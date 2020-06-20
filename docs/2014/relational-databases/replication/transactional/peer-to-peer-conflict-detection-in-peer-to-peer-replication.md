@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055582"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Détection de conflit dans la réplication d'égal à égal
   La réplication transactionnelle d'égal à égal vous permet d'insérer, de mettre à jour et de supprimer des données sur un nœud quelconque dans une topologie, puis de propager les modifications aux autres nœuds. Comme vous pouvez modifier des données sur un nœud quelconque, les modifications de données sur des nœuds différents peuvent être en conflit les unes avec les autres. Si une ligne est modifiée au niveau de plusieurs nœuds, elle peut provoquer un conflit, voire la perte de la mise à jour, lorsque la ligne est propagée à d'autres nœuds.  
@@ -86,7 +85,7 @@ ms.locfileid: "68198994"
   
 -   Essayez de synchroniser de nouveau le nœud en permettant à l'Agent de distribution de continuer à appliquer les modifications :  
   
-    1.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez « p2p_continue_onconflict » pour @property le paramètre `true` et pour @value le paramètre.  
+    1.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez « p2p_continue_onconflict » pour le @property paramètre et `true` pour le @value paramètre.  
   
     2.  Redémarrez l'Agent de distribution.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "68198994"
         > [!NOTE]  
         >  Si les données ne sont pas cohérentes après cette étape, vous devez mettre à jour manuellement les lignes sur le nœud qui a la priorité la plus élevée, puis propager les modifications à partir de ce nœud. S'il n'y a plus de modifications en conflit dans la topologie, tous les nœuds bénéficieront d'un état cohérent.  
   
-    5.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez « p2p_continue_onconflict » pour @property le paramètre `false` et pour @value le paramètre.  
+    5.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez « p2p_continue_onconflict » pour le @property paramètre et `false` pour le @value paramètre.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Réplication transactionnelle d’égal à égal](peer-to-peer-transactional-replication.md)  

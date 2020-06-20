@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954674"
 ---
 # <a name="clr-scalar-valued-functions"></a>Fonctions scalaires CLR
-  Une fonction scalaire (SVF) retourne une valeur unique, telle qu'une chaîne, un entier ou une valeur binaire. Vous pouvez créer des fonctions scalaires définies par l'utilisateur en code managé à l'aide de tout langage de programmation .NET Framework. Ces fonctions sont accessibles au code [!INCLUDE[tsql](../../includes/tsql-md.md)] ou autre code managé. Pour plus d’informations sur les avantages de l’intégration du CLR et le [!INCLUDE[tsql](../../includes/tsql-md.md)]choix entre le code managé et, consultez [vue d’ensemble de l’intégration du CLR](../clr-integration/clr-integration-overview.md).  
+  Une fonction scalaire (SVF) retourne une valeur unique, telle qu'une chaîne, un entier ou une valeur binaire. Vous pouvez créer des fonctions scalaires définies par l'utilisateur en code managé à l'aide de tout langage de programmation .NET Framework. Ces fonctions sont accessibles au code [!INCLUDE[tsql](../../includes/tsql-md.md)] ou autre code managé. Pour plus d’informations sur les avantages de l’intégration du CLR et le choix entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez [vue d’ensemble de l’intégration du CLR](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Spécifications relatives aux fonctions scalaires CLR  
- Les fonctions scalaires .NET Framework sont implémentées en tant que méthodes d'une classe dans un assembly .NET Framework. Les paramètres d’entrée et le type retourné à partir d’un SVF peuvent être n’importe lequel des types de données scalaires `rowversion`pris `text`en `ntext`charge `image`par `timestamp` `table` `cursor` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l’exception `varchar`de `char`,,,,,,, ou. Les fonctions scalaires doivent garantir une correspondance entre le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le type de données de retour de la méthode d'implémentation. Pour plus d’informations sur les conversions de type, consultez [mappage des données de paramètres CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Les fonctions scalaires .NET Framework sont implémentées en tant que méthodes d'une classe dans un assembly .NET Framework. Les paramètres d’entrée et le type retourné à partir d’un SVF peuvent être n’importe lequel des types de données scalaires pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l’exception de,,,,,,, `varchar` `char` `rowversion` `text` `ntext` `image` `timestamp` `table` ou `cursor` . Les fonctions scalaires doivent garantir une correspondance entre le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le type de données de retour de la méthode d'implémentation. Pour plus d’informations sur les conversions de type, consultez [mappage des données de paramètres CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Lors de l'implémentation d'une fonction scalaire .NET Framework dans un langage .NET Framework, l'attribut personnalisé `SqlFunction` peut être spécifié de façon à inclure des informations supplémentaires à propos de la fonction. L'attribut `SqlFunction` indique si la fonction accède ou modifie des données, si elle est déterministe et si elle implique des opérations de virgule flottante.  
   

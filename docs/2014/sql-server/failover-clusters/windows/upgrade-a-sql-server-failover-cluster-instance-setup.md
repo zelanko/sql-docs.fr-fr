@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c393143fbd9f1cc32c9e9ae7c5c1c22fdd0b9447
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62680364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046113"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Mettre à niveau une instance de cluster de basculement SQL Server (programme d'installation)
   Vous pouvez mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] à l'aide de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou à partir de l'invite de commandes.  
@@ -49,11 +48,11 @@ ms.locfileid: "62680364"
   
      Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur un ordinateur avec le système d'exploitation [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 ou [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1, cette mise à jour est incluse.  
   
--   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Pour plus d’informations, [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]consultez les [notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445).  
+-   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Pour plus d’informations, consultez les [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
 -   Dans le cas d'une installation locale, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en qualité d'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
--   Pour mettre à niveau une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] vers un cluster de basculement, l’instance mise à niveau doit être un cluster de basculement.  
+-   Pour mettre à niveau une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] cluster de basculement, l’instance mise à niveau doit être un cluster de basculement.  
   
      Pour déplacer une instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], installez un nouveau cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], puis migrez les bases de données utilisateur depuis l'instance autonome à l'aide de l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62680364"
   
  Pour contrôler le comportement du basculement des nœuds de cluster pendant le processus de mise à niveau, exécutez l'opération de mise à niveau à l'invite de commandes et utilisez le paramètre /FAILOVERCLUSTERROLLOWNERSHIP. Pour plus d’informations, consultez [Installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
- **Remarque** S’il existe un cluster de basculement à nœud [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unique, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programme d’installation met le groupe de ressources hors connexion.  
+ **Remarque** S’il existe un cluster de basculement à nœud unique, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le programme d’installation met le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de ressources hors connexion.  
   
 ## <a name="considerations-when-upgrading-from-ssversion2005"></a>Considérations lors de la mise à niveau de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
  Si vous spécifiez des groupes de domaine pour la stratégie de sécurité du cluster, vous ne pouvez pas spécifier de SID de service sur [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]. Si vous souhaitez utiliser le SID de service, vous devez effectuer une mise à niveau côte à côte.  
@@ -82,7 +81,7 @@ ms.locfileid: "62680364"
   
 2.  Le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré actuellement sur plusieurs sous-réseaux à l'aide de la technologie d'étirement V-LAN : vous devez d'abord mettre à niveau le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Comme la technologie d'étirement V-LAN configure un sous-réseau unique, la configuration réseau doit être modifiée pour inclure plusieurs sous-réseaux. La dépendance de ressource d'adresse IP doit être modifiée à l'aide de l'outil d'administration de cluster de basculement Windows et la dépendance IP doit être définie sur OR.  
   
-###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>Meilleures pratiques avant la mise à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] niveau d’un cluster de basculement  
+###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>Meilleures pratiques avant la mise à niveau d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de basculement  
  Pour réduire le temps mort inattendu provoqué par un redémarrage, préinstallez le package de non-redémarrage pour le .NET Framework 4.0 sur tous les nœuds de cluster de basculement avant d'exécuter la mise à niveau sur les nœuds de cluster. Il est recommandé de respecter les étapes suivantes pour la préinstallation des composants requis :  
   
 -   Installez le package de non-redémarrage pour le .NET Framework 4.0 et mettez à niveau uniquement les composants partagés en commençant par les nœuds passifs. Cela entraîne l'installation du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 4.0, de Windows Installer 4.5 et des fichiers de support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -108,7 +107,7 @@ ms.locfileid: "62680364"
 2.  > [!IMPORTANT]  
     >  Pour plus d’informations sur les étapes 3 et 4, consultez la section [meilleures pratiques avant la mise à niveau d’un cluster de basculement](#BestPractices) .  
   
-3.  Lorsque les composants requis sont installés, l'Assistant Installation démarre le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour mettre à niveau une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]existante de, cliquez sur **mettre [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]à niveau [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]à partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]de, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], ou.**  
+3.  Lorsque les composants requis sont installés, l'Assistant Installation démarre le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour mettre à niveau une instance existante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **mettre à niveau à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ,, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] .**  
   
 4.  Si les fichiers de support du programme d'installation sont requis, le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les installe. Redémarrez votre ordinateur si vous êtes invité à le faire avant de continuer.  
   
@@ -116,11 +115,11 @@ ms.locfileid: "62680364"
   
 6.  Dans la page Clé de produit, entrez la clé PID pour l'édition de la nouvelle version qui correspond à l'édition de l'ancienne version du produit. Par exemple, pour mettre à niveau un cluster de basculement Enterprise Edition, vous devez spécifier une clé PID pour [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Cliquez sur **Suivant** pour continuer. N'oubliez pas que la clé PID que vous utilisez pour une mise à niveau de cluster de basculement doit être cohérente sur tous les nœuds de cluster de basculement dans la même instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [éditions et composants de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md) et [mises à niveau de version et d’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-7.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Cliquez sur**Suivant**pour continuer. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
+7.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. **Cliquez sur suivant pour continuer**. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
   
-8.  Dans la page Sélectionner une instance, spécifiez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à mettre à niveau vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Cliquez sur**Suivant**pour continuer.  
+8.  Dans la page Sélectionner une instance, spécifiez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à mettre à niveau vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. **Cliquez sur suivant pour continuer**.  
   
-9. Dans la page Sélection de composant, les fonctionnalités à mettre à niveau sont présélectionnées. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour ajouter des fonctionnalités à une instance mise à niveau [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] de une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2014 &#40;&#41;d’installation ](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
+9. Dans la page Sélection de composant, les fonctionnalités à mettre à niveau sont présélectionnées. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2014 &#40;&#41;d’installation ](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. Le programme d'installation de SQL Server installera les composants requis qui ne sont pas déjà installés pendant l'étape d'installation décrite ultérieurement dans cette procédure.  
   
@@ -128,13 +127,13 @@ ms.locfileid: "62680364"
   
      **ID d’instance** : Par défaut, le nom de l’instance est utilisé comme ID d’instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d'instance non défini par défaut, activez la case à cocher **ID d'instance** et entrez une valeur. Si vous remplacez la valeur par défaut, vous devez spécifier le même ID d'instance pour l'instance mise à niveau sur tous les nœuds de cluster de basculement. L'ID d'instance de l'instance mise à niveau doit être identique sur tous les nœuds.  
   
-     **Instances et fonctionnalités détectées** : la grille affiche les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances de qui se trouvent sur l’ordinateur où le programme d’installation s’exécute. Cliquez sur**Suivant**pour continuer.  
+     **Instances et fonctionnalités détectées** : la grille affiche les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute. **Cliquez sur suivant pour continuer**.  
   
 11. La page Espace disque nécessaire calcule l'espace disque nécessaire pour les fonctionnalités que vous spécifiez et compare cet espace à l'espace disque disponible sur l'ordinateur où le programme d'installation s'exécute.  
   
 12. Dans la page de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](../../install/full-text-search-upgrade-options.md).  
   
-13. Sur la page **rapport d’erreurs** , spécifiez les informations que vous souhaitez envoyer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] à qui pourront être [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]améliorées. Les options de création de rapports d'erreurs sont activées par défaut.  
+13. Sur la page **rapport d’erreurs** , spécifiez les informations que vous souhaitez envoyer à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] qui pourront être améliorées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les options de création de rapports d'erreurs sont activées par défaut.  
   
 14. L'Outil d'analyse de configuration système exécute un autre ensemble de règles pour valider la configuration de votre ordinateur avec les fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous avez spécifiées, avant le début de l'opération de mise à niveau.  
   
@@ -156,13 +155,13 @@ ms.locfileid: "62680364"
   
 #### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Pour mettre à niveau vers un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (le cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant est un cluster de sous-réseaux non multiples.)  
   
-1.  Suivez les étapes 1 à 24 décrites dans la section [pour mettre à niveau un cluster de basculement SQL Server](#UpgradeSteps) ci- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]dessus pour mettre à niveau votre cluster vers.  
+1.  Suivez les étapes 1 à 24 décrites dans la section [pour mettre à niveau un cluster de basculement SQL Server](#UpgradeSteps) ci-dessus pour mettre à niveau votre cluster vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] .  
   
 2.  Ajoutez un nœud sur un sous-réseau différent à l'aide de l'action d'installation AddNode et confirmez la dépendance de ressource d'adresse IP sur OR dans la page **Configuration du réseau du cluster** . Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 #### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>Pour mettre à niveau un cluster de sous-réseaux multiples utilisant actuellement l'étirement V-LAN  
   
-1.  Suivez les étapes 1 à 24 décrites dans la section [pour mettre à niveau un cluster de basculement SQL Server](#UpgradeSteps) ci- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]dessus pour mettre à niveau votre cluster vers.  
+1.  Suivez les étapes 1 à 24 décrites dans la section [pour mettre à niveau un cluster de basculement SQL Server](#UpgradeSteps) ci-dessus pour mettre à niveau votre cluster vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 2.  Modifiez les paramètres réseau pour déplacer le nœud distant vers un autre sous-réseau.  
   

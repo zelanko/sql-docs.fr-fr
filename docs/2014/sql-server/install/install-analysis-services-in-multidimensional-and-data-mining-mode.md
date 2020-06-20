@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054779"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installer Analysis Services en mode multidimensionnel et exploration de données
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : fournit des fonctionnalités OLAP et d'exploration de données pour les applications de décisionnel. Dans cette version, la prise en charge des bases de données OLAP et des modèles d’exploration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de données est disponible lorsque vous installez en *mode multidimensionnel*. Le mode multidimensionnel est l'un des trois modes serveur dans lequel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute. Il s'agit du mode par défaut. Si vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec les valeurs par défaut, vous obtiendrez une instance qui exécute des bases de données multidimensionnelles et des modèles d'exploration de données multidimensionnelles.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : fournit des fonctionnalités OLAP et d'exploration de données pour les applications de décisionnel. Dans cette version, la prise en charge des bases de données OLAP et des modèles d’exploration de données est disponible lorsque vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en *mode multidimensionnel*. Le mode multidimensionnel est l'un des trois modes serveur dans lequel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute. Il s'agit du mode par défaut. Si vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec les valeurs par défaut, vous obtiendrez une instance qui exécute des bases de données multidimensionnelles et des modèles d'exploration de données multidimensionnelles.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est un composant multi-instance, ce qui signifie que vous pouvez installer plusieurs instances d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur un même ordinateur ou exécuter une nouvelle instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] côte à côte avec une version antérieure. Le mode serveur est spécifique à une instance. L'utilisation d'autres modes requiert l'installation d'instances supplémentaires du serveur.  
   
- Vous pouvez installer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tout seul ou avec d'autres composants. Si vous installez uniquement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les fonctionnalités suivantes sont installées lorsque vous sélectionnez **Analysis Services** sur la page sélection de fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’Assistant Installation de :  
+ Vous pouvez installer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tout seul ou avec d'autres composants. Si vous installez uniquement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les fonctionnalités suivantes sont installées lorsque vous sélectionnez **Analysis Services** sur la page sélection de fonctionnalités de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation de :  
   
 -   Serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour l'exécution des bases de données et modèles d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 400e35752855d23db324054a0caed944d74b715d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 542c8b85bcc287a6d6fcc6b227ba46436666c20c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020938"
 ---
 # <a name="how-cursors-are-implemented"></a>Comment les curseurs sont implémentés
   Les applications ODBC contrôlent le comportement d'un curseur en définissant un ou plusieurs attributs d'instruction avant d'exécuter une instruction SQL. ODBC permet de spécifier les caractéristiques d'un curseur de deux façons différentes :  

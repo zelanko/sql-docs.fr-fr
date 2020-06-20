@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4766a1206eb09e98bb20d3712a63762126b682b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006243"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Tâche 8 : Création d’une règle de domaine composite
   Dans cette tâche, vous allez créer une règle pour le domaine composite **validation d’adresse** . Vous définissez une règle inter-domaines : si la **ville** est **Los Angeles**, l' **État** doit être **ca** , où **ville** et **État** sont deux domaines.  

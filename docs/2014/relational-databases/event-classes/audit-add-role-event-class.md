@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9692b27e2c9c366808ba70ca9bd7ff0c14771bf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d570dda8bb6e7a839ae901b7d9f8709895c2e88a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031115"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role (classe d'événements)
   La classe d’événements **Audit Add Role** se produit quand un rôle de base de données est ajouté ou supprimé dans une base de données. Cette classe d’événements est utilisée par les procédures stockées **sp_addrole** et **sp_droprole** .  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961919"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Fonctionnalités Master Data Services supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -58,9 +57,9 @@ ms.locfileid: "65479443"
  Si vous possédez un package de déploiement de modèle [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] qui contient une règle de ce type, lorsque vous mettez à niveau la base de données vers [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la règle d'entreprise est exclue.  
   
 ### <a name="bulk-updates-and-exporting"></a>Mises à jour et exporations en bloc  
- Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus mettre à jour les valeurs d'attribut de plusieurs membres en bloc. Pour effectuer des mises à jour en bloc, utilisez le processus de site [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]ou.  
+ Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus mettre à jour les valeurs d'attribut de plusieurs membres en bloc. Pour effectuer des mises à jour en bloc, utilisez le processus de site ou [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
- Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus exporter des membres vers Excel. Pour travailler avec des membres dans Excel, utilisez [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]le.  
+ Dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous ne pouvez plus exporter des membres vers Excel. Pour travailler avec des membres dans Excel, utilisez le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
 ### <a name="transactions"></a>Transactions  
  Dans la zone fonctionnelle **Explorateur** , les utilisateurs ne peuvent plus restaurer leurs propres transactions. Auparavant, les utilisateurs pouvaient annuler les modifications apportées aux données dans l' **Explorateur**. Les administrateurs peuvent toujours rétablir des transactions pour tous les utilisateurs dans la zone fonctionnelle **gestion des versions** .  

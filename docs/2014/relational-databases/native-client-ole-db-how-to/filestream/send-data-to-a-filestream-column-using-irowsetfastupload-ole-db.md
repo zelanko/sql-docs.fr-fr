@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5b3661c860ee32de8b0f9e6553cfe6171361861a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ca3fbfa00f087d3728fa9244efd4e06ed1610c42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998765"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Envoyer des données à une colonne FILESTREAM à l'aide d'IRowsetFastUpload (OLE DB)
   Cet exemple utilise l'interface IRowsetFastUpload pour envoyer entre 4 Mo et 4 Go de données à une colonne Filestream.  

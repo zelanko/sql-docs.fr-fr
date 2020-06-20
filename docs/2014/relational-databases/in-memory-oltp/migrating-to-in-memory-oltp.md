@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00ef2590d21ad0d58acecf690342e92bb843ea2d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07381b5450ecb238d09b96cbf9a3983ff178d1f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026121"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migration vers OLTP en mémoire
   Cette section explique comment migrer des objets de base de données pour utiliser l'OLTP en mémoire.  
   
 -   [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   
--   [Conseiller d'optimisation de la mémoire](memory-optimization-advisor.md)  
+-   [Conseil d’optimisation par mémoire](memory-optimization-advisor.md)  
   
 -   [Conseiller de compilation native](native-compilation-advisor.md)  
   

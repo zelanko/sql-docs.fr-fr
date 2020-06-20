@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025191"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
   Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
@@ -44,7 +43,7 @@ ms.locfileid: "63144807"
     > [!NOTE]  
     >  Il est possible que les options 32 bits et 64 bits soient toutes deux disponibles.  
   
-2.  Dans **Gestionnaire de configuration SQL Server**, développez **configuration du réseau SQL Server**, puis cliquez sur **protocoles pour** _ \<InstanceName>_.  
+2.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** _\<InstanceName>_.  
   
      L’instance par défaut (instance sans nom) est répertoriée sous **MSSQLSERVER**. Si vous avez installé une instance nommée, le nom que vous indiquez est répertorié. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] est installé en tant que **SQLEXPRESS**, sauf si vous avez changé le nom lors de l'installation.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144807"
  Pour une sécurité optimale, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]et Windows 7 activent le Pare-feu Windows. Pour vous connecter à cette instance à partir d'un autre ordinateur, vous devez ouvrir un port de communication dans le pare-feu. L'instance par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)] écoute sur le port 1433 ; par conséquent, vous n'avez pas besoin de configurer un port fixe. Toutefois, les instances nommées incluant [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] sont à l'écoute sur des ports dynamiques. Avant d'ouvrir un port sur le pare-feu, vous devez configurer le [!INCLUDE[ssDE](../includes/ssde-md.md)] pour l'écoute sur un port spécifique appelé port fixe ou port statique ; le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut également écouter sur un port différent à chaque démarrage. Pour plus d’informations sur les pare-feu, les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le moteur de base de données, Analysis Services, Reporting Services et Integration Services, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  Les attributions de numéro de port sont gérées par l’autorité des numéros [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)d’Internet affectées et sont répertoriées dans. Les numéros de port doivent être attribués à partir des numéros 49152 à 65535.  
+>  Les attributions de numéro de port sont gérées par l’autorité des numéros d’Internet affectées et sont répertoriées dans [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) . Les numéros de port doivent être attribués à partir des numéros 49152 à 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Pour configurer SQL Server pour l'écoute sur un port spécifique  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144807"
   
 3.  Dans la boîte de dialogue **Propriétés TCP/IP** , cliquez sur l’onglet **Adresses IP** .  
   
-4.  Dans la zone **Port TCP** de la section **IPAll** , tapez un numéro de port disponible. Pour ce didacticiel, nous allons utiliser `49172`.  
+4.  Dans la zone **Port TCP** de la section **IPAll** , tapez un numéro de port disponible. Pour ce didacticiel, nous allons utiliser `49172` .  
   
 5.  Cliquez sur **OK** pour fermer la boîte de dialogue, puis cliquez à nouveau sur **OK** dès l'apparition du message d'avertissement indiquant que vous devez redémarrer le service.  
   
 6.  Dans le volet gauche, cliquez sur **Services SQL Server**.  
   
-7.  Dans le volet droit, cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis cliquez sur **Redémarrer**. Lorsque le [!INCLUDE[ssDE](../includes/ssde-md.md)] redémarre, il écoute sur le port `49172`.  
+7.  Dans le volet droit, cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis cliquez sur **Redémarrer**. Lorsque le [!INCLUDE[ssDE](../includes/ssde-md.md)] redémarre, il écoute sur le port `49172` .  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Ouverture de ports dans le pare-feu  
  Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Pour vous connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lorsque le pare-feu est activé, vous devez ouvrir un port dans ce pare-feu.  

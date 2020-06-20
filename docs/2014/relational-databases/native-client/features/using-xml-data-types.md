@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 24a4f5750af22e8fd588c9c70c1c0399de948907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039008"
 ---
 # <a name="using-xml-data-types"></a>Utilisation de types de données XML
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un type de données **xml** qui vous permet de stocker des documents et des fragments XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le type de données **xml** est intégré dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s’apparente à certains égards à d’autres types intégrés, comme **int** et **varchar**. Tout comme les autres types intégrés, vous pouvez utiliser le type de données **xml** en tant que type de colonne quand vous créez une table ou en tant que type de variable, type de paramètre ou type de retour de fonction ou bien dans des fonctions CAST et CONVERT.  

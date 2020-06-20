@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036950"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurer un compte de service (Gestionnaire de configuration de SSRS)
   Dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le service Web Report Server, le Gestionnaire de rapports et l'application de traitement en arrière-plan s'exécutent au sein d'un même service. Le compte sous lequel le service s'exécute est défini pendant l'installation lorsque vous spécifiez le compte dans la page Identité du service, mais vous pouvez utiliser l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si vous souhaitez utiliser un autre compte ou mettre à jour le mot de passe.  
   
- Si vous disposez d’un serveur de rapports configuré pour utiliser le mode intégré SharePoint et que vous modifiez le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide de l’outil de configuration de, vous devez également [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ouvrir l’administration centrale de SharePoint et utiliser la page accorder l’accès à la **base de données** pour réappliquer les paramètres du serveur de rapports et de l’instance. Cette étape permet d’accorder au nouveau compte de service l’accès aux bases de données SharePoint, ce qui [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] nécessaire [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]pour l’intégration avec ou.  
+ Si vous disposez d’un serveur de rapports configuré pour utiliser le mode intégré SharePoint et que vous modifiez le compte de service à l’aide de l' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] outil de configuration de, vous devez également ouvrir l’administration centrale de SharePoint et utiliser la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] page accorder l’accès à la **base de données** pour réappliquer les paramètres du serveur de rapports et de l’instance. Cette étape permet d’accorder au nouveau compte de service l’accès aux bases de données SharePoint, ce qui est nécessaire pour l’intégration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .  
   
  Utilisez toujours l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour mettre à jour le compte de service afin que les autres paramètres qui dépendent de l'identité de service puissent être mis à jour simultanément.  
   

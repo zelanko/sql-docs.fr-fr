@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31a7d1e52c53cb858039f1fd0ed403f255ad5ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010919"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
   Cette rubrique explique comment créer un abonnement pour un abonné non-SQL Server dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La réplication transactionnelle et la réplication d'instantané prennent en charge la publication de données vers des Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur les plateformes d'Abonné prises en charge, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "62721671"
   
          Vous devez créer l'instantané après avoir activé la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de garantir que l'Agent d'instantané génère un instantané et des scripts d'initialisation qui conviennent pour des Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Activez la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la boîte de dialogue **Propriétés de la publication - \<nom_publication>**. Consultez [Publication Properties, Subscription Options](publication-properties-subscription-options.md) pour plus d'informations sur cette étape.  
+3.  Activez la publication pour les abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la boîte **de dialogue Propriétés de la publication- \<PublicationName> ** . Consultez [Publication Properties, Subscription Options](publication-properties-subscription-options.md) pour plus d'informations sur cette étape.  
   
 4.  Créez un abonnement avec l'Assistant Nouvel abonnement. Cette rubrique fournit des informations sur cette étape.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62721671"
   
 2.  Cliquez avec le bouton droit sur la publication, puis cliquez sur **Afficher l'état de l'Agent d'instantané**.  
   
-3.  Dans la boîte de dialogue **Afficher l’état de l’Agent d’instantané - \<Publication>**, cliquez sur **Démarrer**.  
+3.  Dans la boîte de dialogue **afficher \<Publication> l’État** de l’agent d’instantané, cliquez sur **Démarrer**.  
   
  Lorsque l'Agent d'instantané a terminé, un message s'affiche, par exemple, « [100%] Un instantané de 17 articles a été généré. »  
   
@@ -155,25 +154,25 @@ ms.locfileid: "62721671"
   
     -   Si `enabled_for_het_sub` a la valeur 1, les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge.  
   
-    -   Si la valeur de `enabled_for_het_sub` est 0, exécutez [Sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en `enabled_for_het_sub` spécifiant `true` pour **@value** **@property** et pour.  
+    -   Si la valeur de `enabled_for_het_sub` est 0, exécutez [sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant `enabled_for_het_sub` pour **@property** et `true` pour **@value** .  
   
         > [!NOTE]  
         >  Avant de remplacer la valeur de `enabled_for_het_sub` par `true`, vous devez supprimer tout abonnement existant à la publication. Vous ne pouvez pas affecter la valeur `enabled_for_het_sub` à `true` lorsque la publication prend également en charge la mise à jour des abonnements. La modification de `enabled_for_het_sub` affectera d'autres propriétés de publication. Pour plus d’informations, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). **@publication**Spécifiez **@subscriber**,, la valeur **(destination par défaut)** pour **@destination_db**, la valeur **Push** pour **@subscription_type**et la valeur 3 pour **@subscriber_type** (spécifie un fournisseur OLE DB).  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez **@publication** , **@subscriber** , la valeur **(destination par défaut)** pour **@destination_db** , la valeur **Push** pour **@subscription_type** et la valeur 3 pour **@subscriber_type** (spécifie un fournisseur OLE DB).  
   
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Spécifiez les éléments suivants :  
   
-    -   Paramètres **@subscriber**et **@publication** .  
+    -   **@subscriber**Paramètres et **@publication** .  
   
     -   La valeur **(destination par défaut)** pour **@subscriber_db**,  
   
-    -   Propriétés de la source de données[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non-pour **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location** **@subscriber_provider_string**, et **@subscriber_catalog**.  
+    -   Propriétés de la source de données non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** et **@subscriber_catalog** .  
   
-    -   Les [!INCLUDE[msCoName](../../includes/msconame-md.md)] informations d’identification Windows sous lesquelles le agent de distribution sur le serveur de **@job_login** distribution **@job_password**s’exécute pour et.  
+    -   Les [!INCLUDE[msCoName](../../includes/msconame-md.md)] informations d’identification Windows sous lesquelles le agent de distribution sur le serveur de distribution s’exécute pour **@job_login** et **@job_password** .  
   
         > [!NOTE]  
-        >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les **@job_login** informations **@job_password**d’identification Windows spécifiées par et. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
+        >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les informations d’identification Windows spécifiées par **@job_login** et **@job_password** . L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
     -   La valeur **0** pour **@subscriber_security_mode** et les informations de connexion du fournisseur OLE DB pour **@subscriber_login** et **@subscriber_password**.  
   

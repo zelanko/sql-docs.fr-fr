@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca3da66a23292212df7464c8d5966e5c3603e13e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055558"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962939"
 ---
 # <a name="smtp-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SMTP
   Utilisez la boîte de dialogue **Éditeur du gestionnaire de connexions SMTP** pour spécifier un serveur SMTP (Simple Mail Transfer Protocol).  
@@ -36,14 +35,14 @@ ms.locfileid: "66055558"
  **Serveur SMTP**  
  Indiquez le nom du serveur SMTP.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour envoyer des messages au moyen d'un serveur SMTP utilisant l'authentification Windows pour authentifier l'accès au serveur.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions SMTP prend en charge uniquement l'authentification anonyme et l'authentification Windows. Il ne prend pas en charge l'authentification de base.  
   
 > [!NOTE]  
->  Lorsque vous utilisez Microsoft Exchange comme serveur SMTP, vous devrez peut-être définir **utiliser l’authentification Windows** sur `True`. Les serveurs Exchange peuvent être configurés de manière à interdire les connexions SMTP non authentifiées.  
+>  Lorsque vous utilisez Microsoft Exchange comme serveur SMTP, vous devrez peut-être définir **utiliser l’authentification Windows** sur `True` . Les serveurs Exchange peuvent être configurés de manière à interdire les connexions SMTP non authentifiées.  
   
  **Activer SSL (Secure Sockets Layer)**  
  Sélectionnez cette option pour chiffrer la communication au moyen de Secure Sockets Layer (SSL) lors de l'envoi de messages électroniques.  

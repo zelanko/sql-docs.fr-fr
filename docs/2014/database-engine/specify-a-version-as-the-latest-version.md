@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773475"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928868"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Désigner une version comme étant la dernière version
   Lorsque vous archivez un fichier dans le contrôle de code source, la version que vous archivez devient la dernière version. Les utilisateurs qui extraient ou récupèrent la dernière version reçoivent des copies locales du tout dernier élément archivé.  
@@ -40,7 +39,7 @@ ms.locfileid: "62773475"
   
 3.  Dans le menu **fichier** , pointez sur **contrôle de code source** , puis cliquez sur **ViewHistory**.  
   
-4.  Dans la boîte **de dialogue historique du** \<fichier>, sélectionnez la version que vous souhaitez spécifier comme la plus récente, puis cliquez sur **épingler**.  
+4.  Dans la boîte **de dialogue historique de** \<file> , sélectionnez la version que vous souhaitez spécifier comme la plus récente, puis cliquez sur **épingler**.  
   
      Un symbole de mise en attente s'affiche à côté de la version sélectionnée, indiquant qu'il s'agit de la version en cours du fichier. En cas de chargement d'une version différente dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], le système vous demande de recharger le fichier.  
   

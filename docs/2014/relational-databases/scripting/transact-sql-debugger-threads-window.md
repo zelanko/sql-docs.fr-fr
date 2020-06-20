@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29da37c82339798df3ec47b4b611da948f974c53
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f3460c892c182996a753c2a16076418a6b2008f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063333"
 ---
 # <a name="threads-window"></a>Fenêtre Threads
   La fenêtre **Threads** affiche des informations sur le thread du [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilisé par la session de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en cours de débogage. Vous devez être en mode débogage pour afficher les informations sur le thread.  

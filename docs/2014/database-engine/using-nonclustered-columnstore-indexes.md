@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c876eb6fdd466349ac369dcff8e292bc0839c669
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927770"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Utilisation d'index columnstore non cluster
   Décrit les tâches clés pour l'utilisation d'un index columnstore non cluster sur une table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
@@ -24,7 +23,7 @@ ms.locfileid: "78175348"
 
  Pour plus d'informations sur les index columnstore cluster, consultez [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).
 
-## <a name="contents"></a>Contents
+## <a name="contents"></a>Contenu
 
 -   [Créer un index columnstore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)
 

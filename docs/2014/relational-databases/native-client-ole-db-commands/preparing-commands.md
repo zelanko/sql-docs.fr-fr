@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dd3be1705411dd84a4bc3e0ad9e55f6e6c8d97b2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fa927574dad6b6f811a6fbc8ad5496b0ff098b68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056386"
 ---
 # <a name="preparing-commands"></a>Préparation des commandes
   Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge la préparation de commande pour l'exécution multiple optimisée d'une commande unique ; toutefois, la préparation de commande génère une charge mémoire et un consommateur n'a pas besoin de préparer une commande pour l'exécuter plus d'une fois. En général, la préparation de commande est nécessaire si celle-ci doit être exécutée plus de trois fois.  

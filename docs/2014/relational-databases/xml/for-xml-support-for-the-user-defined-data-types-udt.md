@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 25156dd240c90b7cc50cc44fba90125f5c6eab85
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b668ad2da13fdfc880ab26cb2b2759ff3693f7d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046695"
 ---
 # <a name="for-xml-support-for-the-user-defined-data-types-udt"></a>Prise en charge de FOR XML pour les types de données définis par l'utilisateur (UDT)
   FOR XML ne prend pas en charge les types de données définis par l'utilisateur (UDT) du Common Language Runtime (CLR).  

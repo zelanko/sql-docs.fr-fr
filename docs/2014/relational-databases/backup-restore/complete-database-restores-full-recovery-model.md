@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6ec9f196acd0a64a0b785024bd6426cd6a5381
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922154"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959065"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération complète)
   Lors d'une restauration complète de base de données, le but est de restaurer la totalité de la base de données. L'ensemble de la base de données est hors ligne pendant la durée de la restauration. Avant qu'une partie quelconque de la base de données ne puisse être mise en ligne, toutes les données sont récupérées dans un état cohérent où toutes les parties de la base de données sont chronologiquement synchronisées et aucune transaction non validée n'existe.  
@@ -36,16 +35,16 @@ ms.locfileid: "62922154"
   
  **Dans cette rubrique :**  
   
--   [Restauration d'une base de données jusqu'au point de défaillance](#PointOfFailure)  
+-   [Restauration d’une base de données jusqu’au point de défaillance](#PointOfFailure)  
   
--   [Restauration d'une base de données jusqu'à un point dans une sauvegarde de fichier journal](#PointWithinBackup)  
+-   [Restauration d’une base de données jusqu’à un point dans une sauvegarde de fichier journal](#PointWithinBackup)  
   
 -   [Tâches associées](#RelatedTasks)  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a>Restauration d’une base de données jusqu’au point de défaillance  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> Restauration d'une base de données jusqu'au point de défaillance  
  Généralement, la récupération d'une base de données jusqu'au point de défaillance comprend les étapes de base suivantes :  
   
 1.  Sauvegardez le journal des transactions actives (connu sous le nom de fin du journal). Cela entraîne la création d'une sauvegarde de la fin du journal. Si le journal des transactions actives n'est pas disponible, toutes les transactions contenues dans cette partie du journal sont perdues.  
@@ -73,7 +72,7 @@ ms.locfileid: "62922154"
 >  Quand vous restaurez une sauvegarde de base de données sur une instance de serveur différente, consultez [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Syntaxe de base de l'instruction Transact-SQL RESTORE  
- La syntaxe de base [Restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] pour la séquence de restauration dans l’illustration précédente est la suivante :  
+ La syntaxe [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] de base pour la séquence de restauration dans l’illustration précédente est la suivante :  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62922154"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a>Exemple : récupération jusqu’au point de défaillance (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu’au point de défaillance (Transact-SQL)  
  L'exemple [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant indique les principales options d'une séquence de restauration qui restaure la base de données jusqu'au point de défaillance. L'exemple crée une sauvegarde de la fin du journal de la base de données. Ensuite, il restaure une sauvegarde complète de base de données et une sauvegarde de fichier journal, puis restaure la sauvegarde de la fin du journal. L'exemple récupère la base de données dans une dernière étape séparée.  
   
 > [!NOTE]  
@@ -121,7 +120,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a>Restauration d’une base de données jusqu’à un point dans une sauvegarde de fichier journal  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> Restauration d'une base de données jusqu'à un point dans une sauvegarde de fichier journal  
  En mode de récupération complète, une restauration complète de base de données peut généralement être récupérée jusqu'à une date et une heure, une transaction marquée ou un LSN dans une sauvegarde de fichier journal. Cependant, en mode de récupération utilisant les journaux des transactions, si la sauvegarde du journal contient des modifications journalisées en bloc, la récupération jusqu'à une date et heure est impossible.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Exemples de scénarios de restauration jusqu'à une date et heure  
@@ -180,7 +179,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Sauvegardes complètes de base de données &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

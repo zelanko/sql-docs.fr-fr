@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 614c35992be2f85ef15afd0645140746041d083d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d25830ad119a1f5f344a4dcf318c35bee5f86ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62656372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062192"
 ---
 # <a name="modify-a-job"></a>Modifier un travail
-  Cette rubrique explique comment modifier les propriétés des travaux [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]l' [!INCLUDE[tsql](../../includes/tsql-md.md)]aide de, de ou de SQL Server Management Objects.  
+  Cette rubrique explique comment modifier les propriétés des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travaux de l’agent dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , de ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL Server Management Objects.  
   
  **Dans cette rubrique**  
   

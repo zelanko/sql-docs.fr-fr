@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcdace31407c1b5ca8568595bb4b10e245b4da0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064282"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Types de requêtes (Visual Database Tools)
   Le Concepteur de requêtes et de vues propose des fonctionnalités intégrées pour certains types de requêtes (Select, Insert Results, Insert Values, Update, Delete et Make Table) et prend également en charge les requêtes d'expression UNION, de recherche en texte intégral et CASE.  

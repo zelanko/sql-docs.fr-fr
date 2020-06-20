@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2fe246a1f8baf1ab9f60ab1fa73e21e81c052aa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b66a623ca2db3881409604c768ad2873eebf289
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064370"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Se connecter au serveur (page Connexion) — Moteur de base de données
   Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -61,7 +60,7 @@ ms.locfileid: "70153706"
  **Mot de passe**  
  Entrez le mot de passe utilisé avec la connexion. Ce mot de passe ne peut être modifié que si vous avez choisi la connexion avec l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Se souvenir du mot de passe**  
+ **Mémoriser le mot de passe**  
  Cliquez sur cette option pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enregistre le mot de passe entré. Cette option n’est affichée que si vous avez choisi la connexion avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Connexion**  

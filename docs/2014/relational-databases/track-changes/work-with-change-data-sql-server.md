@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061464"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utiliser les données modifiées (SQL Server)
   Les données modifiées sont mises à disposition des consommateurs de capture de données modifiées par le biais de fonctions table. Toutes les requêtes de ces fonctions requièrent deux paramètres afin de définir la plage de numéros séquentiels dans le journal (LSN) éligibles lors du développement du jeu de résultats retourné. Les valeurs supérieures et inférieures de ces numéros qui lient l'intervalle sont considérées comme étant incluses dans l'intervalle.  

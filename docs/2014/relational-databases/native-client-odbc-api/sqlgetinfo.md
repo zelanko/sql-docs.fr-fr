@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2721e3fc4d46d2cfbf5284986d343d5baca5862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022154"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   Le tableau indique les valeurs retournées par **SQLGetInfo**. Ces valeurs peuvent varier en fonction du numéro de version du serveur connecté.  
   
- **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère de **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC (sqlsrv32. DLL) quand **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, en cas d’appel avec une longueur de tampon différente de zéro inférieure à la chaîne de mot clé de sortie, **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLSTATE de 01004.  
+ **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère de **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC (SQLSRV32.DLL) lorsque **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, en cas d’appel avec une longueur de tampon différente de zéro inférieure à la chaîne de mot clé de sortie, **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLSTATE de 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -33,10 +32,10 @@ ms.locfileid: "82706005"
 |SQL_ACTIVE_CONNECTIONS|Le nombre de connexions est limité par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote retourne 0 pour cette demande **SQLGetInfo** .|  
 |SQL_ACTIVE_ENVIRONMENTS|Le nombre d'environnements n'est pas limité par le pilote. Le pilote retourne 0 pour cette demande **SQLGetInfo** .|  
 |SQL_ACTIVE_STATEMENTS|Le pilote retourne 1 pour cette demande **SQLGetInfo** . Le nombre de descripteurs d'instruction disponibles pour une application n'est pas limité par le pilote, mais l'exécution par défaut sur un descripteur d'instruction bloquera l'exécution sur tout autre descripteur.|  
-|SQL_ALTER_DOMAIN|FAUX|  
+|SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
-|SQL_DATETIME_LITERALS|FAUX|  
+|SQL_DATETIME_LITERALS|FALSE|  
 |SQL_ASYNC_MODE|SQL_AM_STATEMENT|  
 |SQL_BATCH_ROW_COUNT|SQL_BRC_EXPLICIT|  
 |SQL_BATCH_SUPPORT|SQL_BS_SELECT_PROC DE SQL_BS_SELECT_EXPLICIT DE SQL_BS_ROW_COUNT_PROC DE SQL_BS_ROW_COUNT_EXPLICIT|  
@@ -75,13 +74,13 @@ ms.locfileid: "82706005"
 |SQL_CONVERT_WLONGVARCHAR|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_WVARCHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
 |SQL_CORRELATION_NAME|SQL_CN_ANY|  
-|SQL_CREATE_ASSERTION|FAUX|  
-|SQL_CREATE_CHARACTER_SET|FAUX|  
-|SQL_CREATE_COLLATION|FAUX|  
-|SQL_CREATE_DOMAIN|FAUX|  
+|SQL_CREATE_ASSERTION|FALSE|  
+|SQL_CREATE_CHARACTER_SET|FALSE|  
+|SQL_CREATE_COLLATION|FALSE|  
+|SQL_CREATE_DOMAIN|FALSE|  
 |SQL_CREATE_SCHEMA|SQL_CS_AUTHORIZATION SQL_CS_CREATE_SCHEMA|  
 |SQL_CREATE_TABLE|SQL_CT_CREATE_TABLE|  
-|SQL_CREATE_TRANSLATION|FAUX|  
+|SQL_CREATE_TRANSLATION|FALSE|  
 |SQL_CREATE_VIEW|SQL_CV_CHECK_OPTION SQL_CV_CREATE_VIEW|  
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
@@ -96,13 +95,13 @@ ms.locfileid: "82706005"
 |SQL_DRIVER_NAME|"sqlncli11.dll"|  
 |SQL_DRIVER_ODBC_VER|Version ODBC prise en charge du pilote.|  
 |SQL_DRIVER_VER|Numéro de version du pilote.|  
-|SQL_DROP_ASSERTION|FAUX|  
-|SQL_DROP_CHARACTER_SET|FAUX|  
-|SQL_DROP_COLLATION|FAUX|  
-|SQL_DROP_DOMAIN|FAUX|  
+|SQL_DROP_ASSERTION|FALSE|  
+|SQL_DROP_CHARACTER_SET|FALSE|  
+|SQL_DROP_COLLATION|FALSE|  
+|SQL_DROP_DOMAIN|FALSE|  
 |SQL_DROP_SCHEMA|DROP SCHEMA n'est pas pris en charge.|  
 |SQL_DROP_TABLE|SQL_DT_DROP_TABLE|  
-|SQL_DROP_TRANSLATION|FAUX|  
+|SQL_DROP_TRANSLATION|FALSE|  
 |SQL_DROP_VIEW|SQL_DV_DROP_VIEW|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BULK_ADD SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -117,7 +116,7 @@ ms.locfileid: "82706005"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (guillemet double)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Demande non prise en charge par le pilote.|  
-|SQL_INFO_SS_NETLIB_NAME|Attribut spécifique au pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Nom de la bibliothèque réseau en cours d'utilisation par la connexion.<br /><br /> Par défaut, DBNETLIB est retourné.  Dans ce cas, DBNETLIB fait référence à la bibliothèque réseau et n’est pas lié à dbnetlib. dll.|  
+|SQL_INFO_SS_NETLIB_NAME|Attribut spécifique au pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Nom de la bibliothèque réseau en cours d'utilisation par la connexion.<br /><br /> Par défaut, DBNETLIB est retourné.  Dans ce cas, DBNETLIB fait référence à la bibliothèque réseau et n’est pas lié à dbnetlib.dll.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -180,11 +179,11 @@ ms.locfileid: "82706005"
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|Nom du serveur de la connexion.|  
 |SQL_SPECIAL_CHARACTERS|Dépend du jeu de caractères installé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|SQL_SQL92_DATETIME_FUNCTIONS|FAUX|  
-|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FAUX|  
-|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FAUX|  
+|SQL_SQL92_DATETIME_FUNCTIONS|FALSE|  
+|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FALSE|  
+|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FALSE|  
 |SQL_SQL92_GRANT|SQL_SG_WITH_GRANT_OPTION|  
-|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|FAUX|  
+|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|FALSE|  
 |SQL_SQL92_PREDICATES|SQL_SP_LIKE DE SQL_SP_ISNULL DE SQL_SP_ISNOTNULL DE SQL_SP_EXISTS SQL_SP_IN SQL_SP_BETWEEN SQL_SP_UNIQUE|  
 |SQL_SQL92_RELATIONAL_JOIN_OPERATORS|SQL_SRJO_CROSS_JOIN SQL_SRJO_FULL_OUTER_JOIN SQL_SRJO_INNER_JOIN SQL_SRJO_LEFT_OUTER_JOIN SQL_SRJO_RIGHT_OUTER_JOIN SQL_SRJO_UNION_JOIN|  
 |SQL_SQL92_REVOKE|SQL_SR_GRANT_OPTION_FOR|  

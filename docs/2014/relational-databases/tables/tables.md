@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e417a535454f88d6475a97d2d17ad794404175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055048"
 ---
 # <a name="tables"></a>Tables
   Les tables sont des objets de base de données qui contiennent toutes les données d'une base de données. Dans les tables, les données sont logiquement organisées en lignes et en colonnes, à la manière d'un tableur. Chaque ligne représente un enregistrement unique et chaque colonne représente un champ dans l'enregistrement. Par exemple, une table qui contient les données relatives aux employés d'une société peut contenir une ligne pour chaque employé et des colonnes représentant des informations sur l'employé, telles que son numéro, son nom, son adresse, son poste et son numéro de téléphone privé.  
@@ -36,7 +35,7 @@ ms.locfileid: "68211789"
  Les tables partitionnées sont des tables dont les données sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers dans une base de données. Le partitionnement permet une gestion plus simple des tables et index volumineux. Vous pouvez en effet accéder à des sous-ensembles de données ou les gérer de manière rapide et efficace, tout en préservant l'intégrité de la collection globale. Par défaut, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge jusqu'à 15 000 partitions. Pour plus d’informations, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Tables temporaires  
- Les tables temporaires sont stockées `tempdb`dans. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des tables temporaires locales est un signe dièse (#) unique. Ces tables sont visibles uniquement à la connexion courante de l'utilisateur et sont supprimées dès que l'utilisateur se déconnecte de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, le nom des tables temporaires globales commence par deux signes dièse (##) ; ces tables sont visibles à tout utilisateur après avoir été créées et ne sont supprimées qu'une fois que l'ensemble des utilisateurs ayant fait référence à la table se sont déconnectés de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Les tables temporaires sont stockées dans `tempdb` . Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des tables temporaires locales est un signe dièse (#) unique. Ces tables sont visibles uniquement à la connexion courante de l'utilisateur et sont supprimées dès que l'utilisateur se déconnecte de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, le nom des tables temporaires globales commence par deux signes dièse (##) ; ces tables sont visibles à tout utilisateur après avoir été créées et ne sont supprimées qu'une fois que l'ensemble des utilisateurs ayant fait référence à la table se sont déconnectés de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tables système  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données qui définissent la configuration du serveur et de toutes ses tables dans un ensemble spécial de tables appelées « tables système ». Les utilisateurs ne peuvent pas directement interroger ou mettre à jour les tables système. Les informations contenues dans les tables système sont disponibles via les affichages système. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](/sql/t-sql/language-reference).  

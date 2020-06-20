@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55200e2121cf642df4ff3d974ec98c65a8760a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062271"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>Propriétés du travail : Nouveau travail (page Planifications)
-  Utilisez cette page pour afficher et organiser les planifications [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un travail de l’agent.  
+  Utilisez cette page pour afficher et organiser les planifications d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’agent.  
   
 ## <a name="options"></a>Options  
  **Liste des planifications**  
  Affiche la liste des planifications pour ce travail.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une nouvelle planification. Une fois que vous avez créé la planification, celle-ci est ajoutée au travail.  
   
  **Choisir**  
@@ -35,7 +34,7 @@ ms.locfileid: "62695675"
  **Modifier**  
  Modifiez la planification sélectionnée pour changer les propriétés de planification du travail.  
   
- **Remove**  
+ **Supprimer**  
  Supprimez la planification sélectionnée du travail. Si la planification en question n'est pas utilisée par un autre travail, elle est supprimée de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0eb6de956884eb66990459b8b4c6a6336c8ed8ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45e72165eef621dc377b02ed3d2e7e1e3cf7ab8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021872"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   Pour les instructions exécutées, le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client n'accède pas au serveur pour indiquer le nombre de colonnes d'un jeu de résultats. Dans ce cas, `SQLNumResultCols` n’entraîne pas l’aller-retour du serveur. À l’instar de [SQLDescribeCol](sqldescribecol.md) et [SQLColAttribute](sqlcolattribute.md), l’appel `SQLNumResultCols` de sur des instructions préparées mais non exécutées génère un aller-retour sur le serveur.  

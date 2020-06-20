@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ffcef923eaeb3ba48eacaca870bd3355fb6661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66822369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035584"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Effectuer une évaluation à la demande à l'aide des serveurs inscrits
 
@@ -39,7 +38,7 @@ ms.locfileid: "66822369"
   
 2.  Développez **moteur de base de données**, puis développez **groupes**de serveurs locaux ou **serveurs de gestion centralisée**, en fonction de votre configuration.  
   
-3.  Effectuez l'une des opérations suivantes :  
+3.  Effectuez l’une des opérations suivantes :  
   
     -   Pour évaluer les stratégies par rapport à tous les serveurs gérés par le groupe de serveurs local ou le serveur de gestion centralisée, cliquez avec le bouton droit sur le nom du groupe de serveurs local ou le nom du serveur de gestion centralisée, puis cliquez sur **évaluer les stratégies**.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66822369"
   
 4.  Dans la boîte de dialogue **évaluer les stratégies** , en regard de la zone **source** , cliquez sur le bouton de sélection (**...**).  
   
-5.  Dans la boîte de dialogue **Sélectionner une source** , vous pouvez sélectionner **fichiers** ou **serveur** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **serveur**, vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur des stratégies sur un serveur local ou distant. Dans ce didacticiel, vous allez cliquer sur **fichiers**, puis sélectionner les fichiers de stratégie individuels que vous souhaitez évaluer. Pour cela, procédez comme suit :  
+5.  Dans la boîte de dialogue **Sélectionner une source** , vous pouvez sélectionner **fichiers** ou **serveur** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **serveur**, vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur des stratégies sur un serveur local ou distant. Dans ce didacticiel, vous allez cliquer sur **fichiers**, puis sélectionner les fichiers de stratégie individuels que vous souhaitez évaluer. Pour ce faire, procédez comme suit :  
   
     1.  Cliquez sur **fichiers**.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66822369"
 7.  Pour certains échecs de stratégie, la Gestion basée sur des stratégies vous permet de mettre immédiatement en vigueur la conformité aux stratégies sur la cible. Pour de tels échecs, une case à cocher s'affichera en regard de la stratégie qui a échoué. Si vous activez la case à cocher ou si vous cliquez sur la ligne avec la stratégie qui a échoué, les cases à cocher s’affichent dans le volet Détails de la **cible** en regard des instances cibles dont l’évaluation a échoué. Si l’une des cases à cocher est activée, le bouton **appliquer** devient disponible. Lorsque vous cliquez sur **appliquer**, le paramètre non conforme est automatiquement mis à jour sur les instances cibles que vous avez sélectionnées.  
   
     > [!CAUTION]  
-    >  Assurez-vous de bien comprendre le paramètre de stratégie avant de mettre à jour automatiquement une instance cible. Après avoir sélectionné une ou plusieurs cases à cocher, nous vous recommandons de cliquer sur **script**et de choisir un emplacement de sortie afin de pouvoir [!INCLUDE[tsql](../includes/tsql-md.md)] examiner le code sous-jacent avant d’appliquer les modifications.  
+    >  Assurez-vous de bien comprendre le paramètre de stratégie avant de mettre à jour automatiquement une instance cible. Après avoir sélectionné une ou plusieurs cases à cocher, nous vous recommandons de cliquer sur **script**et de choisir un emplacement de sortie afin de pouvoir examiner le code sous-jacent [!INCLUDE[tsql](../includes/tsql-md.md)] avant d’appliquer les modifications.  
   
 8.  Pour afficher les résultats détaillés d’une stratégie, cliquez sur la stratégie dans le tableau des **résultats** . La table Détails de la **cible** affiche les détails de chaque instance.  
   
