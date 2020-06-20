@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0ca7391a025cf0fe4477cc9008c51c0a06a59f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5045b5312dbcb19820de7ed6f4aa88f521a558db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937650"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importer les domaines d'un fichier Excel dans la découverte des connaissances
   Cette rubrique explique comment importer un ou plusieurs domaines d'un fichier Excel dans l'activité de découverte de connaissance [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'importation simplifie le processus de génération de la connaissance, en permettant de gagner du temps et d'économiser les efforts. Elle permet aux personnes qui ont des données dans un fichier Excel ou un fichier texte de créer une base de connaissances avec ces données. (Consultez [importer des valeurs à partir d’un fichier Excel dans un domaine](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md) pour plus d’informations sur l’importation de valeurs dans un domaine d’une base de connaissances existante.) L’exportation vers un fichier Excel n’est pas prise en charge.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0145f973a2290d6fbe0c93139d42cd2298fa3cbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066913"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   L'Assistant Paramétrage du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] analyse les bases de données et émet des recommandations que vous pouvez utiliser pour optimiser les performances des requêtes. L'Assistant Paramétrage du moteur de base de données vous permet de sélectionner et de créer un ensemble optimal d'index, de vues indexées ou de partitions de table sans devoir être un expert familiarisé avec la structure de la base de données ou les mécanismes internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez effectuer les tâches suivantes à l'aide de l'Assistant Paramétrage du moteur de base de données :  
@@ -116,7 +115,7 @@ ms.locfileid: "63151202"
   
 |Tâche de l'Assistant Paramétrage du moteur de base de données|Rubrique|  
 |-----------------------------------------|-----------|  
-|Initialiser et démarrer l'Assistant Paramétrage du moteur de base de données.<br /><br /> Créer une charge de travail en spécifiant le cache du plan, en créant un script ou en générant un fichier de trace ou une table de trace.<br /><br /> Paramétrer une base de données à l'aide de l'outil d'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Créer des fichiers d'entrée XML pour paramétrer les charges de travail.<br /><br /> Afficher les descriptions des options d'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.|[Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Initialiser et démarrer l'Assistant Paramétrage du moteur de base de données.<br /><br /> Créer une charge de travail en spécifiant le cache du plan, en créant un script ou en générant un fichier de trace ou une table de trace.<br /><br /> Paramétrer une base de données à l'aide de l'outil d'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Créer des fichiers d'entrée XML pour paramétrer les charges de travail.<br /><br /> Afficher les descriptions des options d'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.|[Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Afficher les résultats de l'opération de paramétrage de base de données.<br /><br /> Sélectionner et mettre en œuvre des recommandations de paramétrage.<br /><br /> Réaliser une analyse de simulation exploratoire sur la charge de travail.<br /><br /> Examiner les sessions de paramétrage et les sessions de clonage en fonction des sessions existantes <br />ou modifier les recommandations de paramétrage existantes pour une évaluation ou une implémentation plus poussée.<br /><br /> Afficher les descriptions des options d'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.|[Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   

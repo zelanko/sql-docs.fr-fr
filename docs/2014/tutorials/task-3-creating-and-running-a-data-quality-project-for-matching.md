@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035407"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tâche 3 : Création et exécution d’un projet de qualité des données pour la mise en correspondance
   Dans cette tâche, vous allez créer un projet de qualité des données pour l'activité de correspondance, puis exécuter le processus de mise en correspondance sur les données des fournisseurs nettoyées pour supprimer les doublons.
@@ -34,7 +33,7 @@ ms.locfileid: "78171768"
 
 6.  Dans la page **Mapper** , sélectionnez **Fichier Excel** pour **Source de données**.
 
-7.  Cliquez sur **Parcourir** et sélectionnez **cleaned Supplier List. xls**, qui est le fichier de sortie de l’activité de nettoyage.
+7.  Cliquez sur **Parcourir** et sélectionnez le **List.xlsde fournisseur nettoyé **, qui est le fichier de sortie de l’activité de nettoyage.
 
 8.  Mappez la colonne source **RéfFournisseur** au domaine de l' **ID** de fournisseur, à la colonne **nom du fournisseur** en domaine **nom du fournisseur** et à la colonne **ContactEmailAddress** sur contacter le domaine de **messagerie** .
 

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c08d3a2f86c7e412fbdb1caa6d55d7d23bf407
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004329"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
   Cette rubrique explique comment extraire les valeurs requises avant d'ajouter une propriété à une liste de propriétés de recherche et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
   
- Les propriétés de document qui sont extraites par les IFilters des données binaires, c’est-à-dire celles stockées `varbinary`dans `varbinary(max)` une colonne `FILESTREAM`de type de `image` données, (y compris), peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md).  
+ Les propriétés de document qui sont extraites par les IFilters des données binaires, c’est-à-dire celles stockées dans une `varbinary` `varbinary(max)` colonne de type de données, (y compris `FILESTREAM` ), `image` peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md).  
   
  Avant d'ajouter une propriété disponible à une liste de propriétés, vous devez obtenir deux informations sur la propriété :  
   

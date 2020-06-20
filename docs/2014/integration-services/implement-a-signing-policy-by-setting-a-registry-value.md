@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968319"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implémenter une stratégie de signature en définissant une valeur du Registre
   Vous pouvez utiliser une valeur du Registre facultative pour gérer la stratégie d'une organisation pour charger des packages signés ou non signés. Si vous utilisez cette valeur du Registre, vous devez créer cette valeur du Registre sur tous les ordinateurs sur lesquels les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécuteront et sur lesquels vous souhaitez appliquer la stratégie. Une fois la valeur du Registre définie, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vérifiera les signatures avant de charger les packages.  
@@ -48,7 +47,7 @@ ms.locfileid: "66058218"
   
 1.  Dans le menu **Démarrer**, cliquez sur **Exécuter**.  
   
-2.  Dans la boîte de dialogue Exécuter, `Regedit`tapez, puis cliquez sur **OK**.  
+2.  Dans la boîte de dialogue Exécuter, tapez `Regedit` , puis cliquez sur **OK**.  
   
 3.  Localisez la clé de registre HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66058218"
   
 5.  Remplacez le nom de la nouvelle valeur par `BlockedSignatureStates`.  
   
-6.  Cliquez `BlockedSignatureStates` avec le bouton droit et cliquez sur **modifier**.  
+6.  Cliquez avec le bouton droit `BlockedSignatureStates` et cliquez sur **modifier**.  
   
 7.  Dans la boîte de dialogue **Édition de la valeur DWORD** , tapez la valeur 0, 1, 2 ou 3.  
   

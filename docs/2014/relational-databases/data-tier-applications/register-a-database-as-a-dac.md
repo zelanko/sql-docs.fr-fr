@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782719"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953086"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
-  Utilisez l' **Assistant inscrire l’application de la couche données** ou un script Windows PowerShell pour générer une définition d’application de la couche données (DAC) qui décrit les objets d’une base de données existante et enregistrez la `msdb` définition de la DAC dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]la base de données système (**Master** dans).  
+  Utilisez l' **Assistant inscrire l’application de la couche données** ou un script Windows PowerShell pour générer une définition d’application de la couche données (DAC) qui décrit les objets d’une base de données existante et enregistrez la définition de la DAC dans la `msdb` base de données système (**Master** dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ).  
   
 -   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782719"
   
  **Nom de l’application.** - Chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC. Le champ est renseigné avec le nom de la base de données.  
   
- **Version.** - Valeur numérique qui identifie la version de la DAC. La version de la DAC est utilisée dans Visual Studio pour identifier la version de la DAC sur laquelle les développeurs travaillent. Lors du déploiement d’une DAC, la version est stockée `msdb` dans la base de données et peut être affichée ultérieurement sous le nœud applications [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de la **couche données** dans.  
+ **Version.** - Valeur numérique qui identifie la version de la DAC. La version de la DAC est utilisée dans Visual Studio pour identifier la version de la DAC sur laquelle les développeurs travaillent. Lors du déploiement d’une DAC, la version est stockée dans la `msdb` base de données et peut être affichée ultérieurement sous le nœud applications de la **couche données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Descriptive.** - Facultatif. Texte qui explique l'objectif de la DAC. Lors du déploiement d’une DAC, la description est stockée `msdb` dans la base de données et peut être affichée ultérieurement sous le nœud applications [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]de la **couche données** dans.  
+ **Descriptive.** - Facultatif. Texte qui explique l'objectif de la DAC. Lors du déploiement d’une DAC, la description est stockée dans la `msdb` base de données et peut être affichée ultérieurement sous le nœud applications de la **couche données** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
- Précédent : vous renvoie à la page **Introduction** . ** \< **  
+ ** \< Précédent** : vous renvoie à la page **Introduction** .  
   
  **Suivant >** : vérifie qu’une DAC peut être générée à partir des objets de la base de données et affiche les résultats dans la page **Validation et résumé**.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782719"
 ### <a name="retrieving-objects"></a>Récupération d'objets  
  **Récupération d'objets de bases de données et de serveurs.** - Affiche une barre de progression au fur et à mesure que l'Assistant récupère tous les objets requis de la base de données et de l'instance du moteur de base de données.  
   
- Précédent : vous renvoie à la page **définir les propriétés** pour modifier vos entrées. ** \< **  
+ ** \< Précédent** : vous renvoie à la page **définir les propriétés** pour modifier vos entrées.  
   
  **Suivant >** : inscrit la DAC et affiche les résultats dans la page **Inscrire la DAC**.  
   
@@ -103,18 +102,18 @@ ms.locfileid: "72782719"
 ### <a name="validating-objects"></a>Validation d'objets  
  **Vérification de**  _SchemaName_ **.** _ObjectName_ **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. _SchemaName_**.**_ObjectName_ identifient quel objet est vérifié actuellement.  
   
- Précédent : vous renvoie à la page **définir les propriétés** pour modifier vos entrées. ** \< **  
+ ** \< Précédent** : vous renvoie à la page **définir les propriétés** pour modifier vos entrées.  
   
  **Suivant >** : inscrit la DAC et affiche les résultats dans la page **Inscrire la DAC**.  
   
  **Annuler** : termine l’Assistant sans inscrire la DAC.  
   
-### <a name="summary"></a>Récapitulatif  
+### <a name="summary"></a>Résumé  
  **Le paramètre suivant sera utilisé pour inscrire votre DAC.** - Affiche un rapport des propriétés et objets qui seront inclus dans la DAC.  
   
  **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer une copie du rapport de validation dans un fichier HTML. Le dossier par défaut est un dossier **SQL Server Management Studio\DAC Packages** dans le dossier Documents de votre compte Windows.  
   
- Précédent : vous renvoie à la page **définir les propriétés** pour modifier vos entrées. ** \< **  
+ ** \< Précédent** : vous renvoie à la page **définir les propriétés** pour modifier vos entrées.  
   
  **Suivant >** : inscrit la DAC et affiche les résultats dans la page **Inscrire la DAC**.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782719"
   
  **Inscription de la DAC** : signale la réussite ou l’échec de chaque action entreprise pour inscrire la DAC. Examinez les informations pour déterminer la réussite ou l'échec de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Sélectionnez le lien pour consulter le rapport de d'erreur de cette action.  
   
- **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport d’inscription dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier **SQL Server Management Studio\DAC Packages** dans le dossier Documents de votre compte Windows. Le nom de fichier est au format \<DACPackageName>_RegisterDACReport_yyyymmdd. html, où \<> *DACPackageName* est le nom du package déployé, *aaaa* = l’année en cours, *mm* = le mois en cours et *JJ* = le jour actuel.  
+ **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport d’inscription dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier **SQL Server Management Studio\DAC Packages** dans le dossier Documents de votre compte Windows. Le nom de fichier est au format \<DACPackageName>_RegisterDACReport_yyyymmdd.html, où \<*DACPackageName*> est le nom du package déployé, *aaaa* = l’année en cours, *mm* = le mois en cours et *JJ* = le jour actuel.  
   
  **Terminer** : met fin à l’Assistant.  
   

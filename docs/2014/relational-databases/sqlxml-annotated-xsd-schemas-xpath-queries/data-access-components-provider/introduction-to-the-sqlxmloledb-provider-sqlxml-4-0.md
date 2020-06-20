@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 75be01ca2358a3ab04cee64ab19a6f9023d38170
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703221"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015673"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Présentation du fournisseur SQLXMLOLEDB (SQLXML 4.0)
   Le fournisseur SQLXMLOLEDB est un fournisseur OLE DB qui expose des fonctionnalités [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML par l'intermédiaire d'objets ADO (ActiveX Data Objects). Toutefois, le fournisseur peut uniquement exécuter des commandes dans le mode « écriture dans un flux de sortie » de l'objet ADO. Le fournisseur SQLXMLOLEDB n'est pas un fournisseur d'ensembles de lignes. Quand vous exécutez une commande, vous devez spécifier l’indicateur adExecuteStream, qui indique à ADO d’utiliser le flux de sortie que vous avez spécifié.  

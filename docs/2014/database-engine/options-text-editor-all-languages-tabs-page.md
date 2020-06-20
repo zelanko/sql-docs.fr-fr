@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: e383b5a33cc27b1f2e8a6cf7ec02938a7c5f8902
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929965"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Options (Éditeur de texte - Toutes les langues - Page Onglets)
   Cette boîte de dialogue vous permet de définir le comportement de tabulation des cinq éditeurs de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour afficher ces options, sélectionnez **Options** dans le menu **Outils** . Sélectionnez le dossier **Éditeur de texte** , développez le dossier **Tous les langages** , puis cliquez sur **Tabulations**.  

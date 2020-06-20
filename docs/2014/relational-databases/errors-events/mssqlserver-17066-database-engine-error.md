@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d650bbf-c583-4af8-9e22-993ee2880d95
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b8600d83f09504d43778ad0b349ae71b653374e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2bc421fb969e4f24e49871ff97047be9040ae0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915394"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967909"
 ---
 # <a name="mssqlserver_17066"></a>MSSQLSERVER_17066
     
@@ -30,7 +29,7 @@ ms.locfileid: "62915394"
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLASSERT_ONLY|  
-|Texte du message|Assertion SQL Server : fichier : \<%s>, ligne=%d Échec d’assertion = ’%s’. Cette erreur est éventuellement liée à un délai d'attente. Si l'erreur persiste après une nouvelle exécution de l'instruction, utilisez DBCC CHECKDB pour vérifier l'intégrité structurelle de la base de données ou redémarrez le serveur pour vous assurer que les structures de données en mémoire ne sont pas corrompues.|  
+|Texte du message|Assertion de SQL Server : fichier : \<%s> , ligne =% d échec d’assertion = '% s'. Cette erreur est éventuellement liée à un délai d'attente. Si l'erreur persiste après une nouvelle exécution de l'instruction, utilisez DBCC CHECKDB pour vérifier l'intégrité structurelle de la base de données ou redémarrez le serveur pour vous assurer que les structures de données en mémoire ne sont pas corrompues.|  
   
 ## <a name="explanation"></a>Explication  
  Cette erreur peut être provoquée par des erreurs temporaires liées à un délai d'attente ou par une corruption des données en mémoire ou sur disque.  

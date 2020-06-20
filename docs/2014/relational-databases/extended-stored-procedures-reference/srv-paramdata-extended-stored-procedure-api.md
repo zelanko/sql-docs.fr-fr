@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050756"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API de procédure stockée étendue)
     
@@ -69,11 +68,11 @@ n
 |BIGVARBINARY|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, 0x00<br /><br /> **>=255 :** VP, 255 octets<br /><br /> **<255 :** VP, données réelles|  
 |NCHAR|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, 255 espaces<br /><br /> **>=255 :** VP, 255 caractères<br /><br /> **<255 :** VP, données réelles + remplissage (jusqu’à 255)|  
 |NVARCHAR|**NULL :** NULL, N/A<br /><br /> **ZERO :** VP, NULL<br /><br /> **>=255 :** VP, 255 caractères<br /><br /> **<255 :** VP, données réelles|  
-|NTEXT|**NULL :** N/A<br /><br /> **ZERO :** N/A<br /><br /> **>= 255 :** NON APPLICABLE<br /><br /> ** \<255 :** NON APPLICABLE|  
+|NTEXT|**NULL :** N/A<br /><br /> **ZERO :** N/A<br /><br /> **>= 255 :** NON APPLICABLE<br /><br /> ** \< 255 :** N/A|  
   
  \*   Les données ne se terminent pas par le caractère NULL ; aucun avertissement n’est émis en cas de troncation de données >255 caractères.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si vous connaissez le nom du paramètre, vous pouvez utiliser **srv_paramnumber** pour obtenir le numéro du paramètre. Pour déterminer si un paramètre est NULL, utilisez **srv_paramlen**.  
   
  Lorsqu'un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Si une erreur se produit, le gestionnaire SRV_RPC est tout de même appelé, mais il apparaît comme s’il n’y avait aucun paramètre et **srv_rpcparams** retourne 0.  

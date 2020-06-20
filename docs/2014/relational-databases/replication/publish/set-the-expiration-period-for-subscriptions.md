@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc0ecb449af64b88cf3ded032c78c2e399dd4234
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060367"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Définir la période d'expiration des abonnements
   Cette rubrique explique comment définir la période d'expiration des abonnements dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La période d'expiration des abonnements détermine le temps qui précède l'expiration et la suppression d'un abonnement. Pour plus d’informations, voir [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
@@ -50,11 +49,11 @@ ms.locfileid: "73882176"
     -   Il est possible de spécifier que les abonnements n'expirent jamais, mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Définissez la période d’expiration des abonnements dans la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
+ Définissez la période d’expiration des abonnements dans la page **général** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Pour définir la période d'expiration des abonnements  
   
-1.  Dans la section **Expiration de l’abonnement** de la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , spécifiez si l’abonnement doit expirer.  
+1.  Dans la section expiration de l' **abonnement** de la page **général** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** , indiquez si les abonnements doivent expirer.  
   
 2.  S'il doit expirer, spécifiez un délai d'expiration.  
   

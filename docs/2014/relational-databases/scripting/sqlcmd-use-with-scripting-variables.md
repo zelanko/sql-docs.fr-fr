@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1255a810c5d41dfe7c69dee781c670965f0756c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2408399c0c04338312f2076e42d3ac7de167f7aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037795"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utiliser sqlcmd avec des variables de script
   Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  

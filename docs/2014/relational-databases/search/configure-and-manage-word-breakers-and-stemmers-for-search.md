@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22cb7371a0215989d2759ddfb2c84f51ba5c3c31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011542"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997578"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche
   Ils effectuent une analyse linguistique de l'ensemble des données indexées en texte intégral. Elle implique la recherche des limites de mots (coupure de mots) et la conjugaison des verbes (outil de conjugaison). Les analyseurs lexicaux et les générateurs de formes dérivées sont spécifiques à la langue, et les règles de l'analyse linguistique diffèrent selon les langues. Pour une langue donnée, un *analyseur lexical* identifie des mots individuels en déterminant l’emplacement des limites de mots d’après les règles lexicales de cette langue. Chaque mot (également appelé *jeton*) est inséré dans l’index de recherche en texte intégral dans une représentation compressée afin de réduire sa taille. Le *générateur de formes dérivées* génère des formes flexionnelles d’un mot particulier selon les règles spécifiques d’une langue (par exemple, « running », « ran » et « runner » constituent différentes formes du mot « run »).  
@@ -40,7 +39,7 @@ ms.locfileid: "66011542"
  Si vous ajoutez, supprimez ou modifiez un analyseur lexical, vous devez actualiser la liste des identificateurs de paramètres régionaux Microsoft Windows pris en charge pour l'indexation et les requêtes de texte intégral. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>Définition de l’option langue de texte intégral par défaut  
- Pour une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d' `default full-text language` installation de définit l’option sur la langue du serveur s’il existe une correspondance appropriée. Pour une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'anglais est la valeur affectée par défaut à l'option `default full-text language`.  
+ Pour une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programme d’installation de définit l' `default full-text language` option sur la langue du serveur s’il existe une correspondance appropriée. Pour une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'anglais est la valeur affectée par défaut à l'option `default full-text language`.  
   
  Lorsque vous créez ou modifié un index de recherche en texte intégral, vous devez spécifier une langue différente pour chaque colonne indexée de texte intégral. Si aucune langue n'est spécifiée pour une colonne, la valeur par défaut est déterminée par l'option de configuration `default full-text language`.  
   

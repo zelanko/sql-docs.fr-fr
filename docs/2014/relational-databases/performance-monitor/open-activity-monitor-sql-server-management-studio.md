@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdff4dcefb1fb6113869fa01e41f3c8690cfaf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998226"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Ouvrir le Moniteur d'activité (SQL Server Management Studio)
   Cette rubrique décrit la façon d'ouvrir le Moniteur d'activité pour obtenir des informations sur les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la façon dont ces processus affectent l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle explique également comment définir l'intervalle d'actualisation du Moniteur d'activité.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef15fccda450ccb94264f73289b77fce74789acc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970479"
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
   Le collecteur de données utilise le modèle de sécurité basée sur les rôles implémenté par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce modèle permet à l'administrateur de base de données d'exécuter les différentes tâches du collecteur de données dans un contexte de sécurité qui ne dispose que des autorisations requises pour effectuer ces tâches. Cette méthode est également utilisée pour les opérations qui impliquent des tables internes, uniquement accessibles à l'aide d'une procédure stockée ou d'une vue. Aucune autorisation n'est accordée aux tables internes. En revanche, il est procédé à une vérification des autorisations de l'utilisateur de la procédure stockée ou de la vue utilisée pour accéder à une table.  
@@ -48,7 +47,7 @@ ms.locfileid: "62873620"
   
  Ces rôles sont stockés dans la base de données msdb. Par défaut, aucun utilisateur n'est membre de ces rôles de base de données. L'appartenance d'un utilisateur à ces rôles doit être accordée explicitement.  
   
- Les utilisateurs qui sont membres du `sysadmin` rôle serveur fixe ont un accès complet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux objets de l’agent et aux vues du collecteur de données. Ils doivent toutefois être ajoutés explicitement aux rôles de collecteur de données.  
+ Les utilisateurs qui sont membres du `sysadmin` rôle serveur fixe ont un accès complet aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de l’agent et aux vues du collecteur de données. Ils doivent toutefois être ajoutés explicitement aux rôles de collecteur de données.  
   
 > [!IMPORTANT]  
 >  Les membres du rôle db_ssisadmin et du rôle dc_admin peuvent être en mesure d'élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous prémunir contre cette élévation de privilège lors de l'exécution de plans de maintenance, de jeux d'éléments de collecte de données et d'autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent des packages pour l'utilisation d'un compte proxy doté de privilèges limités ou ajoutez uniquement des membres sysadmin aux rôles db_ssisadmin et dc_admin.  
@@ -69,9 +68,9 @@ ms.locfileid: "62873620"
 -   **SQLAgentUserRole**. Ce rôle est requis pour créer des planifications et exécuter des travaux.  
   
     > [!NOTE]  
-    >  Les proxies créés pour le collecteur de données doivent `dc_admin` accorder l’accès à pour les créer et les utiliser dans toutes les étapes de travail qui requièrent un proxy.  
+    >  Les proxies créés pour le collecteur de données doivent accorder l’accès à `dc_admin` pour les créer et les utiliser dans toutes les étapes de travail qui requièrent un proxy.  
   
--   **dc_operator**. Les membres `dc_admin` de héritent des autorisations accordées à **dc_operator**.  
+-   **dc_operator**. Les membres de `dc_admin` héritent des autorisations accordées à **dc_operator**.  
   
 ### <a name="dc_operator-role"></a>Rôle dc_operator  
  Les membres du rôle **dc_operator** disposent d’un accès en lecture et mise à jour. Ce rôle prend en charge les tâches d'opérations liées à l'exécution et la configuration des jeux d'éléments de collection. Les membres de ce rôle peuvent effectuer les opérations suivantes :  

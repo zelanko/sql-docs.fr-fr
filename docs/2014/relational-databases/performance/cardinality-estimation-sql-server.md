@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066040"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
   La logique d'estimation de la cardinalité, appelée estimateur de cardinalité, est remodelée dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] afin d'améliorer la qualité des plans de requête, et par conséquent, améliorer les performances des requêtes. Le nouvel estimateur de cardinalité incorpore des hypothèses et des algorithmes qui fonctionnent sur les charges de travail OLTP et de stockage de données modernes. Il repose sur la recherche détaillée des estimations de cardinalité sur les charges de travail modernes et sur nos connaissances acquises au cours des 15 dernières années sur l'amélioration de l'estimateur de cardinalité SQL Server. Les commentaires des clients indiquent que bien que la plupart des requêtes tirent parti des modifications ou demeurent inchangées, un petit nombre d'entre elles présente des régressions par rapport à l'estimateur de cardinalité précédent.  
@@ -73,9 +72,9 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- Ce comportement a changé. Maintenant, les nouvelles estimations de cardinalité supposent que les colonnes Make et Model ont une *certaine* corrélation. L'optimiseur de requête estime une cardinalité plus élevée en ajoutant un composant exponentiel à l'équation d'estimation. L’optimiseur de requête estime désormais que 22,36 lignes (0,05 * SQRT (. 20 \* ) 1000 lignes = 22,36 lignes) correspondent au prédicat. Pour ce scénario et cette distribution de données spécifique, 22,36 lignes est le résultat le proche des 50 lignes réelles qui sera retourné par la requête.  
+ Ce comportement a changé. Maintenant, les nouvelles estimations de cardinalité supposent que les colonnes Make et Model ont une *certaine* corrélation. L'optimiseur de requête estime une cardinalité plus élevée en ajoutant un composant exponentiel à l'équation d'estimation. L’optimiseur de requête estime désormais que 22,36 lignes (0,05 * SQRT (. 20) \* 1000 lignes = 22,36 lignes) correspondent au prédicat. Pour ce scénario et cette distribution de données spécifique, 22,36 lignes est le résultat le proche des 50 lignes réelles qui sera retourné par la requête.  
   
- Notez que la logique du nouvel estimateur de cardinalité trie les sélectivités de prédicat et augmente l'exposant. Par exemple, si les sélectivités de prédicat étaient 0,05,. 20 et 0,25, l’estimation de cardinalité est (. 05 * SQRT (. 20) \* SQRT (sqrt (. 25))).  
+ Notez que la logique du nouvel estimateur de cardinalité trie les sélectivités de prédicat et augmente l'exposant. Par exemple, si les sélectivités de prédicat étaient 0,05,. 20 et 0,25, l’estimation de cardinalité est (. 05 * SQRT (. 20) \* sqrt (sqrt (. 25))).  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>Exemple C. Les nouvelles estimations de cardinalité supposent que les prédicats filtrés sur les tables sont indépendants.  
  Pour cet exemple, l'estimateur de cardinalité précédent suppose que les filtres de prédicat s.type et r.date sont corrélés. Toutefois, les résultats du test sur les charges de travail modernes indiquent que les filtres de prédicat sur les colonnes de différentes tables ne sont généralement pas corrélés.  

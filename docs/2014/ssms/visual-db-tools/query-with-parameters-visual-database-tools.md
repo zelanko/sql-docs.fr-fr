@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9167f4ec0f62c34ddf6bae5838b36dcf4bdb6967
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 307a2a73d0f51c17aabd1e09cd32375688a39660
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63010716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035698"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Requête avec des paramètres (Visual Database Tools)
   Il est parfois intéressant de créer une requête qu'il est possible de réutiliser à de nombreuses reprises dans vos applications avec chaque fois des entrées différentes. Cette section présente des informations sur la création de requêtes avec paramètres à des fins générales.  

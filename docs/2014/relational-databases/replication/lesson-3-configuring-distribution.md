@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a648902b97a8224b9032c24ee8c7715a4030777
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 28df67dad52bcd11a18fc5deb42a6725700dde5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065948"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Leçon 3 : Configuration de la distribution
   Dans cette leçon, vous allez configurer la distribution sur le serveur de publication et définir les autorisations requises sur les bases de données de publication et de distribution. Si vous avez déjà configuré le serveur de distribution, vous devez d'abord désactiver la publication et la distribution avant de commencer cette leçon. Ne procédez pas ainsi si vous devez conserver une topologie de réplication existante.  
@@ -35,11 +34,11 @@ ms.locfileid: "83000406"
   
      L'Assistant Configuration de la distribution démarre.  
   
-3.  Sur la page serveur de **distribution** , sélectionnez **«**_ \< ServerName>_ **» agit comme son propre serveur de distribution ; SQL Server créera une base de données de distribution et un journal**, puis cliquez sur **suivant**.  
+3.  Sur la page serveur de **distribution** , sélectionnez **«** _\<ServerName>_ **» agit comme son propre serveur de distribution ; SQL Server créera une base de données de distribution et un journal**, puis cliquez sur **suivant**.  
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s’exécute pas, dans la page de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent**, sélectionnez **Oui**, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour qu’il démarre automatiquement. Cliquez sur **Suivant**.  
   
-5.  Entrez **\\\\** \< _Machine_Name>_ **\repldata** dans la zone de texte **dossier d’instantanés** , où \< *Machine_Name>* est le nom du serveur de publication, puis cliquez sur **suivant**.  
+5.  Entrez **\\\\** \<_Machine_Name> _**\repldata** dans la zone de texte **dossier d’instantanés** , où \<*Machine_Name> * est le nom du serveur de publication, puis cliquez sur **suivant**.  
   
 6.  Acceptez les valeurs par défaut sur les pages restantes de l'Assistant.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "83000406"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , développez **sécurité**, cliquez avec le bouton droit sur **connexions**, puis sélectionnez **nouvelle connexion**.  
   
-2.  Sur la **page général** , cliquez **sur rechercher**, entrez \< _Machine_Name>_ **\ repl_snapshot** dans la zone **entrez le nom de l’objet à sélectionner** , où \< *Machine_Name>* est le nom du serveur de publication local, cliquez sur **vérifier les noms**, puis cliquez sur **OK**.  
+2.  Sur la page **général** , cliquez sur **Rechercher**, entrez \<_Machine_Name> _**\ repl_snapshot** dans la zone **Entrez le nom de l’objet à sélectionner** , où \<*Machine_Name> * est le nom du serveur de publication local, cliquez sur vérifier les **noms**, puis cliquez sur **OK**.  
   
 3.  Dans la page mappage de l' **utilisateur** , dans la liste **utilisateurs mappés à cette connexion** , sélectionnez la **distribution** et les [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] bases de données.  
   

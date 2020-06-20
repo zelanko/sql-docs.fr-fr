@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059486"
 ---
 # <a name="examples-using-auto-mode"></a>Exemples : utilisation du mode AUTO
   Les exemples suivants illustrent l'utilisation du mode AUTO. Un grand nombre de ces requêtes sont spécifiées sur les documents XML d'instructions de fabrication de bicyclettes, stockés dans la colonne Instructions de la table ProductModel dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
@@ -265,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Dans le résultat de la requête, les caractères spéciaux XML et URL qui se trouvent dans les noms d'éléments et d'attributs renvoyés sont encodés avec la valeur hexadécimale du caractère Unicode correspondant. Dans le résultat précédent, le nom d'élément <`Special Chars`> est renvoyé comme <`Special_x0020_Chars`>. Le nom de l’attribut <`Col#&2`> est retourné en tant que <`Col_x0023__x0026_2`>. Les caractères spéciaux XML et URL sont encodés.  
   
--   Si les valeurs des éléments ou des attributs contiennent une des cinq entités de caractères XML standard (', "", \<, > et &), ces caractères XML spéciaux sont toujours encodés selon l’encodage de caractère XML. Dans le résultat précédent, la valeur `&` contenue dans la valeur de l'attribut <`Col1`> est encodée sous la forme `&`. Cependant, le caractère « # » reste sous la forme « # » parce qu'il s'agit d'un caractère XML valide et non d'un caractère XML spécial.  
+-   Si les valeurs des éléments ou des attributs contiennent l’une des cinq entités de caractères XML standard (', "", \<, > et &), ces caractères XML spéciaux sont toujours encodés à l’aide de l’encodage de caractères XML. Dans le résultat précédent, la valeur `&` contenue dans la valeur de l'attribut <`Col1`> est encodée sous la forme `&`. Cependant, le caractère « # » reste sous la forme « # » parce qu'il s'agit d'un caractère XML valide et non d'un caractère XML spécial.  
   
 -   Si les valeurs des éléments ou des attributs contiennent un des caractères URL spéciaux ayant donc une signification particulière dans l'URL, ils sont encodés seulement dans la valeur URL DBOBJECT et uniquement lorsque le caractère spécial fait partie d'un nom de table ou de colonne. Dans le résultat, le caractère « `#` » qui fait partie du nom de table `Col#&2` est encodé sous la forme `_x0023_ in the DBOJBECT URL`.  
   

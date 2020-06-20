@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4008df15ded37398ef8565bac759364699561fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058690"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>Propriétés de l'Agent SQL Server (page Historique)
-  Utilisez cette page pour afficher et modifier les paramètres de gestion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du journal d’historique des services de l’agent.  
+  Utilisez cette page pour afficher et modifier les paramètres de gestion du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Journal d’historique des services de l’agent.  
   
 ## <a name="options"></a>Options  
  **Limiter la taille du journal d'historique des travaux.**  

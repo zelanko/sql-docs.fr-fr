@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab592ba35ebc0b012a41aea2f05e27a76c0a7e0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065406"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Solutions haute disponibilité (SQL Server)
   Cette rubrique présente plusieurs solutions haute disponibilité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui améliorent la disponibilité des serveurs ou des bases de données. Une solution à haute disponibilité masque l'impact d'une défaillance matérielle ou logicielle et gère la disponibilité des applications pour réduire au maximum le temps mort que perçoit l'utilisateur.  
@@ -34,7 +33,7 @@ ms.locfileid: "63193047"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs options permettant de garantir un haut niveau de disponibilité pour un serveur ou une base de données. Les options de haute disponibilité sont les suivantes :  
   
  Instances de cluster de basculement AlwaysOn  
- Dans le cadre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’offre AlwaysOn, les instances de cluster de basculement AlwaysOn tirent parti de la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
+ Dans le cadre de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre AlwaysOn, les instances de cluster de basculement AlwaysOn tirent parti de la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
   
  Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   

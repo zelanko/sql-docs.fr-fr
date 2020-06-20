@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: facc534177113bd93e56e50fca3ae14c3e6b2cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014387"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
   Les instructions de déclenchement DML utilisent deux tables spéciales : la table deleted et la table inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Ces tables temporaires résidant en mémoire servent à tester les effets de certaines modifications de données et à définir des conditions pour les actions de déclencheur DML. Vous ne pouvez pas modifier directement les données contenues dans les tables ou effectuer des opérations DDL (Data Definition Language) sur les tables, telles que CREATE INDEX.  

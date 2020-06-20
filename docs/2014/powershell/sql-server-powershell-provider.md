@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762841"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960147"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell présente la hiérarchie des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans des chemins d'accès semblables aux chemins d'accès de système de fichiers. Vous pouvez utiliser les chemins pour localiser un objet, puis utiliser des méthodes des modèles SMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour effectuer des actions sur les objets.  
@@ -46,7 +45,7 @@ ms.locfileid: "62762841"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tels que les projets, les packages et les environnements.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tels que des cubes, des agrégations et des dimensions.|  
   
- Par exemple, vous pouvez utiliser le dossier SQLSERVER:\SQL pour commencer des chemins d'accès pouvant représenter tout objet pris en charge par le modèle objet SMO. La partie de tête d’un chemin d’accès SqlServer : \ SQL est SqlServer\\: \ SQL*ComputerName*\\*InstanceName*. Les nœuds après le nom de l’instance alternent entre des collections d’objets (telles que *Bases de données* ou *Vues*) et des noms d’objets (comme AdventureWorks2012). Les schémas ne sont pas représentés en tant que classes d'objets. Lorsque vous spécifiez le nœud pour un objet de niveau supérieur dans un schéma, tel qu’une table ou une vue, vous devez spécifier le nom d’objet au format *SchemaName.ObjectName*.  
+ Par exemple, vous pouvez utiliser le dossier SQLSERVER:\SQL pour commencer des chemins d'accès pouvant représenter tout objet pris en charge par le modèle objet SMO. La partie de tête d’un chemin d’accès SqlServer : \ SQL est SqlServer : \ SQL \\ *ComputerName* \\ *InstanceName*. Les nœuds après le nom de l’instance alternent entre des collections d’objets (telles que *Bases de données* ou *Vues*) et des noms d’objets (comme AdventureWorks2012). Les schémas ne sont pas représentés en tant que classes d'objets. Lorsque vous spécifiez le nœud pour un objet de niveau supérieur dans un schéma, tel qu’une table ou une vue, vous devez spécifier le nom d’objet au format *SchemaName.ObjectName*.  
   
  Voici le chemin de la table Vendor dans le schéma Purchasing de la base de données AdventureWorks2012 dans une instance par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local :  
   

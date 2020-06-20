@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76b651b3d9e5274c199b4c3aec43d90abcb8edbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050668"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procédure stockée étendue)
     
@@ -72,7 +71,7 @@ len
   
  Si *len* a pour valeur 0, il retourne NULL. Pour retourner la valeur NULL au client, la seule façon est d’attribuer la valeur 0 à *len*.  
   
- Cette fonction retourne les valeurs suivantes, si le paramètre est l’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] des types de données.  
+ Cette fonction retourne les valeurs suivantes, si le paramètre est l’un des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] types de données.  
   
 |Nouveaux types de données|Longueur de données de retour|  
 |--------------------|------------------------|  
@@ -83,12 +82,12 @@ len
 |`BIGVARBINARY`|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
 |NCHAR|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
 |NVARCHAR|**NULL :** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = max8k, data = valide, RET = 0<br /><br /> **<255 :** *len* = <8k, data = valide, RET = 1|  
-|`NTEXT`|**NULL :** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = IG, data = IG, RET = 0<br /><br /> 255 : *Len* = IG, données = IG, RET = 0 ** \<**|  
+|`NTEXT`|**NULL :** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO :** *len* = IG, data = IG, RET = 0<br /><br /> **>=255 :** *len* = IG, data = IG, RET = 0<br /><br /> ** \< 255 :** *Len* = IG, données = IG, RET = 0|  
 |RET = Valeur de retour de srv_paramset.||  
 |IG = La valeur sera ignorée.||  
 |valide = Tout pointeur valide vers des données.||  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les paramètres contiennent les données passées entre les clients et l'application avec des procédures stockées distantes. Le client peut spécifier certains paramètres en tant que paramètres de retour. Ces paramètres de retour peuvent contenir des valeurs que l'application serveur ODS (Open Data Services) repasse au client. L'utilisation de paramètres de retour est analogue au passage de paramètres par référence.  
   
  Vous ne pouvez pas définir la valeur de retour pour un paramètre qui n'a pas été appelé en tant que paramètre de retour. Vous pouvez utiliser **srv_paramstatus** pour déterminer comment le paramètre a été appelé.  

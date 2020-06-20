@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d48e3c9a2c25dda9dae893cc8e61ff30be4314
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874121"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970609"
 ---
 # <a name="getting-started-with-clr-integration"></a>Mise en route avec l'intégration du CLR
-  Cette rubrique fournit une vue d’ensemble des espaces de noms et des bibliothèques requis pour compiler des [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] objets de base de données à l’aide de l’intégration avec l' .NET Framework Common Language Runtime (CLR). La rubrique vous indique également comment écrire, compiler et exécuter une procédure stockée CLR simple écrite dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  Cette rubrique fournit une vue d’ensemble des espaces de noms et des bibliothèques requis pour compiler des objets de base de données à l’aide de l' [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] intégration avec l' .NET Framework Common Language Runtime (CLR). La rubrique vous indique également comment écrire, compiler et exécuter une procédure stockée CLR simple écrite dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Espaces de noms requis  
- À partir [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]de. Les fonctionnalités d'intégration du CLR sont exposées dans un assembly appelé system.data.dll, qui fait partie du .NET Framework. Cet assembly se trouve dans le Global Assembly Cache (GAC), ainsi que dans le répertoire .NET Framework. Une référence à cet assembly est ajoutée en général automatiquement par les outils en ligne de commande et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, afin qu'il ne soit pas nécessaire de l'ajouter manuellement.  
+ À partir de [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] . Les fonctionnalités d'intégration du CLR sont exposées dans un assembly appelé system.data.dll, qui fait partie du .NET Framework. Cet assembly se trouve dans le Global Assembly Cache (GAC), ainsi que dans le répertoire .NET Framework. Une référence à cet assembly est ajoutée en général automatiquement par les outils en ligne de commande et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, afin qu'il ne soit pas nécessaire de l'ajouter manuellement.  
   
  L'assembly system.data.dll contient les espaces de noms suivants, qui sont requis pour compiler les objets de base de données CLR :  
   
@@ -85,7 +84,7 @@ End Class
   
 ```  
   
- Ce programme simple contient une méthode statique unique sur une classe publique. Cette méthode utilise deux nouvelles classes, `SqlContext` et `SqlPipe`, pour créer des objets de base de données managés afin d'obtenir un message textuel simple. La méthode assigne également la chaîne « Hello World ! » comme valeur d’un paramètre de sortie. Cette méthode peut être déclarée en tant que procédure [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] stockée dans une procédure stockée.  
+ Ce programme simple contient une méthode statique unique sur une classe publique. Cette méthode utilise deux nouvelles classes, `SqlContext` et `SqlPipe`, pour créer des objets de base de données managés afin d'obtenir un message textuel simple. La méthode assigne également la chaîne « Hello World ! » comme valeur d’un paramètre de sortie. Cette méthode peut être déclarée en tant que procédure stockée dans une [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] procédure stockée.  
   
  Nous allons maintenant compiler ce programme sous la forme d'une bibliothèque, le charger dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et l'exécuter en tant que procédure stockée.  
   
@@ -119,7 +118,7 @@ vbc /target:library helloworld.vb
  Ces commandes lancent le compilateur Visual C# ou Visual Basic en utilisant l'option /target pour spécifier la génération d'une DLL de bibliothèque.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Chargement et exécution de la procédure stockée "Hello World" dans SQL Server  
- Une fois que l’exemple de procédure a été compilé avec succès, [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] vous pouvez le tester dans et créer une nouvelle requête, en vous connectant à une base de données de test appropriée (par exemple, l’exemple de base de données AdventureWorks).  
+ Une fois que l’exemple de procédure a été compilé avec succès, vous pouvez le tester dans [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] et créer une nouvelle requête, en vous connectant à une base de données de test appropriée (par exemple, l’exemple de base de données AdventureWorks).  
   
  La fonctionnalité d'exécution du code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le code CLR peut être activé à l’aide de la procédure stockée système **sp_configure** . Pour plus d’informations, consultez [Activation de l’intégration du CLR](../clr-integration-enabling.md).  
   

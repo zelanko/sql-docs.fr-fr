@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d502e7c7fdd6716f42a18f745ab71aa27954e99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63020975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037975"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>générer automatiquement un ensemble de filtres de jointure entre des articles de fusion (SQL Server Management Studio)
-   Générez automatiquement un ensemble de filtres de jointure dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+  Générez automatiquement un ensemble de filtres de jointure dans la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
->  Si vous générez automatiquement un ensemble de filtres de jointure dans la boîte de dialogue **Propriétés de la publication - \<Publication>** une fois les abonnements à la publication initialisés, vous devez générer un nouvel instantané et réinitialiser tous les abonnements après avoir effectué la modification. Pour plus d’informations sur les exigences relatives aux changements de propriétés, consultez [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md).  
+>  Si vous générez automatiquement un ensemble de filtres de jointure dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** après que les abonnements à la publication aient été initialisés, vous devez générer un nouvel instantané et réinitialiser tous les abonnements après avoir effectué la modification. Pour plus d’informations sur les exigences relatives aux changements de propriétés, consultez [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md).  
   
  Les filtres de jointure peuvent être créés manuellement pour un ensemble de tables, ou la réplication peut les générer automatiquement en fonction des relations de clé étrangère à clé primaire définies sur les tables. Pour plus d’informations sur la création manuelle de filtres de jointure, consultez [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>Pour générer automatiquement un ensemble de filtres de jointure entre articles de fusion  
   
-1.  Sur la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la Publication - \<Publication>**, cliquez sur **Ajouter**, puis sur **Générer automatiquement des filtres**.  
+1.  Sur la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page Filtrer les **lignes** de la page Propriétés de la **publication- \<Publication> **, cliquez sur **Ajouter**, puis sur **générer automatiquement des filtres**.  
   
     > [!NOTE]  
     >  La génération automatique de filtres supprime tout filtre de lignes ou de jointure existant dans la publication. Vous pouvez ajouter des filtres après avoir généré automatiquement un ensemble de filtres.  
@@ -65,11 +64,11 @@ ms.locfileid: "63020975"
   
      Une fois l'instruction analysée, la réplication crée les filtres de jointure nécessaires et les affiche dans le volet **Tables filtrées** sur la page **Filtrer les lignes de la table** ou **Filtrer les lignes** . Si vous générez des filtres à partir de l'Assistant Nouvelle publication et n'avez pas encore configuré le serveur de distribution pour le serveur de publication sur lequel cet Assistant est exécuté, il vous est demandé de le configurer.  
   
-4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+4.  Si vous êtes dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Pour modifier un filtre généré automatiquement  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+1.  Sur la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page Filtrer les **lignes** des propriétés de la **publication- \<Publication> **, sélectionnez un filtre dans le volet **Tables filtrées** , puis cliquez sur **modifier**.  
   
 2.  Modifiez le filtre dans la boîte de dialogue **Modifier le filtre** ou **Modifier une jointure** .  
   
@@ -77,7 +76,7 @@ ms.locfileid: "63020975"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>Pour supprimer un filtre généré automatiquement  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
+1.  Sur la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page Filtrer les **lignes** des propriétés de la **publication- \<Publication> **, sélectionnez un filtre dans le volet **Tables filtrées** , puis cliquez sur **supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtres de jointure](../merge/join-filters.md)   

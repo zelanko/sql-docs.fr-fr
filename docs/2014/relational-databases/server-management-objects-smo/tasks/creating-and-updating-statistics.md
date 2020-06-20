@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54995cc99aae2065112cbb510203b656c409dcac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a774a994de7cd6cb9396658d739921b8c3b64383
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037529"
 ---
 # <a name="creating-and-updating-statistics"></a>Création et mise à jour des statistiques
   Dans SMO, les informations statistiques à propos du traitement de requêtes dans la base de données peuvent être recueillies en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic>.  

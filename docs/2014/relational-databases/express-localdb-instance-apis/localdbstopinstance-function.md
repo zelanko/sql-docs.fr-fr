@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d4c19943bc79567a5e3abee0c19597247eb31bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050983"
 ---
 # <a name="localdbstopinstance-function"></a>Fonction LocalDBStopInstance
   Arrête l'exécution de l'instance SQL Server Express LocalDB spécifiée.  
@@ -101,7 +100,7 @@ HRESULT LocalDBStopInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  

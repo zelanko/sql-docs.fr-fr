@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e2d10ab64bfeed5cbc0e42242ae123a56b51aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953569"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
   Le déploiement est le processus selon lequel une application ou un module fini est distribué en vue de son installation et de son exécution sur un autre ordinateur. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
@@ -39,7 +38,7 @@ ms.locfileid: "62920839"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Pour déployer l'assembly à l'aide de Visual Studio  
   
-1.  Générez le projet en sélectionnant nom du projet de **Build** \<> dans le menu **générer** .  
+1.  Générez le projet en sélectionnant **générer** \<project name> dans le menu **générer** .  
   
 2.  Résolvez tous les avertissements et erreurs de build avant de déployer l'assembly sur le serveur de test.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62920839"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Pour plus d’informations sur la création des différents types d’objets de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]base de données managés dans, consultez [fonctions CLR définies par l’utilisateur](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [agrégats CLR définis](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)par l’utilisateur, [types CLR définis par l’utilisateur](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](../../database-engine/dev-guide/clr-stored-procedures.md)et [déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md).  
+ Pour plus d’informations sur la création des différents types d’objets de base de données managés dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [fonctions CLR définies par l’utilisateur](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [agrégats CLR définis](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)par l’utilisateur, [types CLR définis par l’utilisateur](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procédures stockées CLR](../../database-engine/dev-guide/clr-stored-procedures.md)et [déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Déploiement de l'assembly sur des serveurs de production  
  Une fois que les objets de base de données CLR ont été testés et vérifiés sur le serveur de test, ils peuvent être distribués sur les serveurs de production. Pour plus d’informations sur le débogage des objets de base de données managés, consultez [débogage des objets de base de données CLR](debugging-clr-database-objects.md).  
@@ -86,7 +85,7 @@ ms.locfileid: "62920839"
   
 1.  Ouvrez [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] et connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] où l'assembly managé ou objet de base de données à déployer est inscrit.  
   
-2.  Dans l **'Explorateur d’objets**, développez le ** \<nom du serveur>** et les arborescences **de bases de données** . Cliquez avec le bouton droit sur la base de données dans laquelle l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des scripts**. L'Assistant Script s'ouvre.  
+2.  Dans l **'Explorateur d’objets**, développez les **\<server name>** arborescences **bases de données** et. Cliquez avec le bouton droit sur la base de données dans laquelle l’objet de base de données managé est inscrit, sélectionnez **tâches**, puis sélectionnez **générer des scripts**. L'Assistant Script s'ouvre.  
   
 3.  Sélectionnez la base de données dans la zone de liste, puis cliquez sur **suivant**.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "62920839"
   
 5.  Dans le volet **choisir les types d’objets** , choisissez le type d’objet de base de données à déployer. Cliquez sur **Suivant**.  
   
-6.  Pour chaque type d’objet sélectionné dans le volet **choisir les types d’objets** , un volet choisir ** \<un type de>** s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets, puis cliquez sur **suivant**.  
+6.  Pour chaque type d’objet sélectionné dans le volet **choisir les types d’objets** , un volet **choisir \<type> ** est présenté. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets, puis cliquez sur **suivant**.  
   
 7.  Le volet **options de sortie** s’affiche lorsque tous les types d’objets de base de données souhaités ont été sélectionnés. Sélectionnez **script à fichier** et spécifiez un chemin d’accès au fichier pour le script. Sélectionnez **Suivant**. Passez en revue vos sélections et cliquez sur **Terminer**. Le script de déploiement est enregistré dans le chemin d'accès relatif spécifié.  
   

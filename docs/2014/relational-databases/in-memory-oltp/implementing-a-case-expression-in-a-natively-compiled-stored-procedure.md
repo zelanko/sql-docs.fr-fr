@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c76aef87e8d9ed968552b7a46e496472dfaf32a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8bcd68c0a1b3b754319cc73988790c6d63edb9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706509"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050165"
 ---
 # <a name="implementing-a-case-statement"></a>Implémentation d'une instruction CASE
   Les instructions CASE ne sont pas prises en charge dans les procédures stockées compilées en mode natif. L'exemple suivant illustre une méthode permettant d'implémenter les fonctionnalités d'une instruction CASE dans une procédure stockée compilée en mode natif.  

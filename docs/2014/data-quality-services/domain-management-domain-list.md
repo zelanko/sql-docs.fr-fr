@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dc815c0f53db54371d24078f13089246976e63ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168bc25871ee61b545498be940ec91198d956e7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937760"
 ---
 # <a name="domain-management-domain-list"></a>Gestion de l’arborescence du domaine : Liste des domaines
   Cette rubrique décrit les contrôles dans la liste des domaines de la page **Gestion de l'arborescence du domaine** dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilisez ce volet pour sélectionner un domaine sur lequel effectuer des opérations de gestion. Le même volet est utilisé pour toutes les pages à onglets dans la page **Gestion de l'arborescence du domaine** .  
@@ -25,7 +24,7 @@ ms.locfileid: "65480643"
 ## <a name="options"></a>Options  
   
 ### <a name="domains-list"></a>Liste des domaines  
- **Domain**  
+ **Domaine**  
  Cette liste affiche tous les domaines dans la base de connaissances. Les opérations que vous effectuez dans les pages à onglets dans le volet droit sont exécutées sur le domaine sélectionné dans la liste. Pour plus d'informations, consultez la rubrique  
   
  **Créer un domaine composite**  

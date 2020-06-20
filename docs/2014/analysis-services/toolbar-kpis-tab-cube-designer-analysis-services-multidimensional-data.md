@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2be57c8f3ca02e2e182f13240a32ac4255f367d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938400"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d'outils** pour effectuer les opérations courantes dans l'onglet **Indicateurs de performance clés** du Concepteur de cube.  
@@ -27,7 +26,7 @@ ms.locfileid: "66066012"
  **Processus**  
  Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le cube.  
   
- **Reconnect**  
+ **Reconnexion**  
  Reconnecte l’onglet **Indicateurs de performance clés** à l’instance et à la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui contient le cube si la session de l’onglet **Indicateurs de performance clés** est déconnectée à cause d’une perte de connexion ou d’une expiration de délai.  
   
  **Nouvel indicateur de performance clé (KPI)**  

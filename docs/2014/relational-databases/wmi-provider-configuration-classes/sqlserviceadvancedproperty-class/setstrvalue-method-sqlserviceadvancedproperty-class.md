@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0229791e764104b912727f2d4f78960ec494b9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059620"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetStrValue (classe SqlServiceAdvancedProperty)
   Définit la valeur de chaîne d'une propriété.  
@@ -40,7 +39,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) qui représente une propriété avancée.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -52,7 +51,7 @@ StrValue
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le type de valeur de la propriété doit être *string* pour permettre l'attribution d'une valeur de chaîne à la propriété.  
   
 ## <a name="see-also"></a>Voir aussi  

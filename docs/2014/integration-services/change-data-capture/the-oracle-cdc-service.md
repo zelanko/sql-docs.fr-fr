@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ee8e81623fb4358cc9768d79a1f8b559a24685
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922260"
 ---
 # <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
   Le service de capture de données modifiées Oracle est un service Windows qui exécute le programme xdbcdcsvc.exe. Ce service peut être configuré pour exécuter plusieurs services Windows sur le même ordinateur, chacun avec un nom différent de service Windows. La création de plusieurs services Windows de capture de données modifiées Oracle sur un seul ordinateur est souvent réalisée pour obtenir une meilleure séparation entre eux, ou lorsque chacun d'eux doit fonctionner avec une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Un service de capture de données modifiées Oracle est créé à l'aide de la console de configuration du service de capture de données modifiées Oracle ou est défini par l'interface de ligne de commande intégrée au programme xdbcdcsvc.exe. Dans les deux cas, chaque service de capture de données modifiées Oracle créé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est associé à une seule instance (qui peut être mise en cluster ou en miroir avec l’installation **AlwaysOn** ) et les informations de connexion (chaîne de connexion et informations d’identification d’accès) font partie de la configuration du service.  
+ Un service de capture de données modifiées Oracle est créé à l'aide de la console de configuration du service de capture de données modifiées Oracle ou est défini par l'interface de ligne de commande intégrée au programme xdbcdcsvc.exe. Dans les deux cas, chaque service de capture de données modifiées Oracle créé est associé à une seule [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (qui peut être mise en cluster ou en miroir avec l’installation **AlwaysOn** ) et les informations de connexion (chaîne de connexion et informations d’identification d’accès) font partie de la configuration du service.  
   
  Lorsqu'un service de capture de données modifiées Oracle est démarré, il tente de se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle il est associé, d'obtenir la liste des instances Oracle CDC à gérer et effectue une première validation de l'environnement. Les erreurs qui se produisent lors du démarrage du service et toutes les informations de démarrage et d'arrêt sont toujours écrites dans le journal des événements des applications Windows. Quand une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est établie, les erreurs et messages d’information sont écrits dans la table **dbo.xdbcdc_trace** de la base de données MSXDBCDC de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un des contrôles effectués au démarrage est la vérification qu'aucun autre service de capture de données modifiées Oracle portant le même nom ne fonctionne actuellement. Si un service du même nom est actuellement connecté à partir d'un autre ordinateur, le service de capture de données modifiées Oracle entre dans une boucle d'attente et attend que l'autre service se déconnecte avant de continuer à gérer la capture de données modifiées Oracle.  
   

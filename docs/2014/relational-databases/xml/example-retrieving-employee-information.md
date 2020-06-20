@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e4cafd4d9f9ec1579eacc2eca2f1381cec13ae6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: efa6c05db03bdfe17d5b1a68b04403e5649ccee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013356"
 ---
 # <a name="example-retrieving-employee-information"></a>Exemple : extraction d'informations sur les employés
   Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  

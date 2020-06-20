@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07f6714f27f60afda91134034509ff439d92f071
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050476"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d'identité lors de l'importation de données en bloc (SQL Server)
-  Les fichiers de données qui contiennent des valeurs d’identité peuvent être importés en bloc dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, les valeurs de la colonne d'identité du fichier de données importé sont ignorées et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte automatiquement des valeurs uniques. Ces valeurs uniques reposent sur les valeurs de départ et d'incrément spécifiées lors de la création de la table.  
+  Les fichiers de données qui contiennent des valeurs d’identité peuvent être importés en bloc dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, les valeurs de la colonne d'identité du fichier de données importé sont ignorées et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte automatiquement des valeurs uniques. Ces valeurs uniques reposent sur les valeurs de départ et d'incrément spécifiées lors de la création de la table.  
   
  Si les fichiers de données ne contiennent pas de valeurs pour la colonne d'identificateur de la table, vous devez utiliser un fichier de format pour préciser si la colonne d'identificateur de la table doit être ignorée lors de l'importation de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigne automatiquement des valeurs uniques pour la colonne.  
   
@@ -79,7 +78,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |Qualificateurs|Description|  
 |----------------|-----------------|  
 |**-E**|Précise que les valeurs d'identité du fichier de données doivent être utilisées pour la colonne d'identité.|  
-|**-T**|Spécifie que `bcp` l’utilitaire se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connecte à avec une connexion approuvée.|  
+|**-T**|Spécifie que l' `bcp` utilitaire se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée.|  
   
  À l'invite de commandes Windows, entrez :  
   
