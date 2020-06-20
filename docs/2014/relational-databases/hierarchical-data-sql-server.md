@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027099"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
-  Le type de `hierarchyid` données intégré facilite le stockage et l’interrogation des données hiérarchiques. `hierarchyid`est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
+  Le `hierarchyid` type de données intégré facilite le stockage et l’interrogation des données hiérarchiques. `hierarchyid`est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
   
  Les données hiérarchiques sont définies comme un jeu d'éléments de données liés entre eux par des relations hiérarchiques. Des relations hiérarchiques existent dans lesquelles un élément de données est le parent d'un autre élément. Voici quelques exemples de données hiérarchiques communément stockées dans les bases de données :  
   
@@ -108,7 +107,7 @@ GO
   
 -   Les requêtes portent rarement sur plusieurs sections de la hiérarchie. En d'autres termes, les requêtes portent habituellement sur un seul point de la hiérarchie. Dans ces cas, la co-location n'est pas importante. Par exemple, parent/enfant est supérieur lorsque la table d'organisation est utilisée uniquement pour le traitement des salaires d'employés individuels.  
   
--   Les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et les performances sont importantes. Dans une représentation parent/enfant, la modification de l'emplacement d'une ligne dans une hiérarchie affecte une seule ligne. La modification de l’emplacement d’une ligne `hierarchyid` dans une utilisation affecte *n* lignes, où *n* est le nombre de nœuds dans la sous-arborescence qui est déplacée.  
+-   Les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et les performances sont importantes. Dans une représentation parent/enfant, la modification de l'emplacement d'une ligne dans une hiérarchie affecte une seule ligne. La modification de l’emplacement d’une ligne dans une `hierarchyid` utilisation affecte *n* lignes, où *n* est le nombre de nœuds dans la sous-arborescence qui est déplacée.  
   
      Si les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et que les performances sont importantes, mais que la plupart des déplacements se font à un niveau bien défini de la hiérarchie, envisagez le fractionnement des niveaux supérieurs et inférieurs en deux hiérarchies. Tous les déplacements se font ainsi dans les niveaux du nœud terminal de la hiérarchie supérieure. Prenons par exemple une hiérarchie de sites Web hébergés par un service. Les sites contiennent de nombreuses pages organisées de façon hiérarchique. Les sites hébergés peuvent être déplacés vers d'autres emplacements dans la hiérarchie de site, mais les pages subordonnées sont rarement réorganisées. Cela peut être représenté de la manière suivante :  
   
@@ -122,7 +121,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , lorsqu’un index XML est créé `hierarchyid` , les valeurs sont utilisées en interne pour représenter la position dans la hiérarchie.  
+ Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , lorsqu’un index XML est créé, les `hierarchyid` valeurs sont utilisées en interne pour représenter la position dans la hiérarchie.  
   
  Il peut être préférable d'utiliser le type de données XML lorsque les conditions suivantes sont réunies :  
   
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Exemple utilisant une transaction sérialisable  
- Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut souhaiter vérifier, une violation de clé dupliquée après l’insertion indique une tentative d’ajout de plusieurs employés ayant le même **@last_child** ID et doit donc être recalculée. Le code suivant utilise une transaction sérialisable et un index à largeur prioritaire pour calculer la nouvelle valeur de nœud :  
+ Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut souhaiter vérifier, une violation de clé dupliquée après l’insertion indique une tentative d’ajout de plusieurs employés ayant le même ID et **@last_child** doit donc être recalculée. Le code suivant utilise une transaction sérialisable et un index à largeur prioritaire pour calculer la nouvelle valeur de nœud :  
   
 ```  
 CREATE TABLE Org_T2  
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Déplacement de sous-arborescences  
- Une autre opération courante concerne le déplacement de sous-arborescences. La procédure ci-dessous prend la sous **@oldMgr** -arborescence de et la **@oldMgr**fait (y compris) **@newMgr**une sous-arborescence de.  
+ Une autre opération courante concerne le déplacement de sous-arborescences. La procédure ci-dessous prend la sous-arborescence de **@oldMgr** et la fait (y compris **@oldMgr** ) une sous-arborescence de **@newMgr** .  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f358f0f36e84ad903a0a4fcb0203291019e7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938494"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>Modélisation tabulaire (SSAS Tabulaire)
   Les modèles tabulaires sont des bases de données en mémoire dans Analysis Services. À l'aide d'algorithmes de compression de pointe et du processeur de requêtes multithread, le moteur d'analyse en mémoire xVelocity (VertiPaq) permet un accès rapide aux objets de modèles tabulaires et aux données par les applications clientes de création de rapports telles que Microsoft Excel et Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  

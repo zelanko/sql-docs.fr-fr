@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932220"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Mises à niveau de version et d’édition prises en charge
   Vous pouvez effectuer une mise à niveau depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Cette rubrique répertorie les chemins de mise à niveau pris en charge à partir de ces versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et les mises à niveau d'édition prises en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -121,7 +120,7 @@ ms.locfileid: "62775218"
   
 -   Se connecter à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Lorsqu'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], le niveau de compatibilité de cette base de données passe de 90 à 100. (Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les valeurs valides pour le niveau de compatibilité de la base de données sont 100, 110 et 120.) Le [niveau de compatibilité ALTER database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) explique comment la modification du niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilité peut affecter les applications.  
+ Lorsqu'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], le niveau de compatibilité de cette base de données passe de 90 à 100. (Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , les valeurs valides pour le niveau de compatibilité de la base de données sont 100, 110 et 120.) Le [niveau de compatibilité ALTER database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) explique comment la modification du niveau de compatibilité peut affecter les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
   
  Les scénarios non spécifiés dans la liste ci-dessus ne sont pas pris en charge, notamment :  
   
@@ -167,9 +166,9 @@ ms.locfileid: "62775218"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (licence serveur + CAL) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence principale)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence principale)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence serveur+CAL)|  
   
- <sup>1</sup> s’applique également [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à Express with Tools [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et à Express with Advanced Services.  
+ <sup>1</sup> s’applique également à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Tools et à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Advanced Services.  
   
- <sup>2</sup> la modification de l’édition [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] d’un cluster de basculement est limitée. Les scénarios suivants ne sont pas pris en charge pour les clusters de basculement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
+ <sup>2</sup> la modification de l’édition d’un [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] cluster de basculement est limitée. Les scénarios suivants ne sont pas pris en charge pour les clusters de basculement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
   
 -   SQL Server 2014 Enterprise vers SQL Server 2014 Developer, Standard ou Enterprise Evaluation.  
   

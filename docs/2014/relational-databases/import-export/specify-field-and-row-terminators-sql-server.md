@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026586"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
   Dans le cas de champs de données de type caractère, des caractères facultatifs de fin vous permettent d'indiquer la fin de chaque champ inclus dans un fichier de données par un *indicateur de fin de champ* et la fin de chaque ligne par un *indicateur de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
@@ -56,7 +55,7 @@ ms.locfileid: "66011859"
 >  Quand vous utilisez la commande **bcp** de manière interactive et que vous spécifiez le caractère de saut de ligne \n en tant qu’indicateur de fin de ligne, **bcp** fait précéder ce caractère du retour chariot \r automatiquement, modifiant ainsi l’indicateur de fin de ligne en \r\n.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Spécification d'indicateurs pour l'exportation en bloc  
- Lorsque vous `char` exportez `nchar` ou exportez des données en bloc et que vous souhaitez utiliser une marque de fin non définie par défaut, vous devez spécifier l’indicateur de fin de la commande **BCP** . Vous pouvez le spécifier de l'une des façons suivantes :  
+ Lorsque vous exportez ou exportez des données en bloc `char` `nchar` et que vous souhaitez utiliser une marque de fin non définie par défaut, vous devez spécifier l’indicateur de fin de la commande **BCP** . Vous pouvez le spécifier de l'une des façons suivantes :  
   
 -   Grâce à un fichier de format précisant l'indicateur de fin pour chaque champ.  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualificateur|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **= '*`field_terminator`*'**|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
-    |ROWTERMINATOR **= '*`row_terminator`*'**|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
+    |ROWTERMINATOR **= ' *`row_terminator`* '**|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
   
      Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |Option|Attribut|  
 |------------|---------------|  
-|DATAFILETYPE **= '`char`'**|Chargement des champs de données en tant que données sous forme de caractères.|  
+|DATAFILETYPE **= ' `char` '**|Chargement des champs de données en tant que données sous forme de caractères.|  
 |FIELDTERMINATOR **='** `,` **'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
 |ROWTERMINATOR **='** `\n` **'**|Indicateur de fin de ligne en tant que caractère de saut de ligne.|  
   

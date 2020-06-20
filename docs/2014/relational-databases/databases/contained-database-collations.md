@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5c51426bd68a4e1bd69aa4f81d097e7af3fe6f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952081"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
   Diverses propriétés affectent l'ordre de tri et la sémantique d'égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md).  
@@ -58,7 +57,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Cela semble relativement simple, mais plusieurs problèmes se posent. Étant donné que le classement d’une colonne dépend de la base de données dans laquelle la table est créée, des problèmes se posent lors de l’utilisation de `tempdb`tables temporaires qui sont stockées dans. Le classement de `tempdb` correspond généralement au classement de l’instance, qui ne doit pas nécessairement correspondre au classement de la base de données.  
+ Cela semble relativement simple, mais plusieurs problèmes se posent. Étant donné que le classement d’une colonne dépend de la base de données dans laquelle la table est créée, des problèmes se posent lors de l’utilisation de tables temporaires qui sont stockées dans `tempdb` . Le classement de `tempdb` correspond généralement au classement de l’instance, qui ne doit pas nécessairement correspondre au classement de la base de données.  
   
 ### <a name="example-2"></a>Exemple 2  
  Par exemple, examinez la base de données (chinoise) ci-dessus utilisée sur une instance avec un classement **Latin1_General** :  
@@ -111,14 +110,14 @@ AS BEGIN
 END;  
 ```  
   
- C'est une fonction assez particulière. Dans un classement qui respecte la casse, le @i dans la clause return ne peut pas @I être lié à ou à @ ??. Dans un classement Latin1_General sans respect de la casse, @i est lié à @I, et la fonction retourne 1. Mais dans un classement turc ne respectant pas la casse @i , est lié à @ ??, et la fonction retourne 2. Cela peut causer des dégâts dans une base de données qui se déplace entre des instances aux classements différents.  
+ C'est une fonction assez particulière. Dans un classement qui respecte la casse, le @i dans la clause return ne peut pas être lié à @I ou à @ ??. Dans un classement Latin1_General sans respect de la casse, @i est lié à @I, et la fonction retourne 1. Mais dans un classement turc ne respectant pas la casse, est @i lié à @ ??, et la fonction retourne 2. Cela peut causer des dégâts dans une base de données qui se déplace entre des instances aux classements différents.  
   
 ## <a name="contained-databases"></a>Bases de données autonomes  
  Comme un objectif de la conception de bases de données autonomes est de les rendre autonomes, la dépendance de l'instance et des classements de `tempdb` doit être supprimée. Pour cela, les bases de données autonomes présentent le concept de classement de catalogue. Le classement de catalogue est utilisé pour les métadonnées système et les objets transitoires. Des informations complémentaires sont fournies ci-dessous.  
   
  Dans une base de données autonome, le classement de catalogue est **Latin1_General_100_CI_AS_WS_KS_SC**. Ce classement est le même pour toutes les bases de données autonomes sur toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ne peut pas être changé.  
   
- Le classement de base de données est conservé, mais est utilisé uniquement comme classement par défaut des données utilisateur. Par défaut, le classement de base de données est égal au classement de la base de données model, mais peut être modifié par `CREATE` l' `ALTER DATABASE` utilisateur via une commande ou comme avec les bases de données sans relation contenant-contenu.  
+ Le classement de base de données est conservé, mais est utilisé uniquement comme classement par défaut des données utilisateur. Par défaut, le classement de base de données est égal au classement de la base de données model, mais peut être modifié par l’utilisateur via une `CREATE` `ALTER DATABASE` commande ou comme avec les bases de données sans relation contenant-contenu.  
   
  Un nouveau mot clé, `CATALOG_DEFAULT`, est disponible dans la clause `COLLATE`. Il est utilisé comme un raccourci du classement actuel de métadonnées à la fois dans les bases de données autonomes et non autonomes. Autrement dit, dans une base de données non autonome, `CATALOG_DEFAULT` retourne le classement de base de données actuel, puisque les métadonnées sont assemblées dans le classement de base de données. Dans une base de données autonome, ces deux valeurs peuvent être différentes, puisque l'utilisateur peut modifier le classement de base de données afin qu'il ne corresponde pas au classement de catalogue.  
   
@@ -235,7 +234,7 @@ GO
  Nom d'objet '#A' non valide.  
   
 ### <a name="example-3"></a>Exemple 3  
- L'exemple suivant illustre le cas où la référence trouve plusieurs correspondances qui étaient distinctes à l'origine. Tout d’abord, nous `tempdb` commençons dans (qui a le même classement respectant la casse que notre instance) et nous exécutons les instructions suivantes.  
+ L'exemple suivant illustre le cas où la référence trouve plusieurs correspondances qui étaient distinctes à l'origine. Tout d’abord, nous commençons dans `tempdb` (qui a le même classement respectant la casse que notre instance) et nous exécutons les instructions suivantes.  
   
 ```  
 USE tempdb;  

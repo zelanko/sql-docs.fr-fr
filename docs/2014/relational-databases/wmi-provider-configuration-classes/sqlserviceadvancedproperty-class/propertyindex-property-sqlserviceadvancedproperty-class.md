@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 186aa762c9c176cab2bfa55de17a0a9d7ea3a301
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e328c2fcf6b5f6ab6fc95383b7020deb9e172b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048884"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Propriété PropertyIndex (classe SqlServiceAdvancedProperty)
   Obtient ou définit l'index de propriété qui spécifie la position d'une propriété avancée dans un tableau de propriétés avancées qui appartiennent à un service référencé.  
@@ -37,13 +36,13 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) qui représente une propriété avancée.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32` qui spécifie la position de la propriété avancée dans le tableau de propriétés avancées qui appartient au service référencé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

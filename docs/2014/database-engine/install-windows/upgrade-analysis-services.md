@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932050"
 ---
 # <a name="upgrade-analysis-services"></a>Mettre à niveau Analysis Services
-  Utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mise à niveau en mode SharePoint, consultez [mettre à niveau PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md). Pour plus d’informations sur la mise à niveau d’une instance de SQL Server existante, consultez [mise à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;&#41;d’installation ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Utilisez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la mise à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode SharePoint, consultez [mettre à niveau PowerPivot pour SharePoint](upgrade-power-pivot-for-sharepoint.md). Pour plus d’informations sur la mise à niveau d’une instance de SQL Server existante, consultez [mise à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;&#41;d’installation ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problèmes de mise à niveau connus  
  Avant d'effectuer la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez les rubriques suivantes :  
@@ -55,14 +54,14 @@ ms.locfileid: "68889182"
 ## <a name="upgrading-analysis-services"></a>Mise à niveau d'Analysis Services  
  Différentes approches s'offrent à vous pour mettre à niveau le serveur et les données :  
   
--   Une **mise à niveau sur place** remplace les fichiers programme existants [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] par les fichiers programme. Les bases de données restent au même emplacement. Les dossiers programme sont mis à jour pour refléter le nouveau nom.  
+-   Une **mise à niveau sur place** remplace les fichiers programme existants par les [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fichiers programme. Les bases de données restent au même emplacement. Les dossiers programme sont mis à jour pour refléter le nouveau nom.  
   
 -   Une **mise à niveau côte à côte** est une nouvelle installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur le même ordinateur qui a une instance de Analysis Services existante. Vous pouvez déplacer les bases de données vers la nouvelle instance du même ordinateur, puis désinstaller l'ancienne version si vous n'en avez plus l'utilité.  
   
 -   Vous pouvez également installer Analysis Services sur le nouveau matériel, puis migrer les bases de données existantes vers ce serveur.  
   
 ## <a name="in-place-upgrade"></a>Mise à niveau sur place  
- Vous pouvez mettre à niveau une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vers et, dans le cadre du processus de mise à niveau, migrer automatiquement les bases de données existantes de l’ancienne instance vers la nouvelle instance. Comme les métadonnées et les données binaires sont compatibles entre les deux versions, vous conserverez les données après la mise à niveau et vous n'avez pas à migrer les données manuellement.  
+ Vous pouvez mettre à niveau une instance existante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et, dans le cadre du processus de mise à niveau, migrer automatiquement les bases de données existantes de l’ancienne instance vers la nouvelle instance. Comme les métadonnées et les données binaires sont compatibles entre les deux versions, vous conserverez les données après la mise à niveau et vous n'avez pas à migrer les données manuellement.  
   
  Pour mettre à niveau une instance existante, exécutez le programme d'installation et spécifiez le nom de l'instance existante comme nom de la nouvelle instance.  
   

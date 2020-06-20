@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916949"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriétés du flux de données pouvant être définies à l’aide d’expressions
   Les valeurs de certaines propriétés d'objets de flux de données peuvent être spécifiées à l'aide d'expressions de propriété disponibles sur le conteneur de tâche de flux de données.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059942"
   
  Pour spécifier une expression de propriété pour une des propriétés d’objets de flux de données répertoriées dans cette rubrique, affichez la fenêtre **Propriétés** pour la tâche de flux de données en la sélectionnant sur l’aire **Flux de contrôle** du concepteur ou en sélectionnant l’onglet **Flux de données** du concepteur sans sélectionner de composant ou de chemin individuel. Sélectionnez la propriété **Expressions** , puis cliquez sur les points de suspension (...) pour afficher la boîte de dialogue de **l’Éditeur d’expressions de la propriété** . Déroulez la liste **Propriété** pour sélectionner une propriété, puis entrez une expression dans la zone de texte **Expression** ou cliquez sur les points de suspension (...) pour afficher la boîte de dialogue **Générateur d’expressions** .  
   
- La liste **Propriété** affiche les propriétés disponibles uniquement pour les objets de flux de données que vous avez déjà placés sur l’aire **Flux de données** du concepteur. Par conséquent, vous ne pouvez pas utiliser la liste **Propriété** pour consulter toutes les propriétés possibles des objets de flux de données qui prennent en charge les expressions de propriété. Par exemple, si vous avez placé une source ADO .net sur l’aire du concepteur, la liste de **Propriétés** contient une entrée `[ADO NET Source].[SqlCommand]` pour la propriété. La liste affiche également de nombreuses propriétés de la tâche de flux de données elle-même.  
+ La liste **Propriété** affiche les propriétés disponibles uniquement pour les objets de flux de données que vous avez déjà placés sur l’aire **Flux de données** du concepteur. Par conséquent, vous ne pouvez pas utiliser la liste **Propriété** pour consulter toutes les propriétés possibles des objets de flux de données qui prennent en charge les expressions de propriété. Par exemple, si vous avez placé une source ADO .net sur l’aire du concepteur, la liste de **Propriétés** contient une entrée pour la `[ADO NET Source].[SqlCommand]` propriété. La liste affiche également de nombreuses propriétés de la tâche de flux de données elle-même.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Propriétés des objets de flux de données qui prennent en charge les expressions de propriété  
  Les valeurs des propriétés de la liste suivante peuvent être spécifiées à l'aide d'expressions de propriété.  

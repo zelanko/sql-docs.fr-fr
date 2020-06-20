@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e3cd4cecd88bcad83c6e9f2a59ecd5f225fb02a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e825829eb70b695a619df8caaa59788d0ad413f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064767"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Tâche 2 : Téléchargement des données des fournisseurs vers MDS à l’aide du complément MDS pour Excel
   Au cours de cette tâche, vous allez publier les données du fournisseur et du nettoyage dans **MDS** à l’aide de la **complément MDS pour Excel**. Vous créez une entité nommée **fournisseur** dans le modèle **fournisseurs** que vous avez créé dans la leçon précédente. L'entité aura un attribut pour chaque colonne dans le fichier Excel. Les attributs de code et de nom de l’entité fournisseur correspondent aux colonnes **SupplierID** et **nom du fournisseur** dans Excel.  
   
-1.  Ouvrez le **. xls nettoyé et mis en correspondance** dans **Excel**.  
+1.  Ouvrir **les Suppliers.xlsnettoyées et mises en correspondance** dans **Excel**.  
   
 2.  Appuyez sur **Ctrl + A** pour sélectionner des données entières. Il est **important** de sélectionner l’ensemble des données dans la feuille de calcul.  
   
@@ -34,9 +33,9 @@ ms.locfileid: "81487693"
   
     1.  Sélectionnez **créer une nouvelle connexion**, puis cliquez sur le bouton **nouveau** .  
   
-    2.  Dans la boîte de dialogue **Ajouter une nouvelle connexion** , tapez **serveur MDS local** pour **Description** et **http :\//localhost/MDS** pour **adresse du serveur MDS**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
+    2.  Dans la boîte de dialogue **Ajouter une nouvelle connexion** , tapez **serveur MDS local** pour **Description** et **http : \/ /localhost/MDS** pour **adresse du serveur MDS**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-6.  Dans la boîte de dialogue **gérer les connexions** , sélectionnez **serveur MDS local** (`http://localhost/MDS`), puis cliquez sur **tester** pour tester la connexion. Cliquez sur **OK** dans le message de confirmation.  
+6.  Dans la boîte de dialogue **gérer les connexions** , sélectionnez **serveur MDS local** ( `http://localhost/MDS` ), puis cliquez sur **tester** pour tester la connexion. Cliquez sur **OK** dans le message de confirmation.  
   
 7.  Cliquez sur **se connecter** pour vous connecter au serveur MDS.  
   

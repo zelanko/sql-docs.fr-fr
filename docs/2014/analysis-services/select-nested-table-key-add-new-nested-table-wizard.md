@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c58fc8d77bccb072d0999d2e6e0c4f545712f522
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940900"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>Sélectionner la clé de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
   Utilisez la page **Sélectionner la clé de la table imbriquée** pour sélectionner l’attribut à utiliser comme clé de la table imbriquée.  

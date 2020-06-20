@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938360"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Trace (Client d'exploration de données pour Excel)
   ![Bouton Trace](media/misc-trace.gif "Bouton Trace")
 
- La boîte de dialogue **traceur** vous permet de surveiller les instructions envoyées à l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous utilisez pour l’exploration de données. Une fois que vous avez créé une connexion à une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]instance de, toutes les interactions entre le client et le serveur sont consignées dans le volet de suivi, y **compris les instructions** qui créent des structures, ajoutent des modèles d’exploration de données et effectuent des prédictions, ainsi que certains messages renvoyés par le serveur.
+ La boîte de dialogue **traceur** vous permet de surveiller les instructions envoyées à l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous utilisez pour l’exploration de données. Une fois que vous avez créé une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , toutes les interactions entre le client et le serveur sont **Tracer** consignées dans le volet de suivi, y compris les instructions qui créent des structures, ajoutent des modèles d’exploration de données et effectuent des prédictions, ainsi que certains messages renvoyés par le serveur.
 
  Selon l'action demandée, l'instruction peut être une requête de définition de données DMX (Data Mining Extensions) ou une requête de manipulation de données, un paquet ASSL (Analysis Services Scripting Language) ou un appel à une procédure stockée Analysis Services. Toutefois, les valeurs de données et les résultats numériques réels ne sont pas affichés.
 
