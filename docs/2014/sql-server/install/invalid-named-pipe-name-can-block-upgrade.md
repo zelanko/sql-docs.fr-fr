@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bacfd3d097d7cccb0a5780328c4db95dc5afc733
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059247"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>Un nom de canal nommé non valide peut bloquer la mise à niveau
   La mise à niveau échoue si le protocole des canaux nommés est configuré de manière incorrecte.  
@@ -27,7 +26,7 @@ ms.locfileid: "66094191"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Pendant la mise à niveau, le programme [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’installation démarre l’instance avec la prise en charge de la mémoire partagée, un canal nommé qui n’accepte que les connexions locales. Si le nom de canal spécifié sur le serveur n’est pas vide, il doit commencer par la\\\\chaîne\\« .\pipe » pour être valide. Si le nom de canal n'est pas valide, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne démarre pas et l'installation échoue.  
+ Pendant la mise à niveau, le programme d’installation démarre l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance avec la prise en charge de la mémoire partagée, un canal nommé qui n’accepte que les connexions locales. Si le nom de canal spécifié sur le serveur n’est pas vide, il doit commencer par la chaîne « \\ \\ .\pipe \\ » pour être valide. Si le nom de canal n'est pas valide, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne démarre pas et l'installation échoue.  
   
 ## <a name="corrective-action"></a>Action corrective  
  Utilisez l' ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitaire réseau** pour fournir un nom de canal valide, puis exécutez le programme d’installation.  

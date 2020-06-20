@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960289"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins PowerShell SQL Server
   Le fournisseur PowerShell du [!INCLUDE[ssDE](../includes/ssde-md.md)] expose le jeu d'objets dans une instance de SQL Server dans une structure similaire à un chemin d'accès de fichier. Vous pouvez utiliser des applets de commande Windows PowerShell pour naviguer jusqu'au chemin d'accès du fournisseur et créer des lecteurs personnalisés pour raccourcir le chemin d'accès que vous devez taper.  
@@ -28,11 +27,11 @@ ms.locfileid: "72797814"
 |Applet de commande|Alias canonique|Alias d'applet de commande|Alias de l'interpréteur de commandes UNIX|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtient le nœud actuel.|  
-|`Set-Location`|**SL**|**cd, chdir**|**cd, chdir**|Modifie le nœud actuel.|  
-|**Acquérir-ChildItem**|**gci**|**dir**|**LS**|Répertorie les objets stockés sur le nœud actuel.|  
-|**Recevoir un élément**|**gi**|||Retourne les propriétés de l'élément actif.|  
-|**Renommer l’élément**|**rni**|**RN**|**ren**|Renomme un objet.|  
-|**Supprimer un élément**|**instance réservée**|**del, rd**|**rm, rmdir**|Supprime un objet.|  
+|`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Modifie le nœud actuel.|  
+|**Get-ChildItem**|**gci**|**dir**|**LS**|Répertorie les objets stockés sur le nœud actuel.|  
+|**Get-Item**|**gi**|||Retourne les propriétés de l'élément actif.|  
+|**Rename-Item**|**rni**|**RN**|**ren**|Renomme un objet.|  
+|**Remove-Item**|**instance réservée**|**del, rd**|**rm, rmdir**|Supprime un objet.|  
   
 > [!IMPORTANT]  
 >  Certains identificateurs (noms d'objets) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiennent des caractères que Windows PowerShell ne prend pas en charge dans les noms de chemins d'accès. Pour plus d'informations sur l'utilisation de noms qui contiennent ces caractères, consultez [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -44,7 +43,7 @@ ms.locfileid: "72797814"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Retourne le nom de l'ordinateur local. Si vous avez utilisé SMO ou WMI pour vous connecter aux instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur d'autres ordinateurs, ces ordinateurs sont également répertoriés.|  
 |SQLSERVER:\SQL\\*nom_ordinateur*|Liste des instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l'ordinateur.|  
-|SqlServer : \ SQL\\*ComputerName*\\*InstanceName*|Liste des types d'objets de niveau supérieur dans l'instance, tels que les points de terminaison, les certificats et les bases de données.|  
+|SqlServer : \ SQL \\ *ComputerName* \\ *InstanceName*|Liste des types d'objets de niveau supérieur dans l'instance, tels que les points de terminaison, les certificats et les bases de données.|  
 |Nœud de classes d'objets, tels que Databases|Liste des objets de ce type, telle que la liste des bases de données : MASTER, Model, AdventureWorks20008R2.|  
 |Nœud de noms d’objets, comme AdventureWorks2012|Liste des types d'objets contenus dans l'objet. Par exemple, une base de données répertorierait des types d'objets tels que les tables et les vues.|  
   

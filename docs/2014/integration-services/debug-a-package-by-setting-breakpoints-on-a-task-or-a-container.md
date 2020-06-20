@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951849"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur
   Cette section décrit la procédure de définition des points d'arrêt dans un package, une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences.  
@@ -38,7 +37,7 @@ ms.locfileid: "66059658"
   
     -   Pour définir des points d’arrêt dans un gestionnaire d’événements, cliquez sur l’onglet **Gestionnaire d’événements** , cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
   
-4.  Dans la boîte de dialogue **définir le nom du conteneur d’points d’arrêt \<>** , sélectionnez les points d’arrêt à activer.  
+4.  Dans la boîte de dialogue **définir les points d’arrêt \<container name> ** , sélectionnez les points d’arrêt à activer.  
   
 5.  Vous pouvez également modifier le type du nombre d'accès et la valeur du nombre d'accès pour chaque point d'arrêt.  
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d5af895df518a915dacd953331b9139471933aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798181"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058666"
 ---
 # <a name="start-a-job"></a>Démarrer un travail
-  Cette rubrique explique comment démarrer l’exécution d' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un travail de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dans [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de, ou SQL Server Management Objects.  
+  Cette rubrique explique comment démarrer l’exécution d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
   
  Un travail est une série d'actions exécutées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être exécutés sur un serveur local ou sur plusieurs serveurs distants.  
   

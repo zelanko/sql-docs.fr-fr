@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706535"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050239"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
   Le collecteur de performances de transaction dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] vous aide à évaluer si l’OLTP en mémoire améliore les performances de votre application de base de données. Le rapport d'analyse des performances de transaction indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif.  
@@ -93,7 +92,7 @@ ms.locfileid: "82706535"
   
 4.  Cliquez sur **nouveau** pour créer une nouvelle base de données qui contiendra les données de profil. Une fois que vous avez terminé la création de la base de données, cliquez sur **suivant** dans l’Assistant.  
   
-5.  L'étape suivante de l'Assistant vous permet d'ajouter des utilisateurs et des noms de connexion. Vous pouvez mapper les noms de connexion aux appartenances aux rôles pour l'instance de l'entrepôt de données de gestion (MDW). Cela n'est pas obligatoire pour collecter des données sur l'instance locale. Si vous ne collectez pas de données depuis l'instance locale, vous pouvez accorder l'appartenance au rôle de base de données `mdw_admin` au compte qui exécutera les transactions qui seront profilées. Lorsque vous avez terminé, cliquez sur **suivant**.  
+5.  L'étape suivante de l'Assistant vous permet d'ajouter des utilisateurs et des noms de connexion. Vous pouvez mapper les noms de connexion aux appartenances aux rôles pour l'instance de l'entrepôt de données de gestion (MDW). Cela n'est pas obligatoire pour collecter des données sur l'instance locale. Si vous ne collectez pas de données depuis l'instance locale, vous pouvez accorder l'appartenance au rôle de base de données `mdw_admin` au compte qui exécutera les transactions qui seront profilées. Quand vous avez terminé, cliquez sur **Suivant**.  
   
 6.  Vérifiez que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent s'exécute.  
   
@@ -225,6 +224,6 @@ ms.locfileid: "82706535"
  Pour afficher des détails sur la façon de convertir une procédure stockée en procédure stockée compilée en mode natif, utilisez le [conseiller de compilation native](native-compilation-advisor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

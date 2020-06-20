@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4b3ab8f1e956ee68585ecdc3e12ae605d52ab38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9625d2865a21b66663ebe2c2ad066e9ce8c7bf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050516"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (API de procédure stockée étendue)
     
@@ -55,7 +54,7 @@ len
  *srvproc*  
  Pointeur vers la structure SRV_PROC qui est le handle pour une connexion cliente particulière. La structure contient des informations que la bibliothèque d'API de procédure stockée étendue utilise pour gérer les communications et les données entre l'application et le client.  
   
- *chronique*  
+ *column*  
  Indique le numéro de la colonne pour laquelle la longueur des données est spécifiée. Les colonnes sont numérotées, en commençant par 1.  
   
  *Len*  
@@ -64,7 +63,7 @@ len
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque colonne de la ligne doit être au préalable définie avec **srv_describe**. La longueur des données de la colonne est définie par le dernier appel à **srv_describe** ou **srv_setcollen**. En cas de modification des données de longueur variable (données se terminant par le caractère Null) pour une ligne, vous devez utiliser **srv_setcollen** pour définir la nouvelle longueur avant d’appeler **srv_sendrow**. Pour une colonne qui autorise des valeurs Null, **srv_describe** doit être appelé avec un type de données qui autorise des valeurs Null attribué à *desttype* (comme SRVINTN) et des données Null sont spécifiées en appelant **srv_setcollen** avec la valeur 0 attribuée à *len*. Les données de longueur nulle ne peuvent pas être spécifiées à l'aide de l'API de procédure stockée étendue.  
   
  Notez que quand le type de données de la colonne est de longueur variable, *len* n’est pas vérifié. Cette fonction retourne FAIL si elle est appelée pour une colonne de longueur fixe.  

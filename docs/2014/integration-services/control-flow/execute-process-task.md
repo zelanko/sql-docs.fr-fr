@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd58a175eaecc85e8c2bd515041753cf241adf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919191"
 ---
 # <a name="execute-process-task"></a>Tâche d'exécution de processus
   La tâche d’exécution de processus exécute une application ou un fichier de commandes dans le cadre d’un flux de travail de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Bien qu’il soit possible d’utiliser la tâche d’exécution de processus pour ouvrir des applications standard telles que [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], il est courant de l’utiliser pour exécuter des applications de gestion ou des fichiers de commandes fonctionnant sur une source de données. Par exemple, vous pouvez utiliser la tâche d'exécution de processus pour développer un fichier texte compressé. Ensuite, le package peut utiliser le fichier texte comme source de données pour le flux de données de ce package. Vous pouvez aussi utiliser la tâche d'exécution de processus pour démarrer une application [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personnalisée qui génère quotidiennement un état des ventes. Ensuite, vous pouvez associer le rapport à une tâche Envoyer un message pour le transmettre à une liste de distribution.  
@@ -60,7 +59,7 @@ ms.locfileid: "62831860"
   
  Vous pouvez utiliser une expression pour définir différentes propriétés de tâche d'exécution de processus.  
   
- Quand vous utilisez la propriété **StandardInputVariable** pour configurer la tâche d’exécution de processus afin de fournir une `Console.ReadLine` entrée, appelez la méthode à partir de l’application pour lire l’entrée. Pour plus d’informations, consultez la rubrique [Console.ReadLine, méthode](https://go.microsoft.com/fwlink/?LinkId=129201) dans la bibliothèque de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Quand vous utilisez la propriété **StandardInputVariable** pour configurer la tâche d’exécution de processus afin de fournir une entrée, appelez la `Console.ReadLine` méthode à partir de l’application pour lire l’entrée. Pour plus d’informations, consultez la rubrique [Console.ReadLine, méthode](https://go.microsoft.com/fwlink/?LinkId=129201) dans la bibliothèque de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Quand vous configurez la tâche d’exécution de processus à l’aide de la propriété **Arguments** pour fournir l’entrée, effectuez l’une des étapes suivantes pour obtenir les arguments :  
   
@@ -88,6 +87,6 @@ ms.locfileid: "62831860"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](integration-services-tasks.md)   
- [Flux de contrôle](control-flow.md)  
+ [Workflow de contrôle](control-flow.md)  
   
   

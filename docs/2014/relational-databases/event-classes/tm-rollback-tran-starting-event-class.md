@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0492c7df719b9c6177c947d9848c95fc151ac093
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051345"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting, classe d'événements
   La classe d'événements TM: Rollback Tran Starting indique qu'une demande ROLLBACK TRANSACTION commence. Le client envoie la demande par le biais de l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction va être démarrée après l'annulation de la transaction en cours.  

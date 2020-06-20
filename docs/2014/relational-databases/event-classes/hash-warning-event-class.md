@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c26b06e61a6f9fcad52dab0d042b299f993342e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052949"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning (classe d'événements)
   La classe d'événements Hash Warning peut être utilisée pour analyser une récurrence de hachage ou une cessation de hachage (interruption de hachage) qui s'est produite lors d'une opération de hachage.  
@@ -61,7 +60,7 @@ ms.locfileid: "62662343"
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IntegerData|`int`|Niveau de récurrence (récurrence du hachage uniquement).|25|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
-|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur (soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la connexion de sécurité, soit les informations d’identification de connexion Windows sous la forme * \<domaine>\\<nom d’utilisateur\>*).|11|Oui|  
+|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur (soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la connexion de sécurité, soit les informations d’identification de connexion Windows sous la forme * \<DOMAIN> \\<nom d’utilisateur \> *).|11|Oui|  
 |LoginSid|`image`|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l'affichage catalogue sys.server_principals. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  

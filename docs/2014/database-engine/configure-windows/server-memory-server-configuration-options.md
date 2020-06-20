@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934990"
 ---
 # <a name="server-memory-configuration-options"></a>Options de configuration de la mémoire du serveur
   Utilisez les deux options de mémoire du serveur, **min server memory** et **max server memory**, pour reconfigurer la quantité de mémoire (en mégaoctets) gérée par le Gestionnaire de mémoire de SQL Server pour un processus SQL Server utilisé par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "69028689"
  Le paramètre par défaut de l'option **min server memory** est 0 et le paramètre par défaut de l'option **max server memory** est 2 147 483 647 Mo. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut modifier dynamiquement sa configuration mémoire en fonction des ressources système disponibles.  
   
 > [!NOTE]  
-> Si vous donnez à **max server memory** sa valeur minimale, vous allez gravement limiter les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , jusqu'à l'empêcher même de démarrer. Si vous ne pouvez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pas démarrer après avoir modifié cette option, démarrez-le à l’aide de l’option **de démarrage-f** et réinitialisez **Max Server Memory** à sa valeur précédente. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](database-engine-service-startup-options.md).  
+> Si vous donnez à **max server memory** sa valeur minimale, vous allez gravement limiter les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , jusqu'à l'empêcher même de démarrer. Si vous ne pouvez pas démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après avoir modifié cette option, démarrez-le à l’aide de l’option **de démarrage-f** et réinitialisez **Max Server Memory** à sa valeur précédente. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](database-engine-service-startup-options.md).  
   
  Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise dynamiquement la mémoire, il interroge régulièrement le système afin de déterminer la mémoire physique disponible. La conservation de cette mémoire libre empêche le système d'exploitation de paginer. S'il y a moins de mémoire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en libère pour le système d'exploitation. S’il y a plus de mémoire disponible, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut allouer davantage de mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’ajoute de la mémoire que lorsque sa charge de travail en requiert davantage. Un serveur au repos n’augmente pas la taille de son espace d’adressage virtuel.  
   
@@ -67,7 +66,7 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
 
 |Type de système d'exploitation|Quantité de mémoire minimale autorisée pour **Max Server Memory**|  
 |-------------|----------------------------------------------------------------|  
-|32 bits|64 Mo|  
+|32 bits|64 Mo|  
 |64 bits|128 Mo| 
 
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>Comment configurer les options de mémoire à l'aide de SQL Server Management Studio  
@@ -96,14 +95,14 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
 3.  Si l'option **Maximiser le débit des données pour les applications réseau** est sélectionnée, choisissez une autre option et cliquez sur **OK**. Fermez ensuite les boîtes de dialogue restantes.  
   
 ## <a name="lock-pages-in-memory"></a>Verrouiller les pages en mémoire  
- Cette stratégie Windows détermine quels comptes peuvent utiliser un processus destiné à conserver les données en mémoire physique pour éviter leur pagination en mémoire virtuelle sur le disque. Le verrouillage des pages en mémoire peut permettre de conserver sa réactivité au serveur lors de la pagination de la mémoire sur disque. L’option SQL Server **verrouiller les pages en mémoire** a la valeur on dans les instances 32 bits et 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition et supérieure lorsque le compte avec les privilèges nécessaires pour exécuter sqlservr. exe a reçu le droit d’utilisateur Windows « pages verrouillées en mémoire » (LPIM). Dans les versions antérieures de SQL Server, la définition de l'option de verrouillage des pages pour une instance 32 bits de SQL Server exige que le compte avec les privilèges nécessaires pour exécuter sqlservr.exe ait le droit d'utilisateur LPIM et que l'option de configuration « awe_enabled » ait la valeur ON.  
+ Cette stratégie Windows détermine quels comptes peuvent utiliser un processus destiné à conserver les données en mémoire physique pour éviter leur pagination en mémoire virtuelle sur le disque. Le verrouillage des pages en mémoire peut permettre de conserver sa réactivité au serveur lors de la pagination de la mémoire sur disque. L’option SQL Server **verrouiller les pages en mémoire** a la valeur on dans les instances 32 bits et 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition et supérieure lorsque le compte avec les privilèges pour exécuter sqlservr.exe a reçu le droit d’utilisateur Windows « pages verrouillées en mémoire » (LPIM). Dans les versions antérieures de SQL Server, la définition de l'option de verrouillage des pages pour une instance 32 bits de SQL Server exige que le compte avec les privilèges nécessaires pour exécuter sqlservr.exe ait le droit d'utilisateur LPIM et que l'option de configuration « awe_enabled » ait la valeur ON.  
   
- Pour désactiver l’option **verrouiller les pages en mémoire** pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], supprimez le droit d’utilisateur « pages verrouillées en mémoire » pour le compte de démarrage SQL Server.  
+ Pour désactiver l’option **verrouiller les pages en mémoire** pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , supprimez le droit d’utilisateur « pages verrouillées en mémoire » pour le compte de démarrage SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Pour désactiver Verrouiller les pages en mémoire  
  **Pour désactiver l’option verrouiller les pages en mémoire :**  
   
-1.  Dans le menu **Démarrer**, cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez `gpedit.msc`.  
+1.  Dans le menu **Démarrer**, cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez `gpedit.msc` .  
   
      La boîte de dialogue **Stratégie de groupe** s'affiche.  
   
@@ -143,9 +142,9 @@ Vous pouvez définir les options de serveur **min server memory** et **max serve
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Apport de la quantité maximale de mémoire à SQL Server  
   
-||32 bits|64 bits|  
+||32 bits|64 bits|  
 |-|-------------|-------------|  
-|Mémoire conventionnelle|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 2 Go<br /><br /> 3 Go avec le paramètre de démarrage **/3GB** *<br /><br /> 4 Go sur WOW64\*\*|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 8 To sur l'architecture x64|  
+|Mémoire conventionnelle|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 2 Go<br /><br /> 3 Go avec le paramètre de démarrage **/3GB** *<br /><br /> 4 Go sur WOW64\*\*|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 8 To sur l'architecture x64|  
   
  ***/3GB** est un paramètre de démarrage du système d’exploitation. Pour plus d’informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
@@ -180,7 +179,7 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

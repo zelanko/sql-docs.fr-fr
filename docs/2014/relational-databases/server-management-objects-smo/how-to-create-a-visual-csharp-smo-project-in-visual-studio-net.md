@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfc8e5cf35a7f03f485bc3ff9e94ee70eab2cea2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997081"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Créer un projet SMO Visual C# dans Visual Studio .NET
   Cette section décrit comment élaborer une application de console SMO simple.  
@@ -38,7 +37,7 @@ ms.locfileid: "63131642"
   
 6.  Dans le menu **Projet**, sélectionnez **Ajouter une référence**. La boîte de dialogue **Ajouter une référence** s’affiche.  
   
-7.  Cliquez sur **Parcourir**, recherchez les assemblys Smo dans [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] le dossier, puis sélectionnez les fichiers suivants. Il s'agit des fichiers minimum requis pour générer une application SMO :  
+7.  Cliquez sur **Parcourir**, recherchez les assemblys Smo dans le [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] dossier, puis sélectionnez les fichiers suivants. Il s'agit des fichiers minimum requis pour générer une application SMO :  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   

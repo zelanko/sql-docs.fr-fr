@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a80b4690597f9274bb7ff334b5879ef465c6e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089531"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928270"
 ---
 # <a name="trace-properties-general-tab"></a>Propriétés de la trace (onglet Général)
   Utilisez l’onglet **Général** de la boîte de dialogue **Propriétés de la trace** pour consulter ou spécifier les propriétés d’une trace.  
@@ -46,7 +45,7 @@ ms.locfileid: "66089531"
  **Définir la taille de fichier maximale (Mo)**  
  Si vous décidez d'enregistrer les données de trace dans un fichier, vous devez indiquer la taille maximale de ce fichier. La valeur par défaut est 5 mégaoctets (Mo). La taille maximale est uniquement limitée par le système de fichiers (NTFS, FAT) dans lequel le fichier est enregistré.  
   
- \<Graphique> **Enregistrer sous**  
+ \<Graphic>**Enregistrer sous**  
  Une fois que vous avez choisi d'enregistrer les données dans un fichier, vous pouvez sélectionner cette icône pour modifier le nom du fichier.  
   
  **Activer la substitution de fichier**  
@@ -58,7 +57,7 @@ ms.locfileid: "66089531"
  **Enregistrer dans la table**  
  Cette option permet de capturer les données de trace dans une table de base de données. L'enregistrement des données de trace vous permet de consulter et d'analyser ces données plus tard. Ce choix peut néanmoins provoquer un surcroît de charge important sur le serveur où les données de trace sont enregistrées. Si possible, n'enregistrez pas la table de trace sur le serveur qui est tracé.  
   
- \<Graphique> la **table de destination**  
+ \<Graphic>**Table de destination**  
  Une fois que vous avez choisi d'enregistrer les données de trace dans une table de base de données, vous pouvez sélectionner cette icône pour modifier le nom de la table.  
   
  **Définir le nombre de lignes maximal (en milliers)**  

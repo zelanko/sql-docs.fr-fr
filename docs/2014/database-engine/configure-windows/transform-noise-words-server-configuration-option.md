@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934726"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words (option de configuration de serveur)
   Utilisez l' `transform noise words` option de configuration de serveur pour supprimer un message d’erreur si des mots parasites, autrement dit des [mots vides](../../relational-databases/search/full-text-search.md), provoquent le retour de lignes nulles d’une opération booléenne sur une requête de texte intégral. Cette option est utile pour les requêtes de texte intégral qui utilisent le prédicat CONTAINS dans lequel les opérations booléennes ou les opérations de proximité (NEAR) incluent des mots parasites. Les valeurs possibles sont décrites dans le tableau suivant.  

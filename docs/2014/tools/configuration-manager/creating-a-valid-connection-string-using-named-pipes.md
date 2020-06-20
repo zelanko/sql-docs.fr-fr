@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 784ef2ec305629756e0c43e1726b70c04c6194b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011651"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Création d'une chaîne de connexion valide à l'aide de canaux nommés
   Sauf modification par l’utilisateur, lorsque l’instance par défaut de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute le protocole des canaux nommés, elle utilise `\\.\pipe\sql\query` comme nom de canal. Le point indique que l’ordinateur est l’ordinateur local, `pipe` indique que la connexion est un canal nommé et `sql\query` est le nom du canal. Pour se connecter au canal par défaut, l'alias doit avoir `\\<computer_name>\pipe\sql\query` comme nom de canal. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été configuré de manière à être à l'écoute sur un autre canal, le nom de canal doit correspondre à ce canal. Par exemple, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise `\\.\pipe\unit\app` comme canal, l'alias doit utiliser `\\<computer_name>\pipe\unit\app` comme nom de canal.  

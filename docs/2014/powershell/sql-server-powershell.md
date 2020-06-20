@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92183382aa8832f3c381ce864df34c0744095da3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960029"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prend en charge Windows PowerShell, un environnement de script puissant qui permet aux administrateurs et aux développeurs d'automatiser l'administration de serveurs et le déploiement d'applications. Le langage Windows PowerShell prend en charge une logique plus complexe que les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , ce qui permet aux administrateurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de générer des scripts d'administration fiables. Les scripts Windows PowerShell peuvent également être utilisés pour administrer d'autres produits serveur [!INCLUDE[msCoName](../includes/msconame-md.md)] . Cela fournit aux administrateurs un langage de script commun entre les serveurs.  

@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7e721ca02733b1602c2388657d52321f46fa9bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d3877dd8311e0fe5b65bd4b1e7f9c40fbd84751
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934810"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit la prise en charge native des applications de messagerie et [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]de mise en file d’attente dans le. Cette opération permet aux développeurs de créer plus facilement des applications perfectionnées qui utilisent des composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates. Les développeurs peuvent utiliser [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour créer facilement des applications fiables et distribuées.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]fournit la prise en charge native des applications de messagerie et de mise en file d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Cette opération permet aux développeurs de créer plus facilement des applications perfectionnées qui utilisent des composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates. Les développeurs peuvent utiliser [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour créer facilement des applications fiables et distribuées.  
   
  Les développeurs d'applications qui utilisent [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent distribuer les charges de données sur plusieurs bases de données sans développer des mécanismes de messagerie et de communication complexes. Il est ainsi possible de réduire le travail de développement et de test puisque [!INCLUDE[ssSB](../../includes/sssb-md.md)] gère les chemins de communication dans le contexte d'une conversation. Les performances sont aussi meilleures. Par exemple, les bases de données frontales prenant en charge les sites Web peuvent enregistrer des informations et mettre des tâches intensives en file d'attente dans des bases de données principales. [!INCLUDE[ssSB](../../includes/sssb-md.md)] garantit que toutes les tâches sont gérées dans le contexte des transactions afin d’assurer une fiabilité et une cohérence techniques.  
   

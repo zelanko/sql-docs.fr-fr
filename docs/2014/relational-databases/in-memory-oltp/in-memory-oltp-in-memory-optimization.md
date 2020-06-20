@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 22faed7d9505c1ad487b5300a46a565379512091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050162"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
 
@@ -63,7 +62,7 @@ ms.locfileid: "82922098"
 > [!IMPORTANT]
 >  Certaines modifications de la syntaxe des tables et des procédures stockées sont nécessaires pour utiliser l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]. Pour plus d’informations, consultez [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md). Avant de migrer une table sur disque vers une table mémoire optimisée, consultez [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour voir les tables et les procédures stockées qui tireront parti d’[!INCLUDE[hek_2](../../../includes/hek-2-md.md)].
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
  Cette section fournit des informations sur les concepts suivants :
 
 |Rubrique|Description|
@@ -81,7 +80,7 @@ ms.locfileid: "82922098"
 |[Prise en charge d'OLTP en mémoire par Transact-SQL](transact-sql-support-for-in-memory-oltp.md)|Décrit la prise en charge [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[Prise en charge de la haute disponibilité pour les bases de données OLTP en mémoire](high-availability-support-for-in-memory-oltp-databases.md)|Décrit les groupes de disponibilité et le clustering de basculement dans l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[Prise en charge d'OLTP en mémoire par SQL Server](sql-server-support-for-in-memory-oltp.md)|Répertorie les nouveautés et les mises à jour en matière de syntaxe et de fonctionnalités prenant en charge les tables optimisées en mémoire.|
-|[Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)|Explique comment migrer les tables sur disque vers des tables optimisées en mémoire.|
+|[Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)|Explique comment migrer les tables sur disque vers des tables optimisées en mémoire.|
 
  Des informations supplémentaires sur l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] sont disponibles dans :
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 88e254954c126684eca606f318170c82d3699fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74a6db063168cf0eb444a2ee442ff44e3b09958b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662542"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053010"
 ---
 # <a name="eventlog-event-class"></a>Classe d'événements EventLog
   La classe d’événements EventLog indique que des événements ont été consignés dans le journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -28,12 +27,12 @@ ms.locfileid: "62662542"
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nom de l’application cliente qui a créé la connexion à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
+|ApplicationName|`nvarchar`|Nom de l’application cliente qui a créé la connexion à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |BinaryData|`image`|Valeur binaire dépendante de la classe d'événements capturés dans la trace.|2|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|Error|`int`|Numéro d'erreur d'un événement donné, si disponible.|31|Oui|  
+|Erreur|`int`|Numéro d'erreur d'un événement donné, si disponible.|31|Oui|  
 |EventClass|`int`|Type d’événement = 21.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  

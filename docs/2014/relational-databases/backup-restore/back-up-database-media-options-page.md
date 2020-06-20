@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd09eb091a7f488f891bc2e69d19ad039b65e065
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959615"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
   Utilisez la page  **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
@@ -111,7 +110,7 @@ ms.locfileid: "70154839"
  **Rembobiner la bande avant de décharger**  
  La bande est automatiquement libérée et rembobinée avant d'être déchargée. Cette option est activée uniquement si **Décharger la bande après la sauvegarde** est sélectionné.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

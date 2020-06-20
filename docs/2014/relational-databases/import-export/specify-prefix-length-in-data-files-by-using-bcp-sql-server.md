@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff16491ed9c021424d3d6371ccb7ba2941c61129
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050405"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
   Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
@@ -81,7 +80,7 @@ ms.locfileid: "66011757"
 |UDT (type de données défini par l'utilisateur)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> les `ntext`types `text`de données `image` , et seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez `nvarchar(max)`, `varchar(max)`et `varbinary(max)` à la place.  
+ <sup>1</sup> les `ntext` `text` types de données, et `image` seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez `nvarchar(max)` , `varchar(max)` et à la `varbinary(max)` place.  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Longueurs de préfixe pour l'importation en bloc  
  Lorsque vous importez des données en bloc, la longueur de préfixe correspond à la valeur spécifiée lors de la création du fichier de données. Si le fichier de données n’a pas été créé à l’aide d’une commande **bcp** , il n’existe probablement pas de caractères de longueur de préfixe. Dans ce cas, vous devez préciser la valeur 0 comme longueur de préfixe.  

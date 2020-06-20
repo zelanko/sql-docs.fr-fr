@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 347b20c12a0ac5edd82172741377617aa0fe12c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970215"
 ---
 # <a name="database-identifiers"></a>Identificateur de la base de données
   Le nom d'un objet d'une base de données est son identificateur. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tous les éléments peuvent avoir un identificateur. Les serveurs, les bases de données et les objets de bases de données tels que les tables, les vues, les colonnes, les index, les déclencheurs, les procédures, les contraintes, les règles, etc. peuvent avoir des identificateurs. La plupart des objets doivent avoir un identificateur ; les identificateurs sont facultatifs pour certains objets, tels que les contraintes.  

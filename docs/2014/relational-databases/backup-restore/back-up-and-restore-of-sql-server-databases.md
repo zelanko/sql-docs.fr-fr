@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec2104219d98ed3cb97bfbb8993a3c28d45841c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959769"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
   Cette rubrique décrit les avantages de la sauvegarde des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les termes de sauvegarde et de restauration de base, et présente les stratégies de sauvegarde et de restauration pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que les questions de sécurité pour la sauvegarde et la restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +37,7 @@ ms.locfileid: "70176025"
   
 
   
-##  <a name="benefits"></a><a name="Benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
   
 -   La sauvegarde de vos bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'exécution de procédures de restauration de test sur vos sauvegardes et le stockage des copies des sauvegardes à un emplacement sécurisé et hors site permettent de vous protéger contre une éventuelle perte catastrophique de données.  
   
@@ -201,7 +200,7 @@ ms.locfileid: "70176025"
 > [!NOTE]  
 >  Pour réaliser des sauvegardes partielles ou de copie uniquement, vous devez utiliser l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) avec l’option PARTIAL ou COPY_ONLY, respectivement.  
   
- **Utilisation de SQL Server Management Studio**  
+ **Utilisation de SQL Server Management Studio**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -211,7 +210,7 @@ ms.locfileid: "70176025"
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
@@ -224,7 +223,7 @@ ms.locfileid: "70176025"
 
   
 ### <a name="restoring-data-backups"></a>Restauration de sauvegardes de données  
- **Utilisation de SQL Server Management Studio**  
+ **Utilisation de SQL Server Management Studio**  
   
 -   [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -234,7 +233,7 @@ ms.locfileid: "70176025"
   
 -   [Restaurer des fichiers et des groupes de fichiers &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Restaurer une sauvegarde de base de données en mode de récupération simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -249,7 +248,7 @@ ms.locfileid: "70176025"
 
   
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>Restauration des journaux de transactions (mode de récupération complète)  
- **Utilisation de SQL Server Management Studio**  
+ **Utilisation de SQL Server Management Studio**  
   
 -   [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
@@ -257,14 +256,14 @@ ms.locfileid: "70176025"
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>Tâches de restauration supplémentaires  
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Redémarrer une opération de restauration interrompue &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
@@ -272,7 +271,7 @@ ms.locfileid: "70176025"
   
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0453d495c90c1e599bfc7777b4899f30e6659c52
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952614"
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
   Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données.  
@@ -120,7 +119,7 @@ ms.locfileid: "62872205"
   
      *@is_default*= '*État du profil par défaut* '  
   
-     où *@profile_name* est le nom du profil, et *@principal_name* est le nom de l’utilisateur ou du rôle de base *@is_default* de données, détermine si ce profil est le paramètre par défaut pour l’utilisateur ou le rôle de base de données.  
+     où *@profile_name* est le nom du profil, et *@principal_name* est le nom de l’utilisateur ou du rôle de base de données, *@is_default* détermine si ce profil est le paramètre par défaut pour l’utilisateur ou le rôle de base de données.  
   
  L'exemple suivant crée un compte et un profil privé de messagerie de base de données, puis ajoute le compte au profil et octroie au rôle de base de données **DBMailUsers** dans la base de données **msdb** l'accès à ce profil.  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default*= '*État du profil par défaut* '  
   
-     où *@profile_name* est le nom du profil, et *@principal_name* pour indiquer qu’il s’agit d’un profil *@is_default* public, détermine si ce profil est le paramètre par défaut pour l’utilisateur ou le rôle de base de données.  
+     où *@profile_name* est le nom du profil, et *@principal_name* pour indiquer qu’il s’agit d’un profil public, *@is_default* détermine si ce profil est le paramètre par défaut pour l’utilisateur ou le rôle de base de données.  
   
  L'exemple suivant crée un compte et un profil privé de messagerie de base de données, puis ajoute le compte au profil et octroie l'accès public au profil.  
   

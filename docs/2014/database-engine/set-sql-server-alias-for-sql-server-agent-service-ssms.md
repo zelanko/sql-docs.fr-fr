@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9f91ec957665975fd956e36a5af3c4261fb47af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774395"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929168"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Définir un alias SQL Server pour le service SQL Server Agent (SQL Server Management Studio)
-  Cette rubrique explique comment définir un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alias que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] l’agent doit utiliser pour se connecter au à l' [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]aide de. Par défaut, le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent se connecte à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par l'intermédiaire de canaux de communication nommés qui utilisent des noms de serveur dynamiques ne nécessitant aucune configuration supplémentaire du client. Vous devez configurer un alias de connexion serveur uniquement si vous n'utilisez pas le transport réseau par défaut ou si vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] via un autre canal nommé.  
+  Cette rubrique explique comment définir un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alias [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que l’agent doit utiliser pour se connecter au à l' [!INCLUDE[ssDE](../includes/ssde-md.md)] aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Par défaut, le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent se connecte à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par l'intermédiaire de canaux de communication nommés qui utilisent des noms de serveur dynamiques ne nécessitant aucune configuration supplémentaire du client. Vous devez configurer un alias de connexion serveur uniquement si vous n'utilisez pas le transport réseau par défaut ou si vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] via un autre canal nommé.  
   
  **Dans cette rubrique**  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62774395"
   
 -   Changer les quotas de mémoire d'un processus (SeIncreaseQuotaPrivilege)  
   
- Pour plus d’informations sur les autorisations Windows requises pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le compte de service de l’agent, consultez [Sélectionner un compte pour le service SQL Server Agent](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de service Windows et les autorisations](configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Pour plus d’informations sur les autorisations Windows requises pour le compte de service de l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agent, consultez [Sélectionner un compte pour le service SQL Server Agent](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) et configurer les [comptes de service Windows et les autorisations](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

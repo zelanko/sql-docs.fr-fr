@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968199"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Étape 2 : Création d’un fichier corrompu
   Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
@@ -34,12 +33,12 @@ ms.locfileid: "62767381"
   
     3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Utilisez la fonctionnalité Rechercher et remplacer de l’éditeur de texte pour rechercher toutes `VEB` les instances de et `BAD`les remplacer par.  
+2.  Utilisez la fonctionnalité Rechercher et remplacer de l’éditeur de texte pour rechercher toutes les instances de `VEB` et les remplacer par `BAD` .  
   
-3.  Dans le même dossier que les autres exemples de fichiers de données, enregistrez le fichier `Currency_BAD.txt`modifié sous.  
+3.  Dans le même dossier que les autres exemples de fichiers de données, enregistrez le fichier modifié sous `Currency_BAD.txt` .  
   
     > [!IMPORTANT]  
-    >  Assurez- `Currency_BAD.txt` vous que est enregistré dans le même dossier que les autres exemples de fichiers de données.  
+    >  Assurez-vous que `Currency_BAD.txt` est enregistré dans le même dossier que les autres exemples de fichiers de données.  
   
 4.  Fermez l'éditeur de texte.  
   

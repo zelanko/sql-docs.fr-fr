@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: af3e8d9184b12a726361643c563402242c6b04cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3291a858d8ef037e7cca92eb2e6abb19aec4da8e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959429"
 ---
 # <a name="backup-compression-sql-server"></a>Compression de sauvegardes (SQL Server)
   Cette rubrique décrit la compression des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notamment les restrictions, les compromis en termes de performances pour la compression des sauvegardes, la configuration pour la compression des sauvegardes et le taux de compression.  
   
 > [!NOTE]  
->  Pour plus d’informations sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] les éditions de qui prennent en charge la compression de sauvegarde, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée.  
+>  Pour plus d’informations sur les éditions de qui [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prennent en charge la compression de sauvegarde, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée.  
   
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
@@ -109,7 +108,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceoff-transact-sql)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Indicateurs de trace &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ff715b51a7fa84a462d1439e78627d648e20472d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065956"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Leçon 1 : publication de données à l'aide de la réplication transactionnelle
    Dans cette leçon, vous créez une publication transactionnelle en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble filtré de la table **Product** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Vous allez aussi ajouter à la liste d'accès à la publication le compte de connexion SQL Server utilisée par l'Agent de distribution. Avant de commencer ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur à la réplication](tutorial-preparing-the-server-for-replication.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "83000455"
   
 10. Dans la page Sécurité de l’agent, décochez la case **Utiliser les paramètres de sécurité de l’Agent d’instantané** .  
   
-11. Cliquez sur **Paramètres de sécurité** pour l’Agent d’instantané, entrez \<_nom_ordinateur>_**\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte et cliquez sur **OK**.  
+11. Cliquez sur **paramètres de sécurité** pour la agent d’instantané, entrez \<_Machine_Name> _**\ repl_snapshot** dans la zone **compte de processus** , fournissez le mot de passe de ce compte, puis cliquez sur **OK**.  
   
 12. Répétez l’étape précédente pour définir repl_logreader comme compte de processus de l’Agent de lecture du journal, puis cliquez sur **Terminer**.  
   

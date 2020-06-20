@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c3ee58ebc7cd579b04d317b44e823779ae987e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745879"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004550"
 ---
 # <a name="synchronize-a-push-subscription"></a>Synchroniser un abonnement par émission (push)
   Cette rubrique explique comment synchroniser un abonnement par émission de données (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], d' [agents de réplication](agents/replication-agents-overview.md)ou d'objets RMO (Replication Management Objects).  
@@ -40,7 +39,7 @@ ms.locfileid: "62745879"
   
 4.  Cliquez avec le bouton droit sur l'abonnement à synchroniser, puis cliquez sur **Afficher l'état de synchronisation**.  
   
-5.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
+5.  Dans la boîte de dialogue **afficher l’état de synchronisation- \<Subscriber> \<SubscriptionDatabase> :** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
   
 6.  Cliquez sur **Fermer**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62745879"
   
 4.  Un message sur l'établissement d'une connexion avec le serveur de distribution s'affiche. Cliquez sur **OK**.  
   
-5.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
+5.  Dans la boîte de dialogue **afficher l’état de synchronisation- \<Subscriber> \<SubscriptionDatabase> :** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
   
 6.  Cliquez sur **Fermer**.  
   

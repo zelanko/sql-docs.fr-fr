@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 826622cd17862c0535e60c01baab756af2b2996b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004711"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchroniser un abonnement par extraction
   Cette rubrique explique comment synchroniser un abonnement par extraction de données (pull) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], d' [agents de réplication](agents/replication-agents-overview.md)ou d'objets RMO (Replication Management Objects).  
@@ -38,7 +37,7 @@ ms.locfileid: "63186230"
   
 3.  Cliquez avec le bouton droit sur l'abonnement à synchroniser, puis cliquez sur **Afficher l'état de synchronisation**.  
   
-4.  Dans la boîte de dialogue **Afficher l’état de synchronisation - \<Abonné> : \<Base_de_données_Abonnement>**, cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
+4.  Dans la boîte de dialogue **afficher l’état de synchronisation- \<Subscriber> \<SubscriptionDatabase> :** , cliquez sur **Démarrer**. Lorsque la synchronisation est terminée, le message **Synchronisation terminée** s'affiche.  
   
 5.  Cliquez sur **Fermer**.  
   
@@ -58,15 +57,15 @@ ms.locfileid: "63186230"
   
     -   **-Serveur de distribution**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  =  **1**  
   
     -   **-Abonné**  
   
     -   **-SubscriberDB**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  =  **1**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-SubscriptionType**  =  **1**  
   
      Si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez également spécifier les arguments suivants :  
   
@@ -74,19 +73,19 @@ ms.locfileid: "63186230"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  =  **0**  
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>Pour démarrer l'Agent de fusion à partir de l'invite de commandes ou à partir d'un fichier de commandes  
   
@@ -96,21 +95,21 @@ ms.locfileid: "63186230"
   
     -   **-PublisherDB**  
   
-    -   **-PublisherSecurityMode** = **1**  
+    -   **-PublisherSecurityMode**  =  **1**  
   
     -   **-Publication**  
   
     -   **-Serveur de distribution**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  =  **1**  
   
     -   **-Abonné**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  =  **1**  
   
     -   **-SubscriberDB**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-SubscriptionType**  =  **1**  
   
      Si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez également spécifier les arguments suivants :  
   
@@ -118,19 +117,19 @@ ms.locfileid: "63186230"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  =  **0**  
   
 ###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Exemples (Agents de réplication)  
  L'exemple suivant démarre l'Agent de distribution pour synchroniser un abonnement par extraction de données (pull). Toutes les connexions sont effectuées au moyen de l'authentification Windows.  
@@ -172,7 +171,7 @@ ms.locfileid: "63186230"
     -   Obtenez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> à partir de la propriété <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> et appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> . Cette méthode démarre l'agent en mode synchrone, et le travail d'agent en cours d'exécution conserve le contrôle. Au cours de l'exécution synchrone, vous pouvez gérer l'événement <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> pendant que l'agent est en cours d'exécution.  
   
         > [!NOTE]  
-        >  Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (valeur par défaut) lorsque vous avez créé l’abonnement par extraction, vous devez <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>également <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>spécifier, et éventuellement <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> et parce que les métadonnées liées au travail de l’agent pour l’abonnement ne sont pas disponibles dans [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
+        >  Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (valeur par défaut) lorsque vous avez créé l’abonnement par extraction, vous devez également spécifier <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A> , <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A> et éventuellement, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> et <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> parce que les métadonnées liées au travail de l’agent pour l’abonnement ne sont pas disponibles dans [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>Pour synchroniser un abonnement par extraction de données (pull) vers une publication de fusion  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63186230"
     -   Obtenez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> à partir de la propriété <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> et appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> . Cette méthode démarre l'Agent de fusion en mode synchrone, et le travail d'agent en cours d'exécution conserve le contrôle. Au cours de l'exécution synchrone, vous pouvez gérer l'événement <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> pendant que l'agent est en cours d'exécution.  
   
         > [!NOTE]  
-        >  Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (valeur par défaut) lorsque vous avez créé l’abonnement par extraction, vous devez <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>également <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>spécifier <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>,, et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, éventuellement <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>, et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> parce que les métadonnées associées au travail de l’agent pour l’abonnement ne sont pas disponibles dans [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
+        >  Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (valeur par défaut) lorsque vous avez créé l’abonnement par extraction, vous devez également spécifier <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A> et, éventuellement,, et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> parce que les métadonnées associées au travail de l’agent pour l’abonnement ne sont pas disponibles dans [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple synchronise un abonnement par envoi de données (pull) vers une publication transactionnelle, où l'agent est démarré en mode asynchrone au moyen du travail d'agent.  

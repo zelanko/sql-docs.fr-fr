@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c7aded5577e28d94f42e108e46bb8a9c3cd6020
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58acde8aaebdcac629463edcfb565eed13355ad4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036757"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Les constantes importantes sont tapées en tant que types à valeur élevée en mode de compatibilité 90 ou ultérieur
   Le Conseiller de mise à niveau a détecté la présence de constantes importantes. Les constantes de chaîne de caractères et les constantes binaires dont la taille dépasse 8 000 octets sont traitées comme des types de données d'objet volumineuses dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, les constantes caractère, Unicode et binaires importantes sont tapées en tant que types à valeurs élevées.  

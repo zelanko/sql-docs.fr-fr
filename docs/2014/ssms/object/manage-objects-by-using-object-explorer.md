@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1044dfabf22f8d6b00518a74b6afd4127048cd07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058610"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gérer les objets à l'aide de l'Explorateur d'objets
   Vous pouvez utiliser l'Explorateur d'objets pour gérer des objets tels que les bases de données, les tables et les procédures stockées.  

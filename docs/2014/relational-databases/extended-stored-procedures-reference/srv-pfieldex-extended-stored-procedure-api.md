@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8bacfd4f955f60b17b439c8066a3b1cba2c52392
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f375f8befe51455679fdcb68fd4a79c05276fc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050621"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API de procédure stockée étendue)
     
@@ -69,7 +68,7 @@ len
 > [!IMPORTANT]  
 >  La mémoire tampon retournée à partir du serveur doit être en lecture seule. Dans le cas contraire, l'état du serveur peut être endommagé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

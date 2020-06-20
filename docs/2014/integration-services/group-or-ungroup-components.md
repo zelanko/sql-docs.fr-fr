@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f9ba8c8ce532621a44ac8a7ab58cb712a97934e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0beeed1beea03f3acdb869fcd10cef163eaedb9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768121"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968355"
 ---
 # <a name="group-or-ungroup-components"></a>Grouper ou dissocier des composants
   Les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] prennent en charge le groupement réductible. Si un package contient plusieurs composants, les onglets peuvent être encombrés, ce qui rend difficile l'affichage simultané de tous les composants et la recherche de l'élément avec lequel vous souhaitez travailler. La fonctionnalité de groupement réductible permet d'économiser de l'espace sur la surface de travail et de faciliter l'utilisation des packages volumineux.  

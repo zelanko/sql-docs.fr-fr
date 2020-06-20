@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee72512a507299e71f13fee689709a9403bb04e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058658"
 ---
 # <a name="view-information-about-an-alert"></a>Afficher les informations relatives à une alerte
-  Cette rubrique explique comment afficher des informations sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les alertes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[tsql](../../includes/tsql-md.md)]à l’aide de ou de.  
+  Cette rubrique explique comment afficher des informations sur les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertes de l’agent dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Dans cette rubrique**  
   

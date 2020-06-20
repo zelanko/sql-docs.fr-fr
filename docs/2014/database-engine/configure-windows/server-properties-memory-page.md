@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee690ddfc4cc02769db6d07d226cb154f3c4eae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934920"
 ---
 # <a name="server-properties-memory-page"></a>Propriétés du serveur (page Mémoire)
   Cette page vous permet d'afficher et de modifier les options de mémoire de votre serveur. Lorsque **Mémoire minimale du serveur (en Mo)** a la valeur 0 et que **Mémoire maximale du serveur** a la valeur 2 147 483 647 Mo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut bénéficier d'un volume optimal de mémoire à tout moment, selon la quantité de mémoire que le système d'exploitation et les autres applications utilisent simultanément. La mémoire est allouée au fur et à mesure des modifications de la charge de l'ordinateur et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également limiter l'allocation de cette mémoire dynamique aux valeurs minimale et maximale spécifiées ci-dessous.  

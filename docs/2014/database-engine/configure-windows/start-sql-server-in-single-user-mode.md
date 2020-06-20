@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2600524da45f9a81f155432397cee2e7e876274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934780"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Démarrer SQL Server en mode mono-utilisateur
   Dans certaines circonstances, vous devrez peut-être démarrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur à l’aide de **startup option -m.** Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données master ou une autre base de données système endommagées. Les deux actions requièrent le démarrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur.  
@@ -36,7 +35,7 @@ ms.locfileid: "62809053"
   
  Lorsque vous démarrez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'exécution de l'Explorateur d'objets dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] peut échouer, car il requiert plusieurs connexions pour certaines opérations. Pour gérer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur, exécutez des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] en vous connectant uniquement via l’éditeur de requête dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou utilisez l’ [utilitaire sqlcmd](../../tools/sqlcmd-utility.md).  
   
- Lorsque vous utilisez l’option **-m** avec **sqlcmd** ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez limiter les connexions à une application cliente spécifiée. Par exemple, **-m "sqlcmd"** limite les connexions à une connexion unique et cette connexion doit s’identifier en tant que programme client **sqlcmd** . Utilisez cette option lorsque vous démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur et qu'une application cliente inconnue utilise la seule connexion disponible. Pour vous connecter par le biais de l’éditeur de requête dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilisez **-m"Microsoft SQL Server Management Studio - Query"**.  
+ Lorsque vous utilisez l’option **-m** avec **sqlcmd** ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous pouvez limiter les connexions à une application cliente spécifiée. Par exemple, **-m "sqlcmd"** limite les connexions à une connexion unique et cette connexion doit s’identifier en tant que programme client **sqlcmd** . Utilisez cette option lorsque vous démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur et qu'une application cliente inconnue utilise la seule connexion disponible. Pour vous connecter par le biais de l’éditeur de requête dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilisez **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  N'utilisez pas cette option comme fonctionnalité de sécurité. L'application cliente fournit le nom d'application cliente et peut fournir un nom erroné dans la chaîne de connexion.  
@@ -55,7 +54,7 @@ ms.locfileid: "62809053"
   
 4.  Vérifiez dans la console de l'administrateur de cluster ou de gestion de cluster de basculement que la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est encore hors connexion.  
   
-5.  Connectez-vous maintenant à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant la commande suivante et exécutez l’opération nécessaire : SQLCMD -E -S\<nom_serveur>.  
+5.  Connectez-vous maintenant à à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aide de la commande suivante et exécutez l’opération nécessaire : sqlcmd-E-S \<servername> .  
   
 6.  Une fois que l'opération est terminée, fermez l'invite de commandes et remettez les ressources SQL et d'autres ressources en ligne via la console de l'administrateur de cluster.  
   

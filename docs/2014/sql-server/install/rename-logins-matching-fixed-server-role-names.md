@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059092"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Renommer les accès correspondant aux noms de rôles serveur fixes
   Le Conseiller de mise à niveau a détecté un ou plusieurs noms de comptes de connexion définis par l'utilisateur correspondant aux noms des rôles serveur fixes. Les noms des rôles serveur fixes sont réservés. Renommez l'accès avant la mise à niveau.  
@@ -60,7 +59,7 @@ ms.locfileid: "72278218"
   
 2.  Supprimez les connexions.  
   
-3.  Utilisez la procédure système **sp_addlogin** pour créer des connexions. Spécifiez le SID retourné à l’étape 1 ** \@** dans le paramètre sid pour chaque connexion correspondante.  
+3.  Utilisez la procédure système **sp_addlogin** pour créer des connexions. Spécifiez le SID retourné à l’étape 1 dans le paramètre ** \@ sid** pour chaque connexion correspondante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

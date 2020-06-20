@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea211927bd9325bbbd39415fcb30e191570bf469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011687"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Leçon 1 : Création des objets de base de données
   Cette leçon vous montre comment créer une base de données, une table dans la base de données, puis accéder aux données et les modifier dans la table. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  

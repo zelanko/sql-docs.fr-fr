@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62938581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065850"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visionneuse des conflits de réplication Microsoft (réplication de fusion)
   La Visionneuse des conflits de réplication permet d'afficher et de résoudre les conflits qui se sont produits pendant la synchronisation de la réplication. Des conflits ont lieu lorsque les mêmes données sont modifiées sur deux serveurs différents, par exemple sur un Éditeur et un Abonné ou sur deux Abonnés différents. La réplication résout automatiquement les conflits à l'aide du résolveur de conflits sélectionné lors de la création de l'article. Cependant, la Visionneuse des conflits de réplication permet de choisir une résolution différente des conflits lorsque c'est nécessaire. Les conflits suivants peuvent se produire :  
@@ -46,7 +45,7 @@ ms.locfileid: "62938581"
  **Publication**  
  Choisissez une publication qui comporte des tables faisant l'objet de conflits.  
   
- **Table de charge de travail**  
+ **Table**  
  Choisissez une table qui comporte des conflits.  
   
  **Définir le filtre**  
@@ -61,7 +60,7 @@ ms.locfileid: "62938581"
  **Sélectionner aucun**  
  Désélectionne tous les conflits de la grille.  
   
- **Remove**  
+ **Supprimer**  
  Supprime les conflits sélectionnés et leurs métadonnées associées des tables système de réplication. Vous obtenez le même résultat en cliquant sur le bouton Soumettre le gagnant (sans modifier les données) de chaque conflit sélectionné.  
   
  **Afficher toutes les colonnes**  

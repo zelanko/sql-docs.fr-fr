@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd84bacfd389651abaf00486cd9940d95a26b0b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87592be4ea5698f9a7a6cb5c45bdb8cfe4fbd484
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050513"
 ---
 # <a name="srv_setcoldata-extended-stored-procedure-api"></a>srv_setcoldata (API de procédure stockée étendue)
     
@@ -55,7 +54,7 @@ data
  *srvproc*  
  Pointeur vers la structure SRV_PROC qui est le handle pour une connexion cliente particulière. La structure contient des informations que la bibliothèque d'API de procédure stockée étendue utilise pour gérer les communications et les données entre l'application et le client.  
   
- *chronique*  
+ *column*  
  Indique le numéro de la colonne pour laquelle l'adresse est spécifiée. Les colonnes sont numérotées, en commençant par 1.  
   
  *data*  
@@ -64,7 +63,7 @@ data
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque colonne de la ligne doit être au préalable définie avec **srv_describe**. Les adresses des données de colonne sont définies initialement avec **srv_describe**. En cas de modification de l'adresse des données de colonne, **srv_setcoldata** doit être appelé pour spécifier la nouvelle adresse des données et **srv_setcoldata** doit être appelé séparément pour chaque colonne modifiée.  
   
  Pour représenter des données Null, attribuez la valeur 0 à la longueur de la colonne avec **srv_setcollen**. L'adresse des données est alors ignorée.  

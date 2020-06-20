@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 068220e731c905f32dff471d477ae27742698e23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066214"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Effacer les résultats d'une requête (Visual Database Tools)
   Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de vues**, vous pouvez effacer le volet Résultats. Cette procédure s’applique aux requêtes créées à l’aide de l’option **Ouvrir la vue** ou **Ouvrir la table** de l’Explorateur d’objets. Dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], après l’exécution d’une requête dans l’Éditeur de requête, le volet Résultats ne peut être effacé qu’en fermant la fenêtre Éditeur de requête ou en exécutant une autre requête.  

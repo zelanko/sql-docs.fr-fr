@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba7914456e4ffcf19a52c6e7f7206a390147cc2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 843e15f6f4cc0e683bb24a9a4709d66707111737
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052954"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>FT:Crawl Aborted, classe d'événements
   La classe d’événements **FT:Crawl Aborted** indique qu’une exception s’est produite au cours d’une analyse de texte intégral. Cette erreur entraîne généralement l'arrêt de l'analyse de texte intégral. Pour plus de détails sur l'erreur, consultez le journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ou le journal d'analyse.  
