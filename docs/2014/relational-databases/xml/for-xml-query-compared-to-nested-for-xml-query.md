@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5e5bb88f57d471a199d925039d551a1f206e511b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d1be9f993b9400d51f3f129d48a85bd92d99b2c2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054902"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparaison de la requête FOR XML et de la requête FOR XML imbriquée
   Cette rubrique compare une requête FOR XML d'un seul niveau à une requête FOR XML imbriquée. L'un des avantages liés à l'utilisation des requêtes FOR XML imbriquées est que vous pouvez spécifier une combinaison de données XML centrées sur l'attribut et centrées sur l'élément pour les résultats de requête. L'exemple suivant en offre une illustration.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea0abd8387b638ce7d51f0fb2f40424adce10187
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa34f8acf54619b3c7154741b4b07640b1683689
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057673"
 ---
 # <a name="sql-server-profiler-f1-help"></a>Aide (F1) du Générateur de profils SQL
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft est un outil qui capture les événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un serveur. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème.  

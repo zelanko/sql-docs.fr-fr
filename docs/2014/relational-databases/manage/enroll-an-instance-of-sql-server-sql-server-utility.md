@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023545"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
   Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
@@ -169,7 +168,7 @@ ms.locfileid: "72798082"
 >   
 >  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT '\<DomainName\AccountName>', code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
+>  Informations supplémentaires : impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT' \<DomainName\AccountName> ', code d’erreur 0X5. (Microsoft SQL Server, erreur : 15404)  
 >   
 >  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f9b8ecedf6a1736fa287d082d8d446c5052078d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955053"
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
   Si une transaction est active au point auquel du code Common Language Runtime (CLR) qui s'exécute sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée à travers la classe `System.Transactions.Transaction`. La propriété `Transaction.Current` est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie `Transaction.Current` automatiquement lorsque la méthode `Connection.Open` est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé `Enlist` n'ait la valeur « false » dans la chaîne de connexion).  
@@ -43,7 +42,7 @@ ms.locfileid: "62920020"
   
 -   La procédure ou fonction managée peut renvoyer une valeur en utilisant un paramètre de sortie. La procédure [!INCLUDE[tsql](../../includes/tsql-md.md)] appelante peut vérifier la valeur renvoyée et, le cas échéant, exécuter `ROLLBACK TRANSACTION`.  
   
--   La procédure ou fonction managée peut lever une exception personnalisée. La procédure [!INCLUDE[tsql](../../includes/tsql-md.md)] appelante peut intercepter l’exception levée par la procédure ou fonction managée dans un bloc try/ `ROLLBACK TRANSACTION`catch et exécuter.  
+-   La procédure ou fonction managée peut lever une exception personnalisée. La procédure appelante [!INCLUDE[tsql](../../includes/tsql-md.md)] peut intercepter l’exception levée par la procédure ou fonction managée dans un bloc try/catch et exécuter `ROLLBACK TRANSACTION` .  
   
 -   La procédure ou fonction managée peut annuler la transaction actuelle en appelant la méthode `Transaction.Rollback` si une certaine condition est remplie.  
   

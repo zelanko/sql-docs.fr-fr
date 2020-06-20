@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c0ccfb05b7b9eb6244e6d403c8975c3af1358a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 189667ecd2756ebf0026a22d981f9bb0ddd347c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056979"
 ---
 # <a name="reinitialize-subscriptions"></a>Réinitialiser des abonnements
   La réinitialisation d'un abonnement nécessite l'application d'un nouvel instantané d'un ou plusieurs articles à un ou plusieurs Abonnés : la réplication transactionnelle et la réplication d'instantané permettent à des articles individuels d'être réinitialisés ; la réplication de fusion nécessite que tous les articles soient réinitialisés. Les nœuds d'une topologie de réplication transactionnelle d'égal à égal ne peuvent pas être réinitialisés. Si vous voulez être certain qu'un nœud dispose d'une nouvelle copie des données, restaurez une sauvegarde sur le nœud. Une réinitialisation se produit pour l'une de ces deux raisons :  

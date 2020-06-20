@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7eae3d290a70bedee0ed9badf9e6d0503caa2bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955009"
 ---
 # <a name="sqltriggercontext-object"></a>Objet SqlTriggerContext
-  La classe `SqlTriggerContext` fournit des informations de contexte sur le déclencheur. Ces informations contextuelles comprennent le type d'action ayant provoqué l'activation du déclencheur, les colonnes qui ont été modifiées dans une opération UPDATE et, dans le cas d'un déclencheur en langage de définition de données (DDL), une structure `EventData` XML qui décrit l'opération de déclenchement. Pour plus d’informations et pour obtenir des exemples d' `SqlTriggerContext` utilisation de la classe, consultez [déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md).  
+  La classe `SqlTriggerContext` fournit des informations de contexte sur le déclencheur. Ces informations contextuelles comprennent le type d'action ayant provoqué l'activation du déclencheur, les colonnes qui ont été modifiées dans une opération UPDATE et, dans le cas d'un déclencheur en langage de définition de données (DDL), une structure `EventData` XML qui décrit l'opération de déclenchement. Pour plus d’informations et pour obtenir des exemples d’utilisation de la `SqlTriggerContext` classe, consultez [déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md).  
   
- Pour plus d’informations, consultez `Microsoft.SqlServer.Server.SqlTriggerContext` la documentation de référence sur les classes dans la documentation du kit de développement logiciel (SDK) .NET Framework.  
+ Pour plus d’informations, consultez la `Microsoft.SqlServer.Server.SqlTriggerContext` documentation de référence sur les classes dans la documentation du kit de développement logiciel (SDK) .NET Framework.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclencheurs CLR](../../database-engine/dev-guide/clr-triggers.md)   

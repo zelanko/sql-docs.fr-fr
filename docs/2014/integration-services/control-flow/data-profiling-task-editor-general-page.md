@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72e81e6d34a386c04d18f050fb8010a3bcf6b7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919258"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Éditeur de tâche de profilage de données (page Général)
   Utilisez la page **Général** de l' **Éditeur de tâche de profilage de données** pour configurer les options suivantes :  
@@ -58,9 +57,9 @@ ms.locfileid: "62832215"
  **Destination**  
  Spécifiez le gestionnaire de connexions de fichiers ou la variable de package qui contient la sortie du profil des données :  
   
--   Si l'option **DestinationType** est définie sur **FileConnection**, l'option **Destination** affiche les gestionnaires de connexions de fichiers disponibles. Choisissez l’un de ces gestionnaires de connexions ou sélectionnez \<Nouvelle connexion de fichier> pour créer un nouveau gestionnaire de connexions de fichiers.  
+-   Si l'option **DestinationType** est définie sur **FileConnection**, l'option **Destination** affiche les gestionnaires de connexions de fichiers disponibles. Sélectionnez l’un de ces gestionnaires de connexions ou sélectionnez \<New File connection> pour créer un gestionnaire de connexions de fichiers.  
   
--   Si l'option **DestinationType** est définie sur **Variable**, l'option **Destination** affiche les variables de package disponibles dans la liste **Destination** . Choisissez l’une de ces variables ou sélectionnez \<Nouvelle variable> pour créer une variable.  
+-   Si l'option **DestinationType** est définie sur **Variable**, l'option **Destination** affiche les variables de package disponibles dans la liste **Destination** . Sélectionnez l’une de ces variables ou sélectionnez cette option \<New Variable> pour créer une variable.  
   
  **OverwriteDestination**  
  Spécifiez si le fichier de sortie est à remplacer s'il existe déjà. La valeur par défaut est **False**. La valeur de cette propriété est utilisée uniquement lorsque l'option DestinationType est définie sur FileConnection. Lorsque l'option DestinationType est définie sur Variable, la tâche remplace toujours la valeur précédente de la variable.  
@@ -76,7 +75,7 @@ ms.locfileid: "62832215"
  Ouvre la visionneuse du profil des données. La visionneuse de profil des données autonome affiche la sortie du profil des données de la tâche de profilage des données. Pour afficher la sortie du profil des données, vous devez avoir exécuté la tâche de profilage des données dans le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et avoir calculé les profils des données.  
   
 > [!NOTE]  
->  Pour ouvrir la Visionneuse du profil des données, vous pouvez aussi exécuter DataProfileViewer.exe dans le dossier, *\<lecteur>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
+>  Vous pouvez également ouvrir la visionneuse du profil des données en exécutant l' DataProfileViewer.exe dans le dossier *\<drive>* : \Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)   

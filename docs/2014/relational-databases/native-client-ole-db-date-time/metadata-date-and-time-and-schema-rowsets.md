@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9238898efd324fae1e4990405c90e31fb7876ca4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ab953952de1c288bcac31548c9562e9ae570bee6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705032"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043577"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Ensembles de lignes de date et d’heure et de schéma
   Cette rubrique fournit des informations sur l'ensemble de lignes COLUMNS et l'ensemble de lignes PROCEDURE_PARAMETERS. Ces informations concernent les améliorations apportées aux date et heure OLE DB pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -27,7 +26,7 @@ ms.locfileid: "82705032"
   
 |Type de colonne|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Désactiver|0|  
+|Date|DBTYPE_DBDATE|Désactiver|0|  
 |time|DBTYPE_DBTIME2|Définissez|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Désactiver|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Désactiver|3|  

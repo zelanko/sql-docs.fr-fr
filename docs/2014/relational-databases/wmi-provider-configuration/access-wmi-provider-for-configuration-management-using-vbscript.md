@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6a4b5fe474481288d8b8edd844be7af12ccbcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061309"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>Modifier les propriétés avancées du service SQL Server à l'aide de VBScript
-  Cette section décrit comment créer un programme VBScript qui répertorie la version des instances installées [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui s’exécutent sur un ordinateur.  
+  Cette section décrit comment créer un programme VBScript qui répertorie la version des instances installées de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s’exécutent sur un ordinateur.  
   
  L'exemple de code répertorie les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécutent sur l'ordinateur et leur version.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62705065"
   
 4.  Utilisez la méthode `ExecQuery` et une requête WQL pour extraire le nom et la version des instances installées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-5.  Enregistrez le fichier .  
+5.  Enregistrez le fichier.  
   
 6.  Exécutez le script en tapant `cscript test.vbs` à l’invite de commandes.  
   

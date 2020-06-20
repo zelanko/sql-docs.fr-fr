@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d388256f8c536724e0819704c268aaad379d85e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055473"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
   La fonctionnalité Audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d’effectuer l’audit d’événements et de groupes d’événements au niveau du serveur et au niveau de la base de données. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](sql-server-audit-database-engine.md).  
@@ -88,7 +87,7 @@ ms.locfileid: "63238133"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsque vous utilisez l'instruction ALTER AUTHORIZATION pour changer le propriétaire d'une base de données et que les autorisations requises à cet effet sont activées. Cet événement est déclenché pour toute modification du propriétaire de la base de données sur une base de données sur le serveur. Équivaut à la [classe d’événements Audit Change Database Owner](../../event-classes/audit-change-database-owner-event-class.md).|  
 |DATABASE_PERMISSION_CHANGE_GROUP|Cet événement est déclenché chaque fois qu’une instruction GRANT, REVOKE ou DENY est émise pour une autorisation d’instruction par un principal dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (cela s’applique aux événements de base de données uniquement, tels que l’accord d’autorisations sur une base de données).<br /><br /> Cet événement est déclenché pour toute modification d'autorisation de base de données pour une base de données dans le serveur. Équivaut à la [classe d’événements Audit Database Scope GDR](../../event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Cet événement est déclenché lorsque des principaux, tels que des utilisateurs, sont créés, modifiés ou supprimés d'une base de données. Équivaut à la [classe d’événements Audit Database Principal Management](../../event-classes/audit-database-principal-management-event-class.md). (Également équivalent à la Classe d'événements d'audit Add DB Principal, qui se produit sur les procédures stockées déconseillées sp_grantdbaccess, sp_revokedbaccess, sp_addPrincipal et sp_dropPrincipal.)<br /><br /> Cet événement est déclenché chaque fois qu'un rôle de base de données est ajouté ou supprimé à l'aide des procédures stockées sp_addrole et sp_droprole. Cet événement est déclenché lorsque des principaux de base de données sont créés, modifiés ou supprimés d'une base de données. Équivaut à la [classe d’événements Audit Add Role](../../event-classes/audit-add-role-event-class.md).|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’opération d’emprunt d’identité dans la portée de la base de données, telle que EXECUTE AS \<principal> ou SETPRINCIPAL. Cet événement est déclenché pour les emprunts d'identité effectués dans une base de données. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’opération d’emprunt d’identité dans la portée de la base de données, telle que EXECUTe AS \<principal> ou SETPRINCIPAL. Cet événement est déclenché pour les emprunts d'identité effectués dans une base de données. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée à un rôle de base de données ou en est supprimée. Cette classe d'événements est déclenchée pour les procédures stockées sp_addrolemember, sp_changegroup et sp_droprolemember. Cet événement est déclenché en cas de modification d'un membre de rôle Base de données dans toute base de données. Équivaut à la [classe d’événements Audit Add Member to DB Role](../../event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Cet événement est déclenché chaque fois qu'un principal émet une commande DBCC. Équivaut à la [classe d’événements Audit DBCC](../../event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données autonome et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login Failed](../../event-classes/audit-login-failed-event-class.md).|  
@@ -106,7 +105,7 @@ ms.locfileid: "63238133"
 |SERVER_OPERATION_GROUP|Cet événement est déclenché lorsque des opérations d'audit de sécurité, telles que la modification de paramètres, de ressources, d'accès externe ou d'autorisation sont utilisées. Équivaut à la [classe d’événements Audit Server Operation](../../event-classes/audit-server-operation-event-class.md).|  
 |SERVER_PERMISSION_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction GRANT, REVOKE ou DENY est émise pour les autorisations dans la portée du serveur, par exemple en cas de création d'une connexion. Équivaut à la [classe d’événements Audit Server Scope GDR](../../event-classes/audit-server-scope-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|Cet événement est déclenché lorsque des principaux de serveur sont créés, modifiés ou supprimés. Équivaut à la [classe d’événements Audit Server Principal Management](../../event-classes/audit-server-principal-management-event-class.md).<br /><br /> Cet événement est déclenché lorsqu'un principal émet les procédures stockées sp_defaultdb ou sp_defaultlanguage ou des instructions ALTER LOGIN. Équivaut à la [classe d’événements Audit Addlogin](../../event-classes/audit-addlogin-event-class.md).<br /><br /> Cet événement est déclenché sur les procédures stockées sp_addlogin et sp_droplogin. Équivaut également à la [classe d’événements Audit Login Change Property](../../event-classes/audit-login-change-property-event-class.md).<br /><br /> Cet événement est déclenché pour les procédures stockées sp_grantlogin ou sp_revokelogin. Équivaut à la [classe d’événements Audit Login GDR](../../event-classes/audit-login-gdr-event-class.md).|  
-|SERVER_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’opération d’emprunt d’identité dans la portée du serveur, telle que EXECUTE AS \<login>. Équivaut à la [classe d’événements Audit Server Principal Impersonation](../../event-classes/audit-server-principal-impersonation-event-class.md).|  
+|SERVER_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’emprunt d’identité dans la portée du serveur, par exemple EXECUTe AS \<login> . Équivaut à la [classe d’événements Audit Server Principal Impersonation](../../event-classes/audit-server-principal-impersonation-event-class.md).|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée ou supprimée d'un rôle serveur fixe. Cet événement est déclenché pour les procédures stockées sp_addsrvrolemember et sp_dropsrvrolemember. Équivaut à la [classe d’événements Audit Add Login to Server Role](../../event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Cet événement est déclenché lorsque l'état du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est modifié. Équivaut à la [classe d’événements Audit Server Starts and Stops](../../event-classes/audit-server-starts-and-stops-event-class.md).|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal s'est connecté à une base de données autonome. Équivalent à la classe d'événements Audit Successful Database Authentication.|  
@@ -115,7 +114,7 @@ ms.locfileid: "63238133"
 |USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données autonome est modifié à l'aide de l'instruction ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Ce groupe surveille les événements déclenchés à l’aide de [sp_audit_write &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-audit-write-transact-sql). En règle générale, les déclencheurs ou procédures stockées incluent des appels à `sp_audit_write` pour activer l'audit d'événements importants.|  
   
-### <a name="considerations"></a>Éléments à prendre en considération  
+### <a name="considerations"></a>Considérations  
  Les groupes d'actions de niveau serveur couvrent les actions sur toute une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, toute vérification d'accès à un objet de schéma dans une base de données est enregistrée si le groupe d'actions approprié est ajouté à une spécification de l'audit du serveur. Dans une spécification d'audit de la base de données, seuls les accès aux objets de schéma dans cette base de données sont enregistrés.  
   
  Les actions de niveau serveur ne permettent pas un filtrage détaillé des actions au niveau de la base de données. Un audit de niveau base de données, tel que l'audit d'actions SELECT sur la table Customers pour les connexions dans le groupe Employee est requis pour implémenter le filtrage d'action détaillé. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
@@ -140,7 +139,7 @@ ms.locfileid: "63238133"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsque vous utilisez l'instruction ALTER AUTHORIZATION pour changer le propriétaire d'une base de données et que les autorisations requises à cet effet sont activées. Équivaut à la [classe d’événements Audit Change Database Owner](../../event-classes/audit-change-database-owner-event-class.md).|  
 |DATABASE_PERMISSION_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une instruction GRANT, REVOKE ou DENY est émise pour une autorisation d'instruction par tout utilisateur dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les événements de base de données uniquement, tels que l'accord d'autorisations sur une base de données. Équivaut à la [classe d’événements Audit Database Scope GDR](../../event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Cet événement est déclenché lorsque des principaux, tels que des utilisateurs, sont créés, modifiés ou supprimés d'une base de données. Équivaut à la [classe d’événements Audit Database Principal Management](../../event-classes/audit-database-principal-management-event-class.md). Équivaut également à la [classe d’événements Audit Add DB User](../../event-classes/audit-add-db-user-event-class.md), qui se produit sur les procédures stockées déconseillées sp_grantdbaccess, sp_revokedbaccess, sp_adduser et sp_dropuser.<br /><br /> Cet événement est déclenché chaque fois qu'un rôle de base de données est ajouté ou supprimé à l'aide des procédures stockées sp_addrole et sp_droprole déconseillées. Équivaut à la [classe d’événements Audit Add Role](../../event-classes/audit-add-role-event-class.md).|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’emprunt d’identité dans l’étendue de la base de données \<, par exemple Execute as User> ou SETUSER. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’emprunt d’identité dans la portée de la base de données, par exemple EXECUTe AS \<user> ou SETUSER. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée à un rôle de base de données ou en est supprimée. Cette classe d’événements est utilisée avec les procédures stockées sp_addrolemember, sp_changegroup et sp_droprolemember. Équivaut à la [classe d’événements Audit Add Member to DB Role](../../event-classes/audit-add-member-to-db-role-event-class.md)|  
 |DBCC_GROUP|Cet événement est déclenché chaque fois qu'un principal émet une commande DBCC. Équivaut à la [classe d’événements Audit DBCC](../../event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données autonome et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Cet événement est déclenché.|  
@@ -165,7 +164,7 @@ ms.locfileid: "63238133"
 |RECEIVE|Cet événement est déclenché chaque fois qu'une instruction RECEIVE est exécutée.|  
 |REFERENCES|Cet événement est déclenché chaque fois qu'une autorisation REFERENCES est vérifiée.|  
   
-### <a name="considerations"></a>Éléments à prendre en considération  
+### <a name="considerations"></a>Considérations  
 *  Les actions d'audit de niveau base de données ne s'appliquent pas aux colonnes.  
   
 *  Lorsque le processeur de requêtes paramètre la requête, le paramètre peut apparaître dans le journal des événements d'audit au lieu des valeurs de colonnes de la requête. 
@@ -180,15 +179,15 @@ ms.locfileid: "63238133"
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois que l'une des commandes suivantes est exécutée :<br /><br /> -CRÉER UN AUDIT DE SERVEUR<br />-ALTER SERVER AUDIT<br />-SUPPRIMER L’AUDIT DU SERVEUR<br />-CRÉER UNE SPÉCIFICATION D’AUDIT DU SERVEUR<br />-MODIFIER LA SPÉCIFICATION DE L’AUDIT DU SERVEUR<br />-SUPPRIMER LA SPÉCIFICATION DE L’AUDIT DU SERVEUR<br />-CRÉER UNE SPÉCIFICATION D’AUDIT DE BASE DE DONNÉES<br />-SPÉCIFICATION DE L’AUDIT DE LA BASE DE DONNÉES<br />-SUPPRIMER LA SPÉCIFICATION D’AUDIT DE BASE DE DONNÉES|  
   
 ## <a name="related-content"></a>Contenu associé  
- [Créer un audit du serveur et une spécification d'audit du serveur](create-a-server-audit-and-server-audit-specification.md)  
+ [Créer un audit du serveur et une spécification d’audit du serveur](create-a-server-audit-and-server-audit-specification.md)  
   
- [Créer une spécification de l'audit du serveur et de la base de données](create-a-server-audit-and-database-audit-specification.md)  
+ [Créer une spécification de l’audit du serveur et de la base de données](create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   

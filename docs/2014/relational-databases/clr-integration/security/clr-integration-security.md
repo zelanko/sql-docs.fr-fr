@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918991"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970579"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
-  Le modèle de sécurité du [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) gère et sécurise l’accès entre les différents types d’objets CLR et non CLR qui [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] s’exécutent dans une instruction ou un autre objet CLR en cours d’exécution sur le serveur. Les appels entre objets portent le nom de liens. Les types de vérifications de sécurité effectués sur ces objets dépendent des types de liens impliqués.  
+  Le modèle de sécurité du [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) gère et sécurise l’accès entre les différents types d’objets CLR et non CLR qui s’exécutent dans [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] une instruction ou un autre objet CLR en cours d’exécution sur le serveur. Les appels entre objets portent le nom de liens. Les types de vérifications de sécurité effectués sur ces objets dépendent des types de liens impliqués.  
   
  Le modèle de sécurité d'intégration du CLR a les objectifs suivants :  
   
--   Par défaut, l’exécution du code utilisateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]managé sur. L'exécution d'opérations susceptibles de compromettre la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être protégée par des autorisations de haut niveau appropriées.  
+-   Par défaut, l’exécution du code utilisateur managé sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'exécution d'opérations susceptibles de compromettre la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être protégée par des autorisations de haut niveau appropriées.  
   
 -   Le code utilisateur managé ne doit pas accéder de façon non autorisée aux données utilisateur ou autre code utilisateur dans la base de données. Le code défini par l'utilisateur doit s'exécuter sous le contexte de sécurité de la session utilisateur qui l'a appelé et avec les privilèges corrects pour ce contexte de sécurité.  
   

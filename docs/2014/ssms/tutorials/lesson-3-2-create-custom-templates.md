@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040888"
 ---
 # <a name="create-custom-templates"></a>Créer des modèles personnalisés
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est fourni avec des modèles pour de nombreuses tâches communes, mais le réel intérêt des modèles réside dans la possibilité de créer un modèle personnalisé pour les scripts complexes qui doivent être créés souvent. Au cours de cet exercice pratique, vous allez créer un script simple avec quelques paramètres, mais les modèles peuvent être utiles également pour les scripts longs et répétitifs.  
@@ -67,7 +66,7 @@ ms.locfileid: "62805576"
   
 10. Dans l’Éditeur de requête, tapez **EXECUTE dbo.WorkOrdersForBlade**et appuyez sur F5 pour exécuter la requête. Vérifiez si le volet **Résultats** affiche la liste des bons de travaux pour les lames.  
   
-11. Modifiez le script du modèle (le script de l’étape 7) en remplaçant le nom du produit Blade par le `nvarchar(50)`paramètre <strong> *<* product_name</strong>,, <strong>name*>*</strong>, à quatre endroits.  
+11. Modifiez le script du modèle (le script de l’étape 7) en remplaçant le nom du produit Blade par le paramètre <strong> *<* product_name</strong>, `nvarchar(50)` , <strong> *>* Name</strong>, à quatre endroits.  
   
     > [!NOTE]  
     >  Les paramètres nécessitent trois éléments : le nom du paramètre à remplacer, le type de données du paramètre et une valeur par défaut pour le paramètre.  
@@ -103,7 +102,7 @@ ms.locfileid: "62805576"
   
 3.  Dans le menu **Requête** , cliquez sur **Spécifier les valeurs des paramètres du modèle**.  
   
-4.  Dans la boîte de dialogue **remplacer les paramètres** de modèle `product_name` , pour la valeur, tapez **freewheel** (en remplaçant le contenu par défaut), puis cliquez sur **OK** pour fermer la boîte de dialogue remplacer les **paramètres de modèle** et modifier le script dans l’éditeur de requête.  
+4.  Dans la boîte de dialogue **remplacer les paramètres de modèle** , pour la `product_name` valeur, tapez **freewheel** (en remplaçant le contenu par défaut), puis cliquez sur **OK** pour fermer la boîte de dialogue remplacer les **paramètres de modèle** et modifier le script dans l’éditeur de requête.  
   
 5.  Appuyez sur F5 pour exécuter la requête et créer la procédure.  
   

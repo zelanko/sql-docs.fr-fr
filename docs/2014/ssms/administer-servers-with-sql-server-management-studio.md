@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9d57657d47f28dc0502b83375f563fa9df737831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fffac67b3d789c6fcd230d4ff894696167935260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63206820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056657"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Administrer des serveurs à l'aide de SQL Server Management Studio
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est un client administratif intégré et riche conçu pour répondre aux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exigences de gestion des serveurs de l’administrateur. Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], les tâches d'administration sont effectuées à l'aide de l'Explorateur d'objets qui vous permet de vous connecter à n'importe quel serveur de la famille des produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Un serveur peut être une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]est un client administratif intégré et riche conçu pour répondre aux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exigences de gestion des serveurs de l’administrateur. Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], les tâches d'administration sont effectuées à l'aide de l'Explorateur d'objets qui vous permet de vous connecter à n'importe quel serveur de la famille des produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Un serveur peut être une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Les composants outil de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] comprennent les serveurs inscrits, l'Explorateur d'objets, l'Explorateur de solutions, l'Explorateur de modèles, la page Détails de l'Explorateur d'objets et la fenêtre de document. Pour afficher un outil, dans le menu **Affichage** , cliquez sur le nom de l’outil. Pour afficher l’outil Éditeur de requête, cliquez sur le bouton **Nouvelle requête** de la barre d’outils.  
   

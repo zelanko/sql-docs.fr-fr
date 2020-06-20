@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779154"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932880"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instructions pour les niveaux d'isolement des transactions sur les tables mémoire optimisées
   Dans de nombreux scénarios, vous devez spécifier le niveau d'isolation de la transaction. L'isolation des transactions pour les tables mémoire optimisées est différente de celle des tables sur disque.  
@@ -56,7 +55,7 @@ ms.locfileid: "62779154"
   
  La garantie fournie par le niveau d'isolation SNAPSHOT (le plus bas niveau d'isolation pris en charge pour les tables mémoire optimisées) inclut les garanties de READ COMMITTED. Chaque instruction dans la transaction lit la même version cohérente de la base de données. Non seulement les lignes sont lues par la transaction validée dans la base de données, mais toutes les opérations de lecture voient l'ensemble des modifications effectuées par le même jeu de transactions.  
   
- **Recommandation**: si seule la garantie d’isolation Read Committed est requise, utilisez l’isolement d’instantané avec les procédures stockées compilées en mode natif et pour accéder [!INCLUDE[tsql](../includes/tsql-md.md)]aux tables optimisées en mémoire par le biais de l’interpréteur.  
+ **Recommandation**: si seule la garantie d’isolation Read Committed est requise, utilisez l’isolement d’instantané avec les procédures stockées compilées en mode natif et pour accéder aux tables optimisées en mémoire par le biais de l’interpréteur [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  Pour les transactions avec validation automatique, le niveau d'isolation READ COMMITTED est mappé implicitement pour les tables mémoire optimisées. Par conséquent, si le paramètre de session TRANSACTION ISOLATION LEVEL est défini sur READ COMMITTED, il n'est pas nécessaire de spécifier le niveau d'isolation par un indicateur de table lors de l'accès aux tables mémoire optimisées.  
   
@@ -123,7 +122,7 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Indicateurs de table de verrouillage  
- Les indicateurs de verrouillage ([indicateurs de Table &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)) tels que HOLDLOCK et XLOCK peuvent être utilisés avec des tables sur disque pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avoir plus de verrous que nécessaire pour le niveau d’isolation spécifié.  
+ Les indicateurs de verrouillage ([indicateurs de Table &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)) tels que HOLDLOCK et XLOCK peuvent être utilisés avec des tables sur disque pour avoir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] plus de verrous que nécessaire pour le niveau d’isolation spécifié.  
   
  Les tables mémoire optimisées n'utilisent pas de verrous. Des niveaux d'isolation plus élevés comme REPEATABLE READ et SERIALIZABLE peuvent être utilisés pour déclarer les garanties de votre choix.  
   
@@ -132,6 +131,6 @@ COMMIT
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnement des transactions sur les tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Instructions relatives à la logique de nouvelle tentative pour les transactions sur les tables optimisées en mémoire](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
- [Niveaux d’isolation des transactions](../../2014/database-engine/transaction-isolation-levels.md)  
+ [Niveaux d'isolement des transactions](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

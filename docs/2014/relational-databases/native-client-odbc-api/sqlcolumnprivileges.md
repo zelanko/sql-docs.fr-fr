@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35bd61c12933dac25ac90d8b56afb0e17b44d3ab
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf46fed47817ed94ea2382f2147df254f2986aec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022750"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
   **SQLColumnPrivileges** retourne SQL_SUCCESS si des valeurs existent pour les paramètres*nomcatalogue*, *SchemaName*, *TableName*ou *ColumnName* . **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  

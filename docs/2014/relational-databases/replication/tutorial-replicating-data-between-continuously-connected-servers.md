@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c63e48d4c5f5bfad6fe50155cd7fd7a088c2178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655390"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047620"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Didacticiel : Réplication de données entre serveurs connectés en permanence
   La réplication constitue une bonne solution au problème de transfert de données entre serveurs connectés en permanence. À l'aide des Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication. Ce didacticiel vous explique comment configurer une topologie de réplication dans le cas de serveurs connectés en permanence.  
@@ -27,7 +26,7 @@ ms.locfileid: "62655390"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel vous explique comment publier des données d'une base de données sur une autre à l'aide de la réplication transactionnelle. La première leçon montre comment utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer une publication. Les leçons suivantes expliquent comment créer et valider un abonnement et comment mesurer la latence.  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Ce didacticiel est destiné aux utilisateurs qui sont familiers des opérations élémentaires de base de données, mais dont l'expérience en matière de réplication est limitée. Pour suivre ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md).  
   
  Pour utiliser ce didacticiel, les composants suivants doivent être installés sur votre système :  
@@ -46,7 +45,7 @@ ms.locfileid: "62655390"
     >  La réplication n'est pas installée par défaut dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
 > [!NOTE]  
->  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’une connexion qui est membre du rôle serveur fixe **sysadmin** .  
+>  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’une connexion qui est membre du rôle serveur fixe **sysadmin** .  
   
  **Durée estimée pour effectuer ce didacticiel : 30 minutes.**  
   

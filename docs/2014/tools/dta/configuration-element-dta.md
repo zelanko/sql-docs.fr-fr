@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 611417e3b88a174e1be2e838f7a323959a53d595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057798"
 ---
 # <a name="configuration-element-dta"></a>Configuration, élément (Assistant Paramétrage de base de données)
   Spécifie une configuration spécifiée par l'utilisateur se composant de structures PDS existantes et hypothétiques en vue d'être analysée par l'Assistant Paramétrage du moteur de base de données lors du paramétrage d'une charge de travail.  
@@ -48,9 +47,9 @@ ms.locfileid: "63150146"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Aucune.|  
-|**Valeur par défaut**|Aucune.|  
-|**Occurrence**|Facultatif. Peut être utilisé une seule fois pour chaque élément `DTAInput`.|  
+|**Type de données et longueur**|Aucun.|  
+|**Valeur par défaut**|Aucun.|  
+|**Occurrence**|facultatif. Peut être utilisé une seule fois pour chaque élément `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

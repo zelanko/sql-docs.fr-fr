@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0657a4b1ab266a1721cf889095ff17f30782f8e7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abb598df3d6048acb45fbfdee17d1671bd7ead43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021300"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Gestion des tailles de lot de copie en bloc
   L'objectif principal d'un lot dans des opérations de copie en bloc est de définir l'étendue d'une transaction. Si aucune taille de lot n'est définie, les fonctions de copie en bloc considèrent une copie en bloc entière comme une transaction. Si une taille de lot est définie, chaque lot constitue alors une transaction validée à la fin de l'exécution de ce lot.  

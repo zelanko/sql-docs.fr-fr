@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040482"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utiliser des données du volet de résultats (Visual Database Tools)
   Après avoir exécuté une requête ou une vue, les résultats sont affichés dans le volet Résultats. Vous pouvez ensuite travailler avec ces résultats. Par exemple, vous pouvez ajouter ou supprimer des lignes, entrer ou modifier des données, et naviguer facilement parmi les vastes ensembles de résultats.  
@@ -115,9 +114,9 @@ ms.locfileid: "63313769"
 ### <a name="what-can-not-be-represented-fully"></a>Ce qui ne peut pas être représenté pleinement  
  Ce qui est retourné au volet Résultats par la base de données est étroitement contrôlé par le fournisseur pour la source de données que vous utilisez. Le volet Résultats ne peut pas toujours traduire les données de tous les systèmes de gestion de base de données. Voici quelques exemples où c'est le cas.  
   
--   Les types de données binary sont souvent inutiles pour ceux qui travaillent dans le volet Résultats, et leur téléchargement peut être très long. Elles sont donc représentées par des * \<données binaires>* ou *null*.  
+-   Les types de données binary sont souvent inutiles pour ceux qui travaillent dans le volet Résultats, et leur téléchargement peut être très long. Ils sont donc représentés par *\<Binary data>* ou *Null*.  
   
--   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d’un type de données avec une précision supérieure, les données peuvent être tronquées ou peuvent être représentées par * \<l’impossibilité de lire des données>*.  
+-   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d'un type de données de précision supérieure, elles peuvent être tronquées ou représentées par *\<Unable to read data>* .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Effectuer des opérations de base avec les requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

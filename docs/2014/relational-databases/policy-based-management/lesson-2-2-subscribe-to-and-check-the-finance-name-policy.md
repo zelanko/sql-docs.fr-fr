@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061621"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Vérifier et s'abonner à la stratégie Nom financier
   Dans cette tâche, vous allez configurer la base de données Finance de manière à l'abonner à la catégorie de stratégies Finance. Ensuite, vous allez tester la stratégie Nom financier.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Pour abonner la base de données à la catégorie de stratégies Finance  
   
-1.  Dans l’Explorateur d’objets, développez **bases de données**, cliquez `Finance`avec le bouton droit, pointez sur **stratégies**, puis cliquez sur **catégories**.  
+1.  Dans l’Explorateur d’objets, développez **bases de données**, cliquez avec le bouton droit `Finance` , pointez sur **stratégies**, puis cliquez sur **catégories**.  
   
-2.  Activez la **Subscribed** case à cocher abonné `Finance` pour la catégorie.  
+2.  Activez la case à cocher **abonné** pour la `Finance` catégorie.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66090699"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Désormais, la catégorie Finance s’applique à toutes les bases de données, mais la condition que vous avez créée restreint la stratégie Nom financier à la base de données Finance. Cela démontre la manière dont vous pouvez utiliser des combinaisons de conditions complexes pour cibler des stratégies pour une application correcte sur de nombreux serveurs.  
   
-## <a name="summary"></a>Récapitulatif  
+## <a name="summary"></a>Résumé  
  Ce didacticiel vous a montré comment créer des conditions, des stratégies et des groupes de stratégies de la Gestion basée sur des stratégies et comment appliquer des filtres et vérifier la conformité des cibles de la Gestion basée sur des stratégies.  
   
 ## <a name="next"></a>Suivant  

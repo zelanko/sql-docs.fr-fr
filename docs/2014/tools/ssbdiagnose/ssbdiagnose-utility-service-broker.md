@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057649"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
   L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
@@ -183,16 +182,16 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificateur unique qui identifie un point de terminaison de conversation dans une application. Les descripteurs de conversation sont uniques à un point de terminaison d'une conversation, les points de terminaison initiateur et cible ont des descripteurs de conversation distincts.  
   
- *@dialog_handle* Les descripteurs de conversation sont retournés aux applications par le paramètre de l’instruction **Begin Dialog** , et la `conversation_handle` colonne dans le jeu de résultats d’une instruction **Receive** .  
+ Les descripteurs de conversation sont retournés aux applications par le *@dialog_handle* paramètre de l’instruction **Begin Dialog** , et la `conversation_handle` colonne dans le jeu de résultats d’une instruction **Receive** .  
   
- Les descripteurs de conversation `conversation_handle` sont signalés dans la colonne des affichages catalogue **sys. transmission_queue** et **sys. conversation_endpoints** .  
+ Les descripteurs de conversation sont signalés dans la `conversation_handle` colonne des affichages catalogue **sys. transmission_queue** et **sys. conversation_endpoints** .  
   
  *conversation_group_id*  
  Identificateur unique qui identifie un groupe de conversations.  
   
- Les ID de groupe de conversations sont retournés aux applications par *@conversation_group_id* le paramètre de l’instruction d’extraction de groupe de **conversations** et de la `conversation_group_id` colonne dans le jeu de résultats d’une instruction **Receive** .  
+ Les ID de groupe de conversations sont retournés aux applications par le *@conversation_group_id* paramètre de l’instruction d' **extraction de groupe de conversations** et de la `conversation_group_id` colonne dans le jeu de résultats d’une instruction **Receive** .  
   
- Les ID de groupe de conversations sont `conversation_group_id` signalés dans les colonnes des affichages catalogue **sys. conversation_groups** et **sys. conversation_endpoints** .  
+ Les ID de groupe de conversations sont signalés dans les `conversation_group_id` colonnes des affichages catalogue **sys. conversation_groups** et **sys. conversation_endpoints** .  
   
  *conversation_id*  
  Identificateur unique qui identifie une conversation. Les ID de conversation sont les mêmes pour les points de terminaison initiateur et cible d'une conversation.  
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Spécifie l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser.  
   
- Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez *nom_serveur***\\***nom_instance* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
+ Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez *server_name ***\\*** instance_name* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
   
  **-d** *database_name*  
  Spécifie la base de données qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser. Si cette base de données n'existe pas, un message d'erreur est généré. Si vous ne spécifiez pas l’option **-d** , la valeur par défaut est la base de données spécifiée dans la propriété de base de données par défaut de votre connexion.  

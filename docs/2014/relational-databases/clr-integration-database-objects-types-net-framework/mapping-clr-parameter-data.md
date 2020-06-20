@@ -25,56 +25,55 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70274fcc16caec38d4d960f89fe586b32662dc57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232280"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954779"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mappage des données de paramètres CLR
-  Le tableau suivant répertorie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les types de données, leurs équivalents dans le Common Language Runtime ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR) `System.Data.SqlTypes` pour dans l’espace de noms, et leurs équivalents CLR natifs dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+  Le tableau suivant répertorie les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données, leurs équivalents dans le Common Language Runtime (CLR) pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l' `System.Data.SqlTypes` espace de noms, et leurs équivalents CLR natifs dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
 |**Type de données SQL Server**|Type (dans System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Type de données CLR (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64, Nullable\<Int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**Boolean, Nullable\<>**|  
+|`bit`|`SqlBoolean`|**Boolean, Nullable\<Boolean>**|  
 |`char`|None|None|  
 |`cursor`|None|None|  
-|`date`|`SqlDateTime`|**DateTime, DateTime\<Nullable>**|  
-|`datetime`|`SqlDateTime`|**DateTime, DateTime\<Nullable>**|  
-|`datetime2`|None|**DateTime, DateTime\<Nullable>**|  
-|`DATETIMEOFFSET`|`None`|**DateTimeOffset, DateTimeOffset\<Nullable>**|  
-|`decimal`|`SqlDecimal`|**Décimal, Nullable\<>décimal**|  
-|`float`|`SqlDouble`|**Double, double\<>Nullable**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`est défini dans Microsoft. SqlServer. types. dll, qui est installé avec SQL Server et peut être téléchargé à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]du [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`date`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
+|`datetime`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
+|`datetime2`|None|**DateTime, Nullable\<DateTime>**|  
+|`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
+|`decimal`|`SqlDecimal`|**Décimal, Nullable\<Decimal>**|  
+|`float`|`SqlDouble`|**Double, Nullable\<Double>**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et qui peut être téléchargé à partir du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et qui peut être téléchargé à partir du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et qui peut être téléchargé à partir du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
 |`image`|None|None|  
 |`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
-|`money`|`SqlMoney`|**Décimal, Nullable\<>décimal**|  
+|`money`|`SqlMoney`|**Décimal, Nullable\<Decimal>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|None|None|  
-|`numeric`|`SqlDecimal`|**Décimal, Nullable\<>décimal**|  
+|`numeric`|`SqlDecimal`|**Décimal, Nullable\<Decimal>**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` est une meilleure correspondance pour le transfert de données et leur accès, et `SQLString` est une meilleure correspondance pour effectuer des opérations sur une chaîne.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<char>**|  
-|`real`|`SqlSingle` (la plage de `SqlSingle`, toutefois, est plus grande que `real`)|**Single, Nullable\<>unique**|  
+|`real`|`SqlSingle` (la plage de `SqlSingle`, toutefois, est plus grande que `real`)|**Unique, Nullable\<Single>**|  
 |`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
-|`smallmoney`|`SqlMoney`|**Décimal, Nullable\<>décimal**|  
+|`smallmoney`|`SqlMoney`|**Décimal, Nullable\<Decimal>**|  
 |`sql_variant`|None|`Object`|  
 |`table`|None|None|  
 |`text`|None|None|  
-|`time`|None|**TimeSpan, null\<TimeSpan>**|  
+|`time`|None|**TimeSpan, Nullable\<TimeSpan>**|  
 |`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**Byte, Nullable\<Byte>**|  
-|`uniqueidentifier`|`SqlGuid`|**Guid,>\<GUID Nullable**|  
+|`uniqueidentifier`|`SqlGuid`|**Guid, Nullable\<Guid>**|  
 |`User-defined type(UDT)`|None|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte[], Nullable\<byte>**|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**Byte, Byte [], Nullable\<byte>**|  
 |`varchar`|None|None|  
 |`xml`|`SqlXml`|None|  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 388554360003fe31bc1d7d93063832b6d265e359
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63259158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055704"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Sécurité de l'agent (Assistant Nouvelle publication)
   La page **Sécurité de l'agent** vous permet de spécifier les comptes sous lesquels les agents ci-après s'exécutent et les connexions sont établies aux ordinateurs dans une topologie de réplication :  
@@ -45,7 +44,7 @@ ms.locfileid: "63259158"
 >  Il existe un Agent de lecture du journal pour chaque base de données publiée utilisant la réplication transactionnelle. Si une publication transactionnelle existe déjà dans la base de données, les paramètres de sécurité sont en lecture seule. Vous pouvez modifier les paramètres dans la boîte de dialogue **Propriétés de la publication** ; toutefois, toutes les publications transactionnelles seront affectées dans la base de données.  
   
  **Agent de lecture de la file d’attente**  
- Affiché pour les publications transactionnelles qui autorisent les abonnements pouvant être mis à jour. Cliquez sur **Paramètres de sécurité** pour spécifier les paramètres de sécurité dans la boîte de dialogue **Sécurité de l'Agent de lecture de la file d'attente** . Une fois l'exécution de cet Assistant terminée, un Agent de lecture de la file d'attente est créé. Sa création ne dépend aucunement de la création d'abonnements mis à jour en file d'attente. Si vous n'envisagez pas de créer des abonnements mis à jour en file d'attente , vous pouvez désactiver ce travail. Cliquez avec le bouton droit sur ce travail (nommé sous la forme : *[\<serveur_publication>].\<entier>* .) dans le dossier **Travaux de l’Agent**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis cliquez sur **Désactiver**.  
+ Affiché pour les publications transactionnelles qui autorisent les abonnements pouvant être mis à jour. Cliquez sur **Paramètres de sécurité** pour spécifier les paramètres de sécurité dans la boîte de dialogue **Sécurité de l'Agent de lecture de la file d'attente** . Une fois l'exécution de cet Assistant terminée, un Agent de lecture de la file d'attente est créé. Sa création ne dépend aucunement de la création d'abonnements mis à jour en file d'attente. Si vous n'envisagez pas de créer des abonnements mis à jour en file d'attente , vous pouvez désactiver ce travail. Cliquez avec le bouton droit sur le travail (nommé sous la forme : *[ \<Publisher> ]. \<integer> *.) dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dossier **travaux** de l’agent, puis cliquez sur **Désactiver**.  
   
  Cliquez sur **Aide** dans la la boîte de dialogue **Sécurité de l'Agent de lecture de la file d'attente** pour obtenir des informations supplémentaires sur les autorisations requises pour les comptes utilisés par l'Agent de lecture de la file d'attente.  
   

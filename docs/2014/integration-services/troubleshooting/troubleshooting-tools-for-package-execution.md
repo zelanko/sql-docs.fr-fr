@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7aac9aa2dc6c7675414354c729f4537479ee8a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972689"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
