@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beae2f836de16dedf3be6d8c196910c53be02266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026287"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server)
   Le format natif Unicode est utile quand vous devez copier des informations d’une installation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre. L'utilisation du format natif pour les données qui ne sont pas de type caractère (char) permet de gagner du temps, puisque vous supprimez les conversions inutiles des types de données depuis et vers le format caractère. L'utilisation du format caractère Unicode pour toutes les données de type caractère évite la perte des caractères étendus lorsque vous transférez en bloc des données entre des serveurs utilisant des pages de codes différentes. Un fichier de données au format natif Unicode peut être lu par toutes les méthodes d'importation en bloc.  
@@ -28,13 +27,13 @@ ms.locfileid: "66011564"
  Les données `sql_variant` qui sont stockées en tant que SQLVARIANT dans un fichier de données au format natif Unicode fonctionnent de la même manière que le fichier de données au format natif, sauf que les valeurs `char` et `varchar` sont converties en `nchar` et `nvarchar`, ce qui double l'espace de stockage nécessaire pour les colonnes affectées. Les métadonnées d'origine sont conservées, et les valeurs sont reconverties en leur type de données `char` et `varchar` d'origine lorsqu'elles sont importées en bloc dans une colonne de table.  
   
 ## <a name="command-options-for-unicode-native-format"></a>Options de commande pour le format natif Unicode  
- Vous pouvez importer des données au format natif Unicode dans une table à l’aide de la commande **BCP**, Bulk Insert ou Insert... SELECT \* from OPENROWSET (BULK...). Pour une commande **BCP** ou une instruction BULK INSERT, vous pouvez spécifier le format de données sur la ligne de commande. Pour une instruction INSERT... SELECT * FROM OPENROWSET(BULK...), vous devez spécifier le format de données dans un fichier de format.  
+ Vous pouvez importer des données au format natif Unicode dans une table à l’aide de la commande **BCP**, Bulk Insert ou Insert... SELECT \* FROM OPENROWSET (BULK...). Pour une commande **BCP** ou une instruction BULK INSERT, vous pouvez spécifier le format de données sur la ligne de commande. Pour une instruction INSERT... SELECT * FROM OPENROWSET(BULK...), vous devez spécifier le format de données dans un fichier de format.  
   
  Le format natif Unicode est reconnu par les options suivantes :  
   
 |Commande|Option|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|Fait en sorte que l’utilitaire **BCP** utilise le format natif Unicode, qui utilise des types de données (base de données) natifs pour toutes les données non-caractères`char`et `nchar`le `varchar`format `nvarchar`de données caractères Unicode pour toutes les données de type caractère (, `text`,,, et `ntext`).|  
+|**bcp**|**-N**|Fait en sorte que l’utilitaire **BCP** utilise le format natif Unicode, qui utilise des types de données (base de données) natifs pour toutes les données non-caractères et le format de données caractères Unicode pour toutes les données de type caractère (,,,, `char` `nchar` `varchar` `nvarchar` `text` et `ntext` ).|  
 |BULK INSERT|DATAFILETYPE **= '** widenative **'**|Utilisez le format natif Unicode lorsque vous importez en bloc des données.|  
   
  Pour plus d’informations, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b1ac80773b28538f29837973d94f1b50b79f0788
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 06443d18b12d0445021001c3bd30d4614b6daebc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702777"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067752"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Exemple : Spécification des directives ID et IDREF
   Un attribut d'élément peut être spécifié comme attribut de type `ID` et l'attribut `IDREFS` peut ensuite être utilisé pour y faire référence. Cela permet de créer des liens à l'intérieur du document et est assimilable aux relations entre clés primaires et clés étrangères dans les bases de données relationnelles.  

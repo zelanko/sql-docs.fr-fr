@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea195f2316e888882fdfad693a39b1b29bb031d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c5c33536ce33824cc80bb452dafcf17719fbac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012632"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>Les commandes DBCC déconseillées ont été supprimées
   Le tableau suivant répertorie les commandes DBCC annoncées comme déconseillées dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Ces commandes ont été supprimées de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et des versions ultérieures. Vous devez mettre à jour les applications et les scripts pour supprimer les références à ces commandes déconseillées.  

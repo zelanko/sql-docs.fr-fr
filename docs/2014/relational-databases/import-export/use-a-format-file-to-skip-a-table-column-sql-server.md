@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd83011fc7fd5b85efb5f20545dd80bb3d6dd43e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 153ef21209ff4261020e26aca3bc52d28dc852a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026246"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)
   Cette rubrique décrit les fichiers de format. Vous pouvez utiliser un fichier de format pour ignorer l'importation d'une colonne de table lorsque le champ n'existe pas dans le fichier de données. Un fichier de données peut contenir moins de champs qu'il n'y a de colonnes dans la table uniquement si les colonnes ignorées peuvent être NULL et/ou avoir une valeur par défaut.

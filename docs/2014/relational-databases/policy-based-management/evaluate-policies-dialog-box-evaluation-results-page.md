@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e645d5cd606f9a466bec35bef4159ef7dd32644
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047790"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation
   Utilisez cette boîte de dialogue pour consulter les résultats d'évaluation d'une stratégie et pour appliquer des stratégies de la Gestion basée sur des stratégies à un jeu de cibles non conforme aux stratégies.  

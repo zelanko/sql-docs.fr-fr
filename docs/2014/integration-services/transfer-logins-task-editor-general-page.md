@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7be36c5818bbcf4855c90ba2fc16b0ba083cf39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972799"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Éditeur de tâche de transfert de connexions (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de connexions** pour donner un nom et une description à la tâche de transfert de connexions. Pour plus d'informations sur cette tâche, consultez [Transfer Logins Task](control-flow/transfer-logins-task.md).  

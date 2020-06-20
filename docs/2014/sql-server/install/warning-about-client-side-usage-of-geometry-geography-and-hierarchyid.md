@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66898aa056800c0a7573b5afa73762785706ff7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044616"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avertissement sur l'utilisation du côté client de GEOMETRY, de la GÉOGRAPHIE et du HIERARCHYID
-  L’assembly **Microsoft. SqlServer. types. dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10,0 vers la version 11,0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque certaines conditions sont vraies.  
+  L’assembly **Microsoft.SqlServer.Types.dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10,0 vers la version 11,0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque certaines conditions sont vraies.  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- L’assembly **Microsoft. SqlServer. types. dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10,0 vers la version 11,0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque les conditions suivantes sont remplies.  
+ L’assembly **Microsoft.SqlServer.Types.dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10,0 vers la version 11,0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque les conditions suivantes sont remplies.  
   
--   Lorsque vous déplacez une application personnalisée à partir d’un ordinateur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] sur lequel est installé sur un ordinateur sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lequel seul est installé, l’application échoue, car la version référencée 10,0 de l’assembly **SqlTypes** n’est pas présente. Ce message d'erreur peut s'afficher : `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   Lorsque vous déplacez une application personnalisée à partir d’un ordinateur sur lequel [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] est installé sur un ordinateur sur lequel seul [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé, l’application échoue, car la version référencée 10,0 de l’assembly **SqlTypes** n’est pas présente. Ce message d'erreur peut s'afficher : `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   Lorsque vous référencez l’assembly **SqlTypes** version 11,0 et que la version 10,0 est également installée, le message d’erreur suivant peut s’afficher :`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   

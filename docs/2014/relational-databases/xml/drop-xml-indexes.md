@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bdda481ae84a15132dd960fe6766c28d82c4f50c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7d4621cf2182b4587b12665a1cfe10ddbe0db3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048808"
 ---
 # <a name="drop-xml-indexes"></a>Supprimer des index XML
   L’instruction [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] permet de supprimer des index XML et non XML, qu’ils soient primaires ou secondaires. Les options DROP INDEX ne s'appliquent cependant pas aux index XML. Si vous supprimez l'index XML primaire, tous les index secondaires présents sont alors également supprimés.  

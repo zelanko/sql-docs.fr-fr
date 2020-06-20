@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5abd2e60f4f9bb5290b47f95349782f8b26ad8bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043195"
 ---
 # <a name="create-a-resource-pool"></a>Créer un pool de ressources
   Vous pouvez créer un pool de ressources à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -73,13 +72,13 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Resource Governor](resource-governor.md)   
  [Activer Resource Governor](enable-resource-governor.md)   
- [Liste de ressources partagées Resource Governor](resource-governor-resource-pool.md)   
+ [Pool de ressources de Resource Governor](resource-governor-resource-pool.md)   
  [Modifier les paramètres du pool de ressources](change-resource-pool-settings.md)   
  [Supprimer un pool de ressources](delete-a-resource-pool.md)   
- [Configurer Resource Governor à l’aide d’un modèle](configure-resource-governor-using-a-template.md)   
- [Groupe de charge de travail Resource Governor](resource-governor-workload-group.md)   
+ [Configurer le gouverneur de ressources à l'aide d'un modèle](configure-resource-governor-using-a-template.md)   
+ [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md)   
  [Fonction classifieur Resource Governor](resource-governor-classifier-function.md)   
- [CRÉER un POOL de ressources &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

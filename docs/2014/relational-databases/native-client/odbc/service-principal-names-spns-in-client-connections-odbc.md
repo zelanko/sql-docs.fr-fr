@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f9639b6fa4bd99b8f4ac17803b5b20789d43efd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cf862959ac2276b5585915078095e96d8f8b5b51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049556"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Noms de principaux du service (SPN) dans les connexions clientes (ODBC)
   Cette rubrique décrit les attributs et fonctions ODBC qui prennent en charge les noms de principaux du service (SPN) dans les applications clientes. Pour plus d’informations sur les SPN dans les applications clientes, consultez [nom de principal du Service &#40;SPN&#41; prise en charge dans les connexions clientes](../features/service-principal-name-spn-support-in-client-connections.md) et [obtenir une authentification Kerberos mutuelle](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  

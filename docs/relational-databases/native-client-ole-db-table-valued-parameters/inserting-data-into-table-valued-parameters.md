@@ -1,5 +1,6 @@
 ---
 title: Insertion de données dans des paramètres table | Microsoft Docs
+description: Découvrez les deux modèles pris en charge par le fournisseur SQL Server Native Client OLE DB pour que le consommateur spécifie des données pour les lignes de paramètres table.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c1c5ed9c0239c31c0dd8a3c97d4e2740cdd1aa0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 840f92955aebef85f169b4f7f93d3a37f5dc951e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283135"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949674"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertion de données dans des paramètres table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "81283135"
   
  Si vous utilisez IColumnsRowset::GetColumnsRowset, il y aura des appels ultérieurs aux méthodes IRowset::GetNextRows, IRowset::GetData et IRowset::ReleaseRows sur l’objet d’ensemble de lignes de la colonne résultante.  
   
- Une fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que le fournisseur de OLE DB Native Client commence à exécuter la commande, les valeurs de paramètre table sont extraites de cet objet d’ensemble de lignes de paramètre table et envoyées au serveur.  
+ Une fois que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client commence à exécuter la commande, les valeurs de paramètre table sont extraites de cet objet d’ensemble de lignes de paramètre table et envoyées au serveur.  
   
  Le modèle d'émission des données requiert un travail minimal de la part du consommateur ; toutefois, il utilise plus de mémoire que le modèle d'extraction des données, car toutes les données de paramètres table doivent être en mémoire au moment de l'exécution.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "81283135"
   
  Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client lit une ou plusieurs lignes à la fois à partir de l'objet d'ensemble de lignes du consommateur afin de prendre en charge l'accès en continu dans les paramètres table. Par exemple, l'utilisateur peut disposer des données d'ensembles de lignes de paramètres table sur disque (et non en mémoire) et peut implémenter les fonctionnalités de lecture des données à partir du disque lorsque cela est requis par le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Le consommateur communique son format de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au fournisseur OLE DB Native Client à l’aide de IAccessor :: CreateAccessor sur l’objet d’ensemble de lignes de paramètre table. Lors de la lecture des données à partir de la mémoire tampon du consommateur, le fournisseur s'assure que toutes les colonnes accessibles en écriture et non définies par défaut sont disponibles à travers au moins un handle d'accesseur, et utilise les handles correspondants pour lire les données des colonnes. Pour éviter toute ambiguïté, il doit exister une correspondance unique entre une colonne d’ensemble de lignes de paramètres table et une liaison. Les liaisons en double à la même colonne génèrent une erreur. Par ailleurs, chaque accesseur est supposé avoir le membre *iOrdinal* de DBBindings en séquence. Il y a autant d’appels à IRowset::GetData que d’accesseurs par ligne. En outre, l’ordre des appels est basé sur l’ordre de la valeur *iOrdinal*, du plus petit au plus grand.  
+ Le consommateur communique son format de données au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client à l’aide de IAccessor :: CreateAccessor sur l’objet d’ensemble de lignes de paramètre table. Lors de la lecture des données à partir de la mémoire tampon du consommateur, le fournisseur s'assure que toutes les colonnes accessibles en écriture et non définies par défaut sont disponibles à travers au moins un handle d'accesseur, et utilise les handles correspondants pour lire les données des colonnes. Pour éviter toute ambiguïté, il doit exister une correspondance unique entre une colonne d’ensemble de lignes de paramètres table et une liaison. Les liaisons en double à la même colonne génèrent une erreur. Par ailleurs, chaque accesseur est supposé avoir le membre *iOrdinal* de DBBindings en séquence. Il y a autant d’appels à IRowset::GetData que d’accesseurs par ligne. En outre, l’ordre des appels est basé sur l’ordre de la valeur *iOrdinal*, du plus petit au plus grand.  
   
  Le fournisseur est supposé implémenter la plupart des interfaces exposées par l'objet d'ensemble de lignes de paramètres table. Le consommateur implémente un objet d’ensemble de lignes avec des interfaces minimales (IRowset). Avec une agrégation indifférenciée, les interfaces d'objets d'ensembles de lignes obligatoires restantes sont implémentées par l'objet d'ensemble de lignes de paramètres table.  
   

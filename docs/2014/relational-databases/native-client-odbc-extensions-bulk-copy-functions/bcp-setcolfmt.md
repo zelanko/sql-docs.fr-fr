@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a8bd75854cc81c661d6e8ac60cab88e23d6efffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705292"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019238"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   La fonction **bcp_setcolfmt** remplace la [bcp_colfmt](bcp-colfmt.md). En spécifiant le classement des colonnes, vous devez utiliser la fonction **bcp_setcolfmt** . [bcp_setbulkmode](bcp-setbulkmode.md) peut être utilisé pour spécifier plusieurs formats de colonne.  
@@ -83,7 +82,7 @@ cbValue
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction remplace la fonction **bcp_colfmt** . Toutes les fonctionnalités de **bcp_colfmt** sont fournies dans **bcp_setcolfmt** fonction. Le classement des colonnes est également pris en charge. Il est préférable de définir les attributs de format de colonne suivants dans l'ordre précisé ci-dessous :  
   
  BCP_FMT_SERVER_COL  

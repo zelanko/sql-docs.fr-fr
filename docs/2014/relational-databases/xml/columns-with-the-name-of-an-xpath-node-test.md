@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c283f1c08e4c30066359c91656c29f2adaa513f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5ebb8d863403d547a1aa45a996db3922c1ecd390
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046852"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Colonnes avec le nom d'un test de nœud XPath
   Si le nom de colonne est l'un des tests de nœud XPath, le contenu est mappé comme le montre le tableau ci-après. Lorsque le nom de colonne est un test de nœud XPath, le contenu est mappé au nœud correspondant. Si le type SQL de la colonne est `xml`, une erreur est renvoyée.  

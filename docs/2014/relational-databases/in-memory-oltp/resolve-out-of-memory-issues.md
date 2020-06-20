@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f0ba7a901a3e55644b3129ebbd9d9e2d3e2944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025830"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] , l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est possible que la quantité de mémoire que vous avez installée et allouée pour [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ne convienne plus à vos besoins croissants. Si c'est le cas, vous risquez de manquer de mémoire. Cette rubrique explique les procédures à mettre en œuvre en cas d'insuffisance de mémoire. Consultez [Analyse et dépannage de l’utilisation de mémoire](monitor-and-troubleshoot-memory-usage.md) pour des conseils pouvant vous aider à éviter de nombreuses situations d’épuisement de la mémoire.  
@@ -24,12 +23,12 @@ ms.locfileid: "67624409"
   
 |Rubrique|Vue d’ensemble|  
 |-----------|--------------|  
-| [Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#resolve-database-restore-failures-due-to-oom) |Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». »|  
+| [Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#resolve-database-restore-failures-due-to-oom) |Que faire si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données » *\<databaseName>* en raison d’une insuffisance de mémoire dans le pool de ressources « *\<resourcePoolName>* ».»|  
 | [Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|Explique la procédure à suivre si vous constatez que les problèmes d'insuffisance de mémoire ont un effet négatif sur les performances.|  
-| [Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». ... » lorsque la mémoire disponible est suffisante pour l’opération.|  
+| [Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Procédure à suivre si vous recevez le message d’erreur « désautorisation des allocations de pages pour la base de données » *\<databaseName>* en raison d’une insuffisance de mémoire dans le pool de ressources « *\<resourcePoolName>* ». ... » lorsque la mémoire disponible est suffisante pour l’opération.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
- Lorsque vous tentez de restaurer une base de données, vous pouvez obtenir le message d’erreur suivant : « échec de l’opération de restauration pour la base de données'*\<DatabaseName>*» en raison d’une insuffisance de mémoire dans le pool de ressources «*\<resourcePoolName>*». Avant de pouvoir restaurer correctement la base de données, vous devez résoudre le problème de mémoire insuffisante en mettant davantage de mémoire à disposition.  
+ Lorsque vous tentez de restaurer une base de données, vous pouvez obtenir le message d’erreur suivant : « échec de l’opération de restauration pour la base de données » *\<databaseName>* en raison d’une insuffisance de mémoire dans le pool de ressources « *\<resourcePoolName>* ». Avant de pouvoir restaurer correctement la base de données, vous devez résoudre le problème de mémoire insuffisante en mettant davantage de mémoire à disposition.  
   
  Pour résoudre un échec de récupération dû à une situation d'insuffisance de mémoire, augmentez la mémoire disponible à l'aide de tous les moyens à votre disposition afin de disposer temporairement d'une mémoire suffisante pour l'opération de récupération.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "67624409"
   
 -   [Partitionnement au niveau de l'application](https://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
   
--   [Modèle d'application pour partitionner des tables mémoire optimisées](https://technet.microsoft.com/library/dn133171\(v=sql.120\).aspx)  
+-   [Modèle d’application pour partitionner des tables à mémoire optimisée](https://technet.microsoft.com/library/dn133171\(v=sql.120\).aspx)  
   
 #### <a name="increase-available-memory"></a>Augmenter la mémoire disponible  
   
@@ -128,14 +127,14 @@ GO
  Pour plus d’informations sur les valeurs maximales de MAX_MEMORY_PERCENT, consultez la section [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Installer de la mémoire supplémentaire  
- En fin de compte, la meilleure solution, le cas échéant, consiste à installer de la mémoire physique supplémentaire. Si vous procédez ainsi, n’oubliez pas que vous pouvez également augmenter la valeur de MAX_MEMORY_PERCENT (consultez Modification de la sous-rubrique [MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] car n’aura probablement pas besoin de plus de mémoire, ce qui vous permet de rendre la plus grande partie de la mémoire nouvellement installée disponible pour le pool de ressources.  
+ En fin de compte, la meilleure solution, le cas échéant, consiste à installer de la mémoire physique supplémentaire. Si vous procédez ainsi, n’oubliez pas que vous pouvez également augmenter la valeur de MAX_MEMORY_PERCENT (consultez Modification de la sous-rubrique [MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , car n’aura probablement pas besoin de plus de mémoire, ce qui vous permet de rendre la plus grande partie de la mémoire nouvellement installée disponible pour le pool de ressources.  
   
 > [!IMPORTANT]  
 >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
 > Pour plus d’informations, consultez la rubrique [meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition  
- Si vous recevez le message d’erreur « désautorisation des allocations de pages pour la base de données'*\<DatabaseName>*» en raison d’une insuffisance de mémoire dans le pool de ressources «*\<resourcePoolName>*». Pour plus<https://go.microsoft.com/fwlink/?LinkId=330673>d’informations, consultez «». dans le journal des erreurs lorsque la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  
+ Si vous recevez le message d’erreur « désautorisation des allocations de pages pour la base de données » *\<databaseName>* en raison d’une mémoire insuffisante dans le pool de ressources « *\<resourcePoolName>* ». <https://go.microsoft.com/fwlink/?LinkId=330673>Pour plus d’informations, consultez «». dans le journal des erreurs lorsque la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  
   
  Pour corriger le problème, vous devez activer Resource Governor.  
   

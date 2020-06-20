@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb5c40db46772cabcb5d1df19e03aced749e1c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63272810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997854"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publication de l'exécution de procédures stockées dans la réplication transactionnelle
   Si vous avez une ou plusieurs procédures stockées qui s'exécutent sur le serveur de publication et qui affectent des tables publiées, vous pouvez envisager d'inclure ces procédures stockées dans votre publication en tant qu'articles d'exécution de procédure stockée. La définition de la procédure (l'instruction CREATE PROCEDURE) est répliquée vers l'Abonné quand l'abonnement est initialisé ; quand la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante sur l'Abonné. Cela peut apporter des performances significativement meilleures dans les cas où de grosses opérations de traitement sont effectuées, car seule l'exécution de la procédure est répliquée, ce qui élimine la nécessité de répliquer les modifications individuelles pour chaque ligne. Supposons par exemple que vous créez la procédure stockée suivante dans la base de données de publication :  

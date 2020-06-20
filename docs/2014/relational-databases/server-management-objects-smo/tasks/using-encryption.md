@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea79d34a5c0e8f8d51ce38db799f88c8aa981dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003577"
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
   Dans SMO, la clé principale du service est représentée par l'objet <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>. Elle est référencée par la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server>. Elle peut être régénérée par la méthode <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  

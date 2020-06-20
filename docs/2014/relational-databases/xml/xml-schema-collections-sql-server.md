@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702261"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046496"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
   Comme décrit dans la rubrique, [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fournit un stockage natif des données XML par le biais du `xml` type de données. Vous pouvez éventuellement associer des schémas XSD à une variable ou une colonne de `xml` type par le biais d’une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
@@ -119,7 +118,7 @@ ms.locfileid: "82702261"
   
 -   **Customer** est un composant ELEMENT.  
   
- Lorsque vous importez un schéma dans la base de données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne stocke pas le schéma lui-même. Au lieu de cela, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les divers composants individuels. Autrement dit, la balise \<Schema> n’est pas stockée ; seuls les composants qui y sont définis sont conservés. Tous les éléments de schémas ne sont pas préservés. Si la balise \<Schema> contient des attributs qui spécifient le comportement par défaut de ses composants, ces attributs sont déplacés vers les composants de schéma dans la balise pendant le processus d’importation, comme illustré dans le tableau suivant.  
+ Lorsque vous importez un schéma dans la base de données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne stocke pas le schéma lui-même. Au lieu de cela, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les divers composants individuels. Autrement dit, la \<Schema> balise n’est pas stockée, seuls les composants qui y sont définis sont conservés. Tous les éléments de schémas ne sont pas préservés. Si la \<Schema> balise contient des attributs qui spécifient le comportement par défaut de ses composants, ces attributs sont déplacés vers les composants de schéma qu’il contient pendant le processus d’importation, comme indiqué dans le tableau suivant.  
   
 |Nom de l’attribut|Comportement|  
 |--------------------|--------------|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016573"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Spécifier le mode de propagation des modifications des articles transactionnels
   La réplication transactionnelle permet de préciser comment les modifications des données sont propagées entre le serveur de publication et les Abonnés. Pour chaque table publiée, vous pouvez spécifier l'une des quatre méthodes de propagation possibles d'une opération (INSERT, UPDATE ou DELETE) vers l'Abonné :  
@@ -37,13 +36,13 @@ ms.locfileid: "62655674"
 ## <a name="default-and-custom-stored-procedures"></a>Procédures stockées par défaut et personnalisées  
  Trois procédures sont créées par défaut par la réplication pour chaque article de table :  
   
--   **sp_MSins_\<** *nomdetable* **>**, qui gère les insertions.  
+-   **sp_Msins_ \<** *tablename* **> **, qui gère les insertions.  
   
--   **sp_MSupd_\<** *nomdetable* **>**, qui gère les mises à jour.  
+-   **sp_Msupd_ \<** *tablename* **> **, qui gère les mises à jour.  
   
--   **sp_MSdel_\<** *nomdetable* **>**, qui gère les suppressions.  
+-   **sp_Msdel_ \<** *tablename* **> **, qui gère les suppressions.  
   
- Le ** \< ***tablename*** TableName> ** utilisé dans la procédure dépend de la façon dont l’article a été ajouté à la publication et si la base de données d’abonnement contient une table du même nom avec un propriétaire différent.  
+ Le **\<***tablename***>** utilisé dans la procédure dépend de la façon dont l’article a été ajouté à la publication et si la base de données d’abonnement contient une table du même nom avec un propriétaire différent.  
   
  N'importe laquelle de ces procédures peut être remplacée par une procédure personnalisée que vous spécifiez lors de l'ajout d'un article à une publication. Les procédures personnalisées sont utilisées dans le cas où l'application exige une logique personnalisée, par exemple l'insertion de données dans une table d'audit lors de la mise à jour d'une ligne sur l'Abonné. Pour plus d'informations sur la définition de procédures stockées personnalisées, reportez-vous à la liste des rubriques ci-dessus.  
   

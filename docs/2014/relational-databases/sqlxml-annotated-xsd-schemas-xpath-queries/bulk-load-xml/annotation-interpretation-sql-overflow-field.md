@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b91e3dcca3277a9ef1953065d3331682d1a9af7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45f29994242d40bd91a05b68f7afc3dcc2a38384
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068211"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   Dans un schéma, vous pouvez identifier une colonne en tant que colonne de dépassement destinée à recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l'aide de l'annotation `sql:overflow-field`. Un schéma peut contenir plusieurs colonnes de dépassement.  
@@ -29,7 +28,7 @@ ms.locfileid: "82703408"
   
  En même temps qu'il stocke des données dans la colonne de dépassement, le chargement en masse XML stocke les balises d'ouverture et de fermeture de l'élément parent pour lequel `sql:overflow-field` est défini.  
   
- Par exemple, le schéma suivant décrit les éléments ** \< customer>** et ** \< CustOrder>** . Chacun de ces éléments identifie une colonne de dépassement :  
+ Par exemple, le schéma suivant décrit les **\<Customers>** **\<CustOrder>** éléments et. Chacun de ces éléments identifie une colonne de dépassement :  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +72,9 @@ ms.locfileid: "82703408"
 </xsd:schema>  
 ```  
   
- Dans le schéma, l’élément ** \< customer>** est mappé à la table Cust et l’élément ** \< Order>** est mappé à la table CustOrder.  
+ Dans le schéma, l' **\<Customer>** élément est mappé à la table Cust et l' **\<Order>** élément est mappé à la table CustOrder.  
   
- Les éléments ** \< customer>** et ** \< Order>** identifient une colonne Overflow. Ainsi, le chargement en masse XML enregistre tous les éléments enfants et attributs non consommés de l’élément ** \< customer>** dans la colonne Overflow de la table Cust, ainsi que tous les éléments enfants et attributs non consommés de l’élément ** \< Order>** dans la colonne Overflow de la table CustOrder.  
+ Les **\<Customer>** éléments et **\<Order>** identifient une colonne de dépassement. Ainsi, le chargement en masse XML enregistre tous les éléments enfants et attributs non consommés de l' **\<Customer>** élément dans la colonne de dépassement de la table Cust, ainsi que tous les éléments enfants et attributs non consommés de l' **\<Order>** élément dans la colonne Overflow de la table CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   

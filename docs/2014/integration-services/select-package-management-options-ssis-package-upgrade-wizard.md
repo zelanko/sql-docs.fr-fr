@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e3a7d2ec134ff9b7a3fb63aed29a029ef6fc9bf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963780"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Sélectionner les options de gestion des packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionner les options de gestion des packages** pour spécifier des options permettant de mettre à niveau des packages.  
