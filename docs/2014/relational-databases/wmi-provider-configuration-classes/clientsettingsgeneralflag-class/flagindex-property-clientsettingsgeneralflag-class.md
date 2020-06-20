@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0200ce01bd8c2218272d56635b15fcf7a41e744e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e39c0d1c89537d9687460817e31eb4320e3a3242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048887"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>Propriété FlagIndex (classe ClientSettingsGeneralFlag)
   Obtient la valeur d'index de l'indicateur.  
@@ -37,13 +36,13 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) qui représente un indicateur général pour les paramètres du serveur.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur u`int32` qui spécifie la valeur d'index de l'indicateur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  

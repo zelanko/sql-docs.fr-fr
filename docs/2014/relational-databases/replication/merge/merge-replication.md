@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8617fcbc7204dfe29d3f6a02a0240812b5bd682c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57c0401d073ab7cf4ee05d27f5c2c4e7039e2c85
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010562"
 ---
 # <a name="merge-replication"></a>Réplication de fusion
   La réplication de fusion, comme la réplication transactionnelle, démarre généralement avec un instantané des objets et des données de la base de données de publication. Les modifications de données et de schéma ultérieures qui sont effectuées sur le serveur de publication et sur les Abonnés sont suivies avec des déclencheurs. L'abonné est synchronisé avec l'éditeur lorsqu'il est connecté au réseau et il échange toutes les lignes qui ont changé entre l'éditeur et l'abonné depuis la dernière synchronisation.

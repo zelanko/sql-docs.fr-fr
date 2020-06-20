@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 811247325eb146ba63a478b72729ccfb735dd904
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5c8b6c5642bd31e1bcd2505d0fe58667903b5521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049052"
 ---
 # <a name="find-in-files"></a>Rechercher dans les fichiers
   L’onglet **Rechercher dans les fichiers** de la fenêtre Rechercher et remplacer vous permet de rechercher une chaîne ou une expression dans le code d’un ensemble de fichiers spécifié. Les concordances trouvées et les actions exécutées sont répertoriées dans la fenêtre Résultats de la recherche, sélectionnée dans **Options de résultat**.  

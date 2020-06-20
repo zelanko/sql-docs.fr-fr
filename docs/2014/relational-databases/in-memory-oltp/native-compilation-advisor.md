@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1aeb6b4cb356cbb2d965ce449e36b2c5cd484ccc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 175e79f017b795a60088bdaab7939ca51eee9608
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025979"
 ---
 # <a name="native-compilation-advisor"></a>Conseiller de compilation native
   L'outil de génération de rapports sur les performances des transactions (voir [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) vous indique quelles procédures stockées interprétées dans votre base de données tireront parti de l'utilisation de la compilation native. Après avoir identifié une procédure stockée que vous souhaitez déplacer pour utiliser la compilation native, vous pouvez utiliser le conseiller de compilation native pour vous aider à migrer la procédure stockée interprétée vers la compilation native. Pour plus d'informations sur les procédures stockées compilées en mode natif, consultez [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
@@ -97,6 +96,6 @@ select * from SalesOrders
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

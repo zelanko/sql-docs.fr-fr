@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 010b5b2e9778ccf37133b0a84796373c012290f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047533"
 ---
 # <a name="validate-subscription"></a>Valider l'abonnement
   Utilisez la boîte de dialogue **Valider l'abonnement** pour indiquer qu'un abonnement à une publication de fusion doit être validée lors de la prochaine exécution de l'Agent de fusion de l'abonnement. Le résultat de la validation figure dans le Moniteur de réplication. Pour plus d'informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  

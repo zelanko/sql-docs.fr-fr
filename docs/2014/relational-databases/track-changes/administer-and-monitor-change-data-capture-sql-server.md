@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97929ead145d1b0de1a1f83becb15ade397683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048929"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
   Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
@@ -40,7 +39,7 @@ ms.locfileid: "76929194"
  Le paramètre *Continuous* contrôle si `sp_cdc_scan` abandonne le contrôle dans après avoir vidé le journal ou exécuté le nombre maximal de cycles d’analyse (mode à une seule fois). Il détermine également si `sp_cdc_scan` poursuit son exécution tant qu'il n'est pas explicitement arrêté (mode continuous).  
   
 ##### <a name="one-shot-mode"></a>Mode en une seule fois  
- En mode une seule fois, le travail de `sp_cdc_scan` capture demande à exécuter jusqu’à *maxtrans* analyses pour essayer de vider le journal et de renvoyer. Toute transaction au-delà de *maxtrans* qui est présente dans le journal sera traitée dans les analyses ultérieures.  
+ En mode une seule fois, le travail de capture demande `sp_cdc_scan` à exécuter jusqu’à *maxtrans* analyses pour essayer de vider le journal et de renvoyer. Toute transaction au-delà de *maxtrans* qui est présente dans le journal sera traitée dans les analyses ultérieures.  
   
  Le mode en une seule fois est utilisé dans les tests contrôlés, où le volume des transactions à traiter est connu, et où il y a un avantage au fait que le travail se termine automatiquement une fois terminé. Le mode en une seule fois n'est pas recommandé dans un environnement de production. La raison en est que t s'appuie sur la planification du travail pour déterminer la fréquence d'exécution du cycle d'analyse.  
   

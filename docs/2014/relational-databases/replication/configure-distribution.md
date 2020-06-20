@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0378fe285ba57e1420b7e6bebf5e2e6fe13d29e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064640"
 ---
 # <a name="configure-distribution"></a>Configurer la distribution
   Le serveur de distribution contient la base de données de distribution, laquelle stocke les métadonnées, les données d'historique pour tous les types de réplication et les transactions pour la réplication transactionnelle. Pour définir la réplication, vous devez configurer un serveur de distribution. Chaque serveur de publication ne peut être affecté qu'à une seule instance de serveur de distribution mais plusieurs serveurs de publication peuvent partager un serveur de distribution. Le serveur de distribution utilise les ressources supplémentaires suivantes sur le serveur sur lequel il se trouve :  

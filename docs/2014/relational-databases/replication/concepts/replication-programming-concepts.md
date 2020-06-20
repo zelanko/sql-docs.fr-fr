@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db4ab6196c138eaf21de08afc27731225df398e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064684"
 ---
 # <a name="replication-programming-concepts"></a>Concepts de programmation en matière de réplication
   Avant de développer une application qui utilise des fonctionnalités de réplication, vous devez effectuer les opérations de planification générales indiquées ci-dessous :  

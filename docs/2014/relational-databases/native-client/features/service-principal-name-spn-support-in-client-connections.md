@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10a64baa17bd070d9354beaf6ff8c2e460682318
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049575"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
   À partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la prise en charge des noms de principal du service (SPN) a été étendue pour permettre une authentification mutuelle entre tous les protocoles. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les noms de principal du service étaient pris en charge uniquement pour Kerberos sur TCP quand le nom de principal du service par défaut de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] était inscrit auprès d’Active Directory.  

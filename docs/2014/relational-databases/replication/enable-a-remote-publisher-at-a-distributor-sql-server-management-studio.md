@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d871e2cfb6eb0d4e095a19ba9893b26418230e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010730"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>activer un serveur de publication distant sur un serveur de distribution (SQL Server Management Studio)
-   Activez un serveur de publication afin d’utiliser un serveur de distribution distant sur la page **Serveurs de publication**. Cette page est disponible dans l’Assistant Configuration de la distribution et la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur de distribution>**. Pour plus d’informations sur l’utilisation de l’Assistant et l’accès à la boîte de dialogue, consultez [Configurer la publication et la distribution](configure-publishing-and-distribution.md) et [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](view-and-modify-distributor-and-publisher-properties.md).  
+   Activez un serveur de publication afin d’utiliser un serveur de distribution distant sur la page **Serveurs de publication**. Cette page est disponible dans l’Assistant Configuration de la distribution et dans la boîte de dialogue Propriétés du serveur de distribution **- \<Distributor> ** . Pour plus d’informations sur l’utilisation de l’Assistant et l’accès à la boîte de dialogue, consultez [Configurer la publication et la distribution](configure-publishing-and-distribution.md) et [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>Pour activer un serveur de publication dans l'Assistant Configuration de distribution  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62721311"
   
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>Pour activer un serveur de publication dans la boîte de dialogue Propriétés du serveur de distribution  
   
-1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur de distribution>**, cliquez sur **Ajouter**.  
+1.  Sur la page serveurs de **publication** de la boîte de dialogue Propriétés du serveur de **distribution- \<Distributor> ** , cliquez sur **Ajouter**.  
   
 2.  Cliquez sur **Ajouter un serveur de publication SQL Server**. Pour plus d'informations sur l'activation d'un serveur de publication Oracle pour utiliser un serveur de distribution, consultez [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md).  
   

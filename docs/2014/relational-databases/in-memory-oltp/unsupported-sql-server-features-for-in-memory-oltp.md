@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050006"
 ---
 # <a name="supported-sql-server-features"></a>Fonctionnalités SQL Server prises en charge
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont prises en charge, et celles qui ne le sont pas, avec les objets mémoire optimisés.  
@@ -33,7 +32,7 @@ ms.locfileid: "82702224"
   
 -   Contrôle de version multiple et contrôle d'accès concurrentiel optimiste. Pour plus d’informations, consultez [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md).  
   
--   Opérations de sauvegarde et de restauration d'une base de données qui contient un groupe de fichiers mémoire optimisé. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Opérations de sauvegarde et de restauration d'une base de données qui contient un groupe de fichiers mémoire optimisé. Pour plus d’informations, consultez [sauvegarder et restaurer des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 -   Affichages catalogue, vues de gestion dynamique et événements étendus pour la prise en charge. Pour plus d’informations, consultez [Vues système, procédures stockées, DMV et types d’attente pour l’OLTP en mémoire](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "82702224"
 |Serveur lié|Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../linked-servers/linked-servers-database-engine.md).|  
 |Journalisation en bloc|Quel que soit le mode de récupération de la base de données, toutes les opérations sur les tables à mémoire optimisée durables sont toujours entièrement journalisées.|  
 |Journalisation minimale|La journalisation minimale n'est pas prise en charge pour les tables à mémoire optimisée. Pour plus d’informations sur la journalisation minimale, consultez [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) et [Prérequis pour une journalisation minimale dans l’importation en bloc](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|Suivi des modifications|Le suivi des modifications peut être activé sur une base de données avec des objets de l'OLTP en mémoire. Toutefois, les modifications apportées aux tables à mémoire optimisée ne sont pas suivies.|  
+|Change tracking|Le suivi des modifications peut être activé sur une base de données avec des objets de l'OLTP en mémoire. Toutefois, les modifications apportées aux tables à mémoire optimisée ne sont pas suivies.|  
 |déclencheurs DDL|Les déclencheurs DDL aux niveaux de la base de données et du serveur ne sont pas pris en charge avec les tables de l'OLTP en mémoire et les procédures stockées compilées en mode natif.|  
 |Capture de données modifiées (CDC)|La capture de données modifiées ne doit pas être activée sur une base de données qui possède des objets de l'OLTP en mémoire, car elle empêche certaines opérations telles que DROP.|  
 |Relation contenant-contenu de base de données|La relation contenant-contenu de la base de données n'est pas prise en charge dans une base de données contenant des procédures stockées compilées en mode natif et des tables optimisées en mémoire. Pour plus d'informations, consultez [Bases de données autonomes](../databases/contained-databases.md)|  
@@ -107,8 +106,8 @@ ms.locfileid: "82702224"
   
 |Bases de données|Autorisé|Description|  
 |---------------|-------------|-----------------|  
-|Bases de données utilisateur, model et msdb|No|Les requêtes et transactions de bases de données croisées ne sont pas prises en charge.<br /><br /> Les requêtes et les transactions qui accèdent aux tables mémoire optimisées ou aux procédures stockées compilées en mode natif ne peuvent pas accéder à d'autres bases de données, à l'exception de la base de données système master (accès en lecture seule) et de tempdb.|  
-|Base de données Resource et tempdb|Yes|Il n'y a pas de restrictions appliquées aux transactions de bases de données croisées qui, à part une base de données en mode mono-utilisateur, utilisent uniquement la base de données Resource et tempdb.|  
+|Bases de données utilisateur, model et msdb|Non|Les requêtes et transactions de bases de données croisées ne sont pas prises en charge.<br /><br /> Les requêtes et les transactions qui accèdent aux tables mémoire optimisées ou aux procédures stockées compilées en mode natif ne peuvent pas accéder à d'autres bases de données, à l'exception de la base de données système master (accès en lecture seule) et de tempdb.|  
+|Base de données Resource et tempdb|Oui|Il n'y a pas de restrictions appliquées aux transactions de bases de données croisées qui, à part une base de données en mode mono-utilisateur, utilisent uniquement la base de données Resource et tempdb.|  
 |master|en lecture seule|La validation des transactions de bases de données croisées qui impliquent l'OLTP en mémoire et la base de données master échoue si ces transactions incluent des écritures dans la base de données master. Les transactions de bases de données croisées qui n'impliquent que des lectures de la base de données master et utilisent uniquement une base de données mono-utilisateur sont autorisées.|  
   
 ## <a name="see-also"></a>Voir aussi  

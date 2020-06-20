@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 389c4b76a3b52895a796a5fddef90e37f617fcdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028037"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed, classe d'événements
   La classe d'événements TM: Rollback Tran Completed indique qu'une demande ROLLBACK TRANSACTION a été exécutée. La demande a été envoyée à partir du client via l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction va être démarrée après l'annulation de la transaction en cours.  
@@ -32,7 +31,7 @@ ms.locfileid: "63061325"
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|Error|`int`|Numéro d'erreur d'un événement donné. Il s'agit généralement du numéro d'erreur stocké dans la table sys.messages.|31|Oui|  
+|Erreur|`int`|Numéro d'erreur d'un événement donné. Il s'agit généralement du numéro d'erreur stocké dans la table sys.messages.|31|Oui|  
 |EventClass|`int`|Type d’événement = 188.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1=Annulation<br /><br /> 2=Annulation et commencement|21|Oui|  
@@ -48,7 +47,7 @@ ms.locfileid: "63061325"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|Opération réussie|`int`|1 = réussite. 0 = échec (par exemple, 1 indique qu'une vérification des autorisations a abouti et 0 indique que la vérification a échoué).|23|Oui|  
+|Succès|`int`|1 = réussite. 0 = échec (par exemple, 1 indique qu'une vérification des autorisations a abouti et 0 indique que la vérification a échoué).|23|Oui|  
 |TextData|`ntext`|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  

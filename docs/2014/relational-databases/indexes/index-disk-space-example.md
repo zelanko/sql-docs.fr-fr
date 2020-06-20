@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025252"
 ---
 # <a name="index-disk-space-example"></a>Exemple d'espace disque d'un index
   Chaque fois qu'un index est créé, reconstruit ou supprimé, de l'espace disque est nécessaire tant pour l'ancienne structure (source) que pour la nouvelle (cible) dans leurs fichiers et groupes de fichiers respectifs. L'ancienne structure n'est pas désallouée aussi longtemps que la transaction de création d'index n'est pas validée. De l'espace disque temporaire supplémentaire peut également être requis pour le tri des opérations. Pour plus d’informations, consultez [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -96,7 +95,7 @@ ms.locfileid: "63161790"
   
 -   Déterminez l'espace de l'index de mappage temporaire.  
   
-     Dans cet exemple, l’ancien signet est l’ID de ligne (RID) du segment de mémoire (8 octets) et le nouveau signet est la clé de clustering (24 `uniqueifier`octets, y compris un). Aucune colonne ne se chevauche entre les anciens et nouveaux signets.  
+     Dans cet exemple, l’ancien signet est l’ID de ligne (RID) du segment de mémoire (8 octets) et le nouveau signet est la clé de clustering (24 octets, y compris un `uniqueifier` ). Aucune colonne ne se chevauche entre les anciens et nouveaux signets.  
   
      Taille de l'index de mappage temporaire = 1 million * (8 octets + 24 octets) / 80 % ~ 40 Mo.  
   

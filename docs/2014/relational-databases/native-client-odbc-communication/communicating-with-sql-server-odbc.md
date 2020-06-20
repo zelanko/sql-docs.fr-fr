@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 015cec73c97a3a02179bb65735aaed4dd4f0da6c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c41ac2dcce9c5bdbdd351148d16bcaa8f067d22f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021200"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Communication avec SQL Server (ODBC)
   Pour qu’une application ODBC communique avec une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , elle doit allouer des handles d’environnement et de connexion et se connecter à la source de données. Après avoir établi une connexion, l'application peut envoyer des requêtes au serveur et traiter tous les jeux de résultats. Lorsque l'application a terminé d'utiliser la source de données, elle se déconnecte de la source de données et libère le handle de connexion. Lorsque l'application a libéré tous ses handles de connexion, elle libère le handle d'environnement.  

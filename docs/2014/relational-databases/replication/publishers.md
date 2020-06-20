@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b28a0543208ab28414fb93def15adf904e2c078
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 879fa3cc2ecadf56914928c6ae83600f513f6ddb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049095"
 ---
 # <a name="publishers"></a>Serveurs de publication
   Vous pouvez autoriser les autres serveurs de publication à utiliser ce serveur de distribution. Notez que l'activation d'un serveur de publication pour utiliser ce serveur en tant que serveur de distribution distant ne fait pas de ce serveur un serveur de publication. Vous devez vous connecter au serveur de publication, le configurer pour la publication, et choisir ce serveur comme distributeur. Vous pouvez configurer le serveur de publication et choisir un serveur de distribution à l'aide de l'Assistant Nouvelle publication.  

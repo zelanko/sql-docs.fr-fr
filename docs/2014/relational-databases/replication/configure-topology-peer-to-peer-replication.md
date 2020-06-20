@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc09f5ae7f488afd46f29c301d11b7687e0a4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010978"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurer la topologie (réplication d'égal à égal)
   Utilisez la page **Configurer la topologie** pour effectuer des tâches de configuration communes, telles que l'ajout de nouveaux nœuds, la suppression de nœuds et l'ajout de nouvelles connexions entre des nœuds existants. Le nœud que vous avez sélectionné dans la page **Publication** de cet Assistant s'affiche dans l'aire de conception. Pour spécifier des options de configuration, cliquez avec le bouton droit sur un nœud, une connexion ou l'aire de conception.

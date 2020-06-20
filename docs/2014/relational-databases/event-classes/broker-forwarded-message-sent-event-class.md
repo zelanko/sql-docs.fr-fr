@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3996850833efdc8737febec4691353d1c0a835f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030490"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement Broker:Forwarded Message Sent quand Service Broker transmet un message.  
@@ -38,7 +37,7 @@ ms.locfileid: "62664005"
 |FileName|`nvarchar`|Nom du service auquel le message est destiné.|36|Non|  
 |GUID|`uniqueidentifier`|ID de conversation du dialogue. Cet identifiant est transmis en tant que partie intégrante du message et est partagé par les deux intervenants de la conversation.|54|Non|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
-|IndexID|`int`|Nombre de sauts restants au message transféré.|24|Non|  
+|IndexID|`int`|Nombre de sauts restants au message transféré.|24|Non |  
 |IntegerData|`int`|Nombre de fragments du message transféré.|25|Non|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Non|  
 |LoginSid|`image`|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
@@ -51,7 +50,7 @@ ms.locfileid: "62664005"
 |ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SPID|`int`|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |StartTime|`datetime`|Heure de début de l'événement, le cas échéant.|14|Oui|  
-|Opération réussie|`int`|Temps consommé durant le processus de transfert.|23|Non|  
+|Succès|`int`|Temps consommé durant le processus de transfert.|23|Non |  
 |TargetLoginName|`nvarchar`|Adresse réseau à laquelle cette instance a envoyé le message. Notez que celle-ci peut différer de la destination finale du message.|42|Non|  
 |TargetUserName|`nvarchar`|Nom du service initiateur du message.|39|Non|  
 |TransactionID|`bigint`|ID affecté à la transaction par le système.|4|Non|  

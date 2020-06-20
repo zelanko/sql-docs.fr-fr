@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634263350f0f094697ff2a77d68de5a2feacc9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63256059"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047757"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutoriel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies
   Bienvenue au didacticiel Administration de serveurs à l'aide de stratégies de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais ne connaissant pas la Gestion basée sur des stratégies.  
@@ -34,7 +33,7 @@ ms.locfileid: "63256059"
  [Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  Cette leçon crée une stratégie qui définit et applique une norme d'affectation de noms pour les tables.  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Cette leçon requiert une connaissance élémentaire des bases de données et une compréhension des notions fondamentales de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  L'utilisation de ce didacticiel nécessite l'installation de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sur votre système.  

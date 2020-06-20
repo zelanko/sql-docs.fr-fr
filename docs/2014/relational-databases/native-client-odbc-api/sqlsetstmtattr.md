@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0932c3e78cf92501b38f80e779f25f93238e2419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021591"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client ne prend pas en charge le modèle de curseur mixte (jeu de clés/dynamique). Les tentatives de définir la taille du jeu de clés à l'aide de SQL_ATTR_KEYSET_SIZE échoue si la valeur définie n'est pas égale à 0.  

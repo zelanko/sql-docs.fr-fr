@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962949"
 ---
 # <a name="smo-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SMO
   Utilisez l' **Éditeur du gestionnaire de connexions SMO** pour configurer une connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à utiliser par les différentes tâches qui transfèrent des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "66055597"
  **Actualisation**  
  Actualisez la liste des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles qui peuvent être détectées sur le réseau.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Utilisez l'authentification Windows pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sélectionnée.  
   
  **Utiliser l’authentification SQL Server**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c783a06d5d5518639e6368f5c1eb572e60206b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962259"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Éditeur de transformation d'extraction de terme (onglet Avancé)
   Utilisez l’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’extraction de terme** pour définir les propriétés de l’extraction, telles que la fréquence et la longueur, et indiquer si les mots ou les phrases doivent être extraits.  

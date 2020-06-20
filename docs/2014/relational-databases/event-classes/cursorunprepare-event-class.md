@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3c872738f35d4c99032d14feff6f3890ddeebca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030063"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare (classe d'événements)
   La classe d’événements **CursorUnprepare** fournit des informations sur les événements de non-préparation de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API, Application Programming Interface). Ces événements se produisent quand le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] rejette un plan d’exécution.  

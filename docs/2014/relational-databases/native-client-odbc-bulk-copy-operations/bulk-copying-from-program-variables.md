@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a76f86f1be8012e0df2ed80960095eb83d6882e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021448"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copie en bloc à partir de variables de programme
   Vous pouvez effectuer une copie en bloc directement à partir de variables de programme. Après avoir alloué des variables pour stocker les données d’une ligne et appelant [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour démarrer la copie en bloc, appelez [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour chaque colonne afin de spécifier l’emplacement et le format de la variable de programme à associer à la colonne. Remplissez chaque variable avec des données, puis appelez [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour envoyer une ligne de données au serveur. Répétez le processus de remplissage des variables et en appelant **bcp_sendrow** jusqu’à ce que toutes les lignes aient été envoyées au serveur, puis appelez [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) pour spécifier que l’opération est terminée.  
