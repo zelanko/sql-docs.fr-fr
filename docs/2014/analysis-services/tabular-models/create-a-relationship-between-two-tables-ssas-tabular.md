@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afd264701c8e74d4fdb99d186e3bb5be8d2b5e15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939837"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Créer une relation entre deux tables (SSAS Tabulaire)
   S'il n'existe pas de relations entre les tables de votre source de données ou si vous ajoutez de nouvelles tables, vous pouvez utiliser les outils du générateur de modèles pour créer des relations. Pour plus d’informations sur la façon dont les relations sont utilisées dans les modèles tabulaires, consultez [Relations &#40;SSAS Tabulaire&#41;](relationships-ssas-tabular.md).  

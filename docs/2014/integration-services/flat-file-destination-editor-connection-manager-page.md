@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7d2c37e38386f7e46c1b8a0800d45dfc0b9b0dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967079"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Éditeur de destination de fichier plat (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination de fichier plat** pour sélectionner la connexion de fichier plat de la destination et spécifier si elle doit remplacer le fichier de destination existant ou lui être ajoutée. La destination de fichier plat écrit ses données dans un fichier texte. Ce fichier texte peut être d'un format délimité, à largeur fixe avec séparateur de lignes, ou en drapeau à droite.  
@@ -30,7 +29,7 @@ ms.locfileid: "66058695"
  **Gestionnaire de connexions de fichiers plats**  
  Sélectionnez un gestionnaire de connexions existant dans la zone de liste ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion à l’aide des boîtes de dialogue **Format de fichier plat** et **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
  En plus des formats de fichier plat standard (délimité, largeur fixe et en drapeau à droite), la boîte de dialogue **Format de fichier plat** contient une quatrième option : **Largeur fixe avec séparateurs de lignes**. Cette option représente un cas particulier du format en drapeau à droite dans lequel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ajoute une colonne factice comme dernière colonne de données. Cette colonne factice garantit que la dernière colonne a une largeur fixe.  
@@ -43,7 +42,7 @@ ms.locfileid: "66058695"
  **En-tête**  
  Tapez un bloc de texte à insérer dans le fichier avant l'écriture des données. Utilisez cette option pour inclure des informations supplémentaires, telles que des titres de colonne.  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
 ## <a name="see-also"></a>Voir aussi  

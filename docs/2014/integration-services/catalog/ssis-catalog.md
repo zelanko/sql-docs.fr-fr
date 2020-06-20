@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924255"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le `SSISDB` catalogue est le point central pour l’utilisation des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projets (SSIS) que vous avez déployés sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serveur. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "82921716"
 >  Vous ne pouvez pas renommer la `SSISDB` base de données.  
   
 > [!NOTE]  
->  Si l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à laquelle la `SSISDB` base de données est attachée, s’arrête ou ne répond pas, le processus ISServerExec. exe se termine. Un message est écrit dans un journal des événements Windows.  
+>  Si l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à laquelle la `SSISDB` base de données est attachée, s’arrête ou ne répond pas, le processus de ISServerExec.exe se termine. Un message est écrit dans un journal des événements Windows.  
 >   
 >  Si les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basculent dans le cadre d'un basculement de cluster, les packages en cours de exécution ne redémarrent pas. Vous pouvez utiliser les points de contrôle pour redémarrer les packages. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921716"
 ### <a name="folder-project-environment"></a>Dossier, projet, environnement  
  Lorsque vous renommez un dossier, un projet ou un environnement, respectez les règles suivantes.  
   
--   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), le signe supérieur à (>), la barre verticale (|), le retour arrière (\b), la valeur null (\0) et la tabulation (\t).  
+-   Les caractères non valides sont les caractères ASCII/Unicode 1 à 31, les guillemets ("), le signe inférieur à ( \<), greater than (> ), le canal (|), le retour arrière (\b), la valeur null (\ 0) et la tabulation (\t).  
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921716"
 ### <a name="environment-variable"></a>Variable d’environnement  
  Lorsque vous attribuez un nom à une variable d'environnement, respectez les règles suivantes :  
   
--   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), le signe supérieur à (>), la barre verticale (|), le retour arrière (\b), la valeur null (\0) et la tabulation (\t).  
+-   Les caractères non valides sont les caractères ASCII/Unicode 1 à 31, les guillemets ("), le signe inférieur à ( \<), greater than (> ), le canal (|), le retour arrière (\b), la valeur null (\ 0) et la tabulation (\t).  
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921716"
   
  La modification de l'algorithme de chiffrement est une opération qui prend du temps. Tout d'abord, le serveur doit utiliser l'algorithme précédemment spécifié pour déchiffrer toutes les valeurs de configuration. Le serveur doit ensuite utiliser le nouvel algorithme pour ré-chiffrer les valeurs. Pendant ce temps, aucune autre opération [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut être effectuée sur le serveur. Ainsi, pour permettre aux opérations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de continuer de façon ininterrompue, l’algorithme de chiffrement est une valeur en lecture seule dans la boîte de dialogue dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Pour modifier le paramètre de propriété **algorithme de chiffrement** , définissez la `SSISDB` base de données en mode mono-utilisateur, puis appelez la procédure stockée Catalog. configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name* . Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Pour modifier le paramètre de propriété **algorithme de chiffrement** , définissez la `SSISDB` base de données en mode mono-utilisateur, puis appelez la procédure stockée catalog.configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name* . Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Pour plus d’informations sur le mode mono-utilisateur, consultez [Définir une base de données en mode mono-utilisateur](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Pour plus d’informations sur le chiffrement et les algorithmes de chiffrement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les rubriques de la section [Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   

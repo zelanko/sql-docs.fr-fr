@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923250"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
   Une instance Oracle CDC exploite les modifications d'une base de données source Oracle (un cluster Oracle RAC est considéré comme une seule base de données) et écrit les modifications validées dans les tables de modifications dans une base de données CDC de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.  
@@ -55,7 +54,7 @@ ms.locfileid: "62835646"
   
 -   La table MSXDBCDC.dbo.xdbcdc_trace, utilisée pour la journalisation et le suivi généraux par le processus principal du service de capture de données modifiées Oracle.  
   
--   La table \<cdc-database>.cdc.xdbcdc_trace, utilisée pour la journalisation et le suivi généraux par les instances Oracle CDC. Cela signifie que les erreurs liées à une instance Oracle CDC spécifique sont enregistrées dans la table de trace de cette instance.  
+-   La \<cdc-database> table. cdc. xdbcdc_trace, qui est utilisée pour la journalisation et le suivi généraux par les instances Oracle CDC. Cela signifie que les erreurs liées à une instance Oracle CDC spécifique sont enregistrées dans la table de trace de cette instance.  
   
  Les informations sont enregistrées par le service de capture de données modifiées Oracle lorsque le service :  
   

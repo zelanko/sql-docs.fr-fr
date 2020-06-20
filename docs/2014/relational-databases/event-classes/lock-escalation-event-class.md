@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029426"
 ---
 # <a name="lockescalation-event-class"></a>Classe d'événements Lock:Escalation
   La classe d’événements **Lock:Escalation** indique qu’un verrouillage spécifique s’est transformé en verrouillage de plus grande ampleur, comme par exemple un verrou de ligne transformé en verrou d’objet. La classe d'événements Escalation est l'ID d'événement 60.  
@@ -49,7 +48,7 @@ ms.locfileid: "62662367"
 |**NTUserName**|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  
 |**Arguments**|`int`|ID assigné par système de la table pour laquelle l'escalade de verrous a été déclenchée.|22|Oui|  
 |**ObjectID2**|`bigint`|ID de l'objet ou de l'entité associé. (ID HoBT pour lequel l'escalade de verrous a été déclenchée.)|56|Oui|  
-|**Offset**|`int`|Décalage de départ de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Oui|  
+|**Décalage**|`int`|Décalage de départ de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Oui|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Oui|  
 |**Identifi**|`int`|ID de la demande contenant l'instruction.|49|Oui|  
 |**ServerName**|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  

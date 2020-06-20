@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967039"
 ---
 # <a name="msmq-connection-manager-editor"></a>Éditeur du gestionnaire de connexions MSMQ
   La boîte de dialogue **Gestionnaire de connexions MSMQ** permet de spécifier le chemin d’une file d’attente de messages MSMQ (Message Queuing).  
@@ -41,8 +40,8 @@ ms.locfileid: "66057642"
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
-|Private|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
+|Public|\<computer name>\\Nom de la file d’attente<\>|  
+|Private|\<computer name>\Private $ \\<nom de la file d’attente\>|  
   
  Vous pouvez utiliser "." pour représenter l'ordinateur local.  
   

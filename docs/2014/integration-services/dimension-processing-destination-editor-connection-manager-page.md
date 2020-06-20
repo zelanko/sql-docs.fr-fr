@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb6c1a4fb5095e387bed9ca2b88b66e62c0bd9a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966976"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Éditeur de destination de traitement de dimension (page Gestionnaire de connexions)
   La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination de traitement de dimension** vous permet de spécifier une connexion à un projet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "66059436"
  **Gestionnaire de connexions**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
   
  **Liste des dimensions disponibles**  
@@ -43,7 +42,7 @@ ms.locfileid: "66059436"
 |-----------|-----------------|  
 |**Ajouter (incrémentiel)**|Permet d'effectuer un traitement incrémentiel de la dimension.|  
 |**Complète**|Permet d'effectuer un traitement complet de la dimension.|  
-|**Mise à jour**|Permet d'effectuer un traitement de mise à jour de la dimension.|  
+|**Update**|Permet d'effectuer un traitement de mise à jour de la dimension.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   

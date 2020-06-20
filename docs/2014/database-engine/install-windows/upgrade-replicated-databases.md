@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 326a94820876b40128428aac58e47c650ce122b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775316"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931860"
 ---
 # <a name="upgrade-replicated-databases"></a>Mettre à niveau des bases de données répliquées
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n'est pas nécessaire d'interrompre l'activité des autres nœuds lorsqu'un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
@@ -91,7 +90,7 @@ ms.locfileid: "62775316"
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilité descendante de la réplication](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Mettre à niveau vers SQL Server 2014](upgrade-sql-server.md)  
   
   

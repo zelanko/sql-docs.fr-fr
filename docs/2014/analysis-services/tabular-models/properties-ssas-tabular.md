@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1d8c77ffbe8e185e15b716819498fe48295348e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938703"
 ---
 # <a name="properties-ssas-tabular"></a>Propriétés (SSAS Tabulaire)
   Les projets de modèles tabulaires dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ont diverses propriétés qui définissent les comportements du projet, du modèle, de la création de rapports et du déploiement. Les paramètres de propriété sont stockés au format XML dans le fichier Model.bim ; toutefois, toutes les propriétés décrites dans cette section peuvent être configurées dans les fenêtres **Propriétés** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 65f57b330a2b007f8f02df4404597d91fb143fcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67ae47197636af037f3eb9e648a2d8ce6c4a63a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176452"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939678"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
   L'Assistant Dimension à variation lente fonctionne comme un éditeur pour la transformation de dimension à variation lente. La création et la configuration du flux de données pour des données de dimension à variation lente peuvent être des tâches complexes. L'Assistant Dimension à variation lente constitue le moyen le plus simple de créer le flux de données pour les sorties de transformation de dimension à variation lente ; il vous guide lors des étapes de mappage de colonnes, de sélection de colonnes clés d'entreprise, de définition des attributs de modification de colonnes et de configuration de la prise en charge des membres de dimension inférés.

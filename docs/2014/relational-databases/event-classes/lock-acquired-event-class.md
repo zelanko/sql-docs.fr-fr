@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e1ed4e632b11bff6f559392d829ec57bed94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62665321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029546"
 ---
 # <a name="lockacquired-event-class"></a>Classe d'événements Lock:Acquired
   La classe d’événements Lock:Acquired indique que l’acquisition d’un verrou sur une ressource (une page de données, par exemple) a été effectuée.  
@@ -30,7 +29,7 @@ ms.locfileid: "62665321"
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nom de l’application cliente qui a créé la connexion à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
+|ApplicationName|`nvarchar`|Nom de l’application cliente qui a créé la connexion à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |BigintData1|`bigint`|ID de partition si la ressource Lock est partitionnée.|52|Oui|  
 |BinaryData|`image`|Identificateur de ressource du verrou.|2|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  

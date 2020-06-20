@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939250"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données ont des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -128,7 +127,7 @@ ms.locfileid: "62770723"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |Connectionmanager|String|Spécifie le nom du gestionnaire de connexions.|  
-|ValidateExternalMetadata|Boolean|Indique si la transformation du cache est validée à l'aide de sources de données externes au moment de la conception. Si la propriété possède la valeur `False`, la validation avec des sources de données externes a lieu au moment de l'exécution.<br /><br /> La valeur par défaut `True`.|  
+|ValidateExternalMetadata|Boolean|Indique si la transformation du cache est validée à l'aide de sources de données externes au moment de la conception. Si la propriété possède la valeur `False`, la validation avec des sources de données externes a lieu au moment de l'exécution.<br /><br /> La valeur par défaut `True` .|  
 |AvailableInputColumns|String|Liste des colonnes d'entrée disponibles.|  
 |InputColumns|String|Liste des colonnes d'entrée sélectionnées.|  
 |CacheColumnName|String|Spécifie le nom de la colonne mappée à une colonne d'entrée sélectionnée.<br /><br /> Le nom de la colonne dans la propriété CacheColumnName doit correspondre au nom de la colonne correspondante répertoriée dans la page **Colonnes** de **l’Éditeur du gestionnaire de connexions du cache**.<br /><br /> Pour plus d'informations, consultez [Cache Connection Manager Editor](../../cache-connection-manager-editor.md)|  
@@ -232,7 +231,7 @@ ms.locfileid: "62770723"
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|Valeur spécifiant si la transformation ajoute ou non des données à un fichier existant. La valeur par défaut de cette propriété est `False`.|  
 |ForceTruncate|Boolean|Valeur qui spécifie si la transformation tronque un fichier existant avant d'écrire des données. La valeur par défaut de cette propriété est `False`.|  
-|FileDataColumnID|Integer|Valeur qui identifie la colonne contenant les données que la transformation insère dans un fichier. Sur la colonne d’extraction, cette propriété a la valeur **0**; dans la colonne chemin d’accès du fichier, cette `LineageID` propriété contient le de la colonne d’extraction.|  
+|FileDataColumnID|Integer|Valeur qui identifie la colonne contenant les données que la transformation insère dans un fichier. Sur la colonne d’extraction, cette propriété a la valeur **0**; dans la colonne chemin d’accès du fichier, cette propriété contient le `LineageID` de la colonne d’extraction.|  
 |WriteBOM|Boolean|Valeur spécifiant si une marque d'ordre d'octet est écrite dans le fichier.|  
   
  L'entrée, la sortie et les colonnes de sortie de la transformation d'exportation de colonne ne disposent pas de propriétés personnalisées.  
@@ -260,7 +259,7 @@ ms.locfileid: "62770723"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|Délimiteurs|String|Séparateurs de jetons utilisés par la transformation. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (/), barre oblique inverse (\\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;), signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
+|Délimiteurs|String|Séparateurs de jetons utilisés par la transformation. Les délimiteurs par défaut incluent les caractères suivants : Space (), virgule (,), point (.), point-virgule (;), signe deux-points ( :), trait d’Union (-), guillemet double droit ("), guillemet simple ('), perluète (&), barre oblique (/), barre oblique inverse (), arobase ( \\ @), point d’exclamation ( !), point d’interrogation ( ?), parenthèse ouvrante ((), parenthèse fermante ()), inférieur à ( \<), greater than (> ), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;), signe dièse (#), astérisque (*), signe insertion (^) et pourcentage (%).|  
 |Exhaustive|Boolean|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur `True` sert principalement à des fins de débogage. La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par regroupement probable**, mais peut être définie avec **l’Éditeur avancé**.|  
 |MaxMemoryUsage|Integer|Quantité de mémoire maximale que peut utiliser la transformation. La valeur par défaut de cette propriété est **0**, permettant ainsi l'utilisation dynamique de la mémoire.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par regroupement probable**, mais peut être définie avec **l’Éditeur avancé**.|  
 |MinSimilarity|Double|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) que la transformation utilise pour identifier des doublons.  La valeur par défaut de cette propriété est de 0,8.|  
@@ -294,7 +293,7 @@ ms.locfileid: "62770723"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Spécifie si une copie de la table de référence doit être réalisée pour la construction de l'index de recherche floue et les recherches suivantes. La valeur par défaut de cette propriété est `True`.|  
-|Délimiteurs|String|Séparateurs utilisés par la transformation pour marquer les valeurs de colonne. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (\\), barre oblique inverse (\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;). signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
+|Délimiteurs|String|Séparateurs utilisés par la transformation pour marquer les valeurs de colonne. Les délimiteurs par défaut incluent les caractères suivants : espace (), virgule (,), point (.) point-virgule (;), deux-points ( :) le trait d’Union (-), le guillemet double ("), le guillemet simple ('), l’esperluette (&), la barre oblique (/), la barre oblique inverse (), l’arobase \\ (@), le point d’exclamation ( !), point d’interrogation ( ?), parenthèse ouvrante ((), parenthèse fermante ()), inférieur à ( \<), greater than (> ), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;). signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
 |DropExistingMatchIndex|Boolean|Valeur spécifiant si l’index de correspondance spécifié dans MatchIndexName est supprimé quand MatchIndexOptions n’est pas défini sur ReuseExistingIndex. La valeur par défaut de cette propriété est `True`.|  
 |Exhaustive|Boolean|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur `True` sert principalement à des fins de débogage. La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par recherche probable**, mais peut être définie avec **l’Éditeur avancé**.|  
 |MatchIndexName|String|Nom de l'index de correspondance. L'index de correspondance désigne la table dans laquelle la transformation crée et enregistre l'index qu'elle utilise. En cas de réutilisation de l’index de correspondance, MatchIndexName spécifie l’index à réutiliser. MatchIndexName doit être un nom d’identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
@@ -319,7 +318,7 @@ ms.locfileid: "62770723"
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation de recherche floue. Toutes les propriétés sont en lecture/écriture.  
   
 > [!NOTE]  
->  Pour les colonnes de sortie qui contiennent des valeurs passthrough des colonnes d’entrée correspondantes, CopyFromReferenceColumn est vide `LineageID` et SourceInputColumnLineageID contient le de la colonne d’entrée correspondante. Pour les colonnes de sortie qui contiennent des résultats de recherche, CopyFromReferenceColumn contient le nom de la colonne de recherche et SourceInputColumnLineageID est vide.  
+>  Pour les colonnes de sortie qui contiennent des valeurs passthrough des colonnes d’entrée correspondantes, CopyFromReferenceColumn est vide et SourceInputColumnLineageID contient le `LineageID` de la colonne d’entrée correspondante. Pour les colonnes de sortie qui contiennent des résultats de recherche, CopyFromReferenceColumn contient le nom de la colonne de recherche et SourceInputColumnLineageID est vide.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
@@ -422,7 +421,7 @@ ms.locfileid: "62770723"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|Volumes sélectionnés|Boolean|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Sur la sortie sélectionnée, Selected a la `True`valeur, et sur la sortie non sélectionnée, la valeur est `False`.|  
+|Volumes sélectionnés|Boolean|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Sur la sortie sélectionnée, Selected a la valeur `True` , et sur la sortie non sélectionnée, la valeur est `False` .|  
   
  L'entrée, les colonnes d'entrée et les colonnes de sortie de la transformation d'échantillonnage par pourcentage ne disposent pas de propriétés personnalisées.  
   
@@ -477,7 +476,7 @@ ms.locfileid: "62770723"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|Volumes sélectionnés|Boolean|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Sur la sortie sélectionnée, Selected a la `True`valeur, et sur la sortie non sélectionnée, la valeur est `False`.|  
+|Volumes sélectionnés|Boolean|Désigne la sortie vers laquelle les lignes échantillonnées sont dirigées. Sur la sortie sélectionnée, Selected a la valeur `True` , et sur la sortie non sélectionnée, la valeur est `False` .|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation d'échantillonnage de lignes. Toutes les propriétés sont en lecture/écriture.  
   

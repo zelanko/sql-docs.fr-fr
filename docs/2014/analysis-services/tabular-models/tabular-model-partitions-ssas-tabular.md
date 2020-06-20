@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653ec9a81d8c066a32e66b156f5e42fc41169782
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066389"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938560"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partitions de modèle tabulaire (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les partitions définies pour un modèle au cours de la création de modèles sont dupliquées dans un modèle déployé. Une fois le déploiement terminé, vous pouvez gérer ces partitions et créer de nouvelles partitions à l'aide de la boîte de dialogue **Partitions** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou à l'aide d'un script. Les informations fournies dans cette rubrique décrivent des partitions dans une base de données de modèle tabulaire déployée. Pour plus d’informations sur la création et la gestion des partitions lors de la création de modèles, consultez [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66066389"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Avantages  
  La création de modèles efficaces fait appel à des partitions permettant d'éliminer tout traitement inutile et la charge qui en résulte au niveau du processeur sur les serveurs Analysis Services, tout en veillant en même temps à ce que les données soient traitées et actualisées suffisamment souvent pour refléter les données les plus récentes des sources de données.  
   
  Par exemple, un modèle tabulaire peut avoir une table des ventes qui inclut des données de ventes pour l'exercice fiscal 2011 et chacun des exercices précédents. La table Sales du modèle contient les trois partitions suivantes :  

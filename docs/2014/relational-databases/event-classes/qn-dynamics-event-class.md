@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a55c2b2a2392cf5d9993f4bfdea8969e4f4d23f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028893"
 ---
 # <a name="qndynamics-event-class"></a>Classe d'événements QN:Dynamics
   La classe d'événements QN:Dynamics fournit des informations sur l'activité d'arrière-plan que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] effectue pour la prise en charge des notifications de requête. Dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)], un thread d’arrière-plan surveille les délais d’abonnement, les abonnements en attente à déclencher et la destruction de la table de paramètres.  
@@ -34,11 +33,11 @@ ms.locfileid: "63035699"
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d'événement = 202|27|Non|  
 |EventSequence|`int`|Numéro de séquence de cet événement.|51|Non|  
-|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Clock Run Started : indique que le thread d’arrière [!INCLUDE[ssDE](../../includes/ssde-md.md)] -plan du qui planifie les tables de paramètres expirées pour le nettoyage a démarré.<br /><br /> Clock Run finished : indique que le thread d’arrière- [!INCLUDE[ssDE](../../includes/ssde-md.md)] plan du qui planifie les tables de paramètres expirés pour le nettoyage est terminé.<br /><br /> Master cleanup task started : indique le moment auquel démarre le nettoyage (garbage collection) destiné à supprimer les données d’abonnement aux notifications de requête expirées.<br /><br /> Master cleanup task finished : indique le moment auquel se termine le nettoyage (garbage collection) destiné à supprimer les données d’abonnement aux notifications de requête expirées.<br /><br /> Tâche de nettoyage principal ignorée : indique que [!INCLUDE[ssDE](../../includes/ssde-md.md)] le n’a pas effectué le nettoyage (garbage collection) pour supprimer les données d’abonnement aux notifications de requête expirées.|21|Oui|  
+|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Clock Run Started : indique que le thread d’arrière-plan du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui planifie les tables de paramètres expirées pour le nettoyage a démarré.<br /><br /> Clock Run finished : indique que le thread d’arrière-plan du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui planifie les tables de paramètres expirés pour le nettoyage est terminé.<br /><br /> Master cleanup task started : indique le moment auquel démarre le nettoyage (garbage collection) destiné à supprimer les données d’abonnement aux notifications de requête expirées.<br /><br /> Master cleanup task finished : indique le moment auquel se termine le nettoyage (garbage collection) destiné à supprimer les données d’abonnement aux notifications de requête expirées.<br /><br /> Tâche de nettoyage principal ignorée : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’a pas effectué le nettoyage (garbage collection) pour supprimer les données d’abonnement aux notifications de requête expirées.|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  
-|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur (soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la connexion de sécurité, soit les informations d’identification de connexion Windows au format *domaine\nom_utilisateur*).|11|Non|  
+|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur (soit la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion de sécurité, soit les informations d’identification de connexion Windows au format *domaine\nom_utilisateur*).|11|Non |  
 |LoginSID|`image`|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l'affichage catalogue sys.server_principals. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  

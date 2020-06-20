@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 436625f9ad629a6b0e574aa046059f4e7e9c2bf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783258"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995479"
 ---
 # <a name="delete-one-or-more-jobs"></a>Supprimer un ou plusieurs travaux
-  Cette rubrique explique comment supprimer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des travaux de l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agent dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]à [!INCLUDE[tsql](../../includes/tsql-md.md)]l’aide de, de ou de SQL Server Management Objects.  
+  Cette rubrique explique comment supprimer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des travaux de l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , de ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL Server Management Objects.  
   
  
   

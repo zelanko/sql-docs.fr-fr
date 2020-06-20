@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967119"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Avancé)
   La page **Avancé** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de définir des propriétés qui spécifient la manière dont Integration Services lit et écrit des données dans les fichiers plats. Vous pouvez modifier les noms des colonnes dans le fichier plat et définir des propriétés qui incluent le type de données et des séparateurs pour chaque colonne du fichier.  
@@ -50,7 +49,7 @@ ms.locfileid: "66058791"
 |**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d’informations, consultez [Types de données Integration Services](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|  
   
- **Nouvelle**  
+ **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
   
 |Value|Description|  

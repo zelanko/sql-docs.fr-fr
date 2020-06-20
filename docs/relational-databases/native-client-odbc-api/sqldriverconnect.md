@@ -1,5 +1,6 @@
 ---
 title: SQLDriverConnect | Microsoft Docs
+description: En savoir plus sur les attributs de connexion SQLDriverConnect et la prise en charge de la haute disponibilité, de la récupération d’urgence et des SPN dans le pilote ODBC SQL Server Native Client.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1455f0b91313ea137ec9c13a2d318fba0807b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b2df8cd200acec558e2fb522bfbc43f3a4975d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967732"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit des attributs de connexion qui remplacent ou améliorent les mots clés de chaînes de connexion. Plusieurs mots clés de chaînes de connexion ont des valeurs par défaut définies par le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Pour obtenir la liste des mots clés disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pilote ODBC Native Client, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Pour obtenir la liste des mots clés disponibles dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les attributs de connexion et les comportements par défaut du pilote, consultez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attributs de connexion et les comportements par défaut du pilote, consultez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
- Pour plus d’informations sur les mots clés de chaîne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion valides pour Native Client, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Pour plus d’informations sur les mots clés de chaîne de connexion valides pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Quand la valeur du paramètre **SQLDriverConnect**_DriverCompletion_ est SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client récupère les valeurs des mots clés dans la boîte de dialogue affichée. Si la valeur de mot clé est transmise à la chaîne de connexion et si l'utilisateur ne modifie pas la valeur pour le mot clé dans la boîte de dialogue, le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilise la valeur issue de la chaîne de connexion. Si la valeur n'est pas définie dans la chaîne de connexion et si l'utilisateur ne procède à aucune affectation dans la boîte de dialogue, le pilote utilise la valeur par défaut.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "81302548"
  Si la valeur du paramètre *DriverCompletion* est SQL_DRIVER_COMPLETE ou SQL_DRIVER_PROMPT et si la langue ou la base de données n’est pas valide, **SQLDriverConnect** réaffiche la boîte de dialogue.  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>SQLDriverConnect prend en charge les fonctionnalités de récupération d'urgence, haute disponibilité  
- Pour plus d’informations sur l’utilisation de **SQLDriverConnect** pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] se connecter à un cluster, consultez [SQL Server Native Client la prise en charge de la haute disponibilité et de la récupération d’urgence](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Pour plus d’informations sur l’utilisation de **SQLDriverConnect** pour se connecter à un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cluster, consultez [SQL Server Native Client la prise en charge de la haute disponibilité et de la récupération d’urgence](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Prise en charge de SQLDriverConnect pour les noms de principaux du service (SPN)  
  SQLDDriverConnect utilise la boîte de dialogue de connexion ODBC boîte invite est activée. Celle-ci vous permet d'entrer des SPN à la fois pour le serveur principal et pour le partenaire de basculement.  

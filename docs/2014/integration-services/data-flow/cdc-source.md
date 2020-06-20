@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3452e504072188ea5f4bacf3fa6f10002335fb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916639"
 ---
 # <a name="cdc-source"></a>Source CDC
   La source CDC lit une plage de données modifiées dans les tables de modifications de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et apporte les modifications en aval aux autres composants SSIS.  
@@ -38,7 +37,7 @@ ms.locfileid: "62828127"
   
 -   Le nom de la variable de package d'état de capture de données modifiées à partir de laquelle la plage de traitement de capture de données modifiées est déterminée. La source CDC ne modifie pas cette variable.  
   
- Les données retournées par la source CDC sont les mêmes que celles retournées par les fonctions CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<nom-instance-capture>** ou **cdc.fn_cdc_get_net_changes_\<nom-instance-capture>** (si disponibles). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../control-flow/cdc-control-task.md).  
+ Les données retournées par la source CDC sont les mêmes que celles retournées par les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctions CDC **cdc. fn_cdc_get_all_changes_ \<capture-instance-name> ** ou **CDC. fn_cdc_get_net_changes_ \<capture-instance-name> ** (le cas échéant). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../control-flow/cdc-control-task.md).  
   
  La source CDC a une sortie normale et une sortie d'erreur.  
   
@@ -75,20 +74,20 @@ use <cdc-enabled-database-name>
   
  où :  
   
--   \<cdc-enabled-database-name> est le nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant les tables de modifications.  
+-   \<cdc-enabled-database-name>nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données contenant les tables de modifications.  
   
--   \<value-from-state-cs> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CS/\<value-from-state-cs>/ (CS correspond à Current-processing-range-Start, début de la plage de traitement actuelle).  
+-   \<value-from-state-cs>valeur qui apparaît dans la variable d’État CDC sous la forme CS/ \<value-from-state-cs> /(CS correspond à Current-Processing-Range-Start).  
   
--   \<value-from-state-ce> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CE/\<value-from-state-cs>/ (CE correspond à Current-processing-range-End, fin de la plage de traitement actuelle).  
+-   \<value-from-state-ce>est la valeur qui apparaît dans la variable d’État CDC comme CE/ \<value-from-state-cs> /(ce signifie « ce » correspond à la fin de la plage de traitement actuelle).  
   
--   \<mode> correspond aux modes de traitement de capture de données modifiées. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour**et **Net avec fusion**.  
+-   \<mode>sont les modes de traitement CDC. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour**et **Net avec fusion**.  
   
  Ce script aide à isoler les problèmes en les reproduisant dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], où il est facile de reproduire et d'identifier des erreurs.  
   
 #### <a name="sql-server-error-message"></a>Message d'erreur SQL Server  
  Le message suivant peut être retourné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Nombre d’arguments fournis insuffisant pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<..>.**  
+ **Un nombre insuffisant d’arguments a été fourni pour la procédure ou la fonction CDC. fn_cdc_get_net_changes_ \<..> .**  
   
  Cette erreur n'indique pas qu'un argument est manquant. Elle signifie que les valeurs du NSE de début ou du NSE de fin dans la variable d'état de capture de données modifiées ne sont pas valides.  
   

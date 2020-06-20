@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939650"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Créer et déployer un cache pour la transformation de recherche
   Vous pouvez créer et déployer un fichier cache (.caw) pour la transformation de recherche. Le dataset de référence est stocké dans le fichier cache.  
@@ -86,7 +85,7 @@ ms.locfileid: "62900644"
   
 4.  Configurez le projet afin de créer un utilitaire de déploiement, puis créez le projet. Pour plus d’informations, consultez [Créer un utilitaire de déploiement](../../create-a-deployment-utility.md).  
   
-     Un fichier manifeste, \<*nom_projet*>.SSISDeploymentManifest.xml, est créé et répertorie les différents fichiers du projet, les packages et les configurations des packages.  
+     Un fichier manifeste, \<*project name*>.SSISDeploymentManifest.xml, est créé, qui répertorie les divers fichiers du projet, les packages et les configurations du package.  
   
 5.  Déployez le package dans le système de fichiers. Pour plus d’informations, consultez [Déployer des packages à l’aide de l’utilitaire de déploiement](../../deploy-packages-by-using-the-deployment-utility.md).  
   

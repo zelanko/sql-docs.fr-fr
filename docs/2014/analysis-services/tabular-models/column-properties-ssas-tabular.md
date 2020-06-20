@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2773c2b837aa9344e2e8427c6f960fa098fa2408
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f513e8216bf5d8be269a7178601c368f6e597df1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939883"
 ---
 # <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
   Cette rubrique décrit les propriétés de colonne de modèle tabulaire.  
   
  Sections de cette rubrique :  
   
--   [Propriétés de colonne](#bkmk_properties)  
+-   [Propriétés de la colonne](#bkmk_properties)  
   
 -   [Pour configurer des paramètres de propriété de colonne](#bkmk_config_prop)  
   
@@ -48,10 +47,10 @@ ms.locfileid: "66067613"
 |--------------|---------------------|-----------------|  
 |Image par défaut|False|Spécifie la colonne qui fournit une image représentant les données de ligne (par exemple, une pièce d'identité avec photo dans un enregistrement d'employé).|  
 |Étiquette par défaut|False|Spécifie la colonne qui fournit un nom d'affichage pour représenter les données de ligne (par exemple, nom de l'employé dans un enregistrement d'employé).|  
-|URL d'image/Catégorie de données (SP1)|False|Spécifie la valeur de cette colonne en tant que lien hypertexte vers une image sur un serveur. Par exemple : http://localhost/images/image1.jpg.|  
+|URL d'image/Catégorie de données (SP1)|False|Spécifie la valeur de cette colonne en tant que lien hypertexte vers une image sur un serveur. Par exemple : http://localhost/images/image1.jpg.|  
 |Conserver des lignes uniques|False|Spécifie les colonnes qui fournissent des valeurs qui doivent être traitées comme uniques même en cas de doublons (par exemple, prénom et nom de l'employé, dans les cas où deux employés ou plus portent le même nom).|  
 |Identificateur de ligne|False|Spécifie une colonne qui contient seulement des valeurs uniques et permet l'utilisation de cette colonne comme clé de regroupement interne.|  
-|Synthétiser par|Par défaut|Spécifie que les outils clients de création de rapports appliquent la fonction d'agrégation SUM pour les calculs de colonne lorsque cette colonne est ajoutée à une liste de champs. Pour modifier le calcul par défaut, sélectionnez-le dans la liste déroulante. Cette propriété s'applique uniquement aux colonnes de type qui peuvent être agrégées.|  
+|Synthétiser par|Default|Spécifie que les outils clients de création de rapports appliquent la fonction d'agrégation SUM pour les calculs de colonne lorsque cette colonne est ajoutée à une liste de champs. Pour modifier le calcul par défaut, sélectionnez-le dans la liste déroulante. Cette propriété s'applique uniquement aux colonnes de type qui peuvent être agrégées.|  
 |Position du détail de la table|Aucun champ par défaut défini|Spécifie que cette colonne ou mesure peut être ajoutée à un ensemble de champs à partir d'une seule table pour améliorer l'expérience de visualisation de table dans un client de création de rapports.|  
   
 ###  <a name="to-configure-column-property-settings"></a><a name="bkmk_config_prop"></a>Pour configurer les paramètres de propriété de colonne  

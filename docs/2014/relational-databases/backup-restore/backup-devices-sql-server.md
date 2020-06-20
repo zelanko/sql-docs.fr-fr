@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8abbba087679d263c00484764ecf445d6e5a006
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155045"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959309"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
   Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
@@ -86,7 +85,7 @@ ms.locfileid: "70155045"
   
  BACKUP DATABASE *nom_base_de_données*  
   
- Sur le **=** disque { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
  Par exemple :  
   
@@ -100,7 +99,7 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- À partir **=** du disque { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
  Par exemple,  
   
@@ -110,7 +109,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="specifying-the-path-of-a-disk-backup-file"></a><a name="BackupFileDiskPath"></a>Spécification du chemin d’accès d’un fichier de sauvegarde sur disque  
- Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le nombre de l'instance du serveur. Par conséquent, pour l'instance de serveur par défaut, le répertoire de sauvegarde par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
+ Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le numéro de l’instance du serveur. Par conséquent, pour l'instance de serveur par défaut, le répertoire de sauvegarde par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  Pour éviter toute ambiguïté, en particulier dans les scripts, il est recommandé de spécifier explicitement le chemin d'accès du répertoire de sauvegarde dans chaque clause DISK. Cependant, cette exigence prend moins d'importance si vous utilisez l'Éditeur de requête. Dans ce cas, si vous êtes certain que le fichier de sauvegarde réside dans le répertoire de sauvegarde par défaut, vous pouvez omettre le chemin d'accès d'une clause DISK. Par exemple, l'instruction `BACKUP` suivante sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans le répertoire de sauvegarde par défaut.  
   
@@ -136,7 +135,7 @@ GO
     >  La sauvegarde de données sur un réseau peut être sujette à des erreurs du réseau ; c'est pourquoi nous vous conseillons de vérifier l'opération de sauvegarde après l'avoir menée à terme si vous utilisez un disque distant. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Définition d'un nom UNC (Universal Naming Convention)  
- Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, vous devez utiliser le nom UNC (Universal Naming Convention) complet du fichier de l'unité de sauvegarde. Un nom UNC se présente sous ** \\ **la forme _SystemName_**\\**_Nom_Partage_**\\**_chemin_**\\**_nom_fichier_.  
+ Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, vous devez utiliser le nom UNC (Universal Naming Convention) complet du fichier de l'unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\** _nom_système_ **\\** _nom_partage_ **\\** _chemin_ **\\** _nom_fichier_.  
   
  Par exemple :  
   
@@ -174,7 +173,7 @@ GO
   
  BACKUP { DATABASE | LOG } *nom_base_de_données*  
   
- Sur bande **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
  Par exemple :  
   
@@ -188,7 +187,7 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- À partir **=** de la bande { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_ }  
   
 ###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a>Options de sauvegarde et de restauration propres aux bandes (Transact-SQL)  
  Pour faciliter la gestion des bandes, l'instruction BACKUP fournit les options de bande suivantes :  
@@ -207,7 +206,7 @@ GO
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a>Gestion des bandes ouvertes  
  Pour afficher une liste des périphériques à bandes ouverts et l’état des demandes de montage, interrogez la vue de gestion dynamique [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Cette vue affiche toutes les bandes ouvertes. Elle inclut les bandes en cours d'utilisation provisoirement inactives et en attente de la prochaine opération BACKUP ou RESTORE.  
   
- Si une bande a été laissée ouverte par erreur, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY from tape **=** _backup_device_name_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
+ Si une bande a, accidentellement, été laissée ouverte, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Utilisation du service de stockage d’objets BLOB Azure  
  Les sauvegardes SQL Server peuvent être écrites dans le service Stockage Blob Azure.  Pour plus d’informations sur l’utilisation du service de stockage d’objets BLOB Azure pour vos sauvegardes, consultez [SQL Server la sauvegarde et la restauration avec le service de stockage d’objets BLOB Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -293,14 +292,14 @@ GO
 -   [Supprimer une unité de sauvegarde &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server, objet unité de sauvegarde](../performance-monitor/sql-server-backup-device-object.md)   
+ [SQL Server, objet Unité de sauvegarde](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Plans de maintenance](../maintenance-plans/maintenance-plans.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTORE LABELONLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
- [sys. backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
- [sys. dm_io_backup_tapes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
  [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

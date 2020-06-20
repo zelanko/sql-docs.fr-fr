@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 77839c8b9e937e180ad188bd8aadb9792a35dfa2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c16b352ee7fca7078307ddae7b3f265bbc97bce
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967169"
 ---
 # <a name="returning-results-from-the-script-task"></a>Retour de résultats de la tâche de script
   La tâche de script utilise la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> et la propriété facultative <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> pour renvoyer des informations d'état à l'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], lesquelles peuvent être utilisées pour déterminer le chemin d'accès du flux de travail une fois que la tâche de script est terminée.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d02437d6faeb00b55771f7ef13725a23b3a1f92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029054"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface (classe d'événements)
   La classe d’événements **OLEDB QueryInterface** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] émet un appel vers **QueryInterface** du fournisseur OLE DB, provenant de requêtes distribuées et de procédures stockées distantes. Ajoutez cette classe d'événements dans les traces servant à effectuer un suivi des problèmes relatifs aux requêtes distribuées et aux procédures stockées distantes.  
@@ -36,7 +35,7 @@ ms.locfileid: "63032429"
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`bigint`|Durée nécessaire pour exécuter l'événement OLE DB QueryInterface.|13|Non|  
 |EndTime|`datetime`|Heure de fin de l'événement.|15|Oui|  
-|Error|`int`|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans l’affichage catalogue **sys.messages** .|31|Oui|  
+|Erreur|`int`|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans l’affichage catalogue **sys.messages** .|31|Oui|  
 |EventClass|`int`|Type d’événement = 120.|27|Non|  
 |EventSequence|`int`|Séquence de la classe d'événements du fournisseur OLE DB au sein du traitement.|51|Non|  
 |EventSubClass|`int`|0=Démarrage<br /><br /> 1=Terminée|21|Non|  

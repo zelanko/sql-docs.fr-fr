@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 127e0b807e832272dc98270d811af310cc075bdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56758f15a3bd2a71221c936a80f7455d9e1c1cd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057615"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>Format du fichier de sortie XML (ssbdiagnose)
   La sortie de l’utilitaire **ssbdiagnose** est écrite dans un fichier XML lorsque vous l’exécutez avec le commutateur **-XML** . Le fichier de sortie XML répertorie les informations d'en-tête et les erreurs identifiées dans la configuration [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou la conversation analysée. Vous pouvez écrire une application qui analyse ou effectue un rapport sur les erreurs répertoriées dans le fichier. Vous pouvez également consulter le fichier XML dans tout éditeur XML, comme le bloc-notes XML.  

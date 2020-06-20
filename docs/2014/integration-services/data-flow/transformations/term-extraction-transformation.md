@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1655b50f84fae99249b2170d92a49459a143d5b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939267"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  
@@ -44,7 +43,7 @@ ms.locfileid: "62899932"
   
  La transformation d'extraction de terme génère un score pour chaque terme extrait. Ce score peut être une valeur TFIDF ou la fréquence brute, autrement dit le nombre de fois que le terme normalisé apparaît dans l'entrée. Dans les deux cas, le score est représenté par un nombre réel supérieur à 0. Par exemple, le score TFIDF peut avoir la valeur 0,5 et la fréquence peut être égale à 1 ou 2.  
   
- La sortie de la transformation d'extraction de terme contient seulement deux colonnes. Une colonne contient les termes extraits, tandis que l'autre contient le score. Les noms par défaut des colonnes sont **term** et `Score`. La colonne de texte de l'entrée pouvant contenir plusieurs termes, la sortie de la transformation d'extraction de terme possède généralement plus de lignes que l'entrée.  
+ La sortie de la transformation d'extraction de terme contient seulement deux colonnes. Une colonne contient les termes extraits, tandis que l'autre contient le score. Les noms par défaut des colonnes sont **term** et `Score` . La colonne de texte de l'entrée pouvant contenir plusieurs termes, la sortie de la transformation d'extraction de terme possède généralement plus de lignes que l'entrée.  
   
  Si les termes extraits sont écrits dans une table, ils peuvent être utilisés par d'autres transformations de recherche telles que les transformations de recherche, de recherche de terme et de recherche floue.  
   
@@ -146,7 +145,7 @@ ms.locfileid: "62899932"
   
 -   Combinaison de nombres, signes de ponctuation et caractères alphabétiques. Par exemple, *A23B#99* retourne le terme *A23B*.  
   
--   Caractères %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
+-   Les caractères,%, @, &, $, #, \* , :,;,., **,** , !, ?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "et'.  
   
     > [!NOTE]  
     >  Les acronymes incluant un ou plusieurs points (.) ne sont pas divisés en plusieurs phrases.  

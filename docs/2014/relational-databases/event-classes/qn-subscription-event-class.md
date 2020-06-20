@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cebcb693fc6f876c74f375c16de9ad3f09bbe9bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028903"
 ---
 # <a name="qnsubscription-event-class"></a>Classe d'événements QN:Subscription
   L'événement QN:Subscription fournit des informations sur les abonnements aux notifications.  
@@ -34,11 +33,11 @@ ms.locfileid: "62650514"
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d’événement = 199.|27|Non|  
 |EventSequence|`int`|Numéro de séquence de cet événement.|51|Non|  
-|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Subscription registered : indique quand l’abonnement aux notifications de requêtes a été enregistré dans la base de données.<br /><br /> Réenroulement d’abonnement : indique [!INCLUDE[ssDE](../../includes/ssde-md.md)] quand le reçoit une demande d’abonnement qui correspond exactement à un abonnement existant. Dans ce cas, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] définit la valeur de délai de l’abonnement existant sur le délai spécifié dans la nouvelle demande d’abonnement.<br /><br /> Subscription fired : indique quand un abonnement aux notifications produit un message de notification.<br /><br /> Échec du déclenchement avec l’erreur Broker : indique quand un message de notification échoue [!INCLUDE[ssSB](../../includes/sssb-md.md)] en raison d’une erreur.<br /><br /> Échec du déclenchement sans erreur de service Broker : indique quand un message de notification échoue mais n' [!INCLUDE[ssSB](../../includes/sssb-md.md)] est pas dû à une erreur.<br /><br /> Erreur Broker interceptée : indique que [!INCLUDE[ssSB](../../includes/sssb-md.md)] a fourni une erreur dans la conversation que la notification de requête utilise.<br /><br /> Tentative de suppression d’abonnement : indique [!INCLUDE[ssDE](../../includes/ssde-md.md)] que le a tenté de supprimer un abonnement expiré pour libérer des ressources.<br /><br /> Subscription deletion failed : indique que la tentative de suppression d’un abonnement ayant expiré a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifiera automatiquement la suppression de l’abonnement pour libérer des ressources.<br /><br /> Abonnement détruit : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a supprimé avec succès un abonnement expiré|21|Oui|  
+|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Subscription registered : indique quand l’abonnement aux notifications de requêtes a été enregistré dans la base de données.<br /><br /> Réenroulement d’abonnement : indique quand le [!INCLUDE[ssDE](../../includes/ssde-md.md)] reçoit une demande d’abonnement qui correspond exactement à un abonnement existant. Dans ce cas, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] définit la valeur de délai de l’abonnement existant sur le délai spécifié dans la nouvelle demande d’abonnement.<br /><br /> Subscription fired : indique quand un abonnement aux notifications produit un message de notification.<br /><br /> Échec du déclenchement avec l’erreur Broker : indique quand un message de notification échoue en raison d’une [!INCLUDE[ssSB](../../includes/sssb-md.md)] erreur.<br /><br /> Échec du déclenchement sans erreur de service Broker : indique quand un message de notification échoue mais n’est pas dû à une [!INCLUDE[ssSB](../../includes/sssb-md.md)] erreur.<br /><br /> Erreur Broker interceptée : indique que a [!INCLUDE[ssSB](../../includes/sssb-md.md)] fourni une erreur dans la conversation que la notification de requête utilise.<br /><br /> Tentative de suppression d’abonnement : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de supprimer un abonnement expiré pour libérer des ressources.<br /><br /> Subscription deletion failed : indique que la tentative de suppression d’un abonnement ayant expiré a échoué. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] replanifiera automatiquement la suppression de l’abonnement pour libérer des ressources.<br /><br /> Abonnement détruit : indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a supprimé avec succès un abonnement expiré|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  
-|LoginName|`nvarchar`|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion Windows au format DOMAINE\nom_utilisateur).|11|Non|  
+|LoginName|`nvarchar`|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion Windows au format DOMAINE\nom_utilisateur).|11|Non |  
 |LoginSID|`image`|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l'affichage catalogue sys.server_principals. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  

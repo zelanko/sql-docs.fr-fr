@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068162"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940270"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Spécifier le contenu et le type de données de la colonne&#39;s (Assistant Exploration de données)
   La page **Spécifier le type de contenu et de données des colonnes** permet de modifier les types de colonne et de contenu qui ont déjà été définis par l’Assistant. L'Assistant utilise les types de données des colonnes sources et les capacités de l'algorithme sélectionné pour déterminer les types de données et de contenu par défaut de chaque colonne.  

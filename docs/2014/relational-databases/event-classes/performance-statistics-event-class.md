@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fc22c4af9980eb5c1c365c0ce2d0e2f6c8462e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827192"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028998"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
   La classe d'événements Performance Statistics permet de surveiller les performances des requêtes, des procédures stockées et des déclencheurs en cours d'exécution. Chacune des six sous-classes d'événements indique un événement dans la durée de vie des requêtes, des procédures stockées et des déclencheurs au sein du système. En combinant ces sous-classes d'événements aux vues de gestion dynamique sys.dm_exec_query_stats, sys.dm_exec_procedure_statset sys.dm_exec_trigger_stats correspondantes, vous pouvez reconstituer l'historique des performances d'une requête, d'une procédure stockée ou d'un déclencheur donnés.  
@@ -81,7 +80,7 @@ ms.locfileid: "62827192"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 2 = Les requêtes d'une instruction SQL ad hoc ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> Nombre*n* de type 2|21|Oui|  
 |IntegerData2|`int`|Fin de l'instruction dans le traitement.<br /><br /> -1 pour la fin du traitement.|55|Oui|  
-|ObjectID|`int`|NON APPLICABLE|22|Oui|  
+|ObjectID|`int`|N/A|22|Oui|  
 |Offset|`int`|Décalage de départ de l'instruction dans le traitement.<br /><br /> 0 pour le début du traitement.|61|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL. Peut être utilisé pour obtenir le texte SQL du lot à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  

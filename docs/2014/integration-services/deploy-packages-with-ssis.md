@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951829"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Tutoriel SSIS : Déploiement des packages
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] propose des outils qui simplifient le déploiement des packages sur un autre ordinateur. Ces outils de déploiement gèrent aussi les dépendances, telles que les configurations et les fichiers dont les packages ont besoin. Dans ce didacticiel, vous allez apprendre à utiliser ces outils pour installer des packages et leurs dépendances sur un ordinateur cible.
@@ -45,8 +44,8 @@ ms.locfileid: "78176459"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel
  La meilleure façon de se familiariser avec les nouveaux outils, contrôles et fonctionnalités disponibles dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à les utiliser. Ce didacticiel vous guide dans les étapes de création d'un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] puis d'ajout des packages et autres fichiers nécessaires au projet. Une fois le projet terminé, vous allez créer une application de déploiement, copier cette application sur l'ordinateur de destination, puis installer les packages sur l'ordinateur de destination.
 
-## <a name="requirements"></a>Spécifications
- Ce didacticiel est destiné aux utilisateurs qui sont déjà familiarisés avec les opérations fondamentales du système de fichiers, mais qui ont une exposition limitée aux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]nouvelles fonctionnalités disponibles dans. Pour mieux comprendre les [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] concepts de base que vous allez utiliser dans ce didacticiel, il peut s’avérer utile de commencer par suivre les [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] didacticiels suivants : [exécuter l’Assistant importation et exportation SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) et [didacticiel SSIS : création d’un package ETL simple](../integration-services/ssis-how-to-create-an-etl-package.md).
+## <a name="requirements"></a>Configuration requise
+ Ce didacticiel est destiné aux utilisateurs qui sont déjà familiarisés avec les opérations fondamentales du système de fichiers, mais qui ont une exposition limitée aux nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour mieux comprendre [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les concepts de base que vous allez utiliser dans ce didacticiel, il peut s’avérer utile de commencer par suivre les [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] didacticiels suivants : [exécuter l’Assistant importation et exportation SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) et [didacticiel SSIS : création d’un package ETL simple](../integration-services/ssis-how-to-create-an-etl-package.md).
 
  **Ordinateur source.** Les composants suivants doivent être installés sur l'ordinateur sur lequel vous allez créer l'application de déploiement :
 
@@ -68,7 +67,7 @@ ms.locfileid: "78176459"
 
 -   Vous devez disposer d’autorisations pour créer et supprimer des tables dans AdventureWorks, ainsi que pour exécuter des packages dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
--   Vous devez disposer de l’autorisation d’accès en lecture et en écriture sur[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la table sysssispackages dans la base de données système msdb.
+-   Vous devez disposer de l’autorisation d’accès en lecture et en écriture sur la table sysssispackages dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de données système msdb.
 
  Si vous envisagez de déployer les packages sur le même ordinateur que celui où vous créez l'application de déploiement, ce dernier doit avoir la configuration requise pour les ordinateurs source et de destination.
 

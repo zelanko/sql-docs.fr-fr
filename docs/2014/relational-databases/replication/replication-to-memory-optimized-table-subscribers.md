@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af064de0f89d515f2afb87eb2a6d683d7179e4dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056913"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Abonnés de réplication sur des tables optimisées en mémoire
   Les tables agissant comme des abonnés de réplication transactionnelle, à l'exclusion de la réplication transactionnelle d'égal à égal, peuvent être configurées en tant que tables mémoire optimisées. Les autres configurations de réplication ne sont pas compatibles avec les tables mémoire optimisées.  
@@ -59,7 +58,7 @@ ms.locfileid: "68811231"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Naviguez jusqu'au dossier d'instantané. L’emplacement par défaut est «C:\Program Files\Microsoft SQL Server\MSSQL12. \<Instance> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\».  
+2.  Naviguez jusqu'au dossier d'instantané. L’emplacement par défaut est «C:\Program Files\Microsoft SQL Server\MSSQL12. \<INSTANCE> \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS \\ ».  
   
 3.  Recherchez **. Fichier SCH** pour votre table et ouvrez-le dans Management Studio. Modifiez le schéma de la table et mettez à jour la procédure stockée comme décrit ci-dessous.  
   

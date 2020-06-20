@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966989"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Signature numérique
   Utilisez la boîte de dialogue **Signature numérique** pour signer un package par une signature numérique ou pour la supprimer. La boîte de dialogue **Signature numérique** est disponible via l'option **Signature numérique** dans le menu **SSIS** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "66059447"
  **Expéditeur**  
  Cliquez sur cette option pour ouvrir la boîte de dialogue **Sélectionner un certificat** et sélectionner le certificat à utiliser.  
   
- **Remove**  
+ **Supprimer**  
  Cliquez sur cette option pour supprimer la signature numérique.  
   
 ## <a name="see-also"></a>Voir aussi  

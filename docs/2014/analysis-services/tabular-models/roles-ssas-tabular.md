@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938711"
 ---
 # <a name="roles-ssas-tabular"></a>Rôles (SSAS Tabulaire)
   Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Chaque rôle contient des membres, par nom d'utilisateur Windows ou par groupe Windows, ainsi que des autorisations (lecture, traitement, administrateur). Les membres du rôle peuvent effectuer des actions sur le modèle, comme défini par l'autorisation du rôle. Les rôles définis avec des autorisations de lecture peuvent également fournir une sécurité supplémentaire au niveau de la ligne grâce à l'utilisation de filtres au niveau de la ligne.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284853"
 -   [Tâches associées](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Fonctionnement des rôles  
- Les rôles sont utilisés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans pour gérer la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sécurité des données et. Il existe deux types de rôles dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ Les rôles sont utilisés dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer la sécurité des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données et. Il existe deux types de rôles dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 -   le rôle du serveur, un rôle fixe qui fournit un accès administrateur à une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)];  
   
@@ -87,7 +86,7 @@ ms.locfileid: "67284853"
   
  L'effet net de ces autorisations sur la table de transactions est que les membres sont autorisés à interroger les lignes de données pour lesquelles le client réside aux États-unis, la catégorie de produits correspond à des bicyclettes et l'année est 2008. Les utilisateurs ne peuvent pas interroger de transaction en dehors des États-unis, ni de transactions qui ne correspondent pas à des bicyclettes ou des transactions n'ayant pas lieu en 2008, sauf s'ils sont membres d'un autre rôle qui accorde ces autorisations.  
   
- Vous pouvez utiliser le filtre, *= FALSE()*, pour refuser l’accès à toutes les lignes pour une table entière.  
+ Vous pouvez utiliser le filtre, *= FALSE()* , pour refuser l’accès à toutes les lignes pour une table entière.  
   
 ### <a name="dynamic-security"></a>Sécurité dynamique  
  La sécurité dynamique permet de définir la sécurité au niveau de la ligne en fonction du nom de l'utilisateur actuellement connecté ou de la propriété CustomData retournée par une chaîne de connexion. Pour implémenter la sécurité dynamique, vous devez inclure dans votre modèle une table avec des valeurs de connexion (nom d'utilisateur Windows) pour les utilisateurs, ainsi qu'un champ qui peut être utilisé pour définir une autorisation particulière ; par exemple, une table dimEmployees avec un ID de connexion (domaine\nom utilisateur) ainsi qu'une valeur de service pour chaque employé.  
@@ -114,7 +113,7 @@ ms.locfileid: "67284853"
 |Brown|Kevin|Adventure-works\kevin0|Marketing|7|  
 |Bradley|David|Adventure-works\david0|Marketing|7|  
 |Dobney|JoLynn|Adventure-works\JoLynn0|Production|4|  
-|Baretto DeMattos|Paula|Adventure-works\Paula0|Ressources humaines|2|  
+|Baretto DeMattos|Paula|Adventure-works\Paula0|Human Resources|2|  
   
  **dimDepartment**  
   
@@ -126,7 +125,7 @@ ms.locfileid: "67284853"
 |4|Fabrication|  
 |5|Assurance qualité|  
 |6|Recherche et développement|  
-|7|Vente et marketing|  
+|7|Ventes et marketing|  
   
 ##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>Test des rôles  
  Lorsque vous créez un projet de modèle, vous pouvez utiliser la fonctionnalité Analyser dans Excel pour tester l'efficacité des rôles que vous avez définis. Dans le menu **Modèle** du générateur de modèles, lorsque vous cliquez sur **Analyser dans Excel**, avant qu'Excel ne s'ouvre, la boîte de dialogue **Choisir les informations d'identification et la perspective** s'affiche. Dans cette boîte de dialogue, vous pouvez spécifier le nom d'utilisateur actuel, un nom d'utilisateur différent, un rôle et une perspective que vous utiliserez pour vous connecter au modèle de l'espace de travail en tant que source de données. Pour plus d'informations, consultez la section [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md).  

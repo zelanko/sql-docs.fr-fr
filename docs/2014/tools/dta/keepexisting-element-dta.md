@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcfa71becfda386031d6267e2b7f97f1eac5b731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048348"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting, élément (Assistant Paramétrage de base de données)
   Spécifie les structures PDS (index, vues indexées ou partitions) que l'Assistant Paramétrage du moteur de base de données doit conserver lors de la génération de sa recommandation.  

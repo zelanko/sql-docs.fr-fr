@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061063"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924050"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Éditeur de source CDC (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source CDC** pour sélectionner le gestionnaire de connexions ADO.NET de la base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] à partir de laquelle la source CDC lit les lignes modifiées (la base de données CDC). Une fois la base de données CDC sélectionnée, vous devez sélectionner une table capturée dans la base de données.  
@@ -37,7 +36,7 @@ ms.locfileid: "66061063"
  **Gestionnaire de connexions ADO.NET**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur **Nouveau** pour créer une connexion. La connexion doit être établie avec une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] activée pour la capture de données modifiées et dans laquelle la table de modifications sélectionnée est localisée.  
   
- **Nouvelle**  
+ **Nouveau**  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l’Éditeur du gestionnaire de connexions ADO.NET** s’ouvre et vous permet de créer un gestionnaire de connexions.  
   
  **Table CDC**  
@@ -46,7 +45,7 @@ ms.locfileid: "66061063"
  **Instance de capture**  
  Sélectionnez ou tapez le nom de l'instance de capture CDC avec la table CDC à lire.  
   
- Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom par défaut de l’instance de capture pour une table [schema].[table] est \<schéma>_\<table>, mais le nom réel utilisé pour cette instance de capture peut être différent. La table réelle lue est la table CDC **CDC.\<>_CT de capture-instance**.  
+ Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Nom de l’instance de capture par défaut pour une table [Schema]. [table] est de \<schema> _ \<table> , mais les noms d’instance de capture réels en cours d’utilisation peuvent être différents. La table réelle lue est la table CDC **CDC. \<capture-instance> _CT**.  
   
  **Mode de traitement CDC**  
  Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
@@ -57,7 +56,7 @@ ms.locfileid: "66061063"
   
 -   **Net**: retourne une seule ligne de modification par ligne source modifiée dans la plage de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
   
--   **Net avec masque de mise à jour**: ce mode est similaire au mode NET standard, mais il ajoute également des colonnes booléennes avec le modèle de nom **_ _ $\<Column-Name>\__Changed** qui indiquent les colonnes modifiées dans la ligne de modification actuelle.  
+-   **Net avec masque de mise à jour**: ce mode est semblable au mode net normal, mais il ajoute également des colonnes booléennes avec le modèle de nom **_ _ $ \<column-name> \_ _Changed** qui indiquent les colonnes modifiées dans la ligne de modification actuelle.  
   
 -   **Net avec fusion**: ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   
