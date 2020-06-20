@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b35c578ca1edbaebb9871d1633627811536f42bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054317"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Leçon 1 : évaluer les bonnes pratiques en fonction des demandes
   En utilisant la méthode à la demande (ou « ad hoc ») d'évaluation des stratégies, vous pouvez évaluer rapidement des stratégies des meilleures pratiques pour déterminer si une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] répond aux indications et recommandations des meilleures pratiques.  
   
- Dans cette leçon, vous allez effectuer une évaluation à la demande des stratégies des meilleures pratiques pour le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Dans cette leçon, vous allez effectuer une évaluation à la demande des stratégies des meilleures pratiques pour le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Cette leçon contient les rubriques suivantes :  
   

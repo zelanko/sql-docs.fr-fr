@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58ce18de91773a5bea31074ac81c726b0aed3fd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056722"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Méthode SetCurrentCertificate (classe ServerSettings)
   Définit le certificat de sécurité actuel.  
@@ -40,8 +39,8 @@ SHA
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
- Objet [ServerSettings Class] ServerSettings-class.md) qui représente le paramètre du serveur sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Objet [ServerSettings Class] ServerSettings-class.md) qui représente le paramètre du serveur sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Paramètres  
   
@@ -52,7 +51,7 @@ SHA
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

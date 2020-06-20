@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8a817421aeca7906d31e4a70c25a12b6af7c0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064521"
 ---
 # <a name="about-change-tracking-sql-server"></a>À propos du suivi des modifications (SQL Server)
-  Le suivi des modifications est une solution légère qui fournit un mécanisme efficace de suivi des modifications pour les applications. En règle générale, les développeurs d’applications devaient implémenter des mécanismes personnalisés de suivi des modifications pour permettre aux applications d’effectuer des requêtes portant sur les modifications apportées aux données d’une base de données et d’accéder aux informations liées à ces modifications. La création de ces mécanismes impliquait généralement un grand nombre de travaux et implique souvent l’utilisation d' `timestamp` une combinaison de déclencheurs, de colonnes, de nouvelles tables pour stocker les informations de suivi et de processus de nettoyage personnalisés.  
+  Le suivi des modifications est une solution légère qui fournit un mécanisme efficace de suivi des modifications pour les applications. En règle générale, les développeurs d’applications devaient implémenter des mécanismes personnalisés de suivi des modifications pour permettre aux applications d’effectuer des requêtes portant sur les modifications apportées aux données d’une base de données et d’accéder aux informations liées à ces modifications. La création de ces mécanismes impliquait généralement un grand nombre de travaux et implique souvent l’utilisation d’une combinaison de déclencheurs, de `timestamp` colonnes, de nouvelles tables pour stocker les informations de suivi et de processus de nettoyage personnalisés.  
   
  La quantité d'informations relatives aux modifications varie selon les types d'applications. Les applications peuvent utiliser le suivi des modifications pour répondre aux questions suivantes sur les modifications apportées à une table utilisateur :  
   
