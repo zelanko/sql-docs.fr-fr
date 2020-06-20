@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059407"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utiliser le mode AUTO avec FOR XML
   Comme décrit dans [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), le mode AUTO retourne des résultats de requête en tant qu’éléments XML imbriqués. Cela ne permet pas de contrôler de façon précise la forme du document XML généré à partir du résultat d'une requête. Les requêtes au mode AUTO sont utiles pour générer des hiérarchies simples. Toutefois, [Utiliser le mode EXPLICIT avec FOR XML](use-explicit-mode-with-for-xml.md) et [Utiliser le mode PATH avec FOR XML](use-path-mode-with-for-xml.md) fournissent davantage de contrôle et de souplesse pour déterminer la forme du XML à partir d’un résultat de requête.  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- Dans cette requête, les valeurs CustomerID sont comparées d’une ligne à l’autre lors de la création des éléments \<Cust>, car CustomerID est la clé primaire de la table. Si CustomerID n'est pas identifié en tant que clé primaire de la table, toutes les valeurs de colonnes (CustomerID et CustomerType dans cette requête) sont comparées d'une ligne à l'autre. Si les valeurs diffèrent, un nouvel élément \<Cust> est ajouté au document XML.  
+ Dans cette requête, les valeurs CustomerID sont comparées d’une ligne à l’autre lors de la création des \<Cust> éléments, car CustomerID est la clé primaire de la table. Si CustomerID n'est pas identifié en tant que clé primaire de la table, toutes les valeurs de colonnes (CustomerID et CustomerType dans cette requête) sont comparées d'une ligne à l'autre. Si les valeurs diffèrent, un nouvel \<Cust> élément est ajouté au XML.  
   
  Lors de la comparaison de ces valeurs de colonnes, si l’une des colonnes à comparer est de type **text**, **ntext**, **image**ou **xml**, la clause FOR XML considère que les valeurs sont différentes et non comparées, même si elles peuvent être identiques. Cela est dû au fait que la comparaison des objets volumineux n'est pas prise en charge. Des éléments sont ajoutés au résultat pour chaque ligne sélectionnée. Les colonnes de type **(n)varchar(max)** et **varbinary(max)** sont comparées.  
   

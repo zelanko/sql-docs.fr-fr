@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c513c643ebae58c0670abd18e3da1736eabfdd3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 50fea140fec2b59e1869d8aaf15e37220ac28bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065648"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilisation d'ADO pour exécuter des requêtes SQLXML 4.0
   Dans les versions antérieures de SQLXML, l'exécution de requêtes basées sur le protocole HTTP était prise en charge à l'aide de répertoires virtuels IIS SQLXML et du filtre ISAPI SQLXML. Dans SQLXML 4.0, ces composants ont été supprimés du fait que des fonctionnalités semblables et se chevauchant sont fournies avec les services Web XML natifs à compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  

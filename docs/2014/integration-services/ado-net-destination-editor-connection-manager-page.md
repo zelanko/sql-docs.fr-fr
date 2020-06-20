@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36c06fda23fc11c76df4d278a18095659d433567
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925946"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Éditeur de destination ADO NET (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination ADO NET** pour sélectionner la connexion [!INCLUDE[vstecado](../includes/vstecado-md.md)] de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -36,19 +35,19 @@ ms.locfileid: "70154022"
  **Gestionnaire de connexions**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez un gestionnaire de connexions à partir de la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** .  
   
  **Utiliser une table ou une vue**  
  Sélectionnez une table ou une vue existante dans la liste ou créez une table en cliquant sur **Nouvelle**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une table ou vue à l’aide de la boîte de dialogue **Créer une table** .  
   
 > [!NOTE]  
->  Lorsque vous cliquez **New**sur nouveau [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Lorsque vous cliquez sur **nouveau**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] génère une instruction CREATE table par défaut basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table** . Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
  **Utiliser l'insertion en bloc le cas échéant**  
@@ -72,6 +71,6 @@ ms.locfileid: "70154022"
  [Éditeur de destination ADO NET &#40;page Mappages&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
  [Éditeur de destination ADO NET &#40;page sortie d’erreur&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md)   
- [Tâche d’exécution de requêtes SQL](control-flow/execute-sql-task.md)  
+ [Tache d’exécution de requêtes SQL](control-flow/execute-sql-task.md)  
   
   

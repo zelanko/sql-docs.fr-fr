@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8a43f06a0c100725607dfc903bfd045a0d387b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211842"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067992"
 ---
 # <a name="modify-check-constraints"></a>Modifier des contraintes de validation
   Vous pouvez modifier une contrainte de validation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] lorsque vous voulez changer l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.  

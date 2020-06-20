@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f0fb62636f16cab5e74718c6b9565969b477f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934270"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Moniteur de mise en miroir de bases de données (Page État)
   Cette page accessible en lecture seule affiche le dernier état de mise en miroir pour les instances de serveur miroir et de principal de la base de données actuellement sélectionnée dans l'arborescence de navigation. Si les informations d'une instance ne sont pas actuellement disponibles, certaines des cellules de la grille **État** correspondant à cette instance sont grisées et affichent le texte **Inconnu**.  
@@ -42,10 +41,10 @@ ms.locfileid: "62754709"
 |**Rôle actuel**|Rôle actuel de l'instance de serveur : **Principal** ou **Miroir**.|  
 |**État de la mise en miroir**|État de la mise en miroir reportée par l'instance de serveur et icône indiquant la gravité de l'état. Les états possibles et les icônes associées sont les suivants :<br /><br /> - : État **inconnu**. Le moniteur n'est connecté à aucun partenaire. Les seules informations disponibles sont celles qui ont été mises en cache par le moniteur.<br /><br /> Icône d’avertissement : <br />                            État en cours de **synchronisation**.<br />                          Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression. Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.<br /><br /> Cylindre de base de données standard : état<br />                            **Synchronisé**.<br />                          Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal envoie des modifications au serveur miroir et que le serveur miroir applique les modifications à la base de données miroir. En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données. En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .<br /><br /> Icône d’avertissement : état<br />                            **Suspendu**.<br />                            La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.<br /><br /> Icône d’erreur : état <br />                            **Déconnecté**.<br />                          L'instance de serveur ne peut pas se connecter à son partenaire.|  
 |**Connexion témoin**|État de la connexion du témoin, précédé d'une icône d'état **Inconnu**, **Connecté**ou **Déconnecté**.|  
-|**Historique**|Cliquez sur cette colonne pour afficher l'historique de mise en miroir sur l'instance de serveur. La boîte de dialogue **Historique de la mise en miroir de bases de données** s'ouvre, ce qui affiche l'historique d'état de la mise en miroir ainsi que des statistiques pour une base de données mise en miroir sur une instance de serveur donnée.<br /><br /> Le bouton **Historique** est grisé si le moniteur n'est pas connecté à l'instance de serveur.|  
+|**History**|Cliquez sur cette colonne pour afficher l'historique de mise en miroir sur l'instance de serveur. La boîte de dialogue **Historique de la mise en miroir de bases de données** s'ouvre, ce qui affiche l'historique d'état de la mise en miroir ainsi que des statistiques pour une base de données mise en miroir sur une instance de serveur donnée.<br /><br /> Le bouton **Historique** est grisé si le moniteur n'est pas connecté à l'instance de serveur.|  
   
- **Journal principal (** * \<heure>* **)**  
- État du journal sur l’instance de serveur principal à l’heure locale de l’instance de serveur, indiqué par * \<l’heure>*. Les paramètres suivants s'affichent :  
+ **Journal principal (** *\<time>* **)**  
+ État du journal sur l’instance de serveur principal à l’heure locale de l’instance de serveur, indiquée par *\<time>* . Les paramètres suivants s'affichent :  
   
  **Journal non envoyé**  
  Quantité de journal en attente dans la file d'attente d'envoi, en Ko.  
@@ -62,8 +61,8 @@ ms.locfileid: "62754709"
  **Taux actuel de nouvelles transactions**  
  Débit auquel les transactions entrantes sont consignées dans le journal du principal en Kilo-octets par seconde. Pour déterminer si la mise en miroir prend du retard, reste à jour ou rattrape le retard, comparez cette valeur à la valeur **Durée (estimée) d'envoi du journal** .  
   
- **Journal miroir (** * \<temps>* **)**  
- État du journal sur l’instance de serveur miroir à l’heure locale de l’instance de serveur, indiquée par * \<l’heure>*. Les paramètres suivants s'affichent :  
+ **Journal miroir (** *\<time>* **)**  
+ État du journal sur l’instance de serveur miroir à l’heure locale de l’instance de serveur, indiquée par *\<time>* . Les paramètres suivants s'affichent :  
   
  **Journal non restauré**  
  Quantité de journal en attente dans la file d'attente de restauration par progression, en Ko.  
@@ -92,8 +91,8 @@ ms.locfileid: "62754709"
   
 -   **Haute sécurité avec basculement automatique (synchrone)**  
   
-## <a name="remarks"></a>Notes  
- Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Ils dépendent du **Travail du moniteur de mise en miroir de bases de données**pour la mise à jour de la table d’état à intervalles réguliers. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures dans les étiquettes **journal principal (***\<heure>***)** et **Journal miroir (***\<temps>***)** .  
+## <a name="remarks"></a>Remarques  
+ Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Ils dépendent du **Travail du moniteur de mise en miroir de bases de données**pour la mise à jour de la table d’état à intervalles réguliers. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures dans les étiquettes **journal principal ( ***\<time>*** )** et **Journal miroir ( ***\<time>*** )** .  
   
  Si ce travail n'existe pas ou que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, l'état devient rapidement obsolète et risque de ne plus refléter la configuration de la session de mise en miroir. Par exemple, après un basculement, les partenaires peuvent sembler partager le même rôle (principal ou miroir), ou le serveur principal actuel peut être affiché comme serveur miroir, alors que le serveur miroir actuel est affiché comme principal.  
   

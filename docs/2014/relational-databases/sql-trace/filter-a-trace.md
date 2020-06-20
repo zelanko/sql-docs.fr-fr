@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb1a9825b2079e4836f654605097667d8edb05a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068320"
 ---
 # <a name="filter-a-trace"></a>Filtrer une trace
   Les filtres limitent les événements recueillis dans une trace. Si aucun filtre n'est défini, tous les événements des classes d'événements sélectionnées sont retournés dans le résultat de trace. Par exemple, limiter les noms d'utilisateurs Windows d'une trace à des utilisateurs particuliers réduit le volume des données de sortie à ces seuls utilisateurs.  
@@ -137,7 +136,7 @@ ms.locfileid: "62714716"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> si vous tracez des événements à partir de l’utilitaire **osql** ou de **%** l’utilitaire **sqlcmd** , ajoutez toujours aux filtres sur la colonne de données **TextData** .  
+ <sup>1</sup> si vous tracez des événements à partir de l’utilitaire **osql** ou de l’utilitaire **sqlcmd** , ajoutez toujours **%** aux filtres sur la colonne de données **TextData** .  
   
  En tant que mécanisme de sécurité, le Générateur de profils SQL omet automatiquement de la trace les procédures stockées de sécurité qui affectent les mots de passe. Ce mécanisme de sécurité n'est pas configurable et est toujours actif. Il empêche les utilisateurs, qui par ailleurs ont l'autorisation de tracer l'ensemble de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], d'intercepter les mots de passe.  
   

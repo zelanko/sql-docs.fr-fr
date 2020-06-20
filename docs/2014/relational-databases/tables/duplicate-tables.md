@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d07777b7f55d6471127cb1cbe4adbafb36679573
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62760757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068107"
 ---
 # <a name="duplicate-tables"></a>Dupliquer des tables
   Vous pouvez dupliquer une table existante dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] en créant une table puis en copiant les informations sur les colonnes d'une table existante.  

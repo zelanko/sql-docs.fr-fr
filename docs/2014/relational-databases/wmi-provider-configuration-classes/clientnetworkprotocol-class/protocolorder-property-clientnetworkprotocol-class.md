@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0a0043e5a894e3f3f1b778a6f42fe6e3bacbbc78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bccb7109972dea4697e9e289081cbf47d2f9492
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065596"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Propriété ProtocolOrder (classe ClientNetworkProtocol)
   Obtient le numéro d'ordre du protocole réseau client actuellement référencé tel que spécifié par la [méthode SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md) .  
@@ -37,13 +36,13 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32` qui spécifie le numéro d'ordre du protocole réseau client actuellement référencé en tant que jeu par la méthode `OrderValue`. Si le protocole réseau client est désactivé, cette valeur sera égale à zéro.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)   

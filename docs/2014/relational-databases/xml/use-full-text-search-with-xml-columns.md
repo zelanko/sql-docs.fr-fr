@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b546ea99aac7d645cc41746bc0bae757f852050
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c71d2350b472c47f1d48b0b9279f457cd97d58af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059364"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utiliser la recherche en texte intégral avec des colonnes XML
   Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  

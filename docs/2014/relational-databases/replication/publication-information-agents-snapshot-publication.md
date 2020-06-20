@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02b112a93cb6098ab873ac2a698303b8a717afd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065727"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informations de publication, Agents (Publication d'instantané)
   L'onglet **Agents** contient des informations résumées sur l'Agent d'instantané de la publication sélectionnée.  
@@ -38,13 +37,13 @@ ms.locfileid: "63021787"
  **État**  
  État de l'Agent d'instantané. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Nouvelle tentative de la commande qui a échoué  
   
 -   Non exécuté  
   
--   Completed  
+-   Effectué  
   
  **Agent**  
  L'Agent d'instantané. Il s'agit du seul Agent associé à une publication d'instantané. L'Agent de distribution est associé aux abonnements à cette publication. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  

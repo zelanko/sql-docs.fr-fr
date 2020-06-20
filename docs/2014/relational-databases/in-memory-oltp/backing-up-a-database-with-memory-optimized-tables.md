@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 176448aa9d4bab4101ab2db12ffc9a8a7fd1a5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050323"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
   Les tables mémoire optimisées sont sauvegardées dans le cadre des sauvegardes de base de données normales. Pour les tables sur disque, la valeur CHECKSUM des paires de fichiers de données et delta est validée dans le cadre de la sauvegarde de base de données pour détecter la corruption du stockage.  

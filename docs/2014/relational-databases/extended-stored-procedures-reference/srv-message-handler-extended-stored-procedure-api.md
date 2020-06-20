@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd2452a969f290f4d33529eee44d36611c8d7525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050741"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
- Appelle le gestionnaire de messages de l'API de procédure stockée étendue installée. Cette fonction est généralement utilisée pour appeler [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’une procédure stockée étendue afin de consigner une erreur (définie par la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée étendue) [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans le fichier journal des erreurs ou le journal des applications Windows.  
+ Appelle le gestionnaire de messages de l'API de procédure stockée étendue installée. Cette fonction est généralement utilisée pour appeler [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’une procédure stockée étendue afin de consigner une erreur (définie par la procédure stockée étendue) dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal des erreurs ou le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Journal des applications Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +99,7 @@ oserrtextlen
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction **srv_message_handler** permet l’intégration d’une procédure stockée étendue aux fonctionnalités centralisées de journalisation des erreurs et de création de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez établir des alertes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les événements de procédures stockées étendues, et SQL Server Agent surveillera ces conditions d’alerte.  
   
  Si le message d'erreur est plus long, il est tronqué à 412 octets.  

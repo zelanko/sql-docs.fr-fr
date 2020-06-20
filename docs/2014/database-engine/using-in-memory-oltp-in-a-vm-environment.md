@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213051d56869159545428505e7cb0a7b9fd33226
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927790"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle
   La virtualisation de serveur vous permet de réduire les coûts d’exploitation et de capital informatique et d’optimiser l’efficacité informatique, grâce à des processus de configuration, de maintenance, de disponibilité, de sauvegarde et de récupération d’applications optimisés. Avec les progrès technologiques récents, les charges de travail de base de données complexes peuvent être consolidées plus aisément à l'aide de la virtualisation. Cette rubrique porte sur les meilleures pratiques relatives à l’utilisation de [!INCLUDE[hek_1](../includes/hek-1-md.md)] dans un environnement virtualisé.  
@@ -31,7 +30,7 @@ ms.locfileid: "62843058"
   
  Si vous suivez les pratiques ci-dessus pour une base de données avec des tables à mémoire optimisée, une tentative de récupération et de restauration d’une base de données peut entraîner le blocage de la base de données à l’état « Récupération en attente », même si vous avez suffisamment de mémoire disponible pour la récupérer. En effet, au démarrage, [!INCLUDE[hek_2](../includes/hek-2-md.md)] met les données en mémoire plus rapidement que l’allocation de mémoire dynamique n’alloue la mémoire nécessaire à la base de données.  
   
- **Résolution :**  
+ **Résolution**  
   
  Pour atténuer ce problème, préallouez suffisamment de mémoire à la base de données pour la récupération ou le redémarrage ; ne vous contentez pas d'une valeur minimale en comptant sur la mémoire dynamique pour fournir la mémoire supplémentaire lorsque cela est nécessaire.  
   

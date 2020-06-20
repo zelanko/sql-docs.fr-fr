@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 709707caa9087ceadaa11cfd4b415eadd6c3702c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927930"
 ---
 # <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) est un environnement intégré d’accès, de configuration, de gestion, d’administration et de développement de tous les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]composants de. SSMS associe un groupe d'outils graphiques à des éditeurs de script performants pour permettre aux développeurs et aux administrateurs de tous niveaux d'avoir accès à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) est un environnement intégré d’accès, de configuration, de gestion, d’administration et de développement de tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . SSMS associe un groupe d'outils graphiques à des éditeurs de script performants pour permettre aux développeurs et aux administrateurs de tous niveaux d'avoir accès à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  SSMS associe dans un environnement unique les fonctionnalités d'Enterprise Manager, de l'Analyseur de requêtes et d'Analysis Manager, comprises dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En outre, SSMS fonctionne avec tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tels que [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les développeurs retrouvent des outils familiers et les administrateurs disposent d'un utilitaire complet qui associe des outils graphiques conviviaux à des fonctionnalités de scripts puissantes.  
   

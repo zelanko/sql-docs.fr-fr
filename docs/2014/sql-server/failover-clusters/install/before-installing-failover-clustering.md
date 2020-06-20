@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037190"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
   Avant d'installer un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez sélectionner le matériel et le système d'exploitation que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisera. Vous devez aussi configurer le clustering de basculement Windows Server (WSFC) et examiner le réseau, la sécurité ainsi que les points importants à prendre en compte pour les autres logiciels qui seront exécutés sur votre cluster de basculement.  
@@ -45,9 +44,9 @@ ms.locfileid: "63190341"
   
     -   Windows PowerShell n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Windows PowerShell 2.0 est un composant requis pour l'installation des composants du [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell 2.0 n’est pas présent sur votre ordinateur, vous pouvez l’activer en suivant les instructions de la page [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214).  
   
-    -   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des systèmes d'exploitation Windows plus anciens. Pour plus d’informations, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]consultez les [notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des systèmes d'exploitation Windows plus anciens. Pour plus d’informations, consultez les [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **Package de mise à jour : [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** Pour éviter le redémarrage de l’ordinateur en raison de l' [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installation de .NET Framework [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 4 lors de l’installation, le programme d’installation requiert l’installation d’une mise à jour sur l’ordinateur.  Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, cette mise à jour est incluse. Si vous installez sur un système d'exploitation Windows plus ancien, vous pouvez la télécharger à partir de la [Mise à niveau Microsoft pour le .NET Framework 4.0 sur Windows Vista et Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Package de mise à jour :** pour éviter le redémarrage de l’ordinateur en raison de l’installation de .NET Framework 4 pendant l’installation, le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] programme d’installation requiert l’installation d’une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] mise à jour sur l’ordinateur.  Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, cette mise à jour est incluse. Si vous installez sur un système d'exploitation Windows plus ancien, vous pouvez la télécharger à partir de la [Mise à niveau Microsoft pour le .NET Framework 4.0 sur Windows Vista et Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   Le programme d'installation de .NET Framework 4.0 installe le .NET Framework 4 sur un système d'exploitation en cluster. Pour réduire le temps d'installation, vous pouvez envisager d'installer le .NET Framework 4 avant d'exécuter le programme d'installation.  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63190341"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les clusters ne sont pas pris en charge en mode WOW. Cela inclut les mises à niveau de versions précédentes des clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installés à l'origine dans WOW. Pour ceux-là, la seule option de mise à niveau est d'installer la nouvelle version côte à côte et de migrer.  
   
- <sup>2</sup> pris en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] charge pour le clustering de basculement de sous-réseaux multiples.  
+ <sup>2</sup> pris en charge pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le clustering de basculement de sous-réseaux multiples.  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190341"
   
 1.  La dépendance de ressource d'adresse IP est définie à OR dans une configuration de sous-réseaux multiples. Pour plus d’informations, consultez [créer un cluster de basculement SQL Server &#40;d’installation&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  Les dépendances d'adresse IP mixtes AND-OR ne sont pas prises en charge. Par exemple, \<IP1> AND \<IP2> OR \<IP3> n’est pas pris en charge.  
+2.  Les dépendances d'adresse IP mixtes AND-OR ne sont pas prises en charge. Par exemple, \<IP1> et \<IP2> ou \<IP3> n’est pas pris en charge.  
   
 3.  La présence de plusieurs adresses IP par sous-réseau n'est pas prise en charge.  
   

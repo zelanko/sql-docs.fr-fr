@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413d0d42ce629076488b5971408df25ca0ce9d1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768445"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968439"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilisation d'images à l'aide de la tâche de script
   Une base de données de produits ou d'utilisateurs contient généralement des images, en plus du texte et des données numériques. L'espace de noms `System.Drawing` dans Microsoft .NET Framework fournit des classes permettant de manipuler des images.  
@@ -47,7 +46,7 @@ ms.locfileid: "62768445"
   
 1.  Créez une variable chaîne appelée `CurrentImageFile` et attribuez lui la valeur du chemin d'accès et du nom d'un fichier image existant.  
   
-2.  Dans la page **script** de l **'éditeur de tâche**de script `CurrentImageFile` , ajoutez la `ReadOnlyVariables` variable à la propriété.  
+2.  Dans la page **script** de l **'éditeur de tâche de script**, ajoutez la `CurrentImageFile` variable à la `ReadOnlyVariables` propriété.  
   
 3.  Dans le projet de script, définissez une référence à l'espace de noms `System.Drawing`.  
   
@@ -158,7 +157,7 @@ End Function
   
 2.  Créez également la variable de type entier `MaxThumbSize` et attribuez-lui une valeur en pixels, telle que 100.  
   
-3.  Dans la page **script** de l **'éditeur de tâche de script**, ajoutez les `ReadOnlyVariables` deux variables à la propriété.  
+3.  Dans la page **script** de l **'éditeur de tâche de script**, ajoutez les deux variables à la `ReadOnlyVariables` propriété.  
   
 4.  Dans le projet de script, définissez une référence à l'espace de noms `System.Drawing`.  
   

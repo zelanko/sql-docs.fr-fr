@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4c83a6bde711d2e653fdf19d4d3e145efae8d1d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6383fb17183a991d2f83325044663cc9671e9442
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012976"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Afficher une collection de schémas XML stockée
   Après l’importation d’une collection de schémas XML à l’aide de l’instruction [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), les composants du schéma sont stockés dans les métadonnées. Vous pouvez utiliser la fonction intrinsèque [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)pour reconstruire la collection de schémas XML. Cette fonction renvoie une instance de type de données `xml`.  

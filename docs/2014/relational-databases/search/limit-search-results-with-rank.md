@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1b930b3238cb541965e1984d1561f1a1c22d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004207"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
   Les fonctions [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) retournent une colonne appelée RANK qui contient des valeurs ordinales comprises entre 0 et 1000 (valeurs de classement). Ces valeurs servent à établir le rang des lignes retournées en fonction de leur correspondance par rapport aux critères de sélection. Les valeurs de classement indiquent uniquement un ordre relatif de pertinence pour les lignes du jeu de résultats. Une valeur inférieure indique une pertinence plus faible. Les valeurs réelles sont sans importance et sont généralement différentes d'une exécution de requête à une autre.  
@@ -143,7 +142,7 @@ GO
   
  Les statistiques telles que `IndexRowCount` peuvent fortement varier. Par exemple, si un catalogue a 2 milliards de lignes dans l'index principal, un nouveau document est indexé dans un index intermédiaire en mémoire ; par ailleurs, les rangs de ce document qui sont basés sur le nombre de documents dans l'index en mémoire peuvent être incorrects par rapport aux rangs des documents de l'index principal. Par conséquent, lorsqu'un remplissage entraîne l'indexation ou la réindexation d'un grand nombre de lignes, il est recommandé de fusionner les index dans un index principal via l'instruction ALTER FULLTEXT CATALOG ... Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Le Moteur d'indexation et de recherche en texte intégral fusionne automatiquement les index en fonction de paramètres tels que le nombre et la taille des index intermédiaires.  
   
- Les valeurs `MaxOccurrence` sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Étant donné que les longueurs de document sont comprises entre les valeurs de table adjacentes 32 et 128, elles sont effectivement traitées comme ayant la `docLength` même longueur, 128 (32 < <= 128).  
+ Les valeurs `MaxOccurrence` sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Étant donné que les longueurs de document sont comprises entre les valeurs de table adjacentes 32 et 128, elles sont effectivement traitées comme ayant la même longueur, 128 (32 < `docLength` <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

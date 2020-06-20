@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3bee955-0344-4078-89f1-94a02e7f93c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 322fa77d7d8620de87aaf862242da3c5c83126cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62118da80af9f546c83f1fc0aca926069ea55e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037067"
 ---
 # <a name="complete-image-progress"></a>Progression de la finalisation d'image
   Utilisez la page **Progression de la finalisation d'image** de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour contrôler l'état d'installation de la finalisation d'image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . À l'issue de cette étape, cette page répertorie l'état de chaque fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée et finalisée.  

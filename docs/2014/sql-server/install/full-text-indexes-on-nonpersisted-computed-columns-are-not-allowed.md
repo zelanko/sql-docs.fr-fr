@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 417ca3c2e5e477960c4c905543f3a712a5ec7453
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de153d45e2f652bfea6e9dce68428af84be68b6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012335"
 ---
 # <a name="full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed"></a>Les index de recherche en texte intégral sur des colonnes calculées non persistantes ne sont pas autorisés
   Vous ne pouvez pas créer des index de recherche en texte intégral sur des colonnes calculées non déterministes et imprécises. Ces colonnes ne peuvent pas être utilisées en tant que colonnes de type ou en colonnes clés de texte intégral.  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7d99c3459d7bf41a4b9b6552ad6dbb6fe2213c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036981"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)
 
@@ -38,7 +37,7 @@ ms.locfileid: "71952331"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif|  
   
  
   
@@ -67,7 +66,7 @@ ms.locfileid: "71952331"
   
 -   Utilisez le Gestionnaire de configuration de Reporting Services si vous spécifiez simplement un serveur SMTP et un compte d'utilisateur ayant l'autorisation d'envoyer des messages électroniques. Ce sont les paramètres minimum requis pour configurer l'extension de remise du courrier électronique par le serveur de rapports. Pour plus d’informations, consultez [paramètres de messagerie électronique-Configuration Manager &#40;mode natif SSRS&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) et [remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   (Facultatif) Utilisez un éditeur de texte pour spécifier les paramètres supplémentaires dans le fichier RSreportserver.config. Ce fichier contient tous les paramètres de configuration pour la remise du courrier électronique par le serveur de rapports. La spécification de paramètres supplémentaires dans ces fichiers est obligatoire si vous utilisez un serveur SMTP local ou si vous limitez la remise par messagerie à des hôtes spécifiques. Pour plus d’informations sur la recherche et la modification des fichiers de configuration, consultez [modifier un fichier de configuration d’Reporting Services &#40;&#41;RSReportServer. config](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans documentation en ligne de SQL Server.  
+-   (Facultatif) Utilisez un éditeur de texte pour spécifier les paramètres supplémentaires dans le fichier RSreportserver.config. Ce fichier contient tous les paramètres de configuration pour la remise du courrier électronique par le serveur de rapports. La spécification de paramètres supplémentaires dans ces fichiers est obligatoire si vous utilisez un serveur SMTP local ou si vous limitez la remise par messagerie à des hôtes spécifiques. Pour plus d’informations sur la recherche et la modification des fichiers de configuration, consultez [modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans documentation en ligne de SQL Server.  
   
 > [!NOTE]  
 >  Les paramètres du courrier électronique pour le serveur de rapports dépendent du CDO. Si vous souhaitez obtenir plus de détails sur des paramètres spécifiques, reportez-vous à la documentation de production CDO.  
@@ -120,7 +119,7 @@ ms.locfileid: "71952331"
   
 3.  Définissez `DefaultHostName` au nom DNS (Domain Name System) ou à l'adresse IP du redirecteur ou du serveur SMTP.  
   
-4.  Enregistrez le fichier .  
+4.  Enregistrez le fichier.  
   
   
   
@@ -148,7 +147,7 @@ ms.locfileid: "71952331"
   
  La connexion entre le serveur de rapports et le serveur ou le redirecteur SMTP local est déterminée par les paramètres de configuration suivants :  
   
--   `SendUsing`a la valeur **1**.  
+-   `SendUsing` est défini sur **1**.  
   
 -   **SMTPServerPickupDirectory** est défini sur un dossier de lecteur local.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "71952331"
   
 7.  Dans <`From`>, tapez le nom d’un compte qui a l’autorisation d’envoyer du courrier électronique à partir du serveur SMTP.  
   
-8.  Enregistrez le fichier .  
+8.  Enregistrez le fichier.  
   
      Le serveur de rapports utilise automatiquement les nouveaux paramètres ; il n'est pas nécessaire de redémarrer le service. Vous pouvez spécifier des paramètres SMTP supplémentaires pour configurer comment le serveur SMTP est utilisé pour la remise par messagerie du serveur de rapports. Pour plus d'dans la documentation en ligne deformations, consultez [Configurdans la documentation en ligne deg a Report Server for E-Mail Delivery](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) et [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onldans la documentation en ligne dee.  
   
@@ -211,7 +210,7 @@ ms.locfileid: "71952331"
   
 7.  Vérifiez que le service s'exécute dans la console **Services** .  
   
-8.  Ouvrez le fichier **RSReportServer. config** dans un éditeur de texte.  
+8.  Ouvrez le fichier **RSReportServer.config** dans un éditeur de texte.  
   
 9. Vérifiez que `<UrlRoot>` est paramétré à l'adresse URL du serveur de rapports. Cette valeur est définie lorsque vous configurez le serveur de rapports et elle devrait normalement être déjà définie. Si elle n'est pas définie, tapez l'adresse URL du serveur de rapports.  
   
@@ -225,7 +224,7 @@ ms.locfileid: "71952331"
   
 14. Définissez `<From>` sur un compte qui a l'autorisation d'envoyer des messages électroniques à partir du serveur SMTP.  
   
-15. Enregistrez le fichier .  
+15. Enregistrez le fichier.  
   
  
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4b11963d8e05ff7787ce9200329daf2e899ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970376"
 ---
 # <a name="data-compression"></a>Data Compression
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la compression de page et de ligne pour les tables et les index rowstore, et prend en charge la compression columnstore et d'archivage columnstore pour les tables et les index columnstore.  
@@ -63,7 +62,7 @@ ms.locfileid: "62873553"
   
 -   La compression permet de stocker davantage de lignes dans une page, mais elle ne modifie pas la taille maximale des lignes d'une table ou d'un index.  
   
--   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui contient les colonnes C1`char(8000)` et C2`char(53)` ne peut pas être compressée en raison de la surcharge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
+-   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui contient les colonnes C1 `char(8000)` et C2 `char(53)` ne peut pas être compressée en raison de la surcharge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
   
     -   Une mise à jour d'un type de longueur fixe doit toujours réussir.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873553"
   
 ||  
 |-|  
-|**S’applique à** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Concepts de base  
  Les tables et les index columnstore sont toujours enregistrés avec la compression columnstore. Limitez encore davantage la taille des données columnstore en configurant une compression supplémentaire appelée compression d'archivage.  Pour exécuter la compression d'archivage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l'algorithme de compression Microsoft XPRESS sur les données. Ajoutez ou supprimez la compression d'archivage en utilisant les types de compression de données suivants :  
@@ -167,7 +166,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Métadonnées  
  Les vues système suivantes contiennent des informations sur la compression de données pour les index cluster :  
   
--   [sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -les `type` colonnes `type_desc` et incluent les COLUMNSTORE en cluster et les COLUMNSTORE non cluster.  
+-   [sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -les `type` `type_desc` colonnes et incluent les COLUMNSTORE en cluster et les COLUMNSTORE non cluster.  
   
 -   [sys. partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -les `data_compression` colonnes et `data_compression_desc` incluent COLUMNSTORE et COLUMNSTORE_ARCHIVE.  
   

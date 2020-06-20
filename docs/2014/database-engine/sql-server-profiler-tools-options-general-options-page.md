@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7845a84c45015ba3346538030725eb2973490d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089619"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928550"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-Tools-Options (page Options générales)
   Utilisez la boîte de dialogue **Options générales** pour afficher ou spécifier les options ci-après.  
@@ -27,7 +26,7 @@ ms.locfileid: "66089619"
 ## <a name="options"></a>Options  
   
 ### <a name="display-options"></a>Options d'affichage  
- **Nom de police**  
+ **Nom de la police**  
  Affiche le nom de la police utilisée dans la grille des résultats de trace pendant les traces.  
   
  **Taille de police**  
@@ -79,7 +78,7 @@ ms.locfileid: "66089619"
  [Relire un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Relire les traces](../tools/sql-server-profiler/replay-traces.md)   
  [Définir les options de trace globales &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
- [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

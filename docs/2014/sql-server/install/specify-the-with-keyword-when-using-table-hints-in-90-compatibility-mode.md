@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7636cc85-5155-44db-baf6-df807761adb8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff2fee26c6f71cc398f8dbacf91f3ad8dbdb3358
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ecd13475395cef4257d97eb7480f32420932e22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092162"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036301"
 ---
 # <a name="specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode"></a>Spécifier le mot clé WITH lors de l'utilisation d'indicateurs de table en mode de compatibilité 90
   À quelques exceptions près, les indicateurs de table ne sont pris en charge dans la clause FROM d'une requête que s'ils sont spécifiés à l'aide du mot clé WITH. Pour plus d'informations, consultez les rubriques « FROM ([!INCLUDE[tsql](../../includes/tsql-md.md)]) » et « Indicateur de table ([!INCLUDE[tsql](../../includes/tsql-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39c09a3a73051e7a61f3a62a125232d83d1570c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068079"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimisation de la table NewOrg
-  La table **NewOrd** que vous avez créée dans la tâche [remplissage d’une table avec des données hiérarchiques existantes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contient toutes les informations relatives aux employés et représente la structure hiérarchique `hierarchyid` à l’aide d’un type de données. Cette tâche ajoute de nouveaux index pour prendre en charge les recherches sur la colonne `hierarchyid`.  
+  La table **NewOrd** que vous avez créée dans la tâche [remplissage d’une table avec des données hiérarchiques existantes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contient toutes les informations relatives aux employés et représente la structure hiérarchique à l’aide d’un `hierarchyid` type de données. Cette tâche ajoute de nouveaux index pour prendre en charge les recherches sur la colonne `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Index cluster  
  La `hierarchyid` colonne (**OrgNode**) est la clé primaire de la table **NewOrg** . Quand la table a été créée, elle contenait un index cluster nommé **PK_NewOrg_OrgNode** pour forcer l’unicité de la colonne **OrgNode** . Cet index cluster prend également en charge une recherche à profondeur prioritaire de la table.  

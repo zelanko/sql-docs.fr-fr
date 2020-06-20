@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b39f5347a7ace6dc449be804144b105957b33e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068199"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Règles et limitations du chargement en masse XML (SQLXML 4.0)
   Lorsque vous utilisez le chargement en masse XML, vous devez connaître les indications et les limitations suivantes :  
@@ -35,9 +34,9 @@ ms.locfileid: "82703380"
   
 -   Toutes informations de prologue XML sont ignorées.  
   
-     Le chargement en masse XML ignore toutes les informations avant et après l' \< élément racine> dans le document XML. Par exemple, le chargement en masse XML ignore toutes les déclarations XML, les définitions DTD internes, les références DTD externes, les commentaires, etc.  
+     Le chargement en masse XML ignore toutes les informations avant et après l' \<root> élément dans le document XML. Par exemple, le chargement en masse XML ignore toutes les déclarations XML, les définitions DTD internes, les références DTD externes, les commentaires, etc.  
   
--   Si vous possédez un schéma de mappage qui définit une relation clé primaire/clé étrangère entre deux tables (par exemple, entre Customer et CustOrder), la table avec la clé primaire doit être décrite en premier dans le schéma. La table avec la colonne de clé étrangère doit apparaître ultérieurement dans le schéma. Cela est dû au fait que l’ordre dans lequel les tables sont identifiées dans le schéma est l’ordre utilisé pour les charger dans la base de données. Par exemple, le schéma XDR suivant génère une erreur lorsqu’il est utilisé dans le chargement en masse XML, car l’élément ** \< Order>** est décrit avant l’élément ** \< Customer>** . La colonne CustomerID dans CustOrder est une colonne de clé étrangère qui fait référence à la colonne de clé primaire CustomerID dans la table Cust.  
+-   Si vous possédez un schéma de mappage qui définit une relation clé primaire/clé étrangère entre deux tables (par exemple, entre Customer et CustOrder), la table avec la clé primaire doit être décrite en premier dans le schéma. La table avec la colonne de clé étrangère doit apparaître ultérieurement dans le schéma. Cela est dû au fait que l’ordre dans lequel les tables sont identifiées dans le schéma est l’ordre utilisé pour les charger dans la base de données. Par exemple, le schéma XDR suivant génère une erreur lorsqu’il est utilisé dans le chargement en masse XML, car l' **\<Order>** élément est décrit avant l' **\<Customer>** élément. La colonne CustomerID dans CustOrder est une colonne de clé étrangère qui fait référence à la colonne de clé primaire CustomerID dans la table Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +76,7 @@ ms.locfileid: "82703380"
   
 -   Si le schéma ne spécifie pas de colonnes de dépassement à l'aide de l'annotation `sql:overflow-field`, le chargement en masse XML ignore toutes les données qui sont présentes dans le document XML, mais qui ne sont pas décrites dans le schéma de mappage.  
   
-     Le chargement en masse XML applique le schéma de mappage que vous avez spécifié toutes les fois qu'il rencontre des balises connues dans le flux de données XML. Il ignore les données qui sont présentes dans le document XML mais qui ne sont pas décrites dans le schéma. Par exemple, supposons que vous ayez un schéma de mappage qui décrit un élément ** \< customer>** . Le fichier de données XML a une balise racine ** \< AllCustomers>** (qui n’est pas décrite dans le schéma) qui englobe tous les éléments du ** \<>client** :  
+     Le chargement en masse XML applique le schéma de mappage que vous avez spécifié toutes les fois qu'il rencontre des balises connues dans le flux de données XML. Il ignore les données qui sont présentes dans le document XML mais qui ne sont pas décrites dans le schéma. Par exemple, supposons que vous ayez un schéma de mappage qui décrit un **\<Customer>** élément. Le fichier de données XML a une **\<AllCustomers>** balise racine (qui n’est pas décrite dans le schéma) qui englobe tous les **\<Customer>** éléments :  
   
     ```  
     <AllCustomers>  
@@ -87,9 +86,9 @@ ms.locfileid: "82703380"
     </AllCustomers>  
     ```  
   
-     Dans ce cas, le chargement en masse XML ignore l’élément ** \< AllCustomers>** et commence le mappage au niveau de l’élément ** \< Customer>** . Le chargement en masse XML ignore les éléments qui ne sont pas décrits dans le schéma mais qui sont présents dans le document XML.  
+     Dans ce cas, le chargement en masse XML ignore l' **\<AllCustomers>** élément et commence le mappage au niveau de l' **\<Customer>** élément. Le chargement en masse XML ignore les éléments qui ne sont pas décrits dans le schéma mais qui sont présents dans le document XML.  
   
-     Prenons l’exemple d’un autre fichier de données source XML qui contient les éléments de ** \< commande>** . Ces éléments ne sont pas décrits dans le schéma de mappage :  
+     Prenons l’exemple d’un autre fichier de données source XML qui contient des **\<Order>** éléments. Ces éléments ne sont pas décrits dans le schéma de mappage :  
   
     ```  
     <AllCustomers>  
@@ -105,11 +104,11 @@ ms.locfileid: "82703380"
     </AllCustomers>  
     ```  
   
-     Le chargement en masse XML ignore ces éléments ** \<>ordre** . Toutefois, si vous utilisez l' `sql:overflow-field` annotation dans le schéma pour identifier une colonne en tant que colonne de dépassement, le chargement en masse XML stocke toutes les données non consommées dans cette colonne.  
+     Le chargement en masse XML ignore ces **\<Order>** éléments. Toutefois, si vous utilisez l' `sql:overflow-field` annotation dans le schéma pour identifier une colonne en tant que colonne de dépassement, le chargement en masse XML stocke toutes les données non consommées dans cette colonne.  
   
 -   Les sections CDATA et les références d'entité sont traduites en chaînes équivalentes avant d'être stockées dans la base de données.  
   
-     Dans cet exemple, une section CDATA encapsule la valeur de l’élément ** \< City>** . Le chargement en masse XML extrait la valeur de chaîne (« NY ») avant d’insérer l’élément ** \< City>** dans la base de données.  
+     Dans cet exemple, une section CDATA encapsule la valeur de l' **\<City>** élément. Le chargement en masse XML extrait la valeur de chaîne (« NY ») avant d’insérer l' **\<City>** élément dans la base de données.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +141,7 @@ ms.locfileid: "82703380"
     </Schema>  
     ```  
   
-     Dans ces données XML, l’attribut **HireDate** est manquant dans le deuxième élément ** \< Customers>** . Lorsque le chargement en masse XML insère le second ** \< client>** élément dans la base de données, il utilise la valeur par défaut spécifiée dans le schéma.  
+     Dans ces données XML, l’attribut **HireDate** est manquant dans le deuxième **\<Customers>** élément. Lorsque le chargement en masse XML insère le deuxième **\<Customers>** élément dans la base de données, il utilise la valeur par défaut spécifiée dans le schéma.  
   
     ```  
     <ROOT>  

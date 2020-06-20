@@ -1,5 +1,6 @@
 ---
 title: OLE DB
+description: Le fournisseur SQL Server Native Client OLE DB est une API COM pour l’accès aux données, utilisée pour les outils, les utilitaires ou les composants de bas niveau qui nécessitent des performances élevées.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f945ca5abaa515823ea81ad30ca4292cc42690
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948677"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +77,7 @@ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de O
   
 -   [SQL Server Native Client &#40;OLE DB référence de&#41;](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Rubriques "Comment" relatives aux OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Rubriques de procédures liées à OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

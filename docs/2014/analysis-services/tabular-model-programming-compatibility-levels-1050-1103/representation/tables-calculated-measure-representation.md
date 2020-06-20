@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b630fa075ae07b84e4886ad8bc115611da8e2d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757661"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940040"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Représentation de la mesure calculée (tabulaire)
   Une mesure calculée est une expression DAX nommée évaluée chaque fois qu'elle est utilisée.  
@@ -23,7 +22,7 @@ ms.locfileid: "62757661"
 ## <a name="calculated-measure-representation"></a>Représentation de la mesure calculée  
   
 ### <a name="calculated-measure-in-amo"></a>Mesure calculée dans AMO  
- Lorsque vous utilisez AMO pour traiter une mesure calculée de modèle tabulaire, il existe une correspondance linéaire entre l'objet de mesure calculée logique et une mesure définie dans un objet <xref:Microsoft.AnalysisServices.Command> de l'objet <xref:Microsoft.AnalysisServices.MdxScript>. Chaque **mesure calculée** est définie en tant `CREATE MEASURE` qu’expression à <xref:Microsoft.AnalysisServices.Command> l’intérieur d’un objet et séparée par un point-virgule. Toutes les mesures calculées dans un modèle tabulaire correspondent à la chaîne `CREATE MEASURE` de collection dans un objet de commande dans un objet <xref:Microsoft.AnalysisServices.MdxScript>. Pour chaque mesure calculée, il existe un mappage un-à-un avec un <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Lorsque vous utilisez AMO pour traiter une mesure calculée de modèle tabulaire, il existe une correspondance linéaire entre l'objet de mesure calculée logique et une mesure définie dans un objet <xref:Microsoft.AnalysisServices.Command> de l'objet <xref:Microsoft.AnalysisServices.MdxScript>. Chaque **mesure calculée** est définie en tant qu' `CREATE MEASURE` expression à l’intérieur d’un <xref:Microsoft.AnalysisServices.Command> objet et séparée par un point-virgule. Toutes les mesures calculées dans un modèle tabulaire correspondent à la chaîne `CREATE MEASURE` de collection dans un objet de commande dans un objet <xref:Microsoft.AnalysisServices.MdxScript>. Pour chaque mesure calculée, il existe un mappage un-à-un avec un <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  L'extrait de code suivant montre comment créer une mesure calculée.  
   

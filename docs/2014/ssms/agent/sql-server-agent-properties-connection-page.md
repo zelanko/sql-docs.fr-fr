@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: d6a677ff-60ad-47ba-a0cb-df4193b165e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c387513b8896018ead7d35e15a32e9e314ac0d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4524b5c7b611ebc9407ab79339d6e35e6c82de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058715"
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>Propriétés de l'Agent SQL Server (page Connexion)
-  Utilisez cette page pour afficher et modifier les paramètres de la connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service agent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Utilisez cette page pour afficher et modifier les paramètres de la connexion du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service agent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
  **Alias du serveur hôte local**  
  Spécifie l'alias à utiliser pour se connecter à l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous ne pouvez pas utiliser les options de connexion par défaut pour l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , définissez un alias pour l'instance et spécifiez l'alias à cet endroit.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Définit l'authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows comme la méthode d'authentification utilisée pour se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte sous le compte utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
  **Utiliser l’authentification SQL Server**  

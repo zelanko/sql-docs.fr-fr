@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 548e894f64aba590475472d843337d8de1fe5e0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e91328f4f12f2a0a27f397c7bd95390a505f3998
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068115"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Désactiver les contraintes de clé étrangère avec des instructions INSERT et UPDATE
   Vous pouvez désactiver une contrainte de clé étrangère pendant les transactions INSERT et UPDATE dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Utilisez cette option si vous savez que de nouvelles données violeront la contrainte existante ou si la contrainte s'applique uniquement aux données déjà dans la base de données.  

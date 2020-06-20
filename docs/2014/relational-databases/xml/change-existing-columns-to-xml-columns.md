@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4cdadcb1301a5755b57485ac8e622cd66e850c57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec3677976a82cfb9237c4bcab267ae67f8f6cc5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059544"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Transformer les colonnes existantes en colonnes XML
   L'instruction ALTER TABLE prend en charge le type de données `xml`. Par exemple, vous pouvez modifier n'importe quelle colonne de type chaîne au type de données `xml`. Dans ces cas-là, les documents contenus dans la colonne doivent être corrects. En outre, si vous convertissez la colonne du type chaîne dans le type xml typé, les documents de la colonne sont validés par rapport aux schémas XSD spécifiés.  

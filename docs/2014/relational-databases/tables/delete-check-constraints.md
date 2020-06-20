@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b4110d6a03e9e0b4d7aeca01c62a74a64b26c3ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28a7f72993cbf2ed0a8cc76534380090ef0d0a55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066492"
 ---
 # <a name="delete-check-constraints"></a>Supprimer des contraintes de validation
   Vous pouvez supprimer une contrainte de validation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En supprimant des contraintes de validation, vous supprimez les restrictions sur les valeurs de données acceptées dans la ou les colonnes incluses dans l'expression de contrainte.  

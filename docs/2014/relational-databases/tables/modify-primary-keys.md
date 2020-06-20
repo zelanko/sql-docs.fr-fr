@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5222febad90a48ab64ee5d4039d48760f5b544aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067941"
 ---
 # <a name="modify-primary-keys"></a>Modifier des clés primaires
   Vous pouvez modifier une clé primaire dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez modifier la clé primaire d'une table en changeant l'ordre des colonnes, le nom de l'index, l'option clustered ou le facteur de remplissage.  
