@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965946"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gérer les métadonnées lors de la mise à disposition d'une base de données sur une autre instance de serveur (SQL Server)
   Cette rubrique concerne les situations suivantes :  
@@ -124,7 +123,7 @@ ms.locfileid: "76929903"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>Propriété de base de données  
  Lorsqu'une base de données est restaurée sur un autre ordinateur, la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'utilisateur Windows à l'origine de l'opération de restauration devient automatiquement le propriétaire de la nouvelle base de données. Lorsque la base de données est restaurée, l'administrateur du système ou le nouveau propriétaire de la base de données peut modifier la propriété de la base de données.  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>Requêtes distribuées et serveurs liés  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Requêtes distribuées et serveurs liés  
  Les requêtes distribuées et les serveurs liés sont pris en charge pour les applications OLE DB. Les requêtes distribuées accèdent aux données issues de multiples sources de données hétérogènes sur le même ordinateur ou sur des ordinateurs différents. Une configuration de serveurs liés permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des commandes sur les sources de données OLE DB hébergées sur des serveurs distants. Pour plus d’informations sur ces fonctionnalités, consultez [Serveurs liés &#40;moteur de base de données&#41;](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;Haut&#93;](#information_entities_and_objects)  
@@ -354,8 +353,8 @@ ms.locfileid: "76929903"
   
 ## <a name="see-also"></a>Voir aussi  
  [Bases de données à relation contenant-contenu](contained-databases.md)   
- [Copier les bases de données sur d’autres serveurs](copy-databases-to-other-servers.md)   
- [Détachement et attachement de la base de données &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Copier des bases de données sur d'autres serveurs](copy-databases-to-other-servers.md)   
+ [Attacher et détacher une base de données &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [Basculer vers un &#40;secondaire de copie des journaux de SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

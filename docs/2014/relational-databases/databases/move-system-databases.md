@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965840"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
   Cette rubrique décrit comment déplacer des bases de données système dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le déplacement des bases de données système peut être utile dans les cas suivants :  
@@ -50,7 +49,7 @@ ms.locfileid: "62871536"
 > [!IMPORTANT]  
 >  Si vous déplacez une base de données système et que vous recréez ultérieurement la base de données master, vous devez redéplacer la base de données système car l'opération de recréation installe toutes les bases de données système à leur emplacement par défaut.  
   
-##  <a name="in-this-topic"></a><a name="Intro"></a> **Dans cette rubrique**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**Dans cette rubrique**  
   
 -   [Procédure de réadressage planifié et de maintenance de disque planifiée](#Planned)  
   
@@ -194,7 +193,7 @@ ms.locfileid: "62871536"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Déplacement de la base de données Resource  
- L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
+ L’emplacement de la base de données Resource est \<*drive*> : \Program Files\Microsoft SQL Server\MSSQL \<version> . \<*instance_name*> \MSSQL\Binn \\ . La base de données ne peut pas être déplacée.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
@@ -209,7 +208,7 @@ ms.locfileid: "62871536"
   
 2.  Cliquez avec le bouton droit sur **Journaux d’erreurs** , puis cliquez sur **Configurer**.  
   
-3.  Dans la boîte de dialogue **Configurer les journaux d'erreurs de l'Agent SQL Server** , spécifiez le nouvel emplacement du fichier SQLAGENT.OUT. L’emplacement par défaut est C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name>\\\mssql\log.  
+3.  Dans la boîte de dialogue **Configurer les journaux d'erreurs de l'Agent SQL Server** , spécifiez le nouvel emplacement du fichier SQLAGENT.OUT. L’emplacement par défaut est C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log \\ .  
   
 #### <a name="change-the-database-default-location"></a>Modifier l'emplacement par défaut de la base de données  
   
@@ -266,7 +265,7 @@ ms.locfileid: "62871536"
 ## <a name="see-also"></a>Voir aussi  
  [Base de données Resource](resource-database.md)   
  [Base de données tempdb](tempdb-database.md)   
- [Base de données Master](master-database.md)   
+ [Base de données master](master-database.md)   
  [Base de données msdb](msdb-database.md)   
  [Base de données model](model-database.md)   
  [Déplacer des bases de données utilisateur](move-user-databases.md)   

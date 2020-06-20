@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82a806dd6beefe98094c4ba1d43ae0ae318aa16c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051405"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting, classe d'événements
   La classe d'événements TM: Commit Tran Starting indique qu'une demande COMMIT TRANSACTION est en cours de démarrage. La requête est envoyée depuis le client par le biais de l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction sera démarrée une fois la transaction actuelle validée.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be05cc1355a0957eaf833b352038822296f562ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 461c431392abd2150ee5f1d797bf6ac6366eb5e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054499"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-advanced"></a>Lanceur de démon de filtre de texte intégral SQL (Avancé)
   À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le service du lanceur de démon de filtre de texte intégral SQL est utilisé par la recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce service doit être en cours d'exécution pendant que vous utilisez la recherche en texte intégral. Pour plus d'informations sur les processus hôte de démon de filtre, consultez « Architecture de la recherche en texte intégral » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

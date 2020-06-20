@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c4c97e61191da4d51830b1bc8d44bfc98f698a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997957"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Abonnement, Historique du serveur de distribution vers l'Abonné (Abonnement transactionnel)
   L'onglet **Historique du serveur de distribution vers l'Abonné** affiche des informations détaillées sur l'Agent de distribution, y compris l'état, l'historique, des messages d'information et d'éventuels messages d'erreur.  
@@ -25,21 +24,21 @@ ms.locfileid: "62630559"
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de distribution à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de distribution**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Affichage**  
+ **Afficher**  
  Sélectionnez les sessions de l'Agent de distribution à afficher. Comme l'agent de distribution s'exécute généralement en continu, il se peut qu'il n'y ait qu'une seule session à afficher.  
   
  **État**  
  État de l'Agent de distribution La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
--   Completed  
+-   Effectué  
   
 -   Nouvel essai  
   
 -   Exécution en cours  
   
- **Heure de début**  
+ **Heure de Début**  
  Heure d'ouverture de la session.  
   
  **Heure de fin**  

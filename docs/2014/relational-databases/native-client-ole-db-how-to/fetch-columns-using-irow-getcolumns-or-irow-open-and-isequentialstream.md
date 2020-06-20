@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b843710b9418cfd3f40411e49a30a1c23b7b8113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039133"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
   Les grandes données peuvent être liées ou récupérées à l'aide de l'interface `ISequentialStream`. Pour les colonnes liées, l'indicateur d'état DBSTATUS_S_TRUNCATED indique que les données sont tronquées.  

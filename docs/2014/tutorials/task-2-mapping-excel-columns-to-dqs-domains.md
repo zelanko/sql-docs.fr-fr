@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006645"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tâche 2 : Mappage de colonnes d’Excel aux domaines DQS
     
 1.  Dans la page **Mapper** , sélectionnez **Fichier Excel** pour **Source de données**.  
   
-2.  Cliquez sur **Parcourir**, sélectionnez **Suppliers. xlsx**, puis cliquez sur **ouvrir**.  
+2.  Cliquez sur **Parcourir**, sélectionnez **Suppliers.xlsx**, puis cliquez sur **ouvrir**.  
   
 3.  Sélectionnez **IncomingSuppliers $** pour la **feuille de calcul**.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65484707"
     |Adresse|Adresse|  
     |City|City|  
     |State|State|  
-    |Pays (cliquez sur **+ (ajouter un mappage de colonnes)** barre d’outils pour ajouter une ligne)|Country|  
+    |Pays (cliquez sur **+ (ajouter un mappage de colonnes)** barre d’outils pour ajouter une ligne)|Pays ou région|  
     |Code postal|Zip|  
   
      ![Mappages des colonnes d'Excel aux domaines](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Mappages des colonnes d'Excel aux domaines")  

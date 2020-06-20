@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155fb8e9dca4f95496196ad167f7976115cef1f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052968"
 ---
 # <a name="execution-warnings-event-class"></a>Classe d'événements Execution Warnings
   La classe d'événements Execution Warnings indique que des avertissements d'allocation de mémoire se sont produits lors de l'exécution d'une instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'une procédure stockée. Il est possible de surveiller cette classe d'événements pour déterminer si des requêtes ont dû attendre une seconde ou plus que de la mémoire se libère avant de continuer, ou si la précédente tentative d'obtention de mémoire a échoué. Les informations sur la durée d'attente des requêtes peuvent faciliter la découverte de problèmes de contention dans le système qui peuvent nuire aux performances.  
@@ -33,7 +32,7 @@ ms.locfileid: "62662412"
 |DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`bigint`|Temps d'attente (en millisecondes) de la requête avant d'obtenir la mémoire nécessaire. Valide uniquement lorsque EventSubClass = 1 (attente de requête).|13|Oui|  
-|Error|`int`|Non utilisé.|31|Oui|  
+|Erreur|`int`|Non utilisé.|31|Oui|  
 |EventClass|`int`|Type d’événement = 67.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné dans la trace.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1 = Attente de requête<br /><br /> 2 = Délai de requête|21|Oui|  

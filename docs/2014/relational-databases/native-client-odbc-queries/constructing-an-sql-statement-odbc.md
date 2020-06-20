@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee3dbc4c685337a930a8d7aa5ce741b2e0b876b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e9bfe0a51ec33b310dae0c73f51ff72687811d02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018607"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Construction d'une instruction SQL (ODBC)
   Les applications ODBC effectuent la plus grande partie de leur accès aux bases de données en exécutant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. La forme de ces instructions dépend des spécifications d'application. Les instructions SQL peuvent être construites des manières suivantes :  

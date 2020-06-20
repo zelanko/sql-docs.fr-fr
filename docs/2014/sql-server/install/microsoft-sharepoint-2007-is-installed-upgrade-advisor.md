@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 84672ddf6a9b2912f3d53eef8d40727369376ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44bf9789e98c29f89644a6cd1a191d4b8fa7eef7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062408"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007 installé (Conseiller de mise à niveau)
   Le Conseiller de mise à niveau a détecté une version non prise en charge d'un produit ou d'une technologie SharePoint.  
@@ -28,7 +27,7 @@ ms.locfileid: "71952091"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne sera pas mis à niveau ou installé sur SharePoint 2007. La mise à niveau est bloquée.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ne sera pas mis à niveau ou installé sur SharePoint 2007. La mise à niveau est bloquée.  
   
 ## <a name="corrective-action"></a>Action corrective  
  Pour continuer la mise à niveau, vous devez désinstaller SharePoint 2007 ou procéder à la mise à niveau de SharePoint 2007 vers un produit SharePoint 2010. Une fois votre installation de SharePoint mise à jour, relancez le Conseiller de mise à niveau pour confirmer qu'il n'y a pas d'autre problèmes de mise à niveau.  

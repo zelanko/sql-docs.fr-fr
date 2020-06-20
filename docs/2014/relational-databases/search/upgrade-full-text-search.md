@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016508"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
   La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l'installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l'aide de l'Assistant Copie de base de données.  
@@ -55,7 +54,7 @@ ms.locfileid: "66010960"
  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], chaque index de recherche en texte intégral réside dans un catalogue de texte intégral qui appartient à un groupe de fichiers, a un chemin d'accès physique et est traité en tant que fichier de base de données. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, un catalogue de texte intégral est un objet logique ou virtuel qui contient un groupe d'index de recherche en texte intégral. Par conséquent, un nouveau catalogue de texte intégral n'est pas traité en tant que fichier de base de données avec un chemin d'accès physique. Toutefois, un nouveau groupe de fichiers est créé sur le même disque pendant la mise à niveau de tout catalogue de texte intégral qui contient des fichiers de données. Cela maintient le comportement d'E/S de l'ancien disque après la mise à niveau. Tout index de recherche en texte intégral de ce catalogue est placé dans le nouveau groupe de fichiers si le chemin d'accès racine existe. Si l'ancien chemin de catalogue de texte intégral est non valide, la mise à niveau conserve l'index de recherche en texte intégral dans le même groupe de fichiers comme table de base ou, pour une table partitionnée, dans le groupe de fichiers principal.  
   
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] Les instructions DDL qui spécifient des catalogues de texte intégral continuent de fonctionner correctement.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]Les instructions DDL qui spécifient des catalogues de texte intégral continuent de fonctionner correctement.  
   
 ##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>Options de mise à niveau de texte intégral  
  Lors de la mise à niveau d'une instance de serveur vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], l'interface utilisateur vous permet de choisir l'une des options de mise à niveau de texte intégral suivantes.  
@@ -135,11 +134,11 @@ ms.locfileid: "66010960"
   
  **Pour modifier le comportement de mise à niveau de texte intégral sur une instance de serveur**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Utilisez l' **action\_option de mise à niveau** du [\_service SP de texte intégral\_](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Utilisez l' **action \_ option de mise à niveau** du [ \_ \_ service SP de texte intégral](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** utilisez **l’option de mise à niveau de texte intégral** de la boîte de dialogue **Propriétés du serveur** . Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
-##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a>Considérations relatives à la [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] restauration d’un catalogue de texte intégral vers[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a>Considérations relatives à la restauration d’un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] catalogue de texte intégral vers[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Une méthode de mise à niveau de données de texte intégral d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est de restaurer une sauvegarde de la base de données complète vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  En important un catalogue [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vous pouvez sauvegarder et restaurer la base de données et le fichier catalogue. Le comportement est identique à celui de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -150,7 +149,7 @@ ms.locfileid: "66010960"
   
  Pour plus d’informations sur la sauvegarde et la restauration de catalogues de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration de catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkId=121052) et [Restauration et sauvegarde de fichiers et catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkId=121053)dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Lorsque la base de données est restaurée sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau fichier de base de données est crée pour le catalogue de texte intégral. Le nom par défaut de ce fichier est ftrow_*nom-catalogue*.ndf. Par exemple, si *nom-catalogue* est `cat1`, le nom par défaut du fichier de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] serait `ftrow_cat1.ndf`. Toutefois, si le nom par défaut est déjà utilisé dans le répertoire cible, le nouveau fichier de base de `ftrow_`données est nommé *Catalog-Name*`{`*GUID*`}.ndf`, où *GUID* est l’identificateur global unique du nouveau fichier.  
+ Lorsque la base de données est restaurée sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau fichier de base de données est crée pour le catalogue de texte intégral. Le nom par défaut de ce fichier est ftrow_*nom-catalogue*.ndf. Par exemple, si *nom-catalogue* est `cat1`, le nom par défaut du fichier de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] serait `ftrow_cat1.ndf`. Toutefois, si le nom par défaut est déjà utilisé dans le répertoire cible, le nouveau fichier de base de données est nommé `ftrow_` *Catalog-Name* `{` *GUID* `}.ndf` , où *GUID* est l’identificateur global unique du nouveau fichier.  
   
  Après avoir importé les catalogues, les fichiers **sys.database_files** et **sys.master_file**sont mis à jour pour supprimer les entrées de catalogue et la colonne de **chemin d’accès** dans **sys.fulltext_catalogs** a la valeur Null.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010960"
   
 -   Le fichier de base de données, `ftdb1.mdf`, est déplacé vers `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
   
--   Le fichier journal, `ftdb1_log.ldf`, est déplacé vers un répertoire de journal sur votre lecteur de disque journal, *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`.  
+-   Le fichier journal, `ftdb1_log.ldf` , est déplacé vers un répertoire de journal sur votre lecteur de disque journal, *log_drive* `:\` *log_directory* `\ftdb1_log.ldf` .  
   
 -   Les fichiers catalogue qui correspondent au catalogue `sysft_cat90` sont déplacés vers `C:\temp`. Après avoir importé les index de recherche en texte intégral, ceux-ci sont automatiquement placés dans un fichier de base de données, C:\ftrow_sysft_cat90.ndf, et C:\temp est supprimé.  
   

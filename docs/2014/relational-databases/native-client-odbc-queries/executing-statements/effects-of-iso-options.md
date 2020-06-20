@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bdbf37ee386cb31e8d8dcf29ff1f45d0f21a681f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 79deff1d77f4020aa7484629bac78d360ed7691f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999180"
 ---
 # <a name="effects-of-iso-options"></a>Conséquences des options ISO
   Le standard ODBC est étroitement mis en correspondance avec la norme ISO, et les applications ODBC attendent un comportement standard d'un pilote ODBC. Pour que son comportement soit conforme à celui défini dans la norme ODBC, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise toujours les options ISO disponibles dans la version de SQL Server avec laquelle il se connecte.  

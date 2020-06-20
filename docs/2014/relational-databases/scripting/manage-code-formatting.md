@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7ad7eed88b831a74eaf4ae83d1949df25744159d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009702"
 ---
 # <a name="manage-code-formatting"></a>Gérer la mise en forme du code
   Dans l'éditeur, vous pouvez mettre en forme votre code avec des mises en retrait, du texte caché, des URL, etc. Vous pouvez également mettre en forme automatiquement votre code à l'aide de la fonction de mise en retrait intelligente.  

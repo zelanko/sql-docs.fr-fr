@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059379"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Des extensions personnalisées ont été détectées sur le serveur de rapports (Conseiller de mise à niveau)
   Le Conseiller de mise à niveau a détecté des paramètres d'extension personnalisés dans les fichiers de configuration, ce qui indique que votre installation inclut une ou plusieurs extensions personnalisées pour le traitement des données, la remise, le rendu, la sécurité ou l'authentification. La mise à niveau déplacera les paramètres de configuration d'extension avec le serveur de rapports mis à niveau. Toutefois, si les extensions personnalisées sont installées dans le dossier installation du serveur de rapports existant, les fichiers d'assembly pour ces extensions personnalisées ne seront pas déplacés vers le nouveau dossier d'installation pendant la mise à niveau. Une fois la mise à niveau terminée, vous devez déplacer les fichiers d'assembly vers le nouveau dossier d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "71952593"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit une architecture extensible qui permet aux développeurs de créer des extensions personnalisées pour le traitement des données, la remise, le rendu, la sécurité et l’authentification.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]fournit une architecture extensible qui permet aux développeurs de créer des extensions personnalisées pour le traitement des données, la remise, le rendu, la sécurité et l’authentification.  
   
  Si des extensions ou des assemblys personnalisés sont utilisés dans votre installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez utiliser le programme d'installation pour effectuer une mise à niveau, mais vous devrez peut-être déplacer des extensions vers le nouvel emplacement d'installation après la mise à niveau ou effectuer des étapes avant la mise à niveau.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "71952593"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Étapes postérieures à la mise à niveau pour les extensions pour le traitement des données ou de remise personnalisées  
   
-1.  Déplacez le ou les fichiers d'extension vers le nouveau dossier du programme pour le serveur de rapports. Par défaut, le dossier du programme du serveur de rapports se trouve dans \Program Files\Microsoft SQL Server \ MSRS10_50. \< *instance_name*> serveur \Report.  
+1.  Déplacez le ou les fichiers d'extension vers le nouveau dossier du programme pour le serveur de rapports. Par défaut, le dossier du programme du serveur de rapports se trouve dans \Program Files\Microsoft SQL Server \ MSRS10_50. \<*instance_name*> serveur \Report.  
   
  Pour plus d'informations, consultez « Déploiement d'une extension pour le traitement des données » et « Implémentation d'une extension de remise » dans la documentation en ligne de SQL Server.  
   

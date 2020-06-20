@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489751"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039843"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Leçon 5 : Automatisation du nettoyage et de la mise en correspondance avec SSIS
   Dans la leçon 1, vous avez créé la base de connaissances fournisseurs et vous l’avez utilisée pour nettoyer les données de la leçon 2 et faire correspondre les données de la leçon 3 à l’aide de l’outil **DQS client**. Dans un scénario réel, vous devrez peut-être extraire des données d’une source que DQS ne prend pas en charge ou vous souhaitez automatiser le processus de nettoyage et de correspondance sans avoir à utiliser l’outil **client DQS** . SQL Server Integration Services (SSIS) comporte des composants que vous pouvez utiliser pour intégrer des données provenant de différentes sources hétérogènes et un composant de **[transformation de nettoyage DQS](https://msdn.microsoft.com/library/ee677619.aspx)** pour appeler les fonctionnalités de nettoyage exposées par DQS. Actuellement, DQS n’expose pas les fonctionnalités de correspondance pour SSIS à utiliser, mais vous pouvez utiliser la **[transformation de regroupement probable](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** pour identifier les doublons dans les données.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a273f23d0b5f9bf21f20bc17427c7a2dc3f82ae8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871276"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965816"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
   Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)ou [resource](resource-database.md) ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -105,8 +104,8 @@ ms.locfileid: "62871276"
     |/ACTION=REBUILDDATABASE|Spécifie que le programme d'installation doit recréer les bases de données système.|  
     |/INSTANCENAME =*nom_instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe `sysadmin`. Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` passe du compte. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> Note de ** \* sécurité \* \* ** Le `sa` compte est un compte bien connu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est souvent ciblé par des utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion `sa`.<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
-    |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> ** \* Important \* \* ** La modification du classement au niveau du serveur ne modifie pas le classement des bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../collations/set-or-change-the-server-collation.md).|  
+    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` compte. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> Note de sécurité le compte est ** \* un compte bien connu \* et il est souvent ciblé par des utilisateurs malveillants. \* \* ** `sa` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion `sa`.<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
+    |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> Important la modification du classement au niveau du serveur ne modifie pas le classement des bases de données utilisateur existantes. ** \* \* \* \* ** En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Lorsque le programme d'installation a terminé la reconstruction des bases de données système, il revient à l'invite de commandes sans afficher de message. Examinez le fichier journal Summary.txt pour vérifier que le processus s'est correctement déroulé. Ce fichier se trouve à l'emplacement C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
   
@@ -147,10 +146,10 @@ ms.locfileid: "62871276"
 6.  Dans la page **Prêt à réparer** , cliquez sur **Réparer**. La page Terminé indique que l'opération est terminée.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a>Créer une nouvelle base de données msdb  
- Si la `msdb` base de données est endommagée et que vous n’avez pas `msdb` de sauvegarde de la base de données `msdb` , vous pouvez créer une nouvelle à l’aide du script **instmsdb** .  
+ Si la `msdb` base de données est endommagée et que vous n’avez pas de sauvegarde de la `msdb` base de données, vous pouvez créer une nouvelle `msdb` à l’aide du script **instmsdb** .  
   
 > [!WARNING]  
->  La reconstruction de `msdb` la base de données à l’aide du script **instmsdb** élimine `msdb` toutes les informations stockées dans, telles que les travaux, les alertes, les opérateurs, les plans de maintenance, l’historique de sauvegarde, les paramètres de gestion basée sur des stratégies, les Database mail, les Data Warehouse de performances, etc.  
+>  La reconstruction `msdb` de la base de données à l’aide du script **instmsdb** élimine toutes les informations stockées dans, `msdb` telles que les travaux, les alertes, les opérateurs, les plans de maintenance, l’historique de sauvegarde, les paramètres de gestion basée sur des stratégies, les Database mail, les Data Warehouse de performances, etc.  
   
 1.  Arrêtez tous les services qui établissent des connexions au [!INCLUDE[ssDE](../../includes/ssde-md.md)], dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]et toutes les applications qui utilisent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que banque de données.  
   
@@ -158,21 +157,21 @@ ms.locfileid: "62871276"
   
      Pour plus d’informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le Service moteur de base de données, SQL Server agent ou SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Dans une autre fenêtre de ligne de commande `msdb` , détachez la base de données en exécutant la commande suivante, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]remplaçant * \<ServerName>* par l’instance de :`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Dans une autre fenêtre de ligne de commande, détachez la `msdb` base de données en exécutant la commande suivante, en remplaçant *\<servername>* par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  À l’aide de l’Explorateur Windows, `msdb` renommez les fichiers de base de données. Par défaut, ils se trouvent dans le sous-dossier DATA de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  À l’aide de l’Explorateur Windows, renommez les `msdb` fichiers de base de données. Par défaut, ils se trouvent dans le sous-dossier DATA de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  À l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , arrêtez et redémarrez le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] normalement.  
   
 6.  Dans une fenêtre de ligne de commande, connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécutez la commande : `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Remplacez * \<ServerName>* par l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Utilisez le chemin d'accès au système de fichiers de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Remplacez *\<servername>* par l’instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Utilisez le chemin d'accès au système de fichiers de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 7.  À l'aide du Bloc-notes Windows, ouvrez le fichier **instmsdb.out** et vérifiez qu'il ne présente aucune erreur.  
   
 8.  Réappliquez tous les Service Packs ou les correctifs logiciels installés sur l'instance.  
   
-9. Recréez le contenu de l’utilisateur `msdb` stocké dans la base de données, tel que les travaux, l’alerte, etc.  
+9. Recréez le contenu de l’utilisateur stocké dans la `msdb` base de données, tel que les travaux, l’alerte, etc.  
   
 10. Sauvegardez la base de données `msdb` .  
   

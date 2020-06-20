@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5223e9e98d07d3a50d3bcda37ae422bbdd6d802
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 33ab9f35cd9d3eaf04e688a89390b5eb3f00ae58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018411"
 ---
 # <a name="prepared-execution"></a>Exécution préparée
   L'API ODBC définit l'exécution préparée comme un moyen de réduire la charge d'analyse et de compilation associée à l'exécution répétée d'une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'application génère une chaîne de caractères contenant une instruction SQL, puis l'exécute en deux étapes. Elle appelle la [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) une fois pour que l’instruction soit analysée et compilée dans un plan d’exécution par le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . Il appelle ensuite **SQLExecute** pour chaque exécution du plan d’exécution préparé. Cela permet de réduire la charge d'analyse et de compilation pour chaque exécution. L'exécution préparée est couramment utilisée par les applications pour exécuter de manière répétée la même instruction SQL paramétrable.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3f3fb5f308195a5e0b2ecd58e50a4c1c6da25fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068803"
 ---
 # <a name="add-or-edit-join"></a>Ajouter ou modifier une jointure
   Les boîtes de dialogue **Ajouter une jointure** et **Modifier une jointure** permettent d'ajouter et de modifier des filtres de jointure pour les publications de fusion.  
@@ -45,7 +44,7 @@ ms.locfileid: "62625927"
   
     -   Si vous ajoutez une nouvelle jointure, sélectionnez **Utiliser le générateur pour créer l'instruction** ou **Créer manuellement l'instruction de jointure**. Si vous créez une jointure manuellement, vous pouvez utiliser le générateur.  
   
-         Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante qui vous permet de sélectionner deux colonnes et un opérateur ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **tel**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction (**AND** ou **OR**) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
+         Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante, ce qui vous permet de sélectionner deux colonnes et un opérateur ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **comme**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction (**AND** ou **OR**) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
   
          Si vous créez l'instruction manuellement, écrivez l'instruction de jointure dans la zone de texte **Instruction de jointure** . Utilisez la zone de liste **Colonnes de table filtrée** et la zone de liste **Colonnes de table jointe** pour faire glisser les colonnes et les déposer dans la zone de texte **Instruction de jointure** .  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5eadf89cb6516dcc437b727843cb861b7c04a9c1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667189cc614f04dca0b5a5043bfbac9512779d94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038881"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Recherche d'informations supplémentaires concernant SQL Server Native Client
   Pour plus d'informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et d'autres types de programmation d'accès aux données, consultez les ressources en ligne suivantes :  

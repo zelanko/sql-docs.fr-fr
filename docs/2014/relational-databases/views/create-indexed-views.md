@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061517"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
   Cette rubrique explique comment créer une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.  
@@ -55,7 +54,7 @@ ms.locfileid: "68196430"
   
 -   L'optimiseur de requête utilise la vue indexée pour générer le plan de requête.  
   
-    |Options définies|Valeur requise|Valeur de serveur par défaut|Par défaut<br /><br /> Valeur OLE DB et ODBC|Par défaut<br /><br /> Valeur DB-Library|  
+    |Options définies|Valeur requise|Valeur de serveur par défaut|Default<br /><br /> Valeur OLE DB et ODBC|Default<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
     |ANSI_PADDING|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|  
@@ -98,7 +97,7 @@ ms.locfileid: "68196430"
   
 -   Les propriétés des méthodes et fonctions CLR des types CLR définis par l'utilisateur employés dans la définition de vue doivent être définies de la manière illustrée dans le tableau suivant.  
   
-    |Propriété|Remarque|  
+    |Propriété|Notes|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|Doit être déclarée explicitement comme attribut de la méthode Microsoft .NET Framework.|  
     |PRECISE = TRUE|Doit être déclarée explicitement comme attribut de la méthode .NET Framework.|  
@@ -116,7 +115,7 @@ ms.locfileid: "68196430"
     |COUNT|Fonctions ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET, AND OPENXML)|Jointures OUTER (LEFT, RIGHT ou FULL)|  
     |Table dérivée (définie en spécifiant une instruction SELECT dans la clause FROM)|Jointures réflexives|Spécification des colonnes à l’aide de SELECT \* ou de SELECT *nom_table*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP ou AVG|Expression de table commune (CTE)|  
-    |`float`\*`text` `ntext`colonnes,,,, ou `filestream` `image` `XML`|Sous-requête|Clause OVER, qui inclut des fonctions de classement ou d'agrégation de fenêtre|  
+    |`float`\*colonnes,,,, `text` `ntext` `image` `XML` ou `filestream`|Sous-requête|Clause OVER, qui inclut des fonctions de classement ou d'agrégation de fenêtre|  
     |Prédicats de texte intégral (CONTAIN, FREETEXT)|Fonction SUM qui référence une expression acceptant les valeurs NULL|ORDER BY|  
     |Fonction d'agrégation CLR définie par l'utilisateur|Haut de la page|Opérateurs CUBE, ROLLUP ou GROUPING SETS|  
     |MIN, MAX|Opérateurs UNION, EXCEPT ou INTERSECT|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196430"
     |Jeux de colonnes éparses|Fonctions Inline ou table à instructions multiples|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vue indexée peut contenir `float` des colonnes ; Toutefois, ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.  
+     \*La vue indexée peut contenir des `float` colonnes ; Toutefois, ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.  
   
 -   Si la clause GROUP BY est présente, la définition VIEW doit contenir COUNT_BIG(*), mais pas HAVING. Ces restrictions de GROUP BY sont applicables seulement à la définition de la vue indexée. Une requête peut utiliser une vue indexée dans son plan d'exécution, même si elle ne répond pas à ces restrictions de GROUP BY.  
   
