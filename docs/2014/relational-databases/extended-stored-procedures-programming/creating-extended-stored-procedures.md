@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcdfcc3ca1999e01b29e7b0c7abdd77f710aae9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050872"
 ---
 # <a name="creating-extended-stored-procedures"></a>Création de procédures stockées étendues
     
@@ -29,7 +28,7 @@ ms.locfileid: "62512633"
   
  Une procédure stockée étendue est une fonction avec un prototype :  
   
- *Xp_extendedProcName* SRVRETCODE **(** SRVPROC ** \*);**  
+ *Xp_extendedProcName* SRVRETCODE **(** SRVPROC ** \* );**  
   
  L'utilisation du préfixe xp_ est facultative. Les noms de procédures stockées étendues respectent la casse lorsqu'ils sont référencés dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], indépendamment de la page de codes/de l'ordre de tri sur le serveur. Lorsque vous générez une DLL :  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62512633"
   
 -   Toutes les fonctions appelées hors de la DLL (toutes les procédures stockées étendues Efunctions) doivent être exportées.  
   
-     Vous pouvez exporter une fonction en répertoriant son nom dans la section EXPORTS d’un fichier. def, ou vous pouvez faire précéder le nom de la fonction dans le code source de __declspec (dllexport), \_une extension du compilateur Microsoft (notez que _declspec () commence par deux traits de soulignement).  
+     Vous pouvez exporter une fonction en répertoriant son nom dans la section EXPORTS d’un fichier. def, ou vous pouvez faire précéder le nom de la fonction dans le code source de __declspec (dllexport), une extension du compilateur Microsoft (Notez que \_ _declspec () commence par deux traits de soulignement).  
   
  Ces fichiers sont requis pour la création d'une DLL de procédure stockée étendue.  
   
@@ -62,16 +61,16 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) est une extension du compilateur spécifique à Microsoft. Si votre compilateur ne prend pas en charge cette directive, vous devez exporter cette fonction dans votre fichier DEF sous la section EXPORTS.  
   
- Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré avec l’indicateur de trace-T260 ou si un utilisateur disposant de privilèges d’administrateur système exécute DBCC TRACEON (260) et si la dll de procédure stockée étendue ne prend pas en charge __GetXpVersion (), un message d’avertissement (Erreur 8131 : la \_dll de procédure stockée étendue'% 'n’exporte pas _GetXpVersion ()) est imprimé dans le journal des erreurs (Notez que \__GetXpVersion () commence par deux traits de soulignement.)  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré avec l’indicateur de trace-T260 ou si un utilisateur disposant de privilèges d’administrateur système exécute DBCC TRACEON (260) et si la dll de procédure stockée étendue ne prend pas en charge __GetXpVersion (), un message d’avertissement (erreur 8131 : la dll de procédure stockée étendue'% 'n’exporte pas \_ _GetXpVersion ()) est imprimé dans le journal des erreurs (Notez que \_ _GetXpVersion () commence par deux traits de soulignement.)  
   
- Si la DLL de procédure stockée étendue exporte __GetXpVersion(), mais que la version retournée par la fonction est antérieure à celle requise par le serveur, un message d'avertissement indiquant la version retournée par la fonction et la version attendue par le serveur est écrit dans le journal des erreurs. Si vous recevez ce message, vous retournez une valeur incorrecte \_à partir de _GetXpVersion () ou vous compilez avec une version antérieure de SRV. h.  
+ Si la DLL de procédure stockée étendue exporte __GetXpVersion(), mais que la version retournée par la fonction est antérieure à celle requise par le serveur, un message d'avertissement indiquant la version retournée par la fonction et la version attendue par le serveur est écrit dans le journal des erreurs. Si vous recevez ce message, vous retournez une valeur incorrecte à partir de \_ _GetXpVersion () ou vous compilez avec une version antérieure de SRV. h.  
   
 > [!NOTE]  
 >  SetErrorMode (fonction [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32) ne doit pas être appelé dans les procédures stockées étendues.  
   
  Il est recommandé que toute procédure stockée étendue dont l'exécution est longue, appelle périodiquement srv_got_attention afin que la procédure puisse se terminer si la connexion est arrêtée ou si le lot est abandonné.  
   
- Pour déboguer une DLL de procédure stockée étendue, copiez-la vers le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Pour spécifier le fichier exécutable de la session de débogage, entrez le chemin d’accès et le nom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fichier exécutable (par exemple, C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Pour plus d’informations sur les arguments sqlservr, consultez la rubrique [application sqlservr](../../tools/sqlservr-application.md).  
+ Pour déboguer une DLL de procédure stockée étendue, copiez-la vers le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Pour spécifier le fichier exécutable de la session de débogage, entrez le chemin d’accès et le nom du fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutable (par exemple, C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Pour plus d’informations sur les arguments sqlservr, consultez la rubrique [application sqlservr](../../tools/sqlservr-application.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [srv_got_attention &#40;API de procédure stockée étendue&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

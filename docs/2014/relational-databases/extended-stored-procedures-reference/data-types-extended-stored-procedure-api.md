@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57b9c5b8929f6af33546a55e848a75e4243b4973
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050811"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Type de données (API de procédure stockée étendue)
     
@@ -38,19 +37,19 @@ ms.locfileid: "62511642"
 |SRVBITN|`bit null`|Type de données `bit` autorisant les valeurs NULL.|  
 |SRVCHAR|`char`|`character`type de données.|  
 |SRVDATETIME|`datetime`|Type de données `datetime` de 8 octets.|  
-|SRVDATETIM4|`smalldatetime`|type de données `smalldatetime` sur 4 octets.|  
+|SRVDATETIM4|`smalldatetime`|type de données sur 4 octets `smalldatetime` .|  
 |SRVDATETIMN|**datetime null**|Type de données `smalldatetime` ou `datetime` autorisant les valeurs NULL.|  
 |SRVDECIMAL|`decimal`|`decimal`type de données.|  
 |SRVDECIMALN|`decimal null`|Type de données `decimal` autorisant les valeurs NULL.|  
-|SRVFLT4|`real`|type de données `real` sur 4 octets.|  
+|SRVFLT4|`real`|type de données sur 4 octets `real` .|  
 |SRVFLT8|`float`|Type de données `float` de 8 octets.|  
 |SRVFLTN|`real` &#124; `float null`|Type de données `real` ou `float` autorisant les valeurs NULL.|  
 |SRVIMAGE|`image`|`image`type de données.|  
-|SRVINT1|`tinyint`|type de données `tinyint` sur 1 octet.|  
-|SRVINT2|`smallint`|type de données `smallint` sur 2 octets.|  
-|SRVINT4|`int`|type de données `int` sur 4 octets.|  
+|SRVINT1|`tinyint`|type de données sur 1 octet `tinyint` .|  
+|SRVINT2|`smallint`|type de données sur 2 octets `smallint` .|  
+|SRVINT4|`int`|type de données sur 4 octets `int` .|  
 |SRVINTN|`tinyint` &#124; `smallint` &#124; `int null`|Type de données `tinyint`, `smallint` ou `int` autorisant les valeurs NULL.|  
-|SRVMONEY4|`smallmoney`|type de données `smallmoney` sur 4 octets.|  
+|SRVMONEY4|`smallmoney`|type de données sur 4 octets `smallmoney` .|  
 |SRVMONEY|`money`|Type de données `money` de 8 octets.|  
 |SRVMONEYN|`money` &#124; `smallmoney null`|Type de données `smallmoney` ou `money` autorisant les valeurs NULL.|  
 |SRVNCHAR|**nchar**|Type de données `character` Unicode.|  

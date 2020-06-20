@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005818"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
   Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
@@ -55,15 +54,15 @@ ms.locfileid: "62667814"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Les jetons de suivi peuvent également être utiles lors de la suspension d'un système, qui consiste à arrêter toute l'activité pour vérifier que tous les nœuds ont reçu les changements en cours. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Pour utiliser des jetons de suivi, vous devez utiliser certaines versions [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de :  
+ Pour utiliser des jetons de suivi, vous devez utiliser certaines versions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
--   Le serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] doit être ou version ultérieure.  
+-   Le serveur de distribution doit être [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure.  
   
 -   Le serveur de publication doit être [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure, ou un serveur de publication Oracle.  
   
--   Pour les abonnements par envoi de données, les statistiques de jeton de suivi sont collectées à partir du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serveur de publication, du serveur de distribution et des abonnés si l’abonné est 7,0 ou version ultérieure.  
+-   Pour les abonnements par envoi de données, les statistiques de jeton de suivi sont collectées à partir du serveur de publication, du serveur de distribution et des abonnés si l’abonné est [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 ou version ultérieure.  
   
--   Pour les abonnements par extraction de données, les statistiques de jetons de suivi sont rassemblées uniquement à partir des Abonnés si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 7.0 ou version ultérieure. Si l’abonné est [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], les statistiques sont rassemblées uniquement à partir du serveur de publication et du serveur de distribution.  
+-   Pour les abonnements par extraction de données, les statistiques de jetons de suivi sont rassemblées uniquement à partir des Abonnés si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 7.0 ou version ultérieure. Si l’abonné est [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , les statistiques sont rassemblées uniquement à partir du serveur de publication et du serveur de distribution.  
   
  Il existe aussi d'autres problèmes et restrictions à connaître :  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62667814"
   
 2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Vérifiez que l'abonnement existe et que l'état est actif.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), en spécifiant **@publication**. Notez la valeur du paramètre **@tracer_token_id** de sortie.  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), en spécifiant **@publication**. Notez la valeur du **@tracer_token_id** paramètre de sortie.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667814"
   
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id**.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple publie un enregistrement de jeton de suivi et utilise l'ID retourné du jeton de suivi publié pour consulter les informations de latence.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059562"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Syntaxe de base de la clause FOR XML
   Le mode de la clause FOR XML peut être RAW, AUTO, EXPLICIT ou PATH. Il détermine la forme du code XML résultant.  
@@ -62,7 +61,7 @@ XML
   
 ## <a name="arguments"></a>Arguments  
  RAW[('*ElementName*)]  
- Prend le résultat de la requête et transforme chaque ligne du jeu de résultats en un élément XML comportant un identificateur générique \<row /, comme balise d’élément. Vous pouvez, si vous le souhaitez, spécifier un nom pour l'élément de ligne en cas d'utilisation de cette directive. Le code XML qui en résulte utilise l’ *ElementName* spécifié pour identifier l’élément de ligne généré pour chaque ligne. Pour plus d’informations, consultez [Utiliser le mode RAW avec FOR XML](use-raw-mode-with-for-xml.md).  
+ Prend le résultat de la requête et transforme chaque ligne du jeu de résultats en un élément XML qui a un identificateur générique, \<row /> , comme balise d’élément. Vous pouvez, si vous le souhaitez, spécifier un nom pour l'élément de ligne en cas d'utilisation de cette directive. Le code XML qui en résulte utilise l’ *ElementName* spécifié pour identifier l’élément de ligne généré pour chaque ligne. Pour plus d’informations, consultez [Utiliser le mode RAW avec FOR XML](use-raw-mode-with-for-xml.md).  
   
  AUTO  
  Renvoie les résultats de la requête dans une arborescence XML simple et imbriquée. Chaque table dans la clause FROM pour laquelle au moins une colonne existe dans la clause SELECT est représentée comme un élément XML. Les colonnes listées dans la clause SELECT sont mappées vers les attributs d'éléments appropriés. Pour plus d’informations, consultez [Utiliser le mode AUTO avec FOR XML](use-auto-mode-with-for-xml.md).  
@@ -71,7 +70,7 @@ XML
  Spécifie que la forme de l'arborescence XML résultante est définie de manière explicite. Dans ce mode, les requêtes doivent être écrites d'une manière particulière afin que des informations complémentaires sur l'imbrication souhaitée soient spécifiées de manière explicite. Pour plus d’informations, consultez [Utiliser le mode EXPLICIT avec FOR XML](use-explicit-mode-with-for-xml.md).  
   
  PATH  
- Constitue un moyen simple de mélanger les éléments et les attributs, et d'introduire des imbrications supplémentaires pour représenter des propriétés complexes. Vous pouvez utiliser des requêtes FOR XML en mode EXPLICIT pour construire cette sorte de XML à partir d'un ensemble de lignes, mais le mode PATH est une alternative plus simple aux requêtes en mode EXPLICIT souvent beaucoup plus lourdes à manier. Le mode PATH, allié à la possibilité d’écrire des requêtes FOR XML imbriquées et de faire appel à la directive TYPE pour renvoyer les instances de type **xml** , vous permet d’écrire des requêtes de moindre complexité. Il offre une alternative à l'écriture de la plupart des requêtes en mode EXPLICIT. Par défaut, le mode PATH génère un wrapper d’élément \<row> pour chaque ligne du jeu de résultats. Vous pouvez, si vous le souhaitez, spécifier un nom d'élément. Si telle est votre intention, le nom spécifié est utilisé comme nom d'élément du wrapper. Si vous fournissez une chaîne vide (FOR XML PATH ('')), aucun élément wrapper n'est généré. Pour plus d’informations, consultez [Utiliser le mode PATH avec FOR XML](use-path-mode-with-for-xml.md).  
+ Constitue un moyen simple de mélanger les éléments et les attributs, et d'introduire des imbrications supplémentaires pour représenter des propriétés complexes. Vous pouvez utiliser des requêtes FOR XML en mode EXPLICIT pour construire cette sorte de XML à partir d'un ensemble de lignes, mais le mode PATH est une alternative plus simple aux requêtes en mode EXPLICIT souvent beaucoup plus lourdes à manier. Le mode PATH, allié à la possibilité d’écrire des requêtes FOR XML imbriquées et de faire appel à la directive TYPE pour renvoyer les instances de type **xml** , vous permet d’écrire des requêtes de moindre complexité. Il offre une alternative à l'écriture de la plupart des requêtes en mode EXPLICIT. Par défaut, le mode PATH génère un \<row> wrapper d’élément pour chaque ligne du jeu de résultats. Vous pouvez, si vous le souhaitez, spécifier un nom d'élément. Si telle est votre intention, le nom spécifié est utilisé comme nom d'élément du wrapper. Si vous fournissez une chaîne vide (FOR XML PATH ('')), aucun élément wrapper n'est généré. Pour plus d’informations, consultez [Utiliser le mode PATH avec FOR XML](use-path-mode-with-for-xml.md).  
   
  XMLDATA  
  Indique qu'un schéma XDR (XML-Data Reduced) doit être renvoyé. Le schéma est ajouté au début du document sous la forme d'un schéma en ligne. Pour obtenir un exemple fonctionnel, consultez [Utiliser le mode RAW avec FOR XML](use-raw-mode-with-for-xml.md).  

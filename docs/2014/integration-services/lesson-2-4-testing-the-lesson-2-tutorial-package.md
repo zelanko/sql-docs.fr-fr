@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4483facba1a1233dda7f3330f432ef8d3f9c2b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968226"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Étape 4 : Test du package du tutoriel de la leçon 2
   Une fois le conteneur de boucles Foreach et le gestionnaire de connexions de fichiers plats configurés, le package Lesson 2 peut parcourir l'ensemble des 14 fichiers plats dans le dossier Sample Data. À chaque fois qu'un nom de fichier correspondant au nom de fichier spécifié est trouvé, le conteneur de boucles Foreach remplace la variable définie par l'utilisateur par ce nom de fichier. Cette variable met à jour à son tour la propriété ConnectionString du Gestionnaire de connexions de fichiers plats, et une connexion au nouveau fichier plat est établie. Le conteneur de boucles Foreach exécute alors la tâche de flux de données inchangée sur les données du nouveau fichier plat avant de se connecter au fichier suivant dans le dossier.  
@@ -28,7 +27,7 @@ ms.locfileid: "62767479"
 ## <a name="checking-the-package-layout"></a>Vérification de la disposition du package  
  Avant de tester le package, vous devez vérifier que le flux de contrôle et le flux de données dans le package de la leçon 2 contiennent les objets affichés dans les diagrammes suivants. Le flux de données doit être identique au flux de données de la leçon 1.  
   
- **Flux de contrôle**  
+ **Workflow de contrôle**  
   
  ![Flux de contrôle dans le package](../../2014/tutorials/media/task4lesson2control.gif "Flux de contrôle dans le package")  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62767479"
   
 1.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Lesson 2.dtsx** , puis cliquez sur **Exécuter le package**.  
   
-     Le package est exécuté. Vous pouvez vérifier l’état de chaque boucle dans la fenêtre sortie ou en cliquant sur l’onglet **progression** . Par exemple, vous pouvez voir que 1097 lignes ont été ajoutées à la table de destination à partir du fichier Currency_VEB. txt.  
+     Le package est exécuté. Vous pouvez vérifier l’état de chaque boucle dans la fenêtre sortie ou en cliquant sur l’onglet **progression** . Par exemple, vous pouvez voir que 1097 lignes ont été ajoutées à la table de destination à partir du fichier Currency_VEB.txt.  
   
 2.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   

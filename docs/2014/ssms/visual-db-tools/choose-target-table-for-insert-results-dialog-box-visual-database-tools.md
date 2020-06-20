@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caa9be1a61ed579aa8bfaaf1bc6c83282f52c42c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067525"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066213"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Boîte de dialogue Choisir la table cible pour Insert Results (Visual Database Tools)
   Permet de spécifier la table à laquelle les lignes de données seront ajoutées suite à l'exécution d'une requête INSERT RESULTS. Cette boîte de dialogue s'affiche lorsque vous démarrez une requête INSERT RESULTS.  

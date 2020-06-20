@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930730"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migration des contraintes de validation et de clé étrangère
   Les contraintes de validation et de clés étrangères ne sont pas prises en charge dans [!INCLUDE[hek_2](../includes/hek-2-md.md)] dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ces constructions sont généralement utilisées pour appliquer l'intégrité logique des données au schéma et peuvent être importantes pour conserver la précision fonctionnelle des applications.  
@@ -241,6 +240,6 @@ END
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da9bc9dbef30b1ad2743e9dbab4ae541538c689
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050935"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051992"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings (classe d'événements)
   La classe d'événements Sort Warnings indique que les opérations de tri ne tiennent pas dans la mémoire. Ceci ne couvre pas les opérations de tri entraînant la création d'index, mais uniquement les opérations de tri effectuées dans une requête (comme une clause ORDER BY utilisée dans une instruction SELECT).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4097b2c185b6dde307cd9b295d3b5b32f5797649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065825"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Dépannage des serveurs de publication Oracle
   Cette rubrique présente une liste de plusieurs problèmes qui peuvent se produire lors de la configuration et de l'utilisation d'un serveur de publication Oracle.  
@@ -66,9 +65,9 @@ ms.locfileid: "63021908"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Le serveur de publication Oracle est associé à un autre serveur de distribution  
  Un serveur de publication Oracle peut être associé avec un seul serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si un autre serveur de distribution est associé au serveur de publication Oracle, il doit être supprimé avant de pouvoir utiliser un autre distributeur. Si le serveur de distribution en cours n'est pas d'abord supprimé, vous recevez un des messages d'erreur suivants :  
   
--   « L’instance de serveur Oracle '\<*NomServeurPublicationOracle*>' a été précédemment configurée pour utiliser '\<*NomServeurDistributionSQLServer*>' en tant que serveur de distribution. Pour démarrer l’utilisation de '\<*NouveauNomServeurDistributionSQLServer*>' en tant que serveur de distribution, vous devez supprimer la configuration de réplication actuelle sur l’instance de serveur Oracle, ce qui entraînera également la suppression de toutes les publications sur cette instance de serveur. »  
+-   « L’instance de serveur Oracle « » \<*OraclePublisherName*> a déjà été configurée pour utiliser « \<*SQLServerDistributorName*> » comme serveur de distribution. Pour commencer à utiliser « \<*NewSQLServerDistributorName*> » en tant que serveur de distribution, vous devez supprimer la configuration de réplication actuelle sur l’instance de serveur Oracle, ce qui entraînera la suppression de toutes les publications sur cette instance de serveur.  
   
--   « Le serveur Oracle '\<*NomServeurOracle*>' est déjà défini comme serveur de publication '\<*NomServeurPublicationOracle*>' sur le serveur de distribution '\<*NomServeurDistributionSQLServer*>. *\<NomBaseDeDonnéesDistribution>* . Supprimez le serveur de publication ou le synonyme public ' *\<NomSynonyme>* ' à recréer. »  
+-   « Le serveur Oracle « » \<*OracleServerName*> est déjà défini en tant que serveur de publication « » \<*OraclePublisherName*> sur le serveur de distribution « \<*SQLServerDistributorName*> ». *\<DistributionDatabaseName>* Supprimez le serveur de publication ou le synonyme public' *\<SynonymName>* 'pour le recréer. "  
   
  Quand un serveur de publication Oracle est supprimé, les objets de réplication de la base de données Oracle sont automatiquement nettoyés. Cependant, un nettoyage manuel des objets de réplication Oracle est nécessaire dans certains cas. Pour nettoyer manuellement des objets de réplication Oracle créés par réplication :  
   
@@ -81,14 +80,14 @@ ms.locfileid: "63021908"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Une erreur SQL Server 21663 est provoquée par l'absence d'une clé primaire  
  Les articles des publications transactionnelles doivent avoir une clé primaire valide. Si ce n'est pas le cas, vous recevez le message d'erreur suivant si vous essayez d'ajouter un article :  
   
- « Aucune clé primaire valide n’a été trouvée pour la table source [\<*PropriétaireTable*>].[\<*NomTable*>] »  
+ « Aucune clé primaire valide n’a été trouvée pour la table source [ \<*TableOwner*> ]. [ \<*TableName*> ] »  
   
  Pour des informations sur les conditions requises des clés primaires, consultez la section « Contraintes et index uniques » dans la rubrique [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Une erreur SQL Server 21642 est provoquée par une connexion à un serveur lié en double  
  Quand un serveur de publication Oracle est initialement configuré, une entrée de serveur lié est créée pour la connexion entre le serveur de publication et le serveur de distribution. Le serveur lié a le même nom que le service TNS d'Oracle. Si vous essayez de créer un serveur lié avec le même nom, le message d'erreur suivant apparaît :  
   
- « Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé ' *\<NomServeurLié>* existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication. »  
+ « Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié nommé « *\<LinkedServerName>* » existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication. »  
   
  Cette erreur peut se produire si vous tentez de créer directement un serveur lié ou si vous avez précédemment supprimé la relation entre le serveur de publication Oracle et le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et que vous tentez de le reconfigurer. Si vous recevez cette erreur en tentant de reconfigurer le serveur de publication, supprimez le serveur lié avec [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -155,7 +154,7 @@ ms.locfileid: "63021908"
   
 2.  Dans la boîte de dialogue **Exécuter** , tapez **regedit**et cliquez sur **OK**.  
   
-3.  Accédez à HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<Nom_instance>* \Providers.  
+3.  Accédez à HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ *\<InstanceName>* \Providers.  
   
      Sous Providers doit se trouver un répertoire nommé OraOLEDB.Oracle contenant le nom de valeur DWORD **AllowInProcess**, définie à **1**.  
   

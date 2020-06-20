@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003948"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
   Auparavant, les propriétés de document était indiscernables du contenu du corps du document. Cela limitait les requêtes de texte intégral aux recherches génériques sur les documents entiers. Maintenant, vous pouvez configurer un index de recherche en texte intégral pour prendre en charge la recherche portant sur des propriétés, telles que les propriétés Auteur et Titre, pour les types de documents pris en charge dans une colonne de données binaires `varbinary`, `varbinary(max)` (incluant `FILESTREAM`) ou `image`. Cette forme de recherche s'appelle *recherche de propriétés*.  
@@ -211,7 +210,7 @@ GO
   
     1.  Pour supprimer une propriété de document, cliquez sur l’en-tête de ligne à gauche de la propriété, puis appuyez sur Suppr.  
   
-    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite du **\***, puis entrez les valeurs de la nouvelle propriété.  
+    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite du **\*** , puis entrez les valeurs de la nouvelle propriété.  
   
          Pour plus d'informations sur ces valeurs, consultez [Éditeur de liste de propriétés de recherche](../../database-engine/search-property-list-editor.md). Pour plus d’informations sur la façon d’obtenir ces valeurs pour les propriétés définies par Microsoft, consultez [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Pour plus d'informations sur les propriétés définies par un éditeur de logiciels indépendant (ISV), consultez la documentation de ce dernier.  
   

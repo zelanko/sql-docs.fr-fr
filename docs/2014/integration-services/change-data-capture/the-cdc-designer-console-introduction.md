@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834641"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922300"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Présentation de la console du concepteur de capture de données modifiées
   Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity.  
   
 ## <a name="installation"></a>Installation  
- Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity. Pour installer la console CDC Designer, exécutez manuellement **AttunityOracleCdcDesigner. msi** à partir du support d’installation SQL Server.  Les packages d’installation pour x86 et x64 se trouvent dans **.\Tools\AttunityCDCOracle\\ ** sur le support d’installation de SQL Server.  
+ Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity. Pour installer la console CDC Designer, exécutez manuellement **AttunityOracleCdcDesigner.msi** à partir du support d’installation de SQL Server.  Les packages d’installation pour x86 et x64 se trouvent dans **.\Tools\AttunityCDCOracle \\ ** sur le support d’installation de SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Environnements Windows pris en charge  
  La console du concepteur de capture de données modifiées s'exécute dans les environnements Windows suivants :  
@@ -37,7 +36,7 @@ ms.locfileid: "62834641"
 ## <a name="database-prerequisites"></a>Composants requis pour la base de données  
  Pour utiliser le concepteur de capture de données modifiées pour Oracle par Attunity, vous utilisez une base de données Oracle. Le concepteur de capture de données modifiées pour Oracle par Attunity prend en charge les versions suivantes :  
   
- **Oracle Database**  
+ **Base de données Oracle**  
   
 -   Oracle Database 10g Version 2 : 10.2.0.1-10.2.0.5 (ensemble de correctifs à partir d'avril 2010)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee61532c806ca52b9e9d08ef6052c4da0c564ad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052922"
 ---
 # <a name="lockreleased-event-class"></a>Classe d'événements Lock:Released
   La classe d'événements Lock:Released indique qu'un verrou sur une ressource (une page par exemple) a été débloqué.  

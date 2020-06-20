@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c899d902e403e9f7cdbdfd1a83cde110e627ab11
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060412"
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
   Quand vous attribuez une propriété IDENTITY à une colonne, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère automatiquement des numéros séquentiels pour les nouvelles lignes insérées dans la table contenant la colonne d’identité. Pour plus d’informations, consultez [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Les colonnes d'identité devant être incluses comme composantes de la clé primaire, il est important d'éviter les valeurs dupliquées dans les colonnes d'identité. Pour utiliser des colonnes d'identité dans une topologie de réplication qui a des mises à jour sur plusieurs nœuds, chaque nœud de cette topologie de réplication doit avoir une plage différente de valeurs d'identité, de façon à ce qu'il n'y ait pas de valeurs dupliquées.  
@@ -72,16 +71,16 @@ ms.locfileid: "74479245"
 ### <a name="merge-replication"></a>Réplication de fusion  
  Les plages d'identité sont gérées par le serveur de publication et propagées aux Abonnés par l'Agent de fusion (dans une hiérarchie de réédition, les plages sont gérées par le serveur de publication racine et les rééditeurs). Les valeurs d'identité sont affectées à partir d'un pool au serveur de publication. Quand vous ajoutez un article avec une colonne d’identité à une publication dans l’Assistant Nouvelle publication ou à l’aide de [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), vous spécifiez des valeurs pour :  
   
--   Le ** \@paramètre identity_range** , qui contrôle la taille de la plage d’identité allouée initialement au serveur de publication et aux abonnés avec les abonnements clients.  
+-   Le paramètre ** \@ identity_range** , qui contrôle la taille de la plage d’identité allouée initialement au serveur de publication et aux abonnés avec les abonnements clients.  
   
     > [!NOTE]  
-    >  Pour les abonnés exécutant des versions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]antérieures de, ce paramètre (plutôt que le ** \@paramètre pub_identity_range** ) contrôle également la taille de la plage d’identité sur les abonnés de republication.  
+    >  Pour les abonnés exécutant des versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ce paramètre (plutôt que le paramètre ** \@ pub_identity_range** ) contrôle également la taille de la plage d’identité sur les abonnés de republication.  
   
--   Le ** \@paramètre pub_identity_range** , qui contrôle la taille de la plage d’identité pour la republication allouée aux abonnés avec des abonnements serveur (requis pour la republication des données). Tous les Abonnés avec des abonnements serveur reçoivent une plage pour la réédition, même s'ils ne rééditent pas réellement des données.  
+-   Le paramètre ** \@ pub_identity_range** , qui contrôle la taille de la plage d’identité pour la republication allouée aux abonnés avec des abonnements serveur (requis pour la republication des données). Tous les Abonnés avec des abonnements serveur reçoivent une plage pour la réédition, même s'ils ne rééditent pas réellement des données.  
   
--   Le ** \@paramètre Threshold** , qui est utilisé pour déterminer quand une nouvelle plage d’identités est requise pour un abonnement [!INCLUDE[ssEW](../../../includes/ssew-md.md)] à ou à une version [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]précédente de.  
+-   Le paramètre ** \@ Threshold** , qui est utilisé pour déterminer quand une nouvelle plage d’identités est requise pour un abonnement à [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou à une version précédente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Par exemple, vous pouvez spécifier 10000 pour ** \@identity_range** et 500000 pour ** \@pub_identity_range**. Une plage principale de 10 000 est assignée au serveur de publication et à tous les Abonnés qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure, y compris l'Abonné avec l'abonnement serveur. L’abonné avec l’abonnement serveur se voit également attribuer une plage principale de 500000, qui peut être utilisée par les abonnés qui se synchronisent avec l’abonné de republication (vous devez également spécifier ** \@identity_range**, ** \@pub_identity_range**et ** \@seuil** pour les Articles de la publication sur l’abonné de republication).  
+ Par exemple, vous pouvez spécifier 10000 pour ** \@ identity_range** et 500000 pour ** \@ pub_identity_range**. Une plage principale de 10 000 est assignée au serveur de publication et à tous les Abonnés qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure, y compris l'Abonné avec l'abonnement serveur. L’abonné avec l’abonnement serveur se voit également attribuer une plage principale de 500000, qui peut être utilisée par les abonnés qui se synchronisent avec l’abonné de republication (vous devez également spécifier ** \@ identity_range**, ** \@ pub_identity_range**et ** \@ seuil** pour les Articles de la publication sur l’abonné de republication).  
   
  Chaque Abonné exécutant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure reçoit aussi une plage d'identités secondaire. La plage secondaire a une taille équivalente à celle de la plage principale ; quand la plage principale est épuisée, la plage secondaire est utilisée et l'Agent de fusion attribue une nouvelle plage à l'Abonné. La nouvelle plage devient la plage secondaire et le processus continue tant que l'Abonné utilise des valeurs d'identité.  
   
@@ -89,13 +88,13 @@ ms.locfileid: "74479245"
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>Réplication transactionnelle avec des abonnements mis à jour en attente  
  Les plages d'identités sont gérées par le serveur de distribution et propagées aux Abonnés par l'Agent de distribution. Les valeurs d'identité sont attribuées à partir d'un pool au serveur de distribution. La taille du pool est basée sur la taille du type de données et sur l'incrément utilisé par la colonne d'identité. Quand vous ajoutez un article avec une colonne d’identité à une publication dans l’Assistant Nouvelle publication ou à l’aide de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), vous spécifiez des valeurs pour :  
   
--   Le ** \@paramètre identity_range** , qui contrôle la taille de la plage d’identité initialement allouée à tous les abonnés.  
+-   Le paramètre ** \@ identity_range** , qui contrôle la taille de la plage d’identité initialement allouée à tous les abonnés.  
   
--   Le ** \@paramètre pub_identity_range** , qui contrôle la taille de la plage d’identité allouée au serveur de publication.  
+-   Le paramètre ** \@ pub_identity_range** , qui contrôle la taille de la plage d’identité allouée au serveur de publication.  
   
--   Le ** \@paramètre Threshold** , qui est utilisé pour déterminer quand une nouvelle plage d’identités est requise pour un abonnement.  
+-   Le paramètre ** \@ Threshold** , qui est utilisé pour déterminer quand une nouvelle plage d’identités est requise pour un abonnement.  
   
- Par exemple, vous pouvez spécifier 10000 pour ** \@pub_identity_range**, 1000 pour ** \@identity_range** (en supposant moins de mises à jour sur l’abonné) et 80 pour cent pour ** \@le seuil**. Après 800 insertions sur un Abonné (80 pour cent de 1 000), un Abonné se voit attribuer une nouvelle plage. Après 8 000 insertions sur l'Abonné, le serveur de publication se voit attribuer une nouvelle plage. Quand une nouvelle plage est attribuée, il y aura une interruption dans les valeurs de plage d'identités de la  table. La spécification d'un seuil plus élevé donne des interruptions plus courtes, mais le système tolère moins les pannes : si l'agent de distribution ne peut pas être exécuté pour une raison quelconque, un abonné peut tomber plus facilement à court d'identités.  
+ Par exemple, vous pouvez spécifier 10000 pour ** \@ pub_identity_range**, 1000 pour ** \@ identity_range** (en supposant moins de mises à jour sur l’abonné) et 80 pour cent pour le ** \@ seuil**. Après 800 insertions sur un Abonné (80 pour cent de 1 000), un Abonné se voit attribuer une nouvelle plage. Après 8 000 insertions sur l'Abonné, le serveur de publication se voit attribuer une nouvelle plage. Quand une nouvelle plage est attribuée, il y aura une interruption dans les valeurs de plage d'identités de la  table. La spécification d'un seuil plus élevé donne des interruptions plus courtes, mais le système tolère moins les pannes : si l'agent de distribution ne peut pas être exécuté pour une raison quelconque, un abonné peut tomber plus facilement à court d'identités.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Attribution de plages pour la gestion manuelle des plages d'identité  
  Si vous spécifiez une gestion manuelle des plages d'identité, vous devez vérifier que le serveur de publication et que chaque Abonné utilisent des plages d'identités différentes. Par exemple, supposons une table sur le serveur de publication avec une colonne d'identité définié en tant que `IDENTITY(1,1)`: la colonne d'identité commence à 1 et elle est incrémentée de 1 chaque fois qu'une ligne est insérée. Si la table sur le serveur de publication a 5 000 lignes et que vous vous attendez à un accroissement de la table au cours de la durée de vie de l'application, le serveur de publication peut utiliser la plage 1 à 10 000. Étant donnés deux Abonnés, l’Abonné A peut utiliser la plage 10 001 à 20 000 et l’Abonné B peut utiliser la plage 20 001 à 30 000.  

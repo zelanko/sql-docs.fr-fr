@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9b0dcfa4a7aa7341a7365e90a8bb4b1d9f81e816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059500"
 ---
 # <a name="columns-with-a-name"></a>Colonnes avec nom
   Les conditions suivantes sont celles dans lesquelles les colonnes de l'ensemble de lignes avec nom sont mappées, avec respect de la casse, au document XML obtenu :  

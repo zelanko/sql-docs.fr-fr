@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1488cd9a42a8f7e212fe533615dbb131fe7290
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059310"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>Procédure : installer le Conseiller de mise à niveau
   Le Conseiller de mise à niveau prend en charge l'analyse distante de tous les composants pris en charge, à l'exception de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous n'analysez pas d'instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez installer le Conseiller de mise à niveau sur n'importe quel ordinateur pouvant se connecter à vos instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les composants requis du Conseiller de mise à niveau doivent également être installés sur l'ordinateur. Si vous analysez des instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez installer le Conseiller de mise à niveau sur le serveur de rapports.  
@@ -31,16 +30,16 @@ ms.locfileid: "66094923"
   
 1.  Démarrez l'installation en appliquant l'une des méthodes suivantes :  
   
-    -   Si vous effectuez l’installation à [!INCLUDE[msCoName](../../includes/msconame-md.md)] partir du site Web, cliquez sur le lien de **Téléchargement** , puis cliquez sur le bouton **exécuter** pour démarrer l’installation.  
+    -   Si vous effectuez l’installation à partir du [!INCLUDE[msCoName](../../includes/msconame-md.md)] site Web, cliquez sur le lien de **Téléchargement** , puis cliquez sur le bouton **exécuter** pour démarrer l’installation.  
   
-    -   Si vous effectuez l’installation à partir du support du produit, ouvrez le dossier **Redist** , ouvrez le dossier du **conseiller de mise à niveau** , puis double-cliquez sur **SQLUA. msi**.  
+    -   Si vous effectuez l’installation à partir du support du produit, ouvrez le dossier **Redist** , ouvrez le dossier du **conseiller de mise à niveau** , puis double-cliquez sur **SQLUA.msi**.  
   
     > [!NOTE]  
     >  Le Conseiller de mise à niveau nécessite [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 4. S'il n'est pas installé, ou si vous disposez d'une version préliminaire, un message d'erreur s'affiche. Désinstallez toute version antérieure du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puis installez la version la plus récente de .NET Framework 4.  
     >   
-    >  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom est un composant requis pour l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation du conseiller de mise à niveau et n’est pas installé par le programme d’installation du conseiller de mise à niveau. Le programme d’installation vous demande de télécharger et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] d’installer le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ScriptDom à partir du Feature Pack.  
+    >  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom est un composant requis pour l’installation du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] conseiller de mise à niveau et n’est pas installé par le programme d’installation du conseiller de mise à niveau. Le programme d’installation vous demande de télécharger et d’installer le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom à partir du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
   
-2.  Sur la page **Bienvenue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] le programme d’installation du conseiller de mise à niveau** , cliquez sur **suivant**.  
+2.  Sur la page Bienvenue dans le ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] programme d’installation du conseiller de mise à niveau** , cliquez sur **suivant**.  
   
 3.  Sur la page **contrat de licence** , lisez le contrat de licence. Si vous acceptez, sélectionnez **J’accepte le contrat de licence** , puis cliquez sur **suivant**.  
   

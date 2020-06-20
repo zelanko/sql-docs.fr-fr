@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db78d2aef82e04846e7dff823c3448005beb1b22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920780"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -64,7 +63,7 @@ ms.locfileid: "79112168"
 -   Vous pouvez créer votre propre gestionnaire de connexions personnalisé si les gestionnaires de connexions existants ne répondent pas à vos besoins.  
   
 ### <a name="built-in-connection-managers"></a>Gestionnaires de connexions intégrés  
- Le tableau suivant répertorie les types de gestionnaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de connexions fournis par.  
+ Le tableau suivant répertorie les types de gestionnaires de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournis par.  
   
 |Type|Description|Rubrique|  
 |----------|-----------------|-----------|  
@@ -75,10 +74,10 @@ ms.locfileid: "79112168"
 |EXCEL|Établit une connexion à un fichier de classeur Excel.|[Gestionnaire de connexions Excel](excel-connection-manager.md)|  
 |FILE|Établit une connexion à un fichier ou un dossier.|[Gestionnaire de connexions de fichiers](file-connection-manager.md)|  
 |FLATFILE|Établit une connexion à des données dans un fichier plat unique.|[Gestionnaire de connexions de fichiers plats](flat-file-connection-manager.md)|  
-|FTP|Établit une connexion à un serveur FTP.|[Gestionnaires de connexion FTP](ftp-connection-manager.md)|  
+|FTP|Établit une connexion à un serveur FTP.|[Gestionnaires de connexions FTP](ftp-connection-manager.md)|  
 |HTTP|Établit une connexion à un serveur Web.|[Gestionnaire de connexions HTTP](http-connection-manager.md)|  
 |MSMQ|Établit une connexion à une file d'attente de messages.|[Gestionnaire de connexions MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Établit une connexion à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à un projet.|[Gestionnaire de connexions Analysis Services](analysis-services-connection-manager.md)|  
+|MSOLAP100|Établit une connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet.|[Gestionnaire de connexions Analysis Services](analysis-services-connection-manager.md)|  
 |MULTIFILE|Établit une connexion à plusieurs fichiers et dossiers.|[Gestionnaire de connexions de fichiers multiples](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Établit une connexion à plusieurs fichiers et dossiers de données.|[Gestionnaire de connexions de fichiers plats multiples](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Établit une connexion à une source de données au moyen d'un fournisseur OLE DB.|[Gestionnaire de connexions OLE DB](ole-db-connection-manager.md)|  
@@ -96,9 +95,9 @@ ms.locfileid: "79112168"
   
 |Type|Description|Rubrique|  
 |----------|-----------------|-----------|  
-|ORACLE|Établit une connexion à \<un serveur d’informations de version Oracle>.|Le gestionnaire de connexions Oracle est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
+|ORACLE|Établit une connexion à un \<version info> serveur Oracle.|Le gestionnaire de connexions Oracle est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
 |SAPBI|Établit une connexion à un système SAP NetWeaver BI version 7.|Le gestionnaire de connexions SAP BI est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  
-|TERADATA|Établit une connexion à \<un serveur d’informations de version Teradata>.|Le gestionnaire de connexions Teradata est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
+|TERADATA|Établit une connexion à un \<version info> serveur Teradata.|Le gestionnaire de connexions Teradata est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
   
 ### <a name="custom-connection-managers"></a>Gestionnaires de connexions personnalisés  
  Vous pouvez également écrire des gestionnaires de connexions personnalisés. Pour plus d'informations, consultez [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  

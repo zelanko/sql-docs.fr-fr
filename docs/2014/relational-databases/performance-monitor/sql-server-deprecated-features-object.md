@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067016"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
   L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité dépréciée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -30,9 +29,9 @@ ms.locfileid: "68206963"
 |Instances du compteur de l'objet SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
-|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM` * \< function_name>* `()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
+|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM` *\< function_name>* `()` . Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
 |\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
-|ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice`tape`' 'a été rencontrée. Utilisez sp_addumpdevice'`disk`'à la place. Se produit une fois par utilisation.|  
+|ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice' `tape` 'a été rencontrée. Utilisez sp_addumpdevice' `disk` 'à la place. Se produit une fois par utilisation.|  
 |Autorisation ALL|Nombre total de fois où la syntaxe GRANT ALL, DENY ALL ou REVOKE ALL a été rencontrée. Modifiez la syntaxe pour refuser des autorisations spécifiques. Se produit une fois par requête.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Nombre total d'utilisations de l'option TORN_PAGE_DETECTION de la fonctionnalité déconseillée ALTER DATABASE depuis le démarrage de l'instance du serveur. Utilisez à la place la syntaxe PAGE_VERIFY. Se produit une fois par utilisation dans une instruction DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|La syntaxe de fonctionnalité déconseillée ALTER LOGIN WITH SET CREDENTIAL ou ALTER LOGIN WITH NO CREDENTIAL a été rencontrée. Utilisez à la place la syntaxe ADD ou DROP CREDENTIAL. Se produit une fois par compilation.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5002fea865b93f849c8ce303da6992b378be441
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011614"
 ---
 # <a name="replay-trace-data"></a>Relire les données de trace
   Vous pouvez démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay après avoir préparé les données de trace d’entrée. Pour plus d’informations, consultez [préparer les données de Trace d’entrée](prepare-the-input-trace-data.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "63149891"
   
 ### <a name="to-replay-the-trace"></a>Pour relire la trace  
   
-1.  **(Facultatif) Modifier les paramètres de configuration de la relecture**: si vous voulez modifier les paramètres de configuration de la relecture, tels que le mode de mise en séquence et différentes valeurs de mise à l’échelle, vous devez modifier l’élément `<ReplayOptions>` du fichier XML `DReplay.exe.replay.config`de configuration de relecture. Vous pouvez également modifier l'élément `<OutputOptions>` pour spécifier des paramètres de sortie, tels que l'enregistrement ou non du nombre de lignes. Si vous modifiez le fichier de configuration de relecture, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
+1.  **Modifier les paramètres de configuration de la relecture (facultatif)**  : Si vous voulez modifier les paramètres de configuration de la relecture, tels que le mode de mise en séquence et différentes valeurs de mise à l’échelle, vous devez modifier l’élément `<ReplayOptions>` du fichier XML `DReplay.exe.replay.config`de configuration de relecture. Vous pouvez également modifier l'élément `<OutputOptions>` pour spécifier des paramètres de sortie, tels que l'enregistrement ou non du nombre de lignes. Si vous modifiez le fichier de configuration de relecture, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
   
     1.  Faites une copie du fichier par défaut de configuration de relecture, `DReplay.exe.replay.config`, et renommez le nouveau fichier. Le fichier par défaut de configuration de relecture se trouve dans le dossier d'installation de l'outil d'administration.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63149891"
   
      Pour plus d’informations sur le fichier de configuration de prétraitement, consultez [Configure Distributed Replay](configure-distributed-replay.md)(Configurer Distributed Replay).  
   
-2.  **Initialiser l’étape de relecture d’événements**: pour démarrer la relecture distribuée, vous devez exécuter l’outil d’administration avec l’option de **relecture** . Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+2.  **Lancez l’étape de relecture d’événement** : Pour démarrer la relecture distribuée, vous devez exécuter l’outil d’administration avec l’option de **relecture**. Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
     1.  Ouvrez l'utilitaire d'invite de commandes Windows (`CMD.exe`) et accédez à l'emplacement d'installation de l'outil d'administration Distributed Replay (`DReplay.exe`).  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63149891"
   
     5.  (Facultatif) Utilisez le paramètre *serveur_cible* , **-s**, pour spécifier l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans laquelle les clients de relecture distribuée doivent relire la charge de travail de la trace. Ce paramètre n'est pas nécessaire si vous avez utilisé l'élément `<Server>` pour spécifier le serveur cible dans l'élément `<ReplayOptions>` du fichier de configuration de relecture.  
   
-    6.  Utilisez le paramètre *clients* , **-w**, pour spécifier les clients de relecture distribuée qui doivent participer à la relecture. Répertoriez les noms des ordinateurs clients, séparés par des virgules. Remarque : les adresses IP ne sont pas autorisées.  
+    6.  Utilisez le paramètre *clients* , **-w**, pour spécifier les clients de relecture distribuée qui doivent participer à la relecture. Répertoriez les noms des ordinateurs clients, séparés par des virgules. Remarque : Les adresses IP ne sont pas autorisées.  
   
     7.  (Facultatif) Utilisez le paramètre *fichier_configuration* , **-c**, pour spécifier l’emplacement du fichier de configuration de relecture. Utilisez ce paramètre pour pointer sur le nouveau fichier de configuration si vous avez modifié une copie du fichier de configuration de relecture par défaut.  
   

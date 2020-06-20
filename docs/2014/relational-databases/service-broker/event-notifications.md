@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d5d7114515179cda973b9685c57b26fa930521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996670"
 ---
 # <a name="event-notifications"></a>Notifications d'événements
   Les notifications d'événements envoient des informations sur les événements à un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Les notifications d'événements sont exécutées en réponse à une variété d'instructions DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] et d'événements Trace SQL, par l'envoi d'informations relatives à ces événements à un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -59,7 +58,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Déclencheurs|Notifications d'événements|  
 |--------------|-------------------------|  
 |Les déclencheurs DML répondent aux événements DML (Data Manipulation Language, ou langage de manipulation de données). Les déclencheurs DDL répondent aux événements DDL (Data Definition Language, ou langage de définition de données).|Les notifications d'événements répondent aux événements DDL et à un sous-ensemble d'événements de Trace SQL.|  
-|Les déclencheurs peuvent exécuter Transact-SQL ou le code managé CLR (Common Language Runtime).|Les notifications d'événements n'exécutent aucun code. Au lieu de cela `xml` , ils envoient des messages à un service Service Broker.|  
+|Les déclencheurs peuvent exécuter Transact-SQL ou le code managé CLR (Common Language Runtime).|Les notifications d'événements n'exécutent aucun code. Au lieu de cela, ils envoient des `xml` messages à un Service Service Broker.|  
 |Les déclencheurs sont traités de manière synchrone, dans le cadre des transactions qui provoquent leur déclenchement.|Les notifications d'événements peuvent être traitées de manière synchrone, et elles ne sont pas exécutées dans le cadre des transactions qui provoquent leur déclenchement.|  
 |Le consommateur d'un déclencheur est étroitement lié à l'événement qui provoque son déclenchement.|Le consommateur d'une notification d'événement est dissocié de l'événement qui provoque son déclenchement.|  
 |Les déclencheurs doivent être traités sur le serveur local.|Les notifications d'événements peuvent être traitées sur un serveur distant.|  
@@ -67,7 +66,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Les noms de déclencheurs DML ont une portée de schéma. Les noms de déclencheurs DDL sont limités au niveau de la base de données ou du serveur.|Les noms de notifications d'événements sont limités par le serveur ou la base de données. Les notifications d'événements sur un événement QUEUE_ACTIVATION sont limitées à une file d'attente spécifique.|  
 |Les déclencheurs DML sont détenus par le propriétaire des tables sur lesquelles ils sont appliqués.|Le propriétaire d'une notification d'événements sur une file d'attente peut être différent de celui de l'objet auquel la notification est appliquée.|  
 |Les déclencheurs prennent en charge la clause EXECUTE AS.|Les notifications d'événements ne prennent pas en charge la clause EXECUTE AS.|  
-|Les informations d’événement de déclencheur DDL peuvent être capturées à l’aide `xml` de la fonction EVENTDATA, qui retourne un type de données.|Les notifications `xml` d’événements envoient des informations d’événement à un service Service Broker. Les informations sont mises en forme dans le même schéma que celui de la fonction EVENTDATA.|  
+|Les informations d’événement de déclencheur DDL peuvent être capturées à l’aide de la fonction EVENTDATA, qui retourne un `xml` type de données.|Les notifications d’événements envoient des `xml` informations d’événement à un Service Service Broker. Les informations sont mises en forme dans le même schéma que celui de la fonction EVENTDATA.|  
 |Les métadonnées concernant les déclencheurs se trouvent dans les affichages catalogue **sys.triggers** et **sys.server_triggers** .|Les métadonnées concernant les notifications d’événements se trouvent dans les affichages catalogue **sys.event_notifications** et **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notifications d'événements et Trace SQL  

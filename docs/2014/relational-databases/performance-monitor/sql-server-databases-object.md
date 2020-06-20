@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066085"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objet Databases
   L’objet **SQLServer:Databases** dans SQL Server fournit des compteurs pour analyser les opérations de copie en bloc, le débit des sauvegardes et des restaurations, ainsi que l’activité des journaux des transactions. Surveillez les transactions et le journal des transactions pour déterminer l'intensité de l'activité de l'utilisateur dans la base de données et le taux de remplissage du journal des transactions. Le volume d'activité de l'utilisateur peut déterminer les performances de la base de données et affecter la taille du journal, le verrouillage et la réplication. La surveillance de l'activité du journal de bas niveau afin de mesurer l'activité de l'utilisateur et l'exploitation des ressources peut permettre d'identifier les goulots d'étranglement des performances.  
@@ -42,7 +41,7 @@ ms.locfileid: "63250652"
 |**Lectures du cache du journal/s**|Lectures réalisées par seconde à partir du cache du gestionnaire du journal.|  
 |**Taille des fichiers journaux (Ko)**|Taille cumulée (en kilo-octets) de tous les fichiers du journal des transactions dans la base de données.|  
 |**Taille de fichier(s) journal(aux) utilisée (Ko)**|La taille utilisée cumulée de tous les fichiers journaux de la base de données.|  
-|**Temps d'attente de vidage du journal**|Temps d'attente total (en millisecondes) pour vider le journal. Sur une base de données secondaire AlwaysOn, cette valeur indique le temps d'attente pour les enregistrements de journal renforcés sur le disque.|  
+|**Temps d’attente de vidage du journal**|Temps d'attente total (en millisecondes) pour vider le journal. Sur une base de données secondaire AlwaysOn, cette valeur indique le temps d'attente pour les enregistrements de journal renforcés sur le disque.|  
 |**Attentes de vidage du journal/s**|Nombre de validations par seconde en attente du vidage du journal.|  
 |**Temps d'attente de vidage du journal (ms)**|Temps en millisecondes des vidages du journal au cours de la dernière seconde.|  
 |**Vidages du journal/s**|Nombre de vidages du journal par seconde.|  
@@ -52,13 +51,13 @@ ms.locfileid: "63250652"
 |**Journaliser les lectures du disque/s du pool**|Nombre de lectures du disque émise par le pool du jourrnal pour extraire des blocs du journal.|  
 |**Journaliser les requêtes/s du pool**|Nombre de requêtes de bloc du journal traitées par le pool du journal.|  
 |**Troncatures de journal**|Nombre de fois où le journal des transactions a été réduit.|  
-|**Pourcentage utilisé du journal**|Pourcentage de l'espace en cours d'utilisation dans le journal.|  
+|**Pourcentage de journal utilisé**|Pourcentage de l'espace en cours d'utilisation dans le journal.|  
 |**Réplication en attente Xacts**|Nombre de transactions dans le journal des transactions de la base de données de publication, marquées pour la réplication, mais non encore remises à la base de données de distribution.|  
 |**Taux de transactions de réplication**|Nombre de transactions extraites par seconde du journal des transactions de la base de données de publication et remises à la base de données de distribution.|  
 |**Mouvement de réduction de données en octets/s**|Volume de données déplacées par seconde par les opérations Autoshrink, ou par les instructions DBCC SHRINKDATABASE ou DBCC SHRINKFILE.|  
 |**Transactions suivies/s**|Nombre de transactions validées enregistrées dans la table de validation pour la base de données.|  
 |**Transactions/s**|Nombre de transactions démarrées pour la base de données par seconde.<br /><br /> **Transactions/s** ne tient pas compte des transactions XTP uniquement (transactions commencées par une procédure stockée compilée en mode natif).|  
-|**Transactions d'écriture/s**|Nombre des transactions qui ont écrit dans la base de données et qui ont été validées au cours de la dernière seconde.|  
+|**Transactions d’écriture/s**|Nombre des transactions qui ont écrit dans la base de données et qui ont été validées au cours de la dernière seconde.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller l’utilisation des ressources &#40;Moniteur système&#41;](monitor-resource-usage-system-monitor.md)   

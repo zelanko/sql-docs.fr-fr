@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065310"
 ---
 # <a name="instance-configuration"></a>Configuration de l'instance
   Utilisez la page **Configuration d’une instance** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier s’il faut créer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas déjà installée, une instance par défaut est créée, sauf si vous spécifiez une instance nommée.  
@@ -71,7 +70,7 @@ ms.locfileid: "68190972"
   
 -   Les espaces incorporés ou autres caractères spéciaux ne sont pas autorisés dans les noms d'instance. La barre oblique inverse (\\), la virgule (,), le deux-points (:), le point-virgule (;), le guillemet simple ('), l’esperluette (&) et l’arobase (@) ne sont pas autorisés non plus.  
   
--   **Seuls les caractères qui sont valides dans la page de codes Windows actuelle peuvent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] être utilisés dans les noms d’instance. Si un caractère Unicode non pris en charge est utilisé, une erreur d’installation se produit.**  
+-   **Seuls les caractères qui sont valides dans la page de codes Windows actuelle peuvent être utilisés dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noms d’instance. Si un caractère Unicode non pris en charge est utilisé, une erreur d’installation se produit.**  
   
  **Instances et fonctionnalités détectées**  
  Consultez la liste des instances et des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installés sur l'ordinateur sur lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution.  

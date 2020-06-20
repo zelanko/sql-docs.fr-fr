@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 005e71195fc294ef7c2590886208d7184ec00474
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066349"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutoriel : SQL Server Management Studio
   Ce didacticiel [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous présente l'environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour configurer, surveiller et administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, de surveiller et de mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données et les entrepôts de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
@@ -48,7 +47,7 @@ ms.locfileid: "62753431"
  [Leçon 3 : utilisation de modèles, de solutions et de projets de scripts](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  Dans cette leçon, vous allez apprendre à utiliser des modèles et à organiser des scripts dans des solutions et des projets.  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Ce didacticiel est destiné aux administrateurs et aux développeurs de base de données expérimentés, qui ne connaissent pas [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], mais qui maîtrisent les concepts de base de données et le langage [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  Les éléments suivants doivent cependant être installés sur votre système :  

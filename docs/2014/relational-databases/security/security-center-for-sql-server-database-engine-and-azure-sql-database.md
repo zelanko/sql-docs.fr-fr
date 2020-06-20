@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3eeea022cff74d2ca8ddb636d9f83e4d369529bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244532"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004109"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database
   Cette page fournit des liens qui vous aideront à trouver les informations dont vous avez besoin sur la sécurité et la protection dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "75244532"
   
 ## <a name="links-to-specific-related-topics"></a>Liens vers des rubriques connexes  
  ![Petite icône de dossier de fichiers](../../integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **authentification : qui êtes-vous ?**  
- **Qui s’authentifie ? (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ **Qui s’authentifie ? (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )**  
   
 -   [Choisir un mode d’authentification](choose-an-authentication-mode.md)  
   
@@ -108,7 +107,7 @@ ms.locfileid: "75244532"
   
 -   [Sécurité au niveau des lignes](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [Masquage dynamique des données](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [Dynamic Data Masking](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [Objets signés](/sql/t-sql/statements/add-signature-transact-sql)  
   

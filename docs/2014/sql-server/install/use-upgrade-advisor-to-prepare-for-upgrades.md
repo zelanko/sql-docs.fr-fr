@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058850"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau
   Le Conseiller de mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous assiste lors de la préparation des mises à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le Conseiller de mise à niveau analyse les composants installés des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis génère un rapport qui identifie les problèmes à résoudre avant ou après la mise à niveau.  
@@ -70,17 +69,17 @@ ms.locfileid: "73632735"
   
     -   Pour installer .NET Framework 4 à partir du support de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localisez la racine du lecteur de disque. Ensuite, double-cliquez sur le dossier \redist, sur le dossier DotNetFrameworks et exécutez dotNetFx40_Full_x86_x64.exe (pour les systèmes d'exploitation 32 bits ou 64 bits).  
   
- Pour installer le Conseiller de mise à niveau à partir du Web, cliquez sur le bouton Télécharger figurant sur la page de téléchargement. Vous pouvez alors soit exécuter l'installation immédiatement, soit enregistrer le fichier SQLUA.msi afin de l'exécuter ultérieurement. Si vous effectuez l’installation à partir du CD-ROM du produit, exécutez SQLUA. msi directement à partir du disque du produit.  
+ Pour installer le Conseiller de mise à niveau à partir du Web, cliquez sur le bouton Télécharger figurant sur la page de téléchargement. Vous pouvez alors soit exécuter l'installation immédiatement, soit enregistrer le fichier SQLUA.msi afin de l'exécuter ultérieurement. Si vous effectuez l’installation à partir du disque du produit, exécutez SQLUA.msi directement à partir du disque du produit.  
   
  Après avoir installé le conseiller de mise à niveau, vous pouvez l’ouvrir à partir du menu **Démarrer** :  
   
--   Cliquez sur **Démarrer**, pointez sur **tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] conseiller de mise à niveau**.  
+-   Cliquez sur **Démarrer**, pointez sur **tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , puis cliquez sur conseiller de ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mise à niveau**.  
   
  Pour plus d'informations, consultez la documentation relative au Conseiller de mise à niveau incluse dans le téléchargement du Conseiller de mise à niveau, ainsi que les Notes de publication de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser plusieurs versions et instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilité descendante](../../../2014/getting-started/backward-compatibility.md)  
   
   

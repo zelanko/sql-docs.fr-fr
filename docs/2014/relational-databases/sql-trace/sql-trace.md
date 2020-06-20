@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63286528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060261"
 ---
 # <a name="sql-trace"></a>Trace SQL
   Dans la trace SQL, les événements sont collectés si ce sont des instances de classes d'événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "63286528"
  Les termes suivants décrivent les concepts fondamentaux de Trace SQL.  
   
  **Event**  
- Occurrence d’une action dans une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+ Occurrence d’une action dans une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] .  
   
  **Colonne de données**  
  Attribut d'un événement.  
@@ -109,7 +108,7 @@ ms.locfileid: "63286528"
 |**ObjectID2**|56|ID de l'objet ou de l'entité associé, s'il est disponible.|  
 |**ObjectName**|34|Nom de l'objet référencé.|  
 |**Typeobjet** <sup>2</sup>|28|Valeur représentant le type de l'objet impliqué dans l'événement. Cette valeur correspond à la colonne de **type** dans **sysobjects**.|  
-|**Offset**|61|Décalage de départ de l'instruction dans la procédure stockée ou le traitement.|  
+|**Décalage**|61|Décalage de départ de l'instruction dans la procédure stockée ou le traitement.|  
 |**OwnerID**|58|Pour les événements de verrou uniquement. Type de l'objet qui possède un verrou.|  
 |**OwnerName**|37|Nom d'utilisateur de base de données du propriétaire de l'objet.|  
 |**ParentName**|59|Nom du schéma qui contient l'objet.|  
@@ -127,7 +126,7 @@ ms.locfileid: "63286528"
 |**SqlHandle**|63|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à **sys. dm_exec_sql_text ()** pour récupérer le texte SQL associé.|  
 |**StartTime** <sup>1</sup>|14|Heure de début de l'événement, le cas échéant.|  
 |**State**|30|Code d’état d’erreur.|  
-|**Opération réussie**|23|Indique si l'événement a réussi. Ces valeurs comprennent :<br /><br /> **1** = réussite.<br /><br /> **0** = échec<br /><br /> Par exemple, **1** signifie la réussite de la vérification d’autorisations et **0** l’échec de cette vérification.|  
+|**Succès**|23|Indique si l'événement a réussi. Ces valeurs comprennent :<br /><br /> **1** = réussite.<br /><br /> **0** = échec<br /><br /> Par exemple, **1** signifie la réussite de la vérification d’autorisations et **0** l’échec de cette vérification.|  
 |**TargetLoginName**|42|Pour les actions qui ciblent une connexion, nom de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetLoginSid**|43|Pour les actions qui ciblent une connexion, SID de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetUserName**|39|Pour les actions qui ciblent un utilisateur de base de données, nom de cet utilisateur, par exemple pour accorder une autorisation à un utilisateur.|  
@@ -161,7 +160,7 @@ ms.locfileid: "63286528"
 |Décrit les deux façons de planifier le traçage dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Planifier les traces](../sql-trace/schedule-traces.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Profiler les modèles et les autorisations](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guide de programmation SQL Server Management Objects &#40;SMO&#41;](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   
