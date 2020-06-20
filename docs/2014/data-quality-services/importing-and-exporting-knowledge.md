@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18268c4ac8f0a6a848918c66c07c5ac3be062768
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937630"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importation et exportation de connaissances
   Vous pouvez créer des bases de connaissances et les domaines directement dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ou vous pouvez importer ou exporter les connaissances vers ou depuis une base de connaissances. Dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , vous pouvez utiliser un fichier de données pour les opérations d'importation et d'exportation, ou un fichier Excel pour les opérations d'importation. Le fichier de données utilisé est un fichier chiffré qui est créé par [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) avec l'extension .dqs. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Ces opérations offrent plus de souplesse dans la génération et le partage des connaissances que vous utilisez pour effectuer le nettoyage et la correspondance des données.  

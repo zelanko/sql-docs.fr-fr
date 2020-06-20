@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a6208467b4d6af6b0417727643e190b8702968ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c36ff73606e95ed7ee5e713b81acf7c177a42563
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021573"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   Lors de la demande d’identificateurs de ligne (*IdentifierType* SQL_BEST_ROWID), **SQLSpecialColumns** retourne un jeu de résultats vide (aucune ligne de données) pour toute étendue demandée autre que SQL_SCOPE_CURROW. Le jeu de résultats généré indique que les colonnes ne sont valides que dans cette étendue.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed3228806a4fe0d136a1a2d9761dc46ab519677d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240535"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054351"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organiser les colonnes affichées dans une trace (SQL Server Profiler)
   Vous pouvez grouper les colonnes de données dans une trace en sélectionnant **Organiser les colonnes** dans la table de trace ou dans la boîte de dialogue **Propriétés du fichier de suivi** , ou bien lorsque vous définissez une trace. Le regroupement des colonnes de données vous permet de mieux analyser la sortie de trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Pour plus d’informations, consultez [Afficher et analyser des traces avec SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md).  

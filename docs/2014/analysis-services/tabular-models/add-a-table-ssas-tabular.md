@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2727bc11de184f55ac332e11c75a46095af13f4a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939950"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Ajouter une table (SSAS Tabulaire)
   Cette rubrique explique comment ajouter une table à partir d'une source de données dans laquelle vous avez précédemment importé des données dans votre modèle. Pour ajouter une table à partir de la même source de données, vous pouvez utiliser la connexion à la source de données existante. Il est recommandé d'utiliser toujours une connexion unique lorsque vous importez plusieurs tables à partir d'une source de données unique.  

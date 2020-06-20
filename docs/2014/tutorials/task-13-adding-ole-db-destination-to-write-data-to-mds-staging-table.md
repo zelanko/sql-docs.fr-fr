@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb39e9d50d135adfedcf307cda2ad703e302eda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65476985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061140"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tâche 13 : Ajout d’une destination OLE DB pour écrire des données dans une table intermédiaire MDS
   Maintenant que vous avez ajouté des valeurs **ImportType** et **BatchTag** à tous les enregistrements, vous êtes prêt à les envoyer à MDS pour la mise en lots. Au cours de cette tâche, vous allez utiliser la destination de la OLE DB pour écrire les données dans **STG. supplier_Leaf** table de mise en lots.  

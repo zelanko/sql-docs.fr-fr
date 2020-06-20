@@ -16,24 +16,23 @@ helpviewer_keywords:
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ffb226202bb4ed52fd01e5e6376accfe6b6558
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964914"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Sauvegarde et restauration de packages (Service SSIS)
     
 > [!IMPORTANT]  
 >  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les packages peuvent être enregistrés dans le système de fichiers ou dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, une base de données système. Les packages enregistrés dans msdb peuvent être sauvegardés et restaurés à l’aide des fonctionnalités de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]les packages peuvent être enregistrés dans le système de fichiers ou dans msdb, une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de données système. Les packages enregistrés dans msdb peuvent être sauvegardés et restaurés à l’aide des fonctionnalités de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Pour plus d’informations sur la sauvegarde et la restauration de la base de données msdb, cliquez sur l’une des rubriques suivantes :  
   
--   [Sauvegarde et restauration des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+-   [Sauvegarder et restaurer des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
 -   [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d424f8c592ecf6e9f002342de9539f96dc4479c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971798"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Créer un package de déploiement de modèle à l'aide de l'Assistant
   Utilisez l'Assistant Déploiement de modèle de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour créer un package d'objets de modèle uniquement. Si vous avez besoin d’inclure des données dans un package, consultez [Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "65483601"
   
 6.  Cliquez sur **Télécharger**.  
   
-7.  Enregistrez le fichier .  
+7.  Enregistrez le fichier.  
   
 8.  Cliquez sur **Fermer** pour quitter l'Assistant.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 03c19fecd314bd67949b133e6c1e0ae9e8292d3d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63298330d3f0ebf707dbb42c337553c1f363deab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021438"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
   **SQLTablePrivileges** peut être exécuté sur un curseur statique. Une tentative d’exécution de **SQLTablePrivileges** sur un qui peut être mis à jour (KEYSET ou Dynamic) retourne SQL_SUCCESS_WITH_INFO indiquant que le type de curseur a été modifié.  

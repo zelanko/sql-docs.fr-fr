@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7861e87ad0fd35fdedae444de74f5300edb3de0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938780"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurer les propriétés de comportement de table pour les rapports Power View (SSAS Tabulaire)
   Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.

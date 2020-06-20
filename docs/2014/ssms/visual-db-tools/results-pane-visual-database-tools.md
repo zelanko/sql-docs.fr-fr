@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 675e2d24cb84b2a68922528dcdaa09fb6b675605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067149"
 ---
 # <a name="results-pane-visual-database-tools"></a>Volet Résultats (Visual Database Tools)
   Le volet Résultats montre les résultats de la dernière requête SELECT exécutée. (Les résultats des autres types de requêtes sont affichés dans des boîtes de messages.) Pour ouvrir le volet Résultats, ouvrez ou créez une requête ou encore une vue, ou retournez les données d'une table. Si le volet Résultats ne s'affiche pas par défaut, dans le menu **Concepteur de requêtes** , pointez sur **Volet**, puis cliquez sur **Résultats**.  

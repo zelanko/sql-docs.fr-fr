@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8eab18d84efc1a990715e0d5488085252f93a7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957282"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurer une sauvegarde différentielle de base de données (SQL Server)
   Cette rubrique explique comment restaurer une sauvegarde différentielle de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +31,7 @@ ms.locfileid: "62877246"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Prérequis](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62877246"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Pour restaurer une sauvegarde différentielle de base de données  
   
-1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**. Selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système**et sélectionnez une base de données système.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "62877246"
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
-         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.  
+         Dans la zone de liste **Source : Appareil : Base de données**, sélectionnez le nom de la base de données à restaurer.  
   
          **Remarque** Cette liste n'est disponible que lorsque **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62877246"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Pour restaurer une sauvegarde différentielle de base de données  
   
-1.  Exécutez l'instruction RESTORE DATABASE, en spécifiant la clause NORECOVERY, pour restaurer la sauvegarde complète de la base de données précédant la sauvegarde différentielle. Pour plus d'informations, consultez [Procédure : restaurer une sauvegarde complète](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Exécutez l'instruction RESTORE DATABASE, en spécifiant la clause NORECOVERY, pour restaurer la sauvegarde complète de la base de données précédant la sauvegarde différentielle. Pour plus d’informations, consultez [Procédure : Restaurer une sauvegarde complète](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Exécutez l'instruction RESTORE DATABASE pour restaurer la sauvegarde différentielle de la base de données, en spécifiant :  
   
@@ -207,7 +206,7 @@ GO
   
 -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

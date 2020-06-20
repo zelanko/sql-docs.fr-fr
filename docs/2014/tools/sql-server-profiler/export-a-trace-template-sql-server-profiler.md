@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f4fcc8f39f668422189780f89da0935f21444173
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 588014047b66183c770b4d5a84b9f9eaca05e8b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054396"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exporter un modèle de trace (SQL Server Profiler)
   Cette rubrique décrit comment exporter un modèle de trace existant à enregistrer comme fichier modèle (.tdf) à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Lorsque vous exportez un modèle de trace et que vous l'enregistrez en tant que fichier, vous pouvez utiliser ce modèle avec une autre instance du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

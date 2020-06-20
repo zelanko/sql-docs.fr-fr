@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b839fe4359e083df9c6b4643111b61f5b681914
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63217813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067195"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Compter les lignes d'une table (Visual Database Tools)
   Vous pouvez compter les lignes d'une table afin de déterminer les éléments suivants :  
@@ -55,7 +54,7 @@ ms.locfileid: "63217813"
   
 2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Ajouter un groupe par** dans le menu contextuel. Le Concepteur de requêtes et de vues ajoute une colonne **Group By** à la grille dans le volet Critères.  
   
-3.  Sélectionnez ** \*(toutes les colonnes)** dans le rectangle représentant la table ou l’objet structuré en table.  
+3.  Sélectionnez ** \* (toutes les colonnes)** dans le rectangle représentant la table ou l’objet structuré en table.  
   
      Le Concepteur de requêtes et de vues insère automatiquement le terme **Count** dans la colonne **Group By** du volet Critères et assigne un alias de colonne à la colonne que vous synthétisez. Pour créer un en-tête de colonne plus significatif dans le résultat de la requête, consultez [Créer des alias de colonnes &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   

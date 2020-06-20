@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 309cd3f67cb6fd4d41e3513aa6d3876af53bbc1b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483275"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971739"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Boîte de dialogue Créer un compte et un profil de messagerie de base de données (Gestionnaire de configuration des services de données de référence)
   Utilisez la boîte de dialogue **Créer un compte et un profil de messagerie de base de données** pour créer un profil de messagerie de base de données et un compte de messagerie de base de données pour la base de données des [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ce profil sera utilisé pour avertir les utilisateurs et les groupes par courrier électronique lorsque la validation des règles d'entreprise échoue.  
@@ -37,10 +36,10 @@ ms.locfileid: "65483275"
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|**Adresse de messagerie**|Tapez le nom de l'adresse de messagerie du compte. Il s’agit de l’adresse de messagerie à partir de laquelle le courrier électronique est envoyé, qui doit être au format *email_name*@*domain_name*. Un exemple d’adresse e-mail est sales@contoso.com.|  
-|**Nom complet**|Paramètre facultatif. Tapez le nom à afficher sur les messages électroniques envoyés à partir de ce compte. Un exemple de nom complet est Contoso Sales Group.|  
+|**Adresse de messagerie**|Tapez le nom de l'adresse de messagerie du compte. Il s’agit de l’adresse de messagerie à partir de laquelle le courrier électronique est envoyé, qui doit être au format *email_name* @ *domain_name*. Un exemple d’adresse e-mail est sales@contoso.com.|  
+|**Nom d’affichage**|Paramètre facultatif. Tapez le nom à afficher sur les messages électroniques envoyés à partir de ce compte. Un exemple de nom complet est Contoso Sales Group.|  
 |**Adresse de messagerie pour la réponse**|Paramètre facultatif. Tapez l'adresse de messagerie à utiliser pour répondre aux messages envoyés à partir de ce compte. Un exemple d’adresse de réponse est admin@contoso.com.|  
-|**Serveur SMTP**|Tapez le nom ou l’adresse IP du serveur SMTP utilisé par le compte pour envoyer des e-mails. Un exemple de format de serveur `smtp.` SMTP est *<company_name>* `.com`. Pour plus d'informations, contactez l'administrateur de messagerie.|  
+|**Serveur SMTP**|Tapez le nom ou l’adresse IP du serveur SMTP utilisé par le compte pour envoyer des e-mails. Un exemple de format de serveur SMTP est `smtp.` *<company_name>* `.com` . Pour plus d'informations, contactez l'administrateur de messagerie.|  
 |**Numéro de port**|Tapez le numéro de port du serveur SMTP de ce compte. Le port SMTP par défaut est le port 25.|  
 |**Ce serveur demande une connexion sécurisée (SSL)**|Chiffre la communication au moyen de SSL (Secure Sockets Layer).|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65483275"
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|**Authentification Windows à l'aide d'informations d'identification du service de moteur de bases de données**|Spécifiez que Database mail doit utiliser les informations d’identification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] du compte de service Windows pour l’authentification sur le serveur SMTP.|  
+|**Authentification Windows à l'aide d'informations d'identification du service de moteur de bases de données**|Spécifiez que Database Mail doit utiliser les informations d’identification du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compte de service Windows pour l’authentification sur le serveur SMTP.|  
 |**Authentification de base**|Spécifiez que la messagerie de base de données doit utiliser un nom d'utilisateur et un mot de passe spécifiques pour l'authentification sur le serveur SMTP. Ces informations sont utilisées uniquement pour l’authentification avec le serveur de messagerie, et le compte n’a pas besoin de correspondre à un utilisateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ni à un utilisateur sur l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Nom d'utilisateur**|Tapez le nom du compte d'utilisateur que la messagerie de base de données utilise pour se connecter au serveur SMTP. Un nom d'utilisateur est obligatoire si le serveur SMTP nécessite une authentification de base.|  
 |**Mot de passe**|Tapez le mot de passe que la messagerie de base de données utilise pour se connecter au serveur SMTP. Un mot de passe est obligatoire si le serveur SMTP nécessite une authentification de base.|  

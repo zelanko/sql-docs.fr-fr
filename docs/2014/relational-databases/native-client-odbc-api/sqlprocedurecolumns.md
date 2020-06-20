@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 078e391bd39fdc49cde539c4004ed51d25eef93f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705880"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021921"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns`retourne une ligne signalant les attributs de valeur de retour de toutes les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédures stockées.  
@@ -51,7 +50,7 @@ ms.locfileid: "82705880"
 |DECIMAL_DIGITS|Nombre de colonnes du paramètre table.|  
 |NUM_PREC_RADIX|NULL|  
 |NULLABLE|SQL_NULLABLE|  
-|Remarques|NULL|  
+|REMARQUES|NULL|  
 |COLUMN_DEF|NULL. Les types table ne peuvent pas avoir de valeurs par défaut.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATEIME_SUB|NULL|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c577b06866db12ecd4ccc4b28fbf36e3314f76d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000933"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>Trier plusieurs colonnes dans des requêtes (Visual Database Tools)
   Vous pouvez spécifier l’ordre dans lequel vous souhaitez utiliser les colonnes pour trier les données à l’aide de la colonne **Ordre de tri** du [volet Critères](visual-database-tools.md).  

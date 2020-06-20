@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060576"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio)
 
@@ -116,7 +115,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
     * `1` - Utiliser le contexte de sécurité de l’utilisateur qui apporte des modifications à l’Abonné lors de la connexion au serveur de publication. Consultez [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) pour connaître les restrictions en rapport avec ce mode de sécurité.
     * `2` - Utiliser une connexion de serveur lié existante, définie par l’utilisateur, créée à l’aide de [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. Sur le serveur de publication [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) , exécutez `@publication`sp_addsubscription `@subscriber`spécifiant,, `@destination_db`, la valeur `@subscription_type`pull pour et la même valeur spécifiée à l’étape `@update_mode`3 pour.
+6. Sur le serveur de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) spécifiant `@publication` , `@subscriber` , `@destination_db` , la valeur pull pour `@subscription_type` et la même valeur spécifiée à l’étape 3 pour `@update_mode` .
 
 L'abonnement par extraction est alors inscrit sur le serveur de publication. 
 
@@ -190,7 +189,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
     * (Facultatif) Une valeur de `0` pour `@distributor_security_mode` et les informations de connexion SQL Server pour `@distributor_login` et `@distributor_password`, si vous devez utiliser l’authentification SQL Server lors de la connexion du distributeur. 
     * Planification du travail de l'Agent de distribution pour cet abonnement.
 
-5. Sur le serveur de publication, exécutez [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) pour inscrire l’abonné sur le serveur `@publication`de `@subscriber`publication `@destination_db`, en spécifiant,, `@subscription_type`, la valeur pull pour et la même valeur spécifiée `@update_mode`à l’étape 3 pour.
+5. Sur le serveur de publication, exécutez [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) pour inscrire l’abonné sur le serveur de publication, en spécifiant `@publication` ,, `@subscriber` `@destination_db` , la valeur pull pour `@subscription_type` et la même valeur spécifiée à l’étape 3 pour `@update_mode` .
 
 L'abonnement par extraction est alors inscrit sur le serveur de publication. 
 
@@ -299,14 +298,14 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>définir des options de résolution des conflits de mise à jour en attente (SQL Server Management Studio)
-  Définissez les options de résolution des conflits pour les publications qui prennent en charge les abonnements avec mise à jour en attente, sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
+  Définissez les options de résolution des conflits pour les publications qui prennent en charge les abonnements mis à jour en attente dans la page **options d’abonnement** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Pour définir les options de résolution des conflits de mise à jour en attente  
   
-1.  Sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez l’une des valeurs ci-après pour l’option **Stratégie de résolution de conflit** :    
+1.  Dans la page **options d’abonnement** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** , sélectionnez l’une des valeurs suivantes pour l’option stratégie de résolution des **conflits** :    
     -   **Conserver la modification apportée au serveur de publication**    
     -   **Conserver la modification apportée à l'abonné**    
-    -   **Réinitialiser l'abonnement**    
+    -   **Réinitialisation de l’abonnement**    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## <a name="see-also"></a>Voir aussi ##

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9641c727f52f9e108a368457a668aaf68e38f812
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0e2bb7b4b482b79ab5550540dd5b24ffdd8d6636
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061250"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>Générer un schéma XDR en ligne
   La directive **XMLDATA** de FOR XML retourne un schéma XDR en ligne avec le résultat de la requête. Toutefois, le schéma XDR ne prend pas en charge tous les nouveaux types de données et autres améliorations introduites dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures. Au lieu de cela, vous pouvez demander un schéma XSD en ligne à l’aide de [la directive XMLSCHEMA](generate-an-inline-xsd-schema.md).  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757776"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940110"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
   L'interface IMDEmbedded est une interface publique utilisée pour gérer une base de données incorporée PowerPivot ou une base de données model tabulaire. L'interface hérite de l'interface `IPersistStream`. Elle permet les opérations suivantes :  
@@ -39,7 +38,7 @@ ms.locfileid: "62757776"
 -   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de `IPersistStream`.  
   
 ## <a name="reference"></a>Référence  
- La référence suivante documente `IMDEmbedded` l’interface comme présenté dans le fichier d’en-tête **Msmd. h** .  
+ La référence suivante documente l' `IMDEmbedded` interface comme présenté dans le fichier d’en-tête **Msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Fichier source : PXOEmbeddedData.idl  
   
@@ -88,7 +87,7 @@ HRESULT GetStreamIdentifier (
  *out_pbstrStreamId*  
  Spécifie l'emplacement de l'identificateur de flux de données.  
   
-#### <a name="return-value"></a>Valeur de retour  
+#### <a name="return-value"></a>Valeur renvoyée  
  `S_OK`  
  L'identificateur de flux de données a été retourné avec succès.  
   
@@ -98,7 +97,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  Une erreur s'est produite lors de l'accès à l'identificateur de flux de données.  
   
-#### <a name="remarks"></a>Notes  
+#### <a name="remarks"></a>Remarques  
  Pour vérifier si la connexion actuelle contient une base de données incorporée, l'utilisateur doit vérifier la valeur de la propriété DBPROP_MSMD_EMBEDDED_DATA depuis les propriétés de connexion OLE DB.  
   
  Les valeurs possibles pour DBPROP_MSMD_EMBEDDED_DATA sont :  
@@ -132,7 +131,7 @@ HRESULT SetContainerURL (
  *in_bstrURL*  
  Spécifie l'URL pour le document contenant.  
   
-#### <a name="return-value"></a>Valeur de retour  
+#### <a name="return-value"></a>Valeur renvoyée  
  `S_OK`  
  L'URL du conteneur a été définie avec succès.  
   
@@ -162,7 +161,7 @@ HRESULT SetHosted (
  *in_ftHosted*  
  TRUE si l'appelant est hébergé dans une application de service (comme IIS).  
   
-#### <a name="return-value"></a>Valeur de retour  
+#### <a name="return-value"></a>Valeur renvoyée  
  `S_OK`  
  L'indicateur a été défini avec succès.  
   
@@ -192,7 +191,7 @@ HRESULT SetTempDirPath (
  *in_bstrPath*  
  Chemin d'accès utilisé par l'application hôte pour les fichiers temporaires.  
   
-#### <a name="return-value"></a>Valeur de retour  
+#### <a name="return-value"></a>Valeur renvoyée  
  `S_OK`  
  Le répertoire de fichier temporaire a été défini avec succès.  
   
@@ -217,9 +216,9 @@ HRESULT Cancel ( void )
  Annule l'opération de base de données incorporée actuelle  
   
 #### <a name="parameters"></a>Paramètres  
- Aucune.  
+ Aucun.  
   
-#### <a name="return-value"></a>Valeur de retour  
+#### <a name="return-value"></a>Valeur renvoyée  
  `S_OK`  
  L'opération a été annulée avec succès.  
   
@@ -251,7 +250,7 @@ HRESULT GetSizeMax (
  *in_bstrPath*  
  Taille estimée (en octets) de l'image de la base de données incorporée.  
   
-#### <a name="return-value"></a>Valeur de retour  
+#### <a name="return-value"></a>Valeur renvoyée  
  `S_OK`  
  La taille a été obtenue avec succès.  
   
@@ -268,7 +267,7 @@ HRESULT IsDirty ( void )
  Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
- Aucun  
+ aucun  
   
 #### <a name="return-values"></a>Valeur(s) de retour  
  `S_OK`  

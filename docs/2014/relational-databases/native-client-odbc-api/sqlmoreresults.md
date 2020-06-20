@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50679a4d9654307140ef798c0ab612349d1ed175
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 69ddc312b2d4bf5d6e2845c7f159318d831b4163
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022015"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** permet à l'application de récupérer plusieurs jeux de lignes de résultat. Une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenant une clause COMPUTE, ou un lot soumis d'instructions ODBC ou [!INCLUDE[tsql](../../includes/tsql-md.md)] , entraîne la génération de plusieurs jeux de résultats par le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas la création d'un curseur côté serveur pour traiter les résultats. Par conséquent, le développeur doit s'assurer que l'instruction ODBC bloque. Il doit consommer les données retournées ou annuler l'instruction ODBC avant de traiter les données des autres instructions actives sur la connexion.  

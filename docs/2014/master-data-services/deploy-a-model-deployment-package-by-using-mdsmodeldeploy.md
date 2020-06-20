@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e6229b3edebb8800de642272c9aa2adc0ea907f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971594"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilisez l'outil MDSModelDeploy pour déployer un package qui contient soit :  
@@ -50,13 +49,13 @@ ms.locfileid: "65483072"
   
     -   Si MDS n'est pas installé dans l'emplacement par défaut, recherchez MDSModelDeploy.exe sur l'ordinateur local.  
   
-3.  Facultatif. Consultez les options et l'aide.  
+3.  facultatif. Consultez les options et l'aide.  
   
     -   Pour afficher toutes les options disponibles, tapez `MDSModelDeploy` et appuyez sur Entrée.  
   
     -   Pour afficher l’aide pour une option, tapez la commande suivante, où *OptionName* est le nom de l’option : `MDSModelDeploy help OptionName`.  
   
-4.  Facultatif. Si vous possédez plusieurs applications Web, déterminez le nom du service que vous allez déployer en entrant cette commande et en appuyant sur ENTRÉE :  
+4.  facultatif. Si vous possédez plusieurs applications Web, déterminez le nom du service que vous allez déployer en entrant cette commande et en appuyant sur ENTRÉE :  
   
     ```  
     MDSModelDeploy listservices  
@@ -110,7 +109,7 @@ ms.locfileid: "65483072"
      Lorsque vous mettez à jour un modèle, si le processus échoue au cours des trois premières étapes, il s'arrête ; toutefois, les modifications qui sont déjà effectuées ne sont pas annulées. Si le processus échoue à l'étape 4, les membres qui peuvent être mis à jour sont mis à jour.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Les métadonnées définies par l'utilisateur, les attributs de fichier et les autorisations d'accès ne sont pas inclus dans les packages de déploiement de modèle. Après avoir déployé un modèle, vous devez les mettre à jour manuellement. Pour plus d’informations, voir :  
+ Les métadonnées définies par l'utilisateur, les attributs de fichier et les autorisations d'accès ne sont pas inclus dans les packages de déploiement de modèle. Après avoir déployé un modèle, vous devez les mettre à jour manuellement. Pour plus d'informations, consultez les pages suivantes :  
   
 -   [Ajouter des métadonnées &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

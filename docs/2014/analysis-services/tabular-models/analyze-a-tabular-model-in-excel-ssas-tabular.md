@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36b28a97b920e5c43644451ebee1e0c50df019c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939933"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Analyser un modèle tabulaire dans Excel (SSAS Tabulaire)
   La fonctionnalité Analyser dans Excel de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ouvre l’application Microsoft Excel, crée une connexion de source de données à la base de données model de l’espace de travail, puis ajoute un tableau croisé dynamique à la feuille de calcul. Les objets de modèle (tables, colonnes, mesures, hiérarchies et KPI) sont inclus en tant que champs dans la liste de champs du tableau croisé dynamique.  

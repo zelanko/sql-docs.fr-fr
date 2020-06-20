@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 957ef8b180646427d60a42339434139857bdd3fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 425325d619a6bd15a3617f8ce412af186df8041e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043612"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Métadonnées de paramètre et d'ensemble de lignes
   Cette rubrique fournit des informations sur le type et les membres de type suivants en rapport avec les améliorations de date et d'heure OLE DB.  
@@ -37,7 +36,7 @@ ms.locfileid: "82705026"
   
 |Type de paramètre|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Désactiver|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
@@ -54,7 +53,7 @@ ms.locfileid: "82705026"
 |*pwszDataSourceType*<br /><br /> (spécifique au fournisseur)|*pwszDataSourceType*<br /><br /> (OLE DB générique)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignoré|  
-|date|DBTYPE_DBDATE|6|Ignoré|  
+|Date|DBTYPE_DBDATE|6|Ignoré|  
 ||DBTYPE_DBTIME|10|Ignoré|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignoré|  
@@ -71,7 +70,7 @@ ms.locfileid: "82705026"
 |Type de liaison|*pwszDataSourceType*<br /><br /> (spécifique au fournisseur)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|date|  
+|DBTYPE_DBDATE|Date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -82,7 +81,7 @@ ms.locfileid: "82705026"
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Désactiver|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
@@ -116,7 +115,7 @@ ms.locfileid: "82705026"
   
 |Type de paramètre|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Désactiver|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  

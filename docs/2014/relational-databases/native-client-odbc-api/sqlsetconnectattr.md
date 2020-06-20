@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d70b89f20beed9c4bd13aa30ab0bdddda2b97a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 716f9d2d27c7e13d754d1cd31f7c7294af3f3f90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021741"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ignore le paramètre de SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -97,7 +96,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- La valeur par défaut est `ReadWrite`. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la prise en charge de groupes par native client [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , consultez [SQL Server Native Client la prise en charge de la haute disponibilité et](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)de la récupération d’urgence.  
+ Par défaut, il s’agit de `ReadWrite`. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la prise en charge de groupes par native client [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , consultez [SQL Server Native Client la prise en charge de la haute disponibilité et](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)de la récupération d’urgence.  
   
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME spécifie le nom du fichier primaire d'une base de données pouvant être attachée. Cette base de données est attachée et devient la base de données par défaut de la connexion. Pour utiliser SQL_COPT_SS_ATTACHDBFILENAME vous devez spécifier le nom de la base de données comme valeur de l’attribut de connexion SQL_ATTR_CURRENT_CATALOG ou dans le paramètre DATABASE = d’un [SQLDriverConnect](sqldriverconnect.md). Si la base de données a été attachée précédemment, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne l'attachera pas de nouveau.  

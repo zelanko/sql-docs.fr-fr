@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9892a6fb3033be549d95b708a012e55d40bcb80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930504"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Nouvelle inscription de serveur ou Modifier l'enregistrement du serveur (onglet Général) (Reporting Services)
   Cet onglet vous permet de spécifier des options lors de l'inscription d'une instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "62844265"
  **Mot de passe**  
  Entrez le mot de passe correspondant au nom d'utilisateur indiqué. Cette option n'est modifiable que si vous avez choisi **Authentification de base** ou **Authentification par formulaire**.  
   
- **Se souvenir du mot de passe**  
+ **Mémoriser le mot de passe**  
  Permet d'enregistrer le mot de passe que vous avez entré. Cette option n'est disponible que si vous avez cliqué sur **Authentification de base** ou **Authentification par formulaire**.  
   
 > [!NOTE]  

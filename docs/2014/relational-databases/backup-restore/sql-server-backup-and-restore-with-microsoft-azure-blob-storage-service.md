@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ba066136493c2a429b1193d9846f4183f781846
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232429"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956479"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
-  Cette rubrique présente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les sauvegardes et les restaurations à partir du [service de stockage d’objets BLOB Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Il fournit également un résumé des avantages de l’utilisation du service BLOB Azure pour stocker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les sauvegardes.  
+  Cette rubrique présente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les sauvegardes et les restaurations à partir du [service de stockage d’objets BLOB Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Il fournit également un résumé des avantages de l’utilisation du service BLOB Azure pour stocker les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauvegardes.  
   
  SQL Server prend en charge le stockage des sauvegardes dans le service de stockage d’objets BLOB Azure des manières suivantes :  
   
@@ -27,9 +26,9 @@ ms.locfileid: "75232429"
     > [!NOTE]  
     >  Pour les versions SQL Server antérieures à SQL Server 2014, vous pouvez utiliser le complément SQL Server la sauvegarde dans Azure pour créer rapidement et facilement des sauvegardes dans le stockage Azure. Pour plus d'informations, consultez le [centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Laissez SQL Server gérer les sauvegardes dans Azure :** Configurez SQL Server pour gérer la stratégie de sauvegarde et planifier des sauvegardes pour une ou plusieurs bases de données, ou définissez les valeurs par défaut au niveau de l’instance. Cette fonctionnalité est appelée **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Pour plus d’informations, consultez [SQL Server Managed Backup to Azure](sql-server-managed-backup-to-microsoft-azure.md). Cette fonctionnalité est disponible dans SQL Server 2014 ou version ultérieure.  
+-   **Laissez SQL Server gérer les sauvegardes dans Azure :** Configurez SQL Server pour gérer la stratégie de sauvegarde et planifier des sauvegardes pour une ou plusieurs bases de données, ou définissez les valeurs par défaut au niveau de l’instance. Cette fonctionnalité est appelée **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Pour plus d’informations, consultez [SQL Server Managed Backup to Azure](sql-server-managed-backup-to-microsoft-azure.md). Cette fonctionnalité est disponible dans SQL Server 2014 ou version ultérieure.  
   
-## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>Avantages de l’utilisation du service d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BLOB Azure pour les sauvegardes  
+## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>Avantages de l’utilisation du service d’objets BLOB Azure pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauvegardes  
   
 -   Stockage hors site flexible, fiable et illimité : le stockage de vos sauvegardes sur le service BLOB Azure peut être une option hors site pratique, flexible et facile d’accès. La création d'un stockage hors site pour vos sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être aussi simple que la modification de vos scripts/tâches existants. En principe, le stockage hors site doit être suffisamment éloigné de l'emplacement de la base de données de production pour empêcher qu'un éventuel sinistre n'affecte tous les emplacements (bases de données hors site et de production). En choisissant de géorépliquer le stockage d'objets blob, vous disposez d'un niveau de protection supplémentaire au cas où un sinistre affecterait l'ensemble de la région. En outre, les sauvegardes restent accessibles à partir de n'importe quel endroit et à tout moment, et vous pouvez y accéder facilement pour les restaurations.  
   
@@ -37,9 +36,9 @@ ms.locfileid: "75232429"
   
 -   Aucune surcharge de gestion du matériel : il n’y a aucune surcharge de gestion du matériel avec les services Azure. Ces derniers gèrent le matériel et fournissent une géo-réplication à des fins de redondance et de protection contre les défaillances matérielles.  
   
--   Actuellement, pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances de s’exécutant sur une machine virtuelle Azure, la sauvegarde dans les services de stockage BLOB Azure peut être réalisée en créant des disques attachés. Toutefois, le nombre de disques que vous pouvez attacher à une machine virtuelle Azure est limité. Cette limite est de 16 disques pour une instance extra-large et inférieure pour les instances plus petites. En activant une sauvegarde directe dans le stockage d’objets BLOB Azure, vous pouvez contourner la limite de 16 disques.  
+-   Actuellement, pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutant sur une machine virtuelle Azure, la sauvegarde dans les services de stockage BLOB Azure peut être réalisée en créant des disques attachés. Toutefois, le nombre de disques que vous pouvez attacher à une machine virtuelle Azure est limité. Cette limite est de 16 disques pour une instance extra-large et inférieure pour les instances plus petites. En activant une sauvegarde directe dans le stockage d’objets BLOB Azure, vous pouvez contourner la limite de 16 disques.  
   
-     En outre, le fichier de sauvegarde qui est maintenant stocké dans le service de stockage d’objets BLOB Azure est directement disponible pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local ou un autre s’exécutant sur une machine virtuelle Azure, sans qu’il soit nécessaire d’attacher/détacher la base de données ou de télécharger et d’attacher le disque dur virtuel.  
+     En outre, le fichier de sauvegarde qui est maintenant stocké dans le service de stockage d’objets BLOB Azure est directement disponible pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordinateur local ou un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutant sur une machine virtuelle Azure, sans qu’il soit nécessaire d’attacher/détacher la base de données ou de télécharger et d’attacher le disque dur virtuel.  
   
 -   Avantages en termes de coûts : payez uniquement pour le service utilisé. Peut être économique comme option de sauvegarde et d'archivage hors site. Pour plus d’informations et de liens, consultez la section [Considérations sur la facturation Azure](#Billing) .  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b01dc6a07989176d4d5111e477240e1bc5135868
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899836"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939180"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>Assistant Dimension à variation lente
   Utilisez l' **Assistant Dimension à variation lente** pour configurer le chargement des données dans divers types de dimensions à variation lente.  

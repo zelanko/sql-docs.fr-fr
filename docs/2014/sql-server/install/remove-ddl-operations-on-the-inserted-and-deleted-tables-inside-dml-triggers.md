@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e49ba7d5-787f-4052-b985-b699195d982b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f0990fbe65adc97b9e654f6393e25582363596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61f7ab78b5ab6251b7f27401d36423ec27141c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041843"
 ---
 # <a name="remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers"></a>Supprimer les opérations DDL sur les tables insérées et supprimées à l'intérieur des déclencheurs DML
   Les instructions DDL (Data Definition Language), telles que CREATe INDEX, ne peuvent pas être exécutées sur les tables inserted et Deleted dans les déclencheurs DML. Certaines instructions DDL sur les tables insérées et supprimées sont autorisées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez « Utilisation des tables insérées et supprimées » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

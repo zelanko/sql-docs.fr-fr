@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d248abc5fbfeb22b7ef399945b0116e9be2bda51
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0eee18c654e427253fd1bc4687c89e81c290625c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043770"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversions de serveur à client
   Cette rubrique décrit les conversions date/heure effectuées entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) et une application cliente écrite avec OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -28,7 +27,7 @@ ms.locfileid: "82705091"
 |À -><br /><br /> À partir|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1,7|Ok|-|-|1|1,3|1,7|-|OK (VT_BSTR)|Ok|OK|4|4|  
-|Temps|5, 6, 7|-|9|Ok|6|3, 6|5, 6|-|OK (VT_BSTR)|Ok|OK|4|4|  
+|Heure|5, 6, 7|-|9|Ok|6|3, 6|5, 6|-|OK (VT_BSTR)|Ok|OK|4|4|  
 |Smalldatetime|7|8|9,10|10|Ok|3|7|-|7 (VT_DATE)|Ok|OK|4|4|  
 |Datetime|5, 7|8|9,10|10|Ok|3|7|-|7 (VT_DATE)|Ok|OK|4|4|  
 |Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|OK (VT_BSTR)|Ok|OK|4|4|  
