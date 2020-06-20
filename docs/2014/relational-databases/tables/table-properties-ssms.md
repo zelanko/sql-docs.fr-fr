@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196709"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055061"
 ---
 # <a name="table-properties"></a>Propriétés de la table
   Cette rubrique décrit les propriétés de table qui sont affichées dans la boîte de dialogue Propriétés d'une table dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la façon d’afficher ces propriétés, consultez [Afficher la définition de table](view-the-table-definition.md).  
@@ -128,7 +127,7 @@ ms.locfileid: "68196709"
  **Groupe de fichiers de texte**  
  Nom du groupe de fichiers qui contient les données texte de la table.  
   
- **Fichiers**  
+ **Groupe de fichiers**  
  Nom du groupe de fichiers contenant la table.  
   
  **Table partitionnée**  
@@ -141,7 +140,7 @@ ms.locfileid: "68196709"
   
 ### <a name="general"></a>Général  
  **Le format de stockage VarDecimal est activé**  
- Lorsque `True`la valeur est, cette valeur en lecture `decimal` seule `numeric` indique que les types de données et sont stockés à l’aide du format de stockage vardecimal. Pour modifier cette option, utilisez l' `vardecimal storage format` option de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
+ Lorsque `True` la valeur est, cette valeur en lecture seule indique que les `decimal` `numeric` types de données et sont stockés à l’aide du format de stockage vardecimal. Pour modifier cette option, utilisez l' `vardecimal storage format` option de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
   
  **Espace d'index**  
  Quantité d'espace occupée par les index dans la table, en mégaoctets. Cette valeur n'inclut pas l'utilisation de l'espace des index XML pour la table. Si les index XML appartiennent à la table, utilisez plutôt [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  

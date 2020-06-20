@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1db38c3381939ecb0842dd3e7c265d49ba6c46d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062258"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>Propriétés des catégories de travaux et Nouvelle catégorie de travaux
   Affiche la liste des travaux contenus dans une catégorie de travaux ou dans l'ensemble des catégories de travaux, et vous permet d'ajouter une nouvelle catégorie de travaux.  

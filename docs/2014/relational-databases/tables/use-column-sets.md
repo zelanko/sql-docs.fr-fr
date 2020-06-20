@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055019"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
   Les tables qui utilisent des colonnes éparses peuvent désigner un jeu de colonnes pour retourner toutes les colonnes éparses dans la table. Un jeu de colonnes est une représentation XML non typée qui combine toutes les colonnes éparses d'une table dans une sortie structurée. Un jeu de colonnes est semblable à une colonne calculée, dans la mesure où le jeu de colonnes n'est pas stocké physiquement dans la table. Un jeu de colonnes diffère d'une colonne calculée, dans le sens où le jeu de colonnes est peut être mis à jour directement.  

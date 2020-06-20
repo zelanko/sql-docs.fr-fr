@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1f87c3c612be25660b5949f57d3ba0745f23587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4de7d9af6a9936a85842c6de6289e958272dadc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053147"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership (classe d'événements)
   La classe d’événements **Audit Schema Object Take Ownership** se produit lorsque les autorisations de modifier le propriétaire d’un objet de schéma (tel qu’une table, une procédure ou une fonction) sont vérifiées. Cela intervient lorsque l'instruction ALTER AUTHORIZATION est utilisée pour affecter un propriétaire à un objet.  

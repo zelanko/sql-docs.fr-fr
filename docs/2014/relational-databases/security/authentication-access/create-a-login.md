@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055394"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
   Cette rubrique explique comment créer un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un compte de connexion est l'identité de la personne ou du processus qui se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "63012028"
   
 -   **Avant de commencer :**  
   
-     [Contexte](#Background)  
+     [Arrière-plan](#Background)  
   
      [Sécurité](#Security)  
   
@@ -210,7 +209,7 @@ ms.locfileid: "63012028"
  **Fournisseur**  
  Principal ayant accordé l'autorisation.  
   
- **Licence**  
+ **Accorder**  
  Sélectionnez cette option pour octroyer cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
  **Avec autorisation**  
@@ -219,7 +218,7 @@ ms.locfileid: "63012028"
  **Deny**  
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
-### <a name="status"></a>État  
+### <a name="status"></a>Statut  
  La page **État** répertorie certaines des options d'authentification et d'autorisation qui peuvent être configurées sur la connexion sélectionnée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Les options suivantes sont disponibles sur cette page :  
@@ -237,7 +236,7 @@ ms.locfileid: "63012028"
  Sélectionnez cette option pour activer ou désactiver cette connexion. Cette option utilise l'instruction ALTER LOGIN avec l'option ENABLE ou DISABLE.  
   
  **Authentification SQL Server**  
- La case à cocher la **connexion est verrouillée** est disponible uniquement si la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sélectionnée se connecte à l’aide de l’authentification et que la connexion a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
+ La case à cocher la **connexion est verrouillée** est disponible uniquement si la connexion sélectionnée se connecte à l’aide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de l’authentification et que la connexion a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
