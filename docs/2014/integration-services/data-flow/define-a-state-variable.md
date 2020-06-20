@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915989"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  
@@ -37,7 +36,7 @@ ms.locfileid: "62827563"
 |`<ir-start>`|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste avant le début de la charge initiale.|  
 |`<ir-end>`|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste après la fin de la charge initiale.|  
 |`TS`|Cela marque l'horodateur pour la dernière mise à jour de l'état de capture de données modifiées.|  
-|**\<horodateur>**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
+|**\<timestamp>**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
 |`ER`|Ce message apparaît lorsque la dernière opération a échoué et il inclut une brève description de la cause de l'erreur. Si ce composant est présent, il apparaît toujours en dernier.|  
 |`<short-error-text>`|Il s'agit de la brève description de l'erreur.|  
   

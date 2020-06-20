@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 444689420ad7f83568fc584257329f5133497f38
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964639"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Éditeur de destination de fichier brut (page Colonnes)
   Utilisez l'Éditeur de destination de fichier brut pour configurer la destination de fichier brut et écrire des données brutes dans un fichier.  

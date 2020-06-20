@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0b0340c33f5a53ba75cb42fa16e08b8b45f92da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964496"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Chargement et exécution d'un package distant par programme
   Pour exécuter des packages distants à partir d'un ordinateur local sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé, démarrez les packages afin qu'ils s'exécutent sur l'ordinateur distant sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est installé. Pour cela, vous faites utiliser par l'ordinateur local l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un service Web ou un composant distant pour démarrer les packages sur l'ordinateur distant. Si vous essayez de démarrer directement les packages distants à partir de l'ordinateur local, les packages se chargeront sur l'ordinateur local et essayeront de s'exécuter à partir de ce dernier. Si [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé sur l'ordinateur local, les packages ne s'exécuteront pas.  
@@ -36,7 +35,7 @@ ms.locfileid: "62889632"
   
 -   [Utiliser un service web ou un composant distant pour exécuter le package distant par programmation](#service)  
   
- Presque toutes les méthodes utilisées dans cette rubrique pour charger et enregistrer des packages requièrent une référence à l'assembly `Microsoft.SqlServer.ManagedDTS`. L’exception est l’approche ADO.NET illustrée dans cette rubrique pour l’exécution de la procédure stockée **sp_start_job** , qui requiert uniquement `System.Data`une référence à. Après avoir ajouté la référence à l'assembly `Microsoft.SqlServer.ManagedDTS` dans un nouveau projet, importez l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> à l'aide d'une instruction `using` ou `Imports`.  
+ Presque toutes les méthodes utilisées dans cette rubrique pour charger et enregistrer des packages requièrent une référence à l'assembly `Microsoft.SqlServer.ManagedDTS`. L’exception est l’approche ADO.NET illustrée dans cette rubrique pour l’exécution de la procédure stockée **sp_start_job** , qui requiert uniquement une référence à `System.Data` . Après avoir ajouté la référence à l'assembly `Microsoft.SqlServer.ManagedDTS` dans un nouveau projet, importez l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> à l'aide d'une instruction `using` ou `Imports`.  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Utilisation de SQL Server Agent pour exécuter par programmation un package distant sur le serveur  
  L'exemple de code suivant montre comment utiliser par programme l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter un package distant sur le serveur. L’exemple de code appelle la procédure stockée système, **sp_start_job**, qui lance un travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le travail que la procédure lance est nommé `RunSSISPackage`, et ce travail se trouve sur l'ordinateur distant. Le travail `RunSSISPackage` exécute alors le package sur l'ordinateur distant.  
@@ -164,7 +163,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Ouvrez Visual Studio et créez un projet de service Web dans votre langage de programmation préféré. L'exemple de code utilise le nom LaunchSSISPackageService pour le projet.  
   
-2.  Ajoutez une référence à `Microsoft.SqlServer.ManagedDTS` et ajoutez une `Imports` instruction `using` ou au fichier de code pour l’espace de noms **Microsoft. SqlServer. Dts. Runtime** .  
+2.  Ajoutez une référence à `Microsoft.SqlServer.ManagedDTS` et ajoutez une `Imports` `using` instruction ou au fichier de code pour l’espace de noms **Microsoft. SqlServer. Dts. Runtime** .  
   
 3.  Collez l'exemple de code pour la méthode de service Web LaunchPackage dans la classe. (L'exemple présente tout le contenu de la fenêtre de code.)  
   

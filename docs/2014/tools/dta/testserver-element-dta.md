@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe5e58be9d28cc1eae5913e3bfe40eeed6129c3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007536"
 ---
 # <a name="testserver-element-dta"></a>TestServer, élément (Assistant Paramétrage de base de données)
   Spécifie le serveur de test à utiliser lors du paramétrage d'un serveur de production.  

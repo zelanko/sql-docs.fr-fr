@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 558eb7a55f2838200e1ed13062cb1e0345de4fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929800"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Éditeur de texte - Texte brut - Page Onglets)
   Utilisez cette boîte de dialogue pour modifier le comportement de tabulation de l'Éditeur de texte, qui permet de modifier un document non associé à un langage de développement particulier. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez **Éditeur de texte**, puis **Texte brut**, et cliquez ensuite sur **Tabulations**.  

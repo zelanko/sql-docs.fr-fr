@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d19228fdf17788e9118367a6f0f0eb3be90cb72a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930130"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Options (Résultats de la requête et Page Services de dépendance)
-  Utilisez cette page pour spécifier le serveur auquel se connecter pour les services de dépendance. Les services de dépendance vous permettent d'extraire des informations à propos des dépendances entre des objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stockés sur des serveurs différents. Vous pouvez afficher les dépendances d’objets à l’aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]la boîte de dialogue **dépendances d’objets** dans.  
+  Utilisez cette page pour spécifier le serveur auquel se connecter pour les services de dépendance. Les services de dépendance vous permettent d'extraire des informations à propos des dépendances entre des objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stockés sur des serveurs différents. Vous pouvez afficher les dépendances d’objets à l’aide de la boîte de dialogue **dépendances d’objets** dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
  **Que voulez-vous faire ?**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "65481205"
   
 ##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Ouvrir la boîte de dialogue Options (résultats de la requête/page services de dépendance)  
   
-1.  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], cliquez sur **options** dans le menu **Outils** .  
+1.  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , cliquez sur **options** dans le menu **Outils** .  
   
 2.  Développez **Résultats de la requête**, puis cliquez sur **Services de dépendance**.  
   

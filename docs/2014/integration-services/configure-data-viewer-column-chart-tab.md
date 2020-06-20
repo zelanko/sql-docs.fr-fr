@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd32f9e2bfdac3655acb9d12c8fd0c070aa599fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8eb0d9c2b5f051a4ef4c420c91e565a9712af944
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921790"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configurer la Visionneuse de données (onglet Graphique en colonnes)
   Utilisez l'onglet **Histogramme** de la boîte de dialogue **Configurer la Visionneuse de données** pour afficher une colonne sous forme de barres dans un graphique. Le nombre de barres représente le nombre de valeurs de données discrètes de la colonne et leur hauteur le nombre d'instances de chaque valeur. Le graphique représente le contenu d'une seule mémoire tampon.  

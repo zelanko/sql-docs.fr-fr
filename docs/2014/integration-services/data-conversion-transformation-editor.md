@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917079"
 ---
 # <a name="data-conversion-transformation-editor"></a>Éditeur de transformation de conversion de données
   Utilisez la boîte de dialogue **Éditeur de transformation de conversion de données** pour sélectionner les colonnes à convertir, sélectionner le type de données de conversion des colonnes et définir les attributs de conversion.  
@@ -48,7 +47,7 @@ ms.locfileid: "66060051"
  **Précision**  
  Définissez la précision des données numériques.  
   
- **Mettre à l'échelle**  
+ **Mise à l’échelle**  
  Définissez l'échelle des données numériques.  
   
  **Page de codes**  

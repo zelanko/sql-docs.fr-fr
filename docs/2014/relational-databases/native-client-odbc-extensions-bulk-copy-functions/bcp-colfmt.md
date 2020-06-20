@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 96773f6ed74282cfd1610fc0b297b7e78e892c42
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9bcf209096b1929938affcec6a12ce608e54f799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019734"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
   Spécifie le format source ou cible des données d'un fichier utilisateur. En cas d'utilisation comme format source, **bcp_colfmt** spécifie le format d'un fichier de données existant utilisé comme source de données dans une copie en bloc sur une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En cas d'utilisation comme format cible, le fichier de données est créé à l'aide des formats de colonne spécifiés avec **bcp_colfmt**.  
@@ -126,7 +125,7 @@ idxServerCol
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction **bcp_colfmt** permet de spécifier le format du fichier utilisateur pour les copies en bloc. Pour la copie en bloc, un format se compose des éléments suivants :  
   
 -   Mappage des colonnes du fichier utilisateur avec les colonnes de la base de données  

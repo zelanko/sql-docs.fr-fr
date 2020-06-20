@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964709"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
@@ -52,7 +51,7 @@ ms.locfileid: "62889800"
     > [!NOTE]  
     >  Vous ne pouvez pas utiliser le module fournisseur d’informations [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dans un package exécuté en mode 64 bits.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Module fournisseur d’informations qui écrit des entrées de journal `sysssislog` dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une base de données.  
+-   Module [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur d’informations qui écrit des entrées de journal dans la `sysssislog` table d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
   
 -   Le module fournisseur d'informations pour les événements Windows, qui enregistre les entrées du journal des applications dans le journal des événements Windows sur l'ordinateur local.  
   

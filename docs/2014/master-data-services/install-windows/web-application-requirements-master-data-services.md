@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 407074c7387e30b38d435090ee11216d04acc0b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971337"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] est une application web hébergée par IIS (Internet Information Services). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] fonctionne uniquement dans Internet Explorer 7 ou version ultérieure. Internet Explorer 7 et versions antérieures, Microsoft Edge et Chrome ne sont pas pris en charge.  
@@ -25,16 +24,16 @@ ms.locfileid: "65482885"
 > [!NOTE]  
 >  Tout ordinateur sur lequel vous installez les composants de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] doit disposer d'une licence. Pour plus d'informations, reportez-vous au Contrat de Licence Utilisateur Final (CLUF).  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Configuration requise  
   
-### <a name="operating-system"></a>Système d'exploitation  
+### <a name="operating-system"></a>Système d’exploitation  
  Les systèmes d'exploitation Windows suivants incluent les fonctionnalités des services Internet (IIS) requises pour l'application Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] et le service Web.  
   
 |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer (64 bits) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Entreprise (64 bits) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64 bits) x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professionnel, Entreprise et Édition Intégrale<br /><br /> Windows 8.0 Professionnel, Entreprise et Édition Intégrale|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- Pour obtenir la liste complète des systèmes d’exploitation Windows pris en charge pour votre édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Pour obtenir la liste complète des systèmes d’exploitation Windows pris en charge pour votre édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  Pour travailler dans l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , Silverlight 5 doit être installé sur l'ordinateur client. Si vous n'avez pas la version requise de Silverlight, vous êtes invité à l'installer lorsque vous accédez à une partie de l'application Web qui l'utilise. Vous pouvez installer Silverlight 5 à partir de [cet emplacement](https://go.microsoft.com/fwlink/?LinkId=243096).  
@@ -47,7 +46,7 @@ ms.locfileid: "65482885"
   
 ||  
 |-|  
-|Serveur web<br /><br /> Fonctionnalités HTTP communes<br /><br /> Contenu statique<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Développement d'applications<br /><br /> ASP.NET<br /><br /> Extensibilité .NET<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Sécurité<br /><br /> Authentification Windows<br /><br /> Filtrage des demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Outils de gestion<br /><br /> Console de gestion d’IIS|  
+|Serveur web<br /><br /> Fonctionnalités HTTP communes<br /><br /> Contenu statique<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Développement d'applications<br /><br /> ASP.NET<br /><br /> Extensibilité .NET<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Sécurité<br /><br /> Authentification Windows<br /><br /> Filtrage des demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Outils des gestion<br /><br /> Console de gestion d’IIS|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>Rôle et services de rôle (systèmes d'exploitation Windows Server 2012 ou Windows 8)  
  Sur Windows Server 2012, vous pouvez utiliser le **Gestionnaire de serveur**, disponible dans Microsoft Management Console (MMC), pour installer le rôle **Serveur Web (IIS)** et les services de rôle requis suivants :  
@@ -57,7 +56,7 @@ ms.locfileid: "65482885"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Outils d’administration Web<br /><br /> Console de gestion d’IIS<br /><br /> Services World Wide Web<br /><br /> Développement d'applications<br /><br /> Extensibilité .NET 3.5<br /><br /> Extensibilité .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Fonctionnalités HTTP communes<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Contenu statique<br /><br /> [Remarque : n'installez pas la publication WebDAV]<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Sécurité<br /><br /> Filtrage des demandes<br /><br /> Authentification Windows|  
+|Services Internet (IIS)<br /><br /> Outils d’administration Web<br /><br /> Console de gestion d’IIS<br /><br /> Services World Wide Web<br /><br /> Développement d'applications<br /><br /> Extensibilité .NET 3.5<br /><br /> Extensibilité .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Fonctionnalités HTTP communes<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Contenu statique<br /><br /> [Remarque : n'installez pas la publication WebDAV]<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Sécurité<br /><br /> Filtrage des demandes<br /><br /> Authentification Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Fonctionnalités (systèmes d'exploitation Windows Server 2008 ou Windows Server 2008 R2, Windows 7)  
  Sur [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou Windows Server 2008 R2, vous pouvez utiliser le **Gestionnaire de serveur** pour installer les fonctionnalités requises suivantes :  

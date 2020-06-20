@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964569"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Ensembles de résultats dans la tâche d’exécution SQL
   Dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le retour d'un jeu de résultats à la tâche d'exécution SQL dépend du type de commande SQL que la tâche utilise. Par exemple, une instruction SELECT retourne généralement un ensemble de résultats, contrairement à une instruction INSERT.  
@@ -51,11 +50,11 @@ ms.locfileid: "66056428"
   
  Si le type de l'ensemble de résultats est **Ligne unique**, vous pouvez lier une colonne du résultat obtenu à une variable en utilisant le nom de colonne comme nom d'ensemble de résultats. Vous pouvez également utiliser comme nom la position ordinale de la colonne dans la liste des colonnes. Par exemple, le nom de l'ensemble de résultats de la requête `SELECT Color FROM Production.Product WHERE ProductID = ?` pourrait être **Color** ou **0**. Si la requête retourne plusieurs colonnes et que vous souhaitez accéder aux valeurs de toutes les colonnes, vous devez lier chaque colonne à une variable différente. Si vous mappez des colonnes à des variables en utilisant des numéros comme noms de jeux de résultats, ces numéros reflètent l'ordre d'apparition des colonnes dans la liste des colonnes de la requête. Par exemple, dans la requête `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, vous utilisez 0 pour la colonne **Color** et 1 pour la colonne **ListPrice** . La possibilité d'utiliser un nom de colonne comme nom d'ensemble de résultats dépend du fournisseur que la tâche a été configurée pour utiliser. Tous les fournisseurs ne rendent pas les noms de colonnes disponibles.  
   
- Certaines requêtes qui retournent une valeur unique peuvent ne pas inclure de noms de colonnes. Par exemple, l'instruction `SELECT COUNT (*) FROM Production.Product` ne retourne aucun nom de colonne. Vous pouvez accéder à l'ensemble de résultats en utilisant la position ordinale, 0, comme nom de résultat. Pour accéder au résultat de retour par nom de colonne, la requête doit inclure une clause AS \<nom alias> pour fournir un nom de colonne. L'instruction `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`, fournit la colonne **CountOfProduct** . Vous pouvez ensuite accéder à la colonne de résultat de retour en utilisant le nom de colonne **CountOfProduct** ou la position ordinale, 0.  
+ Certaines requêtes qui retournent une valeur unique peuvent ne pas inclure de noms de colonnes. Par exemple, l'instruction `SELECT COUNT (*) FROM Production.Product` ne retourne aucun nom de colonne. Vous pouvez accéder à l'ensemble de résultats en utilisant la position ordinale, 0, comme nom de résultat. Pour accéder au résultat de retour par nom de colonne, la requête doit inclure une \<alias name> clause As pour fournir un nom de colonne. L'instruction `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`, fournit la colonne **CountOfProduct** . Vous pouvez ensuite accéder à la colonne de résultat de retour en utilisant le nom de colonne **CountOfProduct** ou la position ordinale, 0.  
   
  Si le type de l'ensemble de résultats est **Ensemble de résultats complet** ou **XML**, vous devez utiliser 0 comme nom de jeu de résultats.  
   
- Lorsque vous associez une variable à un ensemble de résultats à l'aide du type **Ligne unique** , la variable doit être d'un type de données compatible avec celui de la colonne contenue dans l'ensemble de résultats. Par exemple, vous ne pouvez pas associer un ensemble de résultats contenant un type de données `String` à une variable de type de données numérique. Lorsque vous affectez **TypeConversionMode** à `Allowed`la propriété TypeConversionMode la valeur, la tâche d’exécution SQL tente de convertir le paramètre de sortie et les résultats de la requête en type de données de la variable à laquelle les résultats sont affectés.  
+ Lorsque vous associez une variable à un ensemble de résultats à l'aide du type **Ligne unique** , la variable doit être d'un type de données compatible avec celui de la colonne contenue dans l'ensemble de résultats. Par exemple, vous ne pouvez pas associer un ensemble de résultats contenant un type de données `String` à une variable de type de données numérique. Lorsque vous affectez à la propriété **TypeConversionMode** la valeur `Allowed` , la tâche d’exécution SQL tente de convertir le paramètre de sortie et les résultats de la requête en type de données de la variable à laquelle les résultats sont affectés.  
   
  Un ensemble de résultats XML ne peut être associé qu'à une variable de type de données `String` ou `Object`. Si la variable est de type de données `String`, la tâche d'exécution SQL retourne une chaîne et la source XML peut exploiter les données XML. Si la variable est de type de données `Object`, la tâche d'exécution SQL retourne un objet DOM (Document Object Model).  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66056428"
 |Ligne unique|Tout type compatible avec la colonne de type contenue dans l'ensemble de résultats.|Non applicable|  
 |Ensemble de résultats complet|`Object`|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un `Recordset` ADO.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)], l'objet retourné est un `System.Data.DataSet`.<br /><br /> Vous pouvez utiliser une tâche de script pour accéder à l'objet  `System.Data.DataSet`, comme le montre l'exemple suivant.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un `MSXML6.IXMLDOMDocument`.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel [!INCLUDE[vstecado](../includes/vstecado-md.md)] que le gestionnaire de connexions, l’objet `System.Xml.XmlDocument`retourné est un.|  
+|XML|`Object`|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un `MSXML6.IXMLDOMDocument`.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gestionnaire de connexions, l’objet retourné est un `System.Xml.XmlDocument` .|  
   
  Vous pouvez définir la variable dans l'étendue de la tâche d'exécution SQL ou dans celle du package. Si la variable a l'étendue d'un package, le jeu de résultats est disponible pour les autres tâches et conteneurs figurant dans le package, ainsi que pour les packages exécutés par les tâches d'exécution de package ou d'exécution de package DTS 2000.  
   

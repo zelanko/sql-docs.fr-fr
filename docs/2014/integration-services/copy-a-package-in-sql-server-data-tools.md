@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 673b69ea632108b889cc2f99b63c9c602ef05237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3d26ebc097267b736b78e83adc37eb484c41162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917577"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copier un package dans les outils de données SQL Server
   Cette rubrique explique comment créer un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en copiant un package existant, et comment mettre à jour les propriétés `Name` et `GUID` du nouveau package.  
@@ -33,7 +32,7 @@ ms.locfileid: "62829545"
   
 3.  Vérifiez soit que le package à copier est sélectionné dans l'Explorateur de solutions, soit que l'onglet du concepteur SSIS qui contient le package est l'onglet actif.  
   
-4.  Dans le menu **Fichier**, cliquez sur **Enregistrer \<nom_package> sous**.  
+4.  Dans le menu **Fichier** , cliquez sur **Enregistrer \<package name> sous**.  
   
     > [!NOTE]  
     >  Le package doit être ouvert dans le concepteur SSIS pour que l’option **Enregistrer sous** apparaisse dans le menu **Fichier** .  
@@ -44,11 +43,11 @@ ms.locfileid: "62829545"
   
 7.  Cliquez sur **Enregistrer**.  
   
-8.  À l'invite, déterminez si vous voulez mettre à jour le nom de l'objet de package afin qu'il corresponde au nom de fichier. Si vous cliquez sur **Oui**, `Name` la propriété du package est mise à jour. Le nouveau package est ajouté au projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ouvert dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+8.  À l'invite, déterminez si vous voulez mettre à jour le nom de l'objet de package afin qu'il corresponde au nom de fichier. Si vous cliquez sur **Oui**, la `Name` propriété du package est mise à jour. Le nouveau package est ajouté au projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ouvert dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 9. Le cas échéant, cliquez sur l’arrière-plan de l’onglet **Flux de contrôle** , puis cliquez sur **Propriétés**.  
   
-10. Dans la fenêtre Propriétés, cliquez sur la valeur de la propriété ID, puis cliquez sur **\<Générer un nouvel ID>** dans la liste déroulante.  
+10. Dans la Fenêtre Propriétés, cliquez sur la valeur de la propriété ID, puis dans la liste déroulante, cliquez sur **\<Generate New ID>** .  
   
 11. Dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés** pour enregistrer le nouveau package.  
   

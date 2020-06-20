@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964589"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Rapports du serveur Integration Services
   Dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
@@ -71,7 +70,7 @@ ms.locfileid: "66056441"
  Le rapport **Toutes les validations** affiche un résumé de toutes les validations d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] effectuées sur le serveur. Le résumé affiche les informations relatives à chaque validation telles que l'état, l'heure de début et l'heure de fin. Chaque entrée du résumé inclut un lien vers les messages générés pendant la validation. Comme avec le Tableau de bord Integration Services, vous pouvez appliquer un filtre à la table afin de réduire les informations affichées.  
   
 ## <a name="custom-reports"></a>Rapports personnalisés  
- Vous pouvez ajouter un rapport personnalisé (fichier .rdl) au nœud de catalogue **SSISDB** sous le nœud **Catalogues Integration Services** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Avant d'ajouter le rapport, vérifiez que vous utilisez une convention d'affectation des noms en trois parties pour qualifier le projet référencé comme table source. Dans le cas contraire, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche une erreur. La convention de nommage est \<base de données>.\<propriétaire>.\<objet>. Par exemple, le nom « SSISDB.interne.exécutions ».  
+ Vous pouvez ajouter un rapport personnalisé (fichier .rdl) au nœud de catalogue **SSISDB** sous le nœud **Catalogues Integration Services** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Avant d'ajouter le rapport, vérifiez que vous utilisez une convention d'affectation des noms en trois parties pour qualifier le projet référencé comme table source. Dans le cas contraire, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche une erreur. La Convention d’affectation de noms est \<database> . \<owner> . \<object> . SSISDB.internal.executions en est un exemple.  
   
 > [!NOTE]  
 >  Quand vous ajoutez des rapports personnalisés au nœud **SSISDB** sous le nœud **Bases de données** , le préfixe SSISDB n’est pas nécessaire.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88bc9c648fde5e302347b243a9ea11f049798876
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921667"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configurer la Visionneuse de données (onglet Histogramme)
   Utilisez l'onglet **Histogramme** de la boîte de dialogue **Configurer la Visionneuse de données** pour spécifier la colonne à afficher. Un histogramme affiche la répartition des valeurs des données d'une colonne numérique. Le graphique représente le contenu d'une seule mémoire tampon.  

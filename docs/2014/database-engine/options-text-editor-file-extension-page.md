@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7588f75c1b2f3f282026821d5bf9a77bd8e09886
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: d60582929f71b89f7a3de17af62419367ebc7d93
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929850"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Options (Éditeur de texte - Page Extension de fichier)
   La boîte de dialogue **Options** vous permet de spécifier la manière dont tous les fichiers présentant certaines extensions de fichier sont traités par [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour chaque extension que vous entrez, vous pouvez sélectionner un éditeur. Ainsi, vous pouvez choisir l'éditeur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans lequel doivent s'ouvrir les documents d'un certain type. Pour afficher les options d’extension de fichier, cliquez sur **Options** dans le menu **Outils**, développez **Éditeur de texte**, puis cliquez sur **Extension de fichier**.  
@@ -32,7 +31,7 @@ ms.locfileid: "83000709"
  **Ajouter**  
  Permet d’ajouter une entrée qui inclut les valeurs **Extension** et **Expérience de modification** spécifiées dans la **Liste d’extensions**.  
   
- **Remove**  
+ **Supprimer**  
  Supprime l’entrée sélectionnée de la **Liste d’extensions**.  
   
  **Extension**  

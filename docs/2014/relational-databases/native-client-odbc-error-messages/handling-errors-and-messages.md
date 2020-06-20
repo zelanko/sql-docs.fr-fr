@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 31216e5a6670ff29c0d7e7ab4f1ee31cc5af0564
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c4cc389a0c2421a996e8d9a3498552e0119e401
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020102"
 ---
 # <a name="handling-errors-and-messages"></a>Gestion des erreurs et des messages
   Lorsqu'une application appelle une fonction ODBC, le pilote exécute la fonction et retourne les informations de diagnostic de deux façons : un code de retour indique le succès ou l'échec total d'une fonction ODBC et les enregistrements de diagnostic fournissent des informations détaillées sur la fonction. Les enregistrements de diagnostic comportent un enregistrement d'en-tête et des enregistrements d'état. Au moins un enregistrement de diagnostic, l'enregistrement d'en-tête, est retourné même si la fonction réussit.  
@@ -51,7 +50,7 @@ ms.locfileid: "82705381"
   
 -   [SQLSTATE &#40;codes d’erreur ODBC&#41;](sqlstate-odbc-error-codes.md)  
   
--   [Messages d'erreur](error-messages.md)  
+-   [Messages d’erreur](error-messages.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  

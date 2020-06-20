@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040237"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface puissante qui permet de créer et gérer des traces ainsi que d'analyser et relire les résultats de trace. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème.  
@@ -95,7 +94,7 @@ ms.locfileid: "68211048"
  **EventClass**  
  Une classe d'événements est un type d'événement qui peut être tracé. La classe d'événements contient toutes les données qui peuvent être signalées par un événement. Voici quelques exemples de classes d'événements :  
   
--   **SQL : BatchCompleted**  
+-   **SQL:BatchCompleted**  
   
 -   **Audit Login**  
   

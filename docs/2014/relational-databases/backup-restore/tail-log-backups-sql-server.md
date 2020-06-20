@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956249"
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
   Cette rubrique s'applique uniquement à la sauvegarde et la restauration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -49,7 +48,7 @@ ms.locfileid: "62920671"
   
 |Option BACKUP LOG|Commentaires|  
 |-----------------------|--------------|  
-|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal.  Le journal est tronqué sauf si l'option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> ** \* Important \* \* ** Nous vous recommandons d’éviter d’utiliser NO_TRUNCATE, sauf lorsque la base de données est endommagée.|  
+|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal.  Le journal est tronqué sauf si l'option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> Important : nous vous recommandons d’éviter d’utiliser des NO_TRUNCATE, sauf lorsque la base de données est endommagée. ** \* \* \* \* **|  
 |CONTINUE_AFTER_ERROR|Utilisez CONTINUE_AFTER_ERROR uniquement si vous sauvegardez la fin d'une base de données endommagée.<br /><br /> Remarque : lorsque vous utilisez la sauvegarde de la fin du journal sur une base de données endommagée, certaines métadonnées habituellement capturées dans les sauvegardes de journaux peuvent ne pas être disponibles. Pour plus d’informations, consultez [Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes](#IncompleteMetadata), plus loin dans cette rubrique.|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes  
@@ -77,9 +76,9 @@ ms.locfileid: "62920671"
 ## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Sauvegarder et restaurer des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
- [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
- [Sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Sauvegardes de type copie seule &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
+ [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   
   

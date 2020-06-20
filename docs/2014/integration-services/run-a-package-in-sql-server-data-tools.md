@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056420"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964545"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Exécuter un package dans les outils de données SQL Server
   Les packages sont exécutés le plus souvent dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pendant le développement, le débogage et le test des packages. Quand vous exécutez un package à partir du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , il est exécuté immédiatement.  
   
- Pendant l’exécution d’un package [!INCLUDE[ssIS](../includes/ssis-md.md)] , le concepteur affiche la progression de l’exécution du package sous l’onglet **progression** . Vous pouvez afficher l’heure de début et de fin du package et de ses tâches et conteneurs, en plus des informations sur les tâches ou les conteneurs du package qui ont échoué. Une fois l’exécution du package terminée, les informations d’exécution restent disponibles sous l’onglet **résultats d’exécution** . Pour plus d’informations, consultez la section « rapport de progression » dans la rubrique [débogage du workflow de contrôle](control-flow/control-flow.md).  
+ Pendant l’exécution d’un package, [!INCLUDE[ssIS](../includes/ssis-md.md)] le concepteur affiche la progression de l’exécution du package sous l’onglet **progression** . Vous pouvez afficher l’heure de début et de fin du package et de ses tâches et conteneurs, en plus des informations sur les tâches ou les conteneurs du package qui ont échoué. Une fois l’exécution du package terminée, les informations d’exécution restent disponibles sous l’onglet **résultats d’exécution** . Pour plus d’informations, consultez la section « rapport de progression » dans la rubrique [débogage du workflow de contrôle](control-flow/control-flow.md).  
   
  **Déploiement au moment du design**. Lorsqu'un package est exécuté dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], il est créé, puis déployé dans un dossier. Avant d'exécuter le package, vous pouvez spécifier le dossier dans lequel il est déployé. Si vous ne spécifiez aucun dossier, le dossier **bin** est utilisé par défaut. Ce type de déploiement est appelé déploiement au moment de la conception.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66056420"
   
 1.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le dossier de projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package à exécuter, puis cliquez sur **Propriétés**.  
   
-2.  Dans la boîte de dialogue ** \<pages de propriétés> nom du projet** , cliquez sur **générer**.  
+2.  Dans la boîte de dialogue ** \<project name> pages de propriétés** , cliquez sur **générer**.  
   
 3.  Mettez à jour la valeur de la propriété OutputPath pour indiquer le dossier que vous souhaitez utiliser pour le déploiement au moment du design, puis cliquez sur **OK**.  
   

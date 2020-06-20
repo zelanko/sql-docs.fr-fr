@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3fe50863656db9faf60613c0ff9f4de7a9d18875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019719"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   Définit la longueur des données dans la variable de programme pour la copie en bloc actuelle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,7 +57,7 @@ idxServerCol
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction **bcp_collen** vous permet de modifier la longueur de données dans la variable de programme pour une colonne particulière lors de la copie de données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec [bcp_sendrow](bcp-sendrow.md).  
   
  Initialement, la longueur de données est déterminée quand [bcp_bind](bcp-bind.md) est appelé. Si la longueur de données change entre des appels à **bcp_sendrow** et qu'aucun préfixe de longueur ou terminateur n'est en cours d'utilisation, vous pouvez appeler **bcp_collen** pour réinitialiser la longueur. L'appel suivant à **bcp_sendrow** utilise la longueur définie par l'appel à **bcp_collen**.  

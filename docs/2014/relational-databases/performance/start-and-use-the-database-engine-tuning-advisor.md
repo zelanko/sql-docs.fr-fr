@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066797"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
   Cette rubrique décrit comment démarrer et utiliser l'Assistant Paramétrage du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur l’affichage et l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
@@ -112,7 +111,7 @@ ms.locfileid: "63150649"
   
 -   **RPC : terminé**  
   
--   **SQL : BatchCompleted**  
+-   **SQL:BatchCompleted**  
   
 -   **SP:StmtCompleted**  
   
@@ -175,7 +174,7 @@ ms.locfileid: "63150649"
   
 2.  Créez une charge de travail. Pour plus d'informations, consultez [Créer une charge de travail](#Create) plus haut dans cette rubrique.  
   
-3.  Lancez Assistant Paramétrage du moteur de base de données et connectez-vous à une instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Pour plus d'informations, consultez [Démarrer l'Assistant Paramétrage du moteur de base de données](#Start) plus haut dans cette rubrique.  
+3.  Lancez Assistant Paramétrage du moteur de base de données et connectez-vous à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Démarrer l'Assistant Paramétrage du moteur de base de données](#Start) plus haut dans cette rubrique.  
   
 4.  Sous l'onglet **Général** , tapez un nom dans la zone **Nom de session** pour créer une nouvelle session de paramétrage.  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150649"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>Créer un fichier d’entrée XML  
  Si vous êtes développeur XML expérimenté, vous pouvez créer des fichiers formatés en XML que l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut utiliser pour paramétrer les charges de travail. Pour créer ces fichiers XML, utilisez vos outils XML préférés pour modifier un exemple de fichier ou pour générer une instance à partir du schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] schéma XML de l’Assistant Paramétrage du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est disponible dans votre installation à l’emplacement suivant :  
+ Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] schéma XML de l’Assistant Paramétrage du est disponible dans votre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation à l’emplacement suivant :  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -353,7 +352,7 @@ ms.locfileid: "63150649"
  **File**  
  Spécifiez un fichier de script ou de trace .sql pour une charge de travail. Indiquez le chemin d'accès et le nom de fichier dans la zone de texte correspondante. L'Assistant Paramétrage du moteur de base de données suppose que le fichier de trace de la charge de travail est un fichier de substitution. Pour plus d'informations sur les fichiers de substitution, consultez [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Table de charge de travail**  
+ **Table**  
  Spécifiez une table de trace pour une charge de travail. Indiquez le nom complet de la table de trace dans la zone de texte correspondante sous la forme suivante :  
   
 ```  
@@ -506,7 +505,7 @@ database_name.owner_name.table_name
  Contient des informations relatives à la session de paramétrage actuelle. Pour imprimer le journal, cliquez avec le bouton droit sur celui-ci, puis cliquez sur **Imprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et utiliser la sortie de la Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md)   
- [dta (utilitaire)](../../tools/dta/dta-utility.md)  
+ [Afficher et utiliser la sortie de l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md)   
+ [Utilitaire dta](../../tools/dta/dta-utility.md)  
   
   

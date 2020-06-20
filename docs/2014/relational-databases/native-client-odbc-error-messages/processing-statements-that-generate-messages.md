@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c6b848163d01d49d4151fa628ab81e867cb69c18
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f1016a9602a664455e0904b6957b8f8e5acdf15d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019967"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Traitement des instructions qui génèrent des messages
   Les options STATISTICS TIME et STATISTICS IO de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SET sont utilisées pour obtenir des informations qui aident au diagnostic des requêtes longues. Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent aussi en charge l'option SHOWPLAN pour analyser les plans de requête. Une application ODBC peut définir ces options en exécutant les instructions suivantes :  

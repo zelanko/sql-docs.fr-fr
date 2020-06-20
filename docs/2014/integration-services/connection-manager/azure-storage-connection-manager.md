@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6b6c86aa3f76088ff3cb0e36a1a111b325944ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921090"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestionnaire de connexions Azure Storage
   Le Gestionnaire de connexions du Stockage Azure permet à un package SSIS (SQL Server Integration Services) de se connecter à un compte de Stockage Azure en utilisant les valeurs que vous spécifiez pour les propriétés Nom du compte de stockage et Clé de compte.  

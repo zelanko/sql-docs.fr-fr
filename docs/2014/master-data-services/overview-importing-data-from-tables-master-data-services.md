@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971169"
 ---
 # <a name="data-import-master-data-services"></a>Importation de données (Master Data Services)
   Une fois que vous avez créé un modèle pour vos données dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez commencer à ajouter des données et à apporter des modifications aux données de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Vous utilisez les tables de mise en lots [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , les procédures stockées et Master Data Manager.
 
- Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]pour ajouter des données au référentiel MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données). Pour plus d’informations, consultez [publication de données &#40;Complément MDS pour Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
+ Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] pour ajouter des données au référentiel MDS ( [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données). Pour plus d’informations, consultez [publication de données &#40;Complément MDS pour Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
 
  Lorsque vous ajoutez et mettez à jour des données, procédez comme suit.
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175984"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.
 
--   stg.udp_\<nom>_Leaf
+-   STG. udp_ \<name> _Leaf
 
--   stg.udp_\<nom>_Consolidated
+-   STG. udp_ \<name> _Consolidated
 
--   stg.udp_\<nom>_Relationship
+-   STG. udp_ \<name> _Relationship
 
  Pour chaque entité du modèle, il existe trois procédures stockées qui correspondent à un membre feuille, un membre consolidé et les tables de mise en lots de relations.  L'illustration suivante montre les procédures stockées de mise en lots pour les entités Devise, Client et Produit.
 
