@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20f54b913124cdaa8a7dfeebac01ba070cc37d88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196608"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002638"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Afficher les dépendances d'une table
   Vous pouvez afficher les dépendances d’une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "68196608"
   
 2.  Cliquez avec le bouton droit sur une table, puis cliquez sur **Afficher les dépendances**.  
   
-3.  Dans la boîte de dialogue **dépendances**_\<_ d’objets nom de l’objet>, sélectionnez les **objets qui dépendent du nom de** _ \<l’objet>_ ou **les**_\< _objets dont le nom d’objet>**dépend**.  
+3.  Dans la boîte de dialogue **dépendances** d’objets _\<object name>_ , sélectionnez soit **objets qui dépendent de** _\<object name>_ , soit **objets**dont _\<object name>_ **dépend**.  
   
 4.  Sélectionnez un objet dans la grille **Dépendances** . Le type de l’objet (par exemple « déclencheur » ou « procédure stockée ») apparaît dans la zone **Type** .  
   

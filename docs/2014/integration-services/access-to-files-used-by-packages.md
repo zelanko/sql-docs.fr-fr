@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f76636fa25b9a061f8e152c7df2eb583a386004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062193"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926527"
 ---
 # <a name="access-to-files-used-by-packages"></a>Accéder aux fichiers utilisés par des packages
   Le niveau de protection de package ne protège pas les fichiers stockés en dehors du package. Il s'agit des fichiers suivants :  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33e8f8b20d9eb6325ce76accc35ec1fe95261016
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934260"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
   Si vous disposez des autorisations appropriées, vous pouvez utiliser le moniteur de mise en miroir de bases de données pour surveiller un sous-ensemble quelconque des bases de données mises en miroir sur une instance de serveur. La surveillance permet de vérifier si et comment les données circulent dans la session de mise en miroir de bases de données. Le moniteur de mise en miroir de bases de données permet de déterminer la cause d'une réduction du flux de données.  
@@ -45,28 +44,28 @@ ms.locfileid: "62755032"
   
  Pour chaque base de données inscrite, les informations suivantes s'affichent :  
   
- _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
+ _<database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER_><MIRROR_SERVER>**->** _<MIRROR_SERVER>_ **)**  
   
  *<nom_base_de_données>*  
  Nom d'une base de données mise en miroir inscrite auprès du moniteur de mise en miroir de bases de données.  
   
- *\<État>*  
+ *\<Status>*  
  Les états possibles et les icônes associées sont les suivants :  
   
 |Icône|Statut|Description|  
 |----------|------------|-----------------|  
 |Icône d'avertissement|**Unknown**|Le moniteur n'est connecté à aucun partenaire. Les seules informations disponibles sont celles qui ont été mises en cache par le moniteur.|  
-|Icône d'avertissement|**Synchronisation**|Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression.<br /><br /> Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.|  
+|Icône d'avertissement|**Renvoi**|Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression.<br /><br /> Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.|  
 |Cylindre de base de données standard|**Synchronisée**|Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal continue d'envoyer des modifications au serveur miroir et que le serveur miroir continue d'appliquer les modifications à la base de données miroir.<br /><br /> En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données.<br /><br /> En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .|  
-|Icône d'avertissement|**Suspendu**|La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.|  
+|Icône d'avertissement|**Provisoire**|La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.|  
 |Icône d'erreur|**Déconnecté**|L'instance de serveur ne peut pas se connecter à son partenaire.|  
   
  *<PRINCIPAL_SERVER>*  
  Nom du partenaire qui est actuellement l'instance de serveur principal. Ce nom respecte le format suivant :  
   
- *<NOM_SYSTÈME>* [ **\\** _<nom_instance>_ ]  
+ *<SYSTEM_NAME>*[ **\\** _<instance_name>_]  
   
- où *<NOM_SYSTÈME>* est le nom du système sur lequel l’instance de serveur réside. Pour une instance de serveur autre que l’instance par défaut, le nom de l’instance s’affiche également : _<NOM_SYSTÈME>_ **\\** _<nom_instance>_ .  
+ où *<NOM_SYSTÈME>* est le nom du système sur lequel l’instance de serveur réside. Pour une instance de serveur non définie par défaut, le nom de l’instance s’affiche également : _<SYSTEM_NAME>_ **\\** _<instance_name _>.  
   
  *<MIRROR_SERVER>*  
  Nom du partenaire qui est actuellement l'instance de serveur miroir. Le format est identique à celui du serveur principal.  
@@ -81,15 +80,15 @@ ms.locfileid: "62755032"
   
  Un administrateur système peut afficher la configuration actuelle des avertissements pour la base de données en sélectionnant la page à onglets **Avertissements** . À partir de là, l’administrateur peut lancer la boîte de dialogue **Définir les seuils d’avertissement** pour activer et configurer un ou plusieurs seuils d’avertissement.  
   
- Dans la bannière située au-dessus des onglets, le volet d’informations affiche l’heure de la dernière actualisation des informations d’État par le moniteur sous la forme, **Dernière actualisation :**_\<date>_ * \<heure>*. En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
+ Dans la bannière située au-dessus des onglets, le volet d’informations affiche l’heure de la dernière actualisation des informations d’État par le moniteur en tant que, **Dernière actualisation :** _\<date>_ *\<time>* . En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
   
 ## <a name="action-menu"></a>Menu Action  
  Le menu **Action** comprend toujours les commandes suivantes :  
   
 |Commande|Description|  
 |-------------|-----------------|  
-|**Inscrire la base de données mise en miroir**|Ouvre la boîte de dialogue **Inscrire la base de données mise en miroir** . Utilisez cette boîte de dialogue pour inscrire une ou plusieurs bases de données mises en miroir sur une instance de serveur donnée en ajoutant la ou les bases de données au moniteur de mise en miroir de bases de données. Lorsqu'une base de données est ajoutée, le moniteur de mise en miroir de bases de données met en cache localement des informations sur la base de données, ses partenaires et la connexion aux partenaires.|  
-|**Gérer les connexions des instances serveur...**|Lorsque vous sélectionnez cette commande, la boîte de dialogue **Gérer les connexions serveur** s’ouvre. Vous pouvez alors choisir une instance de serveur pour laquelle vous souhaitez spécifier des informations d'identification qui seront utilisées par le moniteur lors de la connexion à un partenaire donné.<br /><br /> Pour modifier les informations d’identification pour un partenaire, recherchez l’entrée correspondante dans la grille **Instances de serveur** et cliquez sur **Modifier** dans cette ligne. La boîte de dialogue **Se connecter au serveur** s’ouvre avec le nom d’instance de serveur fixe, les contrôles d’informations d’identification étant initialisés sur la valeur actuelle mise en cache. Modifiez les informations d’authentification comme souhaité et cliquez sur **Se connecter**. Si les informations d’identification disposent des privilèges suffisants, la colonne **Se connecter avec** est mise à jour avec les nouvelles informations d’identification.|  
+|**Inscrire la base de données mise en miroir...**|Ouvre la boîte de dialogue **Inscrire la base de données mise en miroir** . Utilisez cette boîte de dialogue pour inscrire une ou plusieurs bases de données mises en miroir sur une instance de serveur donnée en ajoutant la ou les bases de données au moniteur de mise en miroir de bases de données. Lorsqu'une base de données est ajoutée, le moniteur de mise en miroir de bases de données met en cache localement des informations sur la base de données, ses partenaires et la connexion aux partenaires.|  
+|**Gérer les connexions de l’instance du serveur...**|Lorsque vous sélectionnez cette commande, la boîte de dialogue **Gérer les connexions serveur** s’ouvre. Vous pouvez alors choisir une instance de serveur pour laquelle vous souhaitez spécifier des informations d'identification qui seront utilisées par le moniteur lors de la connexion à un partenaire donné.<br /><br /> Pour modifier les informations d’identification pour un partenaire, recherchez l’entrée correspondante dans la grille **Instances de serveur** et cliquez sur **Modifier** dans cette ligne. La boîte de dialogue **Se connecter au serveur** s’ouvre avec le nom d’instance de serveur fixe, les contrôles d’informations d’identification étant initialisés sur la valeur actuelle mise en cache. Modifiez les informations d’authentification comme souhaité et cliquez sur **Se connecter**. Si les informations d’identification disposent des privilèges suffisants, la colonne **Se connecter avec** est mise à jour avec les nouvelles informations d’identification.|  
   
  Si vous sélectionnez une base de données, le menu **Action** comprend également les commandes suivantes.  
   

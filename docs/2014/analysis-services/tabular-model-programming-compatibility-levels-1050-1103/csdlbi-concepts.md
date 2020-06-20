@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16c6597171eef10da67ad497e4303b3716298e6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940120"
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
   Le langage CSDL (Conceptual Schema Definition Language) avec annotations Business Intelligence (CSDLBI) est basé sur l'infrastructure de données d'entités (Entity Data Framework), qui est une abstraction pour représenter différents types de données de façon à activer les jeux de données disparates pour qu'ils soient accessibles, interrogés ou exportés par programme. CSDLBI est utilisé pour représenter les modèles de données créés à l'aide d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], car il prend en charge les applications et la création de rapports complets pilotée par les données.  
@@ -123,7 +122,7 @@ ms.locfileid: "79525440"
 ## <a name="additions-to-support-multidimensional-models"></a>Ajouts pour prendre en charge les modèles multidimensionnels  
  La version 1.0 des annotations CSDLBI prenait uniquement en charge les modèles tabulaires. Dans la version 1.1., la prise en charge a été ajoutée pour les modèles multidimensionnels (cubes OLAP) créés à l'aide des outils de développement Business Intelligence traditionnels. Par conséquent, vous pouvez maintenant émettre une demande XML dans un modèle multidimensionnel et recevoir une définition CSDLBI du modèle, à utiliser lors de la création de rapports.  
   
- **Cubes :** Une base [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de données tabulaire SQL Server ne peut contenir qu’un seul mode. En revanche, chaque base de données multidimensionnelle peut contenir plusieurs cubes, chaque base de données étant associée à un cube par défaut. Par conséquent, lorsque vous exécutez une requête XML sur un serveur multidimensionnel, vous devez spécifier le cube ; sinon, le code XML du cube par défaut est retourné.  
+ **Cubes :** Une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données tabulaire SQL Server ne peut contenir qu’un seul mode. En revanche, chaque base de données multidimensionnelle peut contenir plusieurs cubes, chaque base de données étant associée à un cube par défaut. Par conséquent, lorsque vous exécutez une requête XML sur un serveur multidimensionnel, vous devez spécifier le cube ; sinon, le code XML du cube par défaut est retourné.  
   
  La représentation d'un cube est similaire à celle d'une base de données model tabulaire. Le nom du cube et le cube correspondent au nom de la base de données tabulaire et à l'identificateur de la base de données.  
   

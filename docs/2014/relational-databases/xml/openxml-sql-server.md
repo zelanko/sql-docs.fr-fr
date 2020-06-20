@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1849029e6654fcd629499cceeff9957e5389370f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065552"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, un mot clé [!INCLUDE[tsql](../../includes/tsql-md.md)] , fournit un ensemble de lignes sur des documents XML en mémoire qui est similaire à une table ou à une vue. OPENXML permet l'accès aux données XML comme s'il s'agissait d'un ensemble de lignes relationnelles. Pour cela, il fournit une vue sous forme d'un ensemble de lignes de la représentation interne d'un document XML. Les enregistrements de l'ensemble de lignes peuvent être stockés dans des tables de base de données.
@@ -38,7 +37,7 @@ ms.locfileid: "82702569"
  Pour écrire des requêtes sur un document XML à l’aide d’OPENXML, vous devez d’abord appeler `sp_xml_preparedocument` . Cela permet d'analyser le document XML et de retourner un descripteur au document analysé qui est prêt à être utilisé. Le document analysé est une représentation sous forme d'arborescence de modèle DOM (document model) de différents nœuds dans le document XML. Ce descripteur de document est transmis à OPENXML. OPENXML fournit alors une vue sous forme d'ensemble de lignes du document, en fonction des paramètres transmis.
 
 > [!NOTE]
->  `sp_xml_preparedocument`utilise une version SQL mise à jour de l’analyseur MSXML, fichier msxmlsql. dll. Cette version de l'analyseur MSXML a été conçue pour prendre en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et offre une compatibilité descendante avec MSXML version 2.6.
+>  `sp_xml_preparedocument`utilise une version SQL mise à jour de l’analyseur MSXML, Msxmlsql.dll. Cette version de l'analyseur MSXML a été conçue pour prendre en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et offre une compatibilité descendante avec MSXML version 2.6.
 
  Pour libérer de la mémoire, vous devez supprimer la représentation interne d’un document XML de la mémoire en appelant la procédure stockée système **sp_xml_removedocument** .
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42936d25e267bcad5ba8ae512750f9e12f041579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064717"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d’un domaine composite
   Au cours de cette tâche, vous allez créer un domaine composite, **validation d’adresse**, qui comprend les domaines **adresse**, **ville**, **État**et **Code postal** . Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Pour plus d’informations, consultez [gestion d’un domaine composite](https://msdn.microsoft.com/library/hh510399.aspx) .  

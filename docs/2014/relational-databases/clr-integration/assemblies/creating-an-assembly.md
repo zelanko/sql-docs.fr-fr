@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995c3a621e6de5d1b878f28c7c0fffaae3311bd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953860"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
   Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Les assemblys DLL managés doivent être enregistrés dans [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] . Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
@@ -39,7 +38,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'autorise pas l'inscription de différentes versions d'un assembly avec le même nom, la même culture et la même clé publique.  
   
- Il est possible de créer des assemblys qui référencent d'autres assemblys. Lorsqu’un assembly est créé [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans, crée également les assemblys référencés par l’assembly de niveau racine, si les assemblys référencés ne sont pas déjà créés dans la base de données.  
+ Il est possible de créer des assemblys qui référencent d'autres assemblys. Lorsqu’un assembly est créé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , crée également les assemblys référencés par l’assembly de niveau racine, si les assemblys référencés ne sont pas déjà créés dans la base de données.  
   
  Les utilisateurs ou les rôles d'utilisateurs de base de données se voient accorder des autorisations pour créer, et de ce fait acquérir, des assemblys dans une base de données. Pour être en mesure de créer des assemblys, l'utilisateur ou le rôle d'utilisateur de base de données doit bénéficier de l'autorisation CREATE ASSEMBLY.  
   
@@ -78,13 +77,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  L'assembly est signé avec un nom fort ou porte une signature Authenticode avec certificat. Ce nom fort (ou certificat) est créé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que clé asymétrique (ou certificat) et dispose d'une connexion correspondante avec l'autorisation `EXTERNAL ACCESS ASSEMBLY` (pour les assemblys à accès externe) ou l'autorisation `UNSAFE ASSEMBLY` (pour les assemblys non sécurisés).  
   
-2.  Le propriétaire de la base de données `EXTERNAL ACCESS ASSEMBLY` (dbo `EXTERNAL ACCESS` ) dispose de `UNSAFE ASSEMBLY` l’autorisation `UNSAFE` (pour les assemblys) ou (pour les assemblys), et la `ON` [propriété de base](../../security/trustworthy-database-property.md) de données Trustworthy de la base de données a la valeur.  
+2.  Le propriétaire de la base de données (DBO) dispose de l' `EXTERNAL ACCESS ASSEMBLY` autorisation (pour les `EXTERNAL ACCESS` assemblys) ou `UNSAFE ASSEMBLY` (pour `UNSAFE` les assemblys), et la [propriété de base](../../security/trustworthy-database-property.md) de données Trustworthy de la base de données a la valeur `ON` .  
   
  Les deux conditions mentionnées ci-dessus sont également vérifiées au moment du chargement de l'assembly (exécution incluse). Une des conditions doit au minimum être satisfaite pour le chargement de l'assembly.  
   
- Nous recommandons que la [propriété de base de données Trustworthy](../../security/trustworthy-database-property.md) sur une base de `ON` données ne soit pas définie sur uniquement pour exécuter le code Common Language Runtime (CLR) dans le processus serveur. Il est préférable, à la place, de créer une clé asymétrique à partir du fichier d'assembly dans la base de données master. Une connexion mappée à cette clé asymétrique doit ensuite être créée. Cette connexion doit disposer de l'autorisation `EXTERNAL ACCESS ASSEMBLY` ou `UNSAFE ASSEMBLY`.  
+ Nous recommandons que la [propriété de base de données Trustworthy](../../security/trustworthy-database-property.md) sur une base de données ne soit pas définie sur `ON` uniquement pour exécuter le code Common Language Runtime (CLR) dans le processus serveur. Il est préférable, à la place, de créer une clé asymétrique à partir du fichier d'assembly dans la base de données master. Une connexion mappée à cette clé asymétrique doit ensuite être créée. Cette connexion doit disposer de l'autorisation `EXTERNAL ACCESS ASSEMBLY` ou `UNSAFE ASSEMBLY`.  
   
- Les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivantes avant d’exécuter l’instruction CREATe assembly.  
+ Les [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions suivantes avant d’exécuter l’instruction CREATE assembly.  
   
 ```  
 USE master;   
@@ -107,7 +106,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- Les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivantes avant d’exécuter l’instruction CREATe assembly.  
+ Les [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions suivantes avant d’exécuter l’instruction CREATE assembly.  
   
 ```  
 USE master;   

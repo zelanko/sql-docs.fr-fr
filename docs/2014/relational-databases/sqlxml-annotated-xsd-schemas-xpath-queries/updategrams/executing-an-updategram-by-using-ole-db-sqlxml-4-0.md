@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996222"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'OLE DB (SQLXML 4.0)
   Cette rubrique fournit un exemple fonctionnel de usingOLE DB pour exécuter un mise à jour.  
@@ -58,7 +57,7 @@ ms.locfileid: "82717505"
 </Schema>  
 ```  
   
- La requête retourne tous les éléments d'employé. Avec le mappage par défaut, l’élément ** \< Person. contact>** est mappé à la table Person. contact de la base de données AdventureWorks.  
+ La requête retourne tous les éléments d'employé. Avec le mappage par défaut, l' **\<Person.Contact>** élément est mappé à la table Person. contact de la base de données AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Pour définir le code XML en tant que commande et récupérer les résultats sous forme d'un document XML  
   

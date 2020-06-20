@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002895"
 ---
 # <a name="use-sparse-columns"></a>Utiliser des colonnes éparses
   Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes éparses réduisent l'espace nécessaire pour les valeurs NULL, en échange d'une augmentation du coût d'extraction des valeurs autres que NULL. Envisagez d'utiliser des colonnes éparses lorsque l'espace économisé est d'au moins 20 à 40 pour cent. Les colonnes éparses et les jeux de colonnes sont définis à l'aide des instructions [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ou [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -92,10 +91,10 @@ ms.locfileid: "68196656"
 |`datetime2(0)`|6|10|57%|  
 |`datetime2(7)`|8|12|52 %|  
 |`time(0)`|3|7|69%|  
-|`time(7)`|5|9|60%|  
+|`time(7)`|5|9|60 %|  
 |`datetimetoffset(0)`|8|12|52 %|  
 |`datetimetoffset (7)`|10|14|49%|  
-|`decimal/numeric(1,s)`|5|9|60%|  
+|`decimal/numeric(1,s)`|5|9|60 %|  
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Utilisez le type `decimal` comme évaluation pessimiste.|||  
   
@@ -104,11 +103,11 @@ ms.locfileid: "68196656"
 |Type de données|Octets non alloués|Octets alloués|Pourcentage NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Varie selon le type de données sous-jacent|||  
-|`varchar` ou `char`|2*|4*|60%|  
-|`nvarchar` ou `nchar`|2*|4*+|60%|  
-|`varbinary` ou `binary`|2*|4*|60%|  
-|`xml`|2*|4*|60%|  
-|`hierarchyid`|2*|4*|60%|  
+|`varchar` ou `char`|2*|4*|60 %|  
+|`nvarchar` ou `nchar`|2*|4*+|60 %|  
+|`varbinary` ou `binary`|2*|4*|60 %|  
+|`xml`|2*|4*|60 %|  
+|`hierarchyid`|2*|4*|60 %|  
   
  *La longueur est égale à la moyenne des données contenues dans le type, plus 2 ou 4 octets.  
   
@@ -166,7 +165,7 @@ ms.locfileid: "68196656"
   
      La réplication de fusion ne prend pas en charge les colonnes éparses ni les jeux de colonnes.  
   
--   Suivi des modifications  
+-   Change tracking  
   
      Le suivi des modifications prend en charge les colonnes éparses et les jeux de colonnes. Lorsqu'un jeu de colonnes est mis à jour dans une table, le suivi des modifications traite cela comme une mise à jour de la ligne entière. Aucun suivi des modifications détaillé n'est fourni pour obtenir le jeu exact des colonnes éparses mises à jour par le biais de l'opération de mise à jour de jeu de colonnes. Si les colonnes éparses sont mises à jour de manière explicite par le biais d'une instruction DML, le suivi des modifications sur ces colonnes fonctionne de façon ordinaire et peut identifier le jeu exact de colonnes modifiées.  
   

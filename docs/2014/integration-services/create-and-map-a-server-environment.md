@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4043075208fb4435fb777214733dad1d93113452
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917280"
 ---
 # <a name="create-and-map-a-server-environment"></a>Créer et mapper un environnement serveur
   Vous créez un environnement serveur pour spécifier les valeurs d’exécution des packages contenus dans un projet que vous avez déployé sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vous pouvez ensuite mapper les variables d'environnement aux paramètres, pour un package spécifique, pour les packages de point d'entrée, ou pour tous les packages dans un projet donné. Un package de point d'entrée est généralement un package parent qui exécute un package enfant.  
@@ -32,7 +31,7 @@ ms.locfileid: "66060150"
   
 ### <a name="to-create-and-use-a-server-environment"></a>Pour créer et utiliser un environnement serveur  
   
-1.  Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], développez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le nœud catalogues> **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier **environnements** du projet pour lequel vous souhaitez créer un environnement.  
+1.  Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , développez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nœud catalogues> **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier **environnements** du projet pour lequel vous souhaitez créer un environnement.  
   
 2.  Cliquez avec le bouton droit sur le dossier **Environnements** , puis cliquez sur **Créer l’environnement**.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891401"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968249"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Étape 3 : Ajout de redirection de flux d’erreurs
   Comme nous l'avons démontré au cours de la tâche précédente, la transformation Lookup Currency Key ne peut pas générer de correspondance lorsqu'elle tente de traiter le fichier plat exemple endommagé qui a généré une erreur. Du fait que la transformation utilise les paramètres par défaut pour l'affichage en sortie des erreurs, toute erreur qui survient entraîne un échec de la transformation. Si la transformation échoue, le reste du package échoue également.  
@@ -24,7 +23,7 @@ ms.locfileid: "62891401"
   
  Au cours de cette tâche, vous allez configurer la transformation Lookup Currency Key afin qu'elle réachemine toutes les lignes échouant lors de la sortie d'erreur. Dans la branche d'erreur du flux de données, ces lignes sont enregistrées dans un fichier.  
   
- Par défaut, les deux colonnes supplémentaires d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] une sortie d’erreur, **ErrorCode** et **ErrorColumn**, contiennent uniquement des codes numériques qui représentent un numéro d’erreur et l’ID de la colonne dans laquelle l’erreur s’est produite. L'usage de ces valeurs numériques peut être limité sans la description d'erreur correspondante.  
+ Par défaut, les deux colonnes supplémentaires d’une [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sortie d’erreur, **ErrorCode** et **ErrorColumn**, contiennent uniquement des codes numériques qui représentent un numéro d’erreur et l’ID de la colonne dans laquelle l’erreur s’est produite. L'usage de ces valeurs numériques peut être limité sans la description d'erreur correspondante.  
   
  Pour améliorer l'utilité de la sortie d'erreur, vous allez utiliser un composant Script pour accéder à l'API [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et obtenir une description de l'erreur avant que le package n'enregistre les lignes ayant échoué dans le fichier.  
   

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea87e2de984107c5a0fda6eb2629ee5cfd197841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934183"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : configuration de la mise en miroir de bases de données à l'aide de certificats (Transact-SQL)
   Cet exemple décrit toutes les étapes de création d'une session de mise en miroir de bases de données à l'aide de l'authentification basée sur les certificats. Les exemples de cette rubrique utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)]. À moins que vous ne puissiez garantir la sécurité de votre réseau, il est recommandé d'utiliser le chiffrement pour les connexions de mise en miroir de bases de données.  
   
  Lors de la copie d'un certificat sur un autre système, utilisez une méthode de copie sécurisée. Veillez particulièrement à sécuriser tous vos certificats.  
   
-##  <a name="example"></a><a name="ExampleH2"></a>Tels  
+##  <a name="example"></a><a name="ExampleH2"></a> Exemple  
  L'exemple suivant illustre ce qui doit être fait sur un serveur partenaire qui réside sur HOST_A. Dans cet exemple, les deux serveurs partenaires sont les instances de serveur par défaut réparties sur trois systèmes informatiques. Les deux instances de serveur sont exécutées dans des domaines Windows non approuvés, par conséquent l'authentification basée sur les certificats est nécessaire.  
   
  Le rôle principal initial est occupé par HOST_A, et le rôle miroir par HOST_B.  
@@ -257,7 +256,7 @@ ms.locfileid: "62806750"
     ```  
   
     > [!NOTE]  
-    >  Si vous envisagez de l’exécuter en mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie sur Full (paramètre par défaut) et ajoutez le témoin dès que possible après l’exécution de la deuxième instruction SET PARTNER **'*`partner_server`*'** . Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
+    >  Si vous envisagez de l’exécuter en mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie sur Full (paramètre par défaut) et ajoutez le témoin dès que possible après l’exécution de la deuxième instruction SET PARTNER **' *`partner_server`* '** . Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
