@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934605"
 ---
 # <a name="connection-properties-dialog-box"></a>Propriétés de connexion (boîte de dialogue)
   Cette boîte de dialogue vous permet d'afficher les propriétés de la connexion en cours. Cette boîte de dialogue est disponible lorsque vous cliquez sur **Afficher les propriétés de connexion** dans les différentes boîtes de dialogue de l'Explorateur d'objets. Les propriétés affichées dans cette page sont en lecture seule.  
@@ -29,9 +28,9 @@ ms.locfileid: "62808397"
  Notez que le délai d'attente de requête pour SQL Azure est de 30 minutes.  
   
 ## <a name="authentication"></a>Authentification  
- Permet d'afficher les propriétés d'authentification pour la connexion en cours. Les propriétés d'authentification correspondent au nom d'accès et à la méthode d'authentification utilisés une fois la connexion établie. Pour modifier les propriétés d’authentification, déconnectez [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-vous, puis reconnectez l’Explorateur d’objets au serveur, à l’aide des options de connexion souhaitées.  
+ Permet d'afficher les propriétés d'authentification pour la connexion en cours. Les propriétés d'authentification correspondent au nom d'accès et à la méthode d'authentification utilisés une fois la connexion établie. Pour modifier les propriétés d’authentification, déconnectez [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -vous, puis reconnectez l’Explorateur d’objets au serveur, à l’aide des options de connexion souhaitées.  
   
- **Méthode d'authentification**  
+ **Méthode d’authentification**  
  Méthode d'authentification utilisée pour la connexion en cours.  
   
  **Nom d’utilisateur**  
@@ -91,7 +90,7 @@ ms.locfileid: "62808397"
  **Plateforme**  
  Nom du système d'exploitation, nom du fabricant et famille d'UC du serveur.  
   
- **Système d'exploitation**  
+ **Système d’exploitation**  
  Version de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows installée sur le serveur.  
   
  **Processeurs**  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966179"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent les valeurs qu’un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -86,7 +85,7 @@ ms.locfileid: "62892269"
  Spécifie la description de la variable.  
   
  EvaluateAsExpression  
- Quand la propriété a la valeur `True`, l’expression fournie est utilisée pour définir la valeur de la variable.  
+ Quand la propriété a la valeur `True` , l’expression fournie est utilisée pour définir la valeur de la variable.  
   
  Expression  
  Spécifie l'expression affectée à la variable.  
@@ -100,7 +99,7 @@ ms.locfileid: "62892269"
  RaiseChangedEvent  
  Lorsque la propriété est définie sur `True`, l'événement `OnVariableValueChanged` est déclenché lorsque la valeur de la variable change.  
   
- ReadOnly  
+ Lecture seule  
  Lorsque la propriété est définie sur `False`, la variable est en lecture-écriture.  
   
  Étendue  
@@ -114,17 +113,17 @@ ms.locfileid: "62892269"
  IncludeInDebugDump  
  Indiquez si la valeur variable est incluse dans les fichiers de vidage de débogage.  
   
- Pour les variables définies par l’utilisateur et les variables système, la valeur **InclueInDebugDump** par défaut de `true`l’option InclueInDebugDump est.  
+ Pour les variables définies par l’utilisateur et les variables système, la valeur par défaut de l’option **InclueInDebugDump** est `true` .  
   
- Toutefois, pour les variables définies par l’utilisateur, le système réinitialise **IncludeInDebugDump** l’option IncludeInDebugDump `false` à quand les conditions suivantes sont remplies :  
+ Toutefois, pour les variables définies par l’utilisateur, le système réinitialise l’option **IncludeInDebugDump** à `false` quand les conditions suivantes sont remplies :  
   
--   Si la propriété de la variable **EvaluateAsExpression** est `true`définie sur, le système réinitialise **IncludeInDebugDump** l’option IncludeInDebugDump `false`sur.  
+-   Si la propriété de la variable **EvaluateAsExpression** est définie sur `true` , le système réinitialise l’option **IncludeInDebugDump** sur `false` .  
   
-     Pour inclure le texte de l’expression comme valeur de variable dans les fichiers de vidage du débogage **IncludeInDebugDump** , définissez l' `true`option IncludeInDebugDump sur.  
+     Pour inclure le texte de l’expression comme valeur de variable dans les fichiers de vidage du débogage, définissez l’option **IncludeInDebugDump** sur `true` .  
   
--   Si le type de données variable est remplacé par une chaîne, le système réinitialise l’option **IncludeInDebugDump** sur `false`.  
+-   Si le type de données variable est remplacé par une chaîne, le système réinitialise l’option **IncludeInDebugDump** sur `false` .  
   
- Lorsque le système réinitialise l’option **IncludeInDebugDump** sur `false`, cela peut remplacer la valeur sélectionnée par l’utilisateur.  
+ Lorsque le système réinitialise l’option **IncludeInDebugDump** sur `false` , cela peut remplacer la valeur sélectionnée par l’utilisateur.  
   
  Value  
  La valeur d'une variable définie par l'utilisateur peut être un littéral ou une expression. Une variable inclut des options permettant de définir la valeur de la variable et le type de données de la valeur. Les deux propriétés doivent être compatibles : par exemple, l'utilisation d'une valeur de chaîne avec un type de données Integer n'est pas valide.  

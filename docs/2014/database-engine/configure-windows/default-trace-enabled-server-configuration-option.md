@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d40305de7375f2ae10d563871fd40b7acfa463f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935381"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled (option de configuration de serveur)
   Utilisez l’option **default trace enabled** pour activer ou désactiver les fichiers journaux de trace par défaut. La fonctionnalité de trace par défaut comprend un journal enrichi et cohérent sur l'activité et les modifications principalement liées aux options de configuration.  

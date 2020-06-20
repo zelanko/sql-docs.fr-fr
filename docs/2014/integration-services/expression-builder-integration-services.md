@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cea6e1b6aa5f9748be3f9117fe59b3cbec8b180
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966739"
 ---
 # <a name="expression-builder-integration-services"></a>Générateur d'expressions (Integration Services)
   La boîte de dialogue **Générateur d'expression** offre une interface graphique utilisateur qui permet de générer les expressions utilisées par les expressions de propriété. Vous pouvez accéder à la boîte de dialogue **Générateur d'expression** à partir des boîtes de dialogue des tâches personnalisées du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et de la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

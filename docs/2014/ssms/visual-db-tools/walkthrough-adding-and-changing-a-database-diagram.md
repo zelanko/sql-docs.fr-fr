@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7314598bffe53b6db1c24ecaaec2cf32ee06cb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008601"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajout et modification d’un diagramme de base de données
   Cette procédure pas à pas montre comment créer et modifier un diagramme de base de données et apporter des modifications à la base de données par l’intermédiaire du composant des diagrammes de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
@@ -70,11 +69,11 @@ ms.locfileid: "63273734"
   
 1.  Cliquez avec le bouton droit sur le Concepteur de schémas en dehors des tables existantes et choisissez **Nouvelle table**.  
   
-2.  Dans la boîte de dialogue **choisir un nom** , cliquez sur **OK** pour accepter `Table1`le nom par défaut.  
+2.  Dans la boîte de dialogue **choisir un nom** , cliquez sur **OK** pour accepter le nom par défaut `Table1` .  
   
      Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
   
-3.  Ajoutez les informations suivantes à `Table1`:  
+3.  Ajoutez les informations suivantes à `Table1` :  
   
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |---------------------|-------------------|---------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "63273734"
   
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer Diagram1**.  
   
-6.  Dans la boîte de dialogue **choisir un nom** , cliquez sur **OK** pour accepter `Diagram1`le nom par défaut.  
+6.  Dans la boîte de dialogue **choisir un nom** , cliquez sur **OK** pour accepter le nom par défaut `Diagram1` .  
   
 7.  La boîte de dialogue **Enregistrer** s’affiche avec un message indiquant que `Table1` sera enregistré dans la base de données. Cliquez sur **Oui**.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "63273734"
   
      La boîte de dialogue **Contraintes de validation** apparaît.  
   
-2.  Cliquez sur **Ajouter**.  
+2.  Cliquez sur **Add**.  
   
      Une nouvelle contrainte s’affiche dans la liste **Contrainte de validation sélectionnée** avec le nom par défaut `CK_Table1`.  
   
@@ -145,7 +144,7 @@ ms.locfileid: "63273734"
   
      La boîte de dialogue **Index/Clés** s’ouvre.  
   
-2.  Cliquez sur **Ajouter**.  
+2.  Cliquez sur **Add**.  
   
      Un nouvel index s’affiche dans la liste **Selected Primary/Unique Key or Index** (Clé ou index primaire/unique sélectionné) avec un nom par défaut similaire à `IX_Table1`.  
   
@@ -173,7 +172,7 @@ ms.locfileid: "63273734"
   
      La boîte de dialogue **Index XML** s’ouvre.  
   
-3.  Cliquez sur **Ajouter**.  
+3.  Cliquez sur **Add**.  
   
      Un index XML contenant des valeurs par défaut sera ajouté à la liste **Index XML sélectionné** .  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f9202483bcb2cf8e06b6e0d14834753cc666b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63185403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000393"
 ---
 # <a name="database-element-for-workload-dta"></a>Database, élément pour les charges de travail (Assistant Paramétrage de base de données)
   Spécifie la base de données où se trouve la table de trace de charge de travail.  
@@ -40,7 +39,7 @@ ms.locfileid: "63185403"
 |--------------------|-----------------|  
 |**Type de données et longueur**|Aucun.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un élément enfant `EventString`, `File` ou `Database` pour le parent `Workload`, mais un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de `Database` travail avec l’élément, vous ne pouvez pas spécifier `File` une charge de travail avec l’élément dans le même fichier d’entrée XML.|  
+|**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un élément enfant `EventString`, `File` ou `Database` pour le parent `Workload`, mais un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de travail avec l' `Database` élément, vous ne pouvez pas spécifier une charge de travail avec l' `File` élément dans le même fichier d’entrée XML.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63185403"
  Cet élément porte le nom **DatabaseDetailsTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Ne confondez pas cet élément `Database` avec celui dont le parent racine est l'élément `Configuration`. (Consultez [Database, élément pour les configurations &#40;Assistant Paramétrage de base de données&#41;](database-element-for-configuration-dta.md).)  
   
 ## <a name="example"></a>Exemple  
- Pour obtenir un exemple d’utilisation `Database` de cet élément, consultez l’exemple de code dans [élément de charge de travail &#40;DTA&#41;](workload-element-dta.md).  
+ Pour obtenir un exemple d’utilisation de cet `Database` élément, consultez l’exemple de code dans [élément de charge de travail &#40;DTA&#41;](workload-element-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

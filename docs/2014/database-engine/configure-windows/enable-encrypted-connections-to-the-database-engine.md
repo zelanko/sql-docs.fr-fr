@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6e45b1f49c348e6cce329fb918479e92edbe9ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935335"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Activer les connexions chiffrées dans le moteur de base de données (Gestionnaire de configuration SQL Server)
   Cette rubrique explique comment activer les connexions chiffrées d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en spécifiant un certificat pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'ordinateur serveur doit être accompagné (approvisionné) d'un certificat et vous devez configurer l'ordinateur client pour permettre l'approbation de l'autorité racine du certificat. L'approvisionnement désigne le processus d'installation d'un certificat par son importation dans Windows.  
@@ -37,7 +36,7 @@ ms.locfileid: "62782313"
  Le client doit être en mesure de vérifier la propriété du certificat employé par le serveur. Si le client dispose du certificat de clé publique de l'autorité de certification qui a signé le certificat de serveur, aucune configuration supplémentaire n'est requise. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows comprend les certificats de clé publique d'un grand nombre d'autorités de certification. Si le certificat de serveur a été signé par une autorité de certification publique ou privée pour laquelle le client ne dispose pas de certificat de clé publique, vous devez installer le certificat de clé publique de l'autorité de certification ayant signé le certificat de serveur.  
   
 > [!NOTE]  
->  Pour utiliser le chiffrement à l'aide d'un cluster de basculement, installez le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Par exemple, si vous avez un cluster à deux nœuds, avec des nœuds nommés test1. votre entreprise>. com et test2. * \< * votre entreprise>. com et que vous disposez d’un serveur virtuel nommé Virtsql, vous devez installer un certificat pour Virtsql. * \< * votre entreprise>. com sur les deux nœuds. * \< * Vous pouvez affecter la valeur **ForceEncryption**(Oui) à l’option **ForceEncryption**.  
+>  Pour utiliser le chiffrement à l'aide d'un cluster de basculement, installez le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Par exemple, si vous avez un cluster à deux nœuds, avec des nœuds nommés test1. *\<your company>* . com et test2. *\<your company>* . et que vous disposez d’un serveur virtuel nommé Virtsql, vous devez installer un certificat pour *\<your company>* Virtsql. com sur les deux nœuds. Vous pouvez affecter la valeur **ForceEncryption**(Oui) à l’option **ForceEncryption**.  
   
  **Dans cette rubrique**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62782313"
   
 ###  <a name="to-provision-install-a-certificate-on-the-server"></a><a name="Provision"></a> Pour installer un certificat sur le serveur  
   
-1.  Dans le **menu Démarrer** , cliquez sur **exécuter**, puis dans la zone **ouvrir** , `MMC` tapez et cliquez sur **OK**.  
+1.  Dans le menu **Démarrer** , cliquez sur **exécuter**, puis dans la zone **ouvrir** , tapez `MMC` et cliquez sur **OK**.  
   
 2.  Dans la console MMC, dans le menu **Fichier**, cliquez sur **Ajouter/Supprimer un composant logiciel enfichable**.  
   
@@ -83,9 +82,9 @@ ms.locfileid: "62782313"
   
 ###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> Pour configurer le serveur afin qu'il accepte les connexions chiffrées  
   
-1.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<instance de serveur>_, puis sélectionnez **Propriétés**.  
+1.  Dans **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **protocoles pour** _\<server instance>_ , puis sélectionnez**Propriétés**.  
   
-2.  Dans la boîte de dialogue **Propriétés** de **protocoles pour**le_\<nom d’instance>_ , sous l’onglet **certificat** , sélectionnez le certificat souhaité dans la liste déroulante de la zone **certificat** , puis cliquez sur **OK**.  
+2.  Dans la boîte de dialogue Propriétés de **protocoles pour** _\<instance name>_ **Properties** , sous l’onglet **certificat** , sélectionnez le certificat souhaité dans la liste déroulante de la zone **certificat** , puis cliquez sur **OK**.  
   
 3.  Sur l'onglet **Indicateurs** , dans la zone **ForceEncryption** , sélectionnez **Oui**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   

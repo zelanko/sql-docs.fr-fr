@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d16a5c3306d07a499594bbe8f720571f68b8cffe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970839"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
   Le magasin d'objets blob distants[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant additionnel facultatif qui permet aux administrateurs de base de données de stocker des objets blob dans des solutions de stockage de marchandises au lieu de les stocker directement sur le serveur de base de données principal.  
@@ -62,10 +61,10 @@ ms.locfileid: "66009848"
  **Livre blanc du magasin d'objets blob distants (RBS)**  
  Le livre blanc «[Stockage étendu des objets blob](https://go.microsoft.com/fwlink/?LinkId=210422)», disponible au téléchargement sous la forme d'un document Microsoft Word, fournit des informations détaillées à propos de l'installation et de la configuration du magasin d'objets blob distants.  
   
- **Exemples de magasins d'objets blob distants (RBS)**  
+ **Exemples RBS**  
  Les exemples de magasins d'objets blob distants (RBS) disponibles sur le site [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) montrent comment développer une application RBS et comment développer et installer un fournisseur RBS personnalisé.  
   
- **Blog du magasin d'objets blob distants (RBS)**  
+ **Blog RBS**  
  Le [blog du magasin d'objets blob distants (RBS)](https://go.microsoft.com/fwlink/?LinkId=210315) fournit des informations supplémentaires qui vous aideront à mieux comprendre, déployer et gérer les magasins d'objets blob distants.  
   
   

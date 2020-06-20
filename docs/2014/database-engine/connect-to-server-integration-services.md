@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5be897bd-f36c-4c6a-a91a-13d0d016f8b6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b0d52d28440a92f79b08e90aff73b45fe643070
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934650"
 ---
 # <a name="connect-to-server-integration-services"></a>Se connecter au serveur (Integration Services)
   Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "62808700"
  Sélectionnez le serveur auquel vous connecter. La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
 > [!NOTE]  
->  \\N’utilisez * \<pas ServerName>* * \<InstanceName>*, car [!INCLUDE[ssIS](../includes/ssis-md.md)] ne prend pas en charge plusieurs instances sur un ordinateur.  
+>  N’utilisez pas *\<servername>* \\ *\<instancename>* , car [!INCLUDE[ssIS](../includes/ssis-md.md)] ne prend pas en charge plusieurs instances sur un ordinateur.  
   
  **Authentification**  
  Seule l'authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows est disponible pour [!INCLUDE[ssIS](../includes/ssis-md.md)]. Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  

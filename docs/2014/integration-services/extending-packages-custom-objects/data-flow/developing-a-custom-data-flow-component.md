@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176346"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966512"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Développement d'un composant de flux de données personnalisé
   La tâche de flux de données comprend des composants qui se connectent à diverses sources de données et qui transforment et acheminent ces données à haut débit. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un modèle objet extensible qui permet aux développeurs de créer des sources, des transformations et des destinations personnalisées que vous pouvez utiliser dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et dans des packages déployés. Cette section contient des rubriques qui vous guideront afin de développer des composants de flux de données personnalisés.
@@ -37,7 +36,7 @@ ms.locfileid: "78176346"
 
  [Plan d’exécution et allocation de mémoire tampon](execution-plan-and-buffer-allocation.md) Décrit le plan d’exécution du workflow et l’allocation des tampons de données.
 
- [Utilisation des types de données dans le workflow](working-with-data-types-in-the-data-flow.md) Explique comment le workflow mappe [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] les types de données aux types de données managées .NET Framework.
+ [Utilisation des types de données dans le workflow](working-with-data-types-in-the-data-flow.md) Explique comment le workflow mappe les [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] types de données aux types de données managées .NET Framework.
 
  [Validation d’un composant de transmission de données](validating-a-data-flow-component.md) Explique les méthodes utilisées pour valider la configuration des composants et pour reconfigurer les métadonnées des composants.
 
@@ -55,21 +54,21 @@ ms.locfileid: "78176346"
 
  [Développement de types spécifiques de composants de workflow](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md) Contient des informations sur le développement des trois types de composants de Data Flow : les sources, les transformations et les destinations.
 
-## <a name="reference"></a>Informations de référence
+## <a name="reference"></a>Référence
  <xref:Microsoft.SqlServer.Dts.Pipeline>Contient les classes et les interfaces utilisées pour créer des composants de workflow de données personnalisés.
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>Contient les classes et les interfaces qui composent le modèle objet de tâche de workflow et est utilisé pour créer des composants de workflow de données personnalisés ou pour générer une tâche de Workflow.
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>Contient les classes et les interfaces utilisées pour créer l’interface utilisateur pour les composants de Data Flow.
 
- [Integration Services de référence des erreurs et des messages](../../integration-services-error-and-message-reference.md) Répertorie les codes d' [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] erreur prédéfinis avec leur nom symbolique et leur description.
+ [Integration Services de référence des erreurs et des messages](../../integration-services-error-and-message-reference.md) Répertorie les [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] codes d’erreur prédéfinis avec leur nom symbolique et leur description.
 
 ## <a name="related-sections"></a>Sections connexes
 
 ### <a name="information-common-to-all-custom-objects"></a>Informations communes à tous les objets personnalisés
  Pour obtenir les informations communes à tous les types d'objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :
 
- [Développement d’objets personnalisés pour Integration Services](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) Décrit les étapes de base de l’implémentation de tous les types [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]d’objets personnalisés pour.
+ [Développement d’objets personnalisés pour Integration Services](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) Décrit les étapes de base de l’implémentation de tous les types d’objets personnalisés pour [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Persistance des objets personnalisés](../../extending-packages-custom-objects/persisting-custom-objects.md) Décrit la persistance personnalisée et explique quand elle est nécessaire.
 

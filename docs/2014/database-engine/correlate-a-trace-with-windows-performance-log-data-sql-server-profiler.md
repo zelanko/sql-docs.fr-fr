@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934580"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Corréler une trace aux données du journal de performances Windows (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]peut corréler les compteurs du moniteur système Microsoft Windows avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] événements ou. Le Moniteur système Windows consigne dans des journaux de performances l'activité du système pour des compteurs spécifiés.  
@@ -64,7 +63,7 @@ ms.locfileid: "66065052"
 11. Cliquez sur **OK** pour créer le journal de performances.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Démarrer SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

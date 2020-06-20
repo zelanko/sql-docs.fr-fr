@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b9d60675ef4c0bdaef1d45c6e8fe230ac70393c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933380"
 ---
 # <a name="send-dataset-sample"></a>Exemple Send DataSet
   L'exemple Send `DataSet` montre comment retourner un `DataSet` basé sur ADO.NET dans une procédure stockée CLR (Common Language Runtime) côté serveur en tant que jeu de résultats au client. Cette opération est utile lorsque, par exemple, ce type de procédure stockée remplit un `DataSet` à l'aide des résultats d'une requête, puis manipule les données contenues dans ce `DataSet`. C'est également utile si la procédure stockée crée et remplit un `DataSet` de toutes pièces. L'exemple est composé de deux classes, `DataSetUtilities` et `TestSendDataSet`. La méthode `SendDataSet` sur la classe `DataSetUtilities` implémente une méthode globale pour transmettre le contenu d'une instance de `DataSet` au client. La méthode `DoTest` définie sur la classe `TestSendDataSet` s'assure que la méthode `SendDataSet` fonctionne en créant un `DataSet` et en le remplissant de données provenant de la procédure stockée `uspGetTwoBOMTestData` Transact-SQL. `uspGetTwoBOMTestData` exécute la procédure stockée Transact-SQL exécute la procédure stockée `uspGetBillOfMaterials` à deux reprises pour interroger de manière récursive la nomenclature de deux produits spécifiés en tant que paramètres pour la procédure stockée `usp_GetTwoBOMTestData` . Généralement, après avoir rempli le jeu de données, les données sont modifiées avant d'appeler `SendDataSet` pour remettre les données dans le jeu de données, sous la forme d'un jeu de résultats au client. Mais, à des fins de simplicité, cet exemple retourne les données sans modification.  

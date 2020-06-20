@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2460e3a86c83dbd6b206bf173ac2c2691ecee685
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966729"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Éditeur de transformation d'exportation de colonne (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de transformation d'exportation de colonne** pour spécifier les colonnes du flux de données à extraire dans des fichiers. Vous pouvez préciser si la transformation d'exportation de colonne ajoute des données à la fin d'un fichier ou écrase le fichier existant.  

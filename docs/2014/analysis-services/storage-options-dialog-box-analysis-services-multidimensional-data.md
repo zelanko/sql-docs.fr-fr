@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7541ba23401bf964f0aa5c8a0425719b89d96b43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bcb8c42be62264e9d4c0b43f84055d9e62d2b50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940223"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Options de stockage (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Options de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les options du mode de stockage personnalisé, de mise en cache proactive et de notification des dimensions, des cubes, des groupes de mesures ou des partitions. Vous pouvez afficher la boîte de dialogue **Options de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur **Options** dans la boîte de dialogue **Paramètres de stockage**. Pour plus d’informations sur la boîte de dialogue **Paramètres de stockage**, consultez [Boîte de dialogue Paramètres de stockage &#40;Analysis Services - Données multidimensionnelles&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
  La boîte de dialogue **Options de stockage** contient les onglets répertoriés dans le tableau suivant.  
   
-## <a name="tabs"></a>Onglets  
+## <a name="tabs"></a>Tabulations  
   
 |Page|Définition|  
 |----------|----------------|  

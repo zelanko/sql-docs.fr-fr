@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940180"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Générateur de modèles tabulaires (SSAS Tabulaire)
   Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 ou une version ultérieure, avec les modèles supplémentaires de type de projet spécifiques au développement de solutions de modèles tabulaires professionnelles.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067824"
   
 -   [Intégration à Visual Studio](#bkmk_vsint)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Avantages  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], de nouveaux modèles de projet de création de modèles tabulaires sont ajoutés aux types de projet disponibles. Une fois un nouveau projet de modèle tabulaire créé à l'aide de l'un des modèles, vous pouvez commencer à créer un modèle à l'aide des outils et des assistants du générateur de modèles tabulaires.  
   
  Outres de nouveaux modèles et outils permettant de créer des solutions professionnelles de modèles multidimensionnels et tabulaires, l'environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fournit des fonctionnalités de débogage et de cycle de vie de projet qui vous permettent de créer des solutions décisionnelles les plus puissantes possibles pour votre organisation. Pour plus d'informations sur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consultez [Mise en route de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
@@ -61,7 +60,7 @@ ms.locfileid: "66067824"
  **Vue de données**  
  La vue de données affiche les tables dans un format de grille tabulaire. Vous pouvez également définir des mesures à l'aide de la grille de mesures, qui peut être affichée pour chaque table dans la vue de données uniquement.  
   
- **Affichage des diagrammes**  
+ **Vue du diagramme**  
  La vue de diagramme affiche les tables, avec les relations entre celles-ci, dans un format graphique. Les colonnes, les mesures, les hiérarchies et les indicateurs de performance clés peuvent être filtrés, et vous pouvez choisir d'afficher le modèle à l'aide d'une perspective définie.  
   
  La plupart des tâches de création de modèles peuvent être effectuées dans l'une ou l'autre vue.  
@@ -103,7 +102,7 @@ ms.locfileid: "66067824"
   
  Par défaut, **Liste d'erreurs** n'apparaît que lorsqu'une erreur est retournée. Vous pouvez, toutefois, afficher la fenêtre **Liste d'erreurs** à tout moment. Pour afficher la fenêtre **Liste d'erreurs** , cliquez sur le menu **Affichage** , puis sur **Liste d'erreurs**.  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>Sortie  
  Les informations de génération et de déploiement sont affichées dans la fenêtre **Sortie** (en plus de la boîte de dialogue modale de progression). Pour afficher la fenêtre **Sortie** , cliquez sur le menu **Affichage** , puis sur Sortie.  
   
 ### <a name="menu-items"></a>Éléments de menu  
@@ -111,14 +110,14 @@ ms.locfileid: "66067824"
   
  En plus de ces éléments de menu, des paramètres supplémentaires sont ajoutés aux options Analysis Services accessibles dans les éléments du menu Outils.  
   
-### <a name="toolbar"></a>Barre d'outils  
+### <a name="toolbar"></a>Barre d’outils  
  La barre d'outils Analysis Services fournit un accès rapide et aisé aux commandes de création de modèles utilisées les plus fréquemment.  
   
 ##  <a name="visual-studio-integration"></a>Intégration à <a name="bkmk_vsint"></a> Visual Studio  
  **Contrôle de code source**  
  Les projets Analysis Services s'intègrent au plug-in sélectionné du contrôle de code source. Si vous avez configuré Visual Studio pour utiliser le contrôle de code source, vous pouvez utiliser l'insertion/l'extraction à partir de l'Explorateur de solutions. Pour configurer l'utilisation de Team Foundation Server, consultez [Configurer Visual Studio avec le contrôle de version de Team Foundation](https://msdn.microsoft.com/library/ms253064.aspx). De nombreux plug-ins de contrôle de code source tiers sont également pris en charge.  
   
- **Polices**  
+ **Fonts**  
  Les modèles tabulaires utilisent la police d’environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour contrôler les polices dans l’affichage. Il peut être nécessaire de modifier cette police si la police par défaut de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ne dispose pas de tous les caractères Unicode dont vous avez besoin pour votre langage. Pour modifier les polices, cliquez sur le menu **Outils** , puis sur **Options**et sur **Polices et couleurs**.  
   
  **Raccourcis clavier**  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704622"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064405"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Nouvelle planification du travail : Propriétés de la planification du travail
   Cette page vous permet d'afficher et de modifier les propriétés de la planification.  
@@ -46,16 +45,16 @@ ms.locfileid: "62704622"
  **Lundi**  
  Exécute le travail le lundi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
- **16:00**  
+ **Mardi**  
  Exécute le travail le mardi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
  **Mercredi**  
  Exécute le travail le mercredi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
- **May**  
+ **Jeudi**  
  Exécute le travail le jeudi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
- **21**  
+ **Vendredi**  
  Exécute le travail le vendredi. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
  **Samedi**  
@@ -64,13 +63,13 @@ ms.locfileid: "62704622"
  **Dimanche**  
  Exécute le travail le dimanche. Disponible uniquement pour les planifications périodiques hebdomadaires.  
   
- **Temps**  
+ **Jour**  
  Sélectionnez le jour du mois pour la planification. Disponible uniquement pour les planifications périodiques mensuelles.  
   
  **de chaque**  
  Sélectionnez le nombre de mois entre deux occurrences de la planification. Disponible uniquement pour les planifications périodiques mensuelles.  
   
- **Les**  
+ **Le**  
  Spécifiez une planification pour un jour de la semaine spécifique, dans une semaine spécifique dans le mois. Disponible uniquement pour les planifications périodiques mensuelles.  
   
  **Une fois à**  

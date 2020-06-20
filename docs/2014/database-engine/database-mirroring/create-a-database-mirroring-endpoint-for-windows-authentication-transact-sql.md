@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5558bc5684f2eb9053c935543db0c05d6225daf7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797925"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934380"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Créer un point de terminaison de mise en miroir de bases de données pour l'authentification Windows (Transact-SQL)
   Cette rubrique explique comment créer un point de terminaison de mise en miroir de bases de données qui utilise l'authentification Windows dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour prendre en charge la mise en miroir de bases de données ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite un point de terminaison de mise en miroir de bases de données. Une instance de serveur ne peut disposer que d'un seul point de terminaison de mise en miroir de bases de données, lequel possède un port unique. Un point de terminaison de mise en miroir de bases de données peut utiliser n'importe quel point disponible sur le système local lors de la création du point de terminaison. Toutes les sessions de mise en miroir des bases de données sur une instance de serveur écoutent ce port, et toutes les connexions entrantes pour la mise en miroir des bases de données utilisent ce port.  
@@ -65,37 +64,37 @@ ms.locfileid: "72797925"
   
 4.  Pour utiliser Transact-SQL afin de créer un point de terminaison qui sera utilisé avec l'authentification Windows, utilisez une instruction CREATE ENDPOINT. L'instruction prend la forme générale suivante :  
   
-     Créer un point de terminaison * \<EndpointName>*  
+     CRÉER UN POINT DE TERMINAISON*\<endpointName>*  
   
      STATE=STARTED  
   
-     As TCP (LISTENER_PORT = * \<listenerPortList>* )  
+     AS TCP (LISTENER_PORT = *\<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [Authentication = **Windows** [ * \<authorizationMethod>* ]  
+     [AUTHENTICation = **Windows** [ *\<authorizationMethod>* ]  
   
      ]  
   
      [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [Algorithm { * \<Algorithm>* }]  
+     [ALGORITHMe { *\<algorithm>* }]  
   
      ]  
   
-     [**,**] ROLE = *\<rôle>*  
+     [**,**] ROLE =*\<role>*  
   
      )  
   
      where  
   
-    -   EndpointName>est un nom unique pour le point de terminaison de mise en miroir de bases de données de l’instance de serveur. * \<*  
+    -   *\<endpointName>* nom unique du point de terminaison de mise en miroir de bases de données de l’instance de serveur.  
   
     -   STARTED spécifie que le point de terminaison doit être démarré et commencer à écouter les connexions. Un point de terminaison de mise en miroir de base de données est en général créé dans l'état STARTED. D'une autre manière, vous pouvez démarrer une session dans un état STOPPED (par défaut) ou DISABLED.  
   
-    -   listenerPortList>est un numéro de port unique (*nnnn*) sur lequel le serveur doit écouter les messages de mise en miroir de bases de données. * \<* Seul le protocole TCP est autorisé ; la spécification d'un autre protocole produit une erreur.  
+    -   *\<listenerPortList>* est un numéro de port unique (*nnnn*) sur lequel vous souhaitez que le serveur écoute les messages de mise en miroir de bases de données. Seul le protocole TCP est autorisé ; la spécification d'un autre protocole produit une erreur.  
   
          Un numéro de port peut servir une fois seulement pour chaque ordinateur. Un point de terminaison de mise en miroir de bases de données peut utiliser n'importe quel point disponible sur le système local lors de la création du point de terminaison. Pour identifier les ports en cours d'utilisation par les points de terminaison TCP, utilisez l'instruction Transact-SQL suivante :  
   
@@ -106,11 +105,11 @@ ms.locfileid: "72797925"
         > [!IMPORTANT]  
         >  Chaque instance de serveur nécessite un port d'écoute et un seul.  
   
-    -   Pour l'authentification Windows, l'option AUTHENTICATION est facultative, à moins que vous vouliez que le point de terminaison utilise uniquement NTLM ou Kerberos pour authentifier les connexions. authorizationMethod>spécifie la méthode utilisée pour authentifier les connexions comme l’une des suivantes : NTLM, Kerberos ou Negotiate. * \<* NEGOTIATE, méthode par défaut, impose au point de terminaison d'utiliser le protocole de négociation Windows pour choisir NTLM ou Kerberos. La négociation active les connexions avec ou sans authentification, selon le niveau d'authentification du point de terminaison opposé.  
+    -   Pour l'authentification Windows, l'option AUTHENTICATION est facultative, à moins que vous vouliez que le point de terminaison utilise uniquement NTLM ou Kerberos pour authentifier les connexions. *\<authorizationMethod>* spécifie la méthode utilisée pour authentifier les connexions comme l’une des suivantes : NTLM, KERBEROS ou NEGOTIATE. NEGOTIATE, méthode par défaut, impose au point de terminaison d'utiliser le protocole de négociation Windows pour choisir NTLM ou Kerberos. La négociation active les connexions avec ou sans authentification, selon le niveau d'authentification du point de terminaison opposé.  
   
     -   ENCRYPTION est défini sur REQUIRED par défaut. En d'autres termes, toutes les connexions à ce point de terminaison doivent utiliser le chiffrement. Toutefois, vous pouvez désactiver le chiffrement ou le rendre facultatif sur un point de terminaison. Les alternatives sont les suivantes :  
   
-        |Valeur|Définition|  
+        |Value|Définition|  
         |-----------|----------------|  
         |DISABLED|Spécifie que les données envoyées sur une connexion ne sont pas chiffrées.|  
         |SUPPORTED|Spécifie que les données sont chiffrées uniquement si le point de terminaison opposé spécifie SUPPORTED ou REQUIRED.|  
@@ -118,14 +117,14 @@ ms.locfileid: "72797925"
   
          Si un point de terminaison exige un chiffrement, l'autre point de terminaison doit avoir l'instruction ENCRYPTION définie sur SUPPORTED ou REQUIRED.  
   
-    -   l’algorithme>permet de spécifier les normes de chiffrement pour le point de terminaison. * \<* La valeur de * \<l’algorithme>* peut être l’un des algorithmes ou combinaisons d’algorithmes suivants : RC4, AES, AES RC4 ou RC4 AES.  
+    -   *\<algorithm>* offre la possibilité de spécifier les normes de chiffrement pour le point de terminaison. La valeur de *\<algorithm>* peut être l’un des algorithmes ou combinaisons d’algorithmes suivants : RC4, AES, AES RC4 ou RC4 AES.  
   
          AES RC4 spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme AES. RC4 AES spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme RC4. Si les deux points de terminaison spécifient les deux algorithmes mais dans des ordres différents, le point de terminaison acceptant la connexion a le dernier mot.  
   
         > [!NOTE]  
         >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-    -   le rôle>définit le ou les rôles que le serveur peut effectuer. * \<* La spécification de ROLE est obligatoire. Toutefois, le rôle du point de terminaison concerne uniquement la mise en miroir de bases de données. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le rôle du point de terminaison est ignoré.  
+    -   *\<role>* définit le ou les rôles que le serveur peut effectuer. La spécification de ROLE est obligatoire. Toutefois, le rôle du point de terminaison concerne uniquement la mise en miroir de bases de données. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le rôle du point de terminaison est ignoré.  
   
          Pour qu'une instance de serveur puisse occuper un rôle pour une session de mise en miroir de base de données et un rôle différent pour une autre session, spécifiez ROLE=ALL. Pour restreindre la fonction d'une instance de serveur à partenaire ou témoin, spécifiez ROLE=PARTNER ou ROLE=WITNESS respectivement.  
   

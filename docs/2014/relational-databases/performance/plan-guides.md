@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c97682163313a56acb8521174fa8d4012a69b529
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063898"
 ---
 # <a name="plan-guides"></a>Repères de plan
   Les repères de plan vous permettent d'optimiser les performances des requêtes lorsque vous ne pouvez pas ou ne souhaitez pas modifier directement le texte de la requête réelle dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les repères de plan influencent l'optimisation des requêtes en attachant des indicateurs de requête ou un plan fixe de requête à celles-ci. Les repères de plan s'avèrent utiles lorsqu'un petit sous-ensemble de requêtes d'une application de base de données fournie par un tiers ne fonctionne pas comme prévu. Dans le repère de plan, vous spécifiez l'instruction Transact-SQL que vous voulez optimiser et une clause OPTION contenant les indicateurs de requête ou un plan de requête spécifique à utiliser pour optimiser la requête. Lorsque la requête s'exécute, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre l'instruction Transact-SQL au repère de plan et attache la clause OPTION à la requête au moment de l'exécution ou fait appel au plan de requête spécifié.  
@@ -125,7 +124,7 @@ sp_create_plan_guide
   
  Pour les repères de plan basés sur SQL ou TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre les valeurs des arguments @module_or_batch et @params avec une requête en comparant les deux valeurs caractère par caractère. Cela signifie que vous devez fournir le texte exactement tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le reçoit dans le traitement réel.  
   
- Lorsque @type = 'SQL’et @module_or_batch a la valeur null, la valeur de @module_or_batch est définie sur la valeur de @stmt. Cela signifie que la valeur de *statement_text* doit être fournie au format identique, caractère pour le caractère, tel qu’il est envoyé à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
+ Lorsque @type = 'SQL’et @module_or_batch a la valeur null, la valeur de @module_or_batch est définie sur la valeur de @stmt . Cela signifie que la valeur de *statement_text* doit être fournie au format identique, caractère pour le caractère, tel qu’il est envoyé à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
   
  Lorsqu'un repère de plan normal (SQL ou OBJECT) et un repère de plan TEMPLATE peuvent s'appliquer tous les deux à une instruction, seul le repère de plan normal est utilisé.  
   

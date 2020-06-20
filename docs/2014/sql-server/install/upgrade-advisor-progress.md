@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 692b06051872084ff5e1b16dfaf1f8198a649d62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062339"
 ---
 # <a name="upgrade-advisor-progress"></a>Progression du Conseiller de mise à niveau
   L'analyse du Conseiller de mise à niveau commence par une analyse de chaque composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionné exécutée par un analyseur dédié. À mesure que les composants sont analysés, la progression est signalée dans la boîte de dialogue de **progression** .  

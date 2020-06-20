@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966439"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Éditeur de source de fichier plat (page Colonnes)
   Utilisez le nœud **Colonnes** de la boîte de dialogue **Éditeur de source de fichier plat** pour mapper une colonne de sortie à chaque colonne externe (source).  
   
 > [!NOTE]  
->  La `FileNameColumnName` propriété de la source de fichier plat et `FastParse` la propriété de ses colonnes de sortie ne sont pas disponibles dans l' **éditeur de source de fichier plat**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section sur la source de fichier plat de [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
+>  La `FileNameColumnName` propriété de la source de fichier plat et la `FastParse` propriété de ses colonnes de sortie ne sont pas disponibles dans l' **éditeur de source de fichier plat**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section sur la source de fichier plat de [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
   
  Pour en savoir plus sur la source de fichier plat, consultez [Flat File Source](data-flow/flat-file-source.md).  
   

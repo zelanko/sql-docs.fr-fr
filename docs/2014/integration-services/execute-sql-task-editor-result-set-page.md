@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966749"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Éditeur de tâche d'exécution SQL (page Ensemble de résultats)
   Utilisez la page **Jeu de résultats** de la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour mapper le résultat de l’instruction SQL à des variables nouvelles ou existantes. Les options de cette boîte de dialogue sont désactivées si **ResultSet** dans la page Général est défini sur **Aucun**.  
@@ -37,12 +36,12 @@ ms.locfileid: "66058965"
  **Rubriques connexes**: [Jeux de résultats dans la tâche d’exécution de requêtes SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **Nom de la variable**  
- Mappez le jeu de résultats à une variable en sélectionnant celle-ci, ou cliquez sur \<**Nouvelle variable...**> pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
+ Mappez le jeu de résultats à une variable en sélectionnant une variable ou cliquez \<**New variable...**> pour ajouter une nouvelle variable à l’aide de la boîte de dialogue **Ajouter une variable** .  
   
  **Ajouter**  
  Ajoute une correspondance de jeu de résultats.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez un mappage de jeu de résultats dans la liste, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  

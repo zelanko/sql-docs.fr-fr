@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 843c5e8cbb857271d4cbd07288e24bfbd98019e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49c4814daf0463c99c7ccda6f16adb039fd58d64
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176619"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964490"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
-  Les applications clientes peuvent lire la sortie des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quand la sortie est enregistrée dans les destinations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quand la sortie est enregistrée dans une destination de fichier plat à l’aide des classes présentes dans l’espace de noms **System.IO**. Toutefois, une application cliente peut également lire directement la sortie d'un package dans la mémoire, sans avoir besoin d'étape intermédiaire pour rendre les données persistantes. La clé de cette solution est l' `Microsoft.SqlServer.Dts.DtsClient` espace de noms, qui contient des implémentations `IDbConnection`spécialisées `IDbCommand`des interfaces, et **IDbDataParameter** de l’espace de noms **System. Data** . L’assembly Microsoft.SqlServer.Dts.DtsClient.dll est installé par défaut dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.
+  Les applications clientes peuvent lire la sortie des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quand la sortie est enregistrée dans les destinations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quand la sortie est enregistrée dans une destination de fichier plat à l’aide des classes présentes dans l’espace de noms **System.IO**. Toutefois, une application cliente peut également lire directement la sortie d'un package dans la mémoire, sans avoir besoin d'étape intermédiaire pour rendre les données persistantes. La clé de cette solution est l' `Microsoft.SqlServer.Dts.DtsClient` espace de noms, qui contient des implémentations spécialisées des `IDbConnection` `IDbCommand` interfaces, et **IDbDataParameter** de l’espace de noms **System. Data** . L’assembly Microsoft.SqlServer.Dts.DtsClient.dll est installé par défaut dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.
 
 > [!NOTE]
 >  Conformément à la procédure décrite dans cette rubrique, la propriété DelayValidation de la tâche de flux de données et de tous les objets parents doit avoir la valeur par défaut **False**.
@@ -36,16 +35,16 @@ ms.locfileid: "78176619"
 
 1.  Dans le package, configurez une destination DataReader afin de recevoir la sortie que vous souhaitez lire dans l'application cliente. Donnez un nom descriptif à la destination DataReader, puisque vous l'utiliserez ultérieurement dans votre application cliente. Prenez note du nom de la destination DataReader.
 
-2.  Dans le projet de développement, définissez une référence à `Microsoft.SqlServer.Dts.DtsClient` l’espace de noms en localisant l’assembly **Microsoft. SqlServer. Dts. DtsClient. dll**. Par défaut, cet assembly est installé dans **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importez l’espace de noms dans votre code `Using` à l' [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` aide de l’instruction C# ou.
+2.  Dans le projet de développement, définissez une référence à l' `Microsoft.SqlServer.Dts.DtsClient` espace de noms en localisant l’assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Par défaut, cet assembly est installé dans **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importez l’espace de noms dans votre code à l’aide de l' `Using` instruction C# ou [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` .
 
-3.  Dans votre code, créez un objet de type `DtsClient.DtsConnection` avec une chaîne de connexion qui contient les paramètres de ligne de commande requis par **dtexec. exe** pour exécuter le package. Pour plus d'informations, consultez [Utilitaire dtexec](../packages/dtexec-utility.md). Ouvrez ensuite la connexion à l'aide de cette chaîne de connexion. Vous pouvez également vous servir de l’utilitaire **dtexecui** pour créer visuellement la chaîne de connexion nécessaire.
+3.  Dans votre code, créez un objet de type `DtsClient.DtsConnection` avec une chaîne de connexion qui contient les paramètres de ligne de commande requis par **dtexec.exe** pour exécuter le package. Pour plus d'informations, consultez [Utilitaire dtexec](../packages/dtexec-utility.md). Ouvrez ensuite la connexion à l'aide de cette chaîne de connexion. Vous pouvez également vous servir de l’utilitaire **dtexecui** pour créer visuellement la chaîne de connexion nécessaire.
 
     > [!NOTE]
     >  L'exemple de code montre le chargement du package à partir du système de fichiers en utilisant la syntaxe `/FILE <path and filename>`. Toutefois, vous pouvez également charger le package à partir de la base de données MSDB en utilisant la syntaxe `/SQL <package name>` ou à partir du magasin de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en utilisant la syntaxe `/DTS \<folder name>\<package name>`.
 
 4.  Créez un objet de type `DtsClient.DtsCommand` qui utilise le `DtsConnection` créé précédemment et qui définit sa propriété `CommandText` sur le nom de la destination DataReader dans le package. Appelez ensuite la méthode `ExecuteReader` de l'objet de commande pour charger les résultats de package dans un nouveau DataReader.
 
-5.  Vous pouvez éventuellement paramétrer indirectement la sortie du package en utilisant la collection d'objets `DtsDataParameter` sur l'objet `DtsCommand` pour passer des valeurs aux variables définies dans le package. Dans le package, vous pouvez utiliser ces variables comme paramètres de requête ou dans des expressions pour affecter les résultats retournés à la destination DataReader. Vous devez définir ces variables dans le package dans l’espace de noms **DtsClient** avant de pouvoir les utiliser `DtsDataParameter` avec l’objet à partir d’une application cliente. (Vous devrez peut-être cliquer sur le bouton de barre d’outils **choisir les colonnes de variables** dans la fenêtre **variables** pour afficher la colonne **espace de noms** .) Dans votre code client, lorsque vous ajoutez un `DtsDataParameter` à la `Parameters` collection de `DtsCommand`, omettez la référence d’espace de noms DtsClient à partir du nom de la variable. Par exemple :
+5.  Vous pouvez éventuellement paramétrer indirectement la sortie du package en utilisant la collection d'objets `DtsDataParameter` sur l'objet `DtsCommand` pour passer des valeurs aux variables définies dans le package. Dans le package, vous pouvez utiliser ces variables comme paramètres de requête ou dans des expressions pour affecter les résultats retournés à la destination DataReader. Vous devez définir ces variables dans le package dans l’espace de noms **DtsClient** avant de pouvoir les utiliser avec l' `DtsDataParameter` objet à partir d’une application cliente. (Vous devrez peut-être cliquer sur le bouton de barre d’outils **choisir les colonnes de variables** dans la fenêtre **variables** pour afficher la colonne **espace de noms** .) Dans votre code client, lorsque vous ajoutez un `DtsDataParameter` à la `Parameters` collection de `DtsCommand` , omettez la référence d’espace de noms DtsClient à partir du nom de la variable. Par exemple :
 
     ```
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));
@@ -81,7 +80,7 @@ ms.locfileid: "78176619"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?
     ```
 
-6.  Cliquez `Parameters` sur et, dans la boîte de dialogue **définir les paramètres** de la requête, mappez le paramètre d’entrée unique dans la requête, Parameter0, à la variable DtsClient :: Country.
+6.  Cliquez sur `Parameters` et, dans la boîte de dialogue **définir les paramètres** de la requête, mappez le paramètre d’entrée unique dans la requête, Parameter0, à la variable DtsClient :: Country.
 
 7.  Ajoutez une transformation d'agrégation au flux de données et connectez la sortie de la source OLE DB à la transformation. Ouvrez l’éditeur de transformation d’agrégation et configurez-le pour effectuer une opération « Count All » sur toutes les colonnes d’entrée (*) et pour générer la sortie de la valeur agrégée avec l’alias CustomerCount.
 
@@ -97,11 +96,11 @@ ms.locfileid: "78176619"
 
 3.  Copiez et collez l'exemple de code suivant dans le module de code pour le formulaire.
 
-4.  Modifiez la valeur de la `dtexecArgs` variable comme requis afin qu’elle contienne les paramètres de ligne de commande requis par **dtexec. exe** pour exécuter le package. L'exemple de code charge le package à partir du système de fichiers.
+4.  Modifiez la valeur de la `dtexecArgs` variable comme requis afin qu’elle contienne les paramètres de ligne de commande requis par **dtexec.exe** pour exécuter le package. L'exemple de code charge le package à partir du système de fichiers.
 
 5.  Modifiez la valeur de la `dataReaderName` variable comme obligatoire afin qu’elle contienne le nom de la destination DataReader dans le package.
 
-6.  Placez un bouton et une zone de texte sur le formulaire. L’exemple de code `btnRun` utilise comme nom du bouton et `txtResults` comme nom de la zone de texte.
+6.  Placez un bouton et une zone de texte sur le formulaire. L’exemple de code utilise `btnRun` comme nom du bouton et `txtResults` comme nom de la zone de texte.
 
 7.  Exécutez l'application et cliquez sur le bouton. Après une brève pause pendant l'exécution du package, vous devez voir apparaître la valeur d'agrégation calculée par le package (le nombre de clients au Canada) dans la zone de texte sur le formulaire.
 

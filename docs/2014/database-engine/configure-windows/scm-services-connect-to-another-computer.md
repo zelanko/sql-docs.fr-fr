@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95de509e0c78c807c3c9de25b317eb2b540db93a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935033"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Se connecter à un autre ordinateur (Gestionnaire de configuration SQL Server)
   Cette rubrique explique comment se connecter à un autre ordinateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Suivez la première procédure pour ouvrir la Console de gestion [!INCLUDE[msCoName](../../includes/msconame-md.md)] (mmc) de Gestion de l'ordinateur Windows, connectez-vous à l'ordinateur et développez l'arborescence Services et Applications. Suivez la deuxième procédure pour créer un fichier avec un lien vers le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur distant.  
@@ -37,7 +36,7 @@ ms.locfileid: "62810347"
   
 3.  Dans la boîte de dialogue **Sélectionner un ordinateur** , dans la zone de texte **Un autre ordinateur** , tapez le nom de l'ordinateur que vous voulez gérer et cliquez sur **OK**.  
   
-     La Gestion de l'ordinateur affiche les services exécutés sur l'ordinateur distant. Le nœud de niveau supérieur devient alors **Gestion de l’ordinateur** \<*ordinateur_distant*>.  
+     La Gestion de l'ordinateur affiche les services exécutés sur l'ordinateur distant. Le nœud de niveau supérieur se transforme en gestion de l' **ordinateur** \<*remotecomputer*> .  
   
 4.  Dans l'arborescence de la console, développez **Services et applications**, puis **Gestionnaire de configuration SQL Server** pour gérer les services de l'ordinateur distant.  
   
@@ -59,13 +58,13 @@ ms.locfileid: "62810347"
   
 8.  Dans la fenêtre **Ajouter/Supprimer un composant logiciel enfichable** , cliquez sur **OK**.  
   
-9. Développez Gestion de l' **ordinateur (nom de***\<l’ordinateur>***)**, puis **services et applications**.  
+9. Développez Gestion de l' **ordinateur ( ***\<computer name>*** )**, puis **services et applications**.  
   
 10. Cliquez avec le bouton droit sur **Gestionnaire de configuration SQL Server**, puis cliquez sur **Nouvelle fenêtre à partir d’ici**.  
   
 11. Dans le menu **Fenêtre**, cliquez sur **Racine de la console** pour revenir à la première fenêtre et supprimez-la.  
   
-12. Dans le menu **fichier** , cliquez sur **Enregistrer sous**, puis enregistrez le fichier dans le dossier de votre choix, avec un nom `.msc` approprié avec l’extension de fichier. Fermez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. Dans le menu **fichier** , cliquez sur **Enregistrer sous**, puis enregistrez le fichier dans le dossier de votre choix, avec un nom approprié avec l' `.msc` extension de fichier. Fermez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Pour ouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur cible, double-cliquez sur le fichier. Si vous le souhaitez, enregistrez un lien vers le fichier sur le bureau ou dans le menu **Démarrer** .  
   

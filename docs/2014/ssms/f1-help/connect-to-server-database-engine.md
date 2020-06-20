@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc7281dab01d97df3608825a4e51c256f1b5296c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064436"
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
   Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  
@@ -40,7 +39,7 @@ ms.locfileid: "63245740"
 >  Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , utilisez le protocole des canaux nommés en spécifiant le nom du canal, par exemple np:\\\\.\pipe\3C3DF6B1-2262-47\tsql\query. Pour plus d’informations, consultez la documentation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
  **Authentification**  
- Deux modes d’authentification sont disponibles lors de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]connexion à une instance du.  
+ Deux modes d’authentification sont disponibles lors de la connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  **Mode d'authentification Windows (authentification Windows)**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  

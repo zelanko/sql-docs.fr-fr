@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a16d34ca8865174d9d05dc08f01402a9d87187b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052591"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed (classe d'événements)
   La classe d'événements RPC:Completed indique qu'un appel de procédure distante a été réglé.  
@@ -36,7 +35,7 @@ ms.locfileid: "63046764"
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`bigint`|Temps pris par l'événement. En microsecondes à partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En millisecondes dans les versions antérieures.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'appel de procédure distante.|15|Oui|  
-|Error|`int`|Numéro d'erreur d'un événement donné.<br /><br /> 0=OK<br /><br /> 1=Erreur<br /><br /> 2=Abandon<br /><br /> 3=Ignoré|31|Oui|  
+|Erreur|`int`|Numéro d'erreur d'un événement donné.<br /><br /> 0=OK<br /><br /> 1=Erreur<br /><br /> 2=Abandon<br /><br /> 3=Ignoré|31|Oui|  
 |EventClass|`int`|Type d'événement = 10.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  

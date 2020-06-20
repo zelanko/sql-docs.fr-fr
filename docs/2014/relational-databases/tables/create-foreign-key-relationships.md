@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009191"
 ---
 # <a name="create-foreign-key-relationships"></a>Créer des relations de clé étrangère
   Cette rubrique explique comment créer des relations de clé étrangère dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous créez une relation entre deux tables lorsque vous voulez associer des lignes d'une table à des lignes appartenant à une autre table.  
@@ -79,7 +78,7 @@ ms.locfileid: "62761613"
   
 3.  Dans la boîte de dialogue **Relations de clé étrangère** , cliquez sur **Ajouter**.  
   
-     La relation s’affiche dans la liste **Relation sélectionnée** avec un nom fourni par le système au format FK_\<*nom_table*>_\<*nom_table*>, où *nom_table* est le nom de la table de clé étrangère.  
+     La relation s’affiche dans la liste **relation sélectionnée** avec un nom fourni par le système au format FK_ \<*tablename*> _ \<*tablename*> , où *TableName* est le nom de la table de clé étrangère.  
   
 4.  Cliquez sur la relation dans la liste **Relation sélectionnée** .  
   

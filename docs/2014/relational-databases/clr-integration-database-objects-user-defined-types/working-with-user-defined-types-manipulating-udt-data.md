@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8d8ef411c8766ebecb98ca1c9eeaa1be11f156
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954409"
 ---
 # <a name="manipulating-udt-data"></a>Manipulation de données UDT
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ne fournit aucune syntaxe spécialisée pour les instructions INSERT, UPDATE ou DELETE lors de la modification de données dans des colonnes de type défini par l'utilisateur (UDT). Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT sont utilisées pour convertir des types de données natives en type UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Insertion de données dans une colonne UDT  
- Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes insèrent trois lignes d’exemples de données dans la table **points** . Le type de données **point** est constitué de valeurs entières X et Y qui sont exposées en tant que propriétés de l’UDT. Vous devez utiliser la fonction CAST ou CONVERT pour effectuer un cast des valeurs X et Y délimitées par des virgules en type **point** . Les deux premières instructions utilisent la fonction CONVERT pour convertir une valeur de chaîne en type **point** , et la troisième instruction utilise la fonction CAST :  
+ Les [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions suivantes insèrent trois lignes d’exemples de données dans la table **points** . Le type de données **point** est constitué de valeurs entières X et Y qui sont exposées en tant que propriétés de l’UDT. Vous devez utiliser la fonction CAST ou CONVERT pour effectuer un cast des valeurs X et Y délimitées par des virgules en type **point** . Les deux premières instructions utilisent la fonction CONVERT pour convertir une valeur de chaîne en type **point** , et la troisième instruction utilise la fonction CAST :  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -156,7 +155,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Appel de méthodes UDT  
- Vous pouvez également appeler des méthodes qui sont définies dans votre type UDT dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. La classe **point** contient trois méthodes, `Distance` `DistanceFrom`, et `DistanceFromXY`. Pour obtenir les listes de code qui définissent ces trois méthodes, consultez [codage de types définis par l’utilisateur](creating-user-defined-types-coding.md).  
+ Vous pouvez également appeler des méthodes qui sont définies dans votre type UDT dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. La classe **point** contient trois méthodes, `Distance` , `DistanceFrom` et `DistanceFromXY` . Pour obtenir les listes de code qui définissent ces trois méthodes, consultez [codage de types définis par l’utilisateur](creating-user-defined-types-coding.md).  
   
  L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante appelle la méthode `PointValue.Distance` :  
   

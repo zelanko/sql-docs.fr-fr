@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 298723c5031299b1b105f686e188e1e27cfd758c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916945"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965870"
 ---
 # <a name="model-database"></a>model, base de données
   La base de données **model** fait office de modèle pour toutes les bases de données créées sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que la base de données **tempdb** est créée chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré, la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tout le contenu de la base de données **model** , y compris ses options, est copié dans la nouvelle base de données. Certains paramètres de **model** sont également utilisés pour la création d'une nouvelle base de données **tempdb** au démarrage, de sorte que la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,34 +48,34 @@ ms.locfileid: "62916945"
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Oui|  
-|ANSI_NULL_DEFAULT|OFF|Oui|  
-|ANSI_NULLS|OFF|Oui|  
-|ANSI_PADDING|OFF|Oui|  
-|ANSI_WARNINGS|OFF|Oui|  
-|ARITHABORT|OFF|Oui|  
-|AUTO_CLOSE|OFF|Oui|  
-|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
-|AUTO_SHRINK|OFF|Oui|  
-|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|Non|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
-|CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Oui<br /><br /> Oui|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|OFF|Non|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|Yes|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Yes|  
+|AUTO_SHRINK|OFF|Yes|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Yes<br /><br /> Oui|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
+|DB_CHAINING|OFF|No|  
 |ENCRYPTION|OFF|Non|  
-|NUMERIC_ROUNDABORT|OFF|Oui|  
-|PAGE_VERIFY|CHECKSUM|Oui|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM|Yes|  
 |PARAMETERIZATION|SIMPLE|Oui|  
-|QUOTED_IDENTIFIER|OFF|Oui|  
-|READ_COMMITTED_SNAPSHOT|OFF|Oui|  
-|RECOVERY|Dépend de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’édition<sup>1</sup>|Oui|  
+|QUOTED_IDENTIFIER|OFF|Yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|Yes|  
+|RECOVERY|Dépend de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition<sup>1</sup>|Yes|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
-|Options de Service Broker|DISABLE_BROKER|Non|  
-|TRUSTWORTHY|OFF|Non|  
+|Options de Service Broker|DISABLE_BROKER|No|  
+|TRUSTWORTHY|OFF|No|  
   
  <sup>1</sup> pour vérifier le mode de récupération actuel de la base de données, consultez [afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929090"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configuration de la sauvegarde managée de SQL Server sur Azure pour les groupes de disponibilité
   Cette rubrique est un didacticiel sur la configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données participant à des groupes de disponibilité AlwaysOn.  
@@ -29,7 +28,7 @@ ms.locfileid: "82849528"
 -   Bande passante réseau : cela s’applique aux implémentations où les réplicas se trouvent dans des emplacements physiques différents, comme dans un Cloud hybride, ou dans des régions Azure différentes dans une configuration Cloud uniquement. La bande passante réseau peut affecter la latence des serveurs secondaires, et si les serveurs secondaires sont configurés avec la réplication synchrone, cela peut entraîner une croissance du journal sur le serveur principal. Si les serveurs secondaires utilisent la réplication synchrone, il est possible qu'ils n'arrivent pas à garder le pas en raison du temps de réponse du réseau, ce qui peut entraîner une perte de données en cas de basculement vers le réplica secondaire.  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données de disponibilité  
- **Autorisations**  
+ **Autorisations :**  
   
 -   Requiert l’appartenance au rôle de base de données **db_backupoperator** , avec les autorisations **ALTER ANY CREDENTIAL** et les `EXECUTE` autorisations sur **sp_delete_backuphistory**procédure stockée.  
   

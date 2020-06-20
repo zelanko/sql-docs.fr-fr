@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60ebcc5ae689b6781a17cc7725020f6e2382e987
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919130"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -56,7 +55,7 @@ ms.locfileid: "67284954"
   
  Dans d'autres situations, vous pouvez préférer que les packages parent et enfants échouent ensemble comme une même unité, ou bien éviter la charge de traitement supplémentaire d'un autre processus. Par exemple, si un processus enfant échoue et que les traitements ultérieurs du processus parent du package dépendent de la réussite du processus enfant, alors le package enfant doit s'exécuter dans le processus du package parent.  
   
- Par défaut, la propriété ExecuteOutOfProcess a de la tâche d’exécution de package a `False`la valeur, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur `True` à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur `True` à la propriété, vous ne pouvez pas déboguer le package dans une installation d'outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../install-windows/install-integration-services.md).  
+ Par défaut, la propriété ExecuteOutOfProcess a de la tâche d’exécution de package a la valeur `False` , et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur `True` à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur `True` à la propriété, vous ne pouvez pas déboguer le package dans une installation d'outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Extension des transactions  
  La transaction que le package parent utilise peut être étendue au package enfant ; par conséquent, le travail réalisé par les deux packages peut être validé ou annulé. Par exemple, les insertions dans une base de données effectuées par le package parent peuvent être validées ou annulées, en fonction de celles réalisées par le package enfant, et vice versa. Pour plus d'informations, consultez [Inherited Transactions](../inherited-transactions.md).  

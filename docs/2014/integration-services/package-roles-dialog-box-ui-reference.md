@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64cdb71f323a4ac9325da74503d8aebaa8dd4474
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056813"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964849"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Rôles de package
   Utilisez la boîte de dialogue **Rôles de package** , disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour spécifier les rôles au niveau de la base de données qui possèdent un accès en lecture au package et les rôles au niveau de la base de données qui possèdent un accès en écriture au package. Les rôles au niveau de la base de données s’appliquent uniquement aux packages stockés dans la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**.  
