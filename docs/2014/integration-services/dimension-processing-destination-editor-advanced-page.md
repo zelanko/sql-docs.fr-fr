@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bef21b424c401d77b9d8f3477de4061c3ff0f3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966956"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Éditeur de destination de traitement de dimension (page Avancé)
   Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination de traitement de dimension** pour configurer la gestion des erreurs.  
@@ -28,7 +27,7 @@ ms.locfileid: "66059484"
   
 ## <a name="options"></a>Options  
  **Utiliser la configuration d'erreur par défaut**  
- Indiquez si vous voulez utiliser la gestion des erreurs par défaut d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par défaut, cette valeur est définie sur `True`.  
+ Indiquez si vous voulez utiliser la gestion des erreurs par défaut d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par défaut, cette valeur est `True`.  
   
  **Action de l’erreur de clé**  
  Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bf24de9bdc0e8b7b7ceb33bb881812b180ce112
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204577"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064246"
 ---
 # <a name="verify-queries-visual-database-tools"></a>Vérifier des requêtes (Visual Database Tools)
   Pour éviter tout problème, vous pouvez vérifier la requête que vous avez conçue afin de vous assurer que sa syntaxe est correcte. Cette option s’avère particulièrement utile quand vous entrez des instructions dans le [volet SQL](visual-database-tools.md).  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2baaa43fdf638dcd1f6794eaa9f5cf76df424c06
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ec23fd1883749e35e67f888e26bdf031ccf7fb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055870"
 ---
 # <a name="performing-distributed-transactions"></a>Exécution de transactions distribuées
   Microsoft Distributed Transaction Coordinator (MS DTC) permet aux applications d'étendre des transactions à deux instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il permet également aux applications de participer à des transactions gérées par des gestionnaires de transactions qui respectent la norme XA DTP d'Open Group.  

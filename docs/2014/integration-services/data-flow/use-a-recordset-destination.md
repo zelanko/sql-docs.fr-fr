@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939210"
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
   La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type `Object`. Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  
@@ -121,7 +120,7 @@ ms.locfileid: "62899995"
   
 5.  Ouvrez l' **Éditeur de destination d'ensemble d'enregistrements**et configurez la destination avec les paramètres suivants :  
   
-    1.  Sous l’onglet **Propriétés du composant** , `VariableName` pour propriété, `User::BonusRecordset`sélectionnez.  
+    1.  Sous l’onglet **Propriétés du composant** , pour `VariableName` propriété, `User::BonusRecordset` sélectionnez.  
   
     2.  Sous l'onglet **Colonnes d'entrée** , sélectionnez les trois colonnes disponibles.  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62899995"
   
 2.  Ouvrez l' **Éditeur de boucle Foreach**et configurez le conteneur avec les paramètres suivants :  
   
-    1.  Dans la page **collection** , pour **énumérateur**, sélectionnez **énumérateur ADO Foreach**, et pour **variable source de l’objet ADO**, sélectionnez `User::BonusRecordset`.  
+    1.  Dans la page **collection** , pour **énumérateur**, sélectionnez **énumérateur ADO Foreach**, et pour **variable source de l’objet ADO**, sélectionnez `User::BonusRecordset` .  
   
-    2.  Dans la **page mappage de variables** , mappez `User::EmailAddress` à l’index `User::FirstName` 0, à l’index `User::Bonus` 1 et à l’index 2.  
+    2.  Dans la page **mappage de variables** , mappez à l' `User::EmailAddress` index 0, à l’index `User::FirstName` 1 et `User::Bonus` à l’index 2.  
   
 3.  Sous l'onglet **Flux de contrôle** , à l'intérieur du conteneur de boucles Foreach, ajoutez une tâche Envoyer un message.  
   

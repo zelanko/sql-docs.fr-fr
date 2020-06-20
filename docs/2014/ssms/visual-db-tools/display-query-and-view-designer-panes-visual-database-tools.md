@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b5ce13bc7456f337b1910779e0c7caa575de483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204976"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056526"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Afficher les volets du Concepteur de requêtes et de vues (Visual Database Tools)
   Le Concepteur de requêtes et de vues est composé de quatre volets distincts : le volet Schéma, le volet Critères, le volet SQL et le volet Résultats. En général, lorsque vous ouvrez une vue ou créez une nouvelle requête, les quatre fenêtres s'ouvrent, mais si vous devez ouvrir l'une d'elles, vous pouvez le faire aussi longtemps que le Concepteur de requêtes et de vues est ouvert.  

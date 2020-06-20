@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 52df62d9a69d57b95c3e3f4fa9a6e75599925953
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83f3342d69b1d7bc60b1db502ca0761c6f58c3df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967343"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (Supérieur à) (expression SSIS)
   Effectue une comparaison pour déterminer si la première expression est supérieure à la deuxième. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison.  

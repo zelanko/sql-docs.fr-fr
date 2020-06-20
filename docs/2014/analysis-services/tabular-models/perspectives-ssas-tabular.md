@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa139c33a3d72b5a628ba6354488b8cef81c0a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938790"
 ---
 # <a name="perspectives-ssas-tabular"></a>Perspectives (SSAS Tabulaire)
   Dans les modèles tabulaires, les perspectives définissent des sous-ensembles visualisables d'un modèle et des points de vue du modèle focalisés sur un domaine d'activité ou sur une application.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066878"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Avantages  
  L'exploration des modèles tabulaires peut s'avérer très complexe pour les utilisateurs. Un modèle unique peut représenter le contenu d'un entrepôt de données complet avec de nombreuses tables, mesures et dimensions. Une telle complexité peut dérouter les utilisateurs qui n'ont besoin d'interagir qu'avec une petite partie du modèle afin de répondre à leurs besoins en termes de décisionnel et de rapports.  
   
  Dans une perspective, les tables, les colonnes et les mesures (dont les KPI) sont définis en tant qu'objets de champ. Vous pouvez sélectionner les champs visibles pour chaque perspective. Par exemple, un modèle peut contenir des données relatives au produit et aux ventes, ainsi que des données financières, des données géographiques et des données relatives aux employés. Si le service commercial a sans doute besoin des données relatives aux produits, aux ventes et aux promotions, ainsi que des données géographiques, il est peut probable qu'il s'intéresse aux données des employés et aux données financières. De même, le service des ressources humaines ne s'intéresse pas aux données relatives aux ventes et aux promotions, ni aux données géographiques.  

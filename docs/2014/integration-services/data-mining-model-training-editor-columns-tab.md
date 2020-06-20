@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9495343fca6da023dbf54bcf69dff6b9bb3e2b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939150"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur d'apprentissage du modèle d'exploration de données** pour établir une correspondance entre les colonnes d'entrée et les colonnes de la structure d'exploration de données.  

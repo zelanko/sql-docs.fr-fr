@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7abcd0cf2c159977c7977e1e49820a4562b25372
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995409"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Configurer les journaux d'erreurs de l'Agent SQL Server (page Général)
   Utilisez cet écran pour afficher et mettre à jour les paramètres du journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c10b9071fb821acc284c5d52621ed582c526ed62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057127"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
@@ -35,7 +34,7 @@ ms.locfileid: "63023912"
 ## <a name="explanation"></a>Explication  
  C'est une erreur générale qui peut être déclenchée qu'une réplication soit utilisée ou non. Dans le cas d'un serveur appartenant à une topologie de réplication, l'erreur est généralement déclenchée car le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est modifié à l'aide du Gestionnaire de contrôle des services [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et non du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque vous essayez d'exécuter un travail d'agent après avoir modifié le compte de service, le travail peut échouer avec un message d'erreur similaire au message suivant :  
   
- «Exécuté en tant qu' \<utilisateur : UserAccount>. Réplication-sous-système d’instantané \<de réplication : échec de l'> de l’agent AgentName. Exécuté en tant qu' \<utilisateur : UserAccount>. Le client ne dispose pas d'un privilège qui est obligatoire. L'étape a échoué. `[SQLSTATE 42000] (Error 14151)`. L'étape a échoué. »  
+ «Exécuté en tant qu’utilisateur : \<UserAccount> . Réplication-sous-système d’instantané de réplication : échec de l’agent \<AgentName> . Exécuté en tant qu’utilisateur : \<UserAccount> . Le client ne dispose pas d'un privilège qui est obligatoire. L'étape a échoué. `[SQLSTATE 42000] (Error 14151)`. L'étape a échoué. »  
   
  Ce problème est dû au fait que le Gestionnaire de contrôle des services Windows ne peut pas accorder les autorisations requises au nouveau compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925590"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Éditeur de transformation d'agrégation (onglet Agrégations)
   Utilisez l’onglet **Agrégations** de la boîte de dialogue **Éditeur de transformation d’agrégation** pour spécifier les colonnes destinées à l’agrégation et les propriétés de cette agrégation. Vous pouvez appliquer plusieurs agrégations. Ce type de transformation ne génère pas d'erreur de sortie.  
@@ -48,7 +47,7 @@ ms.locfileid: "66061582"
 |-----------|-----------------|  
 |Non spécifié|La propriété Échelle de clé n'est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
-|Moyen|L'agrégation peut écrire environ 5 000 000 clés.|  
+|Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
 |Élevé|L'agrégation peut écrire plus de 25 000 000 clés.|  
   
  **Clés**  
@@ -69,12 +68,12 @@ ms.locfileid: "66061582"
 |Opération|Description|  
 |---------------|-----------------|  
 |**GroupBy**|Divise les datasets en groupes. Les colonnes incluant tout type de données peuvent être utilisées pour le regroupement. Pour plus d'informations, consultez GROUP BY.|  
-|**SUM**|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d'informations, consultez SUM.|  
+|**Checksum**|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d'informations, consultez SUM.|  
 |**Average**|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d'informations, consultez AVG.|  
 |**Count**|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d'informations, consultez COUNT.|  
 |**CountDistinct**|Retourne le nombre de valeurs non NULL uniques d'un groupe. Pour plus d'informations, consultez COUNT et Distinct.|  
-|**Minimale**|Renvoie la valeur minimale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
-|**Maximale**|Renvoie la valeur maximale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
+|**Minimum**|Renvoie la valeur minimale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
+|**Maximum**|Renvoie la valeur maximale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
   
  **Indicateurs de comparaison**  
  Si vous sélectionnez **Group by**, permet d’utiliser les cases à cocher afin de contrôler le mode d’évaluation de la comparaison effectuée par la transformation. Pour plus d’informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](data-flow/comparing-string-data.md).  
@@ -86,7 +85,7 @@ ms.locfileid: "66061582"
 |-----------|-----------------|  
 |Non spécifié|La propriété `CountDistinctScale` n'est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
-|Moyen|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
+|Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
 |Élevé|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
   
  **Nombre de clés distinctes**  

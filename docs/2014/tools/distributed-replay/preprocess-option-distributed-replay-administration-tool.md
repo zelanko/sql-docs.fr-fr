@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f168d45b03473d958e202bd75116f4519d2fc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064122"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Option preprocess (outil d'administration Distributed Replay)
-  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outil d’administration Distributed Replay `DReplay.exe`,, est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec le contrôleur Distributed Replay. Cette rubrique décrit l’option de ligne de commande **preprocess** et la syntaxe correspondante.
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outil d’administration Distributed Replay, `DReplay.exe` , est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec le contrôleur Distributed Replay. Cette rubrique décrit l’option de ligne de commande **preprocess** et la syntaxe correspondante.
 
  L’option **preprocess** initialise l’étape de prétraitement. Lors de cette étape, le contrôleur prépare les données de trace d'entrée pour la relecture sur le serveur cible.
 
@@ -37,7 +36,7 @@ ms.locfileid: "78177339"
 
  Si le paramètre **-m** n’est pas spécifié, l’ordinateur local est utilisé.
 
- **-i** *input_trace_file* spécifie le chemin d’accès complet du fichier de trace d’entrée sur le `D:\Mytrace.trc`contrôleur, tel que. Le paramètre **-i** est obligatoire.
+ **-i** *input_trace_file* spécifie le chemin d’accès complet du fichier de trace d’entrée sur le contrôleur, tel que `D:\Mytrace.trc` . Le paramètre **-i** est obligatoire.
 
  Si des fichiers de substitution se trouvent dans le même répertoire, ils seront chargés et utilisés automatiquement. Les fichiers doivent suivre la convention d’affectation des noms de substitution de fichier, par exemple : `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.
 

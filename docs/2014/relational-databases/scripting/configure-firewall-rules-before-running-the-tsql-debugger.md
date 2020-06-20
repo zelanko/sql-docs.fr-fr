@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056920"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurer le débogueur Transact-SQL
   Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s'exécute sur un autre ordinateur que l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +55,7 @@ ms.locfileid: "82704040"
   
     2.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.  
   
-    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à sqlservr.exe pour cette instance. Par défaut, sqlservr. exe est installé dans C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, où *nom_instance* est MSSQLSERVER pour l’instance par défaut et le nom de l’instance pour toute instance nommée.  
+    3.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès du programme :** , puis entrez le chemin d'accès complet à sqlservr.exe pour cette instance. Par défaut, sqlservr.exe est installé dans C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, où *nom_instance* est MSSQLSERVER pour l’instance par défaut et le nom de l’instance pour toute instance nommée.  
   
     4.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.  
   

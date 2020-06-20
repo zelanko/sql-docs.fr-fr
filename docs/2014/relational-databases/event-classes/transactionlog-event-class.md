@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6b6fa07c2cb2f4880420885fefc30d0fd419c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa3f29b6174342f0ec298df5bc49b30f7c0cbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027960"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog (classe d'événements)
   Utilisez la classe d'événements TransactionLog pour analyser l'activité des journaux de transactions dans une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

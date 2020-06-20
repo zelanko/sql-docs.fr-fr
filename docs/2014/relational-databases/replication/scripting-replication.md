@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52c0129c18f3248813c663026797b86ea23d5b13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056896"
 ---
 # <a name="scripting-replication"></a>Création de scripts de réplication
   Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système Transact-SQL nécessaires pour mettre en œuvre le ou les composants de réplication définis dans des scripts, tels qu'une publication ou un abonnement. Il est possible de créer des scripts à l’aide d’un Assistant (comme l’Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée.  
@@ -82,7 +81,7 @@ ms.locfileid: "63250521"
   
 3.  Cliquez avec le bouton droit sur une publication ou un abonnement, puis cliquez sur **Générer des scripts**.  
   
-4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>** .  
+4.  Spécifiez les options dans la boîte de dialogue **générer un script SQL- \<ReplicationObject> ** .  
   
 5.  Cliquez sur **Générer un script sur fichier**.  
   

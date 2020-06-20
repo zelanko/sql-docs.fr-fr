@@ -1,5 +1,6 @@
 ---
 title: Appel d’une procédure stockée | Microsoft Docs
+description: En savoir plus sur la séquence d’échappement ODBC CALL, la méthode recommandée pour exécuter des procédures stockées. Le pilote ODBC Native Client prend également en charge Transact-SQLEXECUTE.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,20 +20,20 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fae2e947d0faa38ae875f72b48119b21c30dd47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4c13ef2e5e1f47a9cb404a312bcca855c52c42b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967536"
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge la séquence d’échappement ODBC Call [!INCLUDE[tsql](../../includes/tsql-md.md)]et l’instruction [Execute](../../t-sql/language-elements/execute-transact-sql.md) pour l’exécution des procédures stockées. la séquence d’échappement ODBC CALL est la méthode recommandée. L'utilisation de la syntaxe ODBC permet à une application de récupérer les codes de retour de procédures stockées et le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est également optimisé pour utiliser un protocole initialement développé pour envoyer des appels de procédure distante (RPC) entre des ordinateurs qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge à la fois la séquence d’échappement ODBC Call et l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction [Execute](../../t-sql/language-elements/execute-transact-sql.md) pour exécuter des procédures stockées ; la séquence d’échappement ODBC Call est la méthode recommandée. L'utilisation de la syntaxe ODBC permet à une application de récupérer les codes de retour de procédures stockées et le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est également optimisé pour utiliser un protocole initialement développé pour envoyer des appels de procédure distante (RPC) entre des ordinateurs qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
   
 > [!NOTE]  
->  Lors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’appel de procédures stockées à l’aide de paramètres nommés avec ODBC (pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkID=209721)),\@les noms de paramètres doivent commencer par le caractère «». Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC (Microsoft Data Access Components).  
+>  Lors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’appel de procédures stockées à l’aide de paramètres nommés avec ODBC (pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkID=209721)), les noms de paramètres doivent commencer par le \@ caractère «». Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC (Microsoft Data Access Components).  
   
  La séquence d'échappement ODBC CALL permettant d'appeler une procédure est la suivante :  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916863"
 ---
 # <a name="data-flow-taps"></a>Drainage des flux de données
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduit une nouvelle fonctionnalité qui vous permet d'ajouter un drainage des données au niveau du chemin d'accès d'un flux de données d'un package au moment de l'exécution et diriger la sortie à partir du drainage des données vers un fichier externe. Pour utiliser cette fonctionnalité, vous devez déployer votre projet SSIS à l'aide du modèle de déploiement de projet sur un serveur SSIS. Après avoir déployé le package sur le serveur, vous devez exécuter des scripts T-SQL sur la base de données SSISDB pour ajouter des drainages de données avant d'exécuter le package. Voici un exemple de scénario :  
@@ -51,7 +50,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  Le paramètre dataflow_path_id_string de la procédure stockée add_data_tap correspond à la propriété IdentificationString du chemin d'accès de flux de données auquel vous voulez ajouter un drainage de données. Pour obtenir dataflow_path_id_string, cliquez sur le chemin de flux de données (flèche entre les tâches du flux de données), et notez la valeur de la propriété **IdentificationString** dans la fenêtre Propriétés.  
   
- Quand vous exécutez le script, le fichier de sortie est stocké dans \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. S'il existe déjà un fichier du même nom, un nouveau fichier avec un suffixe (par exemple : output[1].txt) est créé.  
+ Lorsque vous exécutez le script, le fichier de sortie est stocké dans \<Program Files> \Microsoft SQL Server\110\DTS\DataDumps. S'il existe déjà un fichier du même nom, un nouveau fichier avec un suffixe (par exemple : output[1].txt) est créé.  
   
  Comme mentionné précédemment, vous pouvez également utiliser la procédure stockée [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)plutôt que add_data_tap. Cette procédure stockée accepte l'ID de tâche de flux de données comme paramètre au lieu de task_package_path. L'ID de tâche de flux de données est disponible dans la fenêtre Propriétés de Visual Studio.  
   

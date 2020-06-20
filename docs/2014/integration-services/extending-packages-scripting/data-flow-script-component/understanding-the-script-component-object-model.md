@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967245"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Présentation du modèle objet du composant Script
   Comme indiqué dans [codage et débogage du composant Script] (.. /Extending-packages-Scripting/Data-Flow-script-Component/Coding-and-Debugging-the-script-Component.MD, le projet de composant script contient trois éléments de projet :
@@ -115,27 +114,27 @@ public override void PreExecute()
 
 -   Des propriétés d'accesseur typées et nommées pour chaque colonne d'entrée sélectionnée. Ces propriétés sont en lecture seule ou en lecture/écriture selon le **Type d’utilisation** spécifié pour la colonne dans la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**.
 
--   Une propriété **\<column>_IsNull** pour chaque colonne d’entrée sélectionnée. Cette propriété est également en lecture seule ou en lecture/écriture selon le **Type d’utilisation** spécifié pour la colonne.
+-   Propriété ** \<column> _IsNull** pour chaque colonne d’entrée sélectionnée. Cette propriété est également en lecture seule ou en lecture/écriture selon le **Type d’utilisation** spécifié pour la colonne.
 
--   Une méthode **DirectRowTo\<outputbuffer>** pour chaque sortie configurée. Vous utilisez ces méthodes lorsque vous filtrez des lignes vers l'une des multiples sorties dans le même `ExclusionGroup`.
+-   Méthode **méthode DirectRowTo \<outputbuffer> ** pour chaque sortie configurée. Vous utilisez ces méthodes lorsque vous filtrez des lignes vers l'une des multiples sorties dans le même `ExclusionGroup`.
 
 -   Une fonction `NextRow` pour récupérer la ligne d'entrée suivante et une fonction `EndOfRowset` pour déterminer si la dernière mémoire tampon de données a été traitée. Généralement, vous n'avez pas besoin de ces fonctions lorsque vous exécutez les méthodes de traitement d'entrée implémentées dans la classe de base `UserComponent`. La section suivante fournit des informations supplémentaires sur la classe de base `UserComponent`.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Composants fournis par l'élément de projet ComponentWrapper
  L'élément de projet ComponentWrapper contient une classe nommée `UserComponent` dérivée de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` dans laquelle vous écrivez votre code personnalisé dérive à son tour de `UserComponent`. La classe `UserComponent` contient les méthodes suivantes :
 
--   Une implémentation substituée de la méthode `ProcessInput`. Il s'agit de la méthode que le moteur de flux de données appelle au moment de l'exécution, juste après la méthode `PreExecute`. Elle peut être appelée plusieurs fois. `ProcessInput`transfère le traitement à la ** \<méthode de>_ProcessInput inputBuffer** . La méthode `ProcessInput` recherche ensuite la fin de la mémoire tampon d'entrée et si elle la trouve, appelle la méthode `FinishOutputs` substituable et la méthode `MarkOutputsAsFinished` privée. Puis, la méthode `MarkOutputsAsFinished` appelle `SetEndOfRowset` sur la dernière mémoire tampon de sortie.
+-   Une implémentation substituée de la méthode `ProcessInput`. Il s'agit de la méthode que le moteur de flux de données appelle au moment de l'exécution, juste après la méthode `PreExecute`. Elle peut être appelée plusieurs fois. `ProcessInput`transfère le traitement à la méthode ** \<inputbuffer> _ProcessInput** . La méthode `ProcessInput` recherche ensuite la fin de la mémoire tampon d'entrée et si elle la trouve, appelle la méthode `FinishOutputs` substituable et la méthode `MarkOutputsAsFinished` privée. Puis, la méthode `MarkOutputsAsFinished` appelle `SetEndOfRowset` sur la dernière mémoire tampon de sortie.
 
--   Une implémentation substituable de la méthode **\<inputbuffer>_ProcessInput**. Cette implémentation par défaut parcourt simplement chaque ligne d’entrée et appelle **\<inputbuffer>_ProcessInputRow**.
+-   Implémentation substituable de la méthode ** \<inputbuffer> _ProcessInput** . Cette implémentation par défaut parcourt simplement chaque ligne d’entrée et appelle ** \<inputbuffer> _ProcessInputRow**.
 
--   Une implémentation substituable de la méthode **\<inputbuffer>_ProcessInputRow**. L'implémentation par défaut est vide. Il s'agit normalement de la méthode que vous devez substituer pour écrire votre code de traitement de données personnalisé.
+-   Implémentation substituable de la méthode ** \<inputbuffer> _ProcessInputRow** . L'implémentation par défaut est vide. Il s'agit normalement de la méthode que vous devez substituer pour écrire votre code de traitement de données personnalisé.
 
 #### <a name="what-your-custom-code-should-do"></a>Opérations à effectuer par votre code personnalisé
  Vous pouvez utiliser les méthodes suivantes pour traiter l'entrée dans la classe `ScriptMain` :
 
--   Substituez **\<inputbuffer>_ProcessInputRow** pour traiter les données dans chaque ligne d’entrée lors de leur transfert.
+-   Remplacez ** \<inputbuffer> _ProcessInputRow** pour traiter les données dans chaque ligne d’entrée lors de leur transmission.
 
--   Substituez **\<inputbuffer>_ProcessInput** uniquement si vous devez effectuer une autre opération pendant que vous parcourez les lignes d’entrée, (Par exemple, vous devez tester `EndOfRowset` pour que effectue une autre action une fois que toutes les lignes ont été traitées.) Appelez ** \<le>_ProcessInputRow inputBuffer** pour effectuer le traitement de ligne.
+-   Remplacez ** \<inputbuffer> _ProcessInput** uniquement si vous devez effectuer une opération supplémentaire en effectuant une boucle dans les lignes d’entrée. (Par exemple, vous devez tester pour que `EndOfRowset` effectue une autre action une fois que toutes les lignes ont été traitées.) Appelez ** \<inputbuffer> _ProcessInputRow** pour effectuer le traitement de ligne.
 
 -   Substituez `FinishOutputs` si vous devez effectuer une opération sur les sorties avant leur fermeture.
 
@@ -149,11 +148,11 @@ public override void PreExecute()
 
 -   Des propriétés d'accesseur nommées, typées et en écriture seule pour chaque colonne de sortie.
 
--   Une colonne en écriture seule ** \<>_IsNull** propriété pour chaque colonne de sortie sélectionnée que vous pouvez utiliser pour affecter la valeur à `null`la colonne.
+-   Propriété ** \<column> _IsNull** en écriture seule pour chaque colonne de sortie sélectionnée que vous pouvez utiliser pour affecter la valeur à la colonne `null` .
 
 -   Une méthode `AddRow` pour ajouter une ligne vide à la mémoire tampon de sortie.
 
--   Une méthode `SetEndOfRowset` pour indiquer au moteur de flux de données qu'aucune mémoire tampon de données supplémentaires n'est attendue. Il existe également une fonction `EndOfRowset` pour déterminer si la mémoire tampon active est la dernière mémoire tampon de données. En général, vous n’avez pas besoin de ces fonctions lorsque vous utilisez les méthodes de `UserComponent` traitement d’entrée implémentées dans la classe de base.
+-   Une méthode `SetEndOfRowset` pour indiquer au moteur de flux de données qu'aucune mémoire tampon de données supplémentaires n'est attendue. Il existe également une fonction `EndOfRowset` pour déterminer si la mémoire tampon active est la dernière mémoire tampon de données. En général, vous n’avez pas besoin de ces fonctions lorsque vous utilisez les méthodes de traitement d’entrée implémentées dans la `UserComponent` classe de base.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Composants fournis par l'élément de projet ComponentWrapper
  L'élément de projet ComponentWrapper contient une classe nommée `UserComponent` dérivée de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` dans laquelle vous écrivez votre code personnalisé dérive à son tour de `UserComponent`. La classe `UserComponent` contient les méthodes suivantes :

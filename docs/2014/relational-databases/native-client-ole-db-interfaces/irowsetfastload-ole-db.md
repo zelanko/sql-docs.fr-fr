@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7ecf72f0015d9ed197b3b7a33d4f9bb3246134b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056160"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
   L' `IRowsetFastLoad` interface expose la prise en charge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opérations de copie en bloc basées sur la mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les consommateurs de fournisseurs OLE DB Native Client utilisent l’interface pour ajouter rapidement des données à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table existante.  

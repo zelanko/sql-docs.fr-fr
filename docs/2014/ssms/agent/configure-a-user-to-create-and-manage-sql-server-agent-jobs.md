@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83313389b3b872004fb23b0babdad19cfb5b8e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995490"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
-  Cette rubrique explique comment configurer un utilisateur pour créer ou exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des travaux de l’agent.  
+  Cette rubrique explique comment configurer un utilisateur pour créer ou exécuter des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travaux de l’agent.  
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "63253558"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
- Pour configurer un utilisateur pour créer ou exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des travaux de l’agent, vous devez d’abord ajouter un rôle de connexion SQL Server ou msdb existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’un des rôles de base de données fixes de l’agent suivants dans la base de données msdb : SQLAgentUserRole, SQLAgentReaderRole ou SQLAgentOperatorRole.  
+ Pour configurer un utilisateur pour créer ou exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des travaux de l’agent, vous devez d’abord ajouter un rôle de connexion SQL Server ou msdb existant à l’un des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles de base de données fixes de l’agent suivants dans la base de données msdb : SQLAgentUserRole, SQLAgentReaderRole ou SQLAgentOperatorRole.  
   
  Par défaut, les membres de ces rôles de base de données peuvent créer leurs propres étapes de travail qui s'exécutent de façon autonome. Si ces utilisateurs non-administrateurs souhaitent exécuter des travaux qui lancent d'autres types d'étapes de travail (par exemple, des packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), ils doivent disposer d'un accès à un compte proxy. Tous les membres du rôle de serveur fixe sysadmin sont habilités à créer, à modifier et à supprimer des comptes proxy. Pour plus d’informations sur les autorisations associées à ces rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Rôles de base de données fixes de SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63253558"
   
 3.  Cliquez avec le bouton droit sur la connexion à ajouter au rôle de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, puis sélectionnez **Propriétés**.  
   
-4.  Dans la page mappage de l' **utilisateur** de la boîte de dialogue Propriétés de la **connexion** , sélectionnez la ligne contenant `msdb`.  
+4.  Dans la page mappage de l' **utilisateur** de la boîte de dialogue Propriétés de la **connexion** , sélectionnez la ligne contenant `msdb` .  
   
 5.  Sous **Appartenance au rôle de base de données : msdb**, cochez le rôle de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] approprié.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5279500939d0499c8ef7bd247b92e052b522970b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b53cd76a342a4b449359149080f5d549f024fdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048416"
 ---
 # <a name="file-element-dta"></a>File, élément (Assistant Paramétrage de base de données)
   Spécifie le fichier de charge de travail. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. Les fichiers de charge de travail peuvent être des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] (.sql) ou des fichiers de trace (.trc). Pour plus d’informations, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  

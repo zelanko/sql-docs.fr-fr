@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36139b916442b2c0f616d52d2b06efdbda2cfe03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048336"
 ---
 # <a name="setting-tool-options-and-layout"></a>Définition des options du menu Outils et de la disposition
   Vous pouvez définir les options qui permettent de configurer ce que l'interface de l'Assistant Paramétrage du moteur de base de données affiche au démarrage, les polices qu'elle utilise et également configurer d'autres fonctionnalités pour faciliter l'utilisation de l'outil. Les exercices pratiques de cette page vous aideront à vous familiariser avec les options qu'il est possible de définir et avec la façon de procéder.  
@@ -43,6 +42,6 @@ ms.locfileid: "66110200"
     -   Par défaut, l'option **Demander avant d'arrêter l'analyse de la session** est activée pour éviter d'arrêter accidentellement une session de paramétrage avant que l'Assistant Paramétrage du moteur de base de données n'ait terminé d'analyser une charge de travail.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

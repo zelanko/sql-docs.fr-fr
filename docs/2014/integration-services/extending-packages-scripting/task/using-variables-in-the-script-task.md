@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55122ec1323c0e95816af4e6129f324041ab2eda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967159"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilisation de variables dans la tâche de script
   Les variables permettent à la tâche de script d'échanger des données avec d'autres objets dans le package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "62894590"
  Une fois que vous avez mappé les éléments énumérés aux variables, vous devez ajouter les variables mappées à la `ReadOnlyVariables` propriété dans la page **script** de l **'éditeur de tâche de script** pour les mettre à la disposition de votre script. Pour obtenir un exemple de tâche de script dans un conteneur de boucles Foreach qui traite les fichiers image dans un dossier, consultez [Utilisation d’images à l’aide de la tâche de script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
   
 ## <a name="variables-example"></a>Exemple de variables  
- L'exemple suivant montre comment accéder à des variables et les utiliser dans une tâche de script pour déterminer le chemin d'accès du flux de travail du package. L’exemple suppose que vous avez créé des variables de type `CustomerCount` entier `MaxRecordCount` nommées et que vous `ReadOnlyVariables` les avez ajoutées à la collection dans l **'éditeur de tâche de script**. La variable `CustomerCount` contient le nombre d'enregistrements de client à importer. Si sa valeur est supérieure à la valeur de `MaxRecordCount`, la tâche de script signale une défaillance. Lorsqu'une défaillance se produit en raison du dépassement du seuil `MaxRecordCount`, le chemin d'accès aux erreurs du flux de travail peut implémenter les opérations de nettoyage requises.  
+ L'exemple suivant montre comment accéder à des variables et les utiliser dans une tâche de script pour déterminer le chemin d'accès du flux de travail du package. L’exemple suppose que vous avez créé des variables de type entier nommées et que vous les avez `CustomerCount` `MaxRecordCount` ajoutées à la `ReadOnlyVariables` collection dans l **'éditeur de tâche de script**. La variable `CustomerCount` contient le nombre d'enregistrements de client à importer. Si sa valeur est supérieure à la valeur de `MaxRecordCount`, la tâche de script signale une défaillance. Lorsqu'une défaillance se produit en raison du dépassement du seuil `MaxRecordCount`, le chemin d'accès aux erreurs du flux de travail peut implémenter les opérations de nettoyage requises.  
   
  Pour compiler correctement l'exemple, vous devez ajouter une référence à l'assembly Microsoft.SqlServer.ScriptTask.  
   

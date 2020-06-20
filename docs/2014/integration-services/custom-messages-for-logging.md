@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe7d714d93915814b6658409a9f892c28e03b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67316666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917149"
 ---
 # <a name="custom-messages-for-logging"></a>Messages personnalisés pour la journalisation
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble complet d'événements personnalisés permettant d'écrire des entrées de journal pour des packages et bon nombre de tâches. Vous pouvez utiliser ces entrées pour enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Vous pouvez ainsi enregistrer l'heure de début et de fin d'une insertion en bloc pour identifier des problèmes de performances lors de l'exécution du package.  
@@ -33,29 +32,29 @@ ms.locfileid: "67316666"
   
  [Package](#Package)  
   
- [tâche d'insertion en bloc](#BulkInsert)  
+ [Tâche d’insertion en bloc](#BulkInsert)  
   
  [tâche de flux de données](#DataFlow)  
   
  [Tâche d’exécution DTS 2000](#ExecuteDTS200)  
   
- [Tâche d'exécution de processus](#ExecuteProcess)  
+ [Tâche d’exécution de processus](#ExecuteProcess)  
   
- [Tâche d’exécution de requêtes SQL](#ExecuteSQL)  
+ [Tache d’exécution de requêtes SQL](#ExecuteSQL)  
   
  [Tâches du système de fichiers](#FileSystem)  
   
  [Tâche FTP](#FTP)  
   
- [Message Queue Task](#MessageQueue)  
+ [Tâche MSMQ](#MessageQueue)  
   
  [Tâche de script](#Script)  
   
- [tache Envoyer un message](#SendMail)  
+ [Tache Envoyer un message](#SendMail)  
   
  [Tâche de transfert de bases de données](#TransferDatabase)  
   
- [Tâche de transfert de messages d'erreur](#TransferErrorMessages)  
+ [Tâche de transfert de messages d’erreur](#TransferErrorMessages)  
   
  [Tâche de transfert de travaux](#TransferJobs)  
   
@@ -63,13 +62,13 @@ ms.locfileid: "67316666"
   
  [Tâche de transfert de procédures stockées de master](#TransferMasterStoredProcedures)  
   
- [Tâche de transfert d'objets SQL Server](#TransferSQLServerObjects)  
+ [Tâche de transfert d’objets SQL Server](#TransferSQLServerObjects)  
   
  [Tâche de services Web](#WebServices)  
   
  [Tâche Lecteur de données WMI](#WMIDataReader)  
   
- [Tâche Observateur d'événement WMI](#WMIEventWatcher)  
+ [Tâche Observateur d’événement WMI](#WMIEventWatcher)  
   
  [Tâche XML](#XML)  
   

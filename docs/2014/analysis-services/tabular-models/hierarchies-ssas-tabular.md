@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 823d35b71fca52b2f1892d6e7dbfc940688f0ae6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938870"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Hiérarchies (SSAS Tabulaire)
   Les hiérarchies, dans les modèles tabulaires, sont des métadonnées qui définissent les relations entre deux colonnes ou plus d'une table. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de clients de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs du client et à inclure dans un rapport.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067078"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Avantages  
  Les tables peuvent inclure des dizaines, voire des centaines de colonnes avec des noms de colonne inhabituels sans ordre apparent. Cela peut entraîner une apparence non ordonnée dans les listes de champs de clients de création de rapports, ce qui complique la tâche des utilisateurs qui recherchent et souhaitent inclure des données dans un rapport. Les hiérarchies peuvent fournir une vue simple et intuitive d'une structure de données autrement plus complexe.  
   
  Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  

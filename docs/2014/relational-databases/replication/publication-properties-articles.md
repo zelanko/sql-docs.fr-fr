@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f46fbc99145f9a372a2c1bf5d40919b87c782454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55f938c8defeb418cda76b4efa0b182798a2e4e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064611"
 ---
 # <a name="publication-properties-articles"></a>Propriétés de la publication, Articles
   La page **Articles** de la boîte de dialogue **Propriétés de la publication** reprend les informations sur les articles contenus dans une publication, vous permet d'ajouter ou de supprimer des articles de publications existantes, ainsi que de modifier les propriétés des articles et le filtrage s'appuyant sur des colonnes.  
@@ -67,12 +66,12 @@ ms.locfileid: "63021678"
  **Propriétés de l'article**  
  Cliquez sur **Propriétés de l'article** , puis effectuez l'une des actions ci-dessous :  
   
--   Cliquez sur **Définir les propriétés de l’article de \<type_objet> en surbrillance** pour ouvrir la boîte de dialogue **Propriétés de l’article - \<nom_objet>** . Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées uniquement à l’objet en surbrillance dans le volet Objet de la page **Articles**.  
+-   Cliquez sur **définir les propriétés de \<ObjectType> l’article en surbrillance** pour ouvrir la boîte de dialogue Propriétés de **l’article- \<ObjectName> ** . les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées uniquement à l’objet mis en surbrillance dans le volet objet de la page **Articles** .  
   
--   Cliquez sur **Définir les propriétés de tous les articles \<type_objet>** pour ouvrir la boîte de dialogue **Propriétés pour tous les articles \<type_objet>** . Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées à tous les objets de ce type dans le volet Objet de la page **Articles**, notamment ceux qui ne sont pas encore sélectionnés pour la publication.  
+-   Cliquez sur **définir les propriétés de tous les \<ObjectType> Articles**pour ouvrir la boîte de dialogue Propriétés de **tous les \<ObjectType> Articles** ; les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées à tous les objets de ce type dans le volet objet de la page **Articles** , y compris ceux qui n’ont pas encore été sélectionnés pour la publication.  
   
     > [!NOTE]  
-    >  Les modifications de propriétés apportées dans la boîte de dialogue **Propriétés pour tous les articles \<type_objet>** remplacent celles apportées dans la boîte de dialogue **Propriétés de l’article - \<nom_objet>** . Ainsi, si vous voulez définir un certain nombre de valeurs par défaut applicables à tous les articles d'un type d'objet mais souhaitez également définir des propriétés pour des objets spécifiques, vous devez d'abord définir les valeurs par défaut pour tous les articles. Définissez ensuite les propriétés des objets individuels.  
+    >  Les modifications de propriétés apportées dans la boîte de dialogue **Propriétés de tous les \<ObjectType> Articles** remplacent celles effectuées précédemment dans la boîte de dialogue **Propriétés de l’article- \<ObjectName> ** . Ainsi, si vous voulez définir un certain nombre de valeurs par défaut applicables à tous les articles d'un type d'objet mais souhaitez également définir des propriétés pour des objets spécifiques, vous devez d'abord définir les valeurs par défaut pour tous les articles. Définissez ensuite les propriétés des objets individuels.  
   
  **La table sélectionnée est en téléchargement seul**  
  Réplication de fusion uniquement. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Permet d'indiquer que les modifications sont interdites au niveau de l'Abonné si l'abonnement d'un client est utilisé. Étant donné que les articles disponibles uniquement par téléchargement ne peuvent pas être mis à jour sur l'abonné, le suivi des métadonnées n'est pas envoyé aux abonnés. Cela peut aboutir à une réduction du stockage sur les abonnés et à un gain de performances, notamment si la connexion réseau est lente. Cette option équivaut à la valeur **Téléchargement seul pour l'Abonné, interdire les modifications de l'Abonné** pour l'option **Direction de la synchronisation** dans la boîte de dialogue **Propriétés de l'article** . Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](merge/optimize-merge-replication-performance-with-download-only-articles.md).  

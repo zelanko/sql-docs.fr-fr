@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176171"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967229"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.
@@ -49,7 +48,7 @@ ms.locfileid: "78176171"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Éléments et classes du projet de tâche de script
  Par défaut, le projet de tâche de script affiché dans la fenêtre Explorateur de projets VSTA contient un seul élément, `ScriptMain`. L'élément `ScriptMain` contient à son tour une classe unique, également appelée `ScriptMain`. Les éléments de code inclus dans la classe varient selon le langage de programmation sélectionné pour la tâche de script :
 
--   Lorsque la tâche de script est configurée [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] pour le langage de `ScriptMain` programmation, la classe possède une sous `Main`-routine publique,. La sous-routine `ScriptMain.Main` est la méthode appelée par le runtime lorsque vous exécutez votre tâche de script.
+-   Lorsque la tâche de script est configurée pour le [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] langage de programmation, la `ScriptMain` classe possède une sous-routine publique, `Main` . La sous-routine `ScriptMain.Main` est la méthode appelée par le runtime lorsque vous exécutez votre tâche de script.
 
      Par défaut, le seul code figurant dans la sous-routine `Main` d'un nouveau script est la ligne `Dts.TaskResult = ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien. La `Dts.TaskResult` propriété est décrite dans [retour des résultats de la tâche de script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).
 

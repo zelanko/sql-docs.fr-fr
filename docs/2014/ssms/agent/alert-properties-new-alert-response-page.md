@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18c4c93464d7144c8edce9c38464c2f750d7068e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056592"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Propriétés de l’alerte-nouvelle alerte (page réponse)
   Utilisez cette page pour spécifier un travail que vous souhaitez exécuter et pour obtenir une liste d’opérateurs à notifier en réponse à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent.  
