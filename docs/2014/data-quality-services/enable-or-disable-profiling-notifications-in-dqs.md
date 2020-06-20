@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3b5e8cec1cac3eb1ce4357480c0f994a33d4c40
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937720"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Activer ou désactiver les notifications de profilage dans DQS
   Cette rubrique explique comment activer ou désactiver les notifications de profilage dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Par défaut, les notifications de profilage sont activées dans DQS. Les notifications de profilage vous indiquent des faits importants sur la source de données et l'efficacité de l'activité actuelle effectuée sur les données. Pour plus d’informations, consultez [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  

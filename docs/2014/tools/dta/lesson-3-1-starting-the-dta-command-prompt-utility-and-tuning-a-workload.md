@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b051320d2f797fa55c1d84192a1b6246f437b1ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011572"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Démarrage de l'utilitaire de ligne de commande dta et paramétrage d'une charge de travail
   Au cours de cette tâche, vous allez démarrer l’utilitaire **dta** et afficher son aide, puis vous allez l’utiliser afin de paramétrer une charge de travail à partir de l’invite de commandes. Elle utilise la charge de travail, MyScript. SQL, que vous avez créée pour l’Assistant Paramétrage du moteur de base de données la pratique de l’interface utilisateur graphique (GUI) de [Paramétrage d’une charge de travail](lesson-1-1-tuning-a-workload.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66110160"
   
 3.  Lorsque l'Assistant Paramétrage du moteur de base de données a terminé de paramétrer la charge de travail, il affiche un message signalant que votre session de paramétrage s'est terminée avec succès. Vous pouvez afficher les résultats du paramétrage. Pour cela, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour ouvrir les fichiers MySession2OutputScript.sql et RMySession2Output.xml. Une autre méthode consiste à ouvrir la session de paramétrage MySession2 dans l’interface de l’Assistant Paramétrage du moteur de base de données et à afficher les recommandations et les rapports en procédant comme aux exercices [Affichage des recommandations pour le paramétrage](lesson-1-2-viewing-tuning-recommendations.md) et [Affichage des rapports de paramétrage](lesson-1-3-viewing-tuning-reports.md).  
   
-## <a name="summary"></a>Récapitulatif  
+## <a name="summary"></a>Résumé  
  Vous avez correctement paramétré une charge de travail simple à partir de l’invite de commandes en utilisant l’utilitaire **dta** . Cet outil fournit de nombreuses autres options de paramétrage. Pour plus d’informations, consultez l’aide de cet outil (**dta -?**) et la rubrique [Utilitaire dta](dta-utility.md) .  
   
 ## <a name="after-you-finish-this-tutorial"></a>Fin du didacticiel  

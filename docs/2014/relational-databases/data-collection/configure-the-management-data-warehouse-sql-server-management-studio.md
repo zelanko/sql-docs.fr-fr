@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970507"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
   Cette rubrique explique comment configurer l'entrepôt de données de gestion pour prendre en charge le stockage des données sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent le collecteur de données. Ces instances peuvent se trouver sur le même serveur ou sur différents serveurs. Cette rubrique fournit également des descriptions de l'interface utilisateur pour la boîte de dialogue [Assistant Configuration de l'entrepôt de gestion des données](#Wizard) . Pour plus d'informations sur la configuration d'un collecteur de données, consultez [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  
@@ -93,7 +92,7 @@ ms.locfileid: "62918818"
   
  Spécifiez une connexion en activant la case à cocher **Mappage** pour la connexion.  
   
- **Appartenance au rôle de base de données pour :**  *\<nom_entrepôt_données>*  
+ **Appartenance au rôle de base de données pour :**  *\<data warehouse name>*  
  Sélectionnez le rôle d'entrepôt de données de gestion auquel la connexion est mappée en cliquant sur une ou plusieurs cases à cocher en regard des options suivantes :  
   
 -   **mdw_admin**  

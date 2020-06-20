@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a22c5d032ca42b64536bb765b037d2cad02a27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050363"
 ---
 # <a name="application-level-partitioning"></a>Partitionnement au niveau de l'application
   Cet exemple illustre le partitionnement au niveau de l'application, où les données sont stockées dans une table à mémoire optimisée ou une table sur disque, selon que la commande se situe avant ou après une date spécifique. Toutes les commandes postérieures ou égales à *hotDate* sont dans la table à mémoire optimisée et toutes celles antérieures à *hotDate* sont dans la table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table optimisée en mémoire) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968185"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Étape 4 : Ajout d’une destination de fichier plat
   La sortie d'erreur de la transformation Lookup Currency Key réachemine vers la transformation Script toutes les lignes de données ayant échoué au cours de l'opération de recherche. Pour améliorer les informations recueillies sur les erreurs survenues, la transformation Script exécute un script chargé d'obtenir la description des erreurs.  
@@ -36,11 +35,11 @@ ms.locfileid: "62767371"
   
 6.  Dans la boîte de dialogue **Format de fichier plat** , assurez-vous que **Délimité** est sélectionné, puis cliquez sur **OK**.  
   
-7.  Dans l **'éditeur du gestionnaire de connexions de fichiers plats**, dans la zone `Error Data`nom du gestionnaire de **connexions** , tapez.  
+7.  Dans l **'éditeur du gestionnaire de connexions de fichiers plats**, dans la zone **nom du gestionnaire de connexions** , tapez `Error Data` .  
   
 8.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , cliquez sur **Parcourir**, puis recherchez le dossier dans lequel le fichier est à stocker.  
   
-9. Dans la boîte de dialogue **ouvrir** , pour **nom**de fichier `ErrorOutput.txt`, tapez, puis cliquez sur **ouvrir**.  
+9. Dans la boîte de dialogue **ouvrir** , pour **nom de fichier**, tapez `ErrorOutput.txt` , puis cliquez sur **ouvrir**.  
   
 10. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , vérifiez que la zone **Paramètres régionaux** contient la valeur Anglais (États-Unis) et la zone **Page de codes** la valeur 1252 (ANSI - Latin I).  
   

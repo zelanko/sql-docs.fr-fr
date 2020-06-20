@@ -29,18 +29,17 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c073b0f438ec022e1b05f481652d6f08ef34cc53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066110"
 ---
 # <a name="use-sql-server-objects"></a>Utiliser des objets SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des objets et des compteurs qui peuvent être utilisés par le Moniteur système pour surveiller l'activité des ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objet peut être n'importe quelle ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telle qu'un verrou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un processus Windows. Chaque objet contient un ou plusieurs compteurs qui déterminent divers aspects de l'objet à surveiller. Par exemple, l’objet **SQL Server Locks** contient des compteurs appelés **Nombre d’interblocages/s** et **Dépassement du délai d’attente des verrous/s**.  
   
- Certains objets disposent de plusieurs instances si plusieurs ressources d'un type donné sont présentes sur l'ordinateur. Par exemple, le type d'objet **Processor** possède plusieurs instances si le système est multiprocesseur. Le type d'objet **Databases** dispose d'une instance pour chaque base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certains types d’objets (l’objet **Memory Manager** , par exemple) ne disposent que d’une seule instance. Si un type d'objet dispose de plusieurs instances, vous pouvez ajouter des compteurs pour suivre les statistiques de chaque instance ou, le plus souvent, de toutes les instances à la fois. Les compteurs de l’instance par défaut apparaissent au format **SQLServer:** _\<nom_objet>_ . Les compteurs des instances nommées apparaissent au format **MSSQL$** _\<nom_instance>_ **:** _\<nom_compteur>_ ou **SQLAgent$** _\<nom_instance>_ **:** _\<nom_compteur>_ .  
+ Certains objets disposent de plusieurs instances si plusieurs ressources d'un type donné sont présentes sur l'ordinateur. Par exemple, le type d'objet **Processor** possède plusieurs instances si le système est multiprocesseur. Le type d'objet **Databases** dispose d'une instance pour chaque base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Certains types d’objets (l’objet **Memory Manager** , par exemple) ne disposent que d’une seule instance. Si un type d'objet dispose de plusieurs instances, vous pouvez ajouter des compteurs pour suivre les statistiques de chaque instance ou, le plus souvent, de toutes les instances à la fois. Les compteurs de l’instance par défaut s’affichent au format **SqlServer :** _\<object name>_ . Les compteurs pour les instances nommées s’affichent au format **MSSQL $** _\<instance name>_ **:** _\<counter name>_ ou **SQLAgent $** _\<instance name>_ **:** _\<counter name>_ .  
   
  En ajoutant ou en supprimant des compteurs du graphique et en enregistrant les valeurs du graphique, vous pouvez spécifier les objets et compteurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surveillés lors du démarrage du Moniteur système.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "63151173"
   
 -   [Autorisations requises](#RequiredPermissions)  
   
-##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a>SQL Server Agent les objets de performance  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> Objets de performance de l'Agent SQL Server  
  Le tableau suivant répertorie les objets de performance fournis pour l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Objet de performance|Description|  
@@ -73,7 +72,7 @@ ms.locfileid: "63151173"
 |[SQLAgent:JobSteps](sql-server-agent-jobsteps-object.md)|Fournit des informations sur les étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLAgent:Statistics](sql-server-agent-statistics-object.md)|Fournit des informations générales sur l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a>Service Broker les objets de performance  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Objets de performance de Service Broker  
  Le tableau suivant répertorie les objets de performance fournis pour [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 |Objet de performance|Description|  
@@ -82,7 +81,7 @@ ms.locfileid: "63151173"
 |[SQLServer:Broker Statistics](sql-server-broker-statistics-object.md)|Fournit des informations générales sur [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
 |[SQLServer:Broker Transport](sql-server-broker-dbm-transport-object.md)|Fournit des informations sur le réseau [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
   
-##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a>SQL Server les objets de performance  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> Objets de performance de SQL Server  
  Le tableau ci-dessous décrit les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Objet de performance|Description|  
@@ -110,23 +109,23 @@ ms.locfileid: "63151173"
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|Fournit des informations sur les aspects des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , comme le nombre de lots d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] reçus par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|Fournit des informations sur les transactions actives dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles que le nombre total de transactions et le nombre de transactions d'instantané.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|Réalise une surveillance personnalisée. Chaque compteur peut être une procédure stockée personnalisée ou toute instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui renvoie une valeur à surveiller.|  
-|[SQLServer:Wait Statistics](sql-server-wait-statistics-object.md)|Fournit des informations sur les attentes.|  
-|[SQLServer : Statistiques des groupes de charges de travail](sql-server-workload-group-stats-object.md)|Fournit des informations à propos des statistiques du groupe de charges de travail de Resource Governor.|  
+|[SQLServer : Statistiques d’attente](sql-server-wait-statistics-object.md)|Fournit des informations sur les attentes.|  
+|[SQLServer : Statistiques des groupes de charges de travail](sql-server-workload-group-stats-object.md)|Fournit des informations à propos des statistiques du groupe de charges de travail de Resource Governor.|  
   
-##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a>Réplication SQL Server les objets de performance  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> Objets de performance de la réplication de SQL Server  
  Le tableau suivant répertorie les objets de performance fournis pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Objet de performance|Description|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> Pour plus d’informations, voir [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Fournit des informations sur l'activité de l'agent de réplication.|  
   
-##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a>Compteurs de Pipeline SSIS  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> Compteurs de pipeline SSIS  
  Pour le compteur **Pipeline SSIS** , consultez [Compteur de performances](../../integration-services/performance/performance-counters.md).  
   
-##  <a name="required-permissions"></a><a name="RequiredPermissions"></a>Autorisations requises  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> Autorisations requises  
  L'utilisation des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend des autorisations Windows, sauf **SQLAgent:Alerts**. Pour utiliser **SQLAgent:Alerts** , les utilisateurs doivent être membres du rôle de serveur fixe **sysadmin**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser des objets de performance](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   

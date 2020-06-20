@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245751"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058729"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriétés de SQL Server Agent (page Système d'alerte)
-  Utilisez cette page pour afficher et modifier les paramètres des messages envoyés par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les alertes de l’agent.  
+  Utilisez cette page pour afficher et modifier les paramètres des messages envoyés par les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertes de l’agent.  
   
 ## <a name="options"></a>Options  
  **Session de messagerie**  
@@ -36,7 +35,7 @@ ms.locfileid: "63245751"
 >  Une fois que vous avez changé le système de messagerie, vous devez redémarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour que la modification soit prise en compte.  
   
  **Profil de messagerie**  
- Définit le profil que doit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez également sélectionner ** \<nouveau Database mail profil... >** pour créer un nouveau profil.  
+ Définit le profil que doit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez également choisir **\<new Database Mail profile...>** de créer un nouveau profil.  
   
  **Messages de radiomessagerie**  
  Les options de cette section vous permettent de configurer les messages électroniques envoyés à des adresses de radiomessagerie pour qu'ils fonctionnent avec votre système de radiomessagerie.  
@@ -47,7 +46,7 @@ ms.locfileid: "63245751"
  **Ligne À**  
  Spécifie les options relatives à la ligne **À** du message.  
   
- **Céder**  
+ **Préfixe**  
  Tapez le texte prédéfini, requis par votre système au début de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
  **Destinés**  
@@ -59,7 +58,7 @@ ms.locfileid: "63245751"
  **Ligne Cc**  
  Spécifie les options relatives à la ligne **Cc** du message.  
   
- **Céder**  
+ **Préfixe**  
  Tapez le texte prédéfini, requis par votre système au début de la ligne **Cc** des messages envoyés à un récepteur de radiomessagerie.  
   
  **Destinés**  
@@ -71,7 +70,7 @@ ms.locfileid: "63245751"
  **Subject**  
  Spécifie les options relatives à l'objet du message  
   
- **Céder**  
+ **Préfixe**  
  Tapez le texte prédéfini, requis par votre système de radiomessagerie au début de la ligne **Objet** des messages envoyés à un récepteur de radiomessagerie.  
   
  **Suffixe**  
@@ -106,6 +105,6 @@ ms.locfileid: "63245751"
 ## <a name="see-also"></a>Voir aussi  
  [Operator](operators.md)   
  [Configurez SQL Server Agent mail pour utiliser Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
- [Database Mail](../../relational-databases/database-mail/database-mail.md)  
+ [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
   
   

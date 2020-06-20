@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736362"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065661"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
   En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième paramètre ne peut pas être ignoré tant que le cinquième paramètre est inclus, sauf si les paramètres sont fournis sous la forme ** \@Parameter =**_value_.  
+ Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième paramètre ne peut pas être ignoré tant que le cinquième paramètre est inclus, sauf si les paramètres sont fournis sous la forme ** \@ Parameter =**_value_.  
   
 ## <a name="specifying-parameter-direction"></a>Spécification de la direction du paramètre  
  La direction d'un paramètre peut être une entrée (une valeur passée dans le corps de la procédure) ou une sortie (la procédure retourne une valeur au programme appelant). La valeur par défaut est un paramètre d'entrée.  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres ** \@** de sortie Cost et ** \@ComparePrices** sont utilisés avec le langage de contrôle de workflow pour retourner un message dans la fenêtre **messages** .  
+ Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres de sortie ** \@ cost** et ** \@ ComparePrices** sont utilisés avec le langage de contrôle de workflow pour retourner un message dans la fenêtre **messages** .  
   
 > [!NOTE]  
->  La variable OUTPUT doit être définie pendant la création de la procédure et pendant l'utilisation de la variable. Le nom du paramètre et celui de la variable ne doivent pas nécessairement correspondre. Toutefois, le type de données et la position du paramètre doivent correspondre (sauf si ** \@ListPrice =** _variable_ est utilisé).  
+>  La variable OUTPUT doit être définie pendant la création de la procédure et pendant l'utilisation de la variable. Le nom du paramètre et celui de la variable ne doivent pas nécessairement correspondre. Toutefois, le type de données et la position du paramètre doivent correspondre (sauf si ** \@ ListPrice =** _variable_ est utilisé).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

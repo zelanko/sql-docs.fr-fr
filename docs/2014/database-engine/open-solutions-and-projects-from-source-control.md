@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c04d0295fa6add80eb471d8c4c06b2d588b915bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930456"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Ouvrir des solutions et des projets à partir du contrôle de code source
   Vous pouvez utiliser [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ouvrir une solution ou un projet directement à partir du contrôle de code source. Lorsque vous ouvrez une solution à partir du contrôle de code source, l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] récupère automatiquement la dernière version de la solution en question et la copie à l'emplacement que vous avez spécifié.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41158c6ab83491c10c702619a9da46f096a4bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951682"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Déployer des projets sur le serveur Integration Services
   Dans la version actuelle d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous pouvez déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de gérer les packages, d'exécuter les packages et de configurer les valeurs d'exécution des packages à l'aide d'environnements.  
@@ -70,7 +69,7 @@ ms.locfileid: "66059580"
   
      -ou-  
   
-     Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > le nœud **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier projects pour le projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
+     Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , développez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  nœud **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier projects pour le projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
   
      -ou-  
   

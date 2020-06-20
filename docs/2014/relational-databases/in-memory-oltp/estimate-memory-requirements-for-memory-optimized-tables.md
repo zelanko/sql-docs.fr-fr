@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050196"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
-  Que vous soyez en train de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] créer une table optimisée en mémoire ou de migrer une table sur disque existante vers une table optimisée en mémoire, il est important d’avoir une estimation raisonnable des besoins en mémoire de chaque table afin que vous puissiez approvisionner le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
+  Que vous soyez en train de créer une [!INCLUDE[hek_2](../../includes/hek-2-md.md)] table optimisée en mémoire ou de migrer une table sur disque existante vers une table optimisée en mémoire, il est important d’avoir une estimation raisonnable des besoins en mémoire de chaque table afin que vous puissiez approvisionner le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
   
  Si vous envisagez d’effectuer une migration à partir de tables sur disque vers des tables optimisées en mémoire, avant de poursuivre la lecture de cette rubrique, consultez [Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour obtenir des conseils sur les tables les plus judicieuses à faire migrer. Toutes les rubriques sous [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md) fournissent des conseils sur la migration à partir de tables sur disque vers des tables optimisées en mémoire.  
   
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Définition de la taille du tableau d'index de hachage**  
   
- La taille du tableau de hachage est `(bucket_count= <value>)` définie \<par où la valeur> est une valeur entière supérieure à zéro. Si \<la valeur> n’est pas une puissance de 2, le bucket_count réel est arrondi à la puissance de 2 la plus proche suivante.  Dans notre exemple de table, (bucket_count = 5 millions), étant donné que 5 millions n’est pas une puissance de 2, le nombre réel de compartiments est arrondi à 8 388 608 (2<sup>23</sup>).  Vous devez utiliser ce nombre, et non pas 5 000 000, lorsque vous calculez la mémoire nécessaire pour le tableau de hachage.  
+ La taille du tableau d’index de hachage est définie par `(bucket_count= <value>)` où \<value> est un entier supérieur à zéro. Si \<value> n’est pas une puissance de 2, le nombre réel de compartiments (bucket_count) est arrondi à la puissance de 2 supérieur la plus proche.  Dans notre exemple de table, (bucket_count = 5 millions), étant donné que 5 millions n’est pas une puissance de 2, le nombre réel de compartiments est arrondi à 8 388 608 (2<sup>23</sup>).  Vous devez utiliser ce nombre, et non pas 5 000 000, lorsque vous calculez la mémoire nécessaire pour le tableau de hachage.  
   
  Ainsi, dans notre exemple, la mémoire nécessaire pour chaque tableau de hachage est :  
   
@@ -174,6 +173,6 @@ SELECT * FROM t_hk
  Les calculs ci-dessus estiment les besoins en mémoire de la table, telle qu'elle existe actuellement. Outre cette mémoire, vous devez évaluer la croissance de la table et fournir suffisamment de mémoire pour gérer cette croissance.  Par exemple, si vous anticipez une croissance de 10 %, vous devez multiplier le résultat ci-dessus par 1,1 pour obtenir la mémoire totale nécessaire pour votre table.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

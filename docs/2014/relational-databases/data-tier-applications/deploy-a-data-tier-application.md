@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970283"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
   Vous pouvez déployer une application de la couche Données (DAC) sur une instance existante du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l'aide d'un Assistant ou d'un script PowerShell. Le processus de déploiement inscrit une instance DAC en stockant la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crée une base de données, puis remplit la base de données avec tous les objets de base de données définis dans la DAC.  
@@ -107,7 +106,7 @@ ms.locfileid: "72783072"
   
  **Description** : zone en lecture seule qui affiche la description écrite au moment où la DAC a été créée ou extraite d’une base de données.  
   
- Précédent : renvoie à la page **Introduction** . ** \< **  
+ ** \< Précédent** : renvoie à la page **Introduction** .  
   
  **Suivant >** : affiche une barre de progression dès que l’Assistant confirme que le fichier sélectionné est un package DAC valide.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783072"
   
  **Validation du contenu de la DAC** : barre de progression qui indique l’état actuel de la validation.  
   
- Précédent : revient à l’état initial de la page **Sélectionner un package** . ** \< **  
+ ** \< Précédent** : revient à l’état initial de la page **Sélectionner un package** .  
   
  **Suivant >** : passe à la dernière version de la page **Sélectionner un package**.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783072"
   
  **Ignorez les violations de stratégie** : utilisez cette case à cocher pour poursuivre le déploiement en cas d’échec d’une ou de plusieurs des conditions de stratégie. Ne sélectionnez cette option que si vous êtes sûr que toutes les conditions qui ont échoué n'empêcheront pas l'opération de la DAC de réussir.  
   
- Précédent : renvoie à la page **Sélectionner un package** . ** \< **  
+ ** \< Précédent** : renvoie à la page **Sélectionner un package** .  
   
  **Suivant >** : passe à la page **Mettre à jour la configuration**.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783072"
   
  **Nom et chemin d’accès du fichier journal** : spécifie le chemin complet et le nom du fichier journal. La zone est renseignée avec le chemin d'accès et le nom de fichier par défaut. Modifiez la chaîne dans la zone pour modifier la valeur par défaut ou utilisez le bouton **Parcourir** pour accéder au dossier où le fichier journal sera placé.  
   
- Précédent : revient à la page **Sélectionner le package DAC** . ** \< **  
+ ** \< Précédent** : revient à la page **Sélectionner le package DAC** .  
   
  **Suivant >** : passe à la page **Résumé**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783072"
   
  **Les paramètres suivants seront utilisés pour déployer votre DAC.** - Vérifiez les informations affichées pour vous assurer que les actions prises seront correctes. La fenêtre affiche le package DAC que vous avez sélectionné et le nom que vous avez sélectionné pour l'instance DAC déployée. La fenêtre affiche également les paramètres qui seront utilisés lors de la création de la base de données associée à la DAC.  
   
- Précédent : vous renvoie à la page de configuration de la **mise à jour** pour modifier vos sélections. ** \< **  
+ ** \< Précédent** : vous renvoie à la page de configuration de la **mise à jour** pour modifier vos sélections.  
   
  **Suivant >** : déploie la DAC et affiche les résultats dans la page **Déployer une DAC**.  
   

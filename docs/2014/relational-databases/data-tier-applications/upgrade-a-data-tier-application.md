@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f5d9d53a6dbaf2c0dee01aaa5a85cf4fde98f27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953077"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
@@ -44,13 +43,13 @@ ms.locfileid: "72797980"
 ###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> Choix des options de mise à niveau de la DAC  
  Il existe quatre options de mise à niveau dans le cadre d'une mise à niveau sur place :  
   
--   **Ignorer la perte** de données `True`: si la valeur est, la mise à niveau se poursuivra même si certaines opérations entraînent la perte de données. Si sa valeur est `False`, ces opérations mettent fin à la mise à niveau. Par exemple, si l'une des tables de la base de données actuelle n'est pas présente dans le schéma de la nouvelle DAC, la table est supprimée si la valeur `True` est spécifiée. La valeur par défaut est `True`.  
+-   **Ignorer la perte de données** : si `True` la valeur est, la mise à niveau se poursuivra même si certaines opérations entraînent la perte de données. Si sa valeur est `False`, ces opérations mettent fin à la mise à niveau. Par exemple, si l'une des tables de la base de données actuelle n'est pas présente dans le schéma de la nouvelle DAC, la table est supprimée si la valeur `True` est spécifiée. La valeur par défaut est `True`.  
   
--   **Bloquer sur les modifications** : `True`si la mise à niveau est terminée, la mise à niveau est interrompue si le schéma de la base de données est différent de celui défini dans la DAC précédente. Si la valeur est `False`, la mise à niveau continue, même si des modifications sont détectées. La valeur par défaut est `False`.  
+-   **Bloquer sur les modifications** : si `True` la mise à niveau est terminée, la mise à niveau est interrompue si le schéma de la base de données est différent de celui défini dans la DAC précédente. Si la valeur est `False`, la mise à niveau continue, même si des modifications sont détectées. La valeur par défaut est `False`.  
   
--   **Restauration en cas d’échec** : si `True`la mise à niveau est incluse dans une transaction, et si des erreurs sont rencontrées, une restauration est tentée. Si la valeur est `False`, toutes les modifications sont validées au fur et à mesure qu'elles sont effectuées. Par conséquent, si des erreurs se produisent, vous pourrez avoir à restaurer une sauvegarde de la base de données. La valeur par défaut est `False`.  
+-   **Restauration en cas d’échec** : si `True` la mise à niveau est incluse dans une transaction, et si des erreurs sont rencontrées, une restauration est tentée. Si la valeur est `False`, toutes les modifications sont validées au fur et à mesure qu'elles sont effectuées. Par conséquent, si des erreurs se produisent, vous pourrez avoir à restaurer une sauvegarde de la base de données. La valeur par défaut est `False`.  
   
--   **Ignorer la validation** de stratégie `True`-si la stratégie de sélection du serveur DAC n’est pas évaluée. Si la valeur est `False`, la stratégie est évaluée et la mise à niveau s'arrête en cas d'erreur de validation. La valeur par défaut est `False`.  
+-   **Ignorer la validation de stratégie** -si `True` la stratégie de sélection du serveur DAC n’est pas évaluée. Si la valeur est `False`, la stratégie est évaluée et la mise à niveau s'arrête en cas d'erreur de validation. La valeur par défaut est `False`.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Les mises à niveau d'une DAC ne peuvent être effectuées que dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
@@ -124,7 +123,7 @@ ms.locfileid: "72797980"
   
  **Description** : zone en lecture seule qui affiche la description écrite au moment où la DAC a été créée ou extraite d’une base de données.  
   
- Précédent : renvoie à la page **Introduction** . ** \< **  
+ ** \< Précédent** : renvoie à la page **Introduction** .  
   
  **Suivant >** : affiche une barre de progression dès que l’Assistant confirme que le fichier sélectionné est un package DAC valide.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "72797980"
   
  **Validation du contenu de la DAC** : barre de progression qui indique l’état actuel de la validation.  
   
- Précédent : revient à l’état initial de la page **Sélectionner un package** . ** \< **  
+ ** \< Précédent** : revient à l’état initial de la page **Sélectionner un package** .  
   
  **Suivant >** : passe à la dernière version de la page **Sélectionner un package**.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "72797980"
   
  **Ignorez les violations de stratégie** : utilisez cette case à cocher pour poursuivre la mise à niveau en cas d’échec d’une ou plusieurs conditions de stratégie. Ne sélectionnez cette option que si vous êtes sûr que toutes les conditions qui ont échoué n'empêcheront pas l'opération de la DAC de réussir.  
   
- Précédent : renvoie à la page **Sélectionner un package** . ** \< **  
+ ** \< Précédent** : renvoie à la page **Sélectionner un package** .  
   
  **Suivant >** : passe à la page **Détecter les modifications**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72797980"
   
  **Enregistrer le rapport** : cliquez sur ce bouton pour enregistrer un rapport des modifications détectées par l’Assistant entre les objets de la base de données et leurs équivalents dans la définition de la DAC. Vous pouvez ensuite vérifier le rapport pour déterminer si vous devez prendre des mesures, une fois la mise à niveau terminée, pour incorporer dans la nouvelle base de données tout ou partie des objets répertoriés dans le rapport.  
   
- Précédent : revient à la page **Sélectionner le package DAC** . ** \< **  
+ ** \< Précédent** : revient à la page **Sélectionner le package DAC** .  
   
  **Suivant >** : passe à la page **Options**.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "72797980"
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   
- Précédent : renvoie à la page **détecter les modifications** . ** \< **  
+ ** \< Précédent** : renvoie à la page **détecter les modifications** .  
   
  **Suivant >** : passe à la page **Vérifier le plan de mise à niveau**.  
   
@@ -203,7 +202,7 @@ ms.locfileid: "72797980"
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   
- Précédent : renvoie à la page **détecter les modifications** . ** \< **  
+ ** \< Précédent** : renvoie à la page **détecter les modifications** .  
   
  **Suivant >** : passe à la page **Résumé**.  
   
@@ -214,7 +213,7 @@ ms.locfileid: "72797980"
   
  **Les paramètres suivants seront utilisés pour mettre à niveau votre DAC.** - Vérifiez les informations affichées pour vous assurer que les actions prises seront correctes. La fenêtre affiche la DAC que vous avez sélectionnée pour être mise à niveau, et le package de DAC qui contient la nouvelle version de la DAC. La fenêtre s'affiche également si la version actuelle de la base de données est identique à la définition de la DAC actuelle, ou si la base de données a été modifiée.  
   
- Précédent : vous renvoie à la page **vérifier le plan de mise à niveau** . ** \< **  
+ ** \< Précédent** : vous renvoie à la page **vérifier le plan de mise à niveau** .  
   
  **Suivant >** : déploie la DAC et affiche les résultats dans la page **Mettre à niveau la DAC**.  
   

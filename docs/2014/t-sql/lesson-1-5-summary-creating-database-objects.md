@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db179a75ee3c575465ea40476d8a52b6dacbdd8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011696"
 ---
 # <a name="summary-creating-database-objects"></a>Résumé : Création des objets de base de données
   Dans ce didacticiel, vous avez créé une base de données, une table dans la base de données, vous avez inséré des données dans la table, modifié les données, et lu les données de la table. La syntaxe des instructions utilisées correspond simplement à la syntaxe de base et un grand nombre d'options de syntaxe n'ont pas été traitées dans ce didacticiel. Pour plus d'informations sur ces instructions, consultez la syntaxe complète pour ces instructions dans la documentation en ligne de SQL Server et examinez les nombreux exemples fournis dans ces rubriques.  

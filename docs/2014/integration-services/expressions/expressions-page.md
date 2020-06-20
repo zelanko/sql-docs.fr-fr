@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969329"
 ---
 # <a name="expressions-page"></a>Page Expressions
   Utilisez la page **Expressions** pour modifier les expressions de propriété et pour accéder aux boîtes de dialogue **Éditeur d’expressions de la propriété** et **Générateur d’expressions** .  
@@ -32,11 +31,11 @@ ms.locfileid: "62898031"
  **Expressions (...)**  
  Cliquez sur les points de suspension pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété** . Pour plus d’informations, consultez [Éditeur d’expressions de la propriété](property-expressions-editor.md).  
   
- **\<nom_propriété>**  
+ **\<property name>**  
  Cliquez sur les points de suspension pour ouvrir la boîte de dialogue **Générateur d'expression** . Pour plus d'informations, consultez [Expression Builder](expression-builder.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;les variables de&#41; SSIS](../integration-services-ssis-variables.md)   
  [Variables système](../system-variables.md)   
  [Expressions Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)  
   
