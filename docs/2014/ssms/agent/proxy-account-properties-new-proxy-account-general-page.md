@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4770c05b28f4a45ad6cdad0af5a8f0207c1357ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067660"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Propriétés du compte proxy et Nouveau compte proxy (page Général)
   Utilisez cette page pour afficher ou modifier les propriétés d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte proxy de l’agent.  
@@ -26,7 +25,7 @@ ms.locfileid: "62650200"
  **Nom du proxy**  
  Tapez le nom du proxy.  
   
- **Credential name (Nom des informations d’identification)**  
+ **Nom des informations d’identification**  
  Tapez le nom des informations d'identification du proxy.  
   
 > [!NOTE]  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8298df4bfd0eaa91cf788fedbffe4e9b2a1389de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052877"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape (classe d'événements)
   La classe d'événements Mount Tape intervient lors de la réception d'une demande de montage de bande. Cette classe d'événements permet de surveiller les demandes de montage de bande, tout comme leur succès ou leur échec.  
@@ -40,7 +39,7 @@ ms.locfileid: "63023448"
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
-|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur (soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la connexion de sécurité [!INCLUDE[msCoName](../../includes/msconame-md.md)] , soit les informations d’identification de connexion Windows\\sous la forme domaine*nom*d’utilisateur).|11|Oui|  
+|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur (soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la connexion de sécurité, soit les [!INCLUDE[msCoName](../../includes/msconame-md.md)] informations d’identification de connexion Windows sous la forme domaine \\ *nom*d’utilisateur).|11|Oui|  
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  
 |ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
@@ -51,6 +50,6 @@ ms.locfileid: "63023448"
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Sauvegarde et restauration des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Sauvegarder et restaurer des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

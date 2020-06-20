@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a8336e5d186fb72df4e0a17fdd9affccab4ee57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956822"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Restaurer les fichiers à un nouvel emplacement (SQL Server)
   Cette rubrique explique comment restaurer des fichiers à un nouvel emplacement dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -88,8 +87,8 @@ ms.locfileid: "62875072"
     |-----------------|------------|  
     |**Restauration**|Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
-    |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
+    |**Type de fichier**|Spécifie le type des données figurant dans la sauvegarde : **Données**, **Journal**, ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
+    |**Type**|Type de sauvegarde effectuée : **Complète**, **Différentielle** ou **Journal des transactions**.|  
     |**Serveur**|Nom de l'instance Base de données-Moteur ayant effectué l'opération de sauvegarde.|  
     |**Nom logique du fichier**|Comme son nom l'indique.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
@@ -105,7 +104,7 @@ ms.locfileid: "62875072"
     |En-tête de colonne|Valeurs|  
     |-----------------|------------|  
     |**Nom du fichier d'origine**|Chemin d'accès complet d'un fichier de sauvegarde source.|  
-    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
+    |**Type de fichier**|Spécifie le type des données figurant dans la sauvegarde : **Données**, **Journal**, ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
     |**Restaurer sous**|Chemin d'accès complet du fichier de base de données à restaurer. Pour définir un nouveau fichier de restauration, cliquez sur la zone de texte et modifiez le chemin d'accès et le nom de fichier proposés. La modification du chemin d'accès ou du nom de fichier dans la colonne **Restaurer sous** équivaut à utiliser l'option MOVE dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE.|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
@@ -164,7 +163,7 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md)   

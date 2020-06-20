@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637857"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037003"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Si un pare-feu est activé alors qu'il n'est pas configuré correctement, les tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être bloquées.  
@@ -91,7 +90,7 @@ ms.locfileid: "73637857"
   
     -   Définition de restrictions d'étendue  
   
-     L'option **Pare-feu Windows** du Panneau de configuration est très appropriée pour les utilisateurs qui ne sont pas familiarisés avec la configuration du pare-feu, et qui configurent les options de base du pare-feu de base pour les ordinateurs qui ne sont pas mobiles. Vous pouvez également ouvrir l’élément **pare-feu Windows** dans le panneau `run` de configuration à partir de la commande à l’aide de la procédure suivante :  
+     L'option **Pare-feu Windows** du Panneau de configuration est très appropriée pour les utilisateurs qui ne sont pas familiarisés avec la configuration du pare-feu, et qui configurent les options de base du pare-feu de base pour les ordinateurs qui ne sont pas mobiles. Vous pouvez également ouvrir l’élément **pare-feu Windows** dans le panneau de configuration à partir de la commande à l' `run` aide de la procédure suivante :  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Pour ouvrir le Pare-feu Windows  
   
@@ -159,7 +158,7 @@ ms.locfileid: "73637857"
   
 1.  Sous l'onglet **Exceptions** de l'élément du **Pare-feu Windows** dans Panneau de configuration, cliquez sur **Ajouter un programme**.  
   
-2.  Accédez à l’emplacement de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez autoriser via le pare-feu, par exemple **C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Binn**, sélectionnez **sqlservr. exe**, puis cliquez sur **ouvrir**.  
+2.  Accédez à l’emplacement de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez autoriser via le pare-feu, par exemple **C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Binn**, sélectionnez **sqlservr.exe**, puis cliquez sur **ouvrir**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -323,4 +322,4 @@ ms.locfileid: "73637857"
 -   L’utilitaire **PortQry** peut être utilisé pour signaler l’état des ports TCP/IP comme à l’écoute, pas à l’écoute ou filtré. (Lorsque l'état est filtré, le port peut être à l'écoute ou non ; cet état indique que l'utilitaire n'a pas reçu de réponse du port.) l’utilitaire **PortQry** peut être téléchargé à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/kb/832017)  
+ [Vue d’ensemble des services et exigences des ports réseau pour le système Windows Server](https://support.microsoft.com/kb/832017)  

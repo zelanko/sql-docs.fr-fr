@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941078"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les demandes, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
+Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les demandes, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
    
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID de la session à laquelle cette demande est liée. N'accepte pas la valeur NULL.|  
 |request_id|**int**|ID de la demande. Unique dans le contexte de la session. N'accepte pas la valeur NULL.|  
 |start_time|**datetime**|Horodateur lors la réception de la demande. N'accepte pas la valeur NULL.|  
-|status|**nvarchar(30)**|Statut de la demande. Il peut s'agir de l'une des ressources suivantes :<br /><br /> Contexte<br />Exécution en cours<br />Exécutable<br />En état de veille<br />Interrompu<br /><br /> N'accepte pas la valeur NULL.|  
-|command|**nvarchar(32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
+|status|**nvarchar(30)**|Statut de la demande. Il peut s'agir de l'une des ressources suivantes :<br /><br /> Arrière-plan<br />Exécution en cours<br />Exécutable<br />En état de veille<br />Interrompu<br /><br /> N'accepte pas la valeur NULL.|  
+|.|**nvarchar(32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
 |sql_handle|**varbinary(64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Autorise la valeur NULL.| 
-|statement_start_offset|**int**|Indique, en octets, à partir de 0, la position de départ de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle`, `statement_end_offset`et la fonction de gestion `sys.dm_exec_sql_text` dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
-|statement_end_offset|**int**|Indique, en octets, à partir de 0, la position de fin de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle`, `statement_start_offset`et la fonction de gestion `sys.dm_exec_sql_text` dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
+|statement_start_offset|**int**|Indique, en octets, à partir de 0, la position de départ de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle` , `statement_end_offset` et la `sys.dm_exec_sql_text` fonction de gestion dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
+|statement_end_offset|**int**|Indique, en octets, à partir de 0, la position de fin de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle` , `statement_start_offset` et la `sys.dm_exec_sql_text` fonction de gestion dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
 |plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot en cours d’exécution. Autorise la valeur NULL.|  
 |database_id|**smallint**|ID de la base de données dans laquelle la requête s'exécute. N'accepte pas la valeur NULL.|  
 |user_id|**int**|ID de l'utilisateur qui a envoyé la demande. N'accepte pas la valeur NULL.|  
@@ -94,17 +94,20 @@ Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ss
 |parallel_worker_count |**int** |**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.<br /><br /> Nombre de threads de travail parallèles réservés s’il s’agit d’une requête parallèle.  |  
 |external_script_request_id |**uniqueidentifier** |**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.<br /><br /> ID de demande de script externe associé à la requête actuelle. |  
 |is_resumable |**bit** |**S’applique à** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] et versions ultérieures.<br /><br /> Indique si la demande est une opération d’index pouvant être reprise. |  
-|page_resource |**Binary(8** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si `wait_resource` la colonne contient une page. Pour plus d’informations, consultez [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_resource |**Binary(8** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si la `wait_resource` colonne contient une page. Pour plus d’informations, consultez [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**S’applique à**: Azure SQL Database hyperscale<br /><br /> Nombre de lectures du serveur de pages effectuées par cette demande. N'accepte pas la valeur NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques 
 Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif. Les valeurs temporelles retournées par cette vue de gestion dynamique n'incluent pas le temps passé en mode préemptif.
 
-Lors de l’exécution de requêtes parallèles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [mode ligne](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), assigne un thread de travail pour coordonner les threads de travail chargés d’effectuer les tâches qui leur sont attribuées. Dans cette vue de gestion dynamique, seul le thread coordinateur est visible pour la demande. Les colonnes **reads**, **writes**, **LOGICAL_READS**et **row_count** ne sont **pas mises à jour** pour le thread coordinateur. Les colonnes **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**et **granted_query_memory** sont **uniquement mises à jour** pour le thread coordinateur. Pour plus d’informations, consultez le [Guide de l’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
+Lors de l’exécution de requêtes parallèles en [mode ligne](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigne un thread de travail pour coordonner les threads de travail chargés d’effectuer les tâches qui leur sont attribuées. Dans cette vue de gestion dynamique, seul le thread coordinateur est visible pour la demande. Les colonnes **reads**, **writes**, **LOGICAL_READS**et **row_count** ne sont **pas mises à jour** pour le thread coordinateur. Les colonnes **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**et **granted_query_memory** sont **uniquement mises à jour** pour le thread coordinateur. Pour plus d’informations, consultez le [Guide de l’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Autorisations
-Si l’utilisateur dispose `VIEW SERVER STATE` de l’autorisation sur le serveur, il voit toutes les sessions en cours d’exécution sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance de ; dans le cas contraire, l’utilisateur verra uniquement la session active. `VIEW SERVER STATE`ne peut pas être accordé dans `sys.dm_exec_requests` Azure SQL Database donc est toujours limité à la connexion actuelle.
+Si l’utilisateur dispose `VIEW SERVER STATE` de l’autorisation sur le serveur, il voit toutes les sessions en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; sinon, il ne verra que la session en cours. `VIEW SERVER STATE`ne peut pas être accordé dans Azure SQL Database donc `sys.dm_exec_requests` est toujours limité à la connexion actuelle.
+
+Dans les scénarios Always on, si le réplica secondaire est défini en **lecture-intention uniquement**, la connexion à l’application secondaire doit spécifier son intention d’application dans les paramètres de chaîne de connexion en ajoutant `applicationintent=readonly` . Dans le cas contraire, la vérification de l’accès `sys.dm_exec_requests` ne réussira pas pour les bases de données du groupe de disponibilité, même si l' `VIEW SERVER STATE` autorisation est présente.
+
   
 ## <a name="examples"></a>Exemples  
   
@@ -133,7 +136,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO
 ```
 
-Ensuite, pour rechercher des informations de verrou, utilisez `transaction_id` le copié avec la fonction système **sys. dm_tran_locks**.  
+Ensuite, pour rechercher des informations de verrou, utilisez le copié `transaction_id` avec la fonction système **sys. dm_tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

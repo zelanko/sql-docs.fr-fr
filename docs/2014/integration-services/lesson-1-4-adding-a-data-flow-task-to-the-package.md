@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37275d31837a700f5e69c433630839529c2ac0ae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891797"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965279"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Étape 4 : Ajout d’une tâche de flux de données au package
   Après avoir créé des gestionnaires de connexions pour les données sources et de destination, la tâche suivante consiste à ajouter une tâche de flux de données à votre package. La tâche de flux de données permet d'encapsuler le moteur de flux de données qui déplace les données entre les sources et les destinations et fournit la fonctionnalité grâce à laquelle il est possible de transformer, nettoyer et modifier les données lors de leur déplacement. La tâche de flux de données est l'endroit où s'effectue la majorité du travail d'un processus d'extraction, de transformation et de chargement (ETL).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sépare le workflow du Workflow.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sépare le workflow du Workflow.  
   
 ### <a name="to-add-a-data-flow-task"></a>Pour ajouter une tâche de flux de données  
   
@@ -32,11 +31,11 @@ ms.locfileid: "62891797"
     > [!NOTE]  
     >  Si la boîte à outils SSIS n’est pas disponible, dans le menu principal, sélectionnez SSIS, puis Boîte à outils SSIS pour afficher cette dernière.  
   
-3.  Sur l’aire de conception du **Workflow de contrôle** , cliquez avec le bouton droit sur la tâche de nouveau projet de **Workflow**, cliquez sur `Extract Sample Currency Data` **Renommer**, puis remplacez le nom par.  
+3.  Sur l’aire de conception du **Workflow de contrôle** , cliquez avec le bouton droit sur la tâche de nouveau projet de **Workflow**, cliquez sur **Renommer**, puis remplacez le nom par `Extract Sample Currency Data` .  
   
      Il est préférable d'affecter des noms uniques aux composants que vous ajoutez à une zone de conception. Afin d'utiliser et de maintenir les composants plus facilement, il est conseillé de leur affecter des noms décrivant les fonctions qu'ils effectuent. Le respect de ces consignes de nommage permet une auto-documentation de vos packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . L'autre méthode permettant de documenter vos packages, consiste à utiliser des annotations. Pour plus d’informations sur les annotations, consultez [Utilisation des annotations dans les packages](use-annotations-in-packages.md).  
   
-4.  Cliquez avec le bouton droit sur la tâche de workflow, cliquez sur **Propriétés**, et dans la fenêtre Propriétés `LocaleID` , vérifiez que la propriété est définie sur **anglais (États-Unis)**.  
+4.  Cliquez avec le bouton droit sur la tâche de workflow, cliquez sur **Propriétés**, et dans la fenêtre Propriétés, vérifiez que la `LocaleID` propriété est définie sur **anglais (États-Unis)**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Étape 5 : Ajout et configuration de la source de fichier plat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  

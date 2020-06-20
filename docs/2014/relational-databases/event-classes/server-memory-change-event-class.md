@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dfa610b7632455c5d7d7a84efcb6101ffc7575b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052507"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change (classe d'événements)
   La classe d’événements **Server Memory Change** intervient quand l’utilisation de mémoire de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a augmenté ou diminué, soit de 1 mégaoctet (Mo), soit de 5 % de la taille maximale de la mémoire du serveur, la plus élevée de ces deux valeurs étant retenue.  

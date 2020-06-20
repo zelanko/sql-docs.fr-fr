@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed48f48f531e727de5d6e1403ef47f5399f874d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958048"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauration de fichiers (mode de récupération simple)
   Cette rubrique ne concerne que les bases de données en mode simple contenant au moins un groupe de fichiers secondaire en lecture seule.  
@@ -46,11 +45,11 @@ ms.locfileid: "62921817"
      Pour plus d’informations sur la prise en charge de la restauration de fichiers et de pages en ligne, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Si vous souhaitez que la base de données soit hors connexion pour une restauration de fichiers, mettez-la hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
+    >  Si vous voulez que la base de données soit hors connexion pour une restauration de fichiers, mettez celle-ci hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
   
 
   
-##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>Vue d’ensemble de la restauration des fichiers et des groupes de fichiers en mode de récupération simple  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Vue d'ensemble de la restauration de fichiers et de groupes de fichiers en mode de récupération simple  
  Un scénario de restauration de fichiers consiste en une séquence de restauration unique qui copie, restaure par progression et récupère les données appropriées comme suit :  
   
 1.  Restauration de chaque fichier endommagé à partir de sa toute dernière sauvegarde.  
@@ -62,13 +61,13 @@ ms.locfileid: "62921817"
   
  La séquence de restauration contient uniquement deux instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] . La première instruction restaure un fichier secondaire, le fichier `A`, qui est restauré avec WITH NORECOVERY. La seconde opération restaure deux autres fichiers, `B` et `C` , qui sont restaurés avec WITH RECOVERY depuis une unité de sauvegarde différente :  
   
-1.  Restaurer le fichier **=** *de base* de données de base de données _name_of_file_A_  
+1.  RESTORE DATABASE *base_de_données* FILE **=** _nom_fichier_A_  
   
      FROM *sauvegarde_de_fichier_A*  
   
      WITH NORECOVERY **;**  
   
-2.  Restaurer le **=** fichier *de base* de données de base de données _name_of_file_B_**,**_name_of_file_C_  
+2.  RESTORE DATABASE *base_de_données* FILE **=** _nom_fichier_B_ **,** _nom_fichier_C_  
   
      FROM *sauvegarde_des_fichiers_B_et_C*  
   
@@ -76,9 +75,9 @@ ms.locfileid: "62921817"
   
 ### <a name="examples"></a>Exemples  
   
--   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;Mode de récupération simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de récupération simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Exemple : restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers &#40;mode de restauration complète&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Exemple : restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers &#40;mode de restauration complète&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62921817"
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Restaurations de bases de données complètes &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md)   
+ [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

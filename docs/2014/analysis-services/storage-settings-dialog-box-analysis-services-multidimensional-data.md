@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940224"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Paramètres de stockage (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les paramètres de mise en cache proactive, de stockage et de notification d'une dimension, d'un cube, d'un groupe de mesures ou d'une partition. Vous pouvez afficher la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en :  
   
--   Cliquez sur le bouton de sélection (**...**) `ProactiveCaching` pour la valeur de propriété d’une dimension, d’un cube, d’un groupe de mesures [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou d’une partition dans la fenêtre **Propriétés** de.  
+-   Cliquez sur le bouton de sélection (**...**) pour la `ProactiveCaching` valeur de propriété d’une dimension, d’un cube, d’un groupe de mesures ou d’une partition dans la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
 -   développant un groupe de mesures dans l'onglet **Partitions** du **Concepteur de cube** et en cliquant sur **Paramètres de stockage** ;  
   

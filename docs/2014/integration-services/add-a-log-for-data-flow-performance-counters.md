@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c397a5e4361c1aca4edfc32807045e3da9cbed0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926390"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Ajouter un journal pour les compteurs de performances de flux de données
   Cette procédure décrit comment ajouter un journal pour les compteurs de performances fournis par le moteur de flux de données.  
@@ -49,7 +48,7 @@ ms.locfileid: "66062057"
   
     -   Sélectionnez **Sélectionner les compteurs dans la liste** et sélectionnez les compteurs de performances à utiliser.  
   
-9. Cliquez sur **Ajouter**.  
+9. Cliquez sur **Add**.  
   
 10. Cliquez sur **Fermer**.  
   

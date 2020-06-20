@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965479"
 ---
 # <a name="import-project-wizard"></a>Assistant Importation de projet
   Utilisez l'Assistant Importation de projet de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour créer un nouveau projet Integration Services en fonction d'un projet existant. Importez des projets déjà déployés dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou à partir d’un fichier de déploiement de projet (extension .ispac).  
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>Pour créer un projet basé sur un projet dans un fichier .ispac ou dans le catalogue  
   
-1.  Cliquez sur **Fichier**, pointez sur **Nouveau**, puis cliquez sur Projet.  
+1.  Cliquez sur **fichier**, pointez sur **nouveau**, puis cliquez sur projet.  
   
 2.  Développez **Business Intelligence**, puis cliquez sur **Integration Services**.  
   

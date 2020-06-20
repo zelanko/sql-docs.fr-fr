@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d7eaab49c3ccd2bb110c76a81d9dcb371de6278
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a793932ad91b909183069793d05615d828b4e20d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013389"
 ---
 # <a name="mixed-type-and-simple-content"></a>Type mixte et contenu simple
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge la restriction d'un type mixte à du contenu simple.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe802796b129ff9bdb50e5dea13e1fe98beee269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061582"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
   Après avoir tenu compte des conseils de performances générales décrites dans [Amélioration des performances générales de la réplication](enhance-general-replication-performance.md), envisagez ces domaines supplémentaires spécifiques à la réplication transactionnelle.  
@@ -80,7 +79,7 @@ ms.locfileid: "73882354"
   
      Le paramètre **-SubscriptionStreams** peut améliorer le débit de la réplication globale. Il autorise plusieurs connexions à l'Abonné pour appliquer des traitements de modifications en parallèle, tout en conservant la plupart des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. Si l'une des connexions ne réussit pas à s'exécuter ou n'est pas validée, toutes les connexions abandonneront le lot actuel, et l'Agent utilisera un flux unique pour une nouvelle tentative sur les lots ayant échoué. Avant que cette phase de nouvelle tentative ne se termine, il peut se produire des incohérences transactionnelles temporaires sur l'Abonné. Une fois que les lots ayant échoué sont validés avec succès, l'Abonné retrouve un état de cohérence transactionnelle.  
   
-     Vous pouvez spécifier une valeur pour ce paramètre d’agent à l’aide de l' ** \@SubscriptionStreams** de [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     Vous pouvez spécifier une valeur pour ce paramètre d’agent à l’aide de l' ** \@ subscriptionstreams** de [SP_ADDSUBSCRIPTION &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Augmentez la valeur du paramètre **-ReadBatchSize** pour l’Agent de lecture du journal.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "73882354"
   
 -   Réduisez la valeur du paramètre **-PollingInterval** pour l’Agent de lecture du journal.  
   
-     Le paramètre **-PollingInterval** indique la fréquence d’interrogation du journal des transactions d’une base de données publiée pour que les transactions soient répliquées. La valeur par défaut est 5 secondes. Si vous réduisez cette valeur, le journal est interrogé plus fréquemment, ce qui peut entraîner une latence plus faible pour la remise des transactions de la base de données de publication sur la base de données de distribution. Cependant, vous devriez équilibrer les besoins d'une latence plus faible en fonction de l'augmentation de la charge sur le serveur causée par une interrogation plus fréquente.  
+     Le paramètre **-PollingInterval** indique la fréquence d’interrogation du journal des transactions d’une base de données publiée pour que les transactions soient répliquées. La valeur par défaut est 5 secondes. Si vous réduisez cette valeur, le journal est interrogé plus fréquemment, ce qui peut entraîner une latence plus faible pour la remise des transactions de la base de données de publication sur la base de données de distribution. Cependant, vous devriez équilibrer les besoins d'une latence plus faible en fonction de l'augmentation de la charge sur le serveur causée par une interrogation plus fréquente.  
   
  Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   

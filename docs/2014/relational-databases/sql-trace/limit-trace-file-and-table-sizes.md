@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7795dfdadb8fb3bbaa1b55dcd5c962d24a7ba29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068304"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limiter les tailles de fichier et de table de trace
   Les résultats de Trace SQL ont des tailles variables selon les classes d’événements incluses dans la trace et leur mode d’utilisation par [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si vous tracez des classes d'événements qui se produisent fréquemment, vous pouvez minimiser la quantité de données collectées par la trace en définissant la taille de fichier maximale ou le nombre maximal de lignes. La spécification d'une taille de fichier maximale et/ou d'un nombre maximal de lignes empêche le fichier de trace ou la table de trace de croître au-delà de la limite spécifiée.  

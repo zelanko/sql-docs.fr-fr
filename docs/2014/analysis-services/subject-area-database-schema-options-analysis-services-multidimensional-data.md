@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7edc1fc89e9463c7482b47866aa3d12e1bc231a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940240"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Options du schéma de la base de données de la zone de sujet (Assistant Génération de schéma) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Options du schéma de la base de données de la zone de sujet** pour contrôler la génération du schéma et définir la préservation des données.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6e043d5887fdd0f0bfa51eea1f9244320f8fe62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958429"
 ---
 # <a name="device-contents-sql-server"></a>Contenu de l'unité (SQL Server)
   Utilisez cette boîte de dialogue pour consulter les informations de sauvegarde. Ces informations décrivent le périphérique, le support, le jeu de supports, ainsi que le ou les jeux de sauvegarde.  
@@ -56,8 +55,8 @@ ms.locfileid: "62876046"
 |En-tête|Valeurs|  
 |------------|------------|  
 |**Nom**|Nom du jeu de sauvegarde.|  
-|**Type**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
-|**Composant**|Composant sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
+|**Type**|Type de sauvegarde effectuée : Complète, Différentielle ou Journal des transactions.|  
+|**Composant**|Composant sauvegardé : base de données, fichier ou *\<blank>* (pour les journaux des transactions).|  
 |**Serveur**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
 |**Sauvegarde de la base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  
@@ -66,7 +65,7 @@ ms.locfileid: "62876046"
 |**Nom d’utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
 |**Expiration**|La date et l'heure d'expiration du jeu de sauvegarde.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

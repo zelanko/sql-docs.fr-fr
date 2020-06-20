@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bf36f47e84b5e4965946c2109cce7d852fc88e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951159"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL
   Cette rubrique décrit comment créer un mappage entre un jeu de résultats et une variable dans une tâche d'exécution SQL. Le mappage d'un jeu de résultats à une variable rend le jeu de résultats disponible aux autres éléments du package. Par exemple, un script dans une tâche de script peut lire la variable, puis utiliser les valeurs du jeu de résultats ou une source XML pour consommer le jeu de résultats stocké dans une variable. Si le jeu de résultats est généré par un package parent, il est possible de le rendre disponible à un package enfant appelé par une tâche d'exécution de package en mappant le jeu de résultats à une variable dans le package parent, puis en créant une configuration de variable de package parent dans le package enfant pour stocker la valeur de la variable parent.  
@@ -59,7 +58,7 @@ ms.locfileid: "66057756"
   
 11. Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche d’exécution SQL](control-flow/execute-sql-task.md)   
  [Jeux de résultats dans la tâche d’exécution SQL](result-sets-in-the-execute-sql-task.md)   
  [Tâche d’exécution de package](control-flow/execute-package-task.md)   

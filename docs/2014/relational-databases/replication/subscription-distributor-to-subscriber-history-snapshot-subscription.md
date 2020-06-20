@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b0b2e21176a050f98a284d3fb0627d6ce19e67b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62628774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998058"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Abonnement, Historique du serveur de distribution vers l'Abonné (abonnement aux instantanés)
   L'onglet **Historique du serveur de distribution vers l'Abonné** affiche des informations détaillées sur l'Agent de distribution, y compris l'état, l'historique, des messages d'information et d'éventuels messages d'erreur.  
@@ -25,21 +24,21 @@ ms.locfileid: "62628774"
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de distribution à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de distribution**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Affichage**  
+ **Afficher**  
  Sélectionnez les sessions de l'Agent de distribution à afficher.  
   
  **État**  
  État de l'Agent de distribution La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
--   Completed  
+-   Effectué  
   
 -   Nouvel essai  
   
 -   Exécution en cours  
   
- **Heure de début**  
+ **Heure de Début**  
  Heure d'ouverture de la session.  
   
  **Heure de fin**  

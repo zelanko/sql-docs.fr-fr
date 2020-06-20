@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9dfab3a728bc3d5c2a5179a9bb63fb9845b5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965371"
 ---
 # <a name="integration-services-user-interface"></a>Interface utilisateur d'Integration Services
   En plus des surfaces de dessin disponibles sous les onglets du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'interface utilisateur donne accès aux fenêtres et boîtes de dialogue suivantes permettant d'ajouter des fonctionnalités aux packages et de configurer les propriétés d'objets de packages.  
@@ -47,7 +46,7 @@ ms.locfileid: "62767671"
 |**Signature numérique**|Signature d'un package ou suppression de la signature d'un package.|Dans le menu **SSIS** , cliquez sur **Signature numérique**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Signature numérique**.|  
 |**Définir des points d’arrêt**|Activation des points d'arrêt sur des tâches et définition des propriétés des points d'arrêt.|Sur l’aire de conception de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur une tâche ou un conteneur, puis cliquez sur **Modifier les points d’arrêt**. Pour définir un point d’arrêt sur le package, cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Modifier les points d’arrêt**.|  
   
- La fenêtre **Mise en route** fournit des liens vers des exemples, des didacticiels et des vidéos. Pour ajouter des liens à des contenus supplémentaires, modifiez le fichier SamplesSites.xml inclus avec la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Nous vous recommandons de ne pas modifier la valeur de l’élément \<GettingStartedSamples> qui spécifie l’URL du flux RSS. Le fichier se trouve dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn. Sur un ordinateur 64 bits, le fichier se trouve dans le dossier *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn  
+ La fenêtre **Mise en route** fournit des liens vers des exemples, des didacticiels et des vidéos. Pour ajouter des liens à des contenus supplémentaires, modifiez le fichier SamplesSites.xml inclus avec la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il est recommandé de ne pas modifier la \<GettingStartedSamples> valeur de l’élément qui spécifie l’URL du flux RSS. Le fichier se trouve dans le *\<drive>* dossier : \Program Files\Microsoft SQL Server\110\DTS\Binn Sur un ordinateur 64 bits, le fichier se trouve dans le *\<drive>* dossier : \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn  
   
  Si le fichier SamplesSites.xml est endommagé, remplacez le xml dans le fichier par le xml par défaut suivant.  
   

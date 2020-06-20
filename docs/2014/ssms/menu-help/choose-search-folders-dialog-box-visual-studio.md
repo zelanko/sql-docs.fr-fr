@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf3647decf31b37a12d6f9a338907c9fc93182d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067421"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Boîte de dialogue Choisir des dossiers de recherche (Visual Studio)
   Cette boîte de dialogue vous permet d'assembler, d'enregistrer et de réviser vos propres jeux de dossiers de recherche nommés et de spécifier l'ordre de la recherche. Pour afficher cette boîte de dialogue, cliquez sur le bouton **Parcourir (...)** en regard de la liste déroulante **Regarder dans** sous les onglets Rechercher dans les fichiers ou Remplacer dans les fichiers de la fenêtre Rechercher et remplacer.  

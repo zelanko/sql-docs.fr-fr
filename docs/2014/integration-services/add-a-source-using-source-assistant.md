@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce970f4e944fbc4d940d1021a48600be9cd47967
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926300"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Ajouter une source à l'aide de l'Assistant Source
   Cette rubrique présente les étapes à suivre pour ajouter une nouvelle source à l’aide de l’Assistant Source. En outre, elle répertorie les options disponibles dans la boîte de dialogue **Ajouter une nouvelle source** , qui s’affiche quand vous effectuez un glisser-déplacer de l’Assistant Source vers le concepteur SSIS.  
@@ -28,10 +27,10 @@ ms.locfileid: "66062134"
   
 3.  Sélectionnez le type de la destination dans la liste **Types** .  
   
-4.  Sélectionnez un gestionnaire de connexions existant dans la liste **Gestionnaires de connexions** ou sélectionnez **\<Nouveau>** pour en créer un.  
+4.  Sélectionnez un gestionnaire de connexions existant dans la liste **gestionnaires de connexions** ou sélectionnez **\<New>** pour créer un gestionnaire de connexions.  
   
 5.  Si vous sélectionnez un gestionnaire de connexions existant, cliquez sur **OK** pour fermer la boîte de dialogue **Ajouter une nouvelle destination** . Vous devez constater que la destination et les gestionnaires de connexions ont été ajoutés au flux de données.  
   
-6.  Si vous cliquez sur ** \<nouveau>** pour créer un gestionnaire de connexions, vous devez voir s’afficher une boîte de dialogue **Gestionnaire de connexions** , qui vous permet de spécifier des paramètres pour la connexion. Une fois que vous avez fini de créer le gestionnaire de connexions, vous constatez que la destination et le gestionnaire de connexions figurent dans le concepteur SSIS.  
+6.  Si vous cliquez **\<New>** pour créer un gestionnaire de connexions, vous devez voir s’afficher une boîte de dialogue **Gestionnaire de connexions** , qui vous permet de spécifier des paramètres pour la connexion. Une fois que vous avez fini de créer le gestionnaire de connexions, vous constatez que la destination et le gestionnaire de connexions figurent dans le concepteur SSIS.  
   
   

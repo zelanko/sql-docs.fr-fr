@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ffcd52ff5db3d6f04f0af1d3119aabbc4f5229c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82c5b7580c04fa3771595c91ef1f76ffc7f751cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053094"
 ---
 # <a name="database-mirroring-connection-event-class"></a>Classe d'événements de connexion de mise en miroir de bases de données
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement de **connexion de mise en miroir de bases de données** pour indiquer l’état d’une connexion de transport gérée par la mise en miroir de bases de données.  

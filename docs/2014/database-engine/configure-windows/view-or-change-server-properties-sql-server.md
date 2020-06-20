@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783125"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934744"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Afficher ou modifier des propriétés de serveur (SQL Server)
   Cette rubrique explique comment afficher ou modifier les propriétés d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Configuration Manager.  
@@ -59,7 +58,7 @@ ms.locfileid: "72783125"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Les autorisations d' `sp_configure` exécution sur sans paramètre ou avec uniquement le premier paramètre sont accordées par défaut à tous les utilisateurs. Pour exécuter `sp_configure` avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation ALTER Settings au niveau du serveur. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution sur sans paramètre `sp_configure` ou avec uniquement le premier paramètre sont accordées par défaut à tous les utilisateurs. Pour exécuter `sp_configure` avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction REconfigure, un utilisateur doit disposer de l’autorisation ALTER Settings au niveau du serveur. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -148,9 +147,9 @@ GO
   
 2.  Dans le **Gestionnaire de configuration SQL Server**, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<***InstanceName***>)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server ( \<***instancename***> )**, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<***nom_instance***>)** , modifiez les propriétés du serveur sous l’onglet **service** ou **avancé** , puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server ( \<***instancename***> )** , modifiez les propriétés du serveur sous l’onglet **service** ou **avancé** , puis cliquez sur **OK**.  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> Suivi : Après avoir modifié les propriétés du serveur  
  Pour certaines propriétés, le serveur doit être redémarré afin d'appliquer les modification.  

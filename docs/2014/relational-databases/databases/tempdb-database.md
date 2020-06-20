@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965689"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
   La base de données système **tempdb** est une ressource globale disponible pour tous les utilisateurs connectés à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sert de conteneur aux éléments suivants :  
@@ -33,7 +32,7 @@ ms.locfileid: "62916881"
   
 -   Versions de ligne qui sont générées par les transactions de modification de données pour les fonctionnalités telles que : opérations d'index en ligne, MARS (Multiple Active Result Sets) et déclencheurs AFTER.  
   
- Les opérations effectuées dans **tempdb** sont soumises à un enregistrement minimal dans le journal. Cela permet de restaurer des transactions. **tempdb** est recréé à chaque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarrage, de sorte que le système démarre toujours avec une copie propre de la base de données. Les tables et les procédures stockées temporaires sont automatiquement supprimées à la déconnexion et aucune connexion n'est active lorsque le système est arrêté. Par conséquent, il n’y a jamais de contenu dans **tempdb** à enregistrer d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une session de à l’autre. La sauvegarde et la restauration ne sont pas autorisées sur la base de données **tempdb**.  
+ Les opérations effectuées dans **tempdb** sont soumises à un enregistrement minimal dans le journal. Cela permet de restaurer des transactions. **tempdb** est recréé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à chaque démarrage, de sorte que le système démarre toujours avec une copie propre de la base de données. Les tables et les procédures stockées temporaires sont automatiquement supprimées à la déconnexion et aucune connexion n'est active lorsque le système est arrêté. Par conséquent, il n’y a jamais de contenu dans **tempdb** à enregistrer d’une session de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’autre. La sauvegarde et la restauration ne sont pas autorisées sur la base de données **tempdb**.  
   
 ## <a name="physical-properties-of-tempdb"></a>Propriétés physiques de tempdb  
  Le tableau suivant répertorie les valeurs de configuration initiales des fichiers de données et des journaux de **tempdb** . La taille de ces fichiers peut varier légèrement en fonction des éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "62916881"
 |Données primaires|tempdev|tempdb.mdf|Croissance automatique de 10 pour cent jusqu'à ce que le disque soit plein|  
 |Journal|templog|templog.ldf|Croissance automatique de 10 % jusqu'à un maximum de 2 téraoctets|  
   
- La taille de **tempdb** peut affecter les performances d’un système. Par exemple, si la taille de **tempdb** est trop petite, le traitement du système peut être trop occupé avec la croissance automatique de la base de données pour prendre en charge les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]exigences de votre charge de travail chaque fois que vous démarrez. Vous pouvez éviter cette surcharge en accroissant la taille de **tempdb**.  
+ La taille de **tempdb** peut affecter les performances d’un système. Par exemple, si la taille de **tempdb** est trop petite, le traitement du système peut être trop occupé avec la croissance automatique de la base de données pour prendre en charge les exigences de votre charge de travail chaque fois que vous démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez éviter cette surcharge en accroissant la taille de **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Performances accrues dans tempdb  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les performances de **tempdb** connaissent les améliorations suivantes :  
@@ -64,34 +63,34 @@ ms.locfileid: "62916881"
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Oui|  
-|ANSI_NULL_DEFAULT|OFF|Oui|  
-|ANSI_NULLS|OFF|Oui|  
-|ANSI_PADDING|OFF|Oui|  
-|ANSI_WARNINGS|OFF|Oui|  
-|ARITHABORT|OFF|Oui|  
-|AUTO_CLOSE|OFF|Non|  
-|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
-|AUTO_SHRINK|OFF|Non|  
-|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|No|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Yes|  
+|AUTO_SHRINK|OFF|No|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
 |CHANGE_TRACKING|OFF|Non|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
 |CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non |  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ACTIVÉ|Non|  
 |ENCRYPTION|OFF|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
-|PAGE_VERIFY|CHECKSUM pour les nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE pour les mises à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Oui|  
+|PAGE_VERIFY|CHECKSUM pour les nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE pour les mises à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Yes|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
 |READ_COMMITTED_SNAPSHOT|OFF|Non|  
 |RECOVERY|SIMPLE|Non|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
 |Options de Service Broker|ENABLE_BROKER|Oui|  
-|TRUSTWORTHY|OFF|Non|  
+|TRUSTWORTHY|OFF|No|  
   
  Pour obtenir une description de ces options de base de données, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   

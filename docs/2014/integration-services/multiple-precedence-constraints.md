@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965149"
 ---
 # <a name="multiple-precedence-constraints"></a>Contraintes de précédence multiples
   Une contrainte de précédence connecte deux exécutables : deux tâches, deux conteneurs, ou un de chaque. Ils sont connus sous le nom d'exécutable de précédence et d'exécutable contraint. Un exécutable contraint peut comprendre plusieurs contraintes de précédence. Pour plus d’informations, consultez [Contraintes de précédence](control-flow/precedence-constraints.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66057411"
 ## <a name="logicaland-property"></a>Propriété LogicalAnd  
  Si une tâche ou un conteneur comporte plusieurs contraintes, la propriété `LogicalAnd` indique si une contrainte de précédence est évaluée seule ou de concert avec les autres contraintes.  
   
- Vous pouvez définir la `LogicalAnd` propriété à l’aide de l **'éditeur de contrainte de précédence** dans [!INCLUDE[ssIS](../includes/ssis-md.md)] le [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] concepteur ou dans le fenêtre Propriétés qui fournit.  
+ Vous pouvez définir la `LogicalAnd` propriété à l’aide de l **'éditeur de contrainte de précédence** dans le [!INCLUDE[ssIS](../includes/ssis-md.md)] concepteur ou dans le fenêtre Propriétés qui [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fournit.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Définir les propriétés d'une contrainte de précédence](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  

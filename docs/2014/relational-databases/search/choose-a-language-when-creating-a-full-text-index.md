@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997782"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
   Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier une langue au niveau de la colonne pour la colonne indexée. L’ [analyseur lexical et les générateurs de formes dérivées](configure-and-manage-word-breakers-and-stemmers-for-search.md) de la langue spécifiée seront utilisés par les requêtes de texte intégral sur la colonne. Plusieurs aspects doivent être pris en considération pour le choix de la langue d'une colonne lors de la création d'un index de texte intégral. Ces aspects sont liés à la façon dont les unités lexicales de votre texte sont créées et à la façon dont ce texte est ensuite indexé par le Moteur d'indexation et de recherche en texte intégral.  
@@ -49,7 +48,7 @@ ms.locfileid: "66012731"
   
 -   Sécurité  
   
-     Les nouveaux analyseurs lexicaux sont activés par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans grâce aux améliorations de sécurité apportées aux composants linguistiques. Nous recommandons vivement que les composants externes tels que les analyseurs lexicaux et filtres soient signés afin d'améliorer la sécurité globale et la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez configurer le texte intégral pour vérifier que ces composants sont signés comme suit :  
+     Les nouveaux analyseurs lexicaux sont activés par défaut dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grâce aux améliorations de sécurité apportées aux composants linguistiques. Nous recommandons vivement que les composants externes tels que les analyseurs lexicaux et filtres soient signés afin d'améliorer la sécurité globale et la robustesse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez configurer le texte intégral pour vérifier que ces composants sont signés comme suit :  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +60,7 @@ ms.locfileid: "66012731"
   
 -   Pour couvrir une longue liste de langues, les analyseurs lexicaux sont inclus d'office dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont activés par défaut.  
   
- Pour obtenir la liste des langues pour lesquelles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comprend un analyseur lexical et des générateurs de formes dérivées, consultez [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Pour obtenir la liste des langues pour lesquelles comprend un analyseur lexical et des générateurs de formes dérivées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [sys. Fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -108,7 +107,7 @@ ms.locfileid: "66012731"
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Effet du type de colonne sur la recherche en texte intégral  
  Un autre point à prendre en considération dans le choix de la langue est lié au mode de représentation des données. Pour les données non stockées dans une colonne `varbinary(max)`, aucun filtrage particulier n'est effectué. À la place, le texte est généralement traité tel quel par le composant de séparation des mots.  
   
- Les analyseurs lexicaux sont, aussi, principalement conçus pour traiter le texte écrit. Par conséquent, si votre texte contient un balisage quelconque (par exemple du code HTML), vous risquez de ne pas obtenir une précision linguistique importante durant l'indexation et la recherche. Dans ce cas, vous avez deux possibilités : la méthode recommandée consiste simplement à stocker les données de texte `varbinary(max)` dans la colonne et à indiquer le type de document afin qu’elles puissent être filtrées. Si ce choix ne vous convient pas, utilisez un analyseur lexical neutre et, si possible, ajoutez des données de balisage (par exemple « br » en langage HTML) à vos listes de mots parasites.  
+ Les analyseurs lexicaux sont, aussi, principalement conçus pour traiter le texte écrit. Par conséquent, si votre texte contient un balisage quelconque (par exemple du code HTML), vous risquez de ne pas obtenir une précision linguistique importante durant l'indexation et la recherche. Dans ce cas, vous avez deux possibilités : la méthode recommandée consiste simplement à stocker les données de texte dans la `varbinary(max)` colonne et à indiquer le type de document afin qu’elles puissent être filtrées. Si ce choix ne vous convient pas, utilisez un analyseur lexical neutre et, si possible, ajoutez des données de balisage (par exemple « br » en langage HTML) à vos listes de mots parasites.  
   
 > [!NOTE]  
 >  L'identification de la racine linguistique n'intervient pas lorsque vous spécifiez la langue neutre.  

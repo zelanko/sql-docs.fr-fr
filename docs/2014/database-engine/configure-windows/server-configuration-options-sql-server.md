@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde3029cb170a45852e08b8073f9a66bb6179658
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935000"
 ---
 # <a name="server-configuration-options-sql-server"></a>Options de configuration du serveur (SQL Server)
   Vous pouvez gérer et optimiser les ressources de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le bais des options de configuration, en utilisant soit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , soit la procédure stockée système sp_configure. Les options de configuration de serveur les plus fréquemment utilisées sont accessibles via [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; toutes les options de configuration sont accessibles via sp_configure. Avant de paramétrer ces options, vous devez tenir compte de leurs conséquences sur votre système. Pour plus d’informations, consultez [Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)  
@@ -64,7 +63,7 @@ ms.locfileid: "62809567"
   
 -   SC = Options à configuration automatique.  
   
-    |Option de configuration|Valeur minimale|Valeur maximale|Par défaut|  
+    |Option de configuration|Valeur minimale|Valeur maximale|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -105,7 +104,7 @@ ms.locfileid: "62809567"
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1 024 correspond au maximum recommandé pour la version 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et 2 048 pour la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)|0<br /><br /> Zéro configure automatiquement le nombre maximal de threads de travail en fonction du nombre de processeurs, à l’aide de la formule (256 + (*\<processeurs>* -4) * 8) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour 32 bits et deux fois pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]64 bits.|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1 024 correspond au maximum recommandé pour la version 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et 2 048 pour la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)|0<br /><br /> Zéro configure automatiquement le nombre maximal de threads de travail en fonction du nombre de processeurs, à l’aide de la formule (256 + ( *\<processors>* -4) * 8) pour 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et deux fois pour 64 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1 024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  

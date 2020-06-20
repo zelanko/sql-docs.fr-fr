@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09910ec1da0b6d157a3a0a53953f2650a924c314
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662980"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053015"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support (classe d'événements)
   La classe d’événements **Deprecation Final Support** a lieu quand vous utilisez une fonctionnalité qui sera supprimée dans la prochaine version majeure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une plus grande longévité de vos applications, n’utilisez pas les fonctions qui font intervenir la classe d’événements **Deprecation Final Support** ou **Deprecation Announcement** . Modifiez le plus tôt possible les applications qui utilisent actuellement les fonctions abandonnées.  

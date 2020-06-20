@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a59679fc2c48e2c5eabc4be73b186d5267897e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663664"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052982"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill (classe d'événements)
   La classe d’événements **Exchange Spill** indique que les tampons d’un plan de requête parallèle ont été temporairement écrits dans la base de données **tempdb** . Cet événement intervient rarement, seulement lorsqu'un plan de requête inclut de multiples plages d'analyses.  
   
- Normalement, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui génère de telles plages d'analyses comprend de nombreux opérateurs BETWEEN, chacun d'entre eux permettant de sélectionner une plage de lignes à partir d'une table ou d'un index. Vous pouvez également obtenir plusieurs plages à l’aide d’expressions telles que (T. a > 10 et T. \< a 20) ou (t. a > 100 et t. \< a 120). De plus, les plans de requête imposent que ces plages soient analysées de façon ordonnée, dans la mesure ou une clause ORDER BY est spécifiée sur T.a, ou parce qu'un itérateur du plan demande que les lignes qu'il consomme soient triées.  
+ Normalement, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui génère de telles plages d'analyses comprend de nombreux opérateurs BETWEEN, chacun d'entre eux permettant de sélectionner une plage de lignes à partir d'une table ou d'un index. Vous pouvez également obtenir plusieurs plages à l’aide d’expressions telles que (T. a > 10 et T. a \< 20) OR (T.a > 100 et t. a \< 120). De plus, les plans de requête imposent que ces plages soient analysées de façon ordonnée, dans la mesure ou une clause ORDER BY est spécifiée sur T.a, ou parce qu'un itérateur du plan demande que les lignes qu'il consomme soient triées.  
   
  Lorsque le plan de requête d’une telle requête contient plusieurs opérateurs **Parallelism** , les tampons de communication utilisés par ces opérateurs **Parallelism** sont saturés et il se peut que la progression de l’exécution de la requête soit stoppée. Dans cette situation, l’un des opérateurs **Parallelism** écrit sa mémoire tampon de sortie dans la base de données **tempdb** (une opération appelée *vidage d’échange*), de manière à pouvoir consommer des lignes en provenance de certains de ses tampons d’entrée. Éventuellement, les lignes vidées sont retournées à l'opérateur demandeur lorsqu'il est prêt à les utiliser.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62663664"
 |**GroupID**|**int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
-|**LoginName**|**nvarchar**|Nom de la connexion de l’utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit les informations d’identification de connexion Windows au format *\<DOMAINE>\\<nom_utilisateur\>* ).|11|Oui|  
+|**LoginName**|**nvarchar**|Nom de la connexion de l’utilisateur (soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la connexion de sécurité, soit les informations d’identification de connexion Windows sous la forme * \<DOMAIN> \\<nom d’utilisateur \> *).|11|Oui|  
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans la table **syslogins** de la base de données **master** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  

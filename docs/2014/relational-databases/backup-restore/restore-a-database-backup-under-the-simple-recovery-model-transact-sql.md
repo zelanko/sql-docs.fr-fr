@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e264dd380c3dff40dacc4eb576d34af5195dec01
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957182"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Restaurer une sauvegarde de base de données en mode de récupération simple (Transact-SQL)
   Cette rubrique explique comment restaurer une sauvegarde complète de base de données.  
@@ -70,7 +69,7 @@ ms.locfileid: "62875628"
 ### <a name="description"></a>Description  
  Cet exemple restaure la sauvegarde complète de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à partir d'une bande.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
   
 ```  
 USE master;  
@@ -80,7 +79,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](complete-database-restores-full-recovery-model.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md)   
  [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
