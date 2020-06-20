@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e54cf82c9413b97599e6e06ad9a51be46cd822a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965706"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Fichiers de données SQL Server dans Azure
   SQL Server fichiers de données dans Azure permet la prise en charge native des fichiers de base de données SQL Server stockés en tant qu’objets BLOB Azure. Elle vous permet de créer une base de données dans SQL Server s’exécutant localement ou dans une machine virtuelle dans Azure avec un emplacement de stockage dédié pour vos données dans le stockage d’objets BLOB Azure. Cette amélioration simplifie en particulier le déplacement des bases de données entre les ordinateurs, grâce aux opérations par attachement et détachement. En outre, il fournit un autre emplacement de stockage pour vos fichiers de sauvegarde de base de données en vous permettant de restaurer à partir de ou vers le stockage Azure. Par conséquent, elle permet plusieurs solutions hybrides en offrant différents avantages en matière de virtualisation des données, de déplacement des données, de sécurité et de disponibilité, le tout à des coûts et une maintenance réduits pour une mise à l'échelle élastique et une haute disponibilité.  
@@ -96,9 +95,9 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Limitations  
   
--   Dans la version actuelle de cette fonctionnalité, le `FileStream` stockage des données dans le stockage Azure n’est pas pris en charge. Vous pouvez stocker `Filestream` des données dans une base de données locale intégrée au stockage Azure, mais vous ne pouvez pas déplacer les données FILESTREAM entre les machines à l’aide du stockage Azure. Pour les données `FileStream`, nous vous recommandons de continuer à utiliser les méthodes traditionnelles pour déplacer des fichiers (.mdf, .ldf) associés à Filestream entre différents ordinateurs.  
+-   Dans la version actuelle de cette fonctionnalité, le stockage des `FileStream` données dans le stockage Azure n’est pas pris en charge. Vous pouvez stocker `Filestream` des données dans une base de données locale intégrée au stockage Azure, mais vous ne pouvez pas déplacer les données FILESTREAM entre les machines à l’aide du stockage Azure. Pour les données `FileStream`, nous vous recommandons de continuer à utiliser les méthodes traditionnelles pour déplacer des fichiers (.mdf, .ldf) associés à Filestream entre différents ordinateurs.  
   
--   Actuellement, cette nouvelle amélioration ne prend pas en charge l’accès simultané de plusieurs instances SQL Server aux mêmes fichiers de base de données dans le Stockage Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServeurB est démarré par inadvertance et qu’il possède également une base de données qui pointe vers le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données avec un code d’erreur **5120 impossible d’ouvrir le fichier physique "%.\* ls». Erreur% d du système d’exploitation : « % ls »**.  
+-   Actuellement, cette nouvelle amélioration ne prend pas en charge l’accès simultané de plusieurs instances SQL Server aux mêmes fichiers de base de données dans le Stockage Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServeurB est démarré par inadvertance et qu’il possède également une base de données qui pointe vers le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données avec un code d’erreur **5120 impossible d’ouvrir le fichier physique "%. \* ls». Erreur% d du système d’exploitation : « % ls »**.  
   
 -   Seuls les fichiers .mdf, .ldf et .ndf peuvent être enregistrés dans le Stockage Azure à l’aide de la fonctionnalité Fichiers de données SQL Server dans Azure.  
   
@@ -106,9 +105,9 @@ ON
   
 -   La taille d'un objet blob peut atteindre 1 To au maximum. Cette limite supérieure s’applique à chaque fichier journal ou fichier de données de base de données pouvant être enregistré dans le stockage Azure.  
   
--   Il est impossible d’enregistrer des données de l’OLTP en mémoire dans un objet blob Azure à l’aide de la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. En effet, l’OLTP en mémoire dépend de `FileStream` et, dans la version actuelle de cette fonctionnalité, le stockage `FileStream` des données dans le stockage Azure n’est pas pris en charge.  
+-   Il est impossible d’enregistrer des données de l’OLTP en mémoire dans un objet blob Azure à l’aide de la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. En effet, l’OLTP en mémoire dépend de `FileStream` et, dans la version actuelle de cette fonctionnalité, le stockage des `FileStream` données dans le stockage Azure n’est pas pris en charge.  
   
--   Lors de l’utilisation de SQL Server fichiers de données dans la fonctionnalité Azure, SQL Server effectue toutes les comparaisons d’URL ou de chemin `master` d’accès de fichier à l’aide du classement défini dans la base de données.  
+-   Lors de l’utilisation de SQL Server fichiers de données dans la fonctionnalité Azure, SQL Server effectue toutes les comparaisons d’URL ou de chemin d’accès de fichier à l’aide du classement défini dans la `master` base de données.  
   
 -   Les `AlwaysOn Availability Groups` sont pris en charge tant que vous n'ajoutez pas de nouveaux fichiers de base de données à la base de données primaire. Si une opération de base de données nécessite la création d'un nouveau fichier dans la base de données primaire, désactivez d'abord les groupes de disponibilité AlwaysOn dans le nœud secondaire. Puis, effectuez l'opération de base de données dans la base de données primaire et sauvegardez la base de données dans le nœud principal. Ensuite, restaurez la base de données sur le nœud secondaire, puis activez les groupes de disponibilité AlwaysOn dans le nœud secondaire. Notez que les instances de cluster de basculement AlwaysOn ne sont pas prises en charge lors de l’utilisation de la fonctionnalité fichiers de données SQL Server dans Azure.  
   
@@ -141,7 +140,7 @@ ON
   
  **Erreurs d’authentification**  
   
--   *Impossible de supprimer les informations d’identification'%. \*ls', car il est utilisé par un fichier de base de données actif.*   
+-   *Impossible de supprimer les informations d’identification'%. \* ls', car il est utilisé par un fichier de base de données actif.*   
     Résolution : vous pouvez voir cette erreur lorsque vous tentez de supprimer des informations d’identification encore utilisées par un fichier de base de données actif dans le stockage Azure. Pour supprimer les informations d'identification, vous devez d'abord supprimer l'objet blob associé qui comporte ce fichier de base de données. Pour supprimer un objet blob dont le bail est actif, vous devez d'abord résilier le bail.  
   
 -   *La signature d’accès partagé n’a pas été créée correctement sur le conteneur.*   
@@ -162,10 +161,10 @@ ON
 2.  *Erreurs lors de l’exécution de l’instruction ALTER*   
     Résolution : veillez à exécuter l'instruction Alter Database lorsque la base de données est en ligne. Lors de la copie des fichiers de données vers le stockage Azure, créez toujours un objet blob de pages, et non un objet blob de blocs. Sinon, la modification de la base de données avec l'instruction ALTER échouera. Passez en revue les instructions fournies dans la leçon 7 du [Didacticiel : SQL Server fichiers de données dans le service de stockage Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Code d’erreur 5120 impossible d’ouvrir le fichier physique "%. \*ls». Erreur% d du système d’exploitation : « % ls »*   
-    Résolution : actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances de SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le stockage Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServeurB est démarré par inadvertance et qu’il possède également une base de données qui pointe vers le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données avec un code d’erreur *5120 impossible d’ouvrir le fichier physique "%.\* ls». Erreur% d du système d’exploitation : « % ls »*.  
+3.  *Code d’erreur 5120 impossible d’ouvrir le fichier physique "%. \* ls». Erreur% d du système d’exploitation : « % ls »*   
+    Résolution : actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances de SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le stockage Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServeurB est démarré par inadvertance et qu’il possède également une base de données qui pointe vers le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données avec un code d’erreur *5120 impossible d’ouvrir le fichier physique "%. \* ls». Erreur% d du système d’exploitation : « % ls »*.  
   
-     Pour résoudre ce problème, déterminez d’abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Azure. Si vous n’en avez pas besoin, supprimez simplement toute connexion entre le serveur A et les fichiers de base de données dans le stockage Azure. Pour cela, procédez comme suit :  
+     Pour résoudre ce problème, déterminez d’abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Azure. Si vous n’en avez pas besoin, supprimez simplement toute connexion entre le serveur A et les fichiers de base de données dans le stockage Azure. Pour ce faire, procédez comme suit :  
   
     1.  Définissez le chemin d'accès du serveur A sur un dossier local à l'aide de l'instruction ALTER Database.  
   

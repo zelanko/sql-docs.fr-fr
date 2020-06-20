@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068092"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Remplissage d'une table avec des données hiérarchiques existantes
    Cette tâche crée une table et la remplit avec les données de la table **EmployeeDemo**. Les étapes de cette tâche sont les suivantes :  
@@ -151,7 +150,7 @@ ms.locfileid: "66110165"
   
     ```  
   
-     La colonne **LogicalNode** convertit `hierarchyid` la colonne en un format de texte plus lisible qui représente la hiérarchie. Dans les tâches restantes, vous utiliserez la méthode `ToString()` pour afficher le format logique des colonnes `hierarchyid`.  
+     La colonne **LogicalNode** convertit la `hierarchyid` colonne en un format de texte plus lisible qui représente la hiérarchie. Dans les tâches restantes, vous utiliserez la méthode `ToString()` pour afficher le format logique des colonnes `hierarchyid`.  
   
 5.  Supprimez la table temporaire, qui n'est plus nécessaire :  
   

@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f3b4c94ef1c4690af2a333fcdbdef88b475219e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806825"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023756"
 ---
 # <a name="toolbox-component-f1-help"></a>Aide (F1) des composants de la boîte à outils
 
 La **boîte à outils** affiche divers éléments que vous pouvez utiliser dans les projets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez ouvrir la **boîte à outils** à partir du menu **Affichage** et ancrer cette fenêtre comme vous le souhaitez. Quand elle est ancrée, la **boîte à outils** peut rester affichée ou être masquée si elle est inutilisée à l’aide de l’option **Masquer automatiquement** .  
   
-Les icônes de **boîte à outils** peuvent être déplacées et déplacées ou copiées et collées dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]des éditeurs de code ou sur des surfaces en mode Design dans.  
+Les icônes de **boîte à outils** peuvent être déplacées et déplacées ou copiées et collées dans des éditeurs de code ou sur des surfaces en mode Design dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="using-the-toolbox"></a>Utilisation de la boîte à outils  
  La boîte à outils est un contrôle d'arborescence qui se comporte comme l'Explorateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, mais sans quadrillages ou lignes de connexion. Plusieurs segments de la **boîte à outils** (appelés « onglets ») peuvent être développés simultanément, et l’intégralité de l’arborescence défile à l’intérieur de la fenêtre **Boîte à outils** . Pour développer un onglet de la **boîte à outils**, cliquez sur le signe plus ( **+** ) en regard de son nom. Pour réduire un onglet développé, cliquez sur le signe moins ( **-** ) en regard de son nom.  

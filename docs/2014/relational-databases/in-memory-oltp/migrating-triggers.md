@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 38280abdedfc78f747a84acf62c38759e8f5d3de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d2dea44e08e58717f1dfe1c90af20d7fc4558b97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026091"
 ---
 # <a name="migrating-triggers"></a>Migration de déclencheurs
   Cette rubrique présente les déclencheurs DDL et DML et les tables mémoire optimisées.  
@@ -155,6 +154,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

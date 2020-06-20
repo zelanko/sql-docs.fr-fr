@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c87d0123c5174461e4e3470b4e77ccb4bc5b10a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ddb4cacd31b08346d64b3d9caa4868c53a90050d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018961"
 ---
 # <a name="delete-a-data-source-odbc"></a>Supprimer une source de données (ODBC)
   Vous pouvez supprimer une source de données à l’aide de l’administrateur ODBC, par programmation (à l’aide de [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) ou en supprimant un fichier (si un nom de source de données de fichier).  

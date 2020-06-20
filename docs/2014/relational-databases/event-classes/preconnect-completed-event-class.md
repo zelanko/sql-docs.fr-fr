@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af8e7de291c81736d2b83abf8a31a972653c8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052784"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, classe d’événements
   La classe d’événements PreConnect:Completed indique quand un déclencheur LOGON ou la fonction classifieur de Resource Governor finit de s’exécuter.  
@@ -39,7 +38,7 @@ ms.locfileid: "62827080"
 |Lectures|`int`|Nombre de lectures logiques.|16|Oui|  
 |Écritures|`int`|Nombre d'écritures logiques.|17|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail classifié.|66|Oui|  
-|Error|`int`|Dernier numéro d'erreur si la fonction classifieur définie par l'utilisateur ne peut pas s'exécuter.|31|Oui|  
+|Erreur|`int`|Dernier numéro d'erreur si la fonction classifieur définie par l'utilisateur ne peut pas s'exécuter.|31|Oui|  
 |State|`int`|État de la dernière erreur.|30|Oui|  
 |TargetUserName|`sysname`|Valeur de retour (nom de groupe de charges de travail) pour la fonction classifieur définie par l'utilisateur si le système ne peut pas trouver un groupe actif correspondant. Dans le cas contraire, cette colonne a la valeur NULL.|39|Oui|  
 |ObjectName|`nvarchar(256)`|Nom en deux parties de la fonction classifieur définie par l'utilisateur. Par exemple, dbo.classifier.|34|Oui|  

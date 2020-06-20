@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a85363b4971055b020314492db429b72447b6490
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049009"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
   L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
@@ -34,7 +33,7 @@ ms.locfileid: "82718607"
   
     1.  $ADDRESS retourne le nom de la procédure stockée ou de la fonction définie par l'utilisateur dans laquelle le point d'arrêt est défini. Si le point d'arrêt est défini dans la fenêtre de l'éditeur, $ADDRESS retourne le nom du fichier de script modifié. $ADDRESS et $FUNCTION retournent les mêmes informations dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER retourne le nom de l'unité de code [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a appelé une procédure stockée ou une fonction. Si le point d’arrêt se trouve dans la fenêtre de l’éditeur, $CALLER retourne \<Aucun appelant disponible>. Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir du code dans la fenêtre de l'éditeur, $CALLER retourne le nom du fichier modifié. Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir d'une autre procédure stockée ou fonction, $CALLER retourne le nom de la procédure ou fonction appelante.  
+    2.  $CALLER retourne le nom de l'unité de code [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a appelé une procédure stockée ou une fonction. Si le point d’arrêt se trouve dans la fenêtre de l’éditeur, $CALLER retourne \<No caller available> . Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir du code dans la fenêtre de l'éditeur, $CALLER retourne le nom du fichier modifié. Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir d'une autre procédure stockée ou fonction, $CALLER retourne le nom de la procédure ou fonction appelante.  
   
     3.  $CALLSTACK retourne la pile des appels des fonctions dans la chaîne qui a appelé la procédure stockée ou la fonction définie par l'utilisateur en cours. Si le point d'arrêt se trouve dans la fenêtre de l'éditeur, $CALLSTACK retourne le nom du fichier de script modifié.  
   

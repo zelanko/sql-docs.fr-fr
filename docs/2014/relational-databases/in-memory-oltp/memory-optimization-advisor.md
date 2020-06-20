@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 581ce3a1b13d94814904876f61637dcad3dd76de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719081"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050077"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
   L'outil de génération de rapports sur les performances des transactions (voir [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) vous indique quelles tables de votre base de données tireront parti de l'utilisation de la fonctionnalité OLTP en mémoire. Après avoir identifié une table que vous souhaitez déplacer pour utiliser l'OLTP en mémoire, utilisez le Conseiller d'optimisation de la mémoire pour vous aider à migrer la table de base de données sur disque vers l'OLTP en mémoire.  
@@ -122,6 +121,6 @@ ms.locfileid: "82719081"
  Une fois le traitement terminé, actualisez l’ **Explorateur d’objets** pour afficher la nouvelle table optimisée en mémoire et l’ancienne table sur disque. Vous pouvez conserver l'ancienne table ou la supprimer, à votre convenance personnelle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

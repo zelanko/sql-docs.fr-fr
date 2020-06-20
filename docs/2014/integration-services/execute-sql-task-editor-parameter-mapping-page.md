@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966759"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Éditeur de tâche d'exécution de requête SQL (page Mappage de paramètre)
   Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour associer des variables à des paramètres dans une instruction SQL.  
@@ -28,7 +27,7 @@ ms.locfileid: "66059039"
   
 ## <a name="options"></a>Options  
  **Nom de la variable**  
- Après avoir ajouté un mappage de paramètre en cliquant sur **Ajouter**, sélectionnez une variable système ou une variable définie par l’utilisateur dans la liste, ou cliquez sur \<**Nouvelle variable...**> pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
+ Après avoir ajouté un mappage de paramètre en cliquant sur **Ajouter**, sélectionnez un système ou une variable définie par l’utilisateur dans la liste ou cliquez \<**New variable...**> pour ajouter une nouvelle variable à l’aide de la boîte de dialogue **Ajouter une variable** .  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66059039"
  **Ajouter**  
  Cliquez pour ajouter une association de paramètre.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez une association de paramètre dans la liste et cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  

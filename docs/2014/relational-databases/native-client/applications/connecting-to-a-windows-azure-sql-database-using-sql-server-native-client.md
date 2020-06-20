@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c759cddb5f66f0dbee401e0e58bd6ad8590af8ff
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 177c655f97e32f2044460e87c6cd775cdf8fcde9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017642"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connexion à une base de données Azure SQL à l’aide de SQL Server Native Client
   Pour obtenir un exemple qui montre comment se connecter à à [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] l’aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [développement : rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  

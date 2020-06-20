@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966809"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Éditeur de source Excel (page Sortie d'erreur)
   La page **Sortie d’erreur** de la boîte de dialogue **Éditeur de source Excel** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d’erreur.  
@@ -27,7 +26,7 @@ ms.locfileid: "66059228"
  Pour en savoir plus sur la source Excel, consultez [Excel Source](data-flow/excel-source.md).  
   
 ## <a name="options"></a>Options  
- **Entrée ou Sortie**  
+ **Entrée ou sortie**  
  Affichez le nom de la source de données.  
   
  **Colonne**  

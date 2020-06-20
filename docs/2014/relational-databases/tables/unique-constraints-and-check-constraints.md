@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 205e4ae3d6f89f10a933bf357d1eeda458852584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055026"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
   Les contraintes UNIQUE et CHECK sont deux types de contraintes qui peuvent être utilisées pour appliquer l'intégrité des données à des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce sont des objets de base de données importants.  
@@ -51,7 +50,7 @@ ms.locfileid: "68196674"
 >  Les contraintes qui incluent une conversion de type de données implicite ou explicite peuvent causer l'échec de certaines opérations. Par exemple, ces contraintes définies sur des tables qui sont les sources d'une commutation de partition peuvent causer l'échec d'une opération ALTER TABLE...SWITCH. Évitez les conversions de types de données dans les définitions des contraintes.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitations des contraintes CHECK  
- Les contraintes CHECK rejettent les valeurs qui donnent FALSE. Comme les valeurs nulles donnent UNKNOWN, il se peut que leur présence dans les expressions supplante une contrainte. Par exemple, supposons que vous placez une contrainte `int` sur **une colonne** MaColonne en spécifiant **que** MaColonne peut contenir uniquement la valeur 10 (**MaColonne = 10**). Si vous insérez la valeur NULL dans **MyColumn**, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère NULL et ne retourne pas d'erreur.  
+ Les contraintes CHECK rejettent les valeurs qui donnent FALSE. Comme les valeurs nulles donnent UNKNOWN, il se peut que leur présence dans les expressions supplante une contrainte. Par exemple, supposons que vous placez une contrainte sur une `int` colonne MaColonne en spécifiant que **MaColonne** peut contenir uniquement la valeur 10 (**MaColonne = 10**). **MyColumn** Si vous insérez la valeur NULL dans **MyColumn**, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère NULL et ne retourne pas d'erreur.  
   
  Une contrainte CHECK retourne TRUE lorsque la condition qu'elle vérifie n'est pas FALSE pour une ligne quelconque de la table. Une contrainte CHECK s'exécute au niveau de la ligne. Si une table venant d'être créée ne comporte aucune ligne, les éventuelles contraintes CHECK sur cette table sont considérées comme valides. Cette situation peut produire des résultats inattendus, comme l'illustre l'exemple suivant.  
   

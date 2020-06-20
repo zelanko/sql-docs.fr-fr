@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7667a086c8fb5b5f7b17e8baf237e14ffafa1188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e2cee0c5f1aeb87647c7d99b1a8deddc7114b48
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63055689"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051743"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert (classe d'événements)
   La classe d'événements SP:CacheInsert indique que la procédure stockée a été insérée dans le cache de procédure.  

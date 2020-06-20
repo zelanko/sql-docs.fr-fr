@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7fa444ebbf33c48a243703a19d1f296ce91816e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d693217a264388f39fa18859c47b9e7aabdd45aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703466"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003223"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Annotations XSD (SQLXML 4.0)
   Le tableau ci-dessous répertorie les annotations XSD introduites dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les compare avec les annotations XDR introduites dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "82703466"
 |`sql:guid`|Vous permet de spécifier s'il convient d'utiliser une valeur GUID générée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'utiliser la valeur fournie dans le code de mise à jour (updategram) pour cette colonne.|[Utilisation des annotations sql:identity et sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Non pris en charge|  
 |`sql:hide`|Masque l'élément ou l'attribut spécifié dans le schéma dans le document XML résultant.|[Masquage d'éléments et d'attributs à l'aide de sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)|Non pris en charge|  
 |`sql:identity`|Peut être spécifié sur un nœud quelconque qui est mappé à une colonne de base de données de type IDENTITY. La valeur spécifiée pour cette annotation définit comment la colonne de type IDENTITY correspondante dans la base de données est mise à jour.|[Utilisation des annotations sql:identity et sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Non pris en charge|  
-|`sql:inverse`|Indique à la logique mise à jour d’inverser son interprétation de la relation parent-enfant qui a été spécifiée à l’aide de ** \< SQL : Relationship>**.|[Spécification de l’attribut SQL : inverse sur SQL : Relationship &#40;SQLXML 4,0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Non pris en charge|  
+|`sql:inverse`|Indique à la logique mise à jour d’inverser son interprétation de la relation parent-enfant qui a été spécifiée à l’aide de **\<sql:relationship>** .|[Spécification de l’attribut SQL : inverse sur SQL : Relationship &#40;SQLXML 4,0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Non pris en charge|  
 |`sql:is-constant`|Crée un élément XML qui n'est mappé à aucune table. L'élément apparaît dans le résultat de la requête.|[Création d’éléments constants à l’aide de SQL : is-constant &#40;SQLXML 4,0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|Identique|  
 |`sql:key-fields`|Permet de spécifier une ou des colonnes qui identifient de façon unique les lignes d'une table.|[Identification des colonnes clés à l’aide de SQL : key-fields &#40;SQLXML 4,0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|Identique|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|Permet de limiter les valeurs retournées en fonction d'une valeur de limitation.|[Filtrage des valeurs à l’aide de SQL : Limit-Field et SQL : limit-value &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|Identique|  

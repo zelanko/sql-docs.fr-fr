@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016069"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
   Le type de données spatiales géographiques, `geography`, représente des données dans un système de coordonnées de monde sphérique. Ce type est implémenté en tant que type de données CLR (Common Language Runtime) .NET dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` qui stocke des données ellipsoïdales, telles que des coordonnées de latitude et de longitude GPS.  
@@ -103,7 +102,7 @@ ms.locfileid: "66014295"
  [STGeomCollFromWKB &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (type de données geography)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Construction d'une instance geography à partir d'une entrée texte GML  
- Le `geography` type de données fournit une méthode qui génère `geography` une instance à partir de GML, une représentation `geography` XML d’une instance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
+ Le `geography` type de données fournit une méthode qui génère une `geography` instance à partir de GML, une représentation XML d’une `geography` instance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
   
  Pour plus d’informations sur le langage GML (Geography Markup Language), consultez la spécification OGC : [OGC Specifications, Geography Markup Language (en anglais)](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
@@ -128,10 +127,10 @@ ms.locfileid: "66014295"
  [AsGml &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Interrogation des propriétés et des comportements des instances geography  
- Toutes `geography` les instances ont un certain nombre de propriétés qui peuvent être récupérées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais des méthodes fournies par. Les rubriques suivantes définissent les propriétés et comportements de types géographiques et les méthodes permettant de les interroger.  
+ Toutes les `geography` instances ont un certain nombre de propriétés qui peuvent être récupérées par le biais des méthodes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournies par. Les rubriques suivantes définissent les propriétés et comportements de types géographiques et les méthodes permettant de les interroger.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
- Une fois `geography` qu’une instance est construite, vous pouvez utiliser les méthodes suivantes pour retourner le type d’instance ou, s' `GeometryCollection` il s’agit d’une `geography` instance, retourner une instance spécifique.  
+ Une fois qu’une `geography` instance est construite, vous pouvez utiliser les méthodes suivantes pour retourner le type d’instance ou, s’il s’agit d’une `GeometryCollection` instance, retourner une `geography` instance spécifique.  
   
  **Pour retourner le type d'instance d'une géographie**  
  [STGeometryType &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -146,7 +145,7 @@ ms.locfileid: "66014295"
  [STGeometryN &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN (type de données geography)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> Nombre de points  
- Toutes les instances `geography` non vides sont constituées de *points*. Ces points représentent les coordonnées de latitude et de longitude du monde sur lequel les instances `geography` sont dessinées. Le type de données `geography` fournit de nombreuses méthodes intégrées pour interroger les points d'une instance.  
+ Toutes les instances non vides `geography` sont constituées de *points*. Ces points représentent les coordonnées de latitude et de longitude du monde sur lequel les instances `geography` sont dessinées. Le type de données `geography` fournit de nombreuses méthodes intégrées pour interroger les points d'une instance.  
   
  **Pour retourner le nombre de points qui composent une instance**  
  [STNumPoints &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -161,7 +160,7 @@ ms.locfileid: "66014295"
  [STEndpoint &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimension  
- Une instance `geography` non vide peut avoir 0, 1 ou 2 dimensions. Les instances de `geography` dimension zéro, telles `Point` que `MultiPoint`et, n’ont pas de longueur ou de zone. Les objets unidimensionnels, tels que `LineString, CircularString`, `CompoundCurve` et `MultiLineString`, ont une longueur. Les instances à deux dimensions, telles `Polygon, CurvePolygon`que, `MultiPolygon`et, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une `GeometryCollection` indique la dimension maximale de son contenu.  
+ Une instance `geography` non vide peut avoir 0, 1 ou 2 dimensions. Les instances de dimension zéro `geography` , telles que `Point` et `MultiPoint` , n’ont pas de longueur ou de zone. Les objets unidimensionnels, tels que `LineString, CircularString`, `CompoundCurve` et `MultiLineString`, ont une longueur. Les instances à deux dimensions, telles que `Polygon, CurvePolygon` , et `MultiPolygon` , ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une `GeometryCollection` indique la dimension maximale de son contenu.  
   
  **Pour retourner la dimension d'une instance**  
  [STDimension &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  

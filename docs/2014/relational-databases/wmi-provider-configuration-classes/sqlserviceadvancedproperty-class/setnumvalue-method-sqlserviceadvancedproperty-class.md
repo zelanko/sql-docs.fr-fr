@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f44d3426d7a3f11157167763e047dcb7423a904f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64ffacdb14d0a0ba636a34aa27fec6fa10dc1e3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62635078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059652"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetNumValue (classe SqlServiceAdvancedProperty)
   Définit la valeur numérique d'une propriété.  
@@ -40,7 +39,7 @@ NumValue
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) qui représente une propriété avancée.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -52,7 +51,7 @@ NumValue
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le type de valeur de la propriété doit être numérique pour permettre l'attribution d'une valeur numérique à la propriété.  
   
 ## <a name="see-also"></a>Voir aussi  

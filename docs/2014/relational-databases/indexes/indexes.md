@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be474ea547222c30321d893ee8a1ce6f0af0be39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049877"
 ---
 # <a name="indexes"></a>Index
   La table suivante répertorie les types d'index disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et propose des liens correspondants pour plus d'informations.  
   
-|Type d’index|Description|Informations complémentaires|  
+|Type d’index|Description|Informations supplémentaires|  
 |----------------|-----------------|----------------------------|  
 |Hachage|Avec un index de hachage, les données sont accédées via une table de hachage en mémoire. Les index de hachage consomment une quantité fixe de mémoire, en fonction du nombre de compartiments.|[Instructions pour utiliser les index sur les tables optimisées en mémoire](../in-memory-oltp/memory-optimized-tables.md)|  
 |index non cluster optimisés en mémoire|Pour les index non cluster optimisés en mémoire, la consommation de mémoire est une fonction du nombre de lignes et de la taille des colonnes de clés d'index|[Instructions pour utiliser les index sur les tables optimisées en mémoire](../in-memory-oltp/memory-optimized-tables.md)|  
-|Cluster|Un index cluster trie et stocke les lignes de données de la table ou de la vue en fonction de la clé d'index cluster. L'index cluster est mis en œuvre sous la forme d'une structure d'index arborescente binaire permettant la récupération rapide des lignes d'après leurs valeurs clés de l'index cluster.|[Description des index cluster et non-cluster](clustered-and-nonclustered-indexes-described.md)<br /><br /> [Créer des index cluster](create-clustered-indexes.md)|  
-|Non-cluster|Les index non cluster peuvent être définis dans une table ou dans une vue dotée d'un index cluster ou d'un segment de mémoire. Chaque ligne d'un index non cluster contient la valeur clé non cluster ainsi qu'un localisateur de ligne. Le localisateur pointe vers la ligne de données dans l'index cluster ou dans le segment doté de la valeur clé. Les lignes de l'index sont stockées selon l'ordre des valeurs clés de l'index. L'ordre spécifique des lignes de données n'est garanti que si un index cluster est créé sur la table.|[Description des index cluster et non-cluster](clustered-and-nonclustered-indexes-described.md)<br /><br /> [Créer des index non cluster](create-nonclustered-indexes.md)|  
+|Cluster|Un index cluster trie et stocke les lignes de données de la table ou de la vue en fonction de la clé d'index cluster. L'index cluster est mis en œuvre sous la forme d'une structure d'index arborescente binaire permettant la récupération rapide des lignes d'après leurs valeurs clés de l'index cluster.|[Description des index cluster et non cluster](clustered-and-nonclustered-indexes-described.md)<br /><br /> [Créer des index cluster](create-clustered-indexes.md)|  
+|Non-cluster|Les index non cluster peuvent être définis dans une table ou dans une vue dotée d'un index cluster ou d'un segment de mémoire. Chaque ligne d'un index non cluster contient la valeur clé non cluster ainsi qu'un localisateur de ligne. Le localisateur pointe vers la ligne de données dans l'index cluster ou dans le segment doté de la valeur clé. Les lignes de l'index sont stockées selon l'ordre des valeurs clés de l'index. L'ordre spécifique des lignes de données n'est garanti que si un index cluster est créé sur la table.|[Description des index cluster et non cluster](clustered-and-nonclustered-indexes-described.md)<br /><br /> [Créer des index non cluster](create-nonclustered-indexes.md)|  
 |Unique|Un index unique garantit que la clé de l'index ne contient pas de valeur dupliquée et que toute ligne de la table ou de la vue est en quelque sorte unique.<br /><br /> L'unicité peut être une propriété à la fois des index cluster et non cluster.|[Créer des index uniques](create-unique-indexes.md)|  
 |columnstore|Un index columnstore en mémoire stocke et gère des données à l'aide du stockage des données en colonnes et du traitement des requêtes en colonnes.<br /><br /> Les index columnstore fonctionnent bien pour les charges de travail de stockage de données qui effectuent principalement des chargements en masse et des requêtes en lecture seule. Utilisez l’index columnstore pour atteindre des **performances des requêtes** pouvant être multipliées par 10 par rapport au stockage orienté lignes traditionnel, et une **compression de données** multipliée par 7 par rapport à la taille des données non compressées.|[Columnstore Indexes Described](columnstore-indexes-described.md)<br /><br /> [Utilisation d'index columnstore non cluster](../../database-engine/using-nonclustered-columnstore-indexes.md)<br /><br /> [Utilisation d'index columnstore cluster](../../database-engine/using-clustered-columnstore-indexes.md)|  
 |Index à colonnes incluses|Index non cluster qui est étendu pour inclure des colonnes non clés en plus des colonnes clés.|[Créer des index avec colonnes incluses](create-indexes-with-included-columns.md)|  
@@ -48,7 +47,7 @@ ms.locfileid: "63161853"
   
  [Renommer des index](rename-indexes.md)  
   
- [Définir les options d'index](set-index-options.md)  
+ [Définir les options d’index](set-index-options.md)  
   
  [Espace disque nécessaire pour les opérations DDL d'index](disk-space-requirements-for-index-ddl-operations.md)  
   
@@ -57,6 +56,6 @@ ms.locfileid: "63161853"
  [Spécifier un facteur de remplissage pour un index](specify-fill-factor-for-an-index.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Description des index cluster et non-cluster](clustered-and-nonclustered-indexes-described.md)  
+ [Description des index cluster et non cluster](clustered-and-nonclustered-indexes-described.md)  
   
   

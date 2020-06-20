@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064130"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriétés TCP-IP (onglet adresses IP)
   La boîte de dialogue **Propriétés TCP/IP (onglet Adresses IP)** permet de configurer les options du protocole TCP/IP pour une adresse IP spécifique. Seules les options **Ports TCP dynamiques** et **Port TCP** peuvent être configurées pour toutes les adresses en une seule fois en sélectionnant **IPAll**.  
   
- Les modifications prennent effet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors du redémarrage de. Pour obtenir des informations sur le démarrage et l'arrêt du service SQL Server Browser, consultez Procédure : démarrer et arrêter le service SQL Server Browser dans la documentation en ligne.  
+ Les modifications prennent effet lors du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarrage de. Pour obtenir des informations sur le démarrage et l'arrêt du service SQL Server Browser, consultez Procédure : démarrer et arrêter le service SQL Server Browser dans la documentation en ligne.  
   
 ## <a name="static-vs-dynamic-ports"></a>Ports statiques et Ports dynamiques  
  L'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute les connexions entrantes sur le port 1433. Le port peut être modifié pour des raisons de sécurité ou parce qu'une application cliente le requiert. Par défaut, les instances nommées (y compris SQL Server Express) sont configurées pour être à l'écoute sur les ports dynamiques. Pour configurer un port statique, ne complétez pas la zone **Ports TCP dynamiques** et spécifiez un numéro de port disponible dans la zone **Port TCP** . Pour plus d'informations sur l'ouverture de ports dans le pare-feu, consultez Configuration du Pare-feu Windows pour autoriser l'accès à SQL Server dans la documentation en ligne.  

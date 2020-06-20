@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5805ed06ad78040dbdf6c8557e5f548ad57f618b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026099"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilise la mémoire selon des modèles différents pour les tables sur disque. Analysez la quantité de mémoire allouée et utilisée par les tables et les index optimisés en mémoire dans votre base de données à l'aide des DMV ou des compteurs de performance fournis pour la mémoire et le sous-système de garbage collection.  Vous aurez ainsi la visibilité au niveau du système et de la base de données, et vous pourrez prévenir les problèmes liés à l'insuffisance de mémoire.
@@ -112,7 +111,7 @@ ms.locfileid: "82925093"
 
 ##  <a name="monitoring-memory-usage"></a>Surveillance de l'utilisation de la mémoire
 
-###  <a name="using-ssmanstudiofull"></a>Utilisation de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
+###  <a name="using-ssmanstudiofull"></a>Utilisation de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des rapports standard intégrés pour surveiller la mémoire consommée par les tables en mémoire. Vous pouvez accéder à ces rapports à l’aide de l’Explorateur d’objets. Vous pouvez également utiliser l'Explorateur d'objets pour surveiller la mémoire consommée par les tables optimisées en mémoire individuelles.
 
 #### <a name="consumption-at-the-database-level"></a>Consommation au niveau de la base de données

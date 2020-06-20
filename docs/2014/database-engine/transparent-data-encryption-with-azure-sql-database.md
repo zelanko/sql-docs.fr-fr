@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6af7c52741b85a2733b93c2b1ed8c03a14dd6343
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175390"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928210"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Chiffrement transparent des données avec Azure SQL Database
   Le chiffrement transparent des données (version Preview) de la [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] vous aide à protéger contre la menace d'activités malveillantes en effectuant le chiffrement et le déchiffrement en temps réel de la base de données, des sauvegardes associées et des fichiers journaux des transactions au repos sans nécessiter de modifications de l'application.
@@ -50,7 +49,7 @@ ms.locfileid: "78175390"
 
 ##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>S’inscrire à la version préliminaire de TDE et activer TDE sur une base de données
 
-1.  Visitez le portail Azure à [https://portal.azure.com](https://portal.azure.com) l’adresse et connectez-vous avec votre compte administrateur ou contributeur Azure.
+1.  Visitez le portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com) et connectez-vous avec votre compte administrateur ou contributeur Azure.
 
 2.  Dans la bannière de gauche, cliquez sur **PARCOURIR**, puis cliquez sur **Bases de données SQL**.
 
@@ -68,9 +67,9 @@ ms.locfileid: "78175390"
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     Vous pouvez également surveiller la progression du chiffrement en vous connectant à la [!INCLUDE[ssSDS](../includes/sssds-md.md)] à l'aide d'un outil de requête comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en tant qu'utilisateur de base de données avec l'autorisation **AFFICHER L'ÉTAT DE LA BASE DE DONNÉES** . Interrogez `encryption_state` la colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+     Vous pouvez également surveiller la progression du chiffrement en vous connectant à la [!INCLUDE[ssSDS](../includes/sssds-md.md)] à l'aide d'un outil de requête comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en tant qu'utilisateur de base de données avec l'autorisation **AFFICHER L'ÉTAT DE LA BASE DE DONNÉES** . Interrogez la `encryption_state` colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
-##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Activation de TDE [!INCLUDE[ssSDS](../includes/sssds-md.md)] sur à l’aide de Transact-SQL
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Activation de TDE sur [!INCLUDE[ssSDS](../includes/sssds-md.md)] à l’aide de Transact-SQL
  Les étapes suivantes supposent que vous êtes déjà inscrit à la version Preview.
 
 ###  <a name="TsqlProcedure"></a>
@@ -90,7 +89,7 @@ ms.locfileid: "78175390"
     GO
     ```
 
-3.  Pour surveiller la progression du chiffrement [!INCLUDE[ssSDS](../includes/sssds-md.md)]sur, les utilisateurs de base de données avec l’autorisation afficher `encryption_state` l' **État de la base de** données peuvent interroger la colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+3.  Pour surveiller la progression du chiffrement sur [!INCLUDE[ssSDS](../includes/sssds-md.md)] , les utilisateurs de base de données avec l’autorisation **afficher l’état de la base de** données peuvent interroger la `encryption_state` colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Activation de TDE sur SQL Database en utilisant PowerShell
  En utilisant Azure PowerShell, vous pouvez exécuter la commande suivante pour activer ou désactiver TDE. Vous devez connecter votre compte dans la fenêtre PS avant d'exécuter la commande. Les étapes suivantes supposent que vous êtes déjà inscrit à la version Preview. Pour plus d'informations sur PowerShell, consultez [Comment installer et configurer Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).
@@ -116,7 +115,7 @@ ms.locfileid: "78175390"
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Pour désactiver TDE en utilisant le portail Azure
 
-1.  Visitez le portail Azure à [https://portal.azure.com](https://portal.azure.com) l’adresse et connectez-vous avec votre compte administrateur ou contributeur Azure.
+1.  Visitez le portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com) et connectez-vous avec votre compte administrateur ou contributeur Azure.
 
 2.  Dans la bannière de gauche, cliquez sur **PARCOURIR**, puis cliquez sur **Bases de données SQL**.
 
@@ -128,7 +127,7 @@ ms.locfileid: "78175390"
 
 6.  Dans le volet **Chiffrement transparent des données, version PREVIEW** , changez le bouton **Chiffrement des données** en **Désactivé**, puis cliquez sur **Enregistrer** (en haut de la page) pour appliquer le paramètre. L'élément **État du chiffrement** indiquera approximativement la progression du déchiffrement transparent des données.
 
-     Vous pouvez également surveiller la progression du déchiffrement en vous connectant à la [!INCLUDE[ssSDS](../includes/sssds-md.md)] à l'aide d'un outil de requête comme [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] en tant qu'utilisateur de base de données avec l'autorisation **AFFICHER L'ÉTAT DE LA BASE DE DONNÉES** . Interrogez `encryption_state` la colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).
+     Vous pouvez également surveiller la progression du déchiffrement en vous connectant à la [!INCLUDE[ssSDS](../includes/sssds-md.md)] à l'aide d'un outil de requête comme [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] en tant qu'utilisateur de base de données avec l'autorisation **AFFICHER L'ÉTAT DE LA BASE DE DONNÉES** . Interrogez la `encryption_state` colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Pour désactiver TDE en utilisant Transact-SQL
 
@@ -142,7 +141,7 @@ ms.locfileid: "78175390"
     GO
     ```
 
-3.  Pour surveiller la progression du chiffrement [!INCLUDE[ssSDS](../includes/sssds-md.md)]sur, les utilisateurs de base de données avec l’autorisation afficher `encryption_state` l' **État de la base de** données peuvent interroger la colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+3.  Pour surveiller la progression du chiffrement sur [!INCLUDE[ssSDS](../includes/sssds-md.md)] , les utilisateurs de base de données avec l’autorisation **afficher l’état de la base de** données peuvent interroger la `encryption_state` colonne de la vue [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
 ##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>Utilisation des bases de données protégées par TDE sur[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  Il n'est pas nécessaire de déchiffrer les bases de données pour effectuer des opérations dans Azure. La base de données cible hérite de façon transparente des paramètres de TDE sur la base de données source ou sur la base de données principale. Cela inclut les opérations impliquant :

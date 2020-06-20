@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6a28d2991fcf3a49431e31083ae909f367f408e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048848"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemple : Création d’une alerte de SQL Server Agent en utilisant le fournisseur WMI pour les événements de serveur
   Une façon courante d'utiliser le fournisseur d'événements WMI consiste à créer des alertes de l'Agent SQL Server qui répondent à des événements spécifiques. L'exemple suivant présente une alerte simple qui enregistre les événements du graphique de blocage XML dans une table pour leur analyse ultérieure. L'Agent SQL Server soumet une demande WQL, reçoit des événements WMI et exécute un travail en réponse à l'événement. Remarquez que, bien que plusieurs objets Service Broker soient impliqués dans le traitement du message de notification, le fournisseur d'événements WMI gère les détails de la création et de la gestion de ces objets.  
@@ -34,7 +33,7 @@ ms.locfileid: "68195834"
  L'alerte exécute le travail chaque fois qu'un événement de trace du graphique du blocage est consigné. Pour une alerte WMI, l'Agent SQL Server crée une requête de notification à l'aide de l'espace de noms et de l'instruction WQL spécifiés. Pour cette alerte, l'Agent SQL Server analyse l'instance par défaut sur l'ordinateur local. L'instruction WQL demande un événement `DEADLOCK_GRAPH` quelconque dans l'instance par défaut. Pour modifier l'instance que l'alerte surveille, substituez le nom de l'instance pour `MSSQLSERVER` dans le `@wmi_namespace` pour l'alerte.  
   
 > [!NOTE]  
->  Pour SQL Server Agent recevoir des événements WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être activé dans **msdb** et [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Pour SQL Server Agent recevoir des événements WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être activé dans **msdb** et [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks ;  
@@ -89,7 +88,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Test de l'exemple  
- Pour voir le travail s'exécuter, provoquez un blocage. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez deux onglets de **requête SQL** et connectez les deux requêtes à la même instance. Exécutez le script ci-dessous sous l'un des onglets de requête. Ce script produit un jeu de résultats et se termine.  
+ Pour voir le travail s'exécuter, provoquez un blocage. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ouvrez deux onglets de **requête SQL** et connectez les deux requêtes à la même instance. Exécutez le script ci-dessous sous l'un des onglets de requête. Ce script produit un jeu de résultats et se termine.  
   
 ```  
 USE AdventureWorks ;  
@@ -102,7 +101,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Exécutez le script suivant dans le deuxième onglet de requête. Ce script produit un jeu de résultats, puis se bloque, en attendant d' `Production.Product`acquérir un verrou sur.  
+ Exécutez le script suivant dans le deuxième onglet de requête. Ce script produit un jeu de résultats, puis se bloque, en attendant d’acquérir un verrou sur `Production.Product` .  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +117,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Exécutez le script suivant dans le premier onglet de requête. Ce script bloque, en attendant d’acquérir un `Production.Location`verrou sur. Après un court délai d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisira soit ce script, soit le script dans l'exemple comme victime du blocage et mettra un terme à la transaction.  
+ Exécutez le script suivant dans le premier onglet de requête. Ce script bloque, en attendant d’acquérir un verrou sur `Production.Location` . Après un court délai d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisira soit ce script, soit le script dans l'exemple comme victime du blocage et mettra un terme à la transaction.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

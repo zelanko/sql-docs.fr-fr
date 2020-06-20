@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55c621f9f345f0863e6656b66a77a8ccc439b0bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768161"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965619"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>Assistant Importation et Exportation SQL Server
-  L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant importation et exportation offre la méthode la plus simple pour créer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] un package qui copie les données d’une source vers une destination.  
+  L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant importation et exportation offre la méthode la plus simple pour créer un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package qui copie les données d’une source vers une destination.  
   
 > [!NOTE]  
 >  Sur un ordinateur 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe la version 64 bits de l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Toutefois, certaines sources de données, telles qu'Access ou Excel, ne dispose que d'un fournisseur 32 bits. Pour utiliser ces sources de données, il peut s'avérer nécessaire d'installer et d'exécuter la version 32 bits de l'Assistant. Pour ce faire, sélectionnez Outils clients ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] lors de l'installation.  
@@ -50,7 +49,7 @@ ms.locfileid: "62768161"
   
  Certaines fonctionnalités de l'Assistant fonctionnent différemment en fonction de l'environnement dans lequel vous le démarrez.  
   
--   Si vous démarrez l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant importation et exportation dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous exécutez immédiatement le package en activant la case à cocher **exécuter immédiatement** . Cette case à cocher est activée par défaut, et le package s'exécute immédiatement.  
+-   Si vous démarrez l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant importation et exportation dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , vous exécutez immédiatement le package en activant la case à cocher **exécuter immédiatement** . Cette case à cocher est activée par défaut, et le package s'exécute immédiatement.  
   
      Vous pouvez également choisir d'enregistrer le package dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans le système de fichiers. Si vous choisissez d'enregistrer le package, vous devez également spécifier un niveau de protection pour ce dernier. Pour plus d’informations sur les niveaux de protection des packages, consultez [Access Control pour obtenir des données sensibles dans des packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
@@ -74,12 +73,12 @@ ms.locfileid: "62768161"
   
 -   Si vous souhaitez créer une base de données, une table ou un fichier de destination, vous devez, pour cela, disposer d'autorisations suffisantes. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cela implique les autorisations CREATE DATABASE ou CREATE TABLE.  
   
--   Si vous souhaitez enregistrer le package créé par l'Assistant, vous devez disposer d'autorisations suffisantes pour écrire dans la base de données msdb ou dans le système de fichiers. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], cela nécessite des autorisations INSERT sur la base de données msdb.  
+-   Si vous souhaitez enregistrer le package créé par l'Assistant, vous devez disposer d'autorisations suffisantes pour écrire dans la base de données msdb ou dans le système de fichiers. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , cela nécessite des autorisations INSERT sur la base de données msdb.  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>Mappage de types de données dans l'Assistant Importation et Exportation  
  L'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre des fonctions de transformation minimales. À l'exception de la définition du nom, du type de données et des propriétés de type de données des colonnes des nouveaux fichiers et tables de destination, l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend en charge aucune transformation de niveau colonne.  
   
- L'Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des fichiers de mappage que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit pour mapper des types de données d'une version de base de données ou de système à une autre. Par exemple, il peut mapper de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à Oracle. Par défaut, les fichiers de mappage au format XML sont installés dans C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles. Si votre entreprise nécessite différents mappages entre types de données, vous pouvez mettre à jour les mappages pour affecter les mappages que l'Assistant effectue. Par exemple, si vous souhaitez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le type de données **nchar** soit mappé au type de données **Graphics** DB2 au **VARGRAPHIC** lieu du type de données DB2 VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors du transfert de données de vers DB2, vous devez modifier le mappage **nchar** dans le fichier de mappage SqlClientToIBMDB2. xml pour qu’il utilise **Graphic** au lieu de **VARGRAPHIC.**  
+ L'Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des fichiers de mappage que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit pour mapper des types de données d'une version de base de données ou de système à une autre. Par exemple, il peut mapper de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à Oracle. Par défaut, les fichiers de mappage au format XML sont installés dans C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles. Si votre entreprise nécessite différents mappages entre types de données, vous pouvez mettre à jour les mappages pour affecter les mappages que l'Assistant effectue. Par exemple, si vous souhaitez que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données **nchar** soit mappé au type de données **Graphics** DB2 au lieu du type de données DB2 **VARGRAPHIC** lors du transfert de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers DB2, vous devez modifier le mappage **nchar** dans le fichier de mappage SqlClientToIBMDB2.xml pour qu’il utilise **Graphic** au lieu de **VARGRAPHIC.**  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut des mappages entre de nombreuses combinaisons de sources et de destinations fréquemment employées, et vous pouvez ajouter de nouveaux fichiers de mappage dans le répertoire Mapping Files pour prendre en charge des sources et des destinations supplémentaires. Les nouveaux fichiers de mappage doivent se conformer au schéma XSD publié et être mappés entre une combinaison unique de source et de destination.  
   

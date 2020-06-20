@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768023"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965649"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Choisir une destination (Assistant Importation et Exportation SQL Server)
   Utilisez la page **choisir une destination** pour spécifier la destination des données que vous souhaitez copier.  
@@ -28,7 +27,7 @@ ms.locfileid: "62768023"
   
 ## <a name="static-options"></a>Options statiques  
  **Destination**  
- Permet de choisir le fournisseur de données qui correspond au format de stockage de données de la destination. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliser Native Client, le .NET Framework fournisseur de données pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
+ Permet de choisir le fournisseur de données qui correspond au format de stockage de données de la destination. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le .NET Framework Fournisseur de données pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
   
 > [!NOTE]  
 >  Pour enregistrer des données sur une destination ODBC, sélectionnez le fournisseur de données .NET Framework pour ODBC.  
@@ -42,7 +41,7 @@ ms.locfileid: "62768023"
  **Nom du serveur**  
  Tapez le nom du serveur qui doit recevoir les données ou choisissez un serveur dans la liste.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Spécifiez si le package doit utiliser l'authentification Microsoft Windows pour la connexion à la base de données. L'authentification Windows est recommandée pour renforcer la sécurité.  
   
  **Utiliser l’authentification SQL Server**  
@@ -55,12 +54,12 @@ ms.locfileid: "62768023"
  Tapez le mot de passe pour la connexion à la base de données quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Sauvegarde de la base de données**  
- Sélectionnez dans la liste des bases de données sur l’instance spécifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de ou créez une nouvelle base de données en cliquant sur **nouveau**.  
+ Sélectionnez dans la liste des bases de données sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou créez une nouvelle base de données en cliquant sur **nouveau**.  
   
  **Actualisation**  
  Cliquez sur **Actualiser** pour restaurer la liste des bases de données disponibles.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une nouvelle base de données de destination à l’aide de la boîte **de dialogue créer une base de données** .  
   
 ### <a name="destination--flat-file-destination"></a>Destination = destination de fichier plat  
@@ -97,10 +96,10 @@ ms.locfileid: "62768023"
 ### <a name="destination--microsoft-excel"></a>Destination = Microsoft Excel  
   
 > [!NOTE]  
->  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12,0 accès Moteur de base de données OLE DB fournisseur**, cliquez sur **Propriétés**, puis sous l’onglet **tous** de la boîte de dialogue **Propriétés des liaisons de données** , pour **propriétés étendues**, entrez `Excel 12.0`.  
+>  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12,0 accès Moteur de base de données OLE DB fournisseur**, cliquez sur **Propriétés**, puis sous l’onglet **tous** de la boîte de dialogue **Propriétés des liaisons de données** , pour **propriétés étendues**, entrez `Excel 12.0` .  
   
  **Chemin de fichier Excel**  
- Spécifiez le chemin d’accès et le nom de fichier du classeur dans lequel stocker les données (par \\exemple, C:\mydata.xls, \Sales\Database\Northwind.xls). Ou cliquez sur **Parcourir** pour localiser un classeur.  
+ Spécifiez le chemin d’accès et le nom de fichier du classeur dans lequel stocker les données (par exemple, C:\MyData.xls, \\\Sales\Database\Northwind.xls). Ou cliquez sur **Parcourir** pour localiser un classeur.  
   
  **Parcourir**  
  Localisez un classeur Excel à l’aide de la boîte de dialogue **ouvrir** .  
@@ -117,7 +116,7 @@ ms.locfileid: "62768023"
 >  Sélectionnez **Microsoft Access** uniquement si vous souhaitez vous connecter à une base de données qui utilise Access 2003 ou une version antérieure. Pour vous connecter à une base de données qui utilise Access 2007, sélectionnez **Microsoft Office 12,0 accès Moteur de base de données OLE DB fournisseur**.  
   
  **Nom de fichier**  
- Spécifiez le chemin d’accès et le nom du fichier de base de données dans lequel stocker les données (par \\exemple, C:\mydata.mdb, \Sales\Database\Northwind.mdb). Ou cliquez sur **Parcourir** pour localiser un fichier de base de données.  
+ Spécifiez le chemin d’accès et le nom du fichier de base de données dans lequel stocker les données (par exemple, C:\MyData.mdb, \\ \Sales\Database\Northwind.mdb). Ou cliquez sur **Parcourir** pour localiser un fichier de base de données.  
   
  **Parcourir**  
  Accédez au fichier de base de données à l’aide de la boîte de dialogue **ouvrir** .  

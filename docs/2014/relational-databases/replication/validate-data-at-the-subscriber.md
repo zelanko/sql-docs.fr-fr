@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d09750c0cb81d64f5921ae2064b2e75edb6ca96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047581"
 ---
 # <a name="validate-replicated-data"></a>Valider des données répliquées
   Cette rubrique décrit comment valider les données sur l'abonné dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou des objets RMO (Replication Management Objects).  
@@ -112,7 +111,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 
 #### <a name="all-articles"></a>Tous les articles
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Spécifiez ** \@publication** et l’une des valeurs suivantes pour ** \@rowcount_only**:    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Spécifiez ** \@ publication** et l’une des valeurs suivantes pour ** \@ rowcount_only**:    
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** - nombre de lignes et somme de contrôle binaire.  
   
@@ -124,7 +123,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
   
 #### <a name="single-article"></a>Article unique 
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez ** \@publication**, le nom de l’article ** \@** pour l’article et l’une des valeurs suivantes pour ** \@rowcount_only**:    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez ** \@ publication**, le nom de l’article pour l' ** \@ article**et l’une des valeurs suivantes pour ** \@ rowcount_only**:    
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** -RowCount et somme de contrôle binaire.  
   
@@ -137,9 +136,9 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 #### <a name="single-subscriber"></a>Abonné unique
   
 1.  Dans la base de données de publication sur le serveur de publication, ouvrez une transaction explicite en utilisant [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  Dans la base de données de publication du serveur de publication, exécutez [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Spécifiez la publication ** \@** pour la publication, le nom de l’abonné pour ** \@l’abonné**et le nom de la base de données d’abonnement pour ** \@destination_db**.    
+2.  Dans la base de données de publication du serveur de publication, exécutez [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Spécifiez la publication pour la ** \@ publication**, le nom de l’abonné pour l' ** \@ abonné**et le nom de la base de données d’abonnement pour ** \@ destination_db**.    
 3.  (Facultatif) Répétez l'étape 2 pour chaque abonnement en cours de validation.    
-4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez ** \@publication**, le nom de l’article ** \@** pour l’article et l’une des valeurs suivantes pour ** \@rowcount_only**:    
+4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Spécifiez ** \@ publication**, le nom de l’article pour l' ** \@ article**et l’une des valeurs suivantes pour ** \@ rowcount_only**:    
     -   **1** - contrôle du nombre de lignes uniquement (par défaut)    
     -   **2** -RowCount et somme de contrôle binaire.  
   
@@ -187,7 +186,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 
 ### <a name="using-transact-sql-t-sql"></a>Utilisation de Transact-SQL (T-SQL)
 
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Spécifiez ** \@publication**, le nom de l’abonné ** \@** pour l’abonné, le nom de la base de données d’abonnement pour ** \@subscriber_db**et l’une des valeurs suivantes pour ** \@niveau**:   
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Spécifiez ** \@ publication**, le nom de l’abonné pour l' ** \@ abonné**, le nom de la base de données d’abonnement pour ** \@ subscriber_db**et l’une des valeurs suivantes pour ** \@ niveau**:   
     -   **1** - validation du nombre de lignes uniquement.    
     -   **3** - validation de la somme de contrôle binaire du nombre de lignes.  
   
@@ -218,7 +217,7 @@ Prenez en compte les problèmes suivants lors de la validation des données :
 
 ### <a name="using-transact-sql-t-sql"></a>Utilisation de Transact-SQL (T-SQL)
 
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Spécifiez ** \@publication** et l’une des valeurs suivantes pour ** \@niveau**:    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Spécifiez ** \@ publication** et l’une des valeurs suivantes pour ** \@ niveau**:    
     -   **1** - validation du nombre de lignes uniquement.    
     -   **3** - validation de la somme de contrôle binaire du nombre de lignes.  
   

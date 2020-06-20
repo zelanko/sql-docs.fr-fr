@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024739"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
   Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez consulter les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une instance locale ou distante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance cible est hors connexion ou ne peut pas démarrer.  
@@ -50,9 +49,9 @@ ms.locfileid: "63144595"
   
 -   Accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Par défaut, tout le monde dispose de l'accès en lecture via l'autorisation Activer le compte. Pour plus d'informations, consultez la procédure « Pour vérifier les autorisations WMI », plus loin dans cette section.  
   
--   Autorisation en lecture pour le dossier qui contient les fichiers journaux des erreurs. Par défaut, ces fichiers journaux se trouvent à l’emplacement suivant (où \<*Lecteur>* représente le lecteur sur lequel vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et où \<*NomInstance*> est le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) :  
+-   Autorisation en lecture pour le dossier qui contient les fichiers journaux des erreurs. Par défaut, les fichiers journaux des erreurs se trouvent dans le chemin d’accès suivant (où \<*Drive> * représente le lecteur sur lequel vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le \<*InstanceName*> nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) :  
   
-     **\<> de lecteur : \Program Files\Microsoft SQL Server\MSSQL12. \<Nom_instance> \mssql\log**  
+     **\<Drive>: \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\Log**  
   
  Pour vérifier les paramètres de sécurité de l'espace de noms WMI, utilisez le composant logiciel enfichable Contrôle WMI.  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144595"
   
 1.  Ouvrez le composant logiciel enfichable Contrôle WMI. Pour ce faire, effectuez l'une des procédures suivantes, en fonction de votre système d'exploitation :  
   
-    -   Cliquez sur **Démarrer**, `wmimgmt.msc` tapez dans la zone **Rechercher** , puis appuyez sur entrée.  
+    -   Cliquez sur **Démarrer**, tapez `wmimgmt.msc` dans la zone **Rechercher** , puis appuyez sur entrée.  
   
-    -   Cliquez sur **Démarrer**, sur **exécuter**, `wmimgmt.msc`tapez, puis appuyez sur entrée.  
+    -   Cliquez sur **Démarrer**, sur **exécuter**, tapez `wmimgmt.msc` , puis appuyez sur entrée.  
   
 2.  Par défaut, le composant logiciel enfichable Contrôle WMI gère l'ordinateur local.  
   

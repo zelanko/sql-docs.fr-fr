@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb6265513d467f352b0ae890dd3f119a7f5fffb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054609"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>Résumé : Configuration des autorisations sur des objets de base de données
   Les connexions attribuent aux utilisateurs les autorisations de se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les utilisateurs sont des connexions qui peuvent accéder à une base de données spécifique. L'instruction GRANT vous permet de donner aux utilisateurs l'autorisation de lire et d'accéder et de modifier les données.  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010778"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Propriétés du serveur de distribution Réplication SQL Server
 Cette rubrique présente les propriétés disponibles dans les pages **général**, **éditeurs**et **base de données de distribution de** la fenêtre **Propriétés** du serveur de distribution. 
@@ -50,7 +49,7 @@ Cette rubrique présente les propriétés disponibles dans les pages **général
   La page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution** vous permet de faire en sorte que les serveurs de publication utilisent ce serveur de distribution. Vous pouvez également définir les propriétés associées à ces serveurs de publication. Notez que l'activation d'un serveur de publication pour utiliser ce serveur en tant que serveur de distribution distant ne fait pas de ce serveur un serveur de publication. Vous devez vous connecter au serveur de publication, le configurer pour la publication, et choisir ce serveur comme distributeur. Vous pouvez configurer le serveur de publication et choisir un serveur de distribution à l'aide de l'Assistant Nouvelle publication.  
   
 ### <a name="options"></a>Options  
- **Serveurs de publication**  
+ **Dite**  
  Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton Propriétés **(...)** situé en regard d'un serveur de publication pour voir et définir d'autres propriétés.  
   
  **Ajouter**  
@@ -90,7 +89,7 @@ Cette rubrique présente les propriétés disponibles dans les pages **général
 -   L'Agent se connecte au serveur de publication à l'aide des informations d'identification spécifiées dans la boîte de dialogue **Propriétés du serveur de publication** , qui est accessible à partir de la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution** .    
 -   L'Agent se connecte à l'Abonné à l'aide des informations d'identification spécifiées pour l'Agent de distribution dans l'Assistant Nouvel abonnement.  
   
- Pour plus d’informations, \\consultez [modèle de sécurité de l’agent de réplication](security/replication-agent-security-model.md). 
+ Pour plus d’informations, consultez \\ [modèle de sécurité de l’agent de réplication](security/replication-agent-security-model.md). 
 
   
 ## <a name="see-also"></a>Voir aussi  

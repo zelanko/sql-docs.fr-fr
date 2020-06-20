@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049747"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
   Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d’entre elles. Le journal des transactions doit être vidé régulièrement pour éviter qu'il ne soit saturé. Toutefois, certains facteurs peuvent retarder la troncation du journal. Par conséquent, il est important de surveiller la taille du journal. Certaines opérations peuvent faire l'objet d'une journalisation minimale afin de réduire leur impact sur la taille des journaux de transactions.  
@@ -118,7 +117,7 @@ ms.locfileid: "79289407"
   
 -   Mises à jour partielles vers des types de données de valeur élevée, en incluant la clause .WRITE dans l'instruction [UPDATE](/sql/t-sql/queries/update-transact-sql) lors de l'insertion ou de l'ajout de nouvelles données. Notez que la journalisation minimale n'est pas utilisée quand des valeurs existantes sont mises à jour. Pour plus d’informations sur les types de données de valeur élevée, consultez [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   [Instructions WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) et [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) lors de l’insertion ou de l’ajout de `text`nouvelles `ntext`données dans `image` les colonnes de type de données, et. Notez que la journalisation minimale n'est pas utilisée quand des valeurs existantes sont mises à jour.  
+-   Instructions [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) et [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) lors de l’insertion ou de l’ajout de nouvelles données dans les colonnes de `text` type de données, `ntext` et `image` . Notez que la journalisation minimale n'est pas utilisée quand des valeurs existantes sont mises à jour.  
   
     > [!NOTE]  
     >  L'emploi des instructions WRITETEXT et UPDATETEXT est déconseillé, c'est pourquoi vous devez éviter de les utiliser dans les nouvelles applications.  
@@ -155,7 +154,7 @@ ms.locfileid: "79289407"
 ## <a name="see-also"></a>Voir aussi  
  [Contrôler la durabilité des transactions](control-transaction-durability.md)   
  [Conditions préalables à la journalisation minimale dans l’importation en bloc](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Sauvegarder et restaurer des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Sauvegarde et restauration des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Afficher ou modifier les propriétés d’une base de données](../databases/view-or-change-the-properties-of-a-database.md)   
  [Modes de récupération &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  

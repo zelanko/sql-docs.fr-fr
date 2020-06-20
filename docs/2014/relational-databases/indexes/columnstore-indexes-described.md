@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a29b8e8cc5b53c09369156a5cf5f717e9447a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175936"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050025"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   L' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *index ColumnStore en mémoire* stocke et gère des données à l’aide du stockage de données basé sur les colonnes et du traitement de requête basé sur les colonnes. Les index columnstore fonctionnent bien pour les charges de travail de stockage de données qui effectuent principalement des chargements en masse et des requêtes en lecture seule. Utilisez l’index columnstore pour atteindre des **performances des requêtes** pouvant être multipliées par 10 par rapport au stockage orienté lignes traditionnel, et une **compression de données** multipliée par 7 par rapport à la taille des données non compressées.
@@ -29,7 +28,7 @@ ms.locfileid: "78175936"
 > [!NOTE]
 >  Nous considérons l'index columnstore cluster comme étant la norme pour le stockage de grandes tables de faits de stockage des données, et nous pensons qu'il va être utilisé dans la plupart des scénarios de stockage des données. Étant donné que l'index columnstore cluster est modifiable, votre charge de travail peut exécuter un grand nombre d'insertions, mises à jour, et suppressions.
 
-## <a name="contents"></a>Contents
+## <a name="contents"></a>Contenu
 
 -   [Concepts de base](#basics)
 
@@ -40,9 +39,9 @@ ms.locfileid: "78175936"
 -   [Tâches et rubriques connexes](#related)
 
 ##  <a name="basics"></a><a name="basics"></a>Fondamentaux
- Un *index ColumnStore* est une technologie de stockage, de récupération et de gestion des données à l’aide d’un format de données en colonnes, appelé ColumnStore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les index columnstore cluster et non cluster. Les deux utilisent la même technologie columnstore en mémoire, mais sont différents en ce qui concerne leur but et les fonctionnalités qu'ils prennent en charge.
+ Un *columnstore index* est une technologie permettant de stocker, extraire et gérer les données à l'aide d'un format de données en colonnes, appelé columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les index columnstore cluster et non cluster. Les deux utilisent la même technologie columnstore en mémoire, mais sont différents en ce qui concerne leur but et les fonctionnalités qu'ils prennent en charge.
 
-###  <a name="benefits"></a><a name="benefits"></a>Avantageuse
+###  <a name="benefits"></a><a name="benefits"></a> Avantages
  Les index columnstore fonctionnent bien pour la plupart des requêtes en lecture seule qui effectuent des analyses sur des ensembles de données volumineux. Bien souvent, il s'agit de requêtes destinées à des charges de travail de stockage de données. Les index columnstore offrent des gains de performances importants pour les requêtes qui utilisent des analyses de table complètes, et ne conviennent pas pour les requêtes qui effectuent des opérations de recherche de données, notamment qui recherchent une valeur particulière.
 
  Avantages de l'index columnstore :
@@ -125,11 +124,11 @@ ms.locfileid: "78175936"
 
  Un index columnstore non cluster permet d'avoir un index columnstore pour exécuter les requêtes d'analyse tout en exécutant des opérations en lecture seule sur la table d'origine.
 
- ![Index ColumnStore non cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "index columnstore non cluster")
+ ![index columnstore non cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "index columnstore non cluster")
 
  index ColumnStore cluster un *index ColumnStore cluster* est le stockage physique de la table entière et est le seul index de la table. L'index cluster peut être mis à jour. Effectuez des opérations d'insertion, suppression, et mise à jour sur l'index et chargez en masse des données dans l'index.
 
- ![Index columstore en cluster](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Index columstore en cluster")
+ ![Index cluster columnstore](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Index columstore en cluster")
 
  Pour réduire la fragmentation des segments de colonne et améliorer les performances, l'index columnstore peut stocker des données temporaires dans une table rowstore, appelée un deltastore, plus un arbre B d'ID pour les lignes supprimées. Les opérations deltastore sont effectuées en coulisse. Pour retourner des résultats de requête corrects, l'index columnstore cluster associe les résultats de columnstore et de deltastore.
 

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df714d818949b921ff2236e50d58913eab0e0db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062560"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Dépanner des utilisateurs orphelins (SQL Server)
-  Pour se connecter à une instance de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un principal doit posséder une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Cette connexion est utilisée dans le processus d'authentification chargé de vérifier que le principal est autorisé à se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions sur une instance de serveur sont visibles dans l’affichage catalogue **sys. server_principals** et l’affichage de compatibilité **sys. syslogins** .  
+  Pour se connecter à une instance de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un principal doit posséder une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Cette connexion est utilisée dans le processus d'authentification chargé de vérifier que le principal est autorisé à se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions sur une instance de serveur sont visibles dans l’affichage catalogue **sys. server_principals** et l’affichage de compatibilité **sys.sysles connexions** .  
   
  Les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accèdent aux bases de données à l'aide d'un utilisateur de base de données mappé à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il y a deux exceptions à cette règle :  
   
@@ -58,7 +57,7 @@ GO;
  Vous obtenez la liste des utilisateurs et de leurs identificateurs de sécurité (SID) qui, dans la base de données en cours, ne sont pas liés à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
->  **sp_change_users_login** ne peut pas être [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé avec des connexions créées à partir de Windows.  
+>  **sp_change_users_login** ne peut pas être utilisé avec des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions créées à partir de Windows.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>Pour résoudre le cas d'un utilisateur orphelin  
  Pour résoudre le cas d'un orphelin, utilisez la procédure suivante :  
@@ -88,7 +87,7 @@ GO;
     >  Seuls les comptes de connexion avec l'autorisation ALTER ANY LOGIN peuvent modifier le mot de passe du compte de connexion d'un autre utilisateur. Toutefois, seuls les membres du rôle **sysadmin** peuvent modifier les mots de passe des membres du rôle **sysadmin** .  
   
     > [!NOTE]  
-    >  **sp_password** ne peut pas être [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilisé pour les comptes Windows. Les utilisateurs se connectant à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par l'intermédiaire de leur compte réseau Windows sont authentifiés par Windows ; par conséquent, leurs mots de passe ne peuvent être modifiés que dans Windows.  
+    >  **sp_password** ne peut pas être utilisé pour les [!INCLUDE[msCoName](../../includes/msconame-md.md)] comptes Windows. Les utilisateurs se connectant à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par l'intermédiaire de leur compte réseau Windows sont authentifiés par Windows ; par conséquent, leurs mots de passe ne peuvent être modifiés que dans Windows.  
   
      Pour plus d’informations, consultez [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
@@ -99,7 +98,7 @@ GO;
  [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [sp_grantlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sys. sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [sys. syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.sysles utilisateurs &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [Connexionssys.sys&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

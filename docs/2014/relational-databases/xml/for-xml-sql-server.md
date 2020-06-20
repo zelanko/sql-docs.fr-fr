@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669bf07101a05f2646a0928405b1807dadf0b2ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c13c1d4cdf7b1bbc72c956652bb89c2014103d76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059460"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Une requête SELECT retourne les résultats sous la forme d'un ensemble de lignes. Vous pouvez si vous le souhaitez récupérer les résultats d'une requête SQL sous forme de code XML en spécifiant la clause FOR XML dans la requête. La clause FOR XML peut être utilisée dans les requêtes de premier niveau et dans les sous-requêtes. La clause FOR XML de premier niveau ne peut être utilisée que dans l'instruction SELECT. Dans les sous-requêtes, FOR XML peut être utilisée dans les instructions INSERT, UPDATE et DELETE. Elle peut être également utilisée dans les instructions d'assignation.  
@@ -39,7 +38,7 @@ ms.locfileid: "82716651"
   
 -   PATH  
   
- Le mode RAW génère un seul élément \<row> par ligne dans l’ensemble de lignes qui est retourné par l’instruction SELECT. Vous pouvez générer une hiérarchie XML en écrivant des requêtes FOR XML imbriquées.  
+ Le mode RAW génère un seul \<row> élément par ligne dans l’ensemble de lignes qui est retourné par l’instruction SELECT. Vous pouvez générer une hiérarchie XML en écrivant des requêtes FOR XML imbriquées.  
   
  Le mode AUTO génère l'imbrication dans le code XML résultant en utilisant une heuristique basée sur la manière dont l'instruction SELECT est spécifiée. Vous n'avez qu'un contrôle minimal sur la forme du code XML généré. Les requêtes FOR XML imbriquées peuvent être écrites de façon à générer une hiérarchie XML au-delà de la forme XML générée par l'heuristique du mode AUTO.  
   
