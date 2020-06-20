@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038710"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Analyse des performances à l'aide du magasin de requêtes
   La fonctionnalité de magasin de requêtes fournit aux administrateurs de bases de données des informations sur le choix de plan de requête et les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requêtes peut être configuré à l'aide de l'option [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  Lorsque vous utilisez `sp_query_store_force_plan`, vous pouvez uniquement forcer des plans qui ont été enregistrés par le magasin de requêtes en tant que plan pour cette requête. En d'autres termes, les plans disponibles pour une requête sont uniquement ceux qui ont déjà été utilisés pour exécuter Q1 lorsque le magasin de requêtes était actif.
 
- **Supprimer le forçage de plan pour une requête.** Pour vous appuyer à nouveau [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l’optimiseur de requête pour calculer le plan de `sp_query_store_unforce_plan` requête optimal, utilisez pour annuler l’application du plan sélectionné pour la requête.
+ **Supprimer le forçage de plan pour une requête.** Pour vous appuyer à nouveau sur l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] optimiseur de requête pour calculer le plan de requête optimal, utilisez `sp_query_store_unforce_plan` pour annuler l’application du plan sélectionné pour la requête.
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

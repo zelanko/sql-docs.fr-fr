@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fc39541915b43abd024e1b02022f8a9e61580b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016649"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Emplacement de l’agent &lt;nom_agent&gt;
   L'Agent de fusion (pour les abonnements de fusion) et l'Agent de distribution (pour les abonnements transactionnels et d'instantanés) s'exécutent sur le serveur de publication ou sur l'Abonné. Si l'Agent s'exécute sur le serveur de distribution, l'abonnement est référencé comme un abonnement par envoi de données ; s'il s'exécute sur l'Abonné, il est référencé comme un abonnement par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](subscribe-to-publications.md). Tous les abonnements créés de cette manière au moyen de l'Assistant ont le type sélectionné. Pour créer des abonnements des deux types, vous devez exécuter deux fois l'Assistant.  

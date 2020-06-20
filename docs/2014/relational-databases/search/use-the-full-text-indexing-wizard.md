@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fea70d6b1230b67b2eedcdf1c7d2e82d2324a0b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016319"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
   L'Assistant Indexation de texte intégral vous guide tout au long d'une série d'étapes destinées à vous aider à créer un index de texte intégral.  
@@ -49,7 +48,7 @@ ms.locfileid: "66010897"
      **Colonne de type**  
      Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
   
-     La **colonne de type** est activée uniquement lorsque la colonne nommée dans la colonne **colonnes disponibles** est de `varbinary(max)` type `image`ou.  
+     La **colonne de type** est activée uniquement lorsque la colonne nommée dans la colonne **colonnes disponibles** est de `varbinary(max)` type `image` ou.  
   
      **Sémantique statistique**  
      Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -93,9 +92,9 @@ ms.locfileid: "66010897"
   
      Sélectionnez l'une des valeurs suivantes :  
   
-    |Value|Description|  
+    |Valeur|Description|  
     |-----------|-----------------|  
-    |**\<>par défaut**|Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|  
+    |**\<default>**|Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|  
     |**ESSENTIELLES**|Sélectionnez cette option pour utiliser le groupe de fichiers primaire pour le nouvel index de recherche en texte intégral.|  
     |*groupe de fichiers par défaut spécifié par l’utilisateur*|S'il existe une liste de mots vides par défaut définie par l'utilisateur, sélectionnez son nom dans la liste pour utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|  
   
@@ -106,10 +105,10 @@ ms.locfileid: "66010897"
   
      Sélectionnez l'une des valeurs suivantes :  
   
-    |Value|Description|  
+    |Valeur|Description|  
     |-----------|-----------------|  
-    |**\<>système**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
-    |**\<désactivé>**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
+    |**\<system>**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
+    |**\<off>**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
     |*user-defined-stoplist-name*|La liste affiche le nom de chaque liste de mots vides définie par l'utilisateur, le cas échéant, qui a été créée sur la base de données. Sélectionnez une liste de mots vides définie par l'utilisateur à utiliser pour le nouvel index de recherche en texte intégral.|  
   
 4.  Éventuellement, vous pouvez définir la planification de remplissage. Les opérations d'indexation commencent alors immédiatement, sauf si elles ont été planifiées pour plus tard. Les planifications sont créées immédiatement, même si elles ne seront pas exécutées avant l'heure planifiée.  
@@ -131,7 +130,7 @@ ms.locfileid: "66010897"
      **Stop**  
      Interrompt l'opération en cours et empêche l'Assistant d'exécuter les opérations de texte intégral suivantes au cours de cette session.  
   
-     **Rapport**  
+     **Report**  
      Lorsque toutes les opérations ont fini de s'exécuter, cliquez sur ce bouton pour accéder à un rapport sur les opérations effectuées. Vous pouvez afficher le rapport, l'imprimer dans un fichier, le copier dans le Presse-papiers ou l'envoyer par courrier électronique.  
   
   

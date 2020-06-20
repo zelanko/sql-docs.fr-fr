@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6d7fdce36d42591b0f2dda8ae6a08b6dbef4953
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060485"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
   Lors de la création d'une publication, vous choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
@@ -170,7 +169,7 @@ ms.locfileid: "74479324"
     > [!NOTE]  
     >  Si vous ajoutez un article à une publication de fusion et qu’un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l’aide du paramètre **\@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Quand vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **\@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **\@processing_order** de **sp_changemergearticle** et spécifiez le nom de la table pour le paramètre **\@article**. Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
   
--   Les noms de publication ne peuvent pas contenir les caractères suivants : % * [ ] | : " ? \/ \< >.  
+-   Les noms de publication ne peuvent pas contenir les caractères suivants : % * [ ] | : " ? \ / \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Limitations de la publication d'objets  
   
@@ -184,7 +183,7 @@ ms.locfileid: "74479324"
   
 -   Les valeurs par défaut liées créées avec [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) ne sont pas répliquées (les valeurs par défaut liées sont dépréciées et ont été remplacées par les valeurs par défaut créées avec le mot clé DEFAULT de ALTER TABLE ou CREATE TABLE).  
   
--   Les fonctions contenant l'indicateur `NOEXPAND` sur des vues indexées ne peuvent pas être publiées dans la même publication que les tables référencées et les vues d'index, en raison de l'ordre dans lequel l'agent de distribution les livre. Pour contourner ce problème, placez la création de la table et de la vue indexée dans une première publication, puis ajoutez les fonctions contenant l'indicateur `NOEXPAND` sur les vues indexées à une seconde publication que vous publierez à la fin de la première publication. Ou bien, créez des scripts pour ces fonctions et fournissez le script * \@* à l’aide `sp_addpublication`du paramètre post_snapshot_script de.  
+-   Les fonctions contenant l'indicateur `NOEXPAND` sur des vues indexées ne peuvent pas être publiées dans la même publication que les tables référencées et les vues d'index, en raison de l'ordre dans lequel l'agent de distribution les livre. Pour contourner ce problème, placez la création de la table et de la vue indexée dans une première publication, puis ajoutez les fonctions contenant l'indicateur `NOEXPAND` sur les vues indexées à une seconde publication que vous publierez à la fin de la première publication. Ou bien, créez des scripts pour ces fonctions et fournissez le script à l’aide du paramètre * \@ post_snapshot_script* de `sp_addpublication` .  
   
 ### <a name="schemas-and-object-ownership"></a>Schémas et propriété des objets  
  La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
@@ -197,7 +196,7 @@ ms.locfileid: "74479324"
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être changé par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md), [Définir un article](define-an-article.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l' \<***Article***> article-** et des procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md), [Définir un article](define-an-article.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publication de données sur les Abonnés exécutant des versions antérieures de SQL Server  
   

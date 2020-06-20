@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a98f64bc5b9dffc3e2494a0c36c8fc04cdfb6fa2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041189"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Créer une alerte avec un numéro d’erreur
-  Cette rubrique explique comment créer une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui est déclenchée lorsqu’une erreur d’un nombre spécifique se produit à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l' [!INCLUDE[tsql](../../includes/tsql-md.md)]aide de ou de.  
+  Cette rubrique explique comment créer une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui est déclenchée lorsqu’une erreur d’un nombre spécifique se produit à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Dans cette rubrique**  
   

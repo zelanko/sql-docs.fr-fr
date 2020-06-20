@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998052"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   La réplication d'égal à égal offre une solution avec montée en puissance parallèle et haute disponibilité en conservant des copies de données sur plusieurs instances de serveur, également appelées *nœuds*. Conçue sur la base de la réplication transactionnelle, la réplication d'égal à égal propage les modifications quasiment en temps réel de manière transactionnelle. Les applications qui requièrent la montée en puissance parallèle des opérations de lecture peuvent ainsi distribuer les lectures effectuées par les clients sur plusieurs nœuds. Dans la mesure où les données sont conservées sur les nœuds quasiment en temps réel, la réplication d'égal à égal génère une redondance des données, ce qui améliore leur disponibilité.  
@@ -137,24 +136,24 @@ ms.locfileid: "67793926"
   
 -   paramètre de l'Agent de Distribution **-SubscriptionStreams** et paramètre de l'Agent de lecture du journal **-MaxCmdsInTran**;  
   
--   Les propriétés ** \@** d’article destination_owner et ** \@destination_table**.  
+-   Les propriétés d’article ** \@ destination_owner** et ** \@ destination_table**.  
 
 -   La réplication transactionnelle d’égal à égal ne prend pas en charge la création d’un abonnement transactionnel à sens unique à une publication d’égal à égal.
   
  Les propriétés suivantes présentent des considérations spéciales :  
   
--   La propriété ** \@** de `true`publication allow_initialize_from_backup requiert la valeur.  
+-   La propriété de publication ** \@ allow_initialize_from_backup** requiert la valeur `true` .  
   
--   La propriété ** \@** de `true`l’article replicate_ddl requiert la valeur ; identityrangemanagementoption requiert une valeur `manual`; ** \@** l' ** \@État** et requiert que l’option **24** soit définie.  
+-   La propriété de l’article ** \@ replicate_ddl** requiert la valeur `true` ; ** \@ identityrangemanagementoption** requiert une valeur `manual` ; l' ** \@ État** et requiert que l’option **24** soit définie.  
   
--   La valeur des propriétés `SQL` ** \@** d’article ins_cmd, ** \@del_cmd**et ** \@upd_cmd** ne peut pas être définie sur.  
+-   La valeur des propriétés d’article ** \@ ins_cmd**, ** \@ del_cmd**et ** \@ upd_cmd** ne peut pas être définie sur `SQL` .  
   
--   La propriété `none` ** \@** d’abonnement sync_type requiert la valeur ou `automatic`.  
+-   La propriété d’abonnement ** \@ sync_type** requiert la valeur `none` ou `automatic` .  
   
 ### <a name="maintenance-considerations"></a>Considérations sur la maintenance  
  Pour les actions suivantes, le système doit être suspendu. Ce qui signifie que toute activité sur les tables publiées doit être interrompue au niveau de tous les nœuds et que la réception par chacun des nœuds de toutes les modifications provenant des autres nœuds doit être vérifiée.  
   
--   Ajout d' [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] un nœud à une topologie existante  
+-   Ajout d’un [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] nœud à une topologie existante  
   
 -   ajout d'un article à une publication existante ;  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 481e0b383fd877ec81385bcd4ca4ee37106bb298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646f25740ebb007f8d04a89690d3b712781efcc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060715"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
     
@@ -33,7 +32,7 @@ ms.locfileid: "63022769"
 |Texte du message|Le processus n'a pas pu exécuter '%1' sur '%2'.|  
   
 ## <a name="explanation"></a>Explication  
- Cette erreur peut être signalée dans plusieurs circonstances lors du traitement de la réplication transactionnelle, par exemple quand l’Agent de lecture du journal exécute **sp_replcmds** (Le processus n’a pas pu exécuter « sp_replcmds » sur \<Nom_Serveur>) ou **sp_repldone** (Le processus n’a pas pu exécuter « sp_repldone » sur \<Nom_Serveur>).  
+ Cette erreur peut être déclenchée dans un certain nombre de cas au cours du traitement de la réplication transactionnelle, par exemple lorsque l’agent de lecture du journal s’exécute **sp_replcmds** (le processus n’a pas pu exécuter « sp_replcmds » sur \<ServerName> ) ou **sp_repldone** (le processus n’a pas pu exécuter « sp_repldone » sur \<ServerName> ).  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Si cette erreur est signalée dans une base de données que vous venez tout juste de restaurer à partir d'une sauvegarde, vérifiez que vous avez suivi les étapes indiquées dans la documentation sur la sauvegarde et la restauration, notamment l'exécution de **sp_replrestart** si elle est appropriée. Pour plus d’informations, voir [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  

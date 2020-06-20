@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4641159e894b764cbee4d7f02085f3ceb8e6d87d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970829"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Travailler avec des répertoires et des chemins d'accès dans FileTables
   Décrit la structure de répertoires dans laquelle les fichiers sont stockés dans FileTables.  
   
-##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Procédure : travailler avec des répertoires et des chemins d'accès dans FileTables  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Procédure : Travailler avec des répertoires et des chemins d'accès dans FileTables  
  Vous pouvez utiliser les trois fonctions suivantes pour travailler avec des répertoires FileTable dans [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Pour obtenir ce résultat|Utilisez cette fonction|  
@@ -31,7 +30,7 @@ ms.locfileid: "66009881"
 |Obtenir un chemin d'accès UNC absolu ou relatif pour un fichier ou répertoire d'un FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |Obtenir la valeur d'ID de localisateur de chemin d'accès pour le fichier ou le répertoire spécifié d'un FileTable, en spécifiant le chemin d'accès.|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Procédure : utiliser des chemins d'accès relatifs pour du code portable  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Procédure : utiliser des chemins d’accès relatifs pour du code portable  
  Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant les fonctions [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) et [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)ensemble, comme illustré dans l’exemple suivant. Par défaut, la fonction `GetFileNamespacePath` retourne le chemin d'accès relatif du fichier sous le chemin d'accès racine de la base de données.  
   
 ```sql  
@@ -55,12 +54,12 @@ GO
 > [!IMPORTANT]  
 >  Vous ne pouvez pas stocker plus de 15 niveaux de sous-répertoires dans le répertoire FileTable. Lorsque vous stockez 15 niveaux de sous-répertoires, le niveau le plus bas ne peut pas contenir de fichiers, étant donné que ces fichiers représenteraient un niveau supplémentaire.  
   
-###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a>Longueur du nom du chemin d’accès complet  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a> Longueur du nom du chemin d'accès complet  
   
 > [!IMPORTANT]  
 >  Le système de fichiers NTFS prend en charge les noms de chemin d'accès qui sont beaucoup plus longs que la limite de 260 caractères imposée par le shell Windows et de la plupart des API Windows. Par conséquent, il est possible de créer des fichiers dans la hiérarchie des fichiers d'un FileTable à l'aide de Transact-SQL que vous ne pouvez pas afficher ou ouvrir avec l'Explorateur Windows ou de nombreuses autres applications Windows, car le chemin d'accès complet dépasse 260 caractères. Toutefois vous pouvez continuer à accéder à ces fichiers à l'aide de Transact-SQL.  
   
-##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a>Chemin d’accès complet à un élément stocké dans un filetable  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> Chemin complet à un élément stocké dans un FileTable  
  Le chemin d'accès complet à un fichier ou un répertoire stocké dans un FileTable commence par les éléments suivants :  
   
 1.  Le partage activé pour l'accès d'E/S de fichier FILESTREAM au niveau de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -77,7 +76,7 @@ GO
   
  Il est important de se souvenir que la hiérarchie de répertoires créée sous le partage FILESTREAM au niveau de l'instance est une hiérarchie de répertoires virtuels. Cette hiérarchie est stockée dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'est pas représentée physiquement dans le système de fichiers NTFS. Toutes les opérations qui accèdent à des fichiers et des répertoires sous le partage FILESTREAM et dans le FileTables qu'il contient sont interceptées et gérées par un composant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incorporé dans le système de fichiers.  
   
-##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a>Sémantique des répertoires racines aux niveaux de l’instance, de la base de données et du filetable  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> Sémantique des répertoires racines aux niveaux de l'instance, de la base de données et de FileTable  
  Cette hiérarchie de répertoires observe la sémantique suivante :  
   
 -   Le partage FILESTREAM au niveau de l'instance est configuré par un administrateur et stocké comme propriété du serveur. Vous pouvez renommer ce partage à l'aide du gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Une opération de changement de nom n'entre en vigueur qu'une fois que le serveur a redémarré.  
@@ -90,16 +89,16 @@ GO
   
 -   Vous ne pouvez pas ouvrir ces répertoires racines avec des descripteurs de fichiers exclusifs.  
   
-##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a>Colonne is_directory dans le schéma filetable  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> Colonne is_directory dans le schéma de FileTable  
  Le tableau suivant décrit l’interaction entre la colonne **is_directory** et la colonne **file_stream** qui contient les données FILESTREAM dans un FileTable.  
   
 ||||  
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**Comportement**|  
 |FALSE|NULL|Il s'agit d'une combinaison non valide qui est interceptée par une contrainte définie par le système.|  
-|FALSE|\<valeur>|L'élément représente un fichier.|  
+|FALSE|\<value>|L'élément représente un fichier.|  
 |TRUE|NULL|L'élément représente un répertoire.|  
-|TRUE|\<valeur>|Il s'agit d'une combinaison non valide qui est interceptée par une contrainte définie par le système.|  
+|TRUE|\<value>|Il s'agit d'une combinaison non valide qui est interceptée par une contrainte définie par le système.|  
   
 ##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> Utilisation de noms de réseau virtuel (VNN) avec des groupes de disponibilité AlwaysOn  
  Lorsque la base de données qui contient des données FILESTREAM ou FileTable appartient à un groupe de disponibilité AlwaysOn :  
@@ -109,9 +108,9 @@ GO
 -   Tous les accès à FILESTREAM ou aux données FileTable via les API du système de fichiers doivent utiliser des VNN à la place des noms d'ordinateur. Pour plus d’informations, consultez [FILESTREAM et FileTable avec groupes de disponibilité Always On & &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Activer les conditions préalables pour les filetables](enable-the-prerequisites-for-filetable.md)   
+ [Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)   
  [Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)   
- [Accéder à FileTables avec Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Accéder aux FileTables avec Transact-SQL](access-filetables-with-transact-sql.md)   
  [Accéder aux FileTables avec des API d’entrée-sortie de fichier](access-filetables-with-file-input-output-apis.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014353"
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
   Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur `xml`. Le schéma XML inclut des informations sur les éléments suivants :  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- L’instruction `EVENTDATA()` du déclencheur DDL capture le texte de l’instruction `CREATE TABLE` qui n’est pas autorisé. Cela est possible en utilisant une instruction XQuery sur les `xml` données générées par EventData et en extrayant l' \<élément CommandText>. Pour plus d’informations, consultez [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ L’instruction `EVENTDATA()` du déclencheur DDL capture le texte de l’instruction `CREATE TABLE` qui n’est pas autorisé. Cela est possible en utilisant une instruction XQuery sur les `xml` données générées par EventData et en extrayant l' \<CommandText> élément. Pour plus d’informations, consultez [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA capture les données des événements CREATE_SCHEMA ainsi que l'<élément_de_schéma> de la définition CREATE SCHEMA correspondante, s'il existe. En outre, EVENTDATA reconnaît la définition <élément_de_schéma> en tant qu'événement distinct. En conséquence, un déclencheur DDL créé à la fois sur un événement CREATE_SCHEMA et sur un événement représenté par l'<élément_de_schéma> de la définition CREATE SCHEMA, peut retourner deux fois les mêmes données d'événement, telles que les données `TSQLCommand`. Par exemple, considérez qu'un déclencheur DDL est créé sur les deux événements CREATE_SCHEMA et CREATE_TABLE et que le traitement suivant est exécuté :  

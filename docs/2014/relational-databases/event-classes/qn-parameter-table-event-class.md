@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fad4d1cbeaa84b5c6be683d7a87997d1a3f89bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044444"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052643"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe d'événements QN:Parameter Table
   L'événement QN:Parameter Table fournit des informations sur les opérations requises pour créer et supprimer les tables internes chargées de stocker les informations de paramètre et maintenir les nombres de références de ces tables. Il signale également l'activité interne pour réinitialiser le nombre d'utilisations d'une table de paramètres.  
@@ -38,7 +37,7 @@ ms.locfileid: "63044444"
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  
-|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soit la connexion de sécurité, soit les informations d’identification de connexion Windows sous la forme *domaine*\\*nom*d’utilisateur).|11|Non|  
+|LoginName|`nvarchar`|Nom de la connexion de l’utilisateur (soit la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion de sécurité, soit les informations d’identification de connexion Windows sous la forme *domaine* \\ *nom*d’utilisateur).|11|Non |  
 |LoginSID|`image`|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l'affichage catalogue sys.server_principals. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  

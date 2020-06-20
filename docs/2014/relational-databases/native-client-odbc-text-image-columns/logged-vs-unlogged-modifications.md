@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3635fee71c92196cbc9408db1487e95da2b489ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8768acc75d18ea2236f0e9280e5d0c805e688107
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039373"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>Modifications enregistrées ou non enregistrées
   Une application peut demander que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’enregistre pas les modifications **Text**, **ntext**et **image** . Il convient toutefois d'être prudent lors de l'utilisation de cette option. Elle ne doit être utilisée que dans les cas où les données **Text**, **ntext**ou **image** ne sont pas critiques et que les propriétaires de données sont prêts à échanger la possibilité de récupérer les données pour des performances supérieures.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 325bedac3968cb59c70863d54c7e0ef429cedd75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8194b5cc2d4c4a2f1f116ca5a99ea16e18156f13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005255"
 ---
 # <a name="view-and-modify-article-properties"></a>Afficher et modifier les propriétés d'un article
   Cette rubrique décrit comment afficher et modifier les propriétés de l'article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -58,7 +57,7 @@ ms.locfileid: "68941075"
 -   Après qu'une publication a été créée, certaines modifications de propriétés nécessitent un nouvel instantané. Si une publication dispose d'abonnements, ces abonnements pourraient devoir alors être réinitialisés selon les modifications que vous avez apportées. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Affichez et modifiez les propriétés de l’article dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , disponible dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et le Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../monitor/start-the-replication-monitor.md).  
+ Affichez et modifiez les propriétés de l’article dans la boîte de dialogue Propriétés de la **publication \<Publication> -** , disponible dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../monitor/start-the-replication-monitor.md).  
   
 -   La page **Général** contient le nom et la description de la publication, le nom de la base de données, le type de publication et les paramètres d'expiration des abonnements.  
   
@@ -82,49 +81,49 @@ ms.locfileid: "68941075"
   
 #### <a name="to-view-and-modify-article-properties"></a>Pour afficher et modifier les propriétés d'un article  
   
-1.  Dans la page **Article**s de la boîte de dialogue **Propriétés de la Publication - \<Publication>** , sélectionnez un article, puis cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** , sélectionnez un article, puis cliquez sur Propriétés de **l’article**.  
   
 2.  Sélectionnez les articles auxquels les modifications des propriétés doivent s'appliquer :  
   
-    -   Cliquez sur **Définir les propriétés de l’article de \<type_objet> en surbrillance** pour ouvrir la boîte de dialogue **Propriétés de l’article - \<nom_objet>** . Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées uniquement à l’objet en surbrillance dans le volet Objet de la page **Articles**.  
+    -   Cliquez sur **définir les propriétés de \<ObjectType> l’article en surbrillance** pour ouvrir la boîte de dialogue Propriétés de **l’article- \<ObjectName> ** . les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées uniquement à l’objet mis en surbrillance dans le volet objet de la page **Articles** .  
   
-    -   Cliquez sur **Définir les propriétés de tous les articles \<type_objet>** pour ouvrir la boîte de dialogue **Propriétés pour tous les articles \<type_objet>** . Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées à tous les objets de ce type dans le volet Objet de la page **Articles**, notamment ceux qui ne sont pas encore sélectionnés pour la publication.  
+    -   Cliquez sur **définir les propriétés de tous les \<ObjectType> Articles**pour ouvrir la boîte de dialogue Propriétés de **tous les \<ObjectType> Articles** ; les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées à tous les objets de ce type dans le volet objet de la page **Articles** , y compris ceux qui n’ont pas encore été sélectionnés pour la publication.  
   
         > [!NOTE]  
-        >  Les modifications de propriétés apportées dans la boîte de dialogue **Propriétés pour tous les articles \<type_objet>** remplacent celles apportées dans la boîte de dialogue **Propriétés de l’article - \<nom_objet>** . Ainsi, si vous voulez définir un certain nombre de valeurs par défaut applicables à tous les articles d'un type d'objet mais souhaitez également définir des propriétés pour des objets spécifiques, vous devez d'abord définir les valeurs par défaut pour tous les articles. Définissez ensuite les propriétés des objets individuels.  
+        >  Les modifications de propriétés apportées dans la boîte de dialogue **Propriétés de tous les \<ObjectType> Articles** remplacent celles effectuées précédemment dans la boîte de dialogue **Propriétés de l’article- \<ObjectName> ** . Ainsi, si vous voulez définir un certain nombre de valeurs par défaut applicables à tous les articles d'un type d'objet mais souhaitez également définir des propriétés pour des objets spécifiques, vous devez d'abord définir les valeurs par défaut pour tous les articles. Définissez ensuite les propriétés des objets individuels.  
   
 3.  Modifiez les propriétés si nécessaire, puis cliquez sur **OK**.  
   
-4.  Dans la boîte de dialogue **Propriétés de la publication -** Publication> **, cliquez sur \<OK**.  
+4.  Cliquez sur **OK** dans la boîte de dialogue **Propriétés de la publication \<Publication> -** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les articles peuvent être modifiés et leurs propriétés retournées, par programme, à l'aide des procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'article appartient.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Pour afficher les propriétés d'un article appartenant à une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), en spécifiant le nom de la publication ** \@** pour le paramètre de publication et le nom de l' ** \@** article pour le paramètre de l’article. Si vous ne spécifiez ** \@pas l’article**, des informations sont retournées pour tous les Articles de la publication.  
+1.  Exécutez [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), en spécifiant le nom de la publication pour le paramètre de ** \@ publication** et le nom de l’article pour le paramètre de l' ** \@ article** . Si vous ne spécifiez pas ** \@ l’article**, des informations sont retournées pour tous les Articles de la publication.  
   
 2.  Exécutez [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) pour les articles de table pour répertorier toutes les colonnes disponibles dans la table de base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Pour modifier les propriétés d'un article appartenant à une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), en spécifiant la propriété d’article en ** \@** cours de modification dans le paramètre Property et la nouvelle valeur ** \@** de cette propriété dans le paramètre value.  
+1.  Exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), en spécifiant la propriété d’article en cours de modification dans le paramètre ** \@ Property** et la nouvelle valeur de cette propriété dans le paramètre ** \@ value** .  
   
     > [!NOTE]  
-    >  Si la modification nécessite la génération d’un nouvel instantané, vous devez également spécifier la valeur **1** pour ** \@force_invalidate_snapshot**, et si la modification nécessite la réinitialisation des abonnés, vous devez également spécifier la valeur **1** pour ** \@force_reinit_subscription**. Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
+    >  Si la modification nécessite la génération d’un nouvel instantané, vous devez également spécifier la valeur **1** pour ** \@ force_invalidate_snapshot**, et si la modification nécessite la réinitialisation des abonnés, vous devez également spécifier la valeur **1** pour ** \@ force_reinit_subscription**. Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Pour afficher les propriétés d'un article appartenant à une publication de fusion  
   
-1.  Exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql), en spécifiant le nom de la publication ** \@** pour le paramètre de publication et le nom de l' ** \@** article pour le paramètre de l’article. Si vous ne spécifiez pas ces paramètres, des informations sont retournées pour tous les articles d'une publication ou sur l'Abonné.  
+1.  Exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql), en spécifiant le nom de la publication pour le paramètre de ** \@ publication** et le nom de l’article pour le paramètre de l' ** \@ article** . Si vous ne spécifiez pas ces paramètres, des informations sont retournées pour tous les articles d'une publication ou sur l'Abonné.  
   
 2.  Exécutez [sp_helpmergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql) pour les articles de table pour répertorier toutes les colonnes disponibles dans la table de base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Pour modifier les propriétés d'un article appartenant à une publication de fusion  
   
-1.  Exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en spécifiant la propriété d’article en ** \@** cours de modification dans le paramètre Property et la nouvelle valeur ** \@** de cette propriété dans le paramètre value.  
+1.  Exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en spécifiant la propriété d’article en cours de modification dans le paramètre ** \@ Property** et la nouvelle valeur de cette propriété dans le paramètre ** \@ value** .  
   
     > [!NOTE]  
-    >  Si la modification nécessite la génération d’un nouvel instantané, vous devez également spécifier la valeur **1** pour ** \@force_invalidate_snapshot**, et si la modification nécessite la réinitialisation des abonnés, vous devez également spécifier la valeur **1** pour ** \@force_reinit_subscription**. Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
+    >  Si la modification nécessite la génération d’un nouvel instantané, vous devez également spécifier la valeur **1** pour ** \@ force_invalidate_snapshot**, et si la modification nécessite la réinitialisation des abonnés, vous devez également spécifier la valeur **1** pour ** \@ force_reinit_subscription**. Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple de réplication transactionnelle retourne les propriétés de l'article publié.  

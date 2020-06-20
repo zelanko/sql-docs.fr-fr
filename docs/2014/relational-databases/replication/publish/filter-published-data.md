@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 310e32b2804664c4189e8e677227018d853f934a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060551"
 ---
 # <a name="filter-published-data"></a>Filtrer des données publiées
   Le filtrage des articles d'une table vous permet de créer des partitions de données à publier. En filtrant les données publiées, vous pouvez :  
@@ -100,7 +99,7 @@ ms.locfileid: "62989082"
 |Toutes les colonnes d'une publication de fusion SQL Server 7.0|Il est impossible de filtrer les colonnes dans les publications de fusion SQL Server 7.0.|  
 |Timestamp|Publications d'instantané ou publications transactionnelles SQL Server 7.0 qui autorisent les abonnements pouvant être mis à jour|  
   
- <sup>1</sup> si vous publiez une table dans une publication de fusion et que cette table contient déjà une colonne de `uniqueidentifier` type de `ROWGUIDCOL` données avec la propriété définie, la réplication peut utiliser cette colonne au lieu de créer une colonne supplémentaire nommée **rowguid**. Dans ce cas, la colonne existante doit être publiée.  
+ <sup>1</sup> si vous publiez une table dans une publication de fusion et que cette table contient déjà une colonne de type de données `uniqueidentifier` avec la `ROWGUIDCOL` propriété définie, la réplication peut utiliser cette colonne au lieu de créer une colonne supplémentaire nommée **rowguid**. Dans ce cas, la colonne existante doit être publiée.  
   
  Pour définir ou modifier un filtre de colonne, consultez [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62989082"
   
 -   La réplication transactionnelle vous permet de répliquer une vue indexée comme une vue ou une table. Si vous répliquez la vue comme une table, vous ne pouvez pas filtrer les colonnes de la table.  
   
- Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l'exécution de `sp_replcmds` (les filtres qui s'exécutent sous) au propriétaire de la base de données (`dbo`). `dbo` n'a pas de privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sécurité, limite l’exécution de cette logique afin qu’un malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
+ Les filtres de lignes ne sont pas conçus pour fonctionner sur les bases de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite volontairement l'exécution de `sp_replcmds` (les filtres qui s'exécutent sous) au propriétaire de la base de données (`dbo`). `dbo` n'a pas de privilèges de base de données croisés. Avec l'ajout de la capture de données modifiées (CDC) dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la logique `sp_replcmds` remplit les tables de suivi des modifications avec les informations que l'utilisateur peut retourner et interroger. Pour des raisons de sécurité, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limite l’exécution de cette logique afin qu’un malveillant `dbo` ne puisse pas détourner ce chemin d’exécution. Par exemple, un `dbo` malveillant pourrait ajouter des déclencheurs sur les tables de capture de données modifiées qui seraient alors exécutés dans le contexte de l'utilisateur qui appelle `sp_replcmds`, dans ce cas l'agent lecteur du journal.  Si le compte sous lequel l'agent s'exécute dispose de privilèges plus élevés, le `dbo` malveillant pourrait transmettre ses privilèges.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)  

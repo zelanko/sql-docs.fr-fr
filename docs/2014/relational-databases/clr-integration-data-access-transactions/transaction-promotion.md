@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78cbb3d2fc888e56c0b55780daf7b449fe6dc40
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954959"
 ---
 # <a name="transaction-promotion"></a>Promotion des transactions
   La *promotion* des transactions décrit une transaction locale légère qui peut être promue automatiquement en une transaction entièrement distribuable si nécessaire. Lorsqu'une procédure stockée managée est appelée au sein d'une transaction de base de données sur le serveur, le CLR s'exécute dans le contexte d'une transaction locale.  Si une connexion à un serveur distant est ouverte dans une transaction de base de données, la connexion au serveur distant est inscrite dans la transaction distribuée et la transaction locale est promue automatiquement en une transaction distribuée. Ainsi, la promotion des transactions réduit les charges mémoire des transactions distribuées en différant la création d'une transaction distribuée tant qu'elle n'est pas nécessaire. La promotion des transactions est automatique, si elle a été activée à l'aide du mot clé `Enlist`, et ne requiert aucune intervention du développeur. Le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure la prise en charge de la promotion des transactions au travers des classes de l'espace de noms `System.Data.SqlClient` du .NET Framework.  
@@ -31,7 +30,7 @@ ms.locfileid: "62874762"
 ## <a name="distributed-transactions"></a>Transactions distribuées  
  Les transactions distribuées consomment en général d'importantes ressources système. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) gère ces transactions et intègre tous les gestionnaires de ressources qui y sont accédés. La promotion des transactions, en revanche, est une forme spéciale de transaction `System.Transactions` qui délègue efficacement le travail à une simple transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `System.Transactions`, `System.Data.SqlClient` et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordonnent le travail nécessité par la gestion de la transaction, en la promouvant autant que nécessaire en une transaction distribuée complète.  
   
- L'avantage de l'utilisation de la promotion des transaction est que lorsqu'une connexion est ouverte avec une transaction `TransactionScope` active et qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu d'encourir les charges mémoire supplémentaires d'une transaction distribuée complète. Pour plus d’informations `TransactionScope`sur, consultez [utilisation de System. transactions](../native-client-ole-db-transactions/transactions.md).  
+ L'avantage de l'utilisation de la promotion des transaction est que lorsqu'une connexion est ouverte avec une transaction `TransactionScope` active et qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu d'encourir les charges mémoire supplémentaires d'une transaction distribuée complète. Pour plus d’informations sur `TransactionScope` , consultez [utilisation de System. transactions](../native-client-ole-db-transactions/transactions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration et transactions du CLR](clr-integration-and-transactions.md)  

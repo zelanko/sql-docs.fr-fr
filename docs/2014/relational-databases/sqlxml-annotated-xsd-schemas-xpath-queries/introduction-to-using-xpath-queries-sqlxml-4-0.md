@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a32f28268d39b0cc93a315f45d775804eacdd98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015397"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
   Une requête XPath (XML Path Language) peut être spécifiée dans le cadre d'une URL ou dans un modèle. Le schéma de mappage détermine la structure de ce fragment résultant et les valeurs sont extraites de la base de données. Ce processus est conceptuellement semblable à la création de vues à l'aide de l'instruction CREATE VIEW et à l'écriture de requêtes SQL dans ces vues.  
@@ -45,9 +44,9 @@ ms.locfileid: "82703118"
 </root>  
 ```  
   
- Dans ce document, ** \< customer>** est un nœud d’élément, **CID** est un nœud d’attribut et **« important »** est un nœud de texte.  
+ Dans ce document, **\<Customer>** est un nœud d’élément, **CID** est un nœud d’attribut et **« important »** est un nœud de texte.  
   
- XPath est un langage de navigation graphique utilisé pour sélectionner une collection de nœuds à partir d'un document XML. Chaque opérateur XPath sélectionne un élément node-set sur la base d'un élément node-set sélectionné par un opérateur XPath précédent. Par exemple, à partir d’un ensemble de nœuds ** \< customer>** , XPath peut sélectionner tous les nœuds ** \<>de commande** avec la valeur d’attribut **Date** **« 7/14/1999 »**. L'élément node-set résultant contient toutes les commandes avec la date de commande 7/14/1999.  
+ XPath est un langage de navigation graphique utilisé pour sélectionner une collection de nœuds à partir d'un document XML. Chaque opérateur XPath sélectionne un élément node-set sur la base d'un élément node-set sélectionné par un opérateur XPath précédent. Par exemple, à partir d’un ensemble de **\<Customer>** nœuds, XPath peut sélectionner tous les **\<Order>** nœuds avec la valeur d’attribut **Date** **« 7/14/1999 »**. L'élément node-set résultant contient toutes les commandes avec la date de commande 7/14/1999.  
   
  Le langage XPath est défini par le W3C (World Wide Web Consortium) en tant que langage de navigation standard. SQLXML 4,0 implémente un sous-ensemble de la spécification XPath W3C, qui se trouve dans http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
   
@@ -55,7 +54,7 @@ ms.locfileid: "82703118"
   
 -   **Requêtes racines**  
   
-     SQLXML 4.0 ne prend pas en charge la requête racine (/). Chaque requête XPath doit commencer à un ElementType de niveau supérieur ** \<>** dans le schéma.  
+     SQLXML 4.0 ne prend pas en charge la requête racine (/). Chaque requête XPath doit commencer à un niveau supérieur **\<ElementType>** dans le schéma.  
   
 -   **Signalement d’erreurs**  
   
@@ -89,11 +88,11 @@ ms.locfileid: "82703118"
 ## <a name="supported-functionality"></a>Fonctionnalités prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath implémentées dans SQLXML 4.0.  
   
-|Caractéristique|Article|Lien aux exemples de requêtes|  
+|Fonctionnalité|Article|Lien aux exemples de requêtes|  
 |-------------|----------|----------------------------|  
 |Axes|Axes `attribute`, `child`, `parent` et `self`|[Spécification d’axes dans les requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prédicats à valeurs booléennes, y compris les prédicats consécutifs et imbriqués||[La spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Tous les opérateurs relationnels|=, ! =, <, \< =, >, >=|[La spécification d’opérateurs relationnels dans des requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Tous les opérateurs relationnels|=, ! =, <, \<=, > , >=|[La spécification d’opérateurs relationnels dans des requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Opérateurs arithmétiques|+, -, *, div|[La spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Fonctions de conversion explicite|`number()`, `string()`, `Boolean()`|[Spécification de fonctions de conversion explicite dans les requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |opérateurs booléens|AND, OR|[La spécification d’opérateurs booléens dans les requêtes XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -103,15 +102,15 @@ ms.locfileid: "82703118"
 ## <a name="unsupported-functionality"></a>Fonctionnalités non prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath non implémentées dans SQLXML 4.0.  
   
-|Caractéristique|Article|  
+|Fonctionnalité|Article|  
 |-------------|----------|  
 |Axes|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |Prédicats à valeurs numériques||  
 |Opérateurs arithmétiques|mod|  
 |Fonctions de nœuds|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
-|Fonctions de chaînes|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
+|Fonctions de chaîne|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
 |fonctions booléennes|`lang()`|  
-|Fonctions Numériques|`sum()`, `floor()`, `ceiling()`, `round()`|  
+|Fonctions numériques|`sum()`, `floor()`, `ceiling()`, `round()`|  
 |Opérateur d'union|&#124;|  
   
  Lorsque vous spécifiez des requêtes XPath dans un modèle, notez le comportement suivant :  

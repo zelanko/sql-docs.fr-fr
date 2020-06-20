@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c00aa838b5bf420862cfe2793c404989ad911c9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055161"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962084"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche de terme (onglet Table de référence)
   Utilisez l’onglet **Table de référence** de la boîte de dialogue **Éditeur de transformation de recherche de terme** pour définir la connexion à la table de référence (recherche).  
@@ -30,7 +29,7 @@ ms.locfileid: "66055161"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
  **Nom de la table de référence**  

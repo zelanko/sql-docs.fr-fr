@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 527e646f956e60b2c8495a738a85595baac383f2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d63a3ebc13f5bfc0852c589a36185b5147c8c8d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061169"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utiliser les méthodes value() et nodes() avec OPENXML
   Vous pouvez utiliser plusieurs méthodes **value ()** sur le `xml` type de données dans une clause **Select** pour générer un ensemble de lignes de valeurs extraites. La méthode **nodes()** produit une référence interne pour chaque nœud sélectionné en vue d’une requête supplémentaire. La combinaison des méthodes **nodes()** et **value()** peut s’avérer plus efficace pour générer l’ensemble de lignes quand il contient plusieurs colonnes et, peut-être, quand les expressions de chemin utilisées durant sa génération sont complexes.  

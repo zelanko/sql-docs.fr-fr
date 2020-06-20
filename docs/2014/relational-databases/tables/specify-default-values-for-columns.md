@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 650347c29e1175c5a1fe646fc079478520dc8c6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055077"
 ---
 # <a name="specify-default-values-for-columns"></a>Spécifier des valeurs par défaut pour les colonnes
   Vous pouvez spécifier une valeur par défaut qui sera écrite dans la colonne dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si vous n'assignez aucune valeur par défaut et que l'utilisateur laisse la colonne vide, alors :  

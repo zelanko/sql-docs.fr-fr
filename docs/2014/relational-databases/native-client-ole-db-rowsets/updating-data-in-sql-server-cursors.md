@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 037176b5e1833b3cbfcbc93131560fcafcc8e404
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 42e6221a85c30e3adb97df3a11c9cbdc49216b4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039121"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Mise à jour des données dans les curseurs SQL Server
   Lors de l’extraction et de la mise à jour des données par le biais de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] curseurs, une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application cliente OLE DB fournisseur Native Client est liée par les mêmes considérations et contraintes qui s’appliquent à toute autre application cliente.  

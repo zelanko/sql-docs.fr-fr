@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520db8f10b9a60d2c8bd48771a5660402be835ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016503"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Informations de publication, jetons de suivi (publication transactionnelle, SQL Server 2005 et ultérieur)
    L’onglet **Jetons de suivi** vous permet de contrôler la validité des connexions, mais aussi de paramétrer la mesure du temps de latence d’un système utilisant la réplication transactionnelle. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  

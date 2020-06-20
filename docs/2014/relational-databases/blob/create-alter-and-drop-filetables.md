@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934801"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955579"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
   Décrit la procédure de création d'un nouveau FileTable, ou de modification ou de suppression d'un FileTable existant.  
@@ -35,7 +34,7 @@ ms.locfileid: "76934801"
   
 -   Noms à utiliser pour les 3 contraintes uniques et de clé primaire qui sont créées automatiquement.  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Procédure : créer un FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Procédure : Créer un FileTable  
  **Créer un FileTable à l'aide de Transact-SQL**  
  Créez un FileTable en appelant l’instruction [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) avec l’option **AS FileTable**. Puisqu'un FileTable dispose d'un schéma fixe, vous n'avez pas à spécifier une liste de colonnes. Vous pouvez spécifier les paramètres suivants pour le nouveau FileTable :  
   
@@ -107,7 +106,7 @@ GO
   
  Pour plus d’informations sur l’utilisation de l’instruction ALTER TABLE pour activer ou désactiver l’espace de noms FileTable, dont les contraintes définies par le système, consultez [Gérer des FileTables](manage-filetables.md).  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Procédure : modifier le répertoire d'un FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Procédure : modifier le répertoire d’un FileTable  
  **Modifier le répertoire d'un FileTable à l'aide de Transact-SQL**  
  Appelez l’instruction ALTER TABLE et fournissez une nouvelle valeur valide pour l’option SET **FILETABLE_DIRECTORY** .  
   
@@ -175,11 +174,11 @@ GO
 |Contraintes de validation|Les contraintes de validation définies par le système appliquent les spécifications requises suivantes :<br /><br /> Noms de fichier valides.<br /><br /> Attributs de fichier valides.<br /><br /> L'objet parent doit être un répertoire.<br /><br /> La hiérarchie d'espace de noms est verrouillée pendant la manipulation de fichier.|  
   
  **Convention d'affectation des noms pour les contraintes définies par le système**  
- Les contraintes définies par le système décrites ci-dessus sont nommées selon le format **\<type_contrainte>_\<nom_table>[\_\<nom_colonne>]\_\<générateur_de_nom_unique>** où :  
+ Les contraintes définies par le système décrites ci-dessus sont nommées au format ** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> ** où :  
   
 -   *<type_contrainte>* est CK (contrainte de validation), DF (contrainte par défaut), FK (clé étrangère), PK (clé primaire) ou UQ (contrainte unique).  
   
--   *\<générateur_de_nom_unique>* est une chaîne générée par le système pour rendre le nom unique. Cette chaîne peut contenir le nom du FileTable et un identificateur unique.  
+-   *\<uniquifier>* est une chaîne générée par le système pour rendre le nom unique. Cette chaîne peut contenir le nom du FileTable et un identificateur unique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer des FileTables](manage-filetables.md)  

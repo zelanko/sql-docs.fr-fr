@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ee353129d60fe7fc8bed0eff279920d8d4ba640
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041318"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Créer une alerte à l'aide d'un niveau de gravité
-  Cette rubrique explique comment créer une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent qui est déclenchée lorsqu’un événement d’un niveau de gravité [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] spécifique se [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] produit [!INCLUDE[tsql](../../includes/tsql-md.md)]dans à l’aide de ou de.  
+  Cette rubrique explique comment créer une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent qui est déclenchée lorsqu’un événement d’un niveau de gravité spécifique se produit dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Dans cette rubrique**  
   

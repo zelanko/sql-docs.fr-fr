@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2653ec7ef399083f750d80d9ba7a27e361ecc327
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479355"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961639"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Sécuriser une application Web Master Data Manager
   Vous pouvez sécuriser l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] avec HTTPS.  
@@ -38,7 +37,7 @@ ms.locfileid: "65479355"
   
 3.  Dans le volet **Actions**, cliquez sur **Liaisons**.  
   
-4.  Cliquez sur **Ajouter**.  
+4.  Cliquez sur **Add**.  
   
 5.  Dans la liste, sélectionnez **https**.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "65479355"
   
 7.  Cliquez sur **OK**.  
   
-8.  Facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
+8.  facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
   
     > [!IMPORTANT]  
     >  Vous devez changer les configurations basicHttp et wsHttpBinding après avoir supprimé HTTP.  
