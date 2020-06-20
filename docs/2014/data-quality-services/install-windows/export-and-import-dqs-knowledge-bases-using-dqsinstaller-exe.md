@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cf8a8310abf9173f613549ef7f2776fc33ea690c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fea7ae5abbd6aa2824d5a53244a8dc3c2cb5ea6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937610"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Exporter et importer des bases de connaissances DQS à l'aide de DQSInstaller.exe
   Pour une installation existante de DQS, vous pouvez exporter toutes les bases de connaissances de votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en même temps dans un fichier de sauvegarde DQS (.dqsb), puis utiliser ultérieurement ce fichier .dqsb pour importer toutes les bases de connaissances à la fois vers un autre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. Pour plus d'informations sur l'exécution du fichier DQSInstaller.exe à partir de l'invite de commandes, consultez [Exécuter DQSInstaller.exe à partir d'une invite de commandes](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) dans [Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
@@ -55,7 +54,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  Si votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] contient des bases de connaissances portant le même nom que celles que vous importez, les noms des bases de connaissances importées sont complétés par un trait de soulignement (_) suivi d'une valeur entière en commençant par 1. Par exemple, si le domaine « CompanyName » apparaît deux fois, le nom de domaine importé est « CompanyName_1 ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécuter fichier DQSInstaller. exe pour terminer l’installation du serveur de qualité des données](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Exécuter DQSInstaller.exe pour terminer l’installation du serveur de qualité des données](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installer Data Quality Services](install-data-quality-services.md)   
  [Exporter une base de connaissances vers un fichier. DQS](../export-a-knowledge-base-to-a-dqs-file.md)   
  [Importer une base de connaissances à partir d'un fichier .dqs](../import-a-knowledge-base-from-a-dqs-file.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965699"
 ---
 # <a name="implementation-of-child-packages"></a>Implémentation de packages enfants
   Quand vous implémentez un équilibrage de charge avec [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], des packages enfants sont installés sur d’autres serveurs pour tirer parti du temps UC ou serveur disponible. Pour créer et exécuter les packages enfants, les opérations suivantes sont nécessaires :  
@@ -51,7 +50,7 @@ ms.locfileid: "66058190"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Débogage des travaux de SQL Server Agent et des packages enfants.  
  Vous pouvez tester les travaux de SQL Server Agent et leurs packages enfants à l'aide de l'une des méthodes suivantes :  
   
--   Exécution de chaque package enfant dans le concepteur SSIS, en cliquant sur **Déboguer** / **exécuter sans débogage**.  
+-   Exécution de chaque package enfant dans le concepteur SSIS, en cliquant sur **Déboguer**  /  **exécuter sans débogage**.  
   
 -   Exécution du travail individuel de SQL Server Agent sur l’ordinateur distant à l’aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour vérifier que le package fonctionne.  
   

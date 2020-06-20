@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e49b6d36830abcbab720554231a682a98eaca5b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112179"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042481"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint
   Le fournisseur Microsoft OLE DB pour Analysis Services (MSOLAP) est une interface que les applications clientes utilisent pour interagir avec les données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dans un environnement SharePoint qui inclut [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le fournisseur gère les demandes de connexion aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -49,15 +48,15 @@ ms.locfileid: "79112179"
 ##  <a name="why-you-need-to-install-the-ole-db-provider"></a><a name="bkmk_why"></a>Raisons pour lesquelles vous devez installer le fournisseur OLE DB  
  Il existe deux scénarios qui nécessitent l'installation manuelle du fournisseur OLE DB sur les serveurs de la batterie.  
   
- **Le scénario le plus courant est celui** où vous disposez de versions plus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] anciennes et plus récentes des classeurs qui sont enregistrés dans les bibliothèques de documents de la batterie de serveurs. Si les analystes de votre entreprise utilisent la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel et qu'ils enregistrent ces classeurs dans une installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le classeur plus ancien ne fonctionne pas. Sa chaîne de connexion fait référence à une version antérieure du fournisseur, qui ne se trouve pas sur le serveur, sauf si vous l’installez. L'installation de ces deux versions activera l'accès aux données pour les classeurs PowerPivot créés dans des versions plus anciennes et plus récentes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel. Le programme d'installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] n'installe pas la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du fournisseur. Vous devez donc l'installer manuellement si vous utilisez des classeurs provenant d'une version antérieure.  
+ **Le scénario le plus courant est celui** où vous disposez de versions plus anciennes et plus récentes des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs qui sont enregistrés dans les bibliothèques de documents de la batterie de serveurs. Si les analystes de votre entreprise utilisent la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel et qu'ils enregistrent ces classeurs dans une installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le classeur plus ancien ne fonctionne pas. Sa chaîne de connexion fait référence à une version antérieure du fournisseur, qui ne se trouve pas sur le serveur, sauf si vous l’installez. L'installation de ces deux versions activera l'accès aux données pour les classeurs PowerPivot créés dans des versions plus anciennes et plus récentes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel. Le programme d'installation de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] n'installe pas la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] du fournisseur. Vous devez donc l'installer manuellement si vous utilisez des classeurs provenant d'une version antérieure.  
   
- **Le deuxième scénario** est lorsque vous avez un serveur dans une batterie de serveurs SharePoint qui exécute Excel Services, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]mais pas. Dans ce cas, le serveur d'applications qui exécute Excel Services doit être mis à jour manuellement pour utiliser une version plus récente du fournisseur. Cela est nécessaire pour se connecter à une instance de PowerPivot pour SharePoint. Si Excel Services utilise une version antérieure du fournisseur, la demande de connexion échoue. Notez que le fournisseur doit être installé à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou du package d'installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) afin de vous assurer que tous les composants nécessaires pour prendre en charge [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont installés.  
+ **Le deuxième scénario** est lorsque vous avez un serveur dans une batterie de serveurs SharePoint qui exécute Excel Services, mais pas [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Dans ce cas, le serveur d'applications qui exécute Excel Services doit être mis à jour manuellement pour utiliser une version plus récente du fournisseur. Cela est nécessaire pour se connecter à une instance de PowerPivot pour SharePoint. Si Excel Services utilise une version antérieure du fournisseur, la demande de connexion échoue. Notez que le fournisseur doit être installé à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou du package d'installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) afin de vous assurer que tous les composants nécessaires pour prendre en charge [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont installés.  
   
   
 ##  <a name="install-the-sql-server-2012-ole-db-provider-on-an-excel-services-server-by-using-sql-server-setup"></a><a name="bkmk_sql11"></a>Installer le fournisseur de OLE DB SQL Server 2012 sur un serveur Excel Services à l’aide du programme d’installation de SQL Server  
  Utilisez les instructions suivantes pour ajouter le fournisseur OLE DB et d'autres composants de connectivité clients aux serveurs SharePoint sur lesquels ils ne sont pas encore installés, comme les serveurs d'applications qui exécutent Excel Services sans PowerPivot pour SharePoint sur le même matériel.  
   
- Suivez ces instructions pour installer le fournisseur Analysis Services OLE DB actuel et ajouter le **fichier Microsoft. AnalysisServices. XMLA. dll** à l’assembly global.  
+ Suivez ces instructions pour installer le fournisseur de OLE DB Analysis Services actuel et ajouter le **Microsoft.AnalysisServices.Xmla.dll** à l’assembly global.  
   
 #### <a name="run-sql-server-setup-and-install-the-client-connectivity-tools"></a>Exécuter le programme d'installation de SQL Server et installer les outils de connectivité clients  
   
@@ -69,7 +68,7 @@ ms.locfileid: "79112179"
   
 4.  Dans la page rôle d’installation, choisissez **installation de fonctionnalités SQL Server**.  
   
-5.  Dans la page **sélection de fonctionnalités** , cliquez sur connectivité des **outils clients**. Cette option installe **Microsoft. AnalysisServices. XMLA. dll**  
+5.  Dans la page **sélection de fonctionnalités** , cliquez sur connectivité des **outils clients**. Cette option installe **Microsoft.AnalysisServices.Xmla.dll**  
   
      Ne sélectionnez pas d'autres composants.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "79112179"
   
 7.  Dans la description du fournisseur, tapez **Fournisseur Microsoft OLE DB pour OLAP Services 11.0**.  
   
-#### <a name="verify-installation"></a>Vérifier l'installation  
+#### <a name="verify-installation"></a>Vérifier l’installation  
   
 1.  Accédez au dossier Program files\Microsoft Analysis Services\AS OLEDB\110.  
   
@@ -101,13 +100,13 @@ ms.locfileid: "79112179"
   
 3.  Cliquez sur **Détails**.  
   
-4.  Consultez les informations de version du fichier. La version doit inclure 11,00. \<> BuildNumber.  
+4.  Consultez les informations de version du fichier. La version doit inclure 11,00. \<buildnumber> .  
   
 5.  Dans le dossier Windows\assembly, vérifiez les Microsoft.AnalysisServices.Xmla.dll, version 11.0.0.0, est répertorié.  
   
   
-##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>Utiliser le package d’installation PowerPivot pour SharePoint (PowerPivot. msi) pour installer le fournisseur SQL Server 2012 OLE DB  
- Installez le [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] fournisseur OLE DB sur et le serveur Excel Services à l' [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] aide du package d’installation **(PowerPivot. msi)**.  
+##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>Utiliser le package d’installation PowerPivot pour SharePoint (spPowerPivot.msi) pour installer le fournisseur de OLE DB SQL Server 2012  
+ Installez le [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] fournisseur OLE DB sur et le serveur Excel Services à l’aide du [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] package d’installation **(spPowerPivot.msi)**.  
   
 #### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>Téléchargez le fournisseur MSOLAP.5 à partir du Feature Pack [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] .  
   
@@ -117,7 +116,7 @@ ms.locfileid: "79112179"
   
 3.  Consultez la section « Fournisseur Microsoft Analysis Services OLE DB pour Microsoft SQL Server 2012 SP1 ». Téléchargez le fichier et démarrez l'installation.  
   
-4.  Dans la page **sélection de fonctionnalités** , sélectionnez **fournisseur Analysis Services OLE DB pour SQL Server**. Désélectionnez les autres composants et finalisez l'installation. Pour plus d’informations sur le fichier PowerPivot. msi, consultez [installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+4.  Dans la page **sélection de fonctionnalités** , sélectionnez **fournisseur Analysis Services OLE DB pour SQL Server**. Désélectionnez les autres composants et finalisez l'installation. Pour plus d’informations sur spPowerPivot.msi, consultez [installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 5.  Inscrivez MSOLAP.5 en tant que fournisseur approuvé dans SharePoint Excel Services. Pour plus d'informations, consultez [Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -137,25 +136,25 @@ ms.locfileid: "79112179"
   
 #### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Étape 2 : inscrire le fichier Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Servez-vous de l'utilitaire regasm.exe pour inscrire le fichier. Si vous n’avez pas exécuté Regasm. exe auparavant, ajoutez son dossier parent,\\C:\Windows\Microsoft.NET\Framework64\v4.0.30319, à la variable de chemin d’accès système.  
+1.  Servez-vous de l'utilitaire regasm.exe pour inscrire le fichier. Si vous n’avez pas exécuté regasm.exe avant, ajoutez son dossier parent, C:\Windows\Microsoft.NET\Framework64\v4.0.30319 \\ , à la variable de chemin d’accès système.  
   
 2.  Ouvrez une invite de commandes avec des autorisations d'administrateur.  
   
 3.  Accédez au dossier C:\Windows\assembly\GAC_MSIL\Microsoft.AnalysisServices.ChannelTransport\10.0.0.0__89845dcd8080cc91  
   
-4.  Entrez la commande suivante : `regasm microsoft.analysisservices.channeltransport.dll`  
+4.  Entrez la commande suivante : `regasm microsoft.analysisservices.channeltransport.dll`  
   
 5.  Répétez les étapes précédentes pour tous les ordinateurs sur lesquels vous avez installé manuellement la version 2008 R2 du fournisseur.  
   
-#### <a name="verify-installation"></a>Vérifier l'installation  
+#### <a name="verify-installation"></a>Vérifier l’installation  
   
 1.  Vous devez maintenant être en mesure de découper ou de filtrer des classeurs [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Si une erreur se produit, vérifiez que vous avez utilisé la version 64 bits de regasm.exe pour inscrire le fichier.  
   
 2.  En outre, vous pouvez vérifier la version du fichier.  
   
-     Atteindre `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Cliquez avec le bouton droit sur **msolap100. dll** et sélectionnez **Propriétés**. Cliquez sur **Détails**.  
+     Atteindre `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Cliquez avec le bouton droit sur **msolap100.dll** , puis sélectionnez **Propriétés**. Cliquez sur **Détails**.  
   
-     Consultez les informations de version du fichier. La version doit inclure 10,50. \<> BuildNumber.  
+     Consultez les informations de version du fichier. La version doit inclure 10,50. \<buildnumber> .  
   
   
 ## <a name="see-also"></a>Voir aussi  

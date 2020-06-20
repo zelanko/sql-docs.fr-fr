@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88de17e8c487d9a965f2e236edac064dc2fe4c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996519"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
-  Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne du type `geometry` de `geography` données ou (une *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
+  Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne du `geometry` type de `geography` données ou (une *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
   
  Il existe plusieurs restrictions applicables à la création d'index spatiaux. Pour plus d'informations, consultez [Restrictions sur les index spatiaux](#restrictions) dans cette rubrique.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66014265"
   
 7.  Pour spécifier la colonne spatiale à indexer, cliquez sur **Ajouter**.  
   
-8.  Dans la boîte de dialogue **sélectionnez les colonnes dans le nom de** * \<la table>* , `geometry` sélectionnez `geography` une colonne de type ou en activant la case à cocher correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Sélectionner les colonnes à partir de** *\<table name>* , sélectionnez une colonne de type `geometry` ou `geography` en activant la case à cocher correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
   
 9. Vérifiez votre sélection de colonne dans la grille **Colonnes clés d'index** .  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66014265"
   
 11. Dans la page **Spatial** , spécifiez les valeurs que vous souhaitez utiliser pour les propriétés spatiales de l'index.  
   
-     Lorsque vous créez un index sur `geometry` une colonne de type, vous devez spécifier les coordonnées ***`X-min`*(,*`Y-min`*)** et ***`X-max`*(,*`Y-max`*)** de la zone englobante. Pour un index sur une `geography` colonne de type, les champs de cadre englobant sont en lecture seule après que vous avez spécifié le schéma de pavage de **grille géographique** , car le pavage de grille géographique n’utilise pas de cadre englobant.  
+     Lorsque vous créez un index sur une `geometry` colonne de type, vous devez spécifier les coordonnées **( *`X-min`* , *`Y-min`* )** et **( *`X-max`* , *`Y-max`* )** de la zone englobante. Pour un index sur une `geography` colonne de type, les champs de cadre englobant sont en lecture seule après que vous avez spécifié le schéma de pavage de **grille géographique** , car le pavage de grille géographique n’utilise pas de cadre englobant.  
   
      Si vous le souhaitez, vous pouvez spécifier des valeurs autres que les valeurs par défaut pour le champ **Cellules par objet** et pour la densité de grille à tout niveau du schéma de pavage. La quantité par défaut de cellules par objet est 16 pour [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou 8 pour [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou les versions supérieures, et la densité de grille par défaut est **Moyenne** pour [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

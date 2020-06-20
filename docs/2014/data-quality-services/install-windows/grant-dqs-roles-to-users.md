@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be74494f3cf06732ff49bcfd7c268df723fd957b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937596"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Affecter des rôles DQS aux utilisateurs
   Cette rubrique décrit comment créer des connexions SQL selon un principal Windows, et accorde ces rôles de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) sur la base de données DQS_MAIN.  
@@ -50,6 +49,6 @@ ms.locfileid: "65480559"
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer Data Quality Services](install-data-quality-services.md)   
- [Créer une connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Créer un compte de connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f06e60f052dad10b0e69ef0aa6a879e3d29d1f86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965639"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Convertir les types sans vérification de la conversion (Assistant Importation et Exportation SQL Server)
-  Utilisez la page **convertir les types sans vérification** de la conversion pour passer en revue les mappages que l’Assistant effectue lorsque l’Assistant ne peut [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pas localiser un ou plusieurs fichiers de conversion et de mappage de type de données. Cette page comprend des informations qui vous permettent d'identifier le fichier ou les fichiers manquants.  
+  Utilisez la page **convertir les types sans vérification** de la conversion pour passer en revue les mappages que l’Assistant effectue lorsque l’Assistant ne peut pas localiser un ou plusieurs [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fichiers de conversion et de mappage de type de données. Cette page comprend des informations qui vous permettent d'identifier le fichier ou les fichiers manquants.  
   
  Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   

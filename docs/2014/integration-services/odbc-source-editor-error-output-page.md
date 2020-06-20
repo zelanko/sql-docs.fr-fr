@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4653b963bd5e8f997832f153a09d87aaeef9c39c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964999"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Éditeur de source ODBC (page Sortie d'erreur)
   Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de source ODBC** pour sélectionner les options de gestion des erreurs.  
@@ -41,7 +40,7 @@ ms.locfileid: "66057129"
 ### <a name="column"></a>Colonne  
  Non utilisé.  
   
-### <a name="error"></a>Error  
+### <a name="error"></a>Erreur  
  Sélectionnez la façon dont la source ODBC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
 ### <a name="truncation"></a>Troncation  

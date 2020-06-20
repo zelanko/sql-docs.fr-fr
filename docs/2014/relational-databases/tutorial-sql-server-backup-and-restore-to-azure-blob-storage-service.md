@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3eee1449ec42285d5a95ac33d91f439dcd131ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002493"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
   Bienvenue dans le Prise en main avec SQL Server didacticiel sauvegarde et restauration avec le service de stockage d’objets BLOB Azure. Ce didacticiel vous aide à comprendre comment écrire des sauvegardes et les restaurer à partir du service Stockage Blob Azure.  
@@ -23,7 +22,7 @@ ms.locfileid: "70176114"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel montre comment créer un compte de stockage Windows et un conteneur d'objets blob, créer des informations d'identification pour accéder au compte de stockage, écrire une sauvegarde dans le service d'objet blob et effectuer une restauration simple. Ce didacticiel est divisé en quatre leçons :  
   
- [Leçon 1 : Créer des objets de stockage Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Leçon 1 : créer des objets de stockage Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  Dans cette leçon, vous allez créer un compte de stockage Azure et un conteneur d’objets blob.  
   
  [Leçon 2 : Créer des informations d'identification SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
@@ -51,6 +50,6 @@ ms.locfileid: "70176114"
   
 1.  [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

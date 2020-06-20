@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c448d4092ff08b6682b5e9785874cfca53e2091
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0e6cc3a63f5fd542215d04cd3858d743af9d3f85
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002893"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertion de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
-  Un mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans le bloc ** \< after>** , mais pas dans le bloc ** \< Before>** correspondant. Dans ce cas, le mise à jour insère l’enregistrement dans le bloc ** \< after>** dans la base de données.  
+  Un mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans le **\<after>** bloc mais pas dans le **\<before>** bloc correspondant. Dans ce cas, le mise à jour insère l’enregistrement dans le **\<after>** bloc dans la base de données.  
   
  Voici le format du code de mise à jour pour une opération d'insertion :  
   
@@ -64,13 +63,13 @@ ms.locfileid: "82717464"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<avant le bloc>  
- Le bloc ** \< before>** peut être omis pour une opération d’insertion. Si l' `mapping-schema` attribut facultatif n’est pas spécifié, le ** \<>ElementName** qui est spécifié dans le mise à jour est mappé à une table de base de données et les éléments ou attributs enfants sont mappés aux colonnes de la table.  
+## <a name="before-block"></a>\<before>Plage  
+ Le **\<before>** bloc peut être omis pour une opération d’insertion. Si l' `mapping-schema` attribut facultatif n’est pas spécifié, le **\<ElementName>** spécifié dans le mise à jour est mappé à une table de base de données et les éléments ou attributs enfants sont mappés aux colonnes de la table.  
   
-## <a name="after-block"></a>\<après> bloc  
- Vous pouvez spécifier un ou plusieurs enregistrements dans le bloc ** \< after>** .  
+## <a name="after-block"></a>\<after>Plage  
+ Vous pouvez spécifier un ou plusieurs enregistrements dans le **\<after>** bloc.  
   
- Si le bloc ** \< after>** ne fournit pas de valeur pour une colonne particulière, mise à jour utilise la valeur par défaut spécifiée dans le schéma annoté (si un schéma a été spécifié). Si le schéma ne spécifie pas de valeur par défaut pour la colonne, mise à jour ne spécifie pas de valeur explicite pour cette colonne et, à la place, affecte la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valeur par défaut (si elle est spécifiée) à cette colonne. S'il n'y a aucune valeur par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et que la colonne accepte une valeur NULL, le code de mise à jour attribue la valeur NULL à la colonne. Si la colonne ne possède pas de valeur par défaut et qu'elle n'accepte pas de valeur NULL, la commande échoue et le code de mise à jour retourne une erreur. L'attribut `updg:returnid` facultatif est utilisé pour retourner la valeur d'identité générée par le système lorsqu'un enregistrement est ajouté dans une table avec une colonne de type IDENTITY.  
+ Si le **\<after>** bloc ne fournit pas de valeur pour une colonne particulière, mise à jour utilise la valeur par défaut spécifiée dans le schéma annoté (si un schéma a été spécifié). Si le schéma ne spécifie pas de valeur par défaut pour la colonne, mise à jour ne spécifie pas de valeur explicite pour cette colonne et, à la place, affecte la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valeur par défaut (si elle est spécifiée) à cette colonne. S'il n'y a aucune valeur par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et que la colonne accepte une valeur NULL, le code de mise à jour attribue la valeur NULL à la colonne. Si la colonne ne possède pas de valeur par défaut et qu'elle n'accepte pas de valeur NULL, la commande échoue et le code de mise à jour retourne une erreur. L'attribut `updg:returnid` facultatif est utilisé pour retourner la valeur d'identité générée par le système lorsqu'un enregistrement est ajouté dans une table avec une colonne de type IDENTITY.  
   
 ## <a name="updgid-attribute"></a>Attribut updg:id  
  Si le code de mise à jour insère uniquement des enregistrements, le code de mise à jour ne requiert pas l'attribut `updg:id`. Pour plus d’informations sur `updg:id` , consultez [mise à jour des données à l’aide de XML codes &#40;SQLXML 4,0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md).  
@@ -79,7 +78,7 @@ ms.locfileid: "82717464"
  Lorsqu'un code de mise à jour insère un enregistrement dans une table possédant une colonne de type IDENTITY, le code de mise à jour peut capturer la valeur attribuée au système à l'aide de l'attribut `updg:at-identity` facultatif. Le code de mise à jour peut utiliser ensuite cette valeur dans les opérations suivantes. Après l'exécution du code de mise à jour, vous pouvez retourner la valeur d'identité générée en spécifiant l'attribut `updg:returnid`.  
   
 ## <a name="updgguid-attribute"></a>Attribut updg:guid  
- L'attribut `updg:guid` est un attribut facultatif qui génère un identificateur global unique. Cette valeur reste dans la portée pour l’intégralité du bloc de ** \<>de synchronisation** dans lequel elle est spécifiée. Vous pouvez utiliser cette valeur n’importe où dans le bloc de ** \<>de synchronisation** . L’attribut appelle la `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonction pour générer l’identificateur unique.  
+ L'attribut `updg:guid` est un attribut facultatif qui génère un identificateur global unique. Cette valeur reste dans la portée pour le **\<sync>** bloc entier dans lequel elle est spécifiée. Vous pouvez utiliser cette valeur n’importe où dans le **\<sync>** bloc. L’attribut appelle la `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonction pour générer l’identificateur unique.  
   
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l’aide des exemples suivants, vous devez respecter les exigences spécifiées dans la [Configuration requise pour l’exécution d’exemples SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -90,7 +89,7 @@ ms.locfileid: "82717464"
   
 -   La plupart des exemples sont basés sur l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Toutes les mises à jour sont appliquées aux tables de cette base de données.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>R. Insertion d'un enregistrement à l'aide d'un code de mise à jour  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Insertion d'un enregistrement à l'aide d'un code de mise à jour  
  Ce code de mise à jour centré sur les attributs insère un enregistrement dans la table HumanResources.Employee dans la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  Dans cet exemple, le code de mise à jour ne spécifie pas de schéma de mappage. Par conséquent, le code de mise à jour utilise le mappage par défaut, dans lequel le nom d'élément est mappé à un nom de table et les attributs ou éléments enfants sont mappés aux colonnes dans cette table.  
@@ -157,7 +156,7 @@ ms.locfileid: "82717464"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Insertion de plusieurs enregistrements à l'aide d'un code de mise à jour  
- Ce code de mise à jour ajoute deux nouveaux enregistrements de décalage à la table HumanResources.Shift. Mise à jour ne spécifie pas le bloc facultatif ** \< before>** .  
+ Ce code de mise à jour ajoute deux nouveaux enregistrements de décalage à la table HumanResources.Shift. Mise à jour ne spécifie pas le **\<before>** bloc facultatif.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -184,7 +183,7 @@ ms.locfileid: "82717464"
   
      Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Une autre version de cet exemple est un mise à jour qui utilise deux blocs ** \< after>** séparés au lieu d’un bloc pour insérer les deux employés. Cette opération est valide et peut être encodée comme suit :  
+ Une autre version de cet exemple est un mise à jour qui utilise deux **\<after>** blocs séparés au lieu d’un bloc pour insérer les deux employés. Cette opération est valide et peut être encodée comme suit :  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -248,7 +247,7 @@ ms.locfileid: "82717464"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Utilisation de l'attribut at-identity pour récupérer la valeur ayant été insérée dans la colonne de type IDENTITY  
  Le code de mise à jour suivant insère deux enregistrements : un dans la table Sales.SalesOrderHeader et un autre dans la table Sales.SalesOrderDetail.  
   
- En premier lieu, le code de mise à jour ajoute un enregistrement à la table Sales.SalesOrderHeader. Dans cette table, la colonne SalesOrderID est une colonne de type IDENTITY. Par conséquent, lorsque vous ajoutez cet enregistrement à la table, le code de mise à jour utilise l'attribut `at-identity` pour capturer la valeur SalesOrderID attribuée en tant que « x » (valeur d'espace réservé). Le code spécifie ensuite cette `at-identity` variable comme valeur de l’attribut SalesOrderID dans l' \< élément Sales. SalesOrderDetail>.  
+ En premier lieu, le code de mise à jour ajoute un enregistrement à la table Sales.SalesOrderHeader. Dans cette table, la colonne SalesOrderID est une colonne de type IDENTITY. Par conséquent, lorsque vous ajoutez cet enregistrement à la table, le code de mise à jour utilise l'attribut `at-identity` pour capturer la valeur SalesOrderID attribuée en tant que « x » (valeur d'espace réservé). Le code spécifie ensuite cette `at-identity` variable en tant que valeur de l’attribut SalesOrderID dans l' \<Sales.SalesOrderDetail> élément.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -382,7 +381,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  Un schéma XSD est spécifié dans ce code de mise à jour (autrement dit, il n'y a aucun mappage par défaut des éléments et des attributs du code de mise à jour). Le schéma fournit le mappage nécessaire des éléments et des attributs aux tables et aux colonnes de base de données.  
   
- Le schéma suivant (CustOrderSchema. Xml) décrit un élément ** \< CustOrder>** qui se compose des attributs **OrderID** et **EmployeeID** . Pour rendre le schéma plus intéressant, une valeur par défaut est assignée à l’attribut **EmployeeID** . Un code de mise à jour utilise uniquement la valeur par défaut d'un attribut pour les opérations d'insertion, puis uniquement si le code de mise à jour ne spécifie pas cet attribut.  
+ Le schéma suivant (CustOrderSchema.xml) décrit un **\<CustOrder>** élément qui se compose des attributs **OrderID** et **EmployeeID** . Pour rendre le schéma plus intéressant, une valeur par défaut est assignée à l’attribut **EmployeeID** . Un code de mise à jour utilise uniquement la valeur par défaut d'un attribut pour les opérations d'insertion, puis uniquement si le code de mise à jour ne spécifie pas cet attribut.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -481,7 +480,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- Le schéma XSD spécifie **nillable = "true"** pour l’élément ** \<>fname** . Le code de mise à jour suivant utilise ce schéma :  
+ Le schéma XSD spécifie **nillable = "true"** pour l' **\<fname>** élément. Le code de mise à jour suivant utilise ce schéma :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -501,7 +500,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Mise à jour spécifie `xsi:nil` pour l’élément ** \< fname>** dans le bloc ** \< after>** . Par conséquent, lorsque ce code de mise à jour est exécuté, une valeur NULL est insérée pour la colonne first_name dans la table.  
+ Mise à jour spécifie `xsi:nil` pour l' **\<fname>** élément dans le **\<after>** bloc. Par conséquent, lorsque ce code de mise à jour est exécuté, une valeur NULL est insérée pour la colonne first_name dans la table.  
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
@@ -529,7 +528,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. Spécification d'espaces de noms dans un code de mise à jour  
  Dans un code de mise à jour, vous pouvez avoir des éléments qui appartiennent à un espace de noms déclaré dans le même élément dans le code de mise à jour. Dans ce cas, le schéma correspondant doit également déclarer le même espace de noms et l'élément doit appartenir à cet espace de noms cible.  
   
- Par exemple, dans l’mise à jour suivant (UpdateGram-ElementHavingNamespace. Xml), l’élément ** \< Order>** appartient à un espace de noms déclaré dans l’élément.  
+ Par exemple, dans le mise à jour (UpdateGram-ElementHavingNamespace.xml) suivant, l' **\<Order>** élément appartient à un espace de noms déclaré dans l’élément.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -616,7 +615,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 -   Les espaces de noms qui figurent dans la portée du fragment XML inséré dans la colonne `xml` sont conservés et leurs déclarations d'espace de noms sont ajoutées à l'élément du plus haut niveau du fragment inséré.  
   
- Par exemple, dans l’mise à jour suivant (SampleUpdateGram. Xml), l’élément ** \< desc>** met à jour la colonne ProductDescription dans la table production>ProductModel de l' [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] exemple de base de données. Le résultat de cette mise à jour est que le contenu XML de la colonne ProductDescription est mis à jour avec le contenu XML de l’élément ** \< desc>** .  
+ Par exemple, dans le mise à jour (SampleUpdateGram.xml) suivant, l' **\<Desc>** élément met à jour la colonne ProductDescription de la table ProductModel de Production>de l' [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] exemple de base de données. Le résultat de cette mise à jour est que le contenu XML de la colonne ProductDescription est mis à jour avec le contenu XML de l' **\<Desc>** élément.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

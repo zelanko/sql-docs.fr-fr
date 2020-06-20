@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f1442011ddbdb010e5f498dbf3b42fa9ba333ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a5d0283837d9344eaf529cf9818e6629cdc68065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060169"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Création de sections CDATA à l'aide de sql:use-cdata (SQLXML 4.0)
   En XML, les sections CDATA sont utilisées pour l'échappement des blocs de texte qui contiennent des caractères qui seraient reconnus comme caractères de balisage dans un autre contexte.  
   
- Une base de données dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut parfois contenir des caractères qui sont traités comme des caractères de balisage par l’analyseur XML. par exemple, les crochets pointus ( \< et >), le symbole « inférieur à » ou « égal à » (<=) et le signe & (&) sont traités comme des caractères de balisage. Toutefois, vous pouvez encapsuler ce type de caractères spéciaux dans une section CDATA afin de les empêcher d'être traités comme des caractères de balisage. Le texte dans la section CDATA est traité par l'analyseur XML comme du texte brut.  
+ Une base de données dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut parfois contenir des caractères qui sont traités comme des caractères de balisage par l’analyseur XML. par exemple, les crochets pointus ( \< and > ), le symbole « inférieur à » ou « égal à » (<=) et les esperluette (&) sont traités comme des caractères de balisage. Toutefois, vous pouvez encapsuler ce type de caractères spéciaux dans une section CDATA afin de les empêcher d'être traités comme des caractères de balisage. Le texte dans la section CDATA est traité par l'analyseur XML comme du texte brut.  
   
  L'annotation `sql:use-cdata` est utilisée pour spécifier que les données retournées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être encapsulées dans une section CDATA (autrement dit, elle indique si la valeur d'une colonne spécifiée par `sql:field` doit être placée dans une section CDATA). L'annotation `sql:use-cdata` peut être spécifiée uniquement sur des éléments qui mappent à une colonne de base de données.  
   
@@ -40,8 +39,8 @@ ms.locfileid: "82703651"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqluse-cdata-on-an-element"></a>R. Spécification de sql:use-cdata sur un élément  
- Dans le schéma suivant, `sql:use-cdata` a la valeur 1 (true) pour le ** \<>AddressLine1** dans l’élément ** \< Address>** . En conséquence, les données sont retournées dans une section CDATA.  
+### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Spécification de sql:use-cdata sur un élément  
+ Dans le schéma suivant, `sql:use-cdata` a la valeur 1 (true) pour le **\<AddressLine1>** au sein de l' **\<Address>** élément. En conséquence, les données sont retournées dans une section CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

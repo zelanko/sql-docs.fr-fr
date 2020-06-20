@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9aa17642a2b31bcee69fcdc20c20bc506a90557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002370"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
   Fournit des propriétés pour l'affichage des informations relatives à un fichier journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,7 +45,7 @@ class SQLErrorLogFile
 |LogFileSize|Type de données : `uint32`<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Taille du fichier journal, en octets.|  
 |Nom|Type de données : `string`<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom du fichier journal.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 |||  
 |-|-|  
@@ -55,7 +54,7 @@ class SQLErrorLogFile
 |Espace de noms|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant extrait les informations relatives à tous les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour exécuter l’exemple, remplacez \< *Instance_Name*> par le nom de l’instance, par exemple, « Instance1 ».  
+ L'exemple suivant extrait les informations relatives à tous les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour exécuter l’exemple, remplacez \<*Instance_Name*> par le nom de l’instance, par exemple « Instance1 ».  
   
 ```  
 on error resume next  
@@ -82,16 +81,16 @@ Next
 ```  
   
 ## <a name="security"></a>Sécurité  
- Pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un fichier journal via WMI, vous devez disposer des autorisations suivantes sur les ordinateurs locaux et distants :  
+ Pour vous connecter à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal via WMI, vous devez disposer des autorisations suivantes sur les ordinateurs locaux et distants :  
   
 -   Accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement10** . Par défaut, tout le monde dispose de l'accès en lecture via l'autorisation Activer le compte.  
   
     > [!NOTE]  
     >  Pour plus d’informations sur la vérification des autorisations WMI, consultez la section sécurité de la rubrique [afficher les fichiers journaux hors connexion](../logs/view-offline-log-files.md).  
   
--   Autorisation en lecture sur le dossier qui contient les journaux des erreurs. Par défaut, les journaux des erreurs se trouvent dans le chemin d’accès suivant (où \< *lecteur>* représente le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lecteur \<sur lequel vous avez installé et *InstanceName*> est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le nom de l’instance de) :  
+-   Autorisation en lecture sur le dossier qui contient les journaux des erreurs. Par défaut, les journaux des erreurs se trouvent dans le chemin d’accès suivant (où \<*Drive> * représente le lecteur sur lequel vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le \<*InstanceName*> nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) :  
   
-     **> de lecteur : \Program Files\Microsoft SQL Server\MSSQL11. \<** **\< Nom_instance> \MSSQL\Log**  
+     ** \<Drive> : \Program Files\Microsoft SQL Server\MSSQL11** **. \<InstanceName> \MSSQL\Log**  
   
  Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [connexion à WMI à distance à partir de Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   

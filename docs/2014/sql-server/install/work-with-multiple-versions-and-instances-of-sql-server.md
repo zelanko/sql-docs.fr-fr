@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76c0ec3da8661db4b7d132d27f5759d1d3571774
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041696"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Utiliser plusieurs versions et instances de SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)], d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur. Vous pouvez également mettre à niveau des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur où des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont déjà installées. Pour connaître les scénarios de mise à niveau pris en charge, consultez [Mises à niveau de la version et de l’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -70,7 +69,7 @@ ms.locfileid: "63205307"
   
  Exemples : Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’installation de compact, consultez [installer SQL Server 2014 à partir de l’assistant Installation &#40;&#41;d' ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)installation. Pour plus d’informations sur la désinstallation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, consultez [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
+ Pour plus d’informations sur l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation de compact, consultez [installer SQL Server 2014 à partir de l’assistant installation &#40;&#41;d' ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)installation. Pour plus d’informations sur la désinstallation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, consultez [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] côte à côte avec les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur exécutant déjà les instances d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si une instance par défaut existe sur l'ordinateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être installé comme instance nommée.  
@@ -93,7 +92,7 @@ ms.locfileid: "63205307"
 ## <a name="see-also"></a>Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Mise à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Compatibilité descendante](../../../2014/getting-started/backward-compatibility.md)   

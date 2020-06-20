@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950989"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Éditeur de tâche MSMQ (page Recevoir)
   La page **Recevoir** de la boîte de dialogue **Éditeur de tâche MSMQ** permet de configurer une tâche MSMQ pour recevoir des messages MSMQ (Message Queuing) [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -85,7 +84,7 @@ ms.locfileid: "66057671"
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
   
  **Variable**  
- Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable, ou cliquez sur, \<**New variable...**> puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -102,7 +101,7 @@ ms.locfileid: "66057671"
  **Rubriques connexes :** [Sélectionner un package](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Message de type chaîne  
- **Compare**  
+ **Comparer**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Value|Description|  
@@ -116,7 +115,7 @@ ms.locfileid: "66057671"
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
 ### <a name="messagetype--string-message-to-variable"></a>MessageType = Message de type chaîne pour la variable  
- **Compare**  
+ **Comparer**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Value|Description|  
@@ -130,7 +129,7 @@ ms.locfileid: "66057671"
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
  **Variable**  
- Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable qui doit contenir le message reçu, ou cliquez sur \<**New variable...**> puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -139,6 +138,6 @@ ms.locfileid: "66057671"
  [Éditeur de tâche MSMQ &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur de tâche MSMQ &#40;page envoyer&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Page expressions](expressions/expressions-page.md)   
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [Tâche MSMQ](control-flow/message-queue-task.md)  
   
   

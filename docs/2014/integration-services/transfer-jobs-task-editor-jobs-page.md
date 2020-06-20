@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c430f08b4a86c981df5138c7f78e76b54e7de28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972830"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Éditeur de tâche de transfert de travaux (page Travaux)
   Utilisez la page **Travaux** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour spécifier les propriétés de copie d’un ou plusieurs travaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à une autre. Pour plus d'informations sur la tâche de transfert de travaux, consultez [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -29,10 +28,10 @@ ms.locfileid: "66054990"
   
 ## <a name="options"></a>Options  
  **Abord SourceConnection**  
- Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur source.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<New connection...>** pour créer une nouvelle connexion au serveur source.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<New connection...>** pour créer une connexion au serveur de destination.  
   
  **TransferAllJobs**  
  Déterminez si la tâche doit copier du serveur source au serveur de destination tous les travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou seulement ceux spécifiés.  
@@ -61,7 +60,7 @@ ms.locfileid: "66054990"
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des travaux de même nom existent déjà sur le serveur de destination.|  
 |**Remplacer**|La tâche remplace les travaux de même nom sur le serveur de destination.|  
-|**Saut**|La tâche ignore les travaux de même nom qui existent sur le serveur de destination.|  
+|**Ignorer**|La tâche ignore les travaux de même nom qui existent sur le serveur de destination.|  
   
  **EnableJobsAtDestination**  
  Déterminez si les travaux copiés sur le serveur de destination doivent être activés.  

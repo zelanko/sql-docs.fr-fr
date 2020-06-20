@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c922fb612faca72e9f9381990dc777301185cb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0527336a5d6774b1c7114d523d0847b3d10d6a3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965119"
 ---
 # <a name="multiple-transactions"></a>Transactions multiples
   Il est possible qu'un package inclue des transactions non liées entre elles dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Chaque fois qu'un conteneur, au milieu d'une hiérarchie de conteneurs imbriquée, ne prend pas en charge les transactions, les conteneurs au-dessus et au-dessous de lui dans la hiérarchie démarrent des transactions distinctes s'ils sont configurés pour prendre en charge les transactions. Les transactions sont validées ou annulées dans l'ordre, de la tâche la plus imbriquée dans la hiérarchie de conteneurs jusqu'au package. Cependant, si une transaction interne est validée, elle n'est pas annulée si une transaction externe est abandonnée.

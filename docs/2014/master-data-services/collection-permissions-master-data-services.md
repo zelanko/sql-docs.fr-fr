@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 47534b08e32f9e8fe585e4ad7fe2e36f6c6e8c8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a47c6937ace51d20986ccf04bb7d1f39fed9954c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484017"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971984"
 ---
 # <a name="collection-permissions-master-data-services"></a>Autorisations de collection (services de données de référence)
   Les autorisations de collection s'appliquent à toutes les collections d'une entité. Vous ne pouvez pas donner d'autorisation à une collection spécifique ; les autorisations s'appliquent à toutes les collections.  
@@ -29,7 +28,7 @@ ms.locfileid: "65484017"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'ensemble des collections et membres des collections sont affichés.<br /><br /> L'utilisateur ne peut pas ajouter ni supprimer de collections, et ne peut pas ajouter ni supprimer de membres dans la collection.|  
-|**Mise à jour**|Toutes les collections sont affichées et l'utilisateur peut ajouter et supprimer des collections.<br /><br /> L'utilisateur peut également ajouter et supprimer des membres dans la collection.|  
+|**Update**|Toutes les collections sont affichées et l'utilisateur peut ajouter et supprimer des collections.<br /><br /> L'utilisateur peut également ajouter et supprimer des membres dans la collection.|  
 |**Deny**|Aucune collection de l'entité n'est affichée.|  
   
 ## <a name="see-also"></a>Voir aussi  
