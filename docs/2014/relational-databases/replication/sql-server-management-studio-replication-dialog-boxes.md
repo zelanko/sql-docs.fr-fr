@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4806745bf735ada55bea12f16d23dfee4f3a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066561"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Boîtes de dialogue de réplication SQL Server Management Studio
-  Cette section contient des informations sur un certain nombre de boîtes de dialogue de réplication disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+  Cette section contient des informations sur un certain nombre de boîtes de dialogue de réplication disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
   
 -   [Sécurité de l'Agent d'instantané](snapshot-agent-security.md)  
   

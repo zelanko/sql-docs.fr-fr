@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e027ece4576907b9543c7fc6eb9cbe161b3c4323
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b79e57afac4509401acc69892eb1665ec73bf84
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060038"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Méthode GetCurrentCertificate (classe SecurityCertificate)
   Obtient le certificat de sécurité actuel.  
@@ -40,7 +39,7 @@ SHA , SQLInstance
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SecurityCertificate](securitycertificate-class.md) qui représente un certificat de sécurité.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -53,7 +52,7 @@ SHA , SQLInstance
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

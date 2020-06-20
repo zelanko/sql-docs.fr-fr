@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7788e58b24d45966b67e417d35f4b58927a39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056280"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964393"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SAP BW
   Utilisez l' **Éditeur du gestionnaire de connexions SAP BW** pour spécifier les propriétés à utiliser pour se connecter à un système SAP Netweaver BW version 7.  
@@ -82,7 +81,7 @@ ms.locfileid: "66056280"
 > [!NOTE]  
 >   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser l'équilibrage de charge** .  
   
- **Groupe**  
+ **Communauté**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez le nom du groupe de serveurs.  
   
 > [!NOTE]  

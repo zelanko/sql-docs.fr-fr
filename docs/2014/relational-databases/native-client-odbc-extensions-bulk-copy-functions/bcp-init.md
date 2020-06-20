@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d48b2a07e425e0863084c700c4de93d2776739
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019558"
 ---
 # <a name="bcp_init"></a>bcp_init
   Initialise l'opération de copie en bloc.  
@@ -74,7 +73,7 @@ eDirection
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Appelez **bcp_init** avant d’appeler une autre fonction de copie en bloc. **bcp_init** effectue les initialisations nécessaires pour une copie en bloc de données entre la station de travail et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  La fonction **bcp_init** doit être fournie avec un handle de connexion ODBC activé pour une utilisation avec des fonctions de copie en bloc. Pour activer le descripteur, utilisez [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_BCP défini sur SQL_BCP_ON sur un handle de connexion alloué, mais non connecté. La tentative d'assigner l'attribut sur un handle connecté provoque une erreur.  

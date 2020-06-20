@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c7c2f178391b93b1034d3e1bfb07ff9f7714ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67b585b58b6a90f3c75bb658216b8a76b0fe0eac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053201"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout (classe d'événements)
   La classe d’événements **Audit Logout** indique qu’un utilisateur s’est déconnecté de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions.  

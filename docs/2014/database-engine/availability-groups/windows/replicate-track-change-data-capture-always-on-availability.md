@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936550"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La réplication, la capture de données modifiées (CDC) et le suivi des modifications (CT) sont pris en charge sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aide à fournir des fonctionnalités haute disponibilité et de récupération de base de données supplémentaires.  
@@ -109,7 +108,7 @@ ms.locfileid: "62814055"
     ```  
   
     > [!NOTE]  
-    >  Vous devez créer les travaux au niveau de toutes les cibles possibles de basculement avant le basculement, et les marquer comme étant désactivés jusqu'à ce que le réplica de disponibilité sur un hôte devienne le nouveau réplica principal. Les travaux de capture de données modifiées s'exécutant au niveau de l'ancienne base de données principale doivent également être désactivés lorsque la base de données locale devient une base de données secondaire. Pour désactiver et activer des travaux, utilisez *@enabled* l’option de [Sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Pour plus d’informations sur la création de travaux de capture de données modifiées, consultez [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
+    >  Vous devez créer les travaux au niveau de toutes les cibles possibles de basculement avant le basculement, et les marquer comme étant désactivés jusqu'à ce que le réplica de disponibilité sur un hôte devienne le nouveau réplica principal. Les travaux de capture de données modifiées s'exécutant au niveau de l'ancienne base de données principale doivent également être désactivés lorsque la base de données locale devient une base de données secondaire. Pour désactiver et activer des travaux, utilisez l' *@enabled* option de [sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Pour plus d’informations sur la création de travaux de capture de données modifiées, consultez [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
 -   **Ajout de rôles de capture de données modifiées à un réplica de base de données principal AlwaysOn**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814055"
   
      Le nom d'écouteur de groupe de disponibilité ou le nom du nœud explicite peut être utilisé pour rechercher le réplica secondaire. Si le nom d'écouteur du groupe de disponibilité est utilisé, l'accès est dirigé vers un réplica secondaire approprié.  
   
-     Lorsque `sp_addlinkedserver` est utilisé pour créer un serveur lié afin d’accéder au serveur secondaire *@datasrc* , le paramètre est utilisé pour le nom de l’écouteur du groupe de disponibilité ou le *@provstr* nom du serveur explicite, et le paramètre est utilisé pour spécifier l’intention de lecture seule.  
+     Lorsque `sp_addlinkedserver` est utilisé pour créer un serveur lié afin d’accéder au serveur secondaire, le *@datasrc* paramètre est utilisé pour le nom de l’écouteur du groupe de disponibilité ou le nom du serveur explicite, et le *@provstr* paramètre est utilisé pour spécifier l’intention de lecture seule.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -205,18 +204,18 @@ ms.locfileid: "62814055"
 |||||  
 |-|-|-|-|  
 ||**Publisher**|Serveur de **distribution** <sup>3</sup>|**Abonné**|  
-|**Transactionnelle**|Oui<sup>1</sup>|Non|Oui<sup>2</sup>|  
+|**Transactionnelle**|Oui<sup>1</sup>|No|Oui<sup>2</sup>|  
 |**P2P**|Non|Non|Non|  
-|**Fusion**|Oui|Non|Oui<sup>2</sup>|  
-|**Instantané**|Oui|Non|Oui<sup>2</sup>|  
+|**Fusionner**|Oui|No|Oui<sup>2</sup>|  
+|**Instantané**|Oui|No|Oui<sup>2</sup>|  
   
  <sup>1</sup> n’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.  
   
  <sup>2</sup> le basculement vers la base de données de réplica est une procédure manuelle. Le basculement automatique n'est pas fourni.  
   
- <sup>3</sup> la base de données de distribution n’est pas [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prise en charge pour une utilisation avec ou la mise en miroir de bases de données.  
+ <sup>3</sup> la base de données de distribution n’est pas prise en charge pour une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données.  
   
-### <a name="considerations"></a>Éléments à prendre en considération  
+### <a name="considerations"></a>Considérations  
   
 -   La base de données de distribution n'est pas prise en charge en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données. La configuration de la réplication est couplée à l'instance de SQL Server sur laquelle le serveur de distribution est configuré ; par conséquent la base de données de distribution ne peut pas être mise en miroir ni répliquée. Pour fournir une haute disponibilité au serveur de distribution, utilisez un cluster de basculement SQL Server. Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814055"
   
 -   [Utiliser les données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Suivi des modifications**  
+ **Change tracking**  
   
 -   [Activer et désactiver le suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

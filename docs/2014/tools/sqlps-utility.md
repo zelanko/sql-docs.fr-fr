@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcce5bcbab747e9febb1ab3ac8de662a8d3974a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006916"
 ---
 # <a name="sqlps-utility"></a>sqlps (utilitaire)
   L'utilitaire `sqlps` démarre une session Windows PowerShell 2.0 avec les applets de commande et le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell chargés et inscrits. Vous pouvez entrer des scripts ou des commandes PowerShell qui utilisent les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell pour travailler avec des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leurs objets.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt le module `sqlps` PowerShell. Pour plus d’informations sur `sqlps` le module, consultez [importer le module sqlps](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt le module `sqlps` PowerShell. Pour plus d’informations sur le `sqlps` module, consultez [importer le module sqlps](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,28 +53,28 @@ ms.locfileid: "72798136"
  Spécifie que l'utilitaire `sqlps` ne doit pas charger de profil utilisateur. Les profils utilisateur enregistrent des alias, fonctions et variables fréquemment utilisés en vue de leur utilisation au cours de différentes sessions PowerShell.  
   
  **-OutPutFormat** { **Text** | **XML** }  
- Spécifie que `sqlps` la sortie de l’utilitaire doit être mise en forme en tant que chaînes de texte (**texte**) ou dans un format CLIXML sérialisé (**XML**).  
+ Spécifie que la sortie de l' `sqlps` utilitaire doit être mise en forme en tant que chaînes de texte (**texte**) ou dans un format CLIXML sérialisé (**XML**).  
   
  **-InPutFormat** { **Text** | **XML** }  
- Spécifie que l’entrée `sqlps` de l’utilitaire est mise en forme en tant que chaînes de texte (**texte**) ou dans un format CLIXML sérialisé (**XML**).  
+ Spécifie que l’entrée de l' `sqlps` utilitaire est mise en forme en tant que chaînes de texte (**texte**) ou dans un format CLIXML sérialisé (**XML**).  
   
  **-Command**  
  Spécifie la commande de l'utilitaire `sqlps` à utiliser. L' `sqlps` utilitaire exécute la commande, puis se ferme, sauf si **-NoExit** est également spécifié. Ne spécifiez pas d’autres commutateurs après **-Command**, car ils seront lus comme des paramètres de commande.  
   
  **-**  
- **-Command :** spécifie que `sqlps` l’utilitaire lit l’entrée à partir de l’entrée standard.  
+ **-Command :** spécifie que l' `sqlps` utilitaire lit l’entrée à partir de l’entrée standard.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Spécifie un bloc de commandes PowerShell à exécuter ; le bloc doit être placé entre des accolades : {}. *Script_block* peut être spécifié uniquement quand l' `sqlps` utilitaire est appelé à partir de **PowerShell** ou `sqlps` d’une autre session de l’utilitaire. *argument_array* est un tableau de variables PowerShell contenant les arguments pour les commandes PowerShell de *script_block*.  
+ Spécifie un bloc de commandes PowerShell à exécuter ; le bloc doit être placé entre des accolades : {}. *Script_block* peut être spécifié uniquement quand l' `sqlps` utilitaire est appelé à partir de **PowerShell** ou d’une autre session de l' `sqlps` utilitaire. *argument_array* est un tableau de variables PowerShell contenant les arguments pour les commandes PowerShell de *script_block*.  
   
  *string* [ *command_parameters* ]  
- Spécifie une chaîne qui contient les commandes PowerShell à exécuter. Utilisez le format **« & {*`command`*} »**. Les guillemets indiquent une chaîne, tandis que l’opérateur d’appel (& `sqlps` ) entraîne l’exécution de la commande par l’utilitaire.  
+ Spécifie une chaîne qui contient les commandes PowerShell à exécuter. Utilisez le format **« & { *`command`* } »**. Les guillemets indiquent une chaîne, tandis que l’opérateur d’appel (&) entraîne l' `sqlps` exécution de la commande par l’utilitaire.  
   
  [ **-?** |  **-Help** ]  
  Affiche le récapitulatif de la syntaxe des options de l'utilitaire `sqlps`.  
   
-## <a name="remarks"></a>Notes  
- L' `sqlps` utilitaire démarre l’environnement PowerShell (PowerShell. exe) et charge le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] module PowerShell. Le module, également nommé `sqlps`, charge et inscrit ces [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] composants logiciels enfichables PowerShell :  
+## <a name="remarks"></a>Remarques  
+ L' `sqlps` utilitaire démarre l’environnement PowerShell (PowerShell.exe) et charge le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] module PowerShell. Le module, également nommé `sqlps` , charge et inscrit ces [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] composants logiciels enfichables PowerShell :  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   

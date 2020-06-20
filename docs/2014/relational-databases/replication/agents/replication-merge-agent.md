@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3d74dcc6be62ae8a01d911a8404c7bc32fd651
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63216002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066619"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   L'Agent de fusion de réplication est un fichier exécutable d'utilitaire qui applique l'instantané initial contenu dans les tables de base de données aux Abonnés. Il fusionne également les modifications de données incrémentielles ayant eu lieu sur le serveur de publication après la création de l'instantané initial, puis harmonise les conflits soit en fonction des règles que vous configurez, soit à l'aide d'un programme de résolution personnalisé que vous créez.  
@@ -317,7 +316,7 @@ ms.locfileid: "63216002"
  Spécifie le nombre de threads source utilisés par l'Agent de fusion pour énumérer les modifications de la source. La source est l'Abonné au cours du téléchargement ascendant et le serveur de publication au cours du téléchargement descendant. La valeur par défaut est **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Nombre maximal de secondes pendant lesquelles le Agent de fusion attend lorsque le nombre de processus de fusion simultanés en cours d’exécution se trouve à la **@max_concurrent_merge** limite définie par la propriété de **sp_addmergepublication**. Si le nombre maximal de secondes est atteint et que l'Agent de fusion attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
+ Nombre maximal de secondes pendant lesquelles le Agent de fusion attend lorsque le nombre de processus de fusion simultanés en cours d’exécution se trouve à la limite définie par la **@max_concurrent_merge** propriété de **sp_addmergepublication**. Si le nombre maximal de secondes est atteint et que l'Agent de fusion attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Chemin d'accès à la base de données Jet (fichier .mdb) si **SubscriberType** a la valeur **2** (autorise une connexion à une base de données Jet sans nom de la source de données ODBC).  

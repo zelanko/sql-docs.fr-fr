@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964391"
 ---
 # <a name="save-a-copy-of-a-package"></a>Enregistrer une copie d'un package
   Cette procédure décrit comment enregistrer une copie d’un package dans le système de fichiers, dans le magasin de packages ou dans la base de données **msdb** dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous spécifiez un emplacement dans lequel enregistrer la copie du package, vous pouvez également mettre à jour le nom de celui-ci.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056264"
   
 1.  Dans l'Explorateur de solutions, double-cliquez sur le package dont vous voulez enregistrer une copie.  
   
-2.  Dans le menu **Fichier**, cliquez sur **Enregistrer une copie de \<fichier_package> sous**.  
+2.  Dans le menu **fichier** , cliquez sur **enregistrer une copie de \<package file> sous**.  
   
 3.  Dans la boîte de dialogue **Enregistrer une copie du package**, sélectionnez l’emplacement d’un package dans la liste **Emplacement du package**.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66056264"
   
 9. Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Integration Services &#40;des packages de&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)  
   

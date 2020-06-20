@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 87f06021e5a2f9e10f6b60836fe3889aab3e9f65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019813"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   Lie les données d'une variable de programme à une colonne de table pour une copie en bloc dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -143,7 +142,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Appelez [bcp_init](bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L’appel de **bcp_init** définit la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table cible pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
@@ -168,7 +167,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE est traité comme valeur de préfixe spéciale utilisée pour envoyer efficacement les données par segments au serveur. Le format des données avec ce préfixe particulier est :  
   
--   <SPECIAL_PREFIX> \< 0 ou plusieurs segments de données> <ZERO_CHUNK> où :  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> où :  
   
 -   SPECIAL_PREFIX est 0xFFFFFFFFFFFFFFFE  
   
