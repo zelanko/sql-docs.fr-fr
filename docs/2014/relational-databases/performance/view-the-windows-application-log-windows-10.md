@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1255e95833d9fc56abd1700f5acb0d2f49ebf77c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069016"
 ---
 # <a name="view-the-windows-application-log-windows"></a>Afficher le journal des applications Windows (Windows)
   Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour vous permettre d'utiliser le journal des applications Windows, chaque session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y enregistre des nouveaux événements. Contrairement au journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un nouveau journal des applications n'est pas créé chaque fois que vous démarrez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "63150441"
   
 2.  Dans l'Observateur d'événements, cliquez sur **Application**.  
   
-3.  Les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont identifiés par l’entrée **MSSQLSERVER** (les instances nommées sont identifiées par **MSSQL$** _<nom_instance>_ ) dans la colonne **Source**. Les événements de SQL Server Agent sont identifiés par l’entrée SQLSERVERAGENT (pour les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommées, les événements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sont identifiés par **SQLAgent$** \<*nom_instance*>). Les événements du service Microsoft Search sont identifiés par l'entrée **Microsoft Search**.  
+3.  Les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont identifiés par l’entrée **MSSQLSERVER** (les instances nommées sont identifiées par **MSSQL$** _<nom_instance>_ ) dans la colonne **Source**. Les événements de SQL Server Agent sont identifiés par l’entrée SQLSERVERAGENT (pour les instances nommées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] événements de l’agent sont identifiés par **SQLAgent $** \<*instance_name*> ). Les événements du service Microsoft Search sont identifiés par l'entrée **Microsoft Search**.  
   
 4.  Pour afficher le journal d’un autre ordinateur, cliquez avec le bouton droit sur **Observateur d’événements**, cliquez sur **Se connecter à un autre ordinateur** , et renseignez la boîte de dialogue **Sélectionner un ordinateur**.  
   

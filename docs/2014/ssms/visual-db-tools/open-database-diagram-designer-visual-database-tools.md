@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4fb2a6fc58d008dc0c69824282f5ac35b2bb6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14e3bdd491d30b2afe8ac943a36dc9b6f8964d30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064926"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>ouvrir le Concepteur de diagrammes de base de données (Visual Database Tools)
   L’outil visuel Concepteur de diagrammes de base de données permet de concevoir et de visualiser une base de données à laquelle vous êtes connecté. Lors du design d'une base de données, le Concepteur de bases de données permet de créer, de modifier ou de supprimer des tables, des colonnes, des clés, des index, des relations et des contraintes. Pour visualiser une base de données, vous pouvez créer un ou plusieurs schémas illustrant toutes les tables, colonnes, clés et relations, ou quelques-unes d'entre elles.  

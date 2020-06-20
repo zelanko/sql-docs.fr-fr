@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 173211cfa6c1e70d979f908c88433857fccd0201
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c655b5e9a406c3e1881c9dd199a92666377918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705751"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021121"
 ---
 # <a name="allocating-an-environment-handle"></a>Allocation d'un handle d'environnement
   Avant qu'une application puisse appeler toute fonction ODBC, elle doit initialiser l'environnement ODBC et allouer un handle d'environnement. Il s'agit du handle de contexte global et de l'espace réservé pour les autres handles dans ODBC. Pour ce faire, appelez **SQLAllocHandle** avec le paramètre *comme handletype* défini sur SQL_HANDLE_ENV et *InputHandle* défini sur SQL_NULL_HANDLE.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b037e317b629671f6ec5ea1fa90edfca6fafa627
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064893"
 ---
 # <a name="remove-joins-visual-database-tools"></a>Supprimer des jointures (Visual Database Tools)
   Si vous ne souhaitez pas que les tables soient liées par une jointure interne ou externe, vous pouvez supprimer celle-ci. Vous pouvez par exemple supprimer une jointure créée automatiquement entre deux tables par le [Concepteur de requêtes et de vues](visual-database-tools.md) .  

@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 965a79143ce11b44e52fcb664aee47cb69e3c1c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007490"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>Didacticiel : Assistant Paramétrage du moteur de base de données
+# <a name="tutorial-database-engine-tuning-advisor"></a>Tutoriel : Database Engine Tuning Advisor
   Bienvenue dans le Didacticiel Assistant Paramétrage du moteur de base de données. Cet outil examine la façon dont les requêtes sont traitées dans les bases de données que vous spécifiez, puis il recommande des moyens d'améliorer les performances du traitement des requêtes en modifiant les structures des bases de données telles que les index, les vues indexées et le partitionnement.  
   
  L’Assistant Paramétrage du moteur de base de données fournit deux interfaces utilisateur : une interface utilisateur graphique (GUI) et l’utilitaire en ligne de commande **dta** . L’interface utilisateur graphique facilite l’affichage des résultats des sessions de paramétrage, tandis que l’utilitaire en ligne de commande **dta** facilite l’intégration de la fonctionnalité Assistant Paramétrage du moteur de base de données aux scripts pour automatiser le paramétrage. De plus, l'Assistant Paramétrage du moteur de base de données peut accepter les entrées XML, ce qui permet de mieux contrôler la procédure de paramétrage.  
@@ -28,13 +27,13 @@ ms.locfileid: "63268371"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Dans ce didacticiel, vous allez apprendre à vous déplacer dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données et également à effectuer des tâches de base en utilisant à la fois l’interface graphique et l’utilitaire **dta** . Le didacticiel comprend les leçons suivantes :  
   
- [Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  Au cours de cette leçon, vous allez vous familiariser avec la nouvelle interface de l'Assistant Paramétrage du moteur de base de données et apprendrez comment définir les options d'affichage et la disposition.  
   
- [Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](lesson-2-using-database-engine-tuning-advisor.md)  
  Au cours de cette leçon, vous allez apprendre à effectuer des tâches de paramétrage de base en utilisant l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.  
   
- [Leçon 3 : Utilisation de l’utilitaire de ligne de commande dta](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Leçon 3 : Utilisation de l’utilitaire de ligne de commande dta](lesson-3-using-the-dta-command-prompt-utility.md)  
  Au cours de cette leçon, vous allez apprendre à démarrer l’utilitaire en ligne de commande **dta** et à exécuter des commandes de paramétrage simples.  
   
 ## <a name="requirements"></a>Spécifications  
@@ -50,6 +49,6 @@ ms.locfileid: "63268371"
 -   [Utilitaire dta](dta-utility.md) : cette rubrique propose des documents de référence sur l’utilitaire en ligne de commande et le fichier XML facultatif que vous pouvez utiliser pour contrôler le fonctionnement de l’utilitaire.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

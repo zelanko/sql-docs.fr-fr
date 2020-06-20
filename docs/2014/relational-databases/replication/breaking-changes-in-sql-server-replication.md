@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d354ea5104a58884866d5be3f06b64b29597b23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049475"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Dernières modifications dans la réplication SQL Server
   Cette rubrique décrit les changements importants apportés à la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

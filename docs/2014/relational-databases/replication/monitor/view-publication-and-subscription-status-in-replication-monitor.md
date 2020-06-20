@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049392"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Afficher l'état des publications et des abonnements dans le Moniteur de réplication
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le moniteur de réplication affiche des informations d’État pour les publications et les abonnements :  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] moniteur de réplication affiche des informations d’État pour les publications et les abonnements :  
   
 -   L'état d'une publication est déterminé par l'état de la priorité la plus élevée de ses abonnements. Par exemple, si un abonnement à une publication comporte une erreur et qu'un autre présente un problème de performances, un état d'erreur est affiché pour la publication.  
   
@@ -59,12 +58,12 @@ ms.locfileid: "62666934"
 ## <a name="publication-status-values"></a>Valeurs d'état des publications  
  Le tableau suivant montre les valeurs d'état des publications et leurs icônes correspondantes dans l'ordre de la priorité.  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Erreur|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
 |Critique pour les performances|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
 |Nouvelle tentative de la commande qui a échoué|![Icône d’IU : nouvelle tentative de l’agent de réplication](../media/repl-icon-retry.gif "Icône d’IU : nouvelle tentative de l’agent de réplication")|  
-|OK|Aucun|  
+|Ok|aucun|  
   
 ## <a name="subscription-status-values"></a>Valeurs d'état des abonnements  
  Les tableaux suivants montrent les valeurs d'état des abonnements et leurs icônes correspondantes dans l'ordre de la priorité. Un abonnement peut avoir deux états en même temps (par exemple, **Expire bientôt/Expiré** et **Nouvelle tentative de la commande qui a échoué**) ; l'état de haute priorité est affiché.  
@@ -73,9 +72,9 @@ ms.locfileid: "62666934"
   
 ### <a name="transactional-subscriptions"></a>Abonnements transactionnels  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Erreur|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
 |Critique pour les performances|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
 |Expire bientôt/Expiré|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
 |Abonnement non initialisé|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
@@ -85,9 +84,9 @@ ms.locfileid: "62666934"
   
 ### <a name="merge-subscriptions"></a>Abonnements de fusion  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Erreur|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
 |Critique pour les performances|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
 |Fusion longue|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
 |Expire bientôt/Expiré|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
@@ -98,9 +97,9 @@ ms.locfileid: "62666934"
   
 ### <a name="snapshot-subscriptions"></a>Abonnements d'instantanés  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Erreur|![Icône d’IU : erreur](../media/repl-icon-error.gif "Icône d’IU : erreur")|  
 |Expire bientôt/Expiré|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
 |Abonnement non initialisé|![Icône d’IU : avertissement](../media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
 |Nouvelle tentative de la commande qui a échoué|![Icône d’IU : nouvelle tentative de l’agent de réplication](../media/repl-icon-retry.gif "Icône d’IU : nouvelle tentative de l’agent de réplication")|  

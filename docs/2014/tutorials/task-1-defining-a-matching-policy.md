@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064842"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d’une stratégie de correspondance
   Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura un élément requis : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines de la règle. La règle utilise deux autres domaines : **nom du fournisseur** avec une valeur **de similarité** définie sur **70%** et **adresse de messagerie du contact** avec une valeur **de similarité** définie à **30%**.  
@@ -26,7 +25,7 @@ ms.locfileid: "65481312"
   
 2.  Dans la page **mapper** , sélectionnez **fichier Excel** pour **source de données**.  
   
-3.  Cliquez sur **Parcourir**, assurez-vous que filtre est défini sur **classeur Excel**, puis sélectionnez le fichier **cleaned Supplier List. xls** que vous avez exporté après avoir effectué l’activité de nettoyage.  
+3.  Cliquez sur **Parcourir**, assurez-vous que filtre est défini sur **classeur Excel**, puis sélectionnez le fichier de **List.xlsde fournisseur nettoyé** que vous avez exporté après avoir effectué l’activité de nettoyage.  
   
     > [!NOTE]  
     >  À la fin de cette activité, vous ne pourrez pas exporter les résultats car l'activité est principalement axées sur la définition d'une stratégie de correspondance. Vous allez créer un projet de qualité des données pour l'activité de correspondance, et l'exécuter pour supprimer les doublons de la liste des fournisseurs en utilisant cette stratégie de correspondance dans la leçon suivante.  

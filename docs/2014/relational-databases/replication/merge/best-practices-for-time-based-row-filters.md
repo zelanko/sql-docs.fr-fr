@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccaafe71d4137fd4b31eec412c1e35595861bdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049402"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Meilleures pratiques pour les filtres de lignes basés sur le temps
   Les utilisateurs d'applications ont souvent besoin d'un sous-ensemble de données d'une table basé sur le temps. Par exemple, un vendeur peut avoir besoin des données sur les commandes passées au cours de la dernière semaine tandis qu'un planificateur d'événements peut avoir besoin des données sur les événements qui auront lieu au cours de la semaine à venir. Dans de nombreux cas, pour accomplir cette tâche, les applications utilisent des requêtes qui contiennent la fonction `GETDATE()`. Considérons l'instruction de filtre de lignes suivante :  
@@ -26,7 +25,7 @@ ms.locfileid: "68210716"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Avec un filtre de ce type, il est généralement admis que deux événements se produisent systématiquement à l'exécution de l'Agent de fusion : les lignes qui satisfont aux critères de ce filtre sont répliquées vers les Abonnés, tandis que celles qui n'y satisfont plus sont nettoyées sur ceux-ci. (Pour plus d’informations sur le `HOST_NAME()`filtrage avec, consultez [filtres de lignes paramétrables](parameterized-filters-parameterized-row-filters.md).) Toutefois, la réplication de fusion réplique et nettoie uniquement les données qui ont été modifiées depuis la dernière synchronisation, quelle que soit la façon dont vous définissez un filtre de lignes pour ces données.  
+ Avec un filtre de ce type, il est généralement admis que deux événements se produisent systématiquement à l'exécution de l'Agent de fusion : les lignes qui satisfont aux critères de ce filtre sont répliquées vers les Abonnés, tandis que celles qui n'y satisfont plus sont nettoyées sur ceux-ci. (Pour plus d’informations sur le filtrage avec `HOST_NAME()` , consultez [filtres de lignes paramétrables](parameterized-filters-parameterized-row-filters.md).) Toutefois, la réplication de fusion réplique et nettoie uniquement les données qui ont été modifiées depuis la dernière synchronisation, quelle que soit la façon dont vous définissez un filtre de lignes pour ces données.  
   
  Pour que la réplication de fusion traite une ligne, les données contenues dans celle-ci doivent satisfaire aux critères du filtre de lignes et avoir changé depuis la dernière synchronisation. Dans le cas de la table **SalesOrderHeader** , **OrderDate** est entré lorsqu'une ligne est insérée. Les lignes sont répliquées vers l'Abonné comme prévu car l'insertion constitue une modification de données. Toutefois, s'il existe des lignes sur l'Abonné qui ne satisfont plus aux critères de filtre (relatives en l'occurrence aux commandes qui datent de plus de sept jours), elles ne sont supprimées de l'Abonné que si elles ont été mises à jour pour une raison quelconque.  
   

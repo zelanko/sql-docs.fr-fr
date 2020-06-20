@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1be28a98e9ff0d17cb577736324320819c650b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484063"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064789"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>Tâche 11 : Publication de la base de connaissances
   Dans cette tâche, vous allez publier la base de connaissances. Une base de connaissances publiée peut être utilisée pour les activités de nettoyage ou de mise en correspondance dans un projet de qualité des données.  

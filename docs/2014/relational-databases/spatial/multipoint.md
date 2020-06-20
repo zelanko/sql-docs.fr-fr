@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c06ed0be91d64e02f30d6ef4fbebb68e3b9a1272
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc25a2ea7f37086722d83113603ef178b43d86b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003292"
 ---
 # <a name="multipoint"></a>MultiPoint
   Un `MultiPoint` est une collection de zéro ou plusieurs points. La limite d'une instance `MultiPoint` est vide.  
