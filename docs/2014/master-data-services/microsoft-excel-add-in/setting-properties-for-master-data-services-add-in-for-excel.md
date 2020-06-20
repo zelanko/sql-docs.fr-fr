@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a041133bf26865404da6a883992176b19e837c78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da59ce10c28562e4f91796db7efb29b257ffbc78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960819"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Définition des propriétés pour le complément Master Data Services pour Excel
   Les paramètres du complément Master Data Services pour Excel déterminent la façon dont les données sont chargées à partir de MDS dans le complément Excel et la façon dont les données sont publiées du complément Excel vers MDS.  

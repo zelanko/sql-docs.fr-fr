@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f5fa616116b4a6842143b6950905de4b8db0063
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058260"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968339"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Éditeur du gestionnaire de connexions HTTP (page Proxy)
   Utilisez l'onglet **Proxy** de la boîte de dialogue **Éditeur du gestionnaire de connexions HTTP** pour configurer le gestionnaire de connexions HTTP afin d'utiliser un serveur proxy. Une connexion HTTP permet à un package d'accéder à un serveur Web via HTTP pour l'envoi et la réception de fichiers.  
@@ -45,7 +44,7 @@ ms.locfileid: "66058260"
  **Mot de passe**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
- **Domain**  
+ **Domaine**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Liste de contournement proxy**  
@@ -54,7 +53,7 @@ ms.locfileid: "66058260"
  **Ajouter**  
  Tapez une adresse pour laquelle vous souhaitez que le gestionnaire de connexions HTTP n'utilise pas le serveur proxy.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez une adresse, puis supprimez-la en cliquant sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  

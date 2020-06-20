@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11eae15e50c26c4abde212ef273d6ede63ffe30d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953887"
 ---
 # <a name="clr-hosted-environment"></a>Environnement hébergé CLR
   Le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework est un environnement qui exécute de nombreux langages de programmation modernes, y compris [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. Le CLR propose une mémoire récupérée par le garbage collector, un threading préemptif, des services de métadonnées (réflexion de type), la vérifiabilité du code et la sécurité d'accès du code. Le CLR utilise les métadonnées pour rechercher et charger des classes, placer des instances en mémoire, résoudre des appels de méthode, générer un code natif, appliquer la sécurité et définir les limites du contexte d'exécution.  
@@ -123,8 +122,8 @@ ms.locfileid: "62922563"
 |-|-|-|-|  
 |Jeu d'autorisations|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sécurité d'accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Non restreint|  
-|Restrictions du modèle de programmation|Oui|Oui|Aucune restriction|  
-|Vérifiabilité requise|Oui|Oui|Non|  
+|Restrictions du modèle de programmation|Yes|Yes|Sans restriction|  
+|Vérifiabilité requise|Yes|Oui|No|  
 |Possibilité d'appeler du code natif|Non|Non|Oui|  
   
  SAFE est le mode le plus fiable et sécurisé avec des restrictions associées quant au modèle de programmation autorisé. Les assemblys SAFE bénéficient d'autorisations suffisantes pour s'exécuter, effectuer des calculs et avoir accès à la base de données locale. Les assemblys SAFE doivent être de type sécurisé vérifié et ne sont pas autorisés à appeler du code non managé.  

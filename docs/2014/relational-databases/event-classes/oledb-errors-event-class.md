@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97918f1be9c5256fe05c873841ceca98fff3917f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62961065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052850"
 ---
 # <a name="oledb-errors-event-class"></a>Classe d'événements OLEDB Errors
   La classe d’événements OLEDB Errors intervient dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quand un appel à un fournisseur OLE DB retourne une erreur. Utilisez cette classe d'événements dans vos traces afin d'afficher un HRESULT d'échec provenant d'un fournisseur OLE DB.  
@@ -34,7 +33,7 @@ ms.locfileid: "62961065"
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *base de données* ou celui de la *base de données* par défaut si aucune instruction USE n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|Error|`int`|HRESULT retourné par le fournisseur.|31|Oui|  
+|Erreur|`int`|HRESULT retourné par le fournisseur.|31|Oui|  
 |EventClass|`int`|Type d’événement = 61.|27|Non|  
 |EventSequence|`int`|Séquence de la classe d'événements OLE DB dans le lot.|51|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  

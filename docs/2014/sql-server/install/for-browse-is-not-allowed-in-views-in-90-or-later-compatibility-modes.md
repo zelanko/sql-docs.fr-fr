@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4811a3df80257b1e2d0e903fad562568eeec4ea2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 251e0ae2ff6f19dfcff3b0f8056f6697c1bfc40d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012617"
 ---
 # <a name="for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes"></a>L'option FOR BROWSE n'est pas autorisée dans les vues en mode de compatibilité 90 ou ultérieur
   Le Conseiller de mise à niveau a détecté qu'une vue est définie à l'aide de la clause FOR BROWSE. La clause FOR BROWSE est autorisée (et ignorée) dans les vues lorsque le mode de compatibilité de la base de données est défini à 80. Elle n'est pas autorisée dans les vues si le mode de compatibilité de la base de données est défini à 90 ou ultérieur.  

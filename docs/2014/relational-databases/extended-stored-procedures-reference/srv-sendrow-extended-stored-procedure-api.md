@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f39355222b491be27cc1b914401dcc459151e4bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35e640b00c0479d7db1d9a151aa6dcdc0eb67cc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050534"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procédure stockée étendue)
     
@@ -51,7 +50,7 @@ srvproc
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction **srv_sendrow** est appelée une fois pour chaque ligne envoyée au client. Toutes les lignes doivent être envoyées au client avant que les messages, valeurs d'état ou états d'achèvement ne soient envoyés avec **srv_sendmsg**, **srv_status**ou **srv_senddone**.  
   
  L'envoi d'une ligne dont toutes les colonnes n'ont pas été définies avec **srv_describe** oblige l'application de l'API de procédure stockée étendue à déclencher un message d'erreur d'information et à retourner FAIL au client. Dans ce cas, la ligne n'est pas envoyée.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1114ed9e206c49a5993028e180ed70bbb7bf1747
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010935"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003773"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Définir le compte du service du Lanceur de démon de filtre de texte intégral
   Cette rubrique explique comment définir le compte du service du Lanceur de démon de filtre de texte intégral SQL (MSSQLFDLauncher) à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service du Lanceur de démon de filtre de texte intégral SQL est utilisé par la recherche en texte intégral ssNoVersion pour démarrer le processus hôte de démon de filtre, qui gère les césures de mots et le filtrage de recherche en texte intégral. Ce service doit être en cours d'exécution pour que la recherche en texte intégral puisse être utilisée.  
@@ -32,7 +31,7 @@ ms.locfileid: "66010935"
   
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Dans **Gestionnaire de configuration SQL Server**, cliquez sur **services SQL Server**, cliquez avec le bouton droit sur ***`instance name`* lanceur de démon de filtre de texte intégral SQL ()**, puis cliquez sur **Propriétés**.  
+2.  Dans **Gestionnaire de configuration SQL Server**, cliquez sur **services SQL Server**, cliquez avec le bouton droit sur **lanceur de démon de filtre de texte intégral SQL ( *`instance name`* )**, puis cliquez sur **Propriétés**.  
   
 3.  Cliquez sur l’onglet **Ouvrir une session** de la boîte de dialogue, puis sélectionnez ou entrez le nom du compte sous lequel chaque processus créé par le service du Lanceur de démon de filtre de texte intégral SQL doit s’exécuter.  
   

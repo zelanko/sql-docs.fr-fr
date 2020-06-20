@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c206dfb30cd3ac2db3ec95f3b6c07bcef8b09f6a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004574"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Abonnement, Historique du serveur de publication vers le serveur de distribution (abonnement transactionnel)
   L'onglet **Historique du serveur de publication vers le serveur de distribution** affiche des informations détaillées sur l'Agent de lecture du journal, y compris l'état, l'historique, des messages d'information et d'éventuels messages d'erreur.  
@@ -25,21 +24,21 @@ ms.locfileid: "62626774"
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de lecture du journal à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de lecture du journal**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Affichage**  
+ **Afficher**  
  Sélectionnez les sessions de l'Agent de lecture du journal à afficher. L'Agent de lecture du journal s'exécute généralement en permanence : il se peut donc qu'il n'y ait qu'une session à afficher.  
   
  **État**  
  État de l'Agent de lecture du journal. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
--   Completed  
+-   Effectué  
   
 -   Nouvel essai  
   
 -   Exécution en cours  
   
- **Heure de début**  
+ **Heure de Début**  
  Heure d'ouverture de la session.  
   
  **Heure de fin**  

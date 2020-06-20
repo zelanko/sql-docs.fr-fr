@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 648449c65d3d6a1fd2c594025e336d0ace7ce98d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 62c87f71ea77a6a6a5b19c2faf913425aed816b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059415"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Contrainte d'attribution de particule unique
   Dans XSD, les modèles de contenu complexe sont soumis à la règle de la contrainte d'attribution de particule unique. Cette règle requiert que chaque élément d'un document d'instance corresponde sans ambiguïté à exactement une particule `<xsd:element>` ou `<xsd:any>` dans le modèle de contenu de son parent. Tout schéma qui contient un type avec un modèle de contenu potentiellement ambigu est rejeté.  

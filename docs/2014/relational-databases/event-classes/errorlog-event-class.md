@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a1509f9debebe1370c416bc780e4a367d3d88db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f718c40a990ecd6ef080a4611303db08518ea1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052987"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog (classe d'événements)
   La classe d'événements ErrorLog indique que des messages ont été consignés dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -32,7 +31,7 @@ ms.locfileid: "62662824"
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|Error|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
+|Erreur|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
 |EventClass|`int`|Type d’événement = 22.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  

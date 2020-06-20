@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5663ff72d643cb1488bbf2b2866e2cdd94a0f56f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960529"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Encoder et décoder des identificateurs SQL Server
   Les identificateurs délimités SQL Server contiennent parfois des caractères non pris en charge dans les chemins d'accès Windows PowerShell. Vous pouvez spécifier ces caractères en encodant leurs valeurs hexadécimales.  
@@ -25,7 +24,7 @@ ms.locfileid: "72797768"
 2.  **Pour traiter des caractères spéciaux :**  [Encodage d'un identificateur](#EncodeIdent), [Décodage d'un identificateur](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
- Les caractères qui ne sont pas pris en charge dans les noms de chemins d’accès Windows PowerShell peuvent être représentés, ou encodés, sous la forme du caractère « % » suivi de la valeur hexadécimale pour**%** le modèle binaire qui représente le caractère, comme dans « XX ». Le codage peut toujours être utilisé pour gérer des caractères qui ne sont pas pris en charge dans les chemins d'accès Windows PowerShell.  
+ Les caractères qui ne sont pas pris en charge dans les noms de chemins d’accès Windows PowerShell peuvent être représentés, ou encodés, sous la forme du caractère « % » suivi de la valeur hexadécimale pour le modèle binaire qui représente le caractère, comme dans « **%** XX ». Le codage peut toujours être utilisé pour gérer des caractères qui ne sont pas pris en charge dans les chemins d'accès Windows PowerShell.  
   
  L’applet de commande **Encode-SqlName** prend comme entrée un identificateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Elle génère une chaîne contenant tous les caractères qui ne sont pas pris en charge par le langage Windows PowerShell codés avec « % xx ». L’applet de commande **Decode-SqlName** prend comme entrée un identificateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] encodé et retourne l’identificateur d’origine.  
   

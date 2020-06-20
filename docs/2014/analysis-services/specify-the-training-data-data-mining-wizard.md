@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940260"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Spécifier les données d'apprentissage (Assistant Exploration de données)
   Utilisez la page **Spécifier les données d’apprentissage** pour identifier les colonnes à inclure dans la structure d’exploration de données. Vous pouvez sélectionner des colonnes à inclure même dans la structure même si vous ne les utilisez pas dans tous les modèles. Par exemple, si vous souhaitez procéder à une extraction des colonnes à partir du modèle d'exploration de données, vous pouvez les inclure dans la structure mais pas dans le modèle.  
@@ -33,7 +32,7 @@ ms.locfileid: "66068066"
  **Tables/Colonnes**  
  Affiche les tables et les colonnes sélectionnées dans la page précédente de l'Assistant.  
   
- **\<case à cocher>**  
+ **\<check box>**  
  Sélectionnez les colonnes à inclure dans la structure d'exploration de données.  
   
  Si votre source de données inclut des tables imbriquées ou plusieurs vues, développez la liste de colonnes pour afficher les tables imbriquées.  

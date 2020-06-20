@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 156c17d7dae5c4de07033a96f2e936448d8d02ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f53d6d3f623254d2b17996be7fd5b8235dca223
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037117"
 ---
 # <a name="cluster-disk-selection"></a>Sélection du disque du cluster
   Utilisez la page **Sélection du disque du cluster** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner la ressource disque de cluster partagée pour votre cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le disque de cluster est l'emplacement où les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seront placées.  
   
- Un disque de cluster partagé n’est pas obligatoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour les installations de cluster. Un serveur de fichiers SMB est un stockage pris [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en charge pour les installations de cluster de basculement et peut être spécifié à l’aide de la page **moteur de base de données-répertoires de données** avant d’effectuer l’installation.  
+ Un disque de cluster partagé n’est pas obligatoire pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] installations de cluster. Un serveur de fichiers SMB est un stockage pris en charge pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] installations de cluster de basculement et peut être spécifié à l’aide de la page **moteur de base de données-répertoires de données** avant d’effectuer l’installation.  
   
 > [!WARNING]  
 >  Si vous avez sélectionné Analysis Services pour l'installer, vous devez spécifier un disque de cluster partagé.  

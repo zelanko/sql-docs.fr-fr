@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951649"
 ---
 # <a name="derived-column-transformation-editor"></a>Éditeur de transformation de colonne dérivée
   Utilisez la boîte de dialogue **Éditeur de transformation de colonne dérivée** pour créer des expressions qui remplissent de nouvelles colonnes ou des colonnes de remplacement.  
@@ -55,7 +54,7 @@ ms.locfileid: "66059570"
  **Précision**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement la précision des données numériques en fonction du type de données. La valeur de cette colonne est en lecture seule.  
   
- **Mettre à l'échelle**  
+ **Mise à l’échelle**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement l’échelle des données numériques en fonction du type de données. La valeur de cette colonne est en lecture seule.  
   
  **Page de codes**  

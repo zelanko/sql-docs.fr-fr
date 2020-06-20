@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959469"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : Interopérabilité et coexistence (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : interopérabilité et coexistence (SQL Server)
   Cette rubrique comprend des observations sur la sauvegarde et la restauration pour plusieurs fonctionnalités de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ces fonctionnalités concernent : la restauration de fichiers et le démarrage de bases de données, la restauration et la désactivation en ligne d'index, la mise en miroir de bases de données, la restauration fragmentaire et les index de recherche en texte intégral.  
   
  **Dans cette rubrique :**  
@@ -48,7 +47,7 @@ ms.locfileid: "62922434"
   
  Si un problème se produit lors du démarrage de la base de données, la récupération échoue et la base de données est affectée de l'attribut SUSPECT. Si le problème peut être isolé dans un ou des fichiers, l'administrateur de la base de données peut placer les fichiers hors connexion et tenter de la redémarrer. Pour placer un fichier hors connexion, vous pouvez utiliser l'instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) suivante :  
   
- ALTER DATABASE *database_name* modifier le fichier (nom **=*`filename`*' '**, hors connexion)  
+ ALTER DATABASE *database_name* modifier le fichier (nom **= ' *`filename`* '**, hors connexion)  
   
  Si le démarrage aboutit, les groupes de fichiers qui contiennent un fichier hors connexion demeurent hors connexion.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62922434"
   
 -   [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Secondaires actifs : sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  

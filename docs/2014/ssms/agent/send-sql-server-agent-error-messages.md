@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfe6c44af7d0e0f5900192311cc9f659d6a345d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62666786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067611"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
-  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent pour envoyer ses messages d’erreur par le biais de net send dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l' [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aide de.  
+  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent pour envoyer ses messages d’erreur par le biais de net send dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  **Dans cette rubrique**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62666786"
   
 -   Changer les quotas de mémoire d'un processus (SeIncreaseQuotaPrivilege)  
   
- Pour plus d’informations sur les autorisations Windows requises pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service de l’agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Pour plus d’informations sur les autorisations Windows requises pour le compte de service de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et configurer les [comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

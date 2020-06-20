@@ -1,5 +1,6 @@
 ---
 title: Appeler des procédures stockées (ODBC) | Microsoft Docs
+description: Apprenez à ajouter une source de données à l’aide de l’administrateur ODBC, par programmation ou à l’aide d’un fichier, avant d’utiliser des applications ODBC avec SQL Server 2005 ou version ultérieure.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baa8ad51341311014d841c0e31251b0780828389
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f9c78ac618b21097d412b6676abf84b95e9667
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967570"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>Exécution de procédures stockées - Appeler des procédures stockées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

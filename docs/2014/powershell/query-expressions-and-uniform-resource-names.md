@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e53b659fdd5d572d4f76e9a1979e6639ea33d060
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960171"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
   Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
@@ -95,15 +94,15 @@ ms.locfileid: "72782763"
  is_null(\@*PropertyName*)  
  Énumère tous les objets où la propriété spécifiée a la valeur NULL.  
   
- not(\<*PropertyExpression*>)  
+ Not ( \<*PropertyExpression*> )  
  Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, not(contains(\@Name, 'xyz')) énumère tous les objets dont le nom ne contient pas la chaîne xyz.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les expressions de requête sont des chaînes qui énumèrent les nœuds dans une hiérarchie de modèle SMO. Chaque nœud possède une expression de filtre qui spécifie les critères pour déterminer les objets qui sont énumérés au niveau de ce nœud. Les expressions de requête sont modélisées sur le langage d'expression XPath. Les expressions de requête implémentent un petit sous-ensemble des expressions qui sont prises en charge par XPath, et possèdent également quelques extensions qui ne sont pas présentes dans XPath. Les expressions XPath sont des chaînes qui spécifient un jeu de critères utilisé pour énumérer une ou plusieurs balises dans un document XML. Pour plus d'informations sur XPath, consultez [W3C XPath Language](http://www.w3.org/TR/xpath20/)(en anglais).  
   
  Les expressions de requête doivent commencer par une référence absolue à l'objet serveur. Les expressions relatives avec une barre oblique (/) de début ne sont pas autorisées. La séquence des objets spécifiés dans une expression de requête doit respecter la hiérarchie des objets de collection dans le modèle objet associé. Par exemple, une expression de requête qui fait référence à des objets dans l'espace de noms Microsoft.SqlServer.Management.Smo doit commencer par un nœud Server, suivi d'un nœud Database, etc.  
   
- Si un * \<>FilterExpression* n’est pas spécifié pour un objet, tous les objets au niveau de ce nœud sont énumérés.  
+ Si un *\<FilterExpression>* n’est pas spécifié pour un objet, tous les objets au niveau de ce nœud sont énumérés.  
   
 ## <a name="uniform-resource-names-urn"></a>URN (Uniform Resource Name)  
  Les noms URN sont un sous-ensemble d'expressions de requête. Chaque nom URN forme une référence complète à un objet unique. Un nom URN type utilise la propriété Name pour identifier un objet unique au niveau de chaque nœud. Par exemple, ce nom URN fait référence à une colonne spécifique :  

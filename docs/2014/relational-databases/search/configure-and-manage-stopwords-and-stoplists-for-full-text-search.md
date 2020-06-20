@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103b5024368c5ca239856580e9b45473aabf6a92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997651"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral
   Pour éviter que l'index de recherche en texte intégral ne devienne encombré, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un mécanisme qui ignore les chaînes courantes qui ne sont d'aucune utilité pour la recherche. Ces chaînes ignorées sont appelées des *mots vides*. Pendant la création d'un index, le moteur de texte intégral omet les mots vides de l'index de recherche en texte intégral. Cela signifie que les requêtes de texte intégral ne rechercheront pas les mots vides.  

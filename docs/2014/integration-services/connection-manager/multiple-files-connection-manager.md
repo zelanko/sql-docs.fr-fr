@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920610"
 ---
 # <a name="multiple-files-connection-manager"></a>Gestionnaire de connexions de fichiers multiples
   Un gestionnaire de connexions de fichiers multiples permet à un package de référencer des fichiers et dossiers existants ou de créer des fichiers ou dossiers au moment de l'exécution.  
@@ -57,9 +56,9 @@ ms.locfileid: "62833612"
   
  Si le gestionnaire de connexions de fichiers multiples référence plusieurs fichiers et dossiers, les chemins d'accès aux fichiers et dossiers sont séparés par une barre verticale (|). La propriété `ConnectionString` du gestionnaire de connexions utilise le format suivant :  
   
- \<*chemin*>|\<*chemin*>  
+ \<*path*>|\<*path*>  
   
- Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte sur le lecteur C, la valeur de `ConnectionString` la propriété peut être définie sur C\\: *. txt.  
+ Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte sur le lecteur C, la valeur de la `ConnectionString` propriété peut être définie sur C : \\ *. txt.  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   

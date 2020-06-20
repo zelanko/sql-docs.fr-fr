@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c723050f9e860534c5298df9a487337e319ff91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d44cbad43d75634cbf8660110cc879522265c54d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058856"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>La mise à niveau modifiera les abonnements de mise à jour en attente qui utilisent Message Queuing
   Le Conseiller de mise à niveau a détecté que vous possédez un ou plusieurs abonnements de mise à jour en attente qui utilisent [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ). Étant donné que la réplication ne prend plus en charge Message Queuing, les abonnements seront modifiés afin d'utiliser une file d'attente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5d5e35ef1c3f860c58e036f5335e09165acddfb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065967"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Leçon 1 : Création de comptes Windows pour la réplication
   Dans cette leçon, vous allez créer des comptes Windows pour exécuter les agents de réplication. Vous allez créer un compte Windows distinct sur le serveur local pour les agents suivants :  
   
 |Agent|Emplacement|Nom du compte|  
 |-----------|--------------|------------------|  
-|Agent d'instantané|Publisher|\<*nom_ordinateur*>\repl_snapshot|  
-|l'Agent de lecture du journal ;|Publisher|\<*nom_ordinateur*>\repl_logreader|  
-|Agent de distribution|Serveur de publication et Abonné|\<*nom_ordinateur*>\repl_distribution|  
-|Agent de fusion|Serveur de publication et Abonné|\<*nom_ordinateur*>\repl_merge|  
+|Agent d'instantané|Serveur de publication|\<*machine_name*>\ repl_snapshot|  
+|l'Agent de lecture du journal ;|Serveur de publication|\<*machine_name*>\ repl_logreader|  
+|Agent de distribution|Serveur de publication et Abonné|\<*machine_name*>\ repl_distribution|  
+|Agent de fusion|Serveur de publication et Abonné|\<*machine_name*>\ repl_merge|  
   
 > [!NOTE]  
 >  Dans les didacticiels de réplication, le serveur de publication et le serveur de distribution partagent la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le serveur de publication et l'Abonné peuvent partager la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais ce n'est pas une obligation. Si le serveur de publication et l'Abonné partagent la même instance, les étapes de création de comptes pour l'Abonné ne sont pas requises.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd91cccfdeef2cab9e4fdfae73bc69a996d652fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013641"
 ---
 # <a name="state-property-sqlservice-class"></a>Propriété State (classe SqlService)
   Obtient ou définit l'état actuel du service.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlService](sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
@@ -66,7 +65,7 @@ object
  7  
  Suspendu. Le service est suspendu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

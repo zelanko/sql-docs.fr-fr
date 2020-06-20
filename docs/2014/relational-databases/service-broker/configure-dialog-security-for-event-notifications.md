@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d83bfe63c3a9b24c2be8d08916dd2384c59edc93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996562"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurer la sécurité du dialogue pour les notifications d'événements
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être configurée pour les notifications d'événements qui envoient des messages à un Service Broker résidant sur un serveur distant. La sécurité du dialogue doit être configurée manuellement conformément au modèle de sécurité totale du dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le modèle de sécurité totale permet le chiffrement et le déchiffrement des messages échangés avec les serveurs distants. Même si les notifications d'événements sont envoyées dans une direction, les autres messages, comme les erreurs, sont retournés dans la direction opposée.  

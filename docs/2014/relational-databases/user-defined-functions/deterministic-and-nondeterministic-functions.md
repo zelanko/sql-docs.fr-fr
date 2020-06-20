@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e755532e06d64e273408c7e81936a1c2d370697
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066410"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Fonctions déterministes et non déterministes
   Les fonctions déterministes retournent toujours le même résultat quel que soit le moment auquel elles sont appelées avec un ensemble spécifique de valeurs d'entrée et sur la base du même état de la base de données. Les fonctions non déterministes peuvent retourner différents résultats chaque fois qu'elles sont appelées avec un ensemble spécifique de valeurs d'entrée, même si l'état de la base de données à laquelle elles accèdent demeure inchangé. Par exemple, la fonction AVG retourne toujours le même résultat pour les conditions ci-dessus, mais la fonction GETDATE, qui retourne la valeur datetime actuelle, retourne toujours un résultat différent.  

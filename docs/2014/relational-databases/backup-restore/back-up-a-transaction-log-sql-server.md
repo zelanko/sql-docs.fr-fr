@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b57ca40b08718cda5095249991e0d424e6593a24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783118"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959889"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Sauvegarder un journal des transactions (SQL Server)
   Cette rubrique explique comment sauvegarder un journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
@@ -74,38 +73,38 @@ ms.locfileid: "72783118"
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
-3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Sauvegarder**. La boîte de dialogue **Sauvegarder la base de données** s’affiche.  
+3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Sauvegarder**. La boîte de dialogue **Sauvegarder la base de données** s'affiche.  
   
 4.  Dans la zone de liste **Base de données** , vérifiez le nom de la base de données. Vous pouvez éventuellement sélectionner une autre base de données dans la liste.  
   
 5.  Vérifiez que le mode de récupération est **FULL** ou **BULK_LOGGED**.  
   
-6.  Dans la zone de liste **Type de sauvegarde**, sélectionnez **Journal des transactions**.  
+6.  Dans la zone de liste **Type de sauvegarde** , sélectionnez **Journal des transactions**.  
   
-7.  Vous pouvez si vous le souhaitez sélectionner **Sauvegarde de copie uniquement** pour créer une sauvegarde de copie uniquement.  Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  Vous pouvez si vous le souhaitez sélectionner **Sauvegarde de copie uniquement** pour créer une sauvegarde de copie uniquement. Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
     >  Lorsque l'option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
   
-8.  Acceptez le nom de jeu de sauvegarde par défaut suggéré dans la zone de texte **Nom** ou entrez celui de votre choix.  
+8.  Acceptez le nom du jeu de sauvegarde par défaut proposé dans la zone de texte **Nom** , ou attribuez-lui un autre nom.  
   
-9. Dans la zone de texte **Description**, entrez si vous le souhaitez une description du jeu de sauvegarde.  
+9. Dans la zone de texte **Description** , vous avez la possibilité de saisir une description du jeu de sauvegarde.  
   
 10. Indiquez quand le jeu de sauvegarde arrivera à expiration :  
   
-    -   Pour que le jeu de sauvegarde expire après un nombre de jours spécifique, cliquez sur **Après** (option par défaut) et entrez le nombre de jours au terme duquel le jeu expirera à compter de sa création. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.  
+    -   Pour que le jeu de sauvegarde expire au bout d’un nombre de jours spécifique, cliquez sur **Après** (option par défaut) et entrez le nombre de jours souhaité pour l’expiration du jeu après sa création. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.  
   
-         La valeur par défaut est définie dans l’option **rétention par défaut du support de sauvegarde (jours)** de la boîte de dialogue **Propriétés du serveur** (page**paramètres de base de données** ). Pour accéder à cette base de données, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et sélectionnez Propriétés. Ensuite, sélectionnez la page **Paramètres de base de données** .  
+         La valeur par défaut est définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** de la boîte de dialogue **Propriétés du serveur** (page**Paramètres de base de données** ). Pour accéder à cette base de données, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et sélectionnez Propriétés. Ensuite, sélectionnez la page **Paramètres de base de données** .  
   
-    -   Pour que le jeu de sauvegarde expire à une date spécifique, cliquez sur **Le** et entrez la date voulue.  
+    -   Pour que le jeu de sauvegarde expire à une date spécifique, cliquez sur **Le**et entrez la date d'expiration souhaitée.  
   
 11. Choisissez le type de destination de la sauvegarde en cliquant sur **Disque**, **URL** ou **Bande**. Pour sélectionner les chemins d'accès à 64 lecteurs de bande ou de disque au maximum contenant un seul support de sauvegarde, cliquez sur **Ajouter**. Les chemins d'accès sélectionnés apparaissent dans la zone de liste **Sauvegarde sur** .  
   
      Pour supprimer une destination de sauvegarde, sélectionnez-la, puis cliquez sur **Supprimer**. Pour afficher le contenu d'une destination de sauvegarde, sélectionnez-la, puis cliquez sur **Sommaire**.  
   
-12. Pour afficher ou sélectionner les options avancées, cliquez sur **Options** dans le volet **Sélectionner une page**.  
+12. Pour afficher ou sélectionner les options avancées, cliquez sur **Options** dans le volet **Sélectionner une page** .  
   
-13. Sélectionnez une option **Remplacer le support**, en cliquant sur l’un des éléments suivants :  
+13. Sélectionnez une option **Remplacer le support** en cliquant sur un des éléments suivants :  
   
     -   **Sauvegarder sur le support de sauvegarde existant**  
   
@@ -119,13 +118,13 @@ ms.locfileid: "72783118"
   
     -   **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants**  
   
-         Pour cette option, entrez un nom dans la zone de texte **Nouveau nom du support de sauvegarde** et décrivez éventuellement le support de sauvegarde dans la zone de texte **Description du nouveau support de sauvegarde**. Pour plus d’informations, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Pour cette option, entrez un nom dans la zone de texte **Nouveau nom du support de sauvegarde** et décrivez éventuellement le jeu de supports dans la zone de texte **Description du nouveau support de sauvegarde** . Pour plus d’informations, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
 14. Dans la section **Fiabilité** , vous pouvez éventuellement activer les cases à cocher :  
   
     -   **Vérifier la sauvegarde en fin d'opération**;  
   
-    -   **Effectuer une somme de contrôle avant d’écrire sur le support** et, éventuellement, **Continuer lors d’erreurs**. Pour plus d’informations sur les sommes de contrôle, consultez [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Effectuer une somme de contrôle avant d'écrire sur le support**et éventuellement **Continuer lors d'erreurs de somme de contrôle**. Pour plus d’informations sur les sommes de contrôle, consultez [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Dans la section **Journal des transactions** :  
   
@@ -137,11 +136,11 @@ ms.locfileid: "72783118"
   
 16. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général** ), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]et versions ultérieures prennent en charge la [compression de sauvegarde](backup-compression-sql-server.md). Par défaut, la compression de la sauvegarde est régie par la valeur de l’option de configuration du serveur **Compression par défaut des sauvegardes**. Toutefois, quelle que soit la valeur par défaut actuellement définie au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde** et empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la [compression de la sauvegarde](backup-compression-sql-server.md). Par défaut, la compression d’une sauvegarde dépend de la valeur de l’option de configuration de serveur **Compression par défaut des sauvegardes** . Toutefois, quelle que soit la valeur par défaut actuelle au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde**, et vous pouvez empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
   
      **Pour consulter la valeur par défaut de compression de la sauvegarde actuelle**  
   
-    -   [Afficher ou configurer l'option de configuration de serveur backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [Afficher ou configurer la compression par défaut des sauvegardes (option de configuration de serveur)](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
  **Chiffrement**  
   
@@ -165,7 +164,7 @@ ms.locfileid: "72783118"
   
     -   l'unité de sauvegarde où sera écrite la sauvegarde du journal des transactions.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
   
 > [!IMPORTANT]  
 >  Cet exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , qui fait appel au mode de récupération simple. Pour autoriser les sauvegardes de fichier journal, avant d'effectuer une sauvegarde complète de base de données, la base de données a été configurée pour utiliser le mode de récupération complète. Pour plus d’informations, consultez [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md).  
@@ -198,7 +197,7 @@ Pour configurer et utiliser le fournisseur de SQL Server PowerShell, consultez [
   
 -   [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Plans de maintenance](../maintenance-plans/maintenance-plans.md)   

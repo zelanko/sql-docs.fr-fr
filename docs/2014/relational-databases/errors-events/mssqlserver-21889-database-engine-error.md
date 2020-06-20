@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 262b2c795da92b2ef32c6956d9a2deda0e45a39d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c152a542550d7b81af880545f526037baeb4644e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034643"
 ---
 # <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
     
@@ -36,6 +35,6 @@ ms.locfileid: "62915226"
  Afin d'héberger la base de données du serveur de publication, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un serveur de publication de réplication. `sp_validate_redirected_publisher` appelle `sp_helpdistributor` sur le serveur distant pour déterminer si le serveur est un serveur de publication de réplication. Cette erreur est retournée lorsque l'exécution de la procédure stockée `sp_helpdistributor` indique que l'instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas un serveur de publication de réplication.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Exécutez `sp_adddistributor` dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de publication. Lors de l'exécution de `sp_adddistributor`, spécifiez le serveur de distribution correct. Utilisez la même valeur pour le *@password* paramètre que celle utilisée lors `sp_adddistributor` de la première exécution sur le serveur de distribution.  
+ Exécutez `sp_adddistributor` dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de publication. Lors de l'exécution de `sp_adddistributor`, spécifiez le serveur de distribution correct. Utilisez la même valeur pour le *@password* paramètre que celle utilisée lors de la `sp_adddistributor` première exécution sur le serveur de distribution.  
   
   

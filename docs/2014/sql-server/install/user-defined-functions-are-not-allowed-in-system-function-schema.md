@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058780"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>Les fonctions définies par l'utilisateur ne sont pas autorisées dans system_function_schema
   Le conseiller de mise à niveau a détecté des fonctions définies par l’utilisateur qui sont détenues par l’utilisateur **system_function_schema**non documenté. Vous ne pouvez pas créer une fonction système définie par l'utilisateur en spécifiant cet utilisateur. Le nom d’utilisateur **system_function_schema** n’existe pas et l’ID d’utilisateur associé à ce nom (UID = 4) est réservé au schéma **sys** et est réservé à un usage interne uniquement.  
@@ -39,9 +38,9 @@ ms.locfileid: "66091330"
   
  Ces modifications ont l'effet suivant sur les fonctions système définies par l'utilisateur :  
   
--   Les instructions DDL (Data Definition Language) qui référencent **system_function_schema** échouent. Par exemple, l’instruction `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... ne fonctionnera pas.  
+-   Les instructions DDL (Data Definition Language) qui référencent **system_function_schema** échouent. Par exemple, l’instruction `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` ... ne fonctionnera pas.  
   
--   Après la mise à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]niveau vers, les objets existants appartenant à **system_function_schema** sont contenus uniquement dans le schéma **sys** de la base de données **Master** . Étant donné que les objets système ne peuvent pas être modifiés, ces fonctions ne peuvent jamais être modifiées ou supprimées de la base de données **Master** . En outre, il est impossible d'appeler ces fonctions à partir d'autres bases de données en spécifiant uniquement un nom de fonction en une seule partie.  
+-   Après la mise à niveau vers [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , les objets existants appartenant à **system_function_schema** sont contenus uniquement dans le schéma **sys** de la base de données **Master** . Étant donné que les objets système ne peuvent pas être modifiés, ces fonctions ne peuvent jamais être modifiées ou supprimées de la base de données **Master** . En outre, il est impossible d'appeler ces fonctions à partir d'autres bases de données en spécifiant uniquement un nom de fonction en une seule partie.  
   
 ## <a name="corrective-action"></a>Action corrective  
  Avant de procéder à la mise à niveau, effectuez les tâches suivantes :  

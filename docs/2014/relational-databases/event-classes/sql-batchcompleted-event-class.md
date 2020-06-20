@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94127112d214ba976e3b517bdf91a7d6b26b2d1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9d4e156f090501a79f2a2d8cef7822e8dc6a81b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051617"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>Classe d'événements SQL:BatchCompleted
   La classe d'événements SQL:BatchCompleted indique que le lot [!INCLUDE[tsql](../../includes/tsql-md.md)] est exécuté.  
@@ -35,7 +34,7 @@ ms.locfileid: "63050688"
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`bigint`|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting.|15|Oui|  
-|Error|`int`|Numéro d'erreur de l'événement.<br /><br /> 0=OK<br /><br /> 1=Erreur<br /><br /> 2=Abandon|31|Oui|  
+|Erreur|`int`|Numéro d'erreur de l'événement.<br /><br /> 0=OK<br /><br /> 1=Erreur<br /><br /> 2=Abandon|31|Oui|  
 |EventClass|`int`|Type d’événement = 12.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
