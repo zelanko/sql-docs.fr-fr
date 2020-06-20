@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951789"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Déployer et exécuter des packages SSIS à l'aide de procédures stockées
   Lorsque vous configurez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin d'utiliser le modèle de déploiement de projet, vous pouvez utiliser les procédures stockées du catalogue [!INCLUDE[ssIS](../includes/ssis-md.md)] pour déployer le projet et pour exécuter des packages. Pour plus d’informations sur le modèle de déploiement de projet, consultez [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -36,9 +35,9 @@ ms.locfileid: "72251314"
   
 1.  Appelez [catalog.deploy_project &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) pour déployer le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui contient le package sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Pour récupérer le contenu binaire du fichier [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de déploiement de projet, pour le * \@paramètre project_stream* , utilisez une instruction SELECT avec la fonction OPENROWSET et le fournisseur d’ensembles de lignes en bloc. Le fournisseur d'ensembles de lignes BULK vous permet de lire des données dans un fichier. L'argument SINGLE_BLOB du fournisseur d'ensembles de lignes BULK retourne le contenu du fichier de données sous la forme d'un ensemble de lignes à une seule ligne, une seule colonne de type varbinary (max). Pour plus d’informations, consultez [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Pour récupérer le contenu binaire du [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fichier de déploiement de projet, pour le paramètre * \@ project_stream* , utilisez une instruction SELECT avec la fonction OPENROWSET et le fournisseur d’ensembles de lignes en bloc. Le fournisseur d'ensembles de lignes BULK vous permet de lire des données dans un fichier. L'argument SINGLE_BLOB du fournisseur d'ensembles de lignes BULK retourne le contenu du fichier de données sous la forme d'un ensemble de lignes à une seule ligne, une seule colonne de type varbinary (max). Pour plus d’informations, consultez [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     Dans l’exemple suivant, le projet SSISPackages_ProjectDeployment est déployé dans le dossier SSIS Packages sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Les données binaires sont lues à partir du fichier projet (SSISPackage_ProjectDeployment. ISPAC) et sont stockées * \@* dans le paramètre ProjectBinary de type varbinary (max). La * \@* valeur du paramètre ProjectBinary est assignée au paramètre * \@project_stream* .  
+     Dans l’exemple suivant, le projet SSISPackages_ProjectDeployment est déployé dans le dossier SSIS Packages sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Les données binaires sont lues à partir du fichier projet (SSISPackage_ProjectDeployment. ISPAC) et sont stockées dans le paramètre * \@ ProjectBinary* de type varbinary (max). La valeur du paramètre * \@ ProjectBinary* est assignée au paramètre * \@ project_stream* .  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

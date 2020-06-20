@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dd1ad533b6327786195908452701161a94f9592
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967205"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilisation de variables dans le composant Script
   Les variables stockent les valeurs qu'un package et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  
   
- Vous pouvez rendre des variables existantes disponibles pour l’accès en lecture seule ou en lecture/écriture par votre script personnalisé en entrant des listes délimitées par `ReadOnlyVariables` des `ReadWriteVariables` virgules de variables dans les champs et de la page **script** de l **'éditeur de transformation de script**. N'oubliez pas que les noms de variables respectent la casse. Utilisez la propriété `Value` pour lire et écrire des variables individuelles. Le composant Script gère tout le verrouillage sous-jacent requis quand votre script manipule les variables au moment de l'exécution.  
+ Vous pouvez rendre des variables existantes disponibles pour l’accès en lecture seule ou en lecture/écriture par votre script personnalisé en entrant des listes délimitées par des virgules de variables dans les `ReadOnlyVariables` champs et de `ReadWriteVariables` la page **script** de l **'éditeur de transformation de script**. N'oubliez pas que les noms de variables respectent la casse. Utilisez la propriété `Value` pour lire et écrire des variables individuelles. Le composant Script gère tout le verrouillage sous-jacent requis quand votre script manipule les variables au moment de l'exécution.  
   
 > [!IMPORTANT]  
 >  La collection de `ReadWriteVariables` est uniquement disponible dans la méthode `PostExecute` pour maximiser les performances et réduire le risque de conflits de verrouillage. Par conséquent, vous ne pouvez pas incrémenter directement la valeur d'une variable de package à mesure que vous traitez chaque ligne de données. Incrémentez plutôt la valeur d'une variable locale, puis définissez la valeur de la variable de package sur la valeur de la variable locale dans la méthode `PostExecute` une fois que toutes les données ont été traitées. Vous pouvez également utiliser la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> pour contourner cette limitation, comme décrit ultérieurement dans cette rubrique. Toutefois, l'écriture directe dans une variable de package au fut et à mesure du traitement de chaque ligne aura des effets négatifs sur les performances et augmentera le risque de conflits de verrouillage.  

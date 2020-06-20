@@ -1,5 +1,6 @@
 ---
 title: Gestion des erreurs et des messages | Microsoft Docs
+description: Découvrez les informations de diagnostic retournées lorsqu’une application appelle une fonction ODBC, y compris la réussite ou l’échec, ainsi que des informations détaillées.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59bb40dbfc7f8596968d2dc441396dc9c076bb82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c79fbd493906280c6503509309b9efc7a3216f8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967671"
 ---
 # <a name="handling-errors-and-messages"></a>Gestion des erreurs et des messages
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "81291659"
   
  Par exemple, après qu’une application a appelé **SQLFetch** pour extraire les lignes d’un jeu de résultats, le code de retour indique si la fin du jeu de résultats a été atteinte (SQL_NO_DATA), si des messages d’information ont été retournés (SQL_SUCCESS_WITH_INFO) ou si une erreur s’est produite (SQL_ERROR).  
   
- Si le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne une valeur autre que SQL_SUCCESS, l’application peut appeler **SQLGetDiagRec** pour récupérer les messages d’information ou d’erreur. Utilisez **SQLGetDiagRec** pour faire défiler vers le haut et vers le haut l’ensemble de messages s’il y a plusieurs messages.  
+ Si le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne une valeur autre que SQL_SUCCESS, l’application peut **appeler SQLGetDiagRec** pour récupérer les messages d’information ou d’erreur. Utilisez **SQLGetDiagRec** pour faire défiler vers le haut et vers le haut l’ensemble de messages s’il y a plusieurs messages.  
   
  Le code de retour SQL_INVALID_HANDLE indique toujours une erreur de programmation et ne doit jamais se rencontrer au moment de l'exécution. Tous les autres codes de retour fournissent des informations d'exécution, bien que SQL_ERROR puisse indiquer une erreur de programmation.  
   
- L’API [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native d’origine, DB-Library pour C, permet à une application d’installer les fonctions de gestion des erreurs de rappel et de gestion des messages qui retournent des erreurs ou des messages. Certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], telles que PRINT, RAISERROR, DBCC et SET, retournent leurs résultats à la fonction gestionnaire des messages de DB-Library et non dans un jeu de résultats. Toutefois, l'API ODBC n'a aucune fonction de rappel similaire. Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client détecte des messages provenant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il définit le code de retour odbc sur SQL_SUCCESS_WITH_INFO ou SQL_ERROR et retourne le message sous la forme d’un ou de plusieurs enregistrements de diagnostic. Par conséquent, une application ODBC doit tester avec soin ces codes de retour et appeler **SQLGetDiagRec** pour extraire les données de message.  
+ L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API native d’origine, DB-Library pour C, permet à une application d’installer les fonctions de gestion des erreurs de rappel et de gestion des messages qui retournent des erreurs ou des messages. Certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], telles que PRINT, RAISERROR, DBCC et SET, retournent leurs résultats à la fonction gestionnaire des messages de DB-Library et non dans un jeu de résultats. Toutefois, l'API ODBC n'a aucune fonction de rappel similaire. Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client détecte des messages provenant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il définit le code de retour odbc sur SQL_SUCCESS_WITH_INFO ou SQL_ERROR et retourne le message sous la forme d’un ou de plusieurs enregistrements de diagnostic. Par conséquent, une application ODBC doit tester avec soin ces codes de retour et appeler **SQLGetDiagRec** pour extraire les données de message.  
   
  Pour plus d’informations sur le suivi des erreurs, consultez [Suivi de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Pour plus d’informations sur les améliorations du suivi des erreurs ajoutées dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], consultez [Accès aux informations de diagnostic dans le journal des événements étendus](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
@@ -54,7 +55,7 @@ ms.locfileid: "81291659"
   
 -   [SQLSTATE &#40;codes d’erreur ODBC&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md)  
   
--   [Messages d'erreur](../../relational-databases/native-client-odbc-error-messages/error-messages.md)  
+-   [Messages d’erreur](../../relational-databases/native-client-odbc-error-messages/error-messages.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

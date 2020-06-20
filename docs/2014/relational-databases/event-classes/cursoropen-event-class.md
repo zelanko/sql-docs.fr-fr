@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dc2522aef82913bcc2e93f2f8fcde4f2311e958
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030195"
 ---
 # <a name="cursoropen-event-class"></a>Classe d'événements CursorOpen
   La classe d’événements **CursorOpen** décrit les événements d’ouverture de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API, Application Programming Interface). Les événements d'ouverture de curseur se produisent lorsque le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] définit l'instruction SQL à associer au curseur et à ses options, puis remplit le curseur.  

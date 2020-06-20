@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968449"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles. Ces exemples peuvent être modifiés facilement afin d'utiliser l'une des autres sources de données basées sur des fichiers prises en charge par le fournisseur OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -79,23 +78,23 @@ ms.locfileid: "62894783"
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
-1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par `ExcelFileExists`.  
+1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par `ExcelFileExists` .  
   
 2.  Dans l’**Éditeur de tâche de script**, sous l’onglet **Script**, cliquez sur **ReadOnlyVariables** et entrez la valeur de la propriété en utilisant l’une des méthodes suivantes :  
   
-    -   Entrez `ExcelFile`.  
+    -   Tapez `ExcelFile`.  
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue Sélectionner `ExcelFile` des **variables** , sélectionnez la variable.  
+    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables** , sélectionnez la `ExcelFile` variable.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
-    -   Entrez `ExcelFileExists`.  
+    -   Tapez `ExcelFileExists`.  
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue Sélectionner `ExcelFileExists` des **variables** , sélectionnez la variable.  
+    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables** , sélectionnez la `ExcelFileExists` variable.  
   
 4.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   
@@ -149,7 +148,7 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
-1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par `ExcelTableExists`.  
+1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par `ExcelTableExists` .  
   
 2.  Dans l’**Éditeur de tâche de script**, sous l’onglet **Script**, cliquez sur **ReadOnlyVariables** et entrez la valeur de la propriété en utilisant l’une des méthodes suivantes :  
   
@@ -157,15 +156,15 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton des points de suspension (**...**) en regard du champ de propriété, puis dans la boîte de `ExcelTable` dialogue `ExcelFile` **Sélectionner des variables** , sélectionnez les variables et.  
+    -   Cliquez sur le bouton des points de suspension (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables** , sélectionnez les `ExcelTable` `ExcelFile` variables et.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
-    -   Entrez `ExcelTableExists`.  
+    -   Tapez `ExcelTableExists`.  
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue Sélectionner `ExcelTableExists` des **variables** , sélectionnez la variable.  
+    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables** , sélectionnez la `ExcelTableExists` variable.  
   
 4.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   
@@ -260,7 +259,7 @@ public class ScriptMain
   
 2.  Ouvrez l’**Éditeur de tâche de script**, puis sous l’onglet **Script**, cliquez sur **ReadOnlyVariables** et entrez la valeur de la propriété en utilisant l’une des méthodes suivantes :  
   
-    -   Tapez `ExcelFolder`.  
+    -   Saisissez `ExcelFolder`  
   
          -ou-  
   
@@ -268,7 +267,7 @@ public class ScriptMain
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
-    -   Entrez `ExcelFiles`.  
+    -   Tapez `ExcelFiles`.  
   
          -ou-  
   
@@ -335,7 +334,7 @@ public class ScriptMain
   
 2.  Ouvrez l’**Éditeur de tâche de script**, puis sous l’onglet **Script**, cliquez sur **ReadOnlyVariables** et entrez la valeur de la propriété en utilisant l’une des méthodes suivantes :  
   
-    -   Entrez `ExcelFile`.  
+    -   Tapez `ExcelFile`.  
   
          -ou-  
   
@@ -343,7 +342,7 @@ public class ScriptMain
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
-    -   Entrez `ExcelTables`.  
+    -   Tapez `ExcelTables`.  
   
          -ou-  
   

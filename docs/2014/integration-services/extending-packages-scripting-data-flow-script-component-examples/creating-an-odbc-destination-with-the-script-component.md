@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a682c5010887a6aec10d886173d8538cada5963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968629"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Création d'une destination ODBC à l'aide du composant Script
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous enregistrez généralement les données dans une destination ODBC en utilisant une destination [!INCLUDE[vstecado](../../includes/vstecado-md.md)] et le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour ODBC. Toutefois, vous pouvez également créer une destination ODBC ad hoc à utiliser dans un package unique. Pour créer cette destination ODBC ad hoc, vous utilisez le composant Script comme indiqué dans l'exemple suivant.  
@@ -60,7 +59,7 @@ ms.locfileid: "62896185"
   
 7.  Dans la page **Gestionnaires de connexions**, ajoutez ou créez le gestionnaire de connexions ODBC et attribuez-lui un nom descriptif, par exemple **MyODBCConnectionManager**.  
   
-8.  Dans la page **script** , cliquez sur **modifier le script**, puis entrez le script ci-dessous `ScriptMain` dans la classe.  
+8.  Dans la page **script** , cliquez sur **modifier le script**, puis entrez le script ci-dessous dans la `ScriptMain` classe.  
   
 9. Fermez l’environnement de développement de script, fermez l’**Éditeur de transformation de script**, puis exécutez l’exemple.  
   

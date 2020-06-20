@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284917"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938520"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Fonctionnement de DAX dans les modèles tabulaires (SSAS Tabulaire)
   DAX (Data Analysis Expressions) est le langage de formule utilisé pour créer des calculs personnalisés dans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour les classeurs Microsoft Excel et les modèles tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
@@ -70,7 +69,7 @@ ms.locfileid: "67284917"
   
  Pour plus d’informations, consultez [Colonnes calculées &#40;SSAS tabulaire&#41;](ssas-calculated-columns.md).  
   
-### <a name="measures"></a>mesures  
+### <a name="measures"></a>Mesures  
  Les mesures sont des formules dynamiques dont les résultats changent selon le contexte. Les mesures sont utilisées dans les formats de création de rapports qui prennent en charge la combinaison et le filtrage des données de modèle à l'aide de plusieurs attributs, tels qu'un rapport [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] , un tableau croisé dynamique ou un graphique croisé dynamique Excel. Dans les projets de modèles tabulaires, les mesures sont définies par l'auteur du modèle à l'aide de la grille de mesures (et de la barre de formule) dans le concepteur de modèles dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Une formule dans une mesure peut utiliser des fonctions d'agrégation standard créées automatiquement à l'aide de la fonction Somme automatique, telles que COUNT ou SUM, ou vous pouvez définir votre propre formule à l'aide de DAX. Lorsque vous définissez une formule pour une mesure dans la barre de formule, une info-bulle affiche un aperçu rapide de ce que seront les résultats pour l'ensemble du contexte actuel, mais autrement, aucun résultat n'est immédiatement généré. D'autres détails concernant la mesure apparaissent également dans le volet **Propriétés** .  
@@ -103,9 +102,9 @@ ms.locfileid: "67284917"
 |Nombre décimal|Nombre réel de 64 bits (huit octets) <sup>1, 2</sup>|Les nombres réels sont des nombres qui peuvent avoir des décimales. Les nombres réels couvrent une large gamme de valeurs :<br /><br /> Valeurs négatives de -1.79E +308 à -2.23E -308<br /><br /> Zéro<br /><br /> Valeurs positives de 2.23E -308 à -1.79E +308<br /><br /> Toutefois, le nombre de bits significatifs est limité à 17 chiffres décimaux.|  
 |Boolean|Boolean|Valeur True ou valeur False.|  
 |Texte|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
-|Date|Date/time|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
+|Date|Date/Heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Devise|Devise|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
-|NON APPLICABLE|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
+|N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
  Les modèles tabulaires incluent également le type de données Table comme entrée ou sortie dans de nombreuses fonctions DAX. Par exemple, la fonction FILTER prend une table en entrée et génère en sortie une autre table qui contient uniquement les lignes qui répondent aux conditions de filtre. En associant des fonctions de table à des fonctions d'agrégation, vous pouvez effectuer des calculs complexes sur des jeux de données définis de façon dynamique.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "67284917"
   
  Pour plus d’informations sur les types de données dans les modèles tabulaires et les conversions explicites et implicites des types de données dans DAX, consultez [Types de données pris en charge &#40;SSAS tabulaire&#41;](data-types-supported-ssas-tabular.md).  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> Opérateurs DAX  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>Opérateurs DAX  
  Le langage DAX utilise quatre types différents d'opérateurs de calcul dans les formules :  
   
 -   Opérateurs de comparaison pour comparer des valeurs et retourner une valeur TRUE\FALSE logique.  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Les fonctions de texte dans DAX sont très semblables à leurs équivalents dans Excel. Vous pouvez retourner une partie d'une chaîne, rechercher un texte dans une chaîne ou concaténer des valeurs de chaîne. DAX fournit également des fonctions pour le contrôle des formats pour les dates, les heures et les nombres. Pour plus d’informations, consultez [fonctions de texte &#40;&#41;Dax ](/dax/text-functions-dax).  
   
 ### <a name="time-intelligence-functions"></a>Fonctions Time Intelligence  
- Les fonctions Time Intelligence fournies dans DAX vous permettent de créer des calculs qui utilisent la connaissance intégrée relative aux calendriers et aux dates. En utilisant des plages de dates et d'heures en association avec des agrégations ou des calculs, vous pouvez générer des comparaisons explicites à travers des périodes comparables pour les ventes, les stocks, etc. Pour plus d’informations, consultez [fonctions Time Intelligence &#40;&#41;Dax ](/dax/time-intelligence-functions-dax).  
+ Les fonctions Time Intelligence fournies dans DAX vous permettent de créer des calculs qui utilisent la connaissance intégrée relative aux calendriers et aux dates. En utilisant des plages de dates et d’heures en association avec des agrégations ou des calculs, vous pouvez générer des comparaisons significatives sur des périodes de temps comparables pour les ventes, les stocks, etc. Pour plus d’informations, consultez [fonctions Time Intelligence &#40;&#41;Dax ](/dax/time-intelligence-functions-dax).  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>Fonctions table  
  Il existe des fonctions DAX qui génèrent des tables en sortie, qui utilisent des tables en entrée ou les deux à la fois. Étant donné qu'une table peut avoir une colonne unique, les fonctions table utilisent également des colonnes uniques comme entrées. Il importe de savoir utiliser ces fonctions table pour tirer le meilleur parti des formules DAX. DAX inclut les types suivants de fonctions table :  
@@ -416,7 +415,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="additional-resources"></a><a name="bkmk_addional_resources"></a> Ressources supplémentaires  
  La rubrique [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](../tabular-modeling-adventure-works-tutorial.md) fournit des instructions pas à pas pour créer un modèle tabulaire incluant de nombreux calculs dans des colonnes calculées, des mesures et des filtres de lignes. Pour la plupart des formules, une description de la fonction est fournie.  
   
- Le [blog de l’équipe Analysis Services et PowerPivot](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fournit des informations, des conseils, [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] des actualités et des annonces sur et PowerPivot.  
+ Le [blog de l’équipe Analysis Services et PowerPivot](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fournit des informations, des conseils, des actualités et des annonces sur [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] et PowerPivot.  
   
  Le [Centre de ressources DAX](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) fournit des informations internes et externes sur DAX, notamment de nombreuses solutions DAX soumises par des professionnels Business Intelligence.  
   

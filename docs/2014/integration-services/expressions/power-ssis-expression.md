@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3d25801b7cc7f6282ebc8cf7b1ce7839159312dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaa36617b6b51abe985001bbe431862237436d1a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897409"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969129"
 ---
 # <a name="power-ssis-expression"></a>POWER (expression SSIS)
   Renvoie le résultat de l'élévation d'une expression numérique à une puissance donnée. La valeur du paramètre de la puissance doit s'évaluer à un entier.  

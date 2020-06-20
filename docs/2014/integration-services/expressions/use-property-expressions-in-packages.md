@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968989"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.
@@ -92,7 +91,7 @@ ms.locfileid: "78176419"
  Les expressions de propriété sont chargées après le chargement des configurations de package. Par exemple, les variables sont d'abord mises à jour par leurs configurations, puis les expressions de propriété qui utilisent les variables sont évaluées et chargées. Cela signifie que les expressions de propriété utilisent toujours les valeurs de variables qui sont définies par des configurations.
 
 > [!NOTE]
->  Vous ne pouvez pas `Set` utiliser l’option de l’utilitaire **dtexec** pour remplir une expression de propriété.
+>  Vous ne pouvez pas utiliser l' `Set` option de l’utilitaire **dtexec** pour remplir une expression de propriété.
 
  Le tableau suivant indique à quel moment les expressions de propriété d' [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sont évaluées et chargées.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176419"
  Les exemples d'expression suivants montrent comment utiliser les variables système, les opérateurs, les fonctions et les littéraux de chaîne dans les expressions de propriété.
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expression de propriété pour la propriété LoggingMode d'un package
- L’expression de propriété suivante peut être utilisée pour définir la propriété LoggingMode d’un package. L'expression utilise les fonctions DAY et GETDATE pour obtenir un entier qui représente la partie jour d'une date. Si le jour est le premier ou le 15, la journalisation est activée ; sinon, elle est désactivée. La valeur 1 est l’équivalent entier du membre `Enabled`de l’énumérateur LoggingMode, et la valeur 2 est l’équivalent entier du membre `Disabled`. Vous devez utiliser la valeur numérique à la place du nom du membre d'énumérateur dans l'expression.
+ L’expression de propriété suivante peut être utilisée pour définir la propriété LoggingMode d’un package. L'expression utilise les fonctions DAY et GETDATE pour obtenir un entier qui représente la partie jour d'une date. Si le jour est le premier ou le 15, la journalisation est activée ; sinon, elle est désactivée. La valeur 1 est l’équivalent entier du membre de l’énumérateur LoggingMode `Enabled` , et la valeur 2 est l’équivalent entier du membre `Disabled` . Vous devez utiliser la valeur numérique à la place du nom du membre d'énumérateur dans l'expression.
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 
