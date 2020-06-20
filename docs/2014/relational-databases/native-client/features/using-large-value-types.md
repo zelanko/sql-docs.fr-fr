@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8a2e93ee36eb4bfadf18c5b78f552380d1c94266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043551"
 ---
 # <a name="using-large-value-types"></a>Utilisation de types de valeur élevée
   Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Les types de données à valeur élevée sont ceux dont la taille de ligne maximale dépasse 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]a introduit un spécificateur **Max** pour les types de données **varchar**, **nvarchar** et **varbinary** pour permettre le stockage de valeurs allant jusqu’à 2 ^ 31-1 octets. Les colonnes de table et les [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables peuvent spécifier des types de données **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  

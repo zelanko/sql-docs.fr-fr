@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060821"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Ajouter et supprimer des serveurs de publication à partir du Moniteur de réplication
   Le serveur à partir duquel vous lancez le moniteur de réplication est automatiquement ajouté au moniteur s'il s'agit d'un serveur de publication. D'autres serveurs de publication peuvent être ajoutés via la boîte de dialogue **Ajouter un serveur de publication** . Après l'ajout d'un serveur de publication, celui-ci est affiché dans le volet gauche du moniteur. Le groupe **Mes serveurs de publication** est inclus par défaut, mais vous pouvez créer de nouveaux groupes pour gérer une ou plusieurs topologies de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](start-the-replication-monitor.md).  

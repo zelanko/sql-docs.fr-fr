@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6307b4e138cc5523e496c8f4abb4f0bea0011a11
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479375"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971373"
 ---
 # <a name="import-statuses-master-data-services"></a>États d'importation (Master Data Services)
   Dans la zone fonctionnelle **Gestion de l'intégration** , dans la page **Lots intermédiaires** , les états suivants sont possibles.  
@@ -24,7 +23,7 @@ ms.locfileid: "65479375"
 |------------|-----------------|----------------|  
 |En file d'attente d'exécution|Le lot n'a pas démarré le traitement.|1|  
 |Exécution en cours|Le lot est en cours de traitement.|2|  
-|Completed|Le lot a terminé le traitement.|3|  
+|Effectué|Le lot a terminé le traitement.|3|  
 |En file d'attente de suppression|Le lot a terminé le traitement et sera effacé.|4|  
 |Désactivé|Le traitement a été effacé.|5|  
   

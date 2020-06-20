@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d6c372a9b1f9af9e5948732e3bfb9384362f545
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930936"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>Afficher le rapport de la copie des journaux de transaction (SQL Server Management Studio)
   Cette rubrique explique comment afficher le rapport d'état sur la copie des journaux de transaction dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez exécuter ce rapport d'état sur un serveur moniteur, un serveur principal ou un serveur secondaire. Pour obtenir les informations les plus complètes sur la configuration de la copie des journaux de transaction, affichez le rapport sur l'instance de serveur moniteur.  

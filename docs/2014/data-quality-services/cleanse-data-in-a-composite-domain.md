@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df41f9ae623053a61691076f9c96247f7a41564f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481145"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938010"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Nettoyer les données dans un domaine composite
   Cette rubrique fournit des informations sur le nettoyage des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend plusieurs domaines uniques et est mappé à un champ de données qui comprend plusieurs termes connexes. Les différents domaines dans un domaine composite doivent avoir un espace commun de connaissance. Pour plus d'informations sur les domaines composites, consultez [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "65481145"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité de nettoyage des données, cette règle inter-domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle « *\<Nom de la règle inter-domaines>*  ». Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité des données de nettoyage, cette règle entre domaines définitive modifie les données avec un niveau de confiance de 100% et la colonne **raison** affiche le message suivant : corrigé par la règle « *\<Cross-Domain Rule Name>* ». Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La règle entre domaines définitive ne fonctionne pas pour les domaines composites joints au service de données de référence.  

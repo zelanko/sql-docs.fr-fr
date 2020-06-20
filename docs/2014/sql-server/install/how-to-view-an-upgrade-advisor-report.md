@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042440"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Procédure : afficher un rapport du Conseiller de mise à niveau
   Le Conseiller de mise à niveau crée des rapports pour chaque composant que vous sélectionnez pour analyse. Cette rubrique décrit comment afficher un rapport du Conseiller de mise à niveau à partir de la page de démarrage du Conseiller de mise à niveau.  
@@ -31,7 +30,7 @@ ms.locfileid: "66094798"
   
 ### <a name="to-view-a-report"></a>Pour afficher un rapport  
   
-1.  Cliquez sur **Démarrer**, sur **tous les programmes**, sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, puis sur ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] conseiller de mise à niveau**.  
+1.  Cliquez sur **Démarrer**, sur **tous les programmes**, sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , puis sur conseiller de ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mise à niveau**.  
   
 2.  Sur la page de démarrage du conseiller de mise à niveau, cliquez sur **lancer le conseiller de mise à niveau**.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66094798"
   
     -   **Importance**, qui indique à quel point il est important de résoudre le problème.  
   
-    -   **Quand corriger**, ce qui indique si vous devez corriger le problème avant ou après la mise à niveau vers, avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou après la migration de l’application ou des données, ou à tout moment.  
+    -   **Quand corriger**, ce qui indique si vous devez corriger le problème avant ou après la mise à niveau vers [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , avant ou après la migration de l’application ou des données, ou à tout moment.  
   
     -   Brève description du problème.  
   

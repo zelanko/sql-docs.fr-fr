@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 486ef2da96785ed200900f497435117ef6437cb5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023868"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tâche Mettre à jour les statistiques (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Mettre à jour les statistiques** pour mettre à jour les informations [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatives aux données des tables et des index. Cette tâche rééchantillonne les statistiques de distribution de chaque index créé dans les tables utilisateur de la base de données. Les statistiques de distribution servent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour optimiser la navigation dans les tables pendant le traitement des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour collecter automatiquement les statistiques de distribution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] échantillonne périodiquement les données de la table correspondant à chaque index. La taille de cet échantillonnage est calculée en fonction du nombre de lignes de la table et de la fréquence de modification des données. Utilisez cette option pour effectuer un échantillonnage supplémentaire à l'aide du pourcentage spécifié de données des tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise ces informations pour créer des plans de requête améliorés.  

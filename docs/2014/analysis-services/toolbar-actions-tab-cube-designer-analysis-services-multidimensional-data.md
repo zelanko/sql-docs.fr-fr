@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4ef65300-abce-43a6-8119-cb3f962dd564
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e65fce75803445e233ee40890cdefefe8cdd96d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1121ca9cdc1c81bfc0e7be9d53041d1aa9144f34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938491"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d’outils** pour exécuter des actions courantes sous l’onglet **Actions** du Concepteur de cube.  
@@ -26,7 +25,7 @@ ms.locfileid: "66066209"
 |------------|-----------------|  
 |**Ajouter Business Intelligence**|Affiche l' **Assistant Business Intelligence** pour ajouter au cube des fonctionnalités d'aide à la décision.|  
 |**Processus**|Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le cube.|  
-|**Reconnect**|Cliquez pour reconnecter l’onglet **Actions** à l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et la base de données qui contient le cube si la session de l’onglet **Actions** s’est déconnectée à la suite d’une perte de connexion ou d’une temporisation.|  
+|**Reconnexion**|Cliquez pour reconnecter l’onglet **Actions** à l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et la base de données qui contient le cube si la session de l’onglet **Actions** s’est déconnectée à la suite d’une perte de connexion ou d’une temporisation.|  
 |**Nouvelle action**|Cliquez pour afficher le volet **Éditeur de formulaire d’action** et créer une action.|  
 |**Nouvelle action d'extraction**|Cliquez pour afficher **Éditeur de formulaire d’action d’extraction** et créer une action d’extraction.|  
 |**Nouvelle action de rapport**|Cliquez pour afficher **Éditeur de formulaire d’action de rapport** et créer une action de rapport.|  

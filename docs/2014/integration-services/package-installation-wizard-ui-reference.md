@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964857"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Installation de package
   **L’Assistant Installation de package** permet de déployer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , dont les packages et les divers fichiers qu’il contient, ainsi que les dépendances de package éventuelles.  
@@ -114,7 +113,7 @@ ms.locfileid: "66056829"
  La page **Sélectionner le dossier d’installation** permet de définir le dossier du système de fichiers dans lequel les packages et leurs dépendances sont installés.  
   
 ### <a name="options"></a>Options  
- **Répertoire**  
+ **Dossier**  
  Définissez le chemin d'accès et le dossier de copie du package et de ses dépendances.  
   
  **Parcourir**  
@@ -133,7 +132,7 @@ ms.locfileid: "66056829"
  **Nom du serveur**  
  Permet de spécifier le nom du serveur pour lequel doit s'effectuer le déploiement des packages.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Permet d'indiquer si la méthode d'authentification Windows doit être utilisée pour ouvrir une session sur le serveur. L'authentification Windows est recommandée pour renforcer la sécurité.  
   
  **Utiliser l’authentification SQL Server**  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc2eac8564c08831527d71ee5942c37b618aedcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28ac1abc1780953a93615120f4020d80a2021f17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937440"
 ---
 # <a name="perform-knowledge-discovery"></a>Effectuer une découverte des connaissances
   Cette rubrique décrit comment créer une base de connaissances via la découverte des connaissances. Dans le processus de découverte, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyse les données dans un exemple de source de données via un processus assisté par ordinateur, et ajoute les connaissances qu'il acquiert à la base de connaissances. Ces connaissances peuvent être modifiées et améliorées dans l'étape **Gestion des valeurs de domaine** de l'activité de découverte des connaissances ou de celle de gestion des domaines.  

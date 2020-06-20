@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db74bd7de8fcf3cdba6787fda18c510237d63372
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3f8be8b6df1034b06d0aaff6ee61c0c494833c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060378"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Définir la méthode de propagation des modifications de données des articles transactionnels
   Cette rubrique explique comment définir la méthode de propagation pour les modifications de données d'articles transactionnels dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -44,31 +43,31 @@ ms.locfileid: "68941082"
 -   La modification des fichiers d'instantanés générés par la réplication nécessite la plus grande prudence. Vous devez tester et prendre en charge la logique personnalisée dans les procédures stockées personnalisées. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n'assure pas la prise en charge de la logique personnalisée.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Spécifiez la méthode de propagation dans l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, accessible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+ Spécifiez la méthode de propagation dans l’onglet **Propriétés** de la boîte de dialogue Propriétés de l' **article \<Article> -** , disponible dans l’Assistant Nouvelle publication et dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-the-propagation-method"></a>Pour spécifier la méthode de propagation  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table et cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** , sélectionnez une table, puis cliquez sur Propriétés de **l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de Table en surbrillance**.  
   
-3.  Dans l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, dans la section **Remise d’instruction**, spécifiez la méthode de propagation pour chaque opération à l’aide des menus **Format de remise INSERT**, **Format de remise UPDATE** et **Format de remise DELETE**.  
+3.  Sous l’onglet **Propriétés** de la boîte de dialogue Propriétés de l' **article- \<Article> ** , dans la section remise d' **instruction** , spécifiez la méthode de propagation pour chaque opération à l’aide des menus format de **remise Insert**, **format**de remise Update et format de **remise Delete** .  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+5.  Si vous êtes dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>Pour générer et utiliser des procédures stockées personnalisées  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table et cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** , sélectionnez une table, puis cliquez sur Propriétés de **l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de Table en surbrillance**.  
   
-     Dans l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, dans la section **Remise d’instruction**, sélectionnez la syntaxe CALL dans le menu du format de remise approprié (**Format de remise INSERT**, **Format de remise UPDATE** ou **Format de remise DELETE**), puis tapez le nom de la procédure à utiliser dans **Procédure stockée INSERT**, **Procédure stockée DELETE** ou **Procédure stockée UPDATE**. Pour plus d’informations sur la syntaxe CALL, consultez la section « Syntaxe d’appel des procédures stockées » dans [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
+     Sous l’onglet **Propriétés** de la boîte de dialogue Propriétés de l' **article- \<Article> ** , dans la section remise d' **instruction** , sélectionnez la syntaxe Call dans le menu du format de remise approprié (format de**remise Insert**, format de remise **Update**ou **format de remise Delete**), puis tapez le nom de la procédure à utiliser dans procédure stockée **Insert**, **procédure stockée Delete**ou **procédure stockée Update**. Pour plus d’informations sur la syntaxe CALL, consultez la section « Syntaxe d’appel des procédures stockées » dans [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+4.  Si vous êtes dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 5.  Lorsque l'instantané de la publication est généré, il inclut la procédure spécifiée à l'étape précédente. Les procédures utilisent la syntaxe CALL spécifiée, mais incluent également la logique par défaut utilisée par la réplication.  
   
@@ -84,13 +83,13 @@ ms.locfileid: "68941082"
   
 #### <a name="to-create-an-article-that-uses-transact-sql-commands-to-propagate-data-changes"></a>Pour créer un article qui utilise des commandes Transact-SQL pour propager des modifications de données  
   
-1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient ** \@** pour la publication, le nom de l' ** \@article pour l’article, l'** objet de base de données qui est publié pour ** \@source_object**et la valeur **SQL** pour au moins l’un des paramètres suivants :  
+1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour la ** \@ publication**, le nom de l' ** \@ article pour l’article, l'** objet de base de données qui est publié pour ** \@ source_object**et la valeur **SQL** pour au moins l’un des paramètres suivants :  
   
-    -   ins_cmd-contrôle la réplication des commandes [Insert](/sql/t-sql/statements/insert-transact-sql) . ** \@**  
+    -   ** \@ ins_cmd** -contrôle la réplication des commandes [Insert](/sql/t-sql/statements/insert-transact-sql) .  
   
-    -   upd_cmd-contrôle la réplication des commandes [Update](/sql/t-sql/queries/update-transact-sql) . ** \@**  
+    -   ** \@ upd_cmd** -contrôle la réplication des commandes [Update](/sql/t-sql/queries/update-transact-sql) .  
   
-    -   del_cmd-contrôle la réplication des commandes [Delete](/sql/t-sql/statements/delete-transact-sql) . ** \@**  
+    -   ** \@ del_cmd** -contrôle la réplication des commandes [Delete](/sql/t-sql/statements/delete-transact-sql) .  
   
     > [!NOTE]  
     >  Lors de la spécification de la valeur **SQL** pour un des paramètres ci-dessus, les commandes de ce type seront répliquées sur l'Abonné sous la forme de la commande [!INCLUDE[tsql](../../../includes/tsql-md.md)] appropriée.  
@@ -99,13 +98,13 @@ ms.locfileid: "68941082"
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>Pour créer un article qui ne propage pas les modifications de données  
   
-1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient ** \@** pour la publication, le nom de l' ** \@article pour l’article, l'** objet de base de données qui est publié pour ** \@source_object**et la valeur **None** pour au moins l’un des paramètres suivants :  
+1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour la ** \@ publication**, le nom de l' ** \@ article pour l’article, l'** objet de base de données qui est publié pour ** \@ source_object**et la valeur **None** pour au moins l’un des paramètres suivants :  
   
-    -   ins_cmd-contrôle la réplication des commandes [Insert](/sql/t-sql/statements/insert-transact-sql) . ** \@**  
+    -   ** \@ ins_cmd** -contrôle la réplication des commandes [Insert](/sql/t-sql/statements/insert-transact-sql) .  
   
-    -   upd_cmd-contrôle la réplication des commandes [Update](/sql/t-sql/queries/update-transact-sql) . ** \@**  
+    -   ** \@ upd_cmd** -contrôle la réplication des commandes [Update](/sql/t-sql/queries/update-transact-sql) .  
   
-    -   del_cmd-contrôle la réplication des commandes [Delete](/sql/t-sql/statements/delete-transact-sql) . ** \@**  
+    -   ** \@ del_cmd** -contrôle la réplication des commandes [Delete](/sql/t-sql/statements/delete-transact-sql) .  
   
     > [!NOTE]  
     >   Lors de la spécification de la valeur **NONE** pour un des paramètres ci-dessus, les commandes de ce type ne seront pas répliquées sur l'Abonné.  
@@ -114,13 +113,13 @@ ms.locfileid: "68941082"
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>Pour créer un article avec des procédures stockées personnalisées modifiées par utilisateur  
   
-1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient ** \@** pour la publication, le nom de l’article pour ** \@l’article, l'** objet de base de données qui est publié pour ** \@source_object**, une valeur pour le ** \@** masque de schema_option qui contient la valeur **0x02** (permet la génération automatique de procédures stockées personnalisées) et au moins l’un des paramètres suivants :  
+1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour la ** \@ publication**, le nom de l’article pour l' ** \@ article, l'** objet de base de données qui est publié pour ** \@ source_object**, une valeur pour le masque de ** \@ schema_option** qui contient la valeur **0x02** (permet la génération automatique de procédures stockées personnalisées) et au moins l’un des paramètres suivants :  
   
-    -   ins_cmd : spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où **_article_name_** est la valeur spécifiée pour ** \@article**. ** \@**  
+    -   ** \@ ins_cmd** : spécifiez la valeur <strong>Call sp_MSins_*article_name*</strong>, où **_article_name_** est la valeur spécifiée pour ** \@ article**.  
   
-    -   **_article_name_** \@ <strong>*article_name* </strong> ** \@del_cmd** : spécifiez la valeur Call sp_Msdel_ article_name ou <strong>XCALL sp_Msdel_*article_name*</strong>, où article_name est la valeur spécifiée pour _ * article * *.  
+    -   ** \@ del_cmd** : spécifiez la valeur <strong>Call sp_MSdel_*article_name* </strong> ou <strong>XCALL sp_Msdel_*article_name*</strong>, où **_article_name_** est la valeur spécifiée pour _ * \@ article * *.  
   
-    -   ** \@** _**article_name**_ ** \@upd_cmd** -spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_MSupd__article_name*</strong>ou <strong>MCALL sp_Msupd_* article_name *</strong>, où article_name est la valeur spécifiée pour article.  
+    -   ** \@ upd_cmd** -spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_MSupd__article_name *</strong> ou <strong>MCALL sp_Msupd_* article_name *</strong>, où _**article_name**_ est la valeur spécifiée pour ** \@ article**.  
   
     > [!NOTE]  
     >  Pour chacun des paramètres de commande ci-dessus, vous pouvez spécifier votre propre nom pour les procédures stockées que la réplication génère.  
@@ -134,13 +133,13 @@ ms.locfileid: "68941082"
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>Pour créer un article avec des scripts personnalisés dans les procédures stockées personnalisées pour propager les modifications de données  
   
-1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient ** \@** pour la publication, le nom de l’article pour ** \@l’article, l'** objet de base de données qui est publié pour ** \@source_object**, une valeur pour le ** \@** masque de schema_option qui contient la valeur **0x02** (permet la génération automatique de procédures stockées personnalisées) et au moins l’un des paramètres suivants :  
+1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour la ** \@ publication**, le nom de l’article pour l' ** \@ article, l'** objet de base de données qui est publié pour ** \@ source_object**, une valeur pour le masque de ** \@ schema_option** qui contient la valeur **0x02** (permet la génération automatique de procédures stockées personnalisées) et au moins l’un des paramètres suivants :  
   
-    -   ins_cmd : spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où _**article_name**_ est la valeur spécifiée pour ** \@article**. ** \@**  
+    -   ** \@ ins_cmd** : spécifiez la valeur <strong>Call sp_MSins_*article_name*</strong>, où _**article_name**_ est la valeur spécifiée pour ** \@ article**.  
   
-    -   ** \@** _**article_name**_ <strong>*article_name* </strong> ** \@del_cmd** : spécifiez la valeur Call sp_Msdel_ article_name ou <strong>XCALL sp_Msdel_*article_name*</strong>, où article_name est la valeur spécifiée pour article.  
+    -   ** \@ del_cmd** : spécifiez la valeur <strong>Call sp_MSdel_*article_name* </strong> ou <strong>XCALL sp_Msdel_*article_name*</strong>, où _**article_name**_ est la valeur spécifiée pour ** \@ article**.  
   
-    -   ** \@** _**article_name**_ ** \@upd_cmd** : spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_Msupd_*article_name*</strong>, <strong>MCALL sp_Msupd_*article_name*</strong>, où article_name est la valeur spécifiée pour article.  
+    -   ** \@ upd_cmd** : spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_Msupd_*article_name*</strong>, <strong>MCALL sp_Msupd_*article_name*</strong>, où _**article_name**_ est la valeur spécifiée pour ** \@ article**.  
   
     > [!NOTE]  
     >  Pour chacun des paramètres de commande ci-dessus, vous pouvez spécifier votre propre nom pour les procédures stockées que la réplication génère.  
@@ -154,7 +153,7 @@ ms.locfileid: "68941082"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>Pour modifier la méthode de propagation des modifications pour un article existant  
   
-1.  Exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)dans la base de données de publication du serveur de publication. Spécifiez ** \@publication**, ** \@article**, la valeur **ins_cmd**, **upd_cmd**ou **del_cmd** pour ** \@propriété**, et la méthode de propagation appropriée pour ** \@valeur**.  
+1.  Exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)dans la base de données de publication du serveur de publication. Spécifiez ** \@ publication**, ** \@ article**, la valeur **ins_cmd**, **upd_cmd**ou **del_cmd** pour ** \@ propriété**, et la méthode de propagation appropriée pour ** \@ valeur**.  
   
 2.  Répétez l'étape 1 pour chaque méthode de propagation à modifier.  
   

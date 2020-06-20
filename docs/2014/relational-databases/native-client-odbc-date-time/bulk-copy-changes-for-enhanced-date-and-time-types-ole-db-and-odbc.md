@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73b901a60a6dd634857b72a67f7f2a2490483cff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020440"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifications de la copie en bloc pour les types date/heure améliorés (OLE DB et ODBC)
   Cette rubrique décrit les améliorations de date/heure permettant de prendre en charge les fonctionnalités de copie en bloc. Les informations fournies dans cette rubrique sont valables pour OLE DB et ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -26,12 +25,12 @@ ms.locfileid: "82705527"
 ## <a name="format-files"></a>Fichiers de format  
  Lors de la génération interactive de fichiers de format, le tableau ci-dessous décrit l'entrée utilisée pour spécifier des types date/heure et les noms de type de données de fichier hôte correspondants.  
   
-|type de stockage de fichier|Type de données du fichier hôte|Réponse à l’invite : « Entrez le type de stockage de fichier du champ <nom_champ> [\<valeur_par_défaut>] : »|  
+|type de stockage de fichier|Type de données du fichier hôte|Réponse à l’invite : « entrez le type de stockage de fichier du champ <field_name> [ \<default> ] : »|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Date|SQLDATE|de|  
-|Temps|SQLTIME|te|  
+|Heure|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -71,7 +70,7 @@ ms.locfileid: "82705527"
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|Date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -95,7 +94,7 @@ ms.locfileid: "82705527"
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Temps|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Heure|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -107,7 +106,7 @@ ms.locfileid: "82705527"
 |À --><br /><br /> À partir|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Temps|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Heure|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

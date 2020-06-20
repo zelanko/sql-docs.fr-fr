@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 079348921900a7cbf880027433280253df1a9e30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932170"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renommer un ordinateur qui héberge une instance autonome de SQL Server
   Lorsque vous modifiez le nom de l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nouveau nom est reconnu au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous n'avez pas besoin de réexécuter le programme d'installation pour réinitialiser le nom d'ordinateur. À la place, utilisez la procédure suivante pour mettre à jour les métadonnées système qui sont stockées dans sys.servers et signalées par la fonction système @@SERVERNAME . Mettez à jour les métadonnées système pour refléter les modifications opérées dans les noms d’ordinateurs pour les connexions à distance et les applications qui utilisent @@SERVERNAME, ou qui interrogent le nom du serveur à partir de sys.servers.  

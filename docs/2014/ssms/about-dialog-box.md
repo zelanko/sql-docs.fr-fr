@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef885898893de1c0c29ca3b963a30b46d71486f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045281"
 ---
 # <a name="about-dialog-box"></a>À propos de (boîte de dialogue)
   La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d'accéder à d'autres informations relatives à l'ordinateur où s'exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).  

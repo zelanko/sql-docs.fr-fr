@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289267"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922320"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
@@ -45,7 +44,7 @@ ms.locfileid: "79289267"
  Lorsqu'une base de données CDC est créée et des tables Oracle de source CDC sont installées, le propriétaire de la base de données CDC peut accorder l'autorisation SELECT des tables miroir et définir des rôles de régulation SQL Server CDC pour contrôler l'accès aux données modifiées.  
   
 ## <a name="mirror-tables"></a>Tables miroir  
- Pour chaque table capturée, \<schema-name>.\<table-name>, dans la base de données source Oracle, une table vide similaire est créée dans la base de données CDC, avec les mêmes noms de schéma et de table. Les tables sources Oracle avec le nom de schéma `cdc` (ne respectant pas la casse) ne peuvent pas être capturées, car le schéma `cdc` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est réservé pour SQL Server CDC.  
+ Pour chaque table capturée, \<schema-name> . \<table-name> dans la base de données source Oracle, une table vide similaire est créée dans la base de données CDC, avec les mêmes nom de schéma et de table. Les tables sources Oracle avec le nom de schéma `cdc` (ne respectant pas la casse) ne peuvent pas être capturées, car le schéma `cdc` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est réservé pour SQL Server CDC.  
   
  Les tables miroir sont vides ; aucune donnée n'est stockée dans ces dernières. Elles servent à activer l'infrastructure standard SQL Server CDC utilisée par l'instance Oracle CDC. Pour empêcher l'insertion ou la mise à jour des données dans les tables miroir, toutes les opérations UPDATE, DELETE et INSERT sont refusées pour le rôle PUBLIC. Cela garantit qu'elles ne peuvent pas être modifiées.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "79289267"
 ###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> Tables de modifications (_CT)  
  Les tables de modifications sont créées à partir des tables miroir. Elles contiennent les données modifiées qui sont capturées dans la base de données Oracle. Les tables sont nommées en fonction de la convention suivante :  
   
- **[cdc]. [\<instance_de_capture >_CT]**  
+ **[CDC]. [ \<capture-instance> _CT]**  
   
  Lorsque la capture est initialement activée pour la table `<schema-name>.<table-name>`, le nom par défaut de l'instance de capture est `<schema-name>_<table-name>`. Par exemple, le nom par défaut de l'instance de capture pour la table Oracle HR.EMPLOYEES est HR_EMPLOYEES et la table de modifications associée est [cdc]. [HR_EMPLOYEES_CT].  
   

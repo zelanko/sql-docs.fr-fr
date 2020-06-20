@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c04b5cc4dd75d2f9f8305b7af00e389317a92537
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045781"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuration avancée de plusieurs sites Web (SSRS en mode natif)
   Utilisez cette boîte de dialogue pour créer et gérer les URL permettant d'accéder à un serveur de rapports ou au Gestionnaire de rapports. La boîte de dialogue **Configuration de site Web multiple avancée** est utilisée pour créer des URL supplémentaires, des URL personnalisées qui incluent un nom d'en-tête de l'hôte ou spécifier une adresse IP au format IPv4 ou IPv6.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
  La création de plusieurs URLS est utile si vous souhaitez configurer les différents moyens d'accéder à un serveur de rapports. Par exemple, l'accès au serveur de rapports via une connexion intranet et extranet requiert en général que vous ayez une URL différente pour chaque type de connexion.  
   
@@ -40,12 +39,12 @@ ms.locfileid: "71952667"
   
 -   **127.0.0.1** est utilisée pour l'accès à localhost. Cette valeur prend en charge l'administration locale sur le serveur de rapports. Si vous sélectionnez uniquement cette valeur, seuls les utilisateurs qui se connectent localement au serveur de rapports ont accès à l'application.  
   
--   *Nnn.nnn.nnn.nnn* est l'adresse IPv4 d'une carte réseau sur votre ordinateur. Si votre réseau utilise l’adressage IPv6, l’adresse IP sera une valeur 128 bits de champs de 8 4 octets semblable au format suivant : \<en-tête> :*nnnn : nnnn : nnnn : nnnn*.  
+-   *Nnn.nnn.nnn.nnn* est l'adresse IPv4 d'une carte réseau sur votre ordinateur. Si votre réseau utilise l’adressage IPv6, l’adresse IP sera une valeur 128 bits de champs de 8 4 octets semblable au format suivant : \<header> :*nnnn : nnnn : nnnn : nnnn*.  
   
      Si vous avez plusieurs cartes, une adresse IP apparaît pour chacune d'elles. Si vous sélectionnez uniquement cette valeur, elle limite l'accès de l'application à la seule adresse IP (et à tout nom d'hôte mappé sur cette adresse par un serveur de noms de domaine). Vous ne pouvez pas utiliser localhost pour accéder à un serveur de rapports, et vous ne pouvez pas utiliser les adresses IP des autres cartes réseau installées sur le serveur de rapports.  
   
  **Port**  
- Spécifie le port que surveille le serveur de rapports pour les demandes. Le port par défaut est le port 80. Si vous utilisez le port 80, vous n'avez pas à l'inclure dans l'URL. Si vous utilisez un autre numéro de port, vous devez toujours l’inclure dans l’URL (par exemple http://localhost:8181/reports),.  
+ Spécifie le port que surveille le serveur de rapports pour les demandes. Le port par défaut est le port 80. Si vous utilisez le port 80, vous n'avez pas à l'inclure dans l'URL. Si vous utilisez un autre numéro de port, vous devez toujours l’inclure dans l’URL (par exemple, http://localhost:8181/reports) .  
   
  **En-tête de l'hôte**  
  Si vous avez déjà un en-tête de l'hôte défini sur un serveur de noms de domaine qui se résout sur votre ordinateur, vous pouvez spécifier cet en-tête de l'hôte dans une URL que vous configurez pour l'accès au serveur de rapports.  
@@ -71,7 +70,7 @@ ms.locfileid: "71952667"
  **Modifier**  
  Modifiez une partie de la syntaxe d'URL.  
   
- **Remove**  
+ **Supprimer**  
  Supprimez une entrée URL de la liste.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 907840b051a4230a06525e8c3d6574aee4f40bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81605229acc7dccdcd77a3b3f001bf13fc6bf273
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008213"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Propriétés de Analysis Server (onglet Ouvrir une session)
   L'onglet **Ouvrir une session** de la boîte de dialogue **Propriétés de Analysis Server** permet de spécifier le compte utilisé par le service [!INCLUDE[ssAS](../../includes/ssas-md.md)] , ainsi que de démarrer et d'arrêter ce service.  

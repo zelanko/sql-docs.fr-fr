@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e6a3225dc8ddd3049f59986924c1fbb71c173b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149847"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007711"
 ---
 # <a name="column-element-for-index-dta"></a>Column, élément pour les index (Assistant Paramétrage de base de données)
   Spécifie les colonnes sur lesquelles l'index est créé pour une configuration spécifiée par l'utilisateur.  
@@ -41,14 +40,14 @@ ms.locfileid: "63149847"
 |Attribut de colonne|Description|  
 |----------------------|-----------------|  
 |`Type`|facultatif. Spécifie le type de colonne d'index. Utilisez un type de données **string** pour spécifier cet attribut avec l'une des valeurs autorisées suivantes :<br /><br /> `KeyColumn`:<br />                  Spécifie que la colonne est référencée par une clé d'index. Utilisez la syntaxe suivante pour définir cet attribut :<br />`<Column Type="KeyColumn">`<br />Pour plus d’informations sur les colonnes clés, consultez [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`: Spécifie que la colonne est une colonne incluse (au lieu d’une colonne clé). Utilisez la syntaxe suivante pour définir cet attribut :<br />`<Column Type="IncludedColumn">`<br />Pour plus d’informations sur les colonnes incluses, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|`SortOrder`|Facultatif. Spécifie l'ordre de tri de la colonne. Utilisez un type de données **string** pour spécifier un ordre de tri **"Ascending"** ou **"Descending"** comme suit :<br /><br /> `<Column SortOrder="Ascending">`|  
+|`SortOrder`|facultatif. Spécifie l'ordre de tri de la colonne. Utilisez un type de données **string** pour spécifier un ordre de tri **"Ascending"** ou **"Descending"** comme suit :<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Aucune.|  
-|**Valeur par défaut**|Aucune.|  
+|**Type de données et longueur**|Aucun.|  
+|**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Peut spécifié jusqu'à 1 024 colonnes pour l'élément `Index`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  

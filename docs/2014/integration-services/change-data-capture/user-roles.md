@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df6ab109451fbe7cf8df1b7c615f68a6cbad02f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922210"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity
   Cette section décrit les rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity. Les rôles décrits sont des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les rôles Windows ou des rôles de base de données Oracle.  
@@ -139,7 +138,7 @@ ms.locfileid: "62771085"
   
  La liste suivante décrit les privilèges requis pour l'utilisateur d'exploration de données de journaux :  
   
--   SELECT sur \<tout_table_capturée>  
+-   SÉLECTIONNER sur\<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   

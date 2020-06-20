@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 67a932996ccbf52f5ab21fd6aa62381184ebc510
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021811"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Une table peut avoir une ou plusieurs colonnes pouvant servir d’identificateurs de ligne uniques, et les tables créées sans contrainte de clé primaire renvoient un jeu de résultats vide à SQLPrimaryKeys. La fonction ODBC [SQLSpecialColumns](sqlspecialcolumns.md) signale les candidats aux identificateurs de ligne pour les tables sans clés primaires.  

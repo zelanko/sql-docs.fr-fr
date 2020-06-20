@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86380b0e6940a4b4cf9a5103d44860f68258ef59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024586"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
   Cette rubrique explique comment créer un plan de maintenance de serveur unique ou multiserveur à l'aide de l'aire de conception de plan de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L' **Assistant Plan de maintenance** est conseillé pour créer des plans de maintenance de base, tandis que l'aire de conception permet d'utiliser un flux de travail optimisé.  
@@ -251,7 +250,7 @@ ms.locfileid: "63144340"
      Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
      **Résumé du fichier journal**  
-     Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
+     Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<filter criteria>.  
   
      **Date**  
      Affiche la date de l'événement.  

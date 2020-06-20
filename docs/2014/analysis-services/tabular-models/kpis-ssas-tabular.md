@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067001"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938832"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicateurs de performance clés (SSAS Tabulaire)
   Un *indicateur de performance clé* (KPI), dans un modèle tabulaire, permet de mesurer les performances d’une valeur, définies par une mesure de *base* par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Cette rubrique fournit aux concepteurs de modèles tabulaires une présentation de base des indicateurs de performance clés dans un modèle tabulaire.  
@@ -30,7 +29,7 @@ ms.locfileid: "66067001"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Avantages  
  Dans la terminologie d'entreprise, un indicateur de performance clé (KPI) est une mesure quantifiable des performances d'objectifs économiques. Un KPI est fréquemment évalué dans le temps. Par exemple, le service commercial d'une organisation peut utiliser un KPI pour mesurer tous les mois la marge brute réelle par rapport à la marge brute planifiée. Le service comptable peut mesurer tous les mois les dépenses par rapport aux recettes pour évaluer les coûts ; et le service des ressources humaines peut mesurer tous les trimestres le taux de rotation du personnel. Chacun est un exemple de KPI. Les décideurs utilisent fréquemment des KPI qui sont regroupés dans un tableau de bord de l'entreprise pour obtenir une synthèse historique rapide et précise de l'activité ou déterminer les tendances.  
   
  Un indicateur de performance clé dans un modèle tabulaire inclut les éléments suivants :  
@@ -44,7 +43,7 @@ ms.locfileid: "66067001"
  **Seuils d'état**  
  Un seuil d'état est défini par la plage entre un seuil minimal et un seuil maximal, ou par une valeur fixe. Le seuil d'état s'affiche sous la forme d'un graphique pour aider les utilisateurs à déterminer facilement l'état de la valeur de base comparée à la valeur cible.  
   
-##  <a name="example"></a><a name="bkmk_example"></a>Tels  
+##  <a name="example"></a><a name="bkmk_example"></a> Exemple  
  La responsable commerciale d'AdventureWorks souhaite créer un tableau croisé dynamique qu'elle pourra utiliser pour déterminer rapidement si ses commerciaux atteignent leurs quotas de vente pendant une période donnée (généralement annuelle). Pour chaque employé de vente, elle souhaite que le tableau croisé dynamique affiche le montant réel des ventes en dollars, le montant du quota des ventes en dollars et un graphique simple indiquant l’état de chaque employé de vente, au moins au niveau du quota de vente. Elle souhaite obtenir des données annuelles.  
   
  Pour ce faire, le responsable des ventes inscrit l’aide du développeur de solutions DÉCISIONNELles de son organisation pour ajouter un KPI de vente au modèle tabulaire AdventureWorks. La directrice commerciale utilise ensuite [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] pour se connecter au modèle tabulaire Adventure Works comme source de données et créer un tableau croisé dynamique avec des champs (mesures et KPI) et des segments pour analyser si la force de vente atteint ses objectifs.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f432b1e402c51646efba54ed4aacba3287b0c2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060588"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Activer les abonnements pouvant être mis à jour pour les publications transactionnelles
   Cette rubrique explique comment activer les abonnements de mise à jour pour les publications transactionnelles dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -59,11 +58,11 @@ ms.locfileid: "68199422"
   
     -   Si vous ne savez pas si un travail de l’Agent de lecture du journal existe pour une base de données publiée, exécutez [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) au niveau du serveur de publication dans la base de données de publication. Si le jeu de résultats est vide, un travail de l'Agent de lecture du journal doit être créé.  
   
-    -   Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Spécifiez [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les informations d’identification Windows sous lesquelles l’agent **@job_name** s' **@password**exécute pour et. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**.  
+    -   Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Spécifiez les [!INCLUDE[msCoName](../../../includes/msconame-md.md)] informations d’identification Windows sous lesquelles l’agent s’exécute pour **@job_name** et **@password** . Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**.  
   
 2.  Exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), en spécifiant la valeur **true** pour le paramètre **@allow_sync_tran**.  
   
-3.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à **@publication** l’étape 2 pour et les informations d’identification Windows sous **@job_name** lesquelles **@password**l’agent d’instantané s’exécute pour et. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
+3.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à l’étape 2 pour **@publication** et les informations d’identification Windows sous lesquelles l’agent d’instantané s’exécute pour **@job_name** et **@password** . Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
 4.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
@@ -77,7 +76,7 @@ ms.locfileid: "68199422"
   
     -   Si vous ne savez pas si un travail de l’Agent de lecture du journal existe pour une base de données publiée, exécutez [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) au niveau du serveur de publication dans la base de données de publication. Si le jeu de résultats est vide, un travail de l'Agent de lecture du journal doit être créé.  
   
-    -   Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Spécifiez les informations d’identification Windows sous lesquelles l’agent **@job_name** s' **@password**exécute pour et. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**.  
+    -   Sur le serveur de publication, exécutez [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Spécifiez les informations d’identification Windows sous lesquelles l’agent s’exécute pour **@job_name** et **@password** . Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**.  
   
 2.  Si nécessaire, créez un travail de l'Agent de lecture de la file d'attente pour le serveur de distribution.  
   
@@ -85,11 +84,11 @@ ms.locfileid: "68199422"
   
     -   Si vous ne savez pas si un travail de l’Agent de lecture de la file d’attente existe pour la base de données de distribution, exécutez [sp_helpqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql) au niveau du serveur de distribution dans la base de données de distribution. Si le jeu de résultats est vide, un travail de l'Agent de lecture de la file d'attente doit être créé.  
   
-    -   Sur le serveur de distribution, exécutez [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql). Spécifiez les informations d’identification Windows sous lesquelles l’agent **@job_name** s' **@password**exécute pour et. Ces informations d'identification sont utilisées lorsque l'Agent de lecture de la file d'attente se connecte au serveur de publication et à l'Abonné. Pour plus d’informations, consultez [modèle de sécurité de l’agent de réplication](../security/replication-agent-security-model.md).  
+    -   Sur le serveur de distribution, exécutez [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql). Spécifiez les informations d’identification Windows sous lesquelles l’agent s’exécute pour **@job_name** et **@password** . Ces informations d'identification sont utilisées lorsque l'Agent de lecture de la file d'attente se connecte au serveur de publication et à l'Abonné. Pour plus d’informations, consultez [modèle de sécurité de l’agent de réplication](../security/replication-agent-security-model.md).  
   
 3.  Exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), en affectant la valeur **true** au paramètre **@allow_queued_tran** et la valeur **pub wins**, **sub reinit** ou **sub wins** à **@conflict_policy**.  
   
-4.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à **@publication** l’étape 3 pour et les informations d’identification Windows sous **@snapshot_job_name** lesquelles **@password**l’agent d’instantané s’exécute pour et. Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
+4.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à l’étape 3 pour **@publication** et les informations d’identification Windows sous lesquelles l’agent d’instantané s’exécute pour **@snapshot_job_name** et **@password** . Si l'agent utilise l'authentification SQL Server lors de la connexion au serveur de publication, vous devez également affecter la valeur **0** à **@publisher_security_mode** et spécifier les informations de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication.  
   
 5.  Ajoutez des articles à la publication. Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
@@ -99,7 +98,7 @@ ms.locfileid: "68199422"
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Affectez la valeur **conflict_policy** à **@property** et spécifiez le mode de stratégie de conflit souhaité en choisissant parmi **pub wins**, **sub reinit**ou **sub wins** à **@value**.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple crée une publication qui prend en charge les abonnements par extraction avec mise à jour immédiate et mise à jour en file d'attente.  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  

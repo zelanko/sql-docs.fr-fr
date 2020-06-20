@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6c6a8643f3e0a09abba424498c258ae4bb91d37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937840"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profilage des données et notifications dans DQS
   Le profilage des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est le processus d'analyse des données dans une source de données existante et d'affichage des statistiques sur les données dans des activités DQS. Il vous fournit des mesures automatisées de la qualité des données. Le profilage DQS est intégré à la gestion des connaissances DQS et aux projets de qualité des données. Il est dynamique et réglable. Le profilage a deux objectifs importants : d'abord vous guider au cours des processus de qualité des données et prendre en charge les décisions et, ensuite, évaluer l'efficacité des processus. Le processus de profilage DQS présente les avantages suivants :  

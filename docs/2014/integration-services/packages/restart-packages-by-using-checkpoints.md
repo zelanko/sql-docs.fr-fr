@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964779"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut redémarrer les packages ayant échoué à partir du point d'échec, au lieu de reprendre l'exécution du package tout entier. Si un package est configuré pour utiliser des points de contrôle, des informations sur l'exécution du package sont écrites dans un fichier de point de contrôle. Lorsque le package ayant échoué est relancé, le fichier de point de contrôle est utilisé pour redémarrer le package à partir du point d'échec. Si le package est exécuté avec succès, le fichier de point de contrôle est supprimé, puis recréé à l’exécution suivante du package.  
@@ -73,7 +72,7 @@ ms.locfileid: "62767031"
 |`IfExists`|Spécifie que le fichier de point de contrôle est utilisé s'il existe. Si le fichier de point de contrôle existe, le package redémarre à partir du point de l'échec de la précédente exécution. Sinon il est exécuté à partir du début du flux de travail du package.|  
   
 > [!NOTE]  
->  L’option **/checkpointing on on** de dtexec équivaut à affecter à la `SaveCheckpoints` propriété du package `True`la valeur et à la `CheckpointUsage` propriété la valeur Always. Pour plus d'informations, consultez [Utilitaire dtexec](dtexec-utility.md).  
+>  L’option **/checkpointing on on** de dtexec équivaut à affecter à la `SaveCheckpoints` propriété du package la valeur `True` et à la `CheckpointUsage` propriété la valeur Always. Pour plus d'informations, consultez [Utilitaire dtexec](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sécurisation des fichiers de point de contrôle  
  La protection au niveau du package n'inclut pas la protection des fichiers de point de contrôle ; vous devez donc sécuriser ces fichiers séparément. Les données de point de contrôle peuvent être stockées uniquement dans le système de fichiers et vous devez utiliser une liste de contrôle d'accès au système d'exploitation pour sécuriser l'emplacement ou le dossier de stockage du fichier. Il est important de sécuriser les fichiers de point de contrôle car ceux-ci contiennent des informations sur l'état du package, notamment les valeurs actuelles des variables. Une variable peut ainsi contenir un ensemble d'enregistrements doté de plusieurs lignes de données privées, telles que des numéros de téléphone. Pour plus d’informations, consultez [accès aux fichiers utilisés par les packages](../access-to-files-used-by-packages.md).  

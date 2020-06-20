@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924640"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Éditeur de tâche d'insertion en bloc (page Connexion)
   Utilisez la page **Connexion** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** pour définir la source et la destination de l'opération d'insertion en bloc et le format à utiliser.  
@@ -28,7 +27,7 @@ ms.locfileid: "66061219"
   
 ## <a name="options"></a>Options  
  **Connection**  
- Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez \<sur **nouvelle connexion...**> pour créer une connexion.  
+ Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**New connection...**> pour créer une nouvelle connexion.  
   
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Configurer le gestionnaire de connexions OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -41,10 +40,10 @@ ms.locfileid: "66061219"
 |Value|Description|  
 |-----------|-----------------|  
 |**Utiliser un fichier**|Sélectionnez un fichier contenant la spécification de format. Cette option affiche l'option dynamique **FormatFile**.|  
-|**Spécifier**|Spécifiez le format. La sélection de cette option permet d’afficher `RowDelimiter` les `ColumnDelimiter`options dynamiques et.|  
+|**Spécifier**|Spécifiez le format. La sélection de cette option permet d’afficher les options dynamiques `RowDelimiter` et `ColumnDelimiter` .|  
   
  **File**  
- Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste \<ou cliquez sur **nouvelle connexion...**> pour créer une connexion.  
+ Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste ou cliquez sur \<**New connection...**> pour créer une nouvelle connexion.  
   
  L'emplacement du fichier dépend du moteur de base de données SQL Server spécifié dans le gestionnaire de connexions pour cette tâche. Le fichier texte doit être accessible au moteur de base de données SQL Server situé sur un disque dur local du serveur ou via un partage ou un lecteur mappé à SQL Server. Le fichier n'est pas accessible au runtime SSIS.  
   
@@ -74,6 +73,6 @@ ms.locfileid: "66061219"
  [Éditeur de tâche d’insertion en bloc &#40;page Options&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Page expressions](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Flux de contrôle](control-flow/control-flow.md)  
+ [Workflow de contrôle](control-flow/control-flow.md)  
   
   

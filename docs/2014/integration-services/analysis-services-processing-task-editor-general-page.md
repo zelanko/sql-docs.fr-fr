@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7730b3cc75c45d0a6a4240a333b0d869a17c26b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061453"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925550"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Éditeur de tâche de traitement d'Analysis Services (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de traitement d’Analysis Services** pour nommer et décrire la tâche de traitement d’Analysis Services.  
@@ -39,6 +38,6 @@ ms.locfileid: "66061453"
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de traitement de Analysis Services &#40;page Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
- [Tâche DDL d'exécution de SQL Server Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
+ [Tâche DDL d’exécution de SQL Server Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

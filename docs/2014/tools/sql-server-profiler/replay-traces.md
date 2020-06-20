@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69956f6a24ec6f373343cebb4e60fa4ad9fea320
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c485317d1343958f9c430b73d858130097d44d75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62740463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007307"
 ---
 # <a name="replay-traces"></a>Relire des traces
   La relecture est la capacité de reproduire une activité capturée dans une trace. Lorsque vous créez ou modifiez une trace, vous pouvez enregistrer cette trace dans un fichier pour la relire ultérieurement. Vous pouvez utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour relire l’activité de trace d’un ordinateur unique. Pour les charges de travail importantes, utilisez Distributed Replay Utility pour relire les données de trace de plusieurs ordinateurs.  

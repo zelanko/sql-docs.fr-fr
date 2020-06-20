@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1de9cd9b8692a92d902e96caefa986335fa0d1db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480831"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937750"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de connaissances et domaines DQS
   Cette rubrique explique en quoi consiste une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Pour nettoyer les données, vous devez disposer de connaissances sur les données. Pour préparer les connaissances d'un projet de qualité des données, vous créez et gérez une base de connaissances que DQS peut utiliser pour identifier les données incorrectes ou non valides. DQS vous permet d'utiliser des processus assistés par ordinateur et interactifs pour créer, générer, et mettre à jour votre base de connaissances. Les connaissances contenues dans une base de connaissances sont conservées dans des domaines, chacun d'entre eux étant spécifique à un champ de données. La base de connaissances est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité.  
@@ -67,7 +66,7 @@ ms.locfileid: "65480831"
   
  Toutefois, vous pouvez contrôler la casse des valeurs que vous exportez dans les résultats de nettoyage. Pour cela, vous devez définir la propriété de domaine **Mettre en forme la sortie vers** (consultez [Définir des propriétés de domaine](../../2014/data-quality-services/set-domain-properties.md)) et activer la case à cocher **Normaliser la sortie** quand vous exportez les résultats de nettoyage (consultez [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="domain-management"></a><a name="Domains"></a> Gestion de l'arborescence du domaine  
+##  <a name="domain-management"></a><a name="Domains"></a>Gestion de domaine  
  La gestion des domaines permet au gestionnaire de données de modifier et d'enrichir de manière interactive les métadonnées générées par l'activité découverte des connaissances assistée par ordinateur. Chaque modification que vous apportez est appliquée à un domaine de la base de connaissances. Dans l'activité de gestion de domaines, vous pouvez effectuer les opérations suivantes :  
   
 -   Créer un domaine. Le nouveau domaine peut être lié à ou copié à partir d'un champ existant.  

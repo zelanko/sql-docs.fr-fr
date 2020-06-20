@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8918da2943e81adbe2e28eb81b37586c8d81f28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937950"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
   Cette rubrique explique comment créer un domaine composite dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend un ou plusieurs domaines uniques qui s'appliquent à un seul champ de données. Pour plus d’informations sur les domaines composites, consultez [Gestion d’un domaine composite](../../2014/data-quality-services/managing-a-composite-domain.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930840"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de table mémoire optimisée
   En plus des tables mémoire optimisées (pour un accès efficace aux données) et des procédures stockées compilées en mode natif (pour une exécution efficace des requêtes et de la logique métier), [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduit un troisième type d'objet : le type de table mémoire optimisée. Une variable de table créée avec un type de table mémoire optimisée est une variable de table mémoire optimisée.  
