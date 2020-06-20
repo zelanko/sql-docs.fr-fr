@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 180d54647f2913e3cf4db1ddfed314215820b648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965069"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Éditeur de source OData (page Sortie d'erreur)
   La page **Sortie d'erreur** de la boîte de dialogue **Éditeur de source OData** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d'erreur.  

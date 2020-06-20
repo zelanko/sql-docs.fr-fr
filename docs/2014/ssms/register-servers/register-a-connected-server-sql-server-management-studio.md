@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93fcd53b0abbbae6855d32cd215327ebfafe9889
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994768"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Inscrire un serveur connecté (SQL Server Management Studio)
   Cette rubrique explique comment inscrire des serveurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Lors de l'inscription du serveur, vous pouvez enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment. Un serveur peut être inscrit avant la connexion ou au moment de la connexion depuis l'Explorateur d'objets.  

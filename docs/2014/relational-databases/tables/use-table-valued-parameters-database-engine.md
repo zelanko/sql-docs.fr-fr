@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002861"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utiliser les paramètres table (Moteur de base de données)
   Les paramètres table sont déclarés en utilisant des types de table définis par l'utilisateur. Vous pouvez utiliser des paramètres table pour envoyer plusieurs lignes de données à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou à une routine, telle qu'une procédure stockée ou une fonction, sans créer de table temporaire ou de nombreux paramètres.  
@@ -79,7 +78,7 @@ ms.locfileid: "68211761"
   
  Les paramètres table procurent des performances supérieures ou égales à une implémentation de tableau de paramètres équivalente.  
   
-##  <a name="example"></a><a name="Example"></a>Tels  
+##  <a name="example"></a><a name="Example"></a> Exemple  
  L'exemple suivant utilise [!INCLUDE[tsql](../../includes/tsql-md.md)] et montre comment créer un type de paramètre table, déclarer une variable pour y faire référence, remplir la liste de paramètres, puis passer les valeurs à une procédure stockée.  
   
 ```  

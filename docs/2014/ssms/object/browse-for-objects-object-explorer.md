@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1df8207ebf479d22f1e67191dfdd254fb6403fea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60afafacf337b393ac683c76b7bee5bc502ed118
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63276870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067350"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Rechercher des objets (Explorateur d'objets)
   Permet d'afficher la liste des objets du type sélectionné. Sélectionnez un ou plusieurs objets de cette liste en activant les cases à cocher correspondantes. La zone **Rechercher des objets** n'affiche que les éléments appropriés pour l'action et les éléments que vous êtes autorisé à afficher.  

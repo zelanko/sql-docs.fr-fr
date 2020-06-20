@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da56673e05c092c965554b76572ac3b0486d2110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044155"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Effectuer une évaluation à la demande à l'aide de l'Explorateur d'objets
-  Dans cette tâche, vous allez utiliser l’Explorateur d’objets pour effectuer une évaluation à la demande des stratégies des meilleures [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pratiques pour le sur une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]seule instance de.  
+  Dans cette tâche, vous allez utiliser l’Explorateur d’objets pour effectuer une évaluation à la demande des stratégies des meilleures pratiques pour le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur une seule instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Vous pouvez également évaluer des stratégies sur une instance unique via des serveurs inscrits. Pour plus d’informations, consultez [effectuer une évaluation à la demande à l’aide de serveurs inscrits](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
@@ -27,11 +26,11 @@ ms.locfileid: "68210945"
  Cette leçon est basée sur la version de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Pour effectuer une évaluation à la demande des stratégies des meilleures pratiques sur des instances qui [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]exécutent, vous devez utiliser la procédure décrite dans la rubrique [effectuer une évaluation à la demande à l’aide de serveurs inscrits](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
+>  Pour effectuer une évaluation à la demande des stratégies des meilleures pratiques sur des instances qui exécutent [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , vous devez utiliser la procédure décrite dans la rubrique [effectuer une évaluation à la demande à l’aide de serveurs inscrits](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>Pour effectuer une évaluation à la demande à l'aide de l'Explorateur d'objets  
   
-1.  Démarrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], puis connectez-vous au [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+1.  Démarrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , puis connectez-vous au [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
   
 2.  Dans l’Explorateur d’objets, développez **gestion**, gestion de la **stratégie**, cliquez avec le bouton droit sur **stratégies**, puis cliquez sur **évaluer**.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68210945"
   
 3.  Dans la boîte de dialogue **évaluer les stratégies** , en regard de la zone **source** , cliquez sur le bouton de sélection (**...**).  
   
-4.  Dans la boîte de dialogue **Sélectionner une source** , vous pouvez sélectionner **fichiers** ou **serveur** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **serveur**, vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur des stratégies sur un serveur local ou distant. Dans ce didacticiel, vous allez cliquer sur **fichiers**, puis sélectionner les fichiers de stratégie individuels que vous souhaitez évaluer. Pour cela, procédez comme suit :  
+4.  Dans la boîte de dialogue **Sélectionner une source** , vous pouvez sélectionner **fichiers** ou **serveur** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **serveur**, vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur des stratégies sur un serveur local ou distant. Dans ce didacticiel, vous allez cliquer sur **fichiers**, puis sélectionner les fichiers de stratégie individuels que vous souhaitez évaluer. Pour ce faire, procédez comme suit :  
   
     1.  Cliquez sur **fichiers**.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "68210945"
 6.  Pour certains échecs de stratégie, la Gestion basée sur des stratégies vous permet de mettre immédiatement en vigueur la conformité aux stratégies sur la cible. Pour de tels échecs, une case à cocher s'affichera en regard de la stratégie qui a échoué. Si vous activez la case à cocher, le bouton **appliquer** devient disponible. Lorsque vous cliquez sur **appliquer**, le paramètre non conforme est automatiquement mis à jour sur l’instance cible.  
   
     > [!CAUTION]  
-    >  Assurez-vous de bien comprendre le paramètre de stratégie avant de mettre à jour automatiquement une instance cible. Après avoir sélectionné une ou plusieurs cases à cocher, nous vous recommandons de cliquer sur **script**et de choisir un emplacement de sortie afin de pouvoir [!INCLUDE[tsql](../includes/tsql-md.md)] examiner le code sous-jacent avant d’appliquer les modifications.  
+    >  Assurez-vous de bien comprendre le paramètre de stratégie avant de mettre à jour automatiquement une instance cible. Après avoir sélectionné une ou plusieurs cases à cocher, nous vous recommandons de cliquer sur **script**et de choisir un emplacement de sortie afin de pouvoir examiner le code sous-jacent [!INCLUDE[tsql](../includes/tsql-md.md)] avant d’appliquer les modifications.  
   
 7.  Pour afficher les résultats détaillés d’une stratégie, cliquez sur la stratégie dans le tableau des **résultats** .  
   

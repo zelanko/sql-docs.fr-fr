@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5b073ee58c0e29b1d7e6d02d079141838cef237
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6937dbb9ce42cd5631201e0c97be42b211742ada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020956"
 ---
 # <a name="cursor-types"></a>Types de curseurs
   ODBC définit quatre types de curseurs pris en charge par Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client. Ces curseurs varient en fonction de leur capacité à détecter les modifications apportées au jeu de résultats et aux ressources qu’ils consomment, telles que la mémoire et l’espace dans **tempdb**. Un curseur peut détecter des modifications apportées à des lignes uniquement lorsqu'il tente d'extraire à nouveau ces lignes ; il n'existe aucun moyen pour la source de données d'informer le curseur des modifications apportées aux lignes en cours d'extraction. La capacité d'un curseur à détecter des modifications qui n'ont pas été apportées par le biais du curseur est également influencée par le niveau d'isolation de la transaction.  

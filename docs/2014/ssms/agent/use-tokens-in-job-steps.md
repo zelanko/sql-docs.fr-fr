@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8f72c282c540d695b799f0c4a884734db2c491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062121"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vous permet d’utiliser des jetons dans des scripts d’étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ces jetons avec lesquels vous rédigez des étapes de travail vous offrent la même flexibilité que les variables lors de l'écriture de programmes logiciels. Après que vous avez inséré un jeton dans un script d'étape de travail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent le remplace au moment de l'exécution avant que le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)] n'exécute l'étape de travail.  
@@ -34,7 +33,7 @@ ms.locfileid: "68211311"
 ## <a name="understanding-using-tokens"></a>Utilisation de jetons  
   
 > [!IMPORTANT]  
->  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **a-DBN**, **a-SVR**, **a-Err**, **a-gravité**, **a-MSG**et **WMI (*`property`*)**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
+>  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **a-DBN**, **a-SVR**, **a-Err**, **a-gravité**, **a-MSG**et **WMI ( *`property`* )**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
 >   
 >  Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
@@ -100,7 +99,7 @@ ms.locfileid: "68211311"
   
 |Syntaxe des jetons|Remplacement de jetons d'alerte activé|Remplacement de jetons d'alerte désactivé|  
 |------------------|--------------------------------|---------------------------------|  
-|Macro ESCAPE utilisée|Tous les jetons des travaux sont remplacés avec succès.|Les jetons activés par des alertes ne sont pas remplacés. Ces jetons sont **a-DBN**, **a-SVR**, **a-Err**, **a-gravité**, **a-MSG**et **WMI (*`property`*)**. Les autres jetons statiques sont remplacés comme il se doit.|  
+|Macro ESCAPE utilisée|Tous les jetons des travaux sont remplacés avec succès.|Les jetons activés par des alertes ne sont pas remplacés. Ces jetons sont **a-DBN**, **a-SVR**, **a-Err**, **a-gravité**, **a-MSG**et **WMI ( *`property`* )**. Les autres jetons statiques sont remplacés comme il se doit.|  
 |Aucune macro ESCAPE utilisée|Échec de tous les travaux contenant des jetons.|Échec de tous les travaux contenant des jetons.|  
   
 ## <a name="token-syntax-update-examples"></a>Exemples de mise à jour de syntaxe de jeton  

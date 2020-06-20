@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f9b638697d59a0a573a9a31c0a5faade23e870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930790"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gestion de la mémoire pour l'OLTP en mémoire
   Les tables mémoire optimisées nécessitent suffisamment de mémoire pour conserver tous les index et les lignes en mémoire. Dans la mesure où la mémoire est une ressource limitée, il est important de comprendre et de gérer l'utilisation de la mémoire sur votre système. Les rubriques de cette section traitent de scénarios courants d'utilisation et de gestion de la mémoire.  
   
-## <a name="in-this-section"></a>Contenu de cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Section|Description|  
 |-------------|-----------------|  

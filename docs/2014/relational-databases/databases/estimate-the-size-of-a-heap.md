@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965979"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
   La procédure suivante vous permet d'obtenir une estimation de la quantité d'espace nécessaire au stockage de données dans un segment de mémoire.  
@@ -57,13 +56,13 @@ ms.locfileid: "62916743"
      Les octets ajoutés à ***Max_Var_Size*** servent à assurer le suivi de chaque colonne de longueur variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de ***Max_Var_Size*** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
-    >  Vous pouvez combiner des colonnes `varchar`, `nvarchar`, `varbinary` ou `sql_variant` qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être comprise dans la limite de 8 000 octets `varchar`pour `nvarchar,``varbinary`une colonne `sql_variant` , ou. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
+    >  Vous pouvez combiner des colonnes `varchar`, `nvarchar`, `varbinary` ou `sql_variant` qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être comprise dans la limite de 8 000 octets pour une `varchar` `nvarchar,``varbinary` colonne, ou `sql_variant` . Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
      En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à ***Variable_Data_Size*** .  
   
 5.  Calculez la taille totale de la ligne :  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   =  ***Fixed_Data_Size***  +  ***Variable_Data_Size***  +  ***Null_Bitmap*** + 4  
   
      La valeur 4 dans la formule correspond à l'espace réservé à l'en-tête de la ligne de données.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916743"
   
 -   Valeurs LOB  
   
-     L’algorithme permettant de déterminer avec précision la quantité d’espace qui sera utilisée pour stocker `varchar(max)`les `varbinary(max)`types `nvarchar(max)`de `text`données **ntextxml**LOB,, `image` ,, ntextxml et les valeurs est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
+     L’algorithme permettant de déterminer avec précision la quantité d’espace qui sera utilisée pour stocker les types de données LOB,,,, `varchar(max)` `varbinary(max)` `nvarchar(max)` `text` **ntextxml**et les `image` valeurs est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
   
 -   Compression  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f28c72a291c145171f7084524fe5dd5cce7c12a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 930c82f6e4538f7f2e916deaa374e928b756909b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002310"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Propriété AcceptPause (classe SqlService)
   Obtient la valeur de propriété booléenne qui spécifie si le service peut être suspendu.  
@@ -37,13 +36,13 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlService](sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur booléenne qui spécifie si le service peut être suspendu. `true` si le service peut être suspendu ou `false` si le service ne peut pas être suspendu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

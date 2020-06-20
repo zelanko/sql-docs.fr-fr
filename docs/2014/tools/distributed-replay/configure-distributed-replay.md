@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40cbece7c2ee5aad3b65a0b4066b409d9f0b6b6e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 90fb604545b8f349368c8edb3dfcebe58dd00762
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007699"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Les détails de configuration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay sont spécifiés dans les fichiers XML qui se trouvent sur Distributed Replay Controller, sur les clients et à l’emplacement où l’outil d’administration est installé. Il s'agit des fichiers suivants :  
@@ -31,7 +30,7 @@ ms.locfileid: "82925053"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> Fichier de configuration du contrôleur : DReplayController.config  
  Lorsque le service Distributed Replay Controller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre, il charge le niveau de journalisation à partir du fichier de configuration du contrôleur, `DReplayController.config`. Ce fichier se trouve dans le dossier où vous avez installé le service Distributed Replay Controller :  
   
- **\<chemin d’installation du contrôleur>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  Le niveau de journalisation spécifié par le fichier de configuration du contrôleur inclut les éléments suivants :  
   
@@ -52,7 +51,7 @@ ms.locfileid: "82925053"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> Fichier de configuration du client : DReplayClient.config  
  Lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client démarre, il charge des paramètres de configuration à partir du fichier de configuration client, `DReplayClient.config`. Ce fichier se trouve sur chaque client, dans le dossier où vous avez installé le service Distributed Replay Client :  
   
- **\<chemin d’installation du client>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  Les paramètres spécifiés par le fichier de configuration client incluent les éléments suivants :  
   
@@ -83,7 +82,7 @@ ms.locfileid: "82925053"
   
  Le fichier de configuration de prétraitement par défaut se trouve dans le dossier où vous avez installé l'outil d'administration :  
   
- **\<chemin d’installation de l’outil d’administration>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  Les paramètres de configuration de prétraitement sont spécifiés dans les éléments XML qui sont enfants de l'élément `<PreprocessModifiers>` dans le fichier de configuration de prétraitement. Les paramètres suivants sont inclus :  
   
@@ -112,11 +111,11 @@ ms.locfileid: "82925053"
   
  Le fichier de configuration de relecture par défaut se trouve dans le dossier où vous avez installé l'outil d'administration :  
   
- **\<chemin d’installation de l’outil d’administration>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  Les paramètres de configuration de la relecture sont spécifiés dans les éléments XML qui sont enfants des éléments `<ReplayOptions>` et `<OutputOptions>` du fichier de configuration de relecture.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions> Element  
+### <a name="replayoptions-element"></a>Élément \<ReplayOptions>  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<ReplayOptions>` incluent les éléments suivants :  
   
 |Paramètre|Élément XML|Description|Valeurs autorisées|Obligatoire|  
@@ -131,7 +130,7 @@ ms.locfileid: "82925053"
 |Délai de requête|`<QueryTimeout>`|Spécifie la valeur du délai de requête, en secondes. Cette valeur n'est effective que jusqu'à ce que la première ligne soit retournée.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `3600`.|  
 |Threads par client|`<ThreadsPerClient>`|Spécifie le nombre de threads de relecture à utiliser pour chaque client de relecture.|Entier compris entre `1` et `512`.|Non. Si non spécifié, Distributed Replay utilise une valeur de `255`.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions> Element  
+### <a name="outputoptions-element"></a>Élément \<OutputOptions>  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<OutputOptions>` incluent les éléments suivants :  
   
 |Paramètre|Élément XML|Description|Valeurs autorisées|Obligatoire|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6438291ca0d84bfd88c80f490022ebd4dd96ede9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972079"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Changer l’adresse e-mail d’un utilisateur (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier l’adresse e-mail à laquelle les notifications sont envoyées, ainsi que le format par défaut des e-mails de notification.  
@@ -39,7 +38,7 @@ ms.locfileid: "65483583"
   
 5.  Mettez à jour l'adresse de messagerie ou le format de courrier électronique.  
   
-6.  Cliquez sur **Save**.  
+6.  Cliquez sur **Enregistrer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5099505fa724707f4801418c35927400cb624d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002838"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Spécification de variables XPath dans les requêtes XPath (SQLXML 4.0)
   Les exemples suivants expliquent comment des variables XPath sont passées dans des requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "82717702"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-use-the-xpath-variables"></a>R. Utilisation des variables XPath  
- Un exemple de modèle se compose de deux requêtes XPath. Chacune des requêtes XPath accepte un paramètre. Le modèle spécifie également les valeurs par défaut de ces paramètres. Les valeurs par défaut sont utilisées si les valeurs des paramètres ne sont pas spécifiées. Deux paramètres avec des valeurs par défaut sont spécifiés dans ** \< SQL : header>**.  
+ Un exemple de modèle se compose de deux requêtes XPath. Chacune des requêtes XPath accepte un paramètre. Le modèle spécifie également les valeurs par défaut de ces paramètres. Les valeurs par défaut sont utilisées si les valeurs des paramètres ne sont pas spécifiées. Deux paramètres avec des valeurs par défaut sont spécifiés dans **\<sql:header>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

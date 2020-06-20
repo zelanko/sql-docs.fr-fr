@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf1666aeacd7df2589c810faa47edf9f435b73bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060518"
 ---
 # <a name="maintain-publications"></a>Gestion des publications
   Une fois que vous avez créé une publication, il sera peut-être nécessaire d'ajouter ou de supprimer des articles, ou de modifier les propriétés de la publication ou des articles. La plupart des modifications sont autorisées après qu'une publication ait été créée, mais dans certains cas, il est nécessaire de générer un nouvel instantané pour une publication et/ou de réinitialiser les abonnements à la publication. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  

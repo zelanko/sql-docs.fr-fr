@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68ddc4f6b42dcc53445b8afaae0bc15e666a5711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6a94f79f6ae201b242fe43b32b711d5d1f561a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667281"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060777"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Outil de résolution des conflits de réplication Microsoft interactif
   L'Outil de résolution des conflits de réplication Microsoft interactif peut s'utiliser pour les abonnements de fusion synchronisés au moyen du Gestionnaire de synchronisation Windows. Il permet d'afficher, comparer, modifier et sélectionner les conflits dans les données des résultats. La réplication comporte également l'Outil de résolution des conflits qui permet d'afficher et de modifier les résultats des conflits après leur validation. L'Outil de résolution des conflits interactif permet de sélectionner le résultat pendant la synchronisation.  

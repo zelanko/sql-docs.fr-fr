@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21459ff6295fce745a380dfb25650d9bbd971de8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965449"
 ---
 # <a name="integration-services-programming-overview"></a>Vue d'ensemble de la programmation Integration Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a une architecture qui sépare le déplacement et la transformation de données du flux de contrôle et de la gestion de packages. Cette architecture se définit par deux moteurs distincts qui peuvent être automatisés et étendus lors de la programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le moteur d'exécution implémente l'infrastructure de flux de contrôle et de gestion de packages qui permet aux développeurs de contrôler le flux d'exécution et de définir des options pour la journalisation, les gestionnaires d'événements et les variables. Le moteur de flux de données est un moteur spécialisé, hautement performant, exclusivement dédié à l'extraction, la transformation et le chargement de données. La programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'effectue à partir de ces deux moteurs.  
@@ -58,9 +57,9 @@ ms.locfileid: "74683622"
 >  Les interfaces de programmation d'applications [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont incompatibles avec les langages de script COM, tels que VBScript.  
   
 ## <a name="locating-assemblies"></a>Recherche d'assemblys  
- Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour le .NET 4, situé dans *\<lecteur>* :\Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
+ Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour .NET 4, situé dans *\<drive>* : \Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
   
- Comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les principaux fichiers .dll d’extensibilité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se trouvent également dans *\<lecteur>* :\Program files\Microsoft SQL Server\100\SDK\Assemblies.  
+ Comme dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , les [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fichiers. dll d’extensibilité de base se trouvent également dans *\<drive>* : \Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Assemblys couramment utilisés  
  Le tableau suivant répertorie les assemblys fréquemment utilisés lors de la programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à l'aide du [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 082af2f3bd069bf8266af395c5d4c6382e191eb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934300"
 ---
 # <a name="database-mirroring-history"></a>Historique de la mise en miroir de bases de données
   Utilisez cette boîte de dialogue pour afficher l'historique d'état de la mise en miroir d'une base de données sur une instance de serveur spécifiée.  

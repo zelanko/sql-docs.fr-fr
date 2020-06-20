@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060807"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Définir des seuils et des avertissements dans le Moniteur de réplication
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le moniteur de réplication affiche des informations d’État pour les publications et les abonnements. Par défaut, le Moniteur de réplication affiche des avertissements uniquement pour les abonnements non initialisés, mais vous pouvez activer les avertissements pour d'autres conditions. Il est recommandé d'activer les avertissements pour votre topologie, afin que vous soyez informés de l'état et des performances en temps voulu.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] moniteur de réplication affiche des informations d’État pour les publications et les abonnements. Par défaut, le Moniteur de réplication affiche des avertissements uniquement pour les abonnements non initialisés, mais vous pouvez activer les avertissements pour d'autres conditions. Il est recommandé d'activer les avertissements pour votre topologie, afin que vous soyez informés de l'état et des performances en temps voulu.  
   
  Quand vous activez un avertissement, vous spécifiez un seuil. Lorsque ce seuil est atteint ou dépassé, un avertissement est affiché (à moins qu'un problème plus important ne doive être affiché). L'atteinte d'un seuil déclenche un avertissement dans le Moniteur de réplication, mais également une alerte. Vous pouvez activer des avertissements pour les situations suivantes :  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62667182"
   
      Cette boîte de dialogue affiche des alertes pour tous les types de publications, y compris des alertes qui ne sont pas liées à la surveillance des seuils. Pour plus d’informations, consultez [Utiliser les alertes pour les événements des agents de réplication](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Définissez les options de la boîte de dialogue Propriétés de l' ** \<alerte AlertName>** :  
+3.  Définissez les options de la boîte de dialogue Propriétés de l' ** \<AlertName> alerte** :  
   
     -   Sur la page **Général** , cliquez sur **Activer**; spécifiez la base de données à laquelle l'alerte doit s'appliquer.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62667182"
   
      Cette boîte de dialogue affiche des alertes pour tous les types de publications, y compris des alertes qui ne sont pas liées à la surveillance des seuils.  
   
-3.  Définissez les options de la boîte de dialogue Propriétés de l' ** \<alerte AlertName>** :  
+3.  Définissez les options de la boîte de dialogue Propriétés de l' ** \<AlertName> alerte** :  
   
     -   Sur la page **Général** , cliquez sur **Activer**; spécifiez la base de données à laquelle l'alerte doit s'appliquer.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62667182"
   
      Cette boîte de dialogue affiche des alertes pour tous les types de publications, y compris des alertes qui ne sont pas liées à la surveillance des seuils. Pour plus d’informations, consultez [Utiliser les alertes pour les événements des agents de réplication](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Définissez les options de la boîte de dialogue Propriétés de l' ** \<alerte AlertName>** :  
+3.  Définissez les options de la boîte de dialogue Propriétés de l' ** \<AlertName> alerte** :  
   
     -   Sur la page **Général** , cliquez sur **Activer**; spécifiez la base de données à laquelle l'alerte doit s'appliquer.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cab0c8a25f4dd95c205c63db1ae056468ebe61c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965240"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Étape 2 : Exécution de l’Assistant Installation de package
   Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  

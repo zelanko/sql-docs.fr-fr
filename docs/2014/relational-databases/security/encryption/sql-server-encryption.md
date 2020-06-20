@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fc68e6f3280a8e23d6a1bf4f364aadfffd69f85
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060229"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
   Le chiffrement est un processus visant à rendre des données inintelligibles à l'aide d'une clé ou d'un mot de passe. Les données sont alors inutiles en l'absence du mot de passe ou de la clé de déchiffrement correspondante. Le chiffrement ne résout pas les problèmes de contrôle d'accès. Toutefois, il améliore la sécurité en limitant les pertes de données même si les contrôles d'accès sont contournés. Par exemple, si l'ordinateur hôte de la base de données est mal configuré et qu'un pirate parvient à se procurer des données sensibles, les données subtilisées seront vraisemblablement inexploitables si elles sont chiffrées.  

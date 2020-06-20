@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0548d974e83bfe2b1e103d4458b17078fba8014
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996468"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
   Il existe deux types de données spatiales. Le type de données `geometry` prend en charge les données planaires, ou euclidiennes (monde en deux dimensions). Le type de données `geometry` se conforme à la fois à la spécification Open Geospatial Consortium (OGC) Simple Features for SQL version 1.1.0. et à la norme SQL MM (norme ISO).
@@ -29,14 +28,14 @@ ms.locfileid: "78176649"
 > [!IMPORTANT]
 >  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les optimisations des types de données spatiales, téléchargez le livre blanc [New Spatial Features in SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctions spatiales dans SQL Server nom de code « Denali »).
 
-##  <a name="spatial-data-objects"></a><a name="objects"></a>Objets de données spatiales
- Les types de données `geometry` et `geography` prennent en charge seize objets de données spatiales, ou types d'instances. Toutefois, seuls onze de ces types d’instances sont *instanciables*; vous pouvez créer et utiliser ces instances (ou les instancier) dans une base de données. Ces instances dérivent certaines propriétés de leurs types de données parents qui `Points`les distinguent comme, **LineStrings, CircularStrings**, `CompoundCurves` `Polygons`, `geometry` , `geography` `CurvePolygons` ou comme instances `GeometryCollection`multiples ou dans un. Le type `Geography` possède un type d'instance supplémentaire, `FullGlobe`.
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Objets de données spatiales
+ Les types de données `geometry` et `geography` prennent en charge seize objets de données spatiales, ou types d'instances. Toutefois, seuls onze de ces types d’instances sont *instanciables*; vous pouvez créer et utiliser ces instances (ou les instancier) dans une base de données. Ces instances dérivent certaines propriétés de leurs types de données parents qui les distinguent comme `Points` , **LineStrings, CircularStrings**,, `CompoundCurves` `Polygons` , `CurvePolygons` ou comme `geometry` instances multiples ou `geography` dans un `GeometryCollection` . Le type `Geography` possède un type d'instance supplémentaire, `FullGlobe`.
 
- La figure ci-dessous représente la hiérarchie `geometry` sur laquelle les types de données `geometry` et `geography` sont basés. Les types instanciables `geometry` de `geography` et sont indiqués en bleu.
+ La figure ci-dessous représente la hiérarchie `geometry` sur laquelle les types de données `geometry` et `geography` sont basés. Les types instanciables de `geometry` et `geography` sont indiqués en bleu.
 
  ![Hiérarchie du type geometry](../../database-engine/media/geom-hierarchy.gif "Hiérarchie du type geometry")
 
- Comme l’indique la figure, les dix types instanciables `geometry` des `geography` types de données `Point`et `MultiPoint`sont `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`,, `GeometryCollection`et. Il existe un type instanciable supplémentaire pour le type de données geography : `FullGlobe`. Les `geometry` types `geography` et peuvent reconnaître une instance spécifique tant qu’il s’agit d’une instance bien formée, même si l’instance n’est pas définie explicitement. Par exemple, si vous définissez une `Point` instance explicitement à l’aide de la méthode STPointFromText `geometry` ( `geography` ), et que vous `Point`identifiez l’instance comme un, tant que l’entrée de la méthode est correctement formée. Si vous définissez la même instance à l'aide de la méthode `STGeomFromText()`, les types de données `geometry` et `geography` reconnaissent l'instance comme un `Point`.
+ Comme l’indique la figure, les dix types instanciables `geometry` des `geography` types de données et sont `Point` , `MultiPoint` , `LineString` , `CircularString` , `MultiLineString` , `CompoundCurve` , `Polygon` ,, `CurvePolygon` `MultiPolygon` et `GeometryCollection` . Il existe un type instanciable supplémentaire pour le type de données geography : `FullGlobe`. Les `geometry` `geography` types et peuvent reconnaître une instance spécifique tant qu’il s’agit d’une instance bien formée, même si l’instance n’est pas définie explicitement. Par exemple, si vous définissez une `Point` instance explicitement à l’aide de la méthode STPointFromText (), et que vous `geometry` `geography` Identifiez l’instance comme un `Point` , tant que l’entrée de la méthode est correctement formée. Si vous définissez la même instance à l'aide de la méthode `STGeomFromText()`, les types de données `geometry` et `geography` reconnaissent l'instance comme un `Point`.
 
  Les sous-types des types geometry et geography sont divisés en types simples et de collection.  Certaines méthodes, telles que `STNumCurves()` , fonctionnent uniquement avec les types simples.
 
@@ -50,7 +49,7 @@ ms.locfileid: "78176649"
 
 -   [CompoundCurve](../spatial/compoundcurve.md)
 
--   [Polygone](../spatial/polygon.md)
+-   [Polygon](../spatial/polygon.md)
 
 -   [CurvePolygon](../spatial/curvepolygon.md)
 
@@ -84,22 +83,22 @@ ms.locfileid: "78176649"
 
  Dans un système ellipsoïdal, un polygone n'a aucune signification, ou est ambigu, sans orientation. Par exemple, un anneau autour de l'équateur décrit-il l'hémisphère Nord ou Sud ? Si nous utilisons le type de données `geography` pour stocker l'instance spatiale, nous devons spécifier l'orientation de l'anneau et décrire précisément l'emplacement de l'instance. L'intérieur du polygone dans un système ellipsoïdal est défini par la règle gauche.
 
- Lorsque le niveau de compatibilité est 100 ou inférieur [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dans, `geography` le type de données présente les restrictions suivantes :
+ Lorsque le niveau de compatibilité est 100 ou inférieur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , le `geography` type de données présente les restrictions suivantes :
 
 -   Chaque instance `geography` doit être contenue à l'intérieur d'un seul hémisphère. Aucun objet spatial plus grand qu'un hémisphère ne peut être stocké.
 
 -   Toute instance `geography` d'une représentation WKB (Well-Known Binary) ou WKT (Well-Known Text) OGC (Open Geospatial Consortium) qui produit un objet plus grand qu'un hémisphère lève une `ArgumentException`.
 
--   Les `geography` méthodes de type de données qui requièrent l' `geography` entrée de deux instances, telles que STIntersection (), STUnion (), STDifference () et STSymDifference (), retournent Null si les résultats des méthodes ne s’ajustent pas à l’intérieur d’un seul hémisphère. STBuffer() retourne également null si la sortie dépasse un seul hémisphère.
+-   Les `geography` méthodes de type de données qui requièrent l’entrée de deux `geography` instances, telles que STIntersection (), STUnion (), STDifference () et STSymDifference (), retournent Null si les résultats des méthodes ne s’ajustent pas à l’intérieur d’un seul hémisphère. STBuffer() retourne également null si la sortie dépasse un seul hémisphère.
 
  Dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], `FullGlobe` est un type spécial de polygone qui couvre le globe entier. `FullGlobe` possède une zone, mais aucune bordure ni sommet.
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Les anneaux internes et externes ne sont pas importants dans le type de données geography
- La spécification OGC simple Features for SQL traite des anneaux externes et internes, mais cette distinction n’a que peu de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` sens pour le type de données ; tout anneau d’un polygone peut être considéré comme l’anneau externe.
+ La spécification OGC simple Features for SQL traite des anneaux externes et internes, mais cette distinction n’a que peu de sens pour le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` type de données ; tout anneau d’un polygone peut être considéré comme l’anneau externe.
 
  Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
 
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)
 
@@ -111,7 +110,7 @@ ms.locfileid: "78176649"
 
  Les figures C et D montrent comment un segment de ligne peut être défini comme un segment d'arc de cercle.  Notez que trois points sont toujours nécessaires pour définir le segment d'arc de cercle contrairement à un segment de ligne ordinaire qui peut être défini par deux points seulement.
 
- Les méthodes opérant sur les types de segment d’arc de cercle utilisent des segments de ligne droite pour rapprocher l’arc de cercle. Le nombre de segments de ligne utilisés pour rapprocher l’arc dépend de la longueur et de la courbure de l’arc. Les valeurs Z peuvent être stockées pour chacun des types de segment d’arc de cercle ; Toutefois, les méthodes n’utilisent pas les valeurs Z dans leurs calculs.
+ Les méthodes qui fonctionnent sur les types de segment d'arc de cercle utilisent des segments de ligne droite pour se rapprocher de l'arc de cercle. Le nombre de segments de ligne utilisé pour se rapprocher de l'arc dépend de la longueur et de la courbure de l'arc. Les valeurs Z peuvent être stockées pour chacun des types de segment d'arc de cercle ; toutefois, les méthodes n'utilisent pas les valeurs Z dans leurs calculs.
 
 > [!NOTE]
 >  Si des valeurs Z sont fournies pour les segments d'arc de cercle, elles doivent être identiques pour tous les points dans le segment d'arc de cercle pour que ce dernier soit accepté comme entrée. Par exemple, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` est autorisé, contrairement à `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` .
@@ -152,7 +151,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
- L’illustration suivante montre le mode de stockage de chaque type (la `LineString``@g1`ligne rouge affiche, `CircularString``@g2`la ligne bleue affiche) :
+ L’illustration suivante montre le mode de stockage de chaque type (la ligne rouge affiche `LineString``@g1` , la ligne bleue affiche `CircularString``@g2` ) :
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 
@@ -167,7 +166,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
- or
+ ou
 
  Dans les exemples ci-dessus, une instance `LineString` ou une instance `CompoundCurve` pourrait stocker la figure.  L'exemple suivant utilise un `CompoundCurve` pour stocker un graphique en secteurs :
 
@@ -192,7 +191,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
- `CompoundCurve`les instances `LineString` autorisent `CircularString` les composants et de sorte que seuls deux points des segments de ligne du graphique à secteurs soient connus.  Cet exemple de code indique comment utiliser un `CompoundCurve` pour stocker la même figure :
+ `CompoundCurve`les instances autorisent les `LineString` composants et de `CircularString` sorte que seuls deux points des segments de ligne du graphique à secteurs soient connus.  Cet exemple de code indique comment utiliser un `CompoundCurve` pour stocker la même figure :
 
 ```sql
 DECLARE @g geometry;

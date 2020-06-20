@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa2b5830ab0579fe0429357fea3275d4e14d1c47
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61da7fafe60ef31246a436e21a5110c121d094e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996406"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Forçages de type de données et annotation sql:datatype (SQLXML 4.0)
   Dans un schéma XSD, l'attribut `xsd:type` spécifie le type de données XSD d'un élément ou d'un attribut. Lorsqu'un schéma XSD est utilisé pour extraire des données de la base de données, le type de données spécifié est utilisé pour formater les données.  
@@ -45,7 +44,7 @@ ms.locfileid: "82703630"
 |Décimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Temps|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Heure|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Tous les autres|Aucune conversion supplémentaire|  
   
 > [!NOTE]  
@@ -97,7 +96,7 @@ ms.locfileid: "82703630"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>R. Spécification de xsd:type  
+### <a name="a-specifying-xsdtype"></a>A. Spécification de xsd:type  
  Cet exemple montre comment un type XSD `date` qui est spécifié en utilisant l'attribut `xsd:type` dans le schéma affecte le document XML résultant. Le schéma fournit une vue XML de la table Sales.SalesOrderHeader dans la base de données AdventureWorks.  
   
 ```  

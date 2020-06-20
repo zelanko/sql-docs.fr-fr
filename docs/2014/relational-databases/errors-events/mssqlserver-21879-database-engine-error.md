@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054226"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -56,6 +55,6 @@ ms.locfileid: "62869176"
   
 -   Utilisez `sp_changedistpublisher` pour modifier le mode de sécurité associé au serveur de publication d’origine dans MSdistpublishers, ainsi que pour spécifier une connexion et un mot de passe à utiliser pour la connexion.  
   
--   Spécifiez le paramètre de ligne de commande *BypassPublisherValidation* sur la ligne de commande de l' `sp_get_redirected_publisher` agent de fusion pour ignorer la validation lorsque est appelé sur le serveur de distribution.  
+-   Spécifiez le paramètre de ligne de commande *BypassPublisherValidation* sur la ligne de commande de l’agent de fusion pour ignorer la validation lorsque `sp_get_redirected_publisher` est appelé sur le serveur de distribution.  
   
   

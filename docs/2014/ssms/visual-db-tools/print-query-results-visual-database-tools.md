@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e08d00725918a7a3463777f6fc5585ecf0831b1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63295255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001036"
 ---
 # <a name="print-query-results-visual-database-tools"></a>Imprimer les résultats d'une requête (Visual Database Tools)
   Pour imprimer les résultats de votre requête, vous pouvez copier le contenu du [volet Résultats](visual-database-tools.md) dans un autre programme Windows, un traitement de texte par exemple, puis le mettre en forme et l’imprimer.  

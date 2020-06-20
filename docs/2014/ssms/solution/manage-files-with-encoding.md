@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061183"
 ---
 # <a name="manage-files-with-encoding"></a>Gérer des fichiers avec encodage
   Pour faciliter l'affichage de votre code dans un langage particulier ou sur une plateforme spécifique, vous pouvez associer un encodage de caractères déterminé à un fichier.  
@@ -42,7 +41,7 @@ ms.locfileid: "62823796"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Pour enregistrer un fichier avec un encodage ou un type de fin de ligne différent  
   
-1.  Dans le menu **fichier** , cliquez sur **Enregistrer \<le nom de fichier> sous**.  
+1.  Dans le menu **Fichier** , cliquez sur **Enregistrer \<filename> sous**.  
   
 2.  Dans la boîte de dialogue **Enregistrer le fichier sous** , développez le bouton **Enregistrer** , puis cliquez sur **Enregistrer avec l’encodage**.  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce8e7428aaf8ba459bcf6831988c61da3f192bac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008761"
 ---
 # <a name="make-a-master-server"></a>Créer un serveur maître
   Cette rubrique décrit comment définir un serveur maître [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "68189131"
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
  Les travaux distribués dont les étapes sont associées à un proxy sont exécutés dans le contexte du compte proxy du serveur cible. Assurez-vous que les conditions suivantes sont remplies ou que les étapes de travail associées à un proxy ne seront pas téléchargées du serveur maître vers la cible :  
   
--   La sous-clé de Registre du serveur maître **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) a la valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
+-   La sous-clé de Registre du serveur maître **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ < *instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) a la valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
   
 -   Il existe sur le serveur cible un compte proxy possédant le même nom que le compte proxy du serveur maître sur lequel l'étape du travail est exécutée.  
   

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798221"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062230"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
   Une étape du travail est une action exécutée par le travail sur une base de données ou un serveur. Chaque travail doit posséder au moins une étape de travail. Les étapes de travail peuvent être :  
@@ -101,7 +100,7 @@ ms.locfileid: "72798221"
   
 -   Un fichier de script PowerShell existant à ouvrir.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-système PowerShell de l’agent ouvre une session PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et charge les composants logiciels enfichables PowerShell. Le script PowerShell utilisé comme commande d’étape de travail peut faire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] référence au fournisseur PowerShell et aux applets de commande. Pour plus d’informations sur l’écriture de scripts PowerShell à l’aide des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-système PowerShell de l’agent ouvre une session PowerShell et charge les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants logiciels enfichables PowerShell. Le script PowerShell utilisé comme commande d’étape de travail peut faire référence au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur PowerShell et aux applets de commande. Pour plus d’informations sur l’écriture de scripts PowerShell à l’aide des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Étapes de travail ActiveX Scripting  
   
@@ -210,6 +209,6 @@ Set oServer = nothing
 |Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d’étapes de travail](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [dbo. sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Créer des travaux](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

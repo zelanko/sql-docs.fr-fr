@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 325242c6660aa49c9358399b38c92d72e21aaf46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 344c5fd0639876998f1585c32fac5f7599f664e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061659"
 ---
 # <a name="guest-permissions-on-user-databases"></a>Autorisations Invité sur les bases de données utilisateur
   Cette règle détermine si l'utilisateur invité a l'autorisation d'accéder à la base de données. Cette règle s'applique uniquement aux bases de données utilisateur.  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b3405f69ce36b4b46cdb519d281ab910d7220887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f27db2bef0286d4e6d46d94c405599c8ca0e83f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062148"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
-  Cette rubrique explique comment renommer le fichier dans lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les erreurs de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent sont écrites [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]à l’aide de.  
+  Cette rubrique explique comment renommer le fichier dans lequel les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erreurs de l’agent sont écrites à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  **Dans cette rubrique**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62649919"
   
 -   Changer les quotas de mémoire d'un processus (SeIncreaseQuotaPrivilege)  
   
- Pour plus d’informations sur les autorisations Windows requises pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service de l’agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Pour plus d’informations sur les autorisations Windows requises pour le compte de service de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et configurer les [comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

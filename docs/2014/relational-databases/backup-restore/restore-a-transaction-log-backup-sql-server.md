@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fe4bbc199d6555bd490d25f92491100b8bbfcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875672"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957155"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
   Cette rubrique explique comment restaurer une sauvegarde du journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62875672"
     |------------|-----------|  
     |**Restauration**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegardes.|  
-    |**Composant**|Composant de sauvegarde : **Base de données**, **Fichier** ou \<vide> (pour des journaux de transactions).|  
+    |**Composant**|Composant sauvegardé : **base de données**, **fichier**ou \<blank> (pour les journaux des transactions).|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Date de début**|Date et heure de début de la sauvegarde, d'après les paramètres régionaux du client.|  
     |**Date de fin**|Date et heure de fin de la sauvegarde, d'après les paramètres régionaux du client.|  
@@ -130,7 +129,7 @@ ms.locfileid: "62875672"
   
         |En-tête|Valeur|  
         |------------|-----------|  
-        |\<vide>|Affiche une case à cocher pour la sélection de la marque.|  
+        |\<blank>|Affiche une case à cocher pour la sélection de la marque.|  
         |**Marque de transaction**|Nom de la transaction marquée spécifiée par l'utilisateur lors de la validation de la transaction.|  
         |**Date**|Date et heure de la validation de la transaction. La date et l’heure sont affichées telles qu’enregistrées dans la table **msdbgmarkhistory** , et non dans l’option Date et heure de l’ordinateur client.|  
         |**Description**|Description de la transaction marquée spécifiée par l'utilisateur lorsque la transaction a été validée (le cas échéant).|  
@@ -146,9 +145,9 @@ ms.locfileid: "62875672"
   
          Conserve les paramètres de réplication lors de la restauration d'une base de données publiée sur un serveur autre que celui sur lequel la base de données a été créée.  
   
-         Cette option est disponible uniquement avec l’option **conserver la base de données opérationnelle en annulant les transactions non validées...** (décrite plus loin), ce qui équivaut à restaurer une sauvegarde `RECOVERY` avec l’option.  
+         Cette option est disponible uniquement avec l’option **conserver la base de données opérationnelle en annulant les transactions non validées...** (décrite plus loin), ce qui équivaut à restaurer une sauvegarde avec l' `RECOVERY` option.  
   
-         L’activation de cette option revient à utiliser `KEEP_REPLICATION` l’option dans [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` une instruction.  
+         L’activation de cette option revient à utiliser l' `KEEP_REPLICATION` option dans une [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
   
     -   **Demander confirmation avant chaque restauration de sauvegarde**  
   
@@ -162,13 +161,13 @@ ms.locfileid: "62875672"
   
          Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator**ou **sysadmin**.  
   
-         L’activation de cette option revient à utiliser `RESTRICTED_USER` l’option dans [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` une instruction.  
+         L’activation de cette option revient à utiliser l' `RESTRICTED_USER` option dans une [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
   
 10. Pour les options **État de récupération** , spécifiez l'état de la base de données après la restauration.  
   
     -   **Laisser la base de données opérationnelle en restaurant les transactions non validées. Les journaux des transactions supplémentaires ne peuvent pas être restaurés. (RESTORE WITH RECOVERY)**  
   
-         Récupère la base de données. Cette option est équivalente à `RECOVERY` l’option dans [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` une instruction.  
+         Récupère la base de données. Cette option est équivalente à l' `RECOVERY` option dans une [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
   
          Choisissez cette option uniquement si vous ne voulez restaurer aucun fichier journal.  
   
@@ -299,7 +298,7 @@ GO
   
 -   [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   

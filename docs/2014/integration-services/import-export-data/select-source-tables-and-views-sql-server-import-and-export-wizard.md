@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aee638291a4aee2c4ea5d60a69fc206af613e15d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965549"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Sélectionner les tables et les vues sources (Assistant Importation et Exportation SQL Server)
   Utilisez la page **Sélectionner les tables et les vues sources** pour spécifier les tables et les vues à copier de la source de données vers la destination.  
   
 > [!NOTE]  
->  Vous n'êtes pas obligé de copier toutes les colonnes d'une table lorsque vous sélectionnez l'option de copie de table. Après avoir sélectionné une table de destination, cliquez sur modifier les mappages pour afficher la boîte de dialogue **mappage de colonnes** . Sélectionnez ** \<ignorer>** dans la colonne **destination** de la boîte de dialogue **mappage de colonnes** pour les colonnes que vous souhaitez ignorer.  
+>  Vous n'êtes pas obligé de copier toutes les colonnes d'une table lorsque vous sélectionnez l'option de copie de table. Après avoir sélectionné une table de destination, cliquez sur modifier les mappages pour afficher la boîte de dialogue **mappage de colonnes** . Sélectionnez **\<ignore>** dans la colonne **destination** de la boîte de dialogue **mappage de colonnes** pour les colonnes que vous souhaitez ignorer.  
   
  Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -43,9 +42,9 @@ ms.locfileid: "62892667"
   
 ### <a name="other-options"></a>Autres options  
  **Modifier les mappages**  
- Utilisez la boîte de dialogue **mappage de colonnes** pour spécifier les colonnes de destination qui recevront les données sources. Vous pouvez copier uniquement un sous-ensemble de colonnes \<en sélectionnant ignorer> dans la colonne **destination** de la boîte de dialogue **mappage de colonnes** pour les colonnes que vous souhaitez ignorer.  
+ Utilisez la boîte de dialogue **mappage de colonnes** pour spécifier les colonnes de destination qui recevront les données sources. Vous pouvez copier uniquement un sous-ensemble de colonnes en sélectionnant \<ignore> dans la colonne **destination** de la boîte de dialogue **mappage** de colonnes les colonnes que vous souhaitez ignorer.  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affichez un aperçu des données sources dans la boîte de dialogue **aperçu des données** pour les vérifier avant d’effectuer l’importation ou l’exportation. La boîte de dialogue **aperçu des données** affiche jusqu’à 200 lignes de données.  
   
  Après l'aperçu des données, vous pouvez à votre guise modifier les options que vous avez sélectionnées pour la source et la destination des données. Pour effectuer ces modifications, dans la page **Sélectionner les tables et les vues sources**, cliquez sur **Précédent** pour retourner aux pages précédentes où vous pouvez modifier vos sélections.  

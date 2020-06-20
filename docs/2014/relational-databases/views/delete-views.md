@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e05724f7d6384d0407e915207ad60a1cdfb01b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061480"
 ---
 # <a name="delete-views"></a>Supprimer des vues
   Vous pouvez supprimer (ignorer) des vues dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]  

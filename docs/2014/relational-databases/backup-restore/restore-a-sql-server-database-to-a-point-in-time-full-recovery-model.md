@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957183"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
   Cette rubrique explique comment restaurer une base de données à un point précis dans le temps dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cette rubrique s'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant le mode de restauration complète ou de récupération utilisant les journaux de transactions.  
@@ -132,9 +131,9 @@ ms.locfileid: "62921056"
   
  **Syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] de base**  
   
- Restaurer les *database_name* de journal à partir de <backup_device> avec STOPAT ** = *`time`*,** Recovery...  
+ Restaurer les *database_name* de journal à partir de <backup_device> avec STOPAT ** = *`time`* ,** Recovery...  
   
- Le point de récupération est la dernière validation de transaction qui s’est produite `datetime` à ou avant la valeur spécifiée par *heure*.  
+ Le point de récupération est la dernière validation de transaction qui s’est produite à ou avant la `datetime` valeur spécifiée par *heure*.  
   
  Pour restaurer uniquement les modifications apportées avant un moment spécifique dans le temps, spécifiez WITH STOPAT **=** *time* pour chaque sauvegarde que vous restaurez. De cette manière, vous êtes certain de ne pas dépasser le moment cible.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921056"
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre dans lequel elles ont été créées, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* de <backup_device> avec STOPAT**=*`time`*,** Recovery).  
+4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre dans lequel elles ont été créées, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* de <backup_device> avec STOPAT** = *`time`* ,** Recovery).  
   
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  
@@ -193,7 +192,7 @@ GO
 -   [Récupérer un numéro séquentiel dans le journal &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

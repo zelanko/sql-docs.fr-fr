@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08b322b5eb6658dfa44dfd1734a5e5d721674630
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044419"
 ---
 # <a name="design-tables-visual-database-tools"></a>Concevoir des tables (Visual Database Tools)
   Le Concepteur de tables consacre une fenêtre entière à la conception d'une table individuelle. Les rubriques de cette section expliquent comment utiliser le Concepteur de tables pour créer et modifier des tables de base de données.  

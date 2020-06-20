@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bbd9f3693fa8f84015efb061dda5e1a9267af960
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996389"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandText
   Cet exemple illustre la façon dont les fichiers de modèle qui se composent de requêtes SQL ou XPath peuvent être spécifiés à l’aide de CommandTextproperty. Au lieu de spécifier la requête SQL ou XPath comme valeur de CommandText, vous pouvez spécifier un nom de fichier comme valeur. Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType. TemplateFile.  

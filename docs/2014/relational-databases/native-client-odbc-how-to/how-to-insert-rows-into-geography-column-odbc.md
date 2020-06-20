@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77d4bea058b9fc4cf63436ec055c597393d5496f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2cf936e5e57e64c13b93ba27cd0f78aa1234eca0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044032"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procédure : insérer des lignes dans la colonne de géographie (ODBC)
   Cet exemple insère deux lignes dans une table avec une colonne de type geography à partir d'une entrée WKB (Well-Known Binary) à l'aide de 2 liaisons différentes (SQLCCHAR et SQLCBINARY). Il sélectionne ensuite une ligne de cette table et utilise ::STAsText() pour l'afficher. La représentation WKB est 0x01010000000700ECFAD03A4C4001008000B5DF07C0 et l'application se charge de l'impression sur la console : POINT(56.4595 -2.9842).  

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0b2c2e597ef7069bcc51fb885a2e810871bfbb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8524cdc2c4efb03e2a285c815ca58391045062f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045513"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>Sauvegarder la clé de chiffrement (SSRS en mode natif)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise une clé de chiffrement pour sécuriser les données sensibles stockées dans la base de données du serveur de rapports. La possession d'une sauvegarde de cette clé est essentielle pour garantir l'accès continu aux chaînes de connexion et aux informations d'identification chiffrées. Vous devez avoir une copie de sauvegarde de cette clé si vous déplacez la base de données du serveur de rapports vers un autre ordinateur ou si vous modifiez le nom d'utilisateur ou le mot de passe du compte de service Report Server. Ces deux opérations nécessitent la restauration de la clé à partir d'une copie de sauvegarde que vous avez créée précédemment.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
- Pour ouvrir la boîte de dialogue Clé de chiffrement de sauvegarde, cliquez sur **Clés de chiffrement** dans le volet de navigation du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis cliquez sur **Sauvegarder**. La boîte de dialogue apparaît également lorsque vous mettez à jour le compte de service à l'aide de la page Compte de service du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la Configuration Manager, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour ouvrir la boîte de dialogue Clé de chiffrement de sauvegarde, cliquez sur **Clés de chiffrement** dans le volet de navigation du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis cliquez sur **Sauvegarder**. La boîte de dialogue apparaît également lorsque vous mettez à jour le compte de service à l'aide de la page Compte de service du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consultez [Gestionnaire de configuration de Reporting Services &#40;Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
  **Emplacement du fichier**  

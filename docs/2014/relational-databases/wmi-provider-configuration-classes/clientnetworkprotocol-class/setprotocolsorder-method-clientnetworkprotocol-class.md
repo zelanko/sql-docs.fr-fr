@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 16a939835d5129a12d5c3b9fce9d6fa5e0c07f80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec199fe0c89378116a0b4fd3e6d36a5062ea0e0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061424"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Méthode SetProtocolsOrder (classe ClientNetworkProtocol)
   Modifie l'ordre de la liste de protocoles.  
@@ -40,7 +39,7 @@ ProtocolOrderList
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Paramètres  
@@ -52,7 +51,7 @@ ProtocolOrderList
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)   

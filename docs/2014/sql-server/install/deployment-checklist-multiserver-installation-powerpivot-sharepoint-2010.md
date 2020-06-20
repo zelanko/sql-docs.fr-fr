@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045152"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Liste de vérification du déploiement : Installation à plusieurs serveurs de PowerPivot pour SharePoint 2010
-  Cette liste de vérification vous guide tout au long [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] des étapes d’ajout de pour SharePoint à une batterie de serveurs SharePoint 2010 à trois niveaux que vous créez dès le départ. Une batterie de serveurs à trois niveaux comprend un niveau de base de données, un niveau applicatif et un niveau Web. L' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ajout à cette topologie nécessite que vous exécutiez SQL Server installation pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installer sur la couche application. Les fichiers programme PowerPivot sont ajoutés à la couche Web, mais uniquement en tant que tâche consécutive à l’installation lorsque vous déployez la solution d’application Web. Bien que le déploiement comporte des étapes, il n'y a pas d'étape d'installation distincte à effectuer sur la couche Web ou la couche de données. La seule étape d’installation que vous devez effectuer est l' [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation de sur les serveurs d’applications.  
+  Cette liste de vérification vous guide tout au long des étapes d’ajout [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de pour SharePoint à une batterie de serveurs sharepoint 2010 à trois niveaux que vous créez dès le départ. Une batterie de serveurs à trois niveaux comprend un niveau de base de données, un niveau applicatif et un niveau Web. L’ajout [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à cette topologie nécessite que vous exécutiez SQL Server installation pour installer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sur la couche application. Les fichiers programme PowerPivot sont ajoutés à la couche Web, mais uniquement en tant que tâche consécutive à l’installation lorsque vous déployez la solution d’application Web. Bien que le déploiement comporte des étapes, il n'y a pas d'étape d'installation distincte à effectuer sur la couche Web ou la couche de données. La seule étape d’installation que vous devez effectuer est l’installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de sur les serveurs d’applications.  
   
 ||  
 |-|  
@@ -92,7 +91,7 @@ ms.locfileid: "71952245"
   
     6.  Cliquez avec le bouton droit sur **SQL Server (MSSQLSERVER)**, puis cliquez sur **redémarrer**.  
   
-3.  Autorisez l'accès entrant au serveur de base de données via le Pare-feu Windows. Cela permet aux serveurs SharePoint de la batterie de se connecter aux bases de données SharePoint. Pour plus d’informations, consultez [configurer le pare-feu Windows pour autoriser l’accès à SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+3.  Autorisez l'accès entrant au serveur de base de données via le Pare-feu Windows. Cela permet aux serveurs SharePoint de la batterie de se connecter aux bases de données SharePoint. Pour plus d’informations, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
     1.  Dans le panneau de configuration Windows, dans outils d’administration, cliquez sur **pare-feu Windows avec fonctions avancées de sécurité**.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "71952245"
   
  Pour vérifier l'intégration de PowerPivot avec un site SharePoint, procédez comme suit :  
   
-1.  Dans un navigateur, ouvrez l'application Web que vous avez créée. Si vous avez utilisé des valeurs par défaut, vous\<pouvez spécifier http://le nom de votre ordinateur> dans l’adresse URL.  
+1.  Dans un navigateur, ouvrez l'application Web que vous avez créée. Si vous avez utilisé des valeurs par défaut, vous pouvez spécifier http:// \<your computer name> dans l’adresse URL.  
   
 2.  Vérifiez que l'accès aux données et les fonctionnalités de traitement de PowerPivot sont disponibles dans l'application. Pour cela, vous pouvez vérifier la présence de modèles de bibliothèque fournis par PowerPivot :  
   
@@ -209,9 +208,9 @@ ms.locfileid: "71952245"
   
 5.  Démarrez SQL Server Management Studio à partir du groupe de programmes Microsoft SQL Server 2008 R2 dans le menu Démarrer. Si cet outil n'est pas installé sur votre serveur, vous pouvez passer à la dernière étape pour confirmer la présence de fichiers mis en cache.  
   
-6.  Dans Type de serveur, sélectionnez **Analysis Services**.  
+6.  Dans type de serveur, sélectionnez **Analysis Services**.  
   
-7.  Dans nom du serveur, entrez ** \<Server-Name> \powerpivot**, où ** \<Server-Name>** correspond au nom de l’ordinateur sur lequel est installé le PowerPivot pour SharePoint.  
+7.  Dans nom du serveur, entrez ** \<server-name> \powerpivot**, où **\<server-name>** est le nom de l’ordinateur sur lequel est installé le PowerPivot pour SharePoint.  
   
 8.  Cliquez sur **Connecter**.  
   

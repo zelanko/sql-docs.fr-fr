@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62885570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972709"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Outils de dépannage pour le développement des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des fonctionnalités et des outils que vous pouvez utiliser pour dépanner les packages quand vous les développez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "62885570"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut les fonctionnalités supplémentaires suivantes pour vous aider à éviter des erreurs de validation :  
   
--   **Définir tous les packages et toutes les connexions pour travailler hors connexion quand les sources de données ne sont pas disponibles**. Vous pouvez activer **Travailler hors connexion** à partir du menu **SSIS** . Contrairement à `DelayValidation` la propriété, l’option **travailler hors connexion** est disponible même avant l’ouverture d’un package. Vous pouvez également activer l’option **Travailler hors connexion** pour accélérer les opérations exécutées dans le concepteur, puis la désactiver dès que vous souhaitez valider votre package.  
+-   **Définir tous les packages et toutes les connexions pour travailler hors connexion quand les sources de données ne sont pas disponibles**. Vous pouvez activer **Travailler hors connexion** à partir du menu **SSIS** . Contrairement à la `DelayValidation` propriété, l’option **travailler hors connexion** est disponible même avant l’ouverture d’un package. Vous pouvez également activer l’option **Travailler hors connexion** pour accélérer les opérations exécutées dans le concepteur, puis la désactiver dès que vous souhaitez valider votre package.  
   
 -   **Configurer la propriété DelayValidation dans les éléments de package qui ne sont pas valides avant l’exécution**. Pour éviter toute erreur de validation, vous pouvez définir la propriété `DelayValidation` avec la valeur `True` dans les éléments de package dont la configuration n'est pas valide au moment de la conception. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. La propriété `DelayValidation` peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package. En règle générale, pour éviter les mêmes erreurs de validation au moment de l'exécution, vous devez laisser cette propriété avec la valeur `True` dans les mêmes éléments de package lors du déploiement du package.  
   

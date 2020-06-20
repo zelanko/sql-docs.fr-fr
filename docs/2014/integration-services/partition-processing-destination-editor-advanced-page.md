@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fd341302c20d0ac79dad4169c13d1e1bca45d6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056775"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964730"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Éditeur de destination de traitement de partition (page Avancé)
   Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination de traitement de partition** pour configurer la gestion des erreurs.  
@@ -31,7 +30,7 @@ ms.locfileid: "66056775"
   
 ## <a name="options"></a>Options  
  **Utiliser la configuration d'erreur par défaut**  
- Indiquez si vous voulez utiliser la gestion des erreurs par défaut d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par défaut, cette valeur est définie sur `True`.  
+ Indiquez si vous voulez utiliser la gestion des erreurs par défaut d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par défaut, cette valeur est `True`.  
   
  **Action de l’erreur de clé**  
  Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  

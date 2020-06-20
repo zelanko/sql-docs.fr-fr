@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972809"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Éditeur de tâche de transfert de connexions (page Connexions)
   Utilisez la page **Connexions** de la boîte de dialogue **Éditeur de tâche de transfert de connexions** pour spécifier les propriétés de copie d'une ou plusieurs connexions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à une autre. Pour plus d'informations sur cette tâche, consultez [Transfer Logins Task](control-flow/transfer-logins-task.md).  
@@ -29,10 +28,10 @@ ms.locfileid: "66054927"
   
 ## <a name="options"></a>Options  
  **Abord SourceConnection**  
- Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur source.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<New connection...>** pour créer une nouvelle connexion au serveur source.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<New connection...>** pour créer une connexion au serveur de destination.  
   
  **LoginsToTransfer**  
  Sélectionnez les connexions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à copier du serveur source au serveur de destination. Cette propriété dispose des options répertoriées dans le tableau suivant :  
@@ -58,7 +57,7 @@ ms.locfileid: "66054927"
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des connexions de même nom existent déjà sur le serveur de destination.|  
 |**Remplacer**|La tâche remplace les connexions de même nom sur le serveur de destination.|  
-|**Saut**|La tâche ignore les connexions de même nom qui existent sur le serveur de destination.|  
+|**Ignorer**|La tâche ignore les connexions de même nom qui existent sur le serveur de destination.|  
   
  **CopySids**  
  Déterminez si les identificateurs de sécurité associés aux connexions doivent être copiés sur le serveur de destination. **CopySids** doit prendre la valeur **True** si la tâche de transfert de connexions est utilisée en parallèle à la tâche de transfert de bases de données. Dans le cas contraire, les connexions copiées ne seront pas reconnues par la base de données transférée.  

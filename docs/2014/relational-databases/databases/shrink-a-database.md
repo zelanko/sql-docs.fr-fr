@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965739"
 ---
 # <a name="shrink-a-database"></a>Réduire une base de données
   Cette rubrique explique comment réduire une base de données au moyen de l'Explorateur d'objets dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,7 +64,7 @@ ms.locfileid: "62916965"
   
 #### <a name="to-shrink-a-database"></a>Pour réduire une base de données  
   
-1.  Dans **Object Explorer**l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Explorateur d’objets, connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans l' **Explorateur d’objets**, connectez-vous à une instance du, puis [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] développez cette instance.  
   
 2.  Développez **Bases de données**, puis cliquez avec le bouton droit sur la base de données à réduire.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767641"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965289"
 ---
 # <a name="step-4-adding-package-configurations"></a>Étape 4 : Ajout de configurations au package
   Au cours de cette tâche, vous allez ajouter une configuration à chaque package. Les configurations mettent à jour les valeurs des propriétés de package et des objets de package au moment de l'exécution.  

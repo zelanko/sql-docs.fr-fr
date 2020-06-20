@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831619"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918839"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
   Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831619"
   
 2.  Ajoutez un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] au package. Configurez ce gestionnaire de connexions pour qu’il utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) et se connecte à une instance disponible de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Par défaut, le gestionnaire de connexions porte le nom suivant : \<nom_serveur>.AdventureWorks1.  
+     Par défaut, le gestionnaire de connexions porte le nom suivant : \<server name> . AdventureWorks1.  
   
 3.  Ajoutez un gestionnaire de connexions de fichiers au package. Configurez ce gestionnaire de connexions pour créer le fichier de sortie pour la tâche de profilage des données.  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831619"
   
 -   Dans la fenêtre **Variables** , ajoutez et configurez les deux variables de package suivantes :  
   
-    -   Entrez le nom, `ProfileConnectionName`, pour l’une des variables et définissez le type de cette variable sur **chaîne**.  
+    -   Entrez le nom, `ProfileConnectionName` , pour l’une des variables et définissez le type de cette variable sur **chaîne**.  
   
-    -   Entrez le nom, `AddressLine2NullRatio`, pour l’autre variable et définissez le type de cette variable sur **double**.  
+    -   Entrez le nom, `AddressLine2NullRatio` , pour l’autre variable et définissez le type de cette variable sur **double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurer la tâche de profilage des données  
  La tâche de profilage des données doit être configurée de la façon suivante :  
@@ -142,9 +141,9 @@ ms.locfileid: "62831619"
   
 4.  Dans la page **Script** , sélectionnez votre langage de programmation préféré. Ensuite, rendez les deux variables de package disponibles pour le script:  
   
-    1.  Pour `ReadOnlyVariables`, sélectionnez `ProfileConnectionName`.  
+    1.  Pour `ReadOnlyVariables` , sélectionnez `ProfileConnectionName` .  
   
-    2.  Pour **ReadWriteVariables**, sélectionnez `AddressLine2NullRatio`.  
+    2.  Pour **ReadWriteVariables**, sélectionnez `AddressLine2NullRatio` .  
   
 5.  Sélectionnez **Modifier le script** pour ouvrir l'environnement de développement de script.  
   
