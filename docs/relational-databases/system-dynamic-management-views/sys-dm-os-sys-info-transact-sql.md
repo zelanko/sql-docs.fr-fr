@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e624323c2794afc38a9d8dcf948db69282af0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827917"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107042"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "82827917"
 |**physical_memory_kb**|**bigint**|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Spécifie la quantité totale de mémoire physique sur l'ordinateur. N'accepte pas la valeur NULL.|  
 |**virtual_memory_in_bytes**|**bigint**|**S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Quantité de mémoire virtuelle dont dispose le processus en mode utilisateur. Cette information peut être utilisée pour déterminer si SQL Server a été démarré à l'aide d'un commutateur 3-GB.|  
 |**virtual_memory_kb**|**bigint**|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Spécifie la quantité totale d'espace d'adressage virtuel disponible au processus en mode utilisateur. N'accepte pas la valeur NULL.|  
-|**bpool_commited**|**int**|**S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Représente la mémoire validée, en kilo-octet (Ko), dans le gestionnaire de mémoire. Elle ne comprend pas la mémoire réservée dans le gestionnaire de mémoire. N'accepte pas la valeur NULL.|  
+|**bpool_committed**|**int**|**S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Représente la mémoire validée, en kilo-octet (Ko), dans le gestionnaire de mémoire. Elle ne comprend pas la mémoire réservée dans le gestionnaire de mémoire. N'accepte pas la valeur NULL.|  
 |**committed_kb**|**int**|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Représente la mémoire validée, en kilo-octet (Ko), dans le gestionnaire de mémoire. Elle ne comprend pas la mémoire réservée dans le gestionnaire de mémoire. N'accepte pas la valeur NULL.|  
 |**bpool_commit_target**|**int**|**S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Représente la quantité de mémoire, en kilo-octet (KB), qui peut être consommée par le gestionnaire de mémoire SQL Server.|  
 |**committed_target_kb**|**int**|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Représente la quantité de mémoire, en kilo-octet (KB), qui peut être consommée par le gestionnaire de mémoire SQL Server. Le montant cible est calculé à l'aide de diverses entrées, telles que :<br /><br /> -état actuel du système, y compris sa charge<br /><br /> -mémoire demandée par les processus en cours<br /><br /> -la quantité de mémoire installée sur l’ordinateur<br /><br /> -paramètres de configuration<br /><br /> Si **committed_target_kb** est supérieure à **committed_kb**, le gestionnaire de mémoire essaiera d’obtenir de la mémoire supplémentaire. Si **committed_target_kb** est inférieure à **committed_kb**, le gestionnaire de mémoire tente de réduire la quantité de mémoire allouée. Le **committed_target_kb** comprend toujours le vol et la mémoire réservée. N'accepte pas la valeur NULL.|  
