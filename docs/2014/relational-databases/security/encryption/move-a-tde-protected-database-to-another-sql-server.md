@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b03b4d9ecf31e9953fd3e22cec5c51bbacc0c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060297"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
   Cette rubrique explique comment protéger une base de données à l’aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE effectue le chiffrement et le déchiffrement d’E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données stockée dans l’enregistrement de démarrage de base de données à des fins de disponibilité lors de la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données `master` du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
@@ -47,7 +46,7 @@ ms.locfileid: "74957167"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
--   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installé dans `master` la base de données du serveur de destination [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , afin que puisse accéder aux fichiers de base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installé dans la `master` base de données du serveur de destination, afin que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puisse accéder aux fichiers de base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Vous devez conserver des copies du fichier de certificat et du fichier de clé privée pour permettre la récupération du certificat. Le mot de passe de la clé privée ne doit pas forcément être le même que le mot de passe de la clé principale de la base de données.  
   
@@ -57,9 +56,9 @@ ms.locfileid: "74957167"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
--   Nécessite `CONTROL DATABASE` l’autorisation sur `master` la base de données pour créer la clé principale de base de données.  
+-   Nécessite l' `CONTROL DATABASE` autorisation sur la `master` base de données pour créer la clé principale de base de données.  
   
--   Nécessite `CREATE CERTIFICATE` l’autorisation sur `master` la base de données pour créer le certificat qui protège le Dek.  
+-   Nécessite l' `CREATE CERTIFICATE` autorisation sur la `master` base de données pour créer le certificat qui protège le Dek.  
   
 -   Requiert l'autorisation `CONTROL DATABASE` sur la base de données chiffrée et l'autorisation `VIEW DEFINITION` sur le certificat ou la clé asymétrique qui sert à chiffrer la clé de chiffrement de la base de données.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "74957167"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Utilisation de SQL Server Management Studio  
   
-1.  Créez une clé principale de base de données et `master` un certificat dans la base de données. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
+1.  Créez une clé principale de base de données et un certificat dans la `master` base de données. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
 2.  Créez une sauvegarde du certificat de serveur dans la `master` base de données. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
@@ -143,7 +142,7 @@ ms.locfileid: "74957167"
     GO  
     ```  
   
- Pour plus d’informations, voir :  
+ Pour plus d'informations, consultez les pages suivantes :  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -168,7 +167,7 @@ ms.locfileid: "74957167"
      **Bases de données à détacher**  
      Répertorie les bases de données à détacher.  
   
-     **Nom de la base de données**  
+     **Database Name**  
      Spécifie le nom de la base de données à détacher.  
   
      **Supprimer les connexions**  
@@ -177,7 +176,7 @@ ms.locfileid: "74957167"
     > [!NOTE]  
     >  Vous ne pouvez pas détacher une base de données avec des connexions actives.  
   
-     **Mettre à jour les statistiques**  
+     **Statistiques de mise à jour**  
      Par défaut, l'opération de détachement conserve toutes les statistiques d'optimisation obsolètes avant de procéder au détachement ; pour actualiser les statistiques existantes, activez cette case à cocher.  
   
      **Conserver les catalogues de texte intégral**  
@@ -216,13 +215,13 @@ ms.locfileid: "74957167"
      **Bases de données à attacher**  
      Affiche des informations sur les bases de données sélectionnées.  
   
-     \<aucun en-tête de colonne>  
+     \<no column header>  
      Affiche une icône indiquant l'état de l'opération d'attachement. Les icônes possibles sont décrites dans la section **État** ci-dessous.  
   
      **Emplacement du fichier MDF**  
      Affiche le chemin d'accès et le nom du fichier MDF sélectionné.  
   
-     **Nom de la base de données**  
+     **Database Name**  
      Affiche le nom de la base de données.  
   
      **Attacher en tant que**  
@@ -238,7 +237,7 @@ ms.locfileid: "74957167"
     |----------|-----------------|-----------------|  
     |(Aucune icône)|(Aucun texte)|L'opération d'attachement n'a pas démarré ou est peut-être en attente pour cet objet. Il s'agit de la valeur par défaut lorsque la boîte de dialogue est ouverte.|  
     |Triangle vert dirigé vers la droite|En cours|L'opération d'attachement a démarré, mais n'est pas terminée.|  
-    |Coche verte|Opération réussie|L'attachement de l'objet a réussi.|  
+    |Coche verte|Succès|L'attachement de l'objet a réussi.|  
     |Cercle rouge contenant une croix blanche|Error|L'opération d'attachement a rencontré une erreur et ne s'est pas terminée correctement.|  
     |Cercle contenant deux quartiers noirs (à gauche et à droite) et deux quartiers blancs (en haut et en bas)|Arrêté|L'opération d'attachement n'a pas réussi, car l'utilisateur l'a interrompue.|  
     |Cercle contenant une flèche courbe pointant dans le sens inverse des aiguilles d'une montre|Restauré|L'opération d'attachement a réussi, mais a été restaurée en raison d'une erreur lors de l'attachement d'un autre objet.|  
@@ -252,8 +251,8 @@ ms.locfileid: "74957167"
      **Remove**  
      Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
   
-     **Détails de la base de données** **«** _<database_name>_ »  
-     Affiche le nom des fichiers à attacher. Pour vérifier ou modifier le chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (**...**).  
+     **Détails de la base de données "** _<nom_base_de_données>_ **"**  
+     Affiche le nom des fichiers à attacher. Pour vérifier ou changer le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** ( **...** ).  
   
     > [!NOTE]  
     >  Si un fichier n'existe pas, la colonne **Message** affiche « Introuvable ». Si un fichier journal est introuvable, cela signifie qu'il se trouve dans un autre répertoire ou qu'il a été supprimé. Vous devez mettre à jour le chemin d'accès du fichier dans la grille **Détails de la base de données** pour désigner l'emplacement correct ou supprimer le fichier journal de la grille. Si un fichier de données .ndf est introuvable, vous devez mettre à jour son chemin d'accès dans la grille pour désigner l'emplacement correct.  
@@ -268,7 +267,7 @@ ms.locfileid: "74957167"
      Affiche le chemin d'accès au fichier de base de données sélectionné. Le chemin d'accès peut être modifié manuellement.  
   
      **Message**  
-     Affiche un message vierge ou un lien hypertexte «**fichier introuvable**».  
+     Affiche un message vierge ou un lien hypertexte «**Fichier introuvable**».  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Utilisation de Transact-SQL  
   
@@ -311,7 +310,7 @@ ms.locfileid: "74957167"
     GO  
     ```  
   
- Pour plus d’informations, voir :  
+ Pour plus d'informations, consultez les pages suivantes :  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

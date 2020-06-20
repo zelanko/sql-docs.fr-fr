@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d93a9f9a75bd869fd8ecc9bc17ec42750c4a94f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067225"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Boîte de dialogue Couleur (Visual Database Tools)
   La **boîte de dialogue Couleur** retourne la valeur RVB d'une couleur sélectionnée par l'utilisateur. L'utilisateur peut faire son choix dans un jeu de couleurs de base déterminé par le pilote d'affichage ou dans un jeu de couleurs personnalisées. Sélectionnez une couleur parmi les couleurs de base ou créez des couleurs personnalisées. Définissez les couleurs en cliquant sur la matrice des couleurs ou en renseignant les zones **Teinte**, **Sat**, **Lum**, **Rouge**, **Vert**et **Bleu** .  

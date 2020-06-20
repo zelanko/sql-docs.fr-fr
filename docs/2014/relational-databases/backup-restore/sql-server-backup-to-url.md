@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6918a099e00b1de9e773320b5c6c0e4089859e02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956346"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
   Cette rubrique présente les concepts, la configuration requise et les composants nécessaires à l’utilisation du service de stockage d’objets BLOB Azure en tant que destination de sauvegarde. Les fonctionnalités de sauvegarde et de restauration sont identiques ou similaires à l'utilisation de l'option DISK ou TAPE, à quelques différences près. Les différences, les exceptions notables et des exemples de code sont inclus dans cette rubrique.  
@@ -47,12 +46,12 @@ ms.locfileid: "79289227"
 -   Lorsque vous créez un conteneur pour le service de stockage d’objets BLOB Azure, nous vous recommandons de définir l’accès sur **privé**. La définition d’un accès privé limite l’accès aux seuls utilisateurs ou comptes capables de fournir les informations nécessaires pour s’authentifier auprès du compte Azure.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requiert que le nom du compte Azure et l’authentification de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clé d’accès soient stockés dans les informations d’identification. Ces informations sont utilisées pour l’authentification auprès du compte Azure lorsqu’il effectue des opérations de sauvegarde ou de restauration.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requiert que le nom du compte Azure et l’authentification de la clé d’accès soient stockés dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations d’identification. Ces informations sont utilisées pour l’authentification auprès du compte Azure lorsqu’il effectue des opérations de sauvegarde ou de restauration.  
   
 -   Le compte d’utilisateur utilisé pour émettre les commandes BACKUP (sauvegarder) ou RESTORE (restaurer) doit figurer dans le rôle de base de données **db_backup operator** avec les autorisations **Modifier des informations d’identification** .  
   
 ###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a>Présentation des principaux composants et concepts  
- Les deux sections suivantes présentent le service de stockage d’objets BLOB Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ainsi que les composants utilisés lors de la sauvegarde ou de la restauration à partir du service de stockage d’objets BLOB Azure. Il est important de comprendre les composants et leur interaction pour effectuer une sauvegarde ou une restauration à partir du service de stockage d’objets BLOB Azure.  
+ Les deux sections suivantes présentent le service de stockage d’objets BLOB Azure, ainsi que les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants utilisés lors de la sauvegarde ou de la restauration à partir du service de stockage d’objets BLOB Azure. Il est important de comprendre les composants et leur interaction pour effectuer une sauvegarde ou une restauration à partir du service de stockage d’objets BLOB Azure.  
   
  La création d’un compte Azure est la première étape de ce processus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utilise le **nom du compte de stockage Azure** et ses valeurs de **clé d’accès** pour authentifier et écrire et lire les objets BLOB dans le service de stockage. Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration. Pour une procédure pas à pas complète de création d’un compte de stockage et d’exécution d’une restauration simple, consultez [didacticiel utilisation du service de stockage Azure pour la sauvegarde et la restauration de SQL Server](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
@@ -63,7 +62,7 @@ ms.locfileid: "79289227"
   
  **Conteneur :** Un conteneur permet de regrouper un ensemble d’objets BLOB et peut stocker un nombre illimité d’objets BLOB. Pour écrire une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauvegarde dans le service d’objets BLOB Azure, vous devez avoir au moins le conteneur racine créé.  
   
- **Objet blob :** Fichier de tout type et de toute taille. Il existe deux types d’objets BLOB qui peuvent être stockés dans le service de stockage d’objets BLOB Azure : les objets BLOB de blocs et de pages. La sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des objets blob de pages en tant que type d'objet blob. Les objets BLOB sont adressables à l’aide du format\<d’URL suivant : compte\<de stockage https://\<>. blob.Core.Windows.NET/conteneur>/BLOB>  
+ **Objet blob :** Fichier de tout type et de toute taille. Il existe deux types d’objets BLOB qui peuvent être stockés dans le service de stockage d’objets BLOB Azure : les objets BLOB de blocs et de pages. La sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des objets blob de pages en tant que type d'objet blob. Les objets BLOB sont adressables à l’aide du format d’URL suivant : https:// \<storage account> . blob.Core.Windows.net/\<container>/\<blob>  
   
  ![Stockage Blob Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Stockage Blob Azure")  
   
@@ -77,7 +76,7 @@ ms.locfileid: "79289227"
 > [!WARNING]  
 >  Si vous choisissez de copier et de charger un fichier de sauvegarde dans le service de stockage d’objets BLOB Azure, utilisez l’objet blob de pages comme option de stockage. Les restaurations à partir d'objets blob de blocs ne sont pas prises en charge. Une restauration à partir d'un type d'objet blob de blocs échoue avec une erreur.  
   
- Voici un exemple de valeur d’URL : http [s] :\<//ACCOUNTNAME.Blob.core.windows.net/Container>\</filename. bak>. HTTPS n'est pas obligatoire, mais est recommandé.  
+ Voici un exemple de valeur d’URL : http [s]://ACCOUNTNAME.Blob.core.windows.net/ \<CONTAINER> / \<FILENAME.bak> . HTTPS n'est pas obligatoire, mais est recommandé.  
   
  **Informations d’identification :** Les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server.  Ici, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les processus de sauvegarde et de restauration utilisent les informations d’identification pour s’authentifier auprès du service de stockage d’objets BLOB Azure. Les informations d'identification contiennent le nom du compte de stockage et ses valeurs de **clé d'accès** . Une fois les informations d'identification créées, vous devez les spécifier dans l'option WITH CREDENTIAL lorsque vous publiez des instructions BACKUP/RESTORE. Pour plus d'informations sur l'affichage, la copie ou la régénération des **access keys**de compte de stockage, consultez [Afficher, copier et régénérer les clés d'accès d'un compte de stockage Windows Azure](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
@@ -151,7 +150,7 @@ ms.locfileid: "79289227"
 |COPY_ONLY|&#x2713;|||  
 |COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
 |Description|&#x2713;|||  
-|NAME|&#x2713;|||  
+|NOM|&#x2713;|||  
 |EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
 |NOINIT &#124; INIT|&#x2713;||Cette option est ignorée si elle est utilisée.<br /><br /> L'ajout aux objets blob n'est pas possible. Pour remplacer une sauvegarde, utilisez l'argument FORMAT.|  
 |NOSKIP &#124; SKIP|&#x2713;|||  

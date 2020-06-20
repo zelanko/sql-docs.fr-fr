@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211206"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000738"
 ---
 # <a name="creating-a-login"></a>Création d'une connexion
   Pour accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)], les utilisateurs ont besoin d’une connexion. Cette connexion peut représenter l’identité de l’utilisateur sous forme d’un compte Windows ou d’un membre d’un groupe Windows, ou la connexion peut être une connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui existe uniquement dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Chaque fois que vous en avez la possibilité, utilisez l’authentification Windows.  
@@ -26,7 +25,7 @@ ms.locfileid: "68211206"
   
 ### <a name="to-create-a-new-windows-account"></a>Pour créer un nouveau compte Windows  
   
-1.  Cliquez **sur Démarrer**, sur **exécuter**, dans la zone **ouvrir** , `%SystemRoot%\system32\compmgmt.msc /s`tapez, puis cliquez sur **OK** pour ouvrir le programme gestion de l’ordinateur.  
+1.  Cliquez sur **Démarrer**, sur **exécuter**, dans la zone **ouvrir** , tapez `%SystemRoot%\system32\compmgmt.msc /s` , puis cliquez sur **OK** pour ouvrir le programme gestion de l’ordinateur.  
   
 2.  Sous **Outils système**, développez **Utilisateurs et groupes locaux**, cliquez avec le bouton droit sur **Utilisateurs**, puis cliquez sur **Nouvel utilisateur**.  
   

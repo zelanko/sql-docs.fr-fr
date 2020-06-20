@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 616707bfb11b48b170fc8f0e8872076d2cd09d1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793292"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060355"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Répliquer des tables et des index partitionnés
   Le partitionnement facilite la gestion des tables et des index de grande taille, car il permet de gérer et d'accéder rapidement et efficacement à des sous-ensembles de données, tout en conservant l'intégrité d'une collecte de données. Pour plus d’informations, consultez [Tables et index partitionnés](../../partitions/partitioned-tables-and-indexes.md). La réplication prend en charge le partitionnement en fournissant un ensemble de propriétés qui indiquent comment les tables et les index partitionnés doivent être traités.  
@@ -37,7 +36,7 @@ ms.locfileid: "67793292"
   
  Le premier ensemble de propriétés en rapport avec le partitionnement correspond aux options de schéma d'article qui déterminent si le partitionnement d'objets doit être copié vers l'Abonné. Ces options de schéma peuvent être définies de plusieurs façons :  
   
--   Sur la page **Propriétés de l'article** de l'Assistant Nouvelle publication ou la boîte de dialogue Propriétés de la publication. Pour copier les objets listés dans le tableau précédent, spécifiez la `true` valeur pour les propriétés **copier les schémas de partition de table** et copier les schémas de partition d' **index**. Pour plus d’informations sur la façon d’accéder à la page **Propriétés de l’article**, consultez [Afficher et modifier des propriétés de publication](view-and-modify-publication-properties.md).  
+-   Sur la page **Propriétés de l'article** de l'Assistant Nouvelle publication ou la boîte de dialogue Propriétés de la publication. Pour copier les objets listés dans le tableau précédent, spécifiez `true` la valeur pour les propriétés **copier les schémas de partition de table** et copier les schémas de partition d' **index**. Pour plus d’informations sur la façon d’accéder à la page **Propriétés de l’article**, consultez [Afficher et modifier des propriétés de publication](view-and-modify-publication-properties.md).  
   
 -   En utilisant le paramètre *schema_option* de l'une des procédures stockées suivantes :  
   
@@ -70,9 +69,9 @@ ms.locfileid: "67793292"
 ### <a name="enabling-partition-switching"></a>Activation du basculement de partition  
  Les propriétés suivantes pour les publications transactionnelles permettent aux utilisateurs de contrôler le comportement de l'insertion de partition dans un environnement répliqué :  
   
--   allow_partition_switch, si la valeur `true`est, Switch partition peut être exécuté sur la base de données de publication. ** \@**  
+-   ** \@ allow_partition_switch**, si la valeur `true` est, Switch partition peut être exécuté sur la base de données de publication.  
   
--   replicate_partition_switch détermine si l’instruction switch partition DDL doit être répliquée sur les abonnés. ** \@** Cette option est valide uniquement lorsque ** \@allow_partition_switch** a la valeur `true`.  
+-   ** \@ replicate_partition_switch** détermine si l’instruction switch partition DDL doit être répliquée sur les abonnés. Cette option est valide uniquement lorsque ** \@ allow_partition_switch** a la valeur `true` .  
   
  Vous pouvez définir ces propriétés en utilisant [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) lors de la création de la publication, ou en utilisant [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) après la création de la publication. Comme indiqué précédemment, la réplication de fusion ne prend pas en charge le basculement de partition. Pour exécuter SWITCH PARTITION sur une table qui est activée pour la réplication de fusion, supprimez la table de la publication.  
   

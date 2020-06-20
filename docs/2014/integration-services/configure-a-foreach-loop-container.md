@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921970"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurer un conteneur de boucles Foreach
   Cette procédure décrit comment configurer un conteneur de boucles Foreach, notamment les expressions de la propriété au niveau de l'énumérateur et du conteneur.  
@@ -72,7 +71,7 @@ ms.locfileid: "66060877"
   
 7.  Si vous le souhaitez, cliquez sur **Mappage de variables** pour mapper des propriétés d’objets à la valeur de la collection, puis procédez comme suit :  
   
-    1.  Dans la liste **variables** , sélectionnez une variable ou cliquez sur ** \<nouvelle variable>** pour créer une variable.  
+    1.  Dans la liste **variables** , sélectionnez une variable ou cliquez sur **\<New Variable>** pour en créer une.  
   
     2.  Si vous ajoutez une nouvelle variable, définissez ses propriétés dans la boîte de dialogue **Ajouter une variable** et cliquez sur **OK**.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66060877"
   
 9. Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  
   
   

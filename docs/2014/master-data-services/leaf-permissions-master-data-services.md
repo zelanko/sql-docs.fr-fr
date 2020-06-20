@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf091886adb0a7fe484b2b62f44eb51b6c58d8bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971269"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
   Les autorisations de feuille s'appliquent aux valeurs d'attribut pour tous les membres feuille d'une entité.  
@@ -37,7 +36,7 @@ ms.locfileid: "65479168"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|Les membres feuille sont affichés, mais l'utilisateur ne peut ni les ajouter, ni les supprimer ni les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
-|**Mise à jour**|Les membres feuille sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
+|**Update**|Les membres feuille sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
 |**Deny**|Les membres feuille pour l'entité ne sont pas affichés.|  
   
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
@@ -46,7 +45,7 @@ ms.locfileid: "65479168"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'attribut est affiché, mais l'utilisateur ne peut pas modifier les valeurs d'attribut.|  
-|**Mise à jour**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
+|**Update**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
 |**Deny**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
 ### <a name="example"></a>Exemple  

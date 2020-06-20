@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a028ed31ff2f4936d5d7bd45ba7809467939718b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019899"
 ---
 # <a name="bcp_batch"></a>bcp_batch
   Valide toutes les lignes précédemment copiées en bloc à partir de variables de programme et envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par [bcp_sendrow](bcp-sendrow.md).  
@@ -45,7 +44,7 @@ hdbc
 ## <a name="returns"></a>Retours  
  Le nombre de lignes enregistrées après le dernier appel à **bcp_batch**, ou -1 en cas d'erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les lots de copie en bloc définissent des transactions. Lorsqu'une application utilise [bcp_bind](bcp-bind.md) et **bcp_sendrow** pour copier en bloc des lignes à partir de variables de programme dans des tables SQL Server, les lignes sont validées uniquement lorsque le programme appelle **bcp_batch** ou [bcp_done](bcp-done.md).  
   
  Vous pouvez appeler **bcp_batch** une fois chaque *n* lignes ou lorsqu'il y a une accalmie dans les données entrantes (comme dans une application de télémesure). Si une application n'appelle pas **bcp_batch** , les lignes copiées en bloc sont validées uniquement lorsque **bcp_done** est appelé.  

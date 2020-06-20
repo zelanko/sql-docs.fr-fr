@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14284d0c89037664000ded35e09e4256bfe6a544
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 427d48eaa8f4c0812a86ab7c85851ed61afe1d1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698976"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053317"
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Classe d'événements Audit Database Object Take Ownership
   La classe d’événements **Audit Database Object Take Ownership** se produit lors d’une modification du propriétaire des objets dans l’étendue de la base de données.  

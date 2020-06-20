@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e9a67ddf9ff079c4ff5075b8601aec4c0922e89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000598"
 ---
 # <a name="granting-access-to-a-database"></a>Octroi de l'accès à une base de données
   Mary a désormais accès à cette instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais elle n'est pas autorisée à accéder aux bases de données. Elle ne peut pas non plus accéder à sa base de données par défaut **TestData** tant que vous ne l'avez pas autorisée en tant qu'utilisateur de base de données.  

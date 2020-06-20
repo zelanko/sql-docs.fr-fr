@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c706613c828ce579af27a8c5a6890936a31814ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929260"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-table source-sélectionner une table de charge de travail Assistant Paramétrage du moteur de base de données
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] et l'Assistant Paramétrage de [!INCLUDE[ssDE](../includes/ssde-md.md)] utilisent cette boîte de dialogue pour sélectionner des tables.  
@@ -39,12 +38,12 @@ ms.locfileid: "66088881"
  **Propriétaire**  
  Specifies the owner of the trace table. Ce champ est rempli automatiquement comme **dbo**.  
   
- **Table de charge de travail**  
+ **Table**  
  Spécifie le nom de la table de trace à partir de laquelle la trace doit être lue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrer les résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Enregistrer des résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

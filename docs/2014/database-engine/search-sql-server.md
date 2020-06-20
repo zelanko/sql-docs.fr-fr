@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab4fbf86cffea9af6aef03a176aef3d559472506
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0452d3a098ba37985505ba8657ff9f269a936ef9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929310"
 ---
 # <a name="search-sql-server"></a>Recherche (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fournit des fonctionnalités de recherche pour le texte et les documents qui dépassent les fonctionnalités du [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` mot clé.  

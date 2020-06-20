@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a9f116ccd65e4763e382d1125ca0a8424ecd97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040964"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Leçon 2 : Écriture d'instructions Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un environnement de développement intégré qui permet d'écrire des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML et des commandes SQLCMD. Ce didacticiel présente l'utilisation de l'Éditeur de requête du moteur de base de données pour écrire un script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -37,7 +36,7 @@ ms.locfileid: "62470026"
   
 -   Création de script de table  
   
--   Récapitulatif  
+-   Résumé  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Connexion à l'aide de l'Éditeur de requête](lesson-2-1-connecting-with-query-editor.md)  

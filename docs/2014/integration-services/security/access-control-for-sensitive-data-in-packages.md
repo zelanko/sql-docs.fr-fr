@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766775"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964099"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Contrôle d'accès pour les données sensibles présentes dans les packages
   Pour protéger les données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez définir un niveau de protection qui permet de protéger uniquement les données sensibles ou toutes les données du package. En outre, vous pouvez chiffrer ces données avec un mot de passe ou une clé utilisateur ou vous fier à la base de données pour chiffrer les données. De plus, le niveau de protection que vous utilisez pour un package n'est pas nécessairement statique, mais change tout au long du cycle de vie du package. On définit souvent un niveau de protection pendant le développement et un autre dès le déploiement du package.  
@@ -64,7 +63,7 @@ ms.locfileid: "62766775"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Paramètre de niveau de protection et catalogue SSISDB  
  Le catalogue SSISDB utilise le niveau de protection `ServerStorage`. Lorsque vous déployez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le catalogue chiffre automatiquement les données du package et les valeurs sensibles. Le catalogue déchiffre automatiquement les données lorsque vous les récupérez.  
   
- Si vous exportez le projet (.ispac) du serveur de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans le système de fichiers, le système modifie automatiquement le niveau de protection en `EncryptSensitiveWithUserKey`. Si vous importez le projet à l’aide de l' **assistant Integration Services importer un projet** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la propriété **ProtectionLevel** dans la fenêtre `EncryptSensitiveWithUserKey` **Propriétés** affiche la valeur.  
+ Si vous exportez le projet (.ispac) du serveur de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans le système de fichiers, le système modifie automatiquement le niveau de protection en `EncryptSensitiveWithUserKey`. Si vous importez le projet à l’aide de l' **assistant Integration Services importer un projet** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , la propriété **ProtectionLevel** dans la fenêtre **Propriétés** affiche la valeur `EncryptSensitiveWithUserKey` .  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Définition du niveau de protection en fonction du cycle de vie du package  
  Vous définissez le niveau de protection d’un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lorsque vous commencez son développement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Plus tard, lorsque le package est déployé, importé ou exporté à partir de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ou copié à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou le système de fichiers, vous pouvez mettre à jour le niveau de protection du package. Par exemple, si vous créez et enregistrez des packages sur votre ordinateur avec une des options de niveau de protection à clé utilisateur, vous souhaiterez sans doute modifier le niveau de protection lorsque vous donnerez le package à d'autres utilisateurs, pour qu'ils puissent l'ouvrir.  
