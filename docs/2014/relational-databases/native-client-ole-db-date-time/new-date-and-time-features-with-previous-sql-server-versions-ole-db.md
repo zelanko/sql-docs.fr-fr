@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056299"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nouvelles fonctionnalités de date et d’heure avec les versions précédentes de SQL Server (OLE DB)
   Cette rubrique décrit le comportement attendu lorsqu’une application cliente qui utilise des fonctionnalités améliorées de date et d’heure communique avec une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , et lorsqu’un client compilé avec une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envoie des commandes à un serveur qui prend en charge les fonctionnalités de date et d’heure améliorées.  
@@ -65,7 +64,7 @@ ms.locfileid: "82705009"
   
 |Type de paramètre|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|Date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -79,7 +78,7 @@ ms.locfileid: "82705009"
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|date|DBTYPE_WSTR|10|NULL|NULL|  
+|Date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -91,7 +90,7 @@ ms.locfileid: "82705009"
   
 |Type de paramètre|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|date|DBTYPE_WSTR|10|~0|~0|  
+|Date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -106,7 +105,7 @@ ms.locfileid: "82705009"
   
 |Type de colonne|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|date|DBTYPE_WSTR|10|20|NULL|  
+|Date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -118,7 +117,7 @@ ms.locfileid: "82705009"
   
 |Type de colonne|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|date|DBTYPE_WSTR|10|20|Date|  
+|Date|DBTYPE_WSTR|10|20|Date|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  

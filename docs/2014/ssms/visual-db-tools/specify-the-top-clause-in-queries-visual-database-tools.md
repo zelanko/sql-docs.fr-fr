@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8228779703b1bbe3753f1e2728e83b4b5c3a3d17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63194966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000811"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>Spécifier la clause TOP dans des requêtes (Visual Database Tools)
   La clause TOP retourne uniquement les *n premières* lignes ou *n premiers pourcents* des lignes d’une requête. La clause TOP peut être utile si vous souhaitez inspecter une partie de vos résultats afin de déterminer si votre requête se comporte de la manière escomptée, sans devoir utiliser les ressources nécessaires pour retourner tous les résultats de la requête.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f3ab74c6dd095fd92e0f9d20ba622be70a37ef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84ab465da0a1b7ac1da1211de1d5199fd28ee95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058178"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>Créer des requêtes de recherche en texte intégral (Visual Database Tools)
   La recherche en texte intégral utilise le prédicat CONTAINS pour localiser les lignes contenant le texte spécifié dans une colonne donnée. Les recherches en texte intégral ne sont possibles que sur les colonnes possédant des index de texte intégral actifs. Si vous tentez d'utiliser la clause CONTAINS sur une colonne qui ne possède pas d'index de texte intégral actuellement actif, une erreur s'affiche. Pour plus d’informations sur les index de recherche en texte intégral et la clause CONTAINs, consultez [recherche en texte intégral](../../relational-databases/search/full-text-search.md) et [contient &#40;&#41;Transact-SQL ](/sql/t-sql/queries/contains-transact-sql).  

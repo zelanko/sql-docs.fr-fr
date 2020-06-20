@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 42e068120e3eae54580d58e0f4d525ab5451d864
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7bf434243cf02c3827e48feb4543339bfcfab32b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049017"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Spécifier un filtre de point d'arrêt
   Un filtre de point d'arrêt limite l'action du point d'arrêt uniquement aux ordinateurs, aux processus du système d'exploitation et aux threads spécifiés. Les filtres de point d'arrêt sont utilisés en général lors du débogage d'applications parallèles.  

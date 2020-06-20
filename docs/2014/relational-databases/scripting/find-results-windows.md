@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 406c19cb8cc5609e15206c81fc0297e14c6dd8ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 06f26cb7b606052b2183c90713f0ab0470351ffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049035"
 ---
 # <a name="find-results-windows"></a>Fenêtres Résultats de la recherche
   Les deux fenêtres Résultats de la recherche affichent les correspondances trouvées par une recherche effectuée à l'aide des onglets **Rechercher dans les fichiers** ou **Remplacer dans les fichiers** de la boîte de dialogue **Rechercher et remplacer** . La commande **Options de résultat** pour **Rechercher dans les fichiers** et **Remplacer dans les fichiers** vous permet de choisir la fenêtre Résultats de la recherche dans laquelle seront répertoriées, le cas échéant, les occurrences trouvées.  

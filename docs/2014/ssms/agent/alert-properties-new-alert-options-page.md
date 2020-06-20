@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b84c2472c56d50fa5c0595ea7046ed3ab9a2b352
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056600"
 ---
 # <a name="alert-properties-new-alert-options-page"></a>Propriétés de l’alerte : Nouvelle alerte (page Options)
-  Utilisez cette page pour afficher et modifier les options [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des alertes de l’agent.  
+  Utilisez cette page pour afficher et modifier les options des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertes de l’agent.  
   
 ## <a name="options"></a>Options  
  **Courriel**  
@@ -36,9 +35,9 @@ ms.locfileid: "63061266"
  Tapez tout texte supplémentaire à inclure dans les messages de notification.  
   
  **Délai entre les réponses**  
- Spécifiez un délai pour les occurrences répétées de l'événement. Certains événements peuvent se produire fréquemment au court d'une courte période de temps. Dans ce cas, vous voudrez peut-être savoir que l'événement s'est produit sans vouloir de réponse pour chaque événement. Utilisez cette option pour spécifier un délai d’attente. Avec un délai, une fois que l’alerte a répondu à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un événement, l’agent attend le délai spécifié avant de répondre de nouveau, que l’événement se produise ou non pendant ce délai.  
+ Spécifiez un délai pour les occurrences répétées de l'événement. Certains événements peuvent se produire fréquemment au court d'une courte période de temps. Dans ce cas, vous voudrez peut-être savoir que l'événement s'est produit sans vouloir de réponse pour chaque événement. Utilisez cette option pour spécifier un délai d’attente. Avec un délai, une fois que l’alerte a répondu à un événement, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent attend le délai spécifié avant de répondre de nouveau, que l’événement se produise ou non pendant ce délai.  
   
- **Minutes**  
+ **Maximum**  
  Spécifiez un délai en minutes. Pour répondre chaque fois qu'un événement se produit, spécifiez 0 minutes et 0 secondes.  
   
  **Secondes**  

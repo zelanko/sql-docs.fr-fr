@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 840096c197a2e827281bb0023ad03a6d407f3758
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5391479ad7f1db64383049a5a6c9aefa3abadd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056873"
 ---
 # <a name="color-coding-in-query-editors"></a>Codage en couleurs dans les éditeurs de requête
   Une catégorie est attribuée au texte que vous entrez dans les éditeurs de code. Chaque catégorie est identifiée par une couleur. Les couleurs vous aident rapidement à trouver un texte dans votre code. Par exemple, les commentaires apparaissent en vert sombre. Le tableau suivant répertorie les couleurs les plus courantes. Vous pouvez afficher la liste complète des couleurs et de leur catégorie ainsi que configurer un modèle de couleurs personnalisé à partir du menu **Outils**, **Options** . Pour plus d’informations sur la modification des couleurs par défaut, consultez [Modifier la couleur, la taille et le style de la police](change-font-color-size-and-style.md).  

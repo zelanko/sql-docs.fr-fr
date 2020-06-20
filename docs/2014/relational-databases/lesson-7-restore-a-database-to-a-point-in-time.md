@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024936"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Leçon 8. Restaurer une base de données dans le Stockage Azure
   Dans cette leçon, vous allez apprendre à créer un fichier de sauvegarde localement, puis à le restaurer dans le stockage Azure. Notez que vous pouvez faire en sorte que votre base de données soit locale ou dans une machine virtuelle dans Azure. Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5, 6 et 7.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175427"
   
 8.  Dans la section **restaurer les fichiers de la base de données** en tant que, sous le champ **Restaurer sous** , tapez les éléments suivants :  
   
-     Pour fichier de données, tapez `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`:. Pour fichier journal, tapez : `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
+     Pour fichier de données, tapez : `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` . Pour fichier journal, tapez : `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` .  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

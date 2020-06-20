@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 460a0a2cf58d5980b1265db91d053e3088b55a99
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8f6718692e07fb6037d7ffcea7b21d94fdca3181
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056276"
 ---
 # <a name="information-in-error-interfaces"></a>Informations dans les interfaces d'erreur
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client signale des informations d’erreur et d’État dans les interfaces d’erreur définies par l’OLE DB **IErrorInfo**, **IErrorRecords**et **ISQLErrorInfo**.  

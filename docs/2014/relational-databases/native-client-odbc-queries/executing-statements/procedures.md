@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82f9d922d2192925033aceb6c253088ccb9f1d6f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7ae4678d324ba7d07ae429793b1f75b57bb15e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056485"
 ---
 # <a name="procedures"></a>Procédures
   Une procédure stockée est un objet exécutable précompilé qui contient une ou plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les procédures stockées peuvent posséder des paramètres d'entrée et de sortie et peuvent également émettre un code de retour de type entier. Une application peut énumérer les procédures stockées disponibles en utilisant des fonctions de catalogue.  

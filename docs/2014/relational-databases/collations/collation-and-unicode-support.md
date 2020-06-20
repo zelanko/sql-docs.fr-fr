@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9a7c6c48229aa827aaed178e5ed4448c20431b9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970569"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
   Les classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent les règles de tri et les propriétés de respect de la casse et des accents pour vos données. Les classements utilisés avec les types de données character, tels que `char` et `varchar`, déterminent la page de codes et les caractères correspondants qui peuvent être représentés pour ce type de données. Que vous installiez une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restauriez une sauvegarde de base de données ou connectiez un serveur à des bases de données clientes, il est important que vous compreniez les besoins en termes de paramètres régionaux, ordre de tri et respect de la casse et des accents des données avec lesquelles vous travaillez. Pour répertorier les classements disponibles sur votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -135,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  Le tableau suivant présente des informations sur l'utilisation des données multilingues avec diverses combinaisons de serveurs Unicode et non-Unicode.  
   
-|Server (Serveur)|Client|Avantages ou restrictions|  
+|Serveur|Client|Avantages ou restrictions|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|Comme les données Unicode seront utilisées dans la totalité du système, ce scénario fournit les meilleures performances et la meilleure protection contre la modification des données extraites. C’est le cas avec ActiveX Data Objects (ADO), OLE DB et ODBC 3.7 ou version ultérieure.|  
 |Unicode|Non-Unicode|Dans ce scénario, et surtout avec les connexions entre un serveur exécutant un système d'exploitation récent et un client exécutant une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou un système d'exploitation plus ancien, il peut y avoir des limitations ou des erreurs lorsque vous déplacez des données vers un ordinateur client. Les données Unicode sur le serveur tenteront d'établir un mappage à une page de codes correspondante sur le client non-Unicode afin de convertir les données.|  
@@ -144,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> Caractères supplémentaires  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fournit des types de données `nchar` tels `nvarchar` que et pour stocker des données Unicode. Ces types de données encodent le texte dans un format appelé *UTF-16*. Le Consortium Unicode alloue à chaque caractère un codepoint unique, qui est une valeur comprise entre 0x0000 et 0x10FFFF. Les caractères les plus fréquemment utilisés ont des valeurs de codepoint qui correspondent à un mot de 16 bits en mémoire et sur le disque, mais les caractères dont les valeurs de codepoint sont supérieures à 0xFFFF requièrent deux mots de 16 bits consécutifs. Ces caractères sont appelés des *caractères supplémentaires*et les deux mots de 16 bits consécutifs sont appelés des *paires de substitution*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fournit des types de données tels que `nchar` et `nvarchar` pour stocker des données Unicode. Ces types de données encodent le texte dans un format appelé *UTF-16*. Le Consortium Unicode alloue à chaque caractère un codepoint unique, qui est une valeur comprise entre 0x0000 et 0x10FFFF. Les caractères les plus fréquemment utilisés ont des valeurs de codepoint qui correspondent à un mot de 16 bits en mémoire et sur le disque, mais les caractères dont les valeurs de codepoint sont supérieures à 0xFFFF requièrent deux mots de 16 bits consécutifs. Ces caractères sont appelés des *caractères supplémentaires*et les deux mots de 16 bits consécutifs sont appelés des *paires de substitution*.  
   
  Si vous utilisez des caractères supplémentaires :  
   

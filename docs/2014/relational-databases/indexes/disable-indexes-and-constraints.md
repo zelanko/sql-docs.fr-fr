@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f9de4108be4defeb2353a9e7835c289641a819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025545"
 ---
 # <a name="disable-indexes-and-constraints"></a>Désactiver les index et contraintes
   Cette rubrique explique comment désactiver un index ou des contraintes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La désactivation d'un index empêche l'accès des utilisateurs à celui-ci et, s'il s'agit d'un index cluster, aux données de la table sous-jacente. La définition de l'index reste présente dans les métadonnées et les statistiques sont conservées sur les index non cluster. La désactivation d'un index, qu'il soit non cluster ou cluster, sur une vue supprime physiquement les données de l'index. La désactivation d'un index cluster sur une table empêche l'accès aux données de celle-ci ; ces dernières existent toujours dans la table, mais les opérations de langage de manipulation de données (DML) ne peuvent pas les utiliser tant que l'index n'est pas supprimé ou reconstruit.  

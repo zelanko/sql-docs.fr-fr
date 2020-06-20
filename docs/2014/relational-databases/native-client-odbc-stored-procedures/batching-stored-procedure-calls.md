@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce14de191cb8b57496cf2de87d241810e32624ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a0df58ce59853ee15b863cbc7bce34041c37fee4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039508"
 ---
 # <a name="batching-stored-procedure-calls"></a>Traitement par lot des appels aux procédures stockées
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client regroupe automatiquement les appels de procédure stockée au serveur, le cas échéant. Il le fait uniquement en cas d'utilisation de la séquence d'échappement ODBC CALL ; il ne le fait pas pour l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE. Le traitement par lot des appels aux procédures stockées peut réduire le nombre de boucles sur le serveur et augmenter considérablement les performances.  

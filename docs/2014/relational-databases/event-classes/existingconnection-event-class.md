@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73437390154de5f573a1ae5d68f7d0e7ae8dec37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029658"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection (classe d'événements)
   La classe d'événements ExistingConnection indique les propriétés des connexions utilisateur existantes au moment du démarrage de la trace. Le serveur déclenche un événement ExistingConnection par connexion utilisateur existante.  

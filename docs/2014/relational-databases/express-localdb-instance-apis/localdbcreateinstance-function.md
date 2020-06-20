@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f2887d5fa9f4fccc5a37931dfdc1eb6a51331aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027855"
 ---
 # <a name="localdbcreateinstance-function"></a>Fonction LocalDBCreateInstance
   Crée une instance SQL Server Express LocalDB.  
@@ -97,7 +96,7 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si une instance de LocalDB entièrement fonctionnelle portant le nom spécifié existe déjà et sa version est supérieure ou égale à la version demandée, le résultat est S_OK.  
   
  Dans les cas où une instance existante est endommagée, les appels suivants à la méthode d'API `LocalDBCreateInstance` échouent. Les instances endommagées doivent être corrigées manuellement ou être explicitement supprimées avant de pouvoir être réutilisées.  

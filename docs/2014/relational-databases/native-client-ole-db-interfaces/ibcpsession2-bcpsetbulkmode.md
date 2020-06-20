@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d4619dc87bf7dfbc34f4d835ee21bced27f1a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056235"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode fournit une alternative à [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) pour spécifier le format de colonne. Contrairement à IBCPSession::BCPColFmt, qui définit des attributs de format de colonne individuels, IBCPSession2::BCPSetBulkMode définit tous les attributs.  
@@ -62,7 +61,7 @@ HRESULT BCPSetBulkMode (
 |`E_INVALIDARG`|L'argument n'était pas valide.|  
 |`E_OUTOFMEMORY`|Erreur de mémoire insuffisante.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  IBCPSession2::BCPSetBulkMode peut être utilisé pour créer une copie en bloc à partir d’une requête ou d’une table. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` pour spécifier l’instruction de requête.  
   
  Vous devez éviter de combiner la syntaxe d'appel RPC avec la syntaxe de requête de lot (`{rpc func};SELECT * from Tbl`, par exemple) dans un texte de commande simple.  Cela entraînera le retour par ICommandPrepare::Prepare d'une erreur et vous empêchera de récupérer des métadonnées. Utilisez la syntaxe ODBC CALL (`{call func}; SELECT * from Tbl`, par exemple) si vous devez combiner l'exécution d'une procédure stockée et une requête de lot dans un texte de commande simple.  
@@ -71,10 +70,10 @@ HRESULT BCPSetBulkMode (
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLCHARACTER` .|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option-w dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLNCHAR` .|  
-|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option-N dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLNCHAR` si le type de colonne est une chaîne ou `BCP_TYPE_DEFAULT` s’il ne s’agit pas d’une chaîne.|  
-|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option-n dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_DEFAULT` .|  
+|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP.EXE, et à IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option-w dans BCP.EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option-N dans BCP.EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLNCHAR` si le type de colonne est une chaîne ou `BCP_TYPE_DEFAULT` s’il ne s’agit pas d’une chaîne.|  
+|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option-n dans BCP.EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_DEFAULT` .|  
   
  Vous pouvez appeler IBCPSession::BCPControl et IBCPSession2::BCPSetBulkMode pour les options IBCPSession::BCPControl qui ne sont pas en conflit avec IBCPSession2::BCPSetBulkMode. Par exemple, vous pouvez appeler IBCPSession :: BCPControl avec `BCP_OPTION_FIRST` et IBCPSession2 :: BCPSetBulkMode.  
   

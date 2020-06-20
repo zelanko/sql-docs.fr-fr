@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b76d4df23f5d8bb25664ba0f1d294deca9be0418
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62668985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057170"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Présentation de l'interface du moniteur de réplication
   Le Moniteur de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente une vue axée sur le serveur de publication ou le serveur de distribution de toute l’activité de réplication dans un format à deux volets. Vous ajoutez un serveur de publication au moniteur dans le volet gauche tandis que dans le volet droit, le moniteur affiche des informations sur le serveur de publication, ses publications, les abonnements à ces publications ainsi que les divers agents de réplication. Outre la présentation des informations pour la topologie de réplication, le moniteur de réplication vous permet d'effectuer diverses tâches, telles que le démarrage et l'arrêt d'agents, ainsi que la validation des données.  
@@ -225,7 +224,7 @@ ms.locfileid: "62668985"
   
      Cette boîte de dialogue vous permet de : modifier les propriétés des profils, créer et supprimer des profils, spécifier un profil par défaut et spécifier que tous les agents d'un type donné (tels les Agents d'instantané) doivent utiliser un profil donné.  
   
--   **Propriétés de \<Nom_Profil_Agent>**  
+-   **\<AgentProfileName>Sous**  
   
      Cette boîte de dialogue vous permet d'afficher et de modifier les paramètres d'un profil.  
   

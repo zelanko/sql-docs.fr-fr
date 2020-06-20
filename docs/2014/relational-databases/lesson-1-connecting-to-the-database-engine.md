@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d296aae78434bcfff1c69770878705ef5f4bd0ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63145481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025348"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
   Les outils installés lors de l'installation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] dépendent de l'édition du produit et de la configuration choisies. Cette leçon passe en revue les outils principaux et décrit comment faire pour se connecter et exécuter une fonction de base (autorisation de plusieurs utilisateurs).  
@@ -27,7 +26,7 @@ ms.locfileid: "63145481"
   
 ### <a name="basic-tools"></a>Outils de base  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]est l’outil principal pour l’administration du [!INCLUDE[ssDE](../includes/ssde-md.md)] et l' [!INCLUDE[tsql](../includes/tsql-md.md)] écriture de code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Il n'est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mais est disponible en tant que téléchargement distinct à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]est l’outil principal pour l’administration du [!INCLUDE[ssDE](../includes/ssde-md.md)] et l’écriture de [!INCLUDE[tsql](../includes/tsql-md.md)] code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Il n'est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mais est disponible en tant que téléchargement distinct à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les outils clients. Il vous permet d'activer les protocoles serveur, configurer des options de protocole (notamment les ports TCP), configurer le démarrage automatique de services serveur et configurer des ordinateurs clients pour définir leur mode de connexion selon vos préférences. Cet outil configure les éléments de connectivité les plus avancés mais n'active pas les fonctionnalités.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63145481"
   
      La boîte de dialogue **Nouvelle connexion** apparaît.  
   
-2.  Dans la page **général** , dans la zone **nom de connexion** , tapez une connexion Windows au format * \<domaine>\\<connexion\>*.  
+2.  Dans la page **général** , dans la zone **nom de connexion** , tapez une connexion Windows au format * \<domain> \\<connexion \> *.  
   
 3.  Dans la zone **Base de données par défaut** , sélectionnez [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] (si disponible). Sinon, sélectionnez **master**.  
   

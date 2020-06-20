@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025421"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
   Lorsque vous effectuez des opérations en ligne sur les index, les directives suivantes s'appliquent :  
   
--   Les index cluster doivent être créés, reconstruits ou supprimés hors connexion lorsque la table sous-jacente contient les types de données LOB (large object `image`) suivants :, `text` **ntext**et.  
+-   Les index cluster doivent être créés, reconstruits ou supprimés hors connexion lorsque la table sous-jacente contient les types de données LOB (large Object) suivants : `image` , **ntext**et `text` .  
   
 -   Les index de tables temporaires locales ne peuvent pas être créés, reconstruits ou supprimés en ligne. Cette restriction ne s'applique pas aux index des tables temporaires globales.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "63162487"
 ## <a name="related-content"></a>Contenu associé  
  [Fonctionnement des opérations d'index en ligne](how-online-index-operations-work.md)  
   
- [Exécuter des opérations d’index en ligne](perform-index-operations-online.md)  
+ [Exécuter des opérations en ligne sur les index](perform-index-operations-online.md)  
   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   

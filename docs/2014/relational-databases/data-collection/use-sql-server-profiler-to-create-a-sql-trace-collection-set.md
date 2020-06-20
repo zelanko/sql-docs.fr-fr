@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddfb1b83ccb225122edc19860c45480ec1c0c00a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970414"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL (SQL Server Management Studio)
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
@@ -72,7 +71,7 @@ ms.locfileid: "62873319"
   
     1.  Dans la liste de filtres, cliquez sur **Durée**.  
   
-    2.  Dans la fenêtre opérateur booléen, développez le nœud **supérieur ou égal** à, `80` tapez comme valeur, puis cliquez sur **OK**.  
+    2.  Dans la fenêtre opérateur booléen, développez le nœud **supérieur ou égal** à, tapez `80` comme valeur, puis cliquez sur **OK**.  
   
 9. Cliquez sur **Exécuter** pour démarrer la trace.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b86ec76d75f58db7f8e2978764e8ce9c5ace2279
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963542"
 ---
 # <a name="select-variables"></a>Sélectionner des variables
   Utilisez la boîte de dialogue **Sélectionner des variables** pour spécifier les variables à utiliser dans une opération d'envoi de message de la tâche MSMQ. La liste **Variables disponibles** contient les variables système et définies par l’utilisateur exploitables par la tâche MSMQ ou son conteneur parent. La tâche utilise des variables de la liste **Variables sélectionnées** .  
@@ -43,6 +42,6 @@ ms.locfileid: "66055916"
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [Tâche MSMQ](control-flow/message-queue-task.md)  
   
   

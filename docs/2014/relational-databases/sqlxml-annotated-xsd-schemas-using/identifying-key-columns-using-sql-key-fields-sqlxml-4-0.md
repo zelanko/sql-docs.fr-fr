@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d592ea935453675d0467e9d2e4d9162d79117cc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5628f0ef6a130d5f0fc88c78236a0352bc5f4b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003246"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
   Lorsqu'une requête XPath est spécifiée contre un schéma XSD, les informations de clés sont requises dans la plupart des cas pour obtenir une imbrication correcte dans le résultat. La spécification de l'annotation `sql:key-fields` est une méthode permettant de garantir que la hiérarchie appropriée est générée.  
@@ -36,19 +35,19 @@ ms.locfileid: "82703561"
   
  La valeur de `sql:key-fields` identifie le ou les colonnes qui identifient de manière unique les lignes dans la relation. Si plusieurs colonnes sont requises pour identifier une ligne de manière unique, les valeurs de colonnes sont délimitées par des espaces.  
   
- Vous devez utiliser l' `sql:key-fields` annotation lorsqu’un élément contient une ** \<>SQL : Relationship** qui est définie entre l’élément et un élément enfant, mais ne fournit pas la clé primaire de la table spécifiée dans l’élément parent.  
+ Vous devez utiliser l' `sql:key-fields` annotation lorsqu’un élément contient un **\<sql:relationship>** qui est défini entre l’élément et un élément enfant, mais ne fournit pas la clé primaire de la table spécifiée dans l’élément parent.  
   
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Production de l’imbrication appropriée lorsque \< SQL : relationship> ne fournit pas d’informations suffisantes  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Production de l’imbrication appropriée lorsque \<sql:relationship> ne fournit pas d’informations suffisantes  
  Cet exemple montre où `sql:key-fields` doit être spécifié.  
   
- Prenons le schéma suivant : Le schéma spécifie une hiérarchie entre les éléments ** \< Order>** et ** \< Customer>** dans lequel l’élément ** \< Order>** est le parent et l’élément ** \< Customer>** est un enfant.  
+ Prenons le schéma suivant : Le schéma spécifie une hiérarchie entre **\<Order>** les **\<Customer>** éléments et dans lesquels l' **\<Order>** élément est le parent et l' **\<Customer>** élément est un enfant.  
   
- La balise ** \< SQL : Relationship>** est utilisée pour spécifier la relation parent-enfant. Elle identifie CustomerID dans la table Sales.SalesOrderHeader comme clé parente qui fait référence à la clé enfant CustomerID dans la table Sales.Customer. Les informations fournies dans ** \< SQL : Relationship>** ne sont pas suffisantes pour identifier de manière unique les lignes dans la table parente (Sales. SalesOrderHeader). Par conséquent, sans l'annotation `sql:key-fields`, la hiérarchie générée est inexacte.  
+ La **\<sql:relationship>** balise est utilisée pour spécifier la relation parent-enfant. Elle identifie CustomerID dans la table Sales.SalesOrderHeader comme clé parente qui fait référence à la clé enfant CustomerID dans la table Sales.Customer. Les informations fournies dans **\<sql:relationship>** ne sont pas suffisantes pour identifier de manière unique les lignes dans la table parente (Sales. SalesOrderHeader). Par conséquent, sans l'annotation `sql:key-fields`, la hiérarchie générée est inexacte.  
   
- Avec `sql:key-fields` l' ** \<>de commande **spécifié, l’annotation identifie de façon unique les lignes dans la table parente (Sales. SalesOrderHeader) et ses éléments enfants apparaissent sous son parent.  
+ Avec `sql:key-fields` spécifié sur **\<Order>** , l’annotation identifie de façon unique les lignes dans la table parente (Sales. SalesOrderHeader) et ses éléments enfants apparaissent sous son parent.  
   
  Voici le schéma :  
   
@@ -87,7 +86,7 @@ ms.locfileid: "82703561"
   
 1.  Copiez le code de schéma ci-dessus et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields1.xml.  
   
-2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields1T.xml dans le même répertoire où vous avez enregistré KeyFields1.xml. La requête XPath dans le modèle retourne tous les éléments ** \< Order>** avec un CustomerID inférieur à 3.  
+2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields1T.xml dans le même répertoire où vous avez enregistré KeyFields1.xml. La requête XPath dans le modèle retourne tous les **\<Order>** éléments dont le CustomerID est inférieur à 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -125,7 +124,7 @@ ms.locfileid: "82703561"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Spécification de sql:key-fields afin de produire l'imbrication correcte dans le résultat  
- Dans le schéma suivant, aucune hiérarchie n’est spécifiée à l’aide de ** \< SQL : Relationship>**. Le schéma requiert encore la spécification de l'annotation `sql:key-fields` afin d'identifier de manière unique les employés dans la table HumanResources.Employee.  
+ Dans le schéma suivant, aucune hiérarchie n’est spécifiée à l’aide de **\<sql:relationship>** . Le schéma requiert encore la spécification de l'annotation `sql:key-fields` afin d'identifier de manière unique les employés dans la table HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -152,7 +151,7 @@ ms.locfileid: "82703561"
   
 1.  Copiez le code de schéma ci-dessus et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields2.xml.  
   
-2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields2T.xml dans le même répertoire où vous avez enregistré KeyFields2.xml. La requête XPath dans le modèle retourne tous les éléments ** \< HumanResources. employee>** :  
+2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields2T.xml dans le même répertoire où vous avez enregistré KeyFields2.xml. La requête XPath dans le modèle retourne tous les **\<HumanResources.Employee>** éléments :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

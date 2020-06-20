@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb509d4b3ba48bbd31b4246e66e024b0be1d49ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025630"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
   Une table mémoire optimisée se compose d'une collection de lignes et d'index qui contiennent des pointeurs vers les lignes. Dans une table mémoire optimisée, les lignes ne peuvent pas dépasser 8 060 octets. La compréhension de la taille d'une table mémoire optimisée vous aidera à comprendre si votre ordinateur dispose de suffisamment de mémoire.  
@@ -117,14 +116,14 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Pour un temps supérieur à 200, la table contient les lignes suivantes :  
   
-|Name|City|  
+|Nom|City|  
 |----------|----------|  
 |Jean|Beijing|  
 |Jane|Prague|  
   
  Toutefois, toutes les transactions actives avec une heure de début 100 verront la version de la table suivante :  
   
-|Name|City|  
+|Nom|City|  
 |----------|----------|  
 |Jean|Paris|  
 |Jane|Prague|  

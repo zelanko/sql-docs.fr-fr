@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e16882247a123b32ba07fbbae0d1f3573fd2d678
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32188b1c47168aefbca914fa15f71850df716153
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036252"
 ---
 # <a name="sql-server-agent-service-cannot-use-sql-server-authentication"></a>Le service SQL Server Agent ne peut pas utiliser l'authentification SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prend en charge uniquement l'authentification Windows lorsque le service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

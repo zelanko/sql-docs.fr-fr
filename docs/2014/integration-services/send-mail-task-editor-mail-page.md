@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963485"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Éditeur de tâche Envoyer un message (page Courrier)
   Utilisez la page **Courrier** de la boîte de dialogue **Éditeur de tâche Envoyer un message** pour indiquer les destinataires d'un message, son type et sa priorité. Vous pouvez également joindre des fichiers au message. Le texte de ce courrier peut se présenter sous la forme d'une chaîne que vous précisez, d'une connexion à un fichier comportant le texte voulu ou le nom d'une variable contenant le texte en question.  
@@ -28,7 +27,7 @@ ms.locfileid: "66055829"
   
 ## <a name="options"></a>Options  
  **SMTPConnection**  
- Sélectionnez un gestionnaire de connexions SMTP dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer un gestionnaire de connexions.  
+ Sélectionnez un gestionnaire de connexions SMTP dans la liste ou cliquez sur **\<New connection...>** pour créer un gestionnaire de connexions.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions SMTP prend en charge uniquement l'authentification anonyme et l'authentification Windows. Il ne prend pas en charge l'authentification de base.  
@@ -76,13 +75,13 @@ ms.locfileid: "66055829"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Connexion de fichiers  
  **MessageSource**  
- Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable dans la liste ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   

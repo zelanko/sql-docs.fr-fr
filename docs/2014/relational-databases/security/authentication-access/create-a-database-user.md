@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97fc758c754f5fc8803e988d55147670fc3ff45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055440"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
   Cette rubrique indique comment créer un utilisateur de base de données mappé à un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utilisateur de base de données est l'identité du compte de connexion lorsqu'il est connecté à la base de données. Il peut utiliser le même nom que celui du compte de connexion, mais cela n'est pas obligatoire. Cette rubrique part du principe qu'il existe déjà un compte de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’une connexion, consultez [créer une connexion](create-a-login.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "68211969"
   
 -   **Avant de commencer :**  
   
-     [Contexte](#Restrictions)  
+     [Arrière-plan](#Restrictions)  
   
      [Sécurité](#Security)  
   

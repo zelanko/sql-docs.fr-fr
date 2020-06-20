@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6266664bc4e1d1c782ce75a9de4edebe52d11f0c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054138"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972029"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Modifier le compte de l'administrateur système (Master Data Services)
-  Vous pouvez modifier le compte d’utilisateur désigné comme administrateur [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] système.  
+  Vous pouvez modifier le compte d’utilisateur désigné comme [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] administrateur système.  
   
 > [!WARNING]  
 >  Une fois cette procédure terminée, le compte d'administrateur système précédent est supprimé.  

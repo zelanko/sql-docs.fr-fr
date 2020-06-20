@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 613b66c04a69364f3c9be1059f95021dd3eff595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049806"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Leçon 5. (Facultatif) Chiffrer votre base de données avec TDE
   En tant qu'étape facultative, chiffrez la base de données créée. Le chiffrement transparent des données (TDE, Transparent Data Encryption) effectue le chiffrement et le déchiffrement des E/S en temps réel des fichiers de données et des fichiers journaux. Le type de chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](security/encryption/transparent-data-encryption.md) et [déplacer une base de données protégée TDE vers une autre SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  

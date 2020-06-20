@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0a98aa13b4453244c8ed565a950660a20e5a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39b44f45f9fb1799fdd604ce796f8b804ea498e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010753"
 ---
 # <a name="distributor"></a>Serveur de distribution
   La page **Serveur de distribution** figure dans l'Assistant Configuration de la distribution et l'Assistant Nouvelle publication. Le serveur de distribution est le serveur qui contient la base de données de distribution et qui stocke les métadonnées et les données d'historique de tous les types de réplications. Le serveur de distribution stocke également les transactions de la réplication transactionnelle. Le serveur de distribution peut correspondre au serveur de publication (serveur de distribution) ou à un serveur distinct du serveur de publication (serveur de distribution distant). Le rôle du serveur de distribution varie en fonction du type de réplication implémenté. En règle générale, il joue un rôle beaucoup plus important pour la réplication transactionnelle que pour la réplication de fusion et la réplication d'instantané. La réplication de fusion et la réplication d'instantané utilisent un serveur de distribution local, mais la réplication transactionnelle sur un système très occupé peut tirer parti d'un serveur de distribution distant.  
@@ -33,7 +32,7 @@ ms.locfileid: "62721299"
  Le serveur que vous sélectionnez comme serveur de distribution doit avoir un espace disque suffisant et un processeur suffisamment puissant pour prendre en charge la réplication et toutes les autres activités basées sur ce serveur.  
   
 ## <a name="options"></a>Options  
- **'\<Nom_serveur>' agit comme son propre serveur de distribution ; SQL Server crée une base de données de distribution et un journal**  
+ **« \<ServerName> » agit comme son propre serveur de distribution ; SQL Server créera une base de données de distribution et un journal**  
  Sélectionnez cette option pour configurer le serveur auquel vous êtes connecté comme serveur de distribution.  
   
  **Utiliser le serveur suivant comme serveur de distribution (le serveur que vous sélectionnez doit déjà être configuré en tant que serveur de distribution)**  

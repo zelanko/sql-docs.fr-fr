@@ -1,5 +1,5 @@
 ---
-title: '&lt;Propriétés&gt; de l’alias (onglet alias) | Microsoft Docs'
+title: '&lt;&gt;Propriétés de l’alias (onglet alias) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 559cc01b1fb2de42c061e21762495019e1896670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008345"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Propriétés de &lt;Alias&gt; (onglet Alias)
-  Un alias est un nom de remplacement permettant d'établir une connexion. L'alias encapsule les éléments requis d'une chaîne de connexion, puis les expose sous un nom choisi par l'utilisateur. Utilisez la page **Alias** de la boîte de dialogue **Propriétés de \<** nom_alias **>** pour afficher ou spécifier les éléments de chaîne de connexion d’un alias.  
+  Un alias est un nom de remplacement permettant d'établir une connexion. L'alias encapsule les éléments requis d'une chaîne de connexion, puis les expose sous un nom choisi par l'utilisateur. Utilisez la page **alias** de la boîte de dialogue ** \<**Alias name**> Propriétés** pour afficher ou spécifier les éléments de la chaîne de connexion d’un alias.  
   
 ## <a name="options"></a>Options  
  **Nom de l'alias**  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10e732e41193e08ffa8f0c57ac8d7b421b10a590
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62523882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008865"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Définir les options d'une étape de travail Transact-SQL
-  Cette rubrique explique comment définir les options des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étapes [!INCLUDE[tsql](../../includes/tsql-md.md)] de travail de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans à l’aide de ou SQL Server Management Objects.  
+  Cette rubrique explique comment définir les options des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étapes de travail de l’agent [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou SQL Server Management Objects.  
   
  **Dans cette rubrique**  
   

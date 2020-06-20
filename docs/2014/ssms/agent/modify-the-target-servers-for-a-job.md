@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a97fd3892e74b16c844867f88bc7d72fedc46d20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246a5bb59a681a70734cc8cabef4f724cda1b52e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048792"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
-  Cette rubrique explique comment modifier les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveurs cibles pour les travaux de l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agent dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à [!INCLUDE[tsql](../../includes/tsql-md.md)]l’aide de ou de.  
+  Cette rubrique explique comment modifier les serveurs cibles pour les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travaux de l’agent dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Dans cette rubrique**  
   
@@ -84,7 +83,7 @@ GO
   
  Pour plus d’informations, consultez [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration automatisée à l'échelle d'une entreprise](automated-administration-across-an-enterprise.md)  
   
   

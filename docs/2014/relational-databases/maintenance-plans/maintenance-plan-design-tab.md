@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 561c0fc56e1f1749c57876f16c4d24dadfe4931d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024463"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
   Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

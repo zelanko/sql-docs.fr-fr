@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d28b8b6ba540ae361c3c6ab74a1a45763f7bee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058124"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Créer des requêtes qui utilisent autre chose qu'une table (Visual Database Tools)
   Pour écrire une requête d'extraction, il faut toujours formuler quelles sont les colonnes et les lignes à obtenir ainsi que le lieu où le processeur de requêtes trouve les données d'origine. En général, une table ou plusieurs tables jointes constituent les données d'origine. Mais la source des données ne se trouve pas forcément dans une table. Les données d'origine peuvent venir de vues, de requêtes, de synonymes ou de fonctions définies par l'utilisateur et retournant une table.  

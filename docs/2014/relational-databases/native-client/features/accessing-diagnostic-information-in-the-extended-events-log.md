@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10ef11bf8d2620148f88392306aca4dbaace6f58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 902110d601b9ea4b68fb04e8fb91e66400a452e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049610"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
   À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivi Native Client et d’accès aux données ([suivi d’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805)) a été mis à jour pour faciliter l’extraction des informations de diagnostic sur les échecs de connexion à partir de la mémoire tampon en anneau de connectivité et des informations sur les performances de l’application à partir du journal des événements étendus.  
@@ -25,7 +24,7 @@ ms.locfileid: "82704360"
 > [!NOTE]  
 >  Cette fonctionnalité n'est conçue qu'à des fins de dépannage et de diagnostic et peut ne pas convenir à des fins d'audit ou de sécurité.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour les opérations de connexion, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client envoie un ID de connexion client. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) et rechercher le `ClientConnectionID` champ et obtenir des informations de diagnostic sur l’échec de la connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant l’envoi du paquet de préconnexion, un ID de connexion client ne sera pas généré.) L’ID de connexion client est un GUID de 16 octets. Vous pouvez également rechercher l'ID de connexion client dans la cible de sortie d'événements étendus, si l'action de `client_connection_id` est ajoutée aux événements dans une session d'événements étendus. Vous pouvez activer le suivi d'accès aux données et réexécuter la commande de connexion, puis observer le champ `ClientConnectionID` dans la trace d'accès aux données pour une opération ayant échoué, si vous avez besoin de davantage d'aide de diagnostic.  
   
  Si vous utilisez ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et qu’une connexion est établie, vous pouvez obtenir l’ID de connexion client à l’aide de l' `SQL_COPT_SS_CLIENT_CONNECTION_ID` attribut avec [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md).  

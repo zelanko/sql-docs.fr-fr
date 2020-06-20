@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5dfd7df8104519cf09ad72ffee3c5214af2a3d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058169"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Créer des requêtes Insert Results (Visual Database Tools)
   Vous pouvez copier des lignes d'une table à une autre ou au sein d'une même table à l'aide d'une requête Insert Results. Dans une table `titles` par exemple, vous pouvez utiliser une requête Insert Results pour copier des informations sur les titres publiés par un éditeur dans une seconde table que vous pouvez mettre à la disposition de cet éditeur. Une requête Insert Results ressemble à une requête Make Table, à la seule différence qu'elle copie des lignes dans une table existante.  
@@ -80,7 +79,7 @@ WHERE (pub_id = '0766')
   
      Le Concepteur de requêtes et de vues ajoute les colonnes sélectionnées à la colonne **Colonne** du volet Critères.  
   
-5.  Dans la colonne **Ajouter** du volet Critères, sélectionnez une colonne cible dans la table de destination pour chaque colonne copiée. Choisissez *TableName.\* * si vous copiez des lignes entières. Les colonnes de la table de destination doivent avoir des types de données identiques (ou compatibles) à ceux des colonnes de la table source.  
+5.  Dans la colonne **Ajouter** du volet Critères, sélectionnez une colonne cible dans la table de destination pour chaque colonne copiée. Choisissez *TableName. \* * si vous copiez des lignes entières. Les colonnes de la table de destination doivent avoir des types de données identiques (ou compatibles) à ceux des colonnes de la table source.  
   
 6.  Si vous souhaitez copier les lignes dans un ordre précis, spécifiez un ordre de tri. Pour plus d’informations, consultez [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   

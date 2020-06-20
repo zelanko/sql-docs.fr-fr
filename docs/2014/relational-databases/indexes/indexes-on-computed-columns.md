@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049892"
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
   Vous pouvez définir des index sur des colonnes calculées si les règles suivantes sont respectées :  
@@ -88,7 +87,7 @@ ms.locfileid: "63162455"
   
  **Data Type Requirements**  
   
--   La *computed_column_expression* définie pour la colonne calculée ne peut pas correspondre aux `text`types `ntext`de données `image` , ou.  
+-   La *computed_column_expression* définie pour la colonne calculée ne peut pas correspondre aux `text` `ntext` types de données, ou `image` .  
   
 -   Les colonnes calculées dérivées des types de données `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` et `xml` peuvent être indexées tant que le type de données utilisé dans la colonne calculée lui permet d'être une colonne d'index clés.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "63162455"
      L'affectation de la valeur ON à ANSI_WARNINGS affecte de manière implicite la valeur ON à ARITHABORT, lorsque le niveau de compatibilité de la base de données est d'au moins 90.  
   
 ##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Création d’index sur des colonnes calculées persistantes  
- Vous pouvez créer un index sur une colonne calculée définie par une expression déterministe mais non précise si la colonne est marquée comme PERSISTED dans l'instruction CREATE TABLE ou ALTER TABLE. Cela signifie que [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utilise ces valeurs persistantes lorsqu’il crée un index sur la colonne et lorsque l’index est référencé dans une requête. Cette option vous permet de créer un index sur une colonne calculée lorsque [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]est à la fois déterministe et précis.  
+ Vous pouvez créer un index sur une colonne calculée définie par une expression déterministe mais non précise si la colonne est marquée comme PERSISTED dans l'instruction CREATE TABLE ou ALTER TABLE. Cela signifie que [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utilise ces valeurs persistantes lorsqu’il crée un index sur la colonne et lorsque l’index est référencé dans une requête. Cette option vous permet de créer un index sur une colonne calculée lorsque est à la [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] fois déterministe et précis.  
   
 ## <a name="related-content"></a>Contenu associé  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ac008fe139adf55376bb50fbf60dddcd6b9ae5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010892"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Créer et appliquer l'instantané initial
   Cette rubrique explique comment créer et appliquer l'instantané initial dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou des objets RMO (Replication Management Objects). Les publications de fusion qui utilisent des filtres paramétrés nécessitent un instantané en deux parties. Pour plus d'informations, voir [Créer un instantané d’une publication de fusion avec des filtres paramétrés](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -44,7 +43,7 @@ ms.locfileid: "62721681"
   
 3.  Cliquez avec le bouton droit sur la réplication pour laquelle vous souhaitez créer un instantané, puis cliquez sur **Afficher l'état de l'Agent d'instantané**.  
   
-4.  Dans la boîte de dialogue **Afficher l’état de l’Agent d’instantané - \<Publication>**, cliquez sur **Démarrer**.  
+4.  Dans la boîte de dialogue **afficher \<Publication> l’État** de l’agent d’instantané, cliquez sur **Démarrer**.  
   
  Lorsque l'Agent d'instantané termine la génération de l'instantané, un message comme celui-ci s'affiche : « [100 %] Un instantané de 17 article(s) a été généré ».  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62721681"
   
     -   **@job_password**, qui correspond au mot de passe pour les informations d’identification Windows fournies.  
   
-    -   (Facultatif) La valeur **0** pour **@publisher_security_mode** si l'agent utilisera l'authentification SQL Server lors de la connexion au serveur de publication. Dans ce cas, vous devez également spécifier les informations de connexion d’authentification **@publisher_login** SQL Server **@publisher_password**pour et.  
+    -   (Facultatif) La valeur **0** pour **@publisher_security_mode** si l'agent utilisera l'authentification SQL Server lors de la connexion au serveur de publication. Dans ce cas, vous devez également spécifier les informations de connexion d’authentification SQL Server pour **@publisher_login** et **@publisher_password** .  
   
     -   (Facultatif) Une planification de synchronisation pour le travail de l'Agent d'instantané. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](specify-synchronization-schedules.md).  
   
@@ -119,15 +118,15 @@ ms.locfileid: "62721681"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple montre comment créer une publication transactionnelle et ajouter un travail de l'Agent d'instantané pour la nouvelle publication (à l'aide des variables de script **sqlcmd** ). L'exemple démarre également le travail.  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  

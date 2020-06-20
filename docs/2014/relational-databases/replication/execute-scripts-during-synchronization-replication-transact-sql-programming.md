@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc217ad160a0238cc4247600d65eb32f156071f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010696"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Exécuter des scripts pendant la synchronisation (programmation Transact-SQL de la réplication)
   La réplication prend en charge l'exécution de script à la demande pour les Abonnés à des publications transactionnelles et de fusion. Cette fonctionnalité copie le script vers le répertoire de travail de réplication puis utilise **sqlcmd** pour appliquer le script à l'Abonné. Par défaut, en cas d'échec lors de l'application du script pour un abonnement à une publication transactionnelle, l'Agent de distribution s'arrêtera. Vous pouvez spécifier un script [!INCLUDE[tsql](../../includes/tsql-md.md)] à exécuter par programme à l'aide des procédures stockées de réplication.  
@@ -32,7 +31,7 @@ ms.locfileid: "74165024"
   
 2.  Enregistrez le fichier de script dans un emplacement accessible à l'Agent d'instantané pour la publication.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Spécifiez ** \@publication**, le nom du fichier de script avec le chemin UNC complet créé à l’étape 2 pour ** \@scriptfile**et l’une des valeurs suivantes pour ** \@SkipError**:  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Spécifiez ** \@ publication**, le nom du fichier de script avec le chemin UNC complet créé à l’étape 2 pour ** \@ scriptfile**et l’une des valeurs suivantes pour ** \@ SkipError**:  
   
     -   **0** – l'agent arrêtera d'exécuter le script en cas d'erreur.  
   

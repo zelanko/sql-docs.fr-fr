@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e526b01f8e33006c01861cdafef1fd9cd03d2ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad1394bd5e5bedc69a98308ba67a98434559c146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998901"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>Métadonnées de paramètre table pour les instructions préparées
   Une application peut obtenir des métadonnées pour un appel de procédure préparée par le biais de SQLNumParams et SQLDescribeParam. Pour les paramètres table, *DataTypePtr* a la valeur SQL_SS_TABLE. Des métadonnées supplémentaires sont disponibles via SQLGetDescField pour SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME et SQL_CA_SS_SCHEMA_NAME.  

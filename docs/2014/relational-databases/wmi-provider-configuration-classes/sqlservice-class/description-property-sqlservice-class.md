@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 78efcf489189f328408ffc11452b86015e9a1f43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd244f75b7b8829d2a0cd894f637db2e79144f42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995680"
 ---
 # <a name="description-property-sqlservice-class"></a>Propriété de la description (classe SqlService)
   Obtient une description du service référencé.  
@@ -37,13 +36,13 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlService](sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui contient une description textuelle du service référencé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

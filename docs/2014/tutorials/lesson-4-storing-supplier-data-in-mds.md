@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f15ff1fd48321ed4f13826fb239b6cede46242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006670"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Leçon 4 : Stockage des données sur les fournisseurs dans MDS
   Master Data Services (MDS) est une solution SQL Server de gestion des données de référence. La gestion des données de référence (MDM) correspond aux efforts d'une organisation en vue de découvrir et de définir des listes de données non transactionnelles.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d3f2412114e50292c91908b3a20c433d022b239
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057607"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Déployer des stratégies planifiées sur plusieurs instances
   En utilisant des serveurs inscrits, vous pouvez déployer des stratégies planifiées sur des serveurs gérés à partir d'un emplacement central. Vous pouvez déployer des stratégies planifiées à partir d'un groupe de serveurs locaux ou à partir d'un serveur de gestion centralisée.  
@@ -89,7 +88,7 @@ ms.locfileid: "68185799"
     > [!NOTE]  
     >  Pour afficher les résultats d'évaluation après l'exécution d'une stratégie planifiée, ouvrez le journal Historique de la stratégie sur l'instance cible. Pour ouvrir le journal, cliquez avec le bouton droit sur **gestion des stratégies**, puis cliquez sur **afficher l’historique**.  
   
-## <a name="summary"></a>Récapitulatif  
+## <a name="summary"></a>Résumé  
  Ce didacticiel vous a montré comment effectuer des évaluations à la demande et des évaluations planifiées des stratégies des meilleures pratiques sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Suivant  
