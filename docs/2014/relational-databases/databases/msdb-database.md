@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1d552efa888b24e0a1c83464c7947343b132b1c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965846"
 ---
 # <a name="msdb-database"></a>Base de données msdb
   La base de données **msdb** est utilisée par l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier des alertes et des travaux, ainsi que par d’autres fonctionnalités telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] et la messagerie de base de données.  
@@ -108,7 +107,7 @@ ms.locfileid: "62871708"
   
  [Déplacer des fichiers de bases de données](move-database-files.md)  
   
- [Database Mail](../database-mail/database-mail.md)  
+ [Messagerie de base de données](../database-mail/database-mail.md)  
   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

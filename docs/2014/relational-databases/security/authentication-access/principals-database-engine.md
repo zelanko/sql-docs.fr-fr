@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 808c8516b3ed9e95ea4c724736461cb00923a7fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016236"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
   Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. Le champ d'influence d'un principal dépend de l'étendue de sa définition : Windows, serveur, base de données, et du fait qu'il est indivisible ou qu'il s'agit d'une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID).  
@@ -44,7 +43,7 @@ ms.locfileid: "63011916"
   
 -   Connexion locale Windows  
   
- **SQL Server**-**level** **Principaux** de niveau SQL Server  
+ **SQL Server** - **level** **principaux** de niveau  
   
 -   Connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63011916"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Utilisateur invité  
- Chaque base de données inclut un **invité**. Les autorisations accordées à l'utilisateur **invité** sont héritées par les utilisateurs qui ont accès à la base de données, mais n'ont pas de compte d'utilisateur dans la base de données. L’utilisateur **invité** ne peut pas être supprimé, mais il peut être désactivé en révoquant `CONNECT` son autorisation. L' `CONNECT` autorisation peut être révoquée en exécutant `REVOKE CONNECT FROM GUEST` dans une base de données autre que Master ou tempdb.  
+ Chaque base de données inclut un **invité**. Les autorisations accordées à l'utilisateur **invité** sont héritées par les utilisateurs qui ont accès à la base de données, mais n'ont pas de compte d'utilisateur dans la base de données. L’utilisateur **invité** ne peut pas être supprimé, mais il peut être désactivé en révoquant son `CONNECT` autorisation. L' `CONNECT` autorisation peut être révoquée en exécutant `REVOKE CONNECT FROM GUEST` dans une base de données autre que Master ou tempdb.  
   
 ## <a name="client-and-database-server"></a>Client et serveur de base de données  
  Par définition, un client et un serveur de base de données sont des principaux de sécurité et peuvent être sécurisés. Ces entités peuvent être authentifiées mutuellement avant qu'une connexion réseau sécurisée soit établie. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]prend en charge le protocole d’authentification [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) , qui définit la manière dont les clients interagissent avec un service d’authentification réseau.  

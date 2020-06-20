@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58e8c071672c8c3afba8d6c424488899dcf76be7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016383"
 ---
 # <a name="join-a-role"></a>joindre un rôle
   Cette rubrique décrit comment affecter des rôles aux utilisateurs des connexions et des bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Utilisez les rôles dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour gérer efficacement les autorisations. Affectez des autorisations aux rôles, puis ajoutez et supprimez des utilisateurs et des connexions aux rôles. L'utilisation de rôles évite de devoir maintenir individuellement les autorisations pour chaque utilisateur.  
@@ -62,7 +61,7 @@ ms.locfileid: "63011345"
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
- Nécessite `ALTER ANY ROLE` l’autorisation sur la base `ALTER` de données, l’autorisation sur le rôle ou l’appartenance à **db_securityadmin**.  
+ Nécessite l' `ALTER ANY ROLE` autorisation sur la base de données, `ALTER` l’autorisation sur le rôle ou l’appartenance à **db_securityadmin**.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

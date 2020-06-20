@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058154"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965675"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implémentation du package parent
   Lors d'un équilibrage de charge de packages SSIS entre serveurs, l'étape suivante après la création et le déploiement des packages enfants, puis la création des travaux de SQL Server Agent distants pour les exécuter, consiste à créer le package parent. Le package parent contient de nombreuses tâches Exécuter le travail de SQL Server Agent, chaque tâche étant responsable de l'appel d'un travail de SQL Server Agent qui exécute l'un des packages enfants. Les tâches Exécuter le travail de SQL Server Agent dans le package parent exécutent les différents travaux de SQL Server Agent. Chaque tâche dans le package parent contient des informations précisant notamment comment établir la connexion au serveur distant et quel travail exécuter sur ce serveur. Pour plus d'informations, consultez [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md).  

@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: da0ddd549ad82420c4071c21de4ea6fef7f025de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6fc8be573e6aab92b06405bb3ac41ec6cbac238a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015651"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Exécution de modèles contenant des requêtes SQL (fournisseur SQLXMLOLEDB)
   Cet exemple illustre l’utilisation de la propriété SQLXMLOLEDB spécifique au fournisseur ClientSideXML. Dans cet exemple d'application ADO côté client, un modèle XML contenant une requête SQL est exécuté sur le serveur.  
   
  Étant donné que la propriété ClientSideXML a la valeur true, l’instruction SELECT sans la clause FOR XML est envoyée au serveur. Le serveur exécute la requête et retourne un ensemble de lignes au client. Le client applique ensuite la transformation FOR XML à l'ensemble de lignes et génère un document XML.  
   
- Le modèle XML fournit un seul élément racine de niveau supérieur ( \< racine>) pour le document XML qui est généré ; par conséquent, la propriété racine XML n’est pas fournie.  
+ Le modèle XML fournit un seul élément racine de niveau supérieur ( \<ROOT> ) pour le document XML qui est généré ; par conséquent, la propriété racine XML n’est pas fournie.  
   
  Pour exécuter des modèles XML, le dialecte {5d531cb2-e6ed-11d2-b252-00c04f681b71} doit être spécifié.  
   

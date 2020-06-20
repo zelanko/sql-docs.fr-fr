@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702982"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014919"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath et le schéma XML (XSD) ont des types de données très différents. Par exemple, XPath n'affiche aucun type de données integer ou date tandis que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et XSD en possèdent un grand nombre. XSD utilise une précision à la nanoseconde pour les valeurs temporelles ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche au maximum une précision de 1/300ème de seconde. Par conséquent, le mappage d'un type de données à un autre n'est pas toujours possible. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le mappage des types de données aux types de données XSD, consultez [forçages de type de données et annotation sql : DataType &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82702982"
   
 -   Opérateurs booléens (et, ou)  
   
--   Opérateurs relationnels ( \< , >, \< =, >=)  
+-   Opérateurs relationnels ( \<, > , \<=, > =)  
   
 -   Opérateurs d'égalité (=, !=)  
   
@@ -92,7 +91,7 @@ ms.locfileid: "82702982"
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|nombre|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (aucun type de données XPath n'équivaut au type de données XDR fixed14.4)|CONVERT(money, EmployeeID)|  
-|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|Date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Les conversions de date et d’heure sont conçues pour fonctionner, que la valeur soit stockée dans la base de données à l’aide du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données ou d’un `string` . Notez que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données n’utilise pas `timezone` et a une précision inférieure à celle du `time` type de données XML. Pour inclure le type de données `timezone` ou apporter une précision supplémentaire, stockez les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un type `string`.  
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Effectuer plusieurs conversions de types de données dans une requête XPath.  
  Examinez la requête XPath suivante définie par rapport à un schéma XSD annoté : `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Cette requête XPath retourne tous les éléments ** \< OrderDetail>** qui satisfont le prédicat `@UnitPrice * @OrderQty > 98` . Si **UnitPrice** est annoté avec un `fixed14.4` type de données dans le schéma annoté, ce prédicat équivaut à l’expression SQL :  
+ Cette requête XPath retourne tous les **\<OrderDetail>** éléments qui satisfont au prédicat `@UnitPrice * @OrderQty > 98` . Si **UnitPrice** est annoté avec un `fixed14.4` type de données dans le schéma annoté, ce prédicat équivaut à l’expression SQL :  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

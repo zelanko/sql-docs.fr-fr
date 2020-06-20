@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edffd9454b51ea80a18311f735d29407f97f6eb6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957019"
 ---
 # <a name="restore-database-files-page"></a>Restaurer la base de données (page Fichiers)
   Utilisez la page **Fichiers** de la boîte de dialogue **Restaurer la base de données** pour gérer les fichiers spécifiques que vous avez choisi de restaurer dans la base de données.  
@@ -48,7 +47,7 @@ ms.locfileid: "62874999"
  **Restaurer sous**  
  Répertorie les noms de fichier sous lesquels les fichiers restaurés seront enregistrés. Entrez ou recherchez le nom de fichier approprié.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurer la base de données &#40;page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Restaurer la base de données &#40;page Options&#41;](restore-database-options-page.md)   
  [Arguments RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   

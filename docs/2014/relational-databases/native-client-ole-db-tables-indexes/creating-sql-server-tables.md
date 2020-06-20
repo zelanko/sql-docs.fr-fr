@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 67a0dd1c4ab55b1417e30271a841aecb450c63db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3d11a26c2f5d27f28a60effdb26978edd07409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017978"
 ---
 # <a name="creating-sql-server-tables"></a>Création de tables SQL Server
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose la fonction **ITableDefinition :: CreateTable** , ce qui permet aux consommateurs de créer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. Les consommateurs utilisent **CreateTable** pour créer des tables permanentes nommées par le consommateur, ainsi que des tables permanentes ou temporaires avec des noms uniques générés par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client.  
