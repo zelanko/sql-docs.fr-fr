@@ -1,7 +1,7 @@
 ---
 title: sys. Servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 06/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818216"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196031"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "84818216"
 |**server_id**|**int**|ID local du serveur lié.|  
 |**name**|**sysname**|Lorsque **server_id** = 0, la valeur retournée est le nom du serveur.<br /><br /> Lorsque **server_id** > 0, la valeur retournée est le nom local du serveur lié.|  
 |**production**|**sysname**|Nom de produit du serveur lié. La valeur « SQL Server » indique une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**moteur**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.|  
+|**moteur**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.<br /><br />À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la valeur « sqlncli » est mappée au [pilote Microsoft OLE DB pour SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) par défaut. Dans les versions antérieures, la valeur « SQLNCLI » est mappée au [fournisseur de OLE DB SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Propriété de connexion à la source de données OLE DB.|  
 |**location**|**nvarchar(4000)**|Propriété de connexion de l'emplacement OLE DB. NULL si aucun.|  
-|**provider_string**|**nvarchar(4000)**|Propriété de connexion à la chaîne du fournisseur OLE DB.<br /><br /> A pour valeur NULL sauf si l'appelant dispose de l'autorisation ALTER ANY LINKED SERVER.|  
-|**Catalogue**|**sysname**|Propriété d'une connexion au catalogue OLEDB. NULL si aucun.|  
+|**provider_string**|**nvarchar(4000)**|Propriété de connexion à la chaîne du fournisseur OLE DB.<br /><br /> A la valeur NULL, sauf si l’appelant dispose de l' `ALTER ANY LINKED SERVER` autorisation.|  
+|**Catalogue**|**sysname**|Propriété de connexion du catalogue OLE DB. NULL si aucun.|  
 |**connect_timeout**|**int**|Délai d'expiration de la connexion en secondes, 0 si aucun.|  
 |**query_timeout**|**int**|Délai d'expiration de la requête en secondes, 0 si aucun.|  
 |**is_linked**|**bit**|0 = est un serveur de style ancien ajouté à l’aide de **sp_addserver**, avec différents comportements de RPC et de transaction distribuée.<br /><br /> 1 = Serveur lié standard.|  
@@ -59,7 +59,7 @@ ms.locfileid: "84818216"
 |**is_nonsql_subscriber**|**bit**|Le serveur est un abonné de réplication non-SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Si la valeur est 1, l'appel d'une procédure stockée distante démarre une transaction distribuée et enregistre la transaction dans MS DTC. Pour plus d’informations, consultez [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Date de la dernière modification des informations de serveur.|  
-|**is_rda_server**|**bit**|Le serveur est activé pour l’archivage des données à distance (étendu). Pour plus d’informations, consultez [activer la Stretch Database sur le serveur](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer). S’applique à SQL Server 2016 et versions ultérieures.|
+|**is_rda_server**|**bit**|**S’applique à :** À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Le serveur est activé pour l’archivage des données à distance (étendu). Pour plus d’informations, consultez [activer la Stretch Database sur le serveur](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Autorisations  
  La valeur de **provider_string** est toujours null, sauf si l’appelant dispose de l’autorisation ALTER ANY Linked Server.  
@@ -79,4 +79,4 @@ ms.locfileid: "84818216"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
-  
+ 
