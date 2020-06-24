@@ -13,12 +13,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a0dffa0dc53cb8ded9f388199bef35a73a52577
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102132"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263883"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  
@@ -32,9 +32,9 @@ ms.locfileid: "66102132"
     > [!IMPORTANT]  
     >  `RSWindowsNegotiate` provoquera une erreur d'authentification Kerberos si vous avez configuré le service Report Server pour qu'il s'exécute sous un compte d'utilisateur de domaine alors que vous n'avez pas inscrit un nom de principal du service (SPN) pour ce compte. Pour plus d'informations, consultez [Résolution des erreurs d'authentification Kerberos lors de la connexion à un serveur de rapports](#proxyfirewallRSWindowsNegotiate) dans cette rubrique.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] doit être configuré pour l'authentification Windows. Par défaut, les fichiers Web. config du service Web Report Server et Gestionnaire de rapports incluent le \<paramètre authentication mode = "Windows" >. Si vous le remplacez par \<authentication mode="Forms">, l’authentification Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] échouera.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] doit être configuré pour l'authentification Windows. Par défaut, les fichiers Web.config pour le service Web Report Server et Gestionnaire de rapports incluent le \<authentication mode="Windows"> paramètre. Si vous le remplacez par \<authentication mode="Forms"> , l’authentification Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] échouera.  
   
--   Les fichiers Web. config pour le service Web Report Server et Gestionnaire de rapports doivent avoir \<identity impersonate = "true"/>.  
+-   Les fichiers Web.config pour le service Web Report Server et Gestionnaire de rapports doivent avoir \<identity impersonate= "true" /> .  
   
 -   L'application cliente ou le navigateur client doivent prendre en charge la sécurité intégrée de Windows.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66102132"
           </AuthenticationTypes>  
     ```  
   
-4.  Collez-la sur les entrées existantes `Authentication` pour <>.  
+4.  Collez-la sur les entrées existantes pour <`Authentication`>.  
   
      Notez que vous ne pouvez pas utiliser `Custom` avec les types `RSWindows`.  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66102132"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Redémarrez le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et recherchez des entrées semblables aux suivantes dans le fichier journal de trace :  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   Les valeurs sous \<Explicit> contiendront les noms de principaux du service configurés dans Active Directory pour le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
+-   Redémarrez le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+
  Si vous ne voulez pas continuer à utiliser la protection étendue, rétablissez les valeurs par défaut de configuration et redémarrez le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ```  
