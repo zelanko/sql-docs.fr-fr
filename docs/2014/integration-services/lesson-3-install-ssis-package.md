@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3fa7119ba9a8321e2b3bb8cbe1015271c9a3c95e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed53af447271aad48abd08e8e98b0fd11bbcf7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965193"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440496"
 ---
 # <a name="lesson-3-installing-packages"></a>Leçon 3 : Installation des packages
   Dans [la leçon 2 : création de l’ensemble de déploiement](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), vous avez créé un utilitaire de déploiement et créé l’ensemble de déploiement qui contient les éléments que vous devez installer sur un autre ordinateur. Vous avez vérifié également la liste de fichiers dans l'application de déploiement et examiné le contenu du fichier de manifeste créé lorsque vous avez créé l'utilitaire de déploiement.  

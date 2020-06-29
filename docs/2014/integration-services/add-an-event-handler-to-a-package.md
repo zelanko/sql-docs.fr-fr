@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 378b8c95f5b7f4ed1e247a89f3e3ad6111654303
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926280"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439706"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Ajouter un gestionnaire d'événements à un package
   Lors de l'exécution, les conteneurs et les tâches déclenchent des événements. Vous pouvez créer des gestionnaires d'événements personnalisés qui répondent à ces événements en exécutant un flux de travail. Vous pouvez ainsi créer un gestionnaire d'événements qui envoie un message électronique lorsqu'une tâche échoue.  

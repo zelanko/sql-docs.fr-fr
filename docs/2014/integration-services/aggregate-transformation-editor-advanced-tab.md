@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c437e15cbbcb3df64770ad0da4272eedf41cf0e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925610"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439486"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Éditeur de transformation d'agrégation (onglet Avancé)
   L’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’agrégation** permet de définir les propriétés des composants, de spécifier des agrégations et de définir les propriétés des colonnes d’entrée et de sortie.  
@@ -34,7 +34,7 @@ ms.locfileid: "84925610"
  **Échelle de clé**  
  Permet de spécifier le nombre approximatif de clés attendu par l'agrégation (facultatif). La transformation utilise ces informations afin d'optimiser la taille initiale de son cache. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de clé** et **Nombre de clés** sont spécifiées, **Nombre de clés** est prioritaire.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété **KeyScale** n’est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
@@ -47,7 +47,7 @@ ms.locfileid: "84925610"
  **Échelle de nombre des valeurs distinctes**  
  Permet éventuellement de spécifier le nombre approximatif de valeurs distinctes que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de nombre des valeurs distinctes** et **Nombre de clés distinctes** sont spécifiées, **Nombre de clés distinctes** est prioritaire.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété CountDistinctScale n'est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  

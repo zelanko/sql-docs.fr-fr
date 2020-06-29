@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b4257d883b1f39e918f0f8a6eb8135e25b784a79
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427226"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469284"
 ---
 # <a name="developing-a-custom-task"></a>Développement d'une tâche personnalisée
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des tâches pour effectuer des unités de travail en soutien à l'extraction, la transformation et le chargement de données. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut une variété de tâches qui effectuent les actions les plus fréquemment utilisées, allant de l'exécution d'une instruction SQL au téléchargement d'un fichier à partir d'un site FTP. Si les tâches incluses et les actions prises en charge ne répondent pas complètement à vos besoins, vous pouvez créer une tâche personnalisée.  
   
- Pour créer une tâche personnalisée, vous devez créer une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, appliquer l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> à votre classe nouvelle et remplacer les méthodes et propriétés importantes de la classe de base, notamment la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
+ Pour créer une tâche personnalisée, vous devez créer une classe qui hérite de la classe de base [Microsoft. SqlServer. Dts. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) , appliquer l' <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> attribut à votre nouvelle classe et remplacer les méthodes et propriétés importantes de la classe de base, y compris la <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> méthode.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section explique comment créer, configurer et coder une tâche personnalisée et son interface utilisateur personnalisée facultative.  

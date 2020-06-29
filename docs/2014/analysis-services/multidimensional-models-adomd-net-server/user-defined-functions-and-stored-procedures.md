@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545431"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469014"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Fonctions définies par l'utilisateur et procédures stockées
   Avec les objets serveur ADOMD.net, vous pouvez créer des fonctions définies par l’utilisateur (UDF) ou des procédures stockées pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui interagissent avec les métadonnées et les données du serveur. Ces méthodes in-process sont appelées au moyen d'instructions MDX (Multidimensional Expressions) ou DMX (Data Mining Extensions) pour fournir des fonctionnalités supplémentaires sans les temps d'attente inhérents aux communications réseau.  
@@ -28,7 +28,7 @@ ms.locfileid: "84545431"
 ## <a name="udf-examples"></a>Exemples de fonctions définies par l'utilisateur (UDF)  
  Une fonction définie par l'utilisateur est une méthode qui peut être appelée dans le contexte d'une instruction MDX ou DMX, qui peut prendre un nombre illimité de paramètres et qui peut retourner tout type de données.  
   
- Une fonction définie par l'utilisateur créée à l'aide de MDX est semblable à une fonction définie par l'utilisateur créée pour DMX. La principale différence réside dans le fait que certaines propriétés de l'objet <xref:Microsoft.AnalysisServices.AdomdServer.Context>, notamment <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> et <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A>, ne sont disponibles que pour l'un ou l'autre des langages de script.  
+ Une fonction définie par l'utilisateur créée à l'aide de MDX est semblable à une fonction définie par l'utilisateur créée pour DMX. La principale différence réside dans le fait que certaines propriétés de l’objet [Microsoft. AnalysisServices. AdomdServer. Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) , telles que les propriétés [Microsoft. AnalysisServices. AdomdServer. Context. CurrentCube *](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) et [Microsoft. AnalysisServices. AdomdServer. Context. CurrentMiningModel *](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) , sont uniquement disponibles pour un langage de script ou l’autre.  
   
  Les exemples suivants indiquent comment utiliser une fonction définie par l'utilisateur pour retourner une description de nœud, filtrer des tuples et appliquer un filtre à un tuple.  
   

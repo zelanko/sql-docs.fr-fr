@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521616"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468964"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
   Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
@@ -228,10 +228,10 @@ ms.locfileid: "84521616"
 |14|Ordre des moyennes mobiles|Valeur qui représente le nombre de moyennes mobiles dans une série.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |15|Ordre des différences|Indique que la valeur représente une valeur qui indique le nombre de fois où la série fait l'objet d'une différenciation.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |16|Boolean|Représente un type booléen.|  
-|17|Autres|Représente une valeur personnalisée définie par l'algorithme.|  
+|17|Autre|Représente une valeur personnalisée définie par l'algorithme.|  
 |18|Chaîne rendue au préalable|Représente une valeur personnalisée que l'algorithme rend sous la forme d'une chaîne. Aucune mise en forme n'a été appliquée par le modèle objet.|  
   
- Les types valeur sont dérivés de l'énumération ADMOMD.NET. Pour plus d’informations, consultez <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Les types valeur sont dérivés de l'énumération ADMOMD.NET. Pour plus d’informations, consultez [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="node-score"></a>Score du nœud  
  La signification du score de nœud diffère selon le type de modèle et peut également être spécifique au type de nœud. Pour plus d’informations sur la méthode de calcul de NODE_SCORE pour chaque type de modèle et de nœud, consultez [Contenu du modèle d’exploration de données par type d’algorithme](#bkmk_AlgoType).  

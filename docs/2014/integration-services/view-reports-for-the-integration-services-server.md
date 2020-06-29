@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d80ae1f3f6f29f7ee4dc015c26aa1cf3cc1e891
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 244b641d2b7e56ecfb9bafac68ea9fc06c727255
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972512"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439886"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Afficher les rapports du serveur Integration Services
   Dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  Pour plus d’informations sur les rapports, consultez [Rapports du serveur Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  

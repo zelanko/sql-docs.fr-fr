@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818045"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440806"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -52,18 +52,18 @@ ms.locfileid: "84818045"
 
  Le result_cache_hit est un masque de masque de l’utilisation d’une requête du cache de jeu de résultats.  Cette colonne peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  
   
-|Valeur|Description|  
+|Valeur hexadécimale (décimale)|Description|  
 |-----------|-----------------|  
 |**1**|Accès au cache du jeu de résultats|  
-|-**0x00**|Absence dans le cache du jeu de résultats|  
-|-**0x01**|La mise en cache du jeu de résultats est désactivée sur la base de données.|  
-|-**0x02**|La mise en cache du jeu de résultats est désactivée sur la session. | 
-|-**0x04**|La mise en cache du jeu de résultats est désactivée en raison de l’absence de sources de données pour la requête.|  
-|-**0x08**|La mise en cache du jeu de résultats est désactivée en raison des prédicats de sécurité au niveau des lignes.|  
-|-**0x10**|La mise en cache du jeu de résultats est désactivée en raison de l’utilisation d’une table système, d’une table temporaire ou d’une table externe dans la requête.|  
-|-**0x20**|La mise en cache du jeu de résultats est désactivée, car la requête contient des constantes d’exécution, des fonctions définies par l’utilisateur ou des fonctions non déterministes.|  
-|-**0x40**|La mise en cache du jeu de résultats est désactivée, car la taille estimée du jeu de résultats est >10 Go.|  
-|-**0x80**|La mise en cache du jeu de résultats est désactivée, car le jeu de résultats contient des lignes de grande taille (>64 Ko).|  
+|**0x00** (**0**)|Absence dans le cache du jeu de résultats|  
+|-**0x01** (**-1**)|La mise en cache du jeu de résultats est désactivée sur la base de données.|  
+|-**0x02** (**-2**)|La mise en cache du jeu de résultats est désactivée sur la session. | 
+|-**0x04** (**-4**)|La mise en cache du jeu de résultats est désactivée en raison de l’absence de sources de données pour la requête.|  
+|-**0x08** (**-8**)|La mise en cache du jeu de résultats est désactivée en raison des prédicats de sécurité au niveau des lignes.|  
+|-**0x10** (**-16**)|La mise en cache du jeu de résultats est désactivée en raison de l’utilisation d’une table système, d’une table temporaire ou d’une table externe dans la requête.|  
+|-**0x20** (**-32**)|La mise en cache du jeu de résultats est désactivée, car la requête contient des constantes d’exécution, des fonctions définies par l’utilisateur ou des fonctions non déterministes.|  
+|-**0x40** (**-64**)|La mise en cache du jeu de résultats est désactivée, car la taille estimée du jeu de résultats est >10 Go.|  
+|-**0x80** (**-128**)|La mise en cache du jeu de résultats est désactivée, car le jeu de résultats contient des lignes de grande taille (>64 Ko).|  
   
 ## <a name="permissions"></a>Autorisations
 

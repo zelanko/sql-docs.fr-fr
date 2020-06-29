@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c00aa838b5bf420862cfe2793c404989ad911c9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53e41dd7a3c2d3613244be402ee070630647ff19
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962084"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439966"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche de terme (onglet Table de référence)
   Utilisez l’onglet **Table de référence** de la boîte de dialogue **Éditeur de transformation de recherche de terme** pour définir la connexion à la table de référence (recherche).  

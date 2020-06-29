@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521252"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468904"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
   Tous les modèles d'exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  La valeur de l' *ordre des différences* indique le nombre de fois où la série fait l'objet d'une comparaison ou d'une différenciation.  
   
- Pour obtenir une énumération des types de valeurs possibles, consultez <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Pour obtenir une énumération des types de valeurs possibles, consultez [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="using-the-arima-tree-information"></a>Utilisation des informations d'arbre ARIMA  
  Si vous utilisez des prédictions basées sur l'algorithme ARIMA dans une solution d'entreprise, vous pouvez coller l'équation dans un rapport pour illustrer la méthode qui a été utilisée pour créer la prédiction. Vous pouvez utiliser la légende pour présenter les formules sous une forme abrégée, ou la description pour présenter les formules sous une forme longue.  
@@ -436,7 +436,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   Représentation XML : utilisez une requête XML.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Il peut être difficile de récupérer des informations d'un arbre ARTXP, car les informations relatives à chaque division se trouvent dans un emplacement différent dans l'arbre. Par conséquent, avec un modèle ARTXP, vous devez obtenir toutes les informations, puis procéder à un traitement pour reconstituer la formule complète. L'extraction d'une équation à partir d'un modèle ARIMA est plus simple car la formule est disponible dans l'ensemble de l'arbre. Pour plus d’informations sur la création d’une requête pour récupérer ces informations, consultez [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  

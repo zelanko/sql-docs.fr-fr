@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: cddb6b604e0fc397e6640637db7320898d2beb5c
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 0cd36cb2882659bff902d9830af0c5acefd98444
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84546751"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468974"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensions de personnalisation Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]les [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation sont la base de l’idée d’implémenter une architecture de plug-in. Dans une architecture de plug-in, vous pouvez développer dynamiquement des nouveaux objets de cube et de nouvelles fonctionnalités, et les partager facilement avec d'autres développeurs. Par conséquent, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] les extensions de personnalisation offrent les fonctionnalités qui permettent d’obtenir les éléments suivants :  
@@ -31,20 +31,20 @@ ms.locfileid: "84546751"
   
  Les extensions de personnalisation [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ont de nombreuses utilisations. Par exemple, votre société effectue des ventes qui impliquent des devises différentes. Vous créez un membre calculé qui retourne les ventes consolidées dans la devise locale de la personne qui accède au cube. Vous créez ce membre en tant qu'extension de personnalisation. Vous partagez alors ce membre calculé avec un groupe d'utilisateurs. Une fois le membre calculé partagé, ces utilisateurs ont un accès immédiat à celui-ci dès qu'ils se connectent au serveur. Ils bénéficient de cet accès même s'ils n'utilisent pas la même interface que celle utilisée pour créer le membre calculé.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]les extensions de personnalisation sont une modification simple et élégante de l’architecture d’assembly managée existante et sont exposées dans le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> modèle objet, la syntaxe MDX (Multidimensional Expressions) et les ensembles de lignes de schéma.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]les extensions de personnalisation sont une modification simple et élégante de l’architecture d’assembly managée existante et sont exposées dans le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modèle objet [Microsoft. AnalysisServices. AdomdServer](/previous-versions/sql/sql-server-2014/ms131779(v=sql.120)) , la syntaxe MDX (Multidimensional Expressions) et les ensembles de lignes de schéma.  
   
 ## <a name="logical-architecture"></a>Architecture logique  
  L'architecture des extensions de personnalisation [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est basée sur l'architecture d'assembly managée et les quatre éléments de base suivants :  
   
  L'attribut personnalisé [PlugInAttribute]  
- Lors du démarrage du service, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] charge les assemblys requis et détermine les classes qui ont l' <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé.  
+ Lors du démarrage du service, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] charge les assemblys requis et détermine les classes qui ont l’attribut personnalisé [Microsoft. AnalysisServices. AdomdServer. PlugInAttribute](/previous-versions/sql/sql-server-2014/bb678014(v=sql.120)) .  
   
 > [!NOTE]  
 >  Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] définit des attributs personnalisés comme une façon de décrire votre code et affecter le comportement à l'exécution. Pour plus d’informations, consultez la rubrique «[vue d’ensemble des attributs](https://go.microsoft.com/fwlink/?LinkId=82929)» dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guide du développeur sur MSDN.  
   
- Pour toutes les classes avec l' <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] appelle leurs constructeurs par défaut. L'appel de tous les constructeurs au démarrage fournit un emplacement commun à partir duquel générer de nouveaux objets et qui est indépendant de toute activité des utilisateurs.  
+ Pour toutes les classes avec l’attribut personnalisé [Microsoft. AnalysisServices. AdomdServer. PlugInAttribute](/previous-versions/sql/sql-server-2014/bb678014(v=sql.120)) , [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] appelle leurs constructeurs par défaut. L'appel de tous les constructeurs au démarrage fournit un emplacement commun à partir duquel générer de nouveaux objets et qui est indépendant de toute activité des utilisateurs.  
   
- En plus de la génération d'un petit cache d'informations sur la création et la gestion d'extensions de personnalisation, le constructeur de classe s'abonne généralement aux événements <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> et <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>. S'il ne s'abonne pas à ces événements, la classe peut être marquée de manière appropriée en vue d'être nettoyée par le garbage collector du CLR (Common Language Runtime).  
+ En plus de créer un petit cache d’informations sur la création et la gestion des extensions de personnalisation, le constructeur de classe s’abonne généralement aux événements [Microsoft. AnalysisServices. AdomdServer. Server. SessionOpened](/previous-versions/sql/sql-server-2014/bb630427(v=sql.120)) et [Microsoft. AnalysisServices. AdomdServer. Server. SessionClosing](/previous-versions/sql/sql-server-2014/bb630427(v=sql.120)) . S'il ne s'abonne pas à ces événements, la classe peut être marquée de manière appropriée en vue d'être nettoyée par le garbage collector du CLR (Common Language Runtime).  
   
  Contexte de session  
  Pour les objets qui sont basés sur les extensions de personnalisation, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un environnement d'exécution pendant la session cliente et génère dynamiquement la plupart de ces objets dans cet environnement. Comme tout autre assembly CLR, cet environnement d'exécution a également accès aux autres fonctions et procédures stockées. Lorsque la session utilisateur se termine, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supprime les objets créés dynamiquement et ferme l’environnement d’exécution.  
@@ -54,9 +54,9 @@ ms.locfileid: "84546751"
   
  La communication entre le client et le serveur se produit par le biais d'événements spécifiques. Ces événements indiquent au client les situations qui conduisent à la génération des objets du client. L'environnement du client est créé dynamiquement à l'aide de deux ensembles d'événements : événements de session et événements de cube.  
   
- Les événements de session sont associés à l'objet de serveur. Lorsqu’un client se connecte à un serveur, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée une session et déclenche l' <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> événement. Lorsqu’un client met fin à la session sur le serveur, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] déclenche l' <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> événement.  
+ Les événements de session sont associés à l'objet de serveur. Lorsqu’un client se connecte à un serveur, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée une session et déclenche l’événement [Microsoft. AnalysisServices. AdomdServer. Server. SessionOpened](/previous-versions/sql/sql-server-2014/bb630427(v=sql.120)) . Lorsqu’un client met fin à la session sur le serveur, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] déclenche l’événement [Microsoft. AnalysisServices. AdomdServer. Server. SessionClosing](/previous-versions/sql/sql-server-2014/bb630427(v=sql.120)) .  
   
- Les événements de cube sont associés à l'objet de connexion. La connexion à un cube déclenche l'événement <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened>. La fermeture de la connexion à un cube, en fermant le cube ou en passant à un autre cube, déclenche un événement <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing>.  
+ Les événements de cube sont associés à l'objet de connexion. La connexion à un cube déclenche l’événement [Microsoft. AnalysisServices. AdomdServer. AdomdConnection. CubeOpened](/previous-versions/sql/sql-server-2014/bb630581(v=sql.120)) . La fermeture de la connexion à un cube, par la fermeture du cube ou par le passage à un autre cube, déclenche un événement [Microsoft. AnalysisServices. AdomdServer. AdomdConnection. CubeClosing](/previous-versions/sql/sql-server-2014/bb630371(v=sql.120)) .  
   
  Traçabilité et gestion des erreurs  
  Toute l'activité peut être tracée à l'aide de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. Les erreurs non gérées sont consignées dans le journal des événements Windows.  
@@ -67,52 +67,52 @@ ms.locfileid: "84546751"
  Les extensions de personnalisation [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont basées sur des composants existants. Voici un récapitulatif des améliorations qui fournissent les fonctionnalités des extensions de personnalisation.  
   
 ### <a name="assemblies"></a>Assemblys  
- L'attribut personnalisé <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> peut être ajouté à vos assemblys personnalisés pour identifier les classes des extensions de personnalisation [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ L’attribut personnalisé, [Microsoft. AnalysisServices. AdomdServer. PlugInAttribute](/previous-versions/sql/sql-server-2014/bb678014(v=sql.120)), peut être ajouté à vos assemblys personnalisés pour identifier les [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] classes d’extensions de personnalisation.  
   
 ### <a name="changes-to-the-adomdserver-object-model"></a>Modifications apportées au modèle objet AdomdServer  
- Les objets suivants du modèle objet <xref:Microsoft.AnalysisServices.AdomdServer> ont été améliorés ou ont été ajoutés au modèle.  
+ Les objets suivants dans le modèle objet [Microsoft. AnalysisServices. AdomdServer](/previous-versions/sql/sql-server-2014/ms131779(v=sql.120)) ont été améliorés ou ajoutés au modèle.  
   
 #### <a name="new-adomdconnection-class"></a>Nouvelle classe AdomdConnection  
- La nouvelle classe <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> expose plusieurs extensions de personnalisation par le biais de propriétés et d'événements.  
+ La classe [Microsoft. AnalysisServices. AdomdServer. AdomdConnection](/previous-versions/sql/sql-server-2014/bb678193(v=sql.120)) est nouvelle et expose plusieurs extensions de personnalisation par le biais de propriétés et d’événements.  
   
  **Propriétés**  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, une valeur de chaîne en lecture seule qui représente l'ID de session de la connexion actuelle.  
+-   [Microsoft. AnalysisServices. AdomdServer. AdomdConnection. SessionID *](/previous-versions/sql/sql-server-2014/bb678099(v=sql.120)), valeur de chaîne en lecture seule qui représente l’ID de session de la connexion actuelle.  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, une référence en lecture seule à la culture du client associée à la session active.  
+-   [Microsoft. AnalysisServices. AdomdServer. AdomdConnection. ClientCulture *](/previous-versions/sql/sql-server-2014/bb677433(v=sql.120)), une référence en lecture seule à la culture client associée à la session active.  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, une référence en lecture seule à l'interface d'identité représentant l'utilisateur actuel.  
+-   [Microsoft. AnalysisServices. AdomdServer. AdomdConnection. User *](/previous-versions/sql/sql-server-2014/bb630315(v=sql.120)), référence en lecture seule à l’interface d’identité représentant l’utilisateur actuel.  
   
  **Événements**  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened>  
+-   [Microsoft. AnalysisServices. AdomdServer. AdomdConnection. CubeOpened](/previous-versions/sql/sql-server-2014/bb630581(v=sql.120))  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing>  
+-   [Microsoft. AnalysisServices. AdomdServer. AdomdConnection. CubeClosing](/previous-versions/sql/sql-server-2014/bb630371(v=sql.120))  
   
 #### <a name="new-properties-in-the-context-class"></a>Nouvelles propriétés de la classe Context  
- La classe <xref:Microsoft.AnalysisServices.AdomdServer.Context> dispose de deux nouvelles propriétés :  
+ La classe [Microsoft. AnalysisServices. AdomdServer. Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) a deux nouvelles propriétés :  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, une référence en lecture seule au nouvel objet de serveur.  
+-   [Microsoft. AnalysisServices. AdomdServer. Context. Server *](/previous-versions/sql/sql-server-2014/bb678098(v=sql.120)), une référence en lecture seule au nouvel objet serveur.  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, une référence en lecture seule au nouvel objet <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
+-   [Microsoft. AnalysisServices. AdomdServer. Context. CurrentConnection *](/previous-versions/sql/sql-server-2014/bb630975(v=sql.120)), une référence en lecture seule au nouvel objet [Microsoft. AnalysisServices. AdomdServer. AdomdConnection](/previous-versions/sql/sql-server-2014/bb678193(v=sql.120)) .  
   
 #### <a name="new-server-class"></a>Nouvelle classe Server  
- La nouvelle classe <xref:Microsoft.AnalysisServices.AdomdServer.Server> expose plusieurs extensions de personnalisation par le biais d'événements et de propriétés de classe.  
+ La classe [Microsoft. AnalysisServices. AdomdServer. Server](/previous-versions/sql/sql-server-2014/bb677955(v=sql.120)) est nouvelle et expose plusieurs extensions de personnalisation par le biais des propriétés de classe et des événements.  
   
  **Propriétés**  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, une valeur de chaîne en lecture seule représentant le nom du serveur.  
+-   [Microsoft.AnalysisServices.AdomdServer.Server.Name *](/previous-versions/sql/sql-server-2014/bb677694(v=sql.120)), valeur de chaîne en lecture seule représentant le nom du serveur.  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, une référence en lecture seule à la culture globale associée au serveur.  
+-   [Microsoft. AnalysisServices. AdomdServer. Server. culture *](/previous-versions/sql/sql-server-2014/bb677437(v=sql.120)), référence en lecture seule à la culture globale associée au serveur.  
   
  **Événements**  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened>  
+-   [Microsoft. AnalysisServices. AdomdServer. Server. SessionOpened](/previous-versions/sql/sql-server-2014/bb630427(v=sql.120))  
   
--   <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>  
+-   [Microsoft. AnalysisServices. AdomdServer. Server. SessionClosing](/previous-versions/sql/sql-server-2014/bb630427(v=sql.120))  
   
 #### <a name="adomdcommand-class"></a>Classe AdomdCommand  
- La classe <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> prend maintenant en charge les commandes MDX suivantes :  
+ La classe [Microsoft. AnalysisServices. AdomdServer. AdomdCommand](/previous-versions/sql/sql-server-2014/ms143286(v=sql.120)) prend désormais en charge les commandes MDX suivantes :  
   
 -   [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   

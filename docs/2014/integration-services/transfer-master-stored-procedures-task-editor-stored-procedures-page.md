@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 09a9ad4645f430418c39f76178bfe7a6757018dd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0cd0b269c0ced445017d573cfad08a767d5f2008
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972779"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439986"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Éditeur de tâche de transfert de procédures stockées de master (page Procédures stockées)
   La page **Procédures stockées** de la boîte de dialogue **Éditeur de tâche de transfert de procédures stockées de master** permet de spécifier les propriétés de copie d’une ou plusieurs procédures stockées définies par l’utilisateur de la base de données **MASTER** d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une base de données **MASTER** d’une autre instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations sur cette tâche, consultez [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "84972779"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des procédures stockées du même nom existent déjà dans la base de données **MASTER** du serveur de destination.|  
 |**Remplacer**|La tâche remplace les procédures stockées du même nom dans la base de données **MASTER** du serveur de destination.|  
@@ -47,7 +47,7 @@ ms.locfileid: "84972779"
  **TransferAllStoredProcedures**  
  Indiquez si toutes les procédures stockées définies par l’utilisateur dans la base de données **MASTER** sur le serveur source doivent être copiées sur le serveur de destination.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**:**|Copie toutes les procédures stockées définies par l’utilisateur dans la base de données **MASTER** .|  
 |**Fausses**|Copie uniquement les procédures stockées spécifiées.|  

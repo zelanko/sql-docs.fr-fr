@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b86ec76d75f58db7f8e2978764e8ce9c5ace2279
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 47bf9fcd831cc8ca0a56b7687013104ba6b30c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963542"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440066"
 ---
 # <a name="select-variables"></a>Sélectionner des variables
   Utilisez la boîte de dialogue **Sélectionner des variables** pour spécifier les variables à utiliser dans une opération d'envoi de message de la tâche MSMQ. La liste **Variables disponibles** contient les variables système et définies par l’utilisateur exploitables par la tâche MSMQ ou son conteneur parent. La tâche utilise des variables de la liste **Variables sélectionnées** .  

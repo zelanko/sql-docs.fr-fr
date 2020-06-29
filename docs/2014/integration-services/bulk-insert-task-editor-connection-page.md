@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2cd722fd8520ff011c0d57040a55d624178e15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924640"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439166"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Éditeur de tâche d'insertion en bloc (page Connexion)
   Utilisez la page **Connexion** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** pour définir la source et la destination de l'opération d'insertion en bloc et le format à utiliser.  
@@ -37,7 +37,7 @@ ms.locfileid: "84924640"
  **Format**  
  Sélectionnez la source du format de l'insertion en bloc. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Utiliser un fichier**|Sélectionnez un fichier contenant la spécification de format. Cette option affiche l'option dynamique **FormatFile**.|  
 |**Spécifier**|Spécifiez le format. La sélection de cette option permet d’afficher les options dynamiques `RowDelimiter` et `ColumnDelimiter` .|  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95c144141e26415ac576589d36b98b54c52eecb6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925522"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439436"
 ---
 # <a name="audit-transformation-editor"></a>Éditeur de transformation d'audit
   La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  
@@ -32,7 +32,7 @@ ms.locfileid: "84925522"
  **Type d’audit**  
  Sélectionne une variable système disponible pour fournir les informations d'audit.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**GUID d'instance d'exécution**|Insérez le GUID qui identifie de manière unique l'instance d'exécution du package.|  
 |**ID du package**|Insérez le GUID qui identifie de manière unique le package.|  

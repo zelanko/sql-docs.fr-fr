@@ -16,14 +16,14 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f76636fa25b9a061f8e152c7df2eb583a386004
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8db9511c91c9f229b7002f5b16cf077910a4ccf0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926527"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439776"
 ---
 # <a name="access-to-files-used-by-packages"></a>Accéder aux fichiers utilisés par des packages
   Le niveau de protection de package ne protège pas les fichiers stockés en dehors du package. Il s'agit des fichiers suivants :  

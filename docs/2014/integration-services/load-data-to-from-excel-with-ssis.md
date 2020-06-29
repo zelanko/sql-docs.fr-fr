@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f347d00fff1f43c1c926e3ac87bcf023b6b6b89f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951249"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440296"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)
 
@@ -241,7 +241,7 @@ Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une co
 
 -   Si une table de destination est créée pendant la conception du package ou au moment de l’exécution, ou par l’Assistant Importation et Exportation, l’instruction `CREATE TABLE` doit utiliser LONGTEXT (ou un de ses synonymes) comme type de données de la colonne mémo de destination. Dans l’Assistant, vérifiez l’instruction `CREATE TABLE` et corrigez-la, si nécessaire, en cliquant sur **Modifier SQL** à côté de l’option **Créer une table de destination** dans la page **Mappage de colonnes**.
 
-## <a name="related-content"></a>Contenu connexe
+## <a name="related-content"></a>Contenu associé
 
 Pour plus d’informations sur les composants et les procédures décrits dans cet article, consultez les articles ci-dessous :
 

@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833757"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440706"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 
@@ -53,7 +53,7 @@ ms.locfileid: "82833757"
 ## <a name="permissions"></a>Autorisations  
  Cette vue est disponible uniquement dans la base de données **Master** à la connexion du principal au niveau du serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour utiliser cette vue, vous devez être connecté à la base de données **Master** . Utilisez la `sys.dm_operation_status` vue dans la base de données **Master** du [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur pour suivre l’état des opérations suivantes effectuées sur un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Créer une base de données  
@@ -73,7 +73,9 @@ ms.locfileid: "82833757"
 -   Restaurer la base de données  
   
 -   Supprimer la base de données  
-  
+
+Les informations de cette vue sont conservées pendant environ 1 heure. Utilisez le [Journal d’activité Azure](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) pour afficher les détails des opérations au cours des 90 derniers jours. Pour une rétention de plus de 90 jours, envisagez d’envoyer des entrées de [Journal d’activité](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) à un espace de travail log Analytics.
+
 ## <a name="example"></a>Exemple  
  Affichez les opérations de géo-réplication les plus récentes associées à la base de données « MyDB ».  
   

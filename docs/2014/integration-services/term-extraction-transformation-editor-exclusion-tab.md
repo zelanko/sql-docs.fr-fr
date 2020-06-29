@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e4597f3100e7c867b888d8af1d05204e2c271208
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962239"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440036"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Éditeur de transformation d'extraction de terme (onglet Exclusion)
   Utilisez l'onglet **Exclusion** de la boîte de dialogue **Éditeur de transformation d'extraction de terme** pour définir une connexion à une table de connexion et les colonnes qui contiennent des termes d'exclusion.  

@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1aeb650810f9b6d580dabcd22091a2e1eb9d49
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b1e6079d12de5468a654e646c434ae72596f62dc
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427256"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469274"
 ---
 # <a name="creating-a-custom-task"></a>Création d'une tâche personnalisée
   Les étapes de création d'une tâche personnalisée sont semblables aux étapes de création de tout autre objet personnalisé pour [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] :  
   
--   Créer une classe qui hérite de la classe de base. Pour une tâche, la classe de base est <xref:Microsoft.SqlServer.Dts.Runtime.Task>.  
+-   Créer une classe qui hérite de la classe de base. Pour une tâche, la classe de base est [Microsoft. SqlServer. Dts. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task).  
   
 -   Appliquer l'attribut qui identifie le type d'objet auprès de la classe. Pour une tâche, l'attribut est <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "85427256"
 ## <a name="getting-started-with-a-custom-task"></a>Mise en route d'une tâche personnalisée  
   
 ### <a name="creating-projects-and-classes"></a>Création de projets et de classes  
- Comme toutes les tâches managées dérivent de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, la première étape de création d'une tâche personnalisée consiste à créer un projet Bibliothèque de classes dans votre langage de programmation managé par défaut et créer une classe qui hérite de la classe de base. Dans cette classe dérivée, vous devez substituer les méthodes et les propriétés de la classe de base pour implémenter vos fonctionnalités personnalisées.  
+ Étant donné que toutes les tâches managées dérivent de la classe de base [Microsoft. SqlServer. Dts. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) , la première étape de la création d’une tâche personnalisée consiste à créer un projet de bibliothèque de classes dans votre langage de programmation managé préféré et à créer une classe qui hérite de la classe de base. Dans cette classe dérivée, vous devez substituer les méthodes et les propriétés de la classe de base pour implémenter vos fonctionnalités personnalisées.  
   
  Dans la même solution, créez un deuxième projet Bibliothèque de classes pour l'interface utilisateur personnalisée. Il est recommandé d'utiliser un assembly distinct pour l'interface utilisateur afin de faciliter le déploiement car vous pouvez ainsi mettre à jour et redéployer le gestionnaire de connexions ou son interface utilisateur de manière indépendante.  
   

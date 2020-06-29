@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 97933701539249d2294d71a12d9b92d515a5d478
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6e63839d4ab5d8d50f7d86eea05c8d58107d6799
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972499"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439866"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Affichage et arrêt des packages exécutés sur le serveur Integration Services
   La base de données `SSISDB` stocke l'historique de l'exécution dans des tables internes qui ne sont pas visibles par les utilisateurs. Cependant, elle expose les informations dont vous avez besoin via des vues publiques que vous pouvez interroger. Elle fournit également des procédures stockées que vous pouvez appeler pour effectuer des tâches courantes liées aux packages.  
