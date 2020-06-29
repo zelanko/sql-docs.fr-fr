@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3aa628e0113adbbee48c0fa00d43b56e8773ad7c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e7ba771b404ac7d0fad5721fa6056333634e7246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965299"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436076"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Étape 3 : Ajout et configuration d’un Gestionnaire de connexions OLE DB
   La tâche qui suit l'ajout du Gestionnaire de connexions de fichiers plats pour la connexion à la source de données, consiste à ajouter un Gestionnaire de connexions OLE DB pour la connexion à la destination. Un Gestionnaire de connexions OLE DB permet à un package d’extraire ou de charger des données dans une source de données compatible OLE DB. Au moyen du Gestionnaire de connexions OLE DB, vous pouvez spécifier le serveur, la méthode d'authentification et la base de données par défaut pour la connexion.  

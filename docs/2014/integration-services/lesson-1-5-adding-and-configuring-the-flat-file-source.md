@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 795285a6aaceb3e74e80f5cad71d54c72c756ae2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1f50c3aed4429a3ba05a23a969d050c45778c34
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966149"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435846"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Étape 5 : Ajout et configuration de la source de fichier plat
   Au cours de cette tâche, vous allez ajouter et configurer une source de fichier plat à votre package. Une source de fichier plat est un composant de flux de données qui utilise des métadonnées définies par un Gestionnaire de connexions de fichiers plats pour spécifier le format et la structure des données à extraire à partir du fichier plat par un processus de transformation. La source de fichier plat peut être configurée pour extraire les données à partir d'un seul fichier plat en utilisant la définition de format de fichier fournie par le Gestionnaire de connexions de fichiers plats.  

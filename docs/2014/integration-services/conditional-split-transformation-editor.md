@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405d20ce5711f3e3378b0037b6d4c1f753a8f09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921990"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434916"
 ---
 # <a name="conditional-split-transformation-editor"></a>Éditeur de transformation de fractionnement conditionnel
   Utilisez la boîte de dialogue **Éditeur de transformation de fractionnement conditionnel** pour créer des expressions, définir l'ordre dans lequel les expressions sont évaluées et nommer les sorties d'un fractionnement conditionnel. Cette boîte de dialogue comprend des fonctions mathématiques, de chaînes de caractères et de date/heure, ainsi que des opérateurs utilisés pour créer des expressions. La première condition évaluée comme vraie détermine la sortie vers laquelle une ligne est dirigée.  

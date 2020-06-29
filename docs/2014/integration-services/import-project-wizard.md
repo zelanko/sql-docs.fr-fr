@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.importprojectwizard.f1
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b9f20115010f2ad51159f29a4b64da195938969
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965479"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436646"
 ---
 # <a name="import-project-wizard"></a>Assistant Importation de projet
   Utilisez l'Assistant Importation de projet de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour créer un nouveau projet Integration Services en fonction d'un projet existant. Importez des projets déjà déployés dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou à partir d’un fichier de déploiement de projet (extension .ispac).  

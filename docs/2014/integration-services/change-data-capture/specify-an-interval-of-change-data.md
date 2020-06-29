@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70b9c14d609f2db69ee5751eca18acb5262a07a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922470"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435426"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
   Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un charge incrémentielle de données modifiées, la première tâche consiste à calculer les points de terminaison de l’intervalle de modification. Ces points de terminaison sont des valeurs `datetime` qui seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  

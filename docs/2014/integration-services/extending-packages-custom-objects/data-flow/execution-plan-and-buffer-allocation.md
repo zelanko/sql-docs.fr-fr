@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0159c05b641cf234e2d8fdc6cd8c56bddb6a1054
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e64e7ca1680c8219168e447fec8dde41aa577ba5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968869"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436966"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan d'exécution et allocation de mémoire tampon
   Avant l'exécution, la tâche de flux de données examine ses composants et génère un plan d'exécution pour chaque séquence de composants. Cette section fournit des détails sur le plan d'exécution et son mode d'affichage, ainsi que sur l'allocation de mémoires tampons d'entrée et de sortie en fonction du plan d'exécution.  

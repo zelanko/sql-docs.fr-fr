@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95a812cf5c5faa7e367d4e39a8edac8d7bab89de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968319"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436896"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implémenter une stratégie de signature en définissant une valeur du Registre
   Vous pouvez utiliser une valeur du Registre facultative pour gérer la stratégie d'une organisation pour charger des packages signés ou non signés. Si vous utilisez cette valeur du Registre, vous devez créer cette valeur du Registre sur tous les ordinateurs sur lesquels les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécuteront et sur lesquels vous souhaitez appliquer la stratégie. Une fois la valeur du Registre définie, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vérifiera les signatures avant de charger les packages.  
@@ -33,7 +33,7 @@ ms.locfileid: "84968319"
   
  Le tableau suivant répertorie les valeurs valides des données DWORD et leur stratégie associée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|Pas de restriction administrative.|  
 |1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  

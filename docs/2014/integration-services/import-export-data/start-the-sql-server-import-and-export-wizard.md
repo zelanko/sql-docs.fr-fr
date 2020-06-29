@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1803dd3357d2a725f2196e2c692f7470e27a03f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965579"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436856"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Exécuter l'Assistant Importation et Exportation SQL Server
   L'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue la méthode la plus simple pour copier des données entre des sources de données et pour construire des packages de base. Pour plus d’informations sur l’Assistant, consultez [SQL Server Assistant importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "84965579"
   
     -   Indiquez s'il faut créer une base de données et définir ses propriétés. Les propriétés suivantes ne peuvent pas être configurées et l'Assistant utilise les valeurs par défaut spécifiées :  
   
-        |Propriété|Value|  
+        |Propriété|Valeur|  
         |--------------|-----------|  
         |Classement|Latin1_General_CS_AS_KS_WS|  
         |mode de récupération|Full|  

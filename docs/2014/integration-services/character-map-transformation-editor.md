@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f74855074ac4d362c1505a0e3a4ebff416ed4b5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922103"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435076"
 ---
 # <a name="character-map-transformation-editor"></a>Éditeur de transformation de la table des caractères
   Utilisez la boîte de dialogue **Éditeur de transformation de la table des caractères** pour sélectionner les fonctions de chaîne à appliquer aux données de colonne, et indiquer si le mappage est une modification sur place ou s’il est ajouté sous la forme d’une nouvelle colonne.  
@@ -35,7 +35,7 @@ ms.locfileid: "84922103"
  **Destination**  
  Indiquez si vous voulez enregistrer le résultat des opérations de chaîne sur place en utilisant la colonne existante, ou enregistrer les données modifiées sous la forme d'une nouvelle colonne.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Nouvelle colonne|Enregistre les données dans une nouvelle colonne. Définissez le nom de la colonne sous **Alias de sortie**.|  
 |Modification sur place|Enregistre les données modifiées dans la colonne existante.|  
@@ -43,7 +43,7 @@ ms.locfileid: "84922103"
  **opération**  
  Dans la liste, sélectionnez les fonctions de chaîne à appliquer aux données de la colonne.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Minuscules|Convertit les caractères en minuscules.|  
 |Majuscules|Convertit les caractères en majuscules|  

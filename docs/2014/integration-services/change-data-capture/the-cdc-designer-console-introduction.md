@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f167e52d6ee3c1111058a098c2fbd219999c0f10
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922300"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435256"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Présentation de la console du concepteur de capture de données modifiées
   Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity.  

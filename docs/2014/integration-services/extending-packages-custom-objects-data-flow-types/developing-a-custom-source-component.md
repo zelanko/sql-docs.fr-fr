@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8fe20a8bafae1a9f8dd331d1db5ae16fba5c3ee1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65287938d3cdbe45a0853dcd47280f68f0443b3f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968949"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437026"
 ---
 # <a name="developing-a-custom-source-component"></a>Développement d'un composant source personnalisé
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet aux développeurs d’écrire des composants sources capables de se connecter à des sources de données personnalisées et de fournir des données, à partir de ces sources, à d’autres composants dans une tâche de flux de données. La possibilité de créer des sources personnalisées est particulièrement utile lorsque vous devez vous connecter à des sources de données qui ne sont pas accessibles à l'aide de l'une des sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existantes.

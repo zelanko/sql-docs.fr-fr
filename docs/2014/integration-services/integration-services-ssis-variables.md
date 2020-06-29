@@ -15,14 +15,14 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a3565f98786b02eaeacb1140e34f862102ca2463
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966179"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436266"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent les valeurs qu’un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -125,7 +125,7 @@ ms.locfileid: "84966179"
   
  Lorsque le système réinitialise l’option **IncludeInDebugDump** sur `false` , cela peut remplacer la valeur sélectionnée par l’utilisateur.  
   
- Value  
+ Valeur  
  La valeur d'une variable définie par l'utilisateur peut être un littéral ou une expression. Une variable inclut des options permettant de définir la valeur de la variable et le type de données de la valeur. Les deux propriétés doivent être compatibles : par exemple, l'utilisation d'une valeur de chaîne avec un type de données Integer n'est pas valide.  
   
  Si la variable est configurée de façon à correspondre à une expression, vous devez fournir une expression. Au moment de l'exécution, l'expression est évaluée et le résultat de l'évaluation est affecté comme valeur de la variable. Par exemple, si une variable utilise l'expression `DATEPART("month", GETDATE())` , la valeur de la variable est l'équivalent numérique du mois de la date actuelle. L'expression doit être une expression valide qui utilise la syntaxe de grammaire d'expression [!INCLUDE[ssIS](../includes/ssis-md.md)] . Lorsqu'une expression est utilisée avec des variables, elle peut utiliser des littéraux et les opérateurs et fonctions fournis par la grammaire d'expression, mais elle ne peut pas faire référence aux colonnes d'un flux de données du package. La longueur maximale d'une expression est limitée à 4 000 caractères. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c47c5596d5674adf56105cffd7617a2e3436bc8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965649"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436836"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Choisir une destination (Assistant Importation et Exportation SQL Server)
   Utilisez la page **choisir une destination** pour spécifier la destination des données que vous souhaitez copier.  
@@ -81,7 +81,7 @@ ms.locfileid: "84965649"
  **Format**  
  Permet de préciser la mise en forme à utiliser : délimitée, à largeur fixe ou en drapeau à droite.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Delimited|Les colonnes sont séparées par un délimiteur spécifié à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  

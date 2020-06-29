@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 784bd4649fb2169c78f38414c6c400e34582aa99
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965529"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436726"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Spécifier la copie ou l'interrogation de table (Assistant Importation et Exportation SQL Server)
   Utilisez la page **spécifier la copie ou l’interrogation de table** pour spécifier comment copier les données. Vous pouvez utiliser une interface graphique pour sélectionner les objets de base de données existants à copier ou avoir recours à Transact-SQL pour créer une requête plus complexe.  

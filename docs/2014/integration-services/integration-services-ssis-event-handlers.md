@@ -18,14 +18,14 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2aab5732a667dfe9e26a89048991900148077df3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02648e214f425c142141281a2ad21f8433cb6143
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965399"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436396"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
   Lors de l'exécution, les exécutables (packages, conteneurs de boucles Foreach, conteneurs de boucles For, conteneurs de séquences et conteneurs d'hôtes de tâches) déclenchent des événements. Par exemple, un événement OnError se déclenche lorsqu'une erreur se produit. Vous pouvez créer des gestionnaires d'événements personnalisés pour ces événements afin d'étendre les fonctionnalités des packages et les rendre plus faciles à gérer au moment de l'exécution. Les gestionnaires d'événements peuvent réaliser des tâches comme les suivantes :

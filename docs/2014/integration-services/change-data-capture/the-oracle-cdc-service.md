@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50ee8e81623fb4358cc9768d79a1f8b559a24685
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e1a6f64fa7f03bbf98158a791784bb795becd2d4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922260"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435246"
 ---
 # <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
   Le service de capture de données modifiées Oracle est un service Windows qui exécute le programme xdbcdcsvc.exe. Ce service peut être configuré pour exécuter plusieurs services Windows sur le même ordinateur, chacun avec un nom différent de service Windows. La création de plusieurs services Windows de capture de données modifiées Oracle sur un seul ordinateur est souvent réalisée pour obtenir une meilleure séparation entre eux, ou lorsque chacun d'eux doit fonctionner avec une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

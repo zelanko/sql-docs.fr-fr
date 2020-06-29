@@ -12,14 +12,14 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 96f89838368789a6656e047982e107be1aaebc03
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 957b0ce9c43fd986cafc51807f212bd64eb4d9e0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968939"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437016"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (expression SSIS)
   Renvoie une chaîne de caractères après avoir converti les caractères minuscules en caractères majuscules.  

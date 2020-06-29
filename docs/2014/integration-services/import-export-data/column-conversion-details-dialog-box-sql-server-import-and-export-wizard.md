@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd4e53a1e6485d74ba2aff4039108b357d9c0c92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9207e76191060c56acad37db734827579a83aae0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966226"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436826"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Boîte de dialogue Détails de la conversion de colonne (Assistant Importation et Exportation SQL Server)
   Utilisez la boîte de dialogue détails de la **conversion de colonne** pour consulter des informations détaillées sur la conversion d’une colonne. Ces informations de conversion incluent notamment le type de données de la colonne au niveau de la source et de la destination, ainsi que la conversion à laquelle l'Assistant procèdera. Cette page répertorie également les fichiers de mappage de type de données que l'Assistant utilise pour déterminer les conversions de type de données requises. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe ces fichiers de mappage de type de données au cours de l'installation.  
