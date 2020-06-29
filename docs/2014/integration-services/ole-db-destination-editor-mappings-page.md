@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6afcec22eb14686c0bd7e65cdf10be0075f31577
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a72829bd456bbf899149555fe77916913521db5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964959"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424156"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Éditeur de destination OLE DB (page Mappages)
   La page **Mappages** de la boîte de dialogue **Éditeur de destination OLE DB** vous permet de mapper les colonnes d’entrée aux colonnes de destination.  

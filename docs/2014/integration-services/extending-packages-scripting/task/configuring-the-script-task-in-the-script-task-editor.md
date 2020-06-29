@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script Task Editor
 - SSIS Script task, configuring
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: da21a9a12a57b4ddba3b656d154136b7b70e8362
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 605b16db873a47082d1333811065c06d0d8cef46
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968379"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425976"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configuration de la tâche de script dans l'éditeur de tâche de script
   Avant d’écrire du code personnalisé dans la tâche de script, vous devez configurer ses propriétés principales dans les trois pages de l’**éditeur de tâche de script**. Vous pouvez configurer des propriétés de tâche supplémentaires qui ne sont pas propres à la tâche de script à l'aide de la fenêtre Propriétés.

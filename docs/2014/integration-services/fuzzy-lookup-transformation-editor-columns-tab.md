@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: aaf45327-79e9-4760-9b4d-546ace91b5b4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 74608af46f2b76a2df69d2fc7b522948bd858f7a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 74182d9ca6f1a1c7bf2657d5c296c98fe52516a2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966289"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425216"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Éditeur de transformation de recherche floue (onglet Colonnes)
   L'onglet **Colonnes** de la boîte de dialogue **Éditeur de transformation de recherche floue** vous permet de définir les propriétés des colonnes d'entrée et de sortie.  

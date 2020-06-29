@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26ba2fc6a8cfdfb6855d7d5b29cc3be31f1d53da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6194849367e89e2e7ba93e0f1138f4fdef59b3c0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966319"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425286"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Éditeur de transformation de regroupement approximatif (onglet Colonnes)
   L'onglet **Colonnes** de la boîte de dialogue **Éditeur de transformation de regroupement approximatif** permet de spécifier les colonnes utilisées pour regrouper les lignes comportant des doublons.  
@@ -56,7 +56,7 @@ ms.locfileid: "84966319"
  **Chiffres**  
  Spécifiez l'importance des premiers et derniers chiffres en comparant les données de la colonne. Par exemple, si les premiers chiffres sont significatifs, « 123 Main Street » ne sera pas groupé avec « 456 Main Street ».  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les premiers et derniers chiffres ne sont pas significatifs.|  
 |**Premiers**|Seuls les premiers chiffres sont significatifs.|  

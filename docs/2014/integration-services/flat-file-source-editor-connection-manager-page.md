@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43a0251b63d7a0519a2a19b6bec4c5117f0dcef0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966426"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425486"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Éditeur de source de fichier plat (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source de fichier plat** pour sélectionner le gestionnaire de connexions de fichiers plats qui sera utilisé par la source de fichier plat. La source de fichier plat lit les données d'un fichier texte qui peut être au format délimité, à largeur fixe ou mixte.  

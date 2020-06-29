@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eae2f119e2d1fb8c52c00fc7dbe96af1d593193d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964839"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423846"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Référence de l'interface utilisateur de l'utilitaire d'exécution de package (DtExecUI)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant `dtexecui` dans une invite de commandes, est une alternative à l’exécution de packages à l’aide de l’outil d’invite de commandes **dtexec** .  

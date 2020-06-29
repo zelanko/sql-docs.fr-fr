@@ -18,14 +18,14 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76cff13a67d0109e7215ee16285e49e05b0a72c6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967229"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425986"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.

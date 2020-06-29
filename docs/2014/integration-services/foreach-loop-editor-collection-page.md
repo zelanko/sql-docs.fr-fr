@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36e2c705382d553c9833776badfacd32aed7f6d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966419"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425516"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Éditeur de boucle Foreach (page de collection)
   La page **Collection** de la boîte de dialogue **Éditeur de boucle Foreach** permet de spécifier le type d’énumérateur et de configurer ce dernier.  
@@ -27,7 +27,7 @@ ms.locfileid: "84966419"
  **Énumérateur**  
  Sélectionnez le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Foreach File Enumerator**|Permet d'énumérer les fichiers. Si cette valeur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach File**.|  
 |**Foreach Item Enumerator**|Permet d'énumérer les valeurs issues d'un élément. Si cette valeur d'énumérateur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach Item**.|  
@@ -167,7 +167,7 @@ ms.locfileid: "84966419"
  **DocumentSourceType**  
  Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -187,7 +187,7 @@ ms.locfileid: "84966419"
  **EnumerationType**  
  Permet de sélectionner le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Navigateur**|Permet d'énumérer par le biais d'un XPathNavigator.|  
 |**Nœud**|Permet d'énumérer les nœuds retournés par une opération XPath.|  
@@ -197,7 +197,7 @@ ms.locfileid: "84966419"
  **OuterXPathStringSourceType**  
  Permet de sélectionner le type source correspondant à une chaîne XPath. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -220,7 +220,7 @@ ms.locfileid: "84966419"
  **InnerXPathStringSourceType**  
  Permet de sélectionner le type source correspondant à une chaîne XPath interne. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a8064a36bce9be9cfa5e2cc88c5f23806932d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967119"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425686"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Avancé)
   La page **Avancé** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de définir des propriétés qui spécifient la manière dont Integration Services lit et écrit des données dans les fichiers plats. Vous pouvez modifier les noms des colonnes dans le fichier plat et définir des propriétés qui incluent le type de données et des séparateurs pour chaque colonne du fichier.  
@@ -52,7 +52,7 @@ ms.locfileid: "84967119"
  **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Ajouter une colonne**|Ajoute une colonne à la fin de la liste.|  
 |**Insérer avant**|Insère une nouvelle colonne avant la colonne sélectionnée.|  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 13994ac9a235a9259a1f436dc8bf0dd6435a51a3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ebf86dde82ea4bc7f4e5f4f488e9bedbebbcae4a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966369"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425346"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Éditeur de boucle Foreach (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle Foreach** pour décrire et attribuer un nom à un conteneur de boucle Foreach qui utilise un énumérateur précis afin de répéter un flux de travail pour chaque membre d'une collection.  

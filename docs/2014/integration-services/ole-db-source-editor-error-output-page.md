@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 792ef4d13c2181f95b3f8f68654b0084e921706a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 782273c8daf48925da2e25de1f95e6c24ae84a42
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964939"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424026"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Éditeur de source OLE DB (page Sortie d'erreur)
   La page **Sortie d’erreur** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d’erreur.  

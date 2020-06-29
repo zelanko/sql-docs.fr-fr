@@ -15,14 +15,14 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bd3c15610065c4c26da0476d50cac9bd4bd1dacc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7cc7cb929aa34c9226dbdff9efb6b0c918b546f1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966264"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425056"
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un programme d'installation unique pour installer tout ou une partie de ses composants, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le programme d'installation vous permet d'installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec ou sans d'autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur unique.  

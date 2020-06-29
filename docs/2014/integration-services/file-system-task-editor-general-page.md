@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 342a718e1d72a257e469cd855ffd60fff6c5704d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967129"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425676"
 ---
 # <a name="file-system-task-editor-general-page"></a>Éditeur de tâche de système de fichiers (page Général)
   Utilisez la page **Général** de l' **Éditeur de tâche de système de fichiers** pour configurer l'opération de système de fichiers qu'exécute la tâche.  
@@ -39,7 +39,7 @@ ms.locfileid: "84967129"
  **IsDestinationPathVariable**  
  Indique si le chemin d'accès de destination est stocké dans une variable. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**:**|Le chemin d'accès de destination est stocké dans une variable. Cette valeur affiche l'option dynamique **DestinationVariable**.|  
 |**Fausses**|Le chemin d'accès de destination est défini dans un gestionnaire de connexions de fichiers. La sélection de cette valeur affiche l’option dynamique, `DestinationConnection` .|  
@@ -59,7 +59,7 @@ ms.locfileid: "84967129"
  **opération**  
  Sélectionnez l'opération de système de fichiers à exécuter. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Copier le répertoire**|Copier un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
 |**Copier un fichier**|Copier un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
@@ -75,7 +75,7 @@ ms.locfileid: "84967129"
  `IsSourcePathVariable`  
  Indique si le chemin d'accès de destination est stocké dans une variable. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value||  
+|Valeur||  
 |-----------|-|  
 |**:**|Le chemin d'accès de destination est stocké dans une variable. Sélectionnez cette valeur pour afficher l'option dynamique **SourceVariable**.|  
 |**Fausses**|Le chemin d'accès de destination est défini dans un gestionnaire de connexions de fichiers. Cette valeur affiche l'option dynamique **DestinationVariable**.|  

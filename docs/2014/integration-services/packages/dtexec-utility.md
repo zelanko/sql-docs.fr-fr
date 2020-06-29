@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53ddc509c4f44677a2504b791502d530c2104bf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45820aa673f31ae9cea7d1f2f4e8b61d63b8670c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964869"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423946"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   L' `dtexec` utilitaire d’invite de commandes permet de configurer et d’exécuter des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. L'utilitaire `dtexec` fournit un accès à toutes les fonctions de configuration et d'exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L' `dtexec` utilitaire vous permet de charger des packages à partir des sources suivantes : le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serveur, un fichier projet. ISPAC, une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données, le [!INCLUDE[ssIS](../../includes/ssis-md.md)] magasin de packages et le système de fichiers.  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Lorsqu'un package s'exécute, `dtexec` peut retourner un code de sortie. Le code de sortie est utilisé pour remplir la variable ERRORLEVEL, dont la valeur peut être testée dans des instructions conditionnelles ou la logique dans un fichier de commandes. Le tableau suivant répertorie les valeurs que l'utilitaire `dtexec` peut définir lors de la sortie.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|L'exécution du package a réussi.|  
 |1|Le package a échoué.|  

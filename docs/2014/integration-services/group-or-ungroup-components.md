@@ -12,14 +12,14 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0beeed1beea03f3acdb869fcd10cef163eaedb9d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c613671b12991e4819937f8be61f26a25cdf12
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968355"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425106"
 ---
 # <a name="group-or-ungroup-components"></a>Grouper ou dissocier des composants
   Les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] prennent en charge le groupement réductible. Si un package contient plusieurs composants, les onglets peuvent être encombrés, ce qui rend difficile l'affichage simultané de tous les composants et la recherche de l'élément avec lequel vous souhaitez travailler. La fonctionnalité de groupement réductible permet d'économiser de l'espace sur la surface de travail et de faciliter l'utilisation des packages volumineux.  

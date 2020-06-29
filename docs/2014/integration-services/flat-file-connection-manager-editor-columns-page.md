@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1b2a60f82e354513d25003b035bfbb689858107
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967109"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425666"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Colonnes)
   La page **Colonnes** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de spécifier les informations de ligne et de colonne, ainsi que d'afficher un aperçu du fichier.  
@@ -38,7 +38,7 @@ ms.locfileid: "84967109"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**CR**|Les lignes sont séparées par un retour chariot.|  
@@ -52,7 +52,7 @@ ms.locfileid: "84967109"
  **Délimiteur de colonne**  
  Effectuez une sélection dans la liste des séparateurs de colonnes disponibles ou entrez le texte du séparateur.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.|  
 |**CR**|Les colonnes sont séparées par un retour chariot.|  
@@ -99,7 +99,7 @@ ms.locfileid: "84967109"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**CR**|Les lignes sont séparées par un retour chariot.|  

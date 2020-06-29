@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82181fad0220ad73804c23d7ebce2fbe6994d820
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967099"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425656"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Général)
   La page **Général** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de sélectionner un format de fichier et de données. Une connexion de fichier plat permet à un package de se connecter à un fichier texte.  
@@ -50,7 +50,7 @@ ms.locfileid: "84967099"
  **Format**  
  Indique si le fichier utilise une mise en forme délimitée, à largeur fixe ou en drapeau à droite.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Delimited|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
@@ -65,7 +65,7 @@ ms.locfileid: "84967099"
  **Séparateur de lignes d'en-tête**  
  Choisissez dans la liste des séparateurs de lignes d'en-tête ou entrez le texte de séparation.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La ligne d'en-tête est séparée par une combinaison retour chariot-saut de ligne.|  
 |**CR**|La ligne d'en-tête est séparée par des retours chariot.|  

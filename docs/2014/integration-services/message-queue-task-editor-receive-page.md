@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a392a09e2120c08c43b1e373c942ff9c60e148
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950989"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424586"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Éditeur de tâche MSMQ (page Recevoir)
   La page **Recevoir** de la boîte de dialogue **Éditeur de tâche MSMQ** permet de configurer une tâche MSMQ pour recevoir des messages MSMQ (Message Queuing) [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "84950989"
  **MessageType**  
  Sélectionnez le type de message : Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Message de fichiers de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
 |**Message de type variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
@@ -57,7 +57,7 @@ ms.locfileid: "84950989"
  **Filter**  
  Indiquez si vous voulez appliquer un filtre au message. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun filtre**|La tâche ne filtre pas les messages. Cette valeur affiche l’option dynamique **IdentifierReadOnly**.|  
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
@@ -78,7 +78,7 @@ ms.locfileid: "84950989"
  **Filter**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun filtre**|La tâche ne filtre pas les messages. Cette valeur affiche l’option dynamique **IdentifierReadOnly**.|  
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
@@ -104,7 +104,7 @@ ms.locfileid: "84950989"
  **Comparer**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
 |**Correspondance exacte**|Les messages doivent correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
@@ -118,7 +118,7 @@ ms.locfileid: "84950989"
  **Comparer**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
 |**Correspondance exacte**|Le message doit correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efcfde9920aa50e7df6a4b9de59aebf066092c57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967089"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425546"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (Enterprise Manager)
   Utilisez le nœud **Aperçu** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** pour visualiser le contenu du fichier source sous forme de tableau.  
