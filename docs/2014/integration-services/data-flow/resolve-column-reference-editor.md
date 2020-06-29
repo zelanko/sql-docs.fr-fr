@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.resolvereferences.mapper.F1
 - sql12.dts.designer.resolvereferences.preview.F1
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4f810a24baec565a7870fb6602b76ff8f3ba119f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b56e089feba35c3fe83e0a4e593309f8d1ac782
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914619"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431376"
 ---
 # <a name="resolve-column-reference-editor"></a>Éditeur de restauration de références de colonnes
   Lorsqu'un chemin d'accès d'entrée est déconnecté ou s'il existe des colonnes non mappées dans le chemin d'accès, une icône d'erreur s'affiche en regard du chemin d'accès aux données correspondant. Pour simplifier la résolution des erreurs de référence de colonne, le nouvel éditeur de résolution des références vous permet de lier des colonnes de sortie non mappées avec des colonnes d'entrée non mappées pour tous les chemins d'accès de l'arborescence d'exécution. L'éditeur de résolution des références met également en surbrillance les chemins d'accès pour indiquer ceux qui sont résolus.  

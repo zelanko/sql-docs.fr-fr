@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c4a0f7801538198c8c6c3dfc21ba42135d1b7ec0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5b826b771944bb70a97ad116b4c55258a106ec52
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939440"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430306"
 ---
 # <a name="map-columns-to-composite-domains"></a>Mapper des colonnes à des domaines composites
   Un domaine composite comprend deux ou plusieurs domaines uniques. Vous pouvez mapper plusieurs colonnes au domaine ou vous pouvez mapper une seule colonne de valeurs délimitées au domaine.  

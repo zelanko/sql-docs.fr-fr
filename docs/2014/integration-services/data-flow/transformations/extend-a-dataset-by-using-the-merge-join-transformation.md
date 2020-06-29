@@ -12,14 +12,14 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8048e2fb5b752c503993849cb21094da35ab7e35
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb5e111e052c84e89f3ebb5a52bfbdf429295f64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939570"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430606"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Étendre un dataset à l'aide de la transformation de jointure de fusion
   Pour pouvoir ajouter et configurer une transformation de jointure de fusion, le package doit inclure au moins une tâche de flux de données et deux composants de flux de données qui fournissent des entrées à la transformation de jointure de fusion.  

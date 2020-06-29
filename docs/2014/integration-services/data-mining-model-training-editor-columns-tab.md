@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c9495343fca6da023dbf54bcf69dff6b9bb3e2b9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 42fa412dd1f199b27bc753c7e7966b62e8e36fc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939150"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429856"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur d'apprentissage du modèle d'exploration de données** pour établir une correspondance entre les colonnes d'entrée et les colonnes de la structure d'exploration de données.  

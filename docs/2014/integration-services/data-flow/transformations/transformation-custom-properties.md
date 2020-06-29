@@ -38,14 +38,14 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcf5706f3c208dad54577c8dd3be4bfb6b4ea643
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939250"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430016"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données ont des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -445,7 +445,7 @@ ms.locfileid: "84939250"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|Une des valeurs possibles de la colonne marquée comme clé de tableau croisé dynamique par la valeur de sa propriété PivotUsage.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
-|SourceColumn|Integer|`LineageID` d'une colonne d'entrée qui contient une valeur croisée dynamique ou -1. La valeur -1 indique que la colonne ne participe à aucune opération croisée dynamique.|  
+|SourceColumn|Entier|`LineageID` d'une colonne d'entrée qui contient une valeur croisée dynamique ou -1. La valeur -1 indique que la colonne ne participe à aucune opération croisée dynamique.|  
   
  Pour plus d’informations, voir [Pivot Transformation](pivot-transformation.md).  
   
@@ -469,7 +469,7 @@ ms.locfileid: "84939250"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|SamplingSeed|Integer|Valeur de départ employée par le générateur de nombres aléatoires. La valeur par défaut de cette propriété est **0**, ce qui indique que la transformation utilise un nombre de cycles.|  
+|SamplingSeed|Entier|Valeur de départ employée par le générateur de nombres aléatoires. La valeur par défaut de cette propriété est **0**, ce qui indique que la transformation utilise un nombre de cycles.|  
 |SamplingValue|Integer|Nombre de lignes dans l'échantillon.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
   
  Le tableau suivant décrit les propriétés personnalisées des sorties de la transformation d'échantillonnage de lignes. Toutes les propriétés sont en lecture/écriture.  
@@ -482,7 +482,7 @@ ms.locfileid: "84939250"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|InputColumnLineageId|Integer|Valeur spécifiant le `LineageID` de la colonne d'entrée qui correspond à la source de la colonne de sortie.|  
+|InputColumnLineageId|Entier|Valeur spécifiant le `LineageID` de la colonne d'entrée qui correspond à la source de la colonne de sortie.|  
   
  L'entrée et les colonnes d'entrée de la transformation d'échantillonnage de lignes ne sont pas dotées de propriétés personnalisées.  
   
@@ -513,7 +513,7 @@ ms.locfileid: "84939250"
 |EnableInferredMember|Boolean|Valeur indiquant si les mises à jour de membre déduit sont détectées. La valeur par défaut de cette propriété est `True`.|  
 |FailOnFixedAttributeChange|Boolean|Valeur qui indique si la transformation échoue lorsque les colonnes de ligne comportant des attributs fixes contiennent des modifications ou lorsque la recherche dans la table de dimension se solde par un échec. Si vous vous attendez à ce que les lignes entrantes contiennent de nouveaux enregistrements, définissez cette valeur sur `True` pour poursuivre la transformation après l'échec de la recherche car la transformation se fonde sur cet échec pour identifier de nouveaux enregistrements. La valeur par défaut de cette propriété est `False`.|  
 |FailOnLookupFailure|Boolean|Valeur qui indique si la transformation échoue lorsque la recherche d'un enregistrement existant se solde également par un échec. La valeur par défaut de cette propriété est `False`.|  
-|IncomingRowChangeType|Integer|Valeur qui spécifie si toutes les lignes entrantes sont des nouvelles lignes ou si la transformation doit détecter le type de modification.|  
+|IncomingRowChangeType|Entier|Valeur qui spécifie si toutes les lignes entrantes sont des nouvelles lignes ou si la transformation doit détecter le type de modification.|  
 |InferredMemberIndicator|String|Nom de la colonne du membre déduit.|  
 |SqlCommand|String|Instruction SQL employée pour créer un ensemble de lignes de schéma.|  
 |UpdateChangingAttributeHistory|Boolean|Valeur qui indique si les mises à jour d'attribut d'historique sont dirigées sur la sortie de la transformation pour les mises à jour d'attribut variable.|  
@@ -536,20 +536,20 @@ ms.locfileid: "84939250"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |EliminateDuplicates|Boolean|Spécifie si la transformation supprime les lignes dupliquées dans la sortie de la transformation. La valeur par défaut de cette propriété est `False`.|  
-|MaximumThreads|Integer|Contient le nombre maximal de threads que peut utiliser la transformation lors du tri. Une valeur égale à **0** indique une quantité infinie de threads. La valeur par défaut de cette propriété est **0**.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
+|MaximumThreads|Entier|Contient le nombre maximal de threads que peut utiliser la transformation lors du tri. Une valeur égale à **0** indique une quantité infinie de threads. La valeur par défaut de cette propriété est **0**.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes d'entrée de la transformation de tri. Toutes les propriétés sont en lecture/écriture.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |NewComparisonFlags|Entier (masque de bits)|Valeur qui spécifie la manière dont la transformation compare les données de chaîne dans une colonne. Pour plus d'informations, voir [Comparing String Data](../comparing-string-data.md).|  
-|NewSortKeyPosition|Integer|Valeur qui spécifie l'ordre de tri de la colonne. Une valeur égale à 0 indique que les données ne sont pas triées sur cette colonne.|  
+|NewSortKeyPosition|Entier|Valeur qui spécifie l'ordre de tri de la colonne. Une valeur égale à 0 indique que les données ne sont pas triées sur cette colonne.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation de tri. Toutes les propriétés sont en lecture/écriture.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|SortColumnID|Integer|`LineageID` d'une colonne de tri.|  
+|SortColumnID|Entier|`LineageID` d'une colonne de tri.|  
   
  L'entrée et la sortie de la transformation de tri ne sont pas dotées de propriétés personnalisées.  
   
@@ -562,14 +562,14 @@ ms.locfileid: "84939250"
   
 |Propriété|Type de données|Description|  
 |--------------|--------------|-----------------|  
-|FrequencyThreshold|Integer|Valeur numérique indiquant le nombre d'occurrences d'un terme avant son extraction. La valeur par défaut de cette propriété est de **2**.|  
+|FrequencyThreshold|Entier|Valeur numérique indiquant le nombre d'occurrences d'un terme avant son extraction. La valeur par défaut de cette propriété est de **2**.|  
 |IsCaseSensitive|Boolean|Valeur qui précise si l'extraction de noms et d'expressions nominales doit tenir compte de la casse. La valeur par défaut de cette propriété est `False`.|  
-|MaxLengthOfTerm|Integer|Valeur numérique qui indique la longueur maximale d'un terme. Cette propriété concerne uniquement les expressions. La valeur par défaut de cette propriété est de **12**.|  
+|MaxLengthOfTerm|Entier|Valeur numérique qui indique la longueur maximale d'un terme. Cette propriété concerne uniquement les expressions. La valeur par défaut de cette propriété est de **12**.|  
 |NeedRefenceData|Boolean|Valeur qui spécifie si la transformation utilise une liste de termes d'exclusion stockée dans une table de référence. La valeur par défaut de cette propriété est `False`.|  
 |OutTermColumn|String|Nom de la colonne qui contient les termes d'exclusion.|  
 |OutTermTable|String|Nom de la table contenant la colonne qui comporte des termes d'exclusion.|  
-|ScoreType|Integer|Valeur qui précise le type de score à associer au terme. Les valeurs valides sont 0 qui indique la fréquence et 1 qui désigne un score TFIDF. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d’un terme T = (fréquence de T) \* log( (#lignes en entrée) / (#lignes ayant T)). La valeur par défaut de cette propriété est **0**.|  
-|WordOrPhrase|Integer|Valeur qui spécifie le type de terme. Les valeurs valides sont 0 qui indique des mots uniquement, 1 qui désigne des expressions nominales seulement et 2 qui indique des mots et des expressions nominales à la fois. La valeur par défaut de cette propriété est **0**.|  
+|ScoreType|Entier|Valeur qui précise le type de score à associer au terme. Les valeurs valides sont 0 qui indique la fréquence et 1 qui désigne un score TFIDF. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d’un terme T = (fréquence de T) \* log( (#lignes en entrée) / (#lignes ayant T)). La valeur par défaut de cette propriété est **0**.|  
+|WordOrPhrase|Entier|Valeur qui spécifie le type de terme. Les valeurs valides sont 0 qui indique des mots uniquement, 1 qui désigne des expressions nominales seulement et 2 qui indique des mots et des expressions nominales à la fois. La valeur par défaut de cette propriété est **0**.|  
   
  L'entrée, les colonnes d'entrée, la sortie et les colonnes de sortie de la transformation d'extraction de terme ne disposent pas de propriétés personnalisées.  
   
@@ -590,13 +590,13 @@ ms.locfileid: "84939250"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|InputColumnType|Integer|Valeur qui spécifie l'utilisation de la colonne. Les valeurs valides sont 0 pour une colonne de relais, 1 pour une colonne de recherche et 2 pour une colonne qui est à la fois une colonne de relais et de recherche.|  
+|InputColumnType|Entier|Valeur qui spécifie l'utilisation de la colonne. Les valeurs valides sont 0 pour une colonne de relais, 1 pour une colonne de recherche et 2 pour une colonne qui est à la fois une colonne de relais et de recherche.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation de recherche de terme. Toutes les propriétés sont en lecture/écriture.  
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|Integer|`LineageID` de la colonne d'entrée correspondante si la valeur du `InputColumnType` de cette colonne est égale à 0 ou 2.|  
+|CustomLineageID|Entier|`LineageID` de la colonne d'entrée correspondante si la valeur du `InputColumnType` de cette colonne est égale à 0 ou 2.|  
   
  L'entrée et la sortie de la transformation de recherche de terme ne sont pas dotées de propriétés personnalisées.  
   
@@ -612,7 +612,7 @@ ms.locfileid: "84939250"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|DestinationColumn|Integer|`LineageID` de la colonne de sortie à laquelle la colonne d'entrée est mappée. Une valeur égale à -1 indique que la colonne d'entrée n'est pas mappée à une colonne de sortie.|  
+|DestinationColumn|Entier|`LineageID` de la colonne de sortie à laquelle la colonne d'entrée est mappée. Une valeur égale à -1 indique que la colonne d'entrée n'est pas mappée à une colonne de sortie.|  
 |PivotKeyValue|String|Valeur copiée vers une colonne de sortie de la transformation.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Dans le scénario UnPivot décrit dans [Unpivot Transformation](unpivot-transformation.md), les valeurs de tableau croisé dynamique sont les valeurs texte Ham, Coke, Milk, Beer et Chips. Ces valeurs apparaîtront sous la forme de valeurs texte dans la nouvelle colonne Product définie au moyen de l'option **Nom de colonne de la valeur de clé de tableau croisé dynamique** .|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation UnPivot. Toutes les propriétés sont en lecture/écriture.  
