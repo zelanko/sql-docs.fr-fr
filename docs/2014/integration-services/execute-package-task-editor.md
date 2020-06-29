@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 337b261c8c6b51125510ae463a673c746d7d6604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966839"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429286"
 ---
 # <a name="execute-package-task-editor"></a>Éditeur de tâche d'exécution de package
   Utilisez l'Éditeur de tâche d'exécution de package pour configurer la tâche d'exécution de package. La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -68,7 +68,7 @@ ms.locfileid: "84966839"
  **Lieu**  
  Sélectionnez l'emplacement du package enfant. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**SQL Server**|Définissez l'emplacement d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Système de fichiers**|Permet de définir l'emplacement du système de fichiers.|  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52fcf25a0334edcff17ba024da501b248e9176cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968449"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426466"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles. Ces exemples peuvent être modifiés facilement afin d'utiliser l'une des autres sources de données basées sur des fichiers prises en charge par le fournisseur OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  

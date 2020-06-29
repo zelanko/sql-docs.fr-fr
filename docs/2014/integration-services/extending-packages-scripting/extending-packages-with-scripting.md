@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SSIS, scripting
 - scripts [Integration Services], about scripting
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a640847dbc6846b4045ea7f2f6ac1afe9294c160
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967239"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426016"
 ---
 # <a name="extending-packages-with-scripting"></a>Extension de packages avec des scripts
   Si vous constatez que les composants intégrés [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne satisfont pas vos besoins, vous pouvez étendre la puissance d'[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en codant vos propres extensions. Vous disposez de deux options distinctes pour étendre vos packages : vous pouvez écrire du code dans les puissants wrappers fournis par la tâche de script et le composant Script, ou vous pouvez entièrement créer des extensions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personnalisées, dérivées des classes de base fournies par le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
@@ -38,7 +38,7 @@ ms.locfileid: "84967239"
 
  [Extension du workflow de données à l’aide du composant script](data-flow-script-component/extending-the-data-flow-with-the-script-component.md) Explique comment créer des sources de données, des transformations et des destinations de workflow personnalisées à l’aide du composant script. Un composant de flux de données est généralement appelé une fois pour chaque ligne de données traitée.
 
-## <a name="reference"></a>Référence
+## <a name="reference"></a>Informations de référence
  [Integration Services de référence des erreurs et des messages](../integration-services-error-and-message-reference.md) Répertorie les [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] codes d’erreur prédéfinis avec leur nom symbolique et leur description.
 
 ## <a name="related-sections"></a>Sections connexes

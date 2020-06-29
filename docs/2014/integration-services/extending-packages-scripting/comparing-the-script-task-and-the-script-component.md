@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e5061308e416396c268e2fdcbea3e35572496719
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 134cce74fc88cc9a7358c8aa4ba8de3fb7e58c5e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968425"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426406"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparaison de la tâche de script et du composant Script
   La tâche de script, disponible dans la fenêtre Flux de contrôle du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], et le composant Script, disponible dans la fenêtre Flux de données, ont des fonctions très différentes dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tâche est un outil de flux de contrôle à usage général, alors que le composant sert de source, de transformation ou de destination dans le flux de données. En dépit de leurs rôles différents, la tâche de script et le composant Script présentent toutefois des similarités dans les outils de codage qu'ils utilisent et les objets du package qu'ils mettent à la disposition des développeurs. Comprendre ces ressemblances et ces différences peut vous aider à utiliser la tâche et le composant de manière plus efficace.  

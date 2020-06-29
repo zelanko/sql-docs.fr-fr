@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6a7f8f920b143d18712764e67f8b60fcb994935f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967339"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426426"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codage et débogage du composant Script
   Dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], le composant Script propose deux modes : le mode Création des métadonnées et le mode Création du code. Lorsque vous ouvrez l’**Éditeur de transformation de script**, le composant entre en mode Création des métadonnées, dans lequel vous configurez des métadonnées et définissez les propriétés du composant. Après avoir défini les propriétés du composant Script et avoir configuré l'entrée et les sorties en mode Création des métadonnées, vous pouvez basculer vers le mode Création du code pour écrire votre script personnalisé. Pour plus d’informations sur le mode Création des métadonnées et le mode Création de code, consultez [Configuration du composant Script dans l’Éditeur de composant Script](configuring-the-script-component-in-the-script-component-editor.md).

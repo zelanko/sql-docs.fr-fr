@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 32bec035646c976442eb66ff1270b961835b243b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966776"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429196"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Éditeur de tâche d'exécution SQL (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'exécution SQL** pour configurer la tâche d'exécution SQL et indiquer l'instruction SQL que la tâche exécuter.  
@@ -67,7 +67,7 @@ ms.locfileid: "84966776"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Définissez la source d'une instruction Transact-SQL. Sélectionnez cette valeur pour afficher l'option dynamique **SQLStatement**.|  
 |**Connexion de fichiers**|Sélectionnez un fichier qui contient une instruction Transact-SQL. Configurez cette option pour afficher l'option dynamique **FileConnection**.|  

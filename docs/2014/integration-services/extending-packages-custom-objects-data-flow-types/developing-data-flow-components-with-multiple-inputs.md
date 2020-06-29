@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b8f545ac14aa0909abd835feea1293cb5030cb77
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86a3fc9a1ad5978e7bc27f233c3d5c92d23afcef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968899"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427946"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Développement de composants de flux de données avec plusieurs entrées
   Un composant de flux de données avec plusieurs entrées peut consommer excessivement de la mémoire si ses entrées multiples produisent des données à des taux irréguliers. Lorsque vous développez un composant de flux de données personnalisé qui prend en charge plusieurs entrées, vous pouvez gérer cette sollicitation de la mémoire en utilisant les membres suivants dans l’espace de noms Microsoft.SqlServer.Dts.Pipeline :  

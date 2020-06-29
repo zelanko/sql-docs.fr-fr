@@ -10,14 +10,14 @@ helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e28b5ca2203e48fe86494d65229ef58e55022b6e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 186f11783cdb89706b0a2a758262943c86aa3db5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969379"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428796"
 ---
 # <a name="-equal-ssis-expression"></a>== (Égal à) (expression SSIS)
   Effectue une comparaison pour déterminer si deux expressions sont égales. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md).  

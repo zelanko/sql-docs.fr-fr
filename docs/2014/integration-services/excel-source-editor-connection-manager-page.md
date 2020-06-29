@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c154b22d6469df034f4ec7cc6be77b2e7192913
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e80466c4f4346ec0ea815e4a115eb571b2e01ecc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966819"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429306"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Éditeur de source Excel (page Gestionnaire de connexions)
   Le nœud **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source Excel** vous permet de sélectionner le classeur [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] de la source à utiliser. La source Excel lit les données à partir d'une feuille de calcul ou d'une plage nommée dans un classeur existant.  
@@ -38,7 +38,7 @@ ms.locfileid: "84966819"
  **Mode d'accès aux données**  
  Spécifiez la méthode de sélection des données dans la source.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Table ou vue|Récupérez des données à partir d'une feuille de calcul ou d'une plage nommée dans le fichier Excel.|  
 |Variable de nom de table ou de vue|Spécifiez le nom de la feuille de calcul ou de la plage dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  

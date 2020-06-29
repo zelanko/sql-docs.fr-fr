@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5bef21b424c401d77b9d8f3477de4061c3ff0f3d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1962b2e2a59c8fabfb2ee1dcb9691863354c1504
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966956"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429426"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Éditeur de destination de traitement de dimension (page Avancé)
   Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination de traitement de dimension** pour configurer la gestion des erreurs.  
@@ -32,7 +32,7 @@ ms.locfileid: "84966956"
  **Action de l’erreur de clé**  
  Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convertir la valeur de clé non acceptable en valeur `UnknownMember`.|  
 |**DiscardRecord**|Ignorer l'enregistrement.|  
@@ -49,7 +49,7 @@ ms.locfileid: "84966956"
  **Action pour l'erreur**  
  Indiquez l’action à appliquer quand le seuil d’erreurs est atteint, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Arrêter le traitement.|  
 |**StopLogging**|Arrêter d'enregistrer les erreurs.|  
@@ -57,7 +57,7 @@ ms.locfileid: "84966956"
  **Clé introuvable**  
  Indiquez l'action à appliquer en cas d'erreur de clé introuvable. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -66,7 +66,7 @@ ms.locfileid: "84966956"
  **Clé dupliquée**  
  Indiquez l'action à appliquer en cas d'erreur de clé dupliquée. Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -75,7 +75,7 @@ ms.locfileid: "84966956"
  **Clé NULL convertie en clé inconnue**  
  Indiquez l'action à appliquer lorsqu'une clé NULL a été convertie en clé `UnknownMember`. Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -84,7 +84,7 @@ ms.locfileid: "84966956"
  **Clé NULL non autorisée**  
  Indiquez l'action à appliquer si une clé NULL est trouvée alors que les clés NULL ne sont pas autorisées. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
