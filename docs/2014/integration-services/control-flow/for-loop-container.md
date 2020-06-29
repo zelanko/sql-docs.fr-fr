@@ -13,14 +13,14 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c9544f7ae00d3a0eda732b43e9485cafa23536ed
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec872407dbec3885f72c4300b90cb3e11d1bcf92
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918980"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433036"
 ---
 # <a name="for-loop-container"></a>Conteneur de boucles For
   Le conteneur de boucles For définit un flux de contrôle répétitif dans un package. La mise en œuvre de la boucle est similaire à la structure de bouclage **For** des langages de programmation. Dans chaque répétition de la boucle, le conteneur de boucles For évalue une expression et répète son flux de travail jusqu'à ce que l'expression renvoie la valeur `False`.  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c380921202b1037c3bd066f4aef0610703a75a91
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9769eddb7c10492f867395dfc1fa69b6b1260060
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918199"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432696"
 ---
 # <a name="sequence-container"></a>conteneur de séquences
   Le conteneur de séquences définit un flux de contrôle représentant un sous-ensemble du flux de contrôle du package. Les conteneurs de séquences regroupent le package en plusieurs flux de contrôle distincts contenant chacun un ou plusieurs conteneurs et tâches exécutés dans le flux de contrôle global du package.  

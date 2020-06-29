@@ -14,14 +14,14 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86fd70a516bfa6a449bfd9146e439b60dcbbbbf1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ff3e455e5d98d9edc812d80c6851026286986338
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916145"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432236"
 ---
 # <a name="data-mining-model-training-destination"></a>Destination d’apprentissage du modèle d’exploration de données
   La destination d'apprentissage du modèle d'exploration de données exerce les modèles d'exploration de données en transmettant les données que la destination reçoit par le biais des algorithmes de modèles d'exploration de données. Plusieurs modèles d'exploration de données peuvent faire l'objet d'un apprentissage par une même destination si les modèles sont construits sur la même structure d'exploration des données. Pour plus d’informations, consultez [Colonnes de structure d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) et [Colonnes d’un modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  

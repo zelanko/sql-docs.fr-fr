@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec0fe7952fbcca3be13d93c24247cc0434232096
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2683b86699da075be54f6d5ad6720beccbee1add
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918781"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432956"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Options Demande de profil de dépendance fonctionnelle (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de dépendance fonctionnelle** sélectionnée dans le volet Demandes. Un profil de dépendance fonctionnelle indique le degré de dépendance entre les valeurs d'une colonne (colonne dépendante) et celles d'une autre colonne ou d'un ensemble de colonnes (colonne déterminante). Ce profil peut également vous aider à identifier les problèmes dans vos données, tels que les valeurs non valides. Par exemple, vous profilez la dépendance entre une colonne Code postal et une colonne des états des États-Unis. Dans ce profil, la même colonne Code postal doit toujours afficher le même état mais le profil détecte des violations de la dépendance.  

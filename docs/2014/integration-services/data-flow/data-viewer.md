@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f45a99b149feb0c0609aac88660ad7e62ca425f2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11fec821580189c1efe17134d7ee33d111350f89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916019"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432206"
 ---
 # <a name="data-viewer"></a>Visionneuse de données
   Si un chemin d'accès est configuré pour utiliser une visionneuse de données, la visionneuse affiche les données tampon par tampon à mesure qu'elles se déplacent entre deux composants de flux de données.  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 320f7fc2255e9f665141929836d2e7bb7375429f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916305"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432296"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  

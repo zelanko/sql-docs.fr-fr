@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f74a564bf3cc3f70ef685c3adf23fd5a117711cc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918839"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433026"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
   Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
