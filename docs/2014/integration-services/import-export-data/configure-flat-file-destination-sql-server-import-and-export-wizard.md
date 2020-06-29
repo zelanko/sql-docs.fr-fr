@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc1a9102a8fa4ee834663ae839940e2db9b469e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965612"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424976"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server)
   Utilisez la page **configurer la destination de fichier plat** pour spécifier les options de mise en forme pour le fichier plat de destination et pour afficher un aperçu des résultats avant de continuer.  
@@ -32,7 +32,7 @@ ms.locfileid: "84965612"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des délimiteurs de lignes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La ligne est délimitée par une combinaison retour chariot/saut de ligne.|  
 |**CR**|La ligne est délimitée par un retour chariot.|  
@@ -46,7 +46,7 @@ ms.locfileid: "84965612"
  **Délimiteur de colonne**  
  Effectuez une sélection dans la liste des délimiteurs de colonnes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les colonnes sont délimitées par une combinaison retour chariot/saut de ligne.|  
 |**CR**|Les colonnes sont délimitées par un retour chariot.|  

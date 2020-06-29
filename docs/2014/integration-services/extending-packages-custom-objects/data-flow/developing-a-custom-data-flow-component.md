@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee2b30cf0796953d12f976745fb195169de86c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966512"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437076"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Développement d'un composant de flux de données personnalisé
   La tâche de flux de données comprend des composants qui se connectent à diverses sources de données et qui transforment et acheminent ces données à haut débit. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un modèle objet extensible qui permet aux développeurs de créer des sources, des transformations et des destinations personnalisées que vous pouvez utiliser dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et dans des packages déployés. Cette section contient des rubriques qui vous guideront afin de développer des composants de flux de données personnalisés.
@@ -54,7 +54,7 @@ ms.locfileid: "84966512"
 
  [Développement de types spécifiques de composants de workflow](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md) Contient des informations sur le développement des trois types de composants de Data Flow : les sources, les transformations et les destinations.
 
-## <a name="reference"></a>Référence
+## <a name="reference"></a>Informations de référence
  <xref:Microsoft.SqlServer.Dts.Pipeline>Contient les classes et les interfaces utilisées pour créer des composants de workflow de données personnalisés.
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>Contient les classes et les interfaces qui composent le modèle objet de tâche de workflow et est utilisé pour créer des composants de workflow de données personnalisés ou pour générer une tâche de Workflow.
