@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 743f6dcd75cc43bc3aa603ccb5d8733d983c8f97
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964189"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422336"
 ---
 # <a name="script-task-editor-script-page"></a>Éditeur de tâche de script (page Script)
   Utilisez la page **Script** de la boîte de dialogue **Éditeur de tâche de script** pour définir les propriétés du script et vérifier les variables auxquelles le script peut accéder.  

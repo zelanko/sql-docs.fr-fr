@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reusing packages
 - templates [Integration Services]
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: daf617a088dd781cf40bf85bedbd2e5b52ad7e5a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964242"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422396"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Enregistrer un package en tant que modèle de package
   Cette rubrique indique comment désigner et utiliser des packages personnalisés comme modèles lorsque que vous créez de nouveaux packages Integration Services dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Par défaut, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise un modèle de package qui crée un package vide lorsque vous ajoutez un nouveau package à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Vous ne pouvez pas remplacer ce modèle par défaut, mais vous pouvez en ajouter de nouveaux.  

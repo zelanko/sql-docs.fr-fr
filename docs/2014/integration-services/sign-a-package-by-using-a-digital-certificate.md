@@ -11,14 +11,14 @@ helpviewer_keywords:
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 609189366cbce63b671c3c93538146ff647e4576
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0cf5ff8cf0192968c94300977f38d3dd05984a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962999"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421486"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Signer un package à l'aide d'un certificat numérique
   Cette rubrique décrit comment signer un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à l'aide d'un certificat numérique. Vous pouvez utiliser une signature numérique avec d'autres paramètres pour empêcher le chargement et l'exécution d'un package non valide.  

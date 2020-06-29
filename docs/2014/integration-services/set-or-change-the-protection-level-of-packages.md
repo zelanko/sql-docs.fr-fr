@@ -12,14 +12,14 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae909a1f7a61c5ae2aa3d6319fd03c54dd70b0e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963399"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421826"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Définir ou modifier le niveau de protection des packages
   Pour contrôler l'accès au contenu des packages et aux valeurs sensibles qu'ils contiennent, telles que les mots de passe, définissez la valeur de la propriété `ProtectionLevel`. Les packages contenus dans un projet doivent avoir le même niveau de protection que le projet pour permettre sa génération. Si vous modifiez le paramètre de propriété `ProtectionLevel` du projet, vous devez mettre à jour manuellement le paramètre de propriété des packages.  

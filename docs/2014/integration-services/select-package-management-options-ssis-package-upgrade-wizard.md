@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3e3a7d2ec134ff9b7a3fb63aed29a029ef6fc9bf
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bb9102551c56d82bc3cf32ca31e02f7eed4625
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963780"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421996"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Sélectionner les options de gestion des packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionner les options de gestion des packages** pour spécifier des options permettant de mettre à niveau des packages.  

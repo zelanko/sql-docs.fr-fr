@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abe5be4a11e0f7db4f6e8078395aef0fbdf8d10a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963819"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422036"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Sélectionner l'emplacement de destination (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionner l’emplacement de destination** pour spécifier la destination dans laquelle enregistrer les packages mis à niveau.  
@@ -40,7 +40,7 @@ ms.locfileid: "84963819"
  **Source du package**  
  Spécifiez l'emplacement où les packages de mise à niveau doivent être stockés. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Système de fichiers**|Indique que les packages mis à niveau doivent être enregistrés dans un dossier sur l'ordinateur local.|  
 |**Magasin de packages SSIS**|Indique que les packages mis à niveau doivent être enregistrés dans le magasin de packages Integration Services. Le magasin de packages se compose de l'ensemble des dossiers du système de fichiers gérés par Integration Services. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  

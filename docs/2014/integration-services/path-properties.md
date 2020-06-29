@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca263b866fb6d5d7ceb6352f708f387d79cad4f7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964739"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423466"
 ---
 # <a name="path-properties"></a>Propriétés du chemin d'accès
   Les objets de Data Flow dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modèle objet ont des propriétés communes et des propriétés personnalisées au niveau du composant, des entrées et des sorties, ainsi que des colonnes d’entrée et de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
