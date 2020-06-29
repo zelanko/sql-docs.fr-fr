@@ -22,14 +22,14 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7dc27ea31f17d011a8ad486f6dd9f4a101db2ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11dd13bbf431413efe10f4ecdb0031b5a1650242
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966969"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437506"
 ---
 # <a name="dtutil-utility"></a>dtutil (utilitaire)
   L’utilitaire d’invite de commandes **dtutil** sert à gérer les packages [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Cet utilitaire peut copier, déplacer ou supprimer un package, ou en vérifier l'existence. Ces actions peuvent être effectuées sur n’importe quel package [!INCLUDE[ssIS](../includes/ssis-md.md)] stocké à l’un des trois emplacements suivants : une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] et le système de fichiers. Si l'utilitaire accède à un package stocké dans **msdb**, il peut être nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , il est nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si le nom d'utilisateur est manquant, **dtutil** essaie de se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant l'authentification Windows. Le type de stockage du package est identifié par les options `/SQL`, `/FILE` et `/DTS`.  
@@ -116,7 +116,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Codes de sortie dtutil  
  L'utilitaire**dtutil** définit un code de sortie qui vous alerte lorsque des erreurs de syntaxe sont détectées, des arguments incorrects sont employés ou des combinaisons non valides d'options sont spécifiées. Dans le cas contraire, l'utilitaire signale « L'opération s'est terminée avec succès ». Le tableau ci-dessous répertorie les valeurs que l'utilitaire **dtutil** peut définir lors de sa fermeture.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|L'utilitaire s'est exécuté avec succès.|  
 |1|L'utilitaire a échoué.|  

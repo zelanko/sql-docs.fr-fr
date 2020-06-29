@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c68f01425a94f139096ce85a0d12f2b18e0f9164
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921750"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438536"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurer la Visionneuse de données (onglet Général)
   Une visionneuse de données affiche les données à mesure qu'elles progressent sur le chemin qui relie deux composants de flux de données pendant l'exécution d'un package.  

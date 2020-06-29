@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ed7cdc549b3521d3efddc831455136775378cd52
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a51457b748569f5f36e6606dc89b7f276cddd94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915669"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437756"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extraire des données à l'aide de la source ODBC
   Cette procédure explique comment extraire des données à l'aide d'une source ODBC. Pour pouvoir ajouter et configurer une source ODBC, le package doit inclure au moins une tâche de flux de données.  

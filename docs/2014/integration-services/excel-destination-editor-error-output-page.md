@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6076b28e932ac03d211ab6ba1a84fe6c832f72ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4c57cccb71819c86874e83bb105c9270ec456648
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966849"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437376"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Éditeur de destination Excel (page Sortie d'erreur)
   La page **Avancé** de la boîte de dialogue **Éditeur de destination Excel** vous permet de spécifier les options de gestion des erreurs.  
