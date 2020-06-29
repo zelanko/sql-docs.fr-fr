@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ead9ad63b6dfc7d144c0d9e748ad01b847774d85
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972369"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419726"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Éditeur de source XML (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de source XML** pour spécifier un fichier XML et le schéma XSD qui transforme les données XML.  
@@ -29,7 +29,7 @@ ms.locfileid: "84972369"
  **Mode d'accès aux données**  
  Spécifiez la méthode de sélection des données dans la source.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Emplacement du fichier XML|Récupère des données dans un fichier XML.|  
 |Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  

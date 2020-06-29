@@ -10,14 +10,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c996889b6127bb8ea16bab077bfd9d757921b11
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972629"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420346"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utiliser une expression dans un composant de flux de données
   Cette procédure permet d'ajouter une expression à la transformation de fractionnement conditionnel ou à la transformation de colonne dérivée. La transformation de fractionnement conditionnel utilise des expressions pour définir les conditions qui dirigent les lignes de données vers une sortie de transformation et la transformation de colonne dérivée utilise des expressions pour définir les valeurs affectées aux colonnes.  

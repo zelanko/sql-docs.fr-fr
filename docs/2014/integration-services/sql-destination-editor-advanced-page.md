@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d7a3cdc57f48c61894a51386c5671c98e00ba711
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 916de5dabdc64c22821a4984b8632baa0d9515b8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962710"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421146"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Éditeur de destination SQL (page Avancé)
   Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination SQL** pour spécifier les options avancées pour l’insertion en bloc.  

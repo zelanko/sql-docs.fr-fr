@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972609"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420196"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utiliser les valeurs des variables et des paramètres dans un package enfant
   Cette procédure explique comment créer une configuration de package qui utilise le type de configuration de variable parent. Ce type de configuration active un package enfant exécuté à partir d'un package parent pour accéder à une variable dans le parent.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 557e849713ff6a58172dfbc3ddcd8e0816ef2b7f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 082bbd8737fa102c74474118395098a3b46125a2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962738"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421186"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Éditeur du gestionnaire de connexions SQL Server Compact Edition (page Connexion)
   La boîte de dialogue **Éditeur du gestionnaire de connexions SQL Server Compact Edition** permet de spécifier les propriétés permettant de se connecter à une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  

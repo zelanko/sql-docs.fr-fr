@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbfc2cb7419f05884a80244445c6ce418576a402
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68140668"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409348"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  @database_name  
- Nom de la base de données. Est @database_name de type nvarchar (512).  
+ Nom de la base de données. Est de type @database_name nvarchar (512).  
   
 ## <a name="table-returned"></a>Table retournée  
  La table a une contrainte cluster unique sur (database_guid, backup_start_date et first_lsn, backup_type).   
@@ -78,7 +78,7 @@ S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une r
   
 ```  
 SELECT *   
-FROM managed_backup.fn_available_backups ('MyDB')  
+FROM msdb.managed_backup.fn_available_backups ('MyDB')  
   
 ```  
   

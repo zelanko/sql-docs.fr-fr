@@ -1,7 +1,7 @@
 ---
 title: sys. external_libraries (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,21 +18,21 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b1bfc00b403fa76f692db78593ed4c0e6b53ce8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7303649ec6d7a849979871de3f4f91b978adc23a
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664435"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409368"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Prend en charge la gestion des bibliothèques de packages relatives aux runtimes externes tels que R, Python et Java.
 
 > [!NOTE]
-> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur les plateformes Windows et Linux sont pris en charge dans SQL Server 2019 et ultérieur.
+> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur les plateformes Windows et Linux sont pris en charge dans SQL Server 2019 et ultérieur. Sur Azure SQL Managed Instance, R et Python sont pris en charge.
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
@@ -51,5 +51,5 @@ L’affichage catalogue sys. external_libraries répertorie une ligne pour chaqu
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CRÉER UNE BIBLIOTHÈQUE EXTERNE](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [Installer de nouveaux packages R sur SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
-+ [Installer de nouveaux packages Python sur SQL Server](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  
++ [Installer de nouveaux packages R](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
++ [Installer de nouveaux packages Python](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  

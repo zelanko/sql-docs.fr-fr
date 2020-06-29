@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26055dde636d299a2a58fdfe0bdbd3fdfbdab012
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 804c871527e6d7841cfb23f389345edee5af8789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972349"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419466"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Utilisez le nœud **Général** de la boîte de dialogue **Éditeur de tâche XML** pour préciser le type d'opération à effectuer, puis la configurer.  
@@ -29,7 +29,7 @@ ms.locfileid: "84972349"
  **OperationType**  
  Permet de sélectionner le type d'opération dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Procéder à la validation**|Permet de valider le document XML en utilisant un DTD (Document Type Definition) ou un schéma XSD (XML Schema definition). Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Valider**s'affichent alors.|  
 |**XSLT**|Effectue les transformations XSL sur les documents XML. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **XSLT**s'affichent alors.|  
@@ -41,7 +41,7 @@ ms.locfileid: "84972349"
  **SourceType**  
  Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -77,7 +77,7 @@ ms.locfileid: "84972349"
  **DestinationType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -85,7 +85,7 @@ ms.locfileid: "84972349"
  **ValidationType**  
  Permet de sélectionner le type de validation. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**DTD**|Permet d'utiliser un DTD (Document Type Definition).|  
 |**XSD**|Permet d'utiliser un schéma XSD (XML Schema Definition Language). Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **ValidationType**s'affichent.|  
@@ -102,7 +102,7 @@ ms.locfileid: "84972349"
  **SecondOperandType**  
  Permet de sélectionner le type de source correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -140,7 +140,7 @@ ms.locfileid: "84972349"
  **DestinationType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -148,7 +148,7 @@ ms.locfileid: "84972349"
  **SecondOperandType**  
  Permet de sélectionner le type de source correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -186,7 +186,7 @@ ms.locfileid: "84972349"
  **DestinationType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -194,7 +194,7 @@ ms.locfileid: "84972349"
  **SecondOperandType**  
  Permet de sélectionner le type de source correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -217,7 +217,7 @@ ms.locfileid: "84972349"
  **XPathOperation**  
  Permet d'indiquer le type de résultat XPath. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Evaluation**|Permet de retourner les résultats d'une fonction XPath.|  
 |**Liste de nœuds**|Permet de retourner les nœuds sélectionnés en tant que fragment XML.|  
@@ -229,7 +229,7 @@ ms.locfileid: "84972349"
  **XPathStringSourceType**  
  Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -266,7 +266,7 @@ ms.locfileid: "84972349"
  **DestinationType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -274,7 +274,7 @@ ms.locfileid: "84972349"
  **SecondOperandType**  
  Permet de sélectionner le type de destination correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -297,7 +297,7 @@ ms.locfileid: "84972349"
  **DiffAlgorithm**  
  Permet de sélectionner l'algorithme Diff à utiliser pour la comparaison de documents. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Auto**|Laisse la tâche XML déterminer si l'algorithme à utiliser est l'algorithme rapide ou l'algorithme précis.|  
 |**Expédition**|L'algorithme de comparaison utilisé est le plus rapide des deux, mais aussi le moins précis.|  
@@ -306,7 +306,7 @@ ms.locfileid: "84972349"
  **Options Diff**  
  Permet de définir les options de comparaison s'appliquant à l'opération Diff. Ces fonctions sont répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Permet d'indiquer si la déclaration XML doit être comparée.|  
 |**IgnoreDTD**|Permet d'ignorer le DTD (Document Type Definition).|  
@@ -341,7 +341,7 @@ ms.locfileid: "84972349"
  **DestinationType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -349,7 +349,7 @@ ms.locfileid: "84972349"
  **SecondOperandType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -387,7 +387,7 @@ ms.locfileid: "84972349"
  **DestinationType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -395,7 +395,7 @@ ms.locfileid: "84972349"
  **SecondOperandType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
