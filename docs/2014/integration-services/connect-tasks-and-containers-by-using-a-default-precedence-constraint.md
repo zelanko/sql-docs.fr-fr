@@ -12,14 +12,14 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b41330bcb2fe007b1f666382719f98d39ec67438
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4d453b4a24da893515aafd29b0398685a7155d4e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921363"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434476"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Connecter des tâches et des conteneurs à l'aide d'une contrainte de précédence par défaut
   Les contraintes de précédence connectent deux exécutables. Un exécutable peut être une tâche quelconque ou encore un conteneur de boucles For, de boucles Foreach ou un conteneur Sequence. Cette procédure décrit comment définir le comportement par défaut des contraintes de précédence et comment connecter des exécutables à l'aide de contraintes de précédence par défaut.  

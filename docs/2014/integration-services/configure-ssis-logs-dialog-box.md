@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921610"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434806"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurer les journaux SSIS (boîte de dialogue)
   Utilisez la boîte de dialogue **Configurer les journaux SSIS** pour définir les options de journalisation d’un package.  
@@ -92,7 +92,7 @@ ms.locfileid: "84921610"
  **Avancé**  
  Sélectionnez ou désélectionnez les événements à enregistrer dans le journal et les informations à enregistrer pour chaque événement. Cliquez sur **Simple** pour masquer tous les détails de l’enregistrement dans le journal à l’exception de la liste des événements. Les informations suivantes peuvent être enregistrées dans le journal :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Computer**|Nom de l'ordinateur sur lequel s'est produit l'événement enregistré.|  
 |**Opérateur**|Nom de l'utilisateur qui a démarré le package.|  

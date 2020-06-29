@@ -16,14 +16,14 @@ helpviewer_keywords:
 - verifying database consistency
 - integrity checking [Integration Services]
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6eed81f7a4a149de3912b5e9142fbdbd4a2f2c8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 99a2620a6f3f6a9a73c27fe6bb1abd34af73707d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919680"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433666"
 ---
 # <a name="check-database-integrity-task"></a>Tâche Vérifier l'intégrité de la base de données
   La tâche Vérifier l'intégrité de la base de données contrôle l'allocation et l'intégrité de la structure de tous les objets de la base de données spécifiée. La tâche peut vérifier une ou plusieurs bases de données et vous pouvez indiquer si vous souhaitez également contrôler les index de base de données.  

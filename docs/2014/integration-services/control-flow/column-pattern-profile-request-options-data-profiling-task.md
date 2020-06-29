@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919624"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433756"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de modèle de colonne** sélectionnée dans le volet Demandes. Un profil de modèle de colonne signale un ensemble d'expressions régulières qui reflètent le pourcentage spécifié des valeurs dans une colonne de chaîne. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que les chaînes non valides, et peut suggérer des expressions régulières susceptibles d'être utilisées à l'avenir pour la validation de nouvelles valeurs. Par exemple, le profil de modèle d'une colonne États-Unis/Codes postaux peut générer les expressions régulières \d{5}-\d{4}, \d{5} et \d{9}. Si vous rencontrez d'autres expressions régulières, il est probable que vos données contiennent des valeurs qui ne sont pas valides ou utilisent un format incorrect.  
@@ -126,7 +126,7 @@ ms.locfileid: "84919624"
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  
   
- **Sigle**  
+ **symboles**  
  Répertoriez les symboles à conserver dans le cadre des modèles. Les exemples peuvent inclure « / » pour les dates, « : » pour les heures et « @ » pour les adresses de messagerie. Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'` ~ =&/@ !? () <> [] {} | # * ^%».  
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  
