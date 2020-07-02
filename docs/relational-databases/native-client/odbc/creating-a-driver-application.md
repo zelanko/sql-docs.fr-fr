@@ -24,15 +24,15 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e65eaac59bcc16e123bda3e47af29dc4a836ce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d393936953ead282578f69e8ad1945914a252e66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719565"
 ---
 # <a name="creating-a-driver-application"></a>Création d’une application de pilote
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   L'architecture ODBC possède quatre composants qui effectuent les fonctions ci-dessous.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "81388399"
   
  Pour effectuer des appels de fonction ODBC, une application C ou C++ doit inclure les fichiers d'en-tête sql.h, sqlext.h et sqltypes.h. Pour effectuer des appels aux fonctions API du programme d'installation ODBC, une application doit inclure le fichier d'en-tête odbcinst.h. Une application ODBC Unicode doit inclure le fichier d'en-tête sqlucode.h. Les applications ODBC doivent être liées au fichier odbc32.lib. Les applications ODBC qui appellent les fonctions API du programme d'installation ODBC doivent être liées au fichier odbccp32.lib. Ces fichiers sont inclus dans le Kit de développement Platform SDK de Windows.  
   
- De nombreux pilotes ODBC, y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compris le pilote ODBC Native Client, proposent des extensions ODBC spécifiques aux pilotes. Pour tirer parti des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensions spécifiques au pilote ODBC Native Client, une application doit inclure le fichier d’en-tête sqlncli. h. Ce fichier d'en-tête contient :  
+ De nombreux pilotes ODBC, y compris le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client, proposent des extensions ODBC spécifiques aux pilotes. Pour tirer parti des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensions spécifiques au pilote ODBC Native Client, une application doit inclure le fichier d’en-tête sqlncli. h. Ce fichier d'en-tête contient :  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributs de connexion spécifiques au pilote ODBC Native Client.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "81388399"
   
 -   Appelez les fonctions API de métadonnées de requête distribuée pour obtenir les listes des serveurs liés et leurs catalogues.  
   
- Toute application ODBC C ou C++ qui utilise la fonctionnalité de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du pilote ODBC Native Client doit être liée au fichier SQLNCLI11. lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli. h et SQLNCLI11. lib sont distribués dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cadre des outils du développeur. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
+ Toute application ODBC C ou C++ qui utilise la fonctionnalité de copie en bloc du [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client doit être liée au fichier SQLNCLI11. lib. Les applications qui appellent les fonctions API de métadonnées de requête distribuée doivent également être liées à sqlncli11.lib. Les fichiers sqlncli. h et SQLNCLI11. lib sont distribués dans le cadre des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] outils du développeur. Les répertoires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include et Lib doivent correspondre aux chemins d'accès INCLUDE et LIB du compilateur, comme suit :  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

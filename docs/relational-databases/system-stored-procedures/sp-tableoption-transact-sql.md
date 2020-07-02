@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718681"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Définit les valeurs d'option des tables définies par l'utilisateur. sp_tableoption peut être utilisé pour contrôler le comportement dans la ligne des tables avec des colonnes de type **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Text**, **ntext**, **image**ou de type large défini par l’utilisateur.  
   
@@ -68,7 +68,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou numéro d'erreur (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La procédure sp_tableoption peut être utilisée uniquement pour définir les valeurs des options des tables définies par l'utilisateur. Pour afficher les propriétés d’une table, utilisez OBJECTPROPERTY ou Query sys. tables.  
   
  L'option text in row de sp_tableoption peut être activée ou désactivée uniquement pour les tables qui contiennent des colonnes de texte. Si la table ne contient pas de colonne de texte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur.  

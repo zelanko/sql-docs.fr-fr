@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718636"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Renvoie les commandes pour les transactions signalées pour la réplication dans un format lisible. **sp_replshowcmds** ne peut être exécutée que lorsque les connexions clientes (y compris la connexion active) ne lisent pas les transactions répliquées à partir du journal. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -49,7 +49,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**publisher_database_id**|**int**|ID de la base de données du serveur de publication, toujours **0**.|  
 |**article_id**|**int**|ID de l’article.|  
 |**type**|**int**|Type de commande.|  
-|**commande**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]commande.|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]commande.|  
   
 ## <a name="remarks"></a>Remarques  
  **sp_replshowcmds** est utilisé dans la réplication transactionnelle.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8f9e7e8124ec0aa1246a7ef9805ad9761ec9baf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b150636804bc4d312f6f6bfbe046ef7e9612207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717293"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Supprime un article d'une publication transactionnelle ou d'instantané. Un article ne peut être supprimé s'il fait l'objet d'un ou plusieurs abonnements. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -64,7 +64,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_droparticle** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  Pour les articles filtrés horizontalement, **sp_droparticle** vérifie la colonne **type** de l’article dans la table [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) pour déterminer si une vue ou un filtre doit également être supprimé. Si une vue ou un filtre ont été générés automatiquement, ils sont supprimés avec l'article. S'ils ont été créés manuellement, ils ne sont pas supprimés.  

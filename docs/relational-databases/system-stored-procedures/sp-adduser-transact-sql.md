@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716297"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un nouvel utilisateur dans la base de données active.  
   
@@ -44,7 +44,7 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'`Nom de la connexion ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la connexion Windows. *login* est de **type sysname**et n’a pas de valeur par défaut. la *connexion* doit être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion existante ou une connexion Windows.  
+`[ @loginame = ] 'login'`Nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou de la connexion Windows. *login* est de **type sysname**et n’a pas de valeur par défaut. la *connexion* doit être une connexion existante ou une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows.  
   
 `[ @name_in_db = ] 'user'`Nom du nouvel utilisateur de base de données. *User* est de **type sysname**, avec NULL comme valeur par défaut. Si *User* n’est pas spécifié, le nom du nouvel utilisateur de base de données est défini par défaut sur le nom de *connexion* . La spécification de l' *utilisateur* donne au nouvel utilisateur un nom dans la base de données différent du nom de connexion au niveau du serveur.  
   

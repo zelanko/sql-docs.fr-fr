@@ -14,15 +14,15 @@ ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e88092c6566d9e5838f8a2cb59cd7c23564af9b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5be9838e0c4e989c6b802d9c74e240a0d01c354b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715324"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Scénarios d'utilisation des paramètres table ODBC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cette rubrique présente les principaux scénarios utilisateur dans lesquels des paramètres table sont utilisés avec ODBC :  
   
@@ -49,7 +49,7 @@ ms.locfileid: "81297733"
   
  Une application utilise parfois un paramètre table avec Dynamic SQL et le nom de type du paramètre table doit être fourni. Si c’est le cas et si le paramètre table n’est pas défini dans le schéma par défaut actuel de la connexion, SQL_CA_SS_TYPE_CATALOG_NAME et SQL_CA_SS_TYPE_SCHEMA_NAME doivent être définis à l’aide de SQLSetDescField. Dans la mesure où les définitions de type de table et les paramètres table doivent se trouver dans la même base de données, SQL_CA_SS_TYPE_CATALOG_NAME ne doit pas être défini si l'application utilise des paramètres table. Sinon, SQLSetDescField signale une erreur.  
   
- L’exemple de code pour ce scénario est décrit `demo_fixed_TVP_binding` dans la procédure [utilisation des paramètres Table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ L’exemple de code pour ce scénario est décrit dans la procédure `demo_fixed_TVP_binding` [utilisation des paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>Paramètre table avec diffusion de lignes en continu (envoyer des données en tant que paramètre table à l'aide de données en cours d'exécution)  
  Dans ce scénario, l'application fournit des lignes au pilote quand il les lui demande et ces lignes sont transmises en continu au serveur. Ainsi, il n'est pas nécessaire que toutes les lignes soient mises en mémoire tampon. Ceci est représentatif des scénarios d'insertion/mise à jour en bloc. Les performances des paramètres table se situent entre les tableaux de paramètres et la copie en bloc. Autrement dit, les paramètres table sont pratiquement aussi faciles à programmer que les tableaux de paramètres, mais offrent une souplesse supérieure au niveau du serveur.  
@@ -60,7 +60,7 @@ ms.locfileid: "81297733"
   
  Une fois toutes les colonnes de paramètre table traitées, le pilote revient au paramètre table pour traiter d'autres lignes de données de paramètre table. Par conséquent, pour les paramètres table de données en cours d'exécution, le pilote ne suit pas l'analyse séquentielle habituelle des paramètres liés. Un paramètre table lié est interrogé jusqu’à ce que SQLPutData soit appelé avec *StrLen_Or_IndPtr* égal à 0, auquel le pilote ignore les colonnes de paramètre table et passe au paramètre de procédure stockée réel suivant.  Lorsque SQLPutData passe une valeur d’indicateur supérieure ou égale à 1, le pilote traite les lignes et les colonnes de paramètre table de façon séquentielle jusqu’à ce qu’il ait des valeurs pour toutes les lignes et colonnes liées. Le pilote revient ensuite au paramètre table. Entre la réception du jeton pour le paramètre table de SQLParamData et l’appel de SQLPutData (hstmt, NULL, n) pour un paramètre table, l’application doit définir des données de colonne constitutives de paramètre table et le contenu de la mémoire tampon d’indicateur pour la ou les lignes suivantes à transmettre au serveur.  
   
- L’exemple de code de ce scénario se trouve `demo_variable_TVP_binding` dans la routine dans [utiliser des paramètres Table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ L’exemple de code de ce scénario se trouve dans la routine `demo_variable_TVP_binding` dans [utiliser des paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>Récupération des métadonnées de paramètre table du catalogue système  
  Quand une application appelle SQLProcedureColumns pour une procédure qui a des paramètres de paramètre table, DATA_TYPE est retourné comme SQL_SS_TABLE et TYPE_NAME est le nom du type de table pour le paramètre table. Deux colonnes supplémentaires sont ajoutées au jeu de résultats retourné par SQLProcedureColumns : SS_TYPE_CATALOG_NAME retourne le nom du catalogue où le type de table du paramètre table est défini, et SS_TYPE_SCHEMA_NAME retourne le nom du schéma où le type de table du paramètre table a la valeur defined. Conformément à la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  
@@ -71,7 +71,7 @@ ms.locfileid: "81297733"
   
  Une application utilise SQLColumns pour déterminer les colonnes d’un type de table de la même façon que pour les tables persistantes, mais elle doit d’abord définir SQL_SOPT_SS_NAME_SCOPE pour indiquer qu’elle utilise des types de tables plutôt que des tables réelles. SQLPrimaryKeys peut également être utilisé avec des types de tables, à l’aide de SQL_SOPT_SS_NAME_SCOPE.  
   
- L’exemple de code de ce scénario se trouve `demo_metadata_from_catalog_APIs` dans la routine dans [utiliser des paramètres Table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ L’exemple de code de ce scénario se trouve dans la routine `demo_metadata_from_catalog_APIs` dans [utiliser des paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>Récupération des métadonnées de paramètre table pour une instruction préparée  
  Dans ce scénario, une application utilise SQLNumParameters et SQLDescribeParam pour récupérer les métadonnées des paramètres table.  
@@ -84,7 +84,7 @@ ms.locfileid: "81297733"
   
  Une application utilise SQLColumns pour récupérer des métadonnées de colonne pour un paramètre table dans ce scénario, car SQLDescribeParam ne retourne pas de métadonnées pour les colonnes d’une colonne de paramètre table.  
   
- Voici un exemple de code pour ce cas d’usage `demo_metadata_from_prepared_statement` : dans la routine, [Utilisez des paramètres Table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Voici un exemple de code pour ce cas d’usage : dans la routine `demo_metadata_from_prepared_statement` , [Utilisez des paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf8ddb4e3794c8ad7889f395726fb325e071deb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97ee05c8deb88efcd451eb55007983833d0b1879
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719675"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM permet de stocker et d'accéder à de grandes valeurs binaires, soit par le biais de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], soit par accès direct au système de fichiers Windows. Une grande valeur binaire est une valeur supérieure à 2 gigaoctets (Go). Pour plus d'informations sur la prise en charge FILESTREAM améliorée, consultez [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
- Lorsqu’une connexion de base de données est ouverte, ** \@ \@TEXTSIZE** prend la valeur-1 (« illimité ») par défaut.  
+ Lorsqu’une connexion de base de données est ouverte, ** \@ \@ TEXTSIZE** prend la valeur-1 (« illimité ») par défaut.  
   
  Il est également possible d'accéder et de mettre à jour des colonnes FILESTREAM à l'aide d'API de système de fichiers Windows.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81303863"
   
  Pour créer des colonnes FILESTREAM ou détecter les colonnes existantes qui sont des colonnes FILESTREAM, vous pouvez utiliser la colonne **is_filestream** de l’affichage catalogue [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).  
   
- Par exemple :  
+ Voici un exemple :  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -58,7 +58,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilité de bas niveau  
- Si votre client a été compilé à l’aide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la version de native client [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]fournie avec, et que l' [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]application se connecte à, le comportement **varbinary (max)** sera compatible avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Autrement dit, la taille maximale des données retournées est limitée à 2 Go. Pour les valeurs de résultat supérieures à 2 Go, une troncation se produit et un avertissement « Troncation à droite de la chaîne de données » est retourné.  
+ Si votre client a été compilé à l’aide de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournie avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , et que l’application se connecte à [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , le comportement **varbinary (max)** sera compatible avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Autrement dit, la taille maximale des données retournées est limitée à 2 Go. Pour les valeurs de résultat supérieures à 2 Go, une troncation se produit et un avertissement « Troncation à droite de la chaîne de données » est retourné.  
   
  Lorsque la compatibilité de type de données est définie à 80, le comportement client est cohérent avec le comportement client de bas niveau.  
   

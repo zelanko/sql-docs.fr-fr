@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717176"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressions de chemin : spécification de l’axe
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Une étape d'axe dans une expression de chemin d'accès inclut les composants suivants :  
   
@@ -60,7 +60,7 @@ ms.locfileid: "84215760"
 ## <a name="examples"></a>Exemples  
  Les exemples de requête de cette rubrique sont spécifiés par rapport aux colonnes de type **XML** dans la base de données **AdventureWorks** .  
   
-### <a name="a-specifying-a-child-axis"></a>R. Spécification de l'axe enfant  
+### <a name="a-specifying-a-child-axis"></a>A. Spécification de l'axe enfant  
  Pour un modèle de produit spécifique, la requête suivante extrait les \<Features> enfants de nœud d’élément du \<ProductDescription> nœud d’élément à partir de la description du catalogue de produits stockée dans la `Production.ProductModel` table.  
   
 ```  

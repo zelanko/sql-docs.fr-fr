@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b873931c5d09f3c54f61e872f8ea6646408c1a04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715960"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Vérifie qu'une base de données est correctement configurée pour la distribution sur support de sauvegarde amovible et rend compte à l'utilisateur des éventuels problèmes.  
   
@@ -50,7 +50,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si la base de données est correctement configurée, **sp_certify_removable** effectue les opérations suivantes :  
   
 -   Elle met la base de données hors ligne pour permettre la copie des fichiers.  

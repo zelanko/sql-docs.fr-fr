@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717904"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Connexions contextuelles et connexions standard - Restrictions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique décrit les restrictions associées au code qui s’exécute dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via le contexte et les connexions normales.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrictions applicables aux connexions contextuelles  
@@ -41,7 +41,7 @@ ms.locfileid: "81485284"
   
 -   Aucun autre mot clé de chaîne de connexion ne peut être utilisé lorsque vous utilisez « context connection=true ».  
   
--   La propriété **SqlConnection. DataSource** retourne la valeur null si la chaîne de connexion pour **SqlConnection** est « context connection = true », et non le nom de l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instance de.  
+-   La propriété **SqlConnection. DataSource** retourne la valeur null si la chaîne de connexion pour **SqlConnection** est « context connection = true », et non le nom de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   La définition de la propriété **SqlCommand. CommandTimeout** n’a aucun effet lorsque la commande est exécutée sur une connexion contextuelle.  
   

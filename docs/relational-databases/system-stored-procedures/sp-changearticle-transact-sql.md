@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717399"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie les propriétés d'un article dans une publication transactionnelle ou d'instantané. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||Chemin d'accès et nom d'un script de schéma d'article utilisé pour créer des tables cibles. La valeur par défaut est NULL.|  
 |**del_cmd**||Instruction DELETE à exécuter ; à défaut, elle sera élaborée à partir du journal.|  
-|**descriptive**||Nouvelle entrée descriptive de l'article.|  
+|**description**||Nouvelle entrée descriptive de l'article.|  
 |**dest_object**||Fourni pour la compatibilité ascendante. Utilisez **dest_table**.|  
 |**dest_table**||Nouvelle table de destination.|  
 |**destination_owner**||Nom du propriétaire de l’objet de destination.|  
@@ -128,7 +128,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**littéraux de chaîne**|Les modifications sont propagées vers l'abonné à l'aide de valeurs littérales de chaîne.|  
 |**sync_object**||Nom de la table ou de la vue utilisée pour produire un fichier de sortie de synchronisation. La valeur par défaut est NULL. Non pris en charge pour les serveurs de publication Oracle.|  
 |**espace disque logique**||Identifie l'espace de table utilisé par la table de journalisation pour un article publié à partir d'une base de données Oracle. Pour plus d’informations, consultez [Gérer des espaces disque logiques Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**durée**||Valeur de pourcentage qui contrôle le moment où l'Agent de distribution affecte une nouvelle plage d'identité. Non pris en charge pour la réplication d'égal à égal.|  
+|**threshold**||Valeur de pourcentage qui contrôle le moment où l'Agent de distribution affecte une nouvelle plage d'identité. Non pris en charge pour la réplication d'égal à égal.|  
 |**type**||Non pris en charge pour les serveurs de publication Oracle.|  
 ||**logbased**|Article basé sur le journal.|  
 ||**logbased manualboth**|Article reposant sur un journal, avec filtre manuel et vue manuelle. Cette option nécessite que les propriétés de *filtre* et de *sync_object* soient également définies. Non pris en charge pour les serveurs de publication Oracle.|  

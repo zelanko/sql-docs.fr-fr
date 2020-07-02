@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d27ca972fa5a20fbb22a6786e6be2ca3cf8c8153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716649"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur chaque transaction de capture de données répliquées ou modifiées.  
 
@@ -43,7 +43,7 @@ ms.locfileid: "82830485"
 |**lignes**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
 |**xdesid auquel appartient**|**nvarchar (64)**|ID de la transaction.|  
 |**artcache_table_address**|**varbinary (8)**|Adresse en mémoire de la dernière structure de table d'article mis en cache utilisée pour cette transaction.|  
-|**serveurs**|**nvarchar (514)**|Nom du serveur.|  
+|**server**|**nvarchar (514)**|Nom du serveur.|  
 |**server_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom du serveur.|  
 |**database**|**nvarchar (514)**|Nom de la base de données.|  
 |**db_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom de la base de données.|  
@@ -70,7 +70,7 @@ ms.locfileid: "82830485"
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE sur la base de données de publication ou sur la base de données activée pour la capture de données modifiées.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les informations ne sont retournées que pour les objets de base de données répliqués ou les tables activées pour la capture de données modifiées actuellement chargés dans le cache des articles.  
   
 ## <a name="see-also"></a>Voir aussi  

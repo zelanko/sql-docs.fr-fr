@@ -21,15 +21,15 @@ ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2879f5678c315d3e3921813a5d26a6c6034aa05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718814"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations de résumé sur les groupes d'index manquants, à l'exclusion des index spatiaux.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82828096"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent l'utilisation de la vue de gestion dynamique **sys.dm_db_missing_index_group_stats**.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>R. Trouvez les 10 index manquants qui devraient générer l'amélioration la plus importante pour les requêtes utilisateur  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Trouvez les 10 index manquants qui devraient générer l'amélioration la plus importante pour les requêtes utilisateur  
  La requête suivante détermine les 10 index manquants qui génèreraient l'amélioration cumulée la plus importante, par ordre décroissant, pour les requêtes utilisateur.  
   
 ```  
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Cette requête fournit le nom de la base de données, du schéma et de la table où un index est manquant. Elle fournit également le nom des colonnes devant être utilisées pour la clé d'index. Lors de l’écriture de l’instruction DDL CREATe INDEX pour implémenter les index manquants, listez d’abord les colonnes d’égalité, puis les colonnes d’inégalité dans la clause ON \< *table_name*> de l’instruction CREATE index. Les colonnes incluses doivent être indiquées dans la clause INCLUDE de l'instruction CREATE INDEX. Pour déterminer un ordre efficace pour les colonnes d'égalité, organisez ces colonnes en fonction de leur sélectivité, en répertoriant d'abord les colonnes les plus sélectives (les colonnes de gauche dans la liste des colonnes).  
+ Cette requête fournit le nom de la base de données, du schéma et de la table où un index est manquant. Elle fournit également le nom des colonnes devant être utilisées pour la clé d'index. Lors de l’écriture de l’instruction DDL CREATe INDEX pour implémenter les index manquants, listez d’abord les colonnes d’égalité, puis les colonnes d’inégalité dans la \<*table_name*> clause on de l’instruction CREATE index. Les colonnes incluses doivent être indiquées dans la clause INCLUDE de l'instruction CREATE INDEX. Pour déterminer un ordre efficace pour les colonnes d'égalité, organisez ces colonnes en fonction de leur sélectivité, en répertoriant d'abord les colonnes les plus sélectives (les colonnes de gauche dans la liste des colonnes).  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

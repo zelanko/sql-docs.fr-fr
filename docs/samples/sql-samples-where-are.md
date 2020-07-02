@@ -9,16 +9,16 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74318984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718585"
 ---
 # <a name="sql-samples"></a>Exemples SQL
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Emplacements des exemples de bases de données et de code pour les produits Microsoft SQL.
 
@@ -26,9 +26,9 @@ Emplacements des exemples de bases de données et de code pour les produits Micr
 
 Microsoft SQL Server les exemples de code pour les produits SQL se trouvent dans le référentiel GitHub [Samples](https://github.com/microsoft/sql-server-samples) . Chaque exemple comprend un fichier Lisez-moi qui explique comment exécuter et utiliser l’exemple. Le fichier Lisezmoi principal du référentiel d’exemples explique comment contribuer. 
 
-Les exemples et les modèles sont tous sous licence dans le cadre de la licence MIT. Consultez le fichier License. txt à la racine.
+Les exemples et les modèles sont tous sous licence dans le cadre de la licence MIT. Consultez le fichier license.txt à la racine.
 
-Envoyez vos questions à sqlserversamples@microsoft.com:.
+Envoyez vos questions à : sqlserversamples@microsoft.com .
 
 
 ## <a name="wideworldimporters-sample-database"></a>Exemple de base de données WideWorldImporters
@@ -49,7 +49,7 @@ Les bases de données AdventureWorks se trouvent sur la page d' [installation](a
 
 
 ## <a name="azure-samples-and-templates"></a>Exemples et modèles Azure
-Il existe un certain nombre d’exemples de code Microsoft Azure et d’exemples disponibles sur GitHub dans .NET, Java, Python, node. js, PHP et Ruby. En outre, Azure Resource Manager vous permet d’approvisionner vos applications à l’aide d’un modèle déclaratif. Dans un modèle unique, vous pouvez déployer plusieurs services ainsi que leurs dépendances. Le même modèle vous permet de déployer plusieurs fois votre application à chaque phase du cycle de vie de l’application.
+Il existe un certain nombre d’exemples de code Microsoft Azure et d’exemples disponibles sur GitHub dans .NET, Java, Python, Node.js, PHP et Ruby. En outre, Azure Resource Manager vous permet d’approvisionner vos applications à l’aide d’un modèle déclaratif. Dans un modèle unique, vous pouvez déployer plusieurs services ainsi que leurs dépendances. Le même modèle vous permet de déployer plusieurs fois votre application à chaque phase du cycle de vie de l’application.
 
 - [Exemples Azure](https://github.com/Azure-Samples)
 - [Modèles de démarrage rapide Azure](https://azure.microsoft.com/resources/templates/)

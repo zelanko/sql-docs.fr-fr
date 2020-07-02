@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717436"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Force le garbage collector FILESTREAM à s'exécuter, en supprimant tous fichiers FILESTREAM inutiles.  
   
@@ -69,7 +69,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|Indique le nombre d'éléments FILESTREAM éligibles (fichiers ou répertoires) qui n'ont pas été traités pour le garbage collection dans ce conteneur FILESTREAM. Les éléments peuvent être inexploités pour différentes raisons, notamment :<br /><br /> Fichiers qui doivent être épinglés car la sauvegarde de journal ou le point de contrôle n'a pas été accepté.<br /><br /> Fichiers en mode de récupération FULL ou BULK_LOGGED.<br /><br /> Il existe une transaction active de longue durée.<br /><br /> Le travail du lecteur du journal de réplication n’a pas été exécuté. Pour plus d’informations, consultez le livre blanc [stockage FILESTREAM dans SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) .|  
 |*last_collected_xact_seqno*|Retourne le dernier numéro séquentiel dans le journal correspondant (LSN) jusqu'aux fichiers récupérés par le garbage collector pour le conteneur FILESTREAM spécifié.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Exécute explicitement la tâche de Garbage collector FILESTREAM à l'achèvement sur la base de données demandée (et le conteneur FILESTREAM). Les fichiers qui ne sont plus nécessaires sont supprimés par le processus de garbage collection. La durée d'exécution de cette opération varie selon la taille des données FILESTREAM dans cette base de données ou ce conteneur, ainsi qu'en fonction de l'activité DML qui s'est produite récemment sur les données FILESTREAM. Bien que cette opération puisse être exécutée avec la base de données en ligne, cela peut affecter les performances de la base de données pendant son exécution en raison des différentes activités d'entrées/sorties effectuées par le processus de garbage collection.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ Le garbage collection (GC) s’appuie sur la troncation du journal. Par conséqu
 ## <a name="examples"></a>Exemples  
  Les exemples suivants exécutent le garbage collector pour les conteneurs FILESTREAM dans la base de données `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>R. Absence de spécification d'un conteneur  
+### <a name="a-specifying-no-container"></a>A. Absence de spécification d'un conteneur  
   
 ```sql  
 USE FSDB;  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716531"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée l'Agent d'instantané pour la publication spécifiée. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -66,7 +66,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|Une seule fois.|  
 |**4** (par défaut)|Tous les jours.|  
 |**8**|Toutes les semaines.|  
-|**16bits**|Mensuelle:|  
+|**16**|Mensuelle:|  
 |**32**|Tous les mois, en fonction de l'intervalle de fréquence.|  
 |**64**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
@@ -78,7 +78,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval* n’est pas utilisé.|  
 |**4** (par défaut)|Tous les *frequency_interval* jours, avec une valeur par défaut quotidienne.|  
 |**8**|*frequency_interval* est une ou plusieurs des valeurs suivantes (combinées avec un opérateur logique [&#124; (or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ) :<br /><br /> **1** = dimanche &#124;<br /><br /> **2** = lundi &#124;<br /><br /> **4** = mardi &#124;<br /><br /> **8** = mercredi &#124;<br /><br /> **16** = jeudi &#124;<br /><br /> **32** = vendredi &#124;<br /><br /> **64** = samedi|  
-|**16bits**|Le *frequency_interval* jour du mois.|  
+|**16**|Le *frequency_interval* jour du mois.|  
 |**32**|*frequency_interval* est l’un des éléments suivants :<br /><br /> **1** = dimanche &#124;<br /><br /> **2** = lundi &#124;<br /><br /> **3** = mardi &#124;<br /><br /> **4** = mercredi &#124;<br /><br /> **5** = jeudi &#124;<br /><br /> **6** = vendredi &#124;<br /><br /> **7** = samedi &#124;<br /><br /> **8** = jour &#124;<br /><br /> **9** = jour de la semaine &#124;<br /><br /> **10** = jour de week-end|  
 |**64**|*frequency_interval* n’est pas utilisé.|  
 |**128**|*frequency_interval* n’est pas utilisé.|  
@@ -135,7 +135,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_addpublication_snapshot** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
 ## <a name="example"></a>Exemple  

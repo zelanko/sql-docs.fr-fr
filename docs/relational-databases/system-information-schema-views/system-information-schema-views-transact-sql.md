@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3df27d1211807f1863ac40859a833d570191c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716603"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vues de schémas d’informations système (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Une vue de schémas d'informations est l'une des diverses méthodes que fournit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'obtention de métadonnées. Les vues de schémas d'informations fournissent une vue interne indépendante des tables système des métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles permettent aux applications de fonctionner correctement bien que des changements importants aient été apportés aux tables système sous-jacentes. Les vues de schémas d'informations incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont conformes à la norme ISO pour INFORMATION_SCHEMA.
 
@@ -41,7 +41,7 @@ Une vue de schémas d'informations est l'une des diverses méthodes que fournit 
 |Base de données|Catalogue|
 |schéma|schéma|
 |Object|Object|
-|type de données défini par l'utilisateur|Domain|
+|type de données défini par l'utilisateur|Domaine|
 
 Cette convention de mappage de noms s'applique aux vues compatibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO suivantes.
 

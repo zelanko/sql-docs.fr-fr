@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719017"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversions du type de données datetime de C en SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Cette rubrique répertorie les problèmes à prendre en compte lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conversion de types C en types date/heure.  
+  Cette rubrique répertorie les problèmes à prendre en compte lors de la conversion de types C en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types date/heure.  
   
- Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision de fraction de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion du client peut échouer, mais le serveur retourne une erreur lorsque **SQLExecute** ou **SQLExecuteDirect** est appelé. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, tandis que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement est d’arrondir. par exemple, l’arrondi se produit lorsque vous passez de **datetime2 (6)** à **datetime2 (2)**. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
+ Les conversions décrites dans le tableau suivant s'appliquent aux conversions effectuées sur le client. Dans les cas où le client spécifie la précision de fraction de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion du client peut échouer, mais le serveur retourne une erreur lorsque **SQLExecute** ou **SQLExecuteDirect** est appelé. En particulier, ODBC traite toute troncation des fractions de seconde comme une erreur, tandis que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement est d’arrondir ; par exemple, l’arrondi se produit lorsque vous passez de **datetime2 (6)** à **datetime2 (2)**. Les colonnes datetime sont arrondies au 1/300ème de seconde et les secondes des colonnes smalldatetime sont définies avec la valeur zéro (0) par le serveur.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -33,17 +33,17 @@ ms.locfileid: "81301777"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|NON APPLICABLE|NON APPLICABLE|1,10,11|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|1,10,11|NON APPLICABLE|NON APPLICABLE|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|NON APPLICABLE|NON APPLICABLE|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|NON APPLICABLE|NON APPLICABLE|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|NON APPLICABLE|NON APPLICABLE|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|NON APPLICABLE|NON APPLICABLE|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|NON APPLICABLE|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
   
 ## <a name="key-to-symbols"></a>Liste des symboles  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81301777"
   
      Une taille de colonne égale à zéro implique une taille illimitée pour les types de caractères de longueur variable en ODBC (9 chiffres, à moins que la règle des 3 chiffres pour SQL_C_TYPE_TIMESTAMP ne s'applique). La spécification d'une taille de colonne égale à zéro avec un type de caractère de longueur fixe constitue une erreur.  
   
--   Non **applicable : le**comportement [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existant et antérieur est conservé.  
+-   Non **applicable : le**comportement existant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et antérieur est conservé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Améliorations de la date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

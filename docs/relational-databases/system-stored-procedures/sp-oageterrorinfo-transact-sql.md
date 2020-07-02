@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719246"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Obtient des informations d'erreur OLE Automation.  
   
@@ -71,7 +71,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Noms des colonnes|Type de données|Description|  
 |------------------|---------------|-----------------|  
-|**Erreur**|**binaire (4)**|Représentation binaire du numéro d'erreur.|  
+|**Error**|**binaire (4)**|Représentation binaire du numéro d'erreur.|  
 |**Source**|**nvarchar (NN)**|Source de l'erreur.|  
 |**Description**|**nvarchar (NN)**|Description de l'erreur.|  
 |**HelpFile**|**nvarchar (NN)**|Fichier d'aide pour la source.|  
@@ -86,7 +86,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**Mauvais type de variable (0x80020008)**|Le type de données d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] valeur passée comme paramètre de méthode ne correspond pas au [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] type de données du paramètre de méthode, ou une valeur null a été passée comme paramètre de méthode.|  
 |**Nom inconnu (0x8002006)**|La propriété ou le nom de méthode spécifié n'a pu être trouvé pour l'objet spécifié.|  
-|**Chaîne de classe non valide (0x800401f3)**|Le ProgID ou le CLSID spécifié n'est pas inscrit en tant qu'objet OLE sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les serveurs OLE Automation personnalisés doivent être inscrits avant de pouvoir être instanciés à l’aide de **sp_OACreate**. Pour ce faire, vous pouvez utiliser l’utilitaire regsvr32. exe pour les serveurs in-process (. dll) ou le commutateur de ligne de commande **/regserver** pour les serveurs locaux (. exe).|  
+|**Chaîne de classe non valide (0x800401f3)**|Le ProgID ou le CLSID spécifié n'est pas inscrit en tant qu'objet OLE sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les serveurs OLE Automation personnalisés doivent être inscrits avant de pouvoir être instanciés à l’aide de **sp_OACreate**. Pour ce faire, vous pouvez utiliser l’utilitaire Regsvr32.exe pour les serveurs in-process (. dll) ou le commutateur de ligne de commande **/regserver** pour les serveurs locaux (. exe).|  
 |**Échec d'exécution du serveur (0x80080005)**|L'objet OLE spécifié est inscrit comme serveur OLE local (fichier .EXE), mais le fichier .EXE ne peut pas être trouvé ou démarré.|  
 |**Le module spécifié est introuvable (0x8007007e)**|L'objet OLE spécifié est inscrit comme serveur OLE in-process (fichier .DLL), mais le fichier .DLL ne peut pas être trouvé ou chargé.|  
 |**Discordance des types (0x80020005)**|Le type de données d'une variable locale [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisée pour stocker une valeur de propriété renvoyée ou une valeur de retour de méthode ne correspond pas au type de données [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de la valeur de retour de la propriété ou de la méthode. La raison peut aussi être que la valeur de retour d'une propriété ou d'une méthode était requise, mais qu'aucune valeur n'a été renvoyée.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 845fe5389792dbe4c1df7bb9cf3e920073cd23ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717384"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Indique les objets ou tables de base référencés par un curseur côté serveur.  
   
@@ -76,7 +76,7 @@ sp_describe_cursor_tables
 |table_owner|**sysname**|ID d'utilisateur du propriétaire de table.|  
 |Table_name|**sysname**|Nom de l'objet ou de la table de base. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les curseurs côté serveur retournent toujours l'objet spécifié par l'utilisateur, et non les tables de base.|  
 |optimizer_hint|**smallint**|Bitmap composée d'un ou plusieurs des éléments suivants :<br /><br /> 1 = Verrouillage au niveau de la ligne (ROWLOCK)<br /><br /> 4 = Verrouillage au niveau de la page (PAGELOCK)<br /><br /> 8 = Verrou de table (TABLOCK)<br /><br /> 16 = Verrou de table exclusif (TABLOCKX)<br /><br /> 32 = Verrou de mise à jour (UPDLOCK)<br /><br /> 64 = Pas de verrou (NOLOCK)<br /><br /> 128 = Option de première ligne rapide (FASTFIRST)<br /><br /> 4096 = Lecture des sémantiques répétées lorsqu'elles sont utilisées avec DECLARE CURSOR (HOLDLOCK)<br /><br /> Si vous fournissez plusieurs options, le système utilise les plus restrictives. Toutefois, sp_describe_cursor_tables affiche les indicateurs spécifiés dans la requête.|  
-|lock_type|**smallint**|Type de verrou de défilement demandé soit explicitement, soit implicitement pour chaque table de base sous-jacente de ce curseur. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0 = Aucun<br /><br /> 1 = Partagé<br /><br /> 3 = Mettre à jour|  
+|lock_type|**smallint**|Type de verrou de défilement demandé soit explicitement, soit implicitement pour chaque table de base sous-jacente de ce curseur. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0 = Aucun(e)<br /><br /> 1 = Partagé<br /><br /> 3 = Mettre à jour|  
 |nom_serveur|**sysname, Nullable**|Nom du serveur lié sur lequel réside la table. Prend la valeur NULL quand OPENQUERY ou OPENROWSET sont utilisés.|  
 |objectid|**int**|ID d’objet de la table. Prend la valeur 0 quand OPENQUERY ou OPENROWSET sont utilisés.|  
 |dbid|**int**|ID de la base de données dans laquelle réside la table. Prend la valeur 0 quand OPENQUERY ou OPENROWSET sont utilisés.|  

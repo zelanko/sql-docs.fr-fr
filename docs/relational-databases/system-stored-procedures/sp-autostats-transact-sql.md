@@ -18,15 +18,15 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b56b53b90bc8c66b72d68de4b83def5712cdc54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716159"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Affiche ou modifie l'option de mise à jour automatique des statistiques, AUTO_UPDATE_STATISTICS, pour un index, un objet de statistiques, une table ou une vue indexée.  
   
@@ -74,7 +74,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Le jeu de résultats d’une table ou d’une vue indexée comprend les statistiques créées pour les index, les statistiques à une seule colonne générées avec l’option AUTO_CREATE_STATISTICS et les statistiques créées à l’aide de l’instruction [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si l'index spécifié est désactivé ou si la table spécifiée a un index cluster désactivé, un message d'erreur s'affiche.  
   
  AUTO_UPDATE_STATISTICS est toujours désactivé (OFF) pour les tables optimisées en mémoire.  

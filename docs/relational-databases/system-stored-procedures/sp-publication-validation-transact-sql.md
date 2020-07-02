@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715177"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Lance une demande de validation pour chaque article de la publication spécifiée. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -56,7 +56,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Effectue un comptage total à l'aide de COUNT(*).|  
-|**1**|Effectue un comptage rapide à partir de **sysindexes. Rows**. Le comptage des lignes dans [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est beaucoup plus rapide que le comptage des lignes dans la table réelle. Toutefois, étant donné que [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est mis à jour tardivement, le ROWCOUNT peut ne pas être précis.|  
+|**1**|Effectue un comptage rapide à partir de **sysindexes. Rows**. Le comptage des lignes dans [sys.sysindex](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est beaucoup plus rapide que le comptage des lignes dans la table réelle. Toutefois, étant donné que [sys.sysindex](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est mis à jour tardivement, le ROWCOUNT peut ne pas être précis.|  
 |**2** (par défaut)|Exécute un décompte rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur null et que la procédure stockée est utilisée pour obtenir la valeur, un nombre total (*) est toujours utilisé.|  
   
 `[ @shutdown_agent = ] 'shutdown_agent'`Indique si le Agent de distribution doit s’arrêter immédiatement à la fin de la validation. *shutdown_agent* est de **bit**, avec **0**comme valeur par défaut. Si la **valeur est 0**, l’agent de réplication ne s’arrête pas. Si la taille est **1**, l’agent de réplication s’arrête après la validation du dernier article.  

@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718526"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flux de travail ETL WideWorldImportersDW
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Utilisez le package ETL *WWI_Integration* pour migrer des données de la base de données wideworldimporters vers la base de données WideWorldImportersDW à mesure que les données changent. Le package est exécuté périodiquement (généralement quotidiennement).
 
 Le package garantit des performances élevées en utilisant SQL Server Integration Services pour orchestrer les opérations T-SQL en bloc (plutôt que les transformations distinctes dans Integration Services).
@@ -43,7 +43,7 @@ Ensuite, une série de tâches de workflow charge chaque dimension. Ils chargent
   - Veillez à créer un catalogue de Integration Services. Pour créer un catalogue de Integration Services, dans SQL Server Management Studio l’Explorateur d’objets, cliquez avec le bouton droit sur **Integration Services**, puis sélectionnez **Ajouter un catalogue**. Laissez les options par défaut. Vous êtes invité à activer SQLCLR et à fournir un mot de passe.
 
 
-## <a name="download"></a>Téléchargement
+## <a name="download"></a>Télécharger
 
 Pour obtenir la version la plus récente de l’exemple, consultez [larges-World-](https://go.microsoft.com/fwlink/?LinkID=800630)Importers-Release. Téléchargez le fichier de package *ETL. ispac Integration Services quotidien* .
 
@@ -59,11 +59,11 @@ Pour obtenir le code source permettant de recréer l’exemple de base de donné
    5. Sélectionnez **déployer** pour terminer l’Assistant.
 
 2. Créez un travail de SQL Server Agent pour le processus ETL :
-   1. Dans Management Studio, cliquez avec le bouton droit sur **SQL Server Agent**, puis sélectionnez **nouveau** > **travail**.
+   1. Dans Management Studio, cliquez avec le bouton droit sur **SQL Server Agent**, puis sélectionnez **nouveau**  >  **travail**.
    2. Entrez un nom, par exemple, *WIDEWORLDIMPORTERS ETL*.
    3. Ajoutez une **étape de travail** du type **SQL Server Integration Services package**.
    4. Sélectionnez le serveur qui contient le catalogue Integration Services, puis sélectionnez le package *ETL quotidien* .
-   5. Sous **Configuration** > **gestionnaires de connexions**de configuration, assurez-vous que les connexions à la source et à la cible sont correctement configurées. La valeur par défaut consiste à se connecter à l’instance locale.
+   5. Sous **Configuration**  >  **gestionnaires de connexions**de configuration, assurez-vous que les connexions à la source et à la cible sont correctement configurées. La valeur par défaut consiste à se connecter à l’instance locale.
    6. Sélectionnez **OK** pour créer le travail.
 
 3. Exécutez ou planifiez le travail.

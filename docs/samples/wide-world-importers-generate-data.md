@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718592"
 ---
 # <a name="wideworldimporters-data-generation"></a>Génération de données WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Les versions commercialisées des bases de données WideWorldImporters et WideWorldImportersDW ont des données du 1er janvier 2013, jusqu’à la date de génération des bases de données.
 
 Lorsque vous utilisez ces exemples de bases de données, vous souhaiterez peut-être inclure des exemples de données plus récents.
@@ -41,7 +41,7 @@ Pour générer des exemples de données jusqu’à la date actuelle :
 
     Cette instruction ajoute des exemples de données de vente et d’achat à la base de données, jusqu’à la date actuelle. Il affiche la progression de la génération des données par jour. La génération de données peut prendre environ 10 minutes pour chaque année nécessitant des données. En raison d’un facteur aléatoire dans la génération de données, il existe des différences entre les données générées entre les exécutions.
 
-    Pour augmenter ou diminuer la quantité de données générées pour les commandes par jour, modifiez la valeur du `@AverageNumberOfCustomerOrdersPerDay`paramètre. Utilisez les paramètres `@SaturdayPercentageOfNormalWorkDay` et `@SundayPercentageOfNormalWorkDay` pour déterminer le volume de commandes pour les jours du week-end.
+    Pour augmenter ou diminuer la quantité de données générées pour les commandes par jour, modifiez la valeur du paramètre `@AverageNumberOfCustomerOrdersPerDay` . Utilisez les paramètres `@SaturdayPercentageOfNormalWorkDay` et `@SundayPercentageOfNormalWorkDay` pour déterminer le volume de commandes pour les jours du week-end.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importer des données générées dans WideWorldImportersDW
 
@@ -77,6 +77,6 @@ Vous pouvez utiliser la `Application.Configuration_PopulateLargeSaleTable` proc�
 
 #### <a name="result"></a>Résultats
 
-Approximativement, le nombre de lignes requis est inséré dans `Fact.Sale` la table au cours de l’année 2012. La procédure limite artificiellement le nombre de lignes à 50 000 par jour. Vous pouvez modifier cette limitation, mais la limitation vous aide à éviter les surinflations accidentelles de la table.
+Approximativement, le nombre de lignes requis est inséré dans la `Fact.Sale` table au cours de l’année 2012. La procédure limite artificiellement le nombre de lignes à 50 000 par jour. Vous pouvez modifier cette limitation, mais la limitation vous aide à éviter les surinflations accidentelles de la table.
 
 La procédure applique également l’indexation ColumnStore en cluster si elle n’a pas déjà été appliquée.

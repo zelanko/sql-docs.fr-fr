@@ -18,15 +18,15 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716121"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Lie une règle à une colonne ou un type de données d'alias.  
   
@@ -62,7 +62,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez lier une nouvelle règle à une colonne (même si vous préférez utiliser une contrainte CHECK) ou à un type de données alias avec **sp_bindrule** sans dissocier une règle existante. L'ancienne règle est remplacée par la nouvelle. Si une règle est associée à une colonne à l'aide d'une contrainte CHECK existante, toutes les restrictions sont évaluées. Vous ne pouvez pas lier de règle à un type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La règle s'impose lors d'une tentative d'insertion de données (INSERT) et non au moment de la liaison. Vous pouvez lier une règle de caractères à une colonne de type de données **numérique** , bien qu’une telle opération d’insertion ne soit pas valide.  

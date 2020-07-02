@@ -18,15 +18,15 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717362"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Analyse l’instruction spécifiée [!INCLUDE[tsql](../../includes/tsql-md.md)] et ses paramètres pour déterminer les paramètres qui correspondent aux colonnes de base de données qui sont protégées à l’aide de la fonctionnalité Always Encrypted. Retourne les métadonnées de chiffrement pour les paramètres qui correspondent aux colonnes chiffrées.  
   
@@ -40,21 +40,21 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ \@TSQL =] 'Transact-SQL_batch'  
+ [ \@ tsql =] 'Transact-SQL_batch'  
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] Transact-SQL_batch peut être de type nvarchar (n) ou nvarchar (max).  
   
- [ \@params =] N'parameters'  
- params fournit une chaîne de déclaration pour les paramètres du lot Transact-SQL, qui est similaire à sp_executesql. * \@* Les paramètres peuvent être de type nvarchar (n) ou nvarchar (max).  
+ [ \@ params =] N’parameters'  
+ * \@ params* fournit une chaîne de déclaration pour les paramètres du lot Transact-SQL, qui est similaire à sp_executesql. Les paramètres peuvent être de type nvarchar (n) ou nvarchar (max).  
   
- Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés [!INCLUDE[tsql](../../includes/tsql-md.md)]dans le _batch. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans * \@params*. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans l’instruction ne contient pas de paramètres, * \@params* n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans * \@ params*. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans l’instruction ne contient pas de paramètres, * \@ params* n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  0 indique une réussite. Tout autre indicateur indique un échec.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_describe_parameter_encryption** retourne deux jeux de résultats :  
   
--   Ensemble de résultats décrivant les clés de chiffrement configurées pour les colonnes de [!INCLUDE[tsql](../../includes/tsql-md.md)] base de données, les paramètres de l’instruction spécifiée correspondent à.  
+-   Ensemble de résultats décrivant les clés de chiffrement configurées pour les colonnes de base de données, les paramètres de l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction spécifiée correspondent à.  
   
 -   Jeu de résultats décrivant le mode de chiffrement des paramètres particuliers. Ce jeu de résultats fait référence aux clés décrites dans le premier jeu de résultats.  
   
@@ -77,13 +77,13 @@ sp_describe_parameter_encryption
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
-|**parameter_name**|**sysname**|Nom de l’un des paramètres spécifiés dans * \@* l’argument params.|  
+|**parameter_name**|**sysname**|Nom de l’un des paramètres spécifiés dans l’argument * \@ params* .|  
 |**column_encryption_algorithm**|**tinyint**|Code indiquant l’algorithme de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs actuellement prises en charge sont les suivantes : 2 pour **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Code indiquant le type de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs prises en charge sont les suivantes :<br /><br /> 0-texte en clair (la colonne n’est pas chiffrée)<br /><br /> 1-chiffrement aléatoire<br /><br /> 2-chiffrement déterministe.|  
 |**column_encryption_key_ordinal**|**int**|Code de la ligne dans le premier jeu de résultats. La ligne référencée décrit la clé de chiffrement de colonne configurée pour la colonne, le paramètre correspond à.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Numéro de version de l’algorithme de normalisation de type.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote client, prenant en charge Always Encrypted, appelle automatiquement **sp_describe_parameter_encryption** pour récupérer les métadonnées de chiffrement pour les requêtes paramétrables, émises par l’application. Par la suite, le pilote utilise les métadonnées de chiffrement pour chiffrer les valeurs des paramètres qui correspondent aux colonnes de base de données protégées par Always Encrypted et substitue les valeurs de paramètre de texte en clair, soumises par l’application, aux valeurs de paramètre chiffrées, avant d’envoyer la requête au moteur de base de données.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718780"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne des informations sur toutes les attentes de verrouillages spinlock organisées par type.  
   
@@ -47,14 +47,14 @@ Retourne des informations sur toutes les attentes de verrouillages spinlock orga
 
 
 ## <a name="permissions"></a>Autorisations  
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .    
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  
  sys. dm_os_spinlock_stats peut être utilisé pour identifier la source de contention de verrouillage SpinLock. Dans certains cas, vous pouvez être en mesure de résoudre ou de réduire la contention des verrouillages spinlock. Il peut toutefois arriver que vous soyez obligé de contacter le Support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Vous pouvez réinitialiser le contenu de sys. dm_os_spinlock_stats à l' `DBCC SQLPERF` aide de comme suit :  
+ Vous pouvez réinitialiser le contenu de sys. dm_os_spinlock_stats à l’aide de `DBCC SQLPERF` comme suit :  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|À usage interne uniquement|
 |DBT_HASH|À usage interne uniquement|
 |DBT_IO_LIST|À usage interne uniquement|
-|DBTABLE|Contrôle l’accès à une structure de données en mémoire pour chaque base de données d’un SQL Server qui contient les propriétés de cette base de données. Pour plus d’informations, consultez [cet article](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
+|DBTABLE|Contrôle l’accès à une structure de données en mémoire pour chaque base de données d’un SQL Server qui contient les propriétés de cette base de données. Pour plus d’informations, voir [cet article](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
 |DEFERRED_WF_EXT_DROP|À usage interne uniquement|
 |DEK_INSTANCE|À usage interne uniquement|
 |DELAYED_PARTITIONED_STACK|À usage interne uniquement|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|À usage interne uniquement|
 |DINPBUF|À usage interne uniquement|
 |DIRECTLOGCONSUMER|À usage interne uniquement|
-|DP_LIST|Contrôle l’accès à la liste des pages de modifications pour une base de données pour laquelle le point de contrôle indirect est activé. Pour plus d’informations, consultez [cet article](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
+|DP_LIST|Contrôle l’accès à la liste des pages de modifications pour une base de données pour laquelle le point de contrôle indirect est activé. Pour plus d’informations, voir [cet article](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
 |DROP|À usage interne uniquement|
 |DROP_TEMPO|À usage interne uniquement|
 |DROPPED_ALLOC_UNIT|À usage interne uniquement|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|À usage interne uniquement|
 |LIVE_TARGET_TVF|À usage interne uniquement|
 |LOCK_FREE_LIST|À usage interne uniquement|
-|LOCK_HASH|Protège l’accès à la table de hachage du gestionnaire de verrous qui stocke les informations sur les verrous maintenus dans une base de données. Pour plus d’informations, consultez [cet article](https://support.microsoft.com/kb/2926217).|
+|LOCK_HASH|Protège l’accès à la table de hachage du gestionnaire de verrous qui stocke les informations sur les verrous maintenus dans une base de données. Pour plus d’informations, voir [cet article](https://support.microsoft.com/kb/2926217).|
 |LOCK_NOTIFICATION|À usage interne uniquement|
 |LOCK_RESOURCE_ID|À usage interne uniquement|
 |LOCK_RW_ABTX_HASH_SET|À usage interne uniquement|

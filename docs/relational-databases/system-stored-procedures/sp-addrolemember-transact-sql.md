@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716424"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active.  
   
@@ -43,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Arguments  
- [ @rolename= ] «*role*»  
+ [ @rolename =] '*role*'  
  Nom du rôle de base de données dans la base de données actuelle. *role* est de **type sysname**et n’a pas de valeur par défaut.  
   
- [ @membername= ] '*security_account*'  
+ [ @membername =] '*security_account*'  
  Compte de sécurité ajouté au rôle. *security_account* est de **type sysname**, sans valeur par défaut. *security_account* peut être un utilisateur de base de données, un rôle de base de données, une connexion Windows ou un groupe Windows.  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-adding-a-windows-login"></a>R. Ajout d'une connexion Windows  
- L’exemple suivant ajoute la connexion `Contoso\Mary5` Windows à la `AdventureWorks2012` base de données `Mary5`en tant qu’utilisateur. L'utilisateur `Mary5` est ensuite ajouté au rôle `Production`.  
+ L’exemple suivant ajoute la connexion Windows `Contoso\Mary5` à la `AdventureWorks2012` base de données en tant qu’utilisateur `Mary5` . L'utilisateur `Mary5` est ensuite ajouté au rôle `Production`.  
   
 > [!NOTE]  
 >  Comme `Contoso\Mary5` est connu comme l'utilisateur de base de données `Mary5` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], le nom d'utilisateur `Mary5` doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Contoso\Mary5` n'existe. Effectuez un test en utilisant une connexion à partir de votre domaine.  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Ajout d'une connexion Windows  
- L’exemple suivant ajoute la connexion `LoginMary` à la `AdventureWorks2008R2` base de données `UserMary`en tant qu’utilisateur. L'utilisateur `UserMary` est ensuite ajouté au rôle `Production`.  
+ L’exemple suivant ajoute la connexion `LoginMary` à la `AdventureWorks2008R2` base de données en tant qu’utilisateur `UserMary` . L'utilisateur `UserMary` est ensuite ajouté au rôle `Production`.  
   
 > [!NOTE]  
->  Étant donné que `LoginMary` la connexion est connue en tant `UserMary` qu’utilisateur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de base de données dans `UserMary` la base de données, le nom d’utilisateur doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Mary5` n'existe. Les connexions et les utilisateurs ont généralement le même nom. Cet exemple utilise des noms différents pour différencier les actions qui affectent la connexion et l’utilisateur.  
+>  Étant donné que la connexion `LoginMary` est connue en tant qu’utilisateur de base de données `UserMary` dans la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données, le nom d’utilisateur `UserMary` doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Mary5` n'existe. Les connexions et les utilisateurs ont généralement le même nom. Cet exemple utilise des noms différents pour différencier les actions qui affectent la connexion et l’utilisateur.  
   
 ```  
 -- Uses AdventureWorks  

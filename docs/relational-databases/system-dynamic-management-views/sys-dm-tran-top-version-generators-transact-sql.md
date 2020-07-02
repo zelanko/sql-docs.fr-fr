@@ -20,15 +20,15 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 552ca2de9ac8077beb25b9ad77f259790b92a1be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d6484d5f9762590f3bef941f7deff5092c720ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718706"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Renvoie une table virtuelle pour les objets qui génèrent la majorité des versions d'un magasin de versions. **sys. dm_tran_top_version_generators** retourne les 256 premières longueurs d’enregistrements agrégés regroupées par le **database_id** et **rowset_id**. **sys. dm_tran_top_version_generators** récupère les données en interrogeant la table virtuelle **dm_tran_version_store** . **sys. dm_tran_top_version_generators** est une vue inefficace à exécuter, car cette vue interroge la Banque des versions et la Banque des versions peut être très volumineuse. Nous vous recommandons d'utiliser cette fonction pour rechercher les clients les plus volumineux de la banque des versions.  
   
