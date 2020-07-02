@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56db1455b1b85ea50fc5bdea7f6f3d06778d329f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749344"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les noms et les valeurs d’un jeu spécifié de propriétés à propos d’un index spatial **Geometry** . Le résultat est retourné dans un format de table. Vous pouvez choisir de retourner un jeu principal de propriétés ou toutes les propriétés de l'index.  
   
@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Autorisations  
  L'utilisateur doit être assigné un rôle PUBLIC pour accéder à la procédure. Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les propriétés qui contiennent des valeurs NULL ne sont pas incluses dans le jeu de retour.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise `sp_help_spatial_geometry_index` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** défini sur la table **geometry_col** pour l’exemple de requête donné dans ** \@QS**. Cet exemple retourne uniquement les propriétés principales de l'index spécifié.  
+ L’exemple suivant utilise `sp_help_spatial_geometry_index` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** défini sur la table **geometry_col** pour l’exemple de requête donné dans ** \@ QS**. Cet exemple retourne uniquement les propriétés principales de l'index spécifié.  
   
 ```  
 declare @qs geometry  

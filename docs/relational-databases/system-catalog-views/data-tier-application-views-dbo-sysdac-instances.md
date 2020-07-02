@@ -1,5 +1,5 @@
 ---
-title: dbo. sysdac_instances (Transact-SQL) | Microsoft Docs
+title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752971"
 ---
-# <a name="data-tier-application-views---dbosysdac_instances"></a>Affichages des applications de la couche données-dbo. sysdac_instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="data-tier-application-views---dbosysdac_instances"></a>Affichages des applications de la couche données-dbo.sysdac_instances
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche une ligne pour chaque instance d’application de la couche données (DAC) déployée sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . sysdac_instances appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes de la vue sysdac_instances.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82823638"
 |created_by|**sysname**|Connexion qui a créé l'instance DAC.|  
 |database_name|**sysname**|Nom de la base de données créée pour l'instance DAC.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une DAC inclut un type DAC, à savoir une définition des objets de couche Données logiques utilisés par une application, tels que des tables et des vues. Un package DAC est un fichier utilisé pour déployer une DAC. Le package DAC contient une représentation de tous les objets logiques contenus dans le type DAC. Le package DAC peut être utilisé pour déployer une ou plusieurs copies, ou instances, de la DAC vers une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Chaque instance DAC déployée à partir du même package DAC partage le même type, mais reçoit un nom d'instance et un identificateur uniques.  
   
 ## <a name="permissions"></a>Autorisations  

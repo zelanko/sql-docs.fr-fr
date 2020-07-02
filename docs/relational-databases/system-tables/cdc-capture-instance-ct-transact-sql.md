@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 15fe17913bfb00d983772a84f625ff41e690f263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750352"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Table de modifications créée lorsque la capture de données modifiées est activée sur une table source. La table retourne une ligne pour chaque opération d'insertion et de suppression effectuée sur la table source, et deux lignes pour chaque opération de mise à jour effectuée sur la table source. Lorsque le nom de la table de modifications n'est pas spécifié au moment de l'activation de la table source, le nom est dérivé. Le format du nom est CDC. *capture_instance*_CT où *capture_instance* est le nom de schéma de la table source et le nom de la table source au format *schema_table*. Par exemple, si la table **Person. Address** dans l’exemple de base de données **AdventureWorks** est activée pour la capture de données modifiées, le nom de la table de modifications dérivée serait **CDC. Person_Address_CT**.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "82833091"
 |**__$seqval**|**binary(10)**|Valeur de séquence utilisée pour classer les modifications de ligne dans une transaction.|  
 |**_ _ $ opération**|**int**|Identifie l'opération de langage de manipulation de données associée à la modification. Il peut s’agir de l’un des éléments suivants :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (anciennes valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne avant d'exécuter l'instruction UPDATE.<br /><br /> 4 = mise à jour (nouvelles valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne après l'exécution de l'instruction UPDATE.|  
 |**__$update_mask**|**varbinary(128)**|Masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes qui ont été modifiées.|  
-|*\<colonnes de table source capturées>*|varie|Les colonnes restantes de la table de modifications sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont incluses dans cette table.|  
+|*\<captured source table columns>*|varie|Les colonnes restantes de la table de modifications sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont incluses dans cette table.|  
 |**_ _ $ command_id** |**int** |Effectue le suivi de l’ordre des opérations dans une transaction. |  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 
 La colonne `__$command_id` a été introduite dans une mise à jour cumulative des versions 2012 à 2016. Pour obtenir des informations sur la version et le téléchargement, consultez l’article 3030352 de la base de connaissances à [l’adresse suivante : la table de modifications n’est pas correctement ordonnée pour les lignes mises à jour après activation de la capture de données modifiées pour une base de données Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Pour plus d’informations, consultez les fonctionnalités de capture de données [modifiées peuvent s’arrêter après la mise à niveau vers la dernière mise à jour cumulative pour SQL Server 2012, 2014 et 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

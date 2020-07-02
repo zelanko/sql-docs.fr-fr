@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ebb27860d7b7da46680a61486c59de3929117ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 36ac5833a4bf714c6f4b294f15f0cf6aca6fb64d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750422"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations de table sur les tables provenant du serveur lié spécifié.  
   
@@ -63,7 +63,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE SYSTÈME**|Nom d'une table système.|  
 |**VUE SYSTÈME**|Nom d'une vue système.|  
 |**Tableau**|Nom d'une table utilisateur.|  
-|**VIEW**|Nom d'une vue.|  
+|**AFFICHAGE**|Nom d'une vue.|  
   
 `[ @fUsePattern = ] 'fUsePattern'`Détermine si les caractères **_**, **%** , **[** et **]** sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est de **bits**, avec 1 comme valeur par défaut.  
   
@@ -80,7 +80,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|Table, table système ou vue.|  
 |**NOTES**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_tables_ex** est exécuté en interrogeant l’ensemble de lignes tables de l’interface **IDBSchemaRowset** du fournisseur OLE DB correspondant à *table_server*. Les paramètres *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*et *Column* sont passés à cette interface pour limiter les lignes retournées.  
   
  **sp_tables_ex** retourne un jeu de résultats vide si le fournisseur OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes tables de l’interface **IDBSchemaRowset** .  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5debab1572bc2f788c0dc13773d0dc140c693108
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58bc0af5be721d30211617a18095213e76991a24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750150"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stocke un enregistrement par ID secondaire. Cette table est stockée dans la base de données **msdb** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82805935"
  Plusieurs bases de données secondaires sur le même serveur secondaire pour une base de données primaire donnée partagent certains paramètres dans la table **log_shipping_secondary** . En cas de modification d'un paramètre partagé pour l'une d'entre elles, ce paramètre est modifié pour toutes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   

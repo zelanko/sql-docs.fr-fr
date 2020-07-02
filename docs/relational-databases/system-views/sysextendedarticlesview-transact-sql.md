@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c89e15e2a5da3a33afc5641ac9d96c468afb20c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750126"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vue **sysextendedarticlesview** fournit des informations sur les articles publiés. Cette vue est stockée dans la base de données de distribution.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67910117"
 |**artid**|**int**|Colonne d'identité fournissant un numéro d'identification unique pour l'article|  
 |**creation_script**|**nvarchar(255)**|Script de création du schéma de l'article.|  
 |**del_cmd**|**nvarchar(255)**|Commande à exécuter en cas d'instruction DELETE, sinon création à partir du journal|  
-|**descriptive**|**nvarchar(255)**|Entrée descriptive de l’article.|  
+|**description**|**nvarchar(255)**|Entrée descriptive de l’article.|  
 |**dest_table**|**nvarchar(128)**|Nom de la table de destination|  
 |**filter**|**int**|Identificateur d'objet de la procédure stockée utilisée pour le partitionnement horizontal.|  
 |**filter_clause**|**ntext**|Clause WHERE de l'article utilisée pour le filtrage horizontal.|  

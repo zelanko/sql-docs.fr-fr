@@ -23,15 +23,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d2a4789dfc29cdd581ab50f9f0a0f3d5d69ff0f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750784"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversions de types de données et annotation sql : DataType (SQLXML 4,0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Dans un schéma XSD, l’attribut **xsd : type** spécifie le type de données XSD d’un élément ou d’un attribut. Lorsqu'un schéma XSD est utilisé pour extraire des données de la base de données, le type de données spécifié est utilisé pour formater les données.  
   
  Outre la spécification d’un type XSD dans un schéma, vous pouvez également spécifier un type de données Microsoft à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aide de l’annotation **SQL : DataType** . Les attributs **xsd : type** et **SQL : DataType** contrôlent le mappage entre les types de données XSD et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
@@ -43,7 +43,7 @@ ms.locfileid: "84885611"
   
 |Type de données XSD|Conversion SQL Server|  
 |-------------------|---------------------------|  
-|Boolean|CONVERT(bit, COLUMN)|  
+|Booléen|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Décimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  

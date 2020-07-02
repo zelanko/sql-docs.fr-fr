@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9599ab09ebd2da3ae51e84cd73bdcf3be0f05b5b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 94bd2c31e8caec8c33f9dd3eb7b3badfa235d60b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752632"
 ---
 # <a name="msrepl_version-transact-sql"></a>MSrepl_version (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSrepl_version** contient une ligne avec la version actuelle de la réplication installée. Cette table est stockée dans la base de données de distribution.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82825850"
 |-----------------|---------------|-----------------|  
 |**major_version**|**int**|Numéro de version majeure de la base de données de distribution|  
 |**minor_version**|**int**|Numéro de version mineure de la base de données de distribution|  
-|**revision**|**int**|Numéro de révision.|  
+|**faisant**|**int**|Numéro de révision.|  
 |**db_existed**|**bit**|Indique si la base de données de distribution existe avant l’appel de **sp_adddistributiondb** .|  
   
 ## <a name="see-also"></a>Voir aussi  

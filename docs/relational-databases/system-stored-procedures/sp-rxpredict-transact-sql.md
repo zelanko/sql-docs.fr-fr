@@ -4,7 +4,7 @@ ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f6ee7c1f0b1dc1ccbcd4db260621dc5bda3168
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750459"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Génère une valeur prédite pour une entrée donnée composée d’un modèle de Machine Learning stocké dans un format binaire dans une base de données SQL Server.
 
-Fournit des notations sur les modèles de Machine Learning R et Python en temps quasi-réel. `sp_rxPredict`est une procédure stockée fournie en tant que wrapper `rxPredict` pour la fonction R dans [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) et [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), et la fonction python [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) dans [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) et [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Il est écrit en C++ et est optimisé spécifiquement pour les opérations de notation.
+Fournit des notations sur les modèles de Machine Learning R et Python en temps quasi-réel. `sp_rxPredict`est une procédure stockée fournie en tant que wrapper pour la `rxPredict` fonction R dans [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) et [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), et la fonction python [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) dans [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) et [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Il est écrit en C++ et est optimisé spécifiquement pour les opérations de notation.
 
 Bien que le modèle doive être créé à l’aide de R ou python, une fois qu’il est sérialisé et stocké dans un format binaire sur une instance du moteur de base de données cible, il peut être consommé à partir de cette instance du moteur de base de données même si l’intégration de R ou python n’est pas installée. Pour plus d’informations, consultez [notation en temps réel avec sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
 
@@ -53,14 +53,14 @@ Une requête SQL valide
 Une colonne score est retournée, ainsi que toutes les colonnes directes de la source de données d’entrée.
 Des colonnes de score supplémentaires, telles que l’intervalle de confiance, peuvent être retournées si l’algorithme prend en charge la génération de telles valeurs.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Pour permettre l’utilisation de la procédure stockée, SQLCLR doit être activé sur l’instance.
 
 > [!NOTE]
 > Il existe des implications en matière de sécurité pour enabing cette option. Utilisez une autre implémentation, telle que la fonction [Transact-SQL Predict](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) , si SQLCLR ne peut pas être activé sur votre serveur.
 
-L’utilisateur a `EXECUTE` besoin d’une autorisation sur la base de données.
+L’utilisateur a besoin `EXECUTE` d’une autorisation sur la base de données.
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
@@ -87,7 +87,7 @@ Pour créer et former un modèle, utilisez l’un des algorithmes pris en charge
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [catégorielles](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -113,14 +113,14 @@ Pour créer et former un modèle, utilisez l’un des algorithmes pris en charge
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [catégorielles](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### <a name="unsupported-model-types"></a>Types de modèles non pris en charge
 
 Les types de modèles suivants ne sont pas pris en charge :
 
-+ Modèles utilisant les `rxGlm` algorithmes ou `rxNaiveBayes` dans RevoScaleR
++ Modèles utilisant les `rxGlm` `rxNaiveBayes` algorithmes ou dans RevoScaleR
 + Modèles PMML dans R
 + Modèles créés à l’aide d’autres bibliothèques tierces 
 
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-En plus d’être une requête SQL valide, les données d’entrée dans * \@inputData* doivent inclure des colonnes compatibles avec les colonnes du modèle stocké.
+En plus d’être une requête SQL valide, les données d’entrée dans * \@ inputData* doivent inclure des colonnes compatibles avec les colonnes du modèle stocké.
 
 `sp_rxPredict`prend en charge uniquement les types de colonnes .NET suivants : double, float, Short, ushort, long, ULONG et String. Vous devrez peut-être filtrer les types non pris en charge dans vos données d’entrée avant de les utiliser pour une notation en temps réel. 
 

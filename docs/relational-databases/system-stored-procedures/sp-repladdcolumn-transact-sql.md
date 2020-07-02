@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751629"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute une colonne à un article de table existant qui a été publié. Permet d'ajouter la nouvelle colonne à tous les serveurs de publication, ou à une publication spécifique, qui publient cette table. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =] '*colonne*'  
  Nom de la colonne dans la table à ajouter pour la réplication. *Column* est de **type sysname**, sans valeur par défaut.  
   
- [ @typetext =] '*TypeText*'  
+ [ @typetext = ] '*TypeText*'  
  Définition de la colonne ajoutée. *TypeText* est de type **nvarchar (3000)**, sans valeur par défaut. Par exemple, si la colonne order_filled est ajoutée et qu’il s’agit d’un champ à un seul caractère, et non NULL, et que a une valeur par défaut de **N**, order_filled serait le paramètre de *colonne* , tandis que la définition de la colonne, **char (1) n’est pas une contrainte null constraint_name la valeur par défaut « N »** est la valeur du paramètre *TypeText* .  
   
  [ @publication_to_add =] '*publication_to_add*'  

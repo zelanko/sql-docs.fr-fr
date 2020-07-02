@@ -13,17 +13,17 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a083aa6d17a84ff4c801ad5f5b270c7f0ddcb355
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9178116b9fd072122a79694611b14d604cd4d3f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751851"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Cette rubrique décrit les fonctionnalités de SQLSetDescRec qui sont spécifiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à Native Client.  
+  Cette rubrique décrit les fonctionnalités de SQLSetDescRec qui sont spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="sqlsetdescrec-and-table-valued-parameters"></a>SQLSetDescRec et paramètres table  
  SQLSetDescRec peut être utilisé pour définir des champs de descripteur pour les paramètres table et les colonnes de paramètre table. Les colonnes de paramètre table sont disponibles uniquement lorsque le champ d'en-tête de descripteur SQL_SOPT_SS_PARAM_FOCUS est défini sur l'ordinal d'un enregistrement pour lequel SQL_DESC_TYPE a la valeur SQL_SS_TABLE. Pour plus d'informations sur SQL_SOPT_SS_PARAM_FOCUS, consultez [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "81301910"
 |*Sous-type*|Ignoré|Pour les enregistrements de type SQL_DATETIME ou SQL_INTERVAL, affectez la valeur SQL_DESC_DATETIME_INTERVAL_CODE.|  
 |*Longueur*|SQL_DESC_OCTET_LENGTH|Longueur du nom du type de paramètre table. Cela peut être SQL_NTS si le nom de type se termine par une valeur NULL ou zéro si le nom de type de paramètre table n'est pas requis.|  
 |*Précision*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*Mettre à l'échelle*|SQL_DESC_SCALE|Inutilisé. Ce paramètre doit être nul.|  
+|*Mise à l’échelle*|SQL_DESC_SCALE|Inutilisé. Ce paramètre doit être nul.|  
 |*DataPtr*|SQL_DESC_DATA_PTR dans APD|SQL_CA_SS_TYPE_NAME<br /><br /> Ce paramètre est facultatif pour les appels de procédure stockée et NULL peut être spécifié s'il n'est pas requis. Ce paramètre doit être spécifié pour les instructions SQL qui ne sont pas des appels de procédure.<br /><br /> *DataPtr* sert également de valeur unique que l’application peut utiliser pour identifier ce paramètre table lorsque la liaison de ligne variable est utilisée.|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> Pour un paramètre table, il s'agit du nombre de lignes à transférer ou SQL_DATA_AT_EXEC. Il s’agit d’un pointeur vers une valeur qui contient le nombre de lignes à transférer avec SQLExecDirect.|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -46,7 +46,7 @@ ms.locfileid: "81301910"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Prise en charge de SQLSetDescRec pour les fonctionnalités Date et Heure améliorées  
  Les valeurs autorisées pour les types date/heure sont les suivantes :  
   
-||*Type*|*Sous-type*|*Longueur*|*Précision*|*Mettre à l'échelle*|  
+||*Type*|*Sous-type*|*Longueur*|*Précision*|*Mise à l’échelle*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

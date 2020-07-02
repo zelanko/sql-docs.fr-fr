@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: faad3284619bfd3e7beaf5324ac107aed3ac2ff2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749278"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie la mesure du seuil de supervision pour une publication. Cette procédure stockée, utilisée pour surveiller la réplication, est exécutée sur la base de données du serveur de distribution.  
   
@@ -86,7 +86,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_replmonitorchangepublicationthreshold** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2724a62f6bf55941edbaa206728f9352e8fce5c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2fcdf6c750c2cdf0c8ce73e14bdd1b2da5a931a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750488"
 ---
 # <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime la connexion à partir d'une liste d'accès aux publications. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -44,7 +44,7 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_revoke_publication_access** est utilisé dans les réplications d’instantané, transactionnelles et de fusion.  
   
  **sp_revoke_publication_access** peut être appelée à plusieurs reprises.  

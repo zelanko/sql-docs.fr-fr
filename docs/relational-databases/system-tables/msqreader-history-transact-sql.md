@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37f5db39ad610d205a0bd6b268ab701f53c93ffa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8677612214b23677f3b005023a47742b0035eea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752688"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSqreader_history** contient des lignes d’historique pour les agents de lecture de la file d’attente associés au serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82827208"
 |**agent_id**|**int**|ID de l'Agent de lecture de la file d'attente.|  
 |**publication_id**|**int**|ID de la publication.|  
 |**runstatus**|**int**|État d'exécution de l'agent :<br /><br /> **1** = début.<br /><br /> **2** = opération réussie.<br /><br /> **3** = en cours.<br /><br /> **4** = inactif.<br /><br /> **5** = nouvelle tentative.<br /><br /> **6** = échec.|  
-|**start_time**|**datetime**|Date et heure du début de la session de l'Agent.|  
+|**heure-début**|**datetime**|Date et heure du début de la session de l'Agent.|  
 |**time**|**datetime**|Date et heure du dernier message enregistré.|  
 |**duration**|**int**|Durée de l'activité enregistrée de la session, en secondes.|  
 |**commentaires**|**nvarchar(255)**|Texte descriptif.|  

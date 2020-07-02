@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85271f37c441ab88ce5ad14279c07f6feda3d95d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f122698756a6d2359112b535158dcb6ff89569b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750444"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne pour chaque fichier de données ou fichier journal d'une base de données. Les colonnes décrivent la configuration des fichiers au moment où la sauvegarde a été effectuée. Le fait que le fichier soit inclus ou non dans la sauvegarde est déterminé par la colonne **is_present** . Cette table est stockée dans la base de données **msdb** .  
   

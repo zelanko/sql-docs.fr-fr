@@ -1,7 +1,7 @@
 ---
 title: Migrer SQL Server vers Azure SQL Database à l’aide de la Assistant Migration de données
 description: Découvrez comment utiliser Assistant Migration de données pour migrer un SQL Server local vers Azure SQL Database
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749781"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrer des SQL Server locaux ou des SQL Server sur des machines virtuelles Azure vers Azure SQL Database à l’aide de la Assistant Migration de données
 
@@ -87,8 +87,8 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
     ![Sélectionner les objets de schéma](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > Certains des objets qui ne peuvent pas être convertis tels quels sont présentés avec des opportunités de correctif automatique. Un clic sur ces objets dans le volet gauche permet d’afficher les suggestions de correctif dans le volet droit. Passez en revue les correctifs et choisissez d’appliquer ou d’ignorer toutes les modifications, objet par objet. Notez que le fait d’appliquer ou d’ignorer toutes les modifications pour un objet n’affecte pas les modifications apportées aux autres objets de base de données. Les instructions qui ne peuvent pas être converties ni corrigées automatiquement sont reproduites dans la base de données cible et commentées.
 
     ![Correction suggérée](../dma/media/suggested-fix.png)
 

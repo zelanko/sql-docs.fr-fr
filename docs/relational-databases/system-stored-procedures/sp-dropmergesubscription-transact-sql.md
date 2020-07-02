@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2868afcf85895ce1e7456bc2eea3693d9b25e679
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be9ad08f1591ef6f7e8893b09031a2e695be031d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750556"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un abonnement à une publication de fusion et à l'Agent de fusion qui lui est associé. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -54,7 +54,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |-----------|-----------------|  
 |**tous les**|Abonnements par envoi de données (push), par extraction de données (pull) et anonymes.|  
 |**façon**|Abonnement anonyme.|  
-|**souleve**|Abonnement par envoi de données (push).|  
+|**push**|Abonnement par envoi de données (push).|  
 |**collecter**|Abonnement par extraction de données (pull).|  
 |**both** (valeur par défaut)|Abonnements par envoi et extraction de données.|  
   
@@ -65,7 +65,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_dropmergesubscription** est utilisé dans la réplication de fusion.  
   
 ## <a name="example"></a>Exemple  

@@ -15,16 +15,16 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751151"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Créer une base de données de graphiques et exécuter des requêtes de critères spéciaux à l’aide de T-SQL
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Cet exemple fournit un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script pour créer une base de données de graphiques avec des nœuds et des bords, puis utiliser la nouvelle clause match pour faire correspondre des modèles et parcourir le graphique. Cet exemple de script fonctionnera à la fois sur Azure SQL Database et[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>Explication du script  
-Ce script utilise la nouvelle syntaxe T-SQL pour créer des tables de nœuds et d’arêtes. Montre comment insérer des données dans des tables de nœuds `INSERT` et de périphérie à l’aide d' `MATCH` une instruction, et montre également comment utiliser la clause pour les critères spéciaux et la navigation.
+Ce script utilise la nouvelle syntaxe T-SQL pour créer des tables de nœuds et d’arêtes. Montre comment insérer des données dans des tables de nœuds et de périphérie à l’aide `INSERT` d’une instruction, et montre également comment utiliser la `MATCH` clause pour les critères spéciaux et la navigation.
 
 |Commande    |Notes
 |---  |---  |

@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753254"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   Spécifie une condition de recherche pour un graphique, qui est recherchée de manière récursive ou répétée. SHORTEST_PATH peut être utilisé dans une correspondance avec le nœud de graphique et les tables de bord, dans l’instruction SELECT. 
   
@@ -85,7 +85,7 @@ La fonction STRING_AGG prend une expression et un séparateur comme entrée et r
 ### <a name="last_value"></a>LAST_VALUE
 Pour projeter les attributs du dernier nœud du chemin parcouru, LAST_VALUE fonction d’agrégation peut être utilisée. Le fait de fournir un alias de table Edge comme entrée à cette fonction est une erreur, seuls les noms de tables de nœuds ou les alias peuvent être utilisés.
 
-**Dernier nœud**: le dernier nœud fait référence au nœud qui apparaît en dernier dans le chemin parcouru, quelle que soit la direction de la flèche dans le PRÉDICAT de correspondance. Par exemple : `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Ici, le dernier nœud du chemin d’accès est le dernier nœud P visité. 
+**Dernier nœud**: le dernier nœud fait référence au nœud qui apparaît en dernier dans le chemin parcouru, quelle que soit la direction de la flèche dans le PRÉDICAT de correspondance. Par exemple : `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Ici, le dernier nœud du chemin d’accès est le dernier nœud P visité. 
 
 Tandis que le dernier nœud est le dernier nième nœud dans le chemin d’accès du graphique de sortie pour ce modèle :`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -93,7 +93,7 @@ Tandis que le dernier nœud est le dernier nième nœud dans le chemin d’accè
 Cette fonction retourne la somme des valeurs d’attribut node/Edge fournies ou de l’expression qui apparaissait dans le chemin parcouru.
 
 ### <a name="count"></a>COUNT
-Cette fonction retourne le nombre de valeurs non null de l’attribut node/Edge souhaité dans le chemin d’accès. La fonction COUNT prend en charge\*l’opérateur «» avec un nœud ou un alias de table Edge. Sans l’alias de la table node ou Edge, l' \* utilisation de est ambiguë et génère une erreur.
+Cette fonction retourne le nombre de valeurs non null de l’attribut node/Edge souhaité dans le chemin d’accès. La fonction COUNT prend en charge l' \* opérateur «» avec un nœud ou un alias de table Edge. Sans l’alias de la table node ou Edge, l’utilisation de \* est ambiguë et génère une erreur.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -107,7 +107,7 @@ Retourne la valeur minimale des valeurs d’attribut de nœud/de bord fournies o
 ### <a name="max"></a>MAX
 Retourne la valeur maximale des valeurs d’attribut de nœud/de bord fournies ou de l’expression qui apparaissaient dans le chemin parcouru.
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 shortest_path fonction ne peut être utilisée qu’à l’intérieur de MATCH.     
 LAST_NODE est pris en charge uniquement dans les shortest_path.     
 Recherche du chemin d’accès le plus faible pondéré, tous les chemins d’accès ou tous les chemins les plus courts ne sont pas pris en charge.         

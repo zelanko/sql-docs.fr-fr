@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46abcc422058503a0c1911d69ec36b1539957753
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9a581803d232f704dd27592a354c6331660ac03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751701"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Signale un abonnement par extraction de données (pull) transactionnel ou anonyme en vue de sa réinitialisation lors de la prochaine exécution de l’Agent de distribution. Cette procédure stockée est exécutée sur la base de données d'abonnement par extraction de données (pull) de l'abonné.  
   

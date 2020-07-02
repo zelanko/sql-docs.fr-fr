@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d606cbca53810eaa9e19153e5de8b821391b2659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752769"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un abonnement aux catégories de stratégies pour la base de données actuelle.  
   
@@ -41,12 +41,12 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ## <a name="arguments"></a>Arguments  
 `[ @policy_category = ] 'policy_category'`Est le nom de l’abonnement à la catégorie de stratégie que vous souhaitez supprimer. *policy_category* est de **type sysname**et est obligatoire.  
   
- Pour obtenir des valeurs pour *policy_category*, interrogez la vue système msdb. dbo. syspolicy_policy_categories.  
+ Pour obtenir des valeurs pour *policy_category*, interrogez la vue système msdb.dbo.syspolicy_policy_categories.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous devez exécuter sp_syspolicy_unsubscribe_from_policy_category dans le contexte de la base de données de laquelle vous voulez supprimer un abonnement aux catégories de stratégies.  
   
 ## <a name="permissions"></a>Autorisations  

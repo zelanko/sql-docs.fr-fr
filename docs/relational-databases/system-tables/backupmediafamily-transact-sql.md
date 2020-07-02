@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750376"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cette table contient une ligne pour chaque famille de supports de sauvegardes. Si une famille de supports réside dans un support de sauvegarde miroir, elle a une ligne distincte pour chaque miroir du support de sauvegarde. Cette table est stockée dans la base de données **msdb** .  
     
@@ -40,7 +40,7 @@ ms.locfileid: "82807392"
 |**physical_device_name**|**nvarchar(260)**|Nom physique de l'unité de sauvegarde Sa valeur peut être NULL. Ce champ est partagé entre le processus de sauvegarde et de restauration. Il peut contenir le chemin d’accès de destination de la sauvegarde d’origine ou le chemin source d’origine de la restauration. Selon que la sauvegarde ou la restauration s’est produite en premier sur un serveur pour une base de données. Notez que les restaurations consécutives à partir du même fichier de sauvegarde ne mettent pas à jour le chemin d’accès, quel que soit son emplacement au moment de la restauration. Pour cette raison, **physical_device_name** champ ne peut pas être utilisé pour voir le chemin d’accès de restauration utilisé.|  
 |**device_type**|**tinyint**|Type de l'unité de sauvegarde :<br /><br /> 2 = Disque<br /><br /> 5 = Bande<br /><br /> 7 = Unité virtuelle<br /><br /> 9 = stockage Azure<br /><br /> 105 = Unité de sauvegarde constante.<br /><br /> Sa valeur peut être NULL.<br /><br /> Tous les noms et numéros de périphérique permanents sont disponibles dans **sys. backup_devices**.|  
 |**physical_block_size**|**int**|Taille du bloc physique réservé à l'écriture de la famille de supports de sauvegarde. Sa valeur peut être NULL.|  
-|**mémoire**|**tinyint**|Nombre de miroirs (0-3).|  
+|**mirror**|**tinyint**|Nombre de miroirs (0-3).|  
   
 ## <a name="remarks"></a>Remarques  
  RESTORE VERIFYONLY à partir de *backup_device* avec LoadHistory remplit les colonnes de la table **backupmediaset** avec les valeurs appropriées de l’en-tête Media-Set.  

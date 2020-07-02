@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752742"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie les informations (à l'exception des mots de passe) relatifs aux comptes de messagerie de base de données.  
   
@@ -54,7 +54,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Nom de la colonne|Type de données|Description|  
 |**account_id**|**int**|Identificateur du compte.|  
 |**name**|**sysname**|Nom du compte|  
-|**descriptive**|**nvarchar(256)**|Description du compte.|  
+|**description**|**nvarchar(256)**|Description du compte.|  
 |**email_address**|**nvarchar(128)**|Adresse électronique à partir de laquelle les messages sont envoyés.|  
 |**display_name**|**nvarchar(128)**|Nom d'affichage du compte|  
 |**replyto_address**|**nvarchar(128)**|Adresse à laquelle les réponses aux messages de ce compte sont envoyées.|  

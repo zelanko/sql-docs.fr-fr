@@ -20,15 +20,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750774"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Les annotations **SQL : Limit-Field** et **SQL : limit-value** permettent d’identifier la colonne de base de données qui contient des valeurs de limitation et de spécifier une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
   
  L’annotation **SQL : Limit-Field** est utilisée pour identifier une colonne qui contient une valeur de limitation ; elle est autorisée sur chaque élément ou attribut mappé.  
@@ -47,7 +47,7 @@ ms.locfileid: "83689406"
   
  Dans ces exemples, les modèles sont utilisés pour spécifier des requêtes XPath par rapport au schéma de mappage XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitation des adresses de clients retournées à un type d'adresse spécifique  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitation des adresses de clients retournées à un type d'adresse spécifique  
  Dans cet exemple, une base de données contient deux tables :  
   
 -   Customer (CustomerID, CompanyName)  

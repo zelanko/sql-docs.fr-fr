@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d2df9fd85f77a2fa0207562a5b2a8be3e991489
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91542894eeb00fc6c44e3d824bb7fd857cef8897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752994"
 ---
 # <a name="data-collector-views-transact-sql"></a>Vues de collecteur de données (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Le collecteur de données offre les vues suivantes pour afficher des informations sur la configuration du collecteur de données, telles que les propriétés du type de collecteur, les jeux d'éléments de collecte et les éléments des jeux d'éléments de collecte, ainsi que des statistiques d'exécution qui sont obtenues lorsqu'un jeu d'éléments de collecte s'exécute. Ces vues, qui se trouvent dans la base de données **msdb** , fournissent également une couche d’abstraction pour les tables sous-jacentes. Cette abstraction améliore la sécurité en empêchant l'accès direct aux tables, tout en autorisant l'apport de modifications aux tables sans affecter les applications associées.  
   

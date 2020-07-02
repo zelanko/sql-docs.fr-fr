@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752650"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vue **IHextendedArticleView** expose des informations sur les articles d’une publication non SQL Server. Cette vue est stockée dans la base de données de **distribution** .  
   
@@ -33,11 +33,11 @@ ms.locfileid: "68029542"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identificateur unique du serveur de publication.|  
 |**publication_id**|**int**|Identificateur unique de la publication.|  
-|**-**|**sysname**|Nom de l'article.|  
+|**article**|**sysname**|Nom de l'article.|  
 |**destination_object**|**sysname**|Nom de l'objet publié sur l'Abonné.|  
 |**source_owner**|**sysname**|Propriétaire de l'objet publié sur le serveur de publication.|  
 |**source_object**|**sysname**|Nom de l'objet publié sur le serveur de publication.|  
-|**descriptive**|**nvarchar(255)**|Description de l'article.|  
+|**description**|**nvarchar(255)**|Description de l'article.|  
 |**creation_script**|**nvarchar(255)**|Script de création du schéma de l'article.|  
 |**del_cmd**|**nvarchar(255)**|Commande exécutée pour une opération DELETE.|  
 |**filter**|**int**|Identificateur de la procédure stockée utilisée pour définir la partition horizontale.|  

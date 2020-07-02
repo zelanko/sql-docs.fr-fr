@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749297"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les paramètres d'une planification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -70,7 +70,7 @@ sp_update_schedule
 |**1**|Une fois|  
 |**4**|Quotidien|  
 |**8**|Hebdomadaire|  
-|**16bits**|Mensuelle|  
+|**16**|Mensuelle|  
 |**32**|Tous les mois, par rapport à l' *intervalle FREQ*|  
 |**64**|Lancé au démarrage du service SQLServerAgent|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
@@ -106,7 +106,7 @@ sp_update_schedule
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**8**|Quatrième|  
-|**16bits**|Dernier|  
+|**16**|Dernier|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**ou **32**. *freq_recurrence_factor*est de **type int**, avec **0**comme valeur par défaut.  
   

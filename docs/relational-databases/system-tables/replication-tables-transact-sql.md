@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 709f99ce8e45e9a362aa8ef1aa0d5607d3b79172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751586"
 ---
 # <a name="replication-tables-transact-sql"></a>Tables de réplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Les tables système de réplication prennent en charge une topologie de réplication. Lorsqu'une base de données utilisateur est configurée en tant que serveur de publication ou en tant qu'abonné, la réplication ajoute des tables système à la base de données. Ces tables sont supprimées lorsqu'une base de données utilisateur est supprimée d'une topologie de réplication. Pour connaître les règles générales relatives à l’utilisation des tables système, consultez [tables système &#40;&#41;Transact-SQL ](system-tables-transact-sql.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "83808142"
  
 |||  
 |-|-|  
-|[>_ de la table de conflict_ de \< schéma \<>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \<schema> _\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

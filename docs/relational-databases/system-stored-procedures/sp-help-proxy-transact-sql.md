@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750529"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie les informations d'un ou plusieurs serveurs proxy.  
   
@@ -78,7 +78,7 @@ sp_help_proxy
 |**name**|**sysname**|Nom du proxy.|  
 |**credential_identity**|**sysname**|Nom du domaine Microsoft Windows et nom d'utilisateur pour les informations d'identification associées au serveur proxy.|  
 |**désactivé**|**tinyint**|Indique si ce serveur proxy est activé. { **0** = non activé, **1** = activé}|  
-|**descriptive**|**nvarchar(1024)**|Description de ce serveur proxy.|  
+|**description**|**nvarchar(1024)**|Description de ce serveur proxy.|  
 |**user_sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) Windows de l'utilisateur Windows pour ce serveur proxy.|  
 |**credential_id**|**int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
 |**credential_identity_exists**|**int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
