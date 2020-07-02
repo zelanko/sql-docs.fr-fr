@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fd489c9076be08a814f3ea0c27ad92f1f07fa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ffe3197f74e274792ee1a3f97d700492a018bef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80402692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633749"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Engendre une commande d'environnement Windows et lui transmet une chaîne à traiter. Toute sortie est retournée sous forme de lignes de texte.  
   
@@ -62,7 +62,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le processus Windows généré par **xp_cmdshell** a les mêmes droits de sécurité que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service.  
   
  **xp_cmdshell** fonctionne de façon synchrone. Le contrôle n'est renvoyé à l'appelant que lorsque la commande de l'interpréteur de commandes est terminée.  
@@ -70,7 +70,7 @@ The command(s) completed successfully.
  **xp_cmdshell** peuvent être activés et désactivés à l’aide de la gestion basée sur des stratégies ou en exécutant **sp_configure**. Pour plus d’informations, consultez Configuration de la [surface d’exposition](../../relational-databases/security/surface-area-configuration.md) et [Xp_cmdshell option de configuration de serveur](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 > [!IMPORTANT]
->  Si **xp_cmdshell** est exécutée dans un lot et renvoie une erreur, le traitement échoue. Cela représente un changement de comportement. Dans les versions antérieures [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du lot continuerait à s’exécuter.  
+>  Si **xp_cmdshell** est exécutée dans un lot et renvoie une erreur, le traitement échoue. Cela représente un changement de comportement. Dans les versions antérieures du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lot continuerait à s’exécuter.  
   
 ## <a name="xp_cmdshell-proxy-account"></a>Compte proxy xp_cmdshell  
  Lorsqu’il est appelé par un utilisateur qui n’est pas membre du rôle serveur fixe **sysadmin** , **xp_cmdshell** se connecte à Windows en utilisant le nom de compte et le mot de passe stockés dans les informations d’identification nommées **# #xp_cmdshell_proxy_account # #**. Si ces informations d’identification de proxy n’existent pas, **xp_cmdshell** échoue.  
@@ -86,7 +86,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
 ## <a name="permissions"></a>Autorisations  
  Étant donné que les utilisateurs malveillants essaient parfois d’élever leurs privilèges à l’aide de **xp_cmdshell**, **xp_cmdshell** est désactivé par défaut. Utilisez **sp_configure** ou la **gestion basée** sur des stratégies pour l’activer. Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- Lorsque vous activez pour la première fois, **xp_cmdshell** nécessite l’autorisation Control Server pour s’exécuter et le processus Windows créé par **xp_cmdshell** a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le même contexte de sécurité que le compte de service. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service a souvent plus d’autorisations que nécessaire pour le travail effectué par le processus créé par **xp_cmdshell**. Pour améliorer la sécurité, l’accès à **xp_cmdshell** doit être limité aux utilisateurs disposant de privilèges élevés.  
+ Lorsque vous activez pour la première fois, **xp_cmdshell** nécessite l’autorisation Control Server pour s’exécuter et le processus Windows créé par **xp_cmdshell** a le même contexte de sécurité que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service a souvent plus d’autorisations que nécessaire pour le travail effectué par le processus créé par **xp_cmdshell**. Pour améliorer la sécurité, l’accès à **xp_cmdshell** doit être limité aux utilisateurs disposant de privilèges élevés.  
   
  Pour permettre aux non-administrateurs d’utiliser **xp_cmdshell**et autoriser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à créer des processus enfants avec le jeton de sécurité d’un compte avec des privilèges moindres, procédez comme suit :  
   
@@ -95,11 +95,11 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
 2.  Utilisez la procédure système **sp_xp_cmdshell_proxy_account** pour configurer **xp_cmdshell** afin d’utiliser ce compte doté de privilèges minimum.  
   
     > [!NOTE]  
-    >  Vous pouvez également configurer ce compte proxy à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’aide de en cliquant avec le bouton droit sur les **Propriétés** du nom de votre serveur dans l’Explorateur d’objets, puis en consultant l’onglet **sécurité** de la section **compte proxy du serveur** .  
+    >  Vous pouvez également configurer ce compte proxy à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en cliquant avec le bouton droit sur les **Propriétés** du nom de votre serveur dans l’Explorateur d’objets, puis en consultant l’onglet **sécurité** de la section **compte proxy du serveur** .  
   
-3.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], à l’aide de la base de `GRANT exec ON xp_cmdshell TO N'<some_user>';` données Master, exécutez l’instruction pour accorder à des utilisateurs spécifiques non-**sysadmin** la possibilité d’exécuter des **xp_cmdshell**. L’utilisateur spécifié doit exister dans la base de données Master.  
+3.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , à l’aide de la base de données Master, exécutez l' `GRANT exec ON xp_cmdshell TO N'<some_user>';` instruction pour accorder à des utilisateurs spécifiques non-**sysadmin** la possibilité d’exécuter des **xp_cmdshell**. L’utilisateur spécifié doit exister dans la base de données Master.  
   
- Désormais, les utilisateurs non-administrateurs peuvent lancer des processus du système d’exploitation avec **xp_cmdshell** et ces processus s’exécutent avec les autorisations du compte proxy que vous avez configuré. Les utilisateurs disposant de l’autorisation CONTROL SERVER (membres du rôle serveur fixe **sysadmin** ) continuent de recevoir les autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du compte de service pour les processus enfants lancés par **xp_cmdshell**.  
+ Désormais, les utilisateurs non-administrateurs peuvent lancer des processus du système d’exploitation avec **xp_cmdshell** et ces processus s’exécutent avec les autorisations du compte proxy que vous avez configuré. Les utilisateurs disposant de l’autorisation CONTROL SERVER (membres du rôle serveur fixe **sysadmin** ) continuent de recevoir les autorisations du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service pour les processus enfants lancés par **xp_cmdshell**.  
   
  Pour déterminer le compte Windows utilisé par **xp_cmdshell** lors du lancement des processus du système d’exploitation, exécutez l’instruction suivante :  
   

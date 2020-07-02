@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648029"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indique les consommateurs de mémoire au niveau système pour l'[!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La mémoire pour ces consommateurs provient du pool par défaut (lorsque l’allocation est dans le contexte d’un thread utilisateur) ou à partir du pool interne (si l’allocation est dans le contexte d’un thread système).  
   

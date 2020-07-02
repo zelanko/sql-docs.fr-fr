@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1949134790942ea510060534a4760e76b63469d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: af008513b8305d2e7ec0c12ad3fddd937daed9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633493"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Le tableau **MSrepl_identity_range** fournit la prise en charge de la gestion des plages d’identité. Cette table est stockée dans les bases de données de publication, de distribution et d'abonnement.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82824834"
 |**pub_range**|**bigint**|Taille de la plage d'identité du serveur de publication.|  
 |**range**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
 |**max_identity**|**bigint**|Limite maximale de la plage d'identité.|  
-|**durée**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
+|**threshold**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
 |**current_max**|**bigint**|Maximum actuel qui est susceptible d'être attribué.|  
   
 ## <a name="see-also"></a>Voir aussi  

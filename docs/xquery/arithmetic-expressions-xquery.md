@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8d0f4f9286f80ad7031663eb21e8677d99e1cc3
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 548fde62cf6f07d2e31a68b7f702baa4bd9f916a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643659"
 ---
 # <a name="arithmetic-expressions-xquery"></a>Expressions arithmétiques (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Tous les opérateurs arithmétiques sont pris en charge, à l’exception de **IDIV**. Les exemples suivants illustrent l'utilisation de base des opérateurs arithmétiques :  
   

@@ -17,16 +17,16 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e31935a52d4819023b5ed17ac0ef12c106ec49ba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c59f3379d2f210d96b97e497ecb8f332a6f93d2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647899"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cette vue se trouve dans la base de données master logique.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82828987"
 |rôle|**tinyint**|Rôle de géo-réplication, parmi les suivants :<br /><br /> 0 = principal. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Le type secondaire, parmi les suivants :<br /><br /> 0 = Non. La base de données secondaire n’est pas accessible avant le basculement.<br /><br /> 1 = ReadOnly. La base de données secondaire est accessible uniquement aux connexions clientes avec ApplicationIntent = ReadOnly.<br /><br /> 2 = Toutes. La base de données secondaire est accessible à toutes les connexions clientes.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> Tous<br /><br /> Lecture seule|  
+|secondary_allow_connections _desc|**nvarchar(256)**|Non<br /><br /> Tous<br /><br /> Lecture seule|  
   
 ## <a name="permissions"></a>Autorisations
 

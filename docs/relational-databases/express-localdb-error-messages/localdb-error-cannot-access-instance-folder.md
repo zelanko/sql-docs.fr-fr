@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d0354ba6d980b359778a66fc13b65fe233cacba1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f10ed404b9ccb2d7a1dd62a45ac794df265a45d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635322"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Détails  
   
@@ -27,7 +27,7 @@ ms.locfileid: "67995999"
 |ID de l’événement|261|  
 |Source de l’événement|Runtime de base de données locale SQL Server 12.0|  
 |Composant|API d'exécution de la base de données locale|  
-|Texte du message|Impossible d’accéder au dossier de l’instance de base de données locale :%% LOCALAPPDATA\\ %% \\>Microsoft\Microsoft SQL Server DB\Instances local<nom de l’instance.|  
+|Texte du message|Impossible d’accéder au dossier de l’instance de base de données locale :%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server DB\Instances local \\<nom de l’instance \> .|  
   
 ## <a name="explanation"></a>Explication  
  Un dossier d'instance n'est pas accessible.  

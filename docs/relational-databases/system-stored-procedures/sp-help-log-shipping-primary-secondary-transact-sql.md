@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25d3c2133ee02bc25a869ad3a465081de4d7d38e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634493"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée renvoie des informations sur toutes les bases de données secondaires d'une base de données primaire particulière.  
   
@@ -52,14 +52,14 @@ sp_help_log_shipping_primary_secondary
 |**secondary_server**|Nom de l’instance secondaire du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session.|  
 |**secondary_database**|Nom de la base de données secondaire dans la configuration de la copie des journaux de transactions.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_log_shipping_primary_secondary** doit être exécuté à partir de la base de données **Master** sur le serveur principal.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple illustre l’utilisation de **sp_help_log_shipping_primary_secondary** pour récupérer une liste de bases de données secondaires associées à la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]base de données primaire.  
+ Cet exemple illustre l’utilisation de **sp_help_log_shipping_primary_secondary** pour récupérer une liste de bases de données secondaires associées à la base de données primaire [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  
@@ -67,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

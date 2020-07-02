@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634229"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Affiche des informations sur un article. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Dans le cas des serveurs de publication Oracle, cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution.  
   
@@ -66,7 +66,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Type d'article :<br /><br /> **1** = basé sur un journal.<br /><br /> **3** = basé sur un journal avec filtre manuel.<br /><br /> **5** = basé sur un journal avec vue manuelle.<br /><br /> **7** = basé sur un journal avec filtre manuel et vue manuelle.<br /><br /> **8** = exécution de la procédure stockée.<br /><br /> **24** = exécution d’une procédure stockée sérialisable.<br /><br /> **32** = procédure stockée (schéma uniquement).<br /><br /> **64** = vue (schéma uniquement).<br /><br /> **96** = fonction d’agrégation (schéma uniquement).<br /><br /> **128** = fonction (schéma uniquement).<br /><br /> **257** = vue indexée basée sur un journal.<br /><br /> **259** = vue indexée basée sur un journal avec filtre manuel.<br /><br /> **261** = vue indexée basée sur un journal avec vue manuelle.<br /><br /> **263** = vue indexée basée sur un journal avec filtre manuel et vue manuelle.<br /><br /> **320** = vue indexée (schéma uniquement).<br /><br />|  
 |**statut**|**tinyint**|Peut être le résultat de l' [& (and au niveau du bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) d’une ou de plusieurs ou de ces propriétés d’article :<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = l’article est actif.<br /><br /> **0x08** = inclure le nom de colonne dans les instructions INSERT.<br /><br /> **0x16** = utilise des instructions paramétrables.<br /><br /> **0x32** = utilise des instructions paramétrées et inclut le nom de colonne dans les instructions INSERT.|  
 |**filter**|**nvarchar (257)**|Procédure stockée utilisée pour filtrer la table horizontalement. Cette procédure stockée doit avoir été créée à l'aide de la clause FOR REPLICATION.|  
-|**descriptive**|**nvarchar(255)**|Entrée descriptive de l'article|  
+|**description**|**nvarchar(255)**|Entrée descriptive de l'article|  
 |**insert_command**|**nvarchar(255)**|Type de commande de réplication utilisé pour répliquer des insertions avec des articles de table. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Type de commande de réplication utilisé pour répliquer des mises à jour avec des articles de table. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Type de commande de réplication utilisé pour répliquer des suppressions avec des articles de table. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -85,7 +85,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|Indicateur signalant si la gestion automatique de plages d'identité était activée sur la publication au moment de sa création. **1** signifie que la plage d’identités automatique est activée ; **0** signifie qu’elle est désactivée.|  
 |**publisher_identity_range**|**int**|Taille de la plage d’identité sur le serveur de publication si l’article a *identityrangemanagementoption* défini sur **auto** ou **auto_identity_range** défini sur **true**.|  
 |**identity_range**|**bigint**|Taille de la plage d’identité de l’abonné si l’article a *identityrangemanagementoption* défini sur **auto** ou **auto_identity_range** défini sur **true**.|  
-|**durée**|**bigint**|Valeur de pourcentage indiquant le moment où l'Agent de distribution affecte une nouvelle plage d'identité.|  
+|**threshold**|**bigint**|Valeur de pourcentage indiquant le moment où l'Agent de distribution affecte une nouvelle plage d'identité.|  
 |**identityrangemanagementoption**|**int**|Indique la gestion des plages d'identité appliquée à l'article.|  
 |**fire_triggers_on_snapshot**|**bit**|Indique si les déclencheurs de l'utilisateur répliqués sont exécutés lorsque l'instantané initial est appliqué.<br /><br /> **1** = les déclencheurs utilisateur sont exécutés.<br /><br /> **0** = les déclencheurs de l’utilisateur ne sont pas exécutés.|  
   

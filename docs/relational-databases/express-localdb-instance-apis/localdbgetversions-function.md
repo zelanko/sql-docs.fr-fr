@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1548b23aceb5eb4f622ada1289df88ff790c8645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640849"
 ---
 # <a name="localdbgetversions-function"></a>Fonction LocalDBGetVersions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Retourne toutes les versions de SQL Server Express LocalDB disponibles sur l'ordinateur.  
   
  **Fichier d'en-tête :** sqlncli.h  
@@ -58,7 +58,7 @@ En sortie, contient le nombre de versions de LocalDB existantes.
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  

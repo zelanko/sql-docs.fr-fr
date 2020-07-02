@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3967b1e7c8e3b9da93d131a0b82eec1684009210
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645310"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Génère l’instruction CREATE PROCEDURE qui crée une procédure stockée de mise à jour dynamique. L'instruction UPDATE dans la procédure stockée personnalisée est créée dynamiquement en fonction de la syntaxe MCALL qui indique les colonnes devant être modifiées. Utilisez cette procédure stockée si le nombre d’index dans la table d’abonnement augmente et si le nombre de colonnes modifiées est limité. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication.  
   
@@ -42,7 +42,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats qui se compose d’une seule colonne **nvarchar (4000)** . L'ensemble de résultats forme l’instruction CREATE PROCEDURE complète qui permet de créer la procédure stockée personnalisée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_scriptdynamicupdproc** est utilisé dans la réplication transactionnelle. La logique de script MCALL par défaut inclut toutes les colonnes dans l'instruction UPDATE et utilise une image bitmap pour déterminer les colonnes qui ont changé. Si une colonne n'a pas changé, elle est rétablie, ce qui ne cause généralement aucun problème. Si la colonne est indexée, un traitement supplémentaire intervient. L'approche dynamique inclut uniquement les colonnes qui ont changé, ce qui fournit une chaîne UPDATE optimale. Toutefois, un traitement supplémentaire a lieu pendant la phase d’exécution lors de la génération de l’instruction UPDATE dynamique. Nous vous recommandons de tester les approches dynamique et statique, puis d'opter pour la meilleure solution.  
   
 ## <a name="permissions"></a>Autorisations  

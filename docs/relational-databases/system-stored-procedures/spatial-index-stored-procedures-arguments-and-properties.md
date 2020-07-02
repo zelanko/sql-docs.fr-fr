@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626592"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procédures stockées d’index spatial-arguments et propriétés
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique documente les arguments et propriétés pour les procédures stockées d'index spatial.  
   
@@ -314,7 +314,7 @@ ms.locfileid: "82827451"
   
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées d’index spatial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646043"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Extrait une mémoire tampon d'une ou de plusieurs lignes de la base de données. Le groupe de lignes dans cette mémoire tampon est appelé le *tampon d’extraction*du curseur. sp_cursorfetch est appelée en spécifiant ID = 7 dans un paquet tabular data stream (TDS).  
   
@@ -81,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  :   Si aucune ligne n'est retournée, le contenu de la mémoire tampon reste inchangé.  
   
-|*\<>rowNum*|Définir sur|  
+|*\<rownum>*|Définir sur|  
 |------------------|------------|  
 |Si le curseur n'est pas ouvert|0|  
 |Si le curseur est positionné avant le jeu de résultats|0|  
@@ -96,7 +96,7 @@ sp_cursorfetch cursor
 |Pour les curseurs KEYSET et STATIC|En général, taille du jeu de clés actuel.<br /><br /> **-m** si le curseur est en création asynchrone avec *m* lignes trouvées à ce point.|  
 |Pour les curseurs DYNAMIC|-1|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="cursor-parameter"></a>Paramètre de curseur  
  Avant toute opération d'extraction, la position par défaut d'un curseur se situe avant la première ligne du jeu de résultats.  

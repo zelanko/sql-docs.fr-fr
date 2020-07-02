@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633550"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Autorise un groupe ou un utilisateur Windows à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,9 +42,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'`Nom de l’utilisateur ou du groupe Windows à ajouter. L’utilisateur ou le groupe Windows doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*. *login* est de **type sysname**, sans valeur par défaut.  
+`[ @loginame = ] 'login'`Nom de l’utilisateur ou du groupe Windows à ajouter. L’utilisateur ou le groupe Windows doit être qualifié avec un nom de domaine Windows sous la forme *domaine* \\ *utilisateur*. *login* est de **type sysname**, sans valeur par défaut.  
   
-`[ @logintype = ] 'logintype'`Niveau de sécurité de la connexion à laquelle l’accès est accordé. *LoginType* est de type **varchar (5)**, avec NULL comme valeur par défaut. Seul l' **administrateur** peut être spécifié. Si l' **administrateur** est spécifié, la *connexion* se voit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]accorder l’accès à et ajouté en tant que membre du rôle serveur fixe **sysadmin** .  
+`[ @logintype = ] 'logintype'`Niveau de sécurité de la connexion à laquelle l’accès est accordé. *LoginType* est de type **varchar (5)**, avec NULL comme valeur par défaut. Seul l' **administrateur** peut être spécifié. Si l' **administrateur** est spécifié, la *connexion* se voit accorder l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ajouté en tant que membre du rôle serveur fixe **sysadmin** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

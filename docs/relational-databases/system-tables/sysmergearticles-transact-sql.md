@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79e19b531b7dfb10587ec6bdb4db71632066ef87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633384"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne pour chaque article de fusion défini dans la base de données locale. Cette table est stockée dans la base de données de publication.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "82831931"
 |**sync_objid**|**int**|ID d'objet de la vue représentant l'ensemble de données synchronisées.|  
 |**view_type**|**tinyint**|Type de vue :<br /><br /> **0** = n’est pas une vue ; Utilisez l’ensemble de l’objet de base.<br /><br /> **1** = affichage permanent.<br /><br /> **2** = affichage temporaire.|  
 |**artid**|**uniqueidentifier**|Numéro d'identification unique de l'article donné.|  
-|**descriptive**|**nvarchar(255)**|Brève description de l'article.|  
+|**description**|**nvarchar(255)**|Brève description de l'article.|  
 |**pre_creation_command**|**tinyint**|Action par défaut à effectuer lors de la création de l’article dans la base de données d’abonnement :<br /><br /> **0 =** Aucun : si la table existe déjà sur l’abonné, aucune action n’est effectuée.<br /><br /> **1** = drop-supprime la table avant de la recréer.<br /><br /> **2** = DELETE : émet une suppression basée sur la clause WHERE dans le filtre de sous-ensemble.<br /><br /> **3** = tronquer-identique à **2**, mais supprime les pages au lieu des lignes. Toutefois, n'accepte pas la clause WHERE.|  
 |**pubid**|**uniqueidentifier**|ID de la publication à laquelle appartient l'article actif.|  
-|**nickname**|**int**|Le mappage de surnom pour l'identification de l'article.|  
+|**mon**|**int**|Le mappage de surnom pour l'identification de l'article.|  
 |**column_tracking**|**int**|Indique si le suivi des colonnes est implémenté pour l’article.|  
 |**statut**|**tinyint**|Indique l'état de l'article, qui peut être l'un des suivants :<br /><br /> **1** = non synchronisé : le script de traitement initial permettant de publier la table sera exécuté lors de la prochaine exécution du agent d’instantané.<br /><br /> **2** = actif : le script de traitement initial pour la publication de la table a été exécuté.<br /><br /> **5** = New_inactive à ajouter.<br /><br /> **6** = New_active à ajouter.|  
 |**conflict_table**|**sysname**|Nom de la table locale qui contient les enregistrements en conflit pour l'article actif. Cette table est fournie à titre d'information uniquement et son contenu peut être modifié ou supprimé à l'aide des routines personnalisées de résolution de conflits ou directement par l'administrateur.|  
@@ -87,7 +87,7 @@ ms.locfileid: "82831931"
 |**compensate_for_errors**|**bit**|Indique si des actions de compensation sont effectuées lorsque des erreurs sont rencontrées pendant la synchronisation.<br /><br /> **0** = les actions de compensation sont désactivées.<br /><br /> **1** = les modifications qui ne peuvent pas être appliquées sur un abonné ou un serveur de publication entraînent toujours des actions de compensation pour annuler ces modifications, ce qui constitue le comportement par défaut de la réplication de fusion.<br /><br /> Remarque : la valeur **0** aboutit à une non-convergence.|  
 |**pub_range**|**bigint**|Taille de la plage d'identité du serveur de publication.|  
 |**range**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
-|**durée**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
+|**threshold**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
 |**stream_blob_columns**|**bit**|Spécifie si une optimisation de flux de données est utilisée lors de la réplication de colonnes d'objets binaires volumineux. **1** signifie que l’optimisation est tentée.|  
 |**preserve_rowguidcol**|**bit**|Indique si la réplication utilise une colonne rowguid existante. La valeur **1** signifie qu’une colonne rowguidcol existante est utilisée. **0** signifie que la réplication a ajouté la colonne rowguidcol.|  
   

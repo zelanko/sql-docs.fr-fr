@@ -20,16 +20,16 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634939"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne une ligne pour chaque entité définie par l’utilisateur référencée par nom dans la définition de l’entité de référence spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Une dépendance entre deux entités est créée lorsqu’une entité définie par l’utilisateur, appelée *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité définie par l’utilisateur, appelée *entité de référence*. Par exemple, si une procédure stockée est l'entité de référence spécifiée, cette fonction retourne toutes les entités définies par l'utilisateur qui sont référencées dans la procédure stockée, telles que les tables, vues, types définis par l'utilisateur ou autres procédures stockées.  
   
@@ -121,16 +121,16 @@ sys.dm_sql_referenced_entities (
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table|Oui*|Yes|  
-|Affichage|Yes|Yes|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
+|Table de charge de travail|Oui*|Oui|  
+|Vue|Oui|Oui|  
+|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
 |Procédure stockée CLR|Non|Oui|  
-|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Yes|Yes|  
+|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
 |Fonction CLR définie par l'utilisateur|Non|Oui|  
 |Déclencheur CLR (DML et DDL)|Non|Non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
+|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Procédures stockées étendues|Non|Oui|  
 |File d'attente|Non|Oui|  
 |Synonyme|Non|Oui|  

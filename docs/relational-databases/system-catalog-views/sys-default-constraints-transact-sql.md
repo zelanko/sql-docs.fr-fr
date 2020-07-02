@@ -20,21 +20,21 @@ ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 816f5c563713eaa59337d765a7ccadafbd5c73a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c7187880c26fe7f6561d355ea6925cc7229ea39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649199"
 ---
 # <a name="sysdefault_constraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contient une ligne pour chaque objet qui est une définition par défaut (créé dans le cadre d’une instruction CREATE TABLE ou ALTER TABLE au lieu d’une instruction CREATe DEFAULT), avec **sys. Objects. type** = D.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Colonnes héritées de sys. Objects>**||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**parent_column_id**|**int**|ID de la colonne dans **parent_object_id** auquel cette valeur par défaut appartient.|  
 |**définition**|**nvarchar(max)**|Expression SQL qui définit cette valeur par défaut.|  
 |**is_system_named**|**bit**|1 = Le nom a été généré par le système.<br /><br /> 0 = Le nom a été fourni par l'utilisateur.|  

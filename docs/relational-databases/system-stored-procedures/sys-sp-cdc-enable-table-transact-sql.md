@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f66891393527b12f859d1a0aa6447470473a4d49
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd907c83ad7c2fc2751134003f820d43a1023129
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626219"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Active la capture de données modifiées pour la table source spécifiée dans la base de données actuelle. Lorsqu'une table est activée pour la capture de données modifiées, un enregistrement de chaque opération DML (Data Manipulation Language) appliquée à la table est écrit dans le journal des transactions. Le processus de capture de données modifiées extrait ces informations du journal et les écrit dans les tables de modifications accédées à l'aide d'un ensemble de fonctions.  
   

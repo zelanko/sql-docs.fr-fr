@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54c5c0f9bfa6bc64a79e0f4dcde72c09b2a281fb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43fef1a35d36446cdf402b145c0afec68c9eb47d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639539"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Dissocie une règle d'une colonne ou d'un type de données alias dans la base de données active.  
   
@@ -53,7 +53,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour afficher le texte d’une règle, exécutez **sp_helptext** en donnant le nom de la règle comme paramètre.  
   
  Lorsqu’une règle est indépendante, les informations sur la liaison sont supprimées de la table **sys. Columns** si la règle a été liée à une colonne, et à partir de la table **sys. types** si la règle a été liée à un type de données d’alias.  

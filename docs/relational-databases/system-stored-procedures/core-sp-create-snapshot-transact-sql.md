@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646940"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Insère une ligne dans la vue core.snapshots de l'entrepôt de données de gestion. Cette procédure est appelée chaque fois qu'un package de téléchargement commence à télécharger des données dans l'entrepôt de données de gestion.  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Nom de l'instance pour le jeu d'éléments de collecte. *named_instance* est de **type sysname**, sans valeur par défaut.  
   
  [ @log_id =] *log_id*  
- Identificateur unique mappé au journal des événements de jeu d'éléments de collecte sur le serveur qui a collecté les données. *log_id* est de type **bigint** sans valeur par défaut. Pour obtenir la valeur de *log_id*, interrogez la vue dbo. syscollector_execution_log dans la base de données msdb.  
+ Identificateur unique mappé au journal des événements de jeu d'éléments de collecte sur le serveur qui a collecté les données. *log_id* est de type **bigint** sans valeur par défaut. Pour obtenir la valeur de *log_id*, interrogez la vue dbo.syscollector_execution_log dans la base de données msdb.  
   
  [ @snapshot_id =] *snapshot_id*  
  Identificateur unique d’une ligne qui est insérée dans la vue Core. snapshots. *snapshot_id* est de **type int** et est retourné en tant que sortie.  
@@ -68,7 +68,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque fois qu'un package de téléchargement commence à télécharger des données dans l'entrepôt de données de gestion, le composant runtime du collecteur de données appelle core.sp_create_snapshot.  
   
  Cette procédure vérifie les points suivants :  

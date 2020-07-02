@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625759"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tables d’applications de la couche Données - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient des informations sur les actions entreprises pour gérer les applications de la couche Données (DAC). Cette table est stockée dans le schéma **dbo** de la base de données **msdb** .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82833107"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Identificateur de l'action.|  
 |**sequence_id**|**int**|Identifie une étape dans une action.|  
-|**instance_id**|**uniqueidentifier**|Identificateur de l'instance DAC. Cette colonne peut être jointe à la colonne **instance_id** dans [dbo. Sysdac_instances &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
+|**instance_id**|**uniqueidentifier**|Identificateur de l'instance DAC. Cette colonne peut être jointe à la colonne **instance_id** dans [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificateur du type d'action :<br /><br /> **0** = déploiement<br /><br /> **1** = créer<br /><br /> **2** = renommer<br /><br /> **3** = détacher<br /><br /> **4** = suppression|  
 |**action_type_name**|**varchar (19)**|Nom du type d'action :<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **dissocié**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = connexion<br /><br /> **2** = base de données|  
@@ -44,14 +44,14 @@ ms.locfileid: "82833107"
 |**dac_object_name_pretran**|**sysname**|Nom de l'objet avant la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**dac_object_name_posttran**|**sysname**|Nom de l'objet après la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] qui implémente une action sur une base de données ou connexion.|  
-|**payload**|**varbinary(max)**|Définition de package DAC enregistrée dans une chaîne encodée au format binaire.|  
+|**transport**|**varbinary(max)**|Définition de package DAC enregistrée dans une chaîne encodée au format binaire.|  
 |**Commentaires**|**varchar(max)**|Enregistre la connexion d'un utilisateur qui a accepté la perte de données potentielle dans une mise à niveau DAC.|  
 |**error_string**|**nvarchar(max)**|Message d'erreur généré si une erreur se produit lors de l'action.|  
 |**created_by**|**sysname**|Connexion à l'origine de l'action qui a créé cette entrée.|  
 |**date_created**|**datetime**|Date et heure de création de cette entrée.|  
 |**date_modified**|**datetime**|Date et heure de la dernière modification apportée à l'entrée.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les actions de gestion de la DAC, telles que le déploiement ou la suppression d'une DAC, génèrent plusieurs étapes. Un identificateur d'action est attribué à chaque action. Chaque étape est assignée à un numéro de séquence et à une ligne dans **sysdac_history_internal**, où l’état de l’étape est enregistré. Chaque ligne est créée lors du démarrage de l'étape de l'action et est mise à jour autant que nécessaire pour refléter l'état de l'opération. Par exemple, une action de déploiement de la DAC peut être affectée **action_id** 12 et obtenir quatre lignes dans **sysdac_history_internal**:  
   
 |||||  
@@ -81,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo. sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

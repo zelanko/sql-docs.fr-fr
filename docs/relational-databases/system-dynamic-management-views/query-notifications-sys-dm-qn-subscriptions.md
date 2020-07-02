@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635013"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notifications de requêtes-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur les abonnements aux notifications de requêtes actifs dans le serveur. Vous pouvez utiliser cette vue pour vérifier les abonnements actifs dans le serveur ou une base de données spécifiée, ou pour vérifier un principal de serveur.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "82826384"
 |Code|État secondaire|Info|  
 |----------|------------------|----------|  
 |65798|L'abonnement a été déclenché parce que les données ont été modifiées|Abonnement déclenché par insertion|  
-|65799|L'abonnement a été déclenché parce que les données ont été modifiées|Supprimer|  
-|65800|L'abonnement a été déclenché parce que les données ont été modifiées|Update|  
+|65799|L'abonnement a été déclenché parce que les données ont été modifiées|DELETE|  
+|65800|L'abonnement a été déclenché parce que les données ont été modifiées|Mise à jour|  
 |65801|L'abonnement a été déclenché parce que les données ont été modifiées|Fusionner|  
 |65802|L'abonnement a été déclenché parce que les données ont été modifiées|Troncation de la table|  
 |66048|L'abonnement a été déclenché parce que le délai d'attente a expiré|Mode d'information indéfini|  

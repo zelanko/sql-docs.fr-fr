@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886883"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643602"
 ---
 # <a name="atomization-xquery"></a>Atomisation (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   L'atomisation correspond au procédé d'extraction de la valeur typée d'un élément. Ce procédé s'applique cependant sous certaines conditions. Certains opérateurs XQuery, tels que les opérateurs arithmétiques et de comparaison, dépendent de ce processus. Par exemple, lorsque vous appliquez des opérateurs arithmétiques directement à des nœuds, la valeur typée d’un nœud est d’abord récupérée en appelant implicitement la [fonction de données](../xquery/data-accessor-functions-data-xquery.md). Ceci permet de transférer la valeur atomique sous forme d'opérande à l'opérateur arithmétique.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644844"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Applique un filtre à une trace. **sp_trace_setfilter** ne peuvent être exécutées que sur des traces existantes qui sont arrêtées (l'*État* est **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]retourne une erreur si cette procédure stockée est exécutée sur une trace qui n’existe pas ou dont l' *État* n’est pas **égal à 0**.  
   
@@ -91,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  
 |16|La fonction n'est pas valide pour cette trace.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_trace_setfilter** est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée qui effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues disponibles dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez **sp_trace_setfilter** au lieu des procédures stockées étendues du ** \* filtre xp_trace_set** pour créer, appliquer, supprimer ou manipuler des filtres sur des traces. Pour plus d’informations, consultez [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Tous les filtres d’une colonne particulière doivent être activés ensemble au cours d’une exécution de **sp_trace_setfilter**. Par exemple, si un utilisateur décide d'appliquer deux filtres sur la colonne Nom d'application et un filtre sur la colonne Nom d'utilisateur, il doit spécifier les filtres sur le nom d'application de manière séquentielle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur si l'utilisateur tente de spécifier un filtre sur le nom d'application dans un appel de procédure stockée, suivi d'un filtre sur le nom d'utilisateur, puis d'un autre filtre sur le nom d'application.  

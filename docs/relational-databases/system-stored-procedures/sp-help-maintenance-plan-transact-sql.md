@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fac6fcf8e6728d666e46ace86f82c5f968bddb2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ca67d4b23ee91330939e5607dd3e32a0a79e808c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634379"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur le plan de maintenance spécifié. Si aucun plan n'est spécifié, cette procédure stockée renvoie des informations sur tous les plans de maintenance.  
   
@@ -80,7 +80,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Identificateur de tous les travaux associés au plan de maintenance. *job_id* est de type **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_maintenance_plan** se trouve dans la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

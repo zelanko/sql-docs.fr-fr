@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646006"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un utilisateur à la base de données active.  
   
@@ -43,9 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login_ '`Nom du groupe Windows, de la connexion Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la connexion à mapper au nouvel utilisateur de la base de données. Les noms des groupes Windows et des connexions Windows doivent être qualifiés par un nom de domaine Windows sous la forme *domaine*\\*login*; par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *login* est de **type sysname**et n’a pas de valeur par défaut.  
+`[ @loginame = ] 'login_ '`Nom du groupe Windows, de la connexion Windows ou de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion à mapper au nouvel utilisateur de la base de données. Les noms des groupes Windows et des connexions Windows doivent être qualifiés par un nom de domaine Windows sous la forme *domaine* \\ *login*, par exemple **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *login* est de **type sysname**et n’a pas de valeur par défaut.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``Nom du nouvel utilisateur de base de données. *name_in_db* est une variable de sortie avec un type de données **sysname**et une valeur par défaut null. S’il n’est pas spécifié, la *connexion* est utilisée. S’il est spécifié comme variable de sortie avec une valeur null, ** \@name_in_db** est défini sur *login*. *name_in_db* ne doit pas déjà exister dans la base de données active.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``Nom du nouvel utilisateur de base de données. *name_in_db* est une variable de sortie avec un type de données **sysname**et une valeur par défaut null. S’il n’est pas spécifié, la *connexion* est utilisée. S’il est spécifié comme variable de sortie avec une valeur NULL, ** \@ name_in_db** est défini sur *login*. *name_in_db* ne doit pas déjà exister dans la base de données active.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -59,7 +59,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  Requiert l’appartenance au rôle de base de données fixe **db_owner** ou le rôle de base de données fixe **db_accessadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `CREATE USER` pour ajouter un utilisateur de base de données pour `Edmonds\LolanSo` la connexion Windows à la base de données active. Le nouvel utilisateur se nomme `Lolan`. Il s'agit de la méthode recommandée pour la création d'un utilisateur de base de données.  
+ L’exemple suivant utilise `CREATE USER` pour ajouter un utilisateur de base de données pour la connexion Windows `Edmonds\LolanSo` à la base de données active. Le nouvel utilisateur se nomme `Lolan`. Il s'agit de la méthode recommandée pour la création d'un utilisateur de base de données.  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

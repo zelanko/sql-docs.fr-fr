@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1aa837168c5aaff963a0b475596f4e6a4d3ff85f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7905ab0197c4286013f5a407570cdeaa39b3b009
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625984"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime des événements du journal de la messagerie de base de données. Supprime tous les événements du journal ou uniquement les événements correspondant à des critères de date ou de type spécifiés.  
   

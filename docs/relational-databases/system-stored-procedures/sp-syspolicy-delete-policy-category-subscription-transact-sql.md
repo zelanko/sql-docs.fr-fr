@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0060ea0bee5dc987f4f1188d7e4853c2d7e22c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633841"
 ---
 # <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un abonnement aux catégories de stratégies pour une base de données spécifique.  
   
@@ -44,7 +44,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous devez exécuter sp_syspolicy_delete_policy_category_subscription dans le contexte de la base de données système msdb.  
   
  Vous ne pouvez pas supprimer un abonnement aux catégories de stratégies quand l'abonnement est autorisé.  

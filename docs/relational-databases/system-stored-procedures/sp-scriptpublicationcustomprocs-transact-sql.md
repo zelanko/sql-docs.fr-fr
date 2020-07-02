@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb59b3ce367a7f936d4d8bec28b363e493857632
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 19a7b793a1bd7a72941a8f07baba44c584e5d8f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645379"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée un script pour les procédures personnalisées INSERT, UPDATE et DELETE pour tous les articles de table d'une publication dans laquelle l'option de schéma de génération automatique de procédure stockée est activée. **sp_scriptpublicationcustomprocs** est particulièrement utile pour configurer des abonnements pour lesquels l’instantané est appliqué manuellement.  
   
@@ -45,7 +45,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats qui se compose d’une seule colonne **nvarchar (4000)** . L'ensemble de résultats forme l'instruction CREATE PROCEDURE complète, nécessaire à la création de la procédure stockée personnalisée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les procédures personnalisées ne font pas l'objet de scripts pour les articles sans l'option de schéma (0x2) de génération automatique de procédure personnalisée.  
   
  Les procédures suivantes sont utilisées par **sp_scriptpublicationcustomprocs** pour créer des procédures pour l’abonné et ne doivent pas être exécutées directement :  

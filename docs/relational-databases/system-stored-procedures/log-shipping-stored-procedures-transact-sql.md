@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f93be0c72dcd5e8f555cd6610ccf3caeb64790c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2eb9fef4642702b3a2603f444baa442f30ac1b5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634773"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Procédures stockées de la copie des journaux de transaction (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et versions ultérieures prennent en charge les procédures stockées système suivantes, utilisées pour configurer, modifier et analyser les configurations de la copie des journaux de transaction.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830408"
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

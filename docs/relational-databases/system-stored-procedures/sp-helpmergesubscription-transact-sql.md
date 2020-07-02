@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626990"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur un abonnement à une publication de fusion, par envoi (push) et par extraction (pull) de données. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données d'abonnement d'un Abonné de republication.  
   
@@ -78,7 +78,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = les deux|  
 |**importance**|**float (8)**|Numéro indiquant la priorité de l'abonnement.|  
 |**sync_type**|**tinyint**|Type de synchronisation d'abonnement|  
-|**descriptive**|**nvarchar(255)**|Brève description de cet abonnement de fusion.|  
+|**description**|**nvarchar(255)**|Brève description de cet abonnement de fusion.|  
 |**merge_jobid**|**Binary(16**|ID de travail de l'Agent de fusion.|  
 |**full_publication**|**tinyint**|Indique si l'abonnement concerne une publication complète ou filtrée.|  
 |**offload_enabled**|**bit**|Indique si le déchargement d'un Agent de réplication est configuré pour être exécuté sur l'Abonné. Si la valeur est NULL, l'exécution a lieu sur le serveur de publication.|  
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpmergesubscription** est utilisé dans la réplication de fusion pour retourner les informations d’abonnement stockées sur le serveur de publication ou sur l’abonné de republication.  
   
  Pour les abonnements anonymes, la valeur *subscription_type*est toujours **1** (extraction). Toutefois, vous devez exécuter [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) sur l’abonné pour obtenir des informations sur les abonnements anonymes.  

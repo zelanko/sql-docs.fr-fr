@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16753620fa4185d3f488db340aeb4858c28f6d69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8876dd3a23d9efb1c658d2412efb169daef1b62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634394"
 ---
 # <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée récupère les paramètres d'une base de données primaire donnée sur le serveur secondaire.  
   
@@ -51,14 +51,14 @@ sp_help_log_shipping_secondary_primary
 ## <a name="result-sets"></a>Jeux de résultats  
  Le **jeu de résultats** contient les colonnes **secondary_id**, **primary_server**, **primary_database**, **backup_source_directory**, backup_destination_directory **, file_retention_period, copy_job_id** **, restore_job_id** **, monitor_server** **, monitor_server_security_mode**de **log_shipping_secondary**. **backup_destination_directory**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_log_shipping_secondary_primary** doit être exécuté à partir de la base de données **Master** sur le serveur secondaire.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

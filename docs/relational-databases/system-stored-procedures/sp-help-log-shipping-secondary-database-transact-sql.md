@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1aa82b9ced4593bbc1341c3ef305519fb1d1eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634428"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée extrait les paramètres d'une ou plusieurs bases de données secondaires.  
   
@@ -62,7 +62,7 @@ sp_help_log_shipping_secondary_database
 |**file_retention_period**|Durée, en minutes, de conservation d'un fichier de sauvegarde sur le serveur secondaire avant sa suppression.|  
 |**copy_job_id**|ID associé au travail de copie sur le serveur secondaire.|  
 |**restore_job_id**|ID associé au travail de restauration sur le serveur secondaire.|  
-|**monitor_server**|Nom de l’instance du utilisé comme [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serveur moniteur dans la configuration de la copie des journaux de session.|  
+|**monitor_server**|Nom de l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilisé comme serveur moniteur dans la configuration de la copie des journaux de session.|  
 |**monitor_server_security_mode**|Mode de sécurité utilisé pour la connexion au serveur moniteur.<br /><br /> 1 = Authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.|  
 |**secondary_database**|Nom de la base de données secondaire dans la configuration de la copie des journaux de transactions.|  
 |**restore_delay**|Durée, en minutes, de l'attente du serveur secondaire avant de restaurer un fichier de sauvegarde donné. La valeur par défaut est 0 minute.|  
@@ -84,7 +84,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Durée de conservation (en minutes) des enregistrements historiques d'envoi des journaux pour une base de données secondaire donnée avant leur suppression.|  
 |**last_restored_latency**|Durée écoulée (en minutes) entre la création de la sauvegarde du journal sur le serveur principal et sa restauration sur le serveur secondaire.<br /><br /> La valeur initiale est NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si vous incluez le paramètre *secondary_database* , le jeu de résultats contient des informations sur cette base de données secondaire. Si vous incluez le paramètre *secondary_id* , le jeu de résultats contient des informations sur toutes les bases de données secondaires associées à cet ID secondaire.  
   
  **sp_help_log_shipping_secondary_database** doit être exécuté à partir de la base de données **Master** sur le serveur secondaire.  
@@ -94,7 +94,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646417"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Demande des mises à jour positionnées. Cette procédure effectue des opérations sur une ou plusieurs lignes dans le tampon d'extraction d'un curseur. sp_cursor est appelée en spécifiant ID = 1 dans un paquet tabular data stream (TDS).  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Si \< l’argument Update table name> est spécifié, toute valeur spécifiée pour le paramètre *table* sera ignorée.  
+>  Si la mise à jour \<table name> est spécifiée, toute valeur spécifiée pour le paramètre de *table* sera ignorée.  
   
  Lorsque plusieurs paramètres sont utilisés, le premier paramètre doit être une chaîne sous la forme suivante :  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- Dans ce cas, le \< nom de la table> dans l’instruction Update construite est celui spécifié ou défini par défaut par le paramètre *table* .  
+ Dans ce cas, le \<table name> dans l’instruction Update construite est celui spécifié ou défini par défaut par le paramètre *table* .  
   
  Pour INSERT :  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Si l’instruction INSERT * \< table Name>* est spécifiée, toute valeur spécifiée pour le paramètre *table* est ignorée.  
+>  Si INSERT *\<table name>* est spécifié, toute valeur spécifiée pour le paramètre *table* sera ignorée.  
   
  Lorsque plusieurs paramètres sont utilisés, le premier paramètre doit être une chaîne sous la forme suivante :  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- sauf lorsque VALUES a été spécifié, auquel cas une « ) » de fin est nécessaire après la dernière expression. Dans ce cas, le nom de la * \< table>* dans l’instruction Update construite est celui spécifié ou défini par défaut par le paramètre *table* .  
+ sauf lorsque VALUES a été spécifié, auquel cas une « ) » de fin est nécessaire après la dernière expression. Dans ce cas, le *\<table name>* dans l’instruction Update construite est celui spécifié ou défini par défaut par le paramètre *table* .  
   
 > [!NOTE]  
 >  Il est possible d'envoyer un paramètre comme paramètre nommé, c'est-à-dire « `@VALUES` ». Dans ce cas, aucun autre paramètre nommé ne peut être utilisé.  

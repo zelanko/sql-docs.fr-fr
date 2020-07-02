@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7986df966f25644a05d63165cc3d87f4be752ec9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c49356c35c963501450490dfaa6fc89c77e62f40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625746"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>&lt;table conflict_ Schema &gt; _ &lt; &gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Le \< schéma conflict_>_ table \<> table contient des informations sur les lignes en conflit dans la réplication d’égal à égal. Il existe une table de conflits pour chaque table répliquée dans une publication, où le nom de la table de conflits est ajouté au nom du schéma et à celui de l'article. Ces tables de conflits spécifiques aux articles existent dans chaque base de données de publication.  
+  La \<schema> table conflict_ _ \<table> contient des informations sur les lignes en conflit dans la réplication d’égal à égal. Il existe une table de conflits pour chaque table répliquée dans une publication, où le nom de la table de conflits est ajouté au nom du schéma et à celui de l'article. Ces tables de conflits spécifiques aux articles existent dans chaque base de données de publication.  
   
  Pour la réplication d'égal à égal, par défaut, l'Agent de distribution échoue lorsqu'il détecte un conflit. Une erreur de conflit est enregistrée dans le journal des erreurs, mais aucune donnée de conflit n'est enregistrée dans la table de conflits ; par conséquent, la consultation de cette erreur n'est pas possible. Si l'Agent de distribution est autorisé à continuer, un conflit est enregistré localement sur chaque nœud où il a été détecté. Pour plus d'informations, consultez « Gestion des conflits » dans [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82825940"
 |__$inserted_date|**datetime**|Date et heure d'insertion de la ligne en conflit dans cette table.|  
 |__$row_id|**timestamp**|Valeur de version associée à la ligne source du conflit.|  
 |__$change_id|**binaire (8)**|Pour une ligne locale, cette valeur est égale au __$row_id de la ligne entrante qui a été en conflit avec la ligne locale. Cette valeur est NULL pour une ligne entrante.|  
-|\<noms des colonnes de la table de base>|\<types de colonnes de la table de base>|La table en conflit contient une colonne pour chaque colonne dans la table de base.|  
+|\<base table column names>|\<base table column types>|La table en conflit contient une colonne pour chaque colonne dans la table de base.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

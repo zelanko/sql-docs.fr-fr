@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e0abc3934e1cfec8e37a4b1f3060a7aeef38a06e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626939"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur des abonnements par extraction de données (pull) existant sur l'Abonné. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
@@ -63,7 +63,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
 |**importance**|**float (8)**|Priorité de l'abonnement. La valeur doit être inférieure à **100,00**.|  
 |**sync_type**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = la capture instantanée n’est pas utilisée.|  
-|**descriptive**|**nvarchar(255)**|Brève description de l’abonnement par extraction.|  
+|**description**|**nvarchar(255)**|Brève description de l’abonnement par extraction.|  
 |**merge_jobid**|**Binary(16**|ID de travail de l'Agent de fusion.|  
 |**enabled_for_syncmgr**|**int**|Indique si l'abonnement peut être synchronisé à l'aide du gestionnaire de synchronisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar (26)**|Date et heure de la dernière synchronisation de l'abonnement effectuée par l'Agent de fusion.|  
@@ -101,7 +101,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpmergepullsubscription** est utilisé dans la réplication de fusion. Dans le jeu de résultats, la date retournée dans **last_updated** est au format *AAAAMMJJ hh : mm : SS. fff*.  
   
 ## <a name="permissions"></a>Autorisations  

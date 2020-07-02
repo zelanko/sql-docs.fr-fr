@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf55efd5b50f73d15e0fc488cfe4298b99d9eb7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68115059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646491"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Définit une notification pour une alerte.  
   
@@ -73,7 +73,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>Exemples  
  Cet exemple ajoute une notification envoyée par courrier électronique pour l'alerte spécifiée (`Test Alert`).  
   
-> **Remarque :** Cet exemple suppose que `Test Alert` existe déjà et qu' `François Ajenstat` il s’agit d’un nom d’opérateur valide.  
+> **Remarque :** Cet exemple suppose que `Test Alert` existe déjà et qu’il `François Ajenstat` s’agit d’un nom d’opérateur valide.  
   
 ```  
 USE msdb ;  

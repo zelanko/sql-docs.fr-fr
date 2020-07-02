@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626626"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche des informations concernant une ligne d'une table utilisée en tant qu'article dans une réplication de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nom de la base de données qui a effectué cette entrée.|  
 |**db_nickname**|**binary(6)**|Surnom de la base de données qui a effectué cette entrée.|  
 |**version**|**int**|Version de l'entrée.|  
-|**current_state**|**nvarchar (9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> les données de ligne **y** représentent l’état actuel de la ligne.<br /><br /> les données de **n** lignes ne représentent pas l’état actuel de la ligne.<br /><br /> ** \< n/a>** -non applicable.<br /><br /> ** \<>inconnu** -l’état actuel ne peut pas être déterminé.|  
+|**current_state**|**nvarchar (9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> les données de ligne **y** représentent l’état actuel de la ligne.<br /><br /> les données de **n** lignes ne représentent pas l’état actuel de la ligne.<br /><br /> **\<n/a>**-Non applicable.<br /><br /> **\<unknown>**-Impossible de déterminer l’état actuel.|  
 |**rowversion_table**|**nchar (17)**|Indique si les versions de ligne sont stockées dans la table [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou dans la table [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Commentaire**|**nvarchar(255)**|Informations supplémentaires concernant l'entrée de version de cette ligne. En général, ce champ est vide.|  
   
@@ -74,7 +74,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Ensemble de résultats pour la ligne et la colonne  
  Si la valeur **both** est choisie pour *Show*, les jeux de résultats de ligne et de colonne sont retournés.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_showrowreplicainfo** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

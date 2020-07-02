@@ -19,15 +19,15 @@ ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb602bf26b20ea916a46655cf813f4c1a6ab4f1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c47c9e1f03436923332a6f3beee49a0b4a6ef43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647478"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Renvoie une ligne pour chaque type de données alias accessible par l'utilisateur actuel dans la base de données active.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "67950737"
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de précision des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
 |**NUMERIC_SCALE**|**tinyint**|Échelle des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
 |**DATETIME_PRECISION**|**smallint**|Code de sous-type pour les types de données **DateTime** et ISO **Interval** . Pour les autres types de données, cette colonne retourne une valeur NULL.|  
-|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Texte réel de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] de définition.|  
+|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Texte réel de l’instruction de définition [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Vues de schémas d’informations &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys. syscharsets &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
+ [Jeux desys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys. configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
