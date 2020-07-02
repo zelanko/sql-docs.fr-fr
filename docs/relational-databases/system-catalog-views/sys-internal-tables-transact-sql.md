@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5878b5f1e52241a8d733bd6414d73db4e7e7cb8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725774"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne par objet représentant une table interne. Les tables internes sont générées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la prise en charge de différentes fonctionnalités. Par exemple, lorsque vous créez un index XML primaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée automatiquement une table interne pour assurer la persistance des données du document XML fragmenté. Les tables internes apparaissent dans le schéma **sys** de chaque base de données et possèdent des noms uniques, générés par le système, qui indiquent leur fonction, par exemple, **xml_index_nodes_2021582240_32001** ou **queue_messages_1977058079**  
   
- Les tables internes ne contiennent pas de données accessibles aux utilisateurs et leur schéma est fixe et invariable. Vous ne pouvez pas faire référence à des noms de tables internes dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple, vous ne pouvez pas exécuter une instruction telle que SELECT \* from * \< sys. internal_table_name>*. Par contre, vous pouvez interroger les affichages catalogue pour voir les métadonnées des tables internes.  
+ Les tables internes ne contiennent pas de données accessibles aux utilisateurs et leur schéma est fixe et invariable. Vous ne pouvez pas faire référence à des noms de tables internes dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple, vous ne pouvez pas exécuter une instruction telle que SELECT \* from *\<sys.internal_table_name>* . Par contre, vous pouvez interroger les affichages catalogue pour voir les métadonnées des tables internes.  
   
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Colonnes héritées de sys. Objects>**||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Type de la table interne :<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (par exemple, un index spatial)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **CHANGE_TRACKING**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|Description du type de table interne :<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
 |**parent_id**|**int**|ID du parent, qu'il soit ou non de portée de schéma. En l'absence de parent, a pour valeur 0.<br /><br /> **queue_messages**  =  **object_id** de la file d’attente<br /><br /> **xml_index_nodes**  =  **object_id** de l’index XML<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** du catalogue de texte intégral<br /><br /> **fulltext_index_map**  =  **object_id** de l’index de recherche en texte intégral<br /><br /> **query_notification**ou **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** d’un index étendu, tel qu’un index spatial<br /><br /> **object_id** de la table pour laquelle le suivi de table est activé = **CHANGE_TRACKING**|  
@@ -60,7 +60,7 @@ ms.locfileid: "82825378"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment interroger les métadonnées des tables internes à l'aide des affichages catalogue.  
   
-### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>R. Afficher les tables internes qui héritent des colonnes de l'affichage catalogue sys.objects  
+### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. Afficher les tables internes qui héritent des colonnes de l'affichage catalogue sys.objects  
   
 ```  
 SELECT * FROM sys.objects WHERE type = 'IT';  

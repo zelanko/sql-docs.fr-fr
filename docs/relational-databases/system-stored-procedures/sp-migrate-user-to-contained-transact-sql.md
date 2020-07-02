@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727154"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Convertit un utilisateur de la base de données mappé à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en utilisateur de base de données autonome avec mot de passe. Dans une base de données autonome, utilisez cette procédure pour supprimer les dépendances sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où la base de données est installée. **sp_migrate_user_to_contained** sépare l’utilisateur de la connexion d’origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , afin que les paramètres tels que le mot de passe et la langue par défaut puissent être administrés séparément pour la base de données à relation contenant-contenu. **sp_migrate_user_to_contained** peut être utilisé avant de déplacer la base de données à relation contenant-contenu vers une autre instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour éliminer les dépendances sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’instance actuelles.  
   
@@ -54,7 +54,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_migrate_user_to_contained** crée l’utilisateur de base de données à relation contenant-contenu avec le mot de passe, quelles que soient les propriétés ou les autorisations de la connexion. Par exemple, la procédure peut être effectuée si la connexion est désactivée ou si l’utilisateur se voit refuser l’autorisation de **connexion** à la base de données.  
   
  **sp_migrate_user_to_contained** a les restrictions suivantes.  

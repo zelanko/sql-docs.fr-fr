@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7986fc4286cf681507a80a72f2f308b6a96f413a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 2cb91576a8ef3d8aaa4dd5e9369b8420e53ae52d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725818"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne pour chaque valeur de l’option de configuration au niveau du serveur dans le système.  
 
@@ -36,14 +36,14 @@ ms.locfileid: "84215858"
 |**configuration_id**|**int**|ID unique pour la valeur de configuration.|  
 |**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
 |**value**|**sql_variant**|Valeur configurée pour cette option.|  
-|**minimum**|**sql_variant**|Valeur minimale pour l'option de configuration.|  
-|**maximum**|**sql_variant**|Valeur maximale pour l'option de configuration.|  
+|**minimale**|**sql_variant**|Valeur minimale pour l'option de configuration.|  
+|**valeurs**|**sql_variant**|Valeur maximale pour l'option de configuration.|  
 |**value_in_use**|**sql_variant**|Valeur en cours d'exécution actuellement en effet pour cette option.|  
 |**description**|**nvarchar(255)**|Description de l'option de configuration.|  
 |**is_dynamic**|**bit**|1 = Variable qui prend effet lorsque l'instruction RECONFIGURE est exécutée.|  
 |**is_advanced**|**bit**|1 = la variable s’affiche uniquement lorsque l' **affichage advancedoption** est défini.|  
   
- ## <a name="remarks"></a>Notes
+ ## <a name="remarks"></a>Remarques
   Pour obtenir la liste de toutes les options de configuration du serveur, consultez [options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  

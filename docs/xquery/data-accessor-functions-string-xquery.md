@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: d4c0dee40eb08aac425f93570c98fc88d32bcc60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730973"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Fonctions d’accesseur de données : string (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retourne la valeur de *$arg* représentée sous forme de chaîne.  
   

@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdd552b0954f0eda838743530ab94e73aa27067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 749be1b26a7802119346434b016b376ea94910cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727604"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Accès aux données à partir d'objets de base de données CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Une routine de Common Language Runtime (CLR) peut accéder facilement aux données stockées dans l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance de dans laquelle elles s’exécutent, ainsi qu’aux données stockées dans des instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accédez aux données à partir d’un objet de base de données CLR à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]l’aide de l' .NET Framework fournisseur de données pour, également appelé **SqlClient**. Il s'agit du même fournisseur que celui utilisé par les développeurs accédant aux données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'applications clientes managées et de couche intermédiaire. Pour cette raison, vous pouvez tirer parti de vos connaissances de ADO.NET et **SqlClient** dans les applications clientes et de niveau intermédiaire.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Une routine de common language runtime (CLR) peut accéder facilement aux données stockées dans l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans laquelle elles s’exécutent, ainsi qu’aux données stockées dans des instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accédez aux données à partir d’un objet de base de données CLR à l’aide de l' .NET Framework Fournisseur de données pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , également appelé **SqlClient**. Il s'agit du même fournisseur que celui utilisé par les développeurs accédant aux données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'applications clientes managées et de couche intermédiaire. Pour cette raison, vous pouvez tirer parti de vos connaissances de ADO.NET et **SqlClient** dans les applications clientes et de niveau intermédiaire.  
   
 > [!NOTE]  
 >  Les méthodes de type défini par l'utilisateur et les fonctions définies par l'utilisateur ne sont pas autorisées à effectuer un accès aux données par défaut. Vous devez définir la propriété **DataAccess** de **SqlMethodAttribute** ou **SqlFunctionAttribute** sur **DataAccessKind. Read** pour activer l’accès aux données en lecture seule à partir de méthodes de type défini par l’utilisateur (UDT) ou de fonctions définies par l’utilisateur. Les opérations de modification des données ne sont pas autorisées à partir des types définis par l'utilisateur ou des fonctions définies par l'utilisateur ; par ailleurs, elles lèvent des exceptions au moment de l'exécution, à la moindre tentative.  

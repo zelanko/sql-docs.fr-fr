@@ -18,15 +18,15 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 03a1d909dc1d3a89b68895e05953cc0ed0da2a7b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725507"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne une liste d'objets qui peuvent être interrogés dans l'environnement actuel. Cela signifie toute table ou vue, à l'exception des objets synonymes.  
   
@@ -76,7 +76,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|Table, table système ou vue.|  
 |**NOTES**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les critères spéciaux SQL standard de SQL-92 (caractères génériques % et _).  
   
  Les informations de privilège concernant l'accès en lecture/écriture de l'utilisateur actuel à une table spécifique ne sont pas toujours vérifiées. Par conséquent, l'accès n'est pas garanti. Ce jeu de résultats ne comprend pas uniquement des tables et des vues, mais également des synonymes et des noms d'alias, dans le cas des passerelles vers les SGBD qui gèrent ces types. Si l’attribut de serveur **ACCESSIBLE_TABLES** est Y dans le jeu de résultats pour **sp_server_info**, seules les tables accessibles par l’utilisateur actuel sont retournées.  

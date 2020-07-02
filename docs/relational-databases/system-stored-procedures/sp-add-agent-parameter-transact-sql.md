@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731764"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute un nouveau paramètre et sa valeur au profil d'un agent. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
@@ -53,22 +53,22 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 `[ @parameter_name = ] 'parameter_name'`Nom du paramètre. *parameter_name* est de **type sysname**, sans valeur par défaut. Pour obtenir la liste des paramètres déjà définis dans les profils système, consultez [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). Pour obtenir la liste complète des paramètres valides pour chaque agent, consultez les rubriques suivantes :  
   
--   [Agent d'instantané de réplication](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Agent de lecture du journal des réplications](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agent de distribution de réplication](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Agent de lecture de la file d'attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Agent de lecture de la file d’attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
 `[ @parameter_value = ] 'parameter_value'`Valeur à assigner au paramètre. *parameter_value* est de type **nvarchar (255)**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_add_agent_parameter** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

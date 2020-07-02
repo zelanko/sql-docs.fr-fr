@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c471e1bf5c2e3eac60d47418dc3957cef2209b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730019"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur les travaux auxquels une planification particulière est attachée.  
   
@@ -57,7 +57,7 @@ sp_help_jobs_in_schedule
 |**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
 |**name**|**sysname**|Nom du travail.|  
 |**désactivé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
-|**descriptive**|**nvarchar(512)**|Description du travail.|  
+|**description**|**nvarchar(512)**|Description du travail.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
 |**category**|**sysname**|Catégorie de travail.|  
 |**du**|**sysname**|Propriétaire du travail.|  

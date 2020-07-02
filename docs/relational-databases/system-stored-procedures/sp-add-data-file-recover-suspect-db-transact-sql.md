@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731754"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un fichier de données à un groupe de fichiers lorsque la récupération d'une base de données ne peut se terminer en raison d'un espace insuffisant sur le groupe de fichiers (erreur 1105). Une fois le fichier ajouté, cette procédure stockée désactive le paramètre suspect et achève la récupération de la base de données. Les paramètres sont les mêmes que ceux de ALTER DATABASE *database_name* Add file.  
   
@@ -51,7 +51,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
   
 `[ @name = ] 'logical_file_name_ '`Nom utilisé dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour référencer le fichier. Il doit être unique dans le serveur. *logical_file_name* est de type **nvarchar (260)**, sans valeur par défaut.  
   
-`[ @filename = ] 'os_file_name_ '`Est le chemin d’accès et le nom de fichier utilisés par le système d’exploitation pour le fichier. Le fichier doit résider sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* est de type **nvarchar (260)**, sans valeur par défaut.  
+`[ @filename = ] 'os_file_name_ '`Est le chemin d’accès et le nom de fichier utilisés par le système d’exploitation pour le fichier. Le fichier doit résider sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . *os_file_name* est de type **nvarchar (260)**, sans valeur par défaut.  
   
 `[ @size = ] 'size_ '`Taille initiale du fichier. *Size* est de type **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo. La valeur minimale est 512 Ko. Si la *taille* n’est pas spécifiée, la valeur par défaut est 1 Mo.  
   
@@ -82,7 +82,7 @@ EXEC sp_add_data_file_recover_suspect_db db1, fg1, file2,
     'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\db1_file2.mdf', '1MB';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

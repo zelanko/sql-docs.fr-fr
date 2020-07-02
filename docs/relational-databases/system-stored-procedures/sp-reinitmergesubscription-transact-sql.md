@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b42439c35eaf2b240222987f577c8664263d657
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8ec5aaabde0fd98cea45ec601f237743f58b7eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725777"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Signale un abonnement de fusion en vue de sa réinitialisation lors de la prochaine exécution de l’Agent de fusion. Cette procédure stockée est exécutée dans la base de données de publication du serveur de publication.  
   
@@ -51,7 +51,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_reinitmergesubscription** est utilisé dans la réplication de fusion.  
   
  **sp_reinitmergesubscription** peut être appelée à partir du serveur de publication pour réinitialiser les abonnements de fusion. Il est recommandé de réexécuter également l'Agent d'instantané.  

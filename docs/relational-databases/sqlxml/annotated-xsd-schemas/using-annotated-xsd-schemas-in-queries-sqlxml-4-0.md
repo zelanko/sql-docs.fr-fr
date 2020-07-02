@@ -23,18 +23,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9ecd9d65d0f70f7c25328c15bb886ca52122de2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857710f894ddc8ef2c874bdc3fed127f0625c8f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725852"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilisation de schémas XSD annotés dans les requêtes (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Vous pouvez spécifier des requêtes sur un schéma annoté afin de récupérer des données de la base de données ; pour ce faire, spécifiez des requêtes XPath dans un modèle par rapport au schéma XSD.  
   
- L' ** \<élément SQL : XPath-Query>** vous permet de spécifier une requête XPath sur la vue XML définie par le schéma annoté. Le schéma annoté sur lequel la requête XPath doit être exécutée est identifié à l’aide de l’attribut **mapping-schema** de l' ** \<élément SQL : XPath-Query>** .  
+ L' **\<sql:xpath-query>** élément vous permet de spécifier une requête XPath sur la vue XML définie par le schéma annoté. Le schéma annoté sur lequel la requête XPath doit être exécutée est identifié à l’aide de l’attribut **mapping-schema** de l' **\<sql:xpath-query>** élément.  
   
  Les modèles sont des documents XML valides qui contiennent une ou plusieurs requêtes. Les requêtes XPath et FOR XML retournent un fragment de document. Les modèles servent de conteneurs pour les fragments de documents ; par conséquent, les modèles offrent un moyen de spécifier un élément unique, de niveau supérieur.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "81388681"
 ## <a name="using-inline-mapping-schemas"></a>Utilisation de schémas de mappage insérés  
  Un schéma annoté peut être inclus directement dans un modèle ; une requête XPath peut ensuite être spécifiée dans le modèle par rapport au schéma inséré. Le modèle peut également être un code de mise à jour (updategram).  
   
- Un modèle peut inclure plusieurs schémas insérés. Pour utiliser un schéma inline inclus dans un modèle, spécifiez l’attribut **ID** avec une valeur unique sur l' ** \<élément xsd : Schema>** , puis utilisez **#idvalue** pour référencer le schéma Inline. L’attribut **ID** est identique en ce qui concerne le comportement de **SQL : ID** ({urn : schemas-microsoft-com : XML-SQL} ID) utilisé dans les schémas XDR.  
+ Un modèle peut inclure plusieurs schémas insérés. Pour utiliser un schéma inline inclus dans un modèle, spécifiez l’attribut **ID** avec une valeur unique sur l' **\<xsd:schema>** élément, puis utilisez **#idvalue** pour référencer le schéma Inline. L’attribut **ID** est identique en ce qui concerne le comportement de **SQL : ID** ({urn : schemas-microsoft-com : XML-SQL} ID) utilisé dans les schémas XDR.  
   
  Par exemple, le modèle suivant spécifie deux schémas annotés insérés :  
   
@@ -117,21 +117,21 @@ ms.locfileid: "81388681"
 </ROOT>  
 ```  
   
- Le modèle spécifie également deux requêtes XPath. Chaque élément ** \<XPath-Query>** identifie de façon unique le schéma de mappage en spécifiant l’attribut **mapping-schema** .  
+ Le modèle spécifie également deux requêtes XPath. Chaque **\<xpath-query>** élément identifie de façon unique le schéma de mappage en spécifiant l’attribut **mapping-schema** .  
   
- Lorsque vous spécifiez un schéma inline dans le modèle, l’annotation **SQL : is-mapping-schema** doit également être spécifiée sur l' ** \<élément xsd : Schema>** . **SQL : is-mapping-schema** prend une valeur booléenne (0 = false, 1 = true). Un schéma Inline avec **SQL : is-mapping-schema = "1"** est traité comme un schéma annoté inline et n’est pas retourné dans le document XML.  
+ Lorsque vous spécifiez un schéma inline dans le modèle, l’annotation **SQL : is-mapping-schema** doit également être spécifiée sur l' **\<xsd:schema>** élément. **SQL : is-mapping-schema** prend une valeur booléenne (0 = false, 1 = true). Un schéma Inline avec **SQL : is-mapping-schema = "1"** est traité comme un schéma annoté inline et n’est pas retourné dans le document XML.  
   
  L’annotation **SQL : is-mapping-schema** appartient à l’espace de noms template **urn : schemas-microsoft-com : XML-SQL**.  
   
  Pour tester cet exemple, enregistrez le modèle (InlineSchemaTemplate.xml) dans un répertoire local, puis créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) afin d'exécuter le modèle. Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- En plus de spécifier l’attribut **mapping-schema** sur l' ** \<élément SQL : XPath-Query>** dans un modèle (lorsqu’il existe une requête XPath) ou sur ** \<attribut updg : Sync>** élément dans un mise à jour, vous pouvez effectuer les opérations suivantes :  
+ En plus de spécifier l’attribut **mapping-schema** sur l' **\<sql:xpath-query>** élément dans un modèle (lorsqu’il y a une requête XPath) ou sur l' **\<updg:sync>** élément dans un mise à jour, vous pouvez effectuer les opérations suivantes :  
   
--   Spécifiez l’attribut **mapping-schema** sur l' ** \<élément racine>** (déclaration globale) dans le modèle. Ce schéma de mappage devient alors le schéma par défaut qui sera utilisé par tous les nœuds XPath et mise à jour qui n’ont pas d’annotation **de schéma de mappage** explicite.  
+-   Spécifiez l’attribut **mapping-schema** sur l' **\<ROOT>** élément (déclaration globale) dans le modèle. Ce schéma de mappage devient alors le schéma par défaut qui sera utilisé par tous les nœuds XPath et mise à jour qui n’ont pas d’annotation **de schéma de mappage** explicite.  
   
 -   Spécifiez l’attribut de **schéma de mappage** à l’aide de l’objet de **commande** ADO.  
   
- L’attribut **mapping-schema** qui est spécifié sur l' ** \<élément XPath-Query>** ou ** \<attribut updg : Sync>** a la priorité la plus élevée ; l’objet de **commande** ADO a la priorité la plus faible.  
+ L’attribut **mapping-schema** qui est spécifié sur l' **\<xpath-query>** **\<updg:sync>** élément ou a la priorité la plus élevée ; l’objet **Command** ADO a la priorité la plus faible.  
   
  Notez que si vous spécifiez une requête XPath dans un modèle et que vous ne spécifiez pas de schéma de mappage sur lequel la requête XPath est exécutée, la requête XPath est traitée comme une requête de type **dbobject** . Considérons par exemple le modèle suivant :  
   
@@ -142,6 +142,6 @@ ms.locfileid: "81388681"
 </sql:xpath-query>  
 ```  
   
- Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme une requête de type **dbobject** dans laquelle production. ProductPhoto est le nom @ProductPhotoIDde la table et = « 100 » est un prédicat qui recherche une photo du produit avec la valeur d’ID 100. @LargePhotocolonne à partir de laquelle la valeur doit être récupérée.  
+ Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme une requête de type **dbobject** dans laquelle production. ProductPhoto est le nom de la table et @ProductPhotoID = « 100 » est un prédicat qui recherche une photo du produit avec la valeur d’ID 100. @LargePhotocolonne à partir de laquelle la valeur doit être récupérée.  
   
   

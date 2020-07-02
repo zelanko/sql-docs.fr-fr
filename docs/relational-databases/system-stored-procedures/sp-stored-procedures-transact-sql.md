@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac4bc1262eeb87aae42f11bf7c67ca0dc58848ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725640"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Renvoie la liste des procédures stockées dans l'environnement actuel.  
   
@@ -79,7 +79,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NOTES**|**varchar (254)**|Description de la procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |**PROCEDURE_TYPE**|**smallint**|Type de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être l'une des suivantes :<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour une interopérabilité maximale, le client de la passerelle doit utiliser seulement les recherches de correspondance avec des caractères génériques de SQL (caractères génériques % et _).  
   
  Les informations d'autorisations relatives à l'exécution par l'utilisateur actuel d'une procédure stockée particulière ne sont pas nécessairement vérifiées ; l'accès n'est donc pas garanti. Notez que la dénomination en trois parties est utilisée. Cela signifie que seules les procédures stockées locales, et non pas les procédures stockées distantes (qui utilisent la dénomination en quatre parties), sont renvoyées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’attribut de serveur ACCESSIBLE_SPROC est Y dans le jeu de résultats pour **sp_server_info**, seules les procédures stockées qui peuvent être exécutées par l’utilisateur actuel sont retournées.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe481b1a49f8eba69bbf913e49f398c86244b952
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727862"
 ---
 # <a name="clr-user-defined-functions"></a>Fonctions CLR définies par l'utilisateur
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les fonctions définies par l'utilisateur sont des routines qui acceptent des paramètres, effectuent des calculs ou d'autres actions et retournent un résultat. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vous pouvez écrire des fonctions définies par l'utilisateur dans un langage de programmation [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, tel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  Il existe deux types de fonctions : fonction scalaire, qui retourne une valeur unique, et fonction table, qui retourne un ensemble de lignes.  
@@ -41,6 +41,6 @@ ms.locfileid: "81488268"
  Décrit comment implémenter et utiliser les agrégats définis par l'utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)  
+ [Fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   

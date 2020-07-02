@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725702"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Définit une option de base de données de réplication pour la base de données spécifiée. Cette procédure stockée est exécutée sur n'importe quelle base de données de l'abonné au niveau du serveur de publication ou de l'Abonné.  
   
@@ -49,7 +49,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |-----------|-----------------|  
 |**publication de fusion**|La base de données peut être utilisée pour les publications de fusion.|  
 |**édition**|La base de données peut être utilisée pour les autres types de publications.|  
-|**subscribe**|La base de données est une base de données d'abonnement.|  
+|**Inscrivez**|La base de données est une base de données d'abonnement.|  
 |**sync with backup**|La base de données est activée pour la sauvegarde coordonnée. Pour plus d’informations, consultez [activer des sauvegardes coordonnées pour la réplication transactionnelle &#40;la programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'`Indique s’il faut activer ou désactiver l’option de base de données de réplication donnée. la valeur est de **type sysname**et peut avoir la *valeur* **true** ou **false**. Lorsque cette valeur est **false** et que *nom_d* 'est la **publication de fusion**, les abonnements à la base de données publiée de fusion sont également supprimés.  
@@ -61,7 +61,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_replicationdboption** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
  Cette procédure crée ou supprime des tables système de réplication spécifiques, des comptes de sécurité, etc., en fonction des options choisies. Définit le **is_published** correspondant (réplication transacational ou d’instantané), **is_merge_published** (réplication de fusion) ou **is_distributor** bits dans la table système **Master. databases** et crée les tables système nécessaires.  

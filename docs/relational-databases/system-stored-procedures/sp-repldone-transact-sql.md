@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b89dcde2aab76fcb6760f2788503485ef42182ac
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725739"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Met à jour l'enregistrement identifiant la dernière transaction distribuée du serveur. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -57,7 +57,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_repldone** est utilisé dans la réplication transactionnelle.  
   
  **sp_repldone** est utilisé par le processus de lecture du journal pour effectuer le suivi des transactions qui ont été distribuées.  

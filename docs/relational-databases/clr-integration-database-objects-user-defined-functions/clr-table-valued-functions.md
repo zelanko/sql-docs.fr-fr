@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42391504a8c48248e47b5f09e8feb31b613bbfca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727902"
 ---
 # <a name="clr-table-valued-functions"></a>Fonctions table CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Une fonction table est une fonction définie par l'utilisateur qui retourne une table.  
   
  Depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étend les fonctionnalités des fonctions table en vous permettant de définir une fonction table dans n'importe quel langage managé. Les données sont retournées à partir d’une fonction table par le biais d’un objet **IEnumerable** ou **IEnumerator** .  
@@ -48,7 +48,7 @@ ms.locfileid: "81488460"
  Les paramètres table sont des types de tables définis par l'utilisateur et passés à une procédure ou une fonction, et qui offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Ils procurent une fonctionnalité semblable aux tableaux de paramètres, mais offrent une meilleure souplesse et une intégration plus étroite à [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table permettent également de réduire le nombre d’allers-retours au serveur. Au lieu d’envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètre table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [Utiliser les paramètres table &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Paramètres de sortie et fonctions table  
- Des informations peuvent être retournées à partir de fonctions table via des paramètres de sortie. Le paramètre correspondant de la fonction table du code d'implémentation doit utiliser un paramètre passé par référence en guise d'argument. Notez que Visual Basic ne prend pas en charge les paramètres de sortie de la même manière que Visual C#. Vous devez spécifier le paramètre par référence et appliquer l' \<attribut out () > pour représenter un paramètre de sortie, comme suit :  
+ Des informations peuvent être retournées à partir de fonctions table via des paramètres de sortie. Le paramètre correspondant de la fonction table du code d'implémentation doit utiliser un paramètre passé par référence en guise d'argument. Notez que Visual Basic ne prend pas en charge les paramètres de sortie de la même manière que Visual C#. Vous devez spécifier le paramètre par référence et appliquer l' \<Out()> attribut pour représenter un paramètre de sortie, comme suit :  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -79,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   Les fonctions table sont générées à partir de données externes. Par exemple, une fonction table peut lire le journal des événements et l'exposer sous forme de table.  
   
- **Remarque** Une fonction table peut uniquement effectuer l’accès aux données par le [!INCLUDE[tsql](../../includes/tsql-md.md)] biais d’une requête dans la méthode **InitMethod** , et non dans la méthode **FillRow** . Le **InitMethod** doit être marqué avec la propriété d’attribut **SqlFunction. DataAccess. Read** si [!INCLUDE[tsql](../../includes/tsql-md.md)] une requête est exécutée.  
+ **Remarque** Une fonction table peut uniquement effectuer l’accès aux données par le biais d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] requête dans la méthode **InitMethod** , et non dans la méthode **FillRow** . Le **InitMethod** doit être marqué avec la propriété d’attribut **SqlFunction. DataAccess. Read** si une [!INCLUDE[tsql](../../includes/tsql-md.md)] requête est exécutée.  
   
 ## <a name="a-sample-table-valued-function"></a>Exemple de fonction table  
  La fonction table suivante retourne des informations du journal des événements système. La fonction accepte un seul argument de chaîne contenant le nom du journal des événements à lire.  
@@ -178,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Exemple : retour des résultats d'une requête SQL Server  
- L'exemple suivant illustre une fonction table qui interroge une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet exemple utilise la base de données AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Pour [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) plus d’informations sur le téléchargement d’AdventureWorks, consultez.  
+ L'exemple suivant illustre une fonction table qui interroge une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet exemple utilise la base de données AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)Pour plus d’informations sur le téléchargement d’AdventureWorks, consultez.  
   
  Attribuez à votre fichier de code source le nom FindInvalidEmails.cs ou FindInvalidEmails.vb.  
   

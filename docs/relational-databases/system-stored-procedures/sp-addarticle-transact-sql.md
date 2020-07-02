@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e1360140898495518485394878cc74f04ee35923
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731712"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée un article et l'ajoute à une publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -125,7 +125,7 @@ sp_addarticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**NONE**|Aucune action n'est effectuée.|  
 |**CALLsp_MSdel_**<br /> **_table_** (par défaut)<br /><br /> -ou-<br /><br /> **CALL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msdel_*table* </strong> contient le nom de la table de destination à la place de la partie *_table* du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté au nom de la table de destination. Par exemple, pour la table **ProductCategory** appartenant au schéma de **production** sur l’abonné, le paramètre serait `CALL sp_MSdel_ProductionProductCategory` . Pour un article d’une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur Guid. La spécification d' *custom_stored_procedure* n’est pas prise en charge pour la mise à jour des abonnés.|  
-|**XCALL sp_MSdel_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
+|**XCALL sp_MSdel_**<br /> **_Tableau_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
 |**SQL** ou null|Réplique une instruction DELETE. Toutes les valeurs de colonnes clés primaire sont fournies pour l'instruction DELETE. La commande suivante est répliquée lors des suppressions :<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -135,10 +135,10 @@ sp_addarticle [ @publication = ] 'publication'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**NONE**|Aucune action n'est effectuée.|  
-|**CALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **CALL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article.|  
-|**MCALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **MCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type MCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msupd_*table* </strong> contient le nom de la table de destination à la place de la partie *_table* du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté au nom de la table de destination. Par exemple, pour la table **ProductCategory** appartenant au schéma de **production** sur l’abonné, le paramètre serait `MCALL sp_MSupd_ProductionProductCategory` . Pour un article d’une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur Guid. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
+|**CALL sp_MSupd_**<br /> **_Tableau_**<br /><br /> -ou-<br /><br /> **CALL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article.|  
+|**MCALL sp_MSupd_**<br /> **_Tableau_**<br /><br /> -ou-<br /><br /> **MCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type MCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msupd_*table* </strong> contient le nom de la table de destination à la place de la partie *_table* du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté au nom de la table de destination. Par exemple, pour la table **ProductCategory** appartenant au schéma de **production** sur l’abonné, le paramètre serait `MCALL sp_MSupd_ProductionProductCategory` . Pour un article d’une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur Guid. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
 |**SCALL sp_MSupd_**<br /> **_table_** (par défaut)<br /><br /> -ou-<br /><br /> **SCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type SCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msupd_*table* </strong> contient le nom de la table de destination à la place de la partie *_table* du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté au nom de la table de destination. Par exemple, pour la table **ProductCategory** appartenant au schéma de **production** sur l’abonné, le paramètre serait `SCALL sp_MSupd_ProductionProductCategory` . Pour un article d’une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur Guid. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
-|**XCALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
+|**XCALL sp_MSupd_**<br /> **_Tableau_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créez la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
 |**SQL** ou null|Réplique une instruction UPDATE. L'instruction UPDATE est fournie pour toutes les valeurs des colonnes et toutes les valeurs de colonne clé primaire. La commande ci-dessous est répliquée lors des mises à jour :<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
@@ -306,7 +306,7 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_addarticle** est utilisé dans la réplication d’instantané ou dans la réplication transactionnelle.  
   
  Par défaut, la réplication ne publie aucune colonne dans la table source lorsque le type de données de colonne n'est pas pris en charge par la réplication. Si vous devez publier une telle colonne, vous devez exécuter [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) pour ajouter la colonne.  

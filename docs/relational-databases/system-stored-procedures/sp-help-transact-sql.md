@@ -18,17 +18,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727185"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Fournit des informations sur un objet de base de données (n’importe quel objet figurant dans la vue de compatibilité **sys. sysobjects** ), un type de données défini par l’utilisateur ou un type de données.  
+  Fournit des informations sur un objet de base de données (n’importe quel objet figurant dans la vue de compatibilité des **objetssys.sys** ), un type de données défini par l’utilisateur ou un type de données.  
   
  
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -66,7 +66,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|Nom de type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Longueur**|**smallint**|Longueur physique du type de données (en octets).|  
     |**Prec**|**int**|Précision (nombre total de chiffres).|  
-    |**Mettre à l’échelle**|**int**|Nombre de chiffres à droite du séparateur décimal.|  
+    |**Mise à l’échelle**|**int**|Nombre de chiffres à droite du séparateur décimal.|  
     |**Nullable**|**varchar (** 35 **)**|Indique si les valeurs NULL sont autorisées : Oui ou Non.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nom par défaut de ce type de données.<br /><br /> NULL = aucune valeur par défaut n'est liée.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nom d'une règle associée à ce type.<br /><br /> NULL = aucune valeur par défaut n'est liée.|  
@@ -76,7 +76,7 @@ sp_help [ [ @objname = ] 'name' ]
 
     |Nom de la colonne|Type de données|Description|  
     |-----------------|---------------|-----------------|  
-    |**Nom**|**nvarchar (** 128 **)**|Nom du tableau|  
+    |**Nom**|**nvarchar (** 128 **)**|Nom de la table|  
     |**Propriétaire**|**nvarchar (** 128 **)**|Propriétaire de la table|  
     |**Type**|**nvarchar (** 31 **)**|Type de la table|  
     |**Created_datetime**|**datetime**|Date de création de la table|  
@@ -94,7 +94,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Calculée**|**varchar (** 35 **)**|Indique si les valeurs de la colonne sont calculées : Oui ou Non.|  
         |**Longueur**|**int**|Longueur de colonne en octets.<br /><br /> Remarque : si le type de données de la colonne est un type de valeur élevée (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** ou **XML**), la valeur s’affiche comme-1.|  
         |**Prec**|**char (** 5 **)**|Précision de la colonne|  
-        |**Mettre à l’échelle**|**char (** 5 **)**|Échelle de la colonne|  
+        |**Mise à l’échelle**|**char (** 5 **)**|Échelle de la colonne|  
         |**Nullable**|**varchar (** 35 **)**|Indique si les valeurs NULL sont autorisées dans cette colonne : Oui ou Non.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Élimine les vides. Retourne Oui ou Non.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Pour compatibilité descendante uniquement.|  
@@ -107,7 +107,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Identité**|**nvarchar (** 128 **)**|Nom de la colonne dont le type de données déclaré est identité.|  
         |**Seed**|**numeric**|Valeur de départ de la colonne identité.|  
         |**Lier**|**numeric**|Incrément à appliquer aux valeurs de la colonne.|  
-        |**Pas pour la réplication**|**int**|La propriété IDENTity n’est pas appliquée quand une connexion de réplication, telle que **SQLRepl**, insère des données dans la table :<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**Pas pour la réplication**|**int**|La propriété IDENTity n’est pas appliquée quand une connexion de réplication, telle que **SQLRepl**, insère des données dans la table :<br /><br /> 1 = Vrai<br /><br /> 0 = Faux|  
   
     -   Jeu de résultats supplémentaire retourné sur des colonnes :  
   
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Type**|**nvarchar (** 128 **)**|Type de données du paramètre de la procédure stockée.|  
         |**Longueur**|**smallint**|Longueur maximale de stockage physique, en octets.|  
         |**Prec**|**int**|Précision ou nombre total de chiffres.|  
-        |**Mettre à l’échelle**|**int**|Nombre de chiffres situés à droite du séparateur décimal.|  
+        |**Mise à l’échelle**|**int**|Nombre de chiffres situés à droite du séparateur décimal.|  
         |**Param_order**|**smallint**|Ordre du paramètre.|  
   
 ## <a name="remarks"></a>Remarques  
@@ -198,6 +198,6 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [Objetssys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e28d6e5a83595cc052d25f0c2e425c041a89932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727892"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agrégats CLR définis par l’utilisateur -Appel de fonctions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dans les instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous pouvez appeler les agrégats CLR (Common Language Runtime) définis par l'utilisateur et soumis à toutes les règles qui s'appliquent aux fonctions d'agrégation système.  
   
  Les règles suivantes supplémentaires s'appliquent :  

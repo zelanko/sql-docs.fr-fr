@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 786f2d3aa1b0f415ea349e9196082f305e904db8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725525"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de modifier les propriétés d'un élément de collecte défini par l'utilisateur ou de le renommer.  
   
@@ -91,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Exemples  
  Les exemples suivants sont basés sur l’élément de collecte créé dans l’exemple défini dans [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>R. Modification de la fréquence de collecte  
+### <a name="a-changing-the-collection-frequency"></a>A. Modification de la fréquence de collecte  
  L'exemple suivant modifie la fréquence de collecte pour l'élément de collecte spécifié.  
   
 ```  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dd3ba726d4b23b5dc3b8aa58188b0c259a7c3f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4740338e5049862d31e4cd0cf5b25b90356a84c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727756"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Utilisation de types définis par l'utilisateur dans SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Vous pouvez accéder à la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type défini par l’utilisateur (UDT [!INCLUDE[tsql](../../includes/tsql-md.md)] ) à partir du langage à l’aide de la syntaxe de requête standard. Les types UDT peuvent être utilisés dans la définition d'objets de base de données, tels que les variables dans les lots [!INCLUDE[tsql](../../includes/tsql-md.md)], dans les fonctions et les procédures stockées, et comme arguments dans les fonctions et les procédures stockées.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Vous pouvez accéder à la fonctionnalité de type défini par l’utilisateur (UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir du [!INCLUDE[tsql](../../includes/tsql-md.md)] langage à l’aide de la syntaxe de requête standard. Les types UDT peuvent être utilisés dans la définition d'objets de base de données, tels que les variables dans les lots [!INCLUDE[tsql](../../includes/tsql-md.md)], dans les fonctions et les procédures stockées, et comme arguments dans les fonctions et les procédures stockées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Définition de tables et de colonnes UDT](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  

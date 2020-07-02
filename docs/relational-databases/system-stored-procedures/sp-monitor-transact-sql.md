@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55386d32348257db3f89feb81d6a6b0ff7292499
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7bb5e41265e3dd6b69ae1807837b2ac8bda9ba09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727173"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche des statistiques sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -47,7 +47,7 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|Heure de la dernière exécution de **sp_monitor** .|  
 |**current_run**|L’heure de **sp_monitor** est en cours d’exécution.|  
-|**seconds**|Nombre de secondes écoulées depuis l’exécution de **sp_monitor** .|  
+|**durée**|Nombre de secondes écoulées depuis l’exécution de **sp_monitor** .|  
 |**cpu_busy**|Nombre de secondes que l'UC de l'ordinateur serveur a consacrées à des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Nombre de secondes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a consacrées aux opérations d'entrée et de sortie.|  
 |**périodes**|Nombre de secondes pendant lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été inactif.|  
@@ -79,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**seconds**|  
+|**last_run**|**current_run**|**durée**|  
 |29 mars 1998 11:55|4 avril 1998 14:22|561|  
   
 ||||  

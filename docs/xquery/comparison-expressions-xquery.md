@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729513"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressions de comparaison (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery fournit les types d'opérateurs de comparaison suivants :  
   
@@ -47,7 +47,7 @@ ms.locfileid: "81388168"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|=|Égal à|  
+|=|Equal|  
 |!=|Non égal à|  
 |\<|Inférieur à|  
 |>|Supérieur à|  
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- La requête suivante renvoie les illustrations petit format d'un modèle de produit à partir du catalogue de produits fourni dans l'exemple de base de données AdventureWorks. La requête compare une séquence de valeurs atomiques renvoyée par `PD:ProductDescription/PD:Picture/PD:Size` à une séquence singleton, "small". Si la comparaison a la valeur true, elle retourne l'\> élément image <.  
+ La requête suivante renvoie les illustrations petit format d'un modèle de produit à partir du catalogue de produits fourni dans l'exemple de base de données AdventureWorks. La requête compare une séquence de valeurs atomiques renvoyée par `PD:ProductDescription/PD:Picture/PD:Size` à une séquence singleton, "small". Si la comparaison a la valeur true, elle retourne l' \> élément image <.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- La requête renvoie la valeur True. ce qui indique que le numéro existe dans le document. La requête suivante est une version légèrement modifiée de la précédente. Dans cette requête, les valeurs de numéro de téléphone récupérées à partir du document sont comparées à une séquence de deux valeurs de numéro de téléphone. Si la comparaison est true, l’élément <\> number est retourné.  
+ La requête renvoie la valeur True. ce qui indique que le numéro existe dans le document. La requête suivante est une version légèrement modifiée de la précédente. Dans cette requête, les valeurs de numéro de téléphone récupérées à partir du document sont comparées à une séquence de deux valeurs de numéro de téléphone. Si la comparaison est true, l’élément <Number \> est retourné.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -142,7 +142,7 @@ WHERE ContactID=1
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|eq|Égal à|  
+|eq|Equal|  
 |ne|Non égal à|  
 |lt|Inférieur à|  
 |gt|Supérieur à|  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  Ces opérateurs fonctionnent uniquement sur des valeurs atomiques singleton. Autrement dit, vous ne pouvez pas spécifier une séquence en tant qu'opérande.  
   
- Par exemple, la requête suivante récupère les \<éléments d'> d’images pour un modèle de produit où la taille de l’image est «petite :  
+ Par exemple, la requête suivante récupère \<Picture> des éléments pour un modèle de produit où la taille de l’image est «petite :  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +170,7 @@ WHERE ProductModelID=19
   
 -   `declare namespace` définit le préfixe d'espace de noms qui est utilisé par la suite dans la requête.  
   
--   La \<taille> valeur de l’élément est comparée à la valeur atomique spécifiée, « petite ».  
+-   La \<Size> valeur de l’élément est comparée à la valeur atomique spécifiée, « Small ».  
   
 -   Notez que, étant donné que les opérateurs de valeur fonctionnent uniquement sur les valeurs atomiques, la fonction **Data ()** est implicitement utilisée pour récupérer la valeur du nœud. Autrement dit, `data($P/PD:Size) eq "small"` donne le même résultat.  
   
@@ -225,7 +225,7 @@ ProductModelID       Result
   
 -   `>>`: L' **opérande 1** suit l' **opérande 2** dans l’ordre du document.  
   
- La requête suivante renvoie la valeur true si la description du catalogue \<de produits contient l’élément warranty> qui apparaît avant l' \<élément maintenance> dans l’ordre du document pour un produit particulier.  
+ La requête suivante retourne la valeur true si la description du catalogue de produits contient l' \<Warranty> élément qui apparaît avant l' \<Maintenance> élément dans l’ordre du document pour un produit particulier.  
   
 ```  
 WITH XMLNAMESPACES (  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728192"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +42,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'`Nom d’un utilisateur ou d’un groupe Windows. L’utilisateur ou le groupe Windows doit être qualifié par un nom de domaine Windows sous la forme *domaine*\\*utilisateur*; par exemple, **London\JoeB**. *login* est de **type sysname**, sans valeur par défaut.  
+`[ @loginame = ] 'login'`Nom d’un utilisateur ou d’un groupe Windows. L’utilisateur ou le groupe Windows doit être qualifié par un nom de domaine Windows sous la forme *domaine* \\ *utilisateur*; par exemple, **London\JoeB**. *login* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -56,7 +56,7 @@ sp_grantlogin [@loginame=] 'login'
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `CREATE LOGIN` pour créer une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour l’utilisateur `Corporate\BobJ.` Windows. il s’agit de la méthode recommandée.  
+ L’exemple suivant utilise `CREATE LOGIN` pour créer une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour l’utilisateur Windows `Corporate\BobJ.` . il s’agit de la méthode recommandée.  
   
 ```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  

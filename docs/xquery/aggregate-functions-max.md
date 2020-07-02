@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b2a7449da7c255d0ddbbed71fef3561f77e294d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: caf736973d288a89bec287aff3cb1c1993e3b0dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726780"
 ---
 # <a name="aggregate-functions---max"></a>Fonctions d’agrégation : max
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retourne à partir d’une séquence de valeurs atomiques, *$arg*, un élément dont la valeur est supérieure à celle de tous les autres.  
   
@@ -39,7 +39,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Séquence de valeurs atomiques à partir de laquelle la valeur maximale est renvoyée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Tous les types des valeurs atomisées passées à **Max ()** doivent être des sous-types du même type de base. Les types de base acceptés sont les types qui prennent en charge l’opération **gt** . Ces types incluent les trois types numériques de base intégrés, les types de base date/heure et les types xs:string (chaîne), xs:boolean (booléen) et xdt:untypedAtomic (atomique non typé). Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passées, une erreur statique est générée.  
   
  Le résultat de **Max ()** reçoit le type de base des types transmis, tel que XS : double dans le cas de xdt : untypedAtomic. Si l'entrée est vide (valeur empty) de façon statique, « empty » est alors implicite et une erreur statique est émise.  
@@ -49,7 +49,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>R. Utilisation de la fonction XQuery max() pour localiser les postes de travail du processus de fabrication enregistrant le plus d'heures de main-d'œuvre  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Utilisation de la fonction XQuery max() pour localiser les postes de travail du processus de fabrication enregistrant le plus d'heures de main-d'œuvre  
  La requête fournie dans la [fonction min (XQuery)](../xquery/aggregate-functions-min.md) peut être réécrite pour utiliser la fonction **Max ()** .  
   
 ## <a name="implementation-limitations"></a>Limites de mise en œuvre  

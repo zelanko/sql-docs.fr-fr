@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f12da71985fc0d2629c28500c4561eb1495c0ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 227b83f8171122bfd5c7f328628ccb07c359de87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731638"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Extrait, de l'Abonné, les lignes pour lesquelles il existe des mises à jour dans la file d'attente. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
@@ -58,7 +58,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**table column1...n**||Valeur de chaque colonne de la table spécifiée dans *TableName*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Cette colonne permet d'assurer le suivi des modifications apportées aux données répliquées et de détecter les conflits sur le serveur de publication. Cette colonne est automatiquement ajoutée à la table.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_getqueuedrows** est utilisé sur les abonnés participant à la mise à jour en attente.  
   
  **sp_getqueuedrows** recherche les lignes d’une table donnée sur une base de données d’abonnement qui ont participé à une mise à jour en file d’attente, mais qui n’ont pas encore été résolues par l’agent de lecture de la file d’attente.  

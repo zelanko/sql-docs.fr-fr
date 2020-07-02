@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727634"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architecture de l’intégration du CLR - Performances
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Cette rubrique décrit quelques-uns des choix de conception qui améliorent les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performances de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] intégration avec le .NET Framework Common Language Runtime (CLR).  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  Cette rubrique décrit quelques-uns des choix de conception qui améliorent les performances de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégration avec le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Processus de compilation  
  Pendant la compilation d'expressions SQL, en cas de référence à une routine managée, un stub MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) est généré. Ce stub inclut le code pour marshaler les paramètres de routine à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers le CLR, appeler la fonction et retourner le résultat. Ce code de type glue est basé sur le type de paramètre et sur la direction du paramètre (in, out ou reference).  
@@ -56,7 +56,7 @@ ms.locfileid: "81488147"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les données de type caractère, telles que **varchar**, peuvent être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur sont accessibles par le biais d’une interface de streaming retournée par **SQLXML. CreateReader ()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>Différences entre le CLR et les procédures stockées étendues  
- Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les API System. Data. SqlServer prennent en charge des types de données tels que **XML**, **varchar (max)**, **nvarchar (max)** et **varbinary (max)**, introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tandis que les API ODS n’ont pas été étendues pour prendre en charge les nouveaux types de données.  
+ Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les API System. Data. SqlServer prennent en charge des types de données tels que **XML**, **varchar (max)**, **nvarchar (max)** et **varbinary (max)**, introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , tandis que les API ODS n’ont pas été étendues pour prendre en charge les nouveaux types de données.  
   
  Avec le code managé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l'utilisation de ressources telles que la mémoire, les threads et la synchronisation. La raison en est que les API managées qui exposent ces ressources sont implémentées sur le gestionnaire de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inversement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a ni vue ou contrôle sur l'utilisation des ressources de la procédure stockée étendue. Par exemple, si une procédure stockée étendue consomme une quantité trop importante d'UC ou de ressources mémoire, il n'existe aucun moyen de le détecter ou de le contrôler avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avec le code managé, toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut détecter qu'un thread donné n'a rien produit pendant une longue période de temps, puis forcer la tâche à être abandonnée afin qu'un autre travail puisse être planifié. Par conséquent, l'utilisation du code managé offre une meilleure évolutivité et une meilleure utilisation des ressources système.  
   

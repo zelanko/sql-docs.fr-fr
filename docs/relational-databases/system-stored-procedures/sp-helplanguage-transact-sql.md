@@ -19,15 +19,15 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733201"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Affiche des informations sur une langue de remplacement particulière ou sur toutes les langues dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -41,7 +41,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @language = ] 'language'`Nom de l’autre langue pour laquelle afficher des informations. *Language* est de **type sysname**, avec NULL comme valeur par défaut. Si la *langue* est spécifiée, les informations relatives à la langue spécifiée sont retournées. Si la langue n’est pas spécifiée, des informations sur toutes les langues de la vue de compatibilité **sys. syslanguages** sont retournées.  
+`[ @language = ] 'language'`Nom de l’autre langue pour laquelle afficher des informations. *Language* est de **type sysname**, avec NULL comme valeur par défaut. Si la *langue* est spécifiée, les informations relatives à la langue spécifiée sont retournées. Si la langue n’est pas spécifiée, des informations sur toutes les langues de la vue de compatibilité des **languessys.sys** sont retournées.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

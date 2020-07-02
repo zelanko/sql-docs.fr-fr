@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28eb993cc6755d596d49e7930a3fd68b884b8f29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68032977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731716"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un rôle d'application à la base de données active.  
   
@@ -44,7 +44,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="arguments"></a>Arguments  
 `[ @rolename = ] 'role'`Nom du nouveau rôle d’application. *role* est de **type sysname**, sans valeur par défaut. le *rôle* doit être un identificateur valide et ne peut pas déjà exister dans la base de données actuelle.  
   
- Les rôles d'application peuvent contenir de 1 à 128 caractères, y compris les lettres, les symboles et les nombres. Les noms de rôles ne peuvent pas\\contenir de barre oblique inverse () ni de valeur null ou de chaîne vide (' ').  
+ Les rôles d'application peuvent contenir de 1 à 128 caractères, y compris les lettres, les symboles et les nombres. Les noms de rôles ne peuvent pas contenir de barre oblique inverse ( \\ ) ni de valeur null ou de chaîne vide (' ').  
   
 `[ @password = ] 'password'`Mot de passe requis pour activer le rôle d’application. *Password* est de **type sysname**, sans valeur par défaut. le *mot de passe* ne peut pas être null.  
   
@@ -54,7 +54,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="remarks"></a>Notes  
  Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les utilisateurs (et leurs rôles) ne sont pas complètement distincts des schémas. À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les schémas sont complètement distincts des rôles. Cette nouvelle architecture se manifeste dans le comportement de CREATE APPLICATION ROLE. Cette instruction remplace **sp_addapprole**.  
   
- Pour assurer la compatibilité descendante avec les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versions antérieures de, **sp_addapprole** effectuera les opérations suivantes :  
+ Pour assurer la compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_addapprole** effectuera les opérations suivantes :  
   
 -   S'il n'existe pas encore de schéma portant le même nom que le rôle d'application, ce schéma est créé. Le nouveau schéma est la propriété du rôle d'application et devient le schéma par défaut de ce rôle.  
   
@@ -73,7 +73,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données. S'il n'existe pas encore de schéma présentant le même nom et le même propriétaire que le nouveau rôle, l'autorisation CREATE SCHEMA sur la base de données est également requise.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant ajoute le nouveau rôle `SalesApp` d’application avec le `x97898jLJfcooFUYLKm387gf3` mot de passe à la base de données active.  
+ L’exemple suivant ajoute le nouveau rôle d’application `SalesApp` avec le mot de passe `x97898jLJfcooFUYLKm387gf3` à la base de données active.  
   
 ```  
 EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;  

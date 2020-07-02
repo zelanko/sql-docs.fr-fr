@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e870c1411382fc38494a899fa3621c80342c1a8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730081"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie le contenu d'un ou plusieurs fichiers de trace dans un format tabulaire.  
   
@@ -49,7 +49,7 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Spécifie le nombre de fichiers de substitution à lire. Ce nombre comprend le fichier initial spécifié dans *filename*. *number_files* est un **entier**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si *number_files* est spécifié en tant que **valeur par défaut**, **fn_trace_gettable** lit tous les fichiers de substitution jusqu’à ce qu’il atteigne la fin de la trace. **fn_trace_gettable** retourne une table avec toutes les colonnes valides pour la trace spécifiée. Pour plus d’informations, consultez [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Sachez que la fonction fn_trace_gettable ne chargera pas les fichiers de substitution (lorsque cette option est spécifiée à l’aide de l’argument *number_files* ) où le nom du fichier de trace d’origine se termine par un trait de soulignement et une valeur numérique. (Cela ne s’applique pas au trait de soulignement et au nombre qui sont automatiquement ajoutés lors du basculement d’un fichier.) En guise de solution de contournement, vous pouvez renommer les fichiers de trace pour supprimer les traits de soulignement dans le nom de fichier d’origine. Par exemple, si le fichier d’origine se nomme **Trace_Oct_5. trc** et que le fichier de substitution se nomme **Trace_Oct_5_1. trc**, vous pouvez renommer les fichiers en **TraceOct5. trc** et **TraceOct5_1. trc**.  

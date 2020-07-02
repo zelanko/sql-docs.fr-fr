@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727815"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Création de types définis par l’utilisateur - Exigences
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Vous devez prendre plusieurs décisions importantes en matière de conception lors de la création d’un type défini par l’utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](UDT) à installer dans. Pour la plupart des types définis par l'utilisateur, il est recommandé de créer un type défini par l'utilisateur sous forme de structure mais il est également possible de le créer sous forme de classe. La définition de l'UDT doit être conforme aux spécifications de création d'UDT afin de pouvoir l'enregistrer avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Vous devez prendre plusieurs décisions importantes en matière de conception lors de la création d’un type défini par l’utilisateur (UDT) à installer dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour la plupart des types définis par l'utilisateur, il est recommandé de créer un type défini par l'utilisateur sous forme de structure mais il est également possible de le créer sous forme de classe. La définition de l'UDT doit être conforme aux spécifications de création d'UDT afin de pouvoir l'enregistrer avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Configuration requise pour l'implémentation des types définis par l'utilisateur  
  Pour s'exécuter dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], votre UDT doit implémenter les éléments requis suivants dans sa définition :  
   
  Le type défini par l’utilisateur doit spécifier **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute**. L’utilisation de **System. SerializableAttribute** est facultative, mais recommandée.  
   
--   Le type défini par l’utilisateur doit implémenter l’interface **System. Data. SqlTypes. INullable** dans la classe ou la structure en créant [!INCLUDE[msCoName](../../includes/msconame-md.md)] une méthode **null** **statique** publique (**Shared** in Visual Basic). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est par défaut compatible avec la valeur NULL. Ceci est nécessaire pour que le code exécuté dans l'UDT puisse être en mesure de reconnaître une valeur NULL.  
+-   Le type défini par l’utilisateur doit implémenter l’interface **System. Data. SqlTypes. INullable** dans la classe ou la structure en créant une méthode null **statique** publique (**Shared** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic). **Null** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est par défaut compatible avec la valeur NULL. Ceci est nécessaire pour que le code exécuté dans l'UDT puisse être en mesure de reconnaître une valeur NULL.  
   
 -   L’UDT doit contenir une méthode d' **analyse** **statique** publique (ou **partagée**) qui prend en charge l’analyse de, et une méthode **ToString** publique pour la conversion en une représentation sous forme de chaîne de l’objet.  
   
 -   Un UDT avec un format de sérialisation défini par l’utilisateur doit implémenter l’interface **System. Data. IBinarySerialize** et fournir une méthode de **lecture** et d' **écriture** .  
   
--   L’UDT doit implémenter **System. Xml. Serialization. IXmlSerializable**, ou tous les champs et propriétés publics doivent être de types sérialisables XML ou décorés avec l’attribut **XmlIgnore** si la substitution de la sérialisation standard est requise.  
+-   L’UDT doit implémenter **System.Xml. Serialization. IXmlSerializable**, ou tous les champs et propriétés publics doivent être de types qui sont SÉRIALISABLES XML ou décorés avec l’attribut **XmlIgnore** si la substitution de la sérialisation standard est requise.  
   
 -   Chaque objet UDT doit être soumis à une seule sérialisation. La validation échoue si les routines de sérialisation ou désérialisation reconnaissent plusieurs représentations d'un objet en particulier.  
   
@@ -146,13 +146,13 @@ ms.locfileid: "81486968"
 -   Less than or equal to (&lt;=)  
   
 ### <a name="implementing-nullability"></a>Implémentation de la possibilité de valeur NULL  
- En plus de spécifier correctement les attributs de vos assemblys, votre classe doit également prendre en charge la possibilité de valeur NULL. Les UDT chargés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans prennent en charge la valeur null, mais pour que l’UDT puisse reconnaître une valeur null, la classe doit implémenter l’interface **INullable** . Pour plus d’informations et pour obtenir un exemple d’implémentation de la possibilité de valeur null dans un type défini par l’utilisateur, consultez [codage de types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ En plus de spécifier correctement les attributs de vos assemblys, votre classe doit également prendre en charge la possibilité de valeur NULL. Les UDT chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge la valeur null, mais pour que l’UDT puisse reconnaître une valeur null, la classe doit implémenter l’interface **INullable** . Pour plus d’informations et pour obtenir un exemple d’implémentation de la possibilité de valeur null dans un type défini par l’utilisateur, consultez [codage de types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversions de chaînes  
  Pour prendre en charge la conversion de chaînes vers et à partir du type défini par l’utilisateur, vous devez fournir une méthode **Parse** et une méthode **ToString** dans votre classe. La méthode **Parse** permet de convertir une chaîne en UDT. Elle doit être déclarée comme **static** (ou **shared** dans Visual Basic) et prendre un paramètre de type **System. Data. SqlTypes. SqlString**. Pour plus d’informations et pour obtenir un exemple de la façon d’implémenter les méthodes **Parse** et **ToString** , consultez [codage de types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Sérialisation XML  
- Les UDT doivent prendre en charge la conversion vers et depuis le type de données **XML** en se conformant au contrat de sérialisation XML. L’espace de noms **System. Xml. Serialization** contient des classes utilisées pour sérialiser des objets en documents au format XML ou en flux. Vous pouvez choisir d’implémenter la sérialisation **XML** à l’aide de l’interface **IXmlSerializable** , qui fournit une mise en forme personnalisée pour la sérialisation et la désérialisation XML.  
+ Les UDT doivent prendre en charge la conversion vers et depuis le type de données **XML** en se conformant au contrat de sérialisation XML. **System.Xml. **L’espace de noms de sérialisation contient des classes utilisées pour sérialiser des objets en documents au format XML ou en flux. Vous pouvez choisir d’implémenter la sérialisation **XML** à l’aide de l’interface **IXmlSerializable** , qui fournit une mise en forme personnalisée pour la sérialisation et la désérialisation XML.  
   
  Outre les conversions explicites de UDT en **XML**, la sérialisation XML vous permet d’effectuer les opérations suivantes :  
   

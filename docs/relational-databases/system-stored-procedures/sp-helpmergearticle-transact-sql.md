@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733130"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur un article. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données d'abonnement d'un Abonné de republication.  
   
@@ -52,7 +52,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Nom de l'objet source à partir duquel l'article doit être ajouté.|  
 |**sync_object_owner**|**sysname**|Nom du propriétaire de la vue qui définit l'article publié.|  
 |**sync_object**|**sysname**|Nom de l'objet personnalisé utilisé pour établir les données initiales pour la partition.|  
-|**descriptive**|**nvarchar(255)**|Description de l'article|  
+|**description**|**nvarchar(255)**|Description de l'article|  
 |**statut**|**tinyint**|État de l'article, qui peut être l'un des suivants :<br /><br /> **1** = inactif<br /><br /> **2** = actif<br /><br /> **5** = opération DDL (Data Definition Language) en attente<br /><br /> **6** = opération DDL avec un instantané nouvellement généré<br /><br /> Remarque : lorsqu’un article est réinitialisé, les valeurs **5** et **6** sont remplacées par **2**.|  
 |**creation_script**|**nvarchar(255)**|Chemin d'accès et nom d'un script de schéma d'article facultatif utilisé pour créer l'article dans la base de données d'abonnement.|  
 |**conflict_table**|**nvarchar (270)**|Nom de la table stockant les conflits d'insertion ou de mise à jour.|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|Si la gestion automatique des plages d’identité est activée ; où **1** est activé et **0** est désactivé.|  
 |**pub_identity_range**|**bigint**|Taille de plage à utiliser lors de l'affectation de nouvelles valeurs d'identité. Pour plus d’informations, consultez la section « réplication de fusion » de l’article [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Taille de plage à utiliser lors de l'affectation de nouvelles valeurs d'identité. Pour plus d’informations, consultez la section « réplication de fusion » de l’article [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**durée**|**int**|Valeur de pourcentage utilisée pour les abonnés exécutant [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . le **seuil** contrôle le moment où l’agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans le seuil est utilisé, l'Agent de fusion crée une nouvelle plage d'identité. Pour plus d’informations, consultez la section « réplication de fusion » de l’article [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**|**int**|Valeur de pourcentage utilisée pour les abonnés exécutant [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . le **seuil** contrôle le moment où l’agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans le seuil est utilisé, l'Agent de fusion crée une nouvelle plage d'identité. Pour plus d’informations, consultez la section « réplication de fusion » de l’article [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Si une signature numérique est vérifiée avant l’utilisation d’un programme de résolution dans la réplication de fusion ; où **0** signifie que la signature n’est pas vérifiée, et **1** signifie que la signature est vérifiée pour déterminer si elle provient d’une source approuvée.|  
 |**destination_object**|**sysname**|Nom de l'objet de destination. Applicable uniquement aux articles de schémas de fonctions utilisateur, aux vues et aux procédures stockées de fusion.|  
 |**allow_interactive_resolver**|**int**|Si le programme de résolution interactif est utilisé sur un article ; où **1** signifie que ce programme de résolution est utilisé et **0** signifie qu’il n’est pas utilisé.|  
@@ -87,7 +87,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpmergearticle** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

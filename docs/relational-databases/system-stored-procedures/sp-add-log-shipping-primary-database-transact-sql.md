@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731785"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Initialise la base de données primaire d'une configuration d'envoi de journaux, ce qui inclut le travail de sauvegarde, l'enregistrement de surveillance local, et l'enregistrement de surveillance distant.  
   
@@ -85,7 +85,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @history_retention_period = ] history_retention_period`Durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de travail de l’agent associé au travail de sauvegarde sur le serveur principal. *backup_job_id* est de type **uniqueidentifier** et ne peut pas être null.  
+`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ID de travail de l’agent associé au travail de sauvegarde sur le serveur principal. *backup_job_id* est de type **uniqueidentifier** et ne peut pas être null.  
   
 `[ @primary_id = ] primary_id OUTPUT`ID de la base de données primaire pour la configuration de la copie des journaux de la copie. *primary_id* est de type **uniqueidentifier** et ne peut pas être null.  
   
@@ -95,7 +95,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Activé. Toujours compresser des sauvegardes de journal.  
   
- 2 = utiliser le paramètre de la [vue ou configurer l’option de configuration de serveur compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s'agit de la valeur par défaut.  
+ 2 = utiliser le paramètre de la [vue ou configurer l’option de configuration de serveur compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s’agit de la valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

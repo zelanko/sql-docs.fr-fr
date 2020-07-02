@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727830"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Accès aux types définis par l’utilisateur - Mise à jour de colonnes UDT avec DataAdapters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les types définis par l’utilisateur (UDT) sont pris en charge à l’aide d’un **System. Data. DataSet** et d’un **System. Data. SqlClient. SqlDataAdapter** pour récupérer et modifier des données.  
   
 ## <a name="populating-a-dataset"></a>Remplissage d'un dataset  
- Vous pouvez utiliser une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour sélectionner des valeurs de colonne UDT pour remplir un dataset à l'aide d'un adaptateur de données. L’exemple suivant suppose que vous avez une table de **points** définie avec la structure suivante et des exemples de données. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes créent la table **points** et insèrent quelques lignes.  
+ Vous pouvez utiliser une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour sélectionner des valeurs de colonne UDT pour remplir un dataset à l'aide d'un adaptateur de données. L’exemple suivant suppose que vous avez une table de **points** définie avec la structure suivante et des exemples de données. Les [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions suivantes créent la table **points** et insèrent quelques lignes.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  

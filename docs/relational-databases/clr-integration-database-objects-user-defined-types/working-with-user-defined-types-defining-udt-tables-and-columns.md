@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f46ebc5089a4cb2fdb974df52d9bc876f925da4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7fc857b99772983d925504357f641f89780fdd67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727768"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Utilisation de types définis par l’utilisateur - Définition de tables et de colonnes UDT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Une fois que l’assembly contenant la définition de type défini par l’utilisateur (UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été enregistré dans une base de données, il peut être utilisé dans une définition de colonne. Pour plus d’informations, consultez [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Une fois que l’assembly contenant la définition de type défini par l’utilisateur (UDT) a été enregistré dans une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données, il peut être utilisé dans une définition de colonne. Pour plus d’informations, consultez [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 ## <a name="creating-tables-with-udts"></a>Création de tables avec UDT  
- Il n'existe aucune syntaxe particulière pour la création d'une colonne UDT dans une table. Vous pouvez utiliser le nom de l'UDT dans une définition de colonne comme s'il correspondait à l'un des types de données intrinsèques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’instruction CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante crée une table nommée **points**, avec une colonne nommée **ID,** qui est définie comme une colonne d’identité **int** et la clé primaire pour la table. La deuxième colonne est nommée **PointValue**, avec un type de données **point**. Le nom de schéma utilisé dans cet exemple est **dbo**. Notez que vous devez disposer des autorisations nécessaires pour spécifier un nom de schéma. Si vous omettez le nom de schéma, le schéma par défaut de l'utilisateur de base de données est utilisé.  
+ Il n'existe aucune syntaxe particulière pour la création d'une colonne UDT dans une table. Vous pouvez utiliser le nom de l'UDT dans une définition de colonne comme s'il correspondait à l'un des types de données intrinsèques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’instruction CREATE TABLE suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] crée une table nommée **points**, avec une colonne nommée **ID,** qui est définie comme une colonne d’identité **int** et la clé primaire pour la table. La deuxième colonne est nommée **PointValue**, avec un type de données **point**. Le nom de schéma utilisé dans cet exemple est **dbo**. Notez que vous devez disposer des autorisations nécessaires pour spécifier un nom de schéma. Si vous omettez le nom de schéma, le schéma par défaut de l'utilisateur de base de données est utilisé.  
   
 ```sql  
 CREATE TABLE dbo.Points   

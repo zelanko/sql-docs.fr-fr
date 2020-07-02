@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71174258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727223"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crée une alerte.  
   
@@ -53,14 +53,14 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de l’alerte. Ce nom apparaît dans le message envoyé par courrier électronique ou par radiomessagerie en réponse à l'alerte. Il doit être unique et peut contenir le caractère de**%** pourcentage (). *Name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'`Nom de l’alerte. Ce nom apparaît dans le message envoyé par courrier électronique ou par radiomessagerie en réponse à l'alerte. Il doit être unique et peut contenir le caractère de pourcentage ( **%** ). *Name* est de **type sysname**, sans valeur par défaut.  
   
 `[ @message_id = ] message_id`Numéro d’erreur du message qui définit l’alerte. (Il correspond généralement à un numéro d’erreur dans la table **sysmessages** .) *message_id* est de **type int**, avec **0**comme valeur par défaut. Si le niveau de *gravité* est utilisé pour définir l’alerte, *message_id* doit avoir la valeur **0** ou null.  
   
 > [!NOTE]  
 >  Seules les erreurs **sysmessages** écrites dans le journal des applications Microsoft Windows peuvent entraîner l’envoi d’une alerte.  
   
-`[ @severity = ] severity`Niveau de gravité (compris entre **1** et **25**) qui définit l’alerte. Tout [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message stocké dans la table **sysmessages** envoyé au [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows avec la gravité indiquée entraîne l’envoi de l’alerte. *Severity* est de **type int**, avec 0 comme valeur par défaut. Si *message_id* est utilisé pour définir l’alerte, la *gravité* doit être **0**.  
+`[ @severity = ] severity`Niveau de gravité (compris entre **1** et **25**) qui définit l’alerte. Tout [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message stocké dans la table **sysmessages** envoyé au [!INCLUDE[msCoName](../../includes/msconame-md.md)] Journal des applications Windows avec la gravité indiquée entraîne l’envoi de l’alerte. *Severity* est de **type int**, avec 0 comme valeur par défaut. Si *message_id* est utilisé pour définir l’alerte, la *gravité* doit être **0**.  
   
 `[ @enabled = ] enabled`Indique l’état actuel de l’alerte. *Enabled* est de **type tinyint**, avec 1 comme valeur par défaut (activé). Si la **valeur est 0**, l’alerte n’est pas activée et ne se déclenche pas.  
   
@@ -77,7 +77,7 @@ sp_add_alert [ @name = ] 'name'
 `[ @include_event_description_in = ] include_event_description_in`Indique si la description de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erreur doit être incluse dans le message de notification. *include_event_description_in*est de **type tinyint**, avec **5** comme valeur par défaut (courrier électronique et **net send**) et une ou plusieurs de ces valeurs peuvent être combinées avec un opérateur logique **or** .  
   
 > [!IMPORTANT]
->  Les options de radiomessagerie et **net send** seront [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprimées de l’agent dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]une version ultérieure de. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
+>  Les options de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -97,7 +97,7 @@ sp_add_alert [ @name = ] 'name'
 > [!NOTE]  
 >  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap`Non implémenté dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la version 7,0. *raise_snmp_trap* est de **type tinyint**, avec 0 comme valeur par défaut.  
+`[ @raise_snmp_trap = ] raise_snmp_trap`Non implémenté dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7,0. *raise_snmp_trap* est de **type tinyint**, avec 0 comme valeur par défaut.  
   
 `[ @performance_condition = ] 'performance_condition'`Est une valeur exprimée au format'*itemcomparatorvalue*'. *performance_condition* est de type **nvarchar (512)** avec NULL comme valeur par défaut et se compose de ces éléments.  
   
@@ -172,7 +172,7 @@ GO
  [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys. sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysPerfInfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

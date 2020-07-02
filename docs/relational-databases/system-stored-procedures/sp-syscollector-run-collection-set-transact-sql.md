@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88b1cd8aaf95da010883faa7033c0bd6bf3cd2a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df10095b28d64ed3600b709931ad237400b9bd55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725538"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Démarre un jeu d'éléments de collecte si le collecteur est déjà activé et si le jeu d'éléments de collecte est configuré en mode de collecte sans mise en cache.  
   

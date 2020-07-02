@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730038"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur les travaux utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour effectuer des opérations automatisées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendu.|  
 |**7**|Effectue le travail.|  
   
-`[ @date_comparator = ] 'date_comparison'`Opérateur de comparaison à utiliser dans les comparaisons de *Date_Created* et *Date_Modified*. *date_comparison* est de **type char (1)** et peut être =, \< ou >.  
+`[ @date_comparator = ] 'date_comparison'`Opérateur de comparaison à utiliser dans les comparaisons de *Date_Created* et *Date_Modified*. *date_comparison* est de **type char (1)** et peut être =, \<, or > .  
   
 `[ @date_created = ] date_created`Date à laquelle le travail a été créé. *Date_Created*est de **type DateTime**, avec NULL comme valeur par défaut.  
   
@@ -111,7 +111,7 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
 |**name**|**sysname**|Nom du travail.|  
 |**désactivé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
-|**descriptive**|**nvarchar(512)**|Description du travail.|  
+|**description**|**nvarchar(512)**|Description du travail.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
 |**category**|**sysname**|Catégorie de travail.|  
 |**du**|**sysname**|Propriétaire du travail.|  
@@ -149,14 +149,14 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|Identificateur unique de cette étape (pour ce travail).|  
 |**step_name**|**sysname**|Nom de l'étape|  
 |**sous-système**|**nvarchar(40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
-|**commande**|**nvarchar (3200)**|Commande à exécuter.|  
+|**command**|**nvarchar (3200)**|Commande à exécuter.|  
 |**flags**|**nvarchar(4000)**|**Masque** de temps des valeurs qui contrôlent le comportement de l’étape.|  
 |**cmdexec_success_code**|**int**|Pour une étape **CmdExec** , il s’agit du code de sortie du processus d’une commande réussie.|  
 |**on_success_action**|**nvarchar(4000)**|Que faire si l'étape est exécutée correctement :<br /><br /> **1** = quitter avec succès.<br /><br /> **2** = quitter avec échec.<br /><br /> **3** = passer à l’étape suivante.<br /><br /> **4** = passer à l’étape.|  
 |**on_success_step_id**|**int**|Si **on_success_action** a la valeur **4**, cela indique l’étape suivante à exécuter.|  
 |**on_fail_action**|**nvarchar(4000)**|Action à exécuter si l'exécution de l'étape échoue. Les valeurs sont les mêmes que pour **on_success_action**.|  
 |**on_fail_step_id**|**int**|Si **on_fail_action** a la valeur **4**, cela indique l’étape suivante à exécuter.|  
-|**serveurs**|**sysname**|Réservé.|  
+|**server**|**sysname**|Réservé.|  
 |**database_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est la base de données dans laquelle la commande sera exécutée.|  
 |**database_user_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est le contexte de l'utilisateur de la base de données dans lequel la commande est exécutée.|  
 |**retry_attempts**|**int**|Nombre de tentatives maximum de la commande (si elle échoue) avant que l'étape soit considérée comme un échec.|  

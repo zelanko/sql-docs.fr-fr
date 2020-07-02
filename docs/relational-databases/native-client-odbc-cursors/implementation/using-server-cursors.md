@@ -16,17 +16,17 @@ ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ede31d9d59ef7d01dfd7e7b610edae273cbc5d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 962a8879d53f9cf7f0f59ba4c79ba63063f79ecc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730381"
 ---
 # <a name="using-server-cursors"></a>Utilisation des curseurs côté serveur
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Si une application ODBC définit l’un des attributs de curseur ODBC sur une valeur autre que les valeurs par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] défaut, le pilote ODBC native client demande au serveur d’implémenter un curseur côté serveur d’API du même type. L'utilisation de curseurs côté serveur d'API libère la mémoire sur le client et peut réduire considérablement le trafic réseau entre le client et le serveur.  
+  Si une application ODBC définit l’un des attributs de curseur ODBC sur une valeur autre que les valeurs par défaut, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC native client demande au serveur d’implémenter un curseur côté serveur d’API du même type. L'utilisation de curseurs côté serveur d'API libère la mémoire sur le client et peut réduire considérablement le trafic réseau entre le client et le serveur.  
   
  Un inconvénient possible des curseurs côté serveur d'API est qu'ils ne prennent pas en charge toutes les instructions SQL. Les curseurs côté serveur d'API ne peuvent pas être utilisés pour exécuter :  
   

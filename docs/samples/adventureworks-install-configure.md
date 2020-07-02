@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9f84b6113f9f3904ca65831a00308ab56ee79daa
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
+ms.openlocfilehash: 63bbcc23b30e34a66757b0a46d8955edd82a4728
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729142"
 ---
 # <a name="adventureworks-sample-databases"></a>Exemples de bases de données AdventureWorks
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Cet article fournit des liens directs pour télécharger des exemples de bases de données AdventureWorks, ainsi que des instructions pour les restaurer sur SQL Server et Azure SQL Database. 
 

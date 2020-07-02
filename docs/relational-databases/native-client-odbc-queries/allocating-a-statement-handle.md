@@ -21,15 +21,15 @@ ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85678c5b03a77910c73bd5b8bac8d0e40d52c252
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bd93e3ac61c81bf7e61f9fd98cd05685877f287
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730352"
 ---
 # <a name="allocating-a-statement-handle"></a>Allocation d'un descripteur d'instruction
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Pour qu'une application puisse exécuter une instruction, elle doit allouer un descripteur d'instruction. Pour ce faire, il appelle **SQLAllocHandle** avec le paramètre *comme handletype* défini sur SQL_HANDLE_STMT et *InputHandle* pointant vers un handle de connexion.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81291601"
   
  L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_QUERY_TIMEOUT définit un intervalle de délai d’attente de requête pour aider à protéger le serveur et l’utilisateur des requêtes de longue durée.  
   
- L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_LENGTH limite la quantité de données de **texte** et d' **image** qu’une instruction individuelle peut récupérer. L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_ROWS limite également un ensemble de lignes aux *n* premières lignes si toutes les applications le requièrent. Notez que la définition de SQL_ATTR_MAX_ROWS oblige le pilote à émettre une instruction SET ROWCOUNT à destination du serveur. Cela affecte toutes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les instructions, y compris les déclencheurs et les mises à jour.  
+ L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_LENGTH limite la quantité de données de **texte** et d' **image** qu’une instruction individuelle peut récupérer. L’appel à **SQLSetStmtAttr** avec *fOption* défini sur SQL_ATTR_MAX_ROWS limite également un ensemble de lignes aux *n* premières lignes si toutes les applications le requièrent. Notez que la définition de SQL_ATTR_MAX_ROWS oblige le pilote à émettre une instruction SET ROWCOUNT à destination du serveur. Cela affecte toutes les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions, y compris les déclencheurs et les mises à jour.  
   
  Soyez prudent lorsque vous définissez ces options. Il est préférable que tous les descripteurs d'instruction d'un handle de connexion aient les mêmes paramètres pour SQL_ATTR_MAX_LENGTH et SQL_ATTR_MAX_ROWS. Si le pilote passe d'un descripteur d'instruction à un autre avec des valeurs différentes pour ces options, il doit générer les instructions SET TEXTSIZE et SET ROWCOUNT appropriées pour modifier les paramètres. Le pilote ne peut pas placer ces instructions dans le même lot que l'instruction SQL utilisateur, car cette dernière peut contenir une instruction qui doit être la première dans un lot. Le pilote doit envoyer les instructions SET TEXTSIZE et SET ROWCOUNT dans un lot séparé, ce qui génère automatiquement un aller-retour supplémentaire au serveur.  
   
