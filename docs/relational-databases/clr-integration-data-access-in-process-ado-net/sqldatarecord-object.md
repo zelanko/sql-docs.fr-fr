@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1735c17a4d87e085fbe1e8b5f960d14a70b86c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765429"
 ---
 # <a name="sqldatarecord-object"></a>Objet SqlDataRecord
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'objet **SqlDataRecord** représente une ligne unique de données avec ses métadonnées connexes.  
   
  Les procédures stockées managées peuvent envoyer au client des jeux de résultats clients qui ne proviennent pas d'un **SqlDataReader**. La classe **SqlDataRecord** , avec les méthodes **SendResultsStart**, **SendResultsRow**et **SendResultsEnd** de l'objet **SqlPipe** , permet aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  

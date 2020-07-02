@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764706"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque des analyseurs lexicaux sont inscrits pour une langue, ses autres ressources linguistiques (générateurs de formes dérivées, mots parasites (mots vides) et fichiers de dictionnaire des synonymes) sont disponibles pour les opérations d’indexation et d’interrogation de texte intégral. La valeur du **nom** ou du **LCID** peut être spécifiée dans les requêtes de texte intégral et les instructions d' [!INCLUDE[tsql](../../includes/tsql-md.md)] index de recherche en texte intégral.  
+  Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque des analyseurs lexicaux sont inscrits pour une langue, ses autres ressources linguistiques (générateurs de formes dérivées, mots parasites (mots vides) et fichiers de dictionnaire des synonymes) sont disponibles pour les opérations d’indexation et d’interrogation de texte intégral. La valeur du **nom** ou du **LCID** peut être spécifiée dans les requêtes de texte intégral et les instructions d’index de recherche en texte intégral [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
    
 |Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
-|**name**|**sysname**|Valeur de l’alias dans [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) qui correspond à la valeur de **LCID** ou à la représentation sous forme de chaîne du LCID numérique.|  
+|**name**|**sysname**|Valeur de l’alias dans [sys.syslangues](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondant à la valeur de **LCID** ou représentation sous forme de chaîne du LCID numérique.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valeurs retournées pour les langues par défaut  
  Le tableau suivant présente uniquement les valeurs des langues dont les analyseurs lexicaux sont inscrits par défaut.  
@@ -97,7 +97,7 @@ ms.locfileid: "73981773"
 |Ourdou|1056|  
 |Vietnamien|1066|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour mettre à jour la liste des langues inscrites avec la recherche en texte intégral, utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2cd1e4126c1a9da57a6bda6195be78d996e101d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771374"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie les options d'un Abonné. Toute tâche de distribution destinée aux Abonnés à ce serveur de publication est mise à jour. Cette procédure stockée écrit dans la table **MSsubscriber_info** de la base de données de distribution. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -78,7 +78,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|À la demande|  
 |**4**|Quotidien|  
 |**8**|Hebdomadaire|  
-|**16bits**|Mensuelle|  
+|**16**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
 |**128**|Périodique|  
@@ -93,7 +93,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**8**|Quatrième|  
-|**16bits**|Dernier|  
+|**16**|Dernier|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fréquence de répétition de la tâche de distribution au cours de la *frequency_type*définie. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
   
@@ -133,7 +133,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_changesubscriber** est utilisé dans tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

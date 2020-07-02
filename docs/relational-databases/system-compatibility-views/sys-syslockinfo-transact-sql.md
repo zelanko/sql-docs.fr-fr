@@ -1,5 +1,5 @@
 ---
-title: sys. syslockinfo (Transact-SQL) | Microsoft Docs
+title: sys.sysLockInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764386"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient des informations sur toutes les demandes de verrou accordées, en conversion et en attente.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053338"
 |**req_refcnt**|**smallint**|Nombre de références du verrou. Chaque fois qu'une transaction demande un verrou sur une ressource, un nombre de références est incrémenté. Le verrou ne peut pas être libéré tant que le nombre de références n'est pas égal à 0.|  
 |**req_cryrefcnt**|**smallint**|Réservé pour un usage ultérieur. Toujours défini à 0.|  
 |**req_lifetime**|**int**|Bitmap de durée de vie du verrou. Au cours de certaines stratégies d'exécution de requêtes, les verrous doivent être maintenus sur les ressources jusqu'à ce que le processeur de requêtes ait terminé une phase précise de la requête. Le bitmap de durée de vie de verrou est utilisé par le processeur de requêtes et le gestionnaire des transactions pour indiquer les verrous qui peuvent être levés lorsqu'une certaine phase de la requête est terminée. Certains bits du bitmap sont utilisés pour indiquer les verrous maintenus jusqu'à la fin d'une transaction, même si leur nombre de références est égal à 0.|  
-|**req_spid**|**int**|ID [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de processus interne de la session qui demande le verrou.|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ID de processus interne de la session qui demande le verrou.|  
 |**req_ecid**|**int**|ID de contexte d'exécution (ECID). Indique le thread qui détient un verrou dans une opération parallèle.|  
 |**req_ownertype**|**smallint**|Type d'objet associé au verrou :<br /><br /> 1 = Transaction<br /><br /> 2 = Curseur<br /><br /> 3 = Session<br /><br /> 4 = ExSession<br /><br /> Notez que les valeurs 3 et 4 représentent une version spéciale des verrous de session, respectivement pour le suivi des verrous de base de données et de groupe de fichiers.|  
 |**req_transactionID**|**bigint**|ID de transaction unique utilisé dans **syslockinfo** et dans l’événement du profileur|  

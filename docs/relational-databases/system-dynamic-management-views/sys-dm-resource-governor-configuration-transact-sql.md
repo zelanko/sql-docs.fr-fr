@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df38bbb333e3cadb328b9701c19f21ae657a544b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 872b11372a8051d7a2cd7fcea7fe3bc6106762f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764327"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne qui contient l'état de configuration en mémoire actuel du gouverneur de ressources.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82830476"
 |is_reconfiguration_pending|**bit**|Indique si des modifications ont été apportées ou non à un groupe ou un pool à l'aide de l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE mais qu'elles n'ont pas été appliquées à la configuration en mémoire. L'une des valeurs suivantes est retournée :<br /><br /> 0 - Une instruction de reconfiguration n'est pas requise.<br /><br /> 1 - Une instruction de reconfiguration ou un redémarrage du serveur est requis pour que les modifications de configuration en attente soient appliquées.<br /><br /> **Remarque :** La valeur retournée est toujours 0 lorsque Resource Governor est désactivé.<br /><br /> N'accepte pas la valeur NULL.|  
 |max_outstanding_io_per_volume|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Nombre maximal d'E/S en attente par volume.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette vue de gestion dynamique montre la configuration en mémoire. Pour consulter les métadonnées de configuration stockées, utilisez l'affichage catalogue correspondant.  
   
  L'exemple suivant indique comment obtenir et comparer les valeurs de métadonnées stockées et les valeurs en mémoire de la configuration du gouverneur de ressources.  

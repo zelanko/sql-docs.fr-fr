@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772123"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit des informations sur un serveur distant, sur un serveur de réplication particulier ou sur tous les serveurs des deux types. Fournit le nom du serveur, le nom réseau du serveur, l'état de réplication du serveur, le numéro d'identification du serveur et le nom du classement. Fournit également les valeurs des délais d'expiration pour les connexions ou les requêtes des serveurs liés.  
   
@@ -41,7 +41,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server = ] 'server'`Est le serveur sur lequel les informations sont signalées. Si le *serveur* n’est pas spécifié, génère des rapports sur tous les serveurs dans **Master. sys. Servers**. *Server* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'`Est le serveur sur lequel les informations sont signalées. Si le *serveur* n’est pas spécifié, génère des rapports sur tous les serveurs de **master.sys. serveurs**. *Server* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @optname = ] 'option'`Est l’option qui décrit le serveur. l' *option* est de type **varchar (** 35 **)**, avec NULL comme valeur par défaut et doit prendre l’une des valeurs suivantes.  
   

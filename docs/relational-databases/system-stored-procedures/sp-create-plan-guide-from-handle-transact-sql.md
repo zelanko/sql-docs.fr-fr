@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bac08516b4a0b0f30bf8314ac056e17f94f8f7b7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f4141dc0a7c424ce1ccee021da7cf82c2a6b44b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771184"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un ou plusieurs repères de plan à partir d'un plan de requête dans le cache du plan. Vous pouvez appliquer cette procédure stockée pour garantir que l'optimiseur de requête utilise toujours un plan de requête spécifique pour une requête spécifiée. Pour plus d'informations sur les repères de plan, consultez [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
@@ -53,7 +53,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Lorsque la valeur NULL est spécifiée ou qu'un décalage d'instruction n'est pas spécifié, un repère de plan est créé pour chaque instruction du lot à l'aide du plan de requête pour le descripteur de plan spécifié. Les repères de plan obtenus sont équivalents à ceux qui utilisent l'indicateur de requête USE PLAN pour forcer l'utilisation d'un plan spécifique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un repère de plan ne peut pas être créé pour tous les types d'instructions. Si un repère de plan ne peut pas être créé pour une instruction du lot, la procédure stockée ignore l'instruction et passe à la suivante dans le lot. Si une instruction apparaît plusieurs fois dans le même lot, le plan de la dernière occurrence est activé et les plans précédents de l'instruction sont désactivés. Si aucune instruction dans le lot ne peut être utilisée dans un repère de plan, l'erreur 10532 est générée et l'instruction échoue. Nous vous recommandons de toujours obtenir le descripteur de plan à partir de la vue de gestion dynamique sys.dm_exec_query_stats pour empêcher toute occurrence de cette erreur.  
   
 > [!IMPORTANT]  

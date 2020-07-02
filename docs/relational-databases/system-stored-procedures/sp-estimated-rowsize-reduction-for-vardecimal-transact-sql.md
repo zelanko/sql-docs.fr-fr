@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 292bd66b8c30cec9bc55442a3ab768dd23b731ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772144"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Estime la réduction de la taille moyenne des lignes si vous activez le format de stockage vardecimal sur une table. Utilisez ce nombre pour estimer la réduction globale de la taille de la table. Dans la mesure où l'échantillonnage statistique permet de calculer la réduction moyenne de la taille de ligne, considérez-le simplement comme une estimation. La taille de ligne peut augmenter après l'activation du format de stockage vardecimal, mais cela reste rare.  
   
@@ -60,7 +60,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**décimal (12, 2)**|Représente la taille de ligne moyenne lorsque le format de stockage vardecimal est utilisé.|  
 |**row_count**|**int**|Nombre de lignes dans la table.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez **sp_estimated_rowsize_reduction_for_vardecimal** pour estimer les économies qui résultent si vous activez une table pour le format de stockage vardecimal. Par exemple, si la taille moyenne de la ligne peut être réduite de 40 %, vous pouvez réduire la taille de la table de 40 %. Vous n'économiserez peut-être pas d'espace en fonction du facteur de remplissage et de la taille de la ligne. Par exemple, si vous disposez d'une ligne d'une longueur de 8 000 octets et que vous réduisez sa taille de 40 %, vous ne pourrez toujours pas intégrer plus d'une ligne sur une page de données, ce qui ne génère pas de gains.  
   
  Si les résultats de **sp_estimated_rowsize_reduction_for_vardecimal** indiquent que la table va croître, cela signifie que de nombreuses lignes de la table utilisent presque toute la précision des types de données décimaux, et l’ajout de la faible surcharge requise pour le format de stockage vardecimal est plus important que le format de stockage vardecimal. Dans ce cas très peu fréquent, n'activez pas le format de stockage vardecimal.  

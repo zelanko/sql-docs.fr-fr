@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9290e2b9b64c04545c833a2d04620d87564026e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767788"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>Informations de référence sur SQL Server Express LocalDB - API d’instance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dans le monde traditionnel SQL Server basé sur les services, différentes instances de SQL Server installées sur un même ordinateur sont physiquement séparées ; autrement dit, chaque instance doit être installée et supprimée séparément, possède un jeu distinct de binaires, et s'exécute sous un processus de service distinct. Le nom de l'instance SQL Server est utilisé pour spécifier l'instance SQL Server à laquelle l'utilisateur souhaite se connecter.  
   
  L’API SQL Server Express de l’instance de base de données locale utilise un modèle d’instance simplifié et « clair ». Bien que les instances LocalDB individuelles soient séparées sur le disque et dans le Registre, elles utilisent le même jeu de binaires LocalDB partagés. De plus, LocalDB n'utilise pas de services ; les instances de LocalDB sont lancées sur demande par des appels d'API d'instance de LocalDB. Dans LocalDB, le nom de l'instance est utilisé pour spécifier les instances de LocalDB avec lesquelles l'utilisateur souhaite travailler.  
@@ -65,7 +65,7 @@ ms.locfileid: "68021950"
 ### <a name="named-instance-naming-rules"></a>Règles de dénomination d'instance nommée  
  Un nom d’instance de base de données locale peut comporter jusqu’à 128 caractères (la limite est imposée par le type de données **sysname** ). Il s'agit d'une différence importante comparée aux noms d'instances SQL Server traditionnelles, qui sont limités aux noms NetBIOS de 16 caractères ASCII. La raison de cette différence est que la base de données locale traite les bases de données en tant que fichiers et implique donc la sémantique basée sur les fichiers. il est donc intuitif pour les utilisateurs d’avoir plus de liberté dans le choix des noms d’instance.  
   
- Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Les caractères non conformes dans un composant de nom de fichier sont généralement les suivants : caractères ASCII/Unicode 1 à 31, guillemets ("), inférieur\<à (), supérieur à (>), barre verticale (|), retour arrière (\b), tabulation (\t), deux-points ( :), astérisque (*), point d’interrogation ( ?), la barre oblique inverse (\\) et la barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
+ Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Les caractères non conformes dans un composant filename sont généralement les suivants : caractères ASCII/Unicode 1 à 31, guillemets ("), inférieur à ( \<), greater than (> ), canal (|), retour arrière (\b), tabulation (\t), deux-points ( :), astérisque (*), point d’interrogation ( ?), barre oblique inverse ( \\ ) et barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
   
 > [!NOTE]  
 >  La liste de caractères non conformes peut dépendre du système d'exploitation et peut changer dans les versions ultérieures.  

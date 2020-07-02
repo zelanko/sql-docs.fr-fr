@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc74dfc20c55093cce817ab4eb5b2cf67c1ec6eb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b50309c4f3e33dfc51ca493c80b898b4cd38a3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764499"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne l'état du gouverneur de ressources stocké.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82834084"
 |is_enabled|**bit**|Indique l'état actuel du gouverneur de ressources :<br /><br /> 0 = Resource Governor n’est pas activé.<br /><br /> 1 = Resource Governor est activé.<br /><br /> N'accepte pas la valeur NULL.|  
 |max_outstanding_io_per_volume|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Nombre maximal d'E/S en attente par volume.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L'affichage catalogue affiche la configuration du gouverneur de ressources telle qu'elle est stockée dans les métadonnées. Pour consulter la configuration en mémoire, utilisez la vue de gestion dynamique correspondante.  
   
 ## <a name="permissions"></a>Autorisations  

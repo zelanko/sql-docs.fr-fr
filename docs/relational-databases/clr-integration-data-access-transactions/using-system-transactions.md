@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fed4e8106fc5348c94a3c7afda0ec903f570eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765359"
 ---
 # <a name="using-systemtransactions"></a>Utilisation de System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'espace de noms **System.Transactions** fournit une infrastructure de transaction qui s'intègre entièrement à ADO.NET et au CLR (Common Language Runtime) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La classe **System.Transactions.TransactionScope** crée un bloc de code transactionnel en inscrivant implicitement les connexions dans une transaction distribuée. Vous devez appeler la méthode **Complete** à la fin du bloc de code marqué par **TransactionScope**. La méthode **Dispose** est appelée lorsque l'exécution du programme laisse un bloc de code, ce qui provoque une interruption de la transaction si la méthode **Complete** n'est pas appelée. Si une exception a été levée qui provoque l'abandon de l'étendue par le code, la transaction est considérée comme supprimée.  
   
  Nous vous recommandons d'employer un bloc **using** pour garantir que la méthode **Dispose** est appelée sur l'objet **TransactionScope** à la sortie du bloc **using** . L'impossibilité de valider ou d'annuler les transactions en attente peut dégrader sérieusement les performances parce que le délai d'expiration par défaut de **TransactionScope** est une minute. Si vous n'utilisez pas une instruction **using** , vous devez effectuer tout le travail dans un bloc **Try** et appeler explicitement la méthode **Dispose** dans le bloc **Finally** .  

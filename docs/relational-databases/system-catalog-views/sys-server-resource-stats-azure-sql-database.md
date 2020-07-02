@@ -19,17 +19,17 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772982"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Retourne l’utilisation de l’UC, les e/s et les données de stockage pour un Managed Instance Azure SQL. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Il y a une ligne pour chaque rapport de 15 secondes. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation des e/s et la référence SKU d’instance gérée. Les données historiques sont conservées pendant environ 14 jours.
+Retourne l’utilisation de l’UC, les e/s et les données de stockage pour un Managed Instance Azure SQL. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Une ligne est créée pour chaque rapport de 15 secondes. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation des E/S et la référence SKU de l’instance managée. Les données historiques sont conservées pendant environ 14 jours.
 
 La vue **sys. server_resource_stats** a des définitions différentes selon la version de l’instance Azure SQL gérée à laquelle la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.
  
@@ -59,7 +59,7 @@ La vue **sys. server_resource_stats** a des définitions différentes selon la v
 ## <a name="permissions"></a>Autorisations  
  Cette vue est disponible pour tous les rôles d’utilisateur disposant d’autorisations pour se connecter à la base de données **Master** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les données retournées par **sys. server_resource_stats** sont exprimées sous la forme du total utilisé en octets ou en mégaoctets (exprimés dans les noms de colonnes) autres que avg_cpu, exprimé sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.  
  
 ## <a name="examples"></a>Exemples  

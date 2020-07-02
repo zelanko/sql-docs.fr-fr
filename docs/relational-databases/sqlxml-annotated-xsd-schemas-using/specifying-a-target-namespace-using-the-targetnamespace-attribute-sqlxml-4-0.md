@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764894"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Spécification d'un espace de noms cible à l'aide de l'attribut targetNamespace (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Dans l’écriture de schémas XSD, vous pouvez utiliser l’attribut XSD **targetNamespace** pour spécifier un espace de noms cible. Cette rubrique décrit le fonctionnement des attributs XSD **targetNamespace**, **elementFormDefault**et **attributeFormDefault** , comment ils affectent l’instance XML générée et comment les requêtes XPath sont spécifiées avec des espaces de noms.  
   
  Vous pouvez utiliser l’attribut **xsd : targetNamespace** pour placer des éléments et des attributs de l’espace de noms par défaut dans un espace de noms différent. Vous pouvez également spécifier si les éléments et attributs du schéma déclarés localement doivent apparaître qualifiés par un espace de noms, soit explicitement en utilisant un préfixe, soit implicitement par défaut. Vous pouvez utiliser les attributs **elementFormDefault** et **attributeFormDefault** sur l' **\<xsd:schema>** élément pour spécifier globalement la qualification des éléments et attributs locaux, ou vous pouvez utiliser l’attribut **Form** pour spécifier séparément des éléments et des attributs individuels.  

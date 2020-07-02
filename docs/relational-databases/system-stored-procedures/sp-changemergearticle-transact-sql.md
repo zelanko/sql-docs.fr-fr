@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771511"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les propriétés d'un article de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -68,7 +68,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Chemin d'accès et nom d'un script de schéma d'article facultatif utilisé pour créer l'article dans la base de données d'abonnement.|  
 |**delete_tracking**|**true**|Les instructions DELETE sont répliquées, ce qui est le comportement par défaut.|  
 ||**false**|Les instructions DELETE ne sont pas répliquées.<br /><br /> Un paramètre ** \* \* \* important \* ** **delete_tracking** la **valeur false** entraîne une non-convergence et les lignes supprimées doivent être supprimées manuellement.|  
-|**descriptive**||Entrée descriptive de l'article|  
+|**description**||Entrée descriptive de l'article|  
 |**destination_owner**||Nom du propriétaire de l’objet dans la base de données d’abonnement, si ce n’est pas **dbo**.|  
 |**identity_range**||**bigint** qui spécifie la taille de plage à utiliser lors de l’affectation de nouvelles valeurs d’identité si l’article a **identityrangemanagementoption** défini sur **auto** ou **auto_identity_range** défini sur **true**. S'applique à un article de table uniquement. Pour plus d’informations, consultez la section « réplication de fusion » de l’article [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manuelle**|Désactive la gestion automatique des plages d'identité. Marque les colonnes d'identité en utilisant NOT FOR REPLICATION pour permettre la gestion manuelle des plages d'identité. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Les modifications sont autorisées sur un Abonné disposant d'un abonnement client, mais elles ne sont pas téléchargées sur le serveur de publication.|  
 ||**2**|Les modifications ne sont pas autorisées sur un Abonné disposant d'un abonnement client.|  
 |**subset_filterclause**||Clause WHERE spécifiant le filtrage horizontal. S’applique uniquement à un article de table.<br /><br /> Important pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrable, telles que. ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` Si vous utilisez [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) dans une clause de filtre et que vous remplacez la valeur de HOST_NAME, vous devrez peut-être convertir les types de données à l’aide de [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Pour plus d’informations sur les meilleures pratiques pour ce cas, consultez la section « substitution de la valeur HOST_NAME () » dans [filtres de lignes paramétrables](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
-|**durée**||Valeur de pourcentage utilisée pour les abonnés exécutant [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . le **seuil** contrôle le moment où l’agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans le seuil est utilisé, l'Agent de fusion crée une nouvelle plage d'identité. Utilisé lorsque **identityrangemanagementoption** a la valeur **auto** ou **auto_identity_range** a la valeur **true**. S'applique à un article de table uniquement. Pour plus d’informations, consultez la section « réplication de fusion » de l’article [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**||Valeur de pourcentage utilisée pour les abonnés exécutant [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . le **seuil** contrôle le moment où l’agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans le seuil est utilisé, l'Agent de fusion crée une nouvelle plage d'identité. Utilisé lorsque **identityrangemanagementoption** a la valeur **auto** ou **auto_identity_range** a la valeur **true**. S'applique à un article de table uniquement. Pour plus d’informations, consultez la section « réplication de fusion » de l’article [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**1**|La signature numérique d'un outil de résolution personnalisé est vérifiée pour déterminer s'il provient d'une source approuvée.|  
 ||**0**|La signature numérique d'un outil de résolution personnalisé n'est pas vérifiée pour déterminer s'il provient d'une source approuvée.|  
 |NULL (par défaut)||Retourne la liste des valeurs prises en charge pour la *propriété*.|  

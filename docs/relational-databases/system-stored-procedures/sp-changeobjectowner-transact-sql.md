@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771452"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie le propriétaire d'un objet dans la base de données active.  
   
 > [!IMPORTANT]
->  Cette procédure stockée fonctionne uniquement avec les objets disponibles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]dans. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** modifie à la fois le schéma et le propriétaire. Pour maintenir la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette procédure stockée modifie les propriétaires d'objet uniquement si les schémas, dont les noms sont identiques aux noms d'utilisateur de base de données, appartiennent à la fois au propriétaire actuel et au nouveau propriétaire.  
+>  Cette procédure stockée fonctionne uniquement avec les objets disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** modifie à la fois le schéma et le propriétaire. Pour maintenir la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette procédure stockée modifie les propriétaires d'objet uniquement si les schémas, dont les noms sont identiques aux noms d'utilisateur de base de données, appartiennent à la fois au propriétaire actuel et au nouveau propriétaire.  
 > 
 > [!IMPORTANT]
 >  Une nouvelle autorisation a été ajoutée à cette procédure stockée.  
@@ -47,7 +47,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="arguments"></a>Arguments  
 `[ @objname = ] 'object'`Nom d’une table, d’une vue, d’une fonction définie par l’utilisateur ou d’une procédure stockée existante dans la base de données active. l' *objet* est de type **nvarchar (776)**, sans valeur par défaut. l' *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme _existing_owner_**.** _objet_ si le schéma et son propriétaire ont le même nom.  
   
-`[ @newowner = ] 'owner_ '`Nom du compte de sécurité qui sera le nouveau propriétaire de l’objet. *owner* est de **type sysname**, sans valeur par défaut. le *propriétaire* doit être un utilisateur de base de données, [!INCLUDE[msCoName](../../includes/msconame-md.md)] un rôle de serveur, une connexion Windows ou un groupe Windows valide ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  
+`[ @newowner = ] 'owner_ '`Nom du compte de sécurité qui sera le nouveau propriétaire de l’objet. *owner* est de **type sysname**, sans valeur par défaut. le *propriétaire* doit être un utilisateur de base de données, un rôle de serveur, une [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion Windows ou un groupe Windows valide ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -61,7 +61,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
  Requiert l’appartenance au rôle de base de données fixe **db_owner** , ou l’appartenance au rôle de base de données fixe **db_ddladmin** et au rôle de base de données fixe **db_securityadmin** , ainsi que l’autorisation Control sur l’objet.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant modifie le propriétaire de la `authors` table en `Corporate\GeorgeW`.  
+ L’exemple suivant modifie le propriétaire de la `authors` table en `Corporate\GeorgeW` .  
   
 ```  
 EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';  

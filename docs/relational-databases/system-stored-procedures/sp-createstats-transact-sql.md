@@ -18,15 +18,15 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 608f969ab70a0bd9a35b64918a29053caf26c385
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771158"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Appelle l’instruction [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) pour créer des statistiques à une seule colonne sur les colonnes qui ne sont pas déjà la première colonne d’un objet de statistiques. La création de statistiques à une seule colonne augmente le nombre d’histogrammes, ce qui peut améliorer les estimations de cardinalité, les plans de requête et les performances des requêtes. La première colonne d'un objet de statistiques comporte un histogramme ; les autres colonnes n'ont pas d'histogramme.  
   

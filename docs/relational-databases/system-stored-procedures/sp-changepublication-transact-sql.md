@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771427"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie les propriétés d'une publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -72,7 +72,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|Pour la mise à jour des Abonnés, en cas de conflit, l'abonnement doit être réinitialisé. Cette propriété ne peut être modifiée qu'en l'absence d'abonnements actifs. Non pris en charge pour les serveurs de publication Oracle.|  
 ||**sub wins**|Politique de résolution des conflits de mise à jour des Abonnés dans laquelle l'Abonné l'emporte dans le conflit. Cette propriété ne peut être modifiée qu'en l'absence d'abonnements actifs. Non pris en charge pour les serveurs de publication Oracle.|  
 |**conflict_retention**||**int** qui spécifie la période de rétention des conflits, en jours. La rétention par défaut est de 14 jours. **0** signifie qu’aucun nettoyage de conflit n’est nécessaire. Non pris en charge pour les serveurs de publication Oracle.|  
-|**descriptive**||Entrée facultative décrivant la publication.|  
+|**description**||Entrée facultative décrivant la publication.|  
 |**enabled_for_het_sub**|**true**|Permet à la publication de prendre en charge des Abonnés non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** ne peut pas être modifié lorsqu’il existe des abonnements à la publication. Vous devrez peut-être exécuter des [procédures stockées de réplication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) pour respecter les exigences suivantes avant de définir **enabled_for_het_sub** sur true :<br /> - **allow_queued_tran** doit avoir la **valeur false**.<br /> - **allow_sync_tran** doit avoir la **valeur false**.<br /> La modification de **enabled_for_het_sub** en **true** peut modifier les paramètres de publication existants. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|La publication ne prend pas en charge les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|La publication est activée pour Internet, et le protocole FTP peut être utilisé pour le transfert des fichiers d'instantané vers un abonné. Les fichiers de synchronisation de la publication sont placés dans le répertoire suivant : C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* ne peut pas être null. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

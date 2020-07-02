@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 745ad11ccb8b06471ac07477739580558475e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771588"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie la liste des périphériques à bandes et l'état des demandes de montage pour les sauvegardes.   
  
@@ -40,7 +40,7 @@ ms.locfileid: "82830531"
 |**mount_expiration_time**|**datetime**|Heure d'expiration de la demande de montage (dépassement de délai). NULL si aucun montage n’est en attente (**Status ! = 2**). Autorise la valeur NULL.|  
 |**database_name**|**nvarchar(256)**|Base de données à sauvegarder sur ce périphérique. Autorise la valeur NULL.|  
 |**SPID**|**int**|ID de la session. Il identifie l'utilisateur de la bande. Autorise la valeur NULL.|  
-|**commande**|**int**|Commande qui effectue la sauvegarde. Autorise la valeur NULL.|  
+|**command**|**int**|Commande qui effectue la sauvegarde. Autorise la valeur NULL.|  
 |**command_desc**|**nvarchar(120)**|Description de la commande. Autorise la valeur NULL.|  
 |**media_family_id**|**int**|Index de la famille de supports (1...* n*), *n* est le nombre de familles de supports dans le support de sauvegarde. Autorise la valeur NULL.|  
 |**media_set_name**|**nvarchar(256)**|Nom du jeu de supports (s'il existe) tel qu'il a été spécifié par l'option MEDIANAME lors de la création du jeu de supports). Autorise la valeur NULL.|  

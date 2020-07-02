@@ -1,5 +1,5 @@
 ---
-title: sys. sysmessages (Transact-SQL) | Microsoft Docs
+title: Messages sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53f7abe7603430950f14ecad039419f8435cba28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a70c96b28665141ada5138ac5dd99477d37de1ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68076549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764340"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne pour chaque erreur ou avertissement système retourné par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] affiche la description de l'erreur sur l'écran de l'utilisateur.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68076549"
 |**error**|**int**|Numéro unique de l'erreur.|  
 |**severity**|**tinyint**|Niveau de gravité de l'erreur.|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**descriptive**|**nvarchar(255)**|Explication de l'erreur avec des espaces réservés pour les paramètres.|  
+|**description**|**nvarchar(255)**|Explication de l'erreur avec des espaces réservés pour les paramètres.|  
 |**msglangid**|**smallint**|ID du groupe de messages système.|  
   
 ## <a name="see-also"></a>Voir aussi  

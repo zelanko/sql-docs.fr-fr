@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771476"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les propriétés d'une publication de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -78,7 +78,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**côté**|Les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit. Non pris en charge pour les [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés *.*|  
 ||**versions**|Les enregistrements en conflit sont stockés dans le serveur de publication et l'Abonné.|  
 |**conflict_retention**||**Entier** qui spécifie la période de rétention, en jours, pendant laquelle les conflits sont conservés. La définition de *conflict_retention* sur **0** signifie qu’aucun nettoyage de conflit n’est nécessaire.|  
-|**descriptive**||Description de la publication.|  
+|**description**||Description de la publication.|  
 |**dynamic_filters**|**true**|La publication est filtrée sur une clause dynamique.|  
 ||**false**|La publication n'est pas filtrée dynamiquement.|  
 |**enabled_for_internet**|**true**|La publication est activée pour Internet. Le protocole FTP (File Transfer Protocol) peut être utilisé pour le transfert des fichiers d'instantané vers un Abonné. Les fichiers de synchronisation de la publication sont placés dans le répertoire C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp.|  
