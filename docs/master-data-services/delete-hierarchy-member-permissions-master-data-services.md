@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c441545bc88ef28031815cecb2c0f441fa1ea6a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b008189c4e6f7f1e8b5a0896196592f891508f8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811989"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Supprimer des autorisations de membre de hiérarchie (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez les autorisations d'objet de modèle pour supprimer toutes les affectations effectuées.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73729352"
     > [!NOTE]  
     >  Vous ne pouvez pas supprimer une autorisation d'un utilisateur si elle est héritée d'un groupe. Vous devez supprimer l'autorisation du groupe à la place.  
   
-10. Cliquez sur **Save**.  
+10. Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Autorisations des membres de la hiérarchie &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

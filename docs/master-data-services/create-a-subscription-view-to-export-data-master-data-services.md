@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812761"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Créez une vue d’abonnement pour exporter les données Master Data Services vers des systèmes d’abonnement. Vous créez une vue de vos données dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "84796415"
 |Version|Nom de l’indicateur de version.|  
 |Entité|Nom de la hiérarchie dérivée.|  
 |Entité|Nom de l’entité.|  
-|Format|Type des données figurant dans la vue.|  
+|Mettre en forme|Type des données figurant dans la vue.|  
 |Level|Spécifie le nombre de niveaux de la vue ; cette valeur est uniquement utilisée pour les formats de vue de niveau Explicite ou Dérivé.|  
 |Inclure les membres supprimés|Indique si les membres supprimés de façon réversible sont inclus dans la vue.|  
   

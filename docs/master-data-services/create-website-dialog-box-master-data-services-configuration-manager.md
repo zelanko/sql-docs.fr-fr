@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea7da40c1c82b855f4290f104c0b2d4f8462a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3d4063404a121c889dbbfd930429a586bf8969a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812004"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Boîte de dialogue Créer un site Web (Gestionnaire de configuration Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilisez la boîte de dialogue **Créer un site web** pour créer un site web sur l’ordinateur local. Lorsque vous créez un site web dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], le site est ajouté à Internet Information Services (IIS) sur l’ordinateur local avec une application racine configurée comme application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Un pool d'applications est également créé et l'application web est placée dans ce pool d'applications.  
   

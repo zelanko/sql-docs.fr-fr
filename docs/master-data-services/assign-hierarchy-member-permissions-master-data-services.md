@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9a725ec385d72ea3719e215ea9b01c1565aadecc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02b84362699375c82b4e7eead7ad632c03a76c87
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812454"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Affecter des autorisations de membre de hiérarchie (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Affectez des autorisations à des membres de la hiérarchie pour permettre à des utilisateurs ou des groupes d’afficher les données dans la zone fonctionnelle **Explorateur** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73729777"
   
 10. Dans le menu, sélectionnez une combinaison d’autorisations **Créer**, **Lire, Mettre à jour** et **Supprimer** , ou **Refusez** d’octroyer des autorisation.  
   
-11. Cliquez sur **Save**.  
+11. Cliquez sur **Enregistrer**.  
   
     > [!NOTE]  
     >  Les autorisations des membres de la hiérarchie n'entrent pas immédiatement en vigueur. Pour plus d’informations, consultez [Appliquer immédiatement des autorisations de membre &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812552"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profilage des données et notifications dans DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Le profilage des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est le processus d'analyse des données dans une source de données existante et d'affichage des statistiques sur les données dans des activités DQS. Il vous fournit des mesures automatisées de la qualité des données. Le profilage DQS est intégré à la gestion des connaissances DQS et aux projets de qualité des données. Il est dynamique et réglable. Le profilage a deux objectifs importants : d'abord vous guider au cours des processus de qualité des données et prendre en charge les décisions et, ensuite, évaluer l'efficacité des processus. Le processus de profilage DQS présente les avantages suivants :  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607823"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Profilage des données dans l’analyse des activités  
  Les informations de profilage pour les activités de découverte des connaissances, de stratégie de correspondance, de correspondance et de nettoyage sont disponibles non seulement dans les pages d’activité du client de qualité des données, mais également dans l’analyse des activités. L'analyse des activités vous fournit une vue d'ensemble des activités en cours et passées. Outre les propriétés et les processus de calcul connexes des activités, vous pouvez afficher les informations de profilage générées pour chaque activité à un emplacement. Vous sélectionnez une activité dans la table des activités pour afficher les résultats de profilage dans une table ci-dessous. Vous pouvez également exporter les résultats de profilage. Pour plus d’informations, consultez [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-##  <a name="notifications"></a><a name="Notifications"></a>Fonctionnalité  
+##  <a name="notifications"></a><a name="Notifications"></a> Notifications  
  En plus de collecter et d'afficher des statistiques et des mesures importantes par le profilage, DQS génère des notifications (si l'option est activée) pour indiquer lorsque vous pouvez prendre une mesure en fonction des statistiques de profilage affichées. DQS utilise des notifications pour mettre en évidence des faits importants sur la source de données et pour montrer l’efficacité de l’activité actuelle par rapport à l’objectif pour lequel elle a été exécutée. Les notifications fournissent des conseils et des recommandations qui indiquent une condition et comment vous pouvez améliorer une activité de découverte des connaissances, nettoyage des données ou correspondance de données.  
   
  Une notification DQS est utilisée pour soulever une question qui peut vous intéresser, ou pour résoudre un problème potentiel. La façon dont vous agissez sur la notification dépend de sa pertinence. Par exemple, supposons que DQS publie une notification lorsque le nettoyage de données ne produit aucune valeur corrigée ni suggérée alors que l'exhaustivité et la précision sont toutes deux de 100 %. Cette notification indique que l'exécution de l'activité peut ne pas être nécessaire. Toutefois, il vous appartient de choisir d'exécuter l'activité.  

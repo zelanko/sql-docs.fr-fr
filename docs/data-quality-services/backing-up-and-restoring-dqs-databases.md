@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ce0686211440291711815fa3b1d76641a374da8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812604"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sauvegarde et restauration de bases de données DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique explique comment sauvegarder et restaurer les bases de données DQS.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75258850"
   
 10. Dans l'Explorateur d'objets, cliquez avec le bouton droit sur le serveur, puis cliquez sur **Nouvelle requête**.  
   
-11. Dans la fenêtre de l’éditeur de requête, copiez les instructions SQL suivantes et remplacez * \<le mot de passe>* par le mot de passe que vous avez fourni lors de l’installation de DQS pour la clé principale de base de données :  
+11. Dans la fenêtre de l’éditeur de requête, copiez les instructions SQL suivantes et remplacez *\<PASSWORD>* par le mot de passe que vous avez fourni pendant l’installation de DQS pour la clé principale de base de données :  
   
     ```  
     USE [DQS_MAIN]  

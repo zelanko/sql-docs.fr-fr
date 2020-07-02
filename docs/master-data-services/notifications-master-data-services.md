@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec76228a4f8307813a2bb098b648133e065c5cd5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f645bf481b193b78003808725d60b97b33d845
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812895"
 ---
 # <a name="notifications-master-data-services"></a>Notifications (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] peut être configuré pour envoyer une notification par courrier électronique lors d’un échec de validation de règle d’entreprise, d’une modification de l’état d’une version de modèle ou d’une modification de l’état d’un ensemble de modifications.  
   
 ## <a name="how-notifications-are-sent"></a>Mode d'envoi des notifications  
- Vous pouvez configurer les notifications dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Les notifications envoient des messages électroniques à l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] aide de Database mail [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sur l’instance de qui héberge la base de données. Pour plus d’informations sur la messagerie de base de données, consultez [Objets de configuration de la messagerie de base de données](../relational-databases/database-mail/database-mail-configuration-objects.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Vous pouvez configurer les notifications dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Les notifications envoient des messages électroniques à l’aide de Database Mail sur l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] qui héberge la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données. Pour plus d’informations sur la messagerie de base de données, consultez [Objets de configuration de la messagerie de base de données](../relational-databases/database-mail/database-mail-configuration-objects.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="when-notifications-are-sent"></a>Critères d'envoi des notifications  
  Une fois les notifications configurées, elles peuvent être envoyées automatiquement par courrier électronique dans les cas suivants.  

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1645b1f7ab0cd470d5cb51a5b1a10394dcc5115b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812533"
 ---
 # <a name="data-quality-client-home-screen"></a>Écran d'accueil de Data Quality Client
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilisez cet écran pour accéder aux interfaces utilisateur de chacun des trois groupes de tâches principaux de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) : gestion des bases de connaissances, projets de qualité des données et administration.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75251727"
 ### <a name="administration"></a>Administration  
  L'administration de DQS vous permet d'analyser, de configurer et de gérer DQS.  
   
- **Analyse des activités**  
+ **Surveillance de l’activité**  
  Affiche une vue de l'état de toutes les activités (à la fois actuelles et historiques) en rapport avec le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connecté. Les types d'activités analysées incluent la gestion des connaissances, le projet de qualité des données et la correction des données SSIS.  
   
  **Configuration**  

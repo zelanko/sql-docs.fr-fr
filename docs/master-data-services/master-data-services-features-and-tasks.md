@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a89ed871f18f52efa32b088e02d4432166866cb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812905"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Fonctionnalités et tâches Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Apprenez à utiliser [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour gérer les données de référence de votre organisation. Apprenez comment créer et manipuler les objets de modèle, qui sont des conteneurs de données. Apprenez comment organiser et gérer les données de référence elles-mêmes. Apprenez comment importer et exporter des données de référence et partager des modèles entre les environnements de test et de production. Enfin, apprenez comment développer des applications personnalisées qui accèdent au service Web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   

@@ -12,16 +12,16 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8f122f6fbc746b025b0354265ff9e176845333f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84999955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812915"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Héberger une base de données MDS sur une instance gérée
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cet article explique comment configurer une base de données Master Data Services (MDS) sur une instance gérée.
   
@@ -50,8 +50,8 @@ Pour vous préparer, vous devez créer et configurer une Azure SQL Database inst
      - Développement d'applications
      - Extensibilité .NET 3.5
      - Extensibilité .NET 4.5
-     - ASP.NET 3.5
-     - ASP.NET 4.5
+     - ASP.NET 3.5
+     - ASP.NET 4.5
      - Extensions ISAPI
      - Filtres ISAPI
      - Fonctionnalités HTTP communes
@@ -73,7 +73,7 @@ Pour vous préparer, vous devez créer et configurer une Azure SQL Database inst
    - Fonctionnalités :
      - .NET Framework 3.5 (inclut .NET 2.0 et 3.0)
      - .NET Framework 4.5 Advanced Services
-     - ASP.NET 4.5
+     - ASP.NET 4.5
      - Services WCF
      - Activation HTTP (obligatoire)
      - Partage de port TCP

@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de3733023aef2975b2276e2a804e0eec503a0930
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811338"
 ---
 # <a name="create-a-matching-policy"></a>Créer une stratégie de correspondance
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique explique comment créer une stratégie de correspondance dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous vous préparez au processus de correspondance dans DQS en exécutant l'activité Stratégie de correspondance sur des exemples de données. Dans cette activité, vous créez et testez une ou plusieurs règles de correspondance dans la stratégie, puis vous publiez la base de connaissances afin que les règles de correspondance soient publiquement disponibles. Il ne peut y avoir qu'une seule stratégie de correspondance dans une base de connaissances, mais cette stratégie peut contenir plusieurs règles de correspondance.  
   

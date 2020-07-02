@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 89b4f671bde13eddd781779bec5fc4ac48b3897b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6791a728c13a5e33b2557243d70563177465e08
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811851"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Se connecter à la boîte de dialogue Base de données Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilisez la boîte de dialogue **Connexion à une base de données Master Data Services** pour sélectionner une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73728584"
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|**Instance SQL Server**|Spécifiez le nom de l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui doit héberger la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il peut s'agir d'une instance par défaut ou nommée sur un ordinateur local ou distant. Spécifiez les informations en tapant :<br /><br /> un point (.) pour se connecter à l'instance par défaut sur votre ordinateur local ;<br /><br /> le nom du serveur ou l'adresse IP pour se connecter à l'instance par défaut sur l'ordinateur local ou distant spécifié ;<br /><br /> le nom du serveur ou l'adresse IP ainsi que le nom de l'instance pour se connecter à l'instance nommée sur l'ordinateur local ou distant spécifié. Spécifiez ces informations au format *SERVER_NAME*\\*instance_name*.|  
+|**Instance SQL Server**|Spécifiez le nom de l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui doit héberger la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il peut s'agir d'une instance par défaut ou nommée sur un ordinateur local ou distant. Spécifiez les informations en tapant :<br /><br /> un point (.) pour se connecter à l'instance par défaut sur votre ordinateur local ;<br /><br /> le nom du serveur ou l'adresse IP pour se connecter à l'instance par défaut sur l'ordinateur local ou distant spécifié ;<br /><br /> le nom du serveur ou l'adresse IP ainsi que le nom de l'instance pour se connecter à l'instance nommée sur l'ordinateur local ou distant spécifié. Spécifiez ces informations au format *SERVER_NAME* \\ *instance_name*.|  
 |**Type d’authentification**|Sélectionnez le type d’authentification à utiliser lors de la connexion à l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée. Les informations d’identification que vous utilisez pour la connexion déterminent les bases de données affichées dans la liste déroulante **Base de données des services de données de référence** .<br /><br /> Les types d'authentification sont les suivants :<br /><br /> **Sécurité intégrée de l’utilisateur actuel**: utilise l’authentification Windows intégrée pour se connecter à l’aide des informations d’identification du compte d’utilisateur Windows actuel. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] utilise les informations d’identification Windows de l’utilisateur qui s’est connecté à l’ordinateur et a ouvert l’application. Vous ne pouvez pas spécifier des informations d'identification Windows différentes dans l'application. Si vous souhaitez vous connecter avec des informations d’identification Windows différentes, vous devez ouvrir une session sur l’ordinateur sous l’identité de cet utilisateur, puis ouvrir le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Compte SQL Server**: utilise un compte SQL Server pour se connecter. Quand vous sélectionnez cette option, les champs **Nom d’utilisateur** et **Mot de passe** sont activés et vous devez spécifier des informations d’identification pour un compte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.|  
 |**Nom d'utilisateur**|Spécifiez le nom du compte d'utilisateur qui sera utilisé pour se connecter à l'instance SQL Server spécifiée. Le compte doit faire partie du rôle **sysadmin** sur l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée :<br /><br /> Lorsque le **type d’authentification** est **sécurité intégrée de l’utilisateur actuel**, la zone **nom d’utilisateur** est en lecture seule et affiche le nom du compte d’utilisateur Windows qui a ouvert une session sur l’ordinateur.<br /><br /> Lorsque le **Type d'authentification** est **Compte SQL Server**, la zone **Nom d'utilisateur** est activée et vous devez spécifier des informations d'identification pour un compte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée.|  
 |**Mot de passe**|Spécifiez le mot de passe associé au compte d’utilisateur :<br /><br /> Lorsque le **type d’authentification** est **sécurité intégrée de l’utilisateur actuel**, la zone **mot de passe** est en lecture seule et les informations d’identification du compte d’utilisateur Windows spécifié sont utilisées pour la connexion.<br /><br /> Lorsque le **Type d'authentification** est **Compte SQL Server**, la zone **Mot de passe** est activée et vous devez spécifier le mot de passe associé au compte d'utilisateur spécifié.|  

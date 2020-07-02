@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812074"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Ajouter plusieurs conditions à une règle d'entreprise (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ajoutez plusieurs conditions **AND** ou **OR** à une règle d'entreprise lorsque vous souhaitez une règle plus complexe.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728798"
   
 12. Complétez tous les champs obligatoires.  
   
-13. Cliquez sur **Save**. Une nouvelle ligne est ajoutée à la grille **If** .  
+13. Cliquez sur **Enregistrer**. Une nouvelle ligne est ajoutée à la grille **If** .  
   
 14. Si vous le souhaitez, suivez les étapes 8 à 13 pour ajouter d’autres conditions.  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811885"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Requérir des valeurs d'attribut (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], requérez des valeurs d'attribut lorsque vous souhaitez vérifier que vos données de référence sont complètes.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "73728942"
   
 11. Dans la liste déroulante **Attribut** , sélectionnez un attribut.  
   
-12. Cliquez sur **Save**. Une nouvelle ligne est ajoutée à la grille **Then** .  
+12. Cliquez sur **Enregistrer**. Une nouvelle ligne est ajoutée à la grille **Then** .  
   
-13. Cliquez sur **Save**.  
+13. Cliquez sur **Enregistrer**.  
   
 14. Cliquez sur **Tout publier**.  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811614"
 ---
 # <a name="collection-permissions-master-data-services"></a>Autorisations de collection (services de données de référence)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Les autorisations de collection s'appliquent à toutes les collections d'une entité. Vous ne pouvez pas donner d'autorisation à une collection spécifique ; les autorisations s'appliquent à toutes les collections.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "73729636"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lire**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
+|**Lecture**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
 |**Créer**|L’utilisateur peut créer des membres de collection et affecter des valeurs d’attribut.|  
-|**Mise à jour**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
+|**Update**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
 |**Supprimer**|L’utilisateur peut supprimer les membres de collection.|  
 |**Deny**|Tous les accès aux membres de collection sont refusés.|  
   
