@@ -19,15 +19,15 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 948b2b1e9ee9a8827322cf05fcb2f812d925de93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734431"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Interprète la valeur SYS_CHANGE_COLUMNS retournée par la fonction CHANGETABLE (CHANGEs...). Cela permet à une application de déterminer si la colonne spécifiée est incluse dans les valeurs retournées pour SYS_CHANGE_COLUMNS.  
   
@@ -53,16 +53,16 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Valeurs de retour  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK retourne les valeurs suivantes.  
   
-|Valeur retournée|Description|  
+|Valeur renvoyée|Description|  
 |------------------|-----------------|  
 |0|La colonne spécifiée ne figure pas dans la liste *change_columns* .|  
 |1|La colonne spécifiée se trouve dans la liste *change_columns* .|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK n’effectue aucune vérification pour valider la valeur de *column_id* ou si le paramètre *change_columns* a été obtenu à partir de la table à partir de laquelle le *column_id* a été obtenu.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant détermine si la colonne `Salary` de la table `Employees` a été mise à jour. La `COLUMNPROPERTY` fonction retourne l’ID de colonne de `Salary` la colonne. La variable locale `@change_columns` doit être définie en fonction des résultats d'une requête en utilisant CHANGETABLE comme source de données.  
+ L'exemple suivant détermine si la colonne `Salary` de la table `Employees` a été mise à jour. La `COLUMNPROPERTY` fonction retourne l’ID de colonne de la `Salary` colonne. La variable locale `@change_columns` doit être définie en fonction des résultats d'une requête en utilisant CHANGETABLE comme source de données.  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de9c51e35bab142bd54a81224057f1eda05c5fb1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ca908d080a77eb580f945856c3bc2a28a066f4a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736721"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSmerge_history** contient des lignes d’historique avec des descriptions détaillées des résultats des sessions de travail précédentes agent de fusion. Cette table contient une ligne par ligne de sortie de l'Agent. Cette table est utilisée dans la base de données de distribution et dans chaque base de données d'abonnement. Dans la base de données de distribution, elle contient l'historique de toutes les publications de fusion et de tous les abonnements de fusion qui utilisent le serveur de distribution. Dans chaque base de données d'abonnement, il contient l'historique des publications auxquelles l'Abonné a souscrit.  
   

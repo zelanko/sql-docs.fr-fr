@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04cedd0df5552ee19f7fc98ecdd94ff2d9dc88fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734557"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations de position de mot clé dans les documents indexés.  
   
@@ -57,14 +57,14 @@ OBJECT_ID('table_name')
 |document_id|**bigint**|ID de la ligne ou du document à partir duquel le terme actuel a été indexé en texte intégral. Cet ID correspond à la valeur de clé de texte intégral de cette ligne ou de ce document.|  
 |position|**int**|Position du mot clé dans le document.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la DMV pour identifier l’emplacement des mots indexés dans les documents indexés. Cette vue de gestion dynamique peut être utilisée pour résoudre les problèmes quand **sys. dm_fts_index_keywords_by_document** indique que les mots se trouvent dans l’index de recherche en texte intégral, mais quand vous exécutez une requête à l’aide de ces mots, le document n’est pas renvoyé.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur les colonnes couvertes par l'index de recherche en texte intégral et les autorisations CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne des mots clés à partir de l’index de `Production.Document` recherche en texte `AdventureWorks` intégral de la table de l’exemple de base de données.  
+ L’exemple suivant retourne des mots clés à partir de l’index de recherche en texte intégral de la `Production.Document` table de l' `AdventureWorks` exemple de base de données.  
   
 ```  
 USE AdventureWorks2012;  

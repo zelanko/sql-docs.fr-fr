@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734747"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Retourne l’équivalent du dernier plan d’exécution réel connu pour un plan de requête précédemment mis en cache.
 
@@ -61,8 +61,8 @@ Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique sui
 |**chiffrées**|**bit**|Indique si la procédure stockée correspondante est chiffrée.<br /><br /> 0 = Non chiffrée.<br /><br /> 1 = Chiffrée.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**query_plan**|**xml**|Contient la dernière représentation Showplan connue du plan d’exécution de requêtes réel spécifiée avec *plan_handle*. Le plan d'exécution de requêtes est au format XML. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur.<br /><br /> Colonne acceptant la valeur NULL.| 
 
-## <a name="remarks"></a>Notes
-Cette fonction système est disponible à partir [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] de la version CTP 2,4.
+## <a name="remarks"></a>Remarques
+Cette fonction système est disponible à partir de la [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] version CTP 2,4.
 
 Il s’agit d’une fonctionnalité d’activation qui nécessite l’activation de l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, pour effectuer cette opération au niveau de la base de données, voir l’option LAST_QUERY_PLAN_STATS dans [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -84,7 +84,7 @@ Dans les conditions suivantes, une sortie Showplan **simplifiée <sup>1</sup> **
     **AND**    
 -   La requête est assez simple, généralement classée dans le cadre d’une charge de travail OLTP.
 
-<sup>1</sup> à compter [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] de CTP 2,5, cela fait référence à un plan d’exécution de requêtes qui ne contient que l’opérateur de nœud racine (Select). Pour [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4, cela fait référence au plan mis en cache disponible `sys.dm_exec_cached_plans`via.
+<sup>1</sup> à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5, cela fait référence à un plan d’exécution de requêtes qui ne contient que l’opérateur de nœud racine (Select). Pour [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4, cela fait référence au plan mis en cache disponible via `sys.dm_exec_cached_plans` .
 
 Dans les conditions suivantes, **aucune sortie n’est retournée** à partir de **sys. dm_exec_query_plan_stats**:
 
@@ -93,7 +93,7 @@ Dans les conditions suivantes, **aucune sortie n’est retournée** à partir de
 -   Le plan de requête n’a pas été mis en cache en premier lieu. Pour plus d’informations, consultez [mise en cache et réutilisation du plan d’exécution ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> En raison d’une limitation du nombre de niveaux imbriqués autorisés dans le type de données **XML** , **sys. dm_exec_query_plan** ne peut pas retourner des plans de requête qui remplissent ou dépassent 128 niveaux d’éléments imbriqués. Dans les versions antérieures [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, cette condition a empêché le plan de requête de retourner et génère l' [erreur 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, la colonne **query_plan** retourne la valeur null.  
+> En raison d’une limitation du nombre de niveaux imbriqués autorisés dans le type de données **XML** , **sys. dm_exec_query_plan** ne peut pas retourner des plans de requête qui remplissent ou dépassent 128 niveaux d’éléments imbriqués. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette condition a empêché le plan de requête de retourner et génère l' [erreur 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, la colonne **query_plan** retourne la valeur null.  
 
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
@@ -108,7 +108,7 @@ SELECT * FROM sys.dm_exec_cached_plans;
 GO  
 ```  
   
-Ensuite, pour obtenir le dernier plan d’exécution de requête réel connu, utilisez `plan_handle` le copié avec la fonction système **sys. dm_exec_query_plan_stats**.  
+Ensuite, pour obtenir le dernier plan d’exécution de requête réel connu, utilisez le copié `plan_handle` avec la fonction système **sys. dm_exec_query_plan_stats**.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  

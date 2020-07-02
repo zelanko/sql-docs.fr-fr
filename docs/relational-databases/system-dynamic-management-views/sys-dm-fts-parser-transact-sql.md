@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738663"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne le résultat de la création de jetons final après l’application d' [une combinaison donnée](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) d’analyseur lexical, de [dictionnaire des synonymes](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)et de la lettre de [texte](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)à une entrée de chaîne de requête. Le résultat de la segmentation du texte en unités lexicales équivaut à la sortie du Moteur d'indexation et de recherche en texte intégral pour la chaîne de requête spécifiée.  
   
@@ -55,13 +55,13 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Valeur booléenne qui indique si la recherche en texte intégral respecte ou non les signes diacritiques. *accent_sensitivity* est de **bits**, avec l’une des valeurs suivantes :  
   
-|Value|Le respect des accents est...|  
+|Valeur|Le respect des accents est...|  
 |-----------|----------------------------|  
 |0|Respect<br /><br /> Les mots tels que « café » et « cafe » sont traités de la même manière.|  
 |1|Sensible<br /><br /> Les mots tels que « café » et « cafe » ne sont pas traités de la même manière.|  
   
 > [!NOTE]  
->  Pour afficher le paramètre actuel de cette valeur pour un catalogue de texte intégral, exécutez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante : `SELECT fulltextcatalogproperty('` *catalog_name*`', 'AccentSensitivity');`.  
+>  Pour afficher le paramètre actuel de cette valeur pour un catalogue de texte intégral, exécutez l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction suivante : `SELECT fulltextcatalogproperty('` *catalog_name* `', 'AccentSensitivity');` .  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -76,11 +76,11 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |expansion_type|**int**|Contient des informations sur la nature de l'expansion d'un terme donné, informations qui peuvent être l'une des suivantes :<br /><br /> 0 =Cas de mot unique<br /><br /> 2=Expansion fléchie<br /><br /> 4=Expansion/remplacement du dictionnaire des synonymes<br /><br /> Par exemple, considérez un cas dans lequel le dictionnaire des synonymes définit run comme expansion de `jog` :<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Le terme `FORMSOF (FREETEXT, run)` génère la sortie suivante :<br /><br /> `run` with expansion_type=0<br /><br /> `runs` with expansion_type=2<br /><br /> `running` with expansion_type=2<br /><br /> `ran` with expansion_type=2<br /><br /> `jog` with expansion_type=4|  
 |source_term|**nvarchar(4000)**|Terme ou expression à partir duquel un terme donné à été généré ou analysé. Par exemple, une requête sur '"`word breakers" AND stemmers'` produit les valeurs source_term suivantes en anglais :<br /><br /> `word breakers`pour le display_term`word`<br />`word breakers`pour le display_term`breakers`<br />`stemmers`pour le display_term`stemmers`|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sys. dm_fts_parser** prend en charge la syntaxe et les fonctionnalités des prédicats de texte intégral, tels que [Contains](../../t-sql/queries/contains-transact-sql.md) et [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), ainsi que des fonctions, telles que [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) et [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Utilisation d'Unicode pour l'analyse des caractères spéciaux  
- Lorsque vous analysez une chaîne de requête, **sys. dm_fts_parser** utilise le classement de la base de données à laquelle vous êtes connecté, sauf si vous spécifiez la chaîne de requête au format Unicode. Par conséquent, pour une chaîne non-Unicode qui contient des caractères spéciaux, tels que ü ou ç, la sortie peut être inattendue, selon le classement de la base de données. Pour traiter une chaîne de requête indépendamment du classement de la base de données, préfixez `N`la chaîne `N'`avec, autrement dit, *QUERY_STRING*`'`.  
+ Lorsque vous analysez une chaîne de requête, **sys. dm_fts_parser** utilise le classement de la base de données à laquelle vous êtes connecté, sauf si vous spécifiez la chaîne de requête au format Unicode. Par conséquent, pour une chaîne non-Unicode qui contient des caractères spéciaux, tels que ü ou ç, la sortie peut être inattendue, selon le classement de la base de données. Pour traiter une chaîne de requête indépendamment du classement de la base de données, préfixez la chaîne avec `N` , autrement dit, `N'` *QUERY_STRING* `'` .  
   
  Pour plus d'informations, consultez « C. Affichage de la sortie d'une chaîne qui contient des caractères spéciaux », plus loin dans cette rubrique.  
   

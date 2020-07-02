@@ -23,16 +23,16 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f53f49e8418b8fb178a8fd1689c3bc64a8b0a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733623"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Affichages catalogue système (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Les affichages catalogue retournent des informations utilisées par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il est conseillé d'utiliser les affichages catalogue puisqu'ils représentent l'interface la plus générale vers les métadonnées de catalogue et le moyen le plus efficace pour obtenir, transformer et présenter des formulaires personnalisés de ces informations. Toutes les métadonnées de catalogue accessibles à l'utilisateur sont exposées dans des affichages catalogue.
 
@@ -45,7 +45,7 @@ Les affichages catalogue retournent des informations utilisées par le [!INCLUDE
 - L'affichage dérivé contient un sur-ensemble de colonnes et un sous-ensemble de lignes.
 
 > [!IMPORTANT]
-> Dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut augmenter la définition de l'affichage catalogue système en ajoutant des colonnes à la fin de la liste des colonnes. Nous vous recommandons d’utiliser la syntaxe \* Select from *sys. catalog_view_name* dans le code de production, car le nombre de colonnes retournées peut changer et rompre votre application.
+> Dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut augmenter la définition de l'affichage catalogue système en ajoutant des colonnes à la fin de la liste des colonnes. Nous vous recommandons d’utiliser la syntaxe SELECT \* from *sys. catalog_view_name* dans le code de production, car le nombre de colonnes retournées peut changer et rompre votre application.
 
 Les affichages catalogue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont classés en plusieurs catégories :
 

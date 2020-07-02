@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5be48c81dc5851ee43668ef8ca141409acecd7d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0dd71c3d191728b04e2311017d1e446ebecaf6db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734609"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche les descripteurs de fichiers connus par le propriétaire de l'espace de noms (NSO, Namespace Owner). Les handles FileStream qu’un client a obtenu à l’aide de **OpenSqlFilestream** sont affichés par cet affichage.  
   

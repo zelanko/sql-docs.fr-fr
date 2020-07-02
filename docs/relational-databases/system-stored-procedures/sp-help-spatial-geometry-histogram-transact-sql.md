@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733249"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Facilite le codage du rectangle englobant et des paramètres de grille pour un index spatial.  
   
@@ -74,7 +74,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Autorisations  
  L’utilisateur doit être membre du rôle **public** . Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L'onglet spatial SSMS affiche une représentation graphique des résultats. Vous pouvez interroger les résultats dans la fenêtre spatiale afin d'obtenir un nombre approximatif d'éléments de résultat. Les objets dans la table peuvent couvrir plusieurs cellules ; par conséquent, la somme de cellules peut être supérieure au nombre d'objets réels.  
   
  Une ligne supplémentaire peut être ajoutée au jeu de résultats qui conserve le nombre d'objets qui se trouvent en dehors du rectangle englobant ou qui touchent la bordure du rectangle englobant. Le **CellID** de cette ligne est 0 et la **cellule** de cette ligne contient un **LineString** qui représente le cadre englobant. Cette ligne représente l'espace entier à l'extérieur du rectangle englobant.  

@@ -20,20 +20,20 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734582"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations concernant les catalogues de texte intégral qui ont une activité de remplissage en cours sur le serveur.  
   
 > [!NOTE]
->  Les colonnes suivantes seront supprimées dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, Status, status_description et worker_count. Évitez par conséquent d'utiliser ces colonnes dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  
+>  Les colonnes suivantes seront supprimées dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : is_paused, previous_status, previous_status_description, row_count_in_thousands, Status, status_description et worker_count. Évitez par conséquent d'utiliser ces colonnes dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  
   
  
 |Nom de la colonne|Type de données|Description|  
@@ -55,12 +55,12 @@ ms.locfileid: "68265967"
 |**row_count_in_thousands**|**int**|Nombre estimé de lignes (en milliers) dans tous les index de texte intégral de ce catalogue de texte intégral.|  
 |**is_importing**|**bit**|Indique si le catalogue de texte intégral est en cours d'importation :<br /><br /> 1 = le catalogue est en cours d'importation.<br /><br /> 2 = le catalogue n'est pas en cours d'importation.|  
   
-## <a name="remarks"></a>Notes  
- La colonne is_importing est nouvelle dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+## <a name="remarks"></a>Remarques  
+ La colonne is_importing est nouvelle dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Autorisations  
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
    
 ## <a name="physical-joins"></a>Jointures physiques  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43f5c110aaf9b492d70eb7220b6eccc249222609
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9271e23f3de05dc9f62dab06544eb517dfd2e80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733377"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne pour chaque connexion réseau [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Le tableau suivant fournit plus d'informations :  
   
@@ -49,9 +49,9 @@ ms.locfileid: "82830896"
 |**encryption_algorithm**|**smallint**|Algorithme de chiffrement utilisé pour cette connexion. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Description de la valeur &#124; &#124; l’option DDL correspondante**<br /><br /> 0 &#124; aucune &#124; désactivée<br /><br /> 1 &#124; LA SIGNATURE UNIQUEMENT<br /><br /> 2 &#124; AES, RC4 &#124; requis &#124; l’algorithme RC4 requis}<br /><br /> 3 &#124; AES &#124;algorithme AES obligatoire<br /><br /> **Remarque :** L’algorithme RC4 est uniquement pris en charge pour la compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou de RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Représentation textuelle de l'algorithme de chiffrement. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Description &#124; option DDL correspondante**<br /><br /> AUCUN &#124; désactivé<br /><br /> RC4 &#124; {required &#124; algorithme RC4}<br /><br /> Algorithme AES &#124; AES obligatoire<br /><br /> AUCUN, RC4 &#124; {algorithme pris en charge &#124; pris en charge RC4}<br /><br /> AUCUN, AES &#124; algorithme RC4 pris en charge<br /><br /> RC4, AES &#124; algorithme RC4 AES<br /><br /> AES, RC4 &#124; algorithme AES RC4<br /><br /> AUCUN, RC4, AES &#124; algorithme RC4 AES<br /><br /> AUCUN, AES, RC4 &#124; algorithme AES RC4 pris en charge|  
 |**receives_posted**|**smallint**|Nombre de réceptions asynchrones sur le réseau qui ne sont pas encore terminées pour cette connexion. Accepte la valeur NULL.|  
-|**is_receive_flow_controlled**|**bit**|Indique si les réceptions sur le réseau ont été retardées en raison du contrôle de flux car le réseau est occupé. Accepte la valeur NULL.<br /><br /> 1 = True|  
+|**is_receive_flow_controlled**|**bit**|Indique si les réceptions sur le réseau ont été retardées en raison du contrôle de flux car le réseau est occupé. Accepte la valeur NULL.<br /><br /> 1 = Vrai|  
 |**sends_posted**|**smallint**|Nombre d'envois asynchrones sur le réseau qui ne sont pas encore terminés pour cette connexion. Accepte la valeur NULL.|  
-|**is_send_flow_controlled**|**bit**|Indique si les envois sur le réseau ont été retardés en raison du contrôle de flux sur le réseau et parce que ce dernier est occupé. Accepte la valeur NULL.<br /><br /> 1 = True|  
+|**is_send_flow_controlled**|**bit**|Indique si les envois sur le réseau ont été retardés en raison du contrôle de flux sur le réseau et parce que ce dernier est occupé. Accepte la valeur NULL.<br /><br /> 1 = Vrai|  
 |**total_bytes_sent**|**bigint**|Nombre total d’octets qui ont été envoyés par cette connexion. Accepte la valeur NULL.|  
 |**total_bytes_received**|**bigint**|Nombre total d'octets reçus par cette connexion. Accepte la valeur NULL.|  
 |**total_fragments_sent**|**bigint**|Nombre total de fragments de messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoyés par cette connexion. Accepte la valeur NULL.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e93cfbb28276b15906296323539937009213632
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff97153595698a12a3ee95922e31a83a0cf5ee17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736566"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetNumericalValue (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Définit la valeur numérique d'une propriété.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +36,7 @@ object.SetNumericalValue(NumValue)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *object*  
  Objet de [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) qui représente une propriété avancée.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -48,7 +48,7 @@ object.SetNumericalValue(NumValue)
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le type de valeur de la propriété doit être numérique pour permettre l'attribution d'une valeur numérique à la propriété.  
   
 ## <a name="see-also"></a>Voir aussi  

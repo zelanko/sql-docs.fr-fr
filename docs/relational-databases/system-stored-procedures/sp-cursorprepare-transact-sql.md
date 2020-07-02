@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733332"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Compile le lot ou l'instruction de curseur dans un plan d'exécution, mais ne crée pas le curseur. L'instruction compilée peut être utilisée ultérieurement par sp_cursorexecute. Cette procédure, couplée avec sp_cursorexecute, a la même fonction que sp_cursoropen, mais est fractionnée en deux phases. sp_cursorprepare est appelée en spécifiant ID = 3 dans un paquet tabular data stream (TDS).  
   
@@ -106,12 +106,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  Comme avec *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut affecter une valeur différente de celle demandée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le paramètre d'état RPC prend l'une des valeurs suivantes :  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Succès|  
+|0|Opération réussie|  
 |0x0001|Échec|  
 |1FF6|Impossible de retourner des métadonnées.<br /><br /> Remarque : Ceci est dû au fait que l’instruction ne produit pas un jeu de résultats ; par exemple, il s’agit d’une instruction INSERT ou DDL.|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Quand *stmt* est paramétré et que la valeur de PARAMETERIZED_STMT *scrollopt* est on, le format de la chaîne est le suivant :  
   
- {nom de la * \< variable locale> * * \< type de données>* } [,... *n* ]  
+ { *\<local variable name>**\<data type>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

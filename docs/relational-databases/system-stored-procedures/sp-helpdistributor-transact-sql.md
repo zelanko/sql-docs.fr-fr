@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d849e7d43cc73ca6153375f5e5b3772944af1f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cb2b1fb97504b50f2c26ddbfe26f67888f507328
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733227"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Répertorie des informations sur le serveur de distribution, la base de données de distribution, le répertoire de travail et le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte d’utilisateur de l’agent. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur n'importe quelle base de données.  
   
@@ -111,7 +111,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |history retention|**\@history_retention**|  
 |history cleanup agent|**\@history_cleanupagent**|  
 |distribution cleanup agent|**\@distrib_cleanupagent**|  
-|rpc login name|aucun|  
+|rpc login name|Aucun|  
   
  La colonne de l'ensemble de résultats suivante est retournée aux utilisateurs dans la liste d'accès aux publications sur le serveur de distribution :  
   

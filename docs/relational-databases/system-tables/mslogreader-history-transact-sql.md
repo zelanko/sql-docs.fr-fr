@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dfb1efc93efe8c4b59d649466f8b0c0af0a64a6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7d4cad38c515815f5cc4e30424156311388c7420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736853"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSlogreader_history** contient des lignes d’historique pour les agents de lecture du journal associés au serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82812811"
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID de l'Agent de lecture du journal.|  
 |**runstatus**|**int**|État d'exécution :<br /><br /> 1 = Démarrage.<br /><br /> 2 = Succès.<br /><br /> 3 = En cours.<br /><br /> 4 = Inactif.<br /><br /> 5 = Nouvel essai.<br /><br /> 6 = Échec.|  
-|**start_time**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
+|**heure-début**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
 |**time**|**datetime**|Heure de consignation du message dans le journal|  
 |**duration**|**int**|Durée, en secondes, de la session de message.|  
 |**commentaires**|**nvarchar(255)**|Texte du message.|  

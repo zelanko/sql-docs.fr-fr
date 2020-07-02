@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734787"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne par attribut de plan pour le plan spécifié par le handle de plan. Cette fonction à valeur de table vous permet d'obtenir des informations sur un plan particulier, tel que les valeurs clé de cache ou le nombre d'exécutions simultanées en cours du plan.  
   
 > [!NOTE]  
->  Certaines des informations retournées par cette fonction sont mappées à la vue de compatibilité descendante [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
+>  Certaines des informations retournées par cette fonction sont mappées à la vue de compatibilité descendante [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Syntaxe  
 ```  
@@ -59,7 +59,7 @@ Dans le tableau ci-dessus, l' **attribut** peut avoir les valeurs suivantes :
 |dbid|**int**|ID de la base de données contenant l'entité à laquelle le plan fait référence.<br /><br /> Pour des plans ad hoc ou préparés, il s'agit de l'ID de la base de données à partir duquel est exécuté le lot.|  
 |dbid_execute|**int**|Pour les objets système stockés dans la base de données de **ressources** , l’ID de base de données à partir duquel le plan mis en cache est exécuté. Dans tous les autres cas, il est égal à 0.|  
 |user_id|**int**|Une valeur de -2 indique que le lot soumis ne dépend pas de la résolution implicite des noms et peut être partagé entre différents utilisateurs. Ceci est la méthode privilégiée. Toute autre valeur représente l'ID de l'utilisateur soumettant la requête dans la base de données.| 
-|language_id|**smallint**|ID de la langue de la connexion qui a créé l'objet dans le cache. Pour plus d’informations, consultez [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|ID de la langue de la connexion qui a créé l'objet dans le cache. Pour plus d’informations, consultez [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Format de date de la connexion qui a créé l'objet dans le cache Pour plus d’informations, consultez [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Valeur date first. Pour plus d’informations, consultez [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Bits d'état interne qui font partie de la clé de recherche en cache.|  

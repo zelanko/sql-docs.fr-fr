@@ -20,15 +20,15 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f8bb7ab3cd8eb03bd0b8d3a41b5afa17c1c77a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c994be809f9f0376637b3397150600654e65cb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734470"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Retourne des informations sur toutes les attentes subies par les threads qui se sont exécutés. Vous pouvez utiliser cette vue agrégée pour diagnostiquer les problèmes de performance liés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et également liés à des requêtes et des traitements spécifiques. [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fournit des informations similaires par session.  
   
@@ -332,7 +332,7 @@ Cette commande remet tous les compteurs à 0.
 |HADR_PARTNER_SYNC |Attente du contrôle d’accès concurrentiel dans la liste des partenaires. <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_READ_ALL_NETWORKS |En attente de l'obtention de l'accès en lecture ou en écriture à la liste des réseaux WSFC. À usage interne uniquement Remarque : le moteur conserve une liste de réseaux WSFC utilisés dans les vues de gestion dynamique (par exemple, sys. dm_hadr_cluster_networks) ou pour valider Always On instructions Transact-SQL qui font référence à des informations réseau WSFC. Cette liste est mise à jour lors du démarrage du moteur, des notifications liées à WSFC et du redémarrage interne du Always On (par exemple, la perte et la réobtention du quorum WSFC). Les tâches sont généralement bloquées lorsqu'une mise à jour est en cours dans cette liste. , <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |En attente de la connexion de la base de données secondaire à la base de données primaire avant d'effectuer la récupération. Il s’agit d’une attente prévue, qui peut s’allonger si la connexion au serveur principal est lente à établir. <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |La récupération de base de données attend que la base de données secondaire termine la phase de rétablissement et d'initialisation afin de la ramener au point de journal commun avec la base de données primaire. Il s’agit d’une attente attendue après les basculements. La progression de l’annulation peut être suivie par le biais du moniteur système Windows (Perfmon. exe) et des vues de gestion dynamique. <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |La récupération de base de données attend que la base de données secondaire termine la phase de rétablissement et d'initialisation afin de la ramener au point de journal commun avec la base de données primaire. Il s’agit d’une attente attendue après les basculements. La progression de l’annulation peut être suivie par le biais du moniteur système Windows (perfmon.exe) et des vues de gestion dynamique. <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_REPLICAINFO_SYNC |En attente de la mise à jour de l’état actuel du réplica par le contrôle d’accès concurrentiel. <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_SEEDING_CANCELLATION |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 
 |HADR_SEEDING_FILE_LIST |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 

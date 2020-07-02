@@ -26,15 +26,15 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85df62ad3d31bdddbb37540c0c386ad2bcd260e5
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 3c043425e8db0ce36776e8fec938e3b083d230c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733650"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilisation de codes de mise à jour (updategrams) pour modifier des données dans SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Vous pouvez modifier (insérer, mettre à jour ou supprimer) une base de données dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’un document XML existant à l’aide d’un mise à jour ou de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] fonction OpenXml.  
   
  Cette section fournit des informations sur les codes de mise à jour (updategrams) et propose des exemples pour leur utilisation.  

@@ -24,15 +24,15 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b73fff4ba541e0f9b25c1b8dc84419dd5db1b2b
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 924f390643b142029229f81593ce6d00fc9c87ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733679"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>Prise en charge de SQLXML 4.0 pour Microsoft .NET Framework - Classes managées
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 prend en charge des fonctionnalités qui vous permettent d'écrire des applications pour accéder aux données XML d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], intégrer ces données à l'environnement [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, les traiter et renvoyer les mises à jour à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
   
   Les classes managées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML expose les fonctionnalités de SQLXML 4.0 à l'intérieur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework. Avec les classes managées SQLXML, vous pouvez écrire une application C# pour accéder aux données XML à partir d'une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], placer les données dans l'environnement du .NET Framework, traiter les données et retourner les mises à jour à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comme DiffGram pour qu'elles soient appliquées. Vous devez utiliser un schéma de mappage lors de l'application des mises à jour à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide des classes managées SQLXML. Pour obtenir un exemple fonctionnel, consultez [accès à la fonctionnalité SQLXML dans l’environnement .net](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  

@@ -20,15 +20,15 @@ ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a4a15ab9d38297ee1376d70a817efcf603d47df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 71eefe5aca3271ca76f996ec255ce2f34c3a9ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833883"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733441"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trigger_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contient une ligne par événement pour lequel un déclencheur est activé.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82833883"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Colonnes héritées de sys. Events>**|Non applicable|Hérite de la **object_id**, du **type** **type_desc** des colonnes de [sys. Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
+|**\<Columns inherited from sys.events>**|Non applicable|Hérite de la **object_id**, du **type** **type_desc** des colonnes de [sys. Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
 |**is_first**|**bit**|Le déclencheur est marqué comme étant le premier à s'exécuter pour cet événement.|  
 |**is_last**|**bit**|Le déclencheur est marqué comme étant le dernier à s'exécuter pour cet événement.|  
 |**event_group_type**|**int**|Groupe d'événements sur lequel le déclencheur est créé, ou Null si le déclencheur n'est pas créé sur un groupe d'événements.|  

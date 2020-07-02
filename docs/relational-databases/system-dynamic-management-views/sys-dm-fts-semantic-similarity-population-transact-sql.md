@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738640"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne d'informations d'état à propos du remplissage de l'index de ressemblance de document pour chaque index de ressemblance de chaque table associée à un index sémantique.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67900874"
 |**worker_count**|**int**|Nombre de threads de travail associés à l'extraction de ressemblance|  
 |**statut**|**int**|État de ce remplissage. Remarque : certains états sont transitoires. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> 11 = Remplissage abandonné|  
 |**status_description**|**nvarchar(120)**|Description de l'état du remplissage.|  
-|**start_time**|**datetime**|Heure de début du remplissage.|  
+|**heure-début**|**datetime**|Heure de début du remplissage.|  
 |**incremental_timestamp**|**timestamp**|Représente le cachet temporel de départ d'un remplissage complet. Pour tous les autres types de remplissage, cette valeur est le dernier point de contrôle validé représentant la progression des remplissages.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  

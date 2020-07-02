@@ -20,15 +20,15 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ea2f693b49f2b8eebd2c2348883607e08112600
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734724"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne les informations relatives à l'état actuel du sémaphore de ressource de requête dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys. dm_exec_query_resource_semaphores** fournit l’état général de la mémoire d’exécution des requêtes et vous permet de déterminer si le système peut accéder à suffisamment de mémoire. Cette vue complète les informations de mémoire obtenues à partir de [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) pour fournir une image complète de l’état de la mémoire du serveur. **sys. dm_exec_query_resource_semaphores** retourne une ligne pour le sémaphore de ressource ordinaire et une autre ligne pour le sémaphore de ressource de petite requête. Deux conditions sont requises pour un sémaphore de petite requête :  
   

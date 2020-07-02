@@ -1,5 +1,5 @@
 ---
-title: sys. system_components_surface_area_configuration (Transact-SQL) | Microsoft Docs
+title: sys.system_components_surface_area_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d12a73f8efc2b4278fc24f41af4e1d720beef43
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1fdd39f81de3ca41c38d811095c5a81b700a318e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733449"
 ---
 # <a name="syssystem_components_surface_area_configuration-transact-sql"></a>sys.system_components_surface_area_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie une ligne pour chaque objet système exécutable qu'il est possible d'activer ou de désactiver par un composant Configuration de la surface d'exposition. Pour plus d'informations, consultez [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82821675"
 |**database_name**|**sysname**|Base de données qui contient l'objet. Son mot clé de classement sera Latin1_General_CI_AS_KS_WS. Doit prendre l'une des valeurs suivantes :<br /><br /> **master**<br /><br /> **msdb**<br /><br /> **mssqlsystemresource**|  
 |**schema_name**|**sysname**|Schéma qui contient l'objet. Son mot clé de classement sera Latin1_General_CI_AS_KS_WS. Ne peut pas avoir la valeur NULL.|  
 |**object_name**|**sysname**|Nom de l'objet. Son mot clé de classement sera Latin1_General_CI_AS_KS_WS. Ne peut pas avoir la valeur NULL.|  
-|**state**|**tinyint**|0 = Désactivé<br /><br /> 1 = Activé|  
+|**state**|**tinyint**|0 - Désactivé<br /><br /> 1 - Activé|  
 |**type**|**char(2)**|Type d'objet. Il peut s’agir de l’un des éléments suivants :<br /><br /> P = SQL_STORED_PROCEDURE<br /><br /> PC = CLR_STORED_PROCEDURE<br /><br /> FN = SQL_SCALAR_FUNCTION<br /><br /> FS = CLR_SCALAR_FUNCTION<br /><br /> FT = CLR_TABLE_VALUED_FUNCTION<br /><br /> IF = SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> TF = SQL_TABLE_VALUED_FUNCTION<br /><br /> X = EXTENDED_STORED_PROCEDURE|  
 |**type_desc**|**nvarchar(60)**|Description conviviale du type de l'objet.|  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9031f4b2e5923d1382c10c97dd6886959af108a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21aeb49750c0a451166da8147b424589b3902856
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734444"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Fonctions de capture de données modifiées (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Les enregistrements de capture de données modifiées insèrent, mettent à jour et suppriment les activités appliquées aux tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en fournissant les détails des modifications dans un format relationnel simple à utiliser. Les informations sur la colonne qui reflètent la structure de colonne d'une table source suivie sont capturées pour les lignes modifiées, avec les métadonnées nécessaires à l'application des modifications à un environnement cible. Les fonctions suivantes sont utilisées pour retourner des informations sur les modifications.  
   

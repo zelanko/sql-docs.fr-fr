@@ -22,15 +22,15 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "73982993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738565"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Lit des fichiers créés par la cible de fichier asynchrone d'événements étendus. Au format XML, un événement par ligne est retourné.  
   
@@ -78,7 +78,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**S’applique à** : [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Date et heure (fuseau horaire UTC) de l’événement. N'accepte pas la valeur NULL.|  
 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La lecture de jeux de résultats volumineux en exécutant **sys. fn_xe_file_target_read_file** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] peut entraîner une erreur. Utilisez les **résultats** en mode fichier (**Ctrl + Maj + F**) pour exporter de grands jeux de résultats dans un fichier et lisez le fichier avec un autre outil à la place.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68055373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738592"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Convertit le masque de bits des autorisations retourné par la trace SQL en une table de noms d'autorisations.  
   
@@ -52,14 +52,14 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="returns"></a>Retours  
  **table**  
   
-## <a name="remarks"></a>Notes  
- La valeur retournée dans la colonne **permissions** d’une trace SQL est une représentation d’entier d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un masque de réutilisation utilisé par pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **sys. fn_translate_permissions** convertit ce masque de masque en une table de noms d’autorisations.  
+## <a name="remarks"></a>Remarques  
+ La valeur retournée dans la colonne **permissions** d’une trace SQL est une représentation d’entier d’un masque de réutilisation utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **sys. fn_translate_permissions** convertit ce masque de masque en une table de noms d’autorisations.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="example"></a>Exemple  
- La requête suivante utilise `sys.fn_builtin_permissions` pour afficher les autorisations qui s’appliquent aux certificats, puis `sys.fn_translate_permissions` utilise pour retourner les résultats du masque de sous-masque des autorisations.  
+ La requête suivante utilise `sys.fn_builtin_permissions` pour afficher les autorisations qui s’appliquent aux certificats, puis utilise `sys.fn_translate_permissions` pour retourner les résultats du masque de sous-masque des autorisations.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  

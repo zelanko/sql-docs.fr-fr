@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733656"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Lorsque vous mettez à jour des données existantes, vous devez spécifier à la fois les **\<before>** **\<after>** blocs et. Les éléments spécifiés dans **\<before>** les **\<after>** blocs et décrivent la modification souhaitée. Le mise à jour utilise le ou les éléments spécifiés dans le **\<before>** bloc pour identifier les enregistrements existants dans la base de données. Le ou les éléments correspondants dans le **\<after>** bloc indiquent la manière dont les enregistrements doivent s’afficher après l’exécution de l’opération de mise à jour. À partir de ces informations, mise à jour crée une instruction SQL qui correspond au **\<after>** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  
   
  Voici le format du code de mise à jour (updategram) pour une opération de mise à jour :  
@@ -94,7 +94,7 @@ ms.locfileid: "84529778"
   
 -   La plupart des exemples sont basés sur l'exemple de base de données AdventureWorks. Toutes les mises à jour sont appliquées aux tables de cette base de données. Vous pouvez restaurer la base de données AdventureWorks.  
   
-### <a name="a-updating-a-record"></a>R. Mise à jour d'un enregistrement  
+### <a name="a-updating-a-record"></a>A. Mise à jour d'un enregistrement  
  Le code de mise à jour (updategram) suivant met à jour le nom de famille d'un employé en le remplaçant par Fuller dans la table Person.Contact de la base de données AdventureWorks. Le code de mise à jour (updategram) ne spécifie pas de schéma de mappage ; par conséquent, le mappage par défaut est utilisé.  
   
 ```  

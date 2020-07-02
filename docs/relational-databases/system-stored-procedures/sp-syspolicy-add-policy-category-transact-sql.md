@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7489b68c8e41ca90acc83e0a0ea0b4fe5783ed9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a60a1055b9f183ce6b13c977c774c4f2907750eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736892"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute une catégorie de stratégie qui peut être utilisée avec la Gestion basée sur des stratégies. Les catégories de stratégie vous permettent d'organiser des stratégies et de définir leur étendue.  
   
@@ -50,14 +50,14 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous devez exécuter sp_syspolicy_add_policy_category dans le contexte de la base de données système msdb.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement [!INCLUDE[ssDE](../../includes/ssde-md.md)]de l’instance du. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la création de la plupart des objets [!INCLUDE[ssDE](../../includes/ssde-md.md)]dans le. En raison de cette élévation possible des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs approuvés par le contrôle de la configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)]du.  
+>  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la création de la plupart des objets dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] . En raison de cette élévation possible des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs approuvés par le contrôle de la configuration du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une catégorie de stratégie dans laquelle l'abonnement à la catégorie n'est pas autorisé. Cela signifie que des bases de données individuelles peuvent être configurées pour s'abonner aux stratégies de la catégorie ou annuler l'abonnement.  

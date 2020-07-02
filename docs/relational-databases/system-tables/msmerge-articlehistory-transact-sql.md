@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00cc39e233a78642aa805bb0d08f2de559c814af
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 595898809144af584bad34afe120f36291c88b7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736832"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Le tableau **MSmerge_articlehistory** suit les modifications apportées aux articles pendant une session de synchronisation agent de fusion, avec une ligne pour chaque article auquel des modifications ont été apportées. Cette table est stockée dans la base de données de distribution.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82832313"
 |**session_id**|**int**|ID d’une session de travail de Agent de fusion dans la table système [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) .|  
 |**phase_id**|**int**|La phase de la session de synchronisation, qui peut être l'une des suivantes :<br /><br /> **1** = téléchargement.<br /><br /> **2** = téléchargement.<br /><br /> **4** = nettoyage.<br /><br /> **5** = arrêt.<br /><br /> **6** = modifications de schéma.<br /><br /> **7** = BCP.|  
 |**article_name**|**sysname**|Nom de l'article auquel des modifications ont été apportées.|  
-|**start_time**|**datetime**|Heure à laquelle l'Agent a débuté le traitement de l'article.|  
+|**heure-début**|**datetime**|Heure à laquelle l'Agent a débuté le traitement de l'article.|  
 |**duration**|**int**|Durée en secondes pendant laquelle l'Agent a traité un article.|  
 |**insère**|**int**|Nombre d'insertions appliquées à un article spécifique durant la synchronisation. Cette valeur est incrémentée pendant le processus de synchronisation et la valeur de fin représente le nombre total.|  
 |**mises à jour**|**int**|Nombre de mises à jour appliquées à un article spécifique durant la synchronisation. Cette valeur est incrémentée pendant le processus de synchronisation et la valeur de fin représente le nombre total.|  

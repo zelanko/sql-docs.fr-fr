@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f1e6d9b7f9bce06a8003b56fc6767c992636957
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ab8827795c2d65bcd6044102567d9b265c319f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733282"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie une liste de toutes les modifications de schéma en attente. Cette procédure stockée peut être utilisée avec [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), qui permet à un administrateur d’ignorer les modifications de schéma en attente sélectionnées afin qu’elles ne soient pas répliquées. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -56,7 +56,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_enumeratependingschemachanges** est utilisé dans la réplication de fusion.  
   
  **sp_enumeratependingschemachanges**, utilisé avec [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), est destiné à la prise en charge de la réplication de fusion et doit être utilisé uniquement lorsque d’autres actions correctives, telles que la réinitialisation, n’ont pas réussi à corriger la situation.  

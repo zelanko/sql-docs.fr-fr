@@ -20,24 +20,24 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d544d95cc2a0159a3502544489cf58514fe19fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734766"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne des statistiques détaillées sur le fonctionnement de l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette vue lorsque vous paramétrez une charge de travail pour identifier des problèmes ou des améliorations d'optimisation des requêtes. Par exemple, vous pouvez utiliser le nombre total des optimisations, la valeur du temps écoulé et la valeur de coût final pour comparer les optimisations de requête de la charge en cours et les modifications observées au cours du processus de paramétrage. Certains compteurs fournissent des données qui s'appliquent uniquement à l'usage interne du diagnostic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces compteurs indiquent la mention « Interne uniquement ».  
   
 > [!NOTE]  
 >  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Name|Type de données|Description|  
+|Nom|Type de données|Description|  
 |----------|---------------|-----------------|  
-|**)**|**nvarchar(4000)**|Nom de l'événement statistique de l'optimiseur.|  
+|**counter**|**nvarchar(4000)**|Nom de l'événement statistique de l'optimiseur.|  
 |**occurrence**|**bigint**|Nombre d'occurrences de l'événement d'optimisation pour ce compteur.|  
 |**value**|**float**|Valeur moyenne de la propriété par occurrence de l'événement.|  
 |**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
@@ -50,7 +50,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 ## <a name="remarks"></a>Remarques  
  **sys. dm_exec_query_optimizer_info** contient les propriétés suivantes (compteurs). Toutes les valeurs d'occurrence sont cumulatives et sont définies à 0 au redémarrage du système. Tous les champs de valeurs sont initialisés à NULL au redémarrage du système. Toutes les colonnes de valeurs qui indiquent une moyenne utilisent la valeur d'occurrence de la ligne comme dénominateur pour le calcul de la moyenne. Toutes les optimisations de requêtes sont mesurées lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détermine les modifications apportées à **dm_exec_query_optimizer_info**, y compris les requêtes générées par l’utilisateur et le système. L’exécution d’un plan déjà mis en cache ne change pas les valeurs de **dm_exec_query_optimizer_info**, seules les optimisations sont significatives.  
   
-|Compteur|Occurrence|Valeur|  
+|Counter|Occurrence|Valeur|  
 |-------------|----------------|-----------|  
 |optimizations|Nombre total d'optimisations.|Non applicable|  
 |elapsed time|Nombre total d'optimisations.|Temps moyen écoulé par optimisation d'une instruction (requête) individuelle, en secondes.|  

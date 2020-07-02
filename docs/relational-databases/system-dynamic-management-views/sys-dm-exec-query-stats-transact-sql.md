@@ -20,15 +20,15 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a04468a272cb3d344ef55074e60d2dca4eec9bb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734703"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne les statistiques sur les performances des agrégats pour les plans de requête mis en cache dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vue contient une ligne par instruction de requête dans le plan en cache et la durée de vie des lignes est liée au plan lui-même. Lorsqu'un plan est supprimé du cache, les lignes correspondantes sont éliminées de cette vue.  
   
@@ -128,7 +128,7 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
    
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les statistiques de la vue sont actualisées lorsqu'une requête est terminée.  
   
 ## <a name="examples"></a>Exemples  

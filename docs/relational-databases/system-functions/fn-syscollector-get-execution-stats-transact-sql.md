@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68042740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734394"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des statistiques détaillées sur le jeu d'éléments de collecte ou le package, y compris le nombre de lignes d'erreur qui sont enregistrées par une tâche de flux de données de package. Une tâche de flux de données est un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui traite les données. Ces données étant au format relationnel, elles comprennent des groupes de données d'entrée et de sortie composés de lignes.  
   

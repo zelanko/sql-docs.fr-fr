@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e42daae837968ddcf0f61b860886e372bb47245
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e62fbc7e23d20bd5e4256a69a1a088bdd10c79ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738666"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche tous les objets sans relation contenant-contenu utilisés dans la base de données. Les objets non autonomes sont des objets qui traversent la limite de la base de données dans une base de données autonome. Cette vue est accessible depuis une base de données autonome et une base de données non autonome. Si sys.dm_db_uncontained_entities est vide, votre base de données n'utilise pas d'entités sans relation contenant-contenu.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82827986"
 |-|-|-|  
 |**Nom de la colonne**|**Type**|**Description**|  
 |*type*|**int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
-|*class_desc*|**nvarchar(120)**|Description de la classe de l'entité. L’un des éléments suivants pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **CHARGEUR**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|Description de la classe de l'entité. L’un des éléments suivants pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **CHARGEUR**<br /><br /> **TYPE**<br /><br /> **ÉVALUER**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **Itinéraire**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|ID de l'entité.<br /><br /> Si la *classe* est 1, object_id<br /><br /> Si *Class* = 4, sys. database_principals. principal_id.<br /><br /> Si *Class* = 5, sys. Assemblies. assembly_id.<br /><br /> Si *Class* = 6, sys. types. user_type_id.<br /><br /> Si *Class* = 7, sys. indexes. index_id.<br /><br /> Si *Class* = 12, sys. Triggers. OBJECT_ID.<br /><br /> Si *Class* = 19, sys. routes. Route_ID.<br /><br /> Si *Class* = 30, alors sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Si la classe est un module, retourne le numéro de ligne sur lequel l'utilisation sans relation contenant-contenu se trouve.  Sinon, la valeur est Null.|  
 |*statement_ offset_begin*|**int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de départ où l'utilisation sans relation contenant-contenu démarre. Sinon, la valeur de retour est Null.|  

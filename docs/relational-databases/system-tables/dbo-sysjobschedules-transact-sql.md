@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobschedules (Transact-SQL) | Microsoft Docs
+title: dbo.sysJobSchedules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e417a597b6cd7fbb2ccb0aa7131fb17ed458370a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b6b138f2c0f724f003c796574798dcccc82122ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736859"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient les informations de planification pour les travaux qui doivent être exécutés par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette table est stockée dans la base de données **msdb** .  
   
@@ -41,6 +41,6 @@ ms.locfileid: "82827333"
 |**next_run_time**|**int**|Heure à laquelle est planifiée la prochaine exécution du travail. L'heure se présente sous la forme HHMMSS et est exprimée sur 24 heures.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [dbo. sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [Planifications dedbo.sys&#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

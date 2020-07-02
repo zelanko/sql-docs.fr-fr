@@ -20,15 +20,15 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0326d5117371f23cd446caf2c17e0d832ea5cf4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983113"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734534"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations sur les remplissages d'index de recherche en texte intégral et d'expression de clé sémantique actuellement en cours dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
@@ -51,15 +51,15 @@ ms.locfileid: "73983113"
 |**worker_count**|**int**|Cette valeur est toujours 0.|  
 |**queued_population_type**|**int**|Type du remplissage, d'après les modifications suivies, que suivra l'éventuel remplissage en cours.|  
 |**queued_population_type_description**|**nvarchar(120)**|Description du remplissage à suivre, le cas échéant. Par exemple, lorsque CHANGE TRACKING = AUTO et que le remplissage complet initial est en cours, cette colonne affiche « Remplissage automatique ».|  
-|**start_time**|**datetime**|Heure de début du remplissage.|  
+|**heure-début**|**datetime**|Heure de début du remplissage.|  
 |**incremental_timestamp**|**timestamp**|Représente le cachet temporel de départ d'un remplissage complet. Pour tous les autres types de remplissage, cette valeur est le dernier point de contrôle validé représentant la progression des remplissages.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque l'indexation sémantique statistique est activée en plus de l'indexation de texte intégral, l'extraction et le remplissage sémantique d'expressions clés et l'extraction de données de ressemblance du document se produisent simultanément avec l'indexation de texte intégral. Le remplissage de l'index de ressemblance du document se produit ultérieurement dans une deuxième phase. Pour plus d’informations, consultez [gérer et surveiller la recherche sémantique](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="permissions"></a>Autorisations  
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="physical-joins"></a>Jointures physiques  

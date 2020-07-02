@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734726"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne le plan d'exécution de requêtes au format XML pour le traitement spécifié par le descripteur de plan. Le plan spécifié par le descripteur de plan peut être en cache ou en cours d'exécution.  
   
@@ -87,9 +87,9 @@ Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique sui
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent l'utilisation de la vue de gestion dynamique **sys.dm_exec_query_plan**.  
   
- Pour afficher des plans d'exécution de requêtes XML, exécutez les requêtes suivantes dans l'éditeur de requêtes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis cliquez sur **ShowPlanXML** dans la colonne **query_plan** de la table retournée par l'objet **sys.dm_exec_query_plan**. Le plan d'exécution de requêtes XML s'affiche dans le volet de résumé de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour enregistrer le Showplan XML dans un fichier, cliquez avec le bouton droit sur **ShowplanXml** dans la colonne **query_plan** , cliquez sur **enregistrer les résultats sous**, nommez le fichier au format \< *File_name*>. sqlplan ; par exemple, MyXMLShowplan. sqlplan.  
+ Pour afficher des plans d'exécution de requêtes XML, exécutez les requêtes suivantes dans l'éditeur de requêtes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis cliquez sur **ShowPlanXML** dans la colonne **query_plan** de la table retournée par l'objet **sys.dm_exec_query_plan**. Le plan d'exécution de requêtes XML s'affiche dans le volet de résumé de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour enregistrer le Showplan XML dans un fichier, cliquez avec le bouton droit sur **ShowplanXml** dans la colonne **query_plan** , cliquez sur **enregistrer les résultats sous**, puis nommez le fichier au format \<*file_name*> . sqlplan ; par exemple, MyXMLShowplan. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>R. Récupération du plan de requête mis en mémoire cache pour un traitement ou une requête Transact-SQL à exécution lente  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Récupération du plan de requête mis en mémoire cache pour un traitement ou une requête Transact-SQL à exécution lente  
  Les plans de requête pour divers types de lots [!INCLUDE[tsql](../../includes/tsql-md.md)], par exemple les procédures stockées, les fonctions définies par l'utilisateur et les lots appropriés, sont mis en cache dans une zone de la mémoire appelée le cache de plan. Chaque plan de requête mis dans cette mémoire cache est différencié par un identificateur unique appelé descripteur de plan. Il est possible d'utiliser ce descripteur avec la vue de gestion dynamique **sys.dm_exec_query_plan** pour récupérer le plan d'exécution d'une requête ou d'un traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] particulier.  
   
  Si une requête ou un traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] s'exécute longtemps sur une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifique, récupérez le plan d'exécution de cette requête ou de ce traitement pour trouver la raison de ce retard. L'exemple suivant montre la récupération du plan d'exécution de requêtes XML pour une requête ou un traitement s'exécutant lentement.  

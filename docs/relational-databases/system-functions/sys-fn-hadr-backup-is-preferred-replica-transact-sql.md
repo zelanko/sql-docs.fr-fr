@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: be33120bd19561055095fb81f4a4595edbcf394f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734355"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisé pour déterminer si le réplica actuel est le réplica de sauvegarde par défaut.  
   
@@ -49,7 +49,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## <a name="returns"></a>Retours  
  Retourne le type de données **bool**: 1 si la base de données sur l’instance actuelle se trouve sur le réplica préféré, sinon 0.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez cette fonction dans un script de sauvegarde pour déterminer si la base de données active est sur le réplica préféré pour les sauvegardes. Vous pouvez exécuter un script sur chaque réplica de disponibilité. Chacun de ces travaux examine les mêmes données pour déterminer quel travail doit s’exécuter. par conséquent, un seul des travaux planifiés passe à l’étape de sauvegarde. L'exemple de code devrait ressembler à ce qui suit :  
   
 ```  
@@ -78,7 +78,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [CRÉER un groupe de disponibilité &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  Secondaires [actifs : sauvegarde sur les réplicas secondaires &#40;Always on les groupes de disponibilité&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always on affichages catalogue de groupes de disponibilité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   

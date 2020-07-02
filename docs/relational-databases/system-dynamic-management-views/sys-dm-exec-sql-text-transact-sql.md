@@ -20,15 +20,15 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734664"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne le texte du lot SQL identifié par le *sql_handle*spécifié. Cette fonction à valeur de table remplace la fonction système **fn_get_sql**.  
   
@@ -85,7 +85,7 @@ Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique sui
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Pour les requêtes ad hoc, les handles SQL sont des valeurs de hachage basées sur le texte SQL qui est envoyé au serveur et peuvent provenir de n’importe quelle base de données. 
 
 Pour des objets de base de données tels que des procédures stockées, des déclencheurs ou des fonctions, les handles SQL sont dérivés de l'ID de la base de données, de l'ID de l'objet et du numéro de l'objet. 

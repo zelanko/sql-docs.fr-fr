@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734677"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne une ligne par session authentifiée sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions est une vue dans l'étendue du serveur qui affiche des informations sur toutes les connexions utilisateur et les tâches internes actives. Ces informations concernent la version du client, le nom du programme client, l'heure de connexion du client, l'utilisateur connecté, le paramètre de session en cours, etc. Utilisez sys.dm_exec_sessions pour d'abord consulter la charge système en cours et pour identifier une session d'intérêt, puis pour en savoir plus sur cette session en faisant appel à d'autres vues ou fonctions de gestion dynamique.  
   
- Les vues de gestion dynamique sys. dm_exec_connections, sys. dm_exec_sessions et sys. dm_exec_requests sont mappées à la table système [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
+ Les vues de gestion dynamique sys. dm_exec_connections, sys. dm_exec_sessions et sys. dm_exec_requests sont mappées à la table système [sys.sysprocessus](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
 > **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_exec_sessions**.  
   
@@ -97,7 +97,7 @@ Tout le monde peut voir ses propres informations de session.
 ** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Nécessite `VIEW DATABASE STATE` de voir toutes les connexions à la base de données actuelle. `VIEW DATABASE STATE`ne peut pas être accordé dans la `master` base de données. 
   
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque l’option de configuration de serveur **conformité aux critères communs** est activée, les statistiques de connexion s’affichent dans les colonnes suivantes.  
   
 -   last_successful_logon  

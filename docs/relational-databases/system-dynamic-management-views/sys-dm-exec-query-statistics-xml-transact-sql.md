@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734712"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Retourne le plan d’exécution de requête pour les demandes en cours. Utilisez cette DMV pour récupérer Showplan XML avec des statistiques temporaires. 
 
@@ -54,8 +54,8 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot en cours d’exécution. Autorise la valeur Null.|
 |query_plan|**xml**|Contient la représentation Showplan du runtime du plan d’exécution de requête spécifié avec *plan_handle* contenant des statistiques partielles. Le plan d'exécution de requêtes est au format XML. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur. Autorise la valeur Null.|
 
-## <a name="remarks"></a>Notes
-Cette fonction système est disponible à partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] de SP1. Voir KB [3190871](https://support.microsoft.com/help/3190871)
+## <a name="remarks"></a>Remarques
+Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Voir KB [3190871](https://support.microsoft.com/help/3190871)
 
 Cette fonction système fonctionne à la fois dans l’infrastructure de profilage des statistiques d’exécution de requête **standard** et **légère** . Pour plus d’informations, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -66,7 +66,7 @@ Dans les conditions suivantes, aucune sortie Showplan n’est retournée dans la
 En raison d’une limitation du nombre de niveaux imbriqués autorisés dans le type de données **XML** , **sys. dm_exec_query_statistics_xml** ne peut pas retourner des plans de requête qui remplissent ou dépassent 128 niveaux d’éléments imbriqués. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette condition empêchait les retours par le plan de requête et générait l'erreur 6335. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, la colonne **query_plan** retourne la valeur null.   
 
 ## <a name="permissions"></a>Autorisations  
-Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` l’autorisation sur le serveur.  
+Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nécessite `VIEW SERVER STATE` l’autorisation sur le serveur.  
 Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .
 
 ## <a name="examples"></a>Exemples  
@@ -79,7 +79,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO  
 ```  
   
- Ensuite, pour obtenir le plan de requête en direct et les statistiques d’exécution `session_id` , utilisez le copié avec la fonction système **sys. dm_exec_query_statistics_xml**.  
+ Ensuite, pour obtenir le plan de requête en direct et les statistiques d’exécution, utilisez le copié `session_id` avec la fonction système **sys. dm_exec_query_statistics_xml**.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

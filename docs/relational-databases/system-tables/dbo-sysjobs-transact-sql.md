@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobs (Transact-SQL) | Microsoft Docs
+title: Travaux de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe374a81fc88b6591da8fb0303d5ea490cccac0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: adf7124fe37d506eb0ac9b3dcb0bab5d6e85423b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736874"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stocke les informations de chaque travail planifié qui doit être exécuté par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette table est stockée dans la base de données **msdb** .  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82806950"
 |**originating_server_id**|**int**|ID du serveur d'où le travail provient.|  
 |**name**|**sysname**|Nom du travail.|  
 |**désactivé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
-|**descriptive**|**nvarchar(512)**|Description du travail.|  
+|**description**|**nvarchar(512)**|Description du travail.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
 |**category_id**|**int**|ID de la catégorie du travail.|  
 |**owner_sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) du propriétaire du travail.|  

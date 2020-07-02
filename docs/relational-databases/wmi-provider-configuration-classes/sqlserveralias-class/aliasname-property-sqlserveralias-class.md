@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea108a1996facab7549d2bea40e016af39dc29d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbcd21262bb17e191cd08dfba5569bccca547294
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738469"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Propriété AliasName (classe SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom de l'alias de connexion au serveur.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -35,11 +35,11 @@ object.AliasName [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *object*  
  Objet de [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) qui représente un alias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **string** qui spécifie le nom de l'alias de connexion au serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   

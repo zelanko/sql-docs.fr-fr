@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d668fbabc20ef6e7acf8b38064378f74a3b15c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f553207a348511a98a331eb54a7090b217bc04fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734668"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Retourne des informations sur toutes les attentes rencontrées par les threads qui ont été exécutés pour chaque session. Vous pouvez utiliser cette vue pour diagnostiquer les problèmes de performance liés à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session et à des requêtes et des lots spécifiques.  Cette vue retourne les mêmes informations que celles regroupées pour [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) , mais fournit également le numéro de **session_id** .  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82833768"
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette vue de gestion dynamique réinitialise les informations pour une session lorsque la session est ouverte, ou lorsque la session est réinitialisée (si le regroupement de connexions est en cours).  
   
  Pour plus d’informations sur les types d’attente, consultez [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  

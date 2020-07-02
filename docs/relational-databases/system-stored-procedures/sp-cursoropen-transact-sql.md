@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733342"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ouvre un curseur. sp_cursoropen définit l’instruction SQL associée au curseur et aux options de curseur, puis remplit le curseur. sp_cursoropen équivaut à la combinaison des [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions DECLARE_CURSOR et Open. Cette procédure est appelée en spécifiant ID = 2 dans un paquet TDS (Tabular Data Stream).  
   
@@ -147,7 +147,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Si la procédure sp_cursoropen s’exécute correctement, les paramètres de retour RPC et un jeu de résultats avec des informations de format de colonne TDS (0xA0 & messages 0xA1) sont envoyés. En cas d'échec, un ou plusieurs messages d'erreur TDS sont envoyés. Dans les deux cas, aucune donnée de ligne n’est retournée et le nombre de messages *terminés* est égal à zéro. Si vous utilisez une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à 7.0, 0xa0, 0xa1 (standard pour les instructions SELECT) sont retournés avec les flux de jetons 0xa5 et 0xa4. Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 0x81 est retourné (standard pour les instructions SELECT) avec les flux de jetons 0xa5 et 0xa4.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="stmt-parameter"></a>Paramètre stmt  
  Si *stmt* spécifie l’exécution d’une procédure stockée, les paramètres d’entrée peuvent être définis en tant que constantes dans le cadre de la chaîne *stmt* , ou spécifiés en tant qu’arguments *boundparam* . Les variables déclarées peuvent être passées comme paramètres liés de cette façon.  

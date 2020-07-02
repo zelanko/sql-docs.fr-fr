@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 51f6125602813dda2fdc8dbddceaa93ccc5edea2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738626"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne pour chaque Always On groupe de disponibilité qui possède un réplica de disponibilité sur l’instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque ligne affiche les états qui définissent l'intégrité d'un groupe de disponibilité donné.  
   

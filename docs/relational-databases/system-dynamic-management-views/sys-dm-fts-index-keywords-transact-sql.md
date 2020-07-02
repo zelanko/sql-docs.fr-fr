@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e29fcabeb2f99def9f2e06b1d0b157c8d148002a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734537"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur le contenu d'un index de recherche en texte intégral pour la table spécifiée.  
   
@@ -60,7 +60,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 |**column_id**|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
 |**document_count**|**int**|Nombre de documents ou de lignes contenant le terme actuel.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les informations retournées par **sys. dm_fts_index_keywords** sont utiles pour la recherche des éléments suivants :  
   
 -   Si un mot clé fait partie de l'index de recherche en texte intégral.  

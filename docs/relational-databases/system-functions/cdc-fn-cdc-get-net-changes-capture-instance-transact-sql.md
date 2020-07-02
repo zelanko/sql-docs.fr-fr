@@ -1,5 +1,5 @@
 ---
-title: CDC. fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b2825efb9d6b0b16c0e68f2f5744b4371bc59e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734446"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne de modification nette pour chaque ligne source modifiée dans la plage de numéros séquentiels dans le journal (LSN) spécifiée.  
   
  **Wait, qu’est-ce qu’un LSN ?** Chaque enregistrement dans le [Journal des transactions SQL Server](../logs/the-transaction-log-sql-server.md) est identifié de manière unique par un numéro séquentiel dans le journal (LSN). Les LSN sont ordonnés de telle sorte que si LSN2 est supérieur à LSN1, la modification décrite par l’enregistrement de journal référencé par LSN2 s’est produite **après** la modification décrite par le LSN d’enregistrement de journal.  
   
- Le LSN d’un enregistrement de journal dans lequel un événement significatif s’est produit peut être utile pour construire des séquences de restauration correctes. Étant donné que les LSN sont ordonnés, vous pouvez les comparer pour déterminer leur égalité et leur \<inégalité (c’est-à-dire \<, >, =, =, >=). Ces comparaisons sont utiles pour créer des séquences de restauration.  
+ Le LSN d’un enregistrement de journal dans lequel un événement significatif s’est produit peut être utile pour construire des séquences de restauration correctes. Étant donné que les LSN sont ordonnés, vous pouvez les comparer à l’égalité et à l’inégalité (autrement dit, \<, > , =, \<=, > =). Ces comparaisons sont utiles pour créer des séquences de restauration.  
   
  Lorsqu’une ligne source a plusieurs modifications au cours de la plage du LSN, une seule ligne qui reflète le contenu final de la ligne est retournée par la fonction d’énumération décrite ci-dessous. Par exemple, si une transaction insère une ligne dans la table source et qu’une transaction ultérieure dans la plage LSN met à jour une ou plusieurs colonnes de cette ligne, la fonction ne retourne qu' **une** seule ligne, qui comprend les valeurs de colonne mises à jour.  
   
@@ -66,13 +66,13 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Option qui régit le contenu des colonnes de métadonnées aussi bien que les lignes retournées dans le jeu de résultats. Il peut s'agir de l'une des options suivantes :  
   
  all  
- Retourne le LSN de la dernière modification apportée à la ligne et l’opération nécessaire pour appliquer la ligne dans les colonnes de métadonnées _ _ start_lsn et \_ \_$Operation. La colonne \_ \_$Update _MASK a toujours la valeur null.  
+ Retourne le LSN de la dernière modification apportée à la ligne et l’opération nécessaire pour appliquer la ligne dans les colonnes de métadonnées _ _ start_lsn et \_ \_ $operation. La colonne \_ \_ $Update _MASK a toujours la valeur null.  
   
  all with mask  
- Retourne le LSN de la dernière modification apportée à la ligne et l’opération nécessaire pour appliquer la ligne dans les colonnes de métadonnées _ _ start_lsn et \_ \_$Operation. En outre, lorsqu’une opération de mise à\_\_jour retourne ($Operation = 4), les colonnes capturées modifiées dans la mise à jour \_ \_sont marquées dans la valeur retournée dans $Update _MASK.  
+ Retourne le LSN de la dernière modification apportée à la ligne et l’opération nécessaire pour appliquer la ligne dans les colonnes de métadonnées _ _ start_lsn et \_ \_ $operation. En outre, lorsqu’une opération de mise à jour retourne ( \_ \_ $operation = 4), les colonnes capturées modifiées dans la mise à jour sont marquées dans la valeur retournée dans \_ \_ $Update _MASK.  
   
  all with merge  
- Retourne le numéro séquentiel dans le journal de la modification finale apportée à la ligne dans les colonnes de métadonnées __$start_lsn. La colonne \_ \_$Operation aura l’une des deux valeurs suivantes : 1 pour suppression et 5 pour indiquer que l’opération nécessaire pour appliquer la modification est une insertion ou une mise à jour. La colonne \_ \_$Update _MASK a toujours la valeur null.  
+ Retourne le numéro séquentiel dans le journal de la modification finale apportée à la ligne dans les colonnes de métadonnées __$start_lsn. La colonne \_ \_ $operation aura l’une des deux valeurs suivantes : 1 pour suppression et 5 pour indiquer que l’opération nécessaire pour appliquer la modification est une insertion ou une mise à jour. La colonne \_ \_ $Update _MASK a toujours la valeur null.  
   
  Dans la mesure où la logique permettant de déterminer l'opération précise pour une modification donnée augmente la complexité de la requête, cette option est conçue pour améliorer le performances des requêtes lorsqu'il suffit d'indiquer que l'opération nécessaire pour appliquer la donnée modifiée est une insertion ou une mise à jour, mais il n'est pas utile de différencier explicitement les deux. Cette option est très intéressante dans les environnements cibles où une opération de fusion est disponible directement, tel qu'un environnement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -82,19 +82,19 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |__$start_lsn|**binary(10)**|Numéro séquentiel dans le journal associé à la transaction de validation de la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de mise à jour sur la table source modifie deux colonnes sur deux lignes, la table de modifications contiendra quatre lignes, chacune avec le même _ _ $ start_lsnvalue.|  
 |__$operation|**int**|Identifie l'opération du langage de manipulation de données permettant d'appliquer la ligne de données de modification à la source de données cible.<br /><br /> Si la valeur du paramètre row_filter_option est tout ou tout avec le masque, la valeur dans cette colonne peut être l'une des valeurs suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 4 = mise à jour<br /><br /> Si la valeur du paramètre row_filter_option est tout ou tout avec fusion, la valeur dans cette colonne peut être l'une des suivantes :<br /><br /> 1 = suppression|  
-|__$update_mask|**varbinary(128)**|Masque de bits avec un bit correspondant à chaque colonne capturée identifiée pour l'instance de capture. Tous les bits définis de cette valeur ont la valeur 1 lorsque __$operation = 1 ou 2. Lorsque \_ \_$Operation = 3 ou 4, seuls les bits correspondant aux colonnes qui ont changé ont la valeur 1.|  
-|*\<colonnes de table source capturées>*|varie|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
+|__$update_mask|**varbinary(128)**|Masque de bits avec un bit correspondant à chaque colonne capturée identifiée pour l'instance de capture. Tous les bits définis de cette valeur ont la valeur 1 lorsque __$operation = 1 ou 2. Lorsque \_ \_ $operation = 3 ou 4, seuls les bits correspondant aux colonnes qui ont changé ont la valeur 1.|  
+|*\<captured source table columns>*|varie|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données. Lorsque l'appelant n'a pas l'autorisation de consulter les données sources, la fonction retourne l'erreur 208 (nom d'objet non valide).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si la plage spécifiée de numéro séquentiel dans le journal ne se situe pas dans la chronologie de suivi des modifications pour l'instance de capture, la fonction retourne l'erreur 208 (nom d'objet non valide).
 
  En cas de modification de l’identificateur unique d’une ligne, fn_cdc_get_net_changes affiche la commande de mise à jour initiale avec une commande DELETE, puis INSERT à la place.  Ce comportement est nécessaire pour effectuer le suivi de la clé à la fois avant et après la modification.
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise la fonction `cdc.fn_cdc_get_net_changes_HR_Department` pour signaler les modifications nettes apportées à `HumanResources.Department` la table source pendant un intervalle de temps spécifique.  
+ L’exemple suivant utilise la fonction `cdc.fn_cdc_get_net_changes_HR_Department` pour signaler les modifications nettes apportées à la table source `HumanResources.Department` pendant un intervalle de temps spécifique.  
   
  En premier lieu, la fonction `GETDATE` est utilisée pour marquer le début de l'intervalle de temps. Après avoir appliqué à la table source plusieurs instructions DML, la fonction `GETDATE` est rappelée pour identifier la fin de l'intervalle de temps. La fonction [sys. fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) est ensuite utilisée pour mapper l’intervalle de temps à une plage de requêtes de capture de données modifiées délimitée par des valeurs LSN. Enfin, la fonction `cdc.fn_cdc_get_net_changes_HR_Department` est interrogée pour obtenir les modifications nettes apportées à la table source pendant l'intervalle de temps. Remarquez que la ligne qui est insérée, puis supprimée n'apparaît pas dans le jeu de résultats retourné par la fonction. En effet, une ligne qui est d'abord ajoutée, puis supprimée dans une fenêtre de requête ne produit aucune modification nette dans la table source pendant l'intervalle. Avant d’exécuter cet exemple, vous devez d’abord exécuter l’exemple B dans [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   

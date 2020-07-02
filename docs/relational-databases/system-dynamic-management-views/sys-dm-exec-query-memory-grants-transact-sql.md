@@ -20,15 +20,15 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734759"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations sur toutes les requêtes qui ont demandé et qui attendent une allocation de mémoire ou qui ont reçu une allocation de mémoire. Les requêtes qui ne nécessitent pas d’allocation de mémoire n’apparaissent pas dans cette vue. Par exemple, les opérations de jointure de tri et de hachage ont des allocations de mémoire pour l’exécution des requêtes, tandis que les requêtes sans clause **order by** n’ont pas d’allocation de mémoire.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "83731888"
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
    
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un scénario de débogage type pour le délai d'attente de la requête peut ressembler à ce qui suit :  
   
 -   Recherchez l'état général de la mémoire système à l'aide de [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) et de différents compteurs de performance.  
