@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787836"
 ---
 # <a name="using-database-mirroring"></a>Utilisation de la mise en miroir de bases de données
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -62,9 +62,9 @@ ms.locfileid: "81303208"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERDBINIT et le mot clé **FailoverPartner** est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Le cache de basculement est conservé tant que le fournisseur est chargé, ce qui est jusqu’à ce que **CoUninitialize** soit appelé ou que l’application ait une référence à un objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] géré par le fournisseur de OLE DB Native Client, tel qu’un objet de source de données.  
+ Le cache de basculement est conservé tant que le fournisseur est chargé, ce qui est jusqu’à ce que **CoUninitialize** soit appelé ou que l’application ait une référence à un objet géré par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client, tel qu’un objet de source de données.  
   
- Pour plus d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] informations sur la prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de bases de données, consultez [propriétés d’initialisation et d’autorisation](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de bases de données, consultez [propriétés d’initialisation et d’autorisation](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. Plus précisément, l’attribut SQL_COPT_SS_FAILOVER_PARTNER a été ajouté pour être utilisé avec les fonctions [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . et le mot clé **Failover_Partner** a été ajouté en tant que nouvel attribut de chaîne de connexion.  

@@ -18,16 +18,16 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1716c650a138edd36291e20877faf5da741b92a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73783221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787948"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Lie les données d'une variable de programme à une colonne de table pour une copie en bloc dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -52,7 +52,7 @@ RETCODE bcp_bind (
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *pData*  
- Pointeur vers les données copiées. Si *eDataType* a la valeur SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR ou SQLIMAGE, *pData* peut être null. Un *pData* null indique que les valeurs de données de type long [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont envoyées à en segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). L’utilisateur doit uniquement définir *pData* sur la valeur null si la colonne correspondant au champ lié à l’utilisateur est une colonne BLOB, sinon **bcp_bind** échoue.  
+ Pointeur vers les données copiées. Si *eDataType* a la valeur SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR ou SQLIMAGE, *pData* peut être null. Un *pData* null indique que les valeurs de données de type long sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). L’utilisateur doit uniquement définir *pData* sur la valeur null si la colonne correspondant au champ lié à l’utilisateur est une colonne BLOB, sinon **bcp_bind** échoue.  
   
  Si les indicateurs sont présents dans les données, ils apparaissent directement en mémoire avant les données. Le paramètre *pData* pointe vers la variable indicateur dans ce cas, et la largeur de l’indicateur, le paramètre *cbIndicator* , est utilisée par la copie en bloc pour traiter correctement les données utilisateur.  
   
@@ -78,7 +78,7 @@ typedef struct tagBCPBOUNDINT
   
  Pour les types de données de longueur fixe, tels que les entiers, le type de données indique la longueur des données au système. Par conséquent, pour les types de données de longueur fixe, *cbData* peut être SQL_VARLEN_DATA en toute sécurité ou la longueur des données.  
   
- Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les types de données caractère et binaire, *cbData* peut être SQL_VARLEN_DATA, SQL_NULL_DATA, une valeur positive ou 0. Si *cbData* est SQL_VARLEN_DATA, le système utilise un indicateur de longueur/null (le cas échéant) ou une séquence de marque de fin pour déterminer la longueur des données. Si les deux sont fournis, le système utilise celui qui se traduit par la quantité de données à copier la moins élevée. Si *cbData* est SQL_VARLEN_DATA, le type de données de la colonne est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un type caractère ou binaire, et ni un indicateur de longueur ni une séquence de marque de fin n’est spécifié, le système retourne un message d’erreur.  
+ Pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données caractère et binaire, *cbData* peut être SQL_VARLEN_DATA, SQL_NULL_DATA, une valeur positive ou 0. Si *cbData* est SQL_VARLEN_DATA, le système utilise un indicateur de longueur/null (le cas échéant) ou une séquence de marque de fin pour déterminer la longueur des données. Si les deux sont fournis, le système utilise celui qui se traduit par la quantité de données à copier la moins élevée. Si *cbData* est SQL_VARLEN_DATA, le type de données de la colonne est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type caractère ou binaire, et ni un indicateur de longueur ni une séquence de marque de fin n’est spécifié, le système retourne un message d’erreur.  
   
  Si *cbData* est égal à 0 ou à une valeur positive, le système utilise *cbData* comme longueur de données. Toutefois, si, en plus d’une valeur *cbData* positive, un indicateur de longueur ou une séquence de terminaison est fourni, le système détermine la longueur des données à l’aide de la méthode qui produit le moins de données copiées.  
   
@@ -112,7 +112,7 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- Si la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liée est un caractère élargi, aucune conversion n’est effectuée sur [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Si la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède MBCS comme type de caractère, la conversion des caractères larges en caractères multioctets s'effectue quand les données sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne liée est un caractère élargi, aucune conversion n’est effectuée sur [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Si la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède MBCS comme type de caractère, la conversion des caractères larges en caractères multioctets s'effectue quand les données sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *cbTerm*  
  Nombre d'octets présents dans le terminateur de la variable de programme, s'il existe. Si aucune marque de fin n’est définie pour la variable, affectez la valeur 0 à *cbTerm avec* .  
@@ -173,15 +173,15 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 
  SUCCEED ou FAIL.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans une table dans.  
+Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L' **bcp_init** appel de bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit la table cible pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
+Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L’appel de **bcp_init** définit la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table cible pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
 
-Effectuez un appel de **bcp_bind** distinct pour chaque colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table dans laquelle vous souhaitez effectuer la copie. Une fois les appels de **bcp_bind** nécessaires effectués, appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programme vers. La reliaison des colonnes n'est pas prise en charge.
+Effectuez un appel de **bcp_bind** distinct pour chaque colonne de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table dans laquelle vous souhaitez effectuer la copie. Une fois les appels de **bcp_bind** nécessaires effectués, appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de programme vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La reliaison des colonnes n'est pas prise en charge.
 
-Chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous souhaitez valider les lignes déjà reçues, appelez [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Par exemple, appelez **bcp_batch** une fois pour chaque ligne de 1000 insérée ou à tout autre intervalle.  
+Chaque fois que vous souhaitez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valider les lignes déjà reçues, appelez [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Par exemple, appelez **bcp_batch** une fois pour chaque ligne de 1000 insérée ou à tout autre intervalle.  
 
 Lorsqu’il n’y a plus de lignes à insérer, appelez [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). L'échec de cette opération entraîne une erreur.
 
@@ -191,7 +191,7 @@ Si *pData* pour une colonne a la valeur null, car sa valeur sera fournie par les
 
 Pour les nouveaux types de valeur de grande taille, tels que **varchar (max)**, **varbinary (max)** ou **nvarchar (max)**, vous pouvez utiliser SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary et SQLNCHAR comme indicateurs de type dans le paramètre *eDataType* .  
 
-Si *cbTerm avec* n’est pas égal à 0, toute valeur (1, 2, 4 ou 8) est valide pour le préfixe (*cbIndicator*). Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client recherche la marque de fin, calcule la longueur des données par rapport au terminateur (*i*) et affecte à *cbData* la valeur la plus petite et la valeur du préfixe.  
+Si *cbTerm avec* n’est pas égal à 0, toute valeur (1, 2, 4 ou 8) est valide pour le préfixe (*cbIndicator*). Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client recherche la marque de fin, calcule la longueur des données par rapport au terminateur (*i*) et affecte à *cbData* la valeur la plus petite et la valeur du préfixe.  
 
 Si *cbTerm avec* a la valeur 0 et que *cbIndicator* (le préfixe) n’est pas égal à 0, *cbIndicator* doit avoir la valeur 8. Le préfixe de 8 octets peut prendre les valeurs suivantes :  
 
@@ -199,7 +199,7 @@ Si *cbTerm avec* a la valeur 0 et que *cbIndicator* (le préfixe) n’est pas é
 
 - 0xFFFFFFFFFFFFFFFE est traité comme une valeur de préfixe spéciale, qui est utilisée pour envoyer efficacement des données par segments au serveur. Le format des données avec ce préfixe particulier est :  
 
-- <SPECIAL_PREFIX> \<0 ou plusieurs segments de données> <ZERO_CHUNK> où :  
+- <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> où :  
 
 - SPECIAL_PREFIX est 0xFFFFFFFFFFFFFFFE  
 
@@ -217,7 +217,7 @@ Pour plus d’informations sur les types utilisés avec le paramètre *eDataType
 
 Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
   
 ```
 #include sql.h  
@@ -298,6 +298,6 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)

@@ -14,15 +14,15 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce374aad4581d9bf53ecb5b072ae04316765076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e07912f0f2f524759d866a5099345f1816913a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787810"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cette rubrique traite des modifications apportées à ODBC dans SQL Server Native Client pour prendre en charge les types CLR volumineux définis par l'utilisateur.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "81303670"
   
 |Type de données SQL|Disposition en mémoire|Type de données C|Valeur (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Champs de descripteur pour les paramètres  
  Les informations suivantes sont retournées dans les champs IPD :  
@@ -133,7 +133,7 @@ ms.locfileid: "81303670"
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Pris en charge|  
+|SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
  \*Les données binaires sont converties en une chaîne hexadécimale.  
@@ -143,7 +143,7 @@ ms.locfileid: "81303670"
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Pris en charge|  
+|SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
  \*La conversion de chaînes hexadécimales en données binaires se produit.  

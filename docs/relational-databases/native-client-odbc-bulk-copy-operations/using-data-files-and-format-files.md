@@ -18,15 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc87b341a4ca9685e070395e003d8187e8593b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787988"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilisation de fichiers de données et de format
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Le programme de copie en bloc le plus simple permet d'effectuer les opérations suivantes :  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73785280"
   
  Lors d’une copie en bloc à partir d’un fichier de données décrit par un fichier de format, lisez le fichier de format en appelant [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) après **bcp_init** mais avant d' **bcp_exec**.  
   
- La fonction **bcp_control** contrôle plusieurs options lors de la copie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en bloc dans à partir d’un fichier de données. **bcp_control** définit des options, telles que le nombre maximal d’erreurs avant l’arrêt, la ligne du fichier sur laquelle démarrer la copie en bloc, la ligne sur laquelle s’arrêter et la taille du lot.  
+ La fonction **bcp_control** contrôle plusieurs options lors de la copie en bloc dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un fichier de données. **bcp_control** définit des options, telles que le nombre maximal d’erreurs avant l’arrêt, la ligne du fichier sur laquelle démarrer la copie en bloc, la ligne sur laquelle s’arrêter et la taille du lot.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution d’opérations de copie en bloc &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,16 +20,16 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 45273b83d5beb033d8c3aad60fa9919a885e55c4
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790404"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 La procédure stockée **sp_execute_external_script** exécute un script fourni en tant qu’argument d’entrée pour la procédure et est utilisé avec les [extensions de langage](../../language-extensions/language-extensions-overview.md)et de [machine learning services](../../machine-learning/sql-server-machine-learning-services.md) . 
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 > [!IMPORTANT]
 > L’arborescence de requêtes est contrôlée par SQL Machine Learning et les utilisateurs ne peuvent pas effectuer d’opérations arbitraires sur la requête.
@@ -229,7 +229,7 @@ Requiert **l’autorisation exécuter une** base de données de script externe.
 
 Cette section contient des exemples de la façon dont cette procédure stockée peut être utilisée pour exécuter des scripts R ou python à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>R. Retourne un jeu de données R SQL Server  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Retourne un jeu de données R SQL Server  
 
 L’exemple suivant crée une procédure stockée qui utilise **sp_execute_external_script** pour retourner le jeu de données Iris inclus avec R.  
 

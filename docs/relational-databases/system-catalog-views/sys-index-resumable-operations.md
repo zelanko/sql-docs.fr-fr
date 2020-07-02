@@ -19,16 +19,16 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790492"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 **sys. index_resumable_operations** est une vue système qui surveille et vérifie l’état d’exécution actuel de la reconstruction ou de la création d’index pouvant être reprise.  
 **S’applique à**: SQL Server (2017 et versions ultérieures) et Azure SQL Database
   
@@ -42,7 +42,7 @@ ms.locfileid: "82823371"
 |**partition_number**|**int**|Numéro de partition dans l’index ou le segment de mémoire propriétaire. Pour les tables et les index non partitionnés, ou si toutes les partitions sont en cours de reconstruction, la valeur de cette colonne est NULL.|
 |**state**|**tinyint**|État opérationnel de l’index pouvant être repris :<br /><br />0 = en cours d’exécution<br /><br />1 = pause|
 |**state_desc**|**nvarchar(60)**|Description de l’état opérationnel de l’index pouvant être repris (en cours d’exécution ou en pause)|  
-|**start_time**|**datetime**|Heure de début de l’opération d’index (non Nullable)|
+|**heure-début**|**datetime**|Heure de début de l’opération d’index (non Nullable)|
 |**last_pause_time**|**datatime**| Heure de la dernière suspension de l’opération d’index (Nullable). NULL si l’opération est en cours d’exécution et n’est jamais suspendue.|
 |**total_execution_time**|**int**|Durée d’exécution totale à partir de l’heure de début en minutes (non Nullable)|
 |**percent_complete**|**real**|Progression de l’opération d’index en% (non Nullable).|

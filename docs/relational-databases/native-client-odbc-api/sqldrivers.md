@@ -14,15 +14,15 @@ ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838604dd896de595fd585b63c9b95e86dbef291c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61bd4432444b61984c4f13bd71b641657097e414
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789321"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Le Gestionnaire de pilote ODBC retourne toutes les chaînes de spécification d'attribut **SQLDrivers** . Pour plus d'informations sur la définition de la valeur et de la chaîne d'attribut, consultez le [Centre Accès aux Données et Stockage](https://go.microsoft.com/fwlink/?LinkId=4173)ou le [Guide de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
   

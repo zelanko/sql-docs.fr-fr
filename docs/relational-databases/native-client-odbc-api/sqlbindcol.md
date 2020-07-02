@@ -14,23 +14,23 @@ ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69457daccbc7868e58f91c71a48b4b25f15f5318
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10bb4cf287d8cd2bcc2c0396659b1c2adad595d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789437"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   En règle générale, prenez en compte les implications de l’utilisation de **SQLBindCol** pour la conversion de données. Les conversions de liaison sont des processus clients. Ainsi, par exemple, l'extraction d'une valeur à virgule flottante liée à une colonne de type character conduit le pilote à effectuer localement la conversion du type de données float en character lorsqu'une ligne est extraite. La fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT peut être utilisée pour reporter le coût de la conversion des données sur le serveur.  
   
  Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut retourner plusieurs jeux de lignes de résultats à l'issue de l'exécution d'une même instruction. Chaque jeu de résultats doit être lié séparément. Pour plus d’informations sur la liaison de plusieurs jeux de résultats, consultez [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
- Le développeur peut lier des colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à des types de données C spécifiques à à l’aide de la valeur *TargetType* **SQL_C_BINARY**. Les colonnes liées à des types propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas portables. Les types de données ODBC C propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont définis correspondent aux définitions de types de DB-Library. Or les développeurs DB-Library portant des applications souhaiteront peut-être tirer parti de cette fonctionnalité.  
+ Le développeur peut lier des colonnes à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données C spécifiques à à l’aide de la valeur *TargetType* **SQL_C_BINARY**. Les colonnes liées à des types propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas portables. Les types de données ODBC C propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont définis correspondent aux définitions de types de DB-Library. Or les développeurs DB-Library portant des applications souhaiteront peut-être tirer parti de cette fonctionnalité.  
   
- La création de rapports de troncation des données est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un processus coûteux pour le pilote ODBC Native Client. Vous pouvez éviter la troncation en veillant à ce que toutes les mémoires tampons de données liées soient suffisamment grandes pour retourner des données. Pour les données de type character, la largeur doit inclure l'espace nécessaire pour un indicateur de fin de chaîne lorsque le comportement par défaut du pilote pour l'indicateur de fin de chaîne est utilisé. Par exemple, la liaison [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une colonne de **type char (5)** à un tableau de cinq caractères entraîne une troncation pour chaque valeur extraite. La liaison de la même colonne à un tableau de six caractères évite la troncation en fournissant un élément de type character dans lequel stocker l'indicateur de fin null. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) peut être utilisé pour récupérer efficacement des données binaires et de caractères longs sans troncation.  
+ La création de rapports de troncation des données est un processus coûteux pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client. Vous pouvez éviter la troncation en veillant à ce que toutes les mémoires tampons de données liées soient suffisamment grandes pour retourner des données. Pour les données de type character, la largeur doit inclure l'espace nécessaire pour un indicateur de fin de chaîne lorsque le comportement par défaut du pilote pour l'indicateur de fin de chaîne est utilisé. Par exemple, la liaison d’une colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **type char (5)** à un tableau de cinq caractères entraîne une troncation pour chaque valeur extraite. La liaison de la même colonne à un tableau de six caractères évite la troncation en fournissant un élément de type character dans lequel stocker l'indicateur de fin null. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) peut être utilisé pour récupérer efficacement des données binaires et de caractères longs sans troncation.  
   
  Pour les types de données de valeur élevée, si la mémoire tampon fournie par l’utilisateur n’est pas suffisamment grande pour contenir la valeur entière de la colonne, **SQL_SUCCESS_WITH_INFO** est retourné et «données de chaîne ; la troncation à droite» est émise. L’argument **StrLen_or_IndPtr** contient le nombre de caractères/octets stockés dans la mémoire tampon.  
   
