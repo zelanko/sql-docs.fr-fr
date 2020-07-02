@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775493"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Fonctions de valeurs numériques : ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Renvoie le nombre le plus petit sans portion décimale qui n'est pas inférieur à la valeur de cet argument. Si l'argument est une séquence vide, la fonction renvoie la séquence vide.  
   
@@ -39,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Nombre à laquelle s'applique la fonction.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le type de *$arg* est l’un des trois types numériques de base, **XS : float**, **XS : double**ou **XS : Decimal**, le type de retour est le même que le type de *$arg* .  
   
  Si le type de *$arg* est un type dérivé de l’un des types numériques, le type de retour est le type numérique de base.  
@@ -51,7 +51,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>R. Utilisation de la fonction ceiling() de XQuery  
+### <a name="a-using-the-ceiling-xquery-function"></a>A. Utilisation de la fonction ceiling() de XQuery  
  Pour le modèle de produit 7, cette requête renvoie une liste des postes de travail que compte le processus de fabrication du modèle de produit. Pour chaque poste de travail, la requête renvoie l'ID, les heures de main-d'œuvre et la taille des lots, le cas échéant. La requête utilise la fonction **Ceiling** pour retourner les heures de main-d’œuvre en tant que valeurs de type **Decimal**.  
   
 ```  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **Instructions** est une colonne de type **XML** . Par conséquent, la [méthode Query () (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) est utilisée pour spécifier XQuery. L'instruction XQuery est spécifiée comme argument de la méthode query.  
   
--   **pour... Return** est une construction de boucle. Dans la requête, la boucle **for** identifie une liste d' \< emplacements> éléments. Pour chaque poste de travail, l’instruction **Return** dans la boucle **for** décrit le XML à générer :  
+-   **pour... Return** est une construction de boucle. Dans la requête, la boucle **for** identifie une liste d' \<Location> éléments. Pour chaque poste de travail, l’instruction **Return** dans la boucle **for** décrit le XML à générer :  
   
-    -   \<Emplacement> élément ayant des attributs LocationID et LaborHrs. L'expression correspondante entre accolades ({ }) récupère les valeurs requises à partir du document.  
+    -   \<Location>Élément qui a des attributs LocationID et LaborHrs. L'expression correspondante entre accolades ({ }) récupère les valeurs requises à partir du document.  
   
     -   L’expression {$ i/@LotSize } extrait l’attribut de volume du document, le cas échéant.  
   

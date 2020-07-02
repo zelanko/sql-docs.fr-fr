@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8b7409a15c9e8f3df4991b2b7d20737f5cd82c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa87169a0988336e8a00537a76126120fb95d196
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773772"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table système **IHpublisherconstraints** contient une ligne pour chaque contrainte répliquée à partir d’éditeurs non-SQL Server à l’aide du serveur de distribution actuel. Cette table est stockée dans la base de données de distribution.  
   

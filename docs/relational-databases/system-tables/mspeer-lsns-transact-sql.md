@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38efa38b53a089f960311e415d42972599872fcc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f4c3ec9cb14dc9c3e84167ad87f36f93f710f3be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773703"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **Mspeer_lsns** permet de mapper chaque transaction à un abonnement dans une topologie de réplication d’égal à égal. Cette table est stockée dans chaque base de données de publication, dans une topologie de réplication d'égal à égal dans la base de données d'abonnement de tous les Abonnés à une publication d'égal à égal. Pour plus d’informations sur ce type de topologie de réplication transactionnelle, consultez [réplication transactionnelle d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). Cette table est stockée dans la base de données de publication.  
   

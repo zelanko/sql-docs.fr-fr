@@ -20,16 +20,16 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa2a3f7436574d43f0cfc04d5cb7147b1c15f629
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783138"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne une liste de tous les classements pris en charge.  
   
@@ -50,7 +50,7 @@ fn_helpcollations ()
 |Nom|**sysname**|Nom de classement standard|  
 |Description|**nvarchar(1000)**|Description du classement|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend également en charge un nombre limité (<80) de classements appelés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements qui ont été [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] développés avant les classements Windows pris en charge. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les classements sont toujours pris en charge pour la compatibilité descendante, mais ne doivent pas être utilisés pour de nouveaux travaux de développement. Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend également en charge un nombre limité (<80) de classements appelés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements qui ont été développés avant les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements Windows pris en charge. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les classements sont toujours pris en charge pour la compatibilité descendante, mais ne doivent pas être utilisés pour de nouveaux travaux de développement. Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples
 

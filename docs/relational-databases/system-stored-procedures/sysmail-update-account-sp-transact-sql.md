@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783678"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les informations dans un compte de messagerie de base de données existant.  
  
@@ -76,14 +76,14 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`Nouveau mot de passe à utiliser pour se connecter au serveur de messagerie. *Password* est de **type sysname**, sans valeur par défaut.  
   
-`[ @use_default_credentials = ] use_default_credentials`Spécifie si le courrier électronique doit être envoyé au serveur SMTP à l’aide des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] informations d’identification du service. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre a la valeur 0, Database mail utilise le ** \@nom d’utilisateur** et ** \@le mot de passe** pour l’authentification sur le serveur SMTP. Si ** \@le nom d’utilisateur** et ** \@le mot de passe** sont NULL, l’authentification anonyme est utilisée. Contactez votre administrateur SMTP avant de définir ce paramètre.  
+`[ @use_default_credentials = ] use_default_credentials`Spécifie si le courrier électronique doit être envoyé au serveur SMTP à l’aide des informations d’identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre a la valeur 0, Database Mail utilise le ** \@ nom d’utilisateur** et le ** \@ mot de passe** pour l’authentification sur le serveur SMTP. Si le ** \@ nom d’utilisateur** et le ** \@ mot de passe** sont NULL, l’authentification anonyme est utilisée. Contactez votre administrateur SMTP avant de définir ce paramètre.  
   
 `[ @enable_ssl = ] enable_ssl`Spécifie si Database Mail chiffre les communications à l’aide du protocole TLS (Transport Layer Security), précédemment connu sous le nom de protocole SSL (SSL). Utilisez cette option si TLS est requis sur votre serveur SMTP. **enable_ssl** est de bits, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque le nom et l'ID du compte sont tous deux spécifiés, la procédure stockée change le nom du compte en plus de mettre à jour les autres informations du compte. Il peut s'avérer nécessaire de modifier le nom du compte pour corriger des erreurs qui s'y seraient glissées.  
   
  La procédure stockée **sysmail_update_account_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  

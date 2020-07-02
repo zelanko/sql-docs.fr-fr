@@ -16,15 +16,15 @@ ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d86d77d18a91623cc61fbc60a60bd590cbc30c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b50c8dc19d61511222949844459ad9c276faef28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783455"
 ---
 # <a name="cursor-programming-details-odbc"></a>Détails de programmation de curseurs (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Le choix du type de curseur approprié peut améliorer les performances de l'application. Sous certaines conditions, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut convertir implicitement un type de curseur lorsque vous exécutez une instruction SQL qui n'est pas prise en charge par le type de curseur demandé.  
   

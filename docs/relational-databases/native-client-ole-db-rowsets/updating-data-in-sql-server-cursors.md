@@ -18,17 +18,17 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 788055ec21a215a99b2524310452d14ba390088a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947e8da980dbdb4199245d18e44ec9df36dbf13a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773222"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Mise à jour des données dans les curseurs SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Lors de l’extraction et de la mise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à jour des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de curseurs, une application cliente OLE DB fournisseur Native Client est liée par les mêmes considérations et contraintes qui s’appliquent à toute autre application cliente.  
+  Lors de l’extraction et de la mise à jour des données par le biais de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] curseurs, une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application cliente OLE DB fournisseur Native Client est liée par les mêmes considérations et contraintes qui s’appliquent à toute autre application cliente.  
   
  Seules les lignes des curseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participent à un contrôle de simultanéité d'accès aux données. Lorsque le consommateur demande un ensemble de lignes modifiable, le contrôle de simultanéité est vérifié par DBPROP_LOCKMODE. Pour modifier le niveau de contrôle d'accès simultané, le consommateur définit la propriété DBPROP_LOCKMODE avant d'ouvrir l'ensemble de lignes.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81300240"
   
  Dans l'un et l'autre mode, un aller-retour représente une transaction distincte quand aucun objet de transaction n'est ouvert pour l'ensemble de lignes.  
   
- Lorsque vous utilisez **IRowsetUpdate :: Update**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client tente de traiter chaque ligne indiquée. Une erreur qui se produit en raison de valeurs de données, de longueur ou d’État non valides pour une ligne n’arrête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pas le traitement du fournisseur OLE DB Native Client. La totalité des autres lignes prenant part à la mise à jour peut être modifiée. Le consommateur doit examiner le tableau *prgRowStatus* retourné pour déterminer l’échec d’une ligne spécifique lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native Client retourne DB_S_ERRORSOCCURRED.  
+ Lorsque vous utilisez **IRowsetUpdate :: Update**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client tente de traiter chaque ligne indiquée. Une erreur qui se produit en raison de valeurs de données, de longueur ou d’État non valides pour une ligne n’arrête pas le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traitement du fournisseur OLE DB Native Client. La totalité des autres lignes prenant part à la mise à jour peut être modifiée. Le consommateur doit examiner le tableau *prgRowStatus* retourné pour déterminer l’échec d’une ligne spécifique lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client retourne DB_S_ERRORSOCCURRED.  
   
  Un consommateur ne doit pas présumer que les lignes sont traitées selon un ordre spécifique. Si un consommateur a besoin d'un traitement ordonné de la modification des données sur plusieurs lignes, le consommateur doit établir cet ordre dans la logique de l'application et ouvrir une transaction pour encadrer le processus.  
   

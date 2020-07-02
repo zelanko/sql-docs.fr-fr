@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783048"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Syntaxe de hiérarchie des objets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Le paramètre *PropertyName* de sp_OAGetProperty et sp_OASetProperty et le paramètre *MethodName* de sp_OAMethod prennent en charge une syntaxe de hiérarchie d’objets similaire à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]celle de. Lorsque vous utilisez cette syntaxe spéciale, ces paramètres ont la forme générale suivante.  
+  Le paramètre *PropertyName* de sp_OAGetProperty et sp_OASetProperty et le paramètre *MethodName* de sp_OAMethod prennent en charge une syntaxe de hiérarchie d’objets similaire à celle de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Lorsque vous utilisez cette syntaxe spéciale, ces paramètres ont la forme générale suivante.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67941985"
   
  Les guillemets doubles (") sont obligatoires. Tous les paramètres nommés doivent être spécifiés après tous les paramètres positionnels.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si *TraversedObject* n’est pas spécifié, *PropertyOrMethod* est requis.  
   
  Si *PropertyOrMethod* n’est pas spécifié, *TraversedObject* est retourné en tant que paramètre de sortie de jeton d’objet à partir de la procédure stockée OLE Automation. Si *PropertyOrMethod* est spécifié, la propriété ou la méthode de *TraversedObject* est appelée, et la valeur de propriété ou la valeur de retour de la méthode est retournée en tant que paramètre de sortie à partir de la procédure stockée OLE Automation.  

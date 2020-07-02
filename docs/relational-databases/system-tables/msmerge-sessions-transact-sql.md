@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c87de2327918c383b57e4baef7f4948d43ddd85e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3906e38fbcce8edccf9e0a7bda3be0ed93e110b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784816"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSmerge_sessions** contient des lignes d’historique avec les résultats des sessions de travail précédentes agent de fusion. Chaque fois que l'Agent de fusion est exécuté, une nouvelle ligne est ajoutée à cette table. Cette table est stockée dans la base de données de distribution.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "82805230"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID de la session de travail de l'Agent de fusion|  
 |**agent_id**|**int**|ID de l'Agent de fusion|  
-|**start_time**|**datetime**|Heure de début de l'exécution du travail|  
-|**end_time**|**datetime**|Heure de fin de l'exécution du travail|  
+|**heure-début**|**datetime**|Heure de début de l'exécution du travail|  
+|**heure-fin**|**datetime**|Heure de fin de l'exécution du travail|  
 |**duration**|**int**|Durée cumulée (en secondes) de cette session de travail|  
 |**delivery_time**|**int**|Durée (en secondes) de l'application d'un traitement de modifications|  
 |**upload_time**|**int**|Durée (en secondes) du téléchargement des modifications sur le serveur de publication|  

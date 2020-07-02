@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b500ca0f879430f0e5655348bdeebda0e0921292
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5892c9b080604af2e46a96685f4667e4d12dcfe1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784715"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Méthode SetServiceAccount (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Tente de modifier le nom d'utilisateur et le mot de passe sous lesquels l'instance du service s'exécute.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +36,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *object*  
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -55,7 +55,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** égale à 0 si le service a été correctement modifié ou égale à 1 si la demande n'est pas prise en charge. Tout autre nombre indique une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

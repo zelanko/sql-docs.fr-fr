@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: ece175be7fa0791bf1355ed6020121999d62660b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775479"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Modules et prologues : prologue XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Une requête XQuery se compose d'un prologue et d'un corps. Le prologue XQuery est une série de déclarations et de définitions qui créent ensemble l'environnement requis pour le traitement des requêtes. Dans SQL Server, le prologue XQuery peut inclure des déclarations d'espace de noms. Le corps XQuery se compose d'une séquence d'expressions qui spécifient le résultat de requête voulu.  
   

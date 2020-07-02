@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783900"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche une ligne pour chaque condition de la gestion basée sur des stratégies dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_conditions appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes dans la vue syspolicy_conditions.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82833810"
 |Expression|**nvarchar(max)**|Expression des états de la facette.|  
 |obj_name|**sysname**|Nom d'objet affecté à @Name si l'expression de condition contient cette variable.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous dépannez la Gestion basée sur des stratégies, interrogez la vue syspolicy_conditions pour déterminer qui a créé ou modifié en dernier la condition.  
   
 ## <a name="permissions"></a>Autorisations  

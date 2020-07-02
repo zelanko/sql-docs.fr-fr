@@ -19,15 +19,15 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783011"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Met à jour les métadonnées de Always Encrypted pour les paramètres de la procédure stockée non liée au schéma, la fonction définie par l’utilisateur, la vue, le déclencheur DML, le déclencheur DDL au niveau de la base de données ou le déclencheur DDL au niveau du serveur spécifié dans la base de données actuelle. 
 
@@ -55,7 +55,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0 (réussite) ou un nombre différent de zéro (échec)
 
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les métadonnées de chiffrement pour les paramètres d’un module peuvent devenir obsolètes, si :   
 * Les propriétés de chiffrement d’une colonne dans une table référencée par le module, ont été mises à jour. Par exemple, une colonne a été supprimée et une nouvelle colonne portant le même nom, mais un type de chiffrement différent, une clé de chiffrement ou un algorithme de chiffrement a été ajouté.  

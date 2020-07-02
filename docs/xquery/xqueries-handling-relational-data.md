@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9f1e69c10e4930a4a039528cffc4dbb13a67548
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 5ebd9c4d2bae1c491d2bd7a23e52c83457942fb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775470"
 ---
 # <a name="xqueries-handling-relational-data"></a>Requêtes XQuery pour la gestion des données relationnelles
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Vous spécifiez XQuery sur une variable ou une colonne de type **XML** à l’aide de l’une des [méthodes de type de données XML](../t-sql/xml/xml-data-type-methods.md). Il peut s’agir des **requêtes ()**, **value ()**, **exist ()** ou **Modify ()**. La requête XQuery est exécutée par rapport à l'instance XML identifiée dans la requête qui génère le document XML.  
   

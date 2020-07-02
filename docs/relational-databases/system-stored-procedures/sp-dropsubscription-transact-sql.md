@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 483fc481e78c1a879f2858addf6925e987066010
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783029"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Supprime les abonnements relatifs à un article, une publication ou un ensemble d'abonnements particuliers sur le serveur de publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -60,7 +60,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_dropsubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  Si vous supprimez l'abonnement à un article dans une publication à synchronisation immédiate, vous ne pourrez le rajouter que si vous supprimez les abonnements relatifs à tous les articles de la publication et que vous les rajoutez tous en même temps.  

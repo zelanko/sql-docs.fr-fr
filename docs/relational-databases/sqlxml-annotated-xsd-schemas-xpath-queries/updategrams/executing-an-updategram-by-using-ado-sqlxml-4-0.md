@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2da024366da5789631aee147ab25d89a5103b40e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785044"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'ADO (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Cette application [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilise ADO pour établir une connexion à une instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis exécute un code de mise à jour (updategram). Le code de mise à jour (updategram) met à jour le nom d'un employé spécifique. Cet exemple utilise l’exemple de base de données AdventureWorks.  
   
  Dans cet exemple d'application :  
   
--   Objet **conn** (**ADODB. Connexion**) établit une connexion à une instance en cours [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’exécution de sur un ordinateur serveur spécifique.  
+-   Objet **conn** (**ADODB. Connexion**) établit une connexion à une instance en cours d’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un ordinateur serveur spécifique.  
   
 -   L’objet **cmd** (**ADODB. Command**) s’exécute sur la connexion établie.  
   

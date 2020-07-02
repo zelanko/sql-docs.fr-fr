@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46faa94ed9a85433b9212856ea5d95f43fb01972
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 980b40421b51594ef0d687521ba9e436c2a16c4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783825"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Supprime une publication et l'Agent d'instantané qui lui est associé. Tous les abonnements doivent être supprimés avant de pouvoir supprimer une publication. Les articles de la publication sont supprimés automatiquement. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -46,12 +46,12 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_droppublication** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
  **sp_droppublication** supprime de manière récursive tous les articles associés à une publication, puis supprime la publication elle-même. Une publication ne peut être supprimée si elle fait l'objet d'un ou de plusieurs abonnements. Pour plus d’informations sur la suppression des abonnements, consultez [supprimer un abonnement par émission](../../relational-databases/replication/delete-a-push-subscription.md) de données et [supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- L’exécution de **sp_droppublication** pour supprimer une publication ne supprime pas les objets publiés de la base de données de publication ni les objets correspondants de la base de données d’abonnement. Utilisez l' \<> de suppression d’objet pour supprimer ces objets manuellement si nécessaire.  
+ L’exécution de **sp_droppublication** pour supprimer une publication ne supprime pas les objets publiés de la base de données de publication ni les objets correspondants de la base de données d’abonnement. Utilisez DROP \<object> pour supprimer manuellement ces objets, si nécessaire.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_droppublication**.  

@@ -22,15 +22,15 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783637"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procédures stockées système (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], de nombreuses tâches d'administration et d'information peuvent être effectuées à l'aide de procédures stockées système. Les procédures stockées système sont regroupées par catégories dans le tableau suivant.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037317"
 >  Sauf spécification contraire, toutes les procédures stockées système retournent la valeur 0 pour indiquer la réussite d'une procédure. Pour indiquer un échec, la procédure retourne une valeur différente de zéro.  
   
 ## <a name="api-system-stored-procedures"></a>Procédures système API  
- Les utilisateurs qui exécutent le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sur des applications ADO, OLE DB et ODBC peuvent remarquer que celles-ci utilisent des procédures stockées système non abordées dans le manuel de référence [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces procédures stockées sont utilisées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pilote ODBC Native Client pour implémenter les fonctionnalités d’une API de base de données. Ces procédures stockées sont simplement le mécanisme utilisé par le fournisseur ou le pilote afin de communiquer les requêtes des utilisateurs à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont uniquement destinées à l'utilisation interne du fournisseur ou du pilote. Les appeler explicitement à partir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]d’une application basée sur ne sont pas pris en charge.  
+ Les utilisateurs qui exécutent le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sur des applications ADO, OLE DB et ODBC peuvent remarquer que celles-ci utilisent des procédures stockées système non abordées dans le manuel de référence [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces procédures stockées sont utilisées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client pour implémenter les fonctionnalités d’une API de base de données. Ces procédures stockées sont simplement le mécanisme utilisé par le fournisseur ou le pilote afin de communiquer les requêtes des utilisateurs à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont uniquement destinées à l'utilisation interne du fournisseur ou du pilote. Les appeler explicitement à partir d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application basée sur ne sont pas pris en charge.  
   
  Les procédures stockées sp_createorphan et sp_droporphans sont utilisées pour le traitement des **images** , de **texte**et **ntext**ODBC.  
   

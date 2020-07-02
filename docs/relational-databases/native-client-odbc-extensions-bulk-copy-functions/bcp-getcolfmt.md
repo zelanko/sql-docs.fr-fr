@@ -18,15 +18,15 @@ ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38b55369478638e4c736e4f9d4002f5227a1d699
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774275"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Utilisé pour rechercher la valeur de la propriété de format de colonne.  
   
@@ -65,7 +65,7 @@ RETCODE bcp_getcolfmt (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les valeurs de la propriété de format de colonne sont répertoriées dans la rubrique [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) . Ces valeurs sont définies en appelant la fonction **bcp_setcolfmt** . La fonction **bcp_getcolfmt** est utilisée pour rechercher la valeur de la propriété de format de colonne.  
   
  Des changements de comportement peuvent être observés lors de la connexion à un serveur [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou version ultérieure), par rapport aux versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures. Pour plus d’informations, consultez [Découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  

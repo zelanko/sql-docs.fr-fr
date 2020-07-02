@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9cfea2db0ad0a5eadeede6df3f76ea3979243d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775959"
 ---
 # <a name="diagnostic-records-and-fields"></a>Enregistrements et champs de diagnostic
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Les enregistrements de diagnostic sont associés aux handles d'environnement, de connexion, d'instruction ou de descripteur ODBC. Lorsqu'une fonction ODBC déclenche un code de retour autre que SQL_SUCCESS ou SQL_INVALID_HANDLE, le handle appelé par la fonction est associé à des enregistrements de diagnostic qui contiennent des messages informationnels ou d'erreur. Ces enregistrements sont conservés jusqu'à ce qu'une autre fonction soit appelée à l'aide de ce handle, après quoi les enregistrements sont ignorés. Le nombre d'enregistrements de diagnostic pouvant être associés à un handle à un instant donné n'est pas limité.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81291799"
   
  **SQLGetDiagField** est traité par le gestionnaire de pilotes ODBC à l’aide des informations d’erreur qu’il met en cache à partir du pilote sous-jacent. Le gestionnaire de pilotes ODBC ne met pas en cache les champs de diagnostic spécifiques aux pilotes tant qu'une connexion n'a pas été établie avec succès. **SQLGetDiagField** retourne SQL_ERROR s’il est appelé pour obtenir les champs de diagnostic spécifiques au pilote avant qu’une connexion réussie soit terminée. Si une fonction de connexion ODBC retourne SQL_SUCCESS_WITH_INFO, les champs de diagnostic spécifiques au pilote pour la fonction de connexion ne sont pas encore disponibles. Vous pouvez commencer à appeler **SQLGetDiagField** uniquement pour les champs de diagnostic spécifiques au pilote après avoir effectué un autre appel de fonction ODBC après la fonction Connect.  
   
- La plupart des erreurs signalées par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client peuvent être diagnostiquées efficacement à l’aide des informations retournées par **SQLGetDiagRec**. Toutefois, dans certains cas, les informations retournées par les champs de diagnostic spécifiques au pilote sont importantes pour diagnostiquer une erreur. Lors du codage d’un gestionnaire d’erreurs ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des applications utilisant le pilote ODBC Native Client, il est judicieux d’utiliser également **SQLGetDiagField** pour récupérer au moins les SQL_DIAG_SS_MSGSTATE et SQL_DIAG_SS_SEVERITY des champs spécifiques au pilote. Si une erreur particulière peut être déclenchée à plusieurs endroits dans le code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indique à un ingénieur du support technique Microsoft l'emplacement précis où une erreur a été déclenchée, ce qui peut parfois s'avérer utile pour diagnostiquer un problème.  
+ La plupart des erreurs signalées par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client peuvent être diagnostiquées efficacement à l’aide des informations retournées par **SQLGetDiagRec**. Toutefois, dans certains cas, les informations retournées par les champs de diagnostic spécifiques au pilote sont importantes pour diagnostiquer une erreur. Lors du codage d’un gestionnaire d’erreurs ODBC pour des applications utilisant le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client, il est judicieux d’utiliser également **SQLGetDiagField** pour récupérer au moins les SQL_DIAG_SS_MSGSTATE et SQL_DIAG_SS_SEVERITY des champs spécifiques au pilote. Si une erreur particulière peut être déclenchée à plusieurs endroits dans le code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indique à un ingénieur du support technique Microsoft l'emplacement précis où une erreur a été déclenchée, ce qui peut parfois s'avérer utile pour diagnostiquer un problème.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs et des messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

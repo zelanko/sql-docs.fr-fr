@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de61da8e636ff3f6e38dac6fe85d45eaff75df3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783866"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée un nouveau profil pour un Agent de réplication. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
@@ -58,7 +58,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @profile_type = ] profile_type`Type de profil. *profile_type* est de **type int**, avec **1**comme valeur par défaut.  
   
- **0** indique un profil système. **1** indique un profil personnalisé. Seuls les profils personnalisés peuvent être créés à l’aide de cette procédure stockée. par conséquent, la seule valeur valide est **1**. Crée [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement des profils système.  
+ **0** indique un profil système. **1** indique un profil personnalisé. Seuls les profils personnalisés peuvent être créés à l’aide de cette procédure stockée. par conséquent, la seule valeur valide est **1**. Crée uniquement des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] profils système.  
   
 `[ @description = ] 'description'`Description du profil. *Description* est de type **nvarchar (3000)**, sans valeur par défaut.  
   
@@ -67,7 +67,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_add_agent_profile** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
  Les profils d'agent personnalisés sont ajoutés avec les valeurs par défaut. Utilisez [sp_change_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) pour modifier ces valeurs par défaut ou [sp_add_agent_parameter &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) pour ajouter des paramètres supplémentaires.  

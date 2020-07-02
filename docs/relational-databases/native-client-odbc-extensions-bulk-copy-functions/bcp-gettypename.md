@@ -18,15 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774281"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
   
@@ -49,7 +49,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Retours  
  Chaîne contenant le nom de type SQL qui correspond au type BCP. Si un type BCP non valide est spécifié, une chaîne vide est retournée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les jetons de type de BCP sont définis dans le fichier d'en-tête sqlncli.h et la bibliothèque sqlncli11.lib.  
   
  Le tableau suivant spécifie les types BCP possibles, s'ils sont ou pas de type max et la sortie attendue.  
@@ -72,7 +72,7 @@ RETCODE bcp_gettypename (
 |**SQLVARCHAR**|Non|**varchar**|  
 |**SQLTEXT**|Vous pouvez soit utiliser|**text**|  
 |**SQLBIGBINARY**|Non|**binary**|  
-|**SQLBINARY**|Non|**Binaire2**|  
+|**SQLBINARY**|Non|**Binaire**|  
 |**SQLBIGVARBINARY**|Non|**Varbinary**|  
 |**SQLVARBINARY**|Non|**Varbinary**|  
 |**SQLIMAGE**|Vous pouvez soit utiliser|**Image**|  

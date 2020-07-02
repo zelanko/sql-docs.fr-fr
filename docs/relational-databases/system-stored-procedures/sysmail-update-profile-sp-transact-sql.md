@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b9fd67cdd08de9ab85b0da224db970f6cd6d14d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67902892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783645"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie la description ou le nom d'un profil de messagerie de base de données.  
   
@@ -49,7 +49,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque l'identificateur et le nom du profil sont tous les deux spécifiés, la procédure remplace le nom du profil par celui qui est fourni et met à jour la description. Lorsqu'un seul de ces arguments est indiqué, la procédure met simplement à jour la description du profil.  
   
  La procédure stockée **sysmail_update_profile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  

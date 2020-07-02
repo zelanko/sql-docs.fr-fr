@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b341456d2135206083e632b6bbf6dd97f12ca50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853b9f401d08692efe737a66107ebf2e27150f5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775695"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>Méthode SetFlag (classe ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Définit l'indicateur de la propriété référencée.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +36,7 @@ object.SetFlag(BoolValue)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *object*  
  A [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l'instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Paramètres  
@@ -48,7 +48,7 @@ object.SetFlag(BoolValue)
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

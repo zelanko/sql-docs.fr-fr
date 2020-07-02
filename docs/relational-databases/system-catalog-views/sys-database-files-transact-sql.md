@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785014"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contient une ligne par fichier d'une base de données telle qu'elle est stockée dans la base de données. C'est une vue par base de données.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82823485"
 |**type_desc**|**nvarchar(60)**|Description du type de fichier :<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|La valeur peut être supérieure ou égale à 0. La valeur 0 représente le fichier journal de la base de données et une valeur supérieure à 0 représente l'ID du groupe de fichiers où ce fichier de données est stocké.|  
 |**name**|**sysname**|Nom logique du fichier dans la base de données.|  
-|**physical_name**|**nvarchar(260)**|Nom de fichier du système d'exploitation. Si la base de données est hébergée par un [réplica secondaire accessible en lecture](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indique l’emplacement du fichier de la base de données du réplica principal. Pour obtenir l’emplacement de fichier approprié d’une base de données secondaire accessible en lecture, interrogez [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**physical_name**|**nvarchar(260)**|Nom de fichier du système d'exploitation. Si la base de données est hébergée par un [réplica secondaire accessible en lecture](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indique l’emplacement du fichier de la base de données du réplica principal. Pour obtenir l’emplacement de fichier approprié d’une base de données secondaire accessible en lecture, interrogez [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|État du fichier :<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Description de l'état du fichier :<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Pour plus d’informations, consultez [États des fichiers](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Taille actuelle du fichier (en pages de 8 Ko)<br /><br /> 0 = Non applicable<br /><br /> Dans le cas d'un instantané de base de données, size reflète l'espace maximal que celle-ci peut utiliser pour le fichier.<br /><br /> Pour les conteneurs de groupe de fichiers FILESTREAM, Size reflète la taille actuelle utilisée du conteneur.|  
@@ -68,7 +68,7 @@ ms.locfileid: "82823485"
 >  Lorsque vous supprimez ou reconstruisez des index volumineux ou lorsque vous supprimez ou tronquez des tables volumineuses, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations des pages actives et de leurs blocs associés jusqu'à ce que la transaction soit validée. Les opérations de suppression différées ne libèrent pas immédiatement l'espace alloué. Par conséquent, les valeurs retournées par sys.database_files immédiatement après avoir supprimé ou tronqué un objet volumineux ne reflètent pas l'espace disque réel.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** .  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Exemples  
 L’instruction suivante retourne le nom, la taille du fichier et la quantité d’espace vide pour chaque fichier de base de données.

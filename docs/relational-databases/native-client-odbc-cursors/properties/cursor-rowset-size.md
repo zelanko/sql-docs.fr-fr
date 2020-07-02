@@ -15,15 +15,15 @@ ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f799722bfae35a714e740691e2cdc53e3155063
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0ac749816383c14398dfae666ebab5fa2509366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774390"
 ---
 # <a name="cursor-rowset-size"></a>Taille de l'ensemble de lignes d'un curseur
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Les curseurs ODBC peuvent extraire plusieurs lignes à la fois. Ils peuvent récupérer plusieurs lignes dans chaque appel à **SQLFetch** ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Lorsque vous utilisez une base de données client/serveur, telle que Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il est plus efficace d'extraire plusieurs lignes à la fois. Le nombre de lignes retournées sur une extraction est appelé la taille de l’ensemble de lignes et est spécifié à l’aide de la SQL_ATTR_ROW_ARRAY_SIZE de [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
@@ -48,7 +48,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) peut également être utilisé pour récupérer des données de colonne à partir d’un curseur de bloc. Comme **SQLGetData** travaille une ligne à la fois, **SQLSetPos** doit être appelé pour définir une ligne spécifique dans l’ensemble de lignes comme ligne actuelle avant d’appeler **SQLGetData**.  
   
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client offre une optimisation à l’aide d’ensembles de lignes pour récupérer rapidement un jeu de résultats entier. Pour utiliser cette optimisation, définissez les attributs de curseur à leurs valeurs par défaut (avant uniquement, lecture seule, taille de l’ensemble de lignes = 1) au moment de l’appel de **SQLExecDirect** ou **SQLExecute** . Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC native client configure un jeu de résultats par défaut. Cette approche est plus efficace que les curseurs côté serveur lors du transfert de résultats au client sans défilement. Après avoir exécuté l'instruction, augmentez la taille de l'ensemble de lignes et utilisez la liaison selon les colonnes ou la liaison selon les lignes. Cela permet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’utiliser un jeu de résultats par défaut pour envoyer efficacement des lignes de résultat au [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client, tandis que le pilote ODBC Native Client extrait en continu des lignes des tampons réseau sur le client.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client offre une optimisation à l’aide d’ensembles de lignes pour récupérer rapidement un jeu de résultats entier. Pour utiliser cette optimisation, définissez les attributs de curseur à leurs valeurs par défaut (avant uniquement, lecture seule, taille de l’ensemble de lignes = 1) au moment de l’appel de **SQLExecDirect** ou **SQLExecute** . Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC native client configure un jeu de résultats par défaut. Cette approche est plus efficace que les curseurs côté serveur lors du transfert de résultats au client sans défilement. Après avoir exécuté l'instruction, augmentez la taille de l'ensemble de lignes et utilisez la liaison selon les colonnes ou la liaison selon les lignes. Cela permet d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliser un jeu de résultats par défaut pour envoyer efficacement des lignes de résultat au client, tandis que le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client extrait en continu des lignes des tampons réseau sur le client.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés de curseur](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

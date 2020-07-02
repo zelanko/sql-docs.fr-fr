@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773870"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur la planification des travaux utilisés par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour effectuer des opérations automatisées.  
  
@@ -77,13 +77,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Heure de début de la planification.|  
 |**active_end_time**|**int**|Heure de fin de la planification.|  
 |**date_created**|**datetime**|Date de création de la planification.|  
-|**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification qui est dérivée des valeurs dans **msdb. dbo. sysschedules**. Lorsque *include_description* a la **valeur 0**, cette colonne contient du texte indiquant que la description n’a pas été demandée.|  
+|**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification qui est dérivée des valeurs dans les **planifications demsdb.dbo.sys**. Lorsque *include_description* a la **valeur 0**, cette colonne contient du texte indiquant que la description n’a pas été demandée.|  
 |**next_run_date**|**int**|Date à laquelle la planification va lancer l'exécution du travail.|  
 |**next_run_time**|**int**|Heure à laquelle la planification va lancer l'exécution du travail.|  
 |**schedule_uid**|**uniqueidentifier**|Identificateur de la planification.|  
 |**job_count**|**int**|Nombre de travaux retournés.|  
   
-> **Remarque : sp_help_jobschedule** retourne des valeurs à partir des tables système **dbo. sysjobschedules** et **dbo. sysschedules** dans **msdb**. **sysjobschedules** est mis à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
+> **Remarque : sp_help_jobschedule** retourne des valeurs à partir des tables système **dbo.sysJobSchedules** et **dbo.sysplanifis** dans **msdb**. **sysjobschedules** est mis à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
   
 ## <a name="remarks"></a>Remarques  
  Les paramètres de **sp_help_jobschedule** peuvent être utilisés uniquement dans certaines combinaisons. Si *schedule_id* est spécifié, ni *job_id* ni *job_name* ne peuvent être spécifiés. Dans le cas contraire, les paramètres *job_id* ou *job_name* peuvent être utilisés avec *schedule_name*.  

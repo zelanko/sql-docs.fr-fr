@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0c12c9fd481b8fdef50f9a2e0339b276598cd69a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783808"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un message d’erreur défini par l’utilisateur spécifié d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Les messages définis par l’utilisateur peuvent être affichés à l’aide de l’affichage catalogue **sys. messages** .  
   
@@ -53,7 +53,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance aux rôles serveur fixes **sysadmin** et **ServerAdmin** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Sauf si **tout** est spécifié pour la *langue*, toutes les versions localisées d’un message doivent être supprimées avant de pouvoir supprimer la version en anglais des États-Unis du message.  
   
 ## <a name="examples"></a>Exemples  

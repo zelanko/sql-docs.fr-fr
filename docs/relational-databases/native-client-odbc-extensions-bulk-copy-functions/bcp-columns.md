@@ -18,15 +18,15 @@ ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1be4e981448e0c50815e5bf4612ce20feb8e6975
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774316"
 ---
 # <a name="bcp_columns"></a>bcp_columns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Définit le nombre total de colonnes trouvées dans le fichier utilisateur pour une utilisation avec une copie en bloc vers ou depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) peut être utilisé à la place de bcp_columns et [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   
@@ -44,12 +44,12 @@ RETCODE bcp_columns (
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *nColumns*  
- Nombre total de colonnes dans le fichier utilisateur. Même si vous vous préparez à copier en bloc des données à partir du fichier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisateur vers une table et que vous n’envisagez pas de copier toutes les colonnes dans le fichier utilisateur, vous devez toujours définir *nColumns* sur le nombre total de colonnes de fichier utilisateur.  
+ Nombre total de colonnes dans le fichier utilisateur. Même si vous vous préparez à copier en bloc des données à partir du fichier utilisateur vers une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table et que vous n’envisagez pas de copier toutes les colonnes dans le fichier utilisateur, vous devez toujours définir *nColumns* sur le nombre total de colonnes de fichier utilisateur.  
   
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction ne peut être appelée qu’une fois que [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) a été appelé avec un nom de fichier valide.  
   
  Vous devez appeler cette fonction uniquement si vous envisagez d'utiliser un format de fichier utilisateur qui diffère du format par défaut. Pour plus d’informations sur une description du format de fichier utilisateur par défaut, consultez **bcp_init**.  

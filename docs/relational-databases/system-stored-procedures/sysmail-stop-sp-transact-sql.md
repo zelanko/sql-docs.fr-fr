@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6ed9d4a05759495090a35224e5aa5ef805e520f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783700"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Arrête la messagerie de base de données en arrêtant les objets [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilisés par le programme externe.  
   
@@ -44,14 +44,14 @@ sysmail_stop_sp
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette procédure stockée se trouve dans la base de données **msdb** .  
   
  Elle arrête la file d'attente de la messagerie de base de données contenant les demandes de messages sortants et désactive [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour le programme externe.  
   
  Dès que les files d'attente sont arrêtées, le programme externe de la messagerie de base de données ne traite plus les messages. Cette procédure stockée vous permet d'arrêter la messagerie de base de données pour résoudre des problèmes ou effectuer des tâches de maintenance.  
   
- Pour démarrer Database Mail, utilisez **sysmail_start_sp**. Notez que **sp_send_dbmail** accepte toujours le courrier lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] les objets sont arrêtés.  
+ Pour démarrer Database Mail, utilisez **sysmail_start_sp**. Notez que **sp_send_dbmail** accepte toujours le courrier lorsque les [!INCLUDE[ssSB](../../includes/sssb-md.md)] objets sont arrêtés.  
   
 > [!NOTE]  
 >  Cette procédure stockée arrête simplement les files d'attente de la messagerie de base de données. Elle ne désactive pas la remise de messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans la base de données. Cette procédure stockée ne désactive pas les procédures stockées étendues de la messagerie de base de données pour réduire la zone de surface. Pour désactiver les procédures stockées étendues, consultez l' [option Database mail XPS](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  

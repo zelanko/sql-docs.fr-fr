@@ -10,17 +10,17 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82e9e3b1ed8487e864e91edfd3067f9fb97bbb71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73d448e1a012fd27de748e810940b598b2b89044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773205"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Changement de comportement du pilote ODBC lors de la gestion des conversions de caractères
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Le [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] pilote ODBC de Native Client (SQLNCLI11. dll) a modifié son mode de conversion SQL_WCHAR * (NCHAR/NVARCHAR/nvarchar (max))\* et SQL_CHAR (char/varchar/NARCHAR (max)). Les fonctions ODBC, telles que SQLGetData, SQLBindCol et SQLBindParameter, retournent (-4) SQL_NO_TOTAL comme paramètre de longueur/indicateur lors de l'utilisation du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Les versions antérieures du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retournaient une valeur de longueur, ce qui peut s'avérer incorrect.  
+  Le [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] pilote ODBC de Native Client (SQLNCLI11.dll) a modifié son mode de conversion de SQL_WCHAR * (NCHAR/NVARCHAR/nvarchar (max)) et SQL_CHAR \* (char/varchar/NARCHAR (max)). Les fonctions ODBC, telles que SQLGetData, SQLBindCol et SQLBindParameter, retournent (-4) SQL_NO_TOTAL comme paramètre de longueur/indicateur lors de l'utilisation du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Les versions antérieures du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retournaient une valeur de longueur, ce qui peut s'avérer incorrect.  
   
 ## <a name="sqlgetdata-behavior"></a>Comportement de SQLGetData  
  La plupart des fonctions Windows vous permettent de spécifier une taille de mémoire tampon de 0, et la longueur retournée correspond à la taille des données renvoyées. Le motif suivant est bien connu des programmeurs Windows :  
@@ -57,7 +57,7 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Version du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Résultat de longueur ou d'indicateur|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou antérieur|6|Le pilote a déduit par erreur que la conversion de CHAR en WCHAR serait obtenue en multipliant la longueur par 2.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|Le pilote ne suppose plus que la conversion de CHAR en WCHAR ou WCHAR en CHAR est une action (Multiply \*) 2 ou (Division)/2.<br /><br /> L’appel de **SQLGetData** ne retourne plus la longueur de la conversion attendue. Le pilote détecte la conversion vers ou depuis CHAR et WCHAR, puis retourne (-4) SQL_NO_TOTAL au lieu du comportement *2 ou /2 qui peut être incorrect.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|Le pilote ne suppose plus que la conversion de CHAR en WCHAR ou WCHAR en CHAR est une action (Multiply) \* 2 ou (Division)/2.<br /><br /> L’appel de **SQLGetData** ne retourne plus la longueur de la conversion attendue. Le pilote détecte la conversion vers ou depuis CHAR et WCHAR, puis retourne (-4) SQL_NO_TOTAL au lieu du comportement *2 ou /2 qui peut être incorrect.|  
   
  Utilisez **SQLGetData** pour récupérer les segments des données. (Pseudo-code illustré :)  
   

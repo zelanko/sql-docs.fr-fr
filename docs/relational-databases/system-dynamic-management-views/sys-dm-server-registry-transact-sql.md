@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b0a50ee81aa2247d569dab8125924fd6a2c7cf7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 241f6df631098fedbf4b7f5a9849d9b7ea9f3fa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775206"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les informations relatives à la configuration et à l'installation qui sont stockées dans le Registre de Windows pour l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retourne une ligne par clé de Registre. Utilisez cette vue de gestion dynamique pour retourner des informations telles que les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles sur l'ordinateur hôte ou les valeurs de configuration réseau pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

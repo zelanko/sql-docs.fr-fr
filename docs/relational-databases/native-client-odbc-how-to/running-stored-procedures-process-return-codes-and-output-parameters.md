@@ -15,15 +15,15 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 5ae6542c647c7e027acbdb6ed28b4a39e230b2c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783254"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Exécution de procédures stockées - Traiter les codes de retour et les paramètres de sortie
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'exécution des procédures stockées en tant que procédures stockées distantes. L'exécution d'une procédure stockée en tant que procédure stockée distante permet au pilote et au serveur d'optimiser les performances de l'exécution de la procédure.  
   

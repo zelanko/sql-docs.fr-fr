@@ -20,15 +20,15 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11c4b17c786506f3cad456a766fa6b0394ef3e72
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd05afece6814beb84e3fa079b02f661f14990bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783948"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne une ligne pour chaque objet qui est un module défini en langage SQL dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris la fonction scalaire définie par l’utilisateur compilée en mode natif. Les objets de type P, RF, V, TR, FN, IF, TF et R possèdent un module SQL associé. Les valeurs par défaut autonomes, les objets de type D, possèdent également une définition de module SQL dans cette vue. Pour obtenir une description de ces types, consultez la colonne **type** de l’affichage catalogue [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   
@@ -44,13 +44,13 @@ ms.locfileid: "82833935"
 |**uses_database_collation**|**bit**|1 = La définition d'un module lié au schéma dépend du classement par défaut de la base de données pour une évaluation correcte ; dans tous les autres cas, 0. Une telle dépendance empêche la modification du classement par défaut de la base de données.|  
 |**is_recompiled**|**bit**|Procédure créée avec l'option WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Le module a été déclaré pour produire une sortie NULL sur n'importe quelle entrée NULL.|  
-|**execute_as_principal_id**|**Int**|ID du principal de base de données EXECUTE AS.<br /><br /> Valeur NULL par défaut ou dans le cas de l'instruction EXECUTE AS CALLER.<br /><br /> ID du principal spécifié si EXECUTe AS SELF ou EXECUTe AS \< principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**Int**|ID du principal de base de données EXECUTE AS.<br /><br /> Valeur NULL par défaut ou dans le cas de l'instruction EXECUTE AS CALLER.<br /><br /> ID du principal spécifié si EXECUTe AS SELF ou EXECUTe AS \<principal> .<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = Non compilé en mode natif<br /><br /> 1 = Compilé en mode natif<br /><br /> La valeur par défaut est 0.|  
 |**is_inlineable**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et versions ultérieures.<br/><br />Indique si le module est inlineable ou non. L’inlineabilité est basée sur les conditions spécifiées [ici](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inlineable<br /><br /> 1 = est inlineable. <br /><br /> Pour les fonctions définies par l’utilisateur scalaire, la valeur sera égale à 1 si la fonction définie par l’utilisateur est Inline, et 0 dans le cas contraire. Elle contient toujours la valeur 1 pour Inline TVF, et 0 pour tous les autres types de modules.<br />|  
 |**inline_type**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et versions ultérieures.<br /><br />Indique si l’incorporation est activée pour le module actuellement. <br /><br />0 = l’incorporation est désactivée<br /><br /> 1 = l’incorporation est activée.<br /><br /> Pour les fonctions définies par l’utilisateur scalaire, la valeur est 1 si l’incorporation est activée (explicitement ou implicitement). La valeur sera toujours 1 pour Inline TVF, et 0 pour les autres types de modules.<br />|  
 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’expression SQL d’une contrainte par défaut, objet de type D, se trouve dans l’affichage catalogue [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . L’expression SQL d’une contrainte CHECK, objet de type C, se trouve dans l’affichage catalogue [sys. CHECK_CONSTRAINTS](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
  Ces informations sont également décrites dans [sys. dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  

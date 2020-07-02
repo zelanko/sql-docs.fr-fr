@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783091"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie la liste des autorisations accordées effectivement au principal sur un élément sécurisable. Une fonction associée est [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
@@ -57,7 +57,7 @@ fn_my_permissions ( securable , 'securable_class' )
 |subentity_name|**sysname**|Nom de colonne si l'élément sécurisable contient des colonnes, sinon NULL.|  
 |permission_name|**nvarchar**|Nom de l’autorisation.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction table renvoie la liste des autorisations effectives détenues par le principal appelant sur un élément sécurisable spécifié. Une autorisation effective est l’un des éléments suivants :  
   
 -   une autorisation accordée directement au principal et non refusée ;  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Affichage des autorisations effectives sur une collection de schémas XML  
- L’exemple suivant retourne une liste des autorisations effectives de l’appelant sur une collection de schémas XML `ProductDescriptionSchemaCollection` nommée dans [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la base de données.  
+ L’exemple suivant retourne une liste des autorisations effectives de l’appelant sur une collection de schémas XML nommée `ProductDescriptionSchemaCollection` dans la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.  
   
 ```  
 USE AdventureWorks2012;  

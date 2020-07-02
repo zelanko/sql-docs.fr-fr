@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776e7b0c713e36f0d9f67112592dff6d24a46fbd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783712"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Définit les options de serveur pour les serveurs distants et les serveurs liés.  
   
@@ -70,7 +70,7 @@ sp_serveroption [@server = ] 'server'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si l’option **collation compatible** est définie sur true, le **nom de classement** sera automatiquement défini sur null. Si le **nom du classement** est défini sur une valeur non null, le **classement compatible** est défini automatiquement sur false.  
   
 ## <a name="permissions"></a>Autorisations  

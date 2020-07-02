@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773833"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur les étapes d'un travail utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour procéder à des actions automatisées.  
   
@@ -65,14 +65,14 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|Identificateur unique de l'étape.|  
 |**step_name**|**sysname**|Nom de l’étape du travail.|  
 |**sous-système**|**nvarchar(40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
-|**commande**|**nvarchar(max)**|Commande exécutée dans l'étape.|  
+|**command**|**nvarchar(max)**|Commande exécutée dans l'étape.|  
 |**flags**|**int**|Masque de bits des valeurs qui contrôle le comportement de l'étape.|  
 |**cmdexec_success_code**|**int**|Pour une étape **CmdExec** , il s’agit du code de sortie du processus d’une commande réussie.|  
 |**on_success_action**|**tinyint**|Action à effectuer si l'étape est exécutée correctement :<br /><br /> **1** = quitter le travail signalant la réussite.<br /><br /> **2** = quitter le travail signalant une défaillance.<br /><br /> **3** = passer à l’étape suivante.<br /><br /> **4** = passer à l’étape.|  
 |**on_success_step_id**|**int**|Si **on_success_action** a la valeur 4, cela indique l’étape suivante à exécuter.|  
 |**on_fail_action**|**tinyint**|Action à exécuter si l'étape échoue. Les valeurs sont identiques à celles de **on_success_action**.|  
 |**on_fail_step_id**|**int**|Si **on_fail_action** a la valeur 4, cela indique l’étape suivante à exécuter.|  
-|**serveurs**|**sysname**|Réservé.|  
+|**server**|**sysname**|Réservé.|  
 |**database_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est la base de données dans laquelle la commande est exécutée.|  
 |**database_user_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est le contexte de l'utilisateur de la base de données dans lequel la commande est exécutée.|  
 |**retry_attempts**|**int**|Nombre maximum de tentatives de la commande (en cas d'échecs).|  

@@ -11,15 +11,15 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d7ea543843d22433072867a30df814a6bd095f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783242"
 ---
 # <a name="support-for-large-udts"></a>Prise en charge de tables UDT volumineuses
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cet exemple de solution contient deux projets. Un projet crée un assembly (DLL) à partir du code source C#. Cet assembly contient le type CLR. Une table sera ajoutée à la base de données. Une colonne dans la table sera d'un type défini dans l'assembly ; par défaut, cet exemple utilisera la base de données master. Le deuxième projet est une application C native qui lit des données de la table.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81281751"
 ## <a name="example"></a>Exemple  
  La première liste de code correspond à du code source C#. Collez-la dans un fichier appelé LargeStringUDT.cs et compilez-la dans une DLL. Copiez LargeStringUDT.dll vers le répertoire racine de votre lecteur C.  
   
- La deuxième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () crée l’assembly dans la base de données Master.  
+ La deuxième [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () crée l’assembly dans la base de données Master.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et user32.lib. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281751"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La quatrième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () supprime l’assembly de la base de données Master.  
+ La quatrième [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () supprime l’assembly de la base de données Master.  
   
 ```  
 // LargeStringUDT.cs  

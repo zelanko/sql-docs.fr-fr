@@ -20,16 +20,16 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7bc0873bcafa37c0fa35118fcd033caae2049449
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785007"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Contient une ligne par base de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -93,8 +93,8 @@ Si une base de données n’est pas `ONLINE` , ou `AUTO_CLOSE` a `ON` la valeur 
 |**log_reuse_wait_desc**|**nvarchar(60)**|La description de la réutilisation de l'espace du journal des transactions est en attente du dernier point de contrôle.|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION est activé<br /> 0 = DATE_CORRELATION_OPTIMIZATION est désactivé|  
 |**is_cdc_enabled**|**bit**|1 = La base de données est activée pour la capture des données modifiées. Pour plus d’informations, consultez [sys. sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
-|**is_encrypted**|**bit**|Indique si la base de données est chiffrée (reflète le dernier état défini à l’aide de la `ALTER DATABASE SET ENCRYPTION` clause). Il peut s'agir de l'une des valeurs suivantes :<br /> 1 = Chiffrée<br /> 0 = Non chiffré<br /> Pour plus d’informations sur le chiffrement des bases de données, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Si la base de données est en cours de déchiffrement, `is_encrypted` affiche la valeur 0. Vous pouvez voir l’état du processus de chiffrement à l’aide de la vue de gestion dynamique [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**bit**|Indique si la base de données respecte les priorités de conversation (reflète le dernier état défini à l’aide de la `ALTER DATABASE SET HONOR_BROKER_PRIORITY` clause). Il peut s'agir de l'une des valeurs suivantes :<br /> 1 = HONOR_BROKER_PRIORITY a la valeur ON<br /> 0 = HONOR_BROKER_PRIORITY a la valeur OFF<br /> Par défaut, les bases de données restaurées ou attachées ont une priorité de service Broker désactivée.|  
+|**is_encrypted**|**bit**|Indique si la base de données est chiffrée (reflète le dernier état défini à l’aide de la `ALTER DATABASE SET ENCRYPTION` clause). Peut avoir l’une des valeurs suivantes :<br /> 1 = Chiffrée<br /> 0 = Non chiffré<br /> Pour plus d’informations sur le chiffrement des bases de données, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Si la base de données est en cours de déchiffrement, `is_encrypted` affiche la valeur 0. Vous pouvez voir l’état du processus de chiffrement à l’aide de la vue de gestion dynamique [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
+|**is_honor_broker_priority_on**|**bit**|Indique si la base de données respecte les priorités de conversation (reflète le dernier état défini à l’aide de la `ALTER DATABASE SET HONOR_BROKER_PRIORITY` clause). Peut avoir l’une des valeurs suivantes :<br /> 1 = HONOR_BROKER_PRIORITY a la valeur ON<br /> 0 = HONOR_BROKER_PRIORITY a la valeur OFF<br /> Par défaut, les bases de données restaurées ou attachées ont une priorité de service Broker désactivée.|  
 |**replica_id**|**uniqueidentifier**|Identificateur unique du réplica de disponibilité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] local du groupe de disponibilité, le cas échéant, auquel la base de données participe.<br /> NULL = La base de données ne fait pas partie d'un réplica de disponibilité dans un groupe de disponibilité.<br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Identificateur unique de la base de données au sein d’un groupe de disponibilité Always On, le cas échéant, auquel la base de données participe. **group_database_id** est identique pour cette base de données sur le réplica principal et sur chaque réplica secondaire sur lequel la base de données a été jointe au groupe de disponibilité.<br /> NULL = La base de données ne fait pas partie d'un réplica de disponibilité dans un groupe de disponibilité.<br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|ID du pool de ressources qui est mappé à cette base de données. Ce pool de ressources contrôle la mémoire totale qui est disponible pour les tables optimisées en mémoire dans cette base de données.<br /> **S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures|  

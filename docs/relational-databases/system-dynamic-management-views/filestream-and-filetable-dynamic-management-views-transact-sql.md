@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 216cbfbfd1357298d4b816838fd8bfa5428a65f8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f2870cfe7eec9e2f6c8e40d7ffb0c0de30ff69de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784950"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Vues de gestion dynamique liées à Filestream et FileTable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cette section décrit les vues de gestion dynamique en rapport avec les fonctionnalités FILESTREAM et FileTable.  
   

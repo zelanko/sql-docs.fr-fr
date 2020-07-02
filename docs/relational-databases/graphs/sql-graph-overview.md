@@ -15,17 +15,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79428150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776468"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Traitement de graphiques avec SQL Server et Azure SQL Database
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre des fonctionnalités de base de données de graphiques pour modéliser des relations plusieurs-à-plusieurs. Les relations de graphique sont intégrées [!INCLUDE[tsql-md](../../includes/tsql-md.md)] dans et bénéficient des avantages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’utilisation de en tant que système de gestion de base de données de base.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre des fonctionnalités de base de données de graphiques pour modéliser des relations plusieurs-à-plusieurs. Les relations de graphique sont intégrées dans [!INCLUDE[tsql-md](../../includes/tsql-md.md)] et bénéficient des avantages de l’utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que système de gestion de base de données de base.
 
 
 ## <a name="what-is-a-graph-database"></a>Qu’est-ce qu’une base de données de graphes ?  
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Les nœuds et les bords sont stockés sous forme de tables  
 
 ### <a name="query-language-extensions"></a>Extensions du langage de requête  
-La `MATCH` nouvelle clause est introduite pour prendre en charge les critères spéciaux et la navigation sur plusieurs tronçons dans le graphique. La `MATCH` fonction utilise la syntaxe de style d’art ASCII pour les critères spéciaux. Par exemple :  
+`MATCH`La nouvelle clause est introduite pour prendre en charge les critères spéciaux et la navigation sur plusieurs tronçons dans le graphique. La `MATCH` fonction utilise la syntaxe de style d’art ASCII pour les critères spéciaux. Par exemple :  
 
 ```   
 -- Find friends of John
@@ -69,11 +69,11 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-ssnoversion-engine"></a>Entièrement intégré au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur 
-Les extensions Graph sont entièrement intégrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le moteur. Utilisez le même moteur de stockage, les mêmes métadonnées, le même processeur de requêtes, etc. pour stocker et interroger les données de graphique. Interroger des données graphiques et relationnelles dans une seule requête. Combiner les fonctionnalités graphiques avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’autres technologies telles que COLUMNSTORE, ha, R services, etc. La base de données SQL Graph prend également en charge toutes les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de sécurité et de conformité disponibles avec.
+Les extensions Graph sont entièrement intégrées dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur. Utilisez le même moteur de stockage, les mêmes métadonnées, le même processeur de requêtes, etc. pour stocker et interroger les données de graphique. Interroger des données graphiques et relationnelles dans une seule requête. Combiner les fonctionnalités graphiques avec d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies telles que ColumnStore, ha, R services, etc. La base de données SQL Graph prend également en charge toutes les fonctionnalités de sécurité et de conformité disponibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
  
 ### <a name="tooling-and-ecosystem"></a>Outils et écosystème
 
-Tirez parti des outils et de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écosystème existants qui offrent. Les outils tels que la sauvegarde et la restauration, l’importation et l’exportation, BCP fonctionnent tout simplement dès à présent. D’autres outils ou services tels que SSIS, SSRS ou Power BI fonctionnent avec les tables graphiques, de la même façon qu’ils fonctionnent avec les tables relationnelles.
+Tirez parti des outils et de l’écosystème existants qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offrent. Les outils tels que la sauvegarde et la restauration, l’importation et l’exportation, BCP fonctionnent tout simplement dès à présent. D’autres outils ou services tels que SSIS, SSRS ou Power BI fonctionnent avec les tables graphiques, de la même façon qu’ils fonctionnent avec les tables relationnelles.
 
 ## <a name="edge-constraints"></a>Contraintes d’arête
 Une contrainte Edge est définie sur une table des bords du graphique et est une paire de tables de nœud qu’un type de périphérie donné peut connecter. Cela donne aux utilisateurs un meilleur contrôle sur leur schéma graphique. Avec l’aide des contraintes de périphérie, les utilisateurs peuvent limiter le type de nœuds auxquels un bord donné est autorisé à se connecter. 

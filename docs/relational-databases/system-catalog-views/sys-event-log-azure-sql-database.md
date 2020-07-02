@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784924"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Retourne des [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] connexions de base de données, des échecs de connexion et des blocages. Utilisez ces informations pour suivre ou dépanner l'activité de base de données avec [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -41,15 +41,15 @@ ms.locfileid: "82831997"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nom de la base de données. Si la connexion échoue et l'utilisateur n'a pas spécifié de nom de la base de données, cette colonne est vide.|  
-|**start_time**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. Pour les événements agrégés, l'heure est toujours un multiple de 5 minutes. Par exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. Pour les événements agrégés, **End_time** est toujours exactement 5 minutes plus tard que le **start_time** correspondant dans la même ligne. Pour les événements qui ne sont pas agrégés, **start_time** et **end_time** égal à la date et à l’heure UTC réelles de l’événement.|  
+|**heure-début**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. Pour les événements agrégés, l'heure est toujours un multiple de 5 minutes. Par exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**heure-fin**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. Pour les événements agrégés, **End_time** est toujours exactement 5 minutes plus tard que le **start_time** correspondant dans la même ligne. Pour les événements qui ne sont pas agrégés, **start_time** et **end_time** égal à la date et à l’heure UTC réelles de l’événement.|  
 |**event_category**|**nvarchar (64)**|Composant de niveau supérieur qui a généré cet événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**event_type**|**nvarchar (64)**|Type de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**event_subtype**|**int**|Sous-type de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**event_subtype_desc**|**nvarchar (64)**|Description du sous-type d'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**severity**|**int**|Gravité de l'erreur. Les valeurs possibles sont les suivantes :<br /><br /> 0 = Information<br />1 = Avertissement<br />2 = Erreur|  
 |**event_count**|**int**|Nombre de fois où cet événement s’est produit pour la base de données spécifiée dans l’intervalle de temps spécifié (**start_time** et **end_time**).|  
-|**descriptive**|**nvarchar(max)**|Description détaillée de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
+|**description**|**nvarchar(max)**|Description détaillée de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**additional_data**|**XML**|*Remarque : cette valeur est toujours NULL pour Azure SQL Database v12. Consultez la section [exemples](#Deadlock) pour savoir comment récupérer des événements de blocage pour v12.*<br /><br /> Pour les événements **Deadlock** , cette colonne contient le graphique de blocage. Pour les autres types d'événements, cette colonne renvoie la valeur NULL. |  
   
 ##  <a name="event-types"></a><a name="EventTypes"></a>Types d’événements
@@ -61,7 +61,7 @@ ms.locfileid: "82831997"
 > [!NOTE]  
 > Cette vue ne contient pas tous les événements possibles de base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] qui peuvent se produire, uniquement ceux qui sont répertoriés ici. Des catégories, types d'événements et sous-types supplémentaires peuvent être ajoutés dans les versions ultérieures de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**descriptive**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**connectivité**|**connection_successful**|0|**connection_successful**|0|Connexion à la base de données réussie.|  
 |**connectivité**|**connection_failed**|0|**invalid_login_name**|2|Le nom de connexion n'est pas valide dans cette version de SQL Server.|  
@@ -76,7 +76,7 @@ ms.locfileid: "82831997"
 |**connectivité**|**connection_failed**|9|**reconfiguration**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La connexion a échoué car la base de données était en cours de reconfiguration.|  
 |**connectivité**|**connection_terminated**|0|**idle_connection_timeout**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La connexion est restée inactive plus longtemps que ne l'autorise le seuil défini pour le système.|  
 |**connectivité**|**connection_terminated**|1|**reconfiguration**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été interrompue en raison d'une reconfiguration de la base de données.|  
-|**connectivité**|**limitation**|*\<Code de raison>*|**reason_code**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La demande est limitée.  Code de raison de la limitation : code * \< motif>*. Pour plus d’informations, consultez [limitation du moteur](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**connectivité**|**limitation**|*\<reason code>*|**reason_code**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La demande est limitée.  Code de raison de la limitation : *\<reason code>* . Pour plus d’informations, consultez [limitation du moteur](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40549|**long_transaction**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin, car elle contient une transaction à long terme. Essayez de diminuer la durée de la transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin car elle a acquis trop de verrous. Essayez de lire ou de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison d’une utilisation excessive de TEMPDB. Essayez de modifier votre requête afin de réduire l'utilisation de l'espace de table temporaire. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
@@ -88,7 +88,7 @@ ms.locfileid: "82831997"
 
  Les utilisateurs autorisés à accéder à la base de données **Master** disposent d’un accès en lecture seule à cette vue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ### <a name="event-aggregation"></a>Agrégation d'événements
 
@@ -99,7 +99,7 @@ ms.locfileid: "82831997"
   
  Par exemple, si un utilisateur n'arrive pas à se connecter à la base de données Database1, en raison d'un nom de connexion non valide, sept fois entre 11h00 et 11h05 le 5/2/2012 (UTC), ces informations sont disponibles dans une seule ligne de cette vue :  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**descriptive**|**additional_data**|  
+|**database_name**|**heure-début**|**heure-fin**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -230,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>Voir aussi
 
- [Événements étendus dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Événements étendus dans une base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

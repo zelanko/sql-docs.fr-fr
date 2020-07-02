@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f488c50518f0a1dd06d72532f1e9edad865e26a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783667"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour les informations d'une association entre un principal et un profil.  
   
@@ -62,7 +62,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Lorsque le nom principal de l’Association est **public** ou que l’ID du principal de l’Association est **0**, cette procédure stockée modifie le profil public. Il ne peut y avoir qu'un seul profil public par défaut.  
   
- Lorsque ** \@is_default** a la valeur «**1**» et que le principal est associé à plusieurs profils, le profil spécifié devient le profil par défaut pour le principal. Le précédent profil par défaut est toujours associé au principal, mais il ne représente plus le profil par défaut.  
+ Lorsque ** \@ is_default** a la valeur «**1**» et que le principal est associé à plusieurs profils, le profil spécifié devient le profil par défaut pour le principal. Le précédent profil par défaut est toujours associé au principal, mais il ne représente plus le profil par défaut.  
   
  La procédure stockée **sysmail_update_principalprofile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
@@ -72,7 +72,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="examples"></a>Exemples  
  **A. Définition du profil public par défaut d'une base de données**  
   
- L’exemple suivant définit le profil `General Use Profile` comme profil public par défaut pour les utilisateurs de la base de données **msdb** .  
+ L’exemple suivant définit le profil comme `General Use Profile` profil public par défaut pour les utilisateurs de la base de données **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B. Définition du profil privé par défaut d'un utilisateur**  
   
- L’exemple suivant définit le profil `AdventureWorks Administrator` comme profil par défaut pour le principal `ApplicationUser` dans la base de données **msdb** . Le profil doit déjà être associé au principal. Le précédent profil par défaut est toujours associé au principal, mais il ne représente plus le profil par défaut.  
+ L’exemple suivant définit le profil comme `AdventureWorks Administrator` profil par défaut pour le principal `ApplicationUser` dans la base de données **msdb** . Le profil doit déjà être associé au principal. Le précédent profil par défaut est toujours associé au principal, mais il ne représente plus le profil par défaut.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

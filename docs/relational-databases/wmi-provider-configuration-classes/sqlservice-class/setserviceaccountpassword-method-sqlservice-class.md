@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb6a3649268455864148730ac4d4640a7dccc87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6958d7ed8434826c61b703389ee7e1a8ca118cee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784710"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>Méthode SetServiceAccountPassword (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Modifie le mot de passe pour le compte sous lequel le service référencé s'exécute.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +36,7 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *object*  
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -49,5 +49,5 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   

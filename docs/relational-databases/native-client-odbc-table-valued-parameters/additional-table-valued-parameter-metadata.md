@@ -14,15 +14,15 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b52f83e36c315ccd86d1516df9e11b913c80ba8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b9777fb07714eb0d3c23c6ad4e9385921746771
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773484"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Métadonnées de paramètres table supplémentaires
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Pour récupérer les métadonnées d’un paramètre table, une application appelle SQLProcedureColumns. Pour un paramètre table, SQLProcedureColumns retourne une ligne unique. Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonnes spécifiques supplémentaires, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME, ont été ajoutées pour fournir des informations de schéma et de catalogue pour les types de tables associés aux paramètres table. En conformité avec la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques aux pilotes ajoutées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "81304530"
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint non NULL|SQL_NULLABLE|  
-|Remarques|Varchar|NULL|  
+|REMARQUES|Varchar|NULL|  
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint non NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  

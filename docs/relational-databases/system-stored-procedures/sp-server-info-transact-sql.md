@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783727"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne une liste de noms d'attributs et de valeurs correspondantes pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la passerelle de base de données ou la source de données sous-jacente.  
   
@@ -65,7 +65,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**13**|TABLE_LENGTH<br /><br /> Spécifie le nombre maximum de caractères pour un nom de table.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> Spécifie la longueur maximale du nom d'un qualificateur de table. C'est la première partie d'un nom de table en trois parties.|128|  
 |**15**|COLUMN_LENGTH<br /><br /> Spécifie le nombre maximal de caractères pour un nom de colonne.|128|  
-|**16bits**|IDENTIFIER_CASE<br /><br /> Spécifie les noms définis par l'utilisateur (noms de table, noms de colonne, noms de procédure stockée) dans la base de données (cas des objets des catalogues système).|SENSITIVE|  
+|**16**|IDENTIFIER_CASE<br /><br /> Spécifie les noms définis par l'utilisateur (noms de table, noms de colonne, noms de procédure stockée) dans la base de données (cas des objets des catalogues système).|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> Spécifie le niveau initial d'isolement de la transaction assuré par le serveur, ce qui correspond à un niveau d'isolement défini dans SQL-92.|2|  
 |**19**|COLLATION_SEQ<br /><br /> Spécifie l'ordre du jeu de caractères de ce serveur.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les points d'enregistrement nommés.|O|  

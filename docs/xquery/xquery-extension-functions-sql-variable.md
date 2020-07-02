@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775427"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Fonctions d’extension XQuery : sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Expose une variable qui contient une valeur relationnelle SQL dans une expression XQuery.  
   
@@ -55,7 +55,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   une valeur (`DiscountPrice`) issue d'une variable [!INCLUDE[tsql](../includes/tsql-md.md)]. La méthode `sql:variable()` permet de lier cette valeur au document XML ;  
   
--   Valeur (`ProductModelName`) à partir d’une colonne de type **XML** , pour rendre la requête plus intéressante.  
+-   Valeur ( `ProductModelName` ) à partir d’une colonne de type **XML** , pour rendre la requête plus intéressante.  
   
  Voici la requête :  
   
@@ -98,7 +98,7 @@ WHERE ProductID=771
  [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [SQL Server de &#40;de données XML&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Créer des instances de données XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Méthodes de type de données XML](../t-sql/xml/xml-data-type-methods.md)   
- [Langage de modification de données XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [méthodes de type de données xml](../t-sql/xml/xml-data-type-methods.md)   
+ [Langage de manipulation de données XML &#40;DML XML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

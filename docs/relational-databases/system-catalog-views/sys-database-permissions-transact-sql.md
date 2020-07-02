@@ -20,15 +20,15 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775249"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Renvoie une ligne pour chaque autorisation ou chaque autorisation avec exception sur colonne dans la base de données. Pour les colonnes, il existe une ligne pour chaque autorisation différente de l'autorisation correspondante au niveau objet. Si l’autorisation de colonne est identique à l’autorisation d’objet correspondante, il n’y a aucune ligne pour celle-ci et l’autorisation appliquée est celle de l’objet.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73982730"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifie la classe sur laquelle l'autorisation existe.<br /><br /> 0 = Base de données<br />1 = objet ou colonne<br />3 = Schéma<br />4 = Principal de la base de données<br />5 = assembly- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />6 = Type<br />10 = collection de schémas XML- <br />                      **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />15 = type de message : **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />16 = contrat de service- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />17 = service- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />18 = liaison de service distant- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />19 = route- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />23 = catalogue de texte intégral- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />24 = clé symétrique- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />25 = certificat- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />26 = clé asymétrique- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|  
+|**type**|**tinyint**|Identifie la classe sur laquelle l'autorisation existe.<br /><br /> 0 = Base de données<br />1 = objet ou colonne<br />3 = Schéma<br />4 = Principal de la base de données<br />5 = assembly- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />6 = Type<br />10 = collection de schémas XML- <br />                      **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />15 = type de message : **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />16 = contrat de service- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />17 = service- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />18 = liaison de service distant- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />19 = route- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />23 = catalogue de texte intégral- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />24 = clé symétrique- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />25 = certificat- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />26 = clé asymétrique- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|  
 |**class_desc**|**nvarchar(60)**|Description de la classe sur laquelle l'autorisation existe.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|ID de l'objet sur lequel l'autorisation existe, interprété en fonction de la classe. En règle générale, le **major_id** est simplement le type d’ID qui s’applique à ce que la classe représente. <br /><br /> 0 = la base de données elle-même <br /><br /> >0 = ID d’objet pour les objets utilisateur <br /><br /> \<0 = ID d’objet pour les objets système |  
 |**minor_id**|**int**|ID secondaire de l'objet sur lequel l'autorisation existe, interprété en fonction de la classe. Souvent, le **minor_id** est égal à zéro, car aucune sous-catégorie n’est disponible pour la classe de l’objet. Dans le cas contraire, il s’agit de l’ID de colonne d’une table.|  
@@ -115,7 +115,7 @@ Les types d’autorisations suivants sont possibles.
 |IM|IMPERSONATE|Utilisateur|  
 |IN|INSERT|DATABASE, OBJECT, SCHEMA|  
 |RC|RECEIVE|OBJECT|  
-|RF|REFERENCES|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, SCHEMA, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
+|RF|RÉFÉRENCES|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, SCHEMA, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
 |SL|SELECT|DATABASE, OBJECT, SCHEMA|  
 |SN|SEND|SERVICE|  
 |SPLN|SHOWPLAN|DATABASE|  

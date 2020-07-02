@@ -18,19 +18,19 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0e422be747c2b47dacb1feb97ba6c00fa1131fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1b2305336391a29de559fa01bd2d67c1a4621b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775950"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construction d'instructions SQL pour les curseurs
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise des curseurs de serveur pour implémenter la fonctionnalité de curseur définie dans la spécification ODBC. Une application ODBC contrôle le comportement des curseurs à l’aide de [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir différents attributs d’instruction. Voici les attributs et leurs valeurs par défaut.  
   
-|Attribut|Par défaut|  
+|Attribut|Default|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -38,7 +38,7 @@ ms.locfileid: "81291419"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Lorsque ces options sont définies sur leurs valeurs par défaut au moment de l’exécution d’une instruction SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le pilote ODBC Native Client n’utilise pas de curseur côté serveur pour implémenter le jeu de résultats ; au lieu de cela, il utilise un jeu de résultats par défaut. Si l’une de ces options est modifiée par rapport aux valeurs par défaut au moment de l’exécution d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruction SQL, le pilote ODBC de native client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
+ Lorsque ces options sont définies sur leurs valeurs par défaut au moment de l’exécution d’une instruction SQL, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’utilise pas de curseur côté serveur pour implémenter le jeu de résultats ; à la place, il utilise un jeu de résultats par défaut. Si l’une de ces options est modifiée par rapport aux valeurs par défaut au moment de l’exécution d’une instruction SQL, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC de native client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
   
  Les jeux de résultats par défaut prennent en charge toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il n'y a pas de restrictions concernant les types d'instructions SQL qui peuvent être exécutés lors de l'utilisation d'un jeu de résultats par défaut.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db0a9b0d2461e392f981ba3699a9efd3c1f3f8f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 878552c37b9d8d0345969e47f297df85089ce184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784684"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Propriété SqlServiceType (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le type du service managé.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,13 +36,13 @@ object.SqlServiceType [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *object*  
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 qui spécifie le type du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les valeurs retournées peuvent être les suivantes :  
   
 |Type|Définition|  
@@ -54,7 +54,7 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService est le service [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |*6*|ReportServer est le service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser est le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
-|*version8*|NsService est le [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] service de notification.|  
+|*8*|NsService est le [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] service de notification.|  
 |*9*|MSSQLFDLauncher est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service du lanceur de démon de filtre de texte intégral.|  
 |*10*|SQLPBENGINE est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service de moteur Polybase.|  
 |*11*|SQLPBDMS est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service de déplacement de données Polybase.|  

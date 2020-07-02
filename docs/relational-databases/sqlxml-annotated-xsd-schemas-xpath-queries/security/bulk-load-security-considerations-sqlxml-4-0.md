@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd641fe3d3843fe853a16db4833d40bdcbec4e1a
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 43cf00aef7e1ce571f41c08d4d9033aee7bd43a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775258"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considérations de sécurité relatives au chargement en masse (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Vous trouverez ci-après des instructions de sécurité relatives au chargement en masse XML :  
   
 -   Lorsque vous spécifiez que l’opération de chargement en masse doit être exécutée en tant que transaction, vous utilisez la propriété **TempFilePath** pour spécifier un dossier dans lequel créer les fichiers temporaires.  

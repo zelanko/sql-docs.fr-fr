@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784850"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la valeur du numéro séquentiel dans le journal (LSN) à partir de la colonne **start_lsn** de la table système [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) pour l’heure spécifiée. Vous pouvez utiliser cette fonction pour mapper systématiquement les plages DateTime dans la plage basée sur LSN requise par les fonctions d’énumération de capture de données modifiées, [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [CDC. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>pour retourner des modifications de données dans cette plage.  
   
@@ -60,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>Type de retour  
  **binary(10)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour comprendre comment la **sys. fn_cdc_map_time_lsn** peut être utilisée pour mapper des plages DateTime à des plages LSN, examinez le scénario suivant. Supposez qu'un utilisateur souhaite extraire des données de modifications de façon quotidienne. Autrement dit, il ne souhaite extraire que les modifications pour un jour donné jusqu'à minuit compris. La limite inférieure de la plage temporelle se situerait à minuit, sans l'inclure, le jour précédent. La limite supérieure se situerait à minuit (compris) le jour donné. L’exemple suivant montre comment la fonction **sys. fn_cdc_map_time_to_lsn** peut être utilisée pour mapper systématiquement cette plage temporelle à la plage basée sur LSN requise par les fonctions d’énumération de capture de données modifiées pour retourner toutes les modifications au sein de cette plage.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- L'opérateur relationnel '`smallest greater than`' est utilisé pour limiter les modifications à celles qui ont été effectuées après minuit le jour précédent. Si plusieurs entrées avec des valeurs LSN différentes partagent la valeur **tran_end_time** identifiée comme limite inférieure dans la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) , la fonction retourne le LSN le plus petit, garantissant ainsi que toutes les entrées sont incluses. Pour la limite supérieure, l’opérateur relationnel «`largest less than or equal to`» est utilisé pour s’assurer que la plage inclut toutes les entrées du jour, y compris celles dont la valeur **tran_end_time** est minuit. Si plusieurs entrées avec des valeurs LSN différentes partagent la valeur **tran_end_time** identifiée comme limite supérieure, la fonction retourne le LSN le plus grand, garantissant ainsi que toutes les entrées sont incluses.  
+ L'opérateur relationnel '`smallest greater than`' est utilisé pour limiter les modifications à celles qui ont été effectuées après minuit le jour précédent. Si plusieurs entrées avec des valeurs LSN différentes partagent la valeur **tran_end_time** identifiée comme limite inférieure dans la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) , la fonction retourne le LSN le plus petit, garantissant ainsi que toutes les entrées sont incluses. Pour la limite supérieure, l’opérateur relationnel « `largest less than or equal to` » est utilisé pour s’assurer que la plage inclut toutes les entrées du jour, y compris celles dont la valeur **tran_end_time** est minuit. Si plusieurs entrées avec des valeurs LSN différentes partagent la valeur **tran_end_time** identifiée comme limite supérieure, la fonction retourne le LSN le plus grand, garantissant ainsi que toutes les entrées sont incluses.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise la `sys.fn_cdc_map_time_lsn` fonction pour déterminer s’il existe des lignes dans la table [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) avec une valeur **tran_end_time** supérieure ou égale à minuit. Cette requête peut être utilisée pour déterminer, par exemple, si le processus de capture a déjà traité les modifications validées jusqu'à minuit le jour précédent, afin que l'extraction des données de modifications pour ce jour puisse continuer.  
+ L’exemple suivant utilise la `sys.fn_cdc_map_time_lsn` fonction pour déterminer s’il existe des lignes dans la table [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) avec une valeur **tran_end_time** supérieure ou égale à minuit. Cette requête peut être utilisée pour déterminer, par exemple, si le processus de capture a déjà traité les modifications validées jusqu'à minuit le jour précédent, afin que l'extraction des données de modifications pour ce jour puisse continuer.  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ba54cf16819164bb8d356cae0a5a1b7569a373
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783924"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie le texte de l'instruction SQL pour le handle SQL spécifié.  
   
@@ -61,14 +61,14 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|Identificateur de l'objet de base de données. NULL pour les instructions SQL ad hoc.|  
 |nombre|**smallint**|Indique le numéro du groupe, si les procédures sont groupées.<br /><br /> 0 = les entrées ne sont pas des procédures.<br /><br /> NULL = instructions SQL ad hoc.|  
 |encrypted|**bit**|Indique si l'objet est chiffré.<br /><br /> 0 = Non chiffrée<br /><br /> 1 = Chiffrée|  
-|texte|**text**|Texte de l'instruction SQL. NULL pour les objets chiffrés.|  
+|text|**text**|Texte de l'instruction SQL. NULL pour les objets chiffrés.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez obtenir un handle SQL valide à partir de la colonne sql_handle de la vue de gestion dynamique [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
  Si vous transmettez un handle qui n’existe plus dans le cache, fn_get_sq**l** retourne un jeu de résultats vide. Si vous passez un handle qui n'est pas valide, le lot s'arrête et un message d'erreur s'affiche.  
   
- Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne peut pas [!INCLUDE[tsql](../../includes/tsql-md.md)] mettre en cache certaines instructions, telles que les instructions de copie en bloc et les instructions avec des littéraux de chaîne dont la taille est supérieure à 8 Ko. Les handles de ces instructions ne peuvent pas être récupérés avec fn_get_sql.  
+ Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne peut pas mettre en cache certaines [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, telles que les instructions de copie en bloc et les instructions avec des littéraux de chaîne dont la taille est supérieure à 8 Ko. Les handles de ces instructions ne peuvent pas être récupérés avec fn_get_sql.  
   
  La colonne **Text** du jeu de résultats est filtrée pour le texte qui peut contenir des mots de passe. Pour plus d’informations sur les procédures stockées liées à la sécurité qui ne sont pas surveillées, consultez [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md).  
   
@@ -95,7 +95,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Processus desys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

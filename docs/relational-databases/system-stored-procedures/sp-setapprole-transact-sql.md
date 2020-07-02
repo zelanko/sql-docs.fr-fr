@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b158c4571deadadeaee23ffa6e46eb48a8c8446e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783720"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Active les autorisations associées à un rôle d'application dans la base de données active.  
   
@@ -55,14 +55,14 @@ sp_setapprole [ @rolename = ] 'role',
 > La fonction **Encrypt** de ODBC ne fournit pas de chiffrement. Vous ne devez pas compter sur cette fonction pour protéger des mots de passe transmis sur un réseau. Si ces informations sont transmises sur un réseau, utilisez TLS ou IPSec.
   
  **@encrypt= 'none'**  
- Indique qu'aucun codage ne doit être utilisé. Le mot de passe est transmis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous forme de texte brut. Il s’agit de la valeur par défaut.  
+ Indique qu'aucun codage ne doit être utilisé. Le mot de passe est transmis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous forme de texte brut. Il s'agit de la valeur par défaut.  
   
  **@encrypt= 'ODBC'**  
- Spécifie que le mot de passe sera obscurci par ODBC à l’aide de la fonction ODBC **Encrypt** avant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]d’envoyer le mot de passe au. Ceci peut être spécifié seulement si vous utilisez un client ODBC ou le fournisseur OLE DB pour SQL Server.  
+ Spécifie que le mot de passe sera obscurci par ODBC à l’aide de la fonction ODBC **Encrypt** avant d’envoyer le mot de passe au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Ceci peut être spécifié seulement si vous utilisez un client ODBC ou le fournisseur OLE DB pour SQL Server.  
   
 `[ @fCreateCookie = ] true | false`Spécifie si un cookie doit être créé. **true** est implicitement converti en 1. la **valeur false** est implicitement convertie en 0.  
   
-`[ @cookie = ] @cookie OUTPUT`Spécifie un paramètre de sortie pour contenir le cookie. Le cookie est généré uniquement si la valeur de ** \@fCreateCookie** est **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT`Spécifie un paramètre de sortie pour contenir le cookie. Le cookie est généré uniquement si la valeur de ** \@ fCreateCookie** est **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)** . Les applications doivent continuer à réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si la taille de retour du cookie augmente dans une version ultérieure.
@@ -71,15 +71,15 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (succès) et 1 (échec)  
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
- Une fois qu’un rôle d’application est activé à l’aide de **sp_setapprole**, le rôle reste actif jusqu’à ce que l’utilisateur se déconnecte du serveur ou exécute **sp_unsetapprole**. **sp_setapprole** ne peut être exécutée que [!INCLUDE[tsql](../../includes/tsql-md.md)] par des instructions directes. **sp_setapprole** ne peut pas être exécutée dans une autre procédure stockée ou dans une transaction définie par l’utilisateur.  
+ Une fois qu’un rôle d’application est activé à l’aide de **sp_setapprole**, le rôle reste actif jusqu’à ce que l’utilisateur se déconnecte du serveur ou exécute **sp_unsetapprole**. **sp_setapprole** ne peut être exécutée que par des [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions directes. **sp_setapprole** ne peut pas être exécutée dans une autre procédure stockée ou dans une transaction définie par l’utilisateur.  
   
  Pour obtenir une vue d’ensemble des rôles d’application, consultez [rôles d’application](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
 > Pour protéger le mot de passe du rôle d’application lorsqu’il est transmis sur un réseau, vous devez toujours utiliser une connexion chiffrée lors de l’activation d’un rôle d’application.
-> L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] option de **chiffrement** ODBC n’est pas prise en charge par **SqlClient**. Si vous devez stocker des informations d'identification, chiffrez-les à l'aide des fonctions API de chiffrement. Le *mot de passe* du paramètre est stocké sous la forme d’un hachage unidirectionnel. Pour préserver la compatibilité avec les versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]antérieures de, la stratégie de complexité de mot de passe n’est pas appliquée par **sp_addapprole**. Pour appliquer la stratégie de complexité du mot de passe, utilisez [créer un rôle d’application](../../t-sql/statements/create-application-role-transact-sql.md).  
+> L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] option de **chiffrement** ODBC n’est pas prise en charge par **SqlClient**. Si vous devez stocker des informations d'identification, chiffrez-les à l'aide des fonctions API de chiffrement. Le *mot de passe* du paramètre est stocké sous la forme d’un hachage unidirectionnel. Pour préserver la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la stratégie de complexité de mot de passe n’est pas appliquée par **sp_addapprole**. Pour appliquer la stratégie de complexité du mot de passe, utilisez [créer un rôle d’application](../../t-sql/statements/create-application-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations
 

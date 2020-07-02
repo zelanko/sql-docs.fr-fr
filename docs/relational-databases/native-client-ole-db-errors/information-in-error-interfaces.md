@@ -18,15 +18,15 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a19a2189aa28bb5ebf50a0533ed4bfb30b52deea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcbdaa46ab388bc641120bdcccb454468d102eb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773364"
 ---
 # <a name="information-in-error-interfaces"></a>Informations dans les interfaces d'erreur
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client signale des informations d’erreur et d’État dans les interfaces d’erreur définies par l’OLE DB **IErrorInfo**, **IErrorRecords**et **ISQLErrorInfo**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81306086"
 |Paramètre|Description|  
 |---------------|-----------------|  
 |*pbstrSQLState*|Retourne une valeur SQLSTATE pour l'erreur. Les valeurs SQLSTATE sont définies dans les spécifications SQL-92, ODBC et ISO SQL, et API. Ni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client ne définisssent des valeurs SQLSTATE spécifiques à l’implémentation.|  
-|*plNativeError*|Retourne le numéro d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **master.dbo.sysmessages** s’il est disponible. Des erreurs natives sont disponibles après une tentative réussie d’initialisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une source de données de fournisseur OLE DB Native Client. Avant la tentative, le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB Native Client retourne toujours zéro.|  
+|*plNativeError*|Retourne le numéro d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **master.dbo.sysmessages** s’il est disponible. Des erreurs natives sont disponibles après une tentative réussie d’initialisation d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données de fournisseur OLE DB Native Client. Avant la tentative, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client retourne toujours zéro.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Erreurs](../../relational-databases/native-client-ole-db-errors/errors.md)  

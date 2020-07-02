@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783742"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Capture des données de diagnostics et des informations d'intégrité à propos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour détecter des échecs potentiels. La procédure fonctionne en mode de répétition et envoie régulièrement des résultats. Elle peut être appelée depuis une connexion DAC ou ordinaire.  
   
@@ -79,12 +79,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Collecte les données pour le groupe de disponibilité spécifié (si component_type = "Always On : AvailabilityGroup").  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
   
 Le tableau suivant mappe les composants à leurs états d'intégrité associés.  
   
-|Composants|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
+|Components|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |système|x|x|x||  
 |resource|x|x|x||  

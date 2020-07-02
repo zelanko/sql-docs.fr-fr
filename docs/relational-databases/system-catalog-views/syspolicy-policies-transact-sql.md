@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b95e5f5d33d44ad1b23dffbd9425a11fc439861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783911"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Affiche une ligne pour chaque stratégie de la gestion basée sur des stratégies dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l’instance de. syspolicy_policies appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes dans la vue syspolicy_policies.  
+  Affiche une ligne pour chaque stratégie de la gestion basée sur des stratégies dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_policies appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes dans la vue syspolicy_policies.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "68121163"
 |modified_by|**sysname**|Connexion qui a récemment modifié la stratégie. Est NULL si jamais modifiée.|  
 |date_modified|**datetime**|Date et heure de création de la stratégie. Est NULL si jamais modifiée.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous dépannez la gestion basée sur des stratégies, interrogez la vue de [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) pour déterminer si la stratégie est activée. Cette vue affiche également qui a créé ou modifié en dernier la stratégie.  
   
 ## <a name="permissions"></a>Autorisations  

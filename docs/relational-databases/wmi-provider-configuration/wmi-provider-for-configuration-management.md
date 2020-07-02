@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3919147b2b3d721fa59ee1d7f93f26d0267f5d5f
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 7789f78cb4f79a537aef3ae5071498fae4cc439f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775653"
 ---
 # <a name="wmi-provider-for-configuration-management"></a>fournisseur WMI pour Gestion de l'ordinateur
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Le fournisseur WMI est une couche publiée qui est utilisée avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composant logiciel enfichable Configuration Manager pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] la console MMC (Management Console) et le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnés.  
   
  Le fournisseur WMI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se compose d'une DLL et d'un fichier MOF, compilés automatiquement par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

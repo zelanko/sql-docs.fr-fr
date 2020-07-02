@@ -11,15 +11,15 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f86bf7fc6e473685d918e7109180e2bdb8bdb86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783220"
 ---
 # <a name="use-date-and-time-types"></a>Utiliser des types de date et d'heure
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cet exemple montre comment initialiser les structures de données de date et d’heure ajoutées dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Il prépare ensuite les valeurs d'entrée, lie les paramètres et exécute la requête. Pour plus d’informations sur l’utilisation de ces types, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -30,11 +30,11 @@ ms.locfileid: "81298279"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () crée une table utilisée par cet exemple.  
+ La première [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () crée une table utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et user32.lib. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
- La troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () supprime la table utilisée par cet exemple.  
+ La troisième [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () supprime la table utilisée par cet exemple.  
   
 ```sql
 use tempdb  

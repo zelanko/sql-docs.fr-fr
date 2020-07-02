@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa9033b52851b6b678671e94c6d10d71b5a488fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d7409d28b6a21a033c139c63ca6d6e7524e6ba50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818691"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783770"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les informations sur la source de données ODBC ou OLE DB à partir du serveur de distribution associé au serveur actuel. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
@@ -73,7 +73,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Type d’informations**|**nvarchar (64)**|Types d'information, tels que DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Valeur**|**nvarchar(512)**|Valeur du type d'information associé.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_dsninfo** est utilisé dans tous les types de réplications.  
   
  **sp_dsninfo** récupère les informations de source de données ODBC ou OLE DB qui indiquent si la base de données peut être utilisée pour la réplication ou l’interrogation.  

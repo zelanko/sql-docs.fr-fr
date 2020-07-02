@@ -13,15 +13,15 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e26d334a360b42ba1bdaa6311eb09bcffd70489
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773445"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Métadonnées - Paramètres et ensembles de lignes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cette rubrique fournit des informations sur le type et les membres de type suivants en rapport avec les améliorations de date et d'heure OLE DB.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81301016"
   
  Le paramètre *bPrecision* est ignoré.  
   
- « DBPARAMFLAGS_SS_ISVARIABLESCALE » est ignoré lors de l'envoi de données au serveur. Les applications peuvent forcer l’utilisation de types TDS (Tabular Data Stream) hérités en utilisant les noms de types spécifiques au fournisseur « **datetime** » et « **smalldatetime** ». En cas de connexion à des serveurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou ultérieur), le format « **datetime2** » est utilisé et une conversion serveur implicite se produit si nécessaire, quand le nom de type est « **datetime2** » ou « DBTYPE_DBTIMESTAMP ». *bScale* est ignoré si les noms de types spécifiques au fournisseur « **DateTime** » ou « **smalldatetime** » sont utilisés. Dans le cas contraire, appications doit s’assurer que *bScale* est défini correctement. Les applications mises à niveau à partir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de MDAC et [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Native Client à partir de qui utilisent « DBTYPE_DBTIMESTAMP » échouent si elles ne définissent pas correctement *bScale* . En cas de connexion à instances de serveur antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], une valeur *bScale* autre que 0 ou 3 avec « DBTYPE_DBTIMESTAMP » est une erreur, et E_FAIL est retourné.  
+ « DBPARAMFLAGS_SS_ISVARIABLESCALE » est ignoré lors de l'envoi de données au serveur. Les applications peuvent forcer l’utilisation de types TDS (Tabular Data Stream) hérités en utilisant les noms de types spécifiques au fournisseur « **datetime** » et « **smalldatetime** ». En cas de connexion à des serveurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou ultérieur), le format « **datetime2** » est utilisé et une conversion serveur implicite se produit si nécessaire, quand le nom de type est « **datetime2** » ou « DBTYPE_DBTIMESTAMP ». *bScale* est ignoré si les noms de types spécifiques au fournisseur « **DateTime** » ou « **smalldatetime** » sont utilisés. Dans le cas contraire, appications doit s’assurer que *bScale* est défini correctement. Les applications mises à niveau à partir de MDAC et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui utilisent « DBTYPE_DBTIMESTAMP » échouent si elles ne définissent pas correctement *bScale* . En cas de connexion à instances de serveur antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], une valeur *bScale* autre que 0 ou 3 avec « DBTYPE_DBTIMESTAMP » est une erreur, et E_FAIL est retourné.  
   
  Quand ICommandWithParameters :: SetParameterInfo n’est pas appelé, le fournisseur implique le type de serveur à partir du type de liaison comme indiqué dans IAccessor :: CreateAccessor comme suit :  
   
