@@ -20,15 +20,15 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a1057be51a987e694fa1a29de4299ff63a70733
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3d42cc2873c1e3e03e2af3e0a01080cdb18c349a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754285"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations sur l'état de chiffrement d'une base de données et de ses clés de chiffrement de base de données associées. Pour plus d’informations sur le chiffrement des bases de données, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
  
@@ -46,9 +46,9 @@ ms.locfileid: "82824622"
 |encryptor_thumbprint|**varbinary(20)**|Affiche l'empreinte numérique du chiffreur.|  
 |encryptor_type|**nvarchar(32)**|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Décrit le chiffreur.|  
 |percent_complete|**real**|Pourcentage accompli de la modification de l'état de chiffrement de la base de données. La valeur 0 indique aucune modification d'état.|
-|encryption_state_desc|**nvarchar(32)**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br> Chaîne qui indique si la base de données est chiffrée ou non chiffrée.<br><br>Aucune<br><br>NON chiffrés<br><br>COMMUNICATIONS<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_state_desc|**nvarchar(32)**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br> Chaîne qui indique si la base de données est chiffrée ou non chiffrée.<br><br>NONE<br><br>NON chiffrés<br><br>COMMUNICATIONS<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br>Indique l’état actuel de l’analyse de chiffrement. <br><br>0 = aucune analyse n’a été lancée, TDE n’est pas activé<br><br>1 = analyse en cours.<br><br>2 = l’analyse est en cours mais a été suspendue, l’utilisateur peut la reprendre.<br><br>3 = l’analyse a été abandonnée pour une raison quelconque, une intervention manuelle est nécessaire. Pour obtenir de l’aide, contactez Support Microsoft.<br><br>4 = l’analyse a été effectuée avec succès, TDE est activé et le chiffrement est terminé.|
-|encryption_scan_state_desc|**nvarchar(32)**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br>Chaîne qui indique l’état actuel de l’analyse de chiffrement.<br><br> Aucune<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>Remplissez|
+|encryption_scan_state_desc|**nvarchar(32)**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br>Chaîne qui indique l’état actuel de l’analyse de chiffrement.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>Remplissez|
 |encryption_scan_modify_date|**datetime**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br> Affiche la date (au format UTC) de la dernière modification de l’état de l’analyse de chiffrement.|
   
 ## <a name="permissions"></a>Autorisations

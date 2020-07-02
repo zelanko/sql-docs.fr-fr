@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c03c6c2faa156aff513cfcc44fc99dcf461a62f5
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: f47068324f13fe3cd03f0fc798090378a5f5ad6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753627"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Instruction et itération FLWOR (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery définit la syntaxe d'itération FLWOR. FLWOR est l'acronyme de `for`, `let`, `where`, `order by` et `return`.  
   

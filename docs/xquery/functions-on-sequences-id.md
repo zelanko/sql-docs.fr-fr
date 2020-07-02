@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753556"
 ---
 # <a name="functions-on-sequences---id"></a>Fonctions sur les séquences : id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retourne la séquence de nœuds d’élément avec des valeurs XS : ID qui correspondent aux valeurs d’une ou plusieurs des valeurs XS : IDREF fournies dans *$arg*.  
   
@@ -39,18 +39,18 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Une ou plusieurs valeurs xs:IDREF.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le résultat de la fonction est une séquence d'éléments de l'instance XML, dans l'ordre du document, qui ont une valeur xs:ID égale à une ou plusieurs des valeurs xs:IDREF de la liste des candidats xs:IDREF.  
   
  Si la valeur xs:IDREF ne correspond à aucun élément, la fonction renvoie la séquence vide.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **xml** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Récupération des éléments en fonction de la valeur de l'attribut IDREF  
  L’exemple suivant utilise FN : ID pour récupérer les <`employee`> éléments, en fonction de l’attribut IDREF Manager. Dans cet exemple, l'attribut manager est de type IDREF et l'attribut eid est de type ID.  
   
- Pour une valeur d’attribut Manager spécifique, la fonction **ID ()** recherche le `employee` <> élément dont la valeur de l’attribut type d’ID correspond à la valeur IDREF d’entrée. En d’autres termes, pour un employé spécifique, la fonction **ID ()** retourne le responsable de l’employé.  
+ Pour une valeur d’attribut Manager spécifique, la fonction **ID ()** recherche le <`employee`> élément dont la valeur de l’attribut type d’ID correspond à la valeur IDREF d’entrée. En d’autres termes, pour un employé spécifique, la fonction **ID ()** retourne le responsable de l’employé.  
   
  Voici ce qui se passe dans l'exemple :  
   
@@ -58,7 +58,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   Une variable **XML** typée est créée à l’aide de la collection de schémas XML.  
   
--   La requête récupère l’élément qui a une valeur d’attribut ID référencée par l’attribut **Manager** IDREF de l’élément `employee` <>.  
+-   La requête récupère l’élément qui a une valeur d’attribut ID référencée par l’attribut **Manager** IDREF de l' `employee` élément <>.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -99,7 +99,7 @@ Go
  La requête renvoie la valeur « Dave », ce qui indique que Dave est le supérieur hiérarchique de Joe.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Récupération des éléments en fonction de la valeur de l'attribut IDREFS OrderList  
- Dans l’exemple suivant, l’attribut OrderList de l’élément `Customer` <> est un attribut de type IDREFS. Il répertorie les ID de commande se rapportant à un client particulier. Pour chaque ID de commande, il existe un `Order` <> élément enfant sous le `Customer` <> fournissant la valeur de la commande.  
+ Dans l’exemple suivant, l’attribut OrderList de l' `Customer` élément <> est un attribut de type IDREFS. Il répertorie les ID de commande se rapportant à un client particulier. Pour chaque ID de commande, il existe un <`Order`> élément enfant sous le <`Customer`> fournissant la valeur de la commande.  
   
  L'expression de la requête, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, récupère la première valeur de la liste IDREFS pour le premier client. Cette valeur est ensuite transmise à la fonction **ID ()** . La fonction recherche ensuite le <`Order`> élément dont la valeur d’attribut OrderID correspond à l’entrée de la fonction **ID ()** .  
   

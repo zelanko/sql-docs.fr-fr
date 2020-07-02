@@ -17,15 +17,15 @@ ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac8a9ecfe978614b7f2b9121fcf285944bf92638
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: d2060bf646e8f9aff44ee4e8e5ccc474fa9df5e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754511"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Gestion des tailles de lot de copie en bloc
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   L'objectif principal d'un lot dans des opérations de copie en bloc est de définir l'étendue d'une transaction. Si aucune taille de lot n'est définie, les fonctions de copie en bloc considèrent une copie en bloc entière comme une transaction. Si une taille de lot est définie, chaque lot constitue alors une transaction validée à la fin de l'exécution de ce lot.  
   

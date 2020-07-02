@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5a3e93ed2ae3b64828a3260743410b6d007560
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67898407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755541"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur les utilisateurs Windows et les groupes Windows.  
   
@@ -41,10 +41,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @acctname = ] 'account_name'`Nom d’un utilisateur ou groupe Windows autorisé à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Si *account_name* n’est pas spécifié, tous les groupes Windows et utilisateurs Windows auxquels une autorisation de connexion a été explicitement accordée sont signalés. *account_name* doit être complet. Par exemple, « ADVWKS4\macraes » ou « BUILTIN\Administrators ».  
+`[ @acctname = ] 'account_name'`Nom d’un utilisateur ou groupe Windows autorisé à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Si *account_name* n’est pas spécifié, tous les groupes Windows et utilisateurs Windows auxquels une autorisation de connexion a été explicitement accordée sont signalés. *account_name* doit être complet. Par exemple, « ADVWKS4\macraes » ou « BUILTIN\Administrators ».  
   
- **'all'** | '**membres'**  
- Spécifie s'il faut rapporter les informations sur tous les chemins d'autorisation du compte ou sur les membres du groupe Windows. l’option est de type **varchar (10)**, avec NULL comme valeur par défaut. ** \@** Sauf si **All** est spécifié, seul le premier chemin d’accès est affiché.  
+ **'all'**  |  **'Members'**  
+ Spécifie s'il faut rapporter les informations sur tous les chemins d'autorisation du compte ou sur les membres du groupe Windows. l' ** \@ option** est de type **varchar (10)**, avec NULL comme valeur par défaut. Sauf si **All** est spécifié, seul le premier chemin d’accès est affiché.  
   
 `[ @privilege = ] variable_name`Paramètre de sortie qui retourne le niveau de privilège du compte Windows spécifié. *variable_name* est de type **varchar (10)**, avec « not recherché » comme valeur par défaut. Le niveau de privilège retourné est **User**, **admin**ou **null**.  
   
@@ -61,15 +61,15 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**nom du compte**|**sysname**|Nom de compte Windows complet.|  
 |**type**|**Char (8)**|Type de compte Windows. Les valeurs valides sont **User** ou **Group**.|  
 |**limités**|**char(9)**|Privilège d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les valeurs valides sont **admin**, **User**ou **null**.|  
-|**mapped login name**|**sysname**|Pour les comptes d’utilisateur dotés de privilèges utilisateur, le **nom de connexion mappé** indique le nom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de connexion mappé qui tente d’être utilisé lors de la connexion avec ce compte à l’aide des règles mappées avec le nom de domaine ajouté avant.|  
+|**mapped login name**|**sysname**|Pour les comptes d’utilisateur dotés de privilèges utilisateur, le **nom de connexion mappé** indique le nom de connexion mappé qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’être utilisé lors de la connexion avec ce compte à l’aide des règles mappées avec le nom de domaine ajouté avant.|  
 |**permission path**|**sysname**|Membre du groupe qui autorise l'accès au compte|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si *account_name* est spécifié, **xp_logininfo** indique le niveau de privilège le plus élevé du groupe ou de l’utilisateur Windows spécifié. Si un utilisateur Windows dispose d'autorisations d'accès en tant qu'administrateur système et utilisateur de domaine, il est indiqué comme administrateur système. Si l'utilisateur est membre de plusieurs groupes Windows dotés des mêmes niveaux de privilèges, seul le groupe qui a obtenu le premier l'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est indiqué.  
   
- Si *account_name* est un utilisateur ou un groupe Windows valide qui n’est pas associé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une connexion, un jeu de résultats vide est retourné. Si *account_name* ne peut pas être identifié comme un utilisateur ou un groupe Windows valide, un message d’erreur est retourné.  
+ Si *account_name* est un utilisateur ou un groupe Windows valide qui n’est pas associé à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, un jeu de résultats vide est retourné. Si *account_name* ne peut pas être identifié comme un utilisateur ou un groupe Windows valide, un message d’erreur est retourné.  
   
- Si *account_name* et **All** sont spécifiés, tous les chemins d’autorisation pour l’utilisateur ou le groupe Windows sont retournés. Si *account_name* est membre de plusieurs groupes, tous bénéficiant d’un accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], plusieurs lignes sont retournées. Les lignes des privilèges d' **administrateur** sont retournées avant les lignes de privilège de l' **utilisateur** et, dans un niveau de privilège, les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lignes sont retournées dans l’ordre dans lequel les connexions correspondantes ont été créées.  
+ Si *account_name* et **All** sont spécifiés, tous les chemins d’autorisation pour l’utilisateur ou le groupe Windows sont retournés. Si *account_name* est membre de plusieurs groupes, tous bénéficiant d’un accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , plusieurs lignes sont retournées. Les lignes des privilèges d' **administrateur** sont retournées avant les lignes de privilège de l' **utilisateur** et, dans un niveau de privilège, les lignes sont retournées dans l’ordre dans lequel les connexions correspondantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont été créées.  
   
  Si *account_name* et **les membres** sont spécifiés, une liste des membres de niveau suivant du groupe est retournée. Si *account_name* est un groupe local, la liste peut inclure des utilisateurs locaux, des utilisateurs de domaine et des groupes. Si *account_name* est un compte de domaine, la liste est composée d’utilisateurs de domaine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit se connecter au contrôleur de domaine pour extraire les informations d'appartenance au groupe. Si le serveur ne peut pas contacter le contrôleur de domaine, aucune information n'est renvoyée.  
   
@@ -79,7 +79,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  Requiert l’appartenance au rôle serveur fixe **sysadmin** ou l’appartenance au rôle de base de données fixe **public** dans la base de données **Master** avec l’autorisation EXECUTE accordée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant affiche des informations sur `BUILTIN\Administrators` le groupe Windows.  
+ L’exemple suivant affiche des informations sur le `BUILTIN\Administrators` groupe Windows.  
   
 ```  
 EXEC xp_logininfo 'BUILTIN\Administrators';  

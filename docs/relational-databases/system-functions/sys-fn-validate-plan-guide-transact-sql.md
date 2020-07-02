@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754007"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Vérifie la validité du repère de plan spécifié. La fonction sys.fn_validate_plan_guide retourne le premier message d'erreur rencontré lorsque le repère de plan est appliqué à sa requête. Un ensemble de lignes vide est retourné lorsque le repère de plan est valide. Les repères de plan peuvent devenir non valides lorsque des modifications sont apportées à la conception physique de la base de données. Par exemple, si un repère de plan spécifie un index particulier et que cet index est ensuite supprimé, la requête ne peut plus utiliser ce repère de plan.  
   

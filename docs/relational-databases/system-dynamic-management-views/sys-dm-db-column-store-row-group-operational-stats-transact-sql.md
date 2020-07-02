@@ -13,15 +13,15 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35d30dfa78ab43f8efe8d3a1cb6bbb9ad30188a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9430c5c42f9b871457fdaae1386e198a176a0bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754244"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Retourne l’activité actuelle des e/s au niveau des lignes, du verrouillage et de la méthode d’accès pour les RowGroups compressés dans un index ColumnStore. Utilisez **sys. dm_db_column_store_row_group_operational_stats** pour suivre la durée pendant laquelle une requête de l’utilisateur doit attendre la lecture ou l’écriture dans un rowgroup ou une partition d’un index ColumnStore compressé, et identifier les RowGroups qui rencontrent une activité d’e/s importante ou des zones réactives.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "82824598"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique liées aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

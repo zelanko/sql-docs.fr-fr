@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6461e522973b43926b66b6e525526ae6952d85
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755511"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Appelle l’utilitaire **sqlmaint** avec une chaîne qui contient des commutateurs **sqlmaint**. L’utilitaire **sqlmaint** effectue un ensemble d’opérations de maintenance sur une ou plusieurs bases de données.  
   
@@ -48,9 +48,9 @@ xp_sqlmaint 'switch_string'
  Le **- ?** le commutateur n’est pas valide pour **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- Aucune. Retourne une erreur si l’utilitaire **sqlmaint** échoue.  
+ Aucun. Retourne une erreur si l’utilitaire **sqlmaint** échoue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si cette procédure est appelée par un utilisateur connecté avec SQL Server l’authentification, les commutateurs **-U «***login_id***»** et **-P «***mot de passe***** » sont ajoutés à *switch_string* avant l’exécution. Si l’utilisateur a ouvert une session avec l’authentification Windows, *switch_string* est passé sans modification à **sqlmaint**.  
   
 ## <a name="permissions"></a>Autorisations  

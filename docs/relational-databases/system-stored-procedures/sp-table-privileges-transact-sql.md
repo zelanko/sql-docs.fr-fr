@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9c6391540f3da535eb709bba0a39bac11a99289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3024de2e45f8d4fe6b7a8521f24e9fe44424d5f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753980"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne la liste des autorisations de table (telles que INSERT, DELETE, UPDATE, SELECT, REFERENCES) pour la ou les tables spécifiées.  
   
@@ -72,7 +72,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|L'une des autorisations disponibles sur la table. Les autorisations sur les tables peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source de données si leur mise en œuvre est définie) :<br /><br /> SELECT = GRANTEE peut extraire des données pour une ou plusieurs colonnes.<br /><br /> INSERT = GRANTEE peut fournir des données à une ou plusieurs colonnes en rajoutant de nouvelles lignes.<br /><br /> UPDATE = GRANTEE peut modifier des données existantes dans une ou plusieurs colonnes.<br /><br /> DELETE = GRANTEE peut supprimer des lignes de la table.<br /><br /> REFERENCES = GRANTEE peut faire référence à une colonne d'une table étrangère dans une relation clé primaire/clé étrangère. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les relations clé primaire/clé étrangère sont définies grâce à des contraintes portant sur les tables.<br /><br /> Le rayon d'action qu'un privilège de table particulier accorde à l'utilisateur GRANTEE dépend de la source de données. Par exemple, le privilège UPDATE peut autoriser le GRANTEE à mettre à jour toutes les colonnes d'une table pour une source de données, et uniquement les colonnes pour lesquelles le GRANTOR possède le privilège UPDATE pour une autre source de données.|  
 |IS_GRANTABLE|**sysname**|Indique si le GRANTEE est autorisé ou non à accorder des autorisations à d'autres utilisateurs. Il y est souvent fait référence sous le terme « transmission des droits ». Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue (ou NULL) fait référence à une source de données à laquelle la « transmission des droits » ne s'applique pas.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La procédure stockée sp_table_privileges est équivalente à SQLTablePrivileges dans ODBC. Les résultats retournés sont classés par TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME et PRIVILEGE.  
   
 ## <a name="permissions"></a>Autorisations  

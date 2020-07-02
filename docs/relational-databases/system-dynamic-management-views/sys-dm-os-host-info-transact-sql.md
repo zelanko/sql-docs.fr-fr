@@ -19,15 +19,15 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a504416014d9e3a0cb25972ab624fc720a26bef3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754165"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Retourne une ligne qui affiche les informations sur la version du système d’exploitation.  
   
@@ -40,7 +40,7 @@ Retourne une ligne qui affiche les informations sur la version du système d’e
 |**host_sku**|**int**|ID de référence (SKU) Windows. Pour obtenir la liste des ID et des descriptions des références SKU, consultez [fonction GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Autorise la valeur NULL. <br> Pour Linux, retourne la valeur NULL. |  
 |**os_language_version**|**int**|Identificateur des paramètres régionaux (LCID) du système d'exploitation. Pour obtenir la liste des valeurs et des descriptions des LCID, consultez [ID de paramètres régionaux attribués par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur null.|  
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Cette vue est similaire à [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), qui ajoute des colonnes pour différencier Windows et Linux.
   
 ## <a name="security"></a>Sécurité  

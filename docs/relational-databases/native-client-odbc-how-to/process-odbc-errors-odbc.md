@@ -13,15 +13,15 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52c744a096ea55a98aa00a1471f816a93f59c6b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23d2a9c63416eee53e7f873b36ea9bd284af9b80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755663"
 ---
 # <a name="process-odbc-errors-odbc"></a>Traiter les erreurs ODBC (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Deux appels de fonctions ODBC peuvent être utilisés pour récupérer les messages ODBC : [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Pour obtenir les informations ODBC de base dans les champs de diagnostic **SQLState**, **pfNative** et **ErrorMessage**, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) jusqu’à ce que SQL_NO_DATA soit retourné. Pour chaque enregistrement de diagnostic, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) peut être appelé pour extraire les champs individuels. Tous les champs spécifiques au pilote doivent être extraits à l’aide de **SQLGetDiagField**.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "81300406"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour créer la procédure stockée utilisée par cet exemple.  
+ Exécutez la première [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () pour créer la procédure stockée utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Puis, exécutez le programme.  
   
- Exécutez la troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour supprimer la procédure stockée utilisée par cet exemple.  
+ Exécutez la troisième [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () pour supprimer la procédure stockée utilisée par cet exemple.  
   
 ### <a name="code"></a>Code  
   

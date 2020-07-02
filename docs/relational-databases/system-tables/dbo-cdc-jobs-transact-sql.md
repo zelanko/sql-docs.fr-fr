@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69c38cca8ab26691a155d11ad3afc88bdc2852d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a88683f29875047d412d7ae858dc9db47659a36f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755484"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stocke les paramètres de configuration de capture de données modifiées pour les travaux de capture et de nettoyage. Cette table est stockée dans la base de données **msdb**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82827318"
 |**propositions**|**bit**|Indicateur qui précise si le travail de capture doit être exécuté en continu (1) ou ponctuellement (0). Pour plus d’informations, consultez [sys. sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **Continuous** est valide uniquement pour les travaux de capture.|  
 |**PollingInterval**|**bigint**|Nombre de secondes entre les cycles d'analyse du journal.<br /><br /> **PollingInterval** est valide uniquement pour les travaux de capture.|  
 |**fixation**|**bigint**|Nombre de minutes pendant lesquelles les lignes modifiées doivent être conservées dans les tables de modifications.<br /><br /> la **rétention** est valide uniquement pour les travaux de nettoyage.|  
-|**durée**|**bigint**|Nombre maximal d'entrées qui peuvent être supprimées à l'aide d'une instruction unique lors du nettoyage.|  
+|**threshold**|**bigint**|Nombre maximal d'entrées qui peuvent être supprimées à l'aide d'une instruction unique lors du nettoyage.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   

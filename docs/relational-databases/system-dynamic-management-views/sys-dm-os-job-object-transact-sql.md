@@ -19,15 +19,15 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3fe2f22206d0882cafc8428d0fb9ccda22151ea2
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754156"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Retourne une ligne unique décrivant la configuration de l’objet de traitement qui gère le processus de SQL Server, ainsi que certaines statistiques de consommation des ressources au niveau de l’objet du travail. Retourne un jeu vide si SQL Server n’est pas en cours d’exécution dans un objet de traitement.
 

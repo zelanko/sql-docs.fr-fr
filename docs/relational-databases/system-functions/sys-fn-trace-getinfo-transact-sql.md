@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fce5e207ef1ca7f28c0d2088e9f23e701d860b7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754013"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur une trace spécifiée ou toutes les traces existantes.  
   
@@ -52,10 +52,10 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|Identificateur de la trace.|  
-|propriété|**int**|Propriété de la trace :<br /><br /> 1 = options de trace. Pour plus d’informations, @options consultez dans [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = nom de fichier<br /><br /> 3 = taille maxi<br /><br /> 4 = heure d'arrêt<br /><br /> 5 = statut de trace actuel. 0 = arrêtée. 1 = exécution.|  
+|propriété|**int**|Propriété de la trace :<br /><br /> 1 = options de trace. Pour plus d’informations, consultez @options dans [Sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = nom de fichier<br /><br /> 3 = taille maxi<br /><br /> 4 = heure d'arrêt<br /><br /> 5 = statut de trace actuel. 0 = arrêtée. 1 = exécution.|  
 |value|**sql_variant**|Informations sur la propriété de la trace spécifiée.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque l'identificateur d'une trace spécifique lui est passé, la fonction fn_trace_getinfo retourne les informations relatives à cette trace. Lorsqu'un identificateur non valide lui est passé, cette fonction renvoie un ensemble de lignes vide.  
   
  La fonction fn_trace_getinfo ajoute une extension .trc au nom de tous les fichiers de trace inclus dans son jeu de résultats. Pour plus d’informations sur la définition d’une trace, consultez [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Pour obtenir des informations similaires sur les filtres de trace, consultez [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  

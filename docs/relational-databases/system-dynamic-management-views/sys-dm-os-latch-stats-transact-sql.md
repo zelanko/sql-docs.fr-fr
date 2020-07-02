@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0500cca6b59ce1510d274dc0a8336ee2ac1db394
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754145"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne des informations sur toutes les attentes de verrou interne, organisées par classe. 
   
@@ -45,7 +45,7 @@ Retourne des informations sur toutes les attentes de verrou interne, organisées
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  sys.dm_os_latch_stats peut être utilisé pour identifier l'origine d'une contention de verrouillage en examinant le nombre d'attentes et les temps d'attente relatifs pour les différentes classes de verrous internes. Dans certaines situations, vous pouvez être en mesure de résoudre ou de réduire les problèmes de contention de verrouillage. Il peut toutefois arriver que vous soyez obligé de contacter le Support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 Vous pouvez réinitialiser le contenu de sys.dm_os_latch_stats en utilisant `DBCC SQLPERF` de la manière suivante :  

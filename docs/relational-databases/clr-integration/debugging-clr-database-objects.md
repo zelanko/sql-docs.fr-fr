@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a766dc473c1bef47a8104ae76c0e70bd8b31b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7af58a109a658a4af60ca49ad6eea401284782ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756309"
 ---
 # <a name="debugging-clr-database-objects"></a>Débogage d'objets de base de données CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le débogage d'objets [!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR dans la base de données. Les principaux atouts du débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont la facilité d'installation et d'utilisation, et l'intégration du débogueur SQL Server avec le débogueur Microsoft Visual Studio. En outre, le débogage fonctionne sur plusieurs langages. Les utilisateurs peuvent effectuer de façon transparente un pas à pas détaillé dans les objets CLR à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] et vice versa. Le débogueur Transact-SQL dans SQL Server Management Studio ne peut pas être utilisé pour déboguer des objets de base de données managés, mais vous pouvez déboguer les objets en utilisant les débogueurs de Visual Studio. Le débogage d'objets de base de données managés dans Visual Studio prend en charge toutes les fonctionnalités de débogage classiques, par exemple, les instructions "step into" et "step over" dans les routines qui s'exécutent sur le serveur. Les débogueurs peuvent définir des points d'arrêt, inspecter la pile des appels, inspecter les variables et modifier des valeurs de variables en cours de débogage. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le débogage ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
   
  Pour plus d’informations sur le débogage de code managé à l’aide de Visual Studio, consultez la rubrique «[débogage du code managé](https://go.microsoft.com/fwlink/?LinkId=120377)» dans la documentation de Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Autorisations et restrictions de débogage  
- Le débogage est une opération hautement privilégiée, et par conséquent, seuls les membres du rôle serveur fixe **sysadmin** sont autorisés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le faire dans.  
+ Le débogage est une opération hautement privilégiée, et par conséquent, seuls les membres du rôle serveur fixe **sysadmin** sont autorisés à le faire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Les restrictions suivantes s'appliquent dans le cadre du débogage :  
   

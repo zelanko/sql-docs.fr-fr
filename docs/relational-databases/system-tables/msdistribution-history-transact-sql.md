@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 979175ee4495f885f77600d530c57800ff69e624
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 45fb7bb9af3ece5c562412e3673dbeecd47d3b38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753917"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSdistribution_history** contient des lignes d’historique pour les agents de distribution associés au serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82805492"
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID de l'Agent de distribution.|  
 |**runstatus**|**int**|État d’exécution :<br /><br /> **1** = début.<br /><br /> **2** = opération réussie.<br /><br /> **3** = en cours.<br /><br /> **4** = inactif.<br /><br /> **5** = nouvelle tentative.<br /><br /> **6** = échec.|  
-|**start_time**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
+|**heure-début**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
 |**time**|**datetime**|Heure de consignation du message dans le journal|  
 |**duration**|**int**|Durée, en secondes, de la session de message.|  
 |**commentaires**|**nvarchar(4000)**|Texte du message.|  

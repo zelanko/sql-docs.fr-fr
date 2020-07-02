@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 62fa2db01ff17008a0b6a7cd4e5fd0a2bce71189
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 757712cd6e390c4369cea08aa7d0e59d727b7d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755844"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API de procédure stockée étendue)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
@@ -81,7 +81,7 @@ msglen
  *msgnum*  
  Numéro de message à 4 octets.  
   
- *class*  
+ *type*  
  Spécifie la gravité de l'erreur. Une gravité inférieure ou égale à 10 est considérée comme un message d'information.  
   
  *state*  
@@ -105,7 +105,7 @@ msglen
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction envoie des messages d'erreur ou d'information au client. Elle est appelée une fois pour chaque message à envoyer.  
   
  Les messages peuvent être envoyés au client avec **srv_sendmsg** dans n’importe quel ordre avant ou après que toutes les lignes (le cas échéant) ont été envoyées avec **srv_sendrow**. Tous les messages, s’il en existe, doivent être envoyés au client avant que l’état d’achèvement soit envoyé avec **srv_senddone**.  

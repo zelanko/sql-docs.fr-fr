@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756349"
 ---
 # <a name="supported-net-framework-libraries"></a>Bibliothèques .NET Framework prises en charge
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Avec le CLR (Common Language Runtime) hébergé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez créer des procédures stockées, des déclencheurs, des fonctions définies par l'utilisateur, des types définis par l'utilisateur et des agrégats définis par l'utilisateur en code managé. Avec les fonctionnalités présentes dans les bibliothèques de classes .NET Framework, vous avez accès à des classes prégénérées qui fournissent des fonctionnalités pour la manipulation de chaînes, des opérations de mathématique avancées, l'accès au fichier, le chiffrement, etc. Ces classes sont accessibles à partir de procédures stockées managées, de types définis par l'utilisateur, de déclencheurs, de fonctions définies par l'utilisateur ou d'agrégats définis par l'utilisateur, quels qu'ils soient.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>Bibliothèques non prises en charge  
  Il est toujours possible d'appeler des bibliothèques non prises en charge à partir de vos procédures stockées managées, déclencheurs, fonctions définies par l'utilisateur, types définis par l'utilisateur et agrégats définis par l'utilisateur. La bibliothèque non prise en charge doit d’abord être inscrite dans la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données, à l’aide de l’instruction **CREATe assembly** , avant de pouvoir être utilisée dans votre code. Toute bibliothèque non prise en charge qui est inscrite et exécutée sur le serveur doit être examinée et testée en termes de sécurité et de fiabilité.  
   
- Par exemple, l’espace de noms **System. DirectoryServices** n’est pas pris en charge. Vous devez inscrire l’assembly System. DirectoryServices. dll avec des autorisations **non sécurisées** avant de pouvoir l’appeler à partir de votre code. L’autorisation **unsafe** est nécessaire, car les classes de l’espace de noms **System. DirectoryServices** ne satisfont pas aux conditions requises pour **Safe** ou **EXTERNAL_ACCESS**. Pour plus d’informations, consultez [restrictions du modèle de programmation](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) de l’intégration du CLR et sécurité d’accès du code d’intégration du [CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Par exemple, l’espace de noms **System. DirectoryServices** n’est pas pris en charge. Vous devez inscrire l’assembly System.DirectoryServices.dll avec des autorisations **non sécurisées** avant de pouvoir l’appeler à partir de votre code. L’autorisation **unsafe** est nécessaire, car les classes de l’espace de noms **System. DirectoryServices** ne satisfont pas aux conditions requises pour **Safe** ou **EXTERNAL_ACCESS**. Pour plus d’informations, consultez [restrictions du modèle de programmation](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) de l’intégration du CLR et sécurité d’accès du code d’intégration du [CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac7a3e57c18f6ce4ea73415224aabc3843488cf9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755557"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Signale la configuration de la sécurité de connexion d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -66,7 +66,7 @@ xp_loginconfig ['config_name']
 |**name**|**sysname**|Valeur de configuration|  
 |**config value**|**sysname**|Paramètre de la valeur de configuration|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **xp_loginconfig** ne peut pas être utilisé pour définir des valeurs de configuration.  
   
  Pour définir le mode de connexion et le niveau d'audit, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

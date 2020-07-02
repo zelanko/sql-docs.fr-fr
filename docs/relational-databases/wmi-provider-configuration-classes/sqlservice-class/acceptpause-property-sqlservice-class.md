@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cacfdc65de94df31ab96559dc05888b85519bf59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02415dbcb9fb4d1b2ccbc4c93d505e292b813fd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753731"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Propriété AcceptPause (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtient la valeur de propriété booléenne qui spécifie si le service peut être suspendu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -35,13 +35,13 @@ object.AcceptPause [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *object*  
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur booléenne qui spécifie si le service peut être suspendu. **true** si le service peut être suspendu ou **false** si le service ne peut pas être suspendu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753608"
 ---
 # <a name="functions-on-nodes---local-name"></a>Fonctions sur les nœuds : local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retourne la partie locale du nom de *$arg* sous la forme d’une chaîne XS : String qui sera soit la chaîne de longueur nulle, soit la forme lexicale d’un XS : NCName. Si l'argument n'est pas spécifié, la valeur par défaut est le nœud du contexte.  
   
@@ -39,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nom du nœud dont la partie local-name sera extraite.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 -   Dans SQL Server, **FN : local-name ()** sans argument ne peut être utilisé que dans le contexte d’un prédicat dépendant du contexte. Autrement dit, elle ne peut être utilisée qu'à l'intérieur de crochets (`[ ]`).  
   
@@ -50,7 +50,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>R. Extraction du nom local d'un nœud spécifique  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Extraction du nom local d'un nœud spécifique  
  La requête suivante est spécifiée sur une instance XML non typée. L'expression de requête, `local-name(/ROOT[1])`, extrait la partie locale du nom du nœud spécifié.  
   
 ```  

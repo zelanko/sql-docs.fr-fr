@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fc72f98883762c873c214fab9330100c78941d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0b92dbc4840db8f264606a020ea247a9b11d9cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753998"
 ---
 # <a name="sp_syspolicy_repair_policy_automation-transact-sql"></a>sp_syspolicy_repair_policy_automation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Répare l'automatisation de stratégie dans la Gestion basée sur des stratégies. Par exemple, vous pouvez utiliser cette procédure stockée pour réparer des déclencheurs et des travaux associés à des stratégies qui sont configurées pour utiliser les modes d'évaluation « Selon la planification » ou « Sur modification ».  
   
@@ -44,14 +44,14 @@ sp_syspolicy_repair_policy_automation
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous devez exécuter sp_syspolicy_repair_policy_automation dans le contexte de la base de données système msdb.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement [!INCLUDE[ssDE](../../includes/ssde-md.md)]de l’instance du. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la création de la plupart des objets [!INCLUDE[ssDE](../../includes/ssde-md.md)]dans le. En raison de cette élévation possible des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs approuvés par le contrôle de la configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)]du.  
+>  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la création de la plupart des objets dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] . En raison de cette élévation possible des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs approuvés par le contrôle de la configuration du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant répare l'automatisation de stratégie.  

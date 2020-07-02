@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_attributes (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4af723da42b93b3a5a656c2f00f65d94ca1fb184
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 89a8a1f8ccd6458937de3266ec8c7bce58b73a17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754356"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne par composant de schéma XML qui est un attribut, **symbol_space** d' **un**.  
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<colonnes héritées>**|--|Hérite de [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**|--|Hérite de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_default_fixed**|**bit**|1 = La valeur par défaut est une valeur fixe. Cette valeur ne peut pas être substituée dans une instance XML.<br /><br /> 0 = La valeur par défaut n'est pas une valeur fixe pour l'attribut. (par défaut)|  
 |**must_be_qualified**|**bit**|1 = L'attribut doit être explicitement qualifié par l'espace de noms.<br /><br /> 0 = L'attribut peut être implicitement qualifié par l'espace de noms. (par défaut)|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|Valeur par défaut de l'attribut. NULL si une valeur par défaut n'est pas fournie.|  

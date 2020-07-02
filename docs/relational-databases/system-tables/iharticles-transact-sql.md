@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78d6dfdd7497bf8937e7f2c37e8460d883f43760
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753967"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table système **IHarticles** contient une ligne pour chaque article en cours de réplication à partir d’un serveur de publication non-SQL Server à l’aide du serveur de distribution actuel. Cette table est stockée dans la base de données de distribution.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82829892"
 |**tablespace_name**|**nvarchar(255)**|Identifie l'espace disque logique utilisé par la table d'enregistrement de l'article.|  
 |**objid**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement pour rendre la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) de la table **IHarticles** compatible avec la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilisée pour SQL Server Articles ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement pour rendre la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) de la table **IHarticles** compatible avec la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilisée pour SQL Server Articles ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**descriptive**|**nvarchar(255)**|Entrée descriptive de l’article.|  
+|**description**|**nvarchar(255)**|Entrée descriptive de l’article.|  
 |**publisher_status**|**int**|Est utilisé pour indiquer si la vue qui définit l’article publié a été définie en appelant [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) a été appelée.<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) n’a pas été appelé.|  
 |**article_view_owner**|**nvarchar(255)**|Propriétaire de l'objet de synchronisation sur le serveur de publication utilisé par l'Agent de lecture du journal.|  
 |**article_view**|**nvarchar(255)**|Objet de synchronisation sur le serveur de publication utilisé par l'Agent de lecture du journal.|  

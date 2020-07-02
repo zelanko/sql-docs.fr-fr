@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf1c5ea6db06072aff5075b42a1dde18ad00640
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755963"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (API de procédure stockée étendue)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
@@ -57,7 +57,7 @@ n
 ## <a name="returns"></a>Retours  
  Un **int** qui contient les indicateurs d’état du paramètre. Actuellement, il existe un seul indicateur: Si le bit 0 est défini sur 1, le paramètre est un paramètre de retour. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette routine retourne les indicateurs d'état pour un paramètre d'appel d'une procédure stockée distante.  
   
  Les paramètres contiennent les données passées entre les clients et l'application avec des procédures stockées distantes. Le client peut spécifier certains paramètres en tant que paramètres de retour. Ces paramètres de retour peuvent contenir des valeurs que l'application transmet au client.  

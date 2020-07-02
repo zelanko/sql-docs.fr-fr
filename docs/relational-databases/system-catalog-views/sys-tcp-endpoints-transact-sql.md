@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 493bf17904f65b265656e03299fe13f9ea3f6441
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa7c9997a8044181c5d60d1efd19c057fc433814
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754448"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne pour chaque point de terminaison TCP dans le système. Les points de terminaison décrits par **sys. tcp_endpoints** fournissent un objet pour accorder et révoquer le privilège de connexion. Les informations affichées concernant les ports et les adresses IP ne sont pas utilisées pour configurer les protocoles, et il est possible qu'elles ne correspondent pas à la configuration réelle des protocoles. Pour afficher les protocoles et les configurer, utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82821536"
 |**is_dynamic_port**|bit|1 = Numéro de port affecté de façon dynamique.<br /><br /> N'accepte pas la valeur NULL.|  
 |**ip_address**|**nvarchar (45)**|Adresse IP du port d'écoute, telle qu'elle est stipulée par la clause LISTENER_IP. Autorise la valeur NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour recueillir des informations sur les points de terminaison et les connexions, exécutez la requête suivante. Les points de terminaison sans connexion active ou sans connexion TCP s'affichent avec des valeurs NULL. Ajoutez la **WHERE** clause WHERE `WHERE des.session_id = @@SPID` pour renvoyer des informations sur la connexion actuelle.  
   
 ```  

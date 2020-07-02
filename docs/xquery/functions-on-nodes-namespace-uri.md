@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753591"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Fonctions sur les nœuds : namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Retourne l’URI d’espace de noms du QName spécifié dans *$arg* en tant que XS : String.  
   
@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Nom de nœud dont la partie URI d'espace de noms doit être extraite.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 -   Si l'argument est omis, la valeur par défaut est le nœud de contexte.  
   
@@ -52,7 +52,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>R. Extraction de l'URI d'espace de noms d'un nœud spécifique  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Extraction de l'URI d'espace de noms d'un nœud spécifique  
  La requête suivante est spécifiée sur une instance XML non typée. L'expression de requête, `namespace-uri(/ROOT[1])`, extrait la partie URI d'espace de noms du nœud spécifié.  
   
 ```  

@@ -18,15 +18,15 @@ ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7793291a565d50554180de10ab9df39a491f423a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 28341d5b79cf58d5b432d007cc7abe134da0d190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755570"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Met à jour la valeur d'une propriété étendue existante.  
   
@@ -82,7 +82,7 @@ sp_updateextendedproperty
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans le cadre de la spécification des propriétés étendues, les objets d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données sont classés en trois niveaux (0, 1 et 2). Le niveau 0 est le niveau le plus élevé et est composé d'objets relevant de l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux. Les références à un objet d'un niveau donné doivent être qualifiées par les noms des objets de niveau supérieur possédant ou contenant l'objet en question.  
   
  Étant donné un *property_name* et une *valeur*valides, si tous les types et noms d’objet sont NULL, la propriété mise à jour appartient à la base de données active.  

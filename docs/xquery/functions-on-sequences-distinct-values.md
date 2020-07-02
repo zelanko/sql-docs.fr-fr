@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 1a82bfef35b0d8aec39f7f539f65e6ff1fe8f3ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753573"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Fonctions sur les séquences : distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Supprime les valeurs en double de la séquence spécifiée par *$arg*. Si *$arg* est une séquence vide, la fonction retourne la séquence vide.  
   
@@ -39,7 +39,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Séquence de valeurs atomiques.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Tous les types des valeurs atomisées passées à des **valeurs distinctes ()** doivent être des sous-types du même type de base. Les types de base acceptés sont les types qui prennent en charge l’opération **EQ** . Ces types incluent les trois types numériques de base intégrés, les types de base date/heure et les types xs:string (chaîne), xs:boolean (booléen) et xdt:untypedAtomic (atomique non typé). Les valeurs de type xdt:untypedAtomic sont converties en type xs:string. En cas de mélange de ces types ou si des valeurs d'autres types sont transmis, une erreur statique se produit.  
   
  Le résultat de **distinct-values ()** reçoit le type de base des types transmis, tels que XS : String dans le cas de xdt : untypedAtomic, avec la cardinalité d’origine. Si l'entrée est vide (valeur empty) de façon statique, « empty » est alors implicite et une erreur statique est émise.  
@@ -49,7 +49,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>R. Utilisation de la fonction distinct-values() pour supprimer les valeurs en double d'une séquence  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Utilisation de la fonction distinct-values() pour supprimer les valeurs en double d'une séquence  
  Dans cet exemple, une instance XML contenant des numéros de téléphone est assignée à une variable de type **XML** . Le XQuery spécifié par rapport à cette variable utilise la fonction **distinct-values ()** pour compiler une liste de numéros de téléphone qui ne contiennent pas de doublons.  
   
 ```  

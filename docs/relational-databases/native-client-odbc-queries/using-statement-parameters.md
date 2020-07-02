@@ -19,15 +19,15 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4768cc911a1044a4e916718ef164f4f09fc6a28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755647"
 ---
 # <a name="using-statement-parameters"></a>Utilisation de paramètres d'instruction
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Un paramètre est une variable dans une instruction SQL qui peut permettre à une application ODBC d'effectuer les actions suivantes :  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81297895"
   
 -   améliorer l'interaction de l'utilisateur lors de la construction de critères de requête ;  
   
--   Gérer les données **Text**, **ntext**et **image** et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les types de données C spécifiques.  
+-   Gérer les données **Text**, **ntext**et **image** et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données C spécifiques.  
   
  Par exemple, une table de **pièces** contient des colonnes nommées **partid**, **Description**et **Price**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
   

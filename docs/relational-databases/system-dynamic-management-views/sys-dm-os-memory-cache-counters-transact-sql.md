@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8adc560f2078795844c073b4c0c59aa1df404a2e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 20bda8c759d17443d56c2ce046f6c7d279e76f5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754119"
 ---
 # <a name="sysdm_os_memory_cache_counters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne un instantané de l'état d'un cache dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys. dm_os_memory_cache_counters** fournit des informations au moment de l’exécution sur les entrées du cache allouées, leur utilisation et la source de mémoire pour les entrées du cache.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "82820794"
 |**pages_kb**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Spécifie la taille, en kilo-octets, de la mémoire allouée dans le cache. N'accepte pas la valeur NULL.|  
 |**multi_pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Taille, en kilo-octets, de la mémoire multipage allouée. Il s'agit de la quantité de mémoire allouée à l'aide de l'allocateur de pages multiples du nœud de mémoire. Cette mémoire est allouée en dehors du pool de mémoires tampons ; elle tire parti de l'allocateur virtuel des nœuds mémoire. N'accepte pas la valeur NULL.|  
 |**pages_in_use_kb**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Spécifie la taille, en kilo-octets, de la mémoire allouée et en cours d'utilisation dans le cache. Autorise la valeur NULL.  Les valeurs pour les objets de type `USERSTORE_<*>` ne font pas l'objet d'un suivi.  NULL est retourné pour chacune d'entre elles.|  
-|**single_pages_in_use_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Taille, en kilo-octets, de la mémoire monopage utilisée. Autorise la valeur NULL. Ces informations ne sont pas suivies pour les objets de type USERSTORE_ \< * > et ces valeurs sont null.|  
-|**multi_pages_in_use_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Taille, en kilo-octets, de la mémoire multipage utilisée. Accepte la valeur NULL. Ces informations ne sont pas suivies pour les objets de type USERSTORE_ \< * >, et ces valeurs sont null.|  
+|**single_pages_in_use_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Taille, en kilo-octets, de la mémoire monopage utilisée. Autorise la valeur NULL. Ces informations ne sont pas suivies pour les objets de type USERSTORE_ \<*> et ces valeurs sont null.|  
+|**multi_pages_in_use_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Taille, en kilo-octets, de la mémoire multipage utilisée. Accepte la valeur NULL. Ces informations ne sont pas suivies pour les objets de type USERSTORE_ \<*> , et ces valeurs sont null.|  
 |**entries_count**|**bigint**|Indique le nombre d'entrées dans le cache. N'accepte pas la valeur NULL.|  
 |**entries_in_use_count**|**bigint**|Indique le nombre d'entrées dans le cache en cours d'utilisation. N'accepte pas la valeur NULL.|  
 |**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  

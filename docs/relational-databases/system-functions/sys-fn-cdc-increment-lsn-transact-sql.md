@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 770954f8479a97c5dcf96714a44ac025ccc55e04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755603"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne le numéro séquentiel dans le journal suivant dans la séquence basée sur le numéro séquentiel dans le journal spécifié.  
   
@@ -48,7 +48,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Type de retour  
  **binary(10)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La valeur LSN retournée par la fonction est toujours supérieure à la valeur spécifiée, et aucune valeur LSN n'existe entre les deux valeurs.  
   
  Pour interroger systématiquement un flux de données de modification dans le temps, vous pouvez répéter périodiquement l'appel de fonction de requête, en spécifiant chaque fois un nouvel intervalle de requête pour délimiter les modifications retournées dans la requête. Pour aider à s'assurer de ne perdre aucune donnée, la limite supérieure de la requête précédente est souvent utilisée pour générer la limite inférieure de la requête suivante. Étant donné que l'intervalle de requête est un intervalle fermé, la nouvelle limite inférieure doit être plus grande que la limite supérieure précédente, mais assez petite pour garantir qu'aucune modification ne comporte de valeur LSN qui se trouve entre cette valeur et l'ancienne limite supérieure. La fonction sys.fn_cdc_increment_lsn est utilisée pour obtenir cette valeur.  

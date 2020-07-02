@@ -20,15 +20,15 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754471"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne une ligne pour chaque principal de sécurité d'une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -48,9 +48,9 @@ ms.locfileid: "80873115"
 |**authentication_type_desc**|**nvarchar(60)**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Description du type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> NONE : aucune authentification<br />INSTANCE : authentification de l’instance<br />BASE de données : authentification de base de données<br />WINDOWS : authentification Windows<br />EXTERNE : authentification Azure Active Directory|  
 |**default_language_name**|**sysname**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Signifie la langue par défaut de ce principal.|  
 |**default_language_lcid**|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Signifie le LCID par défaut de ce principal.|  
-|**allow_encrypted_value_modifications**|**bit**|**S’applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ultérieures.<br /><br /> Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées à l’aide de Always Encrypted, entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées à l’aide de Always Encrypted, entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF. |      
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les propriétés *PasswordLastSetTime* sont disponibles sur toutes les configurations prises en charge de SQL Server, mais les autres propriétés sont uniquement disponibles lorsque SQL Server s’exécute sur Windows Server 2003 ou version ultérieure et que CHECK_POLICY et CHECK_EXPIRATION sont activés. Pour plus d’informations, consultez [stratégie de mot de passe](../../relational-databases/security/password-policy.md) .
 Les valeurs de la principal_id peuvent être réutilisées dans le cas où les principaux ont été supprimés et qu’il n’est donc pas garanti qu’elles soient toujours plus nombreuses.
   
@@ -95,7 +95,7 @@ JOIN sys.schemas AS s
  La requête suivante énumère les autorisations accordées ou refusées explicitement aux principaux de base de données.  
   
 > [!IMPORTANT]  
->  Les autorisations des rôles de base de données fixes n' `sys.database_permissions`apparaissent pas dans. Par conséquent, les principaux de base de données peuvent avoir des autorisations supplémentaires non répertoriées ici.  
+>  Les autorisations des rôles de base de données fixes n’apparaissent pas dans `sys.database_permissions` . Par conséquent, les principaux de base de données peuvent avoir des autorisations supplémentaires non répertoriées ici.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -106,7 +106,7 @@ JOIN sys.database_permissions AS pe
 ```  
   
 ### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D : énumération des autorisations sur les objets de schéma dans une base de données  
- La requête suivante `sys.database_principals` joint et `sys.database_permissions` à `sys.objects` et `sys.schemas` pour répertorier les autorisations accordées ou refusées à des objets de schéma spécifiques.  
+ La requête suivante joint `sys.database_principals` et `sys.database_permissions` à `sys.objects` et `sys.schemas` pour répertorier les autorisations accordées ou refusées à des objets de schéma spécifiques.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

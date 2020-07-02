@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a135dfd0f633858d828a476899094cb2f0409ed
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 612097238e75fd1f811050b2bba2dfb773695797
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754407"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   L’affichage catalogue **sys. traces** contient les traces en cours d’exécution sur le système. Cette vue est destinée à remplacer la fonction **fn_trace_getinfo** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "82821212"
 |**buffer_size**|**int**|Taille de chaque tampon (Ko).|  
 |**file_position**|**bigint**|Dernière position d'un fichier de trace. Cette valeur est NULL lorsque la trace représente une trace d'ensemble de lignes.|  
 |**reader_spid**|**int**|ID de session de lecteur de trace d'ensemble de lignes. Cette valeur est NULL lorsque la trace est un fichier de trace.|  
-|**start_time**|**datetime**|Heure de début de trace.|  
+|**heure-début**|**datetime**|Heure de début de trace.|  
 |**last_event_time**|**datetime**|Heure du dernier déclenchement d'événement.|  
 |**event_count**|**bigint**|Nombre total d'événements qui se sont produits.|  
 |**dropped_event_count**|**int**|Nombre total d'événements supprimés.|  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5af8ef828e6d05fc221a410692b057f9fc5054ed
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 384cfd63e613b419f87cac7ca60454ddd8a3c90c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754210"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne pour chaque nœud de la configuration de l'instance de cluster de basculement. Si l’instance actuelle est une instance de cluster de basculement, elle retourne la liste des nœuds sur lesquels cette instance de cluster de basculement (anciennement « Virtual Server ») a été définie. Si l'instance de serveur active n'est pas une instance de cluster de basculement, elle retourne un ensemble de lignes vides.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82820882"
 |is_current_owner|bit|1 signifie que ce nœud est le propriétaire actuel de la ressource du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque le clustering de basculement est activé, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être exécutée sur n'importe quel nœud du cluster de basculement faisant partie de la configuration de l'instance de cluster de basculement (serveur virtuel) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > **Remarque :** Cette vue remplace la fonction fn_virtualservernodes, qui sera dépréciée dans une version ultérieure.  

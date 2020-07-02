@@ -13,15 +13,15 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 957a46b2a93013305e8642d4b311c22c9ec16d6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df8b2579ea846663a36cec4290d67fa407468282
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755675"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gestion des colonnes texte et image - Utiliser des paramètres de données à l’exécution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>Pour utiliser des paramètres text, ntext ou image de données en cours d'exécution  
@@ -49,11 +49,11 @@ ms.locfileid: "81298837"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour créer la table utilisée par l’exemple.  
+ Exécutez la première [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () pour créer la table utilisée par l’exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Exécutez ensuite le programme.  
   
- Exécutez la troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour supprimer la table utilisée par l’exemple.  
+ Exécutez la troisième [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () pour supprimer la table utilisée par l’exemple.  
   
 ```  
 use AdventureWorks  

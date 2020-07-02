@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753604"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Fonctions sur des valeurs booléennes : fonction not 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retourne TRUE si la valeur booléenne effective de *$arg* est false, et retourne false si la valeur booléenne effective de *$arg* a la valeur true.  
   
@@ -44,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>R. Utilisation de la fonction XQuery not () pour rechercher des modèles de produit dont les descriptions de catalogue n’incluent pas l' \<Specifications> élément.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Utilisation de la fonction XQuery not () pour rechercher des modèles de produit dont les descriptions de catalogue n’incluent pas l' \<Specifications> élément.  
  La requête suivante construit du code XML qui contient des ID de modèle de produit pour les modèles de produit dont les descriptions de catalogue n’incluent pas l' `Specifications` élément <>.  
   
 ```  

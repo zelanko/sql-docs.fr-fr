@@ -21,15 +21,15 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 159390f64b00aa8bd72478552e37ceaaf26566bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754229"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations détaillées sur les index manquants, à l'exclusion des index spatiaux.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82829433"
 |**equality_columns**|**nvarchar(4000)**|Liste de colonnes, séparées par des virgules, qui contribuent aux prédicats d'égalité au format :<br /><br /> *table. colonne*  = *constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Liste de colonnes, séparées par des virgules, qui contribuent aux prédicats d'inégalité, par exemple, les prédicats au format :<br /><br /> *table. colonne*  >  *constant_value*<br /><br /> Tout opérateur de comparaison autre que "=" exprime l'inégalité.|  
 |**included_columns**|**nvarchar(4000)**|Liste de colonnes, séparées par des virgules, requises comme colonnes de couverture pour la requête. Pour plus d’informations sur les colonnes de couverture ou les colonnes incluses, consultez [créer des index avec des colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Pour les index optimisés en mémoire (à la fois les hachages et les non-cluster optimisés en mémoire), ignorez **included_columns**. Toutes les commandes de la table sont incluses dans chaque index optimisé en mémoire.|  
-|**gestion**|**nvarchar(4000)**|Nom de la table dans laquelle est situé l'index manquant.|  
+|**instruction**|**nvarchar(4000)**|Nom de la table dans laquelle est situé l'index manquant.|  
   
 ## <a name="remarks"></a>Remarques  
  Les informations retournées par **sys.dm_db_missing_index_details** sont mises à jour lorsqu'une requête est optimisée par l'optimiseur de requête, et elles ne sont pas conservées de manière permanente. Les informations sur les index manquants sont simplement conservées jusqu'au redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les administrateurs de base de données doivent effectuer régulièrement des copies de sauvegarde des informations sur les index manquants s'ils souhaitent les conserver après le recyclage du serveur.  
