@@ -22,15 +22,15 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6660bc43a6db9437ba628c0856760aac4ccd52f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940220"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787143"
 ---
-# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. Database\_tuning_options\_automatique (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. Database \_ \_ tuning_options automatique (Transact-SQL)
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Retourne les options de réglage automatique pour cette base de données.  
 
@@ -42,7 +42,7 @@ ms.locfileid: "67940220"
 |**actual_state**|**smallint**|Indique le mode d’opération de l’option de réglage automatique.<br />0 = désactivé<br />1 = activé|  
 |**actual_state_desc**|**nvarchar(60)**|Description textuelle du mode d’opération réel de l’option d’optimisation automatique.<br />OFF<br />ACTIVÉ|  
 |**reason**|**smallint**|Indique pourquoi les États réels et souhaités sont différents.<br />2 = DÉSACTIVÉ<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar(60)**|Description textuelle de la raison pour laquelle les États réels et souhaités sont différents.<br />Disabled = l’option est désactivée par le système<br />QUERY_STORE_OFF = Magasin des requêtes est désactivé<br />QUERY_STORE_READ_ONLY = Magasin des requêtes est en mode lecture seule<br />NOT_SUPPORTED = disponible uniquement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’édition Enterprise| 
+|**reason_desc**|**nvarchar(60)**|Description textuelle de la raison pour laquelle les États réels et souhaités sont différents.<br />Disabled = l’option est désactivée par le système<br />QUERY_STORE_OFF = Magasin des requêtes est désactivé<br />QUERY_STORE_READ_ONLY = Magasin des requêtes est en mode lecture seule<br />NOT_SUPPORTED = disponible uniquement dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition Enterprise| 
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation `VIEW DATABASE STATE`.  

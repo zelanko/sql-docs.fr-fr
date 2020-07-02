@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787008"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche des informations sur les dépendances des objets de base de données, par exemple les vues et procédures qui dépendent d'une table ou vue, et les tables et vues dont dépend la vue ou procédure. Les références à des objets qui se situent en dehors de la base de données active ne sont pas signalées.  
   
@@ -63,7 +63,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_depends** affiche deux jeux de résultats.  
   
- Le jeu de résultats suivant affiche les objets dont dépend l' * \< objet>* .  
+ Le jeu de résultats suivant affiche les objets dont *\<object>* dépend.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ sp_depends [ @objname = ] '<object>'
 |**sélectionné**|**nvarchar(8)**|Indique si l'objet est utilisé dans une instruction SELECT.|  
 |**column**|**sysname**|Colonne ou paramètre sur lequel repose la dépendance.|  
   
- Le jeu de résultats suivant affiche les objets qui dépendent de l' * \< objet>*.  
+ Le jeu de résultats suivant affiche les objets qui dépendent de *\<object>* .  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

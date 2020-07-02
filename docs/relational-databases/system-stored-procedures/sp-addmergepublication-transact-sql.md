@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09e3c873ecdab8f967fb454854ae66b3a367ab87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786245"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée une nouvelle publication de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données publiée.  
   
@@ -226,7 +226,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addmergepublication** est utilisé dans la réplication de fusion.  
   
  Pour répertorier les objets de publication sur le Active Directory à l’aide du paramètre ** \@ add_to_active_directory** , l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet doit déjà être créé dans le Active Directory.  

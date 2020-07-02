@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d9176624f661cb012fe8ed3124a1b868ec72195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b68a7497dc3ed64eaf1b9047d1489e38f99be6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786957"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Supprime une unité de base de données ou une unité de sauvegarde d’une instance du [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , en supprimant l’entrée de **Master. dbo. sysdevices**.  
+  Supprime une unité de base de données ou une unité de sauvegarde d’une instance du [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , en supprimant l’entrée de **master.dbo.sysappareils**.  
    
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @logicalname = ] 'device'`Nom logique de l’unité de base de données ou de l’unité de sauvegarde, comme indiqué dans **Master.dbo.sysdevices.Name**. l' *unité* est de **type sysname**, sans valeur par défaut.  
+`[ @logicalname = ] 'device'`Nom logique de l’unité de base de données ou de l’unité de sauvegarde, comme indiqué dans **master.dbo.sysDevices.Name**. l' *unité* est de **type sysname**, sans valeur par défaut.  
   
 `[ @delfile = ] 'delfile'`Spécifie si le fichier de l’unité de sauvegarde physique doit être supprimé. *delfile* est **de type varchar (7)**. S’il est spécifié en tant que **delfile**, le fichier de disque physique de l’unité de sauvegarde est supprimé.  
   

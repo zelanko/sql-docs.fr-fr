@@ -20,31 +20,31 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787135"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Contient des statistiques pour les [!INCLUDE[ssSDS](../../includes/sssds-md.md)] événements de **connectivité** de base de données, fournissant une vue d’ensemble des succès et des échecs de connexion de base de données. Pour plus d’informations sur les événements de connectivité, consultez types d’événements dans [sys. event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 |Statistique|Type|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nom de la base de données.|  
-|**start_time**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. L'heure est toujours un multiple de 5 minutes. Par exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. **End_time** est toujours exactement 5 minutes plus tard que le **start_time** correspondant dans la même ligne.|  
+|**heure-début**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. L'heure est toujours un multiple de 5 minutes. Par exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**heure-fin**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. **End_time** est toujours exactement 5 minutes plus tard que le **start_time** correspondant dans la même ligne.|  
 |**success_count**|**int**|Nombre de connexions réussies.|  
 |**total_failure_count**|**int**|Nombre total d'échecs de connexion. Il s’agit de la somme des **connection_failure_count**, **terminated_connection_count**et **throttled_connection_count**, et n’inclut pas les événements de blocage.|  
 |**connection_failure_count**|**int**|Nombre d'échecs de connexion.|  
 |**terminated_connection_count**|**int**|**_Applicable uniquement à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions terminées.|  
 |**throttled_connection_count**|**int**|**_Applicable uniquement à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions limitées.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ### <a name="event-aggregation"></a>Agrégation d'événements
 
@@ -52,7 +52,7 @@ ms.locfileid: "82828523"
   
  Par exemple, si un utilisateur ne parvient pas à se connecter à la base de données Database1 sept fois entre 11h00 et 11h05 le 5/2/2012 (UTC), ces informations sont disponibles dans une ligne de cette vue :  
   
-|**database_name**|**start_time**|**end_time**|**success_count**|**total_failure_count**|**connection_failure_count**|**terminated_connection_count**|**throttled_connection_count**|  
+|**database_name**|**heure-début**|**heure-fin**|**success_count**|**total_failure_count**|**connection_failure_count**|**terminated_connection_count**|**throttled_connection_count**|  
 |------------------------|---------------------|-------------------|------------------------|-------------------------------|------------------------------------|---------------------------------------|--------------------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   

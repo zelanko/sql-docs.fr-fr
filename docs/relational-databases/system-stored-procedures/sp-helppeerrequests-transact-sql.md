@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aa3fc831b81827d230274b95bf3cbfbe0d5a560
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d86eeabda755e5b6546f3f5d800f1a35ba40e7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786160"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur toutes les demandes d’état reçues par les participants dans une topologie de réplication d’égal à égal, où ces demandes ont été lancées en exécutant [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) dans une base de données publiée dans la topologie. Cette procédure stockée est exécutée sur la base de données de publication d'un serveur de publication participant à une topologie de réplication d'égal à égal. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
@@ -49,12 +49,12 @@ sp_helppeerrequests [ @publication = ] 'publication'
 |**id**|**int**|Identifie une demande.|  
 |**édition**|**sysname**|Nom de la publication pour laquelle la demande d'état a été envoyée.|  
 |**sent_date**|**datetime**|Date et heure d'envoi de la demande d'état.|  
-|**descriptive**|**nvarchar(4000)**|Informations définies par l'utilisateur que vous pouvez utiliser pour identifier les demandes d'état.|  
+|**description**|**nvarchar(4000)**|Informations définies par l'utilisateur que vous pouvez utiliser pour identifier les demandes d'état.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helppeerrequests** est utilisé dans la réplication transactionnelle d’égal à égal.  
   
  **sp_helppeerrequests** est utilisé lors de la restauration d’une base de données publiée dans une topologie d’égal à égal.  

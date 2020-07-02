@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e858279730f4a9d50eaf9d00804ab7c3125b2efc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786294"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne l’ordinal de colonne de la colonne spécifiée telle qu’elle apparaît dans la [table de modifications](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associée à l’instance de capture spécifiée.  
   
@@ -51,7 +51,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ## <a name="return-type"></a>Type de retour  
  **int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction est utilisée pour identifier la position ordinale d'une colonne capturée dans le masque de mise à jour de capture des données modifiées. Il est principalement utilisé conjointement avec la fonction [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) pour extraire des informations du masque de mise à jour lors de l’interrogation des données modifiées.  
   
 ## <a name="permissions"></a>Autorisations  

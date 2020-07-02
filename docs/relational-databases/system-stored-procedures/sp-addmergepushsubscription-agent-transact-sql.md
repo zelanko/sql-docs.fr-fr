@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f29d2f67f50ecda28b0675ed6e716afd390ca899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786257"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute un nouveau travail d'Agent permettant de planifier la synchronisation d'un abonnement par envoi de données (push) à une publication de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -103,7 +103,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**2**|À la demande|  
 |**4**|Quotidien|  
 |**8**|Hebdomadaire|  
-|**16bits**|Mensuelle|  
+|**16**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
 |**128**|Périodique|  
@@ -136,7 +136,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**8**|Quatrième|  
-|**16bits**|Dernier|  
+|**16**|Dernier|  
 |NULL (par défaut)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  

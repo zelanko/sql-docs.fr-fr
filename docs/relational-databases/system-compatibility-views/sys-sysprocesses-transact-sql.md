@@ -1,5 +1,5 @@
 ---
-title: sys. sysprocesses (Transact-SQL) | Microsoft Docs
+title: Processus de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787042"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient des informations sur les processus en cours d'exécution sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il peut s'agir de processus client ou système. Pour accéder à sysprocesses, vous devez vous trouver dans le contexte de base de données master ou utiliser le nom en trois parties master.dbo.sysprocesses.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78866367"
 |last_batch|**datetime**|Dernière exécution par un processus client d'un appel de procédure stockée distante ou d'une instruction EXECUTE.|  
 |ecid|**smallint**|ID du contexte d'exécution utilisé pour identifier de façon unique les sous-threads exécutés pour le compte d'un seul et même processus.|  
 |open_tran|**smallint**|Nombre de transactions en cours pour le processus.|  
-|status|**nchar(30)**|État de l'ID processus. Les valeurs possibles sont les suivantes :<br /><br /> **dormant** réinitialisation de la session. =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **Running** = la session exécute un ou plusieurs lots. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = la session exécute une tâche en arrière-plan, telle qu’une détection de blocage.<br /><br /> **Rollback** = la session a une restauration de transaction en cours.<br /><br /> **Pending** = la session attend qu’un thread de travail soit disponible.<br /><br /> **Runnable** = la tâche de la session est dans la file d’attente exécutable d’un planificateur en attendant d’obtenir un quantum de temps.<br /><br /> **Spinloop** = la tâche de la session attend qu’un SpinLock soit libéré.<br /><br /> **Suspended** = la session attend la fin d’un événement, tel que des e/s.|  
+|status|**nchar(30)**|État de l'ID processus. Les valeurs possibles sont les suivantes :<br /><br /> **dormant**  =  dormant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialisation de la session.<br /><br /> **Running** = la session exécute un ou plusieurs lots. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = la session exécute une tâche en arrière-plan, telle qu’une détection de blocage.<br /><br /> **Rollback** = la session a une restauration de transaction en cours.<br /><br /> **Pending** = la session attend qu’un thread de travail soit disponible.<br /><br /> **Runnable** = la tâche de la session est dans la file d’attente exécutable d’un planificateur en attendant d’obtenir un quantum de temps.<br /><br /> **Spinloop** = la tâche de la session attend qu’un SpinLock soit libéré.<br /><br /> **Suspended** = la session attend la fin d’un événement, tel que des e/s.|  
 |sid|**binary(86)**|GUID (Globally Unique Identifier) de l'utilisateur.|  
 |hostname|**nchar(128)**|Nom de la station de travail.|  
 |program_name|**nchar(128)**|Nom du logiciel d'application.|  
@@ -69,9 +69,9 @@ ms.locfileid: "78866367"
 |stmt_start|**int**|Décalage de début de l'instruction SQL en cours pour la colonne sql_handle spécifiée.|  
 |stmt_end|**int**|Décalage de fin de l'instruction SQL actuelle pour la colonne sql_handle spécifiée.<br /><br /> -1 = L'instruction en cours s'exécute jusqu'à la fin des résultats renvoyés par la fonction fn_get_sql pour la colonne sql_handle spécifiée.|  
 |request_id|**int**|ID de la demande. Utilisé pour identifier les requêtes qui s'exécutent dans une session spécifique.|
-|page_resource |**Binary(8** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si `waitresource` la colonne contient une page. |  
+|page_resource |**Binary(8** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si la `waitresource` colonne contient une page. |  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si un utilisateur dispose de l'autorisation VIEW SERVER STATE sur le serveur, il voit toutes les sessions en cours d'exécution dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; sinon, il ne voit que la session actuelle.  
   
 ## <a name="see-also"></a>Voir aussi  

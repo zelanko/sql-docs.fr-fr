@@ -16,19 +16,19 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31fff0767ecbbbf41349b3f0dd431eb440fa7d77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1fae8e86b680289fd458924a757bdb1f239b266
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785170"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>Interfaces (OLE DB) de SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose des interfaces aux consommateurs souhaitant accéder aux données sur un ou plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ordinateurs exécutant. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client est un fournisseur conforme à la version 2,0 de OLE DB.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose des interfaces aux consommateurs souhaitant accéder aux données sur un ou plusieurs ordinateurs exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client est un fournisseur conforme à la version 2,0 de OLE DB.  
   
- Cette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] référence de programmation du fournisseur OLE DB Native Client ne documente pas toutes les interfaces et méthodes OLE DB, mais uniquement les interfaces et les méthodes qui présentent un comportement spécifique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au fournisseur lors de l’utilisation du fournisseur OLE DB Native Client.  
+ Cette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] référence de programmation du fournisseur OLE DB Native Client ne documente pas toutes les interfaces et méthodes OLE DB, mais uniquement les interfaces et les méthodes qui présentent un comportement spécifique au fournisseur lors de l’utilisation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client.  
   
  Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
   

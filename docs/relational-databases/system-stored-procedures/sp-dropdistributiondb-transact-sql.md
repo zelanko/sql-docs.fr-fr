@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786965"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Supprime une base de données de distribution. Supprime les fichiers physiques utilisés par la base de données s'ils ne sont pas utilisés par une autre base de données. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
@@ -43,7 +43,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_dropdistributiondb** est utilisé dans tous les types de réplications.  
   
  Cette procédure stockée doit être exécutée avant de supprimer le serveur de distribution en exécutant **sp_dropdistributor**.  

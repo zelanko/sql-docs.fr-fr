@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787016"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations sur toutes les pages de données qui se trouvent actuellement dans le pool de mémoires tampons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le résultat de cet affichage peut être utilisé pour déterminer la répartition des pages de base de données dans le pool de mémoires tampons par base de données, objet ou type. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], cette vue de gestion dynamique retourne également des informations sur les pages de données dans le fichier d'extension du pool de mémoires tampons. Pour plus d’informations, consultez [extension du pool de mémoires tampons](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
@@ -63,8 +63,8 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 |À partir|À|Activé|Relation|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|plusieurs-à-un|  
-|sys.dm_os_buffer_descriptors|\<userdb au terme>. sys. allocation_units|allocation_unit_id|plusieurs-à-un|  
-|sys.dm_os_buffer_descriptors|\<userdb au terme>. sys. database_files|file_id|plusieurs-à-un|  
+|sys.dm_os_buffer_descriptors|\<userdb>. sys. allocation_units|allocation_unit_id|plusieurs-à-un|  
+|sys.dm_os_buffer_descriptors|\<userdb>. sys. database_files|file_id|plusieurs-à-un|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|plusieurs-à-un|  
   
 ## <a name="examples"></a>Exemples  

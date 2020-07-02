@@ -16,15 +16,15 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90ddf4e4617e1182e50979f051fa6ee2657166ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84debd3c8625922b658ce38ba3b62d21dee6f470
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785336"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne l'état d'une opération s'exécutant de manière asynchrone.  
   
@@ -108,7 +108,7 @@ HRESULT GetStatus(
  E_FAIL  
  Une erreur spécifique au fournisseur s'est produite.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La méthode **ISSAsynchStatus::GetStatus** se comporte exactement comme la méthode **IDBAsynchStatus::GetStatus**, à la différence près que si l’initialisation d’un objet source de données est abandonnée, E_UNEXPECTED est retourné au lieu de DB_E_CANCELED (pourtant, [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
   
  Si l'ensemble de lignes est initialisé ou rempli de manière asynchrone, il doit prendre en charge cette méthode.  

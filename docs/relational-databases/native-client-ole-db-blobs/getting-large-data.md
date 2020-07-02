@@ -16,17 +16,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785565"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  En général, les consommateurs doivent isoler le code qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un Client natif OLE DB objet de stockage du fournisseur à partir d’un autre code qui gère les données non référencées par le biais d’un pointeur d’interface **ISequentialStream** .  
+  En général, les consommateurs doivent isoler le code qui crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client natif OLE DB objet de stockage du fournisseur à partir d’un autre code qui gère les données non référencées par le biais d’un pointeur d’interface **ISequentialStream** .  
   
  Cette rubrique aborde les fonctionnalités disponibles avec les fonctions suivantes :  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81303620"
   
  Si la propriété DBPROP_ACCESSORDER (dans le groupe de propriétés rowset) est définie sur l’une des valeurs DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, le consommateur ne doit extraire qu’une seule ligne de données dans un appel à la méthode **GetNextRows** , car les données BLOB ne sont pas mises en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ne récupère pas les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volumineuses à partir de jusqu’à ce qu’il les ait demandées par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ne récupère pas les données volumineuses à partir de jusqu’à ce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu’il les ait demandées par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  

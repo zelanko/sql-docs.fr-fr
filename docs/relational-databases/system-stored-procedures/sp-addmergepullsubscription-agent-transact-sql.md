@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786233"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute un nouveau travail d'Agent permettant de planifier la synchronisation d'un abonnement par extraction de données (pull) à une publication de fusion. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
@@ -155,7 +155,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**2**|À la demande|  
 |**4**|Quotidien|  
 |**8**|Hebdomadaire|  
-|**16bits**|Mensuelle|  
+|**16**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
 |**128**|Périodique|  
@@ -188,7 +188,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**8**|Quatrième|  
-|**16bits**|Dernier|  
+|**16**|Dernier|  
 |NULL (par défaut)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Indique que la synchronisation Web est activée. *use_web_sync* est de **bit**, avec 0 comme valeur par défaut. **1** indique que l’abonnement par extraction peut être synchronisé via Internet à l’aide du protocole http.  
   
-`[ @internet_url = ] 'internet_url'`Est l’emplacement de l’écouteur de réplication (REPLISAPI. DLL) pour la synchronisation Web. *internet_url* est de type **nvarchar (260)**, avec NULL comme valeur par défaut. *internet_url* est une URL complète, au format `http://server.domain.com/directory/replisapi.dll` . Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
+`[ @internet_url = ] 'internet_url'`Est l’emplacement de l’écouteur de réplication (REPLISAPI.DLL) pour la synchronisation Web. *internet_url* est de type **nvarchar (260)**, avec NULL comme valeur par défaut. *internet_url* est une URL complète, au format `http://server.domain.com/directory/replisapi.dll` . Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
   
 `[ @internet_login = ] 'internet_login'`Nom de connexion utilisé par le Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web à l’aide de l’authentification HTTP de base. *internet_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
@@ -288,7 +288,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addmergepullsubscription_agent** est utilisé dans la réplication de fusion et utilise des fonctionnalités similaires à [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Pour obtenir un exemple de la façon de spécifier correctement les paramètres de sécurité lors de l’exécution de **sp_addmergepullsubscription_agent**, consultez [créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md).  

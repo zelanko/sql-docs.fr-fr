@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c12e117682fe2e5286a6f4a1c650878ae0827010
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c31df96682d2d1413094572a2b1fab94cfbe54b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786174"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute ou modifie un seuil d'avertissement pour une métrique de performance de mise en miroir spécifiée.  
 
@@ -91,10 +91,10 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|Mesure de performance|Seuil d'avertissement|Indique si l'avertissement est activé.|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|Transaction non envoyée la plus ancienne|30 minutes|Yes|  
-|2|Journal non envoyé|10 000 Ko|Yes|  
-|3|Journal non restauré|10 000 Ko|Yes|  
-|4|Charge de validation par le serveur miroir|1 000 millisecondes|No|  
+|1|Transaction non envoyée la plus ancienne|30 minutes|Oui|  
+|2|Journal non envoyé|10 000 Ko|Oui|  
+|3|Journal non restauré|10 000 Ko|Oui|  
+|4|Charge de validation par le serveur miroir|1 000 millisecondes|Non|  
 |5|Période de rétention|8 heures|Oui|  
   
 ```  
