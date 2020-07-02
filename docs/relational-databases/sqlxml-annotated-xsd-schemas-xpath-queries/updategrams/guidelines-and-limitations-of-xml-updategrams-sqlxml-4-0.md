@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f94a0dc61b5b8278193ea84beea750383bf3bbc6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: fb774fd8dbb05b52e4f57fcf78d4ecd4c923ccb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790651"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Règles et limitations des codes de mise à jour XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Tenez compte des éléments suivants lorsque vous utilisez des codes de mise à jour (updategrams) XML :  
   
 -   Si vous utilisez un mise à jour pour une opération d’insertion avec une seule paire de **\<before>** blocs et **\<after>** , le **\<before>** bloc peut être omis. À l’inverse, dans le cas d’une opération de suppression, le **\<after>** bloc peut être omis.  

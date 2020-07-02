@@ -35,15 +35,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305a167d233ee5a11348b0cc8a050dc2f61548ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790602"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertion de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Un mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans le **\<after>** bloc mais pas dans le **\<before>** bloc correspondant. Dans ce cas, le mise à jour insère l’enregistrement dans le **\<after>** bloc dans la base de données.  
   
  Voici le format du code de mise à jour pour une opération d'insertion :  
