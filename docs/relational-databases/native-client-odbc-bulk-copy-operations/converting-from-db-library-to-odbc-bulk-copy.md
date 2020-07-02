@@ -17,17 +17,17 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0944552bdf8db7ef97a594887a8e84e2ed834a72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760738"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  La conversion d’un programme de copie en bloc DB-Library vers ODBC est simple, car les fonctions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de copie en bloc prises en charge par le pilote ODBC native client sont similaires aux fonctions de copie en bloc de DB-Library, avec les exceptions suivantes :  
+  La conversion d’un programme de copie en bloc DB-Library vers ODBC est simple, car les fonctions de copie en bloc prises en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client sont similaires aux fonctions de copie en bloc de DB-Library, avec les exceptions suivantes :  
   
 -   Les applications de bibliothèque de bases de données passent un pointeur à une structure DBPROCESS comme premier paramètre de fonctions de copie en bloc. Dans les applications ODBC, le pointeur DBPROCESS est remplacé par un handle de connexion ODBC.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73785190"
     |-------------------------|--------------------------------|-------------------------|  
     |Valeurs NULL fournies|0|-1 (SQL_NULL_DATA)|  
     |Données de variables fournies|-1|-10 (SQL_VARLEN_DATA)|  
-    |Caractère de longueur nulle ou chaîne binaire|NA|0|  
+    |Caractère de longueur nulle ou chaîne binaire|N/D|0|  
   
      Dans DB-Library, une valeur *varlen* de-1 indique que les données de longueur variable sont fournies, ce qui, dans le *cbData* ODBC, est interprété comme signifiant que seules les valeurs NULL sont fournies. Modifiez les spécifications *VARLEN* DB-Library de-1 en SQL_VARLEN_DATA et toutes les spécifications *varlen* de 0 à SQL_NULL_DATA.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785190"
   
     -   chaînes de caractères **DateTime** et **smalldatetime** dans n’importe quel format pris en charge par la fonction **DBConvert** de la bibliothèque DB-Library.  
   
-    -   Lorsque la case **utiliser les paramètres internationaux** est cochée sous l’onglet **options** de la bibliothèque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de bases de l’utilitaire réseau client, les fonctions de copie en bloc de la bibliothèque de bases de la bibliothèque acceptent également les dates au format de date régional défini pour les paramètres régionaux du registre de l’ordinateur client.  
+    -   Lorsque la case **utiliser les paramètres internationaux** est cochée sous l’onglet **options** de la bibliothèque de bases de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitaire réseau client, les fonctions de copie en bloc de la bibliothèque de bases de la bibliothèque acceptent également les dates au format de date régional défini pour les paramètres régionaux du registre de l’ordinateur client.  
   
      Les fonctions de copie en bloc de DB-Library n’acceptent pas les formats **DateTime** et **smalldatetime** ODBC.  
   

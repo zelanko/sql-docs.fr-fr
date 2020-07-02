@@ -17,23 +17,23 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0cb9751940489513f939ab8ee52728c6b75e925
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01bb3af0f1c8e28cfe6002286ed6a2094dff1a50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760602"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose l’interface **ISequentialStream** pour prendre en charge l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accès des consommateurs aux types de données **ntext**, **Text**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** et XML en tant qu’objets BLOB (Binary Large Object). La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose l’interface **ISequentialStream** pour prendre en charge l’accès des consommateurs aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données **ntext**, **Text**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** et XML en tant qu’objets BLOB (Binary Large Object). La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
   
  Pour obtenir un exemple illustrant cette fonctionnalité, consultez [Définir des données volumineuses &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client peut utiliser une interface **IStorage** implémentée par le consommateur lorsque le consommateur fournit le pointeur d’interface dans un accesseur lié pour la modification des données.  
   
- Pour les types de données de valeur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] élevée, le fournisseur de OLE DB Native Client vérifie les hypothèses de taille de type dans les interfaces **IRowset** et DDL. Les colonnes avec des types de données **varchar**, **nvarchar**et **varbinary** dont la taille maximale est définie sur illimité sont représentées en tant que IsLong via les ensembles de lignes de schéma et les interfaces qui retournent des types de données de colonne.  
+ Pour les types de données de valeur élevée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client vérifie les hypothèses de taille de type dans les interfaces **IROWSET** et DDL. Les colonnes avec des types de données **varchar**, **nvarchar**et **varbinary** dont la taille maximale est définie sur illimité sont représentées en tant que IsLong via les ensembles de lignes de schéma et les interfaces qui retournent des types de données de colonne.  
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose les types **varchar (max)**, **varbinary (max)** et **nvarchar (max)** comme DBTYPE_STR, DBTYPE_BYTES et DBTYPE_WSTR respectivement.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81297649"
   
 -   La longueur des données présentées par un objet de stockage implémenté par le consommateur doit être connue du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client lorsque l’accesseur de ligne qui fait référence à l’objet de stockage est créé. Le consommateur doit lier un indicateur de longueur dans la structure DBBINDING utilisée pour la création de l'accesseur.  
   
--   Si une ligne contient plus d’une valeur de données volumineuse et que DBPROP_ACCESSORDER n’est pas DBPROPVAL_AO_RANDOM, le consommateur doit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un ensemble de lignes pris en charge par le curseur du fournisseur Native Client OLE DB pour récupérer des données de ligne ou traiter toutes les valeurs de données volumineuses avant de récupérer d’autres valeurs de ligne. Si DBPROP_ACCESSORDER est DBPROPVAL_AO_RANDOM, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client met en cache tous les types de données XML en tant qu’objets BLOB (Binary Large Object) afin qu’ils soient accessibles dans n’importe quel ordre.  
+-   Si une ligne contient plus d’une valeur de données volumineuse et que DBPROP_ACCESSORDER n’est pas DBPROPVAL_AO_RANDOM, le consommateur doit utiliser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes pris en charge par le curseur du fournisseur Native Client OLE DB pour récupérer des données de ligne ou traiter toutes les valeurs de données volumineuses avant de récupérer d’autres valeurs de ligne. Si DBPROP_ACCESSORDER est DBPROPVAL_AO_RANDOM, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client met en cache tous les types de données XML en tant qu’objets BLOB (Binary Large Object) afin qu’ils soient accessibles dans n’importe quel ordre.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

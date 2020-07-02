@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e6aa2b9a506f0ad485c4a0eb4dc16960ae44d2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bd255e174a02463d1cdc05c047f97c1befba1ceb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762579"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSagent_profiles** contient une ligne pour chaque profil d’agent de réplication défini. Cette table est stockée dans la base de données **msdb** .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82832341"
 |**profile_name**|**sysname**|Nom de profil unique pour le type d'agent.|  
 |**agent_type**|**int**|Type d'Agent:<br /><br /> **1** = agent d’instantané<br /><br /> **2** = agent de lecture du journal<br /><br /> **3** = agent de distribution<br /><br /> **4** = agent de fusion<br /><br /> **9** = agent de lecture de la file d’attente|  
 |**type**|**int**|Type de profil :<br /><br /> **0** = système**1** = personnalisé|  
-|**descriptive**|**nvarchar (3000)**|Description du profil.|  
+|**description**|**nvarchar (3000)**|Description du profil.|  
 |**def_profile**|**bit**|Indique si ce profil représente le profil par défaut pour ce type d'agent.|  
   
 ## <a name="see-also"></a>Voir aussi  

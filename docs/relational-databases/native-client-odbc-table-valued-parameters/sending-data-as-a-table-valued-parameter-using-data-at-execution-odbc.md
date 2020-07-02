@@ -13,15 +13,15 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b07341dbf3beba66ee7ad6e7cc4861142792fa0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2df587de4be458e520f8486b1e81e00916e6df8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760681"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cela est similaire à la procédure [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mais utilise des données en cours d’exécution pour le paramètre table.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81297827"
   
  Lorsque SQLPutData est appelé pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être égal à 0. Lorsque toutes les lignes de la valeur de table ont été passées, SQLPutData est appelé avec une valeur *DataPtr* de 0.  
   
-## <a name="prerequisite"></a>Prérequis  
+## <a name="prerequisite"></a>Configuration requise  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```sql
@@ -187,7 +187,7 @@ from @Items
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre que vous pouvez utiliser la diffusion en continu de ligne, une ligne par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP. exe pour charger des données dans une base de données.  
+ Cet exemple montre que vous pouvez utiliser la diffusion en continu de ligne, une ligne par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
   
@@ -375,7 +375,7 @@ EXIT:
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre que vous pouvez utiliser la diffusion en continu de lignes, plusieurs lignes par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP. exe pour charger des données dans une base de données.  
+ Cet exemple montre que vous pouvez utiliser la diffusion en continu de lignes, plusieurs lignes par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
   

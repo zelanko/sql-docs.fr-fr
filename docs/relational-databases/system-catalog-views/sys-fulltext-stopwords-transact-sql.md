@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1123009c0bfd73b1012476d30b6d633ee038f18c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760378"
 ---
 # <a name="sysfulltext_stopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contient une ligne par mot vide pour toutes les listes de mots vides de la base de données.  
  
@@ -39,7 +39,7 @@ ms.locfileid: "68070451"
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID de la liste de mots vides auquel **stopword** appartient. Cet ID est unique dans la base de données.|  
 |**mot vide**|**nvarchar (64)**|Terme à considérer pour une correspondance de mot vide.|  
-|**sous**|**sysname**|Valeur de l’alias dans [sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)correspondant à la valeur de l’identificateur de paramètres régionaux (**LCID**) ou est la représentation sous forme de chaîne du LCID numérique.|  
+|**langue**|**sysname**|Valeur de l’alias dans [sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)correspondant à la valeur de l’identificateur de paramètres régionaux (**LCID**) ou est la représentation sous forme de chaîne du LCID numérique.|  
 |**language_id**|**int**|LCID utilisé pour l'analyse lexicale.|  
   
 ## <a name="permissions"></a>Autorisations  
