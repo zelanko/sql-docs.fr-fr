@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 929e363228b30889e163519786d802dd4caee049
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b22b60f005ab7e982491685db0ff59dd2c73346
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813095"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Créer un attribut de lien (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut de lien quand vous souhaitez que les utilisateurs entrent un lien hypertexte comme valeur d’attribut, par exemple, `https://www.contoso.com`.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "73728494"
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
+|Statut|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Nom|Nom de l'attribut.|  
-|Nom d’affichage|Nom de l’attribut.|  
+|Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
 |Types et propriétés|Informations sur le type et le type de données de l’attribut.|  
@@ -93,7 +93,7 @@ ms.locfileid: "73728494"
   
 12. Sélectionnez éventuellement **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-13. Cliquez sur **Save**.  
+13. Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

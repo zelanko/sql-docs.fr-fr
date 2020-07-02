@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 115cb0011be22e482e6d8d8e032d8db21246bbd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bb4fd11dca83f752e778b55117d098e3e070d441
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813499"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Modifier le nom d'un groupe d'attributs (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'un groupe d'attributs.  
   

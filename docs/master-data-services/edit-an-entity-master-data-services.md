@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484fdb93ac51f353de97333d115aed4591715e9a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813323"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modifier une entité (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier une entité.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73729299"
   
      Pour plus d’informations, consultez [compression des données](../relational-databases/data-compression/data-compression.md) .  
   
-## <a name="status"></a>État  
+## <a name="status"></a>Statut  
  La colonne d’état de la grille affiche l’état de l’opération sur l’entité. Lorsque vous cliquez sur **Enregistrer l’entité**, l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.  
   
  ![Icône de mise à jour de l’État](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État")  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d6656052194b23b0107641d3c59ba8a84544731
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813155"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>Valider ou envoyer un ensemble de modifications (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Un ensemble de modifications regroupe des modifications en attente, qui portent sur les données de référence. Si les modifications apportées à une entité ne nécessitent pas l’approbation de l’administrateur, vous pouvez valider l’ensemble de modifications. Si les modifications apportées à une entité nécessitent l’approbation de l’administrateur, vous pouvez envoyer l’ensemble de modifications pour approbation.  
   

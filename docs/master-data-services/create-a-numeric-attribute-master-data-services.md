@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 608bdd69396f63fdd0389b43e27bacbab0e763f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71a959c2eec351ee80a0a52ae228dd51347d1be9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813059"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Créer un attribut numérique (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut numérique lorsque vous souhaitez que les utilisateurs entrent un nombre comme valeur d'attribut.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "73729589"
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
+|Statut|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Nom|Nom de l'attribut.|  
-|Nom d’affichage|Nom de l’attribut.|  
+|Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
 |Types et propriétés|Informations sur le type et le type de données de l’attribut.|  
@@ -95,7 +95,7 @@ ms.locfileid: "73729589"
   
 13. Sélectionnez éventuellement **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-14. Cliquez sur **Save**.  
+14. Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ae4fa3f7249c604acaf9df1387282a4d459dce
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813178"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Zone fonctionnelle Gestion des versions (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans la zone fonctionnelle Gestion des versions, les administrateurs peuvent valider les données, examiner et inverser des transactions, créer des copies avec version des données et marquer des versions de données pour les systèmes d'abonnement. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   

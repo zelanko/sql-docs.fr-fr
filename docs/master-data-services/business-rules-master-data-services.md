@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f0e8c072ebda3cd314858bfa7aac2885267f1e86
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 229ac06d8d37922f5ca0abca4f5d327137e18499
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813663"
 ---
 # <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une règle d'entreprise est une règle qui vous permet de vérifier la qualité et l'exactitude de vos données de référence. Vous pouvez utiliser une règle d'entreprise pour mettre à jour automatiquement vos données, envoyer un message électronique ou démarrer un processus ou un flux de travail d'entreprise.  
   

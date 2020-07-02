@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f560af1a8163fae126ea3b6c63cd6b1be48afb7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813783"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  
   

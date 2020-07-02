@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1e4c41bd4edd55fea00d20d89c7d1b944a868d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813199"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Zone fonctionnelle Autorisations d'accès (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans la zone fonctionnelle Autorisations d'accès, les administrateurs peuvent accorder une autorisation d'accès à des zones fonctionnelles, à des attributs (sous l'onglet Modèles), ainsi qu'à des membres (sous l'onglet Membres de hiérarchie). Les chevauchements d’autorisations sont résolus afin de déterminer l’autorisation dont dispose un utilisateur sur chaque valeur d’attribut individuelle.  
   

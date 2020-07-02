@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b366c29412a3a698e793d3153784a8d1450bc81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813058"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Créer une hiérarchie explicite (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une hiérarchie explicite lorsque vous avez besoin d'une hiérarchie déséquilibrée dans laquelle les membres peuvent exister à tous les niveaux. Les hiérarchies explicites contiennent des membres d'une entité unique.  
   
@@ -53,17 +53,17 @@ ms.locfileid: "73729519"
   
 7.  Décochez éventuellement la case **Hiérarchie obligatoire** pour créer la hiérarchie comme une hiérarchie non obligatoire. Pour plus d’informations sur les types de hiérarchies, consultez [Hiérarchies explicites &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
   
-8.  Cliquez sur **Save**.  
+8.  Cliquez sur **Enregistrer**.  
   
 ## <a name="grid-columns"></a>Colonnes de la grille  
  Pour chaque hiérarchie explicite que vous créez, une ligne comportant sept colonnes est ajoutée à la grille. Ces différentes colonnes sont décrites ci-après.  
   
 |Nom|Description|  
 |----------|-----------------|  
-|État|État de l’entité. Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.<br /><br /> ![Icône de mise à jour de l’État](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une entité, l’image suivante apparaît.<br /><br /> ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK")|  
+|Statut|État de l’entité. Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.<br /><br /> ![Icône de mise à jour de l’État](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une entité, l’image suivante apparaît.<br /><br /> ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK")|  
 |Nom|Nom de hiérarchie explicite.|  
 |Est obligatoire|Indique si la hiérarchie explicite est ou non obligatoire.|  
-|Créé par|Nom de l’utilisateur ayant créé la hiérarchie explicite.|  
+|Created By|Nom de l’utilisateur ayant créé la hiérarchie explicite.|  
 |Créée le|Date et heure de création de la hiérarchie explicite.|  
 |Mise à jour par|Nom de l’utilisateur ayant effectué la dernière mise à jour de la hiérarchie explicite.|  
 |Updated On|Date et heure de la dernière mise à jour de la hiérarchie explicite.|  

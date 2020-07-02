@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8ac756143790e8d6c9494489438157ee44c02d06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6faf2fc9b6b4ac3b8004771df79af34a3d255fa8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813345"
 ---
 # <a name="delete-a-version-master-data-services"></a>Supprimer une version (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une version lorsque vous êtes sûr de ne plus avoir besoin des données de référence qui lui sont associées. Après avoir supprimé une version, vous ne pouvez pas récupérer les données de référence associées.  
   

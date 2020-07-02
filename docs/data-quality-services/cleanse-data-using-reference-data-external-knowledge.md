@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 199eac229d752cb019ec027124e83c85ead0176c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813892"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>Nettoyer les données à l’aide de données de référence de connaissances (externes)-Data Quality Services (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique décrit comment nettoyer les données à l'aide de la connaissance des fournisseurs de données de référence. Toutes les étapes d’exécution du nettoyage restent les mêmes pour nettoyer vos données à l’aide de la connaissance des fournisseurs de données de référence, comme expliqué dans [Nettoyer des données à l’aide de la base de connaissance DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Cette rubrique fournit des informations spécifiques sur le nettoyage des données à l’aide du service des données de référence dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
 
@@ -71,20 +71,20 @@ ms.locfileid: "75557904"
     > [!NOTE]  
     >  Sur la page **Nettoyer** , DQS affiche les informations sur les domaines joints au service des données de référence de deux façons :  
     >   
-    >  -   Un message s’affiche sous le bouton **Démarrer** : «Domains \<domaine1>, \<domaine2>,... \<Les>s de domaine sont nettoyés à l’aide du fournisseur de services de données de référence.» Dans cet exemple, le message suivant s’affiche : « La vérification d’adresse de domaine est nettoyée à l’aide du fournisseur de services de données de référence. »  
+    >  -   Un message s’affiche sous le bouton **Démarrer** : «domaines \<Domain1> , \<Domain2> ,... \<DomainN> sont nettoyés à l’aide du fournisseur de services de données de référence.» Dans cet exemple, le message suivant s’affiche : « La vérification d’adresse de domaine est nettoyée à l’aide du fournisseur de services de données de référence. »  
     > -   Une icône, ![domaine est attachée à RDS](../data-quality-services/media/dqs-rdsindicator.JPG "Domaine attaché au RDS"), s’affiche dans la zone du **profileur** par rapport aux domaines attachés au fournisseur de services de données de référence. Dans cet exemple, l'icône sera affichée sur le domaine composite **Contrôle d'adresse** .  
   
 4.  Dans la page **Gérer et afficher les résultats** , vérifiez les valeurs de domaine. Le service de données de référence peut afficher plusieurs suggestions, si elles sont disponibles, pour une valeur en fonction du nombre maximal de suggestions spécifiées dans la zone **Candidats suggérés** lors du mappage du domaine au service des données de référence. Par exemple, deux suggestions s'affichent pour l'adresse américaine suivante :  
   
      **Valeur d’origine :**  
   
-    |Adresse|City|State|Zip|  
+    |Adresse|City|State (État)|Zip|  
     |------------------|----------|-----------|---------|  
     |1 MSFT way|Redmond||98052|  
   
      **Valeurs suggérées :**  
   
-    |Adresse|City|State|Zip|  
+    |Adresse|City|State (État)|Zip|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO Box 1|Redmond|WA|98073|  

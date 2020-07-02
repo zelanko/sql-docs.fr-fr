@@ -2,7 +2,7 @@
 title: Installation et configuration
 description: Apprenez à installer Master Data Services sur un ordinateur Windows Server 2012 R2, à configurer la base de données et le site Web MDS et à déployer les exemples de modèles et de données.
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796280"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834770"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cet article explique comment installer [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur un ordinateur Windows Server 2012 R2, configurer la base de données et le site web MDS, et déployer les exemples de modèles et de données. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) permet à votre organisation de gérer une version approuvée des données.   
   
@@ -209,7 +209,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
-     For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+Pour plus d’informations sur les paramètres de la page Configuration Web, consultez [Page Configuration Web &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
  Vous pouvez également utiliser [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] pour spécifier d’autres paramètres pour les applications et services web associés à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Par exemple, vous pouvez spécifier la fréquence à laquelle les données sont chargées ou des e-mails de validation envoyés. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
@@ -217,9 +217,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
  Les trois packages d’exemples de modèles suivants sont inclus avec  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Ces exemples de modèles incluent des données. **L’emplacement par défaut de ces packages est %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
-  
 -   customer_en.pkg  
-  
 -   product_en.pkg  
   
  Déployez ces packages à l’aide de l’outil MDSModelDeploy. L’emplacement par défaut de l’outil MDSModelDeploy est *lecteur*\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration.  
@@ -248,28 +246,26 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
     >  `MDSModelDeploy listservices`  
     >   
     >  La première valeur de service dans la liste des valeurs renvoyées est celle que vous avez spécifiée pour déployer un modèle.  
-    >
+
     > [!NOTE]
     > Pour en savoir plus sur les informations de métadonnées des exemples de modèles, reportez-vous au fichier lisez-moi disponible à l’emplacement « c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration ».
-    >
    
      **Pour déployer l’exemple de modèle chartofaccounts_en.pkg**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
      **Pour déployer l’exemple de modèle customer_en.pkg**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
      **Pour déployer l’exemple de modèle product_en.pkg**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
-  
     ```  
   
      Lorsqu’un modèle est déployé avec succès, le message **Opération MDSModelDeploy terminée** s’affiche.  

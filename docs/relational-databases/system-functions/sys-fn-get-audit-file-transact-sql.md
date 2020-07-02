@@ -3,7 +3,7 @@ title: sys. fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813902"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
 
   Retourne des informations à partir d'un fichier d'audit créé par un audit du serveur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     Cet argument doit inclure à la fois un chemin d'accès (lettre de lecteur ou partage réseau) et un nom de fichier qui peut inclure un caractère générique. Un seul astérisque (*) peut être utilisé pour collecter plusieurs fichiers à partir d’un jeu de fichiers d’audit. Par exemple :  
   
-    -   ** \< chemin d' \\ \* accès>** : collecte tous les fichiers d’audit à l’emplacement spécifié.  
+    -   **\<path>\\\***-Collecter tous les fichiers d’audit à l’emplacement spécifié.  
   
-    -   ** \< chemin d’accès> \ LOGINSAUDIT_ {GUID}***-collecter tous les fichiers d’audit qui ont le nom et la paire de GUID spécifiés.  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID}***-collecter tous les fichiers d’audit qui ont le nom et la paire GUID spécifiés.  
   
-    -   ** \< chemin d’accès> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -collecte d’un fichier d’audit spécifique.  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -collecter un fichier d’audit spécifique.  
   
  - **Azure SQL Database**:
  
     Cet argument est utilisé pour spécifier une URL d’objet BLOB (y compris le point de terminaison de stockage et le conteneur). Bien qu’il ne prenne pas en charge un caractère générique astérisque, vous pouvez utiliser un préfixe de nom de fichier partiel (au lieu du nom complet de l’objet BLOB) pour collecter plusieurs fichiers (objets BLOB) qui commencent par ce préfixe. Par exemple :
  
-      - ** \< Storage_endpoint \> / \< conteneur \> / \< ServerName \> / \< databasename \> - / ** collecte tous les fichiers d’audit (objets BLOB) pour la base de données spécifique.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-collecte tous les fichiers d’audit (objets BLOB) pour la base de données spécifique.    
       
-      - ** \< Storage_endpoint \> / \< conteneur \> / \< ServerName \> / \< databasename \> / \< AuditName \> / \< CreationDate \> / \< filename \> . Xel** -collecte un fichier d’audit spécifique (objet BLOB).
+      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . Xel** -collecte un fichier d’audit spécifique (objet BLOB).
   
 > [!NOTE]  
 >  Le passage d'un chemin d'accès sans modèle de nom de fichier génère une erreur.  
@@ -116,7 +116,7 @@ fn_get_audit_file ( file_pattern,
 | session_id | **smallint** | ID de la session au cours de laquelle l'événement s'est produit. N'accepte pas la valeur NULL. |  
 | session_server_principal_name | **sysname** | Principal de serveur pour la session. Autorise la valeur NULL. |  
 | statement | **nvarchar(4000)** | Instruction TSQL si elle existe. Autorise la valeur NULL. Retourne NULL si non applicable. |  
-| succeeded | **bit** | Indique si l’action qui a déclenché l’événement a réussi. N'accepte pas la valeur NULL. Pour tous les événements autres que les événements de connexion, cet argument signale uniquement le succès ou l'échec de la vérification des autorisations, mais n'indique rien sur l'opération.<br /> 1 = succès<br /> 0 = échec |
+| réussi | **bit** | Indique si l’action qui a déclenché l’événement a réussi. N'accepte pas la valeur NULL. Pour tous les événements autres que les événements de connexion, cet argument signale uniquement le succès ou l'échec de la vérification des autorisations, mais n'indique rien sur l'opération.<br /> 1 = succès<br /> 0 = échec |
 | target_database_principal_id | **int** | Principal de base de données sur lequel l’opération GRANT/DENY/REVOKE est effectuée. N'accepte pas la valeur NULL. Retourne 0 si non applicable. |  
 | target_database_principal_name | **sysname** | Utilisateur cible de l’action. Autorise la valeur NULL. Retourne NULL si non applicable. |  
 | target_server_principal_id | **int** | Principal de serveur sur lequel l’opération GRANT/DENY/REVOKE est effectuée. N'accepte pas la valeur NULL. Retourne 0 si non applicable. |  
@@ -127,7 +127,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, Azure SQL DB et Managed instance<br /><br /> Utilisé pour enregistrer les informations supplémentaires que l’utilisateur souhaite enregistrer dans le journal d’audit à l’aide de la procédure stockée **sp_audit_write** . |  
 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si l’argument *file_pattern* passé à **fn_get_audit_file** fait référence à un chemin d’accès ou à un fichier qui n’existe pas, ou si le fichier n’est pas un fichier d’audit, le message d’erreur **MSG_INVALID_AUDIT_FILE** est retourné.  
   
 ## <a name="permissions"></a>Autorisations

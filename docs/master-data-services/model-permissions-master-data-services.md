@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813241"
 ---
 # <a name="model-permissions-master-data-services"></a>Autorisations de modèle (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Les autorisations de modèle s'appliquent à l'ensemble des entités, attributs, groupes d'attributs, hiérarchies dérivées, hiérarchies explicites et collections qui existent dans le modèle. Les autorisations affectées au modèle peuvent être remplacées pour tout objet individuel.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "73728968"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lire**|L’utilisateur peut lire des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
+|**Lecture**|L’utilisateur peut lire des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
 |**Créer**|L’utilisateur peut créer des membres et affecter des valeurs d’attribut lors de la création.|  
-|**Mise à jour**|L’utilisateur peut mettre à jour des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
+|**Update**|L’utilisateur peut mettre à jour des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
 |**Supprimer**|L’utilisateur peut supprimer des membres.|  
 |**Deny**|Tous les accès au modèle sont refusés.|  
 |**Administrateur**|Autorisation d’administrateur sur le modèle. L’autorisation d’administrateur est disponible uniquement au niveau du modèle.|  

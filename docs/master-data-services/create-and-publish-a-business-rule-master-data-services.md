@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813036"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Créer et publier une règle d'entreprise (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une règle d'entreprise pour garantir l'exactitude de vos données de référence. Après avoir créé une règle, vous devez la publier avant de pouvoir l'appliquer aux données.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84796394"
   
 5.  Dans la liste **Types de membres** , sélectionnez un type de membre auquel appliquer la règle d’entreprise.  
   
-6.  Cliquez sur **Add**.  
+6.  Cliquez sur **Ajouter**.  
   
 7.  Dans la zone **Nom** , tapez un nom de règle d’entreprise.  
   

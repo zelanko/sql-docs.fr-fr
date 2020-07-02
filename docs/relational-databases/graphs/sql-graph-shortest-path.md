@@ -1,7 +1,7 @@
 ---
 title: Chemin d’accès le plus rapide (SQL Graph) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753254"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834633"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ L’ordre des chemins d’accès des graphiques fait référence à l’ordre de
 ## <a name="graph-path-aggregate-functions"></a>Fonctions d’agrégation du chemin Graph
 Étant donné que les nœuds et les bords impliqués dans un modèle de longueur arbitraire retournent une collection (de nœuds et d’arêtes parcourues dans ce chemin d’accès), les utilisateurs ne peuvent pas projeter les attributs directement à l’aide de la syntaxe TableName. AttributeName conventionnelle. Pour les requêtes dans lesquelles il est nécessaire de projeter des valeurs d’attribut à partir des tables de nœuds ou d’arêtes intermédiaires, dans le chemin parcouru, utilisez les fonctions d’agrégation de chemin de graphique suivantes : STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX et COUNT. La syntaxe générale permettant d’utiliser ces fonctions d’agrégation dans la clause SELECT est la suivante :
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ Cette fonction retourne la somme des valeurs d’attribut node/Edge fournies ou 
 ### <a name="count"></a>COUNT
 Cette fonction retourne le nombre de valeurs non null de l’attribut node/Edge souhaité dans le chemin d’accès. La fonction COUNT prend en charge l' \* opérateur «» avec un nœud ou un alias de table Edge. Sans l’alias de la table node ou Edge, l’utilisation de \* est ambiguë et génère une erreur.
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>AVG
 Retourne la moyenne des valeurs d’attribut node/Edge fournies ou de l’expression qui apparaissait dans le chemin parcouru.
@@ -120,7 +121,7 @@ Pour les exemples de requêtes indiqués ici, nous allons utiliser les tables no
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  Rechercher le chemin le plus rapide entre 2 personnes
  Dans l’exemple suivant, nous trouvons le chemin le plus rapide entre Jacob et Alice. Nous aurons besoin du nœud Person et du Edge FriendOf créé à partir de l’exemple de script Graph. 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Recherche le chemin le plus rapide d’un nœud donné vers tous les autres nœuds du graphique. 
  L’exemple suivant recherche toutes les personnes auxquelles Jacob est connectée dans le graphique et le chemin le plus bref, qui commence par Jacob pour toutes ces personnes. 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  Comptez le nombre de tronçons/niveaux traversés pour passer d’une personne à une autre dans le graphique.
  L’exemple suivant recherche le chemin le plus rapide entre Jacob et Alice et imprime le nombre de tronçons qu’il prend pour passer de Jacob à Alice. 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Rechercher des personnes 1-3 sauts éloignés d’une personne donnée
 L’exemple suivant recherche le chemin le plus rapide entre Jacob et toutes les personnes auxquelles il est connecté dans le graphique 1-3 sauts. 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. Rechercher des personnes exactement 2 sauts à partir d’une personne donnée
 L’exemple suivant recherche le chemin le plus rapide entre Jacob et les personnes qui sont exactement 2 sauts à l’extérieur du graphique. 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4849b2f16c691db08766ca451673d0960ee69222
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813701"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Conditions de règle d'entreprise (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les conditions de règle d'entreprise déterminent les conditions qui doivent être réunies pour qu'une ou plusieurs actions soient entreprises.  
   

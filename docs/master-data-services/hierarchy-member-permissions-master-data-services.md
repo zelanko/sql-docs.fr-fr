@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729238"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813310"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorisations des membres de la hiérarchie (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Les autorisations des membres de la hiérarchie sont optionnelles et doivent être utilisées uniquement lorsque vous souhaitez qu'un utilisateur ait un accès limité à des membres spécifiques. Si vous n'affectez pas d'autorisations sous l'onglet **Membres de hiérarchie** , les autorisations de l'utilisateur sont basées uniquement sur celles affectées sous l'onglet **Modèles** .  
   
- Les autorisations des membres de la hiérarchie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sont affectées dans l’interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **membres de hiérarchie** . Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l’interface utilisateur.  
+ Les autorisations des membres de la hiérarchie sont affectées dans l' [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **membres de hiérarchie** . Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l’interface utilisateur.  
   
  Sous l'onglet **Membres de hiérarchie** , chaque hiérarchie est représentée comme une arborescence. Lorsque vous affectez une autorisation à un nœud dans l'arborescence, tous les enfants héritent de cette autorisation à moins qu'elle ne soit affectée explicitement à un niveau inférieur.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "73729238"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lire**|Les membres sont affichés.<br /><br /> <br /><br /> Remarque : si vous affectez uniquement l’autorisation **Lire** à **Racine**, les membres sous **Racine** sont en lecture seule. Toutefois, dans les collections et hiérarchies explicites, l’utilisateur peut déplacer des membres vers **Racine** et ajouter de nouveaux membres à **Racine**.|  
+|**Lecture**|Les membres sont affichés.<br /><br /> <br /><br /> Remarque : si vous affectez uniquement l’autorisation **Lire** à **Racine**, les membres sous **Racine** sont en lecture seule. Toutefois, dans les collections et hiérarchies explicites, l’utilisateur peut déplacer des membres vers **Racine** et ajouter de nouveaux membres à **Racine**.|  
 |**Créer**|L’autorisation Créer n’est pas disponible dans les autorisations des membres de la hiérarchie.|  
-|**Mise à jour**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
+|**Update**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
 |**Supprimer**|Les membres sont affichés, et l’utilisateur peut les modifier.|  
 |**Deny**|Les membres ne sont pas affichés.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73729238"
   
 -   Si les autorisations **Mettre à jour** et **Créer** sont affectées à un nœud de hiérarchie, et que les autorisations **Mettre à jour** et **Supprimer** sont attribuées à un autre nœud, les membres du nœud peuvent être mis à jour.  
   
--   Si un nœud de hiérarchie est affecté à n’importe quelle combinaison**Read**/d’autorisations **Create**/**Update Update**/**Delete** et qu’un autre nœud reçoit les autorisations **Deny** , l’accès aux membres du nœud est refusé.  
+-   Si un nœud de hiérarchie est affecté à n’importe quelle combinaison d’autorisations **Create** / **Read** / **Update Update** / **Delete** et qu’un autre nœud reçoit les autorisations **Deny** , l’accès aux membres du nœud est refusé.  
   
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog, [Améliorations de sécurité](https://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  

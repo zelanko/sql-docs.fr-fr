@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92b67b981c5eb7dbd1e05b1d18af291cae78aaa1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813982"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Modifier et supprimer une relation de synchronisation d’entités (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La synchronisation d'entités est une synchronisation unidirectionnelle et reproductible entre des versions d'entités. Elle fournit un moyen de partager des données d’entités entre différents modèles. Vous pouvez modifier et supprimer une relation de synchronisation que vous avez créée.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728237"
   
 5.  Modifiez la valeur du champ **Fréquence**. Sélectionnez **Synchronisation à la demande**, ou sélectionnez **Synchronisation automatique** et définissez une fréquence.  
   
-6.  Cliquez sur **Save**.  
+6.  Cliquez sur **Enregistrer**.  
   
  **Pour supprimer une relation de synchronisation d’entités**  
   

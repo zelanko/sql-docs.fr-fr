@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eacd28629c8e4fdeb9de17147a315b172aa3bbd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a81be69eee7a0fa8ea61b4491a296552aca51ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78937694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814035"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Créer un administrateur de modèle (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un administrateur de modèle quand vous souhaitez qu’un groupe ou un utilisateur ait toutes les autorisations sur tous les objets dans un ou plusieurs modèles.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "78937694"
   
 9. Effectuez les étapes 7 et 8 pour chaque modèle que vous souhaitez que le groupe ou l'utilisateur administre.  
   
-10. Cliquez sur **Save**.  
+10. Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

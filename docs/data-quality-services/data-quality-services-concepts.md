@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24227f2afa1f48afe18e5334bfa176d22e59c6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813841"
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique fournit un bref résumé des concepts [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) relatifs à la gestion des connaissances, aux projets de qualité des données et à l'administration de la qualité des données.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75251718"
 ##  <a name="data-quality-administration-concepts"></a><a name="Admin"></a> Concepts relatifs à l'administration de la qualité des données  
  Un administrateur DQS peut effectuer diverses tâches d'administration à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Analyse des activités**  
+ **Surveillance de l’activité**  
   
  L'analyse des activités affiche l'état de chaque activité comprise dans une plage de données, fournit des données pour chaque activité et permet aux administrateurs DQS de contrôler une activité. Pour plus d’informations, consultez [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   

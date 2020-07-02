@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc77f107fe0b3e57e1e8f48fb0e413d9ea22f31f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813770"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Types de données SQL Server et SSIS pris en charge pour les domaines DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Il existe de nombreux types de données dans SQL Server et SQL Server Integration Services (SSIS), mais seulement quatre types de données pour les domaines DQS : Date, Décimal, Entier et Chaîne. Les types de données SQL Server et SSIS ne sont pas tous pris en charge dans DQS. Vous ne pouvez mapper vos données source à un domaine DQS en vue d'y effectuer des activités portant sur la qualité des données que si le type de données source est pris en charge dans DQS et qu'il correspond au type de données du domaine DQS. Cette rubrique fournit des informations relatives aux types de données SQL Server et SSIS qui sont pris en charge et disponibles en vue d'un mappage à chacun des quatre types de données de domaine dans DQS.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "75558165"
   
 |Type de données de domaine DQS|Type de données SQL Server pris en charge|  
 |--------------------------|------------------------------------|  
-|Date|Date|  
+|Date|date|  
 |Decimal|Décimal<br /><br /> float<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> SMALLMONEY|  
-|Integer|bigint<br /><br /> int<br /><br /> SMALLINT<br /><br /> TINYINT|  
+|Entier|bigint<br /><br /> int<br /><br /> SMALLINT<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   
  Les autres types de données SQL Server ne sont pas pris en charge dans DQS. Pour plus d’informations sur les types de données SQL Server, consultez [Types de données &#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "75558165"
 |--------------------------|------------------------------|  
 |Date|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
-|Integer|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
+|Entier|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |String|DT_STR<br /><br /> DT_WSTR|  
   
  Les autres types de données SSIS ne sont pas pris en charge dans DQS Pour plus d'informations sur tous les types de données SSIS, consultez [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813295"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Les autorisations de feuille s'appliquent aux valeurs d'attribut pour tous les membres feuille d'une entité.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "73728077"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lire**|L’utilisateur peut lire les membres feuille et les attributs.|  
+|**Lecture**|L’utilisateur peut lire les membres feuille et les attributs.|  
 |**Créer**|L’utilisateur peut créer des membres feuille et affecter des valeurs d’attribut lors de la création.|  
-|**Mise à jour**|L’utilisateur peut mettre à jour les membres feuille et les attributs.|  
+|**Update**|L’utilisateur peut mettre à jour les membres feuille et les attributs.|  
 |**Supprimer**|L’utilisateur peut supprimer des membres feuille.|  
 |**Deny**|Refusez tout accès aux membres feuille.|  
   
@@ -52,9 +52,9 @@ ms.locfileid: "73728077"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lire**|L’utilisateur peut lire des attributs.|  
+|**Lecture**|L’utilisateur peut lire des attributs.|  
 |**Créer**|L’utilisateur peut attribuer des valeurs lorsqu’il crée des membres.|  
-|**Mise à jour**|L’utilisateur peut mettre à jour des attributs.|  
+|**Update**|L’utilisateur peut mettre à jour des attributs.|  
 |**Supprimer**|Aucun effet.|  
 |**Deny**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   

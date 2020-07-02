@@ -11,23 +11,23 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74486901a641b42f5f3c2c324b97307ef17c0182
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813839"
 ---
 # <a name="domain-management-domain-list"></a>Gestion de l’arborescence du domaine : Liste des domaines
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique décrit les contrôles dans la liste des domaines de la page **Gestion de l'arborescence du domaine** dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilisez ce volet pour sélectionner un domaine sur lequel effectuer des opérations de gestion. Le même volet est utilisé pour toutes les pages à onglets dans la page **Gestion de l'arborescence du domaine** .  
   
 ## <a name="options"></a>Options  
   
 ### <a name="domains-list"></a>Liste des domaines  
- **Domain**  
+ **Domaine**  
  Cette liste affiche tous les domaines dans la base de connaissances. Les opérations que vous effectuez dans les pages à onglets dans le volet droit sont exécutées sur le domaine sélectionné dans la liste. Pour plus d'informations, consultez la rubrique  
   
  **Créer un domaine composite**  

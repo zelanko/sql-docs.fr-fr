@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813119"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Créer un attribut basé sur un domaine (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut basé sur un domaine pour remplir les valeurs d'un attribut avec les membres d'une entité.
 
@@ -43,9 +43,9 @@ ms.locfileid: "78177389"
 
 |Colonne|Description|
 |------------|-----------------|
-|État|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|
+|Statut|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|
 |Nom|Nom de l'attribut.|
-|Nom d’affichage|Nom de l’attribut.|
+|Nom complet|Nom de l’attribut.|
 |Description|Description de l’attribut.|
 |Largeur d’affichage en pixels|Largeur de l’attribut.|
 |Types et propriétés|Informations sur le type et le type de données de l’attribut.|
@@ -97,7 +97,7 @@ ms.locfileid: "78177389"
 
 12. **Facultatif.** Sélectionnez **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
-13. Cliquez sur **Save**.
+13. Cliquez sur **Enregistrer**.
 
 ## <a name="see-also"></a>Voir aussi
  [Les attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md) [créer une hiérarchie dérivée &#40;Master Data Services](../master-data-services/create-a-derived-hierarchy-master-data-services.md)&#41;[modifier un nom d’attribut et un type de données &#40;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md) Master Data Services [supprimer un attribut](../master-data-services/delete-an-attribute-master-data-services.md)&#41;&#40;Master Data Services

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae41076d014e86e0f37978cfa72a49f0d3002959
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814071"
 ---
 # <a name="managing-a-composite-domain"></a>Gestion d'un domaine composite
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique décrit l'utilisation des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Parfois un seul domaine ne représente pas les données d'un domaine de manière satisfaisante, et vous pouvez représenter les données uniquement en regroupant les domaines. Pour cela, vous créez un domaine composite. Un domaine composite comprend deux ou plusieurs domaines individuels et est mappé à un champ de données composé de plusieurs termes connexes qui ne sont pas analysés, mais sont inclus dans une même valeur composite. Chaque terme de la valeur est représenté par un seul domaine différent. Une fois que vous avez inclus les domaines individuels dans les domaines composites, et que vous avez ensuite mappé le domaine composite au champ de données, vous pouvez générer la connaissance dans la base de connaissances sur les données de ce champ lors de la génération de la connaissance dans les domaines individuels. Un domaine composite, comme un seul domaine, est une représentation sémantique des données d'un seul champ de données.  
   

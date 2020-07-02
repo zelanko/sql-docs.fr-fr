@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06e7b913533451aec82098bcd22b23a64bb3dc61
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814100"
 ---
 # <a name="dqs-administration"></a>administration de dqs
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vous permet d'administrer et gérer les différentes activités de DQS effectuées sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], de configurer les propriétés de niveau serveur relatives aux activités de DQS, de configurer les paramètres de Reference Data Services et de configurer les paramètres de journalisation de DQS. Ces opérations sont effectuées par le biais de la fonctionnalité **Administration** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Selon votre accès de sécurité (rôle) dans DQS, vous êtes autorisé ou non à accéder à certaines fonctionnalités de cette zone.  
   

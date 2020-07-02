@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b7b700f4bcdd453f6a2ec6f437fe29370423d5ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ccf1ce5b444c86c8fe979f2865314d947d37ff8a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813118"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Table de mise en lots des membres consolidés (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilisez la table de mise en lots des membres consolidés (stg.name_Consolidated) dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour créer, mettre à jour, désactiver et supprimer des membres consolidés. Elle permet également de mettre à jour les valeurs d'attribut des membres consolidés.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73729619"
 |**Code**<br /><br /> Obligatoire, sauf quand les codes sont générés automatiquement pour **ImportType1** ou **2**. Pour plus d’informations, consultez [Création automatique de code &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Code unique du membre.|  
 |**Nom**<br /><br /> Facultatif|Nom du membre.|  
 |**NewCode**|À utiliser uniquement si vous modifiez le code du membre.|  
-|\<Nom de l’attribut>|Il existe une colonne pour chaque attribut dans l'entité. Utilisez ceci avec un **ImportType** de valeur **0** ou **2**. Pour les attributs de forme libre, spécifiez le nouveau texte ou la nouvelle valeur de chaîne pour l'attribut. Pour les attributs basés sur un domaine, spécifiez le code du membre qui sera l'attribut. Pour les attributs de lien, l’URL doit commencer par **https://**.<br /><br /> <br /><br /> Remarque : vous ne pouvez pas mettre en lots des attributs de fichier.|  
+|\<Attribute name>|Il existe une colonne pour chaque attribut dans l'entité. Utilisez ceci avec un **ImportType** de valeur **0** ou **2**. Pour les attributs de forme libre, spécifiez le nouveau texte ou la nouvelle valeur de chaîne pour l'attribut. Pour les attributs basés sur un domaine, spécifiez le code du membre qui sera l'attribut. Pour les attributs de lien, l’URL doit commencer par **https://**.<br /><br /> <br /><br /> Remarque : vous ne pouvez pas mettre en lots des attributs de fichier.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

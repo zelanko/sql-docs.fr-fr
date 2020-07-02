@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 461d79ab88b7fb2306f98142502bf1cfc11cb53d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814101"
 ---
 # <a name="create-a-domain"></a>Créer un domaine
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique décrit comment créer un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Les valeurs du domaine sont une représentation sémantique des données d'un champ. Pour plus d’informations sur les domaines, consultez [Gestion d’un domaine](../data-quality-services/managing-a-domain.md).  
   

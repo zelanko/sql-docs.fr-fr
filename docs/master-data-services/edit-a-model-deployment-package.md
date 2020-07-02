@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3de531d906608e32ea505a3a2383c0919b5165d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813315"
 ---
 # <a name="edit-a-model-deployment-package"></a>Modifier un package de déploiement de modèle
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique explique comment déployer les pièces sélectionnées d'un modèle dans MDS, plutôt qu'un modèle entier. Pour ce faire, vous modifiez un package de modèle MDS à l'aide de l'Éditeur de package de modèle.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73728230"
   
 5.  Vérifiez la liste des sélections à déployer. Pour effectuer une modification, cliquez sur **Précédent** et répétez l'étape 4.  
   
-6.  Cliquez sur **Parcourir**, accédez au dossier dans lequel vous souhaitez enregistrer le package partiel, puis entrez le nom de fichier du package partiel (avec l’extension .pkg). Cliquez sur **Save**.  
+6.  Cliquez sur **Parcourir**, accédez au dossier dans lequel vous souhaitez enregistrer le package partiel, puis entrez le nom de fichier du package partiel (avec l’extension .pkg). Cliquez sur **Enregistrer**.  
   
 7.  Cliquez sur **Terminer**.  
   

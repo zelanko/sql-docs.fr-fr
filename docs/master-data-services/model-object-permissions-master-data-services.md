@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0243df5cd71ed667219b3e4e1b4a8ff6d1115f25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56977e8fe5e14a873c0d87588f78132b77816894
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813247"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Autorisations d'objet de modèle (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Les autorisations d'objet modèle sont obligatoires. Elles déterminent les attributs auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l'interface utilisateur.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73727982"
   
  Pour octroyer à un utilisateur l’accès à une zone fonctionnelle autre que l’ **Explorateur**, l’utilisateur doit être administrateur de modèle, ce qui implique également l’attribution d’autorisations d’administrateur concernant l’objet modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
- Les autorisations d’objet de modèle sont [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] affectées dans l’interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **modèles** . Sous cet onglet, le modèle est représenté sous la forme d’une arborescence. Lorsque vous affectez une autorisation à un objet dans l'arborescence, tous les objets suivants héritent de cette autorisation. Vous pouvez remplacer cet héritage en affectant l'autorisation à des objets individuels.  
+ Les autorisations d’objet de modèle sont affectées dans l' [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **modèles** . Sous cet onglet, le modèle est représenté sous la forme d’une arborescence. Lorsque vous affectez une autorisation à un objet dans l'arborescence, tous les objets suivants héritent de cette autorisation. Vous pouvez remplacer cet héritage en affectant l'autorisation à des objets individuels.  
   
  Vous pouvez attribuer une combinaison d’autorisations Read, Create, Update et Delete ou Deny aux objets de modèle. Si vous n'affectez aucune autorisation sous l'onglet **Modèles** , l'utilisateur ne peut pas afficher les modèles ou données dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

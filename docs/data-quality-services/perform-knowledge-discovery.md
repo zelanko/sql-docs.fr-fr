@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 02adc815ee969af43b56e51966ded1b1fde6f101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7be51122765131e8681c11a7c84759e173f1517
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813794"
 ---
 # <a name="perform-knowledge-discovery"></a>Effectuer une découverte des connaissances
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique décrit comment créer une base de connaissances via la découverte des connaissances. Dans le processus de découverte, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyse les données dans un exemple de source de données via un processus assisté par ordinateur, et ajoute les connaissances qu'il acquiert à la base de connaissances. Ces connaissances peuvent être modifiées et améliorées dans l'étape **Gestion des valeurs de domaine** de l'activité de découverte des connaissances ou de celle de gestion des domaines.  
   

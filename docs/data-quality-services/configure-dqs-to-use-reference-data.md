@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 542e32606858604e59cdbf204bbf39eba6d214a6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813863"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurer DQS pour utiliser des données de référence
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cette rubrique explique comment configurer [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) afin d'utiliser des données de référence pour le nettoyage de vos données. Vous pouvez utiliser des données de référence à partir d’Azure Marketplace ou de fournisseurs de données de référence tiers en ligne directs.  
 
@@ -32,7 +32,7 @@ ms.locfileid: "75255651"
 ## <a name="before-you-begin"></a>Avant de commencer  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
- Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour plus d’informations sur la création d’une clé de compte Marketplace, consultezhttps://go.microsoft.com/fwlink/?LinkId=212936) [créer votre compte](https://go.microsoft.com/fwlink/?LinkId=212936) (. Vous pouvez également créer une clé de compte de la Place de marché à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence**.  
+ Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour plus d’informations sur la création d’une clé de compte Marketplace, consultez [créer votre compte](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) . Vous pouvez également créer une clé de compte de la Place de marché à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence**.  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75255651"
   
     3.  Dans la zone **Catégorie** , tapez la catégorie des données fournies par le nouveau fournisseur de services de données de référence direct.  
   
-    4.  Dans la zone Schéma, spécifiez le schéma qui définit la chaîne des champs (noms de colonnes) à utiliser à partir du fournisseur de services de données de référence direct. Un nom de champ ne doit pas contenir d'espace, et les champs doivent être séparés par des virgules. Par exemple : `FirstName, LastName, City, State`.  
+    4.  Dans la zone Schéma, spécifiez le schéma qui définit la chaîne des champs (noms de colonnes) à utiliser à partir du fournisseur de services de données de référence direct. Un nom de champ ne doit pas contenir d'espace, et les champs doivent être séparés par des virgules. Par exemple : `FirstName, LastName, City, State`.  
   
     5.  Dans la zone **URI** , tapez l'URI du fournisseur de services de données de référence direct. Seuls les URI sécurisés (adresse commençant par « https:// ») sont autorisés dans DQS.  
   
