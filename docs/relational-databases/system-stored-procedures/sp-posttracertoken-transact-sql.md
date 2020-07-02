@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42401f5d99d7cf89563a0088260ab21e9df9fd67
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f5bc0b6e7960faac9d68469750c445e469896e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720215"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure publie un jeton de suivi dans le journal des transactions sur le serveur de publication et commence le processus de suivi des statistiques de latence. Les informations sont enregistrées lorsque le jeton de suivi est écrit dans le journal des transactions, lorsqu'il est repris par l'Agent de lecture du journal et lorsqu'il est appliqué par l'Agent de distribution. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Pour plus d’informations, voir [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
@@ -50,7 +50,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_posttracertoken** est utilisé dans la réplication transactionnelle.  
   
 ## <a name="example"></a>Exemple  

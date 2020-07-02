@@ -21,17 +21,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48feafe5dddf3bf2e14e52146ceb99f282f8990f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720174"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Crée ou met à jour les règles de pare-feu au niveau [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]de la base de données pour votre. Les règles de pare-feu de base **master** de données peuvent être configurées pour la base [!INCLUDE[ssSDS](../../includes/sssds-md.md)]de données master et les bases de données utilisateur sur. Les règles de pare-feu de base de données sont particulièrement utiles lors de l’utilisation des utilisateurs de base de données Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Crée ou met à jour les règles de pare-feu au niveau de la base de données pour votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Les règles de pare-feu de base de données peuvent être configurées pour la base de données **Master** et les bases de données utilisateur sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Les règles de pare-feu de base de données sont particulièrement utiles lors de l’utilisation des utilisateurs de base de données Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,21 +44,21 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] [N]'name'`Nom utilisé pour décrire et distinguer le paramètre de pare-feu au niveau de la base de données. *Name* est de type **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+`[ @name = ] [N]'name'`Nom utilisé pour décrire et distinguer le paramètre de pare-feu au niveau de la base de données. *Name* est de type **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
   
 `[ @start_ip_address = ] 'start_ip_address'`Adresse IP la plus basse dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`. *start_ip_address* est de type **varchar (50)** sans valeur par défaut.  
   
 `[ @end_ip_address = ] 'end_ip_address'`Adresse IP la plus élevée dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`. *end_ip_address* est de type **varchar (50)** sans valeur par défaut.  
   
- Le tableau suivant montre les arguments et les options pris [!INCLUDE[ssSDS](../../includes/sssds-md.md)]en charge dans.  
+ Le tableau suivant montre les arguments et les options pris en charge dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .  
   
 > [!NOTE]  
->  Les tentatives de connexion Azure sont autorisées lorsque ce champ et le champ *start_ip_address* est `0.0.0.0`égal à.  
+>  Les tentatives de connexion Azure sont autorisées lorsque ce champ et le champ *start_ip_address* est égal à `0.0.0.0` .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les noms des paramètres de pare-feu au niveau base de données doivent être uniques. Si le nom du paramètre de pare-feu au niveau base de données spécifié pour la procédure stockée existe déjà dans le tableau des paramètres de pare-feu au niveau base de données, les adresses IP de début et de fin sont mises à jour. Sinon, un nouveau paramètre de pare-feu au niveau base de données est créé.  
   
- Lorsque vous ajoutez un paramètre de pare-feu au niveau de la base de données alors que les `0.0.0.0`adresses IP de début et de fin sont égales à, vous activez l’accès à votre base de données sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur à partir de n’importe quelle ressource Azure. Spécifiez une valeur pour le paramètre de *nom* qui vous aidera à vous souvenir de la fonction du paramètre de pare-feu.  
+ Lorsque vous ajoutez un paramètre de pare-feu au niveau de la base de données alors que les adresses IP de début et de fin sont égales à `0.0.0.0` , vous activez l’accès à votre base de données sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur à partir de n’importe quelle ressource Azure. Spécifiez une valeur pour le paramètre de *nom* qui vous aidera à vous souvenir de la fonction du paramètre de pare-feu.  
   
 ## <a name="permissions"></a>Autorisations  
  Exige l’autorisation **CONTROL** sur la base de données.  
@@ -72,7 +72,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- Le code suivant crée un paramètre de pare-feu au niveau base de données appelé `Example DB Setting 1` uniquement pour l'adresse IP `0.0.0.4`. Ensuite, la `sp_set_database firewall_rule` procédure stockée est de nouveau appelée pour mettre à jour l' `0.0.0.6`adresse IP de fin, dans ce paramètre de pare-feu. Cela permet de créer une plage qui autorise `0.0.0.4`les `0.0.0.5`adresses IP `0.0.0.6` , et à accéder à la base de données.
+ Le code suivant crée un paramètre de pare-feu au niveau base de données appelé `Example DB Setting 1` uniquement pour l'adresse IP `0.0.0.4`. Ensuite, la `sp_set_database firewall_rule` procédure stockée est de nouveau appelée pour mettre à jour l’adresse IP de fin `0.0.0.6` , dans ce paramètre de pare-feu. Cela permet de créer une plage qui autorise `0.0.0.4` les adresses IP, `0.0.0.5` et `0.0.0.6` à accéder à la base de données.
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  

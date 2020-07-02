@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723082"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute ou supprime un événement ou une colonne d'événement dans une trace. **sp_trace_setevent** ne peuvent être exécutées que sur des traces existantes qui sont arrêtées (l'*État* est **0**). Une erreur est retournée si cette procédure stockée est exécutée sur une trace qui n’existe pas ou dont l' *État* n’est pas **égal à 0**.  
   
@@ -264,7 +264,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |20|**Gravité**|Niveau de gravité d'une exception.|  
 |21|**EventSubClass**|Type de sous-classe d'événements. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
 |22|**Arguments**|ID affecté à l'objet par le système.|  
-|23|**Succès**|Succès de la tentative d'utilisation des autorisations ; utilisé pour l'audit.<br /><br /> **1** = succès**0** = échec|  
+|23|**Fructueux**|Succès de la tentative d'utilisation des autorisations ; utilisé pour l'audit.<br /><br /> **1** = succès**0** = échec|  
 |24|**IndexID contient**|ID de l'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|  
 |25|**IntegerData**|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
 |26|**ServerName**|Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *ServerName* ou *NomServeur\NomInstance*, suivi.|  
@@ -272,7 +272,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|**ObjectType**|Type d'objet : table, fonction ou procédure stockée, par exemple.|  
 |29|**NestLevel**|Niveau d'imbrication où s'exécute la procédure stockée. Consultez [@ @NESTLEVEL &#40;&#41;Transact-SQL ](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**State**|État du serveur, en cas d'erreur.|  
-|31|**Erreur**|Numéro d’erreur.|  
+|31|**Error**|Numéro d’erreur.|  
 |32|**Mode**|Mode de verrouillage du verrou acquis. Cette colonne n’est pas remplie par l’événement **Lock : Released** .|  
 |33|**Handle**|Handle de l'objet référencé dans l'événement.|  
 |34|**ObjectName**|Nom de l'objet en cours d'accès.|  
@@ -338,7 +338,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  
 |16|La fonction n'est pas valide pour cette trace.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_trace_setevent** effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues disponibles dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez **sp_trace_setevent** à la place de ce qui suit :  
   
 -   **xp_trace_addnewqueue**  
@@ -360,7 +360,7 @@ sp_trace_setevent [ @traceid = ] trace_id
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Référence de la classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Informations de référence sur la classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Trace SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

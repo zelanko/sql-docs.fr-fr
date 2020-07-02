@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2987001d2163340d9734a9cf606dfbe009901de3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720058"
 ---
 # <a name="functions-on-string-values---string-length"></a>Fonctions sur les valeurs de chaîne : string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retourne la longueur de la chaîne en caractères.  
   
@@ -40,7 +40,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Chaîne source dont la longueur doit être calculée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si la valeur de *$arg* est une séquence vide, une valeur **XS : Integer** égale à 0 est retournée.  
   
  Le comportement de paires de substitution dans les fonctions XQuery dépend du niveau de compatibilité de la base de données. Si le niveau de compatibilité est 110 ou supérieur, chaque paire de substitution est comptée comme un caractère unique. Pour les premiers niveaux de compatibilité, ils sont comptés comme deux caractères. Pour plus d’informations, consultez [niveau de compatibilité ALTER database &#40;&#41;Transact-SQL](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) et [prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).  
@@ -61,7 +61,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>R. Utilisation de la fonction XQuery string-length() pour extraire les produits dont la description résumée présente une certaine longueur  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Utilisation de la fonction XQuery string-length() pour extraire les produits dont la description résumée présente une certaine longueur  
  Pour les produits dont la description résumée est supérieure à 50 caractères, la requête suivante extrait l’ID de produit, la longueur de la description résumée et le résumé lui-même, l' `Summary` élément <>.  
   
 ```  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed4c953f7f9c14b899f034d58f74d2ceb22862a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720413"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>Vues de la Gestion basée sur des stratégies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La Gestion basée sur des stratégies contient les vues suivantes permettant d'afficher des informations sur les stratégies de gestion, conditions, expressions, groupes et filtres basés sur une stratégie. Ces vues sont dans la base de données msdb et appartiennent au schéma dbo.  
   

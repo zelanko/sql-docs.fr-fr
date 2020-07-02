@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eba554a2472a17f67d0b03faceb8d546da4996c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b86fd5bd04c41d10437a8a0f7bcc21b61ab22fef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720231"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les informations sur un gestionnaire de logique métier ou sur la valeur d'identificateur de classe (CLSID) d'un composant COM de résolveur personnalisé, qui est enregistré sur le serveur de distribution. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -57,7 +57,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_lookupcustomresolver** est utilisé dans la réplication de fusion.  
   
  **sp_lookupcustomresolver** retourne une valeur NULL pour *resolver_clsid* lorsque le composant n’est pas inscrit à la distribution et une valeur de "00000000-0000-0000-0000-000000000000" lorsque l’inscription appartient à un assembly .NET Framework inscrit en tant que gestionnaire de logique métier.  

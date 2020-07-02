@@ -14,15 +14,15 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46639c02c606ed317d0d0bfe94bcf0ae9734a62b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01221bcb23dea7dc78777620fe580bcf0e1287c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725152"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Effectuer une copie en bloc à l'aide d'un fichier de format (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cet exemple montre comment utiliser la fonction ODBC bcp_init avec un fichier de format.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81299617"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste [!INCLUDE[tsql](../../../includes/tsql-md.md)]de code () pour créer la table que l’exemple utilisera.  
+ Exécutez la première [!INCLUDE[tsql](../../../includes/tsql-md.md)] liste de code () pour créer la table que l’exemple utilisera.  
   
  Copiez la deuxième liste de code et collez-la dans un fichier appelé Bcpfmt.fmt. Chaque colonne de la table est séparée par une tabulation.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "81299617"
   
  Compilez la quatrième liste de code (C++) avec odbc32.lib et odbcbcp.lib. Si vous avez effectué la génération avec MSBuild.exe, copiez Bcpfmt.fmt et Bcpodbc.bcp à partir du répertoire de projet dans le répertoire avec le fichier .exe, puis appelez le fichier .exe.  
   
- Exécutez la cinquième liste [!INCLUDE[tsql](../../../includes/tsql-md.md)]de code () pour supprimer la table utilisée par l’exemple.  
+ Exécutez la cinquième [!INCLUDE[tsql](../../../includes/tsql-md.md)] liste de code () pour supprimer la table utilisée par l’exemple.  
   
 ```  
 use AdventureWorks  

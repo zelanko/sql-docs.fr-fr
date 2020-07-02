@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46d4d6598a2a1c4f7c7bb7d8eca7ac3deb6962d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724933"
 ---
 # <a name="conversions-ole-db"></a>Conversions (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Cette section explique comment effectuer une conversion entre les valeurs **datetime** et **datetimeoffset**. Les conversions décrites dans cette section sont soit déjà fournies par OLE DB, soit une extension cohérente de ce dernier.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "81304398"
   
 -   Le format des chaînes **datetime** et **datetimeoffset** est le suivant :  
   
-     *aaaa*-*mm*mm-*JJ*[ *hh*:*mm*:*SS*[.* 9999999*] [± *hh*:*mm*]]  
+     *aaaa* - *mm* - *JJ*[ *hh*:*mm*:*SS*[.* 9999999*] [± *hh*:*mm*]]  
   
 -   Le format des chaînes **time** est :  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81304398"
   
 -   Le format des chaînes **date** est :  
   
-     *aaaa*-*mm*mm-*JJ*  
+     *aaaa* - *mm* - *JJ*  
   
 > [!NOTE]  
 >  Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. C'est pourquoi certaines conversions réalisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 et versions ultérieures diffèrent de la spécification OLE DB.  

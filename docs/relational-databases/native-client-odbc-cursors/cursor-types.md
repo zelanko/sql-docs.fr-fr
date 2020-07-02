@@ -16,23 +16,23 @@ ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4782c61c2f150e36c9632d09170468229c238cbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ad277bb18a8ba549b9e5331fd9dcda7a774f093
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719789"
 ---
 # <a name="cursor-types"></a>Types de curseurs
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  ODBC définit quatre types de curseurs pris [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par Microsoft et le pilote ODBC Native Client. Ces curseurs varient en fonction de leur capacité à détecter les modifications apportées au jeu de résultats et aux ressources qu’ils consomment, telles que la mémoire et l’espace dans **tempdb**. Un curseur peut détecter des modifications apportées à des lignes uniquement lorsqu'il tente d'extraire à nouveau ces lignes ; il n'existe aucun moyen pour la source de données d'informer le curseur des modifications apportées aux lignes en cours d'extraction. La capacité d'un curseur à détecter des modifications qui n'ont pas été apportées par le biais du curseur est également influencée par le niveau d'isolation de la transaction.  
+  ODBC définit quatre types de curseurs pris en charge par Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client. Ces curseurs varient en fonction de leur capacité à détecter les modifications apportées au jeu de résultats et aux ressources qu’ils consomment, telles que la mémoire et l’espace dans **tempdb**. Un curseur peut détecter des modifications apportées à des lignes uniquement lorsqu'il tente d'extraire à nouveau ces lignes ; il n'existe aucun moyen pour la source de données d'informer le curseur des modifications apportées aux lignes en cours d'extraction. La capacité d'un curseur à détecter des modifications qui n'ont pas été apportées par le biais du curseur est également influencée par le niveau d'isolation de la transaction.  
   
  Les quatre types de curseurs ODBC pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont les suivants :  
   
 -   Les curseurs avant uniquement ne prennent pas en charge le défilement, mais seulement l'extraction de lignes en séquence à partir du début jusqu'à la fin du curseur.  
   
--   Les curseurs statiques sont créés dans **tempdb** lorsque le curseur est ouvert. Ils affichent toujours l'ensemble de résultats tel qu'il était au moment où le curseur a été ouvert. Ils ne reflètent jamais les modifications apportées aux données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les curseurs statiques sont toujours en lecture seule. Étant donné qu’un curseur de serveur statique est créé en tant que table de travail dans **tempdb**, la taille du jeu de résultats du curseur ne peut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pas dépasser la taille de ligne maximale autorisée par.  
+-   Les curseurs statiques sont créés dans **tempdb** lorsque le curseur est ouvert. Ils affichent toujours l'ensemble de résultats tel qu'il était au moment où le curseur a été ouvert. Ils ne reflètent jamais les modifications apportées aux données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les curseurs statiques sont toujours en lecture seule. Étant donné qu’un curseur de serveur statique est créé en tant que table de travail dans **tempdb**, la taille du jeu de résultats du curseur ne peut pas dépasser la taille de ligne maximale autorisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   L'appartenance et l'ordre des lignes dans le jeu de résultats des curseurs de jeux de clés sont fixés au moment de l'ouverture du curseur. Les modifications aux colonnes non-clés sont visibles à travers le curseur.  
   

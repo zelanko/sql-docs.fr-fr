@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95bb4ed6469c51abcffa20cf5f8cbd1132e9d182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f293b40fbd4d8cbdd8062679b139a4955fc0ecb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719916"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Types de données SQL Server dans le .NET Framework
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La bibliothèque **SqlTypes** fait partie de la bibliothèque de classes de base [!INCLUDE[msCoName](../../includes/msconame-md.md)] de l' .NET Framework. Elle est conçue pour fournir des types de données avec les mêmes sémantique et précision que celles figurant dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit la nouvelle sémantique à .NET Framework programmeurs et présente les types implémentés dans l’espace de noms **System. Data. SqlTypes** qui est inclus dans la bibliothèque **System. Data** .  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  La bibliothèque **SqlTypes** fait partie de la bibliothèque de classes de base de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Elle est conçue pour fournir des types de données avec les mêmes sémantique et précision que celles figurant dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit la nouvelle sémantique à .NET Framework programmeurs et présente les types implémentés dans l’espace de noms **System. Data. SqlTypes** qui est inclus dans la bibliothèque **System. Data** .  
   
  Le tableau ci-dessous répertorie les rubriques de cette section.  
   

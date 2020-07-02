@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15bdca46fc62832ecd97932b1b71f999f1f80324
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: cf7943cbcef462dbdf73e72357f28e4f4e3eb20d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724211"
 ---
 # <a name="numeric-values-functions---floor"></a>Fonctions de valeurs numériques : floor
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Renvoie le nombre le plus élevé sans portion décimale qui ne dépasse pas la valeur de cet argument. Si l'argument est une séquence vide, la fonction renvoie la séquence vide.  
   
@@ -39,7 +39,7 @@ fn:floor ($arg as numeric?) as numeric?
  *$arg*  
  Nombre à laquelle s'applique la fonction.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le type de *$arg* est l’un des trois types numériques de base, **XS : float**, **XS : double**ou **XS : Decimal**, le type de retour est le même que le type de *$arg* . Si le type de *$arg* est un type dérivé de l’un des types numériques, le type de retour est le type numérique de base.  
   
  Si l’entrée des fonctions FN : Floor, fn : Ceiling ou FN : Round est **xdt : untypedAtomic**, les données non typées sont implicitement converties en **XS : double**. Tout autre type génère une erreur statique.  

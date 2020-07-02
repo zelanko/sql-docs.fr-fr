@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724696"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interprétation des annotations - sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Dans un schéma, vous pouvez identifier une colonne en tant que colonne de dépassement destinée à recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l’aide de l’annotation **SQL : overflow-field** . Un schéma peut contenir plusieurs colonnes de dépassement.  
   
  Chaque fois qu’un nœud XML (élément ou attribut) pour lequel une annotation **SQL : overflow-field** est définie entre dans la portée, la colonne de dépassement est activée et reçoit des données non consommées. Lorsque le nœud sort de la portée, la colonne de dépassement n'est plus active et le chargement en masse XML active le champ de dépassement précédent (le cas échéant).  
   
  À mesure qu’il stocke des données dans la colonne de dépassement, le chargement en masse XML stocke également les balises d’ouverture et de fermeture de l’élément parent pour lequel **SQL : overflow-field** est défini.  
   
- Par exemple, le schéma suivant décrit les éléments ** \< customer>** et ** \< CustOrder>** . Chacun de ces éléments identifie une colonne de dépassement :  
+ Par exemple, le schéma suivant décrit les **\<Customers>** **\<CustOrder>** éléments et. Chacun de ces éléments identifie une colonne de dépassement :  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689242"
 </xsd:schema>  
 ```  
   
- Dans le schéma, l’élément ** \< customer>** est mappé à la table Cust et l’élément ** \< Order>** est mappé à la table CustOrder.  
+ Dans le schéma, l' **\<Customer>** élément est mappé à la table Cust et l' **\<Order>** élément est mappé à la table CustOrder.  
   
- Les éléments ** \< customer>** et ** \< Order>** identifient une colonne Overflow. Ainsi, le chargement en masse XML enregistre tous les éléments enfants et attributs non consommés de l’élément ** \< customer>** dans la colonne Overflow de la table Cust, ainsi que tous les éléments enfants et attributs non consommés de l’élément ** \< Order>** dans la colonne Overflow de la table CustOrder.  
+ Les **\<Customer>** éléments et **\<Order>** identifient une colonne de dépassement. Ainsi, le chargement en masse XML enregistre tous les éléments enfants et attributs non consommés de l' **\<Customer>** élément dans la colonne de dépassement de la table Cust, ainsi que tous les éléments enfants et attributs non consommés de l' **\<Order>** élément dans la colonne Overflow de la table CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   

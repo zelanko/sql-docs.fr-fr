@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 149831d9926161f697c69a893c00784230480940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723023"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de signaler des informations sur les utilisateurs et les groupes Windows qui sont mappés sur des principaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais qui n'existent plus dans l'environnement Windows.  
   
@@ -48,7 +48,7 @@ sp_validatelogins
 |**SID**|**varbinary (85)**|Identificateur de sécurité de l'utilisateur ou groupe Windows.|  
 |**NT Login**|**sysname**|Nom de l’utilisateur ou du groupe Windows.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le principal orphelin au niveau serveur possède un utilisateur de base de données, celui-ci doit être supprimé pour que le principal de serveur orphelin puisse être supprimé. Pour supprimer un utilisateur de base de données, utilisez [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Si le principal au niveau serveur possède des éléments sécurisables dans la base de données, la propriété des éléments sécurisables doit être transférée ou ils doivent être supprimés. Pour transférer la propriété des éléments sécurisables de base de données, utilisez [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Pour supprimer les mappages aux utilisateurs et groupes Windows qui n’existent plus, utilisez [Drop login](../../t-sql/statements/drop-login-transact-sql.md).  

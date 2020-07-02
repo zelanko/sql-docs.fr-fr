@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcd046cf77786bb58aaa843d12b6e924f7b0f3ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 85861db94b619da764323269eaf5f45badf93e28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722908"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSsnapshot_history** contient des lignes d’historique pour les agents d’instantané associés au serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82821016"
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID de l'Agent d'instantané.|  
 |**runstatus**|**int**|État d'exécution :<br /><br /> **1** = début.<br /><br /> **2** = opération réussie.<br /><br /> **3** = en cours.<br /><br /> **4** = inactif.<br /><br /> **5** = nouvelle tentative.<br /><br /> **6** = échec.|  
-|**start_time**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
+|**heure-début**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
 |**time**|**datetime**|Heure de consignation du message dans le journal|  
 |**duration**|**int**|Durée, en secondes, de la session de message.|  
 |**commentaires**|**nvarchar(255)**|Texte du message.|  

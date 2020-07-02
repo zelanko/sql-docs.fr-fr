@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55b69995dc6fb639acad84c561ce3530af991c6e
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: dd6f2d08b44a8e3a3b99dcd3fdc8484e2d0f5b04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720355"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Capture de données modifiées-sys. dm_cdc_log_scan_sessions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne pour chaque session d'analyse du journal dans la base de données actuelle. La dernière ligne retournée représente la session active. Vous pouvez utiliser cette vue pour retourner des informations d'état sur la session d'analyse du journal actuelle, ou des informations de synthèse sur toutes les sessions depuis le dernier démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID de la session.<br /><br /> 0 = les données retournées dans cette ligne sont un agrégat de toutes les sessions depuis le dernier démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**start_time**|**datetime**|Heure de début de la session.<br /><br /> Lorsque **session_id** = 0, le temps de collecte des données agrégées a commencé.|  
-|**end_time**|**datetime**|Heure à laquelle la session s’est terminée.<br /><br /> NULL = la session est active.<br /><br /> Lorsque **session_id** = 0, heure de fin de la dernière session.|  
+|**heure-début**|**datetime**|Heure de début de la session.<br /><br /> Lorsque **session_id** = 0, le temps de collecte des données agrégées a commencé.|  
+|**heure-fin**|**datetime**|Heure à laquelle la session s’est terminée.<br /><br /> NULL = la session est active.<br /><br /> Lorsque **session_id** = 0, heure de fin de la dernière session.|  
 |**duration**|**bigint**|Durée (en secondes) de la session.<br /><br /> 0 = la session ne contient pas de transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, somme de la durée (en secondes) de toutes les sessions avec des transactions de capture de données modifiées.|  
 |**scan_phase**|**nvarchar(200)**|Phase actuelle de la session. Voici les valeurs possibles et leurs descriptions :<br /><br /> 1 : lecture de la configuration<br />2 : première analyse, création de la table de hachage<br />3 : deuxième analyse<br />4 : deuxième analyse<br />5 : deuxième analyse<br />6 : contrôle de version de schéma<br />7 : dernière analyse<br />8 : terminé<br /><br /> Quand **session_id** = 0, cette valeur est toujours « Aggregate ».|  
 |**error_count**|**int**|Nombre d'erreurs rencontrées.<br /><br /> Lorsque **session_id** = 0, nombre total d’erreurs dans toutes les sessions.|  
@@ -55,7 +55,7 @@ ms.locfileid: "82872726"
 |**empty_scan_count**|**int**|Nombre de sessions consécutives qui ne contenaient aucune transaction de capture des données modifiées.|  
 |**failed_sessions_count**|**int**|Nombre de sessions qui ont échoué.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les valeurs dans cette vue de gestion dynamique sont réinitialisées à chaque démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Autorisations  

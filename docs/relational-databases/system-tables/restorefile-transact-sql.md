@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7003ce993893261d2381f11895ee4df2e6fef71b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ba9110c12249db334443af3744efd3cdb6125bee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725407"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne par fichier restauré (y compris les fichiers restaurés indirectement, par nom de groupe de fichiers). Cette table est stockée dans la base de données **msdb** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82834153"
 |**destination_phys_drive**|**nvarchar(260)**|Lecteur ou partition vers laquelle le fichier a été restauré. Sa valeur peut être NULL.<br /><br /> Si un instantané d'une base de données est rétabli, cette valeur est renseignée de la même façon que pour une restauration complète.|  
 |**destination_phys_name**|**nvarchar(260)**|Nom du fichier, sans indication de lecteur ou de partition sur lequel le fichier a été restauré. Sa valeur peut être NULL.<br /><br /> Si un instantané d'une base de données est rétabli, cette valeur est renseignée de la même façon que pour une restauration complète.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour réduire le nombre de lignes dans cette table et dans d’autres tables de sauvegarde et d’historique, exécutez la procédure stockée [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
 ## <a name="see-also"></a>Voir aussi  

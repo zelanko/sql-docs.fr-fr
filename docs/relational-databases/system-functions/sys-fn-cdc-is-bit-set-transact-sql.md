@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b9de9ca9259ed89e4965a1659f46031e74cac3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724612"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Indique si une colonne capturée a été mise à jour en vérifiant si sa position ordinale est définie dans un masque de bits fourni.  
   
@@ -42,7 +42,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *endroit*  
+ *position*  
  Position ordinale dans le masque à vérifier. la *position* est **int**.  
   
  *update_mask*  
@@ -51,7 +51,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ## <a name="return-type"></a>Type de retour  
  **bit**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction est utilisée en général dans le cadre d'une requête de modification de données pour indiquer si une colonne a changé. Dans ce scénario, la fonction [sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) est utilisée avant la requête pour obtenir l’ordinal de colonne requis. **sys. fn_cdc_is_bit_set** est ensuite appliqué à chaque ligne de données modifiées qui est retournée, en fournissant les informations spécifiques à la colonne dans le cadre du jeu de résultats retourné.  
   
  Nous vous recommandons d’utiliser cette fonction au lieu de la fonction [sys. fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) pour déterminer si des colonnes ont été modifiées pour toutes les lignes d’un jeu de résultats retourné.  

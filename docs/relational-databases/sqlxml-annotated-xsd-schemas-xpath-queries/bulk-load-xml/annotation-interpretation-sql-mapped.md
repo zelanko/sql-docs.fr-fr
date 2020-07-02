@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fec5c2625c87b2add23738b5b9d22ccfc77c4f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b38ef4e89db99239759ad0809a5b4828fd1906e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724712"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interprétation des annotations - sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Le chargement en masse XML traite l’annotation **SQL : mapped** dans le schéma XSD comme prévu, autrement dit, si le schéma de mappage spécifie **SQL : mapped = "false"** pour tout élément ou attribut, le chargement en masse XML ne tente pas de stocker les données associées dans la colonne correspondante.  
   
  Le chargement en masse XML ignore les éléments et les attributs qui ne sont pas mappés (soit parce qu’ils ne sont pas décrits dans le schéma, soit parce qu’ils sont annotés dans le schéma XSD avec **SQL : mapped = "false"**). Toutes les données non mappées sont placées dans la colonne Overflow, si une telle colonne est spécifiée à l’aide de **SQL : overflow-field**.  

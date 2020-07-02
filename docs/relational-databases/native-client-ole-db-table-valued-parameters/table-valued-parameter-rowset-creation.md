@@ -13,15 +13,15 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3541f354af26f32f4071c2a6d09648cd53af6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1c474427c4c62b667e27f299e2e7b4d9a65e1b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719652"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Création d'un ensemble de lignes de paramètre table
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Bien que les consommateurs puissent fournir n'importe quel objet d'ensemble de lignes pour les paramètres table, les objets d'ensemble de lignes communs sont implémentés dans des banques de données principales, ce qui limite leurs performances. C'est pourquoi le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permet aux consommateurs de créer un objet d'ensemble de lignes spécialisé par-dessus les données en mémoire. Cet objet d’ensemble de lignes spécial en mémoire est un nouvel objet COM appelé ensemble de lignes de paramètre table. Il fournit des fonctionnalités similaires aux jeux de paramètres.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81283084"
   
  Pour récupérer les informations sur l’État null, unique, calculé et mis à jour de chaque colonne, le consommateur utilise IColumnsRowset :: GetColumnsRowset ou IColumnsInfo :: GetColumnInfo. Ces méthodes fournissent des informations détaillées sur chaque colonne de l'ensemble de lignes du paramètre table.  
   
- Le consommateur spécifie le type de chaque colonne du paramètre table. Cela est identique à la spécification de colonnes lors de la création d'une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le consommateur obtient un objet d’ensemble de lignes de paramètre table à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir du fournisseur de OLE DB Native Client via le paramètre de sortie *ppRowset* .  
+ Le consommateur spécifie le type de chaque colonne du paramètre table. Cela est identique à la spécification de colonnes lors de la création d'une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le consommateur obtient un objet d’ensemble de lignes de paramètre table à partir du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client via le paramètre de sortie *ppRowset* .  
   
 ## <a name="dynamic-scenario"></a>Scénario Dynamique  
  Lorsque le consommateur n’a pas d’informations de type, il doit utiliser IOpenRowset :: OpenRowset pour instancier des objets d’ensemble de lignes de paramètre table. Tout ce que le consommateur doit fournir au fournisseur est le nom du type.  

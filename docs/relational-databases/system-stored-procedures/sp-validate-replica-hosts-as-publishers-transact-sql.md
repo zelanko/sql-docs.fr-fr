@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d93574b2e9b71b47e9c145619e9fb153c6e91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75320000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723040"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers** est une extension de **sp_validate_redirected_publisher** qui permet à tous les réplicas secondaires d’être validés, et non pas seulement le réplica principal actuel. **sp_validate_replicat_hosts_as_publisher** valide l’intégralité d’une topologie de réplication Always on. les **sp_validate_replica_hosts_as_publishers** doivent être exécutées directement sur le serveur de distribution à l’aide d’une session Bureau à distance pour éviter une erreur de sécurité de double saut (21892).  
   
@@ -51,10 +51,10 @@ sp_validate_replica_hosts_as_publishers
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune.  
+ Aucun.  
   
-## <a name="remarks"></a>Notes  
- Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null pour le paramètre * \@* de sortie redirected_publisher. Sinon, le serveur de publication redirigé associé est retourné, à la fois en cas de réussite et d'échec.  
+## <a name="remarks"></a>Remarques  
+ Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null pour le paramètre de sortie * \@ redirected_publisher*. Sinon, le serveur de publication redirigé associé est retourné, à la fois en cas de réussite et d'échec.  
   
  Si la validation réussit, **sp_validate_redirected_publisher** retourne une indication de réussite.  
   

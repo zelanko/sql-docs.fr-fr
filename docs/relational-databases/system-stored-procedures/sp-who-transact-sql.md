@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722951"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Fournit des informations sur les utilisateurs, les sessions et les processus actuels dans une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]instance du. Les informations peuvent être filtrées afin de retourner uniquement les processus qui ne sont pas inactifs, ou qui appartiennent à un utilisateur ou à une session spécifique.  
+  Fournit des informations sur les utilisateurs, les sessions et les processus actuels dans une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Les informations peuvent être filtrées afin de retourner uniquement les processus qui ne sont pas inactifs, ou qui appartiennent à un utilisateur ou à une session spécifique.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  *login* est de **type sysname** et identifie les processus appartenant à une connexion particulière.  
   
- l' *ID de session* est un numéro d’identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session appartenant à l’instance. l' *ID de session* est **smallint**.  
+ l' *ID de session* est un numéro d’identification de session appartenant à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. l' *ID de session* est **smallint**.  
   
  **Active** exclut les sessions en attente de la prochaine commande de l’utilisateur.  
   
@@ -64,12 +64,12 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |**hostname**|**nchar(128)**|Nom de l'hôte ou de l'ordinateur pour chaque processus|  
 |**blk**|**Char (5)**|ID de session du processus bloquant, s'il en existe un. Dans les autres cas, cette colonne a la valeur NULL.<br /><br /> Lorsqu'une transaction associée à un ID de session spécifié est bloquée par une transaction distribuée orpheline, cette colonne renvoie la valeur « -2 » pour la transaction orpheline qui bloque.|  
 |**@**|**nchar(128)**|Base de données dont se sert le processus|  
-|**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]commande ([!INCLUDE[tsql](../../includes/tsql-md.md)] instruction, processus [!INCLUDE[ssDE](../../includes/ssde-md.md)] interne, etc.) en cours d’exécution pour le processus. Dans SQL Server 2019, le type de données a changé en **nchar (26)**.|  
+|**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]commande ( [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction, [!INCLUDE[ssDE](../../includes/ssde-md.md)] processus interne, etc.) en cours d’exécution pour le processus. Dans SQL Server 2019, le type de données a changé en **nchar (26)**.|  
 |**request_id**|**int**|ID des demandes s'exécutant dans une session spécifique|  
   
- En cas de traitement parallèle, des sous-threads sont créés pour l'lD de session spécifique. Le thread principal est indiqué sous la forme `spid = <xxx>` et `ecid =0`. Les autres sous-threads ont le `spid = <xxx>`même, mais avec **ECID** > 0.  
+ En cas de traitement parallèle, des sous-threads sont créés pour l'lD de session spécifique. Le thread principal est indiqué sous la forme `spid = <xxx>` et `ecid =0`. Les autres sous-threads ont le même `spid = <xxx>` , mais avec **ECID** > 0.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un processus bloquant, qui peut disposer d'un verrou exclusif, est un processus qui conserve les ressources dont un autre processus a besoin.  
   
  Toutes les transactions distribuées orphelines reçoivent la valeur d'ID de session « -2 ». Les transactions distribuées orphelines sont des transactions distribuées qui ne sont associées à aucun ID de session. Pour plus d’informations, consultez [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
@@ -121,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Processus desys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

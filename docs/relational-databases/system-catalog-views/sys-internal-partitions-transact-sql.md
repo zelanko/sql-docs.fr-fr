@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724662"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Retourne une ligne pour chaque ensemble de lignes qui effectue le suivi des données internes pour les index ColumnStore sur les tables sur disque. Ces ensembles de lignes sont internes aux index ColumnStore et suivent les lignes supprimées, les mappages rowgroup et le magasin Delta RowGroups. Ils effectuent le suivi des données pour chaque partition de table ; chaque table possède au moins une partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]recrée les ensembles de lignes chaque fois qu’il reconstruit l’index ColumnStore.   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304817"
 |optimize_for_sequential_key|**bit**|1 = l’optimisation de l’insertion de la dernière page a été activée pour la partition.<br><br>0 = valeur par défaut. L’optimisation de l’insertion de la dernière page de la partition est désactivée.|
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au rôle `public`.  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l’appartenance au rôle `public`. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]recrée de nouveaux index internes ColumnStore chaque fois qu’il crée ou reconstruit un index ColumnStore.  

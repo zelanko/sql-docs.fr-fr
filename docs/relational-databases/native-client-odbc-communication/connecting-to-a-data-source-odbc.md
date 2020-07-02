@@ -24,15 +24,15 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd54f05b336284f08892022537641a1e1af99712
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719831"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connexion à une source de données (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Après avoir alloué des handles d'environnement et de connexion et avoir défini tous les attributs de connexion, l'application se connecte à la source de données ou au pilote. Trois fonctions vous permettent de vous connecter :  
   
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- Vous pouvez ignorer les messages 5701 et 5703 ; ils sont fournis uniquement à titre d'information. En revanche, n'ignorez pas le code de retour SQL_SUCCESS_WITH_INFO car des messages autres que 5701 ou 5703 peuvent être retournés. Par exemple, si un pilote se connecte à un serveur exécutant une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance de avec des procédures stockées de catalogue obsolètes, l’une des erreurs retournées via **SQLGetDiagRec** après une SQL_SUCCESS_WITH_INFO est la suivante :  
+ Vous pouvez ignorer les messages 5701 et 5703 ; ils sont fournis uniquement à titre d'information. En revanche, n'ignorez pas le code de retour SQL_SUCCESS_WITH_INFO car des messages autres que 5701 ou 5703 peuvent être retournés. Par exemple, si un pilote se connecte à un serveur exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des procédures stockées de catalogue obsolètes, l’une des erreurs retournées via **SQLGetDiagRec** après une SQL_SUCCESS_WITH_INFO est la suivante :  
   
 ```  
 SqlState:   01000  
@@ -112,7 +112,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- La fonction de gestion des erreurs d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application pour les connexions doit appeler **SQLGetDiagRec** jusqu’à ce qu’elle retourne SQL_NO_DATA. Il doit ensuite agir sur tous les messages autres que ceux avec un code *pfNative* de 5701 ou 5703.  
+ La fonction de gestion des erreurs d’une application pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions doit appeler **SQLGetDiagRec** jusqu’à ce qu’elle retourne SQL_NO_DATA. Il doit ensuite agir sur tous les messages autres que ceux avec un code *pfNative* de 5701 ou 5703.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Communication avec SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  

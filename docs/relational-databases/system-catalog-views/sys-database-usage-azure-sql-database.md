@@ -20,19 +20,19 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724676"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   **Remarque : cela s’applique uniquement à Azure SQL Database v11.**  
   
- Répertorie le nombre, le type et la durée des bases de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] données sur le serveur.  
+ Répertorie le nombre, le type et la durée des bases de données sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur.  
   
  La vue **sys. database_usage** contient les colonnes suivantes.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70155534"
 ## <a name="permissions"></a>Autorisations  
  L’accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la base de données **Master** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La vue **sys.database_usage** renvoie une ligne pour chaque journée de votre abonnement.  
   
 ## <a name="see-also"></a>Voir aussi  

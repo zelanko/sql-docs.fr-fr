@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723073"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie la valeur d'une étape d'un travail qui est utilisé pour effectuer des activités automatisées.  
   
@@ -125,7 +125,7 @@ sp_update_jobstep
 |**2**|Ajout au fichier de sortie|  
 |**4**|Écriture de la sortie de l'étape d'un travail Transact-SQL dans l'historique des étapes.|  
 |**8**|Écriture du journal dans la table (remplace l'historique existant)|  
-|**16bits**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
+|**16**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
   
 `[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent.  
   
@@ -134,7 +134,7 @@ sp_update_jobstep
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_update_jobstep** doit être exécuté à partir de la base de données **msdb** .  
   
  La mise à jour de l'étape d'un travail incrémente le numéro de version de ce travail.  

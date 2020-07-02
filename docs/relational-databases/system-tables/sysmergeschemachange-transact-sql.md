@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5283de7327958f369e78670aefff2c46a480f253
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 362cdb0fac2a30f80a5c1cd1c9d441d81522a6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725402"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient des informations sur les articles publiés générés par l'Agent d'instantané. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   

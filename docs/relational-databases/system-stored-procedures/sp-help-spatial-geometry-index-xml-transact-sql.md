@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720274"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les noms et les valeurs d’un jeu spécifié de propriétés à propos d’un index spatial **Geometry** . Vous pouvez choisir de retourner un jeu principal de propriétés ou toutes les propriétés de l'index.  
   
@@ -53,11 +53,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Autorisations  
  L’utilisateur doit être membre du rôle **public** . Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les propriétés qui contiennent des valeurs NULL ne sont pas incluses dans le jeu de retour XML.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise `sp_help_spatial_geometry_index_xml` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** défini sur la table **geometry_col** pour l’exemple de requête donné dans ** \@QS**. Cet exemple retourne les propriétés principales de l'index spécifié dans un fragment XML qui affiche le nom et la valeur des propriétés sélectionnées.  
+ L’exemple suivant utilise `sp_help_spatial_geometry_index_xml` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** défini sur la table **geometry_col** pour l’exemple de requête donné dans ** \@ QS**. Cet exemple retourne les propriétés principales de l'index spécifié dans un fragment XML qui affiche le nom et la valeur des propriétés sélectionnées.  
   
  Un [XQuery](../../xquery/xquery-basics.md) est ensuite exécuté sur le jeu de résultats, retournant une propriété spécifique.  
   
