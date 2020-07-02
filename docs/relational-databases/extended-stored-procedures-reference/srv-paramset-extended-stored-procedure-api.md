@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756685"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procédure stockée étendue)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
@@ -71,7 +71,7 @@ len
   
  Si *len* a pour valeur 0, il retourne NULL. Pour retourner la valeur NULL au client, la seule façon est d’attribuer la valeur 0 à *len*.  
   
- Cette fonction retourne les valeurs suivantes, si le paramètre est l’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] des types de données.  
+ Cette fonction retourne les valeurs suivantes, si le paramètre est l’un des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] types de données.  
   
 |Nouveaux types de données|Longueur de données de retour|  
 |--------------------|------------------------|  
@@ -82,12 +82,12 @@ len
 |**BIGVARBINARY**|**NULL :** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO :** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255 :** _len_ = max8k, data = valide, RET = 0<br /><br /> **<255 :** _len_ = <8k, data = valide, RET = 1|  
 |NCHAR|**NULL :** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO :** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255 :** _len_ = max8k, data = valide, RET = 0<br /><br /> **<255 :** _len_ = <8k, data = valide, RET = 1|  
 |NVARCHAR|**NULL :** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO :** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255 :** _len_ = max8k, data = valide, RET = 0<br /><br /> **<255 :** _len_ = <8k, data = valide, RET = 1|  
-|**Text**|**NULL :** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO :** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255 :** _len_ = IG, data = IG, RET = 0<br /><br /> 255 : _Len_ = IG, données = IG, RET = 0 ** \<**|  
+|**Text**|**NULL :** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO :** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255 :** _len_ = IG, data = IG, RET = 0<br /><br /> ** \< 255 :** _Len_ = IG, données = IG, RET = 0|  
 |RET = Valeur de retour de srv_paramset.||  
 |IG = La valeur sera ignorée.||  
 |valide = Tout pointeur valide vers des données.||  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les paramètres contiennent les données passées entre les clients et l'application avec des procédures stockées distantes. Le client peut spécifier certains paramètres en tant que paramètres de retour. Ces paramètres de retour peuvent contenir des valeurs que l'application serveur ODS (Open Data Services) repasse au client. L'utilisation de paramètres de retour est analogue au passage de paramètres par référence.  
   
  Vous ne pouvez pas définir la valeur de retour pour un paramètre qui n'a pas été appelé en tant que paramètre de retour. Vous pouvez utiliser **srv_paramstatus** pour déterminer comment le paramètre a été appelé.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760189"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie le propriétaire de la base de données active.  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @loginame= ] «*connexion*»  
- ID de connexion du nouveau propriétaire de la base de données active. *login* est de **type sysname**, sans valeur par défaut. la *connexion* doit être une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un utilisateur Windows déjà existant. la *connexion* ne peut pas devenir le propriétaire de la base de données active s’il a déjà accès à la base de données par le biais d’un compte de sécurité utilisateur existant dans la base de données. Pour éviter cela, supprimez d'abord l'utilisateur de la base de données active.  
+ [ @loginame =] «*connexion*»  
+ ID de connexion du nouveau propriétaire de la base de données active. *login* est de **type sysname**, sans valeur par défaut. la *connexion* doit être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur Windows déjà existant. la *connexion* ne peut pas devenir le propriétaire de la base de données active s’il a déjà accès à la base de données par le biais d’un compte de sécurité utilisateur existant dans la base de données. Pour éviter cela, supprimez d'abord l'utilisateur de la base de données active.  
   
- [ @map= ] *remap_alias_flag*  
- Le paramètre *remap_alias_flag* est déconseillé, car les alias de connexion ont été supprimés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. L’utilisation du paramètre *remap_alias_flag* ne provoque pas d’erreur, mais n’a aucun effet.  
+ [ @map =] *remap_alias_flag*  
+ Le paramètre *remap_alias_flag* est déconseillé, car les alias de connexion ont été supprimés de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L’utilisation du paramètre *remap_alias_flag* ne provoque pas d’erreur, mais n’a aucun effet.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

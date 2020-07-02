@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67a74ab8487c6ff9d6655d4b7039d85bb0d906a3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8943c9e20e9c5add63cf9af21b3ac882696d01af
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757833"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSreplication_options** stocke les métadonnées utilisées en interne par la réplication. Cette table est stockée dans la base de données **Master** .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82829858"
 |**value**|**bit**|À usage interne uniquement|  
 |**major_version**|**int**|À usage interne uniquement|  
 |**minor_version**|**int**|À usage interne uniquement|  
-|**revision**|**int**|À usage interne uniquement|  
+|**faisant**|**int**|À usage interne uniquement|  
 |**install_failures**|**int**|À usage interne uniquement|  
   
 ## <a name="see-also"></a>Voir aussi  

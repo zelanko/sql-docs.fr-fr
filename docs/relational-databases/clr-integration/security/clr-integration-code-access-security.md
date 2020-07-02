@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759039"
 ---
 # <a name="clr-integration-code-access-security"></a>Sécurité d'accès du code de l'intégration du CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Le common language runtime (CLR) prend en charge un modèle de sécurité appelé sécurité d’accès du code pour le code managé. Dans ce modèle, les autorisations sont accordées aux assemblys selon l'identité du code. Pour plus d'informations, consultez la section relative à la sécurité d'accès du code dans le kit de développement logiciel (SDK) .NET Framework.  
   
  La stratégie de sécurité qui détermine les autorisations accordée aux assemblys est définie dans trois emplacements différents :  
@@ -89,10 +89,10 @@ ms.locfileid: "81488308"
  Les assemblys **non sécurisés** reçoivent **FullTrust**.  
   
 > [!IMPORTANT]  
->  **Safe** est le paramètre d’autorisation recommandé pour les assemblys qui effectuent des tâches de calcul et de gestion des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]données sans accéder aux ressources en dehors de. **EXTERNAL_ACCESS** est recommandé pour les assemblys qui accèdent à des ressources en dehors [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de. **EXTERNAL_ACCESS** assemblys par défaut s’exécutent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que compte de service. Il est possible pour **EXTERNAL_ACCESS** code d’emprunter explicitement l’identité du contexte de sécurité de l’authentification Windows de l’appelant. Étant donné que la valeur par défaut consiste [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à s’exécuter en tant que compte de service, l’autorisation d’exécuter **EXTERNAL_ACCESS** doit être accordée uniquement aux connexions approuvées pour s’exécuter en tant que compte de service. Du point de vue de la sécurité, les **EXTERNAL_ACCESS** et les assemblys **non sécurisés** sont identiques. Toutefois, les assemblys **EXTERNAL_ACCESS** fournissent diverses protections de fiabilité et de robustesse qui ne sont pas dans les ASSEMBLYS non **sécurisés** . Le fait de spécifier **unsafe** permet au code de l’assembly d’effectuer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des opérations illégales sur l’espace de processus et peut donc compromettre la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]robustesse et l’extensibilité de. Pour plus d’informations sur la création d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]assemblys CLR dans, consultez [gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  **Safe** est le paramètre d’autorisation recommandé pour les assemblys qui effectuent des tâches de calcul et de gestion des données sans accéder aux ressources en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** est recommandé pour les assemblys qui accèdent à des ressources en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** assemblys par défaut s’exécutent en tant que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compte de service. Il est possible pour **EXTERNAL_ACCESS** code d’emprunter explicitement l’identité du contexte de sécurité de l’authentification Windows de l’appelant. Étant donné que la valeur par défaut consiste à s’exécuter en tant que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compte de service, l’autorisation d’exécuter **EXTERNAL_ACCESS** doit être accordée uniquement aux connexions approuvées pour s’exécuter en tant que compte de service. Du point de vue de la sécurité, les **EXTERNAL_ACCESS** et les assemblys **non sécurisés** sont identiques. Toutefois, les assemblys **EXTERNAL_ACCESS** fournissent diverses protections de fiabilité et de robustesse qui ne sont pas dans les ASSEMBLYS non **sécurisés** . Le fait de spécifier **unsafe** permet au code de l’assembly d’effectuer des opérations illégales sur l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espace de processus et peut donc compromettre la robustesse et l’extensibilité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la création d’assemblys CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Accès aux ressources externes  
- Si un type défini par l’utilisateur (UDT), une procédure stockée ou un autre type d’assembly de construction est inscrit avec le jeu d’autorisations **Safe** , le code managé qui s’exécute dans la construction ne peut pas accéder aux ressources externes. Toutefois, si les jeux d’autorisations **EXTERNAL_ACCESS** ou **unsafe** sont spécifiés et que le code managé tente d’accéder aux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ressources externes, applique les règles suivantes :  
+ Si un type défini par l’utilisateur (UDT), une procédure stockée ou un autre type d’assembly de construction est inscrit avec le jeu d’autorisations **Safe** , le code managé qui s’exécute dans la construction ne peut pas accéder aux ressources externes. Toutefois, si les jeux d’autorisations **EXTERNAL_ACCESS** ou **unsafe** sont spécifiés et que le code managé tente d’accéder aux ressources externes, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applique les règles suivantes :  
   
 |Si|Alors|  
 |--------|----------|  
@@ -108,7 +108,7 @@ ms.locfileid: "81488308"
 |-|-|-|-|  
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**Autorisations de sécurité d’accès du code**|Exécution uniquement|Exécution + accès aux ressources externes|Illimité (y compris P/Invoke)|  
-|**Restrictions du modèle de programmation**|Oui|Oui|Aucune restriction|  
+|**Restrictions du modèle de programmation**|Oui|Oui|Sans restriction|  
 |**Vérifiabilité requise**|Oui|Oui|Non|  
 |**Accès aux données locales**|Oui|Oui|Oui|  
 |**Possibilité d'appeler du code natif**|Non|Non|Oui|  

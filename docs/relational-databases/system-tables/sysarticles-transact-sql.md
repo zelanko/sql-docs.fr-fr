@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 240fe92693fcd811c1f87744cb9a60dddda16369
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5cf27f5335cf0eb098c505ca6872564c172cf610
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758639"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne pour chaque article défini dans la base de données locale. Cette table est stockée dans la base de données publiée.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82833063"
 |**artid**|**int**|Colonne d'identité fournissant un numéro d'identification unique pour l'article|  
 |**creation_script**|**nvarchar(255)**|Script du schéma de l'article.|  
 |**del_cmd**|**nvarchar(255)**|Type de commande de réplication utilisé pour répliquer des suppressions avec des articles de table. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**descriptive**|**nvarchar(255)**|Entrée descriptive de l’article.|  
+|**description**|**nvarchar(255)**|Entrée descriptive de l’article.|  
 |**dest_table**|**sysname**|Nom de la table de destination|  
 |**filter**|**int**|Identificateur de la procédure stockée, utilisé pour la partition horizontale.|  
 |**filter_clause**|**ntext**|Clause WHERE de l'article utilisée pour le filtrage horizontal.|  

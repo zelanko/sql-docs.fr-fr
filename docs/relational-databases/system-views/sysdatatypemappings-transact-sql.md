@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a60a558b94b80ac09c752ca6ae2f2afd5b0ef05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758593"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vue **sysdatatypemappings** est utilisée pour afficher le mappage entre les types de données SQL Server et les types de données d’un système de gestion de base de données (SGBD) non SQL Server. Cette vue est stockée dans la base de données **msdb** .  
   

@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f2b2b5345d4d5cb11b96ecf7741ce144597548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756770"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Ajout d'une procédure stockée étendue à SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
- Une DLL qui contient des fonctions de procédure stockée étendue joue le rôle d'extension pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer la DLL, copiez le fichier dans un répertoire, tel que celui qui contient les fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dll standard (C:\Program Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn par défaut).  
+ Une DLL qui contient des fonctions de procédure stockée étendue joue le rôle d'extension pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer la DLL, copiez le fichier dans un répertoire, tel que celui qui contient les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichiers dll standard (C:\Program Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn par défaut).  
   
  Une fois la DLL de procédure stockée étendue copiée vers le serveur, un administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit inscrire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chaque fonction de procédure stockée étendue dans la DLL. Vous devez pour cela utiliser la procédure stockée système sp_addextendedproc.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67903408"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Si le nom de la fonction spécifié dans `sp_addextendedproc` ne correspond pas exactement au nom de fonction dans la DLL, le nouveau nom sera inscrit dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais le nom ne sera pas utilisable. Par exemple, même `xp_Hello` si est inscrit en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que procédure stockée `xp_hello.dll`étendue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] située dans, ne pourra pas trouver la fonction dans la dll si vous `xp_Hello` utilisez pour appeler la fonction ultérieurement.  
+ Si le nom de la fonction spécifié dans `sp_addextendedproc` ne correspond pas exactement au nom de fonction dans la DLL, le nouveau nom sera inscrit dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais le nom ne sera pas utilisable. Par exemple, même si `xp_Hello` est inscrit en tant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée étendue située dans, ne pourra `xp_hello.dll` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pas trouver la fonction dans la dll si vous utilisez `xp_Hello` pour appeler la fonction ultérieurement.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  

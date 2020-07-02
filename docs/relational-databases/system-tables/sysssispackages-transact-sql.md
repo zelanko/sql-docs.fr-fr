@@ -17,30 +17,30 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e400905801f3186f2eb54956bad612c17d686d14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757744"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Contient une ligne pour chaque package enregistré dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette table est stockée dans la base de données **msdb** .  
+  Contient une ligne pour chaque package enregistré dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette table est stockée dans la base de données **msdb** .  
   
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Identificateur unique du package.|  
 |**id**|**uniqueidentifier**|GUID du package.|  
-|**descriptive**|**nvarchar**|Description facultative du package.|  
-|**createdate**|**datetime**|Date à laquelle le package a été créé.|  
+|**description**|**nvarchar**|Description facultative du package.|  
+|**création**|**datetime**|Date à laquelle le package a été créé.|  
 |**FolderId**|**uniqueidentifier**|GUID du dossier logique dans lequel [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] répertorie le package.|  
 |**ownersid**|**varbinary**|Identificateur de sécurité unique de l'utilisateur qui a créé le package.|  
 |**packagedata**|**image**|Package.|  
-|**packageformat**|**int**|Format dans lequel le package est enregistré :<br /><br /> La valeur 2 indique que le package est enregistré [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] au format.<br /><br /> La valeur 3 indique que le package est enregistré au format [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ou version ultérieure.|  
-|**PackageType**|**int**|Client à l'origine du package. Les valeurs possibles sont les suivantes :<br /><br /> 0 (valeur par défaut)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant importation et exportation)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réplication)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] concepteur)<br /><br /> 6 (Assistant ou Concepteur de plan de maintenance).<br /><br /> <br /><br /> Notez que les valeurs de cette colonne correspondent à l' <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> énumération.|  
+|**packageformat**|**int**|Format dans lequel le package est enregistré :<br /><br /> La valeur 2 indique que le package est enregistré au [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] format.<br /><br /> La valeur 3 indique que le package est enregistré au format [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou version ultérieure.|  
+|**PackageType**|**int**|Client à l'origine du package. Les valeurs possibles sont les suivantes :<br /><br /> 0 (valeur par défaut)<br /><br /> 1 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant importation et exportation)<br /><br /> 3 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réplication)<br /><br /> 5 ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] Concepteur)<br /><br /> 6 (Assistant ou Concepteur de plan de maintenance).<br /><br /> <br /><br /> Notez que les valeurs de cette colonne correspondent à l' <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> énumération.|  
 |**vermajor**|**int**|Dernière version majeure du package.|  
 |**verminor**|**int**|Dernière version mineure du package.|  
 |**verbuild**|**int**|Dernière build du package.|  

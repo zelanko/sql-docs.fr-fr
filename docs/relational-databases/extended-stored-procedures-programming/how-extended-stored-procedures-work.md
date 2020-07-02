@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42aad667b6081e79b4b7897d4dd1f354a6148e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02a1c64974fdcab5a686a61ac35a3a2175e16314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72904037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758086"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Fonctionnement des procédures stockées étendues
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Le processus de fonctionnement d'une procédure stockée étendue est le suivant :  
   
-1.  Lorsqu’un client exécute une procédure stockée étendue, la demande est transmise au format tabular data stream (TDS) ou SOAP (Simple Object Access Protocol) à partir de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]application cliente vers.  
+1.  Lorsqu’un client exécute une procédure stockée étendue, la demande est transmise au format tabular data stream (TDS) ou SOAP (Simple Object Access Protocol) à partir de l’application cliente vers [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche la DLL associée à la procédure stockée étendue et la charge si elle ne l'est déjà.  
   

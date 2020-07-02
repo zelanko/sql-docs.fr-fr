@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55a0c2509a52bb77a4f8ea9779210dac27bc86db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757896"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisée par les agents de réplication pour interroger un serveur de distribution afin de déterminer si le serveur de publication d'origine a été redirigé.  
   
@@ -56,7 +56,7 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|Gravité de l'erreur de validation.|  
 |**error_message**|**nvarchar(4000)**|Texte du message d'erreur de validation.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  *redirected_publisher* retourne le nom de l’éditeur actuel. Retourne la valeur null si le serveur de publication et les bases de données de publication n’ont pas été redirigés à l’aide de **sp_redirect_publisher**.  
   
  Si la validation n’est pas demandée ou si aucune entrée n’existe pour le serveur de publication et la base de données de publication, *ERROR_NUMBER* et *ERROR_SEVERITY* retournent 0 et *ERROR_MESSAGE* retourne la valeur null.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e4c87a0695c57461f444c8be4318bcd06cfdefe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d1eccee8a5acfbb810ed7636f5d073c2644f0342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759479"
 ---
 # <a name="path-expressions-xquery"></a>Expressions de chemin d'accès (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Les expressions de chemin d'accès recherchent des nœuds, tels que des nœuds d'élément, d'attribut et de texte, dans un document. Le résultat d'une expression de chemin d'accès suit toujours l'ordre des documents et la séquence du résultat est dépourvue de nœuds dupliqués. Lorsque vous spécifiez un chemin d'accès, vous pouvez utiliser une syntaxe non abrégée ou une syntaxe abrégée. Les informations suivantes portent sur la syntaxe non abrégée. La syntaxe abrégée est décrite plus loin dans cette rubrique.  
   
@@ -34,17 +34,17 @@ ms.locfileid: "81388066"
   
  Une expression de chemin d'accès peut être relative ou absolue. Les paragraphes suivants décrivent ces deux types d'expression :  
   
--   Une expression de chemin d'accès relative est composée d'une étape, ou de plusieurs étapes séparées par une ou deux barres obliques (/ ou //). Par exemple, `child::Features` est une expression de chemin d'accès relative, où `Child` fait uniquement référence aux nœuds enfants du nœud de contexte. Il s'agit du nœud en cours de traitement. L’expression récupère les \<fonctionnalités> enfants de nœud d’élément du nœud de contexte.  
+-   Une expression de chemin d'accès relative est composée d'une étape, ou de plusieurs étapes séparées par une ou deux barres obliques (/ ou //). Par exemple, `child::Features` est une expression de chemin d'accès relative, où `Child` fait uniquement référence aux nœuds enfants du nœud de contexte. Il s'agit du nœud en cours de traitement. L’expression récupère les \<Features> enfants du nœud d’élément du nœud de contexte.  
   
--   Une expression de chemin d'accès absolue commence par une ou deux barres obliques (/ ou //), suivies d'un chemin d'accès relatif facultatif. Par exemple, la barre oblique initiale de l'expression `/child::ProductDescription` indique qu'il s'agit d'une expression de chemin d'accès absolue. Étant donné qu’une barre oblique au début d’une expression retourne le nœud racine du document du nœud de contexte, l’expression retourne \<tous les ProductDescription> nœuds d’élément enfants de la racine du document.  
+-   Une expression de chemin d'accès absolue commence par une ou deux barres obliques (/ ou //), suivies d'un chemin d'accès relatif facultatif. Par exemple, la barre oblique initiale de l'expression `/child::ProductDescription` indique qu'il s'agit d'une expression de chemin d'accès absolue. Comme une marque de barre oblique au début d’une expression retourne le nœud racine du document du nœud de contexte, l’expression retourne tous les \<ProductDescription> enfants du nœud d’élément de la racine du document.  
   
      Si un chemin d'accès absolu commence par une barre oblique unique, il peut être, ou ne pas être, suivi d'un chemin d'accès relatif. Si vous spécifiez une seule barre oblique, l'expression renvoie le nœud racine du nœud de contexte. Dans le cas d'un type de données XML, il s'agit de son nœud de document.  
   
- En règle générale, une expression de chemin d'accès est composée d'étapes. Par exemple, l’expression de chemin d' `/child::ProductDescription/child::Summary`accès absolu,, contient deux étapes séparées par une barre oblique.  
+ En règle générale, une expression de chemin d'accès est composée d'étapes. Par exemple, l’expression de chemin d’accès absolu, `/child::ProductDescription/child::Summary` , contient deux étapes séparées par une barre oblique.  
   
--   La première étape récupère les \<ProductDescription> nœud d’élément enfants de la racine du document.  
+-   La première étape récupère les \<ProductDescription> enfants du nœud d’élément de la racine du document.  
   
--   La deuxième étape récupère le \<Résumé> nœuds d’élément enfants pour chaque \<nœud d’élément ProductDescription> extrait, qui à son tour devient le nœud de contexte.  
+-   La deuxième étape récupère les \<Summary> enfants de nœud d’élément pour chaque \<ProductDescription> nœud d’élément récupéré, qui à son tour devient le nœud de contexte.  
   
  Une étape dans une expression de chemin d'accès peut être une étape d'axe ou une étape générale.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "81388066"
   
 -   L'expression de chemin d'accès relative `child::ProductDescription/child::Features` contient deux étapes séparées par une barre oblique. Les deux étapes spécifient un axe enfant. ProductDescription et Features sont des tests de nœud.  
   
--   L’expression de chemin d' `child::root/child::Location[attribute::LocationID=10]`accès relative,, contient deux étapes séparées par une barre oblique. La première étape spécifie un axe (`child`) et un test de nœud (`root`). La seconde étape spécifie l'ensemble des trois composants d'une étape d'axe : un axe (enfant), un test de nœud (`Location`) et un prédicat (`[attribute::LocationID=10]`).  
+-   L’expression de chemin d’accès relative, `child::root/child::Location[attribute::LocationID=10]` , contient deux étapes séparées par une barre oblique. La première étape spécifie un axe (`child`) et un test de nœud (`root`). La seconde étape spécifie l'ensemble des trois composants d'une étape d'axe : un axe (enfant), un test de nœud (`Location`) et un prédicat (`[attribute::LocationID=10]`).  
   
  Pour plus d’informations sur les composants d’une étape d’axe, consultez Spécification de l' [axe dans une étape d’expression de chemin d'](../xquery/path-expressions-specifying-axis.md)accès, [spécification d’un test de nœud dans une étape d’expression de chemin d'](../xquery/path-expressions-specifying-node-test.md)accès et [spécification de prédicats dans une étape d’expression de chemin d’accès](../xquery/path-expressions-specifying-predicates.md).  
   

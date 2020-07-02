@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757879"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Accorde à un proxy le droit d'accéder à un sous-système.  
   
@@ -49,13 +49,13 @@ sp_grant_proxy_to_subsystem
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**2**|Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* Important \* \* ** Le sous-système de script ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans une version future [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
+|**2**|Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> Important le sous-système de script ActiveX sera supprimé de l’agent dans une version future de ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
 |**3**|Système d’exploitation (**CmdExec**)|  
 |**4**|Agent d'instantané de réplication|  
 |**5**|Agent de lecture du journal des réplications|  
 |**6**|Agent de distribution de réplication|  
 |**7**|Replication Merge Agent|  
-|**version8**|Agent de lecture de la file d'attente de réplication|  
+|**8**|Agent de lecture de la file d'attente de réplication|  
 |**9**|Requête Analysis Services|  
 |**10**|Commandes Analysis Services|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] Exécution du package|  
@@ -71,7 +71,7 @@ sp_grant_proxy_to_subsystem
 |**Instantané**|Agent d'instantané de réplication|  
 |**LogReader**|Agent de lecture du journal des réplications|  
 |**Distribution**|Agent de distribution de réplication|  
-|**Fusion**|Replication Merge Agent|  
+|**Fusionner**|Replication Merge Agent|  
 |**QueueReader**|Agent de lecture de la file d'attente de réplication|  
 |**ANALYSISQUERY**|Requête Analysis Services|  
 |**ANALYSISCOMMAND**|Commandes Analysis Services|  
@@ -79,7 +79,7 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|script PowerShell|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Autoriser un proxy à accéder à un sous-système ne modifie pas les autorisations pour le principal spécifié dans le proxy.  
   
 ## <a name="permissions"></a>Autorisations  

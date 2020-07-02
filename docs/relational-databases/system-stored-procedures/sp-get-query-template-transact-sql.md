@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0da844225d9a87cbc0c7b6cf06d1bbea108f2d61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757901"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la forme paramétrable d'une requête. Les résultats retournés simulent la forme paramétrable d'une requête obtenue à l'aide d'un paramétrage forcé. sp_get_query_template est principalement utilisé lorsque vous créez des repères de plan TEMPLATE.  
   
@@ -51,7 +51,7 @@ sp_get_query_template
  @parameters  
  Paramètre de sortie de type **nvarchar (max)**, fourni comme indiqué, pour recevoir un littéral de chaîne des noms de paramètres et des types de données qui ont été paramétrés dans @templatetext .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  sp_get_query_template retourne une erreur dans les cas suivants :  
   
 -   Elle ne paramétre pas de valeurs littérales constantes dans *query_text*.  

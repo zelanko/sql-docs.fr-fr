@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7763f7406f865194743c43a6d182466767799b41
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f9582f9377c1ae9cdcbefb00e772f456e1018e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757821"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSreplication_queue** est utilisée par le processus de réplication pour stocker les commandes mises en file d’attente émises par tous les abonnements de mise à jour en attente qui utilisent des mises en file d’attente SQL. Cette table est stockée dans la base de données d’abonnement.  
   

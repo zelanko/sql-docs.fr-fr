@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758005"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crée ou met à jour un mappage entre une connexion sur l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un compte de sécurité sur un serveur distant.  
   
@@ -51,10 +51,10 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  La valeur TRUE spécifie que les connexions utilisent leurs propres informations d’identification pour se connecter à *rmtsrvname*, avec les arguments *rmtuser* et *rmtpassword* ignorés. FALSe spécifie que les arguments *rmtuser* et *rmtpassword* sont utilisés pour se connecter à *rmtsrvname* pour la connexion *locale locale*spécifiée. Si *rmtuser* et *rmtpassword* ont également la valeur null, aucune connexion ou aucun mot de passe n’est utilisé pour se connecter au serveur lié.  
   
  `[ @locallogin = ] 'locallogin'`  
- Connexion sur le serveur local. *LocalLogin* est de **type sysname**, avec NULL comme valeur par défaut. La valeur NULL indique que cette entrée s’applique à toutes les connexions locales qui se connectent à *rmtsrvname*. Si la valeur n' *locallogin* est pas null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la connexion locale peut être une connexion ou une connexion Windows. La connexion Windows doit être autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directement ou par l'intermédiaire de son appartenance à un groupe Windows qui a une autorisation d'accès.  
+ Connexion sur le serveur local. *LocalLogin* est de **type sysname**, avec NULL comme valeur par défaut. La valeur NULL indique que cette entrée s’applique à toutes les connexions locales qui se connectent à *rmtsrvname*. Si la valeur n’est pas NULL, la connexion *locale* peut être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou une connexion Windows. La connexion Windows doit être autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directement ou par l'intermédiaire de son appartenance à un groupe Windows qui a une autorisation d'accès.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Connexion distante utilisée pour se connecter *rmtsrvname* à rmtsrvname @useself lorsque la valeur de est false. Lorsque le serveur distant est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui n’utilise pas l’authentification Windows, *rmtuser* est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une connexion. *rmtuser* est de **type sysname**, avec NULL comme valeur par défaut.  
+ Connexion distante utilisée pour se connecter à *rmtsrvname* lorsque la @useself valeur de est false. Lorsque le serveur distant est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui n’utilise pas l’authentification Windows, *rmtuser* est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion. *rmtuser* est de **type sysname**, avec NULL comme valeur par défaut.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  Mot de passe associé à *rmtuser*. *rmtpassword* est de **type sysname**, avec NULL comme valeur par défaut.  

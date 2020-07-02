@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37114a42cd7e9c64872ff42848bb916b21c1d941
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5842e1a0f7ca48fc415528b0d2b63ca8ed033446
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757813"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSreplication_subscriptions** contient une ligne d’informations de réplication pour chaque agent de distribution desservant la base de données de l’abonné local. Cette table est stockée dans la base de données d’abonnement.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82812363"
 |**subscription_type**|**int**|Type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
 |**distribution_agent**|**sysname**|Nom de l'Agent de distribution.|  
 |**Time**|**smalldatetime**|Heure de la dernière mise à jour effectuée par l'Agent de distribution.|  
-|**descriptive**|**nvarchar(255)**|Description de l'abonnement.|  
+|**description**|**nvarchar(255)**|Description de l'abonnement.|  
 |**transaction_timestamp**|**varbinary(16)**|À usage interne uniquement.|  
 |**update_mode**|**tinyint**|Type de mise à jour.|  
 |**agent_id**|**Binary(16**|ID de l'Agent.|  

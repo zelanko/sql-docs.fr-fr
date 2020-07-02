@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758017"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Ajoute une nouvelle propriété étendue à un objet de base de données.  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  Nom de la propriété à ajouter. *property_name* est de **type sysname** et ne peut pas avoir la valeur null. Les noms peuvent également comporter des chaînes de caractères vides ou non alphanumériques, ainsi que des valeurs binaires.  
   
- [ @value= ] {'*valeur*'}  
+ [ @value =] {'*valeur*'}  
  Valeur à associer à la propriété. la *valeur* est **sql_variant**, avec NULL comme valeur par défaut. La taille de l'argument *value* ne peut pas dépasser les 7 500 octets.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  Type d'objet de niveau 0. *level0_object_type* est de type **varchar (128)**, avec NULL comme valeur par défaut.  
   
  Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE et NULL.  
@@ -67,18 +67,18 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  La possibilité de spécifier USER comme type de niveau 0 dans une propriété étendue d'un objet de type de niveau 1 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez à la place SCHEMA en tant que type de niveau 0. Par exemple, lorsque vous définissez une propriété étendue sur une table, spécifiez le schéma de la table au lieu d'un nom d'utilisateur. La possibilité de spécifier TYPE comme type de niveau 0 sera supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  Nom du type d'objet de niveau 0 spécifié. *level0_object_name* est de **type sysname** , avec NULL comme valeur par défaut.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  Type d'objet de niveau 1. *level1_object_type* est de type **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont agrégation, valeur par défaut, fonction, nom de fichier logique, procédure, file d’attente, règle, séquence, synonyme, TABLE, TABLE_TYPE, TYPE, vue, COLLECTION de schémas XML et NULL.    
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  Nom du type d'objet de niveau 1 spécifié. *level1_object_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  Type d'objet de niveau 2. *level2_object_type* est de type **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER et NULL.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  Nom du type d'objet de niveau 2 spécifié. *level2_object_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  

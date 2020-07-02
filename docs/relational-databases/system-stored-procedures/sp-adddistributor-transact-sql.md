@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760231"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée une entrée dans la table [sys.sys](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) Servers (le cas échéant), marque l’entrée de serveur en tant que serveur de distribution et stocke les informations de propriété. Cette procédure stockée est exécutée sur la base de données master du serveur de distribution pour enregistrer et marquer le serveur en tant que serveur de distribution. Dans le cas d'un serveur de distribution distant, la procédure stockée est également exécutée sur le serveur de publication à partir de la base de données master.  
   

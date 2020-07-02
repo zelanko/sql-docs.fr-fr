@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32a9ac79aaac19976158392520e500b635bc8ebd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58f7f1e887039a5b2ef497a52643a793985f090e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758661"
 ---
 # <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSsync_states** effectue le suivi de la publication toujours en mode d’instantané simultané. Cette table est stockée dans la base de données de distribution.  
   

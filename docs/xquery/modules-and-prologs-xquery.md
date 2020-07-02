@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 078cd9e29c917ce8842edd2269896debee074a91
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c7d982e8c944ff1c596dfa4178ce613ec3be709e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759496"
 ---
 # <a name="modules-and-prologs-xquery"></a>Modules et prologues (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) est une série de déclarations d’espaces de noms. En utilisant la déclaration d'espace de noms en prologue, vous pouvez spécifier une liaison entre un préfixe et un espace de noms, puis utiliser le préfixe dans le corps de la requête.  
   

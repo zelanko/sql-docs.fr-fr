@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44b95598af67b4842595d9570bcd57135924d6ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0276cc54809643ed53bd2ae30813e925b4d84475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757738"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de suivre les articles de schéma uniquement pour des publications transactionnelles et d'instantané. Cette table est stockée dans la base de données de publication.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82819750"
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Identificateur de l'article.|  
 |**creation_script**|**nvarchar(255)**|Chemin d'accès et nom d'un script de schéma d'article utilisé pour créer la table cible.|  
-|**descriptive**|**nvarchar(255)**|Entrée descriptive de l’article.|  
+|**description**|**nvarchar(255)**|Entrée descriptive de l’article.|  
 |**dest_object**|**sysname**|Nom de l'objet dans la base de données d'abonnement si l'article est un article de schéma uniquement, tel qu'une procédure stockée, vue ou fonction définie par l'utilisateur.|  
 |**name**|**sysname**|Nom de l'article de schéma uniquement dans une publication.|  
 |**objid**|**int**|Identificateur de l'objet de base de l'article. Il peut s’agir de l’identificateur d’objet d’une procédure, d’une vue, d’une vue, d’une vue ou d’une fonction définie par l’index.|  
