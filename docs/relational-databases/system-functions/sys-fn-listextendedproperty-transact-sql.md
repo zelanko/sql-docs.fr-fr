@@ -26,15 +26,15 @@ ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11249fd563bd892c79edd4f3393c82f34b211684
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652186"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne les valeurs de propriétés étendues d'objets de base de données.  
  
@@ -96,7 +96,7 @@ fn_listextendedproperty (
   
  Si la table renvoyée est vide, l'objet ne dispose pas de propriétés étendues, ou l'utilisateur n'est pas habilité à afficher la liste des propriétés étendues associées à cet objet. Lorsque les propriétés étendues de la base de données proprement dite sont retournées, les colonnes objtype et objname ont la valeur NULL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si la valeur de *property_name* est null ou par défaut, fn_listextendedproperty retourne toutes les propriétés de l’objet spécifié.  
   
  Lorsque le type d'objet est spécifié et que la valeur du nom d'objet correspondant est NULL ou la valeur par défaut, fn_listextendedproperty retourne toutes les propriétés étendues de tous les objets du type spécifié.  
@@ -142,7 +142,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Affichage des propriétés étendues de toutes les colonnes d'une table  
- L’exemple suivant répertorie les propriétés étendues des `ScrapReason` colonnes de la table. Celle-ci est contenue dans le schéma `Production`.  
+ L’exemple suivant répertorie les propriétés étendues des colonnes de la `ScrapReason` table. Celle-ci est contenue dans le schéma `Production`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. Affichage des propriétés étendues de toutes les tables d'un schéma  
- L’exemple suivant répertorie des propriétés étendues pour toutes les `Sales` tables contenues dans le schéma.  
+ L’exemple suivant répertorie des propriétés étendues pour toutes les tables contenues dans le `Sales` schéma.  
   
 ```  
 USE AdventureWorks2012;  

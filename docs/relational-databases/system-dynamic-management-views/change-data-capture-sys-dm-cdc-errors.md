@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81908d815818c0274615e9bd2bd3bf40037e2b99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b99676242133179bbfc26421c5d740b95c7c16d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652196"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Capture de données modifiées-sys. dm_cdc_errors
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne pour chaque erreur rencontrée pendant la session d'analyse du journal de la capture de données modifiées.  
  
@@ -45,7 +45,7 @@ ms.locfileid: "82833814"
 |**begin_lsn**|**nvarchar (23)**|Valeur LSN de départ de la transaction en cours de traitement lorsque l'erreur s'est produite.<br /><br /> 0 = l'erreur ne s'est pas produite dans une session d'analyse du journal.|  
 |**sequence_value**|**nvarchar (23)**|Valeur LSN des lignes en cours de traitement lorsque l'erreur s'est produite.<br /><br /> 0 = l'erreur ne s'est pas produite dans une session d'analyse du journal.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sys. dm_cdc_errors** contient des informations d’erreur pour les sessions 32 précédentes.  
   
 ## <a name="permissions"></a>Autorisations  

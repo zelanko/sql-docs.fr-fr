@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60acbb6044842c097aa222b7a831addac7cf11d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678707"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procédure stockée étendue)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
@@ -89,7 +89,7 @@ destlen
 ## <a name="returns"></a>Retours  
  Longueur des données converties, en octets, si la conversion de type de données réussit. Quand **srv_convert** rencontre une demande de conversion qu’il ne prend pas en charge, il appelle le gestionnaire d’erreurs fourni par le développeur, le cas échéant, définit un numéro d’erreur global et retourne -1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction **srv_willconvert** détermine si une conversion particulière est autorisée.  
   
  La conversion vers le type de données numérique approximatif SRVFLT4 ou SRVFLT8 peut provoquer une certaine perte de précision. La conversion à partir du type de données numérique approximatif SRVFLT4 ou SRVFLT8 vers SRVCHAR ou SRVTEXT peut également provoquer une certaine perte de précision.  

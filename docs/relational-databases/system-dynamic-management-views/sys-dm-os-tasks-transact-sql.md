@@ -20,15 +20,15 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
-ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
+ms.openlocfilehash: 4a0de9b0fe69b611f802b354cd1fe0265adfc16c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84748732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652326"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne une ligne pour chaque tâche active dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une tâche est l’unité d’exécution de base dans SQL Server. Voici quelques exemples de tâches : une requête, une connexion, une déconnexion et des tâches système telles que l’activité de nettoyage des fichiers fantômes, l’activité de point de contrôle, l’enregistreur de journal, l’activité de restauration parallèle. Pour plus d’informations sur les tâches, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
   

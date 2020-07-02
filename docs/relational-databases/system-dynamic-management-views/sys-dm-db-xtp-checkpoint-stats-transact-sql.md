@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
+description: Retourne des statistiques sur les opérations de point de contrôle de l'OLTP en mémoire dans la base de données active. Découvrez en quoi cette vue diffère pour les versions de SQL Server.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 29e08f4fd023717a186a900f288e47f864af218e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677441"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

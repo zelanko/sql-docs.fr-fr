@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1485221af02834e741d32dde5fd6ad45aaacdfe
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 76cdf55452ff2545063d8bc15c8347281fc46e57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649271"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Exemples de requêtes XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Cette section fournit des exemples de requêtes XPath pour SQLXML 4.0. Pour des raisons d'illustration, ces exemples de requêtes XPath sont spécifiés dans un modèle exécuté à l'aide d'ADO. Par conséquent, vous devez utiliser un fichier de schéma de mappage, SampleSchema1.xml, également fourni dans cette section. Enregistrez ce fichier dans le répertoire où vos modèles sont stockés.  
   
 > [!NOTE]  

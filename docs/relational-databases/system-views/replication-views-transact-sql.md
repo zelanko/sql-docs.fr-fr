@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692666"
 ---
 # <a name="replication-views-transact-sql"></a>Vues de réplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ces vues contiennent des informations qui sont utilisées par la réplication dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les vues permettent un accès plus facile aux données dans les [tables système de réplication](../../relational-databases/system-tables/replication-tables-transact-sql.md). Les vues sont créées dans une base de données utilisateur lorsque celle-ci est activée en tant que base de données de publication ou d'abonnement. Tous les objets de réplication sont supprimés de la base de données utilisateur lorsque celle-ci est supprimée d'une topologie de réplication. La méthode recommandée pour accéder aux métadonnées de réplication consiste à utiliser des [procédures stockées de réplication](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   

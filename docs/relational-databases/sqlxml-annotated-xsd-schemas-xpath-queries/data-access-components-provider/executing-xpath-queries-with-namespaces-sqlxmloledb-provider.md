@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81d8b40501df0cd18765c684a4cce217d2b87ef2
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: fd51dccee8f6b0b42001951fb096400182197deb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650354"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Exécution de requêtes XPath avec des espaces de noms (fournisseur SQLXMLOLEDB)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Les requêtes XPath peuvent inclure des espaces de noms. Si les éléments de schéma sont qualifiés par un espace de noms (autrement dit, s'ils incluent un espace de noms cible), les requêtes XPath contre le schéma doivent spécifier cet espace de noms.  
   
  L'utilisation du caractère générique (*) n'étant pas prise en charge dans SQLXML 4.0, vous devez spécifier la requête XPath en utilisant un préfixe d'espace de noms. Pour résoudre ce préfixe, utilisez la propriété Namespaces pour spécifier la liaison d’espace de noms.  

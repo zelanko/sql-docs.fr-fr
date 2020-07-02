@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f7526cc2902829aef7e4e029428e21faa94d2a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663979"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche les expressions de condition exécutées, les cibles des expressions, le résultat de chaque exécution et les détails des erreurs, le cas échéant. Le tableau suivant décrit les colonnes dans la vue syspolicy_execution_history_details.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68094833"
 |exception_message|**nvarchar(max)**|Message généré par l'exception si celle-ci se produit.|  
 |exception|**nvarchar(max)**|Description de l'exception si celle-ci se produit.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous dépannez la Gestion basée sur des stratégies, interrogez la vue syspolicy_policy_execution_history_details pour déterminer quelles combinaisons de cible et d'expression de condition ont échoué, quand elles ont échoué, et passez en revue les erreurs associées.  
   
  La requête suivante combine la vue `syspolicy_policy_execution_history_details` avec les vues `syspolicy_policy_execution_history_details` et `syspolicy_policies` pour afficher le nom de la stratégie, le nom de la condition et les détails se rapportant aux échecs.  

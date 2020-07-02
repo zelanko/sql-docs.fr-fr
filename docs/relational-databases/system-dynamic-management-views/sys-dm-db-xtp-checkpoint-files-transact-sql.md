@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
+description: Affiche des informations sur les fichiers de point de contrôle, y compris la taille de fichier, l’emplacement physique et l’ID de transaction. Découvrez en quoi cette vue diffère pour les versions de SQL Server.
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677520"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ ms.locfileid: "82830843"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW DATABASE STATE` sur le serveur.  
   
-## <a name="use-cases"></a>Cas d'utilisation  
+## <a name="use-cases"></a>Cas d’usage  
  Vous pouvez estimer le stockage utilisé par l’OLTP en mémoire comme suit :  
   
 ```  

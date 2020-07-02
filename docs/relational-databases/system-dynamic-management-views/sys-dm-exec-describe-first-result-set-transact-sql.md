@@ -18,15 +18,15 @@ ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9597d1852cb16c4f212989d42b1b614f0e5e8fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676485"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Cette fonction de gestion dynamique accepte une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction en tant que paramètre et décrit les métadonnées du premier jeu de résultats pour l’instruction.  
   
@@ -101,7 +101,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|Contient un entier qui représente l'erreur retournée. Mappé à error_type_desc. Consultez la liste sous les notes.|  
 |**error_type_desc**|**nvarchar(60)**|Contient une chaîne majuscule courte qui représente l'erreur retournée. Mappé à error_type. Consultez la liste sous les notes.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction utilise le même algorithme que **sp_describe_first_result_set**. Pour plus d’informations, consultez [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  Le tableau suivant répertorie les types d'erreur et leur description.  
@@ -109,7 +109,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |error_type|error_type|Description|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Toutes les erreurs qui ne font pas l'objet d'une description.|  
-|2|SYNTAX|Une erreur de syntaxe s'est produite dans le lot.|  
+|2|SYNTAXE|Une erreur de syntaxe s'est produite dans le lot.|  
 |3|CONFLICTING_RESULTS|Le résultat n'a pas pu être déterminé en raison d'un conflit entre deux premières instructions possibles.|  
 |4|DYNAMIC_SQL|Le résultat n'a pas pu être déterminé en raison du SQL dynamique qui pourrait éventuellement retourner le premier résultat.|  
 |5|CLR_PROCEDURE|Le résultat n'a pas pu être déterminé parce qu'une procédure stockée clr pourrait éventuellement retourner le premier résultat.|  
@@ -128,7 +128,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="examples"></a>Exemples  
  Des exemples supplémentaires de la rubrique [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) peuvent être adaptés pour utiliser **sys. dm_exec_describe_first_result_set**.  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>R. Retour d'informations sur une instruction Transact-SQL unique  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Retour d'informations sur une instruction Transact-SQL unique  
  Le code suivant retourne des informations sur les résultats d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  

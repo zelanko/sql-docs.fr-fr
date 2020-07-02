@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61755c4b360332042721ccd7ec9213a727ee4ad9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679102"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Procédures stockées étendues de moteur de base de données - Guide de référence
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
- L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procédure stockée étendue, précédemment intégrée à Open Data Services, fournit une interface de programmation d’applications (API) basée [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur pour étendre les fonctionnalités. L'API comprend des fonctions et des macros C et C++ utilisées pour créer des applications.  
+ L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procédure stockée étendue, précédemment intégrée à Open Data Services, fournit une interface de programmation d’applications (API) basée sur le serveur pour étendre les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalités. L'API comprend des fonctions et des macros C et C++ utilisées pour créer des applications.  
   
  Avec l'apparition de nouvelles technologies plus puissantes telles que l'intégration du CLR, les besoins en termes de procédures stockées étendues ont été en grande partie éliminés.  
   

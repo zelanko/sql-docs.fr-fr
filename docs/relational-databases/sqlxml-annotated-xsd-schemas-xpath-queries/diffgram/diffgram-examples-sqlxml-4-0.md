@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ac740e844f06ce35416077f4568e19ffb6f52f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1dbc6d4d2be27ca0a91a7ed312d26baf19a72551
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650012"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Exemples de DiffGrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Cette rubrique contient des exemples de DiffGrams qui réalisent des opérations d'insertion, de mise à jour et de suppression dans la base de données. Avant d'utiliser les exemples, notez les points suivants :  
   
 -   Les exemples utilisent deux tables (Cust et Ord) qui doivent être créées si vous souhaitez tester les exemples de DiffGrams :  

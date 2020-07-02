@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c02c5f41ec11ec15d849e5b7fc6897ee0c798d01
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 567eb423d4def73169fc8d06828af1c34e536136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650414"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Application d'une transformation XSL (fournisseur SQLXMLOLEDB)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Dans cet exemple d'application ADO, une requête SQL est exécutée et le langage XSLT est appliqué au résultat. L’affectation de la valeur true à la propriété ClientSideXML applique le traitement de l’ensemble de lignes côté client. Le dialecte de commande a pour valeur {5d531cb2-e6ed-11d2-b252-00c04f681b71} car la requête SQL est spécifiée dans un modèle et que ce dialecte doit être spécifié lors de l'exécution d'un modèle. La propriété XSL spécifie le fichier XSL à utiliser pour appliquer la transformation. La valeur de la propriété chemin de base est utilisée pour rechercher le fichier XSL. Si vous spécifiez un chemin d’accès dans la valeur de la propriété XSL, le chemin d’accès est relatif au chemin d’accès spécifié dans la propriété chemin d’accès de base.  
   
  Cet exemple indique comment utiliser les propriétés suivantes spécifiques au fournisseur SQLXMLOLEDB :  

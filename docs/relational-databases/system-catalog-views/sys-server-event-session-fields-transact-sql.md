@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 260a0252d096a926eee8ea81c68320dc3b035b31
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 29fc1b3b62b78ef6a0380087c878a34773df7c13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664695"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne pour chaque colonne personnalisable définie explicitement sur les événements et les cibles.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82834018"
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette vue a les cardinalités de relation suivantes.  
   
 ||||  

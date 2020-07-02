@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee37996f4d22787c8379e6a887e23769a260b6b2
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 2ad966d5a6cc4a624310d7c20ed60ea8a9210137
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649428"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandText
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Cet exemple montre comment vous pouvez spécifier les fichiers modèles qui se composent de requêtes SQL ou XPath à l’aide de la propriété CommandText. Au lieu de spécifier la requête SQL ou XPath comme valeur de CommandText, vous pouvez spécifier un nom de fichier comme valeur. Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType. TemplateFile.  
   
  L'exemple d'application exécute ce modèle :  

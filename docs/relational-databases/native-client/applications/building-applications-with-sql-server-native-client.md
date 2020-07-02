@@ -16,15 +16,15 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6d3c7a3020d20ec91560c6a87154ef97ac1f9a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b93aa14d5ac16688cac8ef021023378a270a42f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85658042"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Génération d'applications avec SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Lors du développement d'une application qui utilise la bibliothèque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, plusieurs facteurs entrent en jeu. Les rubriques de cette section décrivent ces facteurs, notamment la mise à niveau de MDAC vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et l'utilisation des fichiers de bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ; par ailleurs, elles fournissent une vue d'ensemble des différentes chaînes de connexion qui peuvent être utilisées avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   

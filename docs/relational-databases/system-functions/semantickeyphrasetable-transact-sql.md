@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662581"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une table de zéro, une ou plusieurs lignes pour les expressions clés associées aux colonnes spécifiées de la table spécifiée.  
   
@@ -50,7 +50,7 @@ SEMANTICKEYPHRASETABLE
   
  Ce nom peut être en une à quatre parties, mais un nom de serveur distant n'est pas autorisé.  
   
- **chronique**  
+ **column**  
  Nom de la colonne indexée pour laquelle les résultats doivent être retournés L'indexation sémantique doit être activée pour la colonne.  
   
  **column_list**  
@@ -72,7 +72,7 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|ID de la colonne à partir de laquelle l’expression clé actuelle a été extraite et indexée.<br /><br /> Consultez les fonctions COL_NAME et COLUMNPROPERTY pour plus d'informations sur la récupération d'un nom de colonne à partir de column_id et inversement.|  
 |**document_key**|**\***<br /><br /> Cette clé correspond au type de la clé unique dans la table source.|Valeur de clé unique du document ou de la ligne à partir de laquelle l'expression clé actuelle a été indexée.|  
 |**keyphrase**|**NVARCHAR**|Expression clé trouvée dans la colonne identifiée par column_id et associée au document spécifié par document_key.|  
-|**enjeu**|**real**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés du même document dans la colonne indexée.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
+|**enjeu**|**NON**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés du même document dans la colonne indexée.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Pour plus d’informations, consultez [Rechercher des expressions clés dans des documents avec la recherche sémantique](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  

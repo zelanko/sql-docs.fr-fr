@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662468"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Supprime une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un utilisateur ou un groupe Windows d'un rôle serveur fixe.
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>Arguments
 
-**[ @loginame = ]** «_connexion_»  
+**[ @loginame =]** «_connexion_»  
 Nom d'une connexion à supprimer du rôle serveur fixe. *login* est de **type sysname**, sans valeur par défaut. la *connexion* doit exister.  
 
-**[ @rolename = ]** «_role_»  
+**[ @rolename =]** '_role_'  
 Nom d'un rôle serveur. *role* est de **type sysname**, avec NULL comme valeur par défaut. le *rôle* doit avoir l’une des valeurs suivantes :  
 
 -   administrateur système  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94c83711131fe1b08edee73db748a8152b9b56f0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87895b3b93059c1c6dec0e859690c8172bb143bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652038"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Réinitialise l'état d'une base de données suspecte.  
   
@@ -48,7 +48,7 @@ sp_resetstatus [ @dbname = ] 'database'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La procédure stockée sp_resetstatus désactive l'indicateur suspect sur une base de données. Elle met à jour les colonnes de mode et d'état qualifiant la base de données nommée dans sys.databases. Vous devez consulter le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et résoudre tous les problèmes avant d'exécuter cette procédure. Arrêtez et redémarrez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après avoir exécuté sp_resetstatus.  
   
  Une base de données peut devenir suspecte pour plusieurs raisons. Parmi les causes possibles figurent le refus d'accès à une ressource de base de données par le système d'exploitation et l'indisponibilité ou la corruption d'un ou plusieurs fichiers de base de données.  

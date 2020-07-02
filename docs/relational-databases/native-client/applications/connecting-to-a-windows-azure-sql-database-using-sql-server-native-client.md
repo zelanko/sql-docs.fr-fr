@@ -10,17 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 474db6d714d770ed5bfe0e509b79efc543ff1866
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 322ade61b0d525f914171d092cf15a2ca2d1db1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657559"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connexion à une base de données Azure SQL à l’aide de SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Pour obtenir un exemple qui montre comment se connecter à [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’aide de Native Client, consultez [développement : rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  Pour obtenir un exemple qui montre comment se connecter à à [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] l’aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [développement : rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problèmes connus lors de la connexion à une base de données SQL  
  Voici les problèmes connus liés à la connexion à une [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] à l'aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  
@@ -32,6 +32,6 @@ ms.locfileid: "81388200"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d'applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Génération d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

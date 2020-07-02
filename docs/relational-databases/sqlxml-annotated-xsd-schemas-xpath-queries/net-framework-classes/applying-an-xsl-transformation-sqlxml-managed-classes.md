@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83195bfb2e06efe5e5c0b1c4fb6105091283e23e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6ecdb718dec421703ffe97ec1b36617476b99ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649713"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Application d'une transformation XSL (classes managées SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Dans cet exemple, une requête SQL est exécutée sur la base de données AdventureWorks. La transformation XSL est appliquée au résultat de la requête pour générer une table à deux colonnes comportant respectivement le prénom et le nom des employés.  
   
  La propriété XslPath de l’objet SqlXmlCommand est utilisée pour spécifier le fichier XSL et son chemin d’accès au répertoire.  

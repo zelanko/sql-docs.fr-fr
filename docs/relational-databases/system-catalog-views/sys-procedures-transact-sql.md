@@ -20,21 +20,21 @@ ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894bcc1a5dc6400fe6e13ae66b63af6cec4cb128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5e6d1842989766c0cf77f141a62ebb6e146281f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678302"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contient une ligne pour chaque objet qui est une procédure d’un genre, avec **sys. Objects. type** = P, X, RF et PC.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Colonnes héritées de sys. Objects>**||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**\<Columns inherited from sys.objects>**||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = Procédure exécutée automatiquement au démarrage du serveur ; sinon, 0. Ne peut être défini que pour les procédures de la base de données master.|  
 |**is_execution_replicated**|**bit**|L'exécution de la procédure est répliquée.|  
 |**is_repl_serializable_only**|**bit**|L'exécution de la procédure est répliquée seulement si la transaction peut être sérialisée.|  

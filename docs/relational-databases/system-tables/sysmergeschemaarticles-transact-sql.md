@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d22d7f3b21e4bc02846df2b5f764a2fd5bca9dd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6ef37acf6e75d2a55a39995906cbda7a18b61d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675114"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de suivre les articles de schéma exclusivement associés à la réplication de fusion. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82829807"
 |**type**|**tinyint**|Type de l'article de schéma exclusivement, pouvant être :<br /><br /> **0x20** = article de schéma de procédure stockée uniquement.<br /><br /> **0x40** = article de schéma uniquement ou de vue indexée de schéma uniquement.|  
 |**objid**|**int**|Identificateur de l'objet de base de l'article. L'identificateur d'objet peut être celui d'une procédure, vue, vue indexée ou fonction définie par l'utilisateur.|  
 |**artid**|**uniqueidentifier**|Identificateur de l'article.|  
-|**descriptive**|**nvarchar(255)**|Description de l'article.|  
+|**description**|**nvarchar(255)**|Description de l'article.|  
 |**pre_creation_command**|**tinyint**|Action par défaut à effectuer lorsque l'article est créé dans la base de données d'abonnement :<br /><br /> **0 =** Aucun : si la table existe déjà sur l’abonné, aucune action n’est effectuée.<br /><br /> **1** = drop-supprime la table avant de la recréer.<br /><br /> **2** = DELETE : émet une suppression basée sur la clause WHERE dans le filtre de sous-ensemble.<br /><br /> **3** = tronquer-identique à **2**, mais supprime les pages au lieu des lignes. Toutefois, n'accepte pas la clause WHERE.|  
 |**pubid**|**uniqueidentifier**|Identificateur unique de la publication.|  
 |**statut**|**tinyint**|État de l'article de schéma exclusivement, pouvant être :<br /><br /> **1** = non synchronisé : le script de traitement initial pour publier la table s’exécute lors de la prochaine exécution du agent d’instantané.<br /><br /> **2** = actif : le script de traitement initial pour la publication de la table a été exécuté.<br /><br /> **5** = New_inactive à ajouter.<br /><br /> **6** = New_active à ajouter.|  

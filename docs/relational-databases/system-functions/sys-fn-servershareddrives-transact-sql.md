@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce7301325f8cf6ec782b9c9850399617171146f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652005"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie les noms des lecteurs partagés utilisés par le serveur cluster.  
   
@@ -49,8 +49,8 @@ fn_servershareddrives()
   
  Si l’instance de serveur actuelle n’est pas un serveur en cluster, **fn_servershareddrives** retourne un ensemble de lignes vide.  
   
-## <a name="remarks"></a>Notes  
- `fn_servershareddrives` renvoie la liste des lecteurs partagés qui sont utilisés par le serveur cluster. Ces lecteurs partagés appartiennent au même groupe de clusters que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la ressource. De plus, la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend de ces lecteurs.  
+## <a name="remarks"></a>Remarques  
+ `fn_servershareddrives` renvoie la liste des lecteurs partagés qui sont utilisés par le serveur cluster. Ces lecteurs partagés appartiennent au même groupe de clusters que la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ressource. De plus, la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend de ces lecteurs.  
   
  Cette fonction permet d'identifier les lecteurs disponibles pour les utilisateurs.  
   

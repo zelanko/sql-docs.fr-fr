@@ -1,5 +1,5 @@
 ---
-title: sys. systypes (Transact-SQL) | Microsoft Docs
+title: Types de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99a970b5be9f28569942b4378c488b710b13cd32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652333"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retourne une ligne pour chaque type de données système et chaque type de données défini par l'utilisateur définis dans la base de données.  
   
@@ -46,12 +46,12 @@ ms.locfileid: "68018077"
 |**xprec**|**tinyint**|Précision interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
 |**xscale**|**tinyint**|Échelle interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
 |**tdefault**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
-|**domaine**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
-|**codé**|**smallint**|ID de schéma du propriétaire du type.<br /><br /> Pour les bases de données mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID de schéma correspond à l'ID d'utilisateur du propriétaire.<br /><br /> ** \* Important \* \* ** Si vous utilisez l’une des instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL suivantes, vous devez utiliser l’affichage catalogue [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) au lieu de **sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
+|**Domain**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
+|**uid**|**smallint**|ID de schéma du propriétaire du type.<br /><br /> Pour les bases de données mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID de schéma correspond à l'ID d'utilisateur du propriétaire.<br /><br /> Important si vous utilisez l’une des instructions DDL suivantes, vous devez utiliser l’affichage catalogue ** \* sys. types au lieu des types desys.sys. \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **sys.systypes**<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |**réservé**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**CollationID**|**int**|S’il est basé sur un caractère, **CollationID** est l’ID du classement de la base de données active ; dans le cas contraire, la valeur est NULL.|  
 |**UserType**|**smallint**|ID de type d'utilisateur. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
-|**variable**|**bit**|Type de données de longueur variable.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**variable**|**bit**|Type de données de longueur variable.<br /><br /> 1 = Vrai<br /><br /> 0 = Faux|  
 |**allownulls**|**bit**|Détermine la possibilité de valeur NULL par défaut pour ce type de données. Cette valeur par défaut est remplacée par si la possibilité de valeur null est spécifiée à l’aide de [Create table](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**type**|**tinyint**|Type de données de stockage physique.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

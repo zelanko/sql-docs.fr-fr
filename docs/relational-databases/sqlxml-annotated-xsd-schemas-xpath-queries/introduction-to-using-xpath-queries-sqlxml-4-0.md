@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 544a8741557c222577f124014d6a04a9d066add1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649769"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Une requête XPath (XML Path Language) peut être spécifiée dans le cadre d'une URL ou dans un modèle. Le schéma de mappage détermine la structure de ce fragment résultant et les valeurs sont extraites de la base de données. Ce processus est conceptuellement semblable à la création de vues à l'aide de l'instruction CREATE VIEW et à l'écriture de requêtes SQL dans ces vues.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "84882250"
 ## <a name="supported-functionality"></a>Fonctionnalités prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath implémentées dans SQLXML 4.0.  
   
-|Fonctionnalité|Article|Lien aux exemples de requêtes|  
+|Fonctionnalité|Élément|Lien aux exemples de requêtes|  
 |-------------|----------|----------------------------|  
 |Axes|**attribut**, **enfant**, **parent**et **auto** -axes|[Spécification d’axes dans les requêtes XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prédicats à valeurs booléennes, y compris les prédicats consécutifs et imbriqués||[La spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -106,7 +106,7 @@ ms.locfileid: "84882250"
 ## <a name="unsupported-functionality"></a>Fonctionnalités non prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath non implémentées dans SQLXML 4.0.  
   
-|Fonctionnalité|Article|  
+|Fonctionnalité|Élément|  
 |-------------|----------|  
 |Axes|**ancêtre**, **ancêtre-or-self**, **descendant**, **descendant-ou-self (//)**, **suivant**, **frère suivant**, **espace de noms**, **précédent**, **frère précédent**|  
 |Prédicats à valeurs numériques||  

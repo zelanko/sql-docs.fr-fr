@@ -1,5 +1,5 @@
 ---
-title: sys. sysconfigures (Transact-SQL) | Microsoft Docs
+title: sys.sysconfigure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e0e65f06ccecd01ae9396b2c64962040a446aeb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663349"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Contient une ligne pour chaque option de configuration définie par un utilisateur. **sysconfigures** contient les options de configuration qui sont définies avant le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que toutes les options de configuration dynamiques définies depuis.  
+  Contient une ligne pour chaque option de configuration définie par un utilisateur. **sysconfigures** contient les options de configuration qui sont définies avant le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ainsi que toutes les options de configuration dynamiques définies depuis.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -38,7 +38,7 @@ ms.locfileid: "68089201"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**value**|**int**|Valeur modifiable par l'utilisateur pour la variable. Utilisée par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] uniquement en cas d'exécution de RECONFIGURE.|  
-|**package**|**int**|Numéro de variable de configuration.|  
+|**config**|**int**|Numéro de variable de configuration.|  
 |**Commentaire**|**nvarchar(255)**|Explication de l'option de configuration.|  
 |**statut**|**smallint**|Bitmap qui indique l’état de l’option. Il peut prendre les valeurs suivantes :<br /><br /> 0 = Statique. Le paramètre prend effet au redémarrage du serveur.<br /><br /> 1 = Dynamique. La variable prend effet lorsque l'instruction RECONFIGURE est exécutée.<br /><br /> 2 = Avancé. La variable s’affiche uniquement lorsque l' **option Afficher les options avancées** est définie. Le paramètre prend effet au redémarrage du serveur.<br /><br /> 3 = Dynamique et avancé.|  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662445"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Affiche le profil de l'Agent indiqué. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
@@ -58,7 +58,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_name**|**sysname**|Nom unique pour le type d'Agent.|  
 |**agent_type**|**int**|**1** = agent d’instantané<br /><br /> **2** = agent de lecture du journal<br /><br /> **3** = agent de distribution<br /><br /> **4** = agent de fusion<br /><br /> **9** = agent de lecture de la file d’attente|  
 |**Type**|**int**|**0** = système<br /><br /> **1** = personnalisé|  
-|**descriptive**|**varchar (3000)**|Description du profil.|  
+|**description**|**varchar (3000)**|Description du profil.|  
 |**def_profile**|**bit**|Indique si ce profil représente le profil par défaut pour ce type d'agent.|  
   
 ## <a name="return-code-values"></a>Codet de retour  

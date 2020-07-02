@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679051"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Type de données (API de procédure stockée étendue)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
@@ -34,7 +34,7 @@ ms.locfileid: "68064214"
 |SRVBIGCHAR|**char**|Type de données **character**, de longueur comprise entre 0 et 8000 octets.|  
 |SRVBIGVARBINARY|**varbinary**|Type de données **binary** de longueur variable comprise entre 0 et 8000 octets.|  
 |SRVBIGVARCHAR|**varchar**|Type de données **character** de longueur variable comprise entre 0 et 8000 octets.|  
-|SRVBINARY|**binary**|Type de données **binary**|  
+|SRVBINARY|**binary**|type de données **Binary** .|  
 |SRVBIT|**64bits**|type de données **bit**|  
 |SRVBITN|**bit null**|Type de données **bit** autorisant les valeurs NULL.|  
 |SRVCHAR|**char**|type de données **character**|  

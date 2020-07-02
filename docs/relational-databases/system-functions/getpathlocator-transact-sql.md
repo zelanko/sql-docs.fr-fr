@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cec490522f8bacc774213ec1af5cce1af0eefef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 133d2b109c54271c2e94cba2e88831f8f7aecf16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662874"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la valeur d'ID de localisateur de chemin d'accès pour le fichier ou le répertoire spécifié d'un FileTable.  
   
@@ -52,6 +52,6 @@ GetPathLocator(filenamespace_path)
  Vous pouvez utiliser la fonction **fonction getpathlocator** lors de la migration de fichiers à partir d’un serveur de fichiers vers un filetable. Dans ce cas, vous souhaitez déplacer les fichiers dans le FileTable, puis remplacer le chemin d'accès UNC d'origine de chaque fichier par le chemin d'accès UNC de FileTable. Pour obtenir un exemple complet, consultez [charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Travailler avec des répertoires et des chemins d’accès dans des FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

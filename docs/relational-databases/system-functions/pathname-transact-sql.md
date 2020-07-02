@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662887"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne le chemin d'accès d'un objet blob FILESTREAM. L’API OpenSqlFilestream utilise ce chemin d’accès pour retourner un handle qu’une application peut utiliser pour travailler avec les données BLOB à l’aide des API Win32. PathName est en lecture seule.  
   
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  La demande du nom de chemin d’accès d’une colonne de tout autre type de données ou d’un columnthat **varbinary (max)** n’a pas l’attribut FILESTREAM Storage entraîne une erreur de compilation de requête.  
   
  *\@option*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) entière qui définit comment le composant serveur du chemin d’accès doit être mis en forme. l’option peut prendre l’une des valeurs suivantes. * \@* La valeur par défaut est 0.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) entière qui définit comment le composant serveur du chemin d’accès doit être mis en forme. l' * \@ option* peut prendre l’une des valeurs suivantes. La valeur par défaut est 0.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -69,10 +69,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-type"></a>Type de retour  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  La valeur retournée est le chemin d'accès logique complet ou NETBIOS de l'objet blob. PathName ne retourne pas d'adresse IP. Une valeur NULL est retournée lorsque l'objet blob FILESTREAM n'a pas été créé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La colonne ROWGUID doit être visible dans toute requête qui appelle PathName.  
   
  Un objet blob FILESTREAM peut être créé uniquement à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  

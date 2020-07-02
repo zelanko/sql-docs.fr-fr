@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645650"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retourne les commandes pour les transactions signalées pour la réplication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -48,7 +48,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**ID de l’article**|**int**|ID de l’article.|  
 |**partial_command**|**bit**|Indique s'il s'agit d'une commande partielle|  
-|**commande**|**varbinary (1024)**|La valeur de commande.|  
+|**command**|**varbinary (1024)**|La valeur de commande.|  
 |**xactid**|**binary(10)**|ID de la transaction.|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de transaction.|  
 |**publication_id**|**int**|ID de la publication.|  
@@ -61,7 +61,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|Version de la base de données d'origine de la transaction.|  
 |**originator_lsn**|**varbinary(16)**|Identifie le numéro séquentiel dans le journal (LSN) de la commande dans la publication d'origine.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_replcmds** est utilisé par le processus de lecture du journal dans la réplication transactionnelle.  
   
  La réplication traite le premier client qui exécute **sp_replcmds** dans une base de données donnée en tant que lecteur de journal.  

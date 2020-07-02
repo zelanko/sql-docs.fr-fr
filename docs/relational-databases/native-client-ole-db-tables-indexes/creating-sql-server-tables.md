@@ -18,15 +18,15 @@ ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8fd8d21aee81366ca00567967a8a48dd88b95ce
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 1802e5ded5d894fbe1c9405d3f02932a8783ebe5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85658497"
 ---
 # <a name="creating-sql-server-tables"></a>Création de tables SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose la fonction **ITableDefinition :: CreateTable** , ce qui permet aux consommateurs de créer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. Les consommateurs utilisent **CreateTable** pour créer des tables permanentes nommées par le consommateur, ainsi que des tables permanentes ou temporaires avec des noms uniques générés par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client.  
   

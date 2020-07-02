@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fac7eaf3916c773b86b59c6819d577fcc1b8a438
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a5438fc11b522471029fdb9c849912b5028e670d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665394"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la configuration de groupe de charge de travail stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque groupe de charges de travail peut s'abonner à un seul et unique pool de ressources.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82831412"
 |pool_id|**int**|ID du pool de ressources utilisé par ce groupe de charges de travail.|  
 |external_pool_id|**int**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.<br /><br /> ID du pool de ressources externe utilisé par ce groupe de charges de travail.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L'affichage catalogue affiche les métadonnées stockées. Pour afficher la configuration en mémoire, utilisez la vue de gestion dynamique correspondante, [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
   
  La configuration stockée et en mémoire peut être différente si la configuration du gouverneur de ressources a été modifiée mais que l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE n'a pas été appliquée.  

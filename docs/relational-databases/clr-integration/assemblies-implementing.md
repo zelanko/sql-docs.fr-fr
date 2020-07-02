@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 807ed6a6f0d59444cd38f7fdf902a7c3fc1b47d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97ef8c7dfc617cb6cd56dbcc6d83e0540051d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695367"
 ---
 # <a name="assemblies---implementing"></a>Assemblys - Implémentation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique fournit des informations sur les concepts suivants, afin de vous aider à implémenter et à utiliser les assemblys dans vos bases de données :  
   
 -   Création d'assemblys  
@@ -32,7 +32,7 @@ ms.locfileid: "81488042"
 -   Gestion des versions d’assembly  
   
 ## <a name="creating-assemblies"></a>Création d'assemblys  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les assemblys sont créés à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY, et dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], au moyen de l'éditeur assisté d'assemblys. En outre, le déploiement d’un projet de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] SQL Server dans inscrit un assembly dans la base de données qui a été spécifiée pour le projet. Pour plus d’informations, consultez [Déploiement d’objets de base de données CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les assemblys sont créés à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY, et dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], au moyen de l'éditeur assisté d'assemblys. En outre, le déploiement d’un projet de SQL Server dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] inscrit un assembly dans la base de données qui a été spécifiée pour le projet. Pour plus d’informations, consultez [Déploiement d’objets de base de données CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
  **Pour créer un assembly à l'aide de Transact-SQL**  
   
@@ -72,14 +72,14 @@ ms.locfileid: "81488042"
   
 -   [Supprimer les objets](../../ssms/object/delete-objects.md)  
   
- Par défaut, l'exécution de tous les assemblys créés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désactivée. Vous pouvez utiliser l’option **CLR activé** de la procédure stockée système **sp_configure** pour désactiver ou activer l’exécution de tous les assemblys téléchargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La désactivation de l'exécution d'un assembly empêche l'exécution des fonctions CLR (Common Language Runtime), des procédures stockées, des déclencheurs, des agrégats et des types définis par l'utilisateur, de même qu'elle arrête leur exécution si celle-ci est en cours. Elle n'entrave cependant pas la possibilité de créer, de modifier ou de supprimer des assemblys. Pour plus d’informations, consultez [clr enabled (option de configuration de serveur)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ Par défaut, l'exécution de tous les assemblys créés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désactivée. Vous pouvez utiliser l’option **CLR activé** de la procédure stockée système **sp_configure** pour désactiver ou activer l’exécution de tous les assemblys téléchargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La désactivation de l'exécution d'un assembly empêche l'exécution des fonctions CLR (Common Language Runtime), des procédures stockées, des déclencheurs, des agrégats et des types définis par l'utilisateur, de même qu'elle arrête leur exécution si celle-ci est en cours. Elle n'entrave cependant pas la possibilité de créer, de modifier ou de supprimer des assemblys. Pour plus d’informations, consultez [clr enabled (option de configuration de serveur)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Pour désactiver et activer la création d'assemblys**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 ##  <a name="managing-assembly-versions"></a><a name="_managing"></a>Gestion des versions d’assembly  
- Quand un assembly est chargé dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est stocké et géré dans les catalogues système de la base de données. Toutes les modifications apportées à la définition de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly dans le doivent être propagées à l’assembly qui est stocké dans le catalogue de la base de données.  
+ Quand un assembly est chargé dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est stocké et géré dans les catalogues système de la base de données. Toutes les modifications apportées à la définition de l’assembly dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doivent être propagées à l’assembly qui est stocké dans le catalogue de la base de données.  
   
  Quand vous modifiez un assembly, vous devez émettre une instruction ALTER ASSEMBLY pour le mettre à jour dans la base de données, de façon à le remplacer par la dernière copie des modèles [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] contenant son implémentation.  
   

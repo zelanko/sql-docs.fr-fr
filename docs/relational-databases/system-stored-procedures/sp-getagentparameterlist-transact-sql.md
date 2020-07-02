@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c23cd3918742984afdb70b84d7a9adcf5553c746
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ceb3178f8ee200b88bcb5968c110a72a7434320
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662420"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie la liste de tous les paramètres d'agent de réplication qui peuvent être définis dans un profil pour le type d'agent spécifié. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution sur lequel l'agent est en cours d'exécution.  
   
@@ -50,7 +50,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_getagentparameter**.  

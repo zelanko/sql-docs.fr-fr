@@ -19,15 +19,15 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677582"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Retourne des informations sur toutes les attentes subies par les threads qui se sont exécutés pendant l'opération. Vous pouvez utiliser cette vue agrégée pour diagnostiquer les problèmes de performance liés à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et également liés à des requêtes et des traitements spécifiques.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82830853"
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 -   Cette vue de gestion dynamique affiche des données uniquement pour la base de données active.  
   

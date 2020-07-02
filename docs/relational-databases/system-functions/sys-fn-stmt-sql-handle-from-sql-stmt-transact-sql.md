@@ -13,15 +13,15 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652013"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Obtient le **stmt_sql_handle** pour une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction sous un type de paramétrage donné (simple ou forcé). Cela vous permet de faire référence aux requêtes stockées dans le Magasin des requêtes à l’aide de leur **stmt_sql_handle** quand vous connaissez leur texte.  
   

@@ -21,15 +21,15 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677913"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Renvoie les informations de taille et de fragmentation pour les données et les index de la table ou de la vue spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour un index, une ligne est retournée pour chaque niveau de l'arbre B (B-tree) dans chaque partition. Pour un segment de mémoire, une ligne est retournée pour l'unité d'allocation IN_ROW_DATA de chaque partition. Pour les données LOB, une ligne est retournée pour l'unité d'allocation LOB_DATA de chaque partition. S'il existe des données en dépassement de capacité des lignes dans la table, une ligne est retournée pour l'unité d'allocation ROW_OVERFLOW_DATA dans chaque partition. Ne retourne pas d'informations sur les index ColumnStore xVelocity avec mémoire optimisée.  
   
@@ -425,7 +425,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique liées aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
