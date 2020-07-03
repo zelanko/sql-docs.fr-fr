@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760143"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865611"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour la table d'état de la surveillance de la mise en miroir de bases de données en insérant une nouvelle ligne de table pour chaque base de données en miroir et tronque les lignes antérieures à la période de rétention actuelle. La période de rétention par défaut est de 7 jours (168 heures). Lors de la mise à jour de la table, **sp_dbmmonitorupdate** évalue les mesures de performance.  
   

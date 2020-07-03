@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52aeca25fd6fcf112adcb2410269fdcb1c049a52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69c80caccabb81fd2da1b3bdbe13ada8c5aa2582
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771142"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867676"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche les autorisations d'un rôle de base de données fixe. **sp_dbfixedrolepermission** retourne des informations correctes dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . La sortie ne reflète pas les modifications apportées à la hiérarchie des autorisations qui ont été implémentées dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Pour plus d’informations, consultez [rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), qui affiche une liste de rôles de base de données fixes et les autorisations correspondantes.  
   

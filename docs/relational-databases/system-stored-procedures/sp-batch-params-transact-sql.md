@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716137"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874140"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne un ensemble de lignes qui contient des informations sur les paramètres inclus dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. **sp_batch_params** analyse uniquement le lot spécifié et retourne des informations sur les valeurs de paramètre incorporées. N'exécute pas le traitement et ne modifie pas l'environnement d'exécution.  
   

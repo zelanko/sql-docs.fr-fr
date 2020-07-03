@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870624"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Permet d'ajouter et de supprimer des informations d'identification contenant le mot de passe requis pour ouvrir la clé principale d'une base de données.  
   
@@ -52,7 +52,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N’drop'  
  Indique que des informations d'identification seront supprimées de la banque d'informations d'identification pour la base de données spécifiée. La valeur passée à @action est **nvarchar**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert la clé principale d'une base de données pour chiffrer ou déchiffrer une clé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de déchiffrer la clé principale de base de données à l'aide de la clé principale de service de l'instance. Si le déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification.  
   
 > [!CAUTION]  
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>R. Création d'informations d'identification pour la clé principale d'AdventureWorks2012  
- Dans l'exemple ci-dessous, des informations d'identification sont créées pour la clé principale de la base de données `AdventureWorks2012` et le mot de passe de la clé principale est enregistré en tant que secret dans les informations d'identification. Étant donné que tous les paramètres passés `sp_control_dbmasterkey_password` à doivent être de type de données **nvarchar**, les chaînes de texte sont converties à l’aide de l’opérateur `N`de cast.  
+ Dans l'exemple ci-dessous, des informations d'identification sont créées pour la clé principale de la base de données `AdventureWorks2012` et le mot de passe de la clé principale est enregistré en tant que secret dans les informations d'identification. Étant donné que tous les paramètres passés à `sp_control_dbmasterkey_password` doivent être de type de données **nvarchar**, les chaînes de texte sont converties à l’aide de l’opérateur de Cast `N` .  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

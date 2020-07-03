@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2a0f6f23d38cb0841ba6e1b7891d9d32fc95b1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ede7644f143fbec8a013e6db879f869562b33e84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869562"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ferme et annule l’allocation du curseur et libère toutes les ressources associées. autrement dit, elle supprime la table temporaire utilisée pour la prise en charge des **curseurs**KEYSET ou static. sp_cursorclose est appelée en spécifiant ID = 9 dans un paquet tabular data stream (TDS).  
   
