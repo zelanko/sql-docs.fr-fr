@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 963a67031276def579d6a5b9c74d3e0239363ae0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bdbdd4bde2436eb11962790e65bb65daa938500
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722768"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880761"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>Méthode RemoveCertificate (classe ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Supprime le certificat de sécurité actuel de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

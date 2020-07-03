@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6aca6dc609835b88f741d573cbd67b95c1d72ce2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f36e1beffa864edefc8dd156375deddd74718fe4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750021"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880550"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Propriété PropertyIndex (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient ou définit l'index de propriété qui spécifie la position d'une propriété avancée dans un tableau de propriétés avancées qui appartiennent à un service référencé.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
