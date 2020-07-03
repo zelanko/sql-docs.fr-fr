@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc84090e08c3c8890a4613e6f73e1914209c0ba7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c20316355a0b86e4dbe85337e15586795a7f73cd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750171"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890221"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table système **IHpublisherindexes** contient une ligne pour chaque index répliqué à partir de serveurs de publication non-SQL Server à l’aide du serveur de distribution actuel. Cette table est stockée dans la base de données de distribution.  
   

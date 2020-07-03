@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644844"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891448"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Applique un filtre à une trace. **sp_trace_setfilter** ne peuvent être exécutées que sur des traces existantes qui sont arrêtées (l'*État* est **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]retourne une erreur si cette procédure stockée est exécutée sur une trace qui n’existe pas ou dont l' *État* n’est pas **égal à 0**.  
   

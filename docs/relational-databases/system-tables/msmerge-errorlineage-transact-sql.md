@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1dc2fa3c04c01588b587be3014029202912ddf2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6502c32f47668cbd2ce78ec91296ce61767a95f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736746"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889802"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSmerge_errorlineage** contient des lignes qui ont été supprimées sur l’abonné, mais dont la suppression n’est pas propagée vers le serveur de publication. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   

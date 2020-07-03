@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ac552c5fe8efe897ea9066819215c82a115d1d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62efb2fa9bf434af4cb9b237b133d3f705eaa7eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725470"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890021"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSdbms_datatype** contient la liste complète des types de données natifs au niveau de chaque système de gestion de base de données (SGBD) pris en charge, utilisé comme serveur de publication ou abonné dans la réplication de bases de données hétérogènes. Cette table est stockée dans la base de données **msdb** .  
   

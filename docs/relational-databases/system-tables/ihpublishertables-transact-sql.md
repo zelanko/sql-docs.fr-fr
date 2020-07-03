@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6440eff0121b54f0b7747bef04649dada0599f4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b0d04f3fea97e4943fbbaecf83637141afce482f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755471"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890229"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table système **IHpublishertables** représente les métadonnées stockées sur le serveur de publication. Cette table contient une ligne par table source publiée à partir d'un serveur de publication non-SQL Server à l'aide du serveur de distribution actuel. Cette table est stockée dans la base de données de distribution.  
   

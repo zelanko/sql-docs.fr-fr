@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45fb7bb9af3ece5c562412e3673dbeecd47d3b38
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6b60abffcb4831223ee35ac530c979865e03e05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753917"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889970"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSdistribution_history** contient des lignes d’historique pour les agents de distribution associés au serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   

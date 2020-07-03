@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 729df88407b71234fedc64d88ccaa1bc00a46fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2efb1920074ab0a15c14f1910cf8eb03ed3ef1f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750208"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890346"
 ---
 # <a name="dbosystaskids-transact-sql"></a>dbo.systaskids (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contient un mappage des tâches créées dans des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des travaux [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans la version actuelle. Cette table est stockée dans la base de données **msdb** .  
   

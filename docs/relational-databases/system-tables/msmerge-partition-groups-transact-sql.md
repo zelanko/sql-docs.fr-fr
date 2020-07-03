@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e0c7be221847924f48523526793fcd3d4664477
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71df50ce6f94602d06bc46229887983233641610
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784841"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889742"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSmerge_partition_groups** stocke une ligne pour chaque partition précalculée dans une base de données donnée. Outre les colonnes répertoriées, une colonne est ajoutée à cette table pour chaque fonction utilisée dans un filtre de lignes paramétrable. Par exemple, une colonne nommée **HOST_NAME_FN** est ajoutée à la table si un filtre utilise la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) . Une ligne est stockée pour chaque jeu unique de valeurs de fonction synchronisées avec ce serveur de publication. Au moins deux abonnés qui se synchronisent avec exactement la même valeur pour toutes ces fonctions partagent la même ligne dans cette table et, par conséquent, partagent tous le même ID de partition. Cette table est stockée dans la base de données de publication.  
   

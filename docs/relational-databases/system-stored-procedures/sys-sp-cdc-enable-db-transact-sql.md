@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a7a07452a0dcb9ebfe91e7e51b10239b3eb3f15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769632"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891134"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Active la capture de données modifiées pour la base de données actuelle. Cette procédure doit être exécutée pour une base de données afin que des tables puissent être activées pour la capture de données modifiées dans cette base de données. Les enregistrements de capture de données modifiées insèrent, mettent à jour et suppriment l'activité appliquée aux tables activées, en rendant les détails des modifications disponibles dans un format relationnel simple à utiliser. Les informations sur la colonne qui reflètent la structure de colonne d'une table source suivie sont capturées pour les lignes modifiées, avec les métadonnées nécessaires à l'application des modifications à un environnement cible.  
   

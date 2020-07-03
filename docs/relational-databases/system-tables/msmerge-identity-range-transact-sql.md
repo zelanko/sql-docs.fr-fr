@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc93ee74d92afadcf302a39ff066ba7e7218240f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4b83d497e70182d8980ec043396b79d7c65ec49
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736699"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889773"
 ---
 # <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table **MSmerge_identity_range** permet d’effectuer le suivi des plages numériques affectées aux colonnes d’identité pour l’abonnement aux publications sur lesquelles la réplication gère automatiquement ces affectations de plage. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
