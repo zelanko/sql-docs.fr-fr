@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fc6d9e9aa0e4da2e2e2652d5d34b833cd7b2a56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730066"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879930"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée vérifie si un travail d'alerte a été créé sur le serveur. Si un travail d’alerte n’existe pas, cette procédure stockée crée le travail d’alerte et ajoute son ID de travail à la table **log_shipping_monitor_alert** . L'alerte de travail est activée par défaut et elle est planifiée pour s'exécuter toutes les deux minutes.  
   

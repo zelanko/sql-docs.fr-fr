@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d3a7a396c381facb76eb3abcc0d7fe67e5991ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 87c001dbb7d6f43004e60b0e3b30415361caa866
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874478"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Associe au serveur actif une base de données qui ne possède qu'un seul fichier de données. **sp_attach_single_file_db** ne peut pas être utilisé avec plusieurs fichiers de données.  
   

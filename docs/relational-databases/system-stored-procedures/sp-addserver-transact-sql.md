@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d6040c3806723d07396fe7af3a0d50f49bb7e9a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716379"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876326"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Définit le nom de l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque l’ordinateur qui héberge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est renommé, utilisez **sp_addserver** pour informer l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] du nouveau nom d’ordinateur. Cette procédure doit être exécutée sur toutes les instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] moteur de base de données hébergé sur l'ordinateur. Le nom de l'instance du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas être modifié. Pour modifier le nom d'une instance nommée, installez une nouvelle instance portant le nom souhaité, détachez les fichiers de base de données de l'ancienne instance, attachez les bases de données à la nouvelle instance, puis supprimez l'ancienne instance. Vous pouvez également créer un nom d'alias client sur l'ordinateur client, en redirigeant la connexion vers un autre nom de serveur et d'instance ou la combinaison **serveur:port** sans modifier le nom de l'instance sur l'ordinateur serveur.
 

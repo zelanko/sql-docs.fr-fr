@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52ede21961df29543714f4c31044ef2e261302c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772277"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879922"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un fichier journal à un groupe de fichiers lorsque la récupération d'une base de données ne peut se terminer en raison d'une erreur 9002 (espace journal insuffisant). Une fois le fichier ajouté, **sp_add_log_file_recover_suspect_db** désactive le paramètre suspect et termine la récupération de la base de données. Les paramètres sont les mêmes que ceux de ALTER DATABASE *database_name* Add log file.  
   
