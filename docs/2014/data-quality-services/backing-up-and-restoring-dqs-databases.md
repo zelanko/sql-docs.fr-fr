@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: af6de293d3b5054e90f79a3f2f8f5cae4fbca04a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84938050"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886022"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sauvegarde et restauration de bases de données DQS
   Cette rubrique explique comment sauvegarder et restaurer les bases de données DQS.  
@@ -61,12 +61,11 @@ ms.locfileid: "84938050"
   
 11. Dans la fenêtre de l’éditeur de requête, copiez les instructions SQL suivantes et remplacez *\<PASSWORD>* par le mot de passe que vous avez fourni pendant l’installation de DQS pour la clé principale de base de données :  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     EXECUTE [internal_core].[RestoreDQDatabases] '<PASSWORD>'  
     GO  
-  
     ```  
   
 12. Appuyez sur F5 pour exécuter les instructions. Vérifiez le volet **résultats** pour vérifier que les instructions ont été exécutées avec succès.  

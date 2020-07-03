@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdef2a7b49e4b71a20d37d04e338b36594ae5985
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a863d0c6130821c9a495b8e92332342e90005689
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724547"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888178"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Exemple : Utilisation du fournisseur d’événements WMI avec le .NET Framework
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'exemple suivant crée une application en C# qui utilise le fournisseur d'événements WMI pour retourner des données d'événement pour tous les événements du langage de définition de données (DDL) qui se produisent sur une instance d'installation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemple  

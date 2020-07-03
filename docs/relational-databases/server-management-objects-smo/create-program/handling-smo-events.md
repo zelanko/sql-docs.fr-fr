@@ -16,15 +16,15 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 155bcf3e74e08d63aa714282aba42de3f6784e54
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148728"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883031"
 ---
 # <a name="handling-smo-events"></a>Gestion des événements SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Il existe des types d'événement de serveur auxquels il est possible de s'abonner en utilisant un gestionnaire d'événements et l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70148728"
   
  La gestion d'événements requiert l'écriture d'une classe de gestionnaire d'événements. La classe de gestionnaire d'événements peut contenir plusieurs fonctions de gestionnaire d'événements et doit être installée pour les événements à gérer. Les fonctions du gestionnaire d’événements reçoivent des informations sur l’événement à partir du paramètre *ServerEventNotificatificationArgs* qui peut être utilisé pour signaler des informations sur l’événement.  
   
- Les types d’événements de base de données et de serveur qui peuvent être gérés <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> sont répertoriés <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>dans la classe et la classe.  
+ Les types d’événements de base de données et de serveur qui peuvent être gérés sont répertoriés dans la <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe et la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> classe.  
   
 ## <a name="example"></a>Exemple  
 Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

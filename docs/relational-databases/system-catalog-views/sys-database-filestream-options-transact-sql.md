@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6a071df606e3d7f7f6721e698b42e7c411906169
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cb185c2cec6bd2a7104384b3b75e14e2de4167f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785001"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887929"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche des informations relatives au niveau d'accès non transactionnel aux données FILESTREAM dans les FileTables activés. Contient une ligne pour chaque base de données dans l'instance SQL Server.  
   

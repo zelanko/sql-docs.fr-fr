@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 749be1b26a7802119346434b016b376ea94910cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f89fa45ce0ca73d3406a87c7739ce6e7d777918
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727604"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887826"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Accès aux données à partir d'objets de base de données CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Une routine de common language runtime (CLR) peut accéder facilement aux données stockées dans l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans laquelle elles s’exécutent, ainsi qu’aux données stockées dans des instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accédez aux données à partir d’un objet de base de données CLR à l’aide de l' .NET Framework Fournisseur de données pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , également appelé **SqlClient**. Il s'agit du même fournisseur que celui utilisé par les développeurs accédant aux données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'applications clientes managées et de couche intermédiaire. Pour cette raison, vous pouvez tirer parti de vos connaissances de ADO.NET et **SqlClient** dans les applications clientes et de niveau intermédiaire.  
   
 > [!NOTE]  

@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ff2e139b9cbb1a4711873ae1cc5e9b3f0ac28e41
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882807"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importer les valeurs d'un fichier Excel dans un domaine
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique décrit comment importer des valeurs à partir d'un fichier Excel vers un champ de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilisation d'un fichier Excel pour importer les valeurs de champ dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifie le processus de génération de connaissance, et permet d'économiser aussi bien le temps que les efforts. Elle permet aux personnes qui ont une liste de valeurs de données valides dans un fichier Excel ou un fichier texte d'importer ces valeurs dans un domaine. À partir d'un fichier Excel, vous pouvez importer les valeurs de domaine dans un domaine ou des domaines d'une base de connaissances. (Pour plus d’informations sur l’importation de domaines dans une base de connaissances, consultez [importer des domaines à partir d’un fichier Excel dans découverte des connaissances](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) ). L’exportation vers un fichier Excel n’est pas prise en charge.  
   

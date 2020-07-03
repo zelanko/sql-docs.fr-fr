@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84932830"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885988"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implémentation de colonnes LOB dans une table mémoire optimisée
   Les tables mémoire optimisées n’ont pas de stockage hors ligne ou LOB (cette limitation a été supprimée dans SQL Server 2016 et versions ultérieures). consultez [types de données pris en charge pour l’OLTP en mémoire](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md), et la limite de taille de ligne est de 8060 octets. Le stockage de valeurs de chaîne de caractères ou LOB peut être effectué de deux manières différentes :  
@@ -25,7 +25,7 @@ ms.locfileid: "84932830"
   
  L'exemple suivant fractionne une valeur LOB en plusieurs lignes et insère les lignes dans une table mémoire optimisée :  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -75,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  Définissez également une table sur disque pour les colonnes LOB. Chaque ligne de la table mémoire optimisée possède une ligne correspondante dans la table sur disque avec toutes les valeurs LOB de cette ligne. Dans l'exemple suivant, des données sur les employés sont stockées dans une table mémoire optimisée, alors que leur photo est stockée dans une table sur disque.  
   

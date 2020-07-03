@@ -15,15 +15,15 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc82e51469a6eba82fb3ba6890bb84f0825c0e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b0bcba68bab412eb01df29d9d5b0e63dbcfd379
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81002738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885106"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gestion des utilisateurs, rôles et connexions
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Dans SMO, les connexions sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.Login>. Lorsque la connexion existe dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], elle peut être ajoutée à un rôle serveur. Le rôle de serveur est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.ServerRole>. Le rôle de base de données est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> et le rôle d'application est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
   

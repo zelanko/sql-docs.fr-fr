@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883928"
 ---
 # <a name="relational-query-designer-ssas"></a>Concepteur de requêtes relationnelles (SSAS)
   Le concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données à récupérer à partir des [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] bases de données relationnelles et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -219,7 +219,7 @@ ms.locfileid: "84539641"
 #### <a name="example"></a>Exemple  
  La requête suivante retourne la liste des noms depuis une table nommée `ContactType`.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>Exemple  
  La requête suivante appelle une procédure stockée nommée `uspGetWhereUsedProductID`. Lorsque la procédure stockée a des paramètres d'entrée, vous devez fournir des valeurs de paramètres lorsque vous exécutez la requête.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

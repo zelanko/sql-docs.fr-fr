@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf1f87043075fdf44adec9d61f379f20d898c2fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775635"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888160"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilisation de WQL avec le fournisseur WMI pour les événements de serveur
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les applications de gestion accèdent aux événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via le fournisseur WMI pour les événements serveur en émettant des instructions WQL (WMI Query Language). Le langage WQL est un sous-ensemble simplifié du langage SQL, avec quelques extensions spécifiques à WMI. Pour utiliser le WQL, une application extrait un type d'événement sur une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une base de données ou un objet de base de données (le seul objet pris en charge actuellement est la file d'attente). Le fournisseur WMI pour les événements serveur traduit la requête en une notification d’événement qui est créée dans la base de données cible pour les notifications d’événements étendues à la base de données ou à l’étendue de l’objet, ou dans la base de données **Master** pour les notifications d’événements d’étendue de serveur.  
   
  Examinons, par exemple, la requête WQL suivante :  

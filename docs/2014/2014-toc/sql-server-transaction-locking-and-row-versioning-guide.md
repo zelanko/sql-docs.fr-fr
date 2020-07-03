@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3405cf5aaf6e25c8d2efc3c0e4753b52e63f2372
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528415"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882123"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server
 
@@ -231,7 +231,7 @@ GO
   
      Une lecture fantôme est une situation qui se produit lorsque deux requêtes identiques sont exécutées et que la collection de lignes retournée par la deuxième requête est différente. L'exemple suivant montre comment cela peut arriver. Supposons que les deux transactions ci-dessous s'exécutent en même temps. Les deux instructions SELECT dans la première transaction peuvent retourner des résultats différents parce que l'instruction INSERT dans la deuxième transaction modifie les données utilisées par les deux transactions.  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -240,10 +240,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -572,7 +571,7 @@ GO
 
  Pour qu'une requête d'analyse d'étendue soit sérialisable, cette requête doit retourner les mêmes résultats chaque fois qu'elle est exécutée dans la même transaction. De nouvelles lignes ne doivent pas être insérées dans la requête d'analyse d'étendue par d'autres transactions, sinon celles-ci deviennent des insertions fantômes. Par exemple, la requête suivante utilise la table et l'index de l'illustration précédente :  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -587,7 +586,7 @@ SELECT name
 
  Si une requête à l'intérieur d'une transaction tente de sélectionner une ligne qui n'existe pas, l'exécution de la requête plus loin dans la même transaction doit retourner le même résultat. Aucune autre transaction ne peut être autorisée à insérer cette ligne inexistante. Supposons par exemple la requête suivante :  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -599,7 +598,7 @@ SELECT name
 
  Lors de la suppression d'une valeur dans une transaction, l'étendue dans laquelle la valeur se trouve ne doit pas nécessairement être verrouillée pendant toute la durée de la transaction effectuant l'opération de suppression. Le verrouillage de la valeur de clé supprimée jusqu'à la fin de la transaction est suffisant pour assurer la sérialisation. Par exemple, pour l'instruction DELETE suivante :  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -612,7 +611,7 @@ DELETE mytable
 
  Lors de l'insertion d'une valeur à l'intérieur d'une transaction, l'étendue dans laquelle la valeur se trouve ne doit pas nécessairement être verrouillée pendant la durée de l'opération effectuant l'opération d'insertion. Le verrouillage de la valeur de clé jusqu'à la fin de la transaction suffit pour assurer la sérialisation. Par exemple, étant donné l'instruction INSERT suivante :  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -745,7 +744,7 @@ INSERT mytable VALUES ('Dan');
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |Format de sortie|La sortie est capturée dans le journal des erreurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|Les nœuds impliqués dans le blocage sont privilégiés. Chaque nœud dispose d'une section dédiée, tandis que la section finale décrit la victime du blocage.|Retourne des informations dans un format de type XML, mais non conforme au schéma XSD (XML Schema Definition). Le format possède trois sections principales. La première déclare la victime du blocage. La deuxième décrit chaque processus impliqué dans le blocage. La troisième décrit les ressources synonymes des nœuds de l'indicateur de trace 1204.|  
 |Identification d'attributs|**SPID : \<x> ECID : \<x> .** Identifie le thread de l'ID du processus système en cas de traitements parallèles. L’entrée `SPID:<x> ECID:0` , où \<x> est remplacé par la valeur SPID, représente le thread principal. L’entrée `SPID:<x> ECID:<y>` , où \<x> est remplacé par la valeur SPID et \<y> est supérieure à 0, représente les sous-threads du même SPID.<br /><br /> **BatchID** (**sbid** pour l’indicateur de trace 1222). Identifie le traitement à partir duquel l'exécution du code demande ou détient un verrou. Lorsque MARS (Multiple Active Result Sets) est désactivé, la valeur BatchID est 0. Quand MARS est activé, la valeur des lots actifs est 1 pour *n*. Si la session ne comporte pas de traitements actifs, BatchID a pour valeur 0.<br /><br /> **Mode**. Spécifie, pour une ressource particulière, le type de verrou demandé, accordé ou attendu par un thread. Les différents modes sont IS (intent partagé), S (partagé), U (mise à jour), IX (intent exclusif), SIX (partagé avec intent exclusif) et X (exclusif).<br /><br /> **Line #** (**line** pour l’indicateur de trace 1222). Indique le numéro de ligne du traitement qui était en cours d'exécution lorsque le blocage s'est produit.<br /><br /> **Input Buf** (**inputbuf** pour l’indicateur de trace 1222). Dresse la liste de toutes les instructions du traitement en cours.|**Nœud**. Il s'agit du numéro d'entrée dans la chaîne de blocage.<br /><br /> **Liste**. Le propriétaire du verrou peut faire partie des listes suivantes :<br /><br /> **Grant List**. Énumère les propriétaires actuels de la ressource.<br /><br /> **Convert List**. Énumère les propriétaires en cours qui essaient de convertir leurs verrous vers un niveau supérieur.<br /><br /> **Wait List**. Énumère les nouvelles demandes de verrou en cours pour la ressource.<br /><br /> **Statement Type**. Décrit le type d'instructions DML (SELECT, INSERT, UPDATE ou DELETE) sur lesquelles les threads disposent d'autorisations.<br /><br /> **Victim Resource Owner**. Spécifie le thread choisi comme victime par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour rompre le cycle de blocage. Il est alors mis fin au thread choisi et à tous les sous-threads existants.<br /><br /> **Next Branch**. Représente les deux sous-threads (ou plus) du même SPID qui participent au cycle de blocage.|**deadlock victim**. Représente l’adresse de mémoire physique de la tâche (consultez [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)) qui a été sélectionnée comme victime de l’interblocage. Elle est égale à 0 (zéro) en cas de non résolution du blocage. Une tâche en cours d'annulation ne peut pas être choisie comme victime de blocage.<br /><br /> **executionstack**. Représente le code [!INCLUDE[tsql](../includes/tsql-md.md)] en cours d'exécution lorsque le blocage se produit.<br /><br /> **priorité**. Représente la priorité de blocage. Dans certains cas, le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut choisir de modifier la priorité de blocage pendant un bref laps de temps afin de favoriser la concurrence.<br /><br /> **logused**. Espace journal utilisé par la tâche.<br /><br /> **ID du propriétaire**. ID de la transaction qui contrôle la demande.<br /><br /> **État**. État de la tâche. Il prend l'une des valeurs suivantes :<br /><br /> >> **en attente**. En attente d'un thread de travail.<br /><br /> >> **exécutable**. Prêt à s'exécuter, mais en attente d'un quantum.<br /><br /> >> **en cours d’exécution**. En cours d'exécution sur le planificateur.<br /><br /> >> **suspendu**. L'exécution est suspendue.<br /><br /> >> **terminé**. La tâche est achevée.<br /><br /> >> **spinloop**. En attente de libération d'un spinlock.<br /><br /> **waitresource**. Ressource convoitée par la tâche.<br /><br /> **délai**. Délai d'attente de la ressource en millisecondes.<br /><br /> **schedulerid**. Planificateur associé à cette tâche. Consultez [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql).<br /><br /> **nom d’hôte**. Nom de la station de travail.<br /><br /> **IsolationLevel**. Niveau d'isolement des transactions en cours.<br /><br /> **Xactid**. ID de la transaction qui contrôle la demande.<br /><br /> **CurrentDb**. ID de la base de données.<br /><br /> **lastbatchstarted**. Dernière fois qu'un processus client a démarré une exécution de traitement.<br /><br /> **lastbatchcompleted**. Dernière fois qu'un processus client a terminé une exécution de traitement.<br /><br /> **clientoption1 et clientoption2**. Options définies pour cette connexion cliente. Il s'agit d'un masque de bits qui contient des informations sur les options habituellement contrôlées par les instructions SET, telles que SET NOCOUNT et SET XACTABORT.<br /><br /> **associatedObjectId**. Représente l'ID HoBT (Heap or B-tree, segment de mémoire ou arborescence binaire).|  
-|Attributs des ressources|**RID**. Identifie la ligne d'une table pour laquelle un verrou est détenu ou demandé. RID est représenté comme RID : *db_id:file_id:page_no:row_no*. Par exemple : `RID: 6:1:20789:0`.<br /><br /> **Objet**. Identifie la table pour laquelle un verrou est détenu ou demandé. OBJECT est représenté comme OBJECT : *db_id:object_id*. Par exemple : `TAB: 6:2009058193`.<br /><br /> **Clé**. Identifie la plage de clés d'un index pour laquelle un verrou est détenu ou demandé. KEY est représenté comme KEY : *db_id:hobt_id* (*valeur de hachage de la clé d’index*). Par exemple : `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifie la ressource de page pour laquelle un verrou est détenu ou demandé. PAG est représenté comme PAG : *db_id:file_id:page_no*. Par exemple : `PAG: 6:1:20789`.<br /><br /> **Ext**. Identifie la structure d'extension. EXT est représenté comme EXT : *db_id:file_id:extent_no*. Par exemple : `EXT: 6:1:9`.<br /><br /> **Base**de. Identifie le verrou de base de données. **DB est représenté de l’une des manières suivantes :**<br /><br /> DB : *db_id*<br /><br /> DB : *db_id*[BULK-OP-DB], qui identifie le verrou de base de données pris par la base de données de sauvegarde.<br /><br /> DB : *db_id*[BULK-OP-LOG], qui identifie le verrou pris par le journal de sauvegarde pour cette base de données spécifique.<br /><br /> **Application**. Identifie le verrou pris par une ressource d'application. APP est représenté comme APP : *lock_resource*. Par exemple : `APP: Formf370f478`.<br /><br /> **Métadonnées**. Représente les ressources de métadonnées impliquées dans un blocage. Comme METADATA possède de nombreuses sous-ressources, la valeur retournée dépend de la sous-ressource bloquée. Par exemple, les MÉTADONNÉEs. USER_TYPE retourne `user_type_id =` \<*integer_value*> . Pour plus d’informations sur les ressources et sous-ressources METADATA, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql).<br /><br /> **HoBT**. Représente un segment de mémoire ou d'arbre B (B-Tree) impliqué dans un blocage.|Non exclusif à cet indicateur de trace.|Non exclusif à cet indicateur de trace.|  
+|Attributs des ressources|**RID**. Identifie la ligne d'une table pour laquelle un verrou est détenu ou demandé. RID est représenté comme RID : *db_id:file_id:page_no:row_no*. Par exemple, `RID: 6:1:20789:0`.<br /><br /> **Objet**. Identifie la table pour laquelle un verrou est détenu ou demandé. OBJECT est représenté comme OBJECT : *db_id:object_id*. Par exemple, `TAB: 6:2009058193`.<br /><br /> **Clé**. Identifie la plage de clés d'un index pour laquelle un verrou est détenu ou demandé. KEY est représenté comme KEY : *db_id:hobt_id* (*valeur de hachage de la clé d’index*). Par exemple, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifie la ressource de page pour laquelle un verrou est détenu ou demandé. PAG est représenté comme PAG : *db_id:file_id:page_no*. Par exemple, `PAG: 6:1:20789`.<br /><br /> **Ext**. Identifie la structure d'extension. EXT est représenté comme EXT : *db_id:file_id:extent_no*. Par exemple, `EXT: 6:1:9`.<br /><br /> **Base**de. Identifie le verrou de base de données. **DB est représenté de l’une des manières suivantes :**<br /><br /> DB : *db_id*<br /><br /> DB : *db_id*[BULK-OP-DB], qui identifie le verrou de base de données pris par la base de données de sauvegarde.<br /><br /> DB : *db_id*[BULK-OP-LOG], qui identifie le verrou pris par le journal de sauvegarde pour cette base de données spécifique.<br /><br /> **Application**. Identifie le verrou pris par une ressource d'application. APP est représenté comme APP : *lock_resource*. Par exemple, `APP: Formf370f478`.<br /><br /> **Métadonnées**. Représente les ressources de métadonnées impliquées dans un blocage. Comme METADATA possède de nombreuses sous-ressources, la valeur retournée dépend de la sous-ressource bloquée. Par exemple, les MÉTADONNÉEs. USER_TYPE retourne `user_type_id =` \<*integer_value*> . Pour plus d’informations sur les ressources et sous-ressources METADATA, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql).<br /><br /> **HoBT**. Représente un segment de mémoire ou d'arbre B (B-Tree) impliqué dans un blocage.|Non exclusif à cet indicateur de trace.|Non exclusif à cet indicateur de trace.|  
   
 ###### <a name="trace-flag-1204-example"></a>Exemple d'indicateur de trace 1204  
 
@@ -976,7 +975,7 @@ deadlock-list
   
  Ces instructions [!INCLUDE[tsql](../includes/tsql-md.md)] créent des objets de test logiques qui sont utilisés dans les exemples qui suivent.  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -998,7 +997,7 @@ GO
   
  Une instruction `SELECT` est exécutée sous une transaction. À cause de l'indicateur de verrou `HOLDLOCK`, cette instruction va acquérir et conserver un verrou IS (Intent Shared) sur la table (pour cette illustration, les verrous de ligne et de page sont ignorés). Le verrou IS sera acquis uniquement sur la partition attribuée à la transaction. Pour cet exemple, il est supposé que le verrou IS est acquis sur l'ID de partition 7.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1011,7 +1010,7 @@ BEGIN TRANSACTION
   
  Une transaction a démarré et l'instruction `SELECT` qui s'exécute sous cette transaction va acquérir et conserver un verrou partagé (S) sur la table. Le verrou S sera acquis sur toutes les partitions, ce qui aboutit à plusieurs verrous de table, un pour chaque partition. Par exemple, sur un système à 16 UC, 16 verrous S seront créés sur les ID de partition de 0 à 15. Comme le verrou S est compatible avec le verrou IS qui se trouve sur la partition ID 7 du fait de la transaction de la session 1, il n'y a pas de blocages entre les transactions.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1022,7 +1021,7 @@ BEGIN TRANSACTION
   
  L'instruction `SELECT` suivante est exécutée sous la transaction qui est encore active sous la session 1. En raison de l'indicateur de verrou de table exclusif (X), la transaction va essayer d'acquérir un verrou exclusif X sur la table. Toutefois, le verrou S qui est maintenu par la transaction de la session 2 bloquera le verrou X au niveau de la partition ID 0.   
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1034,7 +1033,7 @@ SELECT col1
   
  Une instruction `SELECT` est exécutée sous une transaction. À cause de l'indicateur de verrou `HOLDLOCK`, cette instruction va acquérir et conserver un verrou IS (Intent Shared) sur la table (pour cette illustration, les verrous de ligne et de page sont ignorés). Le verrou IS sera acquis uniquement sur la partition attribuée à la transaction. Pour cet exemple, on suppose que le verrou IS est acquis sur la partition ID 6.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1049,7 +1048,7 @@ BEGIN TRANSACTION
   
  Sur les ID de partition de 7 à 15 que le verrou X n'a pas encore atteint, d'autres transactions peuvent continuer d'acquérir des verrous.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1308,13 +1307,13 @@ BEGIN TRANSACTION
 
  Les exemples ci-dessous illustrent les différences de comportement entre les transactions d'isolement d'instantané et les transactions validées en écriture qui utilisent le contrôle de version de ligne.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>R. Utilisation du niveau d'isolement d'instantané  
+#### <a name="a-working-with-snapshot-isolation"></a>A. Utilisation du niveau d'isolement d'instantané  
 
  Dans cet exemple, une transaction exécutée sous isolement d'instantané lit des données qui sont ensuite modifiées par une autre transaction. La transaction d'instantané ne bloque pas l'opération de mise à jour exécutée par l'autre transaction et continue de lire les données à partir de la ligne avec version, en ignorant la modification apportée aux données. Toutefois, lorsque la transaction d'instantané tente de modifier des données qui ont déjà été modifiées par l'autre transaction, la transaction d'instantané génère une erreur et est terminée.  
   
  Sur la session 1 :  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1337,7 +1336,7 @@ BEGIN TRANSACTION;
   
  Sur la session 2 :  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1359,7 +1358,7 @@ BEGIN TRANSACTION;
   
  Sur la session 1 :  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1371,7 +1370,7 @@ BEGIN TRANSACTION;
   
  Sur la session 2 :  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1380,7 +1379,7 @@ GO
   
  Sur la session 1 :  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1415,7 +1414,7 @@ GO
   
  Sur la session 1 :  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1442,7 +1441,7 @@ BEGIN TRANSACTION;
   
  Sur la session 2 :  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1465,7 +1464,7 @@ BEGIN TRANSACTION;
   
  Sur la session 1 :  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1479,7 +1478,7 @@ BEGIN TRANSACTION;
   
  Sur la session 2 :  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1488,7 +1487,7 @@ GO
   
  Sur la session 1 :  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1518,7 +1517,7 @@ GO
   
  L'instruction [!INCLUDE[tsql](../includes/tsql-md.md)] suivante permet la prise en charge de l'option READ_COMMITTED_SNAPSHOT :  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1527,7 +1526,7 @@ ALTER DATABASE AdventureWorks2012
   
  L'instruction [!INCLUDE[tsql](../includes/tsql-md.md)] suivante permet la prise en charge de l'option ALLOW_SNAPSHOT_ISOLATION :  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1557,7 +1556,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   READCOMMITTED (lu-validé) avec utilisation du contrôle de version de ligne par l'activation de l'option de base de données `READ_COMMITTED_SNAPSHOT` (valeur `ON`) comme illustré dans l'exemple de code suivant :  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1566,14 +1565,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   Niveau d'isolement d'instantané en définissant l'option de base de données `ALLOW_SNAPSHOT_ISOLATION` avec la valeur `ON` comme illustré dans l'exemple de code suivant :  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      Une transaction s'exécutant sous le niveau d'isolement d'instantané (SNAPSHOT) peut accéder aux tables de la base de données qui ont été activées pour les instantanés. Pour accéder aux tables qui n'ont pas été activées pour les instantanés, le niveau d'isolement doit être modifié. Ainsi, dans l'exemple de code suivant, une instruction `SELECT` exécutée dans le cadre d'une transaction d'instantané joint deux tables. Une table appartient à une base de données dans laquelle le niveau d'isolement d'instantané (SNAPSHOT) n'est pas activé. Lorsque l'instruction `SELECT` s'exécute sous le niveau d'isolement d'instantané, elle échoue.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1584,7 +1583,7 @@ ALTER DATABASE AdventureWorks2012
   
      Dans l'exemple de code suivant, la même instruction `SELECT` a été modifiée pour faire passer le niveau d'isolation de la transaction à READCOMMITTED (lu-validé). Grâce à cette modification, l'exécution de l'instruction `SELECT` aboutit.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1618,7 +1617,7 @@ ALTER DATABASE AdventureWorks2012
   
      Supposons, par exemple, qu'un administrateur de base de données exécute l'instruction `ALTER INDEX` suivante.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1648,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  Pour déterminer le paramètre de LOCK_TIMEOUT actuel, exécutez la @LOCK_TIMEOUT fonction @ :  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1671,7 +1670,7 @@ GO
   
  L'exemple suivant montre comment définir le niveau d'isolation `SERIALIZABLE` :  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1688,7 +1687,7 @@ GO
   
  Pour déterminer le niveau d'isolation des transactions en cours, utilisez l'instruction `DBCC USEROPTIONS` comme dans l'exemple qui suit. Le jeu de résultats peut être différent sur votre système.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1736,7 +1735,7 @@ GO
   
  Comme l'illustre l'exemple suivant, si le niveau d'isolement d'une transaction est `SERIALIZABLE` et que l'indicateur de verrouillage `NOLOCK` au niveau des tables est utilisé avec l'instruction `SELECT`, les verrous de clé habituellement utilisés pour préserver des transactions sérialisables ne sont pas appliqués.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1793,7 +1792,7 @@ GO
   
  L'exemple suivant illustre cette utilisation des transactions imbriquées. La procédure `TransProc` applique sa transaction quel que soit le mode de transaction du processus qui l'exécute. Si `TransProc` est appelée alors qu'une transaction est active, la transaction imbriquée dans `TransProc` est en grande partie ignorée, et les instructions INSERT qu'elle contient sont validées ou restaurées en fonction de la dernière action effectuée dans la transaction la plus externe. Si `TransProc` est exécutée par un processus pour lequel aucune transaction n'est en cours, l'instruction COMMIT TRANSACTION qui se trouve à la fin de la procédure déclenche la validation effective des instructions INSERT.  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  

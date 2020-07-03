@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 998f1079044f530a824600fede88c99ca91f793e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937990"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886043"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurer les paramètres avancés pour les fichiers journaux DQS
   Cette rubrique explique comment configurer les paramètres avancés pour [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] et les fichiers journaux [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , tels que la définition de la limite de la taille des fichiers par progression des fichiers journaux, la définition du modèle d'horodatage les événements, etc.  
@@ -38,8 +38,8 @@ ms.locfileid: "84937990"
 ##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a> Configurer les paramètres des journaux du serveur de qualité des données  
  Les paramètres des journaux [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sont présents au format XML dans la colonne **VALUE** de la ligne **ServerLogging** de la table A_CONFIGURATION de la base de données DQS_MAIN. Vous pouvez exécuter la requête SQL suivante pour afficher les informations de configuration :  
   
-```  
-select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
+```sql  
+select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'; 
 ```  
   
  Vous devez mettre à jour les informations appropriées dans la colonne **VALUE** de la ligne **ServerLogging** pour modifier les paramètres de configuration de la journalisation [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Dans cet exemple, nous mettrons à jour les paramètres des journaux [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] pour définir la limite de la taille des fichiers par progression à 25 000 Ko (valeur par défaut 20 000 Ko).  
@@ -50,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Dans la fenêtre Éditeur de requête, copiez les instructions SQL suivantes :  
   
-    ```  
+    ```sql  
     -- Begin the transaction.  
     BEGIN TRAN  
     GO  
@@ -96,14 +96,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 5.  Pour appliquer les modifications effectuées à la configuration de journalisation [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , vous devez exécuter les instructions Transact-SQL suivantes. Ouvrez une nouvelle fenêtre de l'Éditeur de requête, puis collez les instructions Transact-SQL suivantes :  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     DECLARE @return_value int  
     EXEC @return_value = [internal_core].[RefreshLogSettings]  
     SELECT 'Return Value' = @return_value  
     GO  
-  
     ```  
   
 6.  Appuyez sur F5 pour exécuter les instructions. Vérifiez le volet **résultats** pour vérifier que les instructions ont été exécutées avec succès.  

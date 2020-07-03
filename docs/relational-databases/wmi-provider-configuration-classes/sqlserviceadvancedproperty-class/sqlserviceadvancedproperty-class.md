@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8dc6c2294d089ca86f571eec5f348c4270782740
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 601cb2d42848d91258de22db6db0648ad7030596
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734302"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888274"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) représente une propriété avancée du service qui est référencé par l’objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) .  
   
  La [propriété AdvancedProperties (classe SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) fait référence à un tableau d’objets de [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) .  

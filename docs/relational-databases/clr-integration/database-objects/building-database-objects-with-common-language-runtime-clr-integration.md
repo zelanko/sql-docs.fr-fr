@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5dc38fc39a0f4d876adc99a0aff87d2acaad1545
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789561"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885909"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Génération d'objets de base de données à l'aide de l'intégration du CLR (Common Language Runtime)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Vous pouvez générer des objets de base de données à l'aide de l'intégration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le CLR (Common Language Runtime) .NET Framework. Le code managé qui s’exécute dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé « routine CLR ». Ces routines incluent :  
   
 -   Fonctions scalaires définies par l'utilisateur (fonctions UDF scalaires)  

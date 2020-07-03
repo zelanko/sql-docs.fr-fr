@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 95d1c30abf269c763bb3c346edd340805d5278f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad22f0e389b9ad7c0c770f5990482e128c02201
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736677"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889276"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La table **sysmergearticlecolumns** contient une ligne pour chaque colonne de table publiée dans une publication de fusion et mappe chaque colonne à son article de fusion. Cette table est stockée dans la base de données de publication.  
   

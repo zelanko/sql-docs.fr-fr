@@ -15,17 +15,17 @@ ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 707ee3cc48cbc459cab98d5d97aa252697cd307f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883024"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guide de programmation SMO (SQL Server Management Objects)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les objets SMO (Management Objects) sont une collection d’objets conçus pour la programmation de tous [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les aspects de la gestion de. La collection d'objets RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) encapsule la gestion de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les objets SMO (Management Objects) sont une collection d’objets conçus pour la programmation de tous les aspects de la gestion de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La collection d'objets RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) encapsule la gestion de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Rubrique|Description|  
 |-----------|-----------------|
