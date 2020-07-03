@@ -16,19 +16,19 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d83b716d9919bf322097b8ded8409950982d961c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6a164927ed5a6dd711dc6d2243dd3b96c85ca08
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148359"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896313"
 ---
 # <a name="tracing-and-replaying-events"></a>Événements de traçage et de relecture
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  Dans SMO, les objets de **trace** et de **relecture** <xref:Microsoft.SqlServer.Management.Trace> de l’espace de noms fournissent [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] un accès par programme à la fonctionnalité, qui est [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisée [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]pour surveiller une instance de ou. Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures qui compromettent les performances en s'exécutant trop lentement.  
+  Dans SMO, les objets de **trace** et de **relecture** de l' <xref:Microsoft.SqlServer.Management.Trace> espace de noms fournissent un accès par programme à la [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] fonctionnalité, qui est utilisée pour surveiller une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures qui compromettent les performances en s'exécutant trop lentement.  
   
- Les objets **Trace** et **Replay** fournissent un jeu d'objets qui peuvent être utilisés pour créer des traces sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces objets peuvent être utilisés au sein de vos propres applications pour créer manuellement des traces pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. En outre, les objets Smo **trace** peuvent être utilisés pour lire les fichiers de trace SQL et les tables qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ont [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]été créées par l’analyse, ou la journalisation Dts.  
+ Les objets **Trace** et **Replay** fournissent un jeu d'objets qui peuvent être utilisés pour créer des traces sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces objets peuvent être utilisés au sein de vos propres applications pour créer manuellement des traces pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. En outre, les objets SMO **trace** peuvent être utilisés pour lire les fichiers de trace SQL et les tables qui ont été créées par l’analyse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou la journalisation Dts.  
   
  Les objets SMO **Trace** vous permettent de réaliser les fonctions suivantes :  
   
@@ -56,7 +56,7 @@ ms.locfileid: "70148359"
   
  Les objets de trace SMO résident dans l'espace de noms <xref:Microsoft.SqlServer.Management.Trace>, qui requiert une référence au fichier Microsoft.SQLServer.ConnectionInfo.dll.  
   
- Les objets **trace** et **Replay** requièrent un objet [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> pour établir une connexion avec l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L’objet [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) réside dans l’espace de noms [Microsoft. SqlServer. Management. Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) , qui requiert une référence au fichier Microsoft. SqlServer. ConnectionInfo. dll.  
+ Les objets **trace** et **Replay** requièrent un objet [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> pour établir une connexion avec l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L’objet [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) réside dans l’espace de noms [Microsoft. SqlServer. Management. Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) , qui requiert une référence au fichier Microsoft.SQLServer.ConnectionInfo.dll.  
   
 > [!NOTE]  
 >  Les objets **Trace** et **Replay** ne sont pas pris en charge sur une plate-forme 64 bits.  

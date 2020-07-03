@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9716985438a9e29c9ef8d72eb2ba3e77b8db42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639996"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899287"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lorsque cette procédure est exécutée depuis un nœud dans une topologie d'égal à égal, elle demande une réponse de tous les nœuds de la topologie. En exécutant cette procédure et en vérifiant les réponses correspondantes, vous garantissez la remise de toutes les commandes précédentes aux nœuds qui répondent. Cette procédure stockée est exécutée sur le nœud demandeur sur n'importe quelle base de données.  
   

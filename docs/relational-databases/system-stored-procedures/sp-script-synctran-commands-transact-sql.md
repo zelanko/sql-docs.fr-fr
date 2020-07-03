@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 697cba4e04483e28fe0099096916391057c1568a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645366"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899210"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Génère un script qui contient les appels de **sp_addsynctrigger** à appliquer aux abonnés pour les abonnements pouvant être mis à jour. Il existe un appel de **sp_addsynctrigger** pour chaque article de la publication. Le script généré contient également les appels de **sp_addqueued_artinfo** qui créent la table **MSsubsciption_articles** nécessaire pour traiter les publications mises en file d’attente. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   

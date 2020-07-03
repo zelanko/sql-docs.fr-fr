@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81820891cbd7d5dda273b633818f9ace057745ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28e5344dfe0b5e026df51e5accda6edecd6c4487
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758041"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898144"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>Procédures stockées OLE Automation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures stockées système suivantes, qui permettent d'utiliser des objets OLE Automation dans un lot [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloque l'accès aux procédures stockées OLE Automation, car ce composant est désactivé dans le cadre de la configuration de la sécurité pour ce serveur. L'accès aux procédures OLE Automation peut être activé par un administrateur système, au moyen de sp_configure. Pour plus d'informations, consultez [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   

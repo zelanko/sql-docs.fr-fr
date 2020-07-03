@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57fc9a180df47b13608cb3687e5b932139c50ab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 832521da1d7d23ed4b91c5d9c451c3ceb3b1e5b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786362"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897120"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contient une ligne pour chaque groupe de fichiers d'une base de données. Il existe au moins une entrée dans cette table pour le groupe de fichiers primaire.  
   

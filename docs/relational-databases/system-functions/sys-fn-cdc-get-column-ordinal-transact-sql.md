@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e858279730f4a9d50eaf9d00804ab7c3125b2efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97c9c8d5b8c15bd2400874104bc1595aa93a4def
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786294"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898409"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne l’ordinal de colonne de la colonne spécifiée telle qu’elle apparaît dans la [table de modifications](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associée à l’instance de capture spécifiée.  
   

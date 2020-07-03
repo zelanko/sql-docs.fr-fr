@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63b7029c69fff73615d34bd723b97290b2557afb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827523"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899199"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Envoie un message électronique aux destinataires spécifiés. Le message peut comprendre un ensemble de résultats de requête et des fichiers joints. Lorsque les messages sont placés dans la file d’attente Database Mail, **sp_send_dbmail** retourne la **mailitem_id** du message. Cette procédure stockée se trouve dans la base de données **msdb** .  
   
@@ -93,7 +93,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Normal  
   
--   Élevé  
+-   Importante  
   
  La valeur par défaut est Normal.  
   

@@ -13,16 +13,16 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e5e80c3e4e9437efa41b43e7bf6469d06432745
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 741a967b3fde6c5e3b5e3de87ac54a1142c93bfe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796265"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896978"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] est une application web hébergée par IIS (Internet Information Services). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] fonctionne seulement dans Internet Explorer 9 ou ultérieur. Internet Explorer 8 et versions antérieures, Microsoft Edge et Chrome ne sont pas pris en charge.  
 
@@ -33,9 +33,9 @@ ms.locfileid: "84796265"
 > [!NOTE]  
 >  Tout ordinateur sur lequel vous installez les composants de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] doit disposer d'une licence. Pour plus d'informations, reportez-vous au Contrat de Licence Utilisateur Final (CLUF).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
-### <a name="operating-system"></a>Système d’exploitation  
+### <a name="operating-system"></a>Système d'exploitation  
  Avant d’installer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], vérifiez les éléments requis suivants :    
     
 -   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
@@ -52,14 +52,14 @@ ms.locfileid: "84796265"
   
 ||  
 |-|  
-|Services Internet (IIS)<br /><br /> Outils d’administration Web<br /><br /> Console de gestion d’IIS<br /><br /> Services World Wide Web<br /><br /> Développement d'applications<br /><br /> Extensibilité .NET 3.5<br /><br /> Extensibilité .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Fonctionnalités HTTP communes<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Contenu statique<br /><br /> [Remarque : n'installez pas la publication WebDAV]<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Sécurité<br /><br /> Filtrage des demandes<br /><br /> Authentification Windows|  
+|Services Internet (IIS)<br /><br /> Outils d’administration Web<br /><br /> Console de gestion d’IIS<br /><br /> Services World Wide Web<br /><br /> Développement d'applications<br /><br /> Extensibilité .NET 3.5<br /><br /> Extensibilité .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Fonctionnalités HTTP communes<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Contenu statique<br /><br /> [Remarque : n'installez pas la publication WebDAV]<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Sécurité<br /><br /> Filtrage des demandes<br /><br /> Authentification Windows|  
   
 ### <a name="features"></a>Fonctionnalités 
  Dans Windows Server 2012 et Windows Server 2012 R2, vous pouvez utiliser le **Gestionnaire de serveur** pour installer les fonctionnalités requises suivantes :  
   
 ||  
 |-|  
-|.NET Framework 3.5 (inclut .NET 2.0 et 3.0)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> Services WCF<br /><br /> Activation HTTP [Remarque : celle-ci est obligatoire.]<br /><br /> Partage de port TCP<br /><br /> Service d’activation des processus Windows<br /><br /> Modèle de processus<br /><br /> Environnement .NET<br /><br /> API de configuration<br/><br/>compression du contenu dynamique|  
+|.NET Framework 3.5 (inclut .NET 2.0 et 3.0)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> Services WCF<br /><br /> Activation HTTP [Remarque : celle-ci est obligatoire.]<br /><br /> Partage de port TCP<br /><br /> Service d’activation des processus Windows<br /><br /> Modèle de processus<br /><br /> Environnement .NET<br /><br /> API de configuration<br/><br/>compression du contenu dynamique|  
   
  Voici un exemple de script PowerShell pour ajouter des fonctionnalités et des rôles serveur prérequis. Les fonctionnalités et rôles serveur prérequis varient en fonction de l’environnement.  
   

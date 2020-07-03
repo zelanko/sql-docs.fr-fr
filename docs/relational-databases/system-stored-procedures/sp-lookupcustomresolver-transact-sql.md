@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b86fd5bd04c41d10437a8a0f7bcc21b61ab22fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720231"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899371"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les informations sur un gestionnaire de logique métier ou sur la valeur d'identificateur de classe (CLSID) d'un composant COM de résolveur personnalisé, qui est enregistré sur le serveur de distribution. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
