@@ -9,15 +9,15 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370316f6f2c77a270117aca3f59d42c11914175c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75238649"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894968"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termes du contrat de licence SQL Server Shared Management Objects (SMO)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 ## <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT
 **OBJETS DE GESTION PARTAGÉE MICROSOFT SQL SERVER 2017**
@@ -77,7 +77,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 **6.    DOCUMENTATION.** Tout utilisateur disposant d’un accès valable à votre ordinateur ou à votre réseau interne est autorisé à copier et à utiliser la documentation à titre de référence et à des fins internes.
 
-**7.    RESTRICTIONS D'EXPORTATION.** Le logiciel est soumis aux lois et réglementations américaines en matière d’exportation. Vous devez vous conformer à toutes les réglementations nationales et internationales en matière d’exportation concernant le logiciel. Ces réglementations comprennent des restrictions sur les pays destinataires, les utilisateurs finaux et les utilisations finales. Pour plus d’informations, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)consultez.
+**7.    RESTRICTIONS D'EXPORTATION.** Le logiciel est soumis aux lois et réglementations américaines en matière d’exportation. Vous devez vous conformer à toutes les réglementations nationales et internationales en matière d’exportation concernant le logiciel. Ces réglementations comprennent des restrictions sur les pays destinataires, les utilisateurs finaux et les utilisations finales. Pour plus d’informations, consultez [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting) .
 
 **8.    SERVICE D’ASSISTANCE TECHNIQUE.** Étant donné que ce logiciel est « tel quel », nous pouvons ne pas fournir de services de support pour celui-ci.
 

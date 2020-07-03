@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b16ddb35ed3d8ec64eb783e904f3c9b6120cfbd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 50ed280cf691c974a7a17991e4c4a28f851191e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725631"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892980"
 ---
 # <a name="sp_subscription_cleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime les métadonnées en cas de suppression d'un abonnement sur l'Abonné. En cas d'abonnement de transaction de synchronisation, elles comprennent également les déclencheurs à mise à jour immédiate. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   

@@ -13,21 +13,21 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37f43e82bdad11909695d5a2799b5065c7cb5b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f8867e5f59c225cec4bccce6bd0de86822509a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095541"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894376"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Création, modification et suppression de clés étrangères
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Dans SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les clés étrangères sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
  Pour créer une clé étrangère dans SMO, vous devez spécifier la table sur laquelle la clé étrangère est définie dans le constructeur de l'objet <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Dans la table, vous devez sélectionner au moins une colonne comme clé étrangère. Pour ce faire, créez une variable objet <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> et spécifiez le nom de la colonne qui est la clé étrangère. Ensuite, spécifiez la table et la colonne référencées. Utilisez la <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> méthode pour ajouter la colonne à la propriété de l’objet **Columns** .  
   
- Les colonnes qui représentent la clé étrangère sont répertoriées dans la propriété de l’objet <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> **Columns** de l’objet. La clé primaire référencée par la clé étrangère est représentée par la propriété <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> qui figure dans la table spécifiée dans la propriété <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
+ Les colonnes qui représentent la clé étrangère sont répertoriées dans la propriété de l’objet **Columns** de l' <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objet. La clé primaire référencée par la clé étrangère est représentée par la propriété <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> qui figure dans la table spécifiée dans la propriété <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Exemple  
  Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
