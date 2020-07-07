@@ -11,15 +11,14 @@ ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3655c567081538c957af1b3d646e683867097dd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9866c13f2a7385c008cc8fd98455e371ebd6f250
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755683"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007899"
 ---
 # <a name="odbc-how-to-topics"></a>Rubriques de procédures ODBC
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Pour utiliser le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez être en mesure de créer des sources de données ODBC et de vous assurer que le serveur a la version correcte des procédures stockées de catalogue. Pour coder une application ODBC qui utilise SQL Server, vous devez savoir comment allouer des handles ODBC, définir des attributs, vous connecter à une instance de SQL Server, exécuter des requêtes et traiter les résultats.  
   

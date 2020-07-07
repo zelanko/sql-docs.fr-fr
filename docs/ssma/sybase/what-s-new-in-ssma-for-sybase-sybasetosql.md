@@ -4,22 +4,28 @@ description: Découvrez les modifications apportées à Assistant Migration SQL 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: ce526f0ae42ac3d44e21f57d0542409d4a3dec0a
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: 10ac2af79db21b9320c3ef180a64de8c2a13b29f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778941"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007857"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Nouveautés de SSMA pour SAP ASE (SybaseToSQL)
 
 Cet article répertorie les modifications apportées à Assistant Migration SQL Server (SSMA) pour SAP ASE (anciennement SSMA pour Sybase) dans chaque version.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+La version 8.11 de SSMA pour SAP ASE contient les modifications suivantes :
+
+* Correction de la conversion de tables temporaires
+* Utiliser la bibliothèque MSAL.NET pour l’authentification Azure Active Directory interactive
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 
