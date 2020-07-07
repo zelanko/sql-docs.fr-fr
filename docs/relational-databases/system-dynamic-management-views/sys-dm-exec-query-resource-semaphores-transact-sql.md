@@ -20,15 +20,14 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d252d5976b07f688d890ed8ccf43a7b0a0c96b2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734724"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012870"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne les informations relatives à l'état actuel du sémaphore de ressource de requête dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys. dm_exec_query_resource_semaphores** fournit l’état général de la mémoire d’exécution des requêtes et vous permet de déterminer si le système peut accéder à suffisamment de mémoire. Cette vue complète les informations de mémoire obtenues à partir de [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) pour fournir une image complète de l’état de la mémoire du serveur. **sys. dm_exec_query_resource_semaphores** retourne une ligne pour le sémaphore de ressource ordinaire et une autre ligne pour le sémaphore de ressource de petite requête. Deux conditions sont requises pour un sémaphore de petite requête :  
   
@@ -60,7 +59,7 @@ ms.locfileid: "85734724"
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  Les requêtes qui utilisent des vues de gestion dynamiques qui incluent ORDER BY ou des fonctions d'agrégation peuvent accroître la consommation de mémoire et par conséquent contribuer au problème qu'elles tentent de résoudre.  
   
  Utilisez **sys. dm_exec_query_resource_semaphores** pour la résolution des problèmes, mais ne l’incluez pas dans les applications qui utiliseront les futures versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

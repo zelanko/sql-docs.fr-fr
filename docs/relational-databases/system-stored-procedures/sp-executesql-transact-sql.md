@@ -19,15 +19,14 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d6efd10e3b7cb385c576cf8644ec945736765ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634813"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012694"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Exécute un lot ou une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], réutilisable plusieurs fois ou créé dynamiquement. L'instruction ou le traitement d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peut contenir des paramètres incorporés.  
   
@@ -75,7 +74,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne les jeux de résultats de toutes les instructions SQL de la chaîne SQL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  sp_executesql paramètres doivent être entrés dans l’ordre spécifique, comme décrit dans la section « syntaxe », plus haut dans cette rubrique. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
   
  La procédure sp_executesql a le même comportement vis-à-vis des traitements d'instructions, de l'étendue des noms et du contexte de base de données que l'instruction EXECUTE. L' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans le \@ paramètre sp_executesql stmt n’est pas compilé tant que l’instruction sp_executesql n’est pas exécutée. Le contenu de \@ stmt est ensuite compilé et exécuté en tant que plan d’exécution distinct du plan d’exécution du lot qui a appelé sp_executesql. Le traitement sp_executesql ne peut pas faire référence à des variables déclarées dans le traitement qui a appelé sp_executesql. Les curseurs ou les variables locaux du traitement sp_executesql ne sont pas visibles pour le traitement qui appelle sp_executesql. Les modifications apportées au contexte de base de données ne durent que jusqu'à la fin de l'exécution de l'instruction sp_executesql.  

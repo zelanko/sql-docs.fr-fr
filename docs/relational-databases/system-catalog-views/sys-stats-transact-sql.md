@@ -20,15 +20,14 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1d43e7cfd9892b7146ecbe551ecb7b42625981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 19a338aa9f5d20dd9a6d089cdf4b56bcf1a4b541
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783934"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012915"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contient une ligne pour chaque objet de statistiques qui existe pour les tables, index et vues indexées de la base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque index aura une ligne de statistiques correspondante avec les mêmes nom et ID (**index_id**  =  **stats_id**), mais chaque ligne de statistiques n’a pas d’index correspondant.  
   

@@ -14,15 +14,14 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789392"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012429"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Vous pouvez utiliser **SQLColAttribute** pour récupérer un attribut d’une colonne de jeu de résultats pour des instructions ODBC préparées ou exécutées. L’appel de **SQLColAttribute** sur des instructions préparées entraîne un aller-retour vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client reçoit les données de la colonne de jeu de résultats dans le cadre de l’exécution de l’instruction, donc l’appel de **SQLColAttribute** après l’achèvement de **SQLExecute** ou **SQLExecDirect** n’implique pas un aller-retour sur le serveur.  
   
