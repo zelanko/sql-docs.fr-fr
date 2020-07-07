@@ -20,15 +20,14 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d544d95cc2a0159a3502544489cf58514fe19fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734766"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005220"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne des statistiques détaillées sur le fonctionnement de l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette vue lorsque vous paramétrez une charge de travail pour identifier des problèmes ou des améliorations d'optimisation des requêtes. Par exemple, vous pouvez utiliser le nombre total des optimisations, la valeur du temps écoulé et la valeur de coût final pour comparer les optimisations de requête de la charge en cours et les modifications observées au cours du processus de paramétrage. Certains compteurs fournissent des données qui s'appliquent uniquement à l'usage interne du diagnostic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces compteurs indiquent la mention « Interne uniquement ».  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85734766"
   
 |Nom|Type de données|Description|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|Nom de l'événement statistique de l'optimiseur.|  
+|**)**|**nvarchar(4000)**|Nom de l'événement statistique de l'optimiseur.|  
 |**occurrence**|**bigint**|Nombre d'occurrences de l'événement d'optimisation pour ce compteur.|  
 |**value**|**float**|Valeur moyenne de la propriété par occurrence de l'événement.|  
 |**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
@@ -47,10 +46,10 @@ ms.locfileid: "85734766"
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
     
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  **sys. dm_exec_query_optimizer_info** contient les propriétés suivantes (compteurs). Toutes les valeurs d'occurrence sont cumulatives et sont définies à 0 au redémarrage du système. Tous les champs de valeurs sont initialisés à NULL au redémarrage du système. Toutes les colonnes de valeurs qui indiquent une moyenne utilisent la valeur d'occurrence de la ligne comme dénominateur pour le calcul de la moyenne. Toutes les optimisations de requêtes sont mesurées lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détermine les modifications apportées à **dm_exec_query_optimizer_info**, y compris les requêtes générées par l’utilisateur et le système. L’exécution d’un plan déjà mis en cache ne change pas les valeurs de **dm_exec_query_optimizer_info**, seules les optimisations sont significatives.  
   
-|Counter|Occurrence|Valeur|  
+|Compteur|Occurrence|Valeur|  
 |-------------|----------------|-----------|  
 |optimizations|Nombre total d'optimisations.|Non applicable|  
 |elapsed time|Nombre total d'optimisations.|Temps moyen écoulé par optimisation d'une instruction (requête) individuelle, en secondes.|  
@@ -69,7 +68,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 |search 2 tasks|Interne uniquement|Interne uniquement|  
 |gain stage 0 to stage 1|Interne uniquement|Interne uniquement|  
 |gain stage 1 to stage 2|Interne uniquement|Interne uniquement|  
-|délai d'expiration|Interne uniquement|Interne uniquement|  
+|timeout|Interne uniquement|Interne uniquement|  
 |memory limit exceeded|Interne uniquement|Interne uniquement|  
 |insert stmt|Nombre d'optimisations destinées à des instructions INSERT.|Non applicable|  
 |delete stmt|Nombre d'optimisations destinées à des instructions DELETE.|Non applicable|  

@@ -18,15 +18,14 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a58b41665d1b10a1e9f9868796b98b80e43e92d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6d9db77c73f9fe6ccefec961a76a74af2c3d343a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774304"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002944"
 ---
 # <a name="bcp_control"></a>bcp_control
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifie les paramètres par défaut pour différents paramètres de contrôle pour une copie en bloc entre un fichier et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -132,7 +131,7 @@ RETCODE bcp_control (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  Cette fonction définit différents paramètres de contrôle pour les opérations de copie en bloc, y compris le nombre d'erreurs autorisées avant l'annulation de la copie en bloc, les numéros des première et dernière lignes à copier à partir d'un fichier de données, et la taille du lot.  
   
  Cette fonction est également utilisée pour spécifier l'instruction SELECT lors de la copie en bloc à partir du jeu de résultats [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'une instruction SELECT. Affectez à *eOption* la valeur valeur BCPHINTS et à *iValue* la valeur d’un pointeur vers une chaîne SQLTCHAR contenant l’instruction SELECT.  

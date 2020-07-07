@@ -16,15 +16,14 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40b45a3b761a2846df714b6d93ed928839cad865
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 4516d94482e70fe704906dec6bd6ba3df36e108c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894104"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001221"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Octroi, révocation et refus d'autorisations
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   L'objet <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> est utilisé pour attribuer un jeu d'autorisations ou une autorisation de serveur individuelle à l'objet <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Pour les autorisations de niveau serveur, le bénéficiaire fait référence à une ouverture de session. Les ouvertures de session authentifiées par Windows sont répertoriées comme noms d'utilisateur Windows. Lorsque cet exemple de code est exécuté, il révoque l'autorisation du bénéficiaire et vérifie qu'il a été supprimé avec la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
   

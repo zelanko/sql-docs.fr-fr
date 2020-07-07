@@ -18,15 +18,14 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1872dfd9d7ffd90696743972d38d7ad4af1171c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: bdd6815ab43d8bb36877038485774a8d61714e36
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648744"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004815"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Utilisez la vue **sys. masked_columns** pour rechercher des colonnes de table auxquelles une fonction de masquage dynamique des données est appliquée. Celle-ci hérite de la vue **sys.columns** . Elle retourne toutes les colonnes de la vue **sys.columns** , ainsi que les colonnes **is_masked** et **masking_function** , en indiquant si les colonnes sont masquées et, dans ce cas, la fonction de masquage est définie. Cette vue présente uniquement les colonnes auxquelles une fonction de masquage est appliquée.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "85648744"
 |is_masked|**bit**|Indique si la colonne est masquée. 1 indique masqué.|  
 |masking_function|**nvarchar(4000)**|Fonction de masquage de la colonne.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Autorisations  
  Cette vue retourne des informations sur les tables pour lesquelles l’utilisateur dispose d’autorisations sur la table ou si l’utilisateur dispose de l’autorisation VIEW ANY DEFINITION.  

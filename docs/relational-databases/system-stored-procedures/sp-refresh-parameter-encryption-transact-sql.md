@@ -19,15 +19,14 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783011"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002136"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Met à jour les métadonnées de Always Encrypted pour les paramètres de la procédure stockée non liée au schéma, la fonction définie par l’utilisateur, la vue, le déclencheur DML, le déclencheur DDL au niveau de la base de données ou le déclencheur DDL au niveau du serveur spécifié dans la base de données actuelle. 
 
@@ -48,14 +47,14 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`Nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *module_name* ne peut pas être une procédure stockée Common Language Runtime (CLR) ou une fonction CLR. *module_name* ne peut pas être lié à un schéma. *module_name* est `nvarchar` de, sans valeur par défaut. *module_name* peut être un identificateur en plusieurs parties, mais ne peut faire référence qu’à des objets de la base de données active.
 
-`[ @namespace = ] ' < class > '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL, `<class>` est requis. `<class>` a la valeur `nvarchar(20)`. Les entrées valides sont `DATABASE_DDL_TRIGGER` et `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL, `<class>` est requis. `<class>` est `nvarchar(20)`. Les entrées valides sont `DATABASE_DDL_TRIGGER` et `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Codet de retour  
 
 0 (réussite) ou un nombre différent de zéro (échec)
 
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Remarks
 
 Les métadonnées de chiffrement pour les paramètres d’un module peuvent devenir obsolètes, si :   
 * Les propriétés de chiffrement d’une colonne dans une table référencée par le module, ont été mises à jour. Par exemple, une colonne a été supprimée et une nouvelle colonne portant le même nom, mais un type de chiffrement différent, une clé de chiffrement ou un algorithme de chiffrement a été ajouté.  

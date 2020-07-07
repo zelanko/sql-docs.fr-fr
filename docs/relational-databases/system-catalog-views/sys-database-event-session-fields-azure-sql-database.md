@@ -11,15 +11,14 @@ ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 818d2eb347539b6ea2452301bf153751184b433b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 52fbdd5925d67592b10e5dc4d293e9523dcda758
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787109"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003019"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retourne une ligne pour chaque colonne personnalisable définie explicitement sur les événements et les cibles.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85787109"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  Cette vue a les cardinalités de relation suivantes.  
   
 ||||  

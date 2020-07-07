@@ -10,15 +10,14 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 322ade61b0d525f914171d092cf15a2ca2d1db1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3aae0fea006909634db2d19eb39345e066e9b631
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85657559"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005755"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connexion à une base de données Azure SQL à l’aide de SQL Server Native Client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Pour obtenir un exemple qui montre comment se connecter à à [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] l’aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [développement : rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
   

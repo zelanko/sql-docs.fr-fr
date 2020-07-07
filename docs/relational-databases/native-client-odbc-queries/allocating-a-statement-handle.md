@@ -21,15 +21,14 @@ ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bd93e3ac61c81bf7e61f9fd98cd05685877f287
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f3ff0249ecbe1193a67014dc5c2ad28e79cae7d4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730352"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001459"
 ---
 # <a name="allocating-a-statement-handle"></a>Allocation d'un descripteur d'instruction
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Pour qu'une application puisse exécuter une instruction, elle doit allouer un descripteur d'instruction. Pour ce faire, il appelle **SQLAllocHandle** avec le paramètre *comme handletype* défini sur SQL_HANDLE_STMT et *InputHandle* pointant vers un handle de connexion.  
   

@@ -23,15 +23,14 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f299d5535a6b07d04eab3d8e16ad8f4bbe99f058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7c24230b76a08f629f219d23f67771e91ff3486c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775892"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002889"
 ---
 # <a name="autotranslation-of-character-data"></a>Traduction automatique de données caractères
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Les données de type caractère, telles que les variables de caractères ANSI déclarées avec SQL_C_CHAR ou les données stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide des types de données **char**, **varchar**ou **Text** , ne peuvent représenter qu’un nombre limité de caractères. Les données caractères stockées à l'aide d'un octet par caractère ne peuvent représenter que 256 caractères. Les valeurs stockées dans les variables SQL_C_CHAR sont interprétées à l'aide de la page de codes ANSI (ACP) de l'ordinateur client. Les valeurs stockées à l’aide des types de données **char**, **varchar**ou **Text** sur le serveur sont évaluées à l’aide de l’ACP du serveur.  
   

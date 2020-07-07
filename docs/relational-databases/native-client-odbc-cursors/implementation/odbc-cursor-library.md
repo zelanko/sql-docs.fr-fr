@@ -19,15 +19,14 @@ ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2771c3418bc942de8ffeb54694b8395e5e5aa414
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e936b0f62e8d12f95e8c08f88ffcb681f0f6aeaa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719767"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000615"
 ---
 # <a name="odbc-cursor-library"></a>Bibliothèque de curseurs ODBC
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Certains pilotes ODBC prennent uniquement en charge les paramètres de curseur par défaut ; Ces pilotes ne prennent pas non plus en charge les opérations de curseur positionnées, telles que **SQLSetPos**. La bibliothèque de curseurs ODBC est un composant de MDAC (Microsoft Data Access Components) qui permet d'implémenter des curseurs de bloc ou statiques sur un pilote qui ne les prend normalement pas en charge. La bibliothèque de curseurs implémente également les instructions UPDATE et DELETE positionnées et **SQLSetPos** pour les curseurs qu’elle crée.  
   
