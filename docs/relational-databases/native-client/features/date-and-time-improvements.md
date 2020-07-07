@@ -10,15 +10,14 @@ ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5ddc38c789041c55e34c83015d047d6c6c7eec9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ed08d716dda8007fbd6ae7d7d39d7e20e60950b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719664"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009059"
 ---
 # <a name="date-and-time-improvements"></a>Améliorations des types de données date et heure
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cette rubrique décrit la prise en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client des types de données de date et d'heure ajoutés à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
@@ -26,7 +25,7 @@ ms.locfileid: "85719664"
   
  Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [Exemples de programmation de données SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilisation  
  Les sections suivantes décrivent les différentes façons d'utiliser les nouveaux types de date et d'heure.  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>Utiliser le type Date comme type de données distinct  

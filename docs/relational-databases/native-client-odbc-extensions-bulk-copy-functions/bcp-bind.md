@@ -18,16 +18,15 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1716c650a138edd36291e20877faf5da741b92a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 29422a0dba80f9092221616c128b69f5579cb900
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787948"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009133"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Lie les données d'une variable de programme à une colonne de table pour une copie en bloc dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -173,7 +172,7 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 
  SUCCEED ou FAIL.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Remarks
 
 Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 

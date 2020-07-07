@@ -18,15 +18,14 @@ ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239bc3a5957c69e1262bf8229b6bdf85fae4ea67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 100646ffb50ac0cb187881a99678c6d366b8922b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783415"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010076"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Envoie une partie d'une valeur de type de données longue et de longueur variable à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -53,7 +52,7 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  Cette fonction peut être utilisée conjointement avec des [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) et des [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour copier des valeurs de données longues de longueur variable en SQL Server dans plusieurs segments plus petits. **bcp_moretext** peut être utilisé avec des colonnes qui ont les types de données SQL Server suivants : **Text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, type défini par l’utilisateur (UDT) et XML. **bcp_moretext** ne prend pas en charge les conversions de données, les données fournies doivent correspondre au type de données de la colonne cible.  
   
  Si **bcp_bind** est appelé avec un paramètre *pData* non null pour les types de données pris en charge par **bcp_moretext**, **bcp_sendrow** envoie la valeur de données entière, quelle que soit la longueur. Toutefois, si **bcp_bind** possède un paramètre *pData* null pour les types de données pris en charge, **bcp_moretext** peut être utilisé pour copier des données immédiatement après un retour réussi de **bcp_sendrow** indiquant que toutes les colonnes liées avec des données présentes ont été traitées.  

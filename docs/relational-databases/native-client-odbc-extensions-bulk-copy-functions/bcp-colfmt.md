@@ -18,15 +18,14 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bebe50f7a31168455d21c45aa28cc7c0efa796e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d01e3c08ea1554fcc10c986bb6e6b9bbd9570d54
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783453"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009145"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Spécifie le format source ou cible des données d'un fichier utilisateur. En cas d'utilisation comme format source, **bcp_colfmt** spécifie le format d'un fichier de données existant utilisé comme source de données dans une copie en bloc sur une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En cas d'utilisation comme format cible, le fichier de données est créé à l'aide des formats de colonne spécifiés avec **bcp_colfmt**.  
   
@@ -111,7 +110,7 @@ RETCODE bcp_colfmt (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  La fonction **bcp_colfmt** permet de spécifier le format du fichier utilisateur pour les copies en bloc. Pour la copie en bloc, un format se compose des éléments suivants :  
   
 -   Mappage des colonnes du fichier utilisateur avec les colonnes de la base de données  

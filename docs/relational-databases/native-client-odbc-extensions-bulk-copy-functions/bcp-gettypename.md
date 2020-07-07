@@ -18,15 +18,14 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774281"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010089"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
   
@@ -49,12 +48,12 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Retours  
  Chaîne contenant le nom de type SQL qui correspond au type BCP. Si un type BCP non valide est spécifié, une chaîne vide est retournée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  Les jetons de type de BCP sont définis dans le fichier d'en-tête sqlncli.h et la bibliothèque sqlncli11.lib.  
   
  Le tableau suivant spécifie les types BCP possibles, s'ils sont ou pas de type max et la sortie attendue.  
   
-|Nom du type BCP|MaxType|Output|  
+|Nom du type BCP|MaxType|Sortie|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|Vous pouvez soit utiliser|**decimal**|  
 |**SQLNUMERIC**|Vous pouvez soit utiliser|**numeric**|  
@@ -80,7 +79,7 @@ RETCODE bcp_gettypename (
 |**SQLDATETIMN**|Vous pouvez soit utiliser|**datetime-null**|  
 |**SQLMONEYN**|Vous pouvez soit utiliser|**money-null**|  
 |**SQLFLTN**|Vous pouvez soit utiliser|**float-null**|  
-|**SQLAOPSUM**|Vous pouvez soit utiliser|**Checksum**|  
+|**SQLAOPSUM**|Vous pouvez soit utiliser|**SUM**|  
 |**SQLAOPAVG**|Vous pouvez soit utiliser|**AVG**|  
 |**SQLAOPCNT**|Vous pouvez soit utiliser|**Count**|  
 |**SQLAOPMIN**|Vous pouvez soit utiliser|**Min**|  

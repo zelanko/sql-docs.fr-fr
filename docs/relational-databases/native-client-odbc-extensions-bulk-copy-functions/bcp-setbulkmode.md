@@ -13,15 +13,14 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9935a3faa08b8aa14b4f8c80182a2a005853666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ee05749a46103e268b0bdc1aaf9c89a729753171
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783395"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010039"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   bcp_setbulkmode vous permet de spécifier le format de colonne dans une opération de copie en bloc, en définissant tous les attributs de colonne dans un appel de fonction unique.  
   
@@ -61,7 +60,7 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  bcp_setbulkmode peut être utilisé pour effectuer une copie en bloc à partir d’une requête ou d’une table. Lorsque bcp_setbulkmode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler bcp_control avec BCP_HINT.  
   
  bcp_setbulkmode est une alternative à l’utilisation de [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) et [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), qui vous permettent uniquement de spécifier le format d’une colonne par appel de fonction.  

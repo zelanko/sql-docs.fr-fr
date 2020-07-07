@@ -19,15 +19,14 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe57fda774997f8439c44a75fa917ecb3db3495e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 940c3210f25430550c11e0ad836d536427d2936a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647642"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012036"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Renvoie une ligne pour chaque colonne accessible à l'utilisateur actuel dans la base de données actuelle.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "85647642"
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle renvoie le nom du schéma du type de données défini par l'utilisateur. Renvoie NULL dans les autres cas.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du type de données défini par l'utilisateur. Renvoie NULL dans les autres cas.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  **ORDINAL_POSITION** colonne du **INFORMATION_SCHEMA. **La vue colonnes n’est pas compatible avec le modèle binaire des colonnes retournées par la fonction COLUMNS_UPDATED. Pour obtenir un modèle binaire qui est compatible avec COLUMNS_UPDATED, vous devez référencer la propriété **ColumnID** de la fonction système COLUMNPROPERTY lorsque vous interrogez le **INFORMATION_SCHEMA. Vue colonnes** . Par exemple :  
   
 ```  
