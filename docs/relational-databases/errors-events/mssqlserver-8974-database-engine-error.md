@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1a8170dbda2efa4b5ab9ed91692b9e3ec3a0774f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 965fcd25d086fba70157dc4730659c414b65f192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636983"
 ---
 # <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|8974|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE). Le nœud de données hors ligne page P_ID1, emplacement S_ID1, ID de texte TEXT_ID est référencé par la page P_ID2, emplacement S_ID2 et par la page P_ID3, emplacement P_ID3.|  
+|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE). Le nœud de données hors ligne page P_ID1, emplacement S_ID1, ID de texte TEXT_ID est référencé par la page P_ID2, emplacement S_ID2 et par la page P_ID3, emplacement P_ID3.|  
   
 ## <a name="explanation"></a>Explication  
 Un nœud de données hors ligne a deux enregistrements de données ou d'index qui le répertorient en tant que nœud enfant. Un nœud ne peut avoir qu'un nœud parent.  

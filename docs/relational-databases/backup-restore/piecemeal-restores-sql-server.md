@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670238"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurations fragmentaires (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique concerne les bases de données de l’édition Entreprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (restauration en ligne) ou de l’édition Standard (restauration hors connexion) qui contiennent plusieurs fichiers ou groupes de fichiers et, dans le mode simple, seulement des groupes de fichiers en lecture seule.  
   
  Pour plus d’informations sur les restaurations fragmentaires et les tables optimisées en mémoire, consultez [Restauration fragmentaire de bases de données avec des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d143c4c52c122c159e7c80dd58d8cee847849360
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666938"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Moniteur d'activité des travaux (Paramètres du filtre)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette page vous permet de réduire le nombre de lignes visibles dans le Moniteur d'activité des travaux. Entrez des critères dans une ou plusieurs des zones disponibles, pour afficher uniquement les lignes qui correspondent aux valeurs spécifiées. Certaines zones, telles que **État** ou **Type de blocage** , proposent un nombre défini de valeurs possibles, fournies dans une liste déroulante. D’autres, telles que **Application** , permettent d’entrer n’importe quelle valeur et autant de valeurs que vous le souhaitez, sous la forme d’une liste dont les valeurs sont séparées par une virgule. Les icônes de la barre d'outils vous permettent de trier les zones disponibles par catégorie ou par ordre alphabétique. Cliquez sur des critères pour afficher une brève description de chacun d'eux.  
   
  Pour filtrer le Moniteur d’activité des travaux, fournissez autant de critères de filtre que vous le souhaitez, cliquez sur **Appliquer le filtre**, puis sur **OK**.  

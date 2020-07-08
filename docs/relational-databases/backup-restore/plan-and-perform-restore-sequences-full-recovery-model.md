@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc9a06ed8df330e6129f28260e5ef21890e98976
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74a785caa2f8511bf11caf757793244d3c06c052
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670135"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planifier et exécuter des séquences de restauration (mode de récupération complète)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique explique comment planifier et effectuer une séquence de restauration pour les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent habituellement le mode de restauration complète. Une *séquence de restauration* est une séquence contenant une ou plusieurs instructions [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) . En règle générale, une séquence de restauration initialise le contenu de la base de données, des fichiers et/ou des pages en cours de restauration (phase de copie des données), restaure les transactions journalisées (phase de restauration par progression) et annule les transactions non validées (phase de restauration).  
   

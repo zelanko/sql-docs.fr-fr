@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d5d371a8d94b49a40fa105f06457519a03ed7ac5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670450"
 ---
 # <a name="online-restore-sql-server"></a>Restauration en ligne (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La restauration en ligne est prise en charge uniquement dans l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Par défaut, une restauration fragmentaire, de fichiers ou de pages est en ligne dans cette édition. Cette rubrique concerne les bases de données qui contiennent plusieurs fichiers ou groupes de fichiers et, en mode de récupération simple, seulement des groupes de fichiers en lecture seule.  
   
  Le processus de restauration des données lorsque la base de données est en ligne est appelé *restauration en ligne*. Une base de données est considérée en ligne lorsque le groupe de fichiers primaire est en ligne, même si un ou plusieurs de ses groupes de fichiers secondaires sont hors connexion. Quel que soit le mode de récupération, vous pouvez restaurer un fichier qui est hors connexion quand la base de données est en ligne. En mode de restauration complète, vous pouvez aussi restaurer les pages quand la base de données est en ligne.  

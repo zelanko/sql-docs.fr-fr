@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65b3853db8fb20ef3c2a21846db59ce0981485cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672785"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette vue affiche une ligne chaque fois qu'un composant de flux de données envoie des données à un composant en aval, pour une exécution de package donnée. Les informations de cette vue peuvent être utilisées pour calculer le débit des données pour un composant.  
   
