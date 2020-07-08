@@ -12,15 +12,15 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ba1146dfe62067ba6371eec6a2b621eb2897852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2614d7805573b74485f3872dfa6d16a2ab961f74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118300"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717785"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock, classe d’événements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La classe d'événements Lock:Deadlock intervient lorsqu'une tentative d'obtention d'un verrou est annulée, car cette tentative faisait partie d'un blocage et a été choisie comme victime.  
   
  La classe d'événements Lock:Deadlock permet de surveiller à quel moment surviennent les blocages, ainsi que les objets concernés. Ces informations peuvent vous être utiles pour déterminer si les blocages affectent de façon significative les performances de votre application. Vous pouvez ensuite examiner le code de l'application pour déterminer si vous pouvez y apporter des modifications afin de réduire le nombre de blocages.  

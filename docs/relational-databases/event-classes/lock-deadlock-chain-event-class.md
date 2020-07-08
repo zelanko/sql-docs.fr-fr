@@ -12,15 +12,15 @@ ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6057c32842121f6d27649fe3f2b8e201d6c9695a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717927"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe d'événements Lock:Deadlock Chain
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La classe d'événements Lock:Deadlock Chain est produite pour chaque participant dans un blocage.  
   
  Utilisez la classe d'événements Lock:Deadlock Chain pour analyser les conditions d'un blocage. Ces informations sont utiles pour déterminer si les interblocages affectent les performances de votre application de manière significative et les objets qui sont concernés. Vous pouvez examiner le code de l'application qui modifie ces objets pour déterminer si des modifications peuvent être apportées pour minimiser les blocages.  

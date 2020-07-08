@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 274eabcf6db0902f18bc8d6348e9b5e5a2314d12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706571"
 ---
 # <a name="compound-operators-transact-sql"></a>Opérateurs composés (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Les opérateurs composés exécutent une opération particulière et affectent une valeur d'origine au résultat de l'opération. Par exemple, si une variable @x est égale à 35, alors @x += 2 prend la valeur d’origine de @x, ajoute 2 et affecte à @x cette nouvelle valeur (37).  
   

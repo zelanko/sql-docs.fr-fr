@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f20350e79c4d02bee6191511ed834cb349ab9b79
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 14ca7d3675242a16c8b1952aecc324ff2f7f67a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706524"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Définit les attributs d'un curseur [!INCLUDE[tsql](../../includes/tsql-md.md)], notamment s'il permet ou non le défilement, et la requête utilisée pour créer le jeu de résultats sur lequel le curseur opère. La syntaxe d’une instruction `DECLARE CURSOR` peut utiliser à la fois la syntaxe ISO et un jeu d’extensions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

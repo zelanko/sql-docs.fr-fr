@@ -16,15 +16,15 @@ ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d7dd25b2b1cd2aa0cc8560072702bc8188191d09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5a1244ed340dcfd4794c14635d570530b88f5d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716723"
 ---
 # <a name="replication-over-the-internet"></a>Réplication sur Internet
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La réplication de données sur Internet permet à des utilisateurs distants et non connectés d'accéder à des données via une connexion à Internet selon leurs besoins. Vous pouvez répliquer des données via Internet en utilisant :  
   
 -   Un réseau privé virtuel (VPN). Pour plus d’informations, consultez [Publier des données sur Internet à l’aide d’un réseau privé virtuel](../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  

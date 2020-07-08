@@ -12,15 +12,15 @@ ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95b4c8c58591ac0846b9774a97bbcc1f389d31c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7f9a9b57817e65ded5bb75ce64a9a1bac5355f3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717825"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Audit Statement Permission** se produit à chaque utilisation d’une autorisation d’instruction (telle que CREATE TABLE).  
   
  La classe d’événements **Audit Statement Permission** pourrait être supprimée dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons donc d’utiliser la classe d’événements **Audit Schema Object Management** .  

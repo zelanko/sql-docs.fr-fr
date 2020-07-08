@@ -1,7 +1,6 @@
 ---
 title: Créer un jeu d’éléments de collecte Trace SQL avec Profiler
-ms.custom: seo-lt-2019
-ms.date: 03/07/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,15 +10,16 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f11e6c98d53cd5008c72510282a0d31019a320d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fdd751f282f1ba62150d5257dde04798962ecb84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715532"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
   
 1.  Créer et exporter une trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
@@ -113,13 +113,13 @@ ms.locfileid: "74056452"
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant est le script final obtenu après l'exécution des étapes documentées dans les procédures précédentes.  
   
-```  
+```sql
 /*************************************************************/  
 -- SQL Trace collection set generated from SQL Server Profiler  
 -- Date: 11/19/2007  12:55:31 AM  
 /*************************************************************/  
   
-USE msdb  
+USE msdb;
 GO  
   
 BEGIN TRANSACTION  
@@ -165,7 +165,9 @@ N'<ns:SqlTraceCollector xmlns:ns"DataCollectorType" use_default="0">
   
 -- Retrieve the collector type GUID for the trace collector type.  
 DECLARE @collector_type_GUID uniqueidentifier;  
-SELECT @collector_type_GUID = collector_type_uid FROM [dbo].[syscollector_collector_types] WHERE name = N'Generic SQL Trace Collector Type';  
+SELECT @collector_type_GUID = collector_type_uid
+  FROM [dbo].[syscollector_collector_types]
+  WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
 -- ***  
@@ -199,7 +201,8 @@ SELECT @ErrorLine = ERROR_LINE(),
        @ErrorNumber = ERROR_NUMBER(),  
        @ErrorMessage = ERROR_MESSAGE(),  
        @ErrorProcedure = ISNULL(ERROR_PROCEDURE(), '-');  
-RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber, @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
+RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber,
+  @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
 END CATCH;  
 GO  
 ```  

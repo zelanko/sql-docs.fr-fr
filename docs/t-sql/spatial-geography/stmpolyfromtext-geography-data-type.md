@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 45be9818ed599365ca50648cb08a1c65825d5a11
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c60f2395b34d580c4782de5d3cfda40eb39cf35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702837"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (type de données geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne une instance **geography** à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text), à laquelle s’ajoutent les valeurs Z (élévation) et M (mesure) apportées par l’instance.
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eabf47faee7f6dbd0916680b378a653a1ae9c619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704385"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (type de données geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne la courbe spécifiée à partir d’une instance **geography** qui est **LineString**, **CircularString** ou **CompoundCurve**.  
   

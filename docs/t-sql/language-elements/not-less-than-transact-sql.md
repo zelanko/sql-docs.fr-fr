@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e34fe713d44993d3d0349485e9e05783980fa4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: efb3b0d7a6422575df0d13bd15dccdf75834707d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706274"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt; (Non inférieur à) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compare deux expressions (opérateur de comparaison). Lorsque vous comparez des expressions non NULL, le résultat est TRUE si la valeur de l'opérande de gauche n'est pas inférieure à celle de l'opérande de droite ; dans le cas contraire, le résultat est FALSE. Si l’une des opérandes ou les deux ont la valeur NULL, consultez la rubrique [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   

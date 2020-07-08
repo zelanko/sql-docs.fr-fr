@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f76c6f4f4d65273c35dffb1cb17e664fceac0328
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a4cb551f72b408210064f88e0387c2fc4f3d638
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716881"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Configurer une alerte de base de données SQL Server (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vous pouvez utiliser le Moniteur système pour créer une alerte devant être déclenchée quand la valeur seuil est atteinte par le compteur du Moniteur système. En réponse à l'alerte, le Moniteur système peut lancer une application, telle qu'une application personnalisée écrite pour prendre en charge la condition d'alerte. Par exemple, vous pouvez créer une alerte déclenchée quand le nombre de blocages dépasse une valeur spécifique. 
   
  Vous pouvez également définir des alertes à l’aide de Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Alertes](../../ssms/agent/alerts.md).  

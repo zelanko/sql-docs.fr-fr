@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9bef65845acd2e81cfea0910e81443d7e4bc390f
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80891150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705363"
 ---
 # <a name="spatial-types---geography"></a>Types spatiaux - geography
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Le type de données spatiales géographique, **geography**, est implémenté en tant que type de données CLR (Common Language Runtime) .NET dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce type représente des données dans un système de coordonnées de monde sphérique. Le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** stocke des données ellipsoïdes, telles que des coordonnées de latitude et de longitude GPS.  
   

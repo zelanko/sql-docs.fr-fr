@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: bde7cdd19ac66d30ceee0e73d6ea74ff5a66b2a8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717961"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Pour récupérer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suite à une erreur, un administrateur de base de données doit restaurer un jeu de sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une séquence de restauration correcte du point de vue logique et explicite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la restauration de données à partir de sauvegardes d'une base de données entière, d'un fichier de données ou d'une page de données, comme suit :  
   

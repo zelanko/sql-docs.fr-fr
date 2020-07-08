@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c9e763c2873c018ca53a0c36db2b5c72b3b5d22b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5aaaba23f670c25af34c357b33718e5dcf96b192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715442"
 ---
 # <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|4846|  
 |Source de l’événement|MSSQLSERVER|  
@@ -40,7 +40,7 @@ Pour corriger des erreurs de mémoire, procédez comme suit :
   
 1.  Vérifiez si d'autres applications ou services consomment de la mémoire sur ce serveur. Reconfigurez les applications ou les services moins importants pour consommer moins de mémoire.  
   
-2.  Commencez la collecte des compteurs de l’analyseur de performances pour **SQL Server : Buffer Manager**, **SQL Server : Memory Manager**.  
+2.  Démarrez la collecte des compteurs de l’analyseur de performances pour **SQL Server : Buffer Manager**, **SQL Server : Memory Manager**.  
   
 3.  Vérifiez les paramètres de configuration de la mémoire de SQL Server suivants :  
   

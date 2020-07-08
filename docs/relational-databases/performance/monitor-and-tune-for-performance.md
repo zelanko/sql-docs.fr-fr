@@ -29,15 +29,15 @@ ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8867064c0d2745c0e34e9e07aa956cf68c76690e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68020251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716904"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Surveiller et régler les performances
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Le but de la surveillance des bases de données est d'évaluer le fonctionnement d'un serveur. Une surveillance efficace implique la prise d'instantanés périodiques des performances actuelles afin d'isoler les processus à l’origine des problèmes, ainsi que la collecte de données en continu pour suivre de près les tendances des performances.  
   
  L'évaluation continue des performances de la base de données vous permet de réduire les temps de réponse et accélère le débit, ce qui optimise les performances. Un trafic réseau efficace, des E/S disque et l'utilisation de l'UC sont essentiels pour maximiser les performances. Vous devez analyser soigneusement les besoins de l'application, comprendre la structure logique et physique des données, évaluer l'utilisation de la base de données et négocier les compromis entre des utilisations conflictuelles telles que le traitement transactionnel en ligne par rapport à l'aide à la décision.  

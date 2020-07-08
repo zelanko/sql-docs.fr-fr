@@ -1,8 +1,7 @@
 ---
 title: Expressions de chemin JSON
-ms.date: 01/23/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715372"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressions de chemin JSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  Utilisez les expressions de chemins JSON pour référencer les propriétés des objets JSON.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "74095733"
 La requête suivante spécifie explicitement le mode `lax` dans l’expression de chemin.
 
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{ ... }'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{ ... }';
 
-SELECT * FROM OPENJSON(@json, N'lax $.info')
+SELECT * FROM OPENJSON(@json, N'lax $.info');
 ```  
   
 ##  <a name="path"></a><a name="PATH"></a> Path  
@@ -100,11 +100,11 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
  Si le texte JSON contient des propriétés dupliquées (par exemple, deux clés portant le même nom au même niveau), les fonctions **JSON_VALUE** et **JSON_QUERY** retournent uniquement la première valeur correspondant au chemin. Pour analyser un objet JSON contenant des clés dupliquées et retourner toutes les valeurs, utilisez **OPENJSON**, comme indiqué dans l’exemple suivant.  
   
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}';
 
 SELECT value
-FROM OPENJSON(@json,'$.person.info') 
+  FROM OPENJSON(@json,'$.person.info');
 ```  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>En savoir plus sur JSON dans SQL Server et Azure SQL Database  

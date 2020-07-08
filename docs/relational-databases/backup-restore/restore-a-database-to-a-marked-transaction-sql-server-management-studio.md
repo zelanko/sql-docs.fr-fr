@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 88386ec0aa476901708ccaed10b235bdab04fe1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718004"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurer une base de données jusqu’à une transaction marquée (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Quand une base de données se trouve dans l’état de restauration, vous pouvez utiliser la boîte de dialogue **Restaurer le journal des transactions** pour restaurer la base de données jusqu’à une transaction marquée dans les sauvegardes du journal disponibles.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "82180800"
   
     |En-tête|Valeur|  
     |------------|-----------|  
-    |\<vide>|Affiche une case à cocher pour la sélection de la marque.|  
+    |\<blank>|Affiche une case à cocher pour la sélection de la marque.|  
     |**Marque de transaction**|Nom de la transaction marquée spécifiée par l'utilisateur lors de la validation de la transaction.|  
     |**Date**|Date et heure de la validation de la transaction. La date et l’heure sont affichées telles qu’enregistrées dans la table **msdbgmarkhistory** , et non dans l’option Date et heure de l’ordinateur client.|  
     |**Description**|Description de la transaction marquée spécifiée par l'utilisateur lorsque la transaction a été validée (le cas échéant).|  

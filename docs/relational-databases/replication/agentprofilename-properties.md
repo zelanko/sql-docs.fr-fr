@@ -15,15 +15,15 @@ ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d7607d8749f99452d58374eb2a83c6a31f640d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3bd2ac7f6c9670c9c1b193c7b9687b0d4e4ba4ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716833"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt;, propriétés
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Utilisez la boîte de dialogue **Propriétés** du profil de l'agent pour afficher les valeurs spécifiées pour chaque paramètre d'agent dans un profil et pour modifier les valeurs des profils définis par l'utilisateur.  
   
 ## <a name="options"></a>Options  

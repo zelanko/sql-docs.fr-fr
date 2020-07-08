@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 83d300b006055a83e823ff509d18ce40e63708c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc97cf967c645db6f647266190000252fd2d9022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700947"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (type de données geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne la représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary) d’une instance **geometry**, à laquelle s’ajoutent les valeurs **Z** (élévation) et **M** (mesure) apportées par l’instance.
   

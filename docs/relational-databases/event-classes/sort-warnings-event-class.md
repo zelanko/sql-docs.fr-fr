@@ -12,15 +12,15 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98bf70f1bc26b4b3dd3182024aa62ed41dd3bbab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717752"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements Sort Warnings indique que les opérations de tri ne tiennent pas dans la mémoire. Ceci ne couvre pas les opérations de tri entraînant la création d'index, mais uniquement les opérations de tri effectuées dans une requête (comme une clause ORDER BY utilisée dans une instruction SELECT).  
   
  Si une requête impliquant une opération de tri produit une classe d'événements Sort Warnings avec la valeur 2 dans la colonne de données EventSubClass, les performances de la requête peuvent être affectées, parce que le tri des données requiert plusieurs passes. Examinez la requête de plus près pour déterminer si l'opération de tri peut être éliminée.  
