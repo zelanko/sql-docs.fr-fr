@@ -1,9 +1,7 @@
 ---
 title: Mettre à niveau une base de données avec la méthode d’attachement et de détachement (Transact-SQL)
-ms.custom: seo-dt-2019
-ms.date: 11/26/2018
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -17,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694721"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Mettre à niveau une base de données avec la méthode d’attachement et de détachement (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Cette rubrique explique comment utiliser les opérations d'attachement et de détachement pour mettre à niveau une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Une fois attachée à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Ainsi, la base de données ne peut pas être utilisée avec une version antérieure du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Toutefois, la mise à niveau des métadonnées n’affecte pas la définition du [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) d’une base de données. Pour plus d’informations, consultez [Niveau de compatibilité des bases de données après une mise à niveau](#dbcompat) plus loin dans cette rubrique.  
   
  **Dans cette rubrique**  

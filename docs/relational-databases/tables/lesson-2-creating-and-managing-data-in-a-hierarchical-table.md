@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692495"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Leçon 2 : Créer et gérer des données dans une table hiérarchique
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Dans la leçon 1, vous avez modifié une table existante pour utiliser le type de données **hierarchyid** et vous avez rempli la colonne **hierarchyid** avec la représentation des données existantes. Dans cette leçon, vous allez utiliser les méthodes hiérarchiques pour créer une nouvelle table et y insérer des données. Puis, toujours à l'aide de méthodes hiérarchiques, vous interrogerez et manipulerez ces données. 
 
 ## <a name="prerequisites"></a>Conditions préalables requises  
@@ -289,7 +289,7 @@ Maintenant que la table HumanResources.EmployeeOrg est entièrement remplie, cet
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Réorganiser des données dans une table hiérarchique à l'aide de méthodes hiérarchiques
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La réorganisation d'une hiérarchie est une tâche de maintenance courante. Dans cette tâche, nous utiliserons une instruction UPDATE avec la méthode [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) pour déplacer en premier lieu une seule ligne vers un nouvel emplacement dans la hiérarchie. Puis, nous déplacerons la totalité d'une sous-arborescence vers un nouvel emplacement.  
   
 La méthode `GetReparentedValue` accepte deux arguments. Le premier argument décrit la partie de la hiérarchie à modifier. Par exemple, si une hiérarchie est **/1/4/2/3/** et que vous souhaitez modifier la section **/1/4/** , la hiérarchie devient **/2/1/2/3/** , laissant les deux derniers nœuds (**2/3 /** ) inchangés. Les nœuds à modifier ( **/1/4/** ) doivent être spécifiés comme premier argument. Le deuxième argument fournit le nouveau niveau de hiérarchie, dans notre exemple **/2/1/** . Les deux arguments ne doivent pas nécessairement contenir le même nombre de niveaux.  
