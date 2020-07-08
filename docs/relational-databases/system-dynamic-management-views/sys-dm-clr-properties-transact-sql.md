@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824717"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091860"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Renvoie une ligne pour chaque propriété relative à l'intégration du CLR (Common Language Runtime) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comprenant la version et l'état du CLR hébergé. Le CLR hébergé est initialisé en exécutant les instructions [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER assembly](../../t-sql/statements/alter-assembly-transact-sql.md)ou [Drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) , ou en exécutant une routine, un type ou un déclencheur CLR. La vue **sys. dm_clr_properties** ne spécifie pas si l’exécution du code CLR utilisateur a été activée sur le serveur. L’exécution du code CLR utilisateur est activée à l’aide de la procédure stockée [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec l’option [CLR activée](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) définie sur 1.  
   

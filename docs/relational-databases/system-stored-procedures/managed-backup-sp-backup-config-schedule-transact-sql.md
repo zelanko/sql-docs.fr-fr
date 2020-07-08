@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77507531"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053456"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Configure les options de planification automatisées ou [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]personnalisées pour.  
+  Configure les options de planification automatisées ou personnalisées pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
     
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,13 +60,13 @@ EXEC managed_backup.sp_backup_config_schedule
  Les jours de la semaine pour les sauvegardes lorsque @full_backup_freq_type est défini sur hebdomadaire. Spécifiez des noms de chaîne complets comme « Monday ».  Vous pouvez également spécifier plus d’un nom de jour, séparé par un canal. Par exemple N’Monday | Mercredi | Vendredi».  
   
  @backup_begin_time  
- Heure de début de la fenêtre de sauvegarde. Les sauvegardes ne seront pas démarrées en dehors de la fenêtre de temps, qui est définie @backup_begin_time par @backup_durationune combinaison de et.  
+ Heure de début de la fenêtre de sauvegarde. Les sauvegardes ne seront pas démarrées en dehors de la fenêtre de temps, qui est définie par une combinaison de @backup_begin_time et @backup_duration .  
   
  @backup_duration  
- Durée de la fenêtre de temps de sauvegarde. Notez qu’il n’y a aucune garantie que les sauvegardes seront effectuées pendant la fenêtre de @backup_begin_time temps @backup_durationdéfinie par et. Les opérations de sauvegarde démarrées dans cette fenêtre de temps mais qui dépassent la durée de la fenêtre ne sont pas annulées.  
+ Durée de la fenêtre de temps de sauvegarde. Notez qu’il n’y a aucune garantie que les sauvegardes seront effectuées pendant la fenêtre de temps définie par @backup_begin_time et @backup_duration . Les opérations de sauvegarde démarrées dans cette fenêtre de temps mais qui dépassent la durée de la fenêtre ne sont pas annulées.  
   
  @log_backup_freq  
- Cela détermine la fréquence des sauvegardes du journal des transactions. Ces sauvegardes se produisent à intervalles réguliers plutôt qu’en fonction de la planification spécifiée pour les sauvegardes de base de données. @log_backup_freqpeut être en minutes ou en heures `0:00` et être valide, ce qui indique l’absence de sauvegardes du journal. La désactivation des sauvegardes de journaux ne conviendrait que pour les bases de données avec un mode de récupération simple.  
+ Cela détermine la fréquence des sauvegardes du journal des transactions. Ces sauvegardes se produisent à intervalles réguliers plutôt qu’en fonction de la planification spécifiée pour les sauvegardes de base de données. @log_backup_freqpeut être en minutes ou en heures et être `0:00` valide, ce qui indique l’absence de sauvegardes du journal. La désactivation des sauvegardes de journaux ne conviendrait que pour les bases de données avec un mode de récupération simple.  
   
 > [!NOTE]  
 >  Si le mode de récupération passe de simple à Full, vous devez reconfigurer le log_backup_freq de `0:00` à une valeur différente de zéro.  

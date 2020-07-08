@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011603"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091543"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -166,8 +166,8 @@ Cette commande remet tous les compteurs à 0.
 |CONNECTION_ENDPOINT_LOCK |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 
 |COUNTRECOVERYMGR |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |CREATE_DATINISERVICE |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
-|CXCONSUMER |Se produit avec des plans de requête parallèles lorsqu’un thread de consommateur attend qu’un thread de producteur envoie des lignes. Il s’agit d’une partie normale de l’exécution des requêtes parallèles. <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Se produit avec des plans de requête parallèles lors de la synchronisation de l’itérateur d’échange du processeur de requêtes, et lors de la production et de la consommation de lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , CXPACKET fait uniquement référence à la synchronisation de l’itérateur d’échange du processeur de requêtes et à la production de lignes pour les threads de consommateur. Les threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
+|CXCONSUMER<a name="cxconsumer"></a>|Se produit avec des plans de requête parallèles lorsqu’un thread de consommateur (parent) attend qu’un thread producteur envoie des lignes. Les attentes CXCONSUMER sont provoquées par un itérateur Exchange qui ne dispose plus de lignes de son thread producteur. Il s’agit d’une partie normale de l’exécution des requêtes parallèles. <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET<a name="cxpacket"></a>|Se produit avec des plans de requête parallèles lors de la synchronisation de l’itérateur d’échange du processeur de requêtes, et lors de la production et de la consommation de lignes. Si l’attente est excessive et ne peut pas être réduite par le paramétrage de la requête (par exemple, l’ajout d’index), envisagez d’ajuster le seuil de coût pour le parallélisme ou de réduire le degré maximal de parallélisme (MaxDOP).<br /> **Remarque :** À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , CXPACKET fait uniquement référence à la synchronisation de l’itérateur d’échange du processeur de requêtes et à la production de lignes. Si les threads de consommateur sont trop lents, la mémoire tampon de l’itérateur Exchange peut devenir pleine et provoquer l’attente de CXPACKET. Les threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
 |CXROWSET_SYNC |Se produit pendant une analyse de plage parallèle.| 
 |DAC_INIT |Se produit alors que la connexion administrateur dédiée est en cours d'initialisation.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 

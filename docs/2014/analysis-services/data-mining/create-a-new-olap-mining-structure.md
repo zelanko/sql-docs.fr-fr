@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: MT
+ms.openlocfilehash: 195805ac2257df8a7f1951d761c83432ff7d0578
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84523785"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091593"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Créer une structure d’exploration de données OLAP
   Vous pouvez utiliser l’Assistant Exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer une structure d’exploration de données qui utilise les données d’un modèle multidimensionnel. Les modèles d'exploration de données basés sur des cubes OLAP peuvent utiliser la colonne et les valeurs des tables de faits, les dimensions et les groupes de mesures comme attributs pour l'analyse.  
@@ -102,7 +101,7 @@ ms.locfileid: "84523785"
   
     -   **Expression de filtre**: tapez une valeur ou une expression pour servir de conditions de filtre, ou utilisez la liste déroulante pour sélectionner une valeur dans la liste des membres au niveau spécifié de la hiérarchie.  
   
-         Par exemple, si vous avez sélectionné [Geography] comme dimension et [Region Country Name] comme niveau de la hiérarchie, la liste déroulante contient tous les pays valides que vous pouvez utiliser comme condition de filtre. Vous pouvez effectuer plusieurs sélections. Par conséquent, les données de la structure d'exploration de données seront limitées aux données du cube de ces régions géographiques.  
+         Par exemple, si vous avez sélectionné [Geography] comme dimension et [Region country name] comme niveau de hiérarchie, la liste déroulante contient tous les pays/régions valides que vous pouvez utiliser comme condition de filtre. Vous pouvez effectuer plusieurs sélections. Par conséquent, les données de la structure d'exploration de données seront limitées aux données du cube de ces régions géographiques.  
   
     -   **Paramètres**: ignorez cette case à cocher. Cette boîte de dialogue prend en charge plusieurs scénarios de filtrage du cube et cette option n'est pas appropriée pour générer une structure d'exploration de données.  
   
@@ -130,5 +129,3 @@ ms.locfileid: "84523785"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
-  
-  

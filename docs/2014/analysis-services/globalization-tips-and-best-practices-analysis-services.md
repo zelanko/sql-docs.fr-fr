@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: MT
+ms.openlocfilehash: 27545026fcf426e024237ff837ce078fed3c4a00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544340"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091573"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Conseils et meilleures pratiques en matière de globalisation (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Multidimensionnel uniquement  
@@ -69,7 +68,7 @@ ms.locfileid: "84544340"
   
      À Taïwan, il est plus courant de voir le Chinois traditionnel avec l'ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     Les autres régions (comme Hong Kong et Macao) utilisent également le chinois traditionnel. Pour les classements, à Hong Kong il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao (R.A.S.)
+     Les autres régions (comme Hong Kong SAR et Macao SAR) utilisent également le chinois traditionnel. Pour les classements, à Hong Kong il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao (R.A.S.)
 , Chinese_Traditional_Stroke_Count_100 (sur SQL Server 2008 et versions ultérieures) est utilisé assez souvent.  
   
 -   Pour le japonais, le classement le plus courant est Japanese_CI_AS. Japanese_XJIS_100 est utilisé dans les installations prenant en charge [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). On utilise généralement Japanese_BIN2 dans les projets de migration de données, avec des données provenant de plateformes non-Windows ou de sources de données autres que le moteur de base de données relationnelle de SQL Server.  
@@ -160,7 +159,5 @@ ms.locfileid: "84544340"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios de globalisation pour Analysis Services données multidimensionnelles](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Scénarios de globalisation pour les Analysis Services multidimensionnels](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Rédiger des instructions Transact-SQL internationales](../relational-databases/collations/write-international-transact-sql-statements.md)  
-  
-  

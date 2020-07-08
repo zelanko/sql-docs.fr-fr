@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937061"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053485"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Contient une ligne pour chaque lot de données migrées à partir de chaque table prenant en charge Stretch sur l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance locale de. Les lots sont identifiés par l’heure de début et l’heure de fin.  
+  Contient une ligne pour chaque lot de données migrées à partir de chaque table prenant en charge Stretch sur l’instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les lots sont identifiés par l’heure de début et l’heure de fin.  
   
  **sys. dm_db_rda_migration_status** est limité au contexte de la base de données actuelle. Assurez-vous que vous êtes dans le contexte de la base de données des tables d’activation Stretch pour lesquelles vous souhaitez afficher l’état de la migration.  
   
- Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la sortie de **sys. dm_db_rda_migration_status** est limitée à 200 lignes.  
+ Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , la sortie de **sys. dm_db_rda_migration_status** est limitée à 200 lignes.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

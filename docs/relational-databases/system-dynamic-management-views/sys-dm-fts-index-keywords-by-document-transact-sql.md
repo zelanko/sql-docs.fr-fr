@@ -22,15 +22,14 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b1517198208c6282aabd29e39d425dc8ae5afb9e
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078562"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091583"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Retourne des informations sur le contenu de niveau document d'un index de recherche en texte intégral associé à la table spécifiée.  
   
@@ -71,7 +70,7 @@ sys.dm_fts_index_keywords_by_document
 |document_id|**int**|ID de la ligne ou du document à partir duquel le terme actuel a été indexé en texte intégral. Cet ID correspond à la valeur de clé de texte intégral de cette ligne ou de ce document.|  
 |occurrence_count|**int**|Nombre d’occurrences du mot clé Current dans le document ou la ligne indiqué par **document_id**. Lorsque'*search_property_name*'est spécifié, occurrence_count affiche uniquement le nombre d’occurrences du mot clé en cours dans la propriété de recherche spécifiée au sein du document ou de la ligne.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les informations retournées par sys.dm_fts_index_keywords_by_document sont utiles pour déterminer, entre autres choses, les éléments ci-dessous :  
   
 -   Nombre total de mots clés contenus dans un index de recherche en texte intégral.  
@@ -80,7 +79,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Nombre de fois qu'un mot clé apparaît dans l'index de recherche en texte intégral entier, à savoir :  
   
-     ([Sum](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) où **mot clé**=*keyword_value* )  
+     ([Somme](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE ( **mot clé** = ) *keyword_value* )  
   
 -   Nombre de fois qu'un mot clé apparaît dans une ligne ou un document donné.  
   
@@ -90,7 +89,7 @@ sys.dm_fts_index_keywords_by_document
   
  Lorsque la colonne clé de texte intégral est un type de données Integer, comme cela est recommandé, document_id est directement mappé à la valeur de la clé de texte intégral dans la table de base.  
   
- En revanche, lorsque la colonne clé de texte intégral fait appel à un type de données non entier, document_id ne représente pas la clé de texte intégral dans la table de base. Dans ce cas, pour identifier la ligne de la table de base qui est retournée par dm_fts_index_keywords_by_document, vous devez joindre cette vue avec les résultats retournés par [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Avant de pouvoir les joindre, vous devez stocker la sortie de la procédure stockée dans une table temp. Puis, vous pouvez joindre la colonne document_id de dm_fts_index_keywords_by_document avec la colonne DocId retournée par cette procédure stockée. Notez qu’une colonne **timestamp** ne peut pas recevoir de valeurs au moment de l’insertion, car elles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sont générées automatiquement par. Par conséquent, la colonne **timestamp** doit être convertie en colonnes **varbinary (8)** . L'exemple suivant affiche ces étapes. Dans cet exemple, *table_id* est l’ID de votre table, *database_name* est le nom de votre base de données et *table_name* est le nom de votre table.  
+ En revanche, lorsque la colonne clé de texte intégral fait appel à un type de données non entier, document_id ne représente pas la clé de texte intégral dans la table de base. Dans ce cas, pour identifier la ligne de la table de base qui est retournée par dm_fts_index_keywords_by_document, vous devez joindre cette vue avec les résultats retournés par [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Avant de pouvoir les joindre, vous devez stocker la sortie de la procédure stockée dans une table temp. Puis, vous pouvez joindre la colonne document_id de dm_fts_index_keywords_by_document avec la colonne DocId retournée par cette procédure stockée. Notez qu’une colonne **timestamp** ne peut pas recevoir de valeurs au moment de l’insertion, car elles sont générées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, la colonne **timestamp** doit être convertie en colonnes **varbinary (8)** . L'exemple suivant affiche ces étapes. Dans cet exemple, *table_id* est l’ID de votre table, *database_name* est le nom de votre base de données et *table_name* est le nom de votre table.  
   
 ```  
 USE database_name;  
