@@ -12,15 +12,15 @@ ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d094f7d89cfb3faf17551bb3068a5bcf17e24d3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a15ff8c6a947dffc6415720f1ac04880c5031c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635420"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements User Error Message affiche le message d'erreur tel qu'il est vu par l'utilisateur dans le cas d'une erreur ou d'une exception. Le texte du message d'erreur s'affiche dans le champ TextData.  
   
 ## <a name="user-error-message-event-class-data-columns"></a>Colonnes de données de la classe d'événements User Error Message  

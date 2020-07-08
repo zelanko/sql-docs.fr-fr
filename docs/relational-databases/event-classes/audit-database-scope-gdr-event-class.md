@@ -12,15 +12,15 @@ ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766d8066ab75ec95ccaa1ada0f3706219cfc95dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 677f7f674b2363e2604d5968cfde131e7c905418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630189"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Audit Database Scope GDR** intervient chaque fois qu’une instruction GRANT, REVOKE ou DENY est émise pour une autorisation d’instruction par un utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les actions de base de données uniquement, comme l’octroi d’autorisations sur une base de données.  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Colonnes de la classe d'événements Audit Database Scope GDR  

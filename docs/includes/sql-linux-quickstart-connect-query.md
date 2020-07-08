@@ -108,7 +108,7 @@ En plus de **sqlcmd**, vous pouvez utiliser les outils multiplateformes suivants
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | Un utilitaire de gestion de base de données GUI multiplateforme. |
+| [Azure Data Studio](../azure-data-studio/index.yml) | Un utilitaire de gestion de base de données GUI multiplateforme. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Éditeur de code GUI multiplateforme qui exécute des instructions Transact-SQL avec l’extension mssql. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Outil d’automatisation et de configuration multiplateforme basé sur de cmdlets. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Une interface de ligne de commande multiplateforme pour l’exécution de commandes Transact-SQL. |

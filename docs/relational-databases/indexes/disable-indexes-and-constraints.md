@@ -24,15 +24,15 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629779"
 ---
 # <a name="disable-indexes-and-constraints"></a>Désactiver les index et contraintes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cette rubrique explique comment désactiver un index ou des contraintes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La désactivation d'un index empêche l'accès des utilisateurs à celui-ci et, s'il s'agit d'un index cluster, aux données de la table sous-jacente. La définition de l'index reste présente dans les métadonnées et les statistiques sont conservées sur les index non cluster. La désactivation d'un index, qu'il soit non cluster ou cluster, sur une vue supprime physiquement les données de l'index. La désactivation d'un index cluster sur une table empêche l'accès aux données de celle-ci ; ces dernières existent toujours dans la table, mais les opérations de langage de manipulation de données (DML) ne peuvent pas les utiliser tant que l'index n'est pas supprimé ou reconstruit.  
   

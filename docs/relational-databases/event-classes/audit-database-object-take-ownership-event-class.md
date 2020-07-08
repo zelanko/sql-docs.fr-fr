@@ -12,15 +12,15 @@ ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 279f8ea49f62c97f939ed273ec12985b65f39e8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7cf4415847421122fd1aa28f4b70c63493924050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635628"
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Classe d'événements Audit Database Object Take Ownership
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Audit Database Object Take Ownership** se produit lors d’une modification du propriétaire des objets dans l’étendue de la base de données.  
   
 ## <a name="audit-database-object-take-ownership-event-class-data-columns"></a>Colonne de la classe d'événements Audit Database Object Take Ownership  

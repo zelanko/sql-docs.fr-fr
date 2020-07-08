@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8a3de3bf8c09149c21357a6d6b8c3e1aed4f995c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113300"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655213"
 ---
 # <a name="start-system-monitor-windows"></a>Démarrer le Moniteur système (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez le Moniteur système pour surveiller l'utilisation des ressources système. Collectez et affichez les données de performances en temps réel sous la forme de compteurs. Vous pouvez utiliser des compteurs pour les ressources de serveur, telles que la mémoire et le processeur. Vous pouvez également utiliser les nombreuses ressources Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles que les verrous et les transactions.  
   
 ## <a name="start-system-monitor-in-windows"></a>Démarrer le Moniteur système de Windows  

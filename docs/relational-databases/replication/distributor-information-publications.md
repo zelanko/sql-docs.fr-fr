@@ -17,15 +17,15 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653543"
 ---
 # <a name="distributor-information-publications"></a>Informations du serveur de distribution, publications
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   L'onglet **Publications** fournit des informations résumées pour toutes les publications sur le serveur de distribution sélectionné dans le volet gauche.  
   
 Les informations affichées relatives aux publications prises en charge par le serveur de distribution incluent une colonne qui contient l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur de publication. Dans le cas contraire, les informations de publication sont les mêmes que les informations de publication fournies lorsque vous consultez des publications dans la vue Serveur de publication du Moniteur de réplication. Pour plus d'informations sur les colonnes de l'onglet **Publications** , consultez [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  

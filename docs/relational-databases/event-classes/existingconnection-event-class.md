@@ -12,15 +12,15 @@ ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4fe3060d0eb7a6c75333345f1770e2512371049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87a295cf1d803e6193b192d62d1f87975a5b241a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642191"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements ExistingConnection indique les propriétés des connexions utilisateur existantes au moment du démarrage de la trace. Le serveur déclenche un événement ExistingConnection par connexion utilisateur existante.  
   
 ## <a name="existing-connection-event-class-data-columns"></a>Colonnes de données de la classe d'événements Existing Connection  

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - session context information [SQL Server]
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b6278faa80721ce500257650db70359dcc740ee8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a1938b5eea673d5b62525a480f6cc03c7e13e5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632108"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cette fonction renvoie la valeur **context_info** définie pour la session ou le traitement actif, ou dérivée à l’aide de l’instruction [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md).
   
@@ -58,7 +58,7 @@ Ne nécessite aucune autorisation particulière. Les vues système suivantes sto
 - **sys.sysprocesses**
   
 ## <a name="examples"></a>Exemples  
-Cet exemple simple attribue à `0x1256698456` la valeur **context_info**, puis utilise la fonction `CONTEXT_INFO` pour extraire la valeur.
+Cet exemple simple attribue à **la valeur**context_info`0x1256698456`, puis utilise la fonction `CONTEXT_INFO` pour extraire la valeur.
   
 ```sql
 SET CONTEXT_INFO 0x1256698456;  
