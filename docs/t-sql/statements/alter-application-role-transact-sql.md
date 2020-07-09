@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813888"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifie le nom, le mot de passe ou le schéma par défaut d'un rôle d'application.  
   
  ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe
   
 ```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Arguments
+
  *application_role_name*  
  Nom du rôle d'application à modifier.  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  Indique le premier schéma dans lequel le serveur doit effectuer des recherches lorsqu'il résout les noms des objets. *schema_name* peut être un schéma qui n’existe pas dans la base de données.  
   
-## <a name="remarks"></a>Notes  
- Si le nouveau nom du rôle d'application existe déjà dans la base de données, l'instruction échoue. Lorsque le nom, le mot de passe ou le schéma par défaut d'un rôle d'application est modifié, l'ID associé au rôle ne l'est pas.  
+## <a name="remarks"></a>Notes
+
+Si le nouveau nom du rôle d'application existe déjà dans la base de données, l'instruction échoue. Lorsque le nom, le mot de passe ou le schéma par défaut d'un rôle d'application est modifié, l'ID associé au rôle ne l'est pas.  
   
 > [!IMPORTANT]  
 >  Les stratégies d'expiration des mots de passe ne s'appliquent pas aux mots de passe des rôles d'application. Pour cette raison, faites extrêmement attention lorsque vous choisissez des mots de passe forts. Les applications qui appellent des rôles d'application doivent stocker leurs mots de passe.  

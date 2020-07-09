@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3f3601aca4a8cf5325071a99a6c7605253ff0aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321481"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880082"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Exécuter la logique métier lors de la synchronisation de fusion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   L'infrastructure de gestion de logique métier permet d'écrire un assembly de code managé qui est appelé pendant le processus de synchronisation de fusion. L'assembly comprend une logique métier qui peut répondre à un certain nombre de conditions au cours de la synchronisation : les modifications de données, les conflits et les erreurs. L'infrastructure de gestionnaires de logique métier propose un modèle de programmation simple et les données fournies par le processus de fusion à votre assembly se présentent sous la forme d'un dataset ADO.NET, de sorte que vous pouvez tirer parti de la connaissance d'ADO.NET au lieu d'apprendre une interface propriétaire. Pour plus d'informations sur la programmation de gestionnaires de logique métier, consultez :  
   
 -   Référence de l'interface de programmation d'applications (API) : <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
