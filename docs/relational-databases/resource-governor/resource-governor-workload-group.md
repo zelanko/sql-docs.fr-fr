@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4f15d4e443f0ffd6df700bff67ed6ba7514e0c90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805608e50c04f6c602d9efc076840c9e76965a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726008"
 ---
 # <a name="resource-governor-workload-group"></a>Groupe de charge de travail de Resource Governor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Dans le gouverneur de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un groupe de charge de travail sert de conteneur aux demandes de session qui ont des critères de classification similaires. Une charge de travail autorise l'analyse globale des sessions et définit les stratégies pour les sessions. Chaque groupe de charge de travail figure dans un pool de ressources, qui représente un sous-ensemble des ressources physiques d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsqu'une session est démarrée, le classifieur du gouverneur de ressources affecte la session à un groupe de charge de travail spécifique, et la session doit s'exécuter à l'aide des stratégies assignées au groupe de charge de travail et aux ressources définies pour le pool de ressources.  
   
 ## <a name="workload-group-concepts"></a>Concepts autour des groupes de charge de travail  

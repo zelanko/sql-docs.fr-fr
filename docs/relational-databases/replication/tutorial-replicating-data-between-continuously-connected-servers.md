@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720704"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutoriel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La réplication transactionnelle constitue une bonne solution au problème de transfert de données entre serveurs connectés en permanence. À l’aide de l’Assistant Réplication, vous pouvez aisément configurer et administrer une topologie de réplication. 
 
 Ce tutoriel vous explique comment configurer une topologie de réplication transactionnelle dans le cas de serveurs connectés en permanence. Pour plus d’informations sur le fonctionnement de la réplication transactionnelle, consultez [Vue d’ensemble de la réplication transactionnelle](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 

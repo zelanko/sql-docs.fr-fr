@@ -28,20 +28,20 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 01221e7bf5ff8b6bc0b8bb1a32f2aca66e8c6ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68495440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706138"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Barre oblique inverse (continuation de ligne) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `\` scinde une constante de chaîne longue, un caractère ou un binaire en deux ou plusieurs lignes pour une meilleure lisibilité.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

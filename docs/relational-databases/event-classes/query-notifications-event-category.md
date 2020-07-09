@@ -12,15 +12,15 @@ ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f336b68b53f95d839eede56fac206ebd390f9e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32e2362d5d106d8605c1c7d7f45a60d8d5d4b044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726218"
 ---
 # <a name="query-notifications-event-category"></a>Catégorie d'événement Notifications de requêtes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La catégorie d’événement **Notifications de requêtes** contient des classes d’événements chargées de fournir des informations que les développeurs et les administrateurs peuvent exploiter pour contrôler les notifications de requêtes et résoudre les problèmes qui en découlent.  
   
 ## <a name="in-this-section"></a>Dans cette section  

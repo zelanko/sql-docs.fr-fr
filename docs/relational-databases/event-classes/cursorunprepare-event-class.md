@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719844"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **CursorUnprepare** fournit des informations sur les événements de non-préparation de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API, Application Programming Interface). Ces événements se produisent quand le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] rejette un plan d’exécution.  
   
  Incluez la classe d’événements **CursorUnprepare** dans des traces qui enregistrent les performances des curseurs. Quand la classe d’événements **CursorUnprepare** est incluse dans une trace, l’importance de la charge induite dépend de la fréquence d’utilisation des curseurs sur la base de données pendant la trace. Si les curseurs sont largement utilisés, la trace peut altérer considérablement les performances.  

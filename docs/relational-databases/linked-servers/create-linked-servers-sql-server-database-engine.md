@@ -17,15 +17,15 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719040"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
   

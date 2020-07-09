@@ -14,15 +14,15 @@ ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed2edb85ea142aa6dd02995784dc96a958ee6a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60d826f519af20e51bc23e8a503975e8222da1bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720945"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>Informations de publication, jetons de suivi (SQL Server 2005 et versions ultérieures)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   L'onglet **Jetons de suivi** vous permet de contrôler la validité des connexions mais aussi de paramétrer la mesure du temps de latence d'un système utilisant la réplication transactionnelle. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
   
 -   du temps écoulé entre la validation d'une transaction par le serveur de publication et l'insertion de la commande qui en découle dans la base de données de distribution sur le serveur de distribution ;  

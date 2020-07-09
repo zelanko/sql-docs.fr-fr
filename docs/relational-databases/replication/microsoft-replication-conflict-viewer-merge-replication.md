@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722037"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visionneuse des conflits de réplication Microsoft (réplication de fusion)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La Visionneuse des conflits de réplication permet d'afficher et de résoudre les conflits qui se sont produits pendant la synchronisation de la réplication. Des conflits ont lieu lorsque les mêmes données sont modifiées sur deux serveurs différents, par exemple sur un Éditeur et un Abonné ou sur deux Abonnés différents. La réplication résout automatiquement les conflits à l'aide du résolveur de conflits sélectionné lors de la création de l'article. Cependant, la Visionneuse des conflits de réplication permet de choisir une résolution différente des conflits lorsque c'est nécessaire. Les conflits suivants peuvent se produire :  
   
 -   Conflits de mise à jour. Les conflits de mise à jour se produisent lorsque les mêmes données sont modifiées dans deux emplacements. L'un « gagne », l'autre « perd ». Vous avez le choix entre conserver les données existantes (les gagnantes) et remplacer les données existantes par celles qui sont en conflit (les perdantes), ou fusionner les données gagnantes et perdantes et mettre à jour les données existantes.  

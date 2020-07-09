@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 04a328034388f5ad305b627106d178b73df040bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68067374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726424"
 ---
 # <a name="model-database"></a>model, base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La base de données **model** fait office de modèle pour toutes les bases de données créées sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que la base de données **tempdb** est créée chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré, la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tout le contenu de la base de données **model** , y compris ses options, est copié dans la nouvelle base de données. Certains paramètres de **model** sont également utilisés pour la création d'une nouvelle base de données **tempdb** au démarrage, de sorte que la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Les bases de données utilisateur récemment créées utilisent le même [mode de récupération](../../relational-databases/backup-restore/recovery-models-sql-server.md) que la base de données model. Le mode par défaut est configurable par l'utilisateur. Pour connaître le mode de récupération actuel du modèle, consultez [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  

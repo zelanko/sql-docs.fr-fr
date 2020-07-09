@@ -12,15 +12,15 @@ ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f41511d90850670ae4d5325ce4db200bb65a9d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20ad4337407a46d91adbbeb080b662a2e4e99f28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726173"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements Showplan Text intervient quand [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une instruction SQL. Les informations comprises sont un sous-ensemble des informations disponibles dans les classes d’événements Showplan All, Showplan XML Statistics Profile ou Showplan XML.  
   
  Si vous incluez la classe d'événements Showplan Text dans une trace, le surcroît de charge imposée au système diminue sensiblement les performances. Pour limiter ce problème, n'utilisez cette classe d'événements qu'avec les traces surveillant des problèmes spécifiques pendant de brèves périodes. Showplan Text ne mobilise pas autant de ressources système que les autres classes d'événements Showplan.  

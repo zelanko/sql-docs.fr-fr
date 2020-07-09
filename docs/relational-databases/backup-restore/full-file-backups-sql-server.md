@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3495b06e0f5c502fc40c1cf4fade996fa8e05c71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 500abb4eca30e502d7a32e23e3b14300258453b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718036"
 ---
 # <a name="full-file-backups-sql-server"></a>Sauvegardes de fichiers complètes (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique concerne les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent plusieurs fichiers ou groupes de fichiers.  
   
  Les fichiers d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être sauvegardés et restaurés individuellement. De plus, vous pouvez spécifier un groupe de fichiers entier au lieu de spécifier chaque fichier constitutif individuellement. Notez que si un fichier dans un groupe de fichiers est hors connexion (par exemple parce que le fichier est en cours de restauration), la totalité du groupe de fichiers est hors connexion et ne peut être sauvegardée.  

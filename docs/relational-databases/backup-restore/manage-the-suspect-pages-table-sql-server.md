@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d364f28e1d27d9eeb758c174e7e8062e7540873
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718023"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment gérer la table **suspect_pages** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La table **suspect_pages** est conçue pour gérer les informations sur les pages suspectes et aide à déterminer si une restauration est nécessaire ou non. La table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) réside dans la [base de données msdb](../../relational-databases/databases/msdb-database.md).  
   
  Une page est considérée « suspecte » quand le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rencontre l'une des erreurs suivantes alors qu'il essaie de lire une page de données :  

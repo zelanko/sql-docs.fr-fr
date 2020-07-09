@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bebf91748c10f1b33c199c3afc227cb8f16b4f88
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 50a480d13dca5053dd565323d96348476a4b33bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720563"
 ---
 # <a name="web-server-information"></a>Informations sur le serveur Web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les informations sur le serveur Web sont nécessaires pour pouvoir utiliser l'option de synchronisation Web pour la réplication de fusion. Pour obtenir des informations sur la configuration de la synchronisation Web, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
 ## <a name="options"></a>Options  

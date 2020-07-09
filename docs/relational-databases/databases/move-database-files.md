@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c53e9ee51714ebfcce81a722f78a4f79cbc2530f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b34df711bbe1a80f62bd307ac26e0eee4fa2cbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68067317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726380"
 ---
 # <a name="move-database-files"></a>Déplacer des fichiers de bases de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez déplacer les bases de données système et utilisateur en spécifiant le nouvel emplacement des fichiers dans la clause FILENAME de l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Cette méthode peut être appliquée aux fichiers de données, aux fichiers journaux et aux fichiers de catalogues de texte intégral. Elle peut être utile dans les cas suivants :  
   
 -   Récupération après défaillance. Par exemple, la base de données est en mode suspect ou a été fermée en raison d'une défaillance matérielle.  

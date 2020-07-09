@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f4dbff82eb2bf2d76073689d87ba1d69809083f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720587"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Résolution de conflit pour la réplication de fusion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les conflits de réplication de fusion sont résolus en fonction de l'outil de résolution spécifié pour chaque article. Par défaut, les conflits sont résolus sans que l'utilisateur doive intervenir. Mais il est possible de les afficher et de modifier le résultat de la résolution dans la Visionneuse des conflits de réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  Les données de conflit sont disponibles dans la Visionneuse des conflits de réplication pendant la durée définie comme période de rétention des conflits (par défaut 14 jours). Pour définir la période de rétention des conflits :  

@@ -12,15 +12,15 @@ ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ef73ccd2c51a7c7b79209f5728feaaf36f8a566
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a70af7f66197bb4c9ee2df82fbf95c99a3fe31cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719820"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements **Data File Auto Shrink** indique que le fichier de données a été réduit automatiquement. Cet événement ne se déclenche pas si le fichier de données est réduit en raison d'une instruction ALTER DATABASE explicite. Intégrez la classe d'événements **Data File Auto Shrink** dans les traces qui surveillent les modifications de la taille des fichiers de données.  
   
  L'augmentation de la charge imposée au système en cas d'ajout de la classe **Data File Auto Shrink** dans une trace est faible, à moins que le fichier de données ne soit fréquemment réduit.  

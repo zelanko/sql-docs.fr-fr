@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70809950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726482"
 ---
 # <a name="database-mail-messaging-objects"></a>Objets de messagerie de base de données
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La base de données **msdb** est la base de données hôte de messagerie de base de données. Elle contient les procédures stockées et les objets de messagerie de la messagerie de base de données. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contient l'Assistant Configuration de la messagerie de base de données qui permet d'activer la messagerie de base de données, de créer et de gérer les profils et les comptes, et de configurer les options de la messagerie de base de données.  
   
 ##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a> Objets dans la base de données **msdb**  

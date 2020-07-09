@@ -13,15 +13,15 @@ ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7ec5da517de073bf12ff5d94ec86c1e7b2aa485f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0aad24f326eb3c0dd61138408ceedf275cdd816b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721009"
 ---
 # <a name="publication-database"></a>Base de données de publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La base de données de publication est la base de données située sur le serveur de publication, qui sert de source aux données et aux objets de base de données à répliquer. Chaque base de données de publication mise en œuvre lors de la réplication doit obligatoirement être activée. La base de données est activée lorsqu'un membre du rôle serveur fixe **sysadmin** :  
   
 -   crée une publication relative à la base de données par le biais de l'Assistant Nouvelle publication ;  

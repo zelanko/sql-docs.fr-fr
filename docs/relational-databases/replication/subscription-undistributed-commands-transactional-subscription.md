@@ -14,15 +14,15 @@ ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 09271bf91d561e86fdf6525ccd217bb000449044
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1fbb40a15f1c4db06fc99289d5d55b0c56b3907e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719524"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription"></a>Abonnement, commandes non distribuées (abonnement transactionnel)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   L'onglet **Commandes non distribuées** contient des informations sur le nombre de commandes de la base de données de distribution qui n'ont pas été distribuées à l'abonné sélectionné, ainsi que le délai estimé de distribution de ces commandes. Pour plus d’informations sur l’affichage des commandes dans la base de données de distribution, consultez [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md).  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]

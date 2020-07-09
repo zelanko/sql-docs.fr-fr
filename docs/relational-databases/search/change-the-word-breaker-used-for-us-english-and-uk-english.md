@@ -10,15 +10,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0d8299581c5394b5528e9c42a41a64445fae800
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f7c80f8cfd68d8389baf80998be37ec4d8119d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726001"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifier l'analyseur lexical utilisé pour l'anglais des États-Unis et l'anglais (R.U.)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe une nouvelle version (version 14.0.4999.1038) de l’analyseur lexical et du générateur de formes dérivées pour la langue anglaise, en remplaçant la version précédente de ces composants (version 12.0.6828.0). Pour plus d’informations sur la modification du comportement des nouveaux composants, consultez [Changements de comportement pour la recherche en texte intégral](/sql/database-engine/behavior-changes-to-full-text-search). Cette rubrique décrit comment passer de la nouvelle version de ces composants à la version précédente, ou de la version précédente à la nouvelle version. Pour les installations de cluster, ces modifications doivent être apportées sur tous les nœuds principaux et passifs.  
   
  Les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisaient des analyseurs lexicaux différents représentés par des CLSID différents pour l'anglais des États-Unis (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Dans cette version, les deux LCID utilisent les mêmes composants avec le même CLSID, comme indiqué dans le tableau suivant :  

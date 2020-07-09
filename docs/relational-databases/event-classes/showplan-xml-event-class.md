@@ -12,15 +12,15 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67e40d00fa989d3e2a8779b1b25c14476da89215
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0744a0988ff3026d307e7606bb29b20b12460a2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726142"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements Showplan XML intervient quand [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une instruction SQL. Incluez la classe d'événements Showplan XML pour identifier les opérateurs Showplan. Cette classe d'événements stocke chaque événement sous la forme d'un document XML bien défini.  
   
  Lorsque la classe d'événements Showplan XML est incluse dans une trace, la charge de gestion induite compromet les performances de façon significative. Showplan XML stocke un plan de requête qui est créé lors de l'optimisation de la requête. Pour minimiser la charge de gestion associée, limitez l'utilisation de cette classe d'événements aux traces qui analysent des problèmes spécifiques pendant de brèves périodes de temps.  

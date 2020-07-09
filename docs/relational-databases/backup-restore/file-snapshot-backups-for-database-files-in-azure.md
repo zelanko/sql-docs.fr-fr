@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a371ac7f8cad6f90f83c7408b315fa35d571d1f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718061"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sauvegarde d’instantanés de fichiers utilise des instantanés Azure pour obtenir des sauvegardes quasi instantanées et des restaurations plus rapides pour les fichiers de base de données stockés avec le service de stockage d’objets blob Azure. Cette fonctionnalité vous permet de simplifier vos stratégies de sauvegarde et de restauration. Pour une démonstration en situation réelle, consultez [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(Démonstration de la restauration à un point dans le temps). Pour plus d’informations sur le stockage de fichiers de base de données à l’aide du service Stockage Blob Azure, consultez [Fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![diagramme architectural de sauvegardes d’instantanés](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagramme architectural de sauvegardes d’instantanés")  

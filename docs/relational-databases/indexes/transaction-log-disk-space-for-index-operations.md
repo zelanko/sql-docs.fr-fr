@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af90d16e4e81b5d2ee1dc73de78826073d1cbff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a88bbccbe0fd1a57455343858f463afe072ed99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722316"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Espace disque du journal des transactions pour les opérations d'index
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les opérations d'index à grande échelle peuvent générer des chargements de données volumineux susceptibles de saturer le journal des transactions rapidement. Pour que l'opération d'index puisse être restaurée, le journal des transactions ne peut pas être tronqué avant la fin de celle-ci ; toutefois, il peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit posséder suffisamment de place pour stocker les transactions de l'opération d'index et toutes les transactions utilisateur concurrentes qui interviennent pendant celle-ci. Cela concerne à la fois les opérations d'index hors ligne et les opérations d'index en ligne. Étant donné que les tables sous-jacentes sont inaccessibles pendant une opération d'index hors ligne, le nombre de transactions utilisateur peut être faible et le journal ne peut pas croître rapidement. Les opérations d'index en ligne n'empêchent pas l'activité utilisateur concurrente ; par conséquent, les opérations d'index en ligne à grande échelle combinées à des transactions utilisateur concurrentes significatives peuvent provoquer une croissance continue du journal des transactions en l'absence d'option permettant de le tronquer.  
   
 ## <a name="recommendations"></a>Recommandations  

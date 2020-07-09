@@ -19,15 +19,15 @@ ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54b656c95323c8f6cb2a4f5f6d4666555de5e02a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719573"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage compte sur l’optimiseur de requête pour analyser une charge de travail et faire des recommandations de paramétrage. Le fait d'effectuer cette analyse sur le serveur de production augmente la charge du serveur et peut dégrader les performances du serveur pendant la session de paramétrage. Vous pouvez réduire l'impact sur la charge du serveur pendant une session de paramétrage en utilisant un serveur de test en plus du serveur de production.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Utilisation d'un serveur de test par l'Assistant Paramétrage du moteur de base de données  

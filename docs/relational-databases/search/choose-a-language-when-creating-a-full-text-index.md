@@ -19,16 +19,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 882a7e1acfa8baf49b90e0ebda8d3cef212d511a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726023"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier une langue au niveau de la colonne pour la colonne indexée. L’ [analyseur lexical et les générateurs de formes dérivées](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) de la langue spécifiée seront utilisés par les requêtes de texte intégral sur la colonne. Plusieurs aspects doivent être pris en considération pour le choix de la langue d'une colonne lors de la création d'un index de texte intégral. Ces aspects sont liés à la façon dont les unités lexicales de votre texte sont créées et à la façon dont ce texte est ensuite indexé par le Moteur d'indexation et de recherche en texte intégral.  
   

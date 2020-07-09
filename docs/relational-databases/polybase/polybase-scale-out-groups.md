@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217089"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818232"
 ---
 # <a name="polybase-scale-out-groups"></a>Groupes de scale-out PolyBase
 
@@ -58,10 +58,6 @@ Le moteur PolyBase est le composant clé des requêtes PolyBase. Il analyse l’
   
 Le service de déplacement de données PolyBase reçoit des instructions du moteur PolyBase et transfère les données entre HDFS et SQL Server et entre les instances SQL Server sur les nœuds principal et de calcul.
   
-## <a name="editions-availability"></a>Disponibilité des éditions  
-
-Après l’installation de SQL Server, l’instance peut être désignée comme un nœud principal ou comme nœud de calcul. Le choix dépend de la version de SQL Server sur laquelle PolyBase est exécuté. Dans une édition Enterprise, l’instance peut être désignée comme nœud principal ou comme nœud de calcul. Dans une édition Standard, l’instance peut uniquement être désignée comme nœud de calcul.
-
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour configurer un groupe de scale-out PolyBase, consultez le guide suivant :

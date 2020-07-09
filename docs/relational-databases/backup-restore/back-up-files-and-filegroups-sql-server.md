@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: db9345dd3411a28d2bfd72b64b4917c93d6567b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725221"
 ---
 # <a name="back-up-files-and-filegroups"></a>Sauvegarder des fichiers et des groupes de fichiers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment sauvegarder des fichiers et des groupes de fichiers dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell. Lorsque la taille de la base de données et les exigences en matière de performances rendent impraticable une sauvegarde complète de la base de données, créez une sauvegarde de fichiers. Une *sauvegarde de fichiers* contient toutes les données dans un ou plusieurs fichiers (ou groupes de fichiers).
   
 Pour plus d’informations sur les sauvegardes de fichiers, consultez [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  

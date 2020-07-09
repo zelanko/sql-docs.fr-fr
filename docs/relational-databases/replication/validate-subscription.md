@@ -15,15 +15,15 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 85f175d82c84351e0abc42038c378beab35167f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7256bc010e5320d63502cce834996f2be01c2a08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68769266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720614"
 ---
 # <a name="validate-subscription"></a>Valider l'abonnement
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   Utilisez la boîte de dialogue **Valider l'abonnement** pour indiquer qu'un abonnement à une publication de fusion doit être validée lors de la prochaine exécution de l'Agent de fusion de l'abonnement. Le résultat de la validation figure dans le Moniteur de réplication. Pour plus d'informations, voir [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
  Vous pouvez également valider tous les abonnements à une publication de fusion en cliquant avec le bouton droit de la souris sur une publication dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et en cliquant sur **Valider tous les abonnements**.  

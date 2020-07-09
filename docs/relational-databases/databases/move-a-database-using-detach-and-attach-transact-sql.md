@@ -1,7 +1,6 @@
 ---
 title: Déplacer une base de données à l’aide de la méthode de détachement et d’attachement (Transact-SQL)
-ms.custom: seo-dt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e26ca45fb3851926959795675e1dd38a7f3f3a14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726412"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Déplacer une base de données à l’aide de la méthode de détachement et d’attachement (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment déplacer une base de données détachée vers un autre emplacement puis la rattacher à la même instance de serveur ou à une instance différente dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Toutefois, nous vous recommandons de déplacer les bases de données à l'aide de la procédure de déplacement planifié ALTER DATABASE, plutôt qu'à l'aide de la méthode de détachement et d'attachement. Pour plus d’informations, consultez [Déplacer des bases de données utilisateur](../../relational-databases/databases/move-user-databases.md).  
   
 > [!IMPORTANT]  
@@ -51,7 +51,7 @@ ms.locfileid: "74095251"
   
 1.  Détachez la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en exécutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
@@ -67,7 +67,7 @@ ms.locfileid: "74095251"
   
 3.  Attachez la base de données déplacée et si vous le souhaitez, son journal, en exécutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   

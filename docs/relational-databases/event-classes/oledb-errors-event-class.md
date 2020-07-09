@@ -12,15 +12,15 @@ ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64df0d85fb8e4bb9e3ea54c7d8613a1a39ac3406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726244"
 ---
 # <a name="oledb-errors-event-class"></a>Classe d'événements OLEDB Errors
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements OLEDB Errors intervient dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quand un appel à un fournisseur OLE DB retourne une erreur. Utilisez cette classe d'événements dans vos traces afin d'afficher un HRESULT d'échec provenant d'un fournisseur OLE DB.  
   
  Lorsque la classe d'événements OLEDB Errors est incluse dans une trace, la charge du système dépend de la fréquence des erreurs de fournisseur OLE DB pendant la trace. Si cette fréquence est élevée, la trace peut fortement réduire les performances.  

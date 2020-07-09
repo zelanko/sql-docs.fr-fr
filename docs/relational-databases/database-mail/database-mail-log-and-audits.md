@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4fa7f81d2ca96b8a54e36240bdee60508c1490bc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e8b0ce1e5924a2186529fb7f7b301b85d0d547c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70228471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726488"
 ---
 # <a name="database-mail-log-and-audits"></a>Journal et audits de la messagerie de base de données
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La fonctionnalité de journalisation de la messagerie de base de données offre un moyen d'isoler et de résoudre les problèmes. La messagerie de base de données stocke les informations du journal dans la base de données **msdb** . Les informations sur le contenu des messages électroniques de la messagerie de base de données, l'état des messages électroniques et tous les messages reçus (notamment les erreurs) sont enregistrées par la messagerie de base de données et peuvent être utilisées à des fins de dépannage et d'audit.  
   
 ## <a name="database-mail-logs"></a>Journaux de la messagerie de base de données  

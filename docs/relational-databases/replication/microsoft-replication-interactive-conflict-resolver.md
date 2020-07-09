@@ -14,15 +14,15 @@ ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5eca59b2277eefc351b63013dbc614eac9ed0b65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 557627ae2524131c277361967e6564704f691397
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722012"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Outil de résolution des conflits de réplication Microsoft interactif
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   L'Outil de résolution des conflits de réplication Microsoft interactif peut s'utiliser pour les abonnements de fusion synchronisés au moyen du Gestionnaire de synchronisation Windows. Il permet d'afficher, comparer, modifier et sélectionner les conflits dans les données des résultats. La réplication comporte également l'Outil de résolution des conflits qui permet d'afficher et de modifier les résultats des conflits après leur validation. L'Outil de résolution des conflits interactif permet de sélectionner le résultat pendant la synchronisation.  
   
 > [!NOTE]  

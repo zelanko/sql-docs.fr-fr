@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c11771790e91bb888df7e77749e6dc879081a46e
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 405e99a8cfda0792b29da8ff40ab6e8d7687a706
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720496"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Créer et tester une fonction classifieur définie par l'utilisateur
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique indique comment créer et tester une fonction définie par l'utilisateur classifieur (UDF). Les étapes impliquent l’exécution d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l’Éditeur de requêtes [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  L'exemple de la procédure suivante illustre les possibilités de création d'une fonction définie par l'utilisateur classifieur assez complexe.  

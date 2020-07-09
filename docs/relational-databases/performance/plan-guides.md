@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8012115ff5f5a7fbd85de36b6263ea4380b44ccc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722242"
 ---
 # <a name="plan-guides"></a>Repères de plan
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Les repères de plan vous permettent d'optimiser les performances des requêtes lorsque vous ne pouvez pas ou ne souhaitez pas modifier directement le texte de la requête réelle dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les repères de plan influencent l'optimisation des requêtes en attachant des indicateurs de requête ou un plan fixe de requête à celles-ci. Les repères de plan s'avèrent utiles lorsqu'un petit sous-ensemble de requêtes d'une application de base de données fournie par un tiers ne fonctionne pas comme prévu. Dans le repère de plan, vous spécifiez l'instruction Transact-SQL que vous voulez optimiser et une clause OPTION contenant les indicateurs de requête ou un plan de requête spécifique à utiliser pour optimiser la requête. Lorsque la requête s'exécute, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre l'instruction Transact-SQL au repère de plan et attache la clause OPTION à la requête au moment de l'exécution ou fait appel au plan de requête spécifié.  
   
  Le nombre total de repères de plan que vous pouvez créer est uniquement tributaire des ressources système disponibles. Toutefois, les repères de plan doivent se limiter au traitement des requêtes critiques ciblées à des fins d'amélioration ou de stabilisation des performances. Les repères de plan ne doivent pas influencer la majeure partie de la charge de requête d'une application déployée.  

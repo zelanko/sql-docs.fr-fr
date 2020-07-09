@@ -14,15 +14,15 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35138719e779da2301ab635e29e9adcaacf2fdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722024"
 ---
 # <a name="replication-conflict-viewer-transactional-replication"></a>Visionneuse des conflits de réplication (réplication transactionnelle)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La Visionneuse des conflits de réplication vous permet d'examiner les conflits qui se sont produits lors de la synchronisation pour la réplication transactionnelle d'égal à égal et la réplication transactionnelle avec des abonnements de mise à jour en attente. Pour plus d’informations, consultez [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
 > [!NOTE]  

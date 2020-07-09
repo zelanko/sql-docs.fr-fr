@@ -13,15 +13,15 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720862"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** vous permet d'afficher et de définir les propriétés de niveau de publication associées aux abonnements. Les propriétés sont regroupées selon les catégories suivantes :  
   
 -   Propriétés qui s'appliquent à toutes les publications.  

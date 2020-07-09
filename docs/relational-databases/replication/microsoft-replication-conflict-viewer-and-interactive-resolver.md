@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cdacdc6209af2f1763f27bfc28419279e1d5a58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722031"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visionneuse des conflits de réplication de Microsoft et Résolveur interactif
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette section contient des informations sur la Visionneuse des conflits de réplication pour la réplication de fusion et la réplication transactionnelle, et sur le Résolveur interactif pour la réplication de fusion :  
   
 -   [Visionneuse des conflits de réplication Microsoft &#40;réplication de fusion&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  

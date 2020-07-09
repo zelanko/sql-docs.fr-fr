@@ -12,15 +12,15 @@ ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19a307d6701a49f8041e07d21884215dc2b827d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4ee0bf31c737a1910f0606e54a6d0d42440fd99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719883"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **CursorPrepare** décrit les événements de préparation des curseurs qui se produisent dans les curseurs d’API. Les événements de préparation de curseur se produisent quand le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compile une instruction SELECT associée à un curseur dans un plan d’exécution, mais ne crée pas le curseur.  
   
  Incluez la classe d’événements **CursorPrepare** dans les traces qui enregistrent les performances des curseurs. Lorsque la classe d’événements **CursorPrepare** est incluse dans une trace, la charge générée varie selon la fréquence d’utilisation des curseurs sur la base de données pendant la trace. Si les curseurs sont fortement utilisés, la trace peut dégrader notablement les performances.  

@@ -17,15 +17,15 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0fc2167d4dc6179b760cfe03ad380b98d041f7b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725913"
 ---
 # <a name="sequence-numbers"></a>Numéros séquentiels
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande. Les séquences, contrairement aux colonnes d'identité, ne sont pas associées à des tables. Une application fait référence à un objet séquence pour recevoir sa valeur suivante. La relation entre les séquences et les tables est contrôlée par l'application. Les applications utilisateur peuvent référencer un objet séquence et coordonner les clés des valeurs entre plusieurs lignes et tables.  
   
  Une séquence est créée indépendamment des tables à l’aide de l’instruction **CREATE SEQUENCE** . Des options vous permettent de contrôler l'incrémentation, les valeurs maximales et minimales, le point de départ, la fonction de redémarrage automatique et la mise en cache afin d'améliorer les performances. Pour plus d’informations sur ces options, consultez [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  

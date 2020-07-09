@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69c415d66ca3f490f0a3b293090ccac36bf9cc51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724781"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité dépréciée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f95994ac6c663020074c5ef3971c1e0a895b3a10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720575"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>afficher les conflits de données pour les publications de fusion (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vous pouvez afficher les conflits pour la réplication transactionnelle d'égal à égal et la réplication transactionnelle avec des abonnements mis à jour en attente dans la Visionneuse des conflits de réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Pour plus d’informations sur la détection et la résolution des conflits, consultez [Détection de conflit dans la réplication d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) et [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
  La disponibilité des données de conflit dépend du type de réplication et de la période de rétention des conflits :  
