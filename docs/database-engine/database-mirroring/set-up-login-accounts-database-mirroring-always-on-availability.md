@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6545a639b9bcdfafcc1bdfdd67930014beab00e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735135"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Configurer des comptes de connexion - Disponibilité Always On de la mise en miroir de bases de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Pour que deux instances de serveur se connectent au [point de terminaison de mise en miroir de bases de données](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) de l'autre, le compte de connexion de chaque instance doit avoir accès à l'autre instance. Par ailleurs, chaque compte de connexion doit disposer d'une autorisation de connexion au point de terminaison de mise en miroir de bases de données de l'autre instance.  
   

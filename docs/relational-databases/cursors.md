@@ -19,15 +19,15 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733911"
 ---
 # <a name="cursors"></a>Curseurs
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Les opérations réalisées dans une base de données relationnelle s'exécutent sur un ensemble complet de lignes. Par exemple, l’ensemble de lignes retourné par une instruction `SELECT` contient toutes les lignes satisfaisant aux conditions de la clause `WHERE` de l’instruction. Cet ensemble complet de lignes retournées par l'instruction est appelé ensemble de résultats. Les applications, en particulier les applications interactives en ligne, peuvent ne pas toujours fonctionner efficacement si l'ensemble de résultats est traité comme une unité. Ces applications ont besoin d'un mécanisme leur permettant de travailler avec une seule ligne ou avec un petit bloc de lignes à la fois. Les curseurs sont une extension des ensembles de résultats et fournissent ce mécanisme.  
   
  Les curseurs permettent l'extension du traitement des résultats en procédant aux opérations suivantes :  

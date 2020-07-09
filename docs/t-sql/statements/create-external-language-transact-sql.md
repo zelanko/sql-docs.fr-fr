@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8d4f85f004d1b15e356b02f025f4297296f9ef2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735842"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Inscrit les extensions de langage externe dans la base de données à partir du flux d’octets ou du chemin de fichier spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données d’inscrire de nouvelles extensions de langage externe sur toute plateforme de système d’exploitation prise en charge par SQL Server. Pour plus d’informations, consultez [Extensions de langage](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 

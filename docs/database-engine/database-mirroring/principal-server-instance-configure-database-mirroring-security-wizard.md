@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b6afefac893920b3a11dcb4cb763e8f6cae6f0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735213"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>Instance de serveur principal (Configurer l'Assistant Sécurité de mise en miroir de bases de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette page vous permet de spécifier des informations sur l'instance de serveur de la base de données principal. La base de données principale est la copie de la base de données qui commence la session de mise en miroir. Une fois que la session a commencé, la base de données principale est la copie de la base de données qui accepte les modifications d'utilisateur. (Lorsqu'un basculement a lieu, les rôles principal et de mise en miroir sont échangés ; par conséquent, la base de données principale initiale peut ne pas demeurer la base de données principale.)  
   
  **Pour configurer la mise en miroir de bases de données à l'aide de SQL Server Management Studio**  

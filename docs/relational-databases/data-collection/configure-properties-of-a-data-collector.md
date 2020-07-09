@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1da1a6aa4b7a98a7ac76c32effc116efdc7020d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 630bbbdfe62e19897ce625af92b1c16069443abe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733880"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Configurer les propriétés d'un collecteur de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment configurer les propriétés d'un collecteur de données.  
   
 ## <a name="data-collection-properties-general-tab"></a>Propriétés de la collecte de données (onglet Général)  

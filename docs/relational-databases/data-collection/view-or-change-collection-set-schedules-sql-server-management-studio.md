@@ -1,7 +1,6 @@
 ---
 title: Afficher ou modifier des planifications de jeu d’éléments de collecte
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733806"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vous pouvez afficher ou modifier des planifications de jeu d'éléments de collecte à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Le mode de collecte, avec ou sans mise en cache, détermine la manière dont vous pouvez apporter des modifications à une planification. Le mode avec mise en cache utilise des planifications distinctes pour la collecte et le téléchargement. Le mode sans mise en cache utilise la même planification pour la collecte et le téléchargement. Le type de mode de collecte pour chacun des jeux d’éléments de collecte de données système est comme suit :  
@@ -110,10 +110,11 @@ ms.locfileid: "74055328"
  **Collecte et téléchargement de données**  
  Spécifie la façon dont les données sont collectées et téléchargées dans l'entrepôt de données de gestion. Choisissez l'une des options suivantes.  
   
-|||  
-|-|-|  
+| Option | Description |
+| :----- | :---------- |
 |**Aucune mise en cache. Collecte et chargement de données sur la même planification.**|Lorsque vous sélectionnez cette option, spécifiez l'un des éléments suivants :<br /><br /> **Planification**. Les données sont collectées et téléchargées selon une planification. Cliquez sur **Choisir** pour faire votre sélection dans une liste prédéfinie de planifications ou sur **Nouvelle** pour créer une planification.<br /><br /> **À la demande**. Les données sont collectées et téléchargées à la demande.|  
 |**Mise en cache. Collecter les données et les mettre en cache selon des fréquences de collecte. Charger les données mises en cache sur une planification distincte.**|Les données sont collectées et mises en cache à une fréquence de collecte spécifiée. Les données collectées sont téléchargées selon une planification séparée.|  
+|||
   
  **Éléments de collecte**  
  Affiche les éléments de collecte dans le jeu d'éléments de collecte. Les informations suivantes sont fournies pour chaque élément de collecte :  
@@ -133,11 +134,12 @@ ms.locfileid: "74055328"
  **Spécifier la durée pendant laquelle les données doivent être conservées dans l'entrepôt de données de gestion.**  
  Spécifie la période de rétention des données collectées. Choisissez l'une des options suivantes.  
   
-|||  
-|-|-|  
+| Option | Description |
+| :----- | :---------- |
 |**Conserver les données pendant**|Cette option est sélectionnée par défaut, et la période de rétention par défaut est de 14 jours.|  
 |**Conserver les données indéfiniment**|Il n'y a aucune limite sur la période de rétention des données.|  
-  
+|||
+
  **Page Téléchargements**  
   
  Utilisez cette page pour configurer la planification du téléchargement pour les données collectées par ce jeu d'éléments de collecte.  

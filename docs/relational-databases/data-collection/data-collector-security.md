@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b2e6e607a49ea4888e6f5f5ec9ad5148e9f790b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733851"
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le collecteur de données utilise le modèle de sécurité basée sur les rôles implémenté par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce modèle permet à l'administrateur de base de données d'exécuter les différentes tâches du collecteur de données dans un contexte de sécurité qui ne dispose que des autorisations requises pour effectuer ces tâches. Cette méthode est également utilisée pour les opérations qui impliquent des tables internes, uniquement accessibles à l'aide d'une procédure stockée ou d'une vue. Aucune autorisation n'est accordée aux tables internes. En revanche, il est procédé à une vérification des autorisations de l'utilisateur de la procédure stockée ou de la vue utilisée pour accéder à une table.  
   
 > [!IMPORTANT]  
