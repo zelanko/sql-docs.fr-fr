@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 285b005393c29a81b90a749a89ebf83af8e9c271
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033354"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882541"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Meilleures pratiques pour les filtres de lignes basés sur le temps
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Les utilisateurs d'applications ont souvent besoin d'un sous-ensemble de données d'une table basé sur le temps. Par exemple, un vendeur peut avoir besoin des données sur les commandes passées au cours de la dernière semaine tandis qu'un planificateur d'événements peut avoir besoin des données sur les événements qui auront lieu au cours de la semaine à venir. Dans de nombreux cas, pour accomplir cette tâche, les applications utilisent des requêtes qui contiennent la fonction **GETDATE()** . Considérons l'instruction de filtre de lignes suivante :  
   
 ```  

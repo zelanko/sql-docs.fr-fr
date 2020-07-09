@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e7d5eae242525d57618050516f6368f016e3d89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71711065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882297"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Les filtres de lignes paramétrables permettent l'envoi de différentes partitions de données à divers Abonnés sans qu'il soit nécessaire de créer plusieurs publications (les filtres paramétrés étaient précédemment désignés par le terme « filtres dynamiques » dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Une partition est un sous-ensemble de lignes d'une table ; selon les paramètres sélectionnés lors de la création d'un filtre de lignes paramétrable, chaque ligne d'une table publiée peut appartenir à une seule partition (ce qui donne des partitions qui ne se chevauchent pas), ou à deux ou plusieurs partitions (auquel cas, elles se chevauchent).  
   
  Les partitions qui ne se chevauchent pas peuvent être partagées entre plusieurs abonnements ou limitées à un seul d'entre eux. Les paramètres qui contrôlent le comportement de la partition sont décrits dans la section « Utilisation des options de filtrage appropriées » plus loin dans cette rubrique. Avec ces paramètres, vous pouvez adapter le filtrage paramétré aux besoins des applications et de performance. En général, les partitions qui se chevauchent offrent davantage de souplesse, tandis que les partitions qui ne se chevauchent pas et sont répliquées sur un seul abonnement offrent de meilleures performances.  

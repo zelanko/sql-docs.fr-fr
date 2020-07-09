@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e160a51471c33f24bf266d2a68d93def33aed04e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 265654db2e2523b5cd54e4a07b6889e5d312f748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882452"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Exécute la requête directe spécifiée sur le serveur lié spécifié. Ce serveur est une source de données OLE DB. Il est possible de référencer OPENQUERY dans la clause FROM d’une requête SELECT comme s’il s’agissait du nom d’une table. Il est également possible de référencer OPENQUERY comme la table cible d'une instruction INSERT, UPDATE ou DELETE. Cela dépend des possibilités du fournisseur OLE DB. Bien que la requête puisse renvoyer plusieurs jeux de résultats, OPENQUERY ne renvoie que le premier.  
   

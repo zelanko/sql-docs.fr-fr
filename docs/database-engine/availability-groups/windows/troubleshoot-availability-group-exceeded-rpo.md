@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822181"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882364"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Après avoir effectué un basculement manuel forcé sur un groupe de disponibilité vers un réplica secondaire avec validation asynchrone, vous pouvez constater que la perte de données est supérieure à votre RPO (objectif de point de récupération). Vous pouvez arriver au même constat quand vous calculez la perte de données potentielle d’un réplica secondaire avec validation asynchrone à l’aide de la méthode décrite dans [Monitorer les performances des groupes de disponibilité AlwaysOn](monitor-performance-for-always-on-availability-groups.md).  
   
  Un réplica secondaire avec validation synchrone élimine les pertes de données, mais le risque de perte de données potentielle d’un réplica secondaire avec validation asynchrone varie selon la part du journal encore en attente de renforcement sur le réplica secondaire.  

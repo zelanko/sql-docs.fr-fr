@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 132e991a0418155ed6d0d1db2eca2945dab3e307
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321462"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882294"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtres paramétrés - Optimiser pour les partitions précalculées
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Les partitions précalculées représentent une optimisation des performances pouvant être utilisée avec les publications de fusion filtrées. Les partitions précalculées sont également une condition requise pour l'utilisation d'enregistrements logiques sur les publications filtrées. Pour plus d’informations sur les enregistrements logiques, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Lorsqu'un abonné synchronise avec un serveur de publication, ce dernier doit évaluer les filtres de l'Abonné pour déterminer quelles lignes appartiennent à la partition, ou à l'ensemble de données de cet abonné. Le processus permettant de déterminer l'appartenance d'une partition aux modifications sur le serveur de publication pour chaque abonné recevant un dataset filtré est dénommé *évaluation de partition*. Sans partitions précalculées, l'évaluation de partition doit être effectuée pour chaque modification apportée à une colonne filtrée sur le serveur de publication depuis la dernière exécution de l'Agent de fusion pour un abonné spécifique, et ce processus doit être répété pour chaque abonné synchronisant avec le serveur de publication.  

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68823114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882339"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sauvegarder et restaurer des bases de données SQL Server sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Vous pouvez effectuer des sauvegardes de bases de données à partir de SQL Server 2017 sur Linux avec de nombreuses options différentes. Sur un serveur Linux, vous pouvez utiliser **sqlcmd** pour vous connecter à SQL Server et effectuer des sauvegardes. À partir de Windows, vous pouvez vous connecter à SQL Server sur Linux et effectuer des sauvegardes avec l’interface utilisateur. La fonctionnalité de sauvegarde est la même sur toutes les plateformes. Par exemple, vous pouvez sauvegarder les bases de données localement, sur des lecteurs distants ou sur le [service de stockage blob Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
