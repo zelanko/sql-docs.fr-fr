@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b29ebcae533a093bd9a00b8f48320b7755d3ce1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760545"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette boîte de dialogue pour consulter les résultats d'évaluation d'une stratégie et pour appliquer des stratégies de la Gestion basée sur des stratégies à un jeu de cibles non conforme aux stratégies.  
   
 ## <a name="options"></a>Options  
