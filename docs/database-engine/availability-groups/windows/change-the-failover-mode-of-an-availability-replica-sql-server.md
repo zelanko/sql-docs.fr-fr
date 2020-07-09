@@ -2,7 +2,7 @@
 title: Changer le mode de basculement d’un réplica pour un groupe de disponibilité
 description: Décrit comment changer le mode de basculement d’un réplica dans un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL), PowerShell ou SQL Server Management Studio.
 ms.custom: seo-lt-2019
-ms.date: 05/17/2016
+ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4dd7de6af88d6fe5955c03f611a593869e19cfc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a56789831d79d33d071eb493c76af8ffbd58ad3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241821"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896183"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>Changer le mode de basculement d’un réplica dans un groupe de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment modifier le mode de basculement d’un réplica de disponibilité dans un groupe de disponibilité Always On dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell. Le mode de basculement est une propriété de réplica qui détermine le mode de basculement pour les réplicas qui s'exécutent en mode de disponibilité avec validation synchrone. Pour plus d’informations, consultez [Basculement et modes de basculement &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) et [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 ## <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Conditions préalables requises et restrictions  
@@ -56,28 +56,28 @@ ms.locfileid: "75241821"
   
 2.  Utilisez l'instruction [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , comme suit :
 
-   ```Transact-SQL
-   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-      WITH ( {  
-           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
-              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
-            }  )
-   ```
+    ```syntaxsql
+    ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+       WITH ( {  
+             AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+                | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+             }  )
+    ```
+    
+    Dans le script précédent :
 
-   Dans le script précédent :
-
-      - *nom_groupe* correspond au nom du groupe de disponibilité.  
+    - *nom_groupe* correspond au nom du groupe de disponibilité.  
   
-      - *server_name* est le nom d’ordinateur ou le nom réseau du cluster de basculement. Pour les instances nommées, ajoutez « \instance_name ». Utilisez le nom qui héberge le réplica que vous souhaitez modifier.
+    - *server_name* est le nom d’ordinateur ou le nom réseau du cluster de basculement. Pour les instances nommées, ajoutez « \instance_name ». Utilisez le nom qui héberge le réplica que vous souhaitez modifier.
   
-   Pour plus d’informations sur ces paramètres, consultez [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
+Pour plus d’informations sur ces paramètres, consultez [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-   L’exemple suivant, entré sur le réplica principal du groupe de disponibilité *MyAG* , remplace le mode de basculement par le basculement automatique sur le réplica de disponibilité situé sur l’instance de serveur par défaut sur un ordinateur nommé *COMPUTER01*.  
+L’exemple suivant, entré sur le réplica principal du groupe de disponibilité *MyAG* , remplace le mode de basculement par le basculement automatique sur le réplica de disponibilité situé sur l’instance de serveur par défaut sur un ordinateur nommé *COMPUTER01*.  
   
-    ```  
-    ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
-       (FAILOVER_MODE = AUTOMATIC);  
-    ```  
+```sql
+ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
+    (FAILOVER_MODE = AUTOMATIC);  
+```  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour modifier le mode de basculement d'un réplica de disponibilité**  
@@ -86,9 +86,9 @@ ms.locfileid: "75241821"
   
 2.  Utilisez l’applet de commande **Set-SqlAvailabilityReplica** avec le paramètre **FailoverMode** . En définissant un réplica en mode de basculement automatique, vous devrez peut-être utiliser le paramètre **AvailabilityMode** pour modifier le réplica afin qu’il utilise le mode de disponibilité avec validation synchrone.  
   
-     Par exemple, la commande suivante modifie le réplica `MyReplica` dans le groupe de disponibilité `MyAg` afin qu'il utilise le mode de disponibilité avec validation synchrone et prenne en charge le basculement automatique.  
+    Par exemple, la commande suivante modifie le réplica `MyReplica` dans le groupe de disponibilité `MyAg` afin qu'il utilise le mode de disponibilité avec validation synchrone et prenne en charge le basculement automatique.  
   
-    ```  
+    ```powershell
     Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\Replicas\MyReplica  
     ```  

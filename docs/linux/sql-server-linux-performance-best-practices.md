@@ -8,16 +8,16 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7ffd00cfafe232f73e66a884617e3e07b15e979b
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550212"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887837"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Meilleures pratiques en matière de performances et lignes directrices de configuration pour SQL Server sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Cet article présente les meilleures pratiques et suggestions pour optimiser les performances des applications de base de données qui se connectent à SQL Server sur Linux. Ces suggestions sont spécifiques à l’exécution sur la plateforme Linux. Toutes les suggestions de SQL Server normales, telles que la conception d’index, s’appliquent toujours.
 

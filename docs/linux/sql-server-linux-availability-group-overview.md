@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ec35aff528e1ca35d145f400edeb2ca46a7df85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558627"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883936"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Groupes de disponibilité Always On sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Cet article décrit les caractéristiques des groupes de disponibilité Always On sur les installations [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux. Il couvre également les différences entre les groupes basés sur des clusters de basculement Linux et Windows Server (WSFC). Consultez la [documentation Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) pour connaître les principes de base des groupes, car ils fonctionnent de la même manière sur Windows et Linux, à l’exception de WSFC.
 

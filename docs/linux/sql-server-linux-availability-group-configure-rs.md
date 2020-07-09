@@ -9,16 +9,16 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558396"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892294"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurer un groupe de disponibilité SQL Server pour l’échelle lecture sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Vous pouvez configurer un groupe de disponibilité Always On SQL Server pour les charges de travail avec échelle lecture sur Linux. L’architecture des groupes de disponibilité se présente sous deux formes. Une architecture visant la haute disponibilité utilise un gestionnaire de clusters pour améliorer la continuité d’activité. Cette architecture peut également inclure des réplicas de mise à l’échelle en lecture. Pour créer l’architecture à haute disponibilité, consultez [Configurer le groupe de disponibilité Always On SQL Server pour la haute disponibilité sur Linux](sql-server-linux-availability-group-configure-ha.md). L’autre architecture prend uniquement en charge les charges de travail avec échelle lecture. Cet article explique comment créer un groupe de disponibilité sans gestionnaire de cluster pour les charges de travail avec échelle lecture. Cette architecture fournit uniquement une échelle lecture. Elle n’assure pas la haute disponibilité.
 

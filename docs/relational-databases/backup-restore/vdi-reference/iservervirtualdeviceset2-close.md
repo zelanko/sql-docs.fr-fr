@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2b0a5d12f256236a0d79c372c44e9b7d0cd2fb3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847470"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892036"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La fonction **Close** ferme un ensemble d’appareils virtuels ouvert par IServerVirtualDeviceSet2::Open. Ceci entraîne la libération de toutes les ressources associées à l’ensemble d’appareils virtuels. Le descripteur IServerVirtualDeviceSet2 n’est pas utile après le retour de cette fonction et doit être retourné à COM.
 

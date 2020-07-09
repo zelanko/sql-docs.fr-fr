@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a9c81bf046d30bd997409389ca91d213a01437f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896164"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893068"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités relatives aux performances de SQL Server sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Si vous êtes un utilisateur de Linux nouveau dans SQL Server, les tâches suivantes vous guident tout au long de certaines tâches relatives aux performances. Celles-ci ne sont pas uniques ni spécifiques à Linux, mais elles vous permettent de vous faire une idée des domaines à examiner en détail. Dans chaque exemple, un lien est fourni vers la documentation détaillée de cette zone.
 

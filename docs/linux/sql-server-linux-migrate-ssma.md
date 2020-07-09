@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 86e56d998959b4cc425626de249d66597262b50a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ced5df4a63cf6fbfed9e47a59a5c7f626de3874b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558409"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882709"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>Automatiser la migration de bases de données vers Linux avec l’Assistant Migration SQL Server (SSMA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Cet article présente [Assistant Migration SQL Server (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx) qui vous aide à migrer facilement des bases de données vers SQL Server sur Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMS est une application Windows. Utilisez donc SSMS quand vous disposez d’une machine Windows capable de se connecter à une instance distante sur Linux. 
 

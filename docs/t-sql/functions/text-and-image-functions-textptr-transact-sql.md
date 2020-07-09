@@ -18,17 +18,17 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 521c012ec8e05cf288aab78021b83c45c2d7bd62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099033"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895722"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et image - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la valeur du pointeur de texte qui correspond à une colonne de type **text**, **ntext** ou **image** au format **varbinary**. La valeur du pointeur de texte obtenue peut être utilisée dans les instructions READTEXT, WRITETEXT et UPDATETEXT.  
   
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  Pour exécuter les exemples suivants, vous devez installer la base de données **pubs**.  
   
 ### <a name="a-using-textptr"></a>R. Utilisation de TEXTPTR  
- L’exemple qui suit utilise la fonction `TEXTPTR` pour rechercher le `logo` de la colonne **image** associé à `New Moon Books` dans la table `pub_info` de la base de données `pubs`. Le pointeur de texte identifie la variable locale `@ptrval.`.  
+ L’exemple qui suit utilise la fonction `TEXTPTR` pour rechercher le **de la colonne**image`logo` associé à `New Moon Books` dans la table `pub_info` de la base de données `pubs`. Le pointeur de texte identifie la variable locale `@ptrval.`.  
   
 ```  
 USE pubs;  

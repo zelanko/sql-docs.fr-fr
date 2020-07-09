@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 55b848cd43e157a9a75670a24aea645c3279f7ea
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 7f773a1ee50395eeebd40e0f08672c324170ccf3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262066"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883537"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification pour l’audit de serveur et l’audit de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cet article explique comment créer une spécification d’audit de serveur et d’audit de base de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  L’audit d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et la journalisation des événements qui se produisent sur le système. L’objet *Audit SQL Server* collecte une seule instance des actions et des groupes d’actions au niveau du serveur ou au niveau de la base de données à superviser. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L’objet *Spécification d’audit de niveau base de données* appartient à un audit. Vous pouvez créer une spécification d'audit de base de données par base de données SQL Server et par audit. Pour plus d’informations, consultez [Audit SQL Server &#40;Moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
