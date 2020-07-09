@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2fe15544cd689004eb2fcc56ae4083651e6c02ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732794"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (moteur de base de données)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retourne un nœud dont le chemin depuis la racine est celui qui pointe vers _newRoot_, suivi du chemin à partir de _oldRoot_.
   

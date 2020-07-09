@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a711e81c796293f9c9ac8694b1dc32e0e60f6938
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe68a2179659a3e5d9cd941d613deb954dbf4726
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731222"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (type de données geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) d’une instance **geography**, à laquelle s’ajoutent les valeurs **Z** (élévation) et **M** (mesure) apportées par l’instance.  
   

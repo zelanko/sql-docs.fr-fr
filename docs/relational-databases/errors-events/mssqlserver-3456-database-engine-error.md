@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f60c9b7f02748e4dcd99e214fcbcd12505f203d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c51f604d4a0d875a0ef4c51ec47106a28b6ca674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723474"
 ---
 # <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|3456|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|REC_REDOLSNMISMATCH|  
-|Texte du message|Impossible de rétablir l'enregistrement du journal %S_LSN, pour l'ID de transaction %S_XID, à la page %S_PGID, base de données '%.*ls' (ID de base de données %d). Page : numéro de séquence d'enregistrement = %S_LSN, type = %ld. Journal : OpCode = %ld, contexte %ld, PrevPageLSN : %S_LSN. Effectuez une restauration à partir d'une sauvegarde de la base de données ou réparez la base de données.|  
+|Texte du message|Impossible de rétablir l'enregistrement du journal %S_LSN, pour l'ID de transaction %S_XID, à la page %S_PGID, base de données '%.*ls' (ID de base de données %d). Page : LSN = %S_LSN, type = %ld. Log : OpCode = %ld, contexte %ld, PrevPageLSN : %S_LSN. Effectuez une restauration à partir d'une sauvegarde de la base de données ou réparez la base de données.|  
   
 ## <a name="explanation"></a>Explication  
 L'opération de restauration n'a pas pu rétablir le journal des transactions. Cette erreur a placé la base de données dans l'état SUSPECT. Le groupe de fichiers primaire et éventuellement d'autres groupes de fichiers sont suspects et peut-être endommagés. La base de données ne peut pas être récupérée au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'est par conséquent pas disponible. Une action est requise de la part de l'utilisateur pour résoudre le problème.  

@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c9500198b88d9a01317ee82ac652a231d1753309
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3bcec97642ead8a53c0703cdcfafbbe59cc4bbe1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728480"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historique de sauvegarde et informations d'en-tête (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Un historique complet de toutes les opérations de restauration et de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de serveur est stocké dans la base de données **msdb** . Cette rubrique présente les tables d'historique de sauvegarde et de restauration, ainsi que les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] servant à accéder à l'historique de sauvegarde. Elle explique également dans quels cas il est utile d'afficher la liste des fichiers journaux de base de données et de transactions et dans quelles circonstances utiliser les informations d'en-tête de support ou les informations d'en-tête de sauvegarde.  
   
 > [!IMPORTANT]  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b03b93f91aa615d8366b9d022a9560480373a404
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727568"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 L’Assistant Copie de base de données déplace ou copie des bases de données et certains objets serveur facilement à partir d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  vers une autre instance, sans temps d’arrêt du serveur. À l'aide de cet Assistant, vous pouvez effectuer les opérations suivantes : 
   
 -   Choisir un serveur source et un serveur de destination.  

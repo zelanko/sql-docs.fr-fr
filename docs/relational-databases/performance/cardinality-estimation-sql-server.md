@@ -15,16 +15,16 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c72de4a0070595b9e1a371d5309d4e1d3e43853
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730295"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un optimiseur de requête basé sur les coûts. Cela signifie qu'il sélectionne des plans de requête dont l'exécution présente le plus faible coût de traitement estimé. L’optimiseur de requête détermine le coût d’exécution d’un plan de requête à partir de deux facteurs principaux :
 

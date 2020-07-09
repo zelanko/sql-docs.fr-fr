@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c63c98eda9ef0827919bfe36f3a2b14ef717f648
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c0fe0b7b8890b3ef9ee2671b4926c8be99cc679
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727290"
 ---
 # <a name="trustworthy-bit"></a>Bit de confiance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette règle détermine si le rôle dbo d'une base de données est affecté au rôle serveur fixe sysadmin et si le bit de confiance de la base de données a la valeur ON.  
   
  Si ces conditions sont réunies, un utilisateur de base de données doté de privilèges peut élever les privilèges au rôle sysadmin. Dans ce rôle, l'utilisateur peut créer et exécuter des assemblys non sécurisés qui compromettent le système.  

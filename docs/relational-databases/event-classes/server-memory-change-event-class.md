@@ -12,15 +12,15 @@ ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b039f0cb4ff6aa944adf981ad5fa26e1cc4cbeea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f07f207cf61c65a3343faf855d1f270ec820433
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727357"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Server Memory Change** intervient quand l’utilisation de mémoire de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a augmenté ou diminué, soit de 1 mégaoctet (Mo), soit de 5 % de la taille maximale de la mémoire du serveur, la plus élevée de ces deux valeurs étant retenue.  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Colonnes de la classe d'événements Server Memory Change  

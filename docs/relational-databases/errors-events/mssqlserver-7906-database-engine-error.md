@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25966577f568b6b807e6039a951300368b0ad971
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637228"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7906|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Texte du message|Erreur de base de données : la base de données %d contient des métadonnées incohérentes.|  
+|Texte du message|Erreur de base de données : le fichier "FILE" n’est pas un fichier Filestream valide.|  
   
 ## <a name="explanation"></a>Explication  
 À l'exception de certains fichiers spéciaux, tels que « filestream.hdr », aucun fichier ne doit figurer directement dans l'espace de données Filestream.  

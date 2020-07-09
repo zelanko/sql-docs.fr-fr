@@ -15,15 +15,15 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4873d4e4481bb6a845101b5ce2754062bcd7ce10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0a2cadea4f97dbfdec98b57c901605d49b29de0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727243"
 ---
 # <a name="log-reader-agent"></a>l'Agent de lecture du journal ;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La boîte de dialogue **Agent de lecture du journal** affiche des informations détaillées sur l'Agent de lecture du journal, notamment l'état, l'historique, les messages d'information et messages d'erreur.  
   
 ## <a name="options"></a>Options  

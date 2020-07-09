@@ -12,15 +12,15 @@ ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb89f83f0a916a9d56443e7494ce5e8284350bb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b364e3d4234cac7b7b3522822aaf2c12e31e6b3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727422"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe d'événements QN:Parameter Table
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   L'événement QN:Parameter Table fournit des informations sur les opérations requises pour créer et supprimer les tables internes chargées de stocker les informations de paramètre et maintenir les nombres de références de ces tables. Il signale également l'activité interne pour réinitialiser le nombre d'utilisations d'une table de paramètres.  
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>Colonnes de données de la classe d'événements QN:Parameter Table  

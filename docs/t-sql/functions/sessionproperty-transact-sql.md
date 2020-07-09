@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714939"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne les paramètres des options SET d'une session.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|Détermine si les résultats de concaténation sont considérés comme des valeurs nulles ou des chaînes vides.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
 |NUMERIC_ROUNDABORT|Indique si un message d'erreur ou un avertissement doit être généré lorsqu'un arrondi effectué dans une expression entraîne une perte de précision.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
 |QUOTED_IDENTIFIER|Indique si les règles ISO relatives à l'utilisation des guillemets pour délimiter les identificateurs et les chaînes littérales doivent être appliquées.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
-|\<Toute autre chaîne>|NULL = Entrée non valide.|  
+|\<Any other string>|NULL = Entrée non valide.|  
   
 ## <a name="return-types"></a>Types de retour  
  **sql_variant**  

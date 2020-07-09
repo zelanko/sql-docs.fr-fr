@@ -1,24 +1,24 @@
 ---
 title: Optimiser le traitement JSON avec OLTP en mémoire
-ms.date: 07/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30a31cb80a9aea2f99824dbf7912714870059be3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730412"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimiser le traitement JSON avec OLTP en mémoire
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 SQL Server et Azure SQL Database vous permettent de travailler avec du texte au format JSON. Pour améliorer les performances des requêtes qui traitent des données JSON, vous pouvez stocker des documents JSON dans des tables à mémoire optimisée en utilisant des colonnes de chaîne standard (type NVARCHAR). Le stockage des données JSON dans des tables optimisées en mémoire améliore les performances des requêtes en tirant parti de l’accès aux données en mémoire sans verrou.
 
@@ -146,7 +146,6 @@ AS BEGIN
     FROM xtp.Product
         JOIN OPENJSON(@ProductIds)
             ON ProductID = value
-
 END;
 
 CREATE PROCEDURE xtp.UpdateProductData(@ProductId int, @Property nvarchar(100), @Value nvarchar(100))
@@ -157,7 +156,6 @@ AS BEGIN
     UPDATE xtp.Product
     SET Data = JSON_MODIFY(Data, @Property, @Value)
     WHERE ProductID = @ProductId;
-
 END
 ```
 

@@ -13,15 +13,15 @@ ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b8b61a52420752c2409edfd4ed580a07a79d492d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c44303cdfde6549c908e024a199f7b4635b46c7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730240"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Emplacement de l’agent &lt;nom_agent&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   L'Agent de fusion (pour les abonnements de fusion) et l'Agent de distribution (pour les abonnements transactionnels et d'instantanés) s'exécutent sur le serveur de publication ou sur l'Abonné. Si l'Agent s'exécute sur le serveur de distribution, l'abonnement est référencé comme un abonnement par envoi de données ; s'il s'exécute sur l'Abonné, il est référencé comme un abonnement par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md). Tous les abonnements créés de cette manière au moyen de l'Assistant ont le type sélectionné. Pour créer des abonnements des deux types, vous devez exécuter deux fois l'Assistant.  
   
 > [!NOTE]  

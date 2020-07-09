@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728506"
 ---
 # <a name="backup-timeline"></a>Chronologie de sauvegarde
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez la boîte de dialogue **Chronologie de sauvegarde** pour rechercher et spécifier des sauvegardes afin de restaurer une base de données jusqu’à une date et heure. La boîte de dialogue **Chronologie de sauvegarde** est accessible en cliquant sur **Chronologie** dans le volet **Restaurer la base de données (page Général)** . Cette boîte de dialogue vous permet de consulter une chronologie des opérations de restauration effectuées sur la base de données.  
   
  L'Assistant Récupération de base de données garantit que seules les sauvegardes requises pour la restauration à cette limite dans le temps sont sélectionnées. Ces sauvegardes sélectionnées constituent le plan de restauration recommandé pour votre opération de restauration. Vous devez utiliser uniquement les sauvegardes sélectionnées. Pour plus d’informations sur l’Assistant de récupération de base de données, consultez [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
