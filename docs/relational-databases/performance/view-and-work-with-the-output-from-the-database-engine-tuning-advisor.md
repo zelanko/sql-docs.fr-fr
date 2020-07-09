@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737092"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Voir et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez utiliser des résumés, des recommandations et des rapports pour déterminer si vous souhaitez implémenter les recommandations de paramétrage, ou si vous souhaitez poursuivre le paramétrage jusqu’à l’obtention des améliorations nécessaires du niveau de performance des requêtes pour votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

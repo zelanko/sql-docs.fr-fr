@@ -12,15 +12,15 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92550c1282689e2d6091a5af2b588a3c36b9b2d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19dd9d5c8f4a5c9c4d37a6f7ce54f061d8bc0e47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737180"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt;0), classe d’événements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La classe d’événements **Lock:Timeout (timeout > 0)** indique qu’une demande de verrou sur une ressource (par exemple une page) a dépassé le délai d’attente parce qu’une autre transaction retient un verrou bloquant sur la ressource exigée. Cette classe d'événements se comporte de la même manière que la classe d'événements **Lock:Timeout** , sauf qu'elle n'inclut pas d'événements ou la valeur de dépassement de délai est 0.  
   
  Incluez la classe d’événements **Lock:Timeout (timeout > 0)** dans les traces où vous utilisez des sondes de verrou ou d’autres processus dont les valeurs de dépassement de délai sont nulles. Ceci vous permet de voir où se produisent les véritables dépassements de délai sans la présence des valeurs de dépassement de délai nulles.  

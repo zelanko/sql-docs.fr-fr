@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743935"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Éviter les conflits avec les opérations de base de données dans les applications FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les applications qui utilisent SqlOpenFilestream() pour ouvrir des descripteurs de fichiers Win32 afin de lire ou d’écrire des données BLOB FILESTREAM peuvent rencontrer des erreurs de conflit avec les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] gérées dans une transaction commune. Cela inclut [!INCLUDE[tsql](../../includes/tsql-md.md)] ou les requêtes MARS dont l'exécution dure longtemps. Les applications doivent être conçues avec soin afin de mieux éviter ces types de conflits.  
   
  Lorsque [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou des applications essaient d’ouvrir des FILESTREAM BLOB, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vérifie le contexte de transaction associé. [!INCLUDE[ssDE](../../includes/ssde-md.md)] autorise ou refuse la demande selon que l’opération en cours fonctionne avec des instructions DDL, des instructions DML, la récupération de données ou la gestion de transactions. Le tableau suivant indique comment le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine si une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] sera autorisée ou refusée selon les types de fichiers qui sont ouverts pendant la transaction.  

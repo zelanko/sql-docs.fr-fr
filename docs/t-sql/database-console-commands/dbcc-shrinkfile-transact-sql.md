@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 35ca1ac90704b05bc714327f839ff1487e5cd66f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a9498c5d2705abece345533573a768e71e0b7030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748901"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Réduit la taille de fichier journal ou de données de la base de données active. Vous pouvez l’utiliser pour déplacer des données entre fichiers du même groupe de fichiers, ce qui a pour effet de supprimer le fichier d’origine et de permettre sa suppression de la base de données. Il est possible de réduire un fichier à une taille inférieure à celle qu’il avait à sa création, réinitialisant ainsi la taille de fichier minimale sur la nouvelle valeur.
   

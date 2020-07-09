@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 891a760dd1935d43219f3603a27a284be3c99b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c14d2ab4c8ab3f24272b30df0de5ca9727ffb4bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737799"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Désactivation de la sauvegarde managée SQL Server sur Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment activer ou suspendre [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau base de données et instance.  
   
 ##  <a name="disable-ss_smartbackup-for-a-database"></a><a name="DatabaseDisable"></a> Désactiver la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données  

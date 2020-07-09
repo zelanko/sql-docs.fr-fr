@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 22a1cd983ffc1105acfca494705ca8260d406f2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738065"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML fournit une vue de l'ensemble des lignes d'un document XML. En tant que fournisseur d'ensembles de lignes, OPENXML peut être inclus dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans lesquelles certains fournisseurs d'ensembles de lignes peuvent apparaître (notamment une table, une vue ou la fonction OPENROWSET).  
   

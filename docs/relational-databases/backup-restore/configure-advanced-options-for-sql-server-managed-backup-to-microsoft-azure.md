@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748474"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurer les options avancées pour la gestion de sauvegarde de SQL Server sur Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ce didacticiel explique comment définir les options avancées pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ces procédures sont nécessaires uniquement si vous avez besoin des fonctionnalités qu’elles proposent. Sinon, vous pouvez activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] et utiliser le comportement par défaut.  
   
  Dans chaque scénario, la sauvegarde est spécifiée à l'aide du paramètre `database_name` . Quand le paramètre `database_name` est NULL ou *, les modifications affectent les paramètres par défaut au niveau de l’instance. Les paramètres au niveau de l'instance affectent également les bases de données créées après la modification.  

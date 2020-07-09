@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64b067889582949b42a7d5ffeeca1b1e119b6e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e296bf3230fbbf3c308aa6c84dba288b9e64e12f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717095"
 ---
 # <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|5228|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE), page PG_ID, ligne R_ID. DBCC a détecté un nettoyage incomplet lié à une opération de construction d'index en ligne. (La valeur de la colonne « antimatière » est VALUE.)|  
+|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE), page PG_ID, ligne R_ID. DBCC a détecté un nettoyage incomplet lié à une opération de construction d'index en ligne. (La valeur de la colonne « antimatière » est VALUE.)|  
   
 ## <a name="explanation"></a>Explication  
 Une construction d’index en ligne non terminée a été détectée pour l’objet *O_ID*, l’index *I_ID* et la partition *PN_ID*. Cela se traduit par la présence d’une colonne antimatière sur la ligne *R_ID*. Une colonne antimatière est utilisée pour réconcilier des enregistrements provenant de plusieurs sources lors de la construction d'un index en ligne. Le message d'erreur indique également la valeur de la colonne antimatière.  

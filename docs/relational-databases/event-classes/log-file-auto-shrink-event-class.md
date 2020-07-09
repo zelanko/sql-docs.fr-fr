@@ -12,15 +12,15 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a65f8ab02309f11438dcbe5af0984ac930a060b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af32d9a61ef21e6bc09e114c4b8d55e56b7f0d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737192"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Log File Auto Shrink** indique que le fichier journal s’est réduit automatiquement. Cet événement ne se déclenche pas si le fichier journal se réduit à la suite d'une instruction explicite ALTER DATABASE.  
   
  Incluez la classe d’événements **Log File Auto Shrink** dans les traces chargées de surveiller la réduction du fichier journal. Quand cette classe d’événements est incluse dans une trace, la surcharge supportée est faible, sauf si le fichier rétrécit fréquemment.  

@@ -12,15 +12,15 @@ ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8987894318819ffd6a91f52462366b8175ce3cf7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 03ed5dd006df07c218f6891308dbf979883bb9e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737171"
 ---
 # <a name="oledb-dataread-event-class"></a>Classe d'événements OLEDB DataRead
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements OLEDB DataRead se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB dans le cadre de requêtes distribuées ou de procédures stockées distantes. Incluez cette classe d'événements au sein des traces qui surveillent les moments où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue un appel de type demande de données à l'attention du fournisseur OLE DB.  
   
  Lorsque la classe OLEDB DataRead est incluse dans la trace, la surcharge système générée est élevée. Il vous est recommandé de limiter l'utilisation de cette classe d'événements aux traces qui analysent l'apparition de problèmes particuliers, durant un bref laps de temps.  

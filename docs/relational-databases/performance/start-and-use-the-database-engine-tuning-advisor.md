@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737150"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique décrit comment démarrer et utiliser l'Assistant Paramétrage du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur l’affichage et l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Initialiser l'Assistant Paramétrage du moteur de base de données  

@@ -13,15 +13,15 @@ ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fe3015085187c42cc95380054070bb5e7c8955fb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a16cbfbbae359a563b60d11a79451ad72bd45383
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740443"
 ---
 # <a name="administrative-password"></a>Mot de passe d'administration
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Si, dans la page **Serveurs de distribution** de cet Assistant, vous avez sélectionné un serveur de distribution distant pour ce serveur de publication, vous devez entrer un mot de passe de façon à effectuer la réplication de connexion entre les serveurs de publication et de distribution en utilisant le nom de connexion **distributor_admin** . Le mot de passe doit correspondre à celui spécifié dans la page **Mot de passe du serveur de distribution** de l'Assistant Configuration de la distribution de la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution** .  
   
 ## <a name="options"></a>Options  

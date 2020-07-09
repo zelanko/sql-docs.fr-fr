@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3bc9ad12e37cf5b208a98a1f9a09396d37d5cb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76941139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748553"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lors de la mise à niveau d’une configuration de la copie des journaux de transaction de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], d’un nouveau Service Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d’une mise à jour cumulative de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la mise à niveau de vos serveurs de copie des journaux de transaction dans le bon ordre permettra de préserver votre solution de reprise d’activité de la copie des journaux de transaction.  
   
 > [!NOTE]  

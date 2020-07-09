@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dc61256f973ce8a16d50b547c0fca41b242465
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748414"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transactions différées (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, une transaction endommagée est différée si les données requises par la restauration (annulation) sont hors connexion durant le démarrage de la base de données. Une *transaction différée* est une transaction qui n’est pas validée lorsque la phase de restauration par progression s’achève et dont la restauration ne peut pas être annulée en raison d’une erreur. Si la transaction ne peut pas être annulée, elle est différée.  
   
 > [!NOTE]  

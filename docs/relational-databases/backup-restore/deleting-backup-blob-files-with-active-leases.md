@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 716daad4f639fffa3970d80b97502731c32514cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737817"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Supprimer des fichiers blob de sauvegarde avec des baux actifs
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En cas de sauvegarde vers ou de restauration à partir du stockage Microsoft Azure, SQL Server acquiert un bail infini pour verrouiller l’accès exclusif à l’objet blob. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l’objet blob ne peut pas être écrit ou supprimé tant que le bail n’a pas été libéré. Cette rubrique explique comment libérer (résilier) le bail et supprimer l’objet blob.
   

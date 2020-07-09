@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068f4737a3367acdd01862cc800a4255a472c843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0d4c51bd7f4e1eca3bf57fbcfa89aec93357fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723742"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|3151|  
 |Source de l’événement|MSSQLSERVER|  
@@ -36,5 +36,5 @@ ms.locfileid: "68001909"
 Ceci est un message d’erreur général qui indique des problèmes variés avec la base de données **MASTER**.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Consultez les journaux des erreurs pour plus d'informations. Pour créer une base de données **MASTER** utilisable, exécutez Setup.exe avec l’option REBUILDDATABASE. Pour plus d'informations, consultez « Procédure : installer SQL Server à partir de l'invite de commandes » dans la documentation en ligne de SQL Server.  
+Consultez les journaux des erreurs pour plus d'informations. Pour créer une base de données **MASTER** utilisable, exécutez Setup.exe avec l’option REBUILDDATABASE. Pour plus d’informations, consultez « Procédure : installer SQL Server à partir de l’invite de commandes » dans la documentation en ligne de SQL Server.  
   

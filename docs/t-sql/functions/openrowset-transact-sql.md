@@ -25,16 +25,16 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 28519681f18d13fb11a93df9ffd852243c503a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738074"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Inclut toutes les informations de connexion exigées pour accéder à des données distantes à partir d'une source de données OLE DB. Cette méthode est une autre façon d'accéder à des tables dans un serveur lié et constitue une méthode efficace pour vous connecter et accéder à des données distantes en utilisant OLE DB. Pour faire des références plus fréquentes à des sources de données OLE DB, utilisez plutôt des serveurs liés. Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). Il est possible de référencer la fonction `OPENROWSET` dans la clause FROM d’une requête comme s’il s’agissait du nom d’une table. La fonction `OPENROWSET` peut également être référencée comme table cible d’une instruction `INSERT`, `UPDATE` ou `DELETE`, en fonction des capacités du fournisseur OLE DB. Bien que la requête puisse retourner plusieurs jeux de résultats, `OPENROWSET` ne retourne que le premier.
 
@@ -46,9 +46,9 @@ Inclut toutes les informations de connexion exigées pour accéder à des donné
 
 ```syntaxsql
 OPENROWSET
-( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
-   | 'provider_string' }
-   , {   <table_or_view> | 'query' }
+( { 'provider_name' 
+    , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
+    , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }

@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83eacf49b6653f7faba016c9f07a7adb88a09cb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caba17d326c15420762a0224bc0d2d1eb3a0ea53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749379"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Boîte de dialogue Propriétés de la facette, page Général
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette boîte de dialogue pour consulter les propriétés d'une facette de la Gestion basée sur des stratégies. Chaque facette peut être appliquée à un ou plusieurs types de cibles, par exemple : serveur, base de données ou table. Utilisez cette page pour afficher les types de cibles liés à cette facette. Les propriétés d'une facette sont définies lors de la création de la facette et ne peuvent pas être modifiées par le biais de cette page.  
   
 ## <a name="options"></a>Options  
