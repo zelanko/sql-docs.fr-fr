@@ -1,7 +1,7 @@
 ---
 title: Se connecter à une source de données Oracle (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773552"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Oracle (Assistant Importation et Exportation SQL Server)
 
@@ -36,6 +36,7 @@ Après avoir sélectionné le **Fournisseur de données .NET Framework pour Orac
 |---|---|
 |Nom du serveur|**Source de données**|
 |Informations d’authentification (connexion)|**ID d’utilisateur** et **Mot de passe**, sinon **Sécurité intégrée**|
+|||
 
 Il n’est pas nécessaire d’entrer la chaîne de connexion dans le champ **ConnectionString** de la liste. Une fois que vous avez entré les valeurs individuelles pour le nom du serveur Oracle (**Source de données**) et les informations de connexion, l’Assistant assemble la chaîne de connexion à partir des propriétés individuelles et de leur valeur. 
 
@@ -70,9 +71,9 @@ ID d’utilisateur et mot de passe pour se connecter.
 ### <a name="connection-string-format"></a>Format de la chaîne de connexion
 Voici le format d’une chaîne de connexion standard.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>Entrer la chaîne de connexion
 Indiquez la chaîne de connexion dans le champ **ConnectionString** ou entrez le nom de la source de données dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une Destination**. Une fois que vous avez entré la chaîne de connexion, l’Assistant analyse cette chaîne et affiche les propriétés individuelles avec leur valeur dans la liste.

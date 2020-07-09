@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fefdced57d611d241dbb96b71a0b220139683243
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d82126c304a40cfba88201f71b8073a815a169cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764955"
 ---
 # <a name="get-information-about-event-notifications"></a>Obtenir des informations concernant les notifications d'événements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les affichages catalogue suivants vous permettent d'interroger les métadonnées concernant les notifications d'événements.  
   
  **Pour obtenir des informations sur les notifications d'événements qui ne se produisent pas au niveau du serveur**  

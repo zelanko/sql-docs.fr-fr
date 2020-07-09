@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0c4060aa1508da72d9b0bd0eb23977074ecac067
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763080"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Auto Stats** indique qu’une mise à jour automatique des statistiques d’index et de colonne s’est produite.  **Auto Stats** se déclenche également quand des statistiques sont chargées pour une utilisation par l’optimiseur.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Colonnes de la classe d'événements Auto Stats  

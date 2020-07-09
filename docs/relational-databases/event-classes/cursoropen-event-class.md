@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773528"
 ---
 # <a name="cursoropen-event-class"></a>Classe d'événements CursorOpen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **CursorOpen** décrit les événements d’ouverture de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API, Application Programming Interface). Les événements d'ouverture de curseur se produisent lorsque le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] définit l'instruction SQL à associer au curseur et à ses options, puis remplit le curseur.  
   
  Incluez la classe d’événements **CursorOpen** dans les traces qui enregistrent les performances des curseurs. Quand la classe d’événements **CursorOpen** est incluse dans une trace, la charge engagée dépend de la fréquence à laquelle les curseurs sont utilisés sur la base de données pendant la trace. Si les curseurs sont fortement utilisés, la trace peut dégrader notablement les performances.  

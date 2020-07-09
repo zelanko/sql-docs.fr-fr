@@ -6,20 +6,20 @@ ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 326e0b0afc4809d13cf2fdfdbd76f53dafe1cbb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774578"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Comment gérer des notebooks dans Azure Data Studio
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article explique comment ouvrir et enregistrer des fichiers de notebooks dans Azure Data Studio. Il montre également comment modifier la connexion à votre serveur SQL Server ou noyau Python.
 

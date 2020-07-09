@@ -12,15 +12,15 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762952"
 ---
 # <a name="cursorexecute-event-class"></a>Classe d'événements CursorExecute
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **CursorExecute** décrit les événements d’exécution de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API). Les événements d’exécution de curseur se produisent quand [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et remplit un curseur à partir du plan d’exécution créé par un événement de préparation de curseur.  
   
  Incluez la classe d’événements **CursorExecute** dans les traces qui enregistrent les performances des curseurs. Lorsque la classe d’événements **CursorExecute** figure dans une trace, la quantité de charge inhérente dépend de la fréquence d’utilisation des curseurs sur la base de données pendant la trace. Si les curseurs sont fortement utilisés, la trace peut dégrader notablement les performances.  

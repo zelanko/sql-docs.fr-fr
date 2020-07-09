@@ -2,7 +2,7 @@
 title: Se connecter à une source de données ODBC (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 description: Guide pratique pour configurer un nom de source de données ODBC ou créer une chaîne de connexion ODBC à utiliser avec l’Assistant Importation et Exportation SQL Server
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773579"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données ODBC (Assistant Importation et Exportation SQL Server)
 
@@ -93,9 +93,9 @@ Si vous souhaitez fournir vos informations de connexion à l’aide d’une cha�
 
 Cet exemple utilise la chaîne de connexion suivante qui permet de se connecter à Microsoft SQL Server. L’exemple de base de données utilisé est **WideWorldImporters**, et nous nous connectons au serveur SQL Server sur l’ordinateur local.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Entrez la chaîne de connexion dans le champ **ConnectionString** de la page **Choisir une source de données** ou **Choisir une destination**. Une fois que vous avez entré la chaîne de connexion, l’Assistant analyse cette chaîne et affiche les propriétés individuelles avec leur valeur dans la liste.
 
@@ -140,7 +140,7 @@ Pour générer et tester la chaîne de connexion pour votre pilote ODBC sur votr
 
 10. Ouvrez le fichier enregistré dans le Bloc-notes ou un autre éditeur de texte. Voici le contenu de notre exemple SQL Server.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ Pour générer et tester la chaîne de connexion pour votre pilote ODBC sur votr
 
     Une fois que vous avez assemblé les valeurs nécessaires à partir de l’exemple de nom de source de données fichier, vous disposez de la chaîne de connexion suivante.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     Vous n’avez généralement pas besoin de tous les paramètres d’un nom de source de données créé par l’Administrateur de source de données ODBC pour créer une chaîne de connexion qui fonctionne.  
     -   Vous devez toujours spécifier le pilote ODBC.

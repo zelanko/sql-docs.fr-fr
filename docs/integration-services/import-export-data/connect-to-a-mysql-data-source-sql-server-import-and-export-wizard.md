@@ -1,7 +1,7 @@
 ---
 title: Se connecter à une source de données MySQL (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdec318d9fdc895470c7dde94e254c2cc164f079
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768087"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données MySQL (Assistant Importation et Exportation SQL Server)
 
@@ -40,6 +40,7 @@ Après avoir sélectionné le **Fournisseur de données .NET Framework pour MySQ
 |Nom du serveur|**Serveur**|
 |Nom de la base de données|**Sauvegarde de la base de données**|
 |Informations d’authentification (connexion)|**ID d’utilisateur** et **Mot de passe**|
+|||
 
 Il n’est pas nécessaire d’entrer la chaîne de connexion dans le champ **ConnectionString** de la liste. Une fois que vous avez entré les valeurs individuelles pour le nom du serveur MySQL (**Serveur**) et les informations de connexion, l’Assistant assemble la chaîne de connexion à partir des propriétés individuelles et de leurs valeurs. 
 
@@ -79,18 +80,18 @@ ID d’utilisateur et mot de passe pour se connecter.
 ### <a name="connection-string-format"></a>Format de la chaîne de connexion
 Voici le format d’une chaîne de connexion standard.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>Entrer la chaîne de connexion
 Indiquez la chaîne de connexion dans le champ **ConnectionString** ou entrez le nom de la source de données dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une Destination**. Une fois que vous avez entré la chaîne de connexion, l’Assistant analyse cette chaîne et affiche les propriétés individuelles avec leur valeur dans la liste.
 
 L’exemple suivant utilise cette chaîne de connexion.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 Voici l’écran que vous voyez après avoir entré la chaîne de connexion.
 

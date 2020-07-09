@@ -12,15 +12,15 @@ ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96dc31f7129caedf65b52a457846dd651b345751
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6737979fc99057e2a85ee6a5494f1c65a5ee7e19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85778765"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements SQL:FullTextQuery se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une requête de texte intégral. Incluez cette classe d'événements dans les traces qui surveillent les problèmes associés aux catalogues de texte intégral.  
   
  Lorsque la classe d'événements SQL:FullTextQuery est incluse, la charge est élevée. Si de tels événements se produisent fréquemment, il est possible que la trace affecte de façon notable les performances. Pour réduire ce risque au minimum, limitez l'utilisation de cette classe d'événements aux traces qui surveillent des problèmes spécifiques pendant de brèves périodes de temps.  

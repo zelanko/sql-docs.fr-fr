@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6885901c16ac5d89bd42dc369fb6ae399cc399c4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5116e561889fdd33912650a5daa5a773731f15d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767158"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crée un objet appelé default (valeur par défaut). Lorsqu'elle est liée à une colonne ou à un type de données alias, une valeur par défaut spécifie une valeur à insérer dans la colonne à laquelle est lié l'objet (ou dans toutes les colonnes, dans le cas d'un type de données alias) lorsqu'aucune valeur n'est explicitement fournie lors d'une opération d'insertion.  
   
