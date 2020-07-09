@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e87c0983ac7e74b45251bb72c44265f2134aa3b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8a3d87f96ffdedb5f9f5c0c8330e34cd7ec3722
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780341"
 ---
 # <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|2533|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_PAGE_WAS_NOT_SEEN|  
-|Texte du message|Erreur de table : la page P_ID assignée à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) n'a pas été affichée. La page n'est peut-être pas valide ou comporte un ID d'unité d'allocation incorrect dans son en-tête.|  
+|Texte du message|Erreur de table, la page P_ID assignée à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE) n'a pas été affichée. La page n'est peut-être pas valide ou comporte un ID d'unité d'allocation incorrect dans son en-tête.|  
   
 ## <a name="explanation"></a>Explication  
 Une page est allouée à l’ID d’unité d’allocation *A_ID*, mais cet ID d’unité d’allocation ne figure pas dans l’en-tête de la page. L'en-tête a un ID d'unité d'allocation différent. Si l'ID d'unité d'allocation de l'en-tête de la page n'est pas un objet valide, la page peut avoir une erreur de correspondance MSSQLEngine_2534.  
