@@ -10,16 +10,16 @@ ms.topic: reference
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2db8a1ca2d96046c9eb3d3d5e8dd393b0342334d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e61edcb1f8c1dd9844d887818d208cde1615d5ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756790"
 ---
 # <a name="system-objects-that-support-extended-events"></a>Objets système qui prennent en charge les événements étendus
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cet article fournit des liens vers d’autres articles relatifs aux événements étendus. Il s’agit d’articles qui décrivent les éléments suivants :
 

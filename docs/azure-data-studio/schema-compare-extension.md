@@ -1,21 +1,20 @@
 ---
 title: Extension de comparaison de schéma
-titleSuffix: Azure Data Studio
 description: Installer et utiliser l’extension de comparaison de schémas pour Azure Data Studio
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73532542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758401"
 ---
 # <a name="schema-compare-extension"></a>Extension de comparaison de schéma
 L’extension de comparaison de schémas fournit une expérience facile à utiliser pour comparer deux définitions de base de données et appliquer les différences de la source à la cible.

@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753338"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **OLEDB Call** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB pour les requêtes distribuées et les procédures stockées distantes.  
   
  Incluez la classe d’événements **OLEDB Call** dans les traces pour surveiller uniquement les appels qui ne demandent pas de données ou les appels qui ne sont pas effectués pour la méthode **QueryInterface** . Quand la classe d’événements **OLEDB Call** est incluse dans une trace, la charge engagée dépend de la fréquence à laquelle les appels OLE DB se produisent sur la base de données pendant la trace. Si les appels se produisent fréquemment, la trace peut dégrader notablement les performances.  
