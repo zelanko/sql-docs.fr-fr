@@ -32,16 +32,16 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c7694d4675d37045b7b463e950d1811cec197ee4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152033"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011947"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Remédiez à la fragmentation des index en les réorganisant ou en les regénérant
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Cet article explique comment la défragmentation d’index se produit et décrit son impact sur les performances des requêtes. Une fois que vous avez déterminé le [volume de fragmentation présent sur un index](#detecting-the-amount-of-fragmentation), vous pouvez procéder à la défragmentation en [réorganisant un index](#reorganize-an-index) ou [regénérant un index](#rebuild-an-index) en exécutant des commandes Transact-SQL dans l’outil que vous choisissez ou en utilisant SQL Server Management Studio.
 

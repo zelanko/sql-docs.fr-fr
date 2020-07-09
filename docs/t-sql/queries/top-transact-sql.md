@@ -21,15 +21,15 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faab44501aa1cae4245d745598e32fab8d66a9f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948249"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012579"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Limite les lignes retournées dans un jeu de résultats de la requête à un nombre spécifié de lignes ou à un pourcentage de lignes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Lorsque vous utilisez TOP avec la clause ORDER BY, les résultats sont limités aux *N* premières lignes ordonnées. Sinon, TOP retourne les *N* premières lignes dans un ordre non défini. Utilisez cette clause pour spécifier le nombre de lignes retournées par une instruction SELECT. Vous pouvez également utiliser TOP pour spécifier les lignes affectées par une instruction INSERT, UPDATE, MERGE ou DELETE.  
   

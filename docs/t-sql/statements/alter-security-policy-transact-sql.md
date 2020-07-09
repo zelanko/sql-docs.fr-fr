@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4cded7e52fac941998ad9ddf5f7ab694e3687581
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7066f26887982ac5973a1e326effda43ce6abbe0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626657"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000671"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Modifie une stratégie de sécurité.  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

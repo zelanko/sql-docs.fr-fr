@@ -15,15 +15,15 @@ ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b9aefe7e8350eef1990a6a37dbf0266cd11464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7641e8f5468a6e915772edf10e97cd735c934f0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980341"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010122"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Le format natif Unicode est utile quand vous devez copier des informations d’une installation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre. L'utilisation du format natif pour les données qui ne sont pas de type caractère (char) permet de gagner du temps, puisque vous supprimez les conversions inutiles des types de données depuis et vers le format caractère. L'utilisation du format caractère Unicode pour toutes les données de type caractère évite la perte des caractères étendus lorsque vous transférez en bloc des données entre des serveurs utilisant des pages de codes différentes. Un fichier de données au format natif Unicode peut être lu par toutes les méthodes d'importation en bloc.  
   
  Le format natif Unicode est recommandé pour le transfert en bloc des données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un fichier de données qui contient des caractères étendus ou des caractères codés sur deux octets (DBCS). Pour les données qui ne sont pas de type caractère, le format natif Unicode utilise des types de données (bases de données) natifs. Pour les données de type caractère, comme [char](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [texte](../../t-sql/data-types/ntext-text-and-image-transact-sql.md), [varchar (max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nvarchar (max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)et [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md), le format natif Unicode utilise le format de données de type caractère Unicode.  

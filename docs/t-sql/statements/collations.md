@@ -19,16 +19,16 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a706193058256747ba1ec2fa71c7641cdecc4e8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71271913"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011325"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Définit un classement pour une colonne de base de données ou de table, ou un cast de classement lors d’une application à une expression de chaîne de caractères. Le nom du classement peut être un nom de classement Windows ou SQL. Si aucun classement n’est spécifié pendant la création de la base de données, le classement par défaut de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est attribué à la base de données. Si aucun classement n’est spécifié pendant la création d’une colonne de table, le classement par défaut de la base de données est attribué à la colonne.
 
@@ -36,7 +36,7 @@ Définit un classement pour une colonne de base de données ou de table, ou un c
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
@@ -150,7 +150,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>B. Exemples supplémentaires
 
-Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple **G. Créer une base de données et spécifier un nom et des options de classement** de la rubrique [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) et l’exemple **V. Modifier le classement des colonnes** de la rubrique [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
+Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple [G. Créer une base de données et spécifier un nom et des options de classement](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) de la rubrique **CREATE DATABASE** et l’exemple [V. Modifier le classement des colonnes](../../t-sql/statements/alter-table-transact-sql.md#alter_column) de la rubrique **ALTER TABLE**.
 
 ## <a name="see-also"></a>Voir aussi
 

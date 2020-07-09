@@ -22,15 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca3b994cb831e78807b8aeb44c5fe6f8fc454f41
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980381"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001206"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou les valeurs par défaut lors de l’importation en bloc (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Par défaut, quand des données sont importées dans une table, la commande [bcp](../../tools/bcp-utility.md) et l’instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) inspectent toutes les valeurs par défaut définies pour les colonnes de la table.  Par exemple, si un fichier de données contient un champ NULL, la valeur par défaut de la colonne est chargée à la place.  La commande [bcp](../../tools/bcp-utility.md) et l’instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) vous permettent de spécifier que les valeurs NULL doivent être conservées.
 

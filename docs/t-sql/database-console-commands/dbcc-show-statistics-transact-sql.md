@@ -33,15 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 350ece68d98f8333eb6281a5cbb6fdacf792e51a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632345"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003430"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS affiche les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée. L'optimiseur de requête utilise des statistiques pour estimer le nombre de lignes, également appelé cardinalité, dans le résultat de la requête, ce qui lui permet de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête pourrait utiliser des estimations de cardinalité afin de choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index dans le plan de requête. Cela permettrait d'améliorer les performances des requêtes car le recours à une analyse d'index monopolisant de nombreuses ressources serait ainsi évité.
   
@@ -167,8 +167,9 @@ Remarquez que les conditions suivantes doivent être remplies pour que les autor
 -   Si l’une des colonnes d’un objet de statistiques est masquée par des règles Dynamic Data Masking, l’utilisateur doit disposer de l’autorisation UNMASK en plus de l’autorisation SELECT
 
 Dans les versions antérieures à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.
-[!NOTE]
-Pour rétablir le comportement antérieur à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, utilisez l’indicateur de trace 9485.
+
+ > [!NOTE]
+ > Pour rétablir le comportement antérieur à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, utilisez l’indicateur de trace 9485.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Autorisations pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS nécessite l’autorisation SELECT sur la table ou l’appartenance à l’un des rôles suivants :

@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9dc47ecc9056c2344b64feb4eb0f122e340927b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3d87bce11cc657ef437a0f57ce07d0eda89bdeb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980611"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007199"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d’identité lors de l’importation de données en bloc (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Les fichiers de données contenant des valeurs d’identité peuvent être importés en bloc dans une instance de Microsoft SQL Server.  Par défaut, les valeurs de la colonne d'identité du fichier de données importé sont ignorées et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte automatiquement des valeurs uniques.  Ces valeurs uniques reposent sur les valeurs de départ et d'incrément spécifiées lors de la création de la table.
 
 Si les fichiers de données ne contiennent pas de valeurs pour la colonne d'identificateur de la table, vous devez utiliser un fichier de format pour préciser si la colonne d'identificateur de la table doit être ignorée lors de l'importation de données.  Consultez [Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) pour plus d’informations.

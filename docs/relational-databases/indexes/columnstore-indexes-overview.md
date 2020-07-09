@@ -18,15 +18,15 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 3b44f45cfcefc1e413fbb13f9c172c1a11b66dc2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269484"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007503"
 ---
 # <a name="columnstore-indexes-overview"></a>Index columnstore : Vue d’ensemble
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Les index columnstore sont la norme pour le stockage et l’interrogation des tables de faits d’entreposage de données de grande taille. Ils utilisent un stockage de données en colonnes et un traitement des requêtes allant jusqu’à multiplier par 10 les performances des requêtes dans l’entrepôt de données par rapport au stockage orienté lignes classique. Vous pouvez également obtenir jusqu’à 10 fois la compression de données par rapport à la taille des données décompressées. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, les index columnstore sont compatibles avec l’analytique opérationnelle, qui permet d’exécuter des analyses en temps réel performantes sur une charge de travail transactionnelle.  
   

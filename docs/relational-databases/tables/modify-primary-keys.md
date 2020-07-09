@@ -14,15 +14,15 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef278fbdc9fa2599e7612cd9c3b54b909a9bf1f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86f2fa7037a7c113a452974f8565148d0a9417e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907319"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007115"
 ---
 # <a name="modify-primary-keys"></a>Modifier des clés primaires
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Vous pouvez modifier une clé primaire dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez modifier la clé primaire d'une table en changeant l'ordre des colonnes, le nom de l'index, l'option clustered ou le facteur de remplissage.  
   

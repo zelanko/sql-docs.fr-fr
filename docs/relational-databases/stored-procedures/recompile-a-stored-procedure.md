@@ -15,15 +15,15 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df92be946b13a4643f6ddca870ea98ff64b3d9d9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74564791"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002739"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Cette rubrique explique comment recompiler une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il existe trois manières d’effectuer cette opération : via l’option **WITH RECOMPILE** dans la définition de la procédure ou lorsque la procédure est appelée, via l’indicateur de requête **RECOMPILE** sur des instructions ou en utilisant la procédure stockée système **sp_recompile** . Cette rubrique décrit l’utilisation de l’option WITH RECOMPILE lors de la création d’une définition de procédure et de l’exécution d’une procédure existante. Elle décrit également l’utilisation de la procédure stockée système sp_recompile pour recompiler une procédure existante.  
   
  **Dans cette rubrique**  

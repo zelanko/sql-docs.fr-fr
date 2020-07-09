@@ -15,16 +15,16 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79375506"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005600"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données autonome - Rendre votre base de données portable
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] au niveau de la base de données. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Cette rubrique examine les avantages liés à l'utilisation du modèle de base de données autonome et les différences qu'il présente par rapport au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu Windows ou au niveau du serveur. Le recours au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu au niveau du serveur peut encore s'avérer nécessaire pour mettre en œuvre une logique métier d'application, des critères de facilité de gestion ou des scénarios spécifiques.  
   

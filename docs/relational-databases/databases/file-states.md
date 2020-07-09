@@ -29,15 +29,15 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a58f92ebb7e6c59d80277cc17457927cff01ff8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934443"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002957"
 ---
 # <a name="file-states"></a>États des fichiers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'état d'un fichier de base de données est géré indépendamment de l'état de la base de données. Un fichier a toujours un seul état spécifique, tel que ONLINE ou OFFLINE. Pour afficher l’état actuel d’un fichier, utilisez l’affichage catalogue [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Si la base de données est hors connexion, l’état des fichiers peut être visualisé à partir de l’affichage catalogue [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
  L'état des fichiers dans un groupe de fichiers détermine la disponibilité du groupe de fichiers tout entier. Pour qu'un groupe de fichiers soit disponible, tous ses fichiers doivent être en ligne. Pour afficher l’état actuel d’un groupe de fichiers, utilisez l’affichage catalogue [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) . Si un groupe de fichiers est hors connexion et que vous tentez d'y accéder par l'intermédiaire d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] , l'opération échoue et une erreur est générée. Lorsque l'optimiseur de requête planifie des instructions SELECT, il évite les index non-cluster et les vues indexées résidant dans les groupes de fichiers hors connexion, de sorte que ces instructions puissent être exécutées correctement. Cependant, si le groupe de fichiers hors connexion contient le segment ou l'index cluster d'une table cible, les instructions SELECT échouent. De plus, toute instruction INSERT, UPDATE ou DELETE modifiant une table assortie d'un index dans un groupe de fichiers hors connexion ne peut être exécutée.  

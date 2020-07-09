@@ -21,19 +21,19 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56343f07a4a53b92aa9ab61d99aefd057f9430e4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2d635f43e607109cd1dc361f8d7252af57daaafe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631758"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000680"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Spécifie les propriétés d’une colonne ajoutées à une table à l’aide de l’instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -95,7 +95,7 @@ column_name <data_type>
   
 -   type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] défini par l’utilisateur et schéma auquel il appartient. Un type de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être créé à l'aide de CREATE TYPE avant de pouvoir être utilisé dans une définition de table.  
   
- Si *type_schema_name* n’est pas spécifié, le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] référence *type_name* dans l’ordre suivant :  
+ Si *type_schema_name* n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] référence *type_name* dans l’ordre suivant :  
   
 -   Le type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

@@ -16,15 +16,15 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37f9f47b2149bb308bf0e2ca8b5c975d24d11c37
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999435"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004769"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Contraintes de clé primaire et de clé étrangère
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Les clés primaires et les clés étrangères sont deux types de contraintes qui peuvent être utilisées pour appliquer l'intégrité des données dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce sont des objets de base de données importants.  
   

@@ -32,18 +32,18 @@ helpviewer_keywords:
 - dates [SQL Server], system date and time
 - time [SQL Server], system
 ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ca78e55c8897a9c0cc71be0eb9650ab89125d21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8c774816cfc09a5694cadc06d5ce4d5ce35c0c9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826857"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000736"
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Renvoie l’horodateur système de base de données actuel en tant que valeur **datetime**. Le décalage de fuseau horaire de base de données n'est pas inclus. Cette valeur représente l'heure UTC actuelle. Cette valeur est dérivée du système d'exploitation de l'ordinateur sur lequel l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.  
   

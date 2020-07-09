@@ -27,15 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 151ca986f2705479567d8b9d5133ff1ad623a8b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635586"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012562"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Refuse une autorisation à un principal. Empêche ce principal d'hériter de l'autorisation par ses appartenances à des groupes ou à des rôles. DENY est prioritaire par rapport à toutes les autres autorisations, sauf qu’elle ne s’applique pas aux propriétaires d’objets ou aux membres du rôle serveur fixe sysadmin.
   **Note de sécurité** Les membres du rôle serveur fixe sysadmin et les propriétaires d’objets ne peuvent pas se voir refuser des autorisations.

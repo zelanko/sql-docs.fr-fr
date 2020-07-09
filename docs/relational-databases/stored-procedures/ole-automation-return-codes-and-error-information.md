@@ -14,15 +14,15 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bfbfa82768efe361f9b067764c7b5a4c408931
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 544d38f39e8ff27eeba474c6c9d54cb48576f049
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136760"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000944"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codes de retour OLE Automation et informations sur les erreurs
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Les procédures stockées du système OLE Automation retournent un code de retour de type **int** qui équivaut au HRESULT retourné par l’opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de 0 est un code d’erreur OLE de forme hexadécimale 0x800*nnnnn*qui est retourné comme une valeur **int** dans un code de retour de procédure stockée qui est de forme 214*nnnnnnn*.  
   
  Par exemple, le passage d’un nom d’objet non valide (comme SQLDMO.Xyzzy) dans la procédure stockée sp_OACreate provoque le retour d’un HRESULT **int** de 2147221005, ce qui correspond à 0x800401f3 en hexadécimal.  

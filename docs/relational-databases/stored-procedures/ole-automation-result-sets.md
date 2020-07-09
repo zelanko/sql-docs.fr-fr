@@ -17,15 +17,15 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eebab07a066192b473aaf0a303515aa894be2aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b11a58d6b5b838fc5add9f8303be0758a6ce7c31
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136821"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000951"
 ---
 # <a name="ole-automation-result-sets"></a>Jeux de résultats OLE Automation
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Si une propriété ou une méthode OLE Automation retourne des données dans un tableau à une ou deux dimensions, ce tableau est retourné au client sous la forme d'un jeu de résultats :  
   
 -   Un tableau à une dimension est retourné au client sous la forme d'un jeu de résultats d'une seule ligne avec autant de colonnes qu'il y a d'éléments dans le tableau. Par exemple, array(10) est retourné sous la forme d'une seule ligne de 10 colonnes.  

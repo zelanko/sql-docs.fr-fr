@@ -18,15 +18,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: db8b4d96fd8ac097f912f535087ca658ca48bcca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980533"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003152"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l’aide de bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données correspondant à son type de table de base de données (format natif), dans sa représentation caractère (format caractère) ou en tant que tout type de données pour lequel la conversion implicite est prise en charge, par exemple, en copiant un type de données **smallint** comme **int**. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Invite bcp pour le type de stockage de fichier  

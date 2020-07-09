@@ -18,21 +18,21 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3cd8777a05d285c49ae314c4e39aed42b5dc184
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68329293"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011421"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Cette fonction retourne le nombre (valeur entière très grande signée) de limites *datepart* spécifiées, traversées entre les valeurs *startdate* et *enddate* spécifiées.
   
-Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [, consultez ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1a3906278e7d4770fa71a8931b3889f9f03d955a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 43cc2ebbb5b06edda65d841f29da03da9a552280
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629379"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008502"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Modifie une clé de chiffrement de colonne dans une base de données, en ajoutant ou en supprimant une valeur chiffrée. Une clé de chiffrement de colonne peut avoir jusqu’à deux valeurs, ce qui permet de permuter la clé principale de colonne correspondante. Une clé de chiffrement de colonne est utilisée lors du chiffrement des colonnes avec [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Avant d’ajouter une valeur de clé de chiffrement de colonne, vous devez définir la clé principale de colonne qui a été utilisée pour chiffrer la valeur à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de l’instruction [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   

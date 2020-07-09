@@ -13,15 +13,15 @@ ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9422e6c8b406258210e03262014d04abc1a4d3ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4eb1d138746687601b2a9e58849093a2b2aa3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136732"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000926"
 ---
 # <a name="parameters"></a>Paramètres
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Les paramètres sont utilisés pour échanger des données entre d'une part une procédure stockée ou une fonction et d'autre part, l'application ou l'outil ayant appelé la procédure stockée ou la fonction : 
 
 *  Les paramètres d'entrée permettent à l'appelant de faire passer une valeur de donnée à la procédure stockée ou à la fonction.

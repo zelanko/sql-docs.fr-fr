@@ -14,15 +14,15 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980481"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009925"
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Lorsque vous importez des données en bloc dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données à partir d'une table, utilisez un fichier de format vers un système souple pour l'écriture de fichiers de données nécessitant peu ou pas d'édition pour la conformité aux autres formats de données ou pour la lecture des fichiers de données provenant d'autres logiciels.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichier de format : format XML et format non-XML. Le format non-XML est le format d'origine pris en charge dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

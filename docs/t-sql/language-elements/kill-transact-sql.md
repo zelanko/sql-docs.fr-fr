@@ -34,21 +34,21 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eca253ab85302555b84e35a3118b1e8a0873402
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981922"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007344"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Met fin à un processus utilisateur basé sur l'ID de session ou sur l'unité de travail (UOW). Si l’ID de session ou l’UOW spécifié implique l’annulation de nombreuses tâches, l’instruction KILL peut mettre du temps à s’exécuter. Le processus prend notamment plus de temps à s’exécuter lorsque le processus implique la restauration d’une transaction longue.  
   
 KILL met fin à une connexion normale, ce qui arrête en interne les transactions associées à l'ID de session spécifié. Il est possible que Distributed Transaction Coordinator (MS DTC) [!INCLUDE[msCoName](../../includes/msconame-md.md)] soit en cours d’utilisation. Si MS DTC est en cours d’utilisation, vous pouvez également utiliser l’instruction pour mettre fins à des transactions distribuées orphelines et incertaines.  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
 Identifie l'ID de l'UOW (Unit of Work) des transactions distribuées. _UOW_ est un GUID qui peut être obtenu à partir de la colonne request_owner_guid de la vue de gestion dynamique sys.dm_tran_locks. _UOW_ peut également être obtenu à partir du journal des erreurs ou par le biais du moniteur MS DTC. Pour plus d'informations sur la surveillance des transactions distribuées, reportez-vous à la documentation de MS DTC.  
   

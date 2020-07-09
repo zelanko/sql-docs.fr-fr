@@ -20,22 +20,22 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - dateparts [SQL Server], day
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f1d58e89e6fd7cdc4d8af85d3d8745e1bc15fa7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a58ac7e29f6a7c41fd0b8e617a04b9a52368fd15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119063"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011370"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Cette fonction retourne un entier représentant le jour (jour du mois) de la *date* spécifiée.
   
-Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [, consultez ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

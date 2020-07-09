@@ -22,22 +22,22 @@ helpviewer_keywords:
 - comparing dates times [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b6d048217cb27a0215485334e54ed9ed93defa1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255816"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011385"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Cette fonction retourne une chaîne de caractères représentant la valeur *datepart* spécifiée de l’argument *date* spécifié.
 
-Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [, consultez ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -129,7 +129,7 @@ Utilisez `DATENAME` dans les clauses suivantes :
 + GROUP BY
 + HAVING
 + ORDER BY
-+ SELECT \<liste>
++ SELECT \<list>
 + WHERE
   
 Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], DATENAME convertit des littéraux de chaîne implicitement en type **datetime2**. En d’autres termes, `DATENAME` ne prend pas en charge le format YDM quand la date est passée sous forme de chaîne. Vous devez caster explicitement la chaîne en type **datetime** ou **smalldatetime** pour utiliser le format AJM.

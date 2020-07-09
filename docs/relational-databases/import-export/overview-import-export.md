@@ -11,15 +11,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 99c3baf7bc52d5c0123cb5aeccef963578ebac68
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980428"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001186"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importer et exporter des données dans SQL Server et Azure SQL Database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Plusieurs méthodes sont possibles pour importer et exporter des données dans SQL Server et Azure SQL Database. Vous pouvez notamment utiliser des instructions Transact-SQL, des outils en ligne de commande et des Assistants.
 
 De plus, vous pouvez importer et exporter des données de formats différents, tels que les fichiers plats, les fichiers Excel, les principales bases de données relationnelles et divers services cloud.

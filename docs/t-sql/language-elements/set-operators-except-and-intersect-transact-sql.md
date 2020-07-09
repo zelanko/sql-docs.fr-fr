@@ -23,15 +23,15 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7469e9b19650c88986d4f0658d28a7e0481abf2a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630250"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004985"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Opérateurs de jeu - EXCEPT et INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Retourne des lignes distinctes en comparant les résultats de deux requêtes.  
   
@@ -56,7 +56,7 @@ Voici les règles essentielles pour combiner les ensembles de résultats de deux
 ```  
   
 ## <a name="arguments"></a>Arguments  
-\<_requête\_spécification_> | ( \<_requête\_expression_>)  
+\<_query\_specification_> | ( \<_query\_expression_> )  
 Spécification ou expression de requête qui retourne les données à comparer avec les données d'une autre spécification ou expression de requête. Les définitions des colonnes faisant partie d'une opération EXCEPT ou INTERSECT ne doivent pas forcément être identiques. Mais elles doivent néanmoins être comparables par le biais d'une conversion implicite. Lorsque les types de données diffèrent, les règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md) déterminent le type de données exécuté pour la comparaison.  
   
 Le résultat se détermine d'après les mêmes règles de combinaison d'expressions si les types sont les mêmes mais diffèrent en terme de précision, d'échelle ou de longueur. Pour plus d’informations, consultez [Précision, échelle et longueur &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
@@ -101,7 +101,7 @@ Si une opération EXCEPT est affichée à l’aide de la fonctionnalité Graphic
 ## <a name="examples"></a>Exemples  
 Les exemples suivants illustrent l’utilisation des opérateurs `INTERSECT` et `EXCEPT`. La première requête retourne toutes les valeurs de la table `Production.Product` pour qu'elles soient comparées aux résultats à l'aide de `INTERSECT` et de `EXCEPT`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -111,7 +111,7 @@ FROM Production.Product ;
   
 La requête suivante retourne toute valeur distincte trouvée par les requêtes à gauche et à droite de l'opérateur `INTERSECT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -124,7 +124,7 @@ FROM Production.WorkOrder ;
   
 La requête suivante retourne toute valeur distincte trouvée par la requête à gauche de l'opérateur `EXCEPT`, mais non trouvée par la requête à droite.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -137,7 +137,7 @@ FROM Production.WorkOrder ;
   
 La requête suivante retourne toute valeur distincte trouvée par la requête à gauche de l'opérateur `EXCEPT`, mais non trouvée par la requête à droite. Les tables sont inversées par rapport à l'exemple précédent.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -151,7 +151,7 @@ FROM Production.Product ;
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Les exemples suivants illustrent la manière d'utiliser les opérateurs `INTERSECT` et `EXCEPT`. La première requête retourne toutes les valeurs de la table `FactInternetSales` pour qu'elles soient comparées aux résultats à l'aide de `INTERSECT` et de `EXCEPT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -161,7 +161,7 @@ FROM FactInternetSales;
   
 La requête suivante retourne toute valeur distincte trouvée par les requêtes à gauche et à droite de l'opérateur `INTERSECT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -176,7 +176,7 @@ ORDER BY CustomerKey;
   
 La requête suivante retourne toute valeur distincte trouvée par la requête à gauche de l'opérateur `EXCEPT`, mais non trouvée par la requête à droite.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   

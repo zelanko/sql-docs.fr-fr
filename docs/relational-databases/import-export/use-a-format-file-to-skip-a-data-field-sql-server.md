@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f936706a855e810eefc8749a6c9296e855a9d57
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a03b892a22a837ad578fccf48460cd4952f80d6b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980651"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004860"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utiliser un fichier de format pour ignorer un champ de données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Le nombre de champs contenus dans un fichier de données peut être supérieur au nombre de colonnes dans la table. Cette rubrique explique comment modifier les fichiers de format non-XML et XML en mappant les colonnes de la table avec les champs de données correspondants et en ignorant les champs supplémentaires afin de prendre en charge un fichier de données contenant davantage de champs.  Veuillez consulter [Créer un fichier de format (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) pour plus d’informations.
 
 |Contour|
