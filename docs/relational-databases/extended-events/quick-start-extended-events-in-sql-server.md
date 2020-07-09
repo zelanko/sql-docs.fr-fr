@@ -11,16 +11,16 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4065dd97c2109a30c90f8de01c50c11894a91f68
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783500"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Les événements étendus sont un système léger d’analyse des performances qui permet aux utilisateurs de collecter les données nécessaires pour analyser et résoudre les problèmes liés à SQL Server. Consultez [Vue d’ensemble des événements étendus](extended-events.md) pour en savoir plus sur l’architecture des événements étendus.  Cet article vise à aider le développeur SQL qui ne connaît pas encore les événements étendus et qui veut créer une session d’événements en quelques minutes seulement. Grâce aux événements étendus, vous pouvez afficher des détails sur les opérations internes du système SQL et votre application. Quand vous créez une session d’événements étendus, vous indiquez au système :
 

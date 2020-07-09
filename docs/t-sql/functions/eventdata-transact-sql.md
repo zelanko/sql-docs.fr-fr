@@ -22,17 +22,17 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784576"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cette fonction retourne des informations sur les événements de serveur et de base de données. Lorsqu’une notification d’événement est déclenchée et que le Service Broker spécifié reçoit les résultats, `EVENTDATA` est appelé. Un déclencheur DDL ou d’ouverture de session prend également en charge l’utilisation interne de `EVENTDATA`.  
   
@@ -77,7 +77,7 @@ EVENTDATA renvoie une valeur dont le type de données est **xml**. Par défaut, 
   
 La page web [Schémas XML Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) comporte également le schéma d’événement.  
   
-Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `EVENT_INSTANCE_DROP_TABLE`, recherchez `DROP_TABLE` dans le schéma.  
+Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `DROP_TABLE`, recherchez `EVENT_INSTANCE_DROP_TABLE` dans le schéma.  
   
 ## <a name="examples"></a>Exemples  
   

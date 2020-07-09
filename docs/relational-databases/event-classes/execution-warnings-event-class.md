@@ -12,15 +12,15 @@ ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a3c813221b586a6378b9590704908cd8f7531b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a97c0e6527d7a598a0d0a026d2f058a6b7773d48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789549"
 ---
 # <a name="execution-warnings-event-class"></a>Classe d'événements Execution Warnings
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements Execution Warnings indique que des avertissements d'allocation de mémoire se sont produits lors de l'exécution d'une instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'une procédure stockée. Il est possible de surveiller cette classe d'événements pour déterminer si des requêtes ont dû attendre une seconde ou plus que de la mémoire se libère avant de continuer, ou si la précédente tentative d'obtention de mémoire a échoué. Les informations sur la durée d'attente des requêtes peuvent faciliter la découverte de problèmes de contention dans le système qui peuvent nuire aux performances.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Colonnes de la classe d'événements Execution Warnings  

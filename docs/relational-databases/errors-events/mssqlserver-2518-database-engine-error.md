@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 54a13abc-4c33-43f0-b55d-e2e74a1381c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca6a654894304197357cbe244be60f9b9a58f789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ff739bf4d3a8e40d398c87b7f350f6adf61e63e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780385"
 ---
 # <a name="mssqlserver_2518"></a>MSSQLSERVER_2518
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|2518|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_NO_EXPRESSION_EVAL_CLR_DISABLED|  
-|Texte du message|ID d'objet O_ID (objet « O_NAME ») : impossible de vérifier les colonnes calculées et les types définis par l'utilisateur pour cet objet, parce que le CLR (Common Language Runtime) est désactivé.|  
+|Texte du message|ID d’objet O_ID (objet « O_NAME ») : impossible de vérifier les colonnes calculées et les types définis par l’utilisateur pour cet objet, parce que le CLR (Common Language Runtime) est désactivé.|  
   
 ## <a name="explanation"></a>Explication  
 Ce message présenté à titre d'information indique que le processeur de requêtes n'a pas pu fournir à DBCC un objet interne autorisant l'évaluation des colonnes calculées et des types définis par l'utilisateur CLR (Common Language Runtime). Ce problème est survenu parce que l'une des colonnes impliquait le CLR ; or ce dernier n'est pas activé. L'objet interne couvre toutes les colonnes. Par conséquent, l'impossibilité d'évaluer une seule colonne empêche la création de l'objet interne. Cela signifie qu'il sera impossible de vérifier si les colonnes calculées sont correctes ou de les utiliser lorsque DBCC vérifiera la cohérence entre les index et les tables de base.  

@@ -16,15 +16,15 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: df4463bf1ebfcc981c2828966c58e7fd0193f19f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 992a95f793611094971e894c6a974b959bce8ca7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790803"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Par défaut, un abonnement à une publication transactionnelle est initialisé avec un instantané, lequel est généré par l'Agent d'instantané et appliqué par l'Agent de distribution. Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode. Autres méthodes d'initialisation d'un abonné :  
   
 -   Spécifier une sauvegarde. Restaurez la sauvegarde sur l'Abonné, l'Agent de distribution copie ensuite toutes les métadonnées de réplication et procédures système requises. L'initialisation avec une sauvegarde est le moyen le plus rapide pour remettre les données sur l'Abonné, c'est également un moyen pratique, car vous pouvez utiliser n'importe quelle sauvegarde récente si celle-ci a été effectuée après que la publication ait été activée pour l'initialisation avec une sauvegarde.  

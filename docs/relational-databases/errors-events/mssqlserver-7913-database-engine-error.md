@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ec08dc7368417e8ca93574a3dd8571c14eff5291
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 286fcd755e970c197785ab1d3ab342013e5dfb86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85791065"
 ---
 # <a name="mssqlserver_7913"></a>MSSQLSERVER_7913
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7913|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_REPAIR_EXTENT_DEALLOCATED|  
-|Texte du message|Réparation : l'extension P_ID a été libérée de l'objet ID O_ID, index ID I_ID, partition ID PN_ID, unité d'allocation ID A_ID (type TYPE).|  
+|Texte du message|Réparation : l’extension P_ID a été libérée de l’objet ID O_ID, index ID I_ID, partition ID PN_ID, unité d’allocation ID A_ID (type TYPE).|  
   
 ## <a name="explanation"></a>Explication  
 Ce message fourni à titre d'information par REPAIR indique qu'une extension a été libérée de l'objet spécifié.  

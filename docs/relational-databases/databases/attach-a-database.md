@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a0b99addafecb3567ed6e5bc351681e3318f67a
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789585"
 ---
 # <a name="attach-a-database"></a>Attacher une base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette rubrique explique comment attacher une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez utiliser cette fonctionnalité pour copier, déplacer, ou mettre à niveau une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -67,7 +67,7 @@ Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY
      **Bases de données à attacher**  
      Affiche des informations sur les bases de données sélectionnées.  
   
-     \<aucun en-tête de colonne>  
+     \<no column header>  
      Affiche une icône indiquant l'état de l'opération d'attachement. Les icônes possibles sont décrites dans la section **État** ci-dessous.  
   
      **Emplacement du fichier MDF**  
@@ -156,7 +156,7 @@ USE <database name>
 EXEC sys.sp_cdc_vupgrade  
 ``` 
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
  <br>[Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Détacher une base de données](../../relational-databases/databases/detach-a-database.md)  

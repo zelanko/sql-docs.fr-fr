@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0b8a226e1376aa705ec3644aacbbc761cc1014b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6e2556ed20f404e011ba0f41709be3504a68ea7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780425"
 ---
 # <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|2512|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_DUPLICATE_KEYS|  
-|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE). Clés en double sur la page P_ID1, emplacement SLOT1, et sur la page P_ID2, emplacement SLOT2.|  
+|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE). Clés en double sur la page P_ID1, emplacement SLOT1, et sur la page P_ID2, emplacement SLOT2.|  
   
 ## <a name="explanation"></a>Explication  
 Les deux emplacements spécifiés ont des clés identiques, dont tout **uniqueifier**.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781682"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraire une DAC d'une base de données
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Utilisez **l’Assistant Extraire l’application de la couche Données** ou un script Windows PowerShell pour extraire un package d’application de la couche Données (DAC) d’une base de données SQL Server existante. Le processus d'extraction crée un fichier de package de DAC qui contient les définitions des objets de base de données et de leurs éléments associés au niveau de l'instance. Par exemple, un fichier de package DAC contient les tables de base de données, procédures stockées, vues, utilisateurs, ainsi que les connexions mappées aux utilisateurs de base de données.  
   
  

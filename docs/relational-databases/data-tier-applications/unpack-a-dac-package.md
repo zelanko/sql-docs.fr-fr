@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781646"
 ---
 # <a name="unpack-a-dac-package"></a>Décompresser un package DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Utilisez la boîte de dialogue Décompresser une application de la couche Données pour décompresser les scripts et les fichiers d'un package d'application de la couche Données (DAC). Les scripts et les fichiers sont placés dans un dossier où ils peuvent être examinés avant que le package soit utilisé pour déployer la DAC dans un système de production. Le contenu d'une DAC peut également être comparé avec le contenu d'un autre package décompressé dans un autre dossier.  
   
 1.  **Avant de commencer :**  [Sécurité](#Security)  

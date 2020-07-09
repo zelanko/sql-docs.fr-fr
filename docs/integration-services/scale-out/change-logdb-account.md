@@ -2,19 +2,19 @@
 title: Changer le compte pour la journalisation SSIS Scale Out| Microsoft Docs
 description: Cet article explique comment changer le compte d’utilisateur pour la journalisation de SSIS Scale Out.
 ms.custom: performance
-ms.date: 12/13/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 81c1770da78d1d469d1b6ad3a01100abaa9ec829
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5e6ab35e67f675c20349a7e968ff9d8d7131c68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785610"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Changer le compte pour la journalisation Scale Out
 
@@ -38,12 +38,12 @@ Pour savoir comment joindre un rôle de base de données, consultez [Joindre un 
 ## <a name="3-update-the-logging-information-in-ssisdb"></a>3. Mettre à jour les informations de journalisation dans SSISDB
 Appelez la procédure stockée `[catalog].[update_logdb_info]` en utilisant le nom SQL Server et la chaîne de connexion comme paramètres, comme indiqué dans l’exemple suivant :
 
-    ```sql
-    SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
-    SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
-    EXEC [internal].[update_logdb_info] @serverName, @connectionString
-    GO
-    ```
+```sql
+SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
+SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
+EXEC [internal].[update_logdb_info] @serverName, @connectionString
+GO
+```
 
 ## <a name="4-restart-the-scale-out-worker-service"></a>4. Redémarrer le service Scale Out Worker
 Redémarrez le service Scale Out Worker pour que la modification prenne effet.

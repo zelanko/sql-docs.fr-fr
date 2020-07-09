@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3d732c555ad470ff01d469f44d27a264abb2f891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 461bed154720f1e17fb4aeff92a4ba2993b16538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785061"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Boîte de dialogue Ouvrir une condition, page Stratégies dépendantes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette boîte de dialogue pour afficher la liste des stratégies qui font actuellement référence à cette condition de la Gestion basée sur des stratégies. Pour plus d’informations sur le rapport entre les conditions et les facettes et stratégies, consultez [Administrer des serveurs à l’aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="options"></a>Options  

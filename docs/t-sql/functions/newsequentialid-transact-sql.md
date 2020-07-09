@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6daa11e30654beed9d4ad4c4d316b075a812b324
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4daa39922e25c67479ad4f49c28fa860303e6d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784392"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crée une valeur GUID supérieure à celle d'un GUID précédemment généré par cette fonction sur un ordinateur donné depuis le démarrage de Windows. Après le redémarrage de Windows, le GUID peut redémarrer à partir d'une plage inférieure, mais est toujours globalement unique. Lorsqu'une colonne GUID est utilisée comme identificateur de ligne, l'utilisation de NEWSEQUENTIALID peut être plus rapide que celle de la fonction NEWID. Cela est dû au fait que la fonction NEWID génère une activité aléatoire et utilise moins de pages de données mises en cache. L'utilisation de NEWSEQUENTIALID vous aide également à remplir complètement les pages de données et d'index.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787497"
 ---
 # <a name="activity-monitor"></a>Moniteur d'activité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Le Moniteur d'activité affiche des informations sur les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur la façon dont ces processus affectent l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Le moniteur d’activité est une fenêtre de document à onglets, qui comprend les volets extensibles et réductibles suivants : **Vue d’ensemble**, **Processus**, **Attentes de ressources**, **E/S du fichier de données**, **Requêtes coûteuses récentes** et **Requêtes coûteuses actives**. Lorsqu'un volet est développé, le Moniteur d'activité interroge l'instance pour obtenir des informations. Lorsqu'un volet est réduit, toutes les activités d'interrogation cessent pour ce volet. Vous pouvez développer en même temps un ou plusieurs volets pour afficher différents types d’activité sur l’instance.  

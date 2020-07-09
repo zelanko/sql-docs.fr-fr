@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785075"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Certains types de stratégies de la Gestion basée sur des stratégies peuvent créer des déclencheurs afin d'appliquer la future conformité avec la stratégie. Dans cette leçon, vous allez créer une stratégie qui applique une norme d'affectation de noms pour des tables. Ensuite, vous allez tester la stratégie en essayant de créer une table qui enfreint la stratégie.  
 
 

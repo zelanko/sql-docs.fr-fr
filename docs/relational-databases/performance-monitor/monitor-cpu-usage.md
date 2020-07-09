@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: eb73d1b82d1a58a756c2ec6287429cee88315fd7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787464"
 ---
 # <a name="monitor-cpu-usage"></a>Surveiller l'utilisation de l'UC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Surveillez régulièrement une instance Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déterminer si les taux d'utilisation de l'unité centrale restent dans des limites normales. Un taux d'utilisation de l'unité centrale régulièrement élevé peut mettre en évidence le besoin d'une mise à niveau de celle-ci ou d'un ajout de plusieurs processeurs. Sinon, si une application sollicite constamment l'unité centrale, cela implique un paramétrage incorrect ou une conception médiocre de cette dernière. En optimisant l'application vous réduirez l'utilisation de l'unité centrale.  
   
  Une bonne manière de déterminer ce besoin consiste à utiliser le compteur **Processeur : % Temps processeur** du Moniteur système. Ce compteur surveille le temps nécessaire à l'unité centrale pour traiter un thread inactif. Une valeur régulièrement comprise entre 80 et 90 % peut indiquer un besoin de mise à niveau de l'unité centrale ou d'ajout de processeurs. Dans le cas de systèmes multiprocesseurs, surveillez une instance séparée de ce compteur pour chaque processeur. Cette valeur représente la somme du temps processeur pour un processeur spécifique. Pour déterminer la moyenne pour tous les processeurs, utilisez plutôt le compteur **Système : % temps total processeur** .  

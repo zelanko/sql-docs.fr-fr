@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781735"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tables, les vues et les objets d’instance, y compris les connexions, qui sont associés à une base de données utilisateur. Une application DAC est une unité autonome de déploiement de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux développeurs et aux administrateurs de base de données de la couche Données d'empaqueter les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un artefact portable appelé « package DAC », ou encore DACPAC.  
   
  Un BACPAC est un artefact connexe qui encapsule le schéma de la base de données, ainsi que les données stockées dans la base de données.  

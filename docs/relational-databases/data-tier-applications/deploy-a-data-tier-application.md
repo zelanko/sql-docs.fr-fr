@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e50e68eefd4b59aa617742baf8d3264aeed333e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74190117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781710"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Déployez une application de la couche Données (DAC) à partir d’un package DAC sur une instance existante du moteur de base de données ou de la base de données Azure SQL à l’aide d’un Assistant ou d’un script PowerShell. 
   
  Le processus de déploiement inscrit une instance DAC en stockant la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Il crée une base de données, puis remplit cette base de données avec tous les objets de base de données définis dans la DAC.  
