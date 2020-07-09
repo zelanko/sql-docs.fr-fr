@@ -9,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: af017cf5d36075fdba6de31aa841e980cc20e175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911015"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901551"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurer Pacemaker pour les groupes de disponibilité Always On et les instances de cluster de basculement
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Quand un groupe de disponibilité Always On ou une instance de cluster de basculement (FCI) s’étend sur plusieurs sites, chaque site dispose généralement de son propre réseau. Cela signifie souvent que chaque site a sa propre adresse IP. Par exemple, les adresses du site A commencent par 192.168.1.*x* et les adresses du site B par 192.168.2.*x*, où *x* est la partie de l’adresse IP qui est unique sur le serveur. Sans une sorte de routage mis en place au niveau de la couche de mise en réseau, ces serveurs ne pourront pas communiquer entre eux. Il existe deux façons de gérer ce scénario : configurer un réseau qui sert de pont entre les deux sous-réseaux, connu sous le nom de réseau local virtuel, ou configurer le routage entre les sous-réseaux.
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3dacfe725541c93f3d5fe1276513423d77aeba9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: f2474ed82498dae30b96178f0fcf962f3b1f0767
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897874"
 ---
 # <a name="replication-queue-reader-agent"></a>Agent de lecture de la file d'attente de réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   L’Agent de lecture de la file d’attente de réplication est un fichier exécutable qui lit les messages stockés dans une file d’attente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une file d’attente de messages [!INCLUDE[msCoName](../../../includes/msconame-md.md)], puis qui applique ces messages au serveur de publication. L'Agent de lecture de la file d'attente est utilisé avec les publications transactionnelles et les publications d'instantané qui autorisent la mise à jour en attente.  
   
 > [!NOTE]  

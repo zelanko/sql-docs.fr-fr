@@ -13,16 +13,16 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 267daba47822bee503f004f57cd1ccb769a765c9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 2c10d77a72ef23616feb2ac59db44589966fe49a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269468"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900237"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Mettre à jour les outils d'administration SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau à partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Cet article documente la prise en charge et le fonctionnement de la mise à niveau des Outils d’administration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des composants de gestion tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, la Messagerie de base de données, les Plans de Maintenance, XPStar et XPWeb.  
   

@@ -15,15 +15,15 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56a9e844499d8cee843b596380edb726f3efdabe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70110272"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998132"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  
   
  Une procédure peut contenir jusqu'à 2100 paramètres ; chacun ayant un nom, un type de données et une direction. Éventuellement, les paramètres peuvent avoir des valeurs par défaut.  

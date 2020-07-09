@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9944a6065d89a49e5bf1a0ccec2d4d681fbae748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593519"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900154"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemple : Script d'installation de SQL Server sans assistance pour SUSE Linux Enterprise Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Cet exemple de script Bash installe SQL Server 2017 sur SUSE Linux Enterprise Server (SLES) version 12 SP2 sans intervention de l’utilisateur. Il fournit des exemples d'installation du moteur de base de données, des outils en ligne de commande SQL Server, SQL Server Agent et exécute les étapes de post-installation. Vous pouvez également installer la recherche en texte intégral et créer un utilisateur administratif.
 

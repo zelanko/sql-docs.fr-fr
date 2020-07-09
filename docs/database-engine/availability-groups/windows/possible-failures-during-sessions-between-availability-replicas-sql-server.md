@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d39284d132610e1ab68312823ca1d06d540bc492
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235652"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897006"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>Déterminer la cause possible des problèmes de connectivité entre des réplicas de disponibilité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent provoquer un échec dans une session entre deux réplicas de disponibilité. Un réplica de disponibilité ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. Pour détecter les autres erreurs qui passeraient sinon inaperçues, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session. Spécifie le délai d'expiration de la session en secondes. Ce délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance avant de considérer que cette dernière est déconnectée. Quand un délai d’expiration de session se produit entre deux réplicas de disponibilité, les réplicas de disponibilité partent du principe qu’une erreur s’est produite et déclarent une *erreur logicielle*.  
   
 > [!IMPORTANT]  

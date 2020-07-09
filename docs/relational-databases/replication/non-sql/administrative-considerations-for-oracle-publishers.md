@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f8a436035c18f7bd6e5a1867ebe92433e4e5951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8cde9d19b4f8b1c04290f6b36006b83aadc0e5ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321896"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900798"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Considérations sur l'administration des serveurs de publication Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Quand un serveur de publication Oracle est configuré et que les mécanismes de suivi des modifications de la réplication sont en place, les administrateurs du système de base de données Oracle peuvent continuer à utiliser les utilitaires de base de données standard d'Oracle et à effectuer des tâches courantes d'administration du système. Cependant, il faut être attentif aux effets que peuvent avoir certaines tâches d'administration sur les données publiées.  
   
  À l'exception de la suppression ou de la modification d'une colonne qui est publiée pour réplication, ou de la suppression ou de la modification de n'importe quel objet de réplication, ces considérations ne s'appliquent pas aux publications d'instantané.  

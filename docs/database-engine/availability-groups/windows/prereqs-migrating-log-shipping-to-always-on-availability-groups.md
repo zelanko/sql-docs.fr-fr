@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52ac6d145638ff6d003724793487be46afc7191b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014513"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901295"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>Prérequis pour convertir une copie des journaux de transaction en groupes de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique décrit les conditions requises pour convertir une base de données principale pour la copie des journaux de transaction avec une ou plusieurs de ses bases de données secondaires en base de données principale Always On et ses bases de données secondaires.  
   

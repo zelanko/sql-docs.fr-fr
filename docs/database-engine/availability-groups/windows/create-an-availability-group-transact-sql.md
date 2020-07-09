@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44e05f6f4e2210ee6dcb70d9c272e3144c245e14
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 99e3ea99dc2cd41e6bd818a50c32944b07bc4996
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901025"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Créer un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour créer et configurer un groupe de disponibilité sur des instances de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sur lesquelles la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activée. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
   
 > [!NOTE]  

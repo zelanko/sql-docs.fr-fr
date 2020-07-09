@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdfd7525ade2500ee144bb57c030350a532ded64
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033260"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901256"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtrer des données publiées en vue de la réplication de fusion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Outre les filtres de lignes statiques et les filtres de colonnes que vous pouvez définir dans les autres types de réplications, la réplication de fusion vous offre des filtres de lignes paramétrés et des filtres de jointure. Pour plus d’informations sur les filtres de lignes statiques et les filtres de colonnes, consultez [Filtrer les données publiées](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  La réplication de fusion est utilisée dans de nombreuses applications qui prennent en charge les utilisateurs mobiles ; ces applications gèrent en général un grand nombre d'abonnements, chacun recevant un jeu de données spécifique. Les filtres paramétrés combinés aux filtres de jointure permettent à un administrateur de configurer une publication (ou tout au plus un petit nombre de publications) et néanmoins de fournir aux utilisateurs des jeux de données différents, ce qui réduit la charge de gestion que nécessiterait la création de nombreuses publications.  

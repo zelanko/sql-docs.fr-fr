@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b61b7a4bd994283bbed79d3e41a3b1c94052d015
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822203"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900723"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Instructions Transact-SQL pour les groupes de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique présente les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui prennent en charge le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , ainsi que la création et la gestion d'un groupe de disponibilité donné, d'un réplica de disponibilité et d'une base de données de disponibilité.  
   

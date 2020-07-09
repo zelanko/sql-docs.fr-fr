@@ -1,6 +1,6 @@
 ---
 title: Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056202"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897995"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Les requêtes de recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent rechercher des synonymes des termes spécifiés par l’utilisateur grâce à un *dictionnaire des synonymes* pour la recherche en texte intégral. Chaque dictionnaire des synonymes définit un jeu de synonymes pour une langue spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données.
 
 La mise en correspondance avec le dictionnaire des synonymes intervient pour toutes les requêtes [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) et [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) et pour toutes les requêtes [CONTAINS](../../t-sql/queries/contains-transact-sql.md) et [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) qui spécifient la clause `FORMSOF THESAURUS`.
@@ -52,30 +52,30 @@ Un dictionnaire des synonymes pour la recherche en texte intégral est un fichie
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a> Emplacement des fichiers de dictionnaire des synonymes  
  L'emplacement par défaut des fichiers de dictionnaires des synonymes est :  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- Cet emplacement par défaut contient les fichiers suivants :  
+Cet emplacement par défaut contient les fichiers suivants :  
   
 -   Fichiers de dictionnaire des synonymes **spécifiques à la langue**  
 
     Le programme d’installation installe les fichiers vides de dictionnaire des synonymes dans l’emplacement ci-dessus. Un fichier distinct est fourni pour chaque langue prise en charge. Ces fichiers peuvent être personnalisés par un administrateur système.  
   
-     Les noms de fichier par défaut des fichiers des dictionnaires des synonymes utilisent le format suivant :  
+    Les noms de fichier par défaut des fichiers des dictionnaires des synonymes utilisent le format suivant :  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     Le nom du fichier de dictionnaire des synonymes est spécifié pour une langue donnée dans la valeur de Registre suivante :
+    Le nom du fichier de dictionnaire des synonymes est spécifié pour une langue donnée dans la valeur de Registre suivante :
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   Fichier **global** de dictionnaire des synonymes  
   
-     Un fichier de dictionnaire des synonymes global vide, tsGlobal.xml.  
+    Un fichier de dictionnaire des synonymes global vide, tsGlobal.xml.  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>Changer l’emplacement d’un fichier de dictionnaire des synonymes 
 Vous pouvez modifier l'emplacement et le nom d'un fichier de dictionnaire des synonymes en modifiant sa clé de Registre. Pour chaque langue, l'emplacement du fichier de dictionnaire des synonymes est spécifié dans la valeur de Registre suivante :  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  Le fichier du dictionnaire des synonymes global correspond à la langue « neutre », avec le LCID 0. Cette valeur ne peut être modifiée que par des administrateurs.  
 

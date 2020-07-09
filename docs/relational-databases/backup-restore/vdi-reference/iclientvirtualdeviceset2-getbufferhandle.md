@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf187379aaa664e536710859e08bf084b14657d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847330"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896903"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Certaines applications peuvent nécessiter plusieurs processus pour fonctionner sur les mémoires tampons retournées par **IClientVirtualDevice2::GetCommand**. Dans ce cas, le processus qui reçoit la commande peut utiliser **GetBufferHandle** pour obtenir un descripteur indépendant du processus qui identifie la mémoire tampon. Ce descripteur peut ensuite être communiqué à tout autre processus qui a également le même ensemble d’appareils virtuels ouvert. Ce processus utilise ensuite IClientVirtualDeviceSet2::MapBufferHandle pour obtenir l’adresse de la mémoire tampon. L’adresse sera probablement différente de celle de son partenaire, car chaque processus peut mapper des mémoires tampons à des adresses différentes.
 

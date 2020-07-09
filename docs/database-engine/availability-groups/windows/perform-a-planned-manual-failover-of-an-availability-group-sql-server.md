@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287203"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897026"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d’un groupe de disponibilité Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Cette rubrique explique comment effectuer un basculement manuel sans perte de données ( *basculement manuel planifié*) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un basculement manuel planifié, comme un basculement de groupe de disponibilité AlwaysOn, transfère le rôle principal à un réplica secondaire. En même temps, le basculement transfère l’ancien réplica principal sur le rôle secondaire.  
   
 Un basculement manuel planifié est pris en charge seulement quand le réplica principal et le réplica secondaire cible s’exécutent en mode de validation synchrone et sont synchronisés. Il conserve toutes les données dans les bases de données secondaires qui sont jointes au groupe de disponibilité sur le réplica secondaire cible. Une fois que le réplica principal précédent transfère le rôle secondaire, ses bases de données deviennent des bases de données secondaires. Puis, elles commencent à se synchroniser avec les nouvelles bases de données primaires. Une fois que toutes ont passé à l'état SYNCHRONIZED, le nouveau réplica secondaire devient éligible pour servir de cible d'un futur basculement manuel planifié.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fea53e375cac2d1eb1489d4ca89c5424cfdf52e7
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 545cb4fd872602e9af2f600c7b1cca7ee42a07b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896394"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Qu’est-ce qu’un groupe de disponibilité Always On ?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
  Cette rubrique présente les concepts [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] essentiels pour configurer et gérer un ou plusieurs groupes de disponibilité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour obtenir un résumé des avantages offerts par les groupes de disponibilité et une vue d’ensemble de la terminologie [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed2db8f5d02174b41d6084d3d7593c7c8775ad16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897492"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Utiliser des mémoires tampons en anneau pour obtenir des informations sur l’intégrité des groupes de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Vous pouvez obtenir certaines informations de diagnostic sur les groupes de disponibilité Always On à partir des mémoires tampons en anneau SQL Server ou de la vue de gestion dynamique (DMV) sys.dm_os_ring_buffers. Les mémoires tampons en anneau sont créées durant le démarrage de SQL Server et enregistrent les alertes générées au sein du système SQL Server à des fins de diagnostic interne. Même si elles ne sont pas prises en charge, vous pouvez toujours en déduire des informations utiles pour la résolution des problèmes. Ces mémoires tampons en anneau fournissent une autre source de diagnostics quand SQL Server plante ou se bloque.  
   
  La requête T-SQL (Transact-SQL) suivante récupère tous les enregistrements d’événement des mémoires tampons en anneau des groupes de disponibilité.  

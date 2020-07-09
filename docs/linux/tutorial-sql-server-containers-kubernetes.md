@@ -9,16 +9,16 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635430"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902311"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Découvrez comment configurer une instance sur Kubernetes dans Azure Kubernetes Service (AKS), avec un stockage persistant pour la haute disponibilité (HA). La solution offre une résilience. En cas d’échec de l’instance, Kubernetes la recrée automatiquement dans un nouveau pod. Kubernetes fournit également une résilience contre les défaillances de nœud.
 
@@ -160,12 +160,15 @@ Dans cette étape, créez un manifeste pour décrire le conteneur en fonction de
 1. Créez un manifeste (fichier YAML) pour décrire le déploiement. L’exemple suivant décrit un déploiement, y compris un conteneur basé sur l’image de conteneur SQL Server.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:

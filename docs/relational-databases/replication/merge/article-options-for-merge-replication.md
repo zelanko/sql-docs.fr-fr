@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 478e6b9bb6f8300a845ae8fe9e3202f750f525eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 692ff343154ae53d53cce4bf385e7e1e6350bb03
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68106112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897170"
 ---
 # <a name="article-options-for-merge-replication"></a>Options d'articles pour la réplication de fusion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Les articles de table de fusion proposent de nombreuses options vous permettant de personnaliser le comportement de réplication en fonction des besoins de vos applications. La réplication de fusion vous offre les possibilités suivantes :  
   
 -   Utiliser les filtres de lignes, de jointure et de colonnes. Le filtrage des articles d'une table vous permet de créer des partitions de données à publier. Pour plus d’informations, consultez [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md).  

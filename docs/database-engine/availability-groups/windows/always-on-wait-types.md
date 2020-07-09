@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f16a93231cf8b3bc6f3ad224703e3902ff3cb9b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934966"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900920"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>Identifier les attentes associées aux groupes de disponibilité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Quand vous tentez de résoudre les problèmes de latence des groupes de disponibilité Always On, vous pouvez monitorer l’accumulation des statistiques d’attente à l’aide des types d’attentes spécifiques aux groupes de disponibilité dans la DMV (vue de gestion dynamique) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
  Pour obtenir des informations générales sur l’utilisation des statistiques d’attente, consultez [Attentes et files d’attente dans SQL Server 2005](https://technet.microsoft.com/library/cc966413.aspx). Ce document a été écrit pour SQL Server 2005, mais les informations qu’il contient s’appliquent aux versions ultérieures de SQL Server.  

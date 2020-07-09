@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67939201"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897878"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Après avoir considéré les conseils en matière de performances qui sont décrits dans la rubrique [Amélioration des performances générales de la réplication](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considérez ces autres aspects spécifiques à la réplication de fusion.  
   
 ## <a name="database-design"></a>Création de bases de données  

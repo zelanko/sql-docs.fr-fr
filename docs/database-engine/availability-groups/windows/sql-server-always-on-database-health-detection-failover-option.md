@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251263"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898062"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 À compter de SQL Server 2016, l’option de détection de l’intégrité au niveau base de données (DB_FAILOVER) est disponible lors de la configuration d’un groupe de disponibilité Always On. La détection de l’état d’intégrité au niveau base de données indique quand une base de données n’est plus en ligne ou quand un problème se produit, puis déclenche le basculement automatique du groupe de disponibilité.
 
 La détection de l’intégrité au niveau base de données est activée pour le groupe de disponibilité dans son ensemble : par conséquent, la détection d’intégrité au niveau base de données surveille chaque base de données du groupe de disponibilité. Elle ne peut pas être activée sélectivement pour des bases de données spécifiques du groupe de disponibilité.

@@ -22,15 +22,15 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db101aad22430dac56e352f606522c0d8f3e0fd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55486ff2c68d47248f7980bbe5269cf665638221
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803738"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000472"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne un code à quatre caractères (SOUNDEX) pour évaluer la similitude entre deux chaînes.  
   
@@ -70,7 +70,7 @@ SOUNDEX ( character_expression )
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre la fonction SOUNDEX et la fonction associée DIFFERENCE. Dans le premier exemple, les valeurs standard `SOUNDEX` sont retournées pour toutes les consonnes. La fonction `SOUNDEX` exécutée sur `Smith` et `Smythe` retourne le même résultat SOUNDEX parce que toutes les voyelles, la lettre « `y` », les lettres doubles et la lettre « `h` » ne sont pas comprises.  
   
-```  
+```sql
 -- Using SOUNDEX  
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
@@ -78,16 +78,12 @@ SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valide pour un classement Latin1_General.  
   
 ```  
-  
------ -----   
 S530  S530    
-  
-(1 row(s) affected)  
 ```  
   
  La fonction `DIFFERENCE` calcule la différence des résultats du modèle `SOUNDEX`. L'exemple suivant illustre deux chaînes de caractères qui ne diffèrent que par les voyelles. La différence retournée est `4`, soit la plus petite différence possible.  
   
-```  
+```sql
 -- Using DIFFERENCE  
 SELECT DIFFERENCE('Smithers', 'Smythers');  
 GO  
@@ -96,15 +92,12 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valide pour un classement Latin1_General.  
   
 ```  
------------   
 4             
-  
-(1 row(s) affected)  
 ```  
   
  Dans l'exemple suivant, les chaînes de caractères diffèrent par leurs consonnes ; la valeur retournée est donc `2`, soit la différence la plus importante.  
   
-```  
+```sql
 SELECT DIFFERENCE('Anothers', 'Brothers');  
 GO  
 ```  
@@ -112,10 +105,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valide pour un classement Latin1_General.  
   
 ```  
------------   
 2             
-  
-(1 row(s) affected)  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

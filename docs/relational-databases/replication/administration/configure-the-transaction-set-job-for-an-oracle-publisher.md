@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f25f3d9c9a69d3a8f87e8a4eb1886f31092940f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff5338131ea2ee3d3e72efac857b430befad8ceb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322050"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897928"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher"></a>Configurer le travail d’un jeu de transactions pour un serveur de publication Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Le travail **Xactset** est un travail de base de données Oracle créé par la réplication qui s'exécute sur un serveur de publication Oracle pour créer des jeux de transactions lorsque l'Agent de lecture du journal n'est pas connecté au serveur de publication. Vous pouvez activer et configurer par programmation ce travail du serveur de distribution à l'aide de procédures stockées de réplication. Pour plus d’informations, consultez [Réglage des performances pour les serveurs de publication Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
   
 ### <a name="to-enable-the-transaction-set-job"></a>Pour activer le travail du jeu de transactions  

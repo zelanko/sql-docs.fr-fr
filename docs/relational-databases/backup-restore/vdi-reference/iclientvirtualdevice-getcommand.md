@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7665d541663097452fa9aaeba4f30dcd95c75232
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847590"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896934"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La fonction **GetCommand** est utilisée pour obtenir la commande suivante mise en file d’attente sur un appareil. Quand elle est demandée, cette fonction attend la commande suivante.
 

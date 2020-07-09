@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 639322e277bddc8a7d71c994600c32cfbcd78449
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f641836a7e465f4276f0970ee15a1bea4ee45283
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251246"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898057"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Démarrer un déplacement de données sur une base de données secondaire AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique contient des informations sur le démarrage de la synchronisation des données après avoir ajouté une base de données à un groupe de disponibilité Always On. Pour chaque nouveau réplica principal, les bases de données secondaires doivent être préparées sur les instances de serveur qui hébergent les réplicas secondaires. Puis, chacune de ces bases de données secondaires doit être attachée manuellement au groupe de disponibilité.  
   

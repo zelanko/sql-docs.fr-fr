@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5797dc0f216d0956619e2874676b917314162dd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529253"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900006"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation Web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet un contrôle précis de la configuration de la sécurité de la synchronisation web. Cette rubrique donne une liste complète de tous les composants qui peuvent être inclus dans une configuration de synchronisation Web, ainsi que des informations sur les connexions qui sont établies entre ces composants. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  L'illustration suivante présente toutes les connexions envisageables, mais il est possible que certaines d'entre elles ne soient pas nécessaires dans une topologie donnée. Par exemple, une connexion à un serveur FTP est nécessaire uniquement si l'instantané est remis à l'aide de FTP.  

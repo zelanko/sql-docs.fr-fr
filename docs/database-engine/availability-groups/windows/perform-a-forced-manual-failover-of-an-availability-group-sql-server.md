@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 901059ea6aa203dfcf21878c35eb1bc0214408b9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ebe94614467e4b4c3d3ef2b9eb52287cdcc3feb7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301590"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897041"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Effectuer un basculement manuel forcé d’un groupe de disponibilité Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment effectuer un basculement forcé (avec perte de données potentielle) sur un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un basculement forcé est une forme du basculement manuel qui est destiné exclusivement à la récupération d'urgence, lorsqu'un [basculement manuel planifié](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) n'est pas possible. Si vous forcez le basculement vers un réplica secondaire qui n'est pas synchronisé, une perte de données est possible. Par conséquent, nous vous recommandons fortement de forcer le basculement uniquement si vous devez restaurer immédiatement un service dans le groupe de disponibilité et si vous êtes prêt à prendre le risque de perdre des données.  
   
  Après un basculement forcé, la cible de basculement vers laquelle le groupe de disponibilité a basculé devient le nouveau réplica principal. Les bases de données secondaires dans les réplicas secondaires restants sont suspendues et vous devez les reprendre manuellement. Lorsque l'ancien réplica principal devient disponible, il adopte le rôle secondaire, et les anciennes bases de données primaires deviennent les bases de données secondaires et passent à l'état SUSPENDED. Avant de reprendre une base de données secondaire donnée, vous pouvez récupérer les données perdues de celle-ci. Toutefois, notez que la troncation du journal des transactions est retardée sur une base de données primaire donnée, lorsque l'une de ses bases de données secondaires est interrompue.  

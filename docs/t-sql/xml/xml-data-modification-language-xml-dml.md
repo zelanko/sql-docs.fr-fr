@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68a0f5f6a52baff0a4baaaad2741bf9ad9a6288e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140888"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901602"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Langage de modification de données XML (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Le langage de modification de données XML (XML DML) est une extension du langage XQuery. Tel qu'il est défini par le consortium W3C, le langage XQuery ne possède pas la partie de manipulation des données (DML). Le langage de manipulation de données (DML, Data Manipulation Language) XML présenté dans cette rubrique, ainsi que le langage de requête Xml, fournissent un langage de modification de données et de requête pleinement fonctionnel que vous pouvez utiliser sur les données de type **xml**.  
   

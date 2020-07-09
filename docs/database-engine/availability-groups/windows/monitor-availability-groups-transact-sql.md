@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014703"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897368"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Surveiller des groupes de disponibilité (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Pour surveiller les groupes de disponibilité et les réplicas, ainsi que les bases de données associées à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournit un ensemble d'affichages catalogue et de vues de gestion dynamique, et des propriétés de serveur. Au moyen d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT, vous pouvez utiliser les vues pour surveiller les groupes de disponibilité, ainsi que leurs réplicas et bases de données. Les informations retournées pour un groupe de disponibilité donné varient selon que vous êtes connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal ou un réplica secondaire.  
   
 > [!TIP]  

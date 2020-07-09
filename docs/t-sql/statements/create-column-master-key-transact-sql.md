@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: d4a1fdec3f27d8086da02b5269c1240c40bc89d0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9b76f2e0287526d9d67dfa878446ce68410e0300
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633286"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999177"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Crée un objet de métadonnées de clé principale de colonne dans une base de données. Une entrée de métadonnées de clé principale de colonne représente une clé stockée dans un magasin de clés externes. Cette clé protège (chiffre) les clés de chiffrement de colonne lorsque vous utilisez [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Plusieurs clés principales de colonne autorisent la rotation périodique de clés pour améliorer la sécurité. Créez une clé principale de colonne dans un magasin de clés et son objet de métadonnées associé dans la base de données en utilisant l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou PowerShell. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
