@@ -12,15 +12,15 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899409"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197092"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contient des informations sur toutes les sessions actuellement ou récemment ouvertes sur l’appliance. Elle répertorie une ligne par session.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67899409"
 |is_transactional|**bit**|Capture si une session est actuellement dans une transaction ou non.|0 pour la validation automatique, 1 pour transaction.|  
 |client_id|**nvarchar(255)**|Capture les informations client pour la session.|Toute chaîne valide.|  
 |app_name|**nvarchar(255)**|Capture les informations de nom de l’application, éventuellement définies dans le cadre du processus de connexion.|Toute chaîne valide.|  
-|sql_spid|**int**|Numéro d’identification du SPID. Utilisez `session_id` cette session. Utilisez la `sql_spid` colonne pour joindre à **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> ** \* Avertissement \* \* ** Cette colonne contient les SPID fermés.||  
+|sql_spid|**int**|Numéro d’identification du SPID. Utilisez `session_id` cette session. Utilisez la `sql_spid` colonne pour joindre à **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> AVERTISSEMENT Cette colonne contient des SPID fermés. ** \* \* \* \* **||  
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

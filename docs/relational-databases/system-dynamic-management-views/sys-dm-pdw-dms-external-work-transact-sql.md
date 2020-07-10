@@ -12,15 +12,15 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f87d950f4fe876e6b04e1df1f529d22126058113
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899503"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197132"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]vue système qui contient des informations sur toutes les étapes du service de déplacement des données (DMS) pour les opérations externes.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67899503"
 |step_index|**int**|Étape de requête qui appelle ce Worker DMS.<br /><br /> request_id, step_index et dms_step_index forment la clé de cette vue.|Identique à step_index dans [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Étape actuelle dans le plan DMS.<br /><br /> request_id, step_index et dms_step_index forment la clé de cette vue.|Identique à dms___step_index dans [sys. dm_pdw_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nœud qui exécute le processus de travail DMS.|Identique à node_id dans [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|type|**nvarchar(60)**|Type d’opération externe en cours d’exécution par ce nœud.<br /><br /> Le FRACTIONNEment de fichier est une opération sur un fichier Hadoop externe qui a été fractionné en plusieurs petites opérations.|'FICHIER FRACTIONNÉ'|  
+|Type|**nvarchar(60)**|Type d’opération externe en cours d’exécution par ce nœud.<br /><br /> Le FRACTIONNEment de fichier est une opération sur un fichier Hadoop externe qui a été fractionné en plusieurs petites opérations.|'FICHIER FRACTIONNÉ'|  
 |work_id|**int**|ID de fractionnement de fichier.|Supérieur ou égal à 0.<br /><br /> Unique par nœud de calcul.|  
 |input_name|**nvarchar(60)**|Nom de chaîne de l’entrée en cours de lecture.|Pour un fichier Hadoop, il s’agit du nom de fichier Hadoop.|  
 |read_location|**bigint**|Décalage de l’emplacement de lecture.||  

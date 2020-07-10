@@ -12,24 +12,24 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83d4fda9c4e2a4d7f9eabd29a101e51a8d5cd8ab
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74564743"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197154"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Affiche des informations d’attente pour tous les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]types de ressources dans.  
+  Affiche des informations d’attente pour tous les types de ressources dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Position de la demande dans la liste d’attente.|ordinal de base 0. Cela n’est pas unique pour toutes les entrées d’attente.|  
 |session_id|**nvarchar(32)**|ID de la session dans laquelle l’état d’attente s’est produit.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|type|**nvarchar(255)**|Type d’attente représenté par cette entrée.|Valeurs possibles :<br /><br /> Connexion<br /><br /> Concurrence des requêtes locales<br /><br /> Concurrence des requêtes distribuées<br /><br /> Concurrence DMS<br /><br /> Concurrence de sauvegarde|  
-|object_type|**nvarchar(255)**|Type d’objet affecté par l’attente.|Valeurs possibles :<br /><br /> **DESSIN**<br /><br /> **DATABASE**<br /><br /> **REQUISE**<br /><br /> **SCHEMA**<br /><br /> **OEUVRE**|  
+|Type|**nvarchar(255)**|Type d’attente représenté par cette entrée.|Valeurs possibles :<br /><br /> Connexion<br /><br /> Concurrence des requêtes locales<br /><br /> Concurrence des requêtes distribuées<br /><br /> Concurrence DMS<br /><br /> Concurrence de sauvegarde|  
+|object_type|**nvarchar(255)**|Type d’objet affecté par l’attente.|Valeurs possibles :<br /><br /> **DESSIN**<br /><br /> **DATABASE**<br /><br /> **REQUISE**<br /><br /> **SCHÉMA**<br /><br /> **OEUVRE**|  
 |object_name|**nvarchar(386**|Nom ou GUID de l’objet spécifié qui a été affecté par l’attente.|Les tables et les vues sont affichées avec des noms en trois parties.<br /><br /> Les index et les statistiques sont affichés avec des noms en quatre parties.<br /><br /> Les noms, les principaux et les bases de données sont des noms de chaîne.|  
 |request_id|**nvarchar(32)**|ID de la demande sur laquelle l’état d’attente s’est produit.|Identificateur QID de la demande.<br /><br /> Identificateur GUID pour les demandes de chargement.|  
 |request_time|**datetime**|Heure à laquelle le verrou ou la ressource a été demandé.||  
@@ -40,7 +40,7 @@ ms.locfileid: "74564743"
 |resource_class|**nvarchar(20**|Interne |Voir les [attentes des ressources de surveillance](#monitor-resource-waits) ci-dessous|  
   
 ## <a name="monitor-resource-waits"></a>Surveiller les attentes des ressources 
-Avec l’introduction des [groupes de charges de travail](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), les emplacements de concurrence ne sont plus applicables.  Utilisez la requête ci-dessous `resources_requested` et la colonne pour comprendre les ressources nécessaires à l’exécution de la demande.
+Avec l’introduction des [groupes de charges de travail](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), les emplacements de concurrence ne sont plus applicables.  Utilisez la requête ci-dessous et la `resources_requested` colonne pour comprendre les ressources nécessaires à l’exécution de la demande.
 
 ```sql
 select rw.wait_id

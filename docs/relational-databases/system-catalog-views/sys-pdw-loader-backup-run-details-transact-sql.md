@@ -12,17 +12,17 @@ ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a0837b713f5c17f9bfb0357b9b1d999a1338e71
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127645"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197176"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contient des informations détaillées supplémentaires, au-delà des informations de [sys. pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sur les opérations de sauvegarde et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de restauration en cours et terminées dans et sur les opérations de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]sauvegarde, de restauration et de chargement en cours et terminées dans. Ces informations sont conservées après le redémarrage du système.  
+  Contient des informations détaillées supplémentaires, au-delà des informations de [sys. pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sur les opérations de sauvegarde et de restauration en cours et terminées dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et sur les opérations de sauvegarde, de restauration et de chargement en cours et terminées dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Ces informations sont conservées après le redémarrage du système.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
