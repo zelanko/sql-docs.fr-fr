@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 086daab53f1863c019e0214b77096a5a00e8b25c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b53d4da153087e222c70711c847e010ca702f31
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764777"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279101"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,12 @@ ms.locfileid: "85764777"
 |**basic_features**|**bit**|Spécifie s’il s’agit d’un groupe de disponibilité de base. Pour plus d’informations, consultez [Groupes de disponibilité de base &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Spécifie si la prise en charge de DTC a été activée pour ce groupe de disponibilité. L’option **DTC_SUPPORT** de **Create Availability Group** contrôle ce paramètre.|  
 |**db_failover**|**bit**|Spécifie si le groupe de disponibilité prend en charge le basculement des conditions d’intégrité de la base de données. L’option **DB_FAILOVER** de **Create Availability Group** contrôle ce paramètre.|  
-|**is_distributed**|**bit**|Spécifie s’il s’agit d’un groupe de disponibilité distribué. Pour plus d’informations, consultez [Groupes de disponibilité distribués &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
+|**is_distributed**|**bit**|Spécifie s’il s’agit d’un groupe de disponibilité distribué. Pour plus d’informations, consultez [Groupes de disponibilité distribués &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**cluster_type**|**tinyint**|0 : cluster de basculement Windows Server <br/><br/>1 : cluster externe (par exemple, le stimulateur Linux)<br/><br/>2 : aucun|
+|**cluster_type_desc**|**nvarchar(60)**|Description textuelle du type de cluster|
+|**required_synchronized_secondaries_to_commit**|**int**| Nombre de réplicas secondaires qui doivent se trouver dans un état synchronisé pour qu’une validation soit terminée|
+|**sequence_number**|**bigint**|Identifie la séquence de configuration du groupe de disponibilité. Augmente de façon incrémentielle chaque fois que le réplica principal du groupe de disponibilité met à jour la configuration du groupe.|
+|**is_contained**|**bit**|1 : instance principale du cluster Big Data configurée pour la haute disponibilité. <br/><br/> 0 : tous les autres.|
   
 ## <a name="failure-condition-level--values"></a>Valeurs de niveau de condition d’échec  
  Le tableau suivant décrit les niveaux de condition d’échec possibles pour la colonne **failure_condition_level** .  

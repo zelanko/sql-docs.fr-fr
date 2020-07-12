@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a8839f1ae540ac9e5f29e144f7f57fb754e50ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287329"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279550"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, fonction
 **Conformité**  
@@ -71,7 +71,7 @@ SQLRETURN SQLSetPos(
   
  Pour plus d’informations, consultez la section « commentaires ».  
   
- **Retourne**  
+## <a name="returns"></a>Retours  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
@@ -80,7 +80,7 @@ SQLRETURN SQLSetPos(
   
  Pour tous les SQLSTATEs qui peuvent retourner des SQL_SUCCESS_WITH_INFO ou des SQL_ERROR (à l’exception de 01xxx SQLSTATEs), SQL_SUCCESS_WITH_INFO est retourné si une erreur se produit sur une ou plusieurs lignes, mais pas toutes, sur les lignes d’une opération multiligne, et SQL_ERROR est retournée si une erreur se produit sur une opération à une seule ligne.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01001|Conflit d’opération de curseur|L’argument *operation* était SQL_DELETE ou SQL_UPDATE et aucune ligne ou plus d’une ligne n’a été supprimée ou mise à jour. (Pour plus d’informations sur les mises à jour de plusieurs lignes, consultez la description de l' *attribut* SQL_ATTR_SIMULATE_CURSOR dans **SQLSetStmtAttr**.) (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> L’argument *operation* était SQL_DELETE ou SQL_UPDATE, et l’opération a échoué en raison d’un accès concurrentiel optimiste. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
@@ -102,7 +102,7 @@ SQLRETURN SQLSetPos(
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
 |42000|Erreur de syntaxe ou violation d’accès|Le pilote n’a pas pu verrouiller la ligne si nécessaire pour effectuer l’opération demandée dans l' *opération*d’argument.<br /><br /> Le pilote n’a pas pu verrouiller la ligne comme demandé dans l’argument *LockType*.|  
 |44000|Violation de WITH CHECK OPTION|L’argument *operation* a été SQL_UPDATE, et la mise à jour a été effectuée sur une table affichée ou une table dérivée de la table affichée qui a été créée en spécifiant **with Check option**, de telle sorte qu’une ou plusieurs lignes affectées par la mise à jour ne seront plus présentes dans la table affichée.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*, puis la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction SQLSetPos.<br /><br /> (DM) le *StatementHandle* spécifié n’était pas dans un état d’exécution. La fonction a été appelée sans appeler d’abord **SQLExecDirect**, **SQLExecute**ou une fonction de catalogue.<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) le pilote était un pilote ODBC *2. x* et **SQLSetPos** a été appelé pour un *StatementHandle* après l’appel de **SQLFetch** .|  
@@ -222,9 +222,9 @@ SQLRETURN SQLSetPos(
   
 1.  Place des valeurs dans les tampons de données et de longueur/indicateur liés par **SQLBindCol**:  
   
-    -   Pour les colonnes normales, l’application place la nouvelle valeur de colonne * \** dans la mémoire tampon TargetValuePtr et la longueur de cette * \** valeur dans la mémoire tampon de StrLen_or_IndPtr. Si la ligne ne doit pas être mise à jour, l’application place SQL_ROW_IGNORE dans l’élément de cette ligne du tableau d’opérations de ligne.  
+    -   Pour les colonnes normales, l’application place la nouvelle valeur de colonne dans la mémoire tampon * \* TargetValuePtr* et la longueur de cette valeur dans la mémoire tampon de * \* StrLen_or_IndPtr* . Si la ligne ne doit pas être mise à jour, l’application place SQL_ROW_IGNORE dans l’élément de cette ligne du tableau d’opérations de ligne.  
   
-    -   Pour les colonnes de données en cours d’exécution, l’application place une valeur définie par l’application, telle que le numéro de * \** colonne, dans la mémoire tampon TargetValuePtr. La valeur peut être utilisée ultérieurement pour identifier la colonne.  
+    -   Pour les colonnes de données en cours d’exécution, l’application place une valeur définie par l’application, telle que le numéro de colonne, dans la mémoire tampon * \* TargetValuePtr* . La valeur peut être utilisée ultérieurement pour identifier la colonne.  
   
          L’application place le résultat de la macro SQL_LEN_DATA_AT_EXEC (*longueur*) dans le tampon **StrLen_or_IndPtr* . Si le type de données SQL de la colonne est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données long spécifique à la source de données et que le pilote retourne « Y » pour le type d’informations SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *Length* est le nombre d’octets de données à envoyer pour le paramètre. dans le cas contraire, il doit s’agir d’une valeur non négative et est ignorée.  
   
@@ -234,7 +234,7 @@ SQLRETURN SQLSetPos(
   
     -   S’il existe des colonnes de données en cours d’exécution, la fonction retourne SQL_NEED_DATA et passe à l’étape 3.  
   
-3.  Appelle **SQLParamData** pour récupérer l’adresse de la * \** mémoire tampon TargetValuePtr pour la première colonne de données en cours d’exécution à traiter. **SQLParamData** retourne SQL_NEED_DATA. L’application récupère la valeur définie par l’application à partir * \** de la mémoire tampon TargetValuePtr.  
+3.  Appelle **SQLParamData** pour récupérer l’adresse de la mémoire tampon * \* TargetValuePtr* pour la première colonne de données en cours d’exécution à traiter. **SQLParamData** retourne SQL_NEED_DATA. L’application récupère la valeur définie par l’application à partir de la mémoire tampon * \* TargetValuePtr* .  
   
     > [!NOTE]  
     >  Bien que les paramètres de données en cours d’exécution soient similaires à ceux des colonnes de données en cours d’exécution, la valeur retournée par **SQLParamData** est différente pour chaque.  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Les colonnes de données en cours d’exécution sont des colonnes d’un ensemble de lignes pour lesquelles des données sont envoyées avec **SQLPutData** lorsqu’une ligne est mise à jour avec **SQLSetPos**. Elles sont liées à **SQLBindCol**. La valeur retournée par **SQLParamData** est l’adresse de la ligne dans la mémoire tampon **TargetValuePtr* en cours de traitement.  
   
-4.  Appelle **SQLPutData** une ou plusieurs fois pour envoyer des données pour la colonne. Plusieurs appels sont nécessaires si toutes les valeurs de données ne peuvent pas être retournées dans la * \** mémoire tampon TargetValuePtr spécifiée dans **SQLPutData**; plusieurs appels à **SQLPutData** pour la même colonne sont autorisés uniquement lors de l’envoi de données de caractères c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données, ou lors de l’envoi de données binaires c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données.  
+4.  Appelle **SQLPutData** une ou plusieurs fois pour envoyer des données pour la colonne. Plusieurs appels sont nécessaires si toutes les valeurs de données ne peuvent pas être retournées dans la mémoire tampon * \* TargetValuePtr* spécifiée dans **SQLPutData**; plusieurs appels à **SQLPutData** pour la même colonne sont autorisés uniquement lors de l’envoi de données de caractères c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données, ou lors de l’envoi de données binaires c à une colonne avec un  
   
 5.  Appelle à nouveau **SQLParamData** pour signaler que toutes les données ont été envoyées pour la colonne.  
   

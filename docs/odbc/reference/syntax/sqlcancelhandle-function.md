@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 059ed283032feb96ca5e6b12520682ccb034752a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299664"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279599"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle, fonction
 **Conformité**  
- Version introduite : ODBC 3,8  
-  
- Conformité aux normes : aucune  
+ Version introduite : ODBC 3,8 conformité aux normes : aucune  
   
  La plupart des pilotes ODBC 3,8 (et versions ultérieures) implémentent cette fonction. Si un pilote ne le fait **SQLCancel**pas, un appel à **SQLCancelHandle** avec un handle de connexion dans le paramètre *descripteur* retourne SQL_ERROR avec une valeur SQLSTATE de IM001 et le message « le pilote ne prend pas en charge cette fonction « » un appel à **SQLCancelHandle** avec un descripteur d’instruction, car le paramètre *handle* sera mappé à un appel à **SQLCancel** par le gestionnaire de pilotes et peut être traité si le Une application peut utiliser **SQLGetFunctions** pour déterminer si un pilote prend en charge **SQLCancelHandle**.  
   
@@ -58,10 +56,10 @@ SQLRETURN SQLCancelHandle(
   
  Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLCancelHandle** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) dans l’argument * \*MessageText* buffer décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) dans l’argument * \* MessageText* buffer décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|Une fonction d’instruction en cours d’exécution asynchrone a été appelée pour l’un des descripteurs d’instruction associés au *handle*, et *comme HandleType* a la valeur SQL_HANDLE_DBC. La fonction asynchrone était toujours en cours d’exécution lors de l’appel de **SQLCancelHandle** .<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_STMT ; une fonction d’exécution asynchrone a été appelée sur le handle de connexion associé ; et la fonction était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour l’un des descripteurs d’instruction associés au *Handle* et *comme HandleType* a été défini sur SQL_HANDLE_DBC, et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> **SQLBrowseConnect** a été appelé pour *ConnectionHandle*et a retourné SQL_NEED_DATA. Cette fonction a été appelée avant la fin du processus de navigation.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  

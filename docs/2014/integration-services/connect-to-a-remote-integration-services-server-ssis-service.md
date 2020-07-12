@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85434656"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279473"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Se connecter à un serveur Integration Services distant (Service SSIS)
     
@@ -46,7 +46,7 @@ ms.locfileid: "85434656"
     > [!NOTE]  
     >  Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n'est pas spécifique à l'instance. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel le service Integration Services s'exécute.  
   
-5.  Cliquez sur **Connecter**.  
+5.  Cliquez sur **Se connecter**.  
   
 > [!NOTE]  
 >  La boîte de dialogue **Rechercher les serveurs** n’affiche pas les instances distantes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. De plus, les options disponibles sous l’onglet **Options de connexion** de la boîte de dialogue **Se connecter au serveur** (cliquez sur le bouton **Options** pour les afficher) ne s’appliquent pas aux connexions [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -96,13 +96,6 @@ ms.locfileid: "85434656"
   
 ## <a name="connecting-by-using-a-local-account"></a>Connexion à l'aide d'un compte local  
  Si vous travaillez sous un compte Windows local sur un ordinateur client, vous pouvez vous connecter au service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un ordinateur distant uniquement si un compte local porte le même nom et mot de passe et si les droits appropriés existent sur l'ordinateur distant.  
-  
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Par défaut, le service SSIS ne prend pas en charge la délégation  
-Par défaut [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le service ne prend pas en charge la délégation des informations d’identification, ou ce qui est parfois appelé double saut. Dans ce scénario, vous opérez sur un ordinateur client, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s’exécute sur un deuxième ordinateur et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’exécute sur un troisième. Dans un premier temps, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] transmet avec succès vos informations d’identification de l’ordinateur client au deuxième ordinateur sur lequel le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s’exécute. En revanche, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ne peut pas déléguer vos informations d’identification du deuxième ordinateur au troisième sur lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s’exécute.
-
-Vous pouvez activer la délégation des informations d’identification en octroyant le droit **Approuver cet utilisateur pour la délégation à tous les services (Kerberos uniquement)** au compte de service SQL Server, qui lance le service Integration Services (ISServerExec.exe) en tant que processus enfant. Avant d’octroyer ce droit, demandez-vous s’il est conforme aux exigences de sécurité de votre organisation.
-
-Pour plus d’informations, consultez [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Faire fonctionner Kerberos et la délégation entre domaines avec un package SSIS).
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un Pare-feu Windows pour l'accès au service SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  

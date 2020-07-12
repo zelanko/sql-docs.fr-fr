@@ -9,19 +9,19 @@ ms.topic: language-reference
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5f704a50924a882e220786ac8cafc090237a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73599242"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279559"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Retourne des compteurs de performances pour l’enclave sécurisée pour Always Encrypted. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../security/encryption/always-encrypted-enclaves.md).
 
-Si l’enclave est configurée et a été correctement initialisée après le dernier redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la vue contient exactement une ligne. Si l’enclave n’est pas configurée ou n’a pas été initialisée correctement, la vue ne retourne aucune ligne. 
+Si l’enclave est configurée et a été correctement initialisée après le dernier redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la vue contient exactement une ligne. Si l’enclave n’est pas configurée ou n’a pas été initialisée correctement, la vue ne retourne aucune ligne. 
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
