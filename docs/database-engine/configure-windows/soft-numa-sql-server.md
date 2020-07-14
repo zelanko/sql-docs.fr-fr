@@ -1,5 +1,6 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
+description: Apprenez-en davantage sur le NUMA logiciel dans SQL Server 2014 SP2 et les versions ultérieures. Découvrez comment utiliser le NUMA logiciel automatique et comment configurer manuellement SQL Server pour utiliser le NUMA logiciel.
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789757"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Les processeurs modernes ont plusieurs cœurs par socket. Chaque socket est généralement représenté sous forme de nœud NUMA unique. Le moteur de base de données SQL Server partitionne plusieurs structures internes et threads de service de partitionnement par nœud NUMA.  Pour les processeurs contenant 10 noyaux par socket ou plus, l’utilisation du NUMA logiciel pour fractionner les nœuds NUMA matériels augmente généralement l’évolutivité et les performances. Avant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, le NUMA logiciel (soft-NUMA) nécessitait la modification du Registre pour ajouter un masque d’affinité de configuration des nœuds et était configuré au niveau de l’hôte plutôt que par instance. À partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le soft-NUMA est configuré automatiquement au niveau de l’instance de base de données au démarrage du service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

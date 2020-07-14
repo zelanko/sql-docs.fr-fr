@@ -1,7 +1,7 @@
 ---
 title: 'Démarrage rapide : Sauvegarder et restaurer une base de données'
 titleSuffix: SQL Server
-description: Ce guide de démarrage rapide montre comment sauvegarder et restaurer une base de données SQL Server locale.
+description: Cet article décrit la création d’une base de données, la sauvegarde d’une base de données et la restauration de la sauvegarde dans SQL Server.
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,15 +11,15 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669953"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Démarrage rapide : Sauvegarder et restaurer une base de données SQL Server localement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Dans ce guide démarrage rapide, vous allez créer une base de données, en effectuer une sauvegarde simple, puis la restaurer. 
 

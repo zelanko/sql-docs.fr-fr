@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892331"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer un cluster SLES pour le groupe de disponibilité SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Ce guide fournit des instructions pour créer un cluster à trois nœuds pour SQL Server sur SUSE Linux Enterprise Server (SLES) 12 SP2. Pour une haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, consultez [Haute disponibilité et protection des données pour les configurations de groupes de disponibilité](sql-server-linux-availability-group-ha.md). La couche de clustering est basée sur l’[Extension haute disponibilité (HAE)](https://www.suse.com/products/highavailability) de SUSE placée au-dessus de [Pacemaker](https://clusterlabs.org/). 
 
@@ -28,6 +28,7 @@ Pour plus d’informations sur la configuration du cluster, les options de l’a
 >[!NOTE]
 >À ce stade, l’intégration de SQL Server avec Pacemaker sur Linux n’est pas aussi couplée qu’avec WSFC sur Windows. Le service SQL Server sur Linux ne prend pas en charge les clusters. Pacemaker contrôle la totalité de l’orchestration des ressources de cluster, y compris la ressource du groupe de disponibilité. Sur Linux, vous ne devez pas compter sur les vues de gestion dynamique (DMV) du groupe de disponibilité Always On qui fournissent des informations sur le cluster telles que sys.dm_hadr_cluster. En outre, le nom du réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent dans le cas de Pacemaker. Vous pouvez toujours créer un écouteur et l’utiliser pour la reconnexion transparente après le basculement, mais vous devrez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué dans les sections suivantes).
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>Feuille de route
 
@@ -313,8 +314,8 @@ La contrainte de colocalisation a une contrainte de classement implicite. Elle d
 1. La ressource des problèmes de l’utilisateur migre vers le master du groupe de disponibilité du nœud1 au nœud2.
 2. La ressource d’adresse IP virtuelle s’arrête sur le nœud 1.
 3. La ressource d’adresse IP virtuelle démarre sur le nœud 2. À ce stade, l’adresse IP pointe temporairement vers le nœud 2, tandis que le nœud 2 est toujours un secondaire de pré-basculement. 
-4. Le Master du groupe de disponibilité sur le nœud 1 est rétrogradé en esclave.
-5. L’esclave du groupe de disponibilité sur le nœud 2 est promu en Master. 
+4. Le master du groupe de disponibilité sur le nœud 1 est rétrogradé.
+5. Le groupe de disponibilité sur le nœud 2 est promu master. 
 
 Pour empêcher l’adresse IP de pointer temporairement vers le nœud avec le secondaire antérieur au basculement, ajoutez une contrainte de classement. Pour ajouter une contrainte de classement, exécutez la commande suivante sur un nœud : 
 

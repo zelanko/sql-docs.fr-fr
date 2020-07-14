@@ -1,6 +1,6 @@
 ---
 title: Journal des erreurs SQL Server (groupes de disponibilité)
-description: Description des événements du journal des erreurs signalés par un groupe de disponibilité Always On.
+description: Apprenez-en davantage sur les événements du journal des erreurs SQL Server qui affectent les groupes de disponibilité Always On et les symptômes qui doivent conduire à l’examen du journal des erreurs.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c44f65761fcb54d8ad9b8eac0fc5e02bce82181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251250"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898073"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>Journal des erreurs SQL Server (groupes de disponibilité Always On)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Le journal des erreurs SQL Server signale les événements qui affectent les groupes de disponibilité Always On, notamment :  
   
 -   Communication avec le cluster WSFC (clustering de basculement Windows Server)    
@@ -27,7 +27,7 @@ ms.locfileid: "75251250"
 -   État de connectivité des bases de données de disponibilité entre les réplicas principal et secondaire    
 -   États des points de terminaison de groupe de disponibilité    
 -   États des écouteurs de groupe de disponibilité    
--   État du bail entre la DLL de ressource SQL Server (en cours d’exécution dans le cluster WSFC) et l’instance SQL Server (pour plus d’informations, consultez [Fonctionnement : délai d’expiration de bail Always On SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx))    
+-   État du bail entre la DLL de ressource SQL Server (en cours d’exécution dans le cluster WSFC) et l’instance SQL Server (pour plus d’informations, consultez [How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) (Fonctionnement : délai d’expiration de bail Always On SQL Server))    
 -   Événements d’erreur dans le groupe de disponibilité  
 
 Les symptômes suivants doivent vous inciter à passer en revue le journal des erreurs SQL Server :  

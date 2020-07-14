@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 671c49e0b36107682994fdc2192a11db0b40d9d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67d76fba42820b972c202fd4321d02fd4f5d9faa
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297115"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469374"
 ---
 # <a name="developing-a-custom-task"></a>Développement d'une tâche personnalisée
 
@@ -37,7 +37,7 @@ ms.locfileid: "71297115"
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des tâches pour effectuer des unités de travail en soutien à l'extraction, la transformation et le chargement de données. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut une variété de tâches qui effectuent les actions les plus fréquemment utilisées, allant de l'exécution d'une instruction SQL au téléchargement d'un fichier à partir d'un site FTP. Si les tâches incluses et les actions prises en charge ne répondent pas complètement à vos besoins, vous pouvez créer une tâche personnalisée.  
   
- Pour créer une tâche personnalisée, vous devez créer une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, appliquer l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> à votre classe nouvelle et remplacer les méthodes et propriétés importantes de la classe de base, notamment la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
+ Pour créer une tâche personnalisée, vous devez créer une classe qui hérite de la classe de base [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task), appliquer l’attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> à votre nouvelle classe et remplacer les méthodes et propriétés importantes de la classe de base, notamment la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section explique comment créer, configurer et coder une tâche personnalisée et son interface utilisateur personnalisée facultative.  

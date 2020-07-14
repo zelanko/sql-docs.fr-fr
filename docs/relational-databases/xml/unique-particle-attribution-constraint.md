@@ -1,5 +1,6 @@
 ---
 title: Contrainte d’attribution de particule unique | Microsoft Docs
+description: Découvrez comment la règle de contrainte d’attribution de particule unique rejette un schéma XSD s’il contient un type associé à un modèle de contenu potentiellement ambigu.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9d7b6de76fdb5310a5121908779d4565a4b6ff1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729829"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Contrainte d'attribution de particule unique
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Dans XSD, les modèles de contenu complexe sont soumis à la règle de la contrainte d'attribution de particule unique. Cette règle requiert que chaque élément d'un document d'instance corresponde sans ambiguïté à exactement une particule `<xsd:element>` ou `<xsd:any>` dans le modèle de contenu de son parent. Tout schéma qui contient un type avec un modèle de contenu potentiellement ambigu est rejeté.  
   
  Les causes d'ambiguïté les plus courantes sont les caractères génériques et les particules `<xsd:any>` ayant des plages d'occurrences variables, telles que minOccurs < maxOccurs. Par exemple, le modèle de contenu suivant est ambigu car un élément <`e1`> peut correspondre à l’élément `<xsd:element>` ou à l’élément `<xsd:any>`.  
@@ -81,11 +82,11 @@ ms.locfileid: "80665210"
 ## <a name="finding-more-information"></a>Sources d'informations complémentaires  
  Le document suivant est publié par le World Wide Web Consortium (W3C) et contient la description technique de la contrainte d'attribution de particule unique :  
   
- « XML Schema Part 1 : Structures Second Edition, W3C Proposed Edited Recommendation » :  
+ « XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation » :  
   
--   Section 3.8.6 : Constraints on Model Group Schema Components  
+-   Section 3.8.6 : Constraints on Model Group Schema Components  
   
--   Appendix H : Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   Appendix H : Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  Pour lire le document, consultez [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

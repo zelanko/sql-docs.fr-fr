@@ -25,24 +25,24 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c307a383d97691a49f437822e4a92cf64fcfb832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892517"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Crée une file d'attente dans une base de données. Les files d'attente stockent les messages. Lorsqu'un message destiné à un service se présente, [!INCLUDE[ssSB](../../includes/sssb-md.md)] le place dans la file d'attente associée au service.
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]
@@ -86,7 +86,7 @@ ACTIVATION spécifie des informations sur la procédure stockée à démarrer po
 
 STATUS (Activation) spécifie si [!INCLUDE[ssSB](../../includes/sssb-md.md)] démarre la procédure stockée. Lorsque STATUS = ON, la file d'attente lance la procédure stockée spécifiée avec PROCEDURE_NAME, quand le nombre de procédures actuellement en cours d'exécution est inférieur à la valeur de MAX_QUEUE_READERS et que la réception des messages dans la file d'attente est plus rapide que la réception des messages par les procédures stockées. Lorsque STATUS = OFF, la file d'attente ne démarre pas la procédure stockée. Quand cette clause est omise, la valeur par défaut est ON.
 
-PROCEDURE_NAME = \<procédure> spécifie le nom de la procédure stockée à démarrer pour traiter les messages dans cette file d’attente. Cette valeur doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+PROCEDURE_NAME = \<procedure> spécifie le nom de la procédure stockée à démarrer pour traiter les messages dans cette file d’attente. Cette valeur doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 *database_name* (procédure) est le nom de la base de données contenant la procédure stockée.
 

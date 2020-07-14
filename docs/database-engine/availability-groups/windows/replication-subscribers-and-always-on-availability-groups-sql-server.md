@@ -1,6 +1,6 @@
 ---
 title: Abonnés de réplication et groupes de disponibilité (SQL Server)
-description: Découvrez comment configurer un abonné de réplication avec un groupe de disponibilité Always On SQL Server.
+description: Découvrez les conséquences de l’échec d’un groupe de disponibilité Always On contenant une base de données correspondant à un abonné de réplication dans SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3c6fdff473202222a83006a6d1a0ff217aed8a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235571"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893136"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Abonnés de réplication et groupes de disponibilité Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Quand un groupe de disponibilité Always On contenant une base de données est un abonné de réplication et bascule, l’abonnement de réplication peut échouer. Pour les abonnés de réplication par émission transactionnelle, l’agent de distribution continue la réplication automatiquement après un basculement si l’abonnement a été créé avec le nom de l’écouteur de groupe de disponibilité. Pour les abonnés de réplication par réception transactionnelle, l’agent de distribution continue la réplication automatiquement après un basculement si l’abonnement a été créé avec le nom de l’écouteur de groupe de disponibilité et que le serveur de l’Abonné d’origine fonctionne. C’est parce que les travaux de l’agent de distribution sont uniquement créés sur l’Abonné d’origine (réplica principal du groupe de disponibilité). Pour les abonnés de fusion, un administrateur de réplication doit reconfigurer l'abonné manuellement, en recréant l'abonnement.  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 349df4ebe6e7787e6415d60d0ed4988b280deac0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886033"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Générer automatiquement des filtres de jointure entre des articles de fusion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Générez automatiquement un ensemble de filtres de jointure sur la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Générez automatiquement un ensemble de filtres de jointure dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Si vous générez automatiquement un ensemble de filtres de jointure dans la boîte de dialogue **Propriétés de la publication - \<Publication>** une fois les abonnements à la publication initialisés, vous devez générer un nouvel instantané et réinitialiser tous les abonnements après avoir effectué la modification. Pour plus d’informations sur les exigences relatives aux changements de propriétés, consultez [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "75321276"
   
     3.  Spécifiez les options de filtre.  
   
-         Sélectionnez l'option correspondant à la façon dont les données seront partagées parmi les abonnés : **Une ligne de cette table ira à plusieurs abonnements** ou **Une ligne de cette table ira à un seul abonnement**. Si vous sélectionnez **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**, la réplication de fusion peut optimiser les performances en stockant et en traitant moins de métadonnées. Cependant, vous devez vérifier que les données sont partitionnées de telle façon qu'une ligne ne peut pas être répliquée sur plus d'un Abonné. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+         Sélectionnez l'option qui correspond aux données qui seront partagées entre des Abonnés : **Une ligne de cette table ira à plusieurs abonnements** or **Une ligne de cette table ira à un seul abonnement**. Si vous sélectionnez **Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**, la réplication de fusion peut optimiser les performances en stockant et en traitant moins de métadonnées. Cependant, vous devez vérifier que les données sont partitionnées de telle façon qu'une ligne ne peut pas être répliquée sur plus d'un Abonné. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -67,11 +67,11 @@ ms.locfileid: "75321276"
   
      Une fois l'instruction analysée, la réplication crée les filtres de jointure nécessaires et les affiche dans le volet **Tables filtrées** sur la page **Filtrer les lignes de la table** ou **Filtrer les lignes** . Si vous générez des filtres à partir de l'Assistant Nouvelle publication et n'avez pas encore configuré le serveur de distribution pour le serveur de publication sur lequel cet Assistant est exécuté, il vous est demandé de le configurer.  
   
-4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Pour modifier un filtre généré automatiquement  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
   
 2.  Modifiez le filtre dans la boîte de dialogue **Modifier le filtre** ou **Modifier une jointure** .  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75321276"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>Pour supprimer un filtre généré automatiquement  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtres de jointure](../../../relational-databases/replication/merge/join-filters.md)   

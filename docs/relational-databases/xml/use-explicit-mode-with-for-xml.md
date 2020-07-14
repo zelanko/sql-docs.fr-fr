@@ -1,5 +1,6 @@
 ---
 title: Utiliser le mode EXPLICIT avec FOR XML | Microsoft Docs
+description: Découvrez en quoi le mode FOR XML EXPLICIT offre une flexibilité maximale dans le cadre de la génération de données XML à partir du résultat d’une requête.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736552"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utiliser le mode EXPLICIT avec FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Comme indiqué dans la rubrique traitant de la [Construction de code XML à l’aide de FOR XML](../../relational-databases/xml/for-xml-sql-server.md), les modes RAW et AUTO ne permettent pas de contrôler de façon précise la forme du document XML généré à partir du résultat d’une requête. Toutefois, le mode EXPLICIT offre la plus grande souplesse pour générer le document XML à partir du résultat d'une requête.  
   
  La requête en mode EXPLICIT doit être écrite de telle sorte que les informations supplémentaires sur le document XML, telles que l'imbrication attendue dans celui-ci, soient explicitement spécifiées comme une partie de la requête. Suivant le document XML demandé, l'écriture de requêtes en mode EXPLICIT peut s'avérer peu pratique. L’ [utilisation du mode PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) avec imbrication peut vous apparaître comme une solution plus simple pour écrire des requêtes en mode EXPLICIT.  
@@ -148,25 +149,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Dans cette section  
  Les exemples suivants illustrent l'utilisation du mode EXPLICIT.  
   
--   [Exemple : extraction d’informations sur les employés](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [Exemple : Récupération d’informations sur les employés](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Exemple : spécification de la directive ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Exemple : Spécification de la directive ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Exemple : spécification de la directive ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Exemple : Spécification de la directive ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Exemple : construction de frères à l'aide du mode EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Exemple : Construction de frères à l’aide du mode EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Exemple : spécification des directives ID et IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Exemple : Spécification des directives ID et IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Exemple : spécification des directives ID et IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Exemple : Spécification des directives ID et IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Exemple : spécification de la directive HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Exemple : Spécification de la directive HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Exemple : spécification de la directive ELEMENT et de l'encodage d'entité](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Exemple : spécification de la directive CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Exemple : Spécification de la directive CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Exemple : spécification de la directive XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Exemple : Spécification de la directive XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
