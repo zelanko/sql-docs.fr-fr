@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588230"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000710"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifie une table ou un index d’affichage (rowstore, columnstore ou XML) existant en désactivant, en régénérant ou en réorganisant l’index d’une part, ou en définissant les options portant sur l’index d’autre part.  
   
@@ -399,7 +399,7 @@ Si la valeur **ON** est définie, les statistiques sont créées par partition. 
 -   statistiques créées sur les tables internes ;  
 -   statistiques créées avec les index spatiaux ou les index XML.  
   
- ONLINE **=** { ON | **OFF** } \<comme appliqué sur rebuild_index_option>  
+ ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  Indique si les tables sous-jacentes et les index associés sont disponibles pour les requêtes et la modification de données pendant l'opération d'index. La valeur par défaut est OFF.  
   
  Pour un index XML ou un index spatial, seul `ONLINE = OFF` est pris en charge et si ONLINE est activé (ON), une erreur est générée.  
@@ -553,7 +553,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
 -   Spécifie des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : `ON PARTITIONS (1, 5)`.  
 -   Spécifie à la fois des plages et des partitions individuelles : `ON PARTITIONS (2, 4, 6 TO 8)`.  
   
- \<plage> peut être spécifiée sous la forme de numéros de partitions séparés par le mot TO, par exemple : `ON PARTITIONS (6 TO 8)`.  
+ \<range> peut être spécifié sous la forme de numéros de partitions séparés par le mot TO, par exemple : `ON PARTITIONS (6 TO 8)`.  
   
  Pour définir des types différents de compression de données pour des partitions différentes, spécifiez plusieurs fois l'option DATA_COMPRESSION, par exemple :  
   
@@ -566,7 +566,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON  | **OFF** } \<comme appliqué sur single_partition_rebuild_index_option>  
+ ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  Spécifie si un index ou une partition d’index d'une table sous-jacente peut être reconstruit en ligne ou hors connexion. Si **REBUILD** est effectué en ligne (**ON**), les données de cette table sont disponibles pour les requêtes et la modification de données pendant l'opération d’index.  La valeur par défaut est **OFF**.  
   
  ACTIVÉ  
@@ -633,7 +633,7 @@ ABORT
 
 Abandonnez une opération d’index en cours d’exécution ou en pause qui a été déclarée comme pouvant être reprise. Vous devez exécuter explicitement une commande **ABORT** pour mettre fin à une opération de reconstruction d’index pouvant être reprise. L’échec ou la mise en pause d’une opération d’index pouvant être reprise n’arrête pas son exécution, mais la laisse dans un état de pause indéterminée.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 ALTER INDEX ne peut pas être utilisé pour recréer la partition d'un index ou le déplacer vers un autre groupe de fichiers. Cette instruction ne peut pas être utilisée pour modifier la définition de l'index, comme l'ajout ou la suppression de colonnes ou la modification de l'ordre des colonnes. Exécutez CREATE INDEX avec la clause DROP_EXISTING afin de procéder aux opérations suivantes.  
   
 Si une option n'est pas spécifiée de façon explicite, le paramètre actuel s'applique. Par exemple, si un paramètre FILLFACTOR n'est pas indiqué dans la clause REBUILD, la valeur de facteur de remplissage stockée dans le catalogue système est utilisée lors du processus de reconstruction. Pour voir les paramètres des options d’index actuels, utilisez [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
@@ -704,7 +704,7 @@ La reconstruction d’index en ligne est spécifiée comme pouvant être reprise
 -  L’option RESUMABLE n’est pas persistante dans les métadonnées d’un index donné et s’applique uniquement à la durée d’une instruction DDL actuelle. C’est pourquoi la clause RESUMABLE=ON doit être spécifiée explicitement pour permettre la reprise.
 -  L’option MAX_DURATION est prise en charge pour l’option RESUMABLE = ON ou l’option d’argument **low_priority_lock_wait**. 
    -  MAX_DURATION pour l’option RESUMABLE spécifie l’intervalle de temps pour un index en cours de reconstruction. Une fois que cette durée est utilisée, la reconstruction d’index est mise en pause ou termine son exécution. L’utilisateur décide quand une reconstruction d’un index en pause peut être reprise. La **durée** en minutes de MAX_DURATION doit être supérieure à 0 minute et inférieur ou égale à une semaine (7 \* 24 \* 60 = 10080 minutes). Si la mise en pause d’une opération d’index est longue, les performances DML d’une table spécifique et la capacité de disque de la base de données risquent d’être impactées parce que les deux index, l’original et celui nouvellement créé, ont besoin d’espace disque et doivent être mis à jour au cours des opérations DML. Si l’option MAX_DURATION est omise, l’opération d’index se poursuit jusqu'à ce qu’elle se termine ou qu’une défaillance se produise. 
-   -  L’option d’argument \<low_priority_lock_wait > vous permet de décider comment l’opération d’index peut continuer quand elle est bloquée sur le verrou SCH-M.
+   -  L’option d’argument \<low_priority_lock_wait> vous permet de décider comment l’opération d’index peut continuer quand elle est bloquée sur le verrou SCH-M.
  
 -  La réexécution de l’instruction ALTER INDEX REBUILD d’origine avec les mêmes paramètres reprend une opération de reconstruction d’index mise en pause. Vous pouvez également reprendre une opération de reconstruction d’index en pause en exécutant l’instruction ALTER INDEX RESUME.
 -  L’option SORT_IN_TEMPDB=ON n’est pas prise en charge pour l’index pouvant être repris. 
@@ -751,8 +751,8 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de recons
 Les restrictions suivantes s'appliquent aux index partitionnés :  
   
 -   Lorsque vous utilisez ALTER INDEX ALL ..., vous ne pouvez pas modifier le paramètre de compression d’une partition unique si la table comporte des index non alignés.  
--   La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l’index.  
--   La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l’index.  
+-   L’instruction ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l’index.  
+-   L’instruction ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l’index.  
   
 ## <a name="statistics"></a>Statistiques  
  Quand vous exécutez **ALTER INDEX ALL ...** sur une table, seules les statistiques associées aux index sont mises à jour. Les statistiques automatiques ou manuelles créées sur la table (au lieu d'un index) ne sont pas mises à jour.  
@@ -1153,7 +1153,7 @@ Pour obtenir d’autres exemples de compression de données, consultez [Compres
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide de conception et d’architecture d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
 [Exécuter des opérations d’index en ligne](../../relational-databases/indexes/perform-index-operations-online.md)    
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     

@@ -1,5 +1,6 @@
 ---
 title: Diffuser un message d’arrêt (invite de commandes) | Microsoft Docs
+description: Découvrez comment utiliser la commande net send pour diffuser un message dans SQL Server. Découvrez comment déterminer quels utilisateurs sont actuellement connectés à SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - default instances [SQL Server], broadcasting shutdown messages
 - stopping SQL Server
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 89fcc63741b4322501c640453971c67d5a9a02fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85d2bac016287afd060cdf727eeea47a6b78d725
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759209"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>Diffuser un message d'arrêt (invite de commandes)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique décrit comment diffuser un message d’arrêt dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de la commande **net send** . Dans ce message, incluez l'heure d'arrêt de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour permettre aux utilisateurs de terminer leurs tâches.  
   
 ##  <a name="SSMSProcedure"></a>  

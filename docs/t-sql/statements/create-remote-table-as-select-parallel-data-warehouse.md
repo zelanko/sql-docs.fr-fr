@@ -4,18 +4,18 @@ ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5f8b817d2de14c41c32fc815dc068a7776b54e3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633966"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627407"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "81633966"
   
  Pour configurer le serveur distant, consultez « Copie de table distante » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Nom de l’ordinateur serveur distant ou adresse IPv4 du serveur distant. Les adresses IPv6 ne sont pas prises en charge. Vous pouvez spécifier une instance nommée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format **nom_ordinateur\nom_instance** ou **adresse_IP\nom_instance**. Le serveur doit être distant et ne peut donc pas être spécifié comme (local).  
   
  Numéro de *port* TCP  
- Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Par exemple : **ServerA, 1450** ou **10.192.14.27,1435**  
+ Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Par exemple : **ServerA,1450** ou **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Nous vous recommandons de vous connecter à un serveur distant à l’aide de l’adresse IP. En fonction de votre configuration réseau, la connexion à l’aide du nom de l’ordinateur peut nécessiter des étapes supplémentaires afin d’utiliser votre serveur DNS non-appliance pour résoudre le nom au serveur approprié. Cette étape n’est pas nécessaire lors de la connexion avec une adresse IP. Pour plus d’informations, consultez « Utiliser un redirecteur DNS pour résoudre les noms DNS non-appliance (Analytics Platform System) » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -84,7 +84,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  WITH *common_table_expression*  
  Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SELECT \<select_criteria> Prédicat de requête qui spécifie les données qui rempliront la table distante. Pour plus d’informations sur l’instruction SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria> Prédicat de requête qui spécifie les données qui rempliront la nouvelle table distante. Pour plus d’informations sur l’instruction SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite :  

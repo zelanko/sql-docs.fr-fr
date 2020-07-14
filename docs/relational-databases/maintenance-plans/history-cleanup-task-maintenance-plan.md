@@ -1,5 +1,6 @@
 ---
 title: Tâche de nettoyage d’historique (Plan de maintenance) | Microsoft Docs
+description: Découvrez comment ignorer l’historique des sauvegardes/restaurations, l’historique des travaux SQL Server Agent et l’historique du plan de maintenance à partir de la base de données msdb à l’aide de la tâche de nettoyage d’historique.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8fecc3eb56a015ac420ca2cd5167098bbce84ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667058"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tâche de nettoyage d'historique (Plan de maintenance)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La boîte de dialogue **Tâche de nettoyage d'historique** vous permet de supprimer les informations d'historique anciennes des tables de la base de données msdb. Cette tâche prend en charge la suppression de l'historique de sauvegarde et de restauration, l'historique des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'historique du plan de maintenance.  
   
  Cette instruction utilise les instructions **sp_purge_jobhistory** et **sp_delete_backuphistory** .  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments UI  
  **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   

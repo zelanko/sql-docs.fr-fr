@@ -1,5 +1,6 @@
 ---
 title: Options de démarrage du service moteur de base de données | Microsoft Docs
+description: Familiarisez-vous avec les options de démarrage de Moteur de base de données SQL Server. Affichez des conseils sur la façon de les utiliser et apprenez-en davantage sur l’objectif de chaque option.
 ms.custom: ''
 ms.date: 08/01/2019
 ms.prod: sql
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5cd9b549123545920c890616945156b37fd762b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772627"
 ---
 # <a name="database-engine-service-startup-options"></a>Options de démarrage du service moteur de base de données
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Les options de démarrage désignent certains emplacements de fichiers nécessaires lors du démarrage et spécifient certaines conditions applicables à l'échelle du serveur. La plupart des utilisateurs n'ont pas besoin de spécifier d'options de démarrage, à moins de dépanner le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou d'avoir un problème inhabituel et que le support technique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne leur demande d'utiliser une option de démarrage.  
   

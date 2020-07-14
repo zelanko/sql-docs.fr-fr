@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef3adbbf44c495e0449da174915704c4da9306dc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d82dd94f3419b0f25c6c5ece04b94277144742c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669945"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En général, toutes les données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont restaurées avant que la base de données ne soit récupérée. Toutefois, une opération de restauration peut récupérer une base de données sans réellement restaurer une sauvegarde, par exemple lors de la récupération d'un fichier en lecture seule qui est cohérent avec la base de données. Il s’agit d’une *restauration avec récupération uniquement*. Lorsque des données hors ligne sont déjà cohérentes avec la base de données et doivent uniquement être rendues disponibles, une restauration avec récupération uniquement termine la récupération de la base de données et met les données en ligne.  
   
  Une restauration avec récupération uniquement peut se produire pour une base de données entière ou pour un ou plusieurs fichiers ou groupes de fichiers.  
@@ -44,7 +44,7 @@ ms.locfileid: "82834505"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> La clause FROM **=** \<*unité_de_sauvegarde>* n’est pas destinée aux restaurations avec récupération uniquement, car aucune sauvegarde n’est nécessaire.  
+> La clause FROM **=** \<*backup_device>* n'est pas destinée aux restaurations avec récupération uniquement, car aucune sauvegarde n'est nécessaire.  
   
  **Exemple**  
   

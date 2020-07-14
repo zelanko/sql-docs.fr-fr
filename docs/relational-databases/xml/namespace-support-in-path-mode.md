@@ -1,5 +1,6 @@
 ---
 title: Prise en charge d’espace de noms en mode PATH | Microsoft Docs
+description: Découvrez la prise en charge des espaces de noms lorsque vous utilisez le mode PATH pour générer du code XML à partir d’une requête SELECT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f75729d1e31989bde851d1fde3a05ab932b6f460
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fb8691f3cdd847a626db99a43e949a4b87a5aefe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661647"
 ---
 # <a name="namespace-support-in-path-mode"></a>Prise en charge d'espace de noms en mode PATH
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La prise en charge des espaces de noms en mode PATH est fournie à l'aide de WITH NAMESPACES. Par exemple, la requête suivante démontre l'utilisation de la syntaxe WITH NAMESPACES pour déclarer un espace de noms ("a:") qui peut ensuite être utilisé dans l'instruction SELECT ultérieure :  
   
 ```  

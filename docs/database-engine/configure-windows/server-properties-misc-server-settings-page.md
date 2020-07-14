@@ -1,5 +1,6 @@
 ---
 title: Propriétés du serveur (page Paramètres divers du serveur) | Microsoft Docs
+description: Familiarisez-vous avec les paramètres du serveur dans SQL Server. Découvrez les options qui contrôlent la langue par défaut pour les nouveaux utilisateurs, les délais d’expiration des requêtes et d’autres comportements.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 62a8af2e4a82a0a0bdeec231db62c2166ed030de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd0f964c344901da4309605949ecb31d8c893adc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726607"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>Propriétés du serveur - Page Paramètres divers du serveur
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette page pour afficher ou modifier les paramètres du serveur.  
   
 ## <a name="options"></a>Options  

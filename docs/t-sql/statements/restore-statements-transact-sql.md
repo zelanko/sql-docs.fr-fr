@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922176"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032450"
 ---
 # <a name="restore-statements-transact-sql"></a>Instructions RESTORE (Transact-SQL)
 
@@ -326,7 +326,7 @@ La restauration est contrôlée par l'instruction RESTORE et les options [ RECO
 Les sauvegardes des bases de données **master**, **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
-> Aucune sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut restaurée dans une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à celle sur laquelle la sauvegarde a été créée.
+> Aucune sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut être restaurée dans une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à celle sur laquelle la sauvegarde a été créée.
 
 Chaque version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un chemin d'accès par défaut différent de celui des versions antérieures. Par conséquent, pour restaurer une base de données créée à l'emplacement par défaut des sauvegardes de version antérieure, vous devez utiliser l'option MOVE. Pour plus d’informations sur le nouveau chemin par défaut, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 

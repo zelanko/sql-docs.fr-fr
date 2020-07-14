@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774009"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Les procédures décrites dans cette rubrique vous guident dans le processus de configuration manuelle des services IIS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services) version 7 et ultérieures pour une utilisation avec la synchronisation web en vue de la réplication de fusion. 
   
@@ -50,7 +50,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 1.  Installez la réplication SQL Server sur l’ordinateur IIS.
 
-2. Créez un nouveau répertoire de fichiers pour replisapi.dll sur l'ordinateur exécutant IIS. Vous pouvez créer le répertoire où vous le souhaitez, mais nous vous recommandons de le créer sous le répertoire \<*lecteur*>:\Inetpub. Par exemple, créez le répertoire \<*lecteur*>:\Inetpub\SQLReplication\\.  
+2. Créez un nouveau répertoire de fichiers pour replisapi.dll sur l'ordinateur exécutant IIS. Vous pouvez créer le répertoire où vous le souhaitez, mais il est recommandé de le créer sous le répertoire \<*drive*>:\Inetpub. Par exemple, créez le répertoire \<*drive*>:\Inetpub\SQLReplication\\.  
   
 3.  Copiez replisapi.dll à partir du répertoire [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ vers le répertoire de fichiers que vous avez créé à l'étape 1.  
   
@@ -70,7 +70,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     2.  Dans le champ **Alias**, entrez **SQLReplication**.  
   
-    3.  Pour **Chemin d’accès physique**, entrez **\<lecteur>:\Inetpub\SQLReplication\\** , puis cliquez sur **OK**.  
+    3.  Pour **Chemin d’accès physique**, entrez **\<drive>:\Inetpub\SQLReplication\\** , puis cliquez sur **OK**.  
   
 7.  Configurez IIS pour permettre à replisapi.dll de s'exécuter.  
   
@@ -84,7 +84,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     5.  Dans la liste déroulante **Module** , sélectionnez **IsapiModule**.  
   
-    6.  Pour **Exécutable**, entrez **\<lecteur>:\Inetpub\SQLReplication\replisapi.dll**.  
+    6.  Pour **Exécutable**, entrez **\<drive>:\Inetpub\SQLReplication\replisapi.dll**.  
   
     7.  Dans le champ **nom**, entrez **Replisapi**.  
   
@@ -218,7 +218,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     2.  Sur l'onglet **Sécurité** , cliquez sur **Modifier**.  
   
-    3.  Dans la boîte de dialogue **Autorisations pour \<nom_dossier>** , cliquez sur **Ajouter** pour ajouter le compte créé à l’étape 1.  
+    3.  Dans la boîte de dialogue **Autorisations pour \<foldername>** , cliquez sur **Ajouter** pour ajouter le compte créé à l'étape 1.  
   
     4.  Vérifiez que **À partir de cet emplacement** indique le nom de l'ordinateur local (et non un domaine). Si ce champ n'indique pas le nom de l'ordinateur local, cliquez sur **Emplacements**. Dans la boîte de dialogue **Emplacements** , choisissez l'ordinateur local, puis cliquez sur **OK**.  
   
@@ -307,7 +307,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
     > [!NOTE]  
     >  Les certificats sont installés pour les utilisateurs. Ce processus doit être effectué pour chaque utilisateur qui réalisera des synchronisations avec IIS.  
   
-4.  Dans la boîte de dialogue **Se connecter à \<NomServeur>** , spécifiez l’ID de connexion et le mot de passe que l’Agent de fusion utilisera pour se connecter à IIS. Ces informations d'identification seront aussi spécifiées dans l'Assistant Nouvel abonnement.  
+4.  Dans la boîte de dialogue **Se connecter à\<ServerName>** , spécifiez la connexion et le mot de passe que l’'Agent de fusion va utiliser pour se connecter à IIS. Ces informations d'identification seront aussi spécifiées dans l'Assistant Nouvel abonnement.  
   
 5.  Dans la fenêtre Internet Explorer relative aux **informations de diagnostic SQL Websync**, vérifiez que la valeur de chaque colonne **État** de la page est **RÉUSSITE**.  
   

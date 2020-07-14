@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 20039429b5368dc560baba68061c4f42c73b95a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8af2373969353597036a3c538d0a8ab8945ae24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217110"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901274"
 ---
 # <a name="pushdown-computations-in-polybase"></a>Calculs pushdown dans PolyBase
 
 ## <a name="dmv"></a>Vue de gestion dynamique
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Le calcul pushdown améliore les performances des requêtes sur votre cluster Hadoop.
 

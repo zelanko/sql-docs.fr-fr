@@ -1,6 +1,6 @@
 ---
 title: Afficher ou modifier des propriétés de serveur (SQL Server) | Microsoft Docs
-ms.custom: ''
+description: Découvrez comment utiliser SQL Server Management Studio, Transact-SQL ou le Gestionnaire de configuration SQL Server pour afficher ou modifier les propriétés d’une instance de SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,40 +16,26 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 - Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a604ee89ed33f30d15e5402cba8d04668c7528f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.custom: contperfq4
+ms.openlocfilehash: 846d393640e02365348f5ffd7057c0142163f5d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763979"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Afficher ou modifier des propriétés de serveur (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment afficher ou modifier les propriétés d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Configuration Manager.  
-  
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour afficher ou modifier des propriétés de serveur à l'aide de :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Gestionnaire de configuration SQL Server](#PowerShellProcedure)  
-  
--   **Suivi :**  [Après avoir modifié les propriétés du serveur](#FollowUp)  
-  
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
+
+Les étapes dépendent de l’outil :
++ [SQL Server Management Studio](#SSMSProcedure)  
++ [Transact-SQL](#TsqlProcedure)  
++ [Gestionnaire de configuration SQL Server](#PowerShellProcedure)  
+    
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Lorsque vous utilisez sp_configure, vous devez exécuter RECONFIGURE ou RECONFIGURE WITH OVERRIDE après la définition d'une option de configuration. L'instruction RECONFIGURE WITH OVERRIDE est généralement réservée aux options de configuration qui doivent être utilisées avec une extrême prudence. Cependant, RECONFIGURE WITH OVERRIDE fonctionne avec toutes les options de configuration, et vous pouvez l'utiliser pour remplacer RECONFIGURE.  
   
@@ -58,14 +44,13 @@ ms.locfileid: "67945764"
   
 -   Certaines pages de propriétés présentent des informations fournies par l'intermédiaire de WMI (Windows Management Instrumentation). Pour afficher ces pages, WMI doit être installé sur l'ordinateur qui exécute [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="security"></a><a name="Security"></a> Sécurité  
+## <a name="server-level-roles"></a><a name="Security"></a> Rôles de niveau serveur  
   
-####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
- Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).  
+Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>Pour afficher ou modifier des propriétés de serveur  
   
@@ -73,9 +58,9 @@ ms.locfileid: "67945764"
   
 2.  Dans la boîte de dialogue **Propriétés du serveur** , cliquez sur une page pour afficher ou modifier les informations du serveur relatives à cette page. Certaines propriétés sont en lecture seule.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL  
   
-#### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Pour afficher les propriétés du serveur à l'aide de la fonction intégrée SERVERPROPERTY  
+### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Pour afficher les propriétés du serveur à l'aide de la fonction intégrée SERVERPROPERTY  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -88,7 +73,7 @@ ms.locfileid: "67945764"
     GO  
     ```  
   
-#### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.servers  
+### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.servers  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -105,7 +90,7 @@ ms.locfileid: "67945764"
   
     ```  
   
-#### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.configurations  
+### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.configurations  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -122,7 +107,7 @@ ms.locfileid: "67945764"
   
     ```  
   
-#### <a name="to-change-a-server-property-by-using-sp_configure"></a>Pour modifier une propriété de serveur à l'aide de sp_configure  
+### <a name="to-change-a-server-property-by-using-sp_configure"></a>Pour modifier une propriété de serveur à l'aide de sp_configure  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -145,23 +130,24 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="using-sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
+## <a name="sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a>Gestionnaire de configuration SQL Server  
  Certaines propriétés du serveur peuvent être affichées ou modifiées à l'aide du gestionnaire de configuration SQL Server. Par exemple, vous pouvez afficher la version et l'édition de l'instance de SQL Server, ou modifier l'emplacement où les fichiers des journaux d'erreurs sont stockés. Vous pouvez aussi afficher ces propriétés en interrogeant les [fonctions et vues de gestion dynamique relatives au serveur](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).  
   
-#### <a name="to-view-or-change-server-properties"></a>Pour afficher ou modifier des propriétés de serveur  
+### <a name="to-view-or-change-server-properties"></a>Pour afficher ou modifier des propriétés de serveur  
   
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
 2.  Dans le **Gestionnaire de configuration SQL Server**, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<** _nom_instance_ **>)** , puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<**_instancename_**>)** , puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<** _nom_instance_ **>)** , modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<**_instancename_**>)** , modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
   
-##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> Suivi : Après avoir modifié les propriétés du serveur  
- Pour certaines propriétés, le serveur doit être redémarré afin d'appliquer les modification.  
+## <a name="restart-after-changes"></a><a name="FollowUp"></a>Redémarrer après les modifications
+
+Pour certaines propriétés, vous devrez peut-être redémarrer le serveur pour que la modification puisse prendre effet.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="next-steps"></a>Étapes suivantes  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
