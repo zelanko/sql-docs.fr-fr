@@ -1,5 +1,6 @@
 ---
 title: Propriétés du serveur (page Mémoire) | Microsoft Docs
+description: Se familiariser avec les options de mémoire du serveur dans SQL Server. En savoir plus sur la mémoire minimale et maximale du serveur, la mémoire de création d’index et d’autres paramètres.
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83f8be52af8507203764cab7197359c1c99663a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726622"
 ---
 # <a name="server-properties---memory-page"></a>Propriétés du serveur - Page Mémoire
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette page vous permet d'afficher et de modifier les options de mémoire de votre serveur. Lorsque **Mémoire minimale du serveur (en Mo)** a la valeur 0 et que **Mémoire maximale du serveur** a la valeur 2 147 483 647 Mo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut bénéficier d'un volume optimal de mémoire à tout moment, selon la quantité de mémoire que le système d'exploitation et les autres applications utilisent simultanément. La mémoire est allouée au fur et à mesure des modifications de la charge de l'ordinateur et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également limiter l'allocation de cette mémoire dynamique aux valeurs minimale et maximale spécifiées ci-dessous.  
   
 ## <a name="options"></a>Options  

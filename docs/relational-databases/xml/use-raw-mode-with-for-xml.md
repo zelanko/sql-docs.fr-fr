@@ -1,5 +1,6 @@
 ---
 title: Utiliser le mode RAW avec FOR XML | Microsoft Docs
+description: Découvrez comment l’utilisation du mode RAW avec la clause FOR XML dans une requête SQL transforme les données XML qui en résultent.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1c82fc52acaf8d3bbd351463803ae682ccfebc1b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: eaaa138461a2e3c96acf1b475de860ac0deeb1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784669"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utiliser le mode RAW avec FOR XML
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Le mode RAW transforme chaque ligne du jeu de résultats de la requête en un élément XML contenant l’identificateur générique \<row> ou le nom d’élément éventuellement fourni. Par défaut, chaque valeur de colonne dans l’ensemble de lignes qui n’est pas NULL est mappée à un attribut de l’élément \<row>. Si la directive ELEMENTS est ajoutée à la clause FOR XML, chaque valeur de colonne est mappée à un sous-élément de l’élément \<row>. Avec la directive ELEMENTS, vous pouvez éventuellement spécifier l’option XSINIL pour mapper les valeurs de colonnes NULL dans le jeu de résultats à un élément qui possède l’attribut `xsi:nil="true"`.
   
@@ -38,19 +39,19 @@ Le mode RAW transforme chaque ligne du jeu de résultats de la requête en un é
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section contient les exemples suivants :  
   
--   [Exemple : récupération des informations de modèle de produit au format XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [Exemple : Récupération des informations de modèle de produit au format XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [Exemple : spécification de XSINIL avec la directive ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Exemple : Spécification de XSINIL avec la directive ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Demander des schémas comme résultats à l’aide de XMLDATA et XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [Exemple : extraction de données binaires](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [Exemple : Récupération de données binaires](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [Exemple : Renommage de l’élément &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [Exemple : Renommage de l’élément &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [Exemple : spécification d’un élément racine pour les données XML générées par FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Exemple : Spécification d’un élément racine pour les données XML générées par FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Exemple : interrogation de colonnes de type XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [Exemple : Interrogation de colonnes de type XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

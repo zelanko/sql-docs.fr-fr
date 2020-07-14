@@ -1,5 +1,6 @@
 ---
 title: Blocked Process Report, classe d’événements | Microsoft Docs
+description: La classe d’événements Blocked Process Report indique qu’une tâche a été bloquée plus longtemps que la période spécifiée dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce090a9018327d1808cf891b5ba6c068d37ccb73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 677e19c19ce569af91af282ef2a280c69161c9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763047"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Blocked Process Report** indique qu’une tâche a été bloquée plus longtemps que la période spécifiée. Elle ne s'applique pas aux tâches système ou aux tâches en attente de ressources à blocage non détectable.  
   
  Pour définir le seuil et la fréquence de génération des rapports, utilisez la commande **sp_configure** pour configurer l’option **Seuil de processus bloqué** qu’il est possible de définir en secondes. Par défaut, aucun rapport de processus bloqué n'est généré. Pour plus d’informations sur la définition de l’option **Seuil de processus bloqué** , consultez [Seuil de processus bloqué (option de configuration de serveur)](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  

@@ -1,5 +1,6 @@
 ---
 title: Installer SQL Server avec le stockage de partage de fichiers SMB | Microsoft Docs
+description: Dans SQL Server, les bases de données système et les bases de données utilisateur du moteur de base de données peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage.
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990927"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883512"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installer SQL Server avec le stockage de partage de fichiers SMB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données système (Master, Model, MSDB et TempDB) et les bases de données utilisateur [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -97,12 +98,12 @@ Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données 
     > [!NOTE]  
     >  Les autorisations de partage FULL CONTROL et les autorisations NTFS sur les dossiers de partage SMB doivent être limitées : au compte de service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , au compte de service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux utilisateurs Windows avec des rôles de serveur admin.  
   
-     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : \<*nom_domaine*>\\<*nom_ordinateur*>\*$*.  
+     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : \<*domain_name*>\\<*nom_ordinateur*>\*$*.  
   
     > [!NOTE]  
     >  Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez spécifier le compte de domaine en tant que compte de service si le partage de fichiers SMB est indiqué comme option de stockage. Avec le partage de fichiers SMB, le compte système peut être spécifié comme compte de service après l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Configurez le compte d’ordinateur au format \<*nom_domaine*>\\<*nom_ordinateur*>\*$*.  
+    >  Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Provisionnez le compte d’ordinateur au format \<*domain_name*>\\<*nom_ordinateur*>\*$*.  
   
 -   Le compte utilisé pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir des autorisations FULL CONTROL sur le dossier de partage de fichiers SMB utilisé comme répertoire de données, ou tous les autres dossiers de données (répertoire de base de données utilisateur, répertoire du journal de la base de données utilisateur, répertoire TempDB, répertoire du journal TempDB, répertoire de sauvegarde) pendant la configuration des clusters.  
   

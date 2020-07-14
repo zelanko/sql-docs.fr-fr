@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737099"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Utiliser SQL Server Profiler pour créer et tester des repères de plan
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Lorsque vous créez un repère de plan, vous pouvez recourir à [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour capturer le texte de requête exact à utiliser dans l’argument *statement_text* de la procédure stockée **sp_create_plan_guide** . Ainsi, au moment de la compilation, le repère de plan correspondra à la requête. Une fois le repère de plan créé, vous pouvez également utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour tester la correspondance effective du repère de plan à la requête. En règle générale, vous devez tester les repères de plan à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour vérifier que la requête correspond au repère de plan.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capture de texte de requête à l’aide de SQL Server Profiler  
@@ -96,7 +96,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  L'événement **Showplan XML For Query Compile** ne peut pas être utilisé. **PlanGuideDB** n'existe pas dans cet événement.  
   
-5.  Si le repère de plan est de type OBJECT ou SQL, vérifiez que l'événement **Showplan XML** contient les attributs **PlanGuideDB** et **PlanGuideName** du repère de plan qui doit correspondre à la requête. Ou, dans le cas d'un repère de plan TEMPLATE, vérifiez que l'événement **Showplan XML** contient les attributs **TemplatePlanGuideDB** et **TemplatePlanGuideName** du repère de plan prévu. Cette opération vérifie que le repère de plan fonctionne. Ces attributs sont contenus sous l’élément **\<StmtSimple>** du plan.  
+5.  Si le repère de plan est de type OBJECT ou SQL, vérifiez que l'événement **Showplan XML** contient les attributs **PlanGuideDB** et **PlanGuideName** du repère de plan qui doit correspondre à la requête. Ou, dans le cas d'un repère de plan TEMPLATE, vérifiez que l'événement **Showplan XML** contient les attributs **TemplatePlanGuideDB** et **TemplatePlanGuideName** du repère de plan prévu. Cette opération vérifie que le repère de plan fonctionne. Ces attributs sont contenus sous l'élément du plan **\<StmtSimple>** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  

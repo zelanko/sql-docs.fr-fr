@@ -1,5 +1,6 @@
 ---
 title: Configurer la copie des journaux de transaction (SQL Server) | Microsoft Docs
+description: Découvrez comment configurer la copie des journaux de transaction à l’aide de SQL Server Management Studio ou de Transact-SQL dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68057890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696261"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurer la copie des journaux de transaction (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment configurer une copie des journaux de transaction dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
@@ -30,7 +31,7 @@ ms.locfileid: "68057890"
   
 -   **Avant de commencer :**  
   
-     [Prérequis](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -78,7 +79,7 @@ ms.locfileid: "68057890"
   
 8.  Notez la planification de la sauvegarde figurant dans la zone **Planification** sous **Travail de sauvegarde**. Si vous souhaitez personnaliser la planification pour votre installation, cliquez ensuite sur **Planification** et ajustez la planification de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en fonction de vos besoins.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Lors de la création d'une configuration de copie des journaux de transaction, vous pouvez contrôler le comportement de compression de la sauvegarde pour les sauvegardes de journaux en choisissant l'une des options suivantes : **Utiliser le paramètre du serveur par défaut**, **Compresser la sauvegarde**ou **Ne pas compresser la sauvegarde**. Pour plus d’informations, consultez [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Lorsque vous créez une configuration de copie des journaux de transaction, vous pouvez contrôler le comportement de compression des sauvegardes de fichiers journaux grâce à l’une des options suivantes : **Utiliser le paramètre de serveur par défaut**, **Compresser la sauvegarde**, ou **Ne pas compresser la sauvegarde**. Pour plus d’informations, consultez [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Cliquez sur **OK**.  
   

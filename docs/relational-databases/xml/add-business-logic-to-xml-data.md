@@ -1,5 +1,6 @@
 ---
 title: Ajouter la logique métier aux données XML | Microsoft Docs
+description: Découvrez comment ajouter une logique métier aux données XML en appliquant des transformations XSL, en utilisant des contraintes spécifiques à un domaine sur des données ou en déclenchant des règles de validation.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729162"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Ajouter la logique métier aux données XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Votre logique métier peut être ajoutée aux données XML de plusieurs manières :  
   
 -   Vous pouvez écrire des contraintes sur les lignes ou les colonnes de façon à imposer des contraintes propres à un domaine lors de l'insertion et de la modification des données XML.  
   
 -   Vous pouvez écrire un déclencheur sur la colonne XML qui est activé lors de l'insertion ou de la mise à jour de valeurs dans la colonne. Le déclencheur peut contenir des règles de validation propres au domaine ou remplir les tables de propriétés.  
   
--   Le moteur de base de données permet l'exécution de code managé. Vous pouvez utiliser cette intégration au CLR (Common Language Runtime) pour écrire des fonctions dans le code managé auxquelles vous transmettez des valeurs XML et utiliser les capacités de traitement fournies par l’espace de noms System.Xml. Vous pouvez, par exemple, appliquer une transformation XSL aux données XML. Vous pouvez également désérialiser le code XML en une ou plusieurs classes managées et travailler sur ces classes à l'aide de code managé.  
+-   Le moteur de base de données permet d'exécuter du code managé. Vous pouvez utiliser cette intégration au CLR (Common Language Runtime) pour écrire des fonctions dans le code managé auxquelles vous transmettez des valeurs XML et utiliser les capacités de traitement fournies par l’espace de noms System.Xml. Vous pouvez, par exemple, appliquer une transformation XSL aux données XML. Vous pouvez également désérialiser le code XML en une ou plusieurs classes managées et travailler sur ces classes à l'aide de code managé.  
   
 -   Vous pouvez écrire des procédures stockées et des fonctions Transact-SQL pour lancer le traitement sur la colonne XML en fonction de vos besoins.  
   
-## <a name="example-applying-xsl-transformation"></a>Exemple : application XSLT  
+## <a name="example-applying-xsl-transformation"></a>Exemple : Application d’une transformation XSL  
  Prenez l’exemple d’une fonction CLR **TransformXml()** qui accepte une instance de type de données **xml** et une transformation XSL stockée dans un fichier, applique la transformation aux données XML, puis retourne les données XML transformées dans le résultat. Le code suivant est un squelette de fonction écrit en C# :  
   
 ```  

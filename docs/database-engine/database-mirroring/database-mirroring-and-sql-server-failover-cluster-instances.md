@@ -1,6 +1,6 @@
 ---
 title: Mise en miroir de bases de données et instances de cluster de basculement
-description: Découvrez comment associer mise en miroir de bases de données et instances de cluster de basculement SQL Server.
+description: Vous pouvez associer la mise en miroir de bases de données avec des instances de cluster de basculement SQL Server. En savoir plus sur le mode haute performance et le mode haute sécurité avec et sans basculement.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00434abb76721e5aecf75bdce589964c69e6903e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789680"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mise en miroir de base de données et instances de cluster de basculement SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Un cluster de basculement est composé d'un ou de plusieurs disques physiques placés dans un groupe de clusters géré par le service de cluster [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), appelé groupe de ressources, et constituant ainsi des nœuds membres du cluster. Le groupe de ressources est configuré comme une instance cluster de basculement qui héberge une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apparaît sur le réseau comme s’il s’agissait d’un ordinateur unique, mais elle est dotée d’une fonctionnalité qui assure le basculement d’un nœud vers un autre si le premier devient indisponible. Pour plus d'informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
  Les clusters de basculement garantissent une prise en charge de la haute disponibilité pour l’intégralité d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En cela, ils se distinguent de la fonctionnalité de mise en miroir de bases de données qui offre cette même prise en charge pour une seule base de données. La mise en miroir de base de données est mise en œuvre entre des clusters de basculement et également entre un cluster de basculement et un hôte non-cluster.  
@@ -45,7 +45,7 @@ ms.locfileid: "75254175"
   
  ![Basculement sur un cluster](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "Basculement sur un cluster")  
   
- Les trois instances de serveur dans la session de mise en miroir résident sur trois clusters distincts : **Cluster_A**, **Cluster_B**et **Cluster_C**. Sur chaque cluster, une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute comme instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au début de la session de mise en miroir, l’instance cluster de basculement **Cluster_A** est le serveur principal, celle de **Cluster_B** est le serveur miroir et celle de **Cluster_C** est le témoin de la session. À un moment donné, le nœud actif de **Cluster_A** subit une défaillance, à la suite de quoi le serveur principal devient indisponible.  
+ Les trois instances de serveur dans la session de mise en miroir résident sur trois clusters distincts : **Cluster_A**, **Cluster_B** et **Cluster_C**. Sur chaque cluster, une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute comme instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au début de la session de mise en miroir, l’instance cluster de basculement **Cluster_A** est le serveur principal, celle de **Cluster_B** est le serveur miroir et celle de **Cluster_C** est le témoin de la session. À un moment donné, le nœud actif de **Cluster_A** subit une défaillance, à la suite de quoi le serveur principal devient indisponible.  
   
  Avant que le basculement du cluster ne puisse avoir lieu, la perte du serveur principal est détectée par le serveur miroir avec l'aide du témoin. Le serveur miroir restaure par progression sa base de données et la remet en ligne en tant que nouvelle base de données principale aussi rapidement que possible. Une fois le basculement du **Cluster_A** terminé, le serveur principal initial devient le serveur miroir et synchronise sa base de données avec la base de données principale actuelle sur le **Cluster_B**.  
   

@@ -1,5 +1,6 @@
 ---
 title: Tâche Reconstruire l’index (Plan de maintenance) | Microsoft Docs
+description: Découvrez comment recréer les index dans les tables de la base de données SQL Server en définissant un nouveau facteur de remplissage à l’aide de la tâche Reconstruire l’index.
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1199b30249c5948381e40fe3c248b44a1f9c5930
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755727"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tâche Reconstruire l'index (Plan de maintenance)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez la boîte de dialogue **Tâche Reconstruire l’index** pour recréer les index des tables de la base de données en définissant un nouveau facteur de remplissage. Le facteur de remplissage détermine la quantité d'espace disponible sur chaque page de l'index pour permettre l'extension ultérieure de l'index. Au fur et à mesure que des données sont ajoutées à la table, l'espace libre se remplit parce que le facteur de remplissage n'est pas conservé. Réorganiser les pages d'index et les données permet de recouvrer de l'espace libre.  
   
  La **Tâche Reconstruire l'index** utilise l'instruction ALTER INDEX. Pour plus d’informations sur les options décrites dans cette page, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  

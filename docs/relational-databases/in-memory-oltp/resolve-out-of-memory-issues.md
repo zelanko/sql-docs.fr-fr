@@ -1,5 +1,6 @@
 ---
 title: Résoudre les problèmes de mémoire insuffisante | Microsoft Docs
+description: Découvrez les situations de mémoire insuffisante dans SQL Server OLTP en mémoire, comment restaurer et résoudre les impacts, résoudre les échecs d’allocation de pages et les meilleures pratiques.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722392"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] , l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est possible que la quantité de mémoire que vous avez installée et allouée pour [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ne convienne plus à vos besoins croissants. Si c'est le cas, vous risquez de manquer de mémoire. Cette rubrique explique les procédures à mettre en œuvre en cas d'insuffisance de mémoire. Consultez [Analyse et dépannage de l’utilisation de mémoire](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) pour des conseils pouvant vous aider à éviter de nombreuses situations d’épuisement de la mémoire.  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908448"
   
 |Rubrique|Vue d’ensemble|  
 |-----------|--------------|  
-|[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». »|  
+|[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d'erreur « Échec de l’opération de restauration pour la base de données ' *\<databaseName>* ' en raison d'une insuffisance de mémoire dans le pool de ressources ' *\<resourcePoolName>* ' ».|  
 |[Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail](#bkmk_recoverFromOOM)|Explique la procédure à suivre si vous constatez que les problèmes d'insuffisance de mémoire ont un effet négatif sur les performances.|  
-|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». ... » lorsque la mémoire disponible est suffisante pour l’opération.|
+|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Désactivation des allocations de pages pour la base de données ' *\<databaseName>* ' en raison d’une insuffisance de mémoire dans le pool de ressources ' *\<resourcePoolName>* '. ... » lorsque la mémoire disponible est suffisante pour l’opération.|
 |[Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs)|Ce qu’il faut savoir avant d’utiliser l’OLTP en mémoire dans un environnement virtualisé.|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
- Quand vous tentez de restaurer une base de données, le message d'erreur suivant peut s'afficher : « Échec de l'opération de restauration pour la base de données « *\<databaseName>*  » en raison d'une insuffisance de mémoire dans le pool de ressources *\<resourcePoolName>*  ». » Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
+ Quand vous tentez de restaurer une base de données, le message d'erreur suivant peut s'afficher : « Échec de l'opération de restauration pour la base de données ' *\<databaseName>* ' en raison d'une insuffisance de mémoire dans le pool de ressources ' *\<resourcePoolName>* ' ». Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
    
 Le serveur sur lequel vous restaurez une base de données doit disposer de suffisamment de mémoire pour les tables à mémoire optimisée dans la sauvegarde de base de données. Dans le cas contraire, la base de données n’est pas mise en ligne et est marquée comme suspecte.  
   

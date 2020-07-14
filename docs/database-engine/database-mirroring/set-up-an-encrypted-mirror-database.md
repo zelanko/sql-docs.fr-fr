@@ -1,5 +1,6 @@
 ---
 title: Configurer une base de données miroir chiffrée | Microsoft Docs
+description: Découvrez comment activer le déchiffrement automatique de la clé principale de base de données d’une base de données miroir à l’aide de sp_control_dbmasterkey_password pour créer des informations d’identification.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e96342ca114ae06d2c1d75954ccd32a674f900a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4711df54f96487447ed543945bd863a4bc7b598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735140"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>Configurer une base de données miroir chiffrée
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Pour activer le déchiffrement automatique de la clé principale d'une base de données miroir, vous devez fournir le mot de passe utilisé pour chiffrer la clé principale à l'instance de serveur miroir. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures incluent des mécanismes de transfert du mot de passe. Utilisez **sp_control_dbmasterkey_password** pour créer des informations d’identification destinées à la clé principale de la base de données avant de démarrer la mise en miroir de celle-ci. Vous devez répéter cette procédure pour chaque base de données qui sera mise en miroir. Pour plus d’informations, consultez [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md).  
   
 > [!CAUTION]  

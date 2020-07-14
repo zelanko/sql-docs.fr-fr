@@ -1,5 +1,6 @@
 ---
 title: Instantanés de base de données (SQL Server) | Microsoft Docs
+description: Découvrez comment utiliser des instantanés de base de données pour créer des vues statiques en lecture seule d’une base de données dans SQL Server. Découvrez les avantages, les conditions préalables et les limitations.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630815"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Une capture instantanée de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Bien que les captures instantanées de base de données fournissent une vue en lecture seule des données dans le même état que lors de la création de la capture instantanée, la taille du fichier de capture instantanée augmente à mesure que des changements sont apportés à la base de données source. Pour plus d’informations, consultez la section [Vue d’ensemble des fonctionnalités](#FeatureOverview) ci-dessous.
   
@@ -109,7 +110,7 @@ Une capture instantanée de base de données est une vue statique en lecture seu
 ##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> Conditions préalables et limitations relatives aux instantanés de base de données  
  **Dans cette section :**  
   
--   [Prérequis](#Prerequisites)  
+-   [Composants requis](#Prerequisites)  
   
 -   [Limitations relatives à la base de données source](#LimitsOnSourceDb)  
   
@@ -200,7 +201,7 @@ Une capture instantanée de base de données est une vue statique en lecture seu
 -   Quand les statistiques sur une capture instantanée en lecture seule sont absentes ou obsolètes, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et gère les statistiques temporaires dans tempdb. Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
 ###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a> Espace disque nécessaire  
- Les instantanés de base de données consomment une grande quantité d'espace disque. Si un instantané de base de données ne dispose plus de suffisamment d'espace disque, il est signalé comme suspect et doit être supprimé. (Toutefois, la base de données source n'est pas affectée ; les opérations sur cette base de données se poursuivent normalement.) Par rapport à une copie complète d'une base de données, les instantanés utilisent beaucoup moins d'espace disque. Un instantané nécessite uniquement un espace de stockage adapté aux pages qui changent au cours de sa durée de vie. En général, les instantanés sont conservés pour une courte durée ; par conséquent, leur taille n'est pas une préoccupation importante.  
+ Les instantanés de base de données consomment une grande quantité d'espace disque. Si un instantané de base de données ne dispose plus de suffisamment d'espace disque, il est signalé comme suspect et doit être supprimé. (Toutefois, la base de données source n'est pas affectée ; les opérations sur cette base de données se poursuivent normalement.) Par rapport à une copie complète d'une base de données, les instantanés utilisent beaucoup moins d'espace disque. Un instantané nécessite uniquement un espace de stockage adapté aux pages qui changent au cours de sa durée de vie. En général, les instantanés sont conservés pour une courte durée ; par conséquent, leur taille n'est pas une préoccupation importante.  
   
  Plus la durée de conservation d'un instantané est longue, plus l'instantané épuisera la quantité d'espace disponible. La taille maximale que peut atteindre un fichier partiellement alloué correspond à la taille du fichier de base de données source correspondant, au moment de la création de l'instantané. Si un instantané de base de données ne dispose plus de suffisamment d'espace disque, il doit être supprimé.  
   

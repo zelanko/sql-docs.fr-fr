@@ -1,5 +1,6 @@
 ---
 title: Bonnes pratiques en matière d’administration de la réplication| Microsoft Docs
+description: Une fois la réplication configurée, utilisez les meilleures pratiques suivantes pour administrer votre topologie de réplication dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5d0948f6732b97da93b1136635175b90d5e92059
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7651b8f739ab3009c37db7f1e10374eb07156
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286874"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808005"
 ---
 # <a name="best-practices-for-replication-administration"></a>Méthodes conseillées pour l'administration de la réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les bonnes pratiques présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les méthodes conseillées présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Les indications sur les méthodes conseillées sont scindées en deux domaines :  
   

@@ -1,5 +1,6 @@
 ---
 title: Spécifier une colonne avec un caractère générique (SQLXML) | Microsoft Docs
+description: Découvrez comment les noms de colonnes qui sont spécifiés sous la forme d’un caractère générique affectent les résultats d’une requête XQuery.
 ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 0820b0d43c51dd7aeabf773f5f9809b7a8005d68
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 915bd2824f6e3a706587769413c0f116df859f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775578"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colonnes avec un nom spécifié sous la forme d'un caractère générique
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Si le nom de colonne spécifié est un caractère générique (\*), le contenu de la colonne concernée est inséré comme si aucun nom de colonne n’était spécifié. Si cette colonne est une colonne de type non-**xml** , le contenu de la colonne est inséré en tant que nœud de texte, comme le montre l’exemple suivant :  
   

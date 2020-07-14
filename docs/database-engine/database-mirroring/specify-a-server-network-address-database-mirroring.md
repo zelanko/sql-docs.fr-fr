@@ -1,6 +1,6 @@
 ---
 title: Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
-description: Spécifiez l’adresse réseau de serveur pour un point de terminaison de mise en miroir de bases de données.
+description: Découvrez comment spécifier une adresse réseau de serveur pour un point de terminaison de mise en miroir de bases de données. Une session de mise en miroir de bases de données requiert une adresse pour chaque instance de serveur.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789606"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La configuration d'une session de mise en miroir de bases de données requiert une adresse réseau de serveur pour chaque instance de serveur. L'adresse réseau de serveur d'une instance de serveur doit identifier sans ambiguïté l'instance en fournissant une adresse système et le numéro du port sur lequel l'instance est à l'écoute.  
   
  Avant de pouvoir spécifier un port dans une adresse réseau de serveur, le point de terminaison de mise en miroir de bases de données doit exister sur l'instance de serveur. Pour plus d’informations, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
@@ -33,11 +33,11 @@ ms.locfileid: "75252760"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Syntaxe d'une adresse réseau de serveur  
  La syntaxe d'une adresse réseau de serveur est de la forme :  
   
- TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  where  
   
--   *\<adresse_système>* est une chaîne qui identifie sans ambiguïté le système informatique de destination. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
+-   *\<system-address>* est une chaîne qui identifie sans ambiguïté le système informatique de destination. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
   
     -   Si les systèmes sont dans le même domaine, vous pouvez utiliser le nom du système informatique ; par exemple, `SYSTEM46`.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75252760"
         > [!NOTE]  
         >  Pour plus d'informations sur la recherche d'un nom de domaine complet, consultez « Recherche du nom de domaine complet » plus loin dans cette rubrique.  
   
--   *\<port>* est le numéro de port utilisé par le point de terminaison de mise en miroir de l’instance du serveur partenaire. Pour plus d’informations sur la spécification d’un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* est le numéro de port utilisé par le point de terminaison de mise en miroir de l'instance de serveur partenaire. Pour plus d’informations sur la spécification d’un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Un point de terminaison de mise en miroir de bases de données peut utiliser tout port disponible sur le système informatique. Chaque numéro de port sur un système d'ordinateur doit être associé à un seul point de terminaison, et chaque point de terminaison est associé à une seule instance de serveur ; ainsi, différentes instances de serveurs sur le même serveur écoutent sur différents points de terminaison dotés de différents ports. Par conséquent, le port que vous spécifiez dans l'adresse réseau du serveur lorsque vous configurez une session de mise en miroir de bases de données dirigera systématiquement la session vers l'instance de serveur dont le point de terminaison est associé à ce port.  
   

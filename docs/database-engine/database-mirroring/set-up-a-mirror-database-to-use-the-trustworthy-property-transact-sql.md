@@ -1,6 +1,6 @@
 ---
 title: Activer la propriété Trustworthy pour une base de données miroir
-description: Décrit les étapes nécessaires à l’activation de la propriété Trustworthy sur une base de données qui vient d’être mise en miroir.
+description: Découvrez comment activer la propriété de base de données TRUSTWORTHY sur une base de données récemment mise en miroir à l’aide de Transact-SQL dans SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20ee7631b1fd4ca8613191ac67a0e13ee1cb028c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c187be44a25edd24c3e9f8f7e91ae52a55ff925
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735184"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Configurer une base de données miroir pour utiliser la propriété Trustworthy (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lorsqu'une base de données est sauvegardée, la valeur OFF est attribuée à la propriété TRUSTWORTHY de la base de données. Par conséquent, la propriété TRUSTWORTHY d'une nouvelle base de données miroir a toujours la valeur OFF. Si la base de données doit être fiable après un basculement, des opérations de configuration supplémentaires sont requises après le début de la mise en miroir.  
   
 > [!NOTE]  

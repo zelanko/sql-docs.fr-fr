@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23617c6179216e9d932fea5f5b239dc17652df01
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761868"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (index XML sélectifs)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifie un index XML sélectif existant. L'instruction ALTER INDEX modifie un ou plusieurs des éléments suivants :  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81628234"
   
  Vous ne pouvez pas modifier des index XML secondaires sélectifs. Pour plus d’informations, consultez [Créer, modifier ou supprimer des index XML secondaires sélectifs](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -135,7 +135,7 @@ identifier
 -   **Supprimer (REMOVE) un chemin.** Lorsque vous SUPPRIMEZ un chemin d'accès, vous devez fournir le nom qui a été donné au chemin d'accès au moment de sa création.  
   
  [WITH **(** \<index_options> **)** ]  
- Vous pouvez spécifier \<index_options> uniquement quand vous utilisez ALTER INDEX sans la clause FOR. Lorsque vous utilisez ALTER INDEX pour ajouter ou supprimer des chemins d'accès dans l'index, les options d'index ne sont pas des arguments valides. Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ Vous ne pouvez spécifier \<index_options> que lorsque vous utilisez ALTER INDEX sans la clause FOR. Lorsque vous utilisez ALTER INDEX pour ajouter ou supprimer des chemins d'accès dans l'index, les options d'index ne sont pas des arguments valides. Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Notes  
   

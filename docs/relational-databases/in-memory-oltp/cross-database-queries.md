@@ -1,5 +1,6 @@
 ---
 title: Requêtes de bases de données croisées | Microsoft Docs
+description: Découvrez comment utiliser des variables de table à mémoire optimisée dans des requêtes de bases de données croisées pour déplacer des données d’une base de données vers des tables à mémoire optimisée dans une autre base de données dans SQL Server.
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 93eae89743c2a4563317614a18e4bf5f46248071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ff96199ed01fe06524ec38f8df2a0cce6380b8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723303"
 ---
 # <a name="cross-database-queries"></a>Requêtes de bases de données croisées
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   À partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les tables mémoire optimisées ne prennent pas en charge les transactions entre bases de données. Vous ne pouvez pas accéder à une autre base de données à partir de la même transaction ou de la même requête qui accède également à une table mémoire optimisée. Vous ne pouvez pas facilement copier les données d'une table d'une base de données, à une table mémoire optimisée d'une autre base de données.  
   

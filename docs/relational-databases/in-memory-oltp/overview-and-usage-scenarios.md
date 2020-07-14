@@ -1,5 +1,6 @@
 ---
 title: Vue d’ensemble et scénarios d’utilisation | Microsoft Docs
+description: Découvrez l’OLTP en mémoire, une technologie dans SQL Server et Azure SQL Database pour le traitement transactionnel optimisé. Passez en revue des exemples et des ressources supplémentaires.
 ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722416"
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 OLTP en mémoire est la technologie de premier plan disponible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] pour optimiser les performances du traitement transactionnel, de l’ingestion et du chargement des données, et des scénarios de données temporaires. Cet article inclut une vue d’ensemble de cette technologie et une présentation des scénarios d’usage de l’OLTP en mémoire. Grâce à ces informations, vous pourrez déterminer si l’OLTP en mémoire est adapté à votre application. À la fin de cet article, vous trouverez un exemple illustrant les objets de l’OLTP en mémoire, ainsi que des liens vers une démonstration des performances de cette technologie et vers des ressources que vous pourrez utiliser pour la suite.
 

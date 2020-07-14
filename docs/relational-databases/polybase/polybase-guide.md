@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: d90503571b10aa614af24a4ee35601b266ab290f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217122"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818195"
 ---
 # <a name="what-is-polybase"></a>Qu’est-ce que PolyBase ?
 
@@ -93,7 +93,7 @@ PolyBase permet les scénarios suivants dans SQL Server :
 
 ## <a name="performance"></a>Performances
 
-- **Déléguer les calculs à Hadoop.** En fonction des coûts, l’optimiseur de requête prend la décision de déléguer les calculs à Hadoop lorsque cela améliore les performances des requêtes.  Il utilise pour cela des statistiques sur des tables externes. La délégation des calculs a pour effet de créer des tâches MapReduce et de tirer parti des ressources de calcul distribuées de Hadoop.
+- **Déléguer les calculs à Hadoop.** En fonction des coûts, l’optimiseur de requête prend la décision de déléguer les calculs à Hadoop, si cela permet d’améliorer les performances des requêtes.  L’optimiseur de requête utilise des statistiques sur des tables externes pour prendre la décision basée sur les coûts. La délégation des calculs a pour effet de créer des tâches MapReduce et de tirer parti des ressources de calcul distribuées de Hadoop.
 
 - **Mise à l’échelle des ressources de calcul.** Pour améliorer les performances des requêtes, vous pouvez utiliser des [groupes de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)SQL Server. Cela autorise un transfert de données en parallèle entre les instances SQL Server et les nœuds Hadoop, et cela ajoute des ressources de calcul qui permettent d’exploiter les données externes.
 

@@ -28,19 +28,19 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 8af6e4e5e3b159249e9437c48791b0519821cbb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757205"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Réduit la taille des fichiers de données et journaux dans la base de données spécifiée.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -120,7 +120,7 @@ Par exemple, si vous spécifiez un _target\_percent_ de 25 pour réduire **mydb
   
 Supposons que le fichier de données de **mydb** contient 7 Mo de données. Si vous spécifiez un _target\_percent_ de 30, le fichier de données peut être réduit à 30 % d’espace libre. En revanche, si vous spécifiez un _target\_percent_ de 40, le fichier de données ne peut pas être réduit, car le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas réduire un fichier à une taille inférieure à celle qu’occupent les données actuellement. 
 
-En d’autres termes : si vous ajoutez 40 % d’espace libre souhaité à 70 % d’espace occupé dans le fichier de données (7 Mo sur un total de 10 Mo), vous obtenez plus de 100 %. Toute valeur _target\_size_ supérieure à 30 n’entraîne pas la réduction du fichier de données. En effet, la somme du pourcentage d’espace libre souhaité et du pourcentage actuel occupé par le fichier de données est supérieure à 100 %.
+Ce problème peut également être envisagé autrement : 40 % d’espace libre souhaité ajoutés à 70 % pour la taille du fichier de données (7 Mo sur 10 Mo) dépassent 100 %. Toute valeur _target\_size_ supérieure à 30 n’entraîne pas la réduction du fichier de données. En effet, la somme du pourcentage d’espace libre souhaité et du pourcentage actuel occupé par le fichier de données est supérieure à 100 %.
   
 Dans le cas des fichiers journaux, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise _target\_percent_ pour calculer la taille cible de l’ensemble du journal. _target\_percent_ correspond donc à la quantité d’espace libre dans le journal après l’opération de réduction. La taille cible pour le journal complet est alors convertie en taille cible pour chaque fichier journal.
   
@@ -130,7 +130,7 @@ Un fichier journal ne peut être réduit que jusqu’à une limite virtuelle. C�
   
 ## <a name="best-practices"></a>Bonnes pratiques  
 Prenez en compte les informations suivantes lorsque vous envisagez de réduire une base de données :
--   Une opération de réduction est plus efficace après une opération. Cette opération crée un espace inutilisé, par exemple une troncature ou une suppression de table.  
+-   Une opération de réduction de taille de fichier est plus efficace après l'exécution d'une opération qui crée de l'espace inutilisé, comme une troncature de table ou une suppression de table.
 -   Un certain espace libre doit exister pour les opérations quotidiennes courantes pour la plupart des bases de données. Vous pouvez réduire plusieurs fois la taille d’une base de données et constater que la taille augmente de nouveau. Cette croissance indique que l’espace qui a été réduit est nécessaire pour les opérations courantes. Dans ce cas, la réduction de la taille de la base de données ne sert à rien.  
 -   Une opération de réduction ne conserve pas l'état de fragmentation des index de la base de données ; en général, elle augmente la fragmentation dans une certaine mesure. Ce résultat représente une raison supplémentaire de ne pas réduire la taille de la base de données de manière répétitive.  
 -   Sauf en cas de besoin précis, n’attribuez pas la valeur ON à l’option de base de données AUTO_SHRINK.  

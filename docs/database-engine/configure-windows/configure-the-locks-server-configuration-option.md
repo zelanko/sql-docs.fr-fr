@@ -1,5 +1,6 @@
 ---
 title: Configurer l’option de configuration de serveur locks | Microsoft Docs
+description: En savoir plus sur l’option locks. Découvrez comment l’utiliser pour limiter la quantité de mémoire que le moteur de base de données SQL Server utilise pour les verrous.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697132"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Configurer l'option de configuration de serveur locks
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique explique comment configurer l'option de configuration de serveur **locks** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **locks** définit le nombre maximum de verrous disponibles, limitant ainsi la quantité de mémoire utilisée pour eux par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La valeur par défaut est 0 ; elle permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'allouer et de libérer des structures de verrous de manière dynamique en fonction des modifications de la configuration requise.  
   

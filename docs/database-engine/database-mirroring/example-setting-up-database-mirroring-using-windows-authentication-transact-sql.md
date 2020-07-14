@@ -1,6 +1,6 @@
 ---
 title: Configurer la mise en miroir de bases de données avec l’authentification Windows (T-SQL)
-description: Exemple illustrant toutes les étapes nécessaires à la création d’une session de mise en miroir de bases de données avec un serveur témoin en utilisant l’authentification Windows avec T-SQL (Transact-SQL)
+description: Cet article contient un exemple de création d’une session de mise en miroir de bases de données avec un témoin à l’aide de l’authentification Windows avec Transact-SQL dans SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 343b04fe9f548c8f3c1274384c731cf6b74c1f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754649"
 ---
 # <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>Exemple : Configurer la mise en miroir de bases de données à l’aide de l’authentification Windows (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cet exemple illustre toutes les étapes nécessaires à la création d'une session de mise en miroir de base de données avec un serveur témoin à l'aide de l'authentification Windows. Les exemples de cette rubrique utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notez qu'au lieu d'utiliser les étapes [!INCLUDE[tsql](../../includes/tsql-md.md)], vous pouvez utiliser l'Assistant Sécurité de mise en miroir de bases de données pour configurer la mise en miroir de base de données. Pour plus d’informations, consultez [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ## <a name="prerequisite"></a>Configuration requise  
@@ -50,9 +50,9 @@ GO
   
 |Rôle initial de la mise en miroir|Système hôte|Compte d’utilisateur de domaine|  
 |----------------------------|-----------------|-------------------------|  
-|Principal|PARTNERHOST1|*\<Mon_domaine>\\<nom_utilisateur_dbo\>*|  
-|Miroir|PARTNERHOST5|*\<Mon_domaine>\\<nom_utilisateur_dbo\>*|  
-|Témoin|WITNESSHOST4|*\<Un_domaine>\\<utilisateur_témoin\>*|  
+|Principal|PARTNERHOST1|*\<Mydomain>\\<dbousername\>*|  
+|Miroir|PARTNERHOST5|*\<Mydomain>\\<dbousername\>*|  
+|Témoin|WITNESSHOST4|*\<Somedomain>\\<witnessuser\>*|  
   
 1.  Créez un point de terminaison dans l'instance du serveur principal (instance par défaut sur PARTNERHOST1).  
   

@@ -1,5 +1,6 @@
 ---
 title: Chiffrement SQL Server | Microsoft Docs
+description: Utilisez ces ressources pour comprendre comment SQL Server utilise le chiffrement pour améliorer la sécurité de vos bases de données.
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fea2c9fdd532385378e2c66af08eefd4804442
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720436"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Le chiffrement est un processus visant à rendre des données inintelligibles à l'aide d'une clé ou d'un mot de passe. Les données sont alors inutiles en l'absence du mot de passe ou de la clé de déchiffrement correspondante. Le chiffrement ne résout pas les problèmes de contrôle d'accès. Toutefois, il améliore la sécurité en limitant les pertes de données même si les contrôles d'accès sont contournés. Par exemple, si l'ordinateur hôte de la base de données est mal configuré et qu'un pirate parvient à se procurer des données sensibles, les données subtilisées seront vraisemblablement inexploitables si elles sont chiffrées.  
   
 
@@ -79,7 +80,7 @@ Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../include
  Informations sur l'utilisation d'un certificat pour chiffrer des données.  
   
 ## <a name="external-resources"></a>Ressources externes  
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2012 - Sécurité et protection](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet - TechCenter SQL Server : Sécurité et protection SQL Server 2012](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Informations à jour sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

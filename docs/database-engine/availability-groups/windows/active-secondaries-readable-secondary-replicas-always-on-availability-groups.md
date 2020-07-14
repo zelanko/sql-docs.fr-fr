@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784638"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883000"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Les fonctions secondaires actives de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent la prise en charge de l’accès en lecture seule à un ou plusieurs réplicas secondaires (*réplicas secondaires accessibles en lecture*). Un réplica secondaire accessible en lecture peut être en mode de disponibilité en validation synchrone ou en mode de disponibilité en validation asynchrone. Un réplica secondaire accessible en lecture autorise l'accès en lecture seule à toutes ses bases de données secondaires. Toutefois, les bases de données secondaires accessibles en lecture ne sont pas définies en lecture seule. Elles sont dynamiques. Chaque base de données secondaire change à mesure que les modifications apportées à la base de données primaire sont répercutées sur elle. Pour un réplica secondaire classique, les données des bases de données secondaires, y compris les tables optimisées en mémoire durables, sont quasiment synchronisées en temps réel. De plus, les index de recherche en texte intégral sont synchronisés avec les bases de données secondaires. En général, la latence des données entre une base de données primaire et la base de données secondaire correspondante n'est que de quelques secondes.  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784638"
      L'administrateur de base de données doit configurer un ou plusieurs réplicas de sorte qu'en cas d'exécution sous le rôle secondaire, ces derniers autorisent toutes les connexions (uniquement pour l'accès en lecture seule) ou uniquement les connexions de tentative de lecture.  
   
     > [!NOTE]  
-    >  Éventuellement, l'administrateur de base de données peut configurer un réplica de disponibilité pour exclure les connexions en lecture seule en cas d'exécution sous le rôle principal.  
+    >  Éventuellement, l'administrateur de base de données peut configurer un réplica de disponibilité pour exclure les connexions en lecture seule en cas d'exécution sous le rôle principal.
   
      Pour plus d’informations, consultez [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+  
+    >[!WARNING]
+    >  Seuls les réplicas qui se trouvent sur la même version majeure de SQL Server seront lisibles. Pour plus d’informations, consultez [Bases de la mise à niveau propagée](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags).
+  
   
 -   **Écouteur de groupe de disponibilité**  
   
@@ -160,7 +164,7 @@ ms.locfileid: "82784638"
   
 -   Supprimez les statistiques temporaires à l'aide de l'instruction [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
--   Analysez les statistiques à l’aide des vues catalogue **sys.stats** et **sys.stats_columns** . **sys_stats** inclut la colonne **is_temporary**pour distinguer les statistiques permanentes des statistiques temporaires.  
+-   Analysez les statistiques à l’aide des affichages catalogue **sys.stats** et **sys.stats_columns** . L’affichage**sys_stats** inclut la colonne **is_temporary**pour distinguer les statistiques permanentes des statistiques temporaires.  
   
  Il n'existe aucune prise en charge de la mise à jour automatique des statistiques pour les tables optimisées en mémoire sur le réplica principal ou secondaire. Vous devez surveiller les performances des requêtes et les plans sur le réplica secondaire et mettre manuellement à jour les statistiques sur le réplica principal quand cela est nécessaire. Toutefois, les statistiques manquantes sont créées automatiquement sur le réplica principal et le réplica secondaire.  
   

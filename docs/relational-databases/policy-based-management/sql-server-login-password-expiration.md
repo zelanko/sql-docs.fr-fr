@@ -1,5 +1,6 @@
 ---
 title: Expiration du mot de passe de connexion SQL Server | Microsoft Docs
+description: Vérifier si l’expiration du mot de passe de chaque connexion SQL Server est activée pour aider à contrer une attaque possible dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 92a8452b586768e260c9bc378d06201cd2e67ed7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f33195e18af58e782c03118a7e3176f1340cd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774167"
 ---
 # <a name="sql-server-login-password-expiration"></a>Expiration du mot de passe de connexion SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette règle vérifie si l'option Expiration du mot de passe est activée pour chaque connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est activée et si la version du système d'exploitation est antérieure à [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], un pirate peut régulièrement exploiter un mot de passe de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connu.  
   
 ## <a name="best-practices-recommendations"></a>Meilleures pratiques recommandées  

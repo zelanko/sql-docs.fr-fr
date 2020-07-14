@@ -4,30 +4,33 @@ titleSuffix: SQL Server on Linux
 description: Apprenez à configurer des partages de dossier de captures instantanées avec des ports autres que ceux par défaut pour la réplication SQL Server sur Linux.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558592"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882678"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Configurer la réplication avec des ports autres que ceux par défaut (SQL Server sur Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Vous pouvez configurer la réplication avec des instances de SQL Server sur Linux qui écoutent sur n’importe quel port configuré avec le paramètre network.tcpport mssql-conf. Le port doit être ajouté au nom du serveur lors de la configuration si les conditions suivantes sont remplies :
 
 1. La configuration de la réplication implique une instance de SQL Server sur Linux
 2. Toute instance (Windows ou Linux) est à l’écoute sur un port autre que celui par défaut. 
 
-Le nom de serveur d’une instance peut être trouvé en exécutant @@servername sur l’instance.
+Le nom de serveur d’une instance peut être trouvé en exécutant @@servername sur l’instance. N’utilisez pas l’adresse IP à la place du nom du serveur. L’utilisation de l’adresse IP pour le serveur de publication, le serveur de distribution ou l’abonné peut entraîner une erreur.
+
+> [!NOTE]
+> La création d’une réplication de SQL Server sur Linux avec un port autre que celui par défaut ne fonctionnera qu’avec SQL Server 2019 et versions ultérieures.
 
 ## <a name="examples"></a>Exemples
 

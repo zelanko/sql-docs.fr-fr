@@ -1,5 +1,6 @@
 ---
 title: Mise en miroir de bases de données (SQL Server) | Microsoft Docs
+description: En savoir plus sur la mise en miroir de bases de données, qui est une solution permettant d’améliorer la disponibilité d’une base de données SQL Server et qui est implémentée pour chaque base de données.
 ms.custom: ''
 ms.date: 05/16/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b95d55a979738f787e4814a9f40f929c521868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754736"
 ---
 # <a name="database-mirroring-sql-server"></a>Mise en miroir de bases de données (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.  
@@ -53,7 +54,7 @@ ms.locfileid: "68006346"
   
      La mise en miroir de bases de données procure une redondance des données complète ou presque complète, selon que le mode de fonctionnement est haute sécurité ou hautes performances. Pour plus d'informations, consultez [Modes de fonctionnement](#OperatingModes), plus loin dans cette rubrique.  
   
-     Un serveur partenaire de mise en miroir de bases de données qui s'exécute sur [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ou versions ultérieures tente de résoudre automatiquement certains types d'erreurs qui empêchent la lecture d'une page de données. Un partenaire qui ne peut pas lire une page demande une copie actualisée à un autre partenaire. Si cette demande aboutit, la page illisible est remplacée par la copie, ce qui permet généralement de résoudre l'erreur. Pour plus d'informations, consultez [Automatic Page Repair &#40;Availability Groups: Database Mirroring&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+     Un serveur partenaire de mise en miroir de bases de données qui s'exécute sur [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ou versions ultérieures tente de résoudre automatiquement certains types d'erreurs qui empêchent la lecture d'une page de données. Un partenaire qui ne peut pas lire une page demande une copie actualisée à un autre partenaire. Si cette demande aboutit, la page illisible est remplacée par la copie, ce qui permet généralement de résoudre l'erreur. Pour plus d’informations, consultez [Réparation de page automatique &#40;groupes de disponibilité : mise en miroir de bases de données&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Elle augmente la disponibilité de la base de données de production au cours des mises à niveau.  
   
@@ -109,7 +110,7 @@ ms.locfileid: "68006346"
  Après le démarrage ou la reprise d'une session de mise en miroir, il s'agit du processus consistant à envoyer au serveur miroir les enregistrements de journal de la base de données principale qui se sont accumulés sur le serveur principal. Le serveur miroir écrit alors ces enregistrements de journal sur le disque le plus rapidement possible pour rester à jour par rapport au serveur principal.  
   
  Sécurité des transactions  
- Propriété de base de données spécifique de la mise en miroir qui permet de déterminer si une session de mise en miroir de bases de données opère de manière synchrone ou asynchrone. Il existe deux niveaux de sécurité : FULL (complète) et OFF (désactivée).  
+ Propriété de base de données spécifique de la mise en miroir qui permet de déterminer si une session de mise en miroir de bases de données opère de manière synchrone ou asynchrone. Il existe deux niveaux de sécurité : FULL (complète) et OFF (désactivée).  
   
  Témoin  
  À utiliser uniquement avec le mode haute sécurité. Il s'agit d'une instance facultative de SQL Server qui active le serveur miroir pour déterminer s'il est nécessaire d'initier un basculement automatique. Contrairement aux deux autres partenaires de basculement, le témoin ne dessert pas la base de données. La prise en charge du basculement automatique est le seul rôle rempli par le témoin.  
@@ -344,9 +345,9 @@ ms.locfileid: "68006346"
   
 ## <a name="see-also"></a>Voir aussi  
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Réparation de page automatique &#40;groupes de disponibilité : mise en miroir de bases de données&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Réparation de page automatique &#40;groupes de disponibilité : mise en miroir de bases de données&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Prérequis, limitations et recommandations relatives à la mise en miroir de bases de données](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  

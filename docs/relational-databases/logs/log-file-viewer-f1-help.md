@@ -1,5 +1,6 @@
 ---
 title: Aide sur la visionneuse du fichier journal via la touche F1 | Microsoft Docs
+description: Bénéficiez d’une aide via la touche F1 pour les colonnes fréquemment affichées, les autorisations et d’autres options pour la visionneuse du fichier journal dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caa7cb4a5a6f5e5f2d3b951f56c3fde0b30978c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784034"
 ---
 # <a name="log-file-viewer-f1-help"></a>Aide sur la visionneuse du fichier journal via la touche F1
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La visionneuse du fichier journal affiche les informations de journalisation de nombreux composants différents. Après avoir ouvert la visionneuse du fichier journal, utilisez le volet **Sélectionner les journaux** pour sélectionner les journaux à afficher. Chaque journal affiche des colonnes appropriées à ce type de journal.  
   
  Les journaux disponibles dépendent de la manière dont la visionneuse du fichier journal est ouverte. Pour plus d’informations, consultez [Ouvrir la Visionneuse du fichier journal](../../relational-databases/logs/open-log-file-viewer.md).  
@@ -49,7 +50,7 @@ ms.locfileid: "68084096"
  Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
  **Résumé du fichier journal**  
- Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
+ Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<filter criteria>.  
   
  **Détails de la ligne sélectionnée**  
  Sélectionnez une ligne pour afficher des détails supplémentaires sur la ligne d'événement sélectionnée en bas de la page. Vous pouvez changer l'ordre des colonnes en les faisant glisser sur la grille. Vous pouvez redimensionner les colonnes en faisant glisser les barres de séparation des colonnes dans l'en-tête de la grille vers la gauche ou la droite. Double-cliquez sur les barres de séparation des colonnes dans l'en-tête de la grille pour ajuster automatiquement la largeur de la colonne au contenu.  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151556"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091629"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un nouveau groupe de disponibilité, si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est activée pour la fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -162,7 +162,7 @@ CREATE AVAILABILITY GROUP group_name
  Les valeurs de FAILURE_CONDITION_LEVEL et de HEALTH_CHECK_TIMEOUT définissent une *stratégie de basculement souple* pour un groupe donné. Cette stratégie de basculement souple vous offre un contrôle granulaire sur les conditions qui doivent entraîner un basculement automatique. Pour plus d’informations, consultez [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *millisecondes*  
- Spécifie le temps d’attente (en millisecondes) pour que la procédure stockée système [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retourne les informations d’intégrité du serveur avant que le cluster WSFC suppose que l’instance de serveur est lente ou suspendue. HEALTH_CHECK_TIMEOUT est défini au niveau du groupe, mais s’applique uniquement aux réplicas de disponibilité configurés pour le mode de disponibilité de validation synchrone avec basculement automatique (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  De plus, l’expiration d’un délai de contrôle d’intégrité peut déclencher un basculement automatique uniquement si les réplicas principaux et secondaires sont configurés pour le mode de basculement automatique (FAILOVER_MODE **=** AUTOMATIC) et si le réplica secondaire est synchronisé avec le réplica principal.  
+ Spécifie le temps d’attente (en millisecondes) nécessaire pour que la procédure stockée système [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retourne les informations d’intégrité du serveur avant que le cluster WSFC ne suppose que l’instance de serveur est lente ou ne répond pas. HEALTH_CHECK_TIMEOUT est défini au niveau du groupe, mais s’applique uniquement aux réplicas de disponibilité configurés pour le mode de disponibilité de validation synchrone avec basculement automatique (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  De plus, l’expiration d’un délai de contrôle d’intégrité peut déclencher un basculement automatique uniquement si les réplicas principaux et secondaires sont configurés pour le mode de basculement automatique (FAILOVER_MODE **=** AUTOMATIC) et si le réplica secondaire est synchronisé avec le réplica principal.  
   
  La valeur par défaut de HEALTH_CHECK_TIMEOUT est de 30 000 millisecondes (30 secondes). La valeur minimale est 15 000 millisecondes (15 secondes), et la valeur maximale est 4 294 967 295 millisecondes.  
   
@@ -207,7 +207,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Si vous spécifiez moins de quatre réplicas secondaires lors de la création d’un groupe de disponibilité, vous pouvez ajouter un réplica secondaire supplémentaire à tout moment à l’aide de l’instruction [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez également utiliser cette instruction pour supprimer un réplica secondaire d'un groupe de disponibilité existant.  
   
- \<server_instance> Spécifie l’adresse de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est l’hôte d’un réplica. Le format de l'adresse varie selon que l'instance est l'instance par défaut ou une instance nommée et s'il s'agit d'une instance autonome ou d'une instance de cluster de basculement (FCI), comme suit :  
+ \<server_instance>Spécifie l'adresse de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est l'hôte d'un réplica. Le format de l'adresse varie selon que l'instance est l'instance par défaut ou une instance nommée et s'il s'agit d'une instance autonome ou d'une instance de cluster de basculement (FCI), comme suit :  
   
  { '*nom_système*[\\*nom_instance*]' | '*nom_réseau_FCI*[\\*nom_instance*]' }  
   
@@ -339,7 +339,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du comportement par défaut.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘** \<server_instance> **’** [ **,** ...*n* ] **)** | NONE } Spécifie une liste séparée par des virgules des instances de serveur qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité, qui répondent aux conditions suivantes lors de l’exécution sous le rôle secondaire :  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } Spécifie une liste séparée par des virgules des instances de serveur qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité, qui répondent aux conditions suivantes lors de l’exécution sous le rôle secondaire :  
   
 -   Être configurés pour autoriser les connexions ou connexions en lecture seule (voir l'argument ALLOW_CONNECTIONS de l'option de SECONDARY_ROLE, ci-dessus).  
   
@@ -378,7 +378,7 @@ Pour plus d’informations, consultez [Redirection de connexion en lecture/écri
   
  Vous devez joindre le groupe de disponibilité secondaire au groupe de disponibilité distribué. Pour plus d’informations, consultez [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
- \<ag_name > Spécifie le nom du groupe de disponibilité qui constitue la moitié du groupe de disponibilité distribué.  
+ \<ag_name> Spécifie le nom du groupe de disponibilité qui constitue la moitié du groupe de disponibilité distribué.  
   
  LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie le chemin de l’URL de l’écouteur associé au groupe de disponibilité.  
@@ -422,7 +422,7 @@ Pour plus d’informations, consultez [Redirection de connexion en lecture/écri
  MANUAL  
  Spécifie l’amorçage manuel (par défaut). Cette méthode vous oblige à créer une sauvegarde de la base de données sur le réplica principal et de restaurer manuellement cette sauvegarde sur le ou les réplicas du groupe de disponibilité secondaire.  
   
- LISTENER **‘** _dns\_name_ **’(** \<listener_option\> **)** Définit un nouvel écouteur de groupe de disponibilité pour ce groupe de disponibilité. LISTENER est un argument facultatif.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Définit un nouvel écouteur de groupe de disponibilité pour ce groupe de disponibilité. LISTENER est un argument facultatif.  
   
 > [!IMPORTANT]
 >  Avant de créer votre premier écouteur, nous vous recommandons vivement de lire [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -442,7 +442,7 @@ Pour plus d’informations, consultez [Redirection de connexion en lecture/écri
 > [!IMPORTANT]  
 >  NetBIOS identifie les 15 premiers caractères du nom_dns. Si vous avez deux clusters WSFC qui sont contrôlés par le même annuaire Active Directory et que vous tentez de créer des écouteurs de groupe de disponibilité dans les deux clusters avec des noms contenant plus de 15 caractères et un préfixe de 15 caractères identique, une erreur signale que la ressource de nom de réseau virtuel ne peut pas être mise en ligne. Pour plus d'informations sur les règles de préfixe des noms DNS, consultez [Attribution de noms de domaine](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
- \<listener_option> LISTENER prend l’une des options \<listener_option> suivantes : 
+ \<listener_option> LISTENER prend l'une des options \<listener_option> suivantes : 
   
  WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Spécifie que l’écouteur du groupe de disponibilité utilise le protocole DHCP (Dynamic Host Configuration Protocol).  Utilisez éventuellement la clause ON pour identifier le réseau sur lequel cet écouteur est créé. DHCP est limité à un seul sous-réseau utilisé pour chaque instance de serveur qui héberge un réplica dans le groupe de disponibilité.  
@@ -496,7 +496,7 @@ Pour plus d’informations, consultez [Redirection de connexion en lecture/écri
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Cette préférence de sauvegarde automatisée indique que les sauvegardes doivent se produire sur un réplica secondaire, sauf lorsque le réplica principal est le seul réplica en ligne (il s'agit du comportement par défaut). Pour que le paramètre AUTOMATED_BACKUP_PREFERENCE ait effet, vous devez générer un script des travaux de sauvegarde dans les bases de données de disponibilité pour prendre en compte la préférence de sauvegarde automatisée.|  
 |FAILURE_CONDITION_LEVEL|3|Cette définition du niveau de condition d'échec spécifie qu'un basculement automatique doit être initialisé sur les erreurs internes SQL Server critiques, telles que les verrouillages Spinlock orphelins, les violations graves d'accès en écriture, ou en cas de trop de vidages.|  
-|HEALTH_CHECK_TIMEOUT|600000|Cette valeur de délai d’attente de contrôle d’intégrité, 60 secondes, spécifie que le cluster WSFC attend 60 000 millisecondes pour que la procédure stockée système [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retourne des informations d’intégrité du serveur sur une instance de serveur qui héberge un réplica de validation synchrone-avec basculement automatique, avant que le cluster ne considère que l’instance de serveur hôte est lente ou suspendue. (La valeur par défaut est 30 000 millisecondes.)|  
+|HEALTH_CHECK_TIMEOUT|600000|Cette valeur de délai d’attente de contrôle d’intégrité, 60 secondes, spécifie que le cluster WSFC attend 60 000 millisecondes pour que la procédure stockée système [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retourne des informations d’intégrité du serveur sur une instance de serveur qui héberge un réplica de validation synchrone avec basculement automatique, avant que le cluster ne considère que l’instance de serveur hôte est lente ou ne répond pas. (La valeur par défaut est 30 000 millisecondes.)|  
   
  Trois réplicas de disponibilité doivent être hébergés par les instances de serveur par défaut sur des ordinateurs nommés `COMPUTER01`, `COMPUTER02` et `COMPUTER03`. Le tableau suivant récapitule les valeurs spécifiées pour les options de réplica de chaque réplica.  
   
@@ -584,6 +584,3 @@ GO
  [Résoudre des problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

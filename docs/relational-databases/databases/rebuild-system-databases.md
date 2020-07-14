@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 681396511bbcee9b68800ccd86e62837a95efd77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728403"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)ou [resource](../../relational-databases/databases/resource-database.md) ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Dans cette rubrique**  
@@ -168,7 +168,7 @@ ms.locfileid: "76516550"
   
      Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Dans une autre fenêtre de ligne de commande, détachez la base de données **msdb** à l’aide de la commande suivante, en remplaçant *\<nom_serveur>* par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Dans une autre fenêtre de ligne de commande, détachez la base de données **msdb** à l'aide de la commande suivante, en remplaçant *\<servername>* par l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  À l'aide de l'Explorateur Windows, renommez les fichiers de la base de données **msdb** . Par défaut, ils se trouvent dans le sous-dossier DATA de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "76516550"
   
 6.  Dans une fenêtre de ligne de commande, connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécutez la commande : `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Remplacez *\<nom_serveur>* par l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Utilisez le chemin d'accès au système de fichiers de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Remplacez *\<servername>* par l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Utilisez le chemin d'accès au système de fichiers de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 7.  À l'aide du Bloc-notes Windows, ouvrez le fichier **instmsdb.out** et vérifiez qu'il ne présente aucune erreur.  
   

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b608af9a25b6a4fe14078043276e0689990e6246
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759104"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restauration à partir de sauvegardes stockées dans Windows Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique présente les éléments à prendre en considération quand vous restaurez une base de données à l’aide d’une sauvegarde stockée dans le service de stockage Blob Azure. Ceci s'applique aux sauvegardes créées à l'aide de la sauvegarde SQL Server vers l'URL ou par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Nous vous recommandons de consulter cette rubrique si vous avez des sauvegardes stockées dans le service de stockage Blob Azure et que vous planifiez de les restaurer. Lisez ensuite la rubrique qui explique comment restaurer une base de données dont les sauvegardes sont locales ou sur le cloud, les deux méthodes étant identiques.  
@@ -42,7 +42,7 @@ ms.locfileid: "82922265"
   
  Pour réduire les durées de restauration, il est recommandé d'utiliser des sauvegardes compressées.  Pour des tailles de sauvegarde de plus de 25 Go, utilisez l’ [utilitaire AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) pour un téléchargement sur le disque local, puis effectuez la restauration. Pour connaître les bonnes pratiques et obtenir des recommandations, consultez [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- Vous pouvez également activer l'indicateur de trace 3051 lors de la restauration afin de générer un journal détaillé. Ce fichier journal se trouve dans le répertoire du journal et son nom est au format suivant : BackupToUrl-\<nom_instance>-\<nom_base_de_données>-action-\<PID>.log. Le fichier journal contient des informations sur chaque aller-retour dans le Stockage Azure, y compris le délai d’attente qui peut être utile lors du diagnostic de problèmes.  
+ Vous pouvez également activer l'indicateur de trace 3051 lors de la restauration afin de générer un journal détaillé. Ce fichier journal se trouve dans le répertoire du journal et son nom est au format suivant : BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. Le fichier journal contient des informations sur chaque aller-retour dans le Stockage Azure, y compris le délai d’attente qui peut être utile lors du diagnostic de problèmes.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Rubriques relatives aux procédures des opérations de restauration  
   

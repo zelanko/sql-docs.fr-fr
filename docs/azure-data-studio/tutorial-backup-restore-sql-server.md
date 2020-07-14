@@ -1,25 +1,24 @@
 ---
 title: Sauvegarder et restaurer une base de données
-titleSuffix: Azure Data Studio
 description: Découvrez comment sauvegarder et restaurer une base de données à l’aide d’Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758290"
 ---
-# <a name="backup-and-restore-databases-using-name-sos"></a>Sauvegarder et restaurer des bases de données avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Sauvegarder et restaurer des bases de données à l’aide d’Azure Data Studio
 
-Dans ce didacticiel, vous apprendrez à utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour :
+Dans ce didacticiel, vous apprendrez à utiliser Azure Data Studio pour :
 > [!div class="checklist"]
 > * Sauvegarder une base de données 
 > * Afficher l’état de la sauvegarde
@@ -27,7 +26,7 @@ Dans ce didacticiel, vous apprendrez à utiliser [!INCLUDE[name-sos](../includes
 > * Restaurer une base de données
 > * Afficher l’état de la tâche de restauration
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server. Pour créer la base de données *TutorialDB*, suivez un des démarrages rapides suivants :
 

@@ -1,5 +1,6 @@
 ---
 title: Configurer la publication et la distribution | Microsoft Docs
+description: Découvrez comment configurer la publication et la distribution dans SQL Server à l’aide de SQL Server Management Studio, Transact-SQL ou Replication Management Objects.
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774004"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurer la publication et la distribution
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  Cette rubrique explique comment configurer la publication et la distribution dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer 
@@ -32,7 +33,7 @@ ms.locfileid: "76284988"
 Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio 
-Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** . Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes `db_owner` puissent créer des publications, ou si vous souhaitez configurer un serveur de distribution distant qui ne soit pas un serveur de publication.
+Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez des propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** . Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes `db_owner` puissent créer des publications, ou si vous souhaitez configurer un serveur de distribution distant qui ne soit pas un serveur de publication.
 
 #### <a name="to-configure-distribution"></a>Pour configurer la distribution 
 

@@ -12,19 +12,19 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766910"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (index XML sélectifs)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Crée un index XML secondaire sélectif sur un chemin d'accès unique déjà indexé par un index XML sélectif existant. Vous pouvez également créer des index XML primaires sélectifs. Pour plus d’informations, consultez [Créer, modifier ou supprimer des index XML sélectifs](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,7 +83,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  Nom de l'index XML sélectif existant.  
   
- FOR **(** \<xquery_or_sql_values_path> **)** Nom du chemin indexé sur lequel créer l’index XML secondaire sélectif. Le chemin d'accès à indexer est le nom affecté dans l'instruction CREATE SELECTIVE XML INDEX. Pour plus d’informations, consultez [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ FOR **(** \<xquery_or_sql_values_path> **)** Nom du chemin d’accès indexé sur lequel créer l’index XML secondaire sélectif. Le chemin d'accès à indexer est le nom affecté dans l'instruction CREATE SELECTIVE XML INDEX. Pour plus d’informations, consultez [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
  WITH \<index_options> Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   

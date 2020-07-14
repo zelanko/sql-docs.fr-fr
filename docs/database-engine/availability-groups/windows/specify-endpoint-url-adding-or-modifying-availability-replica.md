@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b96c091413e5ded9f3cff862f2c5650ce38fe5d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902368"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Spécifier l’URL de point de terminaison - Ajout ou modification d’un réplica de disponibilité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Pour héberger un réplica de disponibilité pour un groupe de disponibilité, une instance de serveur doit posséder un point de terminaison de mise en miroir de bases de données. L'instance de serveur utilise ce point de terminaison pour écouter les messages [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] des réplicas de disponibilité hébergés par d'autres instances de serveur. Pour définir un réplica de disponibilité pour un groupe de disponibilité, vous devez spécifier l'URL de point de terminaison de l'instance de serveur qui hébergera le réplica. L’*URL de point de terminaison* identifie le protocole de transport du point de terminaison de mise en miroir de bases de données (TCP), l’adresse système de l’instance de serveur et le numéro de port associé au point de terminaison.  
   
 > [!NOTE]  
@@ -33,11 +33,11 @@ ms.locfileid: "75251285"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Syntaxe pour une URL de point de terminaison  
  La syntaxe d'une URL de point de terminaison est la suivante :  
   
- TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  where  
   
--   *\<adresse_système>* est une chaîne qui identifie sans ambiguïté le système informatique cible. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
+-   *\<system-address>* est une chaîne qui identifie sans ambiguïté le système informatique cible. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
   
     -   Étant donné que les nœuds du cluster WSFC (clustering de basculement Windows Server) figurent dans le même domaine, vous pouvez utiliser le nom du système informatique, par exemple `SYSTEM46`.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75251285"
   
          Le contenu et le nombre de segments de domaine sont déterminés au sein de la société ou de l'organisation. Pour plus d'informations, consultez [Recherche du nom de domaine complet](#Finding_FQDN), plus loin dans cette rubrique.  
   
--   *\<port>* est le numéro de port utilisé par le point de terminaison de mise en miroir de l’instance du serveur partenaire.  
+-   *\<port>* est le numéro de port utilisé par le point de terminaison de mise en miroir de l'instance de serveur partenaire.  
   
      Un point de terminaison de mise en miroir de bases de données peut utiliser tout port disponible sur le système informatique. Chaque numéro de port doit être associé à un seul point de terminaison, et chaque point de terminaison est associé à une seule instance de serveur ; ainsi, différentes instances de serveurs sur le même serveur écoutent sur différents points de terminaison dotés de différents ports. Par conséquent, le port que vous précisez dans l'URL de point de terminaison lorsque vous spécifiez un réplica de disponibilité dirigera toujours les messages entrants à l'instance de serveur dont le point de terminaison est associé à ce port.  
   

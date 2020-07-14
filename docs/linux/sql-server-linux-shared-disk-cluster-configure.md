@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558324"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897277"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Une instance de cluster de basculement de disque partagé à deux nœuds SQL Server fournit une redondance au niveau du serveur pour la haute disponibilité. Dans ce didacticiel, vous allez apprendre à créer une instance de cluster de basculement à deux nœuds de SQL Server sur Linux. Les étapes spécifiques que vous allez effectuer sont les suivantes :
 
@@ -35,7 +35,7 @@ Cet article explique comment créer une instance de cluster de basculement de di
 
 Pour plus d’informations, consultez [Instance de cluster de basculement (FCI) SQL Server sur Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour effectuer le scénario de bout en bout suivant, vous avez besoin de deux machines pour déployer le cluster à deux nœuds et d’un autre serveur pour le stockage. Les étapes ci-dessous décrivent comment ces serveurs seront configurés.
 
@@ -133,8 +133,8 @@ Vous devez fournir un stockage auquel les deux nœuds peuvent accéder. Vous pou
 
    > Si vous utilisez un autre pare-feu qui n’intègre pas de configuration à haute disponibilité intégrée, les ports suivants doivent être ouverts pour permettre à Pacemaker de communiquer avec les autres nœuds du cluster
    >
-   > * TCP : ports 2224, 3121, 21064
-   > * UDP : port 5405
+   > * TCP : Ports 2224, 3121, 21064
+   > * UDP : Port 5405
 
 1. Installez les packages Pacemaker sur chaque nœud.
 
@@ -201,7 +201,7 @@ Cet exemple crée un FCI dans le groupe NewLinFCIGrp. Le nom du groupe de ressou
 
     \<FolderOnNFSServer> est le nom du partage NFS
 
-    \<FolderToMountiSCSIDIsk> est le dossier de montage du disque (pour les bases de données système et l’emplacement par défaut, il s’agit de /var/opt/mssql/data)
+    \<FolderToMountNFSShare> est le dossier de montage du disque (pour les bases de données système et l’emplacement par défaut, il s’agit de /var/opt/mssql/data)
 
     En voici un exemple :
 
@@ -255,7 +255,7 @@ Cet exemple crée un FCI dans le groupe NewLinFCIGrp. Le nom du groupe de ressou
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName> n’est pas seulement le nom de la ressource, mais le nom convivial associé au FCI. Il s’agit de ce que les utilisateurs et les applications utilisent pour se connecter. 
+    \<FCIResourceName> n’est pas seulement le nom de la ressource, mais aussi le nom convivial associé au FCI. Il s’agit de ce que les utilisateurs et les applications utilisent pour se connecter. 
 
     \<RGName> est le nom du groupe de ressources.
  

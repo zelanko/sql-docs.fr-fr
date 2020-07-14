@@ -1,5 +1,6 @@
 ---
 title: Spécifier des planifications de synchronisation | Microsoft Docs
+description: Découvrez comment spécifier des planifications de synchronisation dans SQL Server à l’aide de SQL Server Management Studio, Transact-SQL ou Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783117"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique explique comment spécifier des planifications de synchronisation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Lorsque vous créez un abonnement, vous pouvez définir une planification de synchronisation qui contrôle à quel moment l'agent de réplication de l'abonnement s'exécute. Si aucun paramètre de planification n'est spécifié, l'abonnement utilise la planification par défaut.  
   
  Les abonnements sont synchronisés par l'Agent de distribution (pour la réplication transactionnelle et d'instantané) ou l'Agent de fusion (pour la réplication de fusion). Les agents peuvent s'exécuter en continu, à la demande ou selon une planification.  
@@ -48,15 +49,15 @@ ms.locfileid: "76287124"
   
 |Agent|Nom du travail|  
 |-----------|--------------|  
-|Agent de fusion pour les abonnements extraits|**\<Serveur_Publication>-\<Base_de_données_Publication>-\<Publication>-\<Abonné>-\<Base_de_données_Abonnement>-\<entier>**|  
-|Agent de fusion pour abonnements par envoi de données (push)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|  
-|Agent de distribution pour abonnements par envoi de données (push)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>** <sup>1</sup>|  
-|Agent de distribution pour abonnements par extraction de données (pull)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<BasededonnéesPublication>-\<GUID>** <sup>2</sup>|  
-|Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|  
+|Agent de fusion pour les abonnements extraits|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|Agent de fusion pour abonnements par envoi de données (push)|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agent de distribution pour abonnements par envoi de données (push)|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|  
+|Agent de distribution pour abonnements par extraction de données (pull)|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
+|Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Pour les abonnements par émission de données aux publications Oracle, il s’agit de **\<Serveur_Publication>-\<Serveur_Publication**> au lieu de **\<Serveur_Publication>-\<Base_de_données_Publication>**  
+ <sup>1</sup> Pour les abonnements envoyés aux publications Oracle, le nom est **\<Publisher>-\<Publisher**> au lieu de **\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Pour les abonnements par extraction aux publications Oracle, il s’agit de **\<Serveur_Publication>-\<Base_de_données_Distribution**> au lieu de **\<Serveur_Publication>-\<Base_de_données_Publication>**  
+ <sup>2</sup> Pour les abonnements extraits aux publications Oracle, le nom est **\<Publisher>-\<DistributionDatabase**> au lieu de **\<Publisher>-\<PublicationDatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>Pour spécifier des planifications de synchronisation  
   
@@ -66,9 +67,9 @@ ms.locfileid: "76287124"
   
     -   **Exécuter à la demande uniquement**  
   
-    -   **\<Définir la planification...>**  
+    -   **\<Define Schedule...>**  
   
-2.  Si vous sélectionnez l’option **\<Définir la planification...>** , spécifiez une planification dans la boîte de dialogue **Propriétés de la planification du travail**, puis cliquez sur **OK**.  
+2.  Si vous sélectionnez l'option **\<Define Schedule...>** , spécifiez une planification dans la boîte de dialogue **Propriétés de la planification du travail**, puis cliquez sur **OK**.  
   
 3.  Terminez l'Assistant.  
 
@@ -80,9 +81,9 @@ ms.locfileid: "76287124"
   
 3.  Cliquez avec le bouton droit sur un abonnement, puis cliquez sur **Afficher les détails**.  
   
-4.  Dans la fenêtre **Abonnement < NomAbonnement>** , cliquez sur **Action**, puis sur **Propriétés du travail - \<NomAgent>** .  
+4.  Dans la fenêtre **Abonnement < NomAbonnement>** , cliquez sur **Action**, puis sur **\<AgentName> Propriétés du travail**.  
   
-5.  Dans la page **Planifications** de la boîte de dialogue **Propriétés du travail - \<NomTravail>** , cliquez sur **Modifier**.  
+5.  Dans la page **Planifications** de la boîte de dialogue **Propriétés du travail - \<JobName>** , cliquez sur **Modifier**.  
   
 6.  Dans la boîte de dialogue **Propriétés de la planification du travail** , sélectionnez une valeur dans la liste déroulante **Type de planification** :  
   
@@ -104,7 +105,7 @@ ms.locfileid: "76287124"
   
 3.  Cliquez avec le bouton droit du travail de l'Agent de distribution ou de fusion associé à l'abonnement puis cliquez sur **Propriétés**.  
   
-4.  Dans la page **Planifications** de la boîte de dialogue **Propriétés du travail - \<NomTravail>** , cliquez sur **Modifier**.  
+4.  Dans la page **Planifications** de la boîte de dialogue **Propriétés du travail - \<JobName>** , cliquez sur **Modifier**.  
   
 5.  Dans la boîte de dialogue **Propriétés de la planification du travail** , sélectionnez une valeur dans la liste déroulante **Type de planification** :  
   
@@ -126,7 +127,7 @@ ms.locfileid: "76287124"
   
 3.  Cliquez avec le bouton droit du travail de l'Agent de distribution ou de fusion associé à l'abonnement puis cliquez sur **Propriétés**.  
   
-4.  Dans la page **Planifications** de la boîte de dialogue **Propriétés du travail - \<NomTravail>** , cliquez sur **Modifier**.  
+4.  Dans la page **Planifications** de la boîte de dialogue **Propriétés du travail - \<JobName>** , cliquez sur **Modifier**.  
   
 5.  Dans la boîte de dialogue **Propriétés de la planification du travail** , sélectionnez une valeur dans la liste déroulante **Type de planification** :  
   

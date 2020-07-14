@@ -1,5 +1,6 @@
 ---
 title: Type et colonnes de données XML (SQL Server) | Microsoft Docs
+description: Découvrez les avantages et les limitations du type de données XML pour le stockage des données XML dans SQL Server.
 ms.custom: ''
 ms.date: 05/17/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83cea04e6617706151c0f74c43273281e6b89901
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0a23431727b25135751693d1dbec68b6377dcd4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729794"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cette rubrique présente les avantages et les limites du type de données **XML** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et vous aide à choisir comment stocker des données XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modèle de données relationnel ou XML  
@@ -115,7 +116,7 @@ ms.locfileid: "80664791"
   
  Le stockage XML natif est utile lorsque les documents XML présentent des structures différentes ou suivent des schémas différents ou complexes beaucoup trop difficiles à mapper à des structures relationnelles.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Exemple : modélisation de données XML à l'aide du type de données xml  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Exemple : modélisation de données XML à l’aide du type de données xml  
  Prenons l'exemple d'un manuel de produit au format XML. Chaque rubrique fait l'objet d'un chapitre distinct, lui-même composé de plusieurs sections. Une section peut contenir des sous-sections. L’élément \<section> est donc un élément récursif. Les manuels de produit regroupent un gros volume de données diverses : contenu, diagrammes, explications techniques ; les données sont semi-structurées. Les utilisateurs veulent pouvoir lancer une recherche contextuelle sur les rubriques qui les intéressent, par exemple rechercher la section consacrée aux « index cluster » dans le chapitre sur l'« indexation », et s'informer des quantités techniques.  
   
  Une colonne de type de données **xml** constitue un modèle de stockage approprié pour vos documents XML. Vous conservez ainsi le contenu InfoSet de vos données XML. L'indexation de la colonne XML permet d'optimiser les performances des requêtes.  
@@ -144,7 +145,7 @@ ms.locfileid: "80664791"
   
  Il pourrait s'agir de données relationnelles exposées au format XML pour l'échange des données et les services Web, et de données XML avec un schéma fixe. Pour plus d'informations, consultez [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)(éventuellement en anglais).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemple : modélisation des données à l'aide d'un schéma XML annoté (AXSD)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemple : modélisation des données à l’aide d’un schéma XML annoté (AXSD)  
  Partons du principe que vous disposez de données relationnelles (clients, commandes et articles) et que vous voulez les gérer sous forme XML. Définissez une vue XML en utilisant AXSD sur les données relationnelles. La vue XML vous permet de charger en masse les données XML dans vos tables, puis d'interroger et de mettre à jour les données relationnelles à l'aide de la vue XML. Ce modèle s'avère très utile si vous avez à échanger des données contenant des balises XML avec d'autres applications alors que les applications SQL fonctionnent sans interruption.  
   
 ### <a name="hybrid-model"></a>Modèle hybride  

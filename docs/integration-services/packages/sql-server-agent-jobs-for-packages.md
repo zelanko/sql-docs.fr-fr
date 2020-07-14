@@ -1,7 +1,7 @@
 ---
 title: Travaux de SQL Server Agent pour les packages | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00dff38a2c1e3309d6b8984475791f885f174e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643276"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Travaux de l'Agent SQL Server pour les packages
 
@@ -122,36 +122,39 @@ ms.locfileid: "71295808"
 6.  Pour le type d'étape de travail, sélectionnez **Package Integration Services** .  
   
 7.  Dans la liste **Exécuter en tant que** , sélectionnez **Compte de service SQL Server Agent** ou sélectionnez un compte proxy ayant les informations d'identification qui seront utilisées par le travail. Pour plus d'informations sur la création d'un compte proxy, consultez [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
-  
-     En utilisant un compte proxy au lieu du **Compte de service SQL Server Agent** , vous pouvez résoudre les problèmes courants qui peuvent se produire lors de l'exécution d'un package à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur ces problèmes, consultez l’article de la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulé [Un package SSIS n’est pas exécuté lorsque vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760). 
-     
-  7.1 Lors de l’exécution d’un travail avec un proxy, les éléments suivants de sécurité doivent être en place pour que le travail s’exécute correctement.
 
-      Informations d’identification de connexion utilisées par le proxy, le compte qui exécute SQL Server Agent et le compte qui exécute le Service SQL Server nécessitent les autorisations suivantes : Attribut de stratégie de sécurité locale : Remplacer un jeton de niveau processus avec contrôle complet sur %SYSTEMROOT%\Temp 
-
-En cas d’échec de mise en place des éléments de sécurité, la tâche échoue et un message d’erreur semblable au suivant s’affiche : Le travail a échoué.  Le client ne dispose pas d'un privilège qui est obligatoire.
+    En utilisant un compte proxy au lieu du **Compte de service SQL Server Agent** , vous pouvez résoudre les problèmes courants qui peuvent se produire lors de l'exécution d'un package à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur ces problèmes, consultez l’article de la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulé [Un package SSIS n’est pas exécuté lorsque vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760). 
      
-  
-    > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
-  
-     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
-  
+    - Lors de l’exécution d’un travail avec un proxy, les éléments suivants de sécurité doivent être en place pour que le travail s’exécute correctement.
+
+        Informations d’identification de connexion utilisées par le proxy, le compte qui exécute SQL Server Agent et le compte qui exécute le Service SQL Server nécessitent les autorisations suivantes :
+
+        - Attribut de stratégie de sécurité locale : Remplacer un jeton de niveau processus
+        - Contrôle total sur %SYSTEMROOT%\Temp 
+
+        En cas d’échec de mise en place des éléments de sécurité, la tâche échoue et un message d’erreur semblable au suivant s’affiche : Le travail a échoué. Le client ne dispose pas d'un privilège qui est obligatoire.
+
+        > **REMARQUE :** Si le mot de passe est différent de celui des informations d'identification que le compte proxy utilise, vous devez mettre à jour le mot de passe des informations d'identification. Autrement, l'étape de travail échouera.  
+
+        Pour plus d’informations sur la configuration du compte de service de l’Agent SQL Server, consultez [Définir le compte de démarrage du service pour l’Agent SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+
 8.  Dans la zone de liste **Source du package** , cliquez sur la source du package et définissez les options de l'étape de travail.  
   
-     **Le tableau suivant décrit les sources de package possibles.**  
+    **Le tableau suivant décrit les sources de package possibles.**  
   
     |Source du package|Description|  
     |--------------------|-----------------|  
     |**Catalogue SSIS**|Packages stockés dans la base de données SSISDB. Les packages sont contenus dans les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Packages stockés dans la base de données MSDB. Vous utilisez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour gérer les packages.|  
-    |**Magasin de packages SSIS**|Packages stockés dans le dossier par défaut sur votre ordinateur. Le dossier par défaut est *\<lecteur>* :\Program files\Microsoft SQL Server\110\DTS\Packages. Vous utilisez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour gérer les packages.<br /><br /> Remarque : Vous pouvez spécifier un dossier différent ou spécifier des dossiers supplémentaires dans le système de fichiers géré par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], en modifiant le fichier de configuration pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
+    |**Magasin de packages SSIS**|Packages stockés dans le dossier par défaut sur votre ordinateur. Le dossier par défaut est *\<drive>*  : \Program files\Microsoft SQL Server\110\DTS\Packages. Vous utilisez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour gérer les packages.<br /><br /> Remarque : Vous pouvez spécifier un dossier différent ou spécifier des dossiers supplémentaires dans le système de fichiers géré par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], en modifiant le fichier de configuration pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**Système de fichiers**|Packages stockés dans un dossier sur votre ordinateur local.|  
+    |||
   
-     **Les tableaux suivants décrivent les options de configuration disponibles pour l'étape de travail en fonction de la source du package que vous sélectionnez.**  
+    **Les tableaux suivants décrivent les options de configuration disponibles pour l'étape de travail en fonction de la source du package que vous sélectionnez.**  
   
     > **IMPORTANT :** Si le package est protégé par mot de passe, lorsque vous cliquez sur l'un des onglets de la page **Général** de la boîte de dialogue **Nouvelle étape de travail** , à l'exception de l'onglet **Package** , vous devez entrer le mot de passe dans la boîte de dialogue **Mot de passe du package** qui s'affiche. Sinon, le travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n'exécute pas le package.  
   
-     **Source du package** : Catalogue SSIS  
+    **Source du package** : Catalogue SSIS  
   
     |Onglet|Options|  
     |---------|-------------|  
@@ -162,7 +165,7 @@ En cas d’échec de mise en place des éléments de sécurité, la tâche écho
     |**Avancée**<br /><br /> Situés sur l'onglet **Configuration** .|Configurez les paramètres supplémentaires suivants pour l’exécution du package :|  
     ||**Substitutions de propriété**:<br /><br /> Cliquez sur **Ajouter** pour entrer une nouvelle valeur de propriété de package, spécifiez le chemin d'accès de la propriété, et indiquez si la valeur de la propriété est sensible. Le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] chiffre les données sensibles. Pour modifier ou supprimer des paramètres de propriété, cliquez sur une ligne dans la zone de priorités **Propriété** puis cliquez sur **Modifier** ou sur **Supprimer**. Vous pouvez trouver le chemin de la propriété en procédant de l’une des façons suivantes :<br /><br /> \- Copiez le chemin de la propriété à partir du fichier de configuration XML (\*.dtsconfig). Le chemin d'accès est répertorié dans la section Configuration du fichier, comme valeur de l'attribut Path. Voici un exemple de chemin d’accès de la propriété MaximumErrorCount : \Package.Properties[MaximumErrorCount]<br /><br /> \- Exécutez **l’Assistant Configuration de package** et copiez les chemins des propriétés à partir de la dernière page **Fin de l’Assistant** . Vous pouvez ensuite quitter l'Assistant.<br /><br /> <br /><br /> Remarque : L'option **Substitutions de propriété** concerne des packages contenant des configurations que vous avez mises à niveau depuis une version précédente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les packages que vous créez à l'aide de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] et que vous déployez sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des paramètres à la place des configurations.|  
     ||**Niveau de journalisation**<br /><br /> Sélectionnez l'un des niveaux de journalisation suivants pour l'exécution du package. Notez que le niveau de journalisation **Performances** ou **Commentaires** sélectionné peut affecter les performances de l’exécution du package.<br /><br /> **Aucun** :<br />                          La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.<br /><br /> **De base** :<br />                          Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s'agit de la valeur par défaut du niveau de journalisation.<br /><br /> **Performances** :<br />                          Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.<br /><br /> **Commentaires**:<br />                          Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> Le niveau de journalisation que vous sélectionnez détermine quelles informations sont affichées dans les vues SSISDB et dans les rapports pour le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Journalisation d’Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).|  
-    ||**Vider en cas d'erreurs**<br /><br /> Déterminez si des fichiers de vidage du débogage sont générés lorsqu'une erreur se produit pendant l'exécution du package. Les fichiers contiennent des informations sur l'exécution du package qui peuvent vous aider à résoudre les problèmes d'exécution. Quand vous sélectionnez cette option et qu’une erreur se produit pendant l’exécution, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un fichier .mdmp (fichier binaire) et un fichier .tmp (fichier texte). Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke ces fichiers dans le dossier *\<lecteur>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
+    ||**Vider en cas d'erreurs**<br /><br /> Déterminez si des fichiers de vidage du débogage sont générés lorsqu'une erreur se produit pendant l'exécution du package. Les fichiers contiennent des informations sur l'exécution du package qui peuvent vous aider à résoudre les problèmes d'exécution. Quand vous sélectionnez cette option et qu’une erreur se produit pendant l’exécution, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un fichier .mdmp (fichier binaire) et un fichier .tmp (fichier texte). Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke ces fichiers dans le dossier *\<drive> :* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Runtime 32 bits**<br /><br /> Indiquez si le package est exécuté à l’aide de la version 32 bits de l’utilitaire dtexec sur un ordinateur 64 bits contenant une version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.<br /><br /> Il peut être nécessaire d'exécuter le package à l'aide de la version 32 bits de dtexec si, par exemple, le package utilise un fournisseur OLE DB natif qui n'est pas disponible en version 64 bits. Pour plus d'informations, consultez [Considérations 64 bits pour Integration Services](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Par défaut, lorsque vous sélectionnez le type d'étape de travail **Package SQL Server Integration Services** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent exécute le package à l'aide de la version de l'utilitaire dtexec qui est appelée automatiquement par le système. Le système appelle la version 32 bits ou 64 bits de l'utilitaire selon le processeur de l'ordinateur, et de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui s'exécute sur l'ordinateur.|  
   
      **Source du package** :  SQL Server, Magasin de packages SSIS ou Système de fichiers  
@@ -189,7 +192,8 @@ En cas d’échec de mise en place des éléments de sécurité, la tâche écho
   
 9. Cliquez sur **OK** pour enregistrer les paramètres et fermer la boîte de dialogue **Nouvelle étape de travail** .  
   
-    > **REMARQUE :** Pour les packages enregistrés dans le **Catalogue SSIS**, le bouton **OK** est désactivé lorsqu'il existe un paramètre de propriété du gestionnaire de connexions, ou un autre paramètre, non résolu. Un paramètre est considéré comme non résolu lorsque vous utilisez une valeur contenue dans une variable d’environnement serveur pour définir le paramètre ou la propriété, et lorsque l’une des conditions suivantes est remplie :  
+    > [!NOTE]
+    > Pour les packages enregistrés dans le **Catalogue SSIS**, le bouton **OK** est désactivé lorsqu'il existe un paramètre de propriété du gestionnaire de connexions, ou un autre paramètre, non résolu. Un paramètre est considéré comme non résolu lorsque vous utilisez une valeur contenue dans une variable d’environnement serveur pour définir le paramètre ou la propriété, et lorsque l’une des conditions suivantes est remplie :  
     >   
     >  La case à cocher **Environnement** sous l'onglet **Configuration** n'est pas sélectionnée.  
     >   

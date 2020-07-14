@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b778cf08b4d017916ea9249eeddeb1cdf6afb422
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628879"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895663"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Mise en miroir de bases de données ALTER DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.
@@ -72,7 +72,7 @@ SET { <partner_option> | <witness_option> }
 
 *database_name* Spécifie le nom de la base de données à modifier.
 
-PARTNER \<partner_option> contrôle les propriétés de base de données qui définissent les partenaires de basculement d’une session de mise en miroir de bases de données ainsi que leur comportement. Certaines options de SET PARTNER peuvent être définies sur l'un et l'autre des serveurs partenaires tandis que d'autres sont réservées au serveur principal ou au serveur miroir. Pour plus d'informations, consultez les options PARTNER individuelles décrites ci-dessous. Une clause SET PARTNER affecte les deux copies de la base de données, indépendamment du serveur partenaire sur lequel elle est spécifiée.
+PARTNER \<partner_option> Contrôle les propriétés de base de données qui définissent les partenaires de basculement d’une session de mise en miroir de bases de données ainsi que leur comportement. Certaines options de SET PARTNER peuvent être définies sur l'un et l'autre des serveurs partenaires tandis que d'autres sont réservées au serveur principal ou au serveur miroir. Pour plus d'informations, consultez les options PARTNER individuelles décrites ci-dessous. Une clause SET PARTNER affecte les deux copies de la base de données, indépendamment du serveur partenaire sur lequel elle est spécifiée.
 
 Pour exécuter une instruction SET PARTNER, le paramètre STATE des points de terminaison des deux partenaires doit avoir la valeur STARTED. Notez par ailleurs que l'option ROLE du point de terminaison de mise en miroir de chaque instance de serveur partenaire doit avoir la valeur PARTNER ou ALL. Pour plus d’informations sur la façon de spécifier un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Pour connaître le rôle et l'état du point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sur cette instance :
 
@@ -91,12 +91,12 @@ Cette option est spécifiée une seule fois par session sur chaque serveur parte
 
 La valeur de *partner_server* est une adresse réseau de serveur. La syntaxe est la suivante :
 
-TCP **://** _\<adresse-système>_ **:** _\<port>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
 where
 
 - *\<system-address>* est une chaîne, telle qu’un nom de système, un nom de domaine complet ou une adresse IP, qui identifie de manière unique l’ordinateur de destination.
-- *\<port>* est un numéro de port associé au point de terminaison de mise en miroir de l’instance du serveur partenaire.
+- *\<port>* est un numéro de port associé au point de terminaison de la mise en miroir de l’instance du serveur partenaire.
 
 Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur (mise en miroir de bases de données)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 
@@ -159,7 +159,7 @@ Vous ne pouvez spécifier l'option TIMEOUT que sur le serveur principal. Si vous
 
 Pour plus d’informations, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).
 
-WITNESS \<witness_option> contrôle les propriétés de base de données qui définissent un témoin de mise en miroir de bases de données. Une clause SET WITNESS affecte les deux copies de la base de données, mais vous ne pouvez la spécifier que sur le serveur principal. Si un témoin est défini pour une session, le quorum est obligatoire pour servir la base de données sans tenir compte de l’option SAFETY. Pour plus d’informations, consultez [Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).
+WITNESS \<witness_option> Contrôle les propriétés de base de données qui définissent les partenaires de basculement d’une session de mise en miroir de bases de données ainsi que leur comportement. Une clause SET WITNESS affecte les deux copies de la base de données, mais vous ne pouvez la spécifier que sur le serveur principal. Si un témoin est défini pour une session, le quorum est obligatoire pour servir la base de données sans tenir compte de l’option SAFETY. Pour plus d’informations, consultez [Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).
 
 Les partenaires de basculement et témoins doivent de préférence résider sur des ordinateurs différents. Pour plus d’informations sur le témoin, consultez [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md).
 

@@ -17,15 +17,15 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc37d9d18d75a9e24b1e894b28b8e7a0a29f602c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753114"
 ---
 # <a name="create-filtered-indexes"></a>Créer des index filtrés
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cette rubrique explique comment créer un index filtré dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index filtré est un index non cluster optimisé convenant tout particulièrement aux requêtes qui effectuent des sélections dans un sous-ensemble de données bien défini. Il utilise un prédicat de filtre pour indexer une partie des lignes de la table. Un index filtré bien conçu peut améliorer les performances des requêtes et réduire les coûts de maintenance et de stockage des index par rapport aux index de table entière.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72908106"
   
     -   Index non uniques. Les index filtrés peuvent être non uniques, alors que les vues indexées doivent être uniques.  
   
--   Les index filtrés sont définis sur une seule table et ne prennent en charge que les opérateurs de comparaison simples. Si vous avez besoin d'une expression de filtre qui référence plusieurs tables ou présente une logique complexe, vous devez créer une vue.  
+-   Les index filtrés sont définis sur une seule table et ne prennent en charge que les [opérateurs de comparaison](../../t-sql/language-elements/comparison-operators-transact-sql.md) simples. Si vous avez besoin d'une expression de filtre qui référence plusieurs tables ou présente une logique complexe, vous devez créer une vue. Les index filtrés ne prennent pas en charge les opérateurs `LIKE`. 
   
 -   Il n'est pas nécessaire qu'une colonne de l'expression d'index filtré soit une colonne clé ou incluse dans la définition de l'index filtré si l'expression d'index filtré est équivalente au prédicat de requête et si la requête ne retourne pas la colonne dans l'expression d'index filtré avec les résultats de la requête.  
   

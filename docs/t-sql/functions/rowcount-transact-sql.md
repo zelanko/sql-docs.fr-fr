@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5a67079be4ee6f64c4386b9c44e5f52a3e22893f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a84cae4e79d4b2bd1438bdae9778a4af37d4a231
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736407"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne le nombre de lignes affectées par la dernière instruction. Si le nombre de lignes est supérieur à 2 milliards, utilisez [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,9 +53,9 @@ ms.locfileid: "82828642"
   
 -   En réinitialisant @@ROWCOUNT à 0 sans renvoyer la valeur au client.  
   
- Les instructions qui réalisent une affectation simple attribuent toujours à @@ROWCOUNT la valeur 1. Aucune ligne n'est envoyée au client. Parmi ces instructions figurent SET @*local_variable*, RETURN, READTEXT, ainsi que les instructions de sélection sans requête telles que SELECT GETDATE() ou SELECT **'***Generic Text***'** .  
+ Les instructions qui réalisent une affectation simple attribuent toujours à @@ROWCOUNT la valeur 1. Aucune ligne n'est envoyée au client. Parmi ces instructions figurent : SET @*local_variable*, RETURN, READTEXT, ainsi que les instructions de sélection sans requête telles que SELECT GETDATE() or SELECT **'***Generic Text***'** .  
   
- Les instructions qui réalisent une affectation dans une requête ou utilisent RETURN dans une requête attribuent à @@ROWCOUNT le nombre de lignes affectées ou lues par la requête, par exemple SELECT @*local_variable* = c1 FROM t1.  
+ Les instructions qui effectuent une affectation dans une requête ou qui utilisent RETURN dans une requête attribuent à @@ROWCOUNT le nombre de lignes affectées ou lues par la requête ; par exemple : SELECT @*local_variable* = c1 FROM t1.  
   
  Les instructions DML (Data Manipulation Language) attribuent à @@ROWCOUNT le nombre de lignes affectées par la requête et renvoient cette valeur au client. Les instructions DML peuvent ne pas envoyer de lignes au client.  
   

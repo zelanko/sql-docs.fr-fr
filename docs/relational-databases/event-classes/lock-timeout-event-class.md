@@ -1,5 +1,6 @@
 ---
 title: Lock:Timeout, classe d’événements | Microsoft Docs
+description: La classe d’événements Lock:Timeout indique qu’une demande de verrou sur une ressource a dépassé le délai d’attente en raison d’un verrou bloquant la ressource dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737198"
 ---
 # <a name="locktimeout-event-class"></a>Classe d'événements Lock:Timeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La classe d'événements Lock:Timeout indique qu'une demande de verrou sur une ressource (par exemple une page) a dépassé le délai d'attente parce qu'une autre transaction retient un verrou bloquant sur la ressource requise. Le délai est déterminé par la fonction système @@LOCK_TIMEOUT et peut être défini à l’aide de l’instruction SET LOCK_TIMEOUT.  
   
  Utilisez la classe d'événements Lock:Timeout pour surveiller à quel moment des conditions d'expiration de délai se produisent. Ces informations sont utiles pour déterminer si les expirations des délais affectent de manière significative les performances de votre application et quels objets sont concernés. Vous pouvez examiner le code de l'application qui modifie ces objets pour déterminer si des modifications pouvant minimiser les délais d'expiration sont possibles.  

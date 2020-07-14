@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729439"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
   

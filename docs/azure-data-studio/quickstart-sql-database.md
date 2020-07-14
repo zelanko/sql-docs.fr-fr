@@ -1,31 +1,30 @@
 ---
 title: Se connecter à et interroger Azure SQL Database
-titleSuffix: Azure Data Studio
 description: Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à une base de données SQL et exécuter une requête
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771952"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>Démarrage rapide : Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger la base de données Azure SQL
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Démarrage rapide : Utiliser Azure Data Studio pour se connecter et interroger une base de données Azure SQL
 
-Dans ce démarrage rapide, vous allez utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à un serveur Azure SQL Database. Vous exécuterez ensuite les instructions Transact-SQL (T-SQL) pour créer et interroger la base de données TutorialDB, qui est utilisée dans d’autres didacticiels [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Dans ce démarrage rapide, vous allez utiliser Azure Data Studio pour vous connecter à un serveur Azure SQL Database. Vous exécuterez ensuite les instructions Transact-SQL (T-SQL) pour créer et interroger la base de données TutorialDB, qui est utilisée dans d’autres didacticiels Azure Data Studio.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour suivre ce guide de démarrage rapide, vous aurez besoin de [!INCLUDE[name-sos](../includes/name-sos-short.md)] et d’un serveur Azure SQL Database.
+Pour suivre ce guide de démarrage rapide, vous aurez besoin d’Azure Data Studio et d’un serveur Azure SQL Database.
 
-- [Installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Installer Azure Data Studio](download.md)
 
 Si vous n’avez pas de serveur Azure SQL, effectuez un des démarrages rapides Azure SQL Database suivants. N’oubliez pas le nom complet du serveur et les informations d’identification de connexion pour les étapes ultérieures :
 
@@ -36,9 +35,9 @@ Si vous n’avez pas de serveur Azure SQL, effectuez un des démarrages rapides 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Connexion à votre serveur Azure SQL Database
 
-Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour établir une connexion à votre serveur Azure SQL Database.
+Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure SQL Database.
 
-1. La première fois que vous exécutez [!INCLUDE[name-sos](../includes/name-sos-short.md)], la **page d’accueil** doit s’ouvrir. Si vous ne voyez pas la **page d’accueil**, sélectionnez **Aide** > **Bienvenue**. Sélectionnez **Nouvelle connexion** pour ouvrir le volet **Connexion** :
+1. La première fois que vous exécutez Azure Data Studio, la **page d’accueil** doit s’ouvrir. Si vous ne voyez pas la **page d’accueil**, sélectionnez **Aide** > **Bienvenue**. Sélectionnez **Nouvelle connexion** pour ouvrir le volet **Connexion** :
    
    ![Icône de nouvelle connexion](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -66,7 +65,7 @@ Une fois la connexion établie, votre serveur s'ouvre dans la barre latérale **
 
 ## <a name="create-the-tutorial-database"></a>Créer la base de données didacticiel
 
-Les sections suivantes créent la base de données TutorialDB utilisée dans d'autres didacticiels [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Les sections suivantes créent la base de données TutorialDB utilisée dans d'autres didacticiels Azure Data Studio.
 
 1. Cliquez avec le bouton droit sur votre serveur Azure SQL dans la barre latérale **SERVEURS**, puis sélectionnez **Nouvelle requête**.
 

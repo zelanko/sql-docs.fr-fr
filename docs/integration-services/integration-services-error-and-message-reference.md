@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: fb8a305b4cec56e9c17209068f1a192edbaaaae7
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087389"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469354"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
+  Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe [Microsoft.SqlServer.Dts.Runtime.Hresults](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime>.  
   
  Cette liste peut être utile lorsque vous rencontrez un code d'erreur sans sa description. La liste ne comporte actuellement aucune information de dépannage.  
   

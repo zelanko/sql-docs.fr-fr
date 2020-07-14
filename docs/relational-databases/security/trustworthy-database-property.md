@@ -1,5 +1,6 @@
 ---
 title: TRUSTWORTHY, propriété de base de données | Microsoft Docs
+description: Découvrez la propriété de base de données TRUSTWORTHY, qui indique si l’instance de SQL Server approuve la base de données et son contenu. La valeur par défaut est OFF.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db2515c51085e79d67e6ace4cbbe1abedc91023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736958"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY, propriété de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La propriété de base de données TRUSTWORTHY permet d'indiquer si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] approuve la base de données et son contenu. Par défaut, cette propriété a la valeur OFF, mais peut être définie sur ON à l'aide de l'instruction ALTER DATABASE. Par exemple : `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
   
 > [!NOTE]  

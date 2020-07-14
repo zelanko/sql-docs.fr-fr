@@ -1,6 +1,6 @@
 ---
 title: 'Exemple : Mise en miroir de bases de données avec certificats (T-SQL)'
-description: Exemple de configuration de la mise en miroir de bases de données SQL Server avec des certificats à l’aide de Transact-SQL.
+description: Cet article contient un exemple de configuration de la mise en miroir de bases de données SQL Server avec l’authentification basée sur les certificats à l’aide de Transact-SQL dans SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4341b53c4787e7a9c194b8ab5ad5892583d1db11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754666"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cet exemple décrit toutes les étapes de création d'une session de mise en miroir de bases de données à l'aide de l'authentification basée sur les certificats. Les exemples de cette rubrique utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)]. À moins que vous ne puissiez garantir la sécurité de votre réseau, il est recommandé d'utiliser le chiffrement pour les connexions de mise en miroir de bases de données.  
   
  Lors de la copie d'un certificat sur un autre système, utilisez une méthode de copie sécurisée. Veillez particulièrement à sécuriser tous vos certificats.  

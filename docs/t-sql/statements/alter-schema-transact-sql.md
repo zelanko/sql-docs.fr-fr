@@ -22,19 +22,19 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bccc7152a13000d667a5f980847eb251c08d1182
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6799fefe08e3c57d6bac0924f2192094c1b9e428
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626767"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091833"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Transfère un élément sécurisable d'un schéma à un autre.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,6 +83,8 @@ ALTER SCHEMA schema_name
  Le fait de déplacer un objet tel qu’une table ou un synonyme ne met pas automatiquement à jour les références à cet objet. Vous devez modifier manuellement tout objet qui référence l’objet transféré. Par exemple, si vous déplacez une table et que cette table est référencée dans un déclencheur, vous devez modifier le déclencheur pour refléter le nom du nouveau schéma. Utilisez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) pour répertorier les dépendances de l’objet avant de le déplacer.  
 
  Pour changer le schéma d’une table à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table, puis sélectionnez **Conception**. Appuyez sur **F4** pour ouvrir la fenêtre Propriétés. Dans la zone **Schéma**, sélectionnez un nouveau schéma.  
+ 
+ ALTER SCHEMA utilise un verrou de niveau de schéma.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

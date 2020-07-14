@@ -1,5 +1,6 @@
 ---
 title: Serveurs distants | Microsoft Docs
+description: En savoir plus sur les serveurs distants, qui ont été remplacés par les serveurs liés dans SQL Server. Afficher des informations sur les fonctionnalités, la configuration et la sécurité.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651579"
 ---
 # <a name="remote-servers"></a>Serveurs distants
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les serveurs distants sont pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement pour des raisons de compatibilité descendante. Il est préférable d'utiliser plutôt des serveurs liés dans les nouvelles applications. Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Une configuration de serveur distant permet à un client connecté à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’exécuter une procédure stockée sur une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans qu’il soit nécessaire d’établir une connexion distincte. Le serveur auquel le client est connecté accepte donc la demande du client et l'envoie au serveur distant, pour le compte du client. Le serveur distant traite la demande et renvoie les résultats au serveur d'origine, qui à son tour transmet les résultats au client. Lors de l'élaboration d'une configuration de serveur distant, la mise en œuvre de la sécurité doit être étudiée avec soin.  

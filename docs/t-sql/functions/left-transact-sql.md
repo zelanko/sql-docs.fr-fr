@@ -18,22 +18,22 @@ helpviewer_keywords:
 - LEFT function
 - leftmost character of expression
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 192470abcd317fff804822c5cc8cefd48d89b52d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a31f0bd882a206897b541eeb265dfeab68ae50ab
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823023"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008794"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne la partie de gauche d'une chaîne de caractères avec le nombre spécifié de caractères.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,6 +44,9 @@ LEFT ( character_expression , integer_expression )
 ## <a name="arguments"></a>Arguments  
  *expression_caractère*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données binaires ou caractères. *character_expression* peut être une constante, une variable ou une colonne. *character_expression* peut être de n’importe quel type de données, à l’exception de **text** et **ntext**, qui peut être converti implicitement en **varchar** ou **nvarchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
+ 
+> [!NOTE]  
+> Si *string_expression* est de type **binary** ou **varbinary**, LEFT effectuera une conversion implicite vers **varchar**, et ne préservera donc pas l’entrée binaire.  
   
  *integer_expression*  
  Entier positif qui spécifie le nombre de caractères de *character_expression* à renvoyer. Si *integer_expression* est négatif, une erreur est retournée. Si *integer_expression* est de type **bigint** et contient une valeur de grande taille, *character_expression* doit être d’un type de données de grande taille, tel que **varchar(max)** .  

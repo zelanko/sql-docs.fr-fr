@@ -1,6 +1,6 @@
 ---
 title: Voir le rapport de copie des journaux de transaction (SSMS)
-description: Découvrez comment voir le rapport de copie des journaux de transaction dans l’interface graphique utilisateur de SSMS (SQL Server Management Studio).
+description: Affichez le rapport d’état de la copie des journaux de transaction dans SQL Server Management Studio. Exécutez un rapport d’état sur un serveur moniteur, un serveur principal ou un serveur secondaire.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748542"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>Afficher le rapport de la copie des journaux de transaction (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment afficher le rapport d'état sur la copie des journaux de transaction dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez exécuter ce rapport d'état sur un serveur moniteur, un serveur principal ou un serveur secondaire. Pour obtenir les informations les plus complètes sur la configuration de la copie des journaux de transaction, affichez le rapport sur l'instance de serveur moniteur.  
   
  Ce rapport indique l'état de toute activité de copie des journaux de transaction dont l'état est disponible sur l'instance de serveur à laquelle vous êtes connecté. Si l'instance de serveur participe à plusieurs configurations sous différents rôles (tels que serveur moniteur pour une base de données et serveur secondaire pour une autre), les résultats affichés contiennent les informations de chaque configuration du point de vue de chaque rôle. Si la procédure stockée peut se connecter à l'instance de serveur moniteur pour une configuration de copie des journaux de transaction donnée, le rapport affiche des informations d'état supplémentaires sur cette configuration.  
@@ -32,7 +32,7 @@ ms.locfileid: "75258566"
   
 |Role|Informations affichées|  
 |----------|---------------------------|  
-|Moniteur|Nom et état de chaque serveur principal et serveur secondaire qui utilisent cette instance de serveur comme serveur moniteur.|  
+|Superviser|Nom et état de chaque serveur principal et serveur secondaire qui utilisent cette instance de serveur comme serveur moniteur.|  
 |Principal|Pour chaque base de données primaire, l'état et le nom de l'instance de serveur actuelle (comme serveur principal), ainsi que le nom de la base de données primaire. Le rapport affiche l'état du travail de sauvegarde (stocké localement sur le serveur principal).<br /><br /> Le rapport contient également une ligne pour chacun des serveurs secondaires correspondants. Si la configuration utilise un serveur moniteur et que la procédure stockée peut se connecter au moniteur, ces lignes affichent l'état de copie et l'état de restauration de la sauvegarde de fichier journal la plus récente.|  
 |Secondary|Pour chaque base de données secondaire, l'état et le nom de l'instance de serveur actuelle (comme serveur secondaire), ainsi que le nom de la base de données secondaire.<br /><br /> Le rapport affiche l'état des travaux de copie et de restauration sur le serveur secondaire.<br /><br /> Le rapport contient également une ligne pour le serveur principal correspondant. Si la configuration utilise un serveur moniteur et que la procédure stockée peut se connecter au moniteur, cette ligne affiche l'état de la sauvegarde de fichier journal la plus récente.|  
   

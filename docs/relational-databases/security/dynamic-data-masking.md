@@ -1,5 +1,6 @@
 ---
 title: Masquage dynamique des données | Microsoft Docs
+description: Découvrez le masquage des données dynamique qui limite l’exposition des données sensibles en les masquant aux utilisateurs sans privilèges. Cela peut considérablement simplifier la sécurité dans SQL Server.
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997716"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005590"
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![Masquage dynamique des données](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -43,9 +44,9 @@ Le masquage des données dynamiques est disponible dans [!INCLUDE[ssSQL15](../..
 |Fonction|Description|Exemples|  
 |--------------|-----------------|--------------|  
 |Default|Masquage complet en fonction des types de données des champs désignés.<br /><br /> Pour les données de type chaîne (string), utilisez XXXX, ou moins de X si la taille du champ est inférieure à 4 caractères (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Pour les données de type numérique, utilisez une valeur zéro (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Pour les données de type date et heure, utilisez 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Pour les données de type binaire, utilisez un seul octet de valeur ASCII 0 (**binary**, **varbinary**, **image**).|Exemple de syntaxe de définition de colonne : `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Méthode de masquage qui affiche la première lettre d’une adresse de messagerie et le suffixe de constante « .com », sous la forme d’une adresse de messagerie. `aXXX@XXXX.com`.|Exemple de syntaxe de définition : `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|E-mail|Méthode de masquage qui affiche la première lettre d’une adresse de messagerie et le suffixe de constante « .com », sous la forme d’une adresse de messagerie. `aXXX@XXXX.com`.|Exemple de syntaxe de définition : `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Aléatoire|Fonction de masquage aléatoire à utiliser sur tout type de données numérique pour masquer la valeur d’origine à l’aide d’une valeur aléatoire dans une plage spécifiée.|Exemple de syntaxe de définition : `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|Chaîne personnalisée|Méthode de masquage qui affiche les première et dernière lettres, et ajoute une chaîne de remplissage personnalisée au milieu. `prefix,[padding],suffix`<br /><br /> Remarque : si la valeur d’origine est trop courte pour occuper la totalité du masque, une partie du préfixe ou du suffixe n’est pas exposée.|Exemple de syntaxe de définition : `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Autres exemples :<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|Chaîne personnalisée|Méthode de masquage qui affiche les première et dernière lettres, et ajoute une chaîne de remplissage personnalisée au milieu. `prefix,[padding],suffix`<br /><br /> Remarque : Si la valeur d’origine est trop courte pour occuper la totalité du masque, une partie du préfixe ou du suffixe n’est pas exposée.|Exemple de syntaxe de définition : `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Autres exemples :<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
 ## <a name="permissions"></a>Autorisations  
  Vous n’avez pas besoin d’autorisation particulière pour créer une table avec un masque dynamique des données. Les autorisations de schéma standard **CREATE TABLE** et **ALTER** suffisent.  
@@ -93,7 +94,7 @@ WHERE is_masked = 1;
  L’ajout d’un masque de données dynamiques est implémenté comme un changement de schéma de la table sous-jacente, et ne peut donc pas être effectué sur une colonne ayant des dépendances. Pour contourner cette restriction, vous pouvez tout d’abord supprimer la dépendance, puis ajouter le masque de données dynamiques et recréer la dépendance. Par exemple, si la dépendance est liée à un index qui dépend de cette colonne, vous pouvez supprimer l’index, ajouter le masque, puis recréer l’index dépendant.
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Remarque relative à la sécurité : ignorer le masquage à l’aide de techniques d’inférence ou de force brute
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Note de sécurité : Ignorer le masquage à l’aide de techniques d’inférence ou de force brute
 
 Le masquage des données dynamiques est conçu pour simplifier le développement d’applications en limitant l’exposition des données dans un ensemble de requêtes prédéfinies utilisées par l’application. Bien que le masquage dynamique des données puisse également être utile pour empêcher l’exposition accidentelle des données sensibles lorsque vous accédez directement à une base de données de production, il est important de noter que les utilisateurs non privilégiés bénéficiant d’autorisations de requête ad hoc peuvent appliquer des techniques pour accéder aux données réelles. S’il est nécessaire d’octroyer l’accès ad hoc, l’audit doit servir à surveiller toutes les activités de base de données et à limiter ce risque.
  
@@ -105,7 +106,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  Id | Name| Salaire |   
+>    |  Id | Nom| Salaire |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  

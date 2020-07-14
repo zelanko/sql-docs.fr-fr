@@ -1,5 +1,6 @@
 ---
 title: Propriétés de la base de données (page Groupes de fichiers) | Microsoft Docs
+description: Découvrez comment utiliser l’onglet Groupes de fichiers de la boîte de dialogue Propriétés de la base de données pour afficher les groupes de fichiers d’une base de données ou pour ajouter un nouveau groupe de fichiers.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f44fd1c87cb1ed27e0d2d52fe658e97ec2edda7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756223"
 ---
 # <a name="database-properties-filegroups-page"></a>Propriétés de la base de données (page Groupes de fichiers)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette page vous permet d'afficher les groupes de fichiers existants ou d'ajouter un nouveau groupe de fichiers à la base de données sélectionnée. Il existe trois types de groupes de fichiers : les groupes de fichiers de *ligne* , les groupes de fichiers de données FILESTREAM et les groupes de fichiers optimisés en mémoire.  
   
  Les groupes de fichiers de ligne contiennent des données régulières et des fichiers journaux. Les groupes de fichiers de données FILESTREAM contiennent des fichiers de données FILESTREAM. Ces fichiers de données comportent des informations sur la manière dont les données des objets BLOB (Binary Large Objects) sont stockées sur le système de fichiers lorsque vous utilisez le stockage FILESTREAM. Les deux types de groupes de fichiers disposent des mêmes options.  

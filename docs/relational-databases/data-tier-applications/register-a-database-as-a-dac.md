@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431745d461d6977cf873cbdb83eebe5929694043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781659"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Utilisez l’ **Assistant Inscrire l’application de la couche Données** ou un script Windows PowerShell pour générer une définition d’application de la couche Données (DAC) qui décrit les objets d’une base de données existante et inscrivez la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
@@ -136,7 +136,7 @@ ms.locfileid: "68134676"
   
  **Inscription de la DAC** : signale la réussite ou l’échec de chaque action entreprise pour inscrire la DAC. Examinez les informations pour déterminer la réussite ou l'échec de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Sélectionnez le lien pour consulter le rapport de d'erreur de cette action.  
   
- **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport d’inscription dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier **SQL Server Management Studio\DAC Packages** dans le dossier Documents de votre compte Windows. Le nom de fichier est au format \<Nom_package_DAC>_RegisterDACReport_aaaammjj.html, où \<*Nom_package_DAC*> est le nom du package déployé, *aaaa* = l’année en cours, *mm* = le mois en cours et *jj* = la date du jour.  
+ **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport d’inscription dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier **SQL Server Management Studio\DAC Packages** dans le dossier Documents de votre compte Windows. Le nom de fichier est au format \<DACPackageName>_RegisterDACReport_aaaammjj.html, où \<*DACPackageName*> est le nom du package déployé, *aaaa* = l’année en cours, *mm* = le mois en cours et *jj* = la date du jour.  
   
  **Terminer** : met fin à l’Assistant.  
   

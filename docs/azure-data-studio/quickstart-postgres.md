@@ -1,38 +1,38 @@
 ---
 title: 'Démarrage rapide : Se connecter à et interroger PostgreSQL'
-titleSuffix: Azure Data Studio
 description: Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à PostgreSQL et exécuter une requête
 ms.custom: seodec18
 ms.date: 09/18/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71127249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717157"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>Démarrage rapide : Se connecter à et interroger PostgreSQL à l’aide de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-Ce guide de démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour se connecter à Postgres, puis utiliser des instructions SQL pour créer la base de données *tutorialdb* et l’interroger.
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Démarrage rapide : Utilisez Azure Data Studio pour vous connecter et interroger PostgreSQL
+
+Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à Postgres, puis utiliser des instructions SQL pour créer la base de données *tutorialdb* et l’interroger.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour effectuer ce guide de démarrage rapide, vous avez besoin de [!INCLUDE[name-sos](../includes/name-sos-short.md)], de l’extension PostgreSQL pour [!INCLUDE[name-sos](../includes/name-sos-short.md)] et de l’accès à un serveur PostgreSQL.
+Pour effectuer ce guide de démarrage rapide, vous avez besoin d’Azure Data Studio, de l’extension PostgreSQL pour Azure Data Studio et de l’accès à un serveur PostgreSQL.
 
-- [Installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Installez Azure Data Studio](download.md).
 - [Installez l’extension PostgreSQL pour Azure Data Studio](postgres-extension.md).
 - [Installez PostgreSQL](https://www.postgresql.org/download/). (Vous pouvez également créer une base de données Postgres dans le cloud avec la commande [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli)). 
 
 ## <a name="connect-to-postgresql"></a>Se connecter à PostgreSQL
 
-1. Démarrez **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
+1. Démarrez **Azure Data Studio**.
 
-2. La première fois que vous démarrez [!INCLUDE[name-sos](../includes/name-sos-short.md)], la boîte de dialogue **Connexion** s’ouvre. Si la boîte de dialogue **Connexion** ne s’ouvre pas, cliquez sur l'icône **Nouvelle connexion** sur la page **SERVEUR** :
+2. La première fois que vous démarrez Azure Data Studio, la boîte de dialogue **Connexion** s’ouvre. Si la boîte de dialogue **Connexion** ne s’ouvre pas, cliquez sur l'icône **Nouvelle connexion** sur la page **SERVEUR** :
 
    ![Icône de nouvelle connexion](media/quickstart-postgresql/new-connection-icon.png)
 
@@ -49,8 +49,8 @@ Pour effectuer ce guide de démarrage rapide, vous avez besoin de [!INCLUDE[name
    | **Nom d'utilisateur** | postgres | Nom d’utilisateur avec lequel vous souhaitez vous connecter. |
    | **Mot de passe (connexion SQL)** | *mot de passe* | Mot de passe du compte avec lequel vous vous connectez. |
    | **Mot de passe** | *Vérification* | Cochez cette case si vous ne souhaitez pas entrer le mot de passe chaque fois que vous vous connectez. |
-   | **Nom de la base de données** | \<Par défaut\> | Renseignez ce champ si vous souhaitez que la connexion spécifie une base de données. |
-   | **Groupe de serveurs** | \<Par défaut\> | Cette option vous permet d’attribuer cette connexion à un groupe de serveurs spécifique que vous créez. | 
+   | **Nom de la base de données** | \<Default\> | Renseignez ce champ si vous souhaitez que la connexion spécifie une base de données. |
+   | **Groupe de serveurs** | \<Default\> | Cette option vous permet d’attribuer cette connexion à un groupe de serveurs spécifique que vous créez. | 
    | **Nom (facultatif)** | *laisser vide* | Cette option vous permet de spécifier un nom convivial pour votre serveur. | 
 
 5. Sélectionnez **Connecter**. 

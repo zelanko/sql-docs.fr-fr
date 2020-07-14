@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217115"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901285"
 ---
 # <a name="install-polybase-on-windows"></a>Installer PolyBase sur Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Pour installer une version d’essai de SQL Server, accédez à [Versions d’évaluation de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
@@ -179,9 +179,9 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 Le programme d’installation de SQL Server PolyBase crée les règles de pare-feu suivantes sur l’ordinateur :  
    
-- SQL Server PolyBase - Moteur de base de données - \<NomInstanceSQLServer> (TCP-entrant)  
+- PolyBase SQL Server - Moteur de base de données - \<SQLServerInstanceName> (TCP entrant)  
    
-- SQL Server PolyBase - Services PolyBase - \<NomInstanceSQLServer> (TCP-entrant)  
+- PolyBase SQL Server - Services PolyBase - \<SQLServerInstanceName> (TCP entrant)  
 
 - SQL Server PolyBase - SQL Browser - (UDP-entrant)  
    

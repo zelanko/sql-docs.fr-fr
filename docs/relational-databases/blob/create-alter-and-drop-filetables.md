@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768013"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Décrit la procédure de création d'un nouveau FileTable, ou de modification ou de suppression d'un FileTable existant.  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> Création d'un FileTable  
@@ -176,11 +176,11 @@ GO
 |Contraintes de validation|Les contraintes de validation définies par le système appliquent les spécifications requises suivantes :<br /><br /> Noms de fichier valides.<br /><br /> Attributs de fichier valides.<br /><br /> L'objet parent doit être un répertoire.<br /><br /> La hiérarchie d'espace de noms est verrouillée pendant la manipulation de fichier.|  
   
  **Convention d'affectation des noms pour les contraintes définies par le système**  
- Les contraintes définies par le système décrites ci-dessus sont nommées selon le format **\<type_contrainte>_\<nom_table>[\_\<nom_colonne>]\_\<générateur_de_nom_unique>** où :  
+ Les contraintes définies par le système décrites ci-dessus sont nommées selon le format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , où :  
   
 -   *<type_contrainte>* est CK (contrainte de validation), DF (contrainte par défaut), FK (clé étrangère), PK (clé primaire) ou UQ (contrainte unique).  
   
--   *\<générateur_de_nom_unique>* est une chaîne générée par le système pour rendre le nom unique. Cette chaîne peut contenir le nom du FileTable et un identificateur unique.  
+-   *\<uniquifier>* est une chaîne générée par le système pour rendre le nom unique. Cette chaîne peut contenir le nom du FileTable et un identificateur unique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md)  

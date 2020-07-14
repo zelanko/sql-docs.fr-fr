@@ -1,5 +1,6 @@
 ---
 title: Superviser les performances des procédures stockées compilées nativement
+description: Découvrez comment surveiller les performances des procédures stockées compilées en mode natif et celles d’autres modules T-SQL compilés en mode natif.
 ms.custom: seo-dt-2019
 ms.date: 04/03/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1970c5953373c500f85e82281a69be1d46f1be0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38de30346d867d67770ce9b988d986f5f886c8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78180059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722456"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Surveillance des performances des procédures stockées compilées en mode natif
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cet article explique comment surveiller les performances des procédures stockées compilées en mode natif et celles d’autres modules T-SQL compilés en mode natif.  
   
 ## <a name="using-extended-events"></a>Utilisation des événements étendus  
@@ -42,12 +43,12 @@ Les statistiques d’exécution sont présentées dans les vues système [sys.dm
 
 ## <a name="procedure-level-execution-statistics"></a>Statistiques d’exécution au niveau de la procédure
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de la procédure, utilisez [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  L’instruction suivante active la collecte des statistiques d’exécution au niveau de la procédure pour tous les modules T-SQL compilés en mode natif sur l’instance actuelle :
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de la procédure, utilisez [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  L’instruction suivante active la collecte des statistiques d’exécution au niveau de la procédure pour tous les modules T-SQL compilés en mode natif sur l’instance actuelle :
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de la procédure, utilisez l’option de [configuration délimitée à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_PROCEDURE_EXECUTION_STATISTICS`. L’instruction suivante active la collecte des statistiques d’exécution au niveau de la procédure pour tous les modules T-SQL compilés en mode natif dans la base de données actuelle :
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**  : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de la procédure, utilisez l’option de [configuration délimitée à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_PROCEDURE_EXECUTION_STATISTICS`. L’instruction suivante active la collecte des statistiques d’exécution au niveau de la procédure pour tous les modules T-SQL compilés en mode natif dans la base de données actuelle :
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -56,12 +57,12 @@ ALTER DATABASE
 
 ## <a name="query-level-execution-statistics"></a>Statistiques d’exécution au niveau de la requête
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de la requête, utilisez [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  L’instruction suivante active la collecte des statistiques d’exécution au niveau de la requête pour tous les modules T-SQL compilés en mode natif sur l’instance actuelle :
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de la requête, utilisez [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  L’instruction suivante active la collecte des statistiques d’exécution au niveau de la requête pour tous les modules T-SQL compilés en mode natif sur l’instance actuelle :
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de l’instruction, utilisez l’option de [configuration délimitée à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_QUERY_EXECUTION_STATISTICS`. L’instruction suivante active la collecte des statistiques d’exécution au niveau de la requête pour tous les modules T-SQL compilés en mode natif dans la base de données actuelle :
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**  : pour activer ou désactiver la collecte des statistiques sur les procédures stockées compilées en mode natif au niveau de l’instruction, utilisez l’option de [configuration délimitée à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_QUERY_EXECUTION_STATISTICS`. L’instruction suivante active la collecte des statistiques d’exécution au niveau de la requête pour tous les modules T-SQL compilés en mode natif dans la base de données actuelle :
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

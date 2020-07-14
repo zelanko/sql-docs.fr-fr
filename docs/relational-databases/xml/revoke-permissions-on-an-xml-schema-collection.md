@@ -1,5 +1,6 @@
 ---
 title: Révoquer des autorisations sur une collection de schémas XML | Microsoft Docs
+description: Découvrez comment révoquer des autorisations sur une collection de schémas XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b3e6a69d61f65cb755fd96d8b0a310f002ab85a5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7952b6d917494f8d73edb24290c2f43f5f0d5d94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752532"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Révoquer des autorisations sur une collection de schémas XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Il est possible de retirer l'autorisation de créer une collection de schémas XML de l'une des façons suivantes :  
   
 -   Retrait de l'autorisation ALTER pour le schéma relationnel. Ainsi, le principal ne peut pas créer de collection de schémas XML dans le schéma relationnel. Toutefois, le principal reste en mesure de le faire dans d'autres schémas relationnels de la même base de données.  

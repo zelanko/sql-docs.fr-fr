@@ -1,5 +1,6 @@
 ---
 title: Plans de maintenance | Microsoft Docs
+description: Découvrez les plans de maintenance, qui créent un flux de travail pour s’assurer que votre base de données SQL Server est optimisée, sauvegardée régulièrement et exempte d’incohérences.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789461"
 ---
 # <a name="maintenance-plans"></a>Plans de maintenance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les plans de maintenance vous permettent de créer un flux de travail des tâches nécessaires à l'optimisation de votre base de données, à la création d'une sauvegarde régulière et à la recherche des incohérences. L'Assistant Plan de maintenance permet aussi de créer les principaux plans de maintenance, mais la création manuelle de ces plans offre beaucoup plus de souplesse.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Avantages des plans de maintenance  

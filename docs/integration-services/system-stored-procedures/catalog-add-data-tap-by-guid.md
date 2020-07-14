@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 486820bf4e3bbae793a23625fe687bd875210cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749796"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un drainage de données à un chemin de flux de données spécifique dans un flux de données de package, pour une instance d'exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql  
-catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+catalog.add_data_tap_by_guid [ @execution_id = ] execution_id  
 , [ @dataflow_task_guid = ] dataflow_task_guid   
 , [ @dataflow_path_id_string = ] dataflow_path_id_string  
 , [ @data_filename = ] data_filename  
@@ -52,7 +52,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  *dataflow_path_id_string* est de type **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- Nom du fichier qui stocke les données drainées. Si la tâche de flux de données s'exécute à l'intérieur d'un conteneur de boucles Foreach ou For, des fichiers distincts stockent les données drainées pour chaque itération de la boucle. Chaque fichier a pour préfixe un nombre qui correspond à une itération. Les fichiers de drainage de données sont écrits dans le dossier « *\<dossier d’installation de SQL Server>* \130\DTS\\ ». *data_filename* est de type **nvarchar(4000)** .  
+ Nom du fichier qui stocke les données drainées. Si la tâche de flux de données s'exécute à l'intérieur d'un conteneur de boucles Foreach ou For, des fichiers distincts stockent les données drainées pour chaque itération de la boucle. Chaque fichier a pour préfixe un nombre qui correspond à une itération. Les fichiers de drainage de données sont écrits dans le dossier « *\<SQL Server installation folder>* \130\DTS\\ ». *data_filename* est de type **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  Nombre de lignes capturées pendant le drainage de données. Si cette valeur n'est pas spécifiée, toutes les lignes sont capturées. max_rows est de type **int**.  

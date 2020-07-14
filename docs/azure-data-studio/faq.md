@@ -1,30 +1,28 @@
 ---
-title: Questions fréquentes (FAQ)
-titleSuffix: Azure Data Studio
+title: FAQ sur Azure Data Studio
 description: Forum aux questions (FAQ) sur Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774613"
 ---
-# <a name="azure-data-studio-faq"></a>FAQ de [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
+# <a name="azure-data-studio-faq"></a>FAQ sur Azure Data Studio
 
 ## <a name="what-is-azure-data-studio"></a>Qu’est-ce qu’Azure Data Studio ?
 
-Azure Data Studio est un nouvel environnement de bureau multiplateforme open source pour les professionnels des données qui utilisent la famille Azure Data de plateformes de données locales et cloud sur Windows, macOS et Linux. Précédemment publié sous le nom de SQL Operations Studio (préversion), Azure Data Studio offre une expérience d’éditeur moderne avec des fonctionnalités IntelliSense ultra rapides, des extraits de code, l’intégration du contrôle de code source et un terminal intégré. Il est conçu en tenant compte de l’utilisateur de la plateforme de données, avec l’intégration de la représentation graphique des jeux de résultats de requête et des tableaux de bord personnalisables.
+Azure Data Studio est un nouvel environnement de bureau multiplateforme open source pour les professionnels des données qui utilisent la famille Azure Data de plateformes de données locales et cloud sur Windows, macOS et Linux. Précédemment publié sous le nom de SQL Operations Studio (préversion), Azure Data Studio offre une expérience d’éditeur moderne avec des fonctionnalités IntelliSense ultra rapides, des extraits de code, l’intégration du contrôle de code source et un terminal intégré. Il est conçu en tenant compte de l’utilisateur de la plateforme de données, avec l’intégration de la représentation graphique des jeux de résultats de requête et des tableaux de bord personnalisables.
 
 La recherche a montré que les utilisateurs passent significativement plus de temps à travailler sur la modification des requêtes que sur toute autre tâche avec SQL Server Management Studio. Pour cette raison, Azure Data Studio a été conçu pour se concentrer profondément sur les fonctionnalités utilisées le plus, avec des expériences supplémentaires disponibles sous forme d’extensions facultatives dans le produit. Cela permet à tous les utilisateurs de personnaliser leur environnement pour les flux de travail qu’ils utilisent le plus souvent.
-
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Combien coûte Azure Data Studio ?
 
@@ -59,7 +57,7 @@ Non. Les investissements dans les outils phares Windows (SSMS, SSDT, PowerShell)
 *Utilisez Azure Data Studio si vous :*
 
 - Passez la majeure partie de votre temps à modifier ou exécuter des requêtes.
-- Avez besoin de visualiser et représenter graphiquement des jeux de résultats.
+- Avez besoin de visualiser et représenter graphiquement des jeux de résultats rapidement.
 - Pouvez exécuter la plupart des tâches d’administration via le terminal intégré à l’aide de sqlcmd ou de PowerShell.
 - Avez des besoins minimaux en assistants.
 - N’avez pas besoin d’effectuer une configuration d’administration ou de plateforme complète.

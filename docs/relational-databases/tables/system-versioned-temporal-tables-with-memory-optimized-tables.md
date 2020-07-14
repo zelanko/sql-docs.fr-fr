@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165460"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984513"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Les tables temporelles à système par version pour les [tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sont conçues pour fournir une solution rentable dans des scénarios où [l’audit de données et l’analyse à un moment donné](https://msdn.microsoft.com/library/mt631669.aspx) sont nécessaires sur des données collectées à l’aide de charges de travail OLTP en mémoire. Elles offrent un débit transactionnel élevé et une simultanéité sans verrouillage, ainsi que la possibilité de stocker un grand nombre de données d’historique pouvant être interrogées facilement.
 
@@ -52,9 +52,9 @@ Les points suivants sur les tables temporelles à système par version avec tabl
 
 La table de mise en lots interne optimisée en mémoire est un objet interne créé par le système pour optimiser les opérations DML.
 
-- Le nom de la table est généré au format suivant : **Memory_Optimized_History_Table_<ID_objet>** , où *<ID_objet>* est l’identificateur de la table temporelle actuelle.
+- Le nom de la table est généré au format suivant : **Memory_Optimized_History_Table_<ID_objet>** , où *<ID_objet>* est l’identificateur de la table temporelle actuelle.
 - La table réplique le schéma de la table temporelle actuelle et une colonne BIGINT. Cette colonne supplémentaire garantit l’unicité des lignes déplacées vers la mémoire tampon de l’historique interne.
-- Le nom de la colonne supplémentaire est au format suivant : **Change_ID[_<suffixe>]** , où *_\<suffixe>* est également ajouté dans les cas où la table contient déjà une colonne *Change_ID*.
+- La colonne supplémentaire est au format suivant : **Change_ID[_<suffixe>]** , où *_\<suffix>* est éventuellement ajouté dans les cas où la table contient déjà une colonne *Change_ID*.
 - La taille de ligne maximale pour une table à système par version optimisée en mémoire est réduite de 8 octets en raison de la colonne BIGINT supplémentaire dans la table de mise en lots. La nouvelle valeur maximale est désormais 8 052 octets.
 - La table de mise en lots interne optimisée en mémoire n’est pas représentée dans l’Explorateur d’objets de SQL Server Management Studio.
 - Les métadonnées relatives à cette table, ainsi que sa connexion à la table temporelle actuelle, sont disponibles dans [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md).

@@ -1,5 +1,6 @@
 ---
 title: Bases de données | Microsoft Docs
+description: En savoir plus sur les schémas de base de données, les tables, les groupes de fichiers, les connexions et les rôles. Découvrez comment vous pouvez avoir recours à l’outil SQL Server Management Studio pour travailler avec des bases de données.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630769"
 ---
 # <a name="databases"></a>Bases de données
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une base de données est constituée d'une collection de tables qui renferment un ensemble spécifique de données structurées. Une table se compose de lignes, également appelées enregistrements ou tuples, et de colonnes, également appelées attributs. Chaque colonne d'une table est conçue pour stocker un certain type d'informations, par exemple, des données, des noms, des valeurs monétaires ou des nombres.  
   
 ## <a name="basic-information-about-databases"></a>Informations générales sur les bases de données  

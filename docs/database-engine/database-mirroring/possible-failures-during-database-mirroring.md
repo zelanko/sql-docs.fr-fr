@@ -1,5 +1,6 @@
 ---
 title: Défaillances possibles pendant la mise en miroir d’une base de données | Microsoft Docs
+description: En savoir plus sur les défaillances dans les sessions de mise en miroir de bases de données provoquées par des problèmes physiques, de système d’exploitation ou de SQL Server, ainsi que sur la façon de répondre aux erreurs.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b1e2a216a38ed3a9009d446ebf8d5abd79048df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735229"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Défaillances possibles pendant la mise en miroir d’une base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Des problèmes physiques, de système d'exploitation ou propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être responsables de l'échec d'une session de mise en miroir de bases de données. La mise en miroir de bases de données ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. La mise en miroir de bases de données implémente ses propres mécanismes de délai d'attente pour détecter les autres erreurs qui passeraient sinon inaperçues. En cas de délai d’attente de la mise en miroir, une *erreur logicielle*se produit quand la mise en miroir de bases de données détermine qu’une défaillance s’est produite. Toutefois, certaines erreurs qui se produisent au niveau de l'instance SQL Server n'entraîne pas de délai d'attente de la mise en miroir et peuvent ne pas être détectées.  
   
 > [!IMPORTANT]  
@@ -99,7 +100,7 @@ ms.locfileid: "70874280"
   
  **Pour modifier la valeur du délai d'attente (en mode haute sécurité uniquement).**  
   
--   Utilisez l’instruction [ALTER DATABASE \<base_de_données> SET PARTNER TIMEOUT \<entier>](../../t-sql/statements/alter-database-transact-sql.md).  
+-   Utilisez l’instruction [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Pour afficher la valeur actuelle du délai d'attente**  
   

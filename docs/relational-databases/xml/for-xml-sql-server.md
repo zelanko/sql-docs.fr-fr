@@ -1,5 +1,6 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
+description: Découvrez la clause FOR XML qui est utilisée dans les requêtes SQL pour récupérer les résultats au format XML.
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 6b59b52321f9c4e9489617bb8da9edf58f78b588
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8cacd5efbc5d94c639c6dbc76c0a8865c4d4d7dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729927"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Une requête SELECT retourne les résultats sous la forme d'un ensemble de lignes. Vous pouvez si vous le souhaitez récupérer les résultats d'une requête SQL sous forme de code XML en spécifiant la clause FOR XML dans la requête. La clause FOR XML peut être utilisée dans les requêtes de premier niveau et dans les sous-requêtes. La clause FOR XML de premier niveau ne peut être utilisée que dans l'instruction SELECT. Dans les sous-requêtes, FOR XML peut être utilisée dans les instructions INSERT, UPDATE et DELETE. FOR XML peut être également utilisée dans les instructions d’assignation.
 

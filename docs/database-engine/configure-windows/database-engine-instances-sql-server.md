@@ -1,5 +1,6 @@
 ---
 title: Instances du moteur de base de données (SQL Server) | Microsoft Docs
+description: En savoir plus sur les instances du moteur de base de données. Affichez des informations sur les tâches que vous pouvez effectuer sur les instances, telles que la configuration des propriétés et l’activation des protocoles.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772601"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une copie de l’exécutable **sqlservr.exe** qui s’exécute en tant que service du système d’exploitation. Chaque instance gère plusieurs bases de données système et une ou plusieurs bases de données utilisateur. Chaque ordinateur peut exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les applications se connectent à l'instance afin d'effectuer des travaux dans une base de données gérée par l'instance.  
   
 ## <a name="instances"></a>Instances  

@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 48f78d1f064051148a4b7e7a31296b0fe04b8ee7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2416295cd79ae7b4e4da53ef71bcf7dfbf0702f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766677"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY – refus d'autorisations d'objet (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Refuse des autorisations à un membre de la classe OBJECT d'éléments sécurisables. Il s'agit des membres de la classe OBJECT : tables, vues, fonctions table, procédures stockées, procédures stockées étendues, fonctions scalaires, fonctions d'agrégation, files d'attente de service et synonymes.  
 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ PRIVILEGES
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
  Spécifie l’objet sur lequel l’autorisation doit être refusée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l’expression OBJECT est utilisée, le qualificateur d’étendue ( **::** ) est obligatoire. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma ( **.** ) est obligatoire.  
   
- TO \<database_principal>  
+ À \<database_principal>  
  Spécifie le principal auquel l'autorisation est refusée.  
   
  CASCADE  

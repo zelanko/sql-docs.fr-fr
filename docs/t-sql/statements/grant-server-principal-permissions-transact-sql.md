@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0433232412135256e98e6f3292fd88fa58bef62d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 91df6d2f20f7ba5a18a5dbdff30712d17b8c0e24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633692"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880362"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT – octroi d'autorisations de principal de serveur (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permet d'accorder des autorisations sur un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,7 +65,7 @@ GRANT permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Spécifie le rôle de serveur défini par l'utilisateur sur lequel l'autorisation est accordée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
- TO \<server_principal> spécifie le rôle serveur ou la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auquel accorder l’autorisation.  
+ TO \<server_principal>Spécifie le compte de connexion ou le rôle de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lequel l’autorisation est accordée.  
   
  *SQL_Server_login*  
  Spécifie le nom d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

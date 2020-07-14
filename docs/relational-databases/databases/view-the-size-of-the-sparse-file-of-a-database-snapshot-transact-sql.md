@@ -1,10 +1,10 @@
 ---
 title: Afficher la taille du fichier partiellement alloué d’un instantané de base de données (T-SQL)
+description: Utilisez Transact-SQL pour vérifier qu’un fichier de base de données SQL Server est un fichier partiellement alloué et recherchez ses tailles réelle et maximale. Les instantanés de base de données utilisent des fichiers partiellement alloués.
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f62d33f45d390a4449bf603254ccc54be16a38b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727528"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour vérifier qu'un fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un fichier partiellement alloué et pour déterminer ses tailles réelle et maximale. Les fichiers partiellement alloués, qui sont une fonctionnalité du système de fichiers NTFS, sont utilisés par les instantanés de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
@@ -47,7 +48,7 @@ ms.locfileid: "74055209"
 > [!NOTE]  
 >  La taille d’un fichier partiellement alloué augmente par incréments de 64 kilo-octets (Ko). Il s’agit donc toujours d’un multiple de 64 Ko.  
   
- Pour afficher le nombre d’octets actuellement utilisés sur le disque par chaque fichier partiellement alloué d’un instantané, interrogez la colonne **size_on_disk_bytes** de la vue de gestion dynamique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ de ](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md).  
+ Pour afficher le nombre d’octets actuellement utilisés sur le disque par chaque fichier partiellement alloué d’un instantané, interrogez la colonne **size_on_disk_bytes** de la vue de gestion dynamique [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour afficher l’espace disque occupé par un fichier partiellement alloué, cliquez avec le bouton droit sur le fichier dans Microsoft Windows, cliquez sur **Propriétés**et notez la valeur indiquée dans **Taille sur le disque** .  
   

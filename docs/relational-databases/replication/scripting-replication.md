@@ -1,5 +1,6 @@
 ---
 title: Création de scripts de réplication | Microsoft Docs
+description: Un script contient les procédures stockées système Transact-SQL nécessaires pour mettre en œuvre les composants de réplication de SQL Server, tels qu'une publication ou un abonnement.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8cda2b7729f205da7908fa481b2e1a5639a095a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 88f805876602f30cfd53defa93257a4102eaf52c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765196"
 ---
 # <a name="scripting-replication"></a>Création de scripts de réplication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système Transact-SQL nécessaires pour mettre en œuvre le ou les composants de réplication définis dans des scripts, tels qu'une publication ou un abonnement. Il est possible de créer des scripts à l’aide d’un Assistant (comme l’Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée.  
   
  Un nouveau script doit être généré pour un composant si des modifications sont apportées à ses propriétés. Si vous utilisez des procédures stockées personnalisées avec la réplication transactionnelle, une copie de chaque procédure doit être stockée avec les scripts ; la copie doit être mise à jour si la procédure change (les procédures sont généralement mises à jour suite à des modifications de schéma ou à des modifications des conditions requises par l'application). Pour plus d’informations sur les procédures personnalisées, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -84,7 +85,7 @@ ms.locfileid: "76287314"
   
 3.  Cliquez avec le bouton droit sur une publication ou un abonnement, puis cliquez sur **Générer des scripts**.  
   
-4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>** .  
+4.  Spécifiez les options dans la boîte de dialogue **Générer un script SQL - \<ReplicationObject>** .  
   
 5.  Cliquez sur **Générer un script sur fichier**.  
   

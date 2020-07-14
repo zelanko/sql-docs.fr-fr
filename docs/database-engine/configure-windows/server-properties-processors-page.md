@@ -1,5 +1,6 @@
 ---
 title: Propriétés du serveur (page Processeurs) | Microsoft Docs
+description: Se familiariser avec les paramètres du processeur dans SQL Server. Découvrez les options qui contrôlent le nombre de threads de travail, l’affectation de processeur et d’autres propriétés.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 42eaf4bc1742c5d9ff101c308d6c120ceb8f3ef8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3652ee3b01383d8d029bb0eb7aeefaa4f8cc045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726600"
 ---
 # <a name="server-properties---processors-page"></a>Propriétés du serveur - Page Processeurs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette page pour afficher ou modifier les options de votre processeur. Les paramètres d'affinité du processeur ne sont activés que si plusieurs processeurs sont installés.  
   
 ## <a name="options"></a>Options  

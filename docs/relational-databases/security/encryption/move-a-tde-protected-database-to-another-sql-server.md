@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ea15d89efb653bff92817ffc97300ec03958482
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558508"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899056"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment protéger une base de données à l’aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE effectue le chiffrement et le déchiffrement d’E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données stockée dans l’enregistrement de démarrage de base de données à des fins de disponibilité lors de la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données **master** du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.   
    
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
@@ -165,14 +165,14 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
      Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral** . Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **État**  
-     Affiche l’un des états suivants : **Prêt** ou **Non prêt**.  
+     Affiche un des états suivants : **Prêt** ou **Non prêt**.  
   
      **Message**  
      La colonne **Message** peut indiquer des informations sur la base de données, comme suit :  
   
     -   Lorsqu'une base de données est impliquée dans la réplication, l' **État** est **Non prêt** et la colonne **Message** indique **Base de données répliquée**.  
   
-    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** affiche _\<nombre\_de\_connexions\_actives\>_ **Connexion(s) active(s)** , par exemple **1 connexion(s) active(s)** . Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
+    -   Lorsqu'une base de données possède une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** indique _\<number\_of\_active\_connections\>_ **connexion(s) active(s)** , par exemple : **1 connexion(s) active(s)** . Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
   
      Pour obtenir plus d'informations sur un message, cliquez sur le texte du lien hypertexte pour ouvrir le Moniteur d'activité.  
   
@@ -197,7 +197,7 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
      **Bases de données à attacher**  
      Affiche des informations sur les bases de données sélectionnées.  
   
-     \<aucun en-tête de colonne>  
+     \<no column header>  
      Affiche une icône indiquant l'état de l'opération d'attachement. Les icônes possibles sont décrites dans la section **État** ci-dessous.  
   
      **Emplacement du fichier MDF**  

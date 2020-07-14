@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57f44934fa5ecfe7c14b4c4b2427656ccd4ef633
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526794"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255422"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -312,11 +312,11 @@ SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux co
 
 L’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.
 
-Dans certaines méthodes de connexion à SQL Database, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Database au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>* @ *\<serveur>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
+Dans certaines méthodes de connexion à SQL Database, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Database au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<login>* @ *\<server>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
 
 Dans SQL Database, vous devez être connecté à la base de données MASTER avec les autorisations appropriées pour créer une connexion. Pour plus d’informations, consultez [Créer des connexions et des utilisateurs supplémentaires disposant d’autorisations administratives](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
-Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
+Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<loginname>@\<servername>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
 
 Dans SQL Database, les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -457,6 +457,12 @@ Après la création d’une connexion, celle-ci peut se connecter à une instanc
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - Les utilisateurs (invités) externes importés à partir d’un autre annuaire Azure AD ne peuvent pas être configurés directement comme administrateur Azure AD pour instance managée. Joignez plutôt l’utilisateur externe à un groupe de sécurité Azure AD et configurez le groupe comme administrateur d’instance.
+- La connexion n’est pas répliquée vers l’instance secondaire dans un groupe de basculement. La connexion est enregistrée dans la base de données MASTER, qui est une base de données système et, par conséquent, n’est pas géo-répliquée. Pour résoudre cela, l’utilisateur doit créer une connexion avec le même SID sur l’instance secondaire.
+
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+```
 
 ## <a name="examples"></a>Exemples
 
@@ -593,11 +599,11 @@ Les mots de passe respectent la casse. Les mots de passe doivent comporter au mo
 
 L’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.
 
-Lorsque vous vous connectez à Azure Synapse en utilisant des outils comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Analytics au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>* @ *\<serveur>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Analytics est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
+Lorsque vous vous connectez à Azure Synapse en utilisant des outils comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Analytics au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<login>* @ *\<server>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Analytics est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
 
 Pour créer une connexion, vous devez être connecté à la base de données master.
 
-Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
+Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<loginname>@\<servername>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
 
 Les données de connexion exigées pour authentifier une connexion et les règles de pare-feu au niveau du serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 

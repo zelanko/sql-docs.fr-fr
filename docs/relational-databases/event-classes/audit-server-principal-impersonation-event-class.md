@@ -12,16 +12,16 @@ ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e469adf2c33327894a36e559ef69c49c989eefad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ea21dfc124671aeb20eb11c0d80be808f655428
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756103"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe d’événements **Audit Server Principal Impersonation** se produit lors d’un emprunt d’identité dans l’étendue du serveur, comme EXECUTE AS \<*ID_connexion*>.  
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+  La classe d'événements **Audit Server Principal Impersonation** se produit lors d'un emprunt d'identité dans l'étendue du serveur, comme EXECUTE AS \<*login*>.  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Colonnes de données de la classe d'événements Audit Server Principal Impersonation  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67913374"
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**ObjectName**|**nvarchar**|Nom de l'objet référencé.|34|Oui|  
 |**ObjectType**|**int**|Valeur représentant le type de l'objet qui intervient dans l'événement. Cette valeur correspond à la colonne type de l'affichage catalogue **sys.objects** . Pour connaître les valeurs, consultez [Colonne d’événements de trace ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Oui|  
-|**Autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE (procédures uniquement)|19|Oui|  
+|**autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE (procédures uniquement)|19|Oui|  
 |**RequestID**|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  

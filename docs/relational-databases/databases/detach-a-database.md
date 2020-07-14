@@ -1,5 +1,6 @@
 ---
 title: Détacher une base de données | Microsoft Docs
+description: Découvrez comment détacher une base de données dans SQL Server à l’aide de SQL Server Management Studio ou de Transact-SQL. Les fichiers peuvent être rattachés ou attachés à un autre serveur.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1780847dda15ac7171473d4a163443bedd9bdf8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756174"
 ---
 # <a name="detach-a-database"></a>Détacher une base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment détacher une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les fichiers détachés restent et peuvent être rattachés à l'aide de CREATE DATABASE avec l'option FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Vous pouvez les déplacer sur un autre serveur et les y attacher.  
   
  **Dans cette rubrique**  
@@ -79,21 +80,21 @@ ms.locfileid: "68006191"
      Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral** . Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **État**  
-     Affiche l’un des états suivants : **Prêt** ou **Non prêt**.  
+     Affiche un des états suivants : **Prêt** ou **Non prêt**.  
   
      **Message**  
      La colonne **Message** peut indiquer des informations sur la base de données, comme suit :  
   
     -   Lorsqu'une base de données est impliquée dans la réplication, l' **État** est **Non prêt** et la colonne **Message** indique **Base de données répliquée**.  
   
-    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** indique _<nombre_de_connexions_actives>_ **Connexion(s) active(s)** , par exemple, **1 connexion(s) active(s)** . Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
+    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** indique _<nombre_de_connexions_actives>_ **Connexion(s) active(s)**  ; par exemple : **1 connexion(s) active(s)** . Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
   
      Pour obtenir plus d'informations sur un message, cliquez sur le texte du lien hypertexte pour ouvrir le Moniteur d'activité.  
   
 4.  Lorsque vous avez prêt à lancer le processus, cliquez sur **OK**.  
   
 > [!NOTE]  
->  La base de données ainsi détachée reste toujours visible dans le nœud **Bases de données** de l'explorateur d'objets jusqu'à ce que la vue soit actualisée. Actualisez la vue à tout moment en cliquant dans le volet de l'explorateur d'objets et en sélectionnant, dans la barre de menus, les éléments **Affichage** puis **Actualiser**.  
+>  La base de données ainsi détachée reste toujours visible dans le nœud **Bases de données** de l'explorateur d'objets jusqu'à ce que la vue soit actualisée. Vous pouvez le faire à tout moment en cliquant dans le volet de l’Explorateur d’objets et en sélectionnant, dans la barre de menus, les éléments **Affichage**, puis **Actualiser**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

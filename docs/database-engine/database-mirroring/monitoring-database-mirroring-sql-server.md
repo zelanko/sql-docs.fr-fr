@@ -1,5 +1,6 @@
 ---
 title: Surveillance de la mise en miroir de bases de données (SQL Server) | Microsoft Docs
+description: Découvrez le Moniteur de mise en miroir de bases de données, les procédures stockées système et le fonctionnement de la surveillance de la mise en miroir de bases de données, y compris le travail Moniteur de mise en miroir de bases de données.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8479b88d100f9687469ad615d0b92c50aedb6ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771829"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette section présente le moniteur de mise en miroir de bases de données et les procédures stockées système **sp_dbmmonitor** ; par ailleurs, elle décrit le fonctionnement de la surveillance de la mise en miroir de bases de données (ainsi que du **travail du moniteur de mise en miroir de bases de données)** et récapitule les informations que vous pouvez surveiller en matière de sessions de mise en miroir de bases de données. De plus, cette section explique comment définir des seuils d'avertissement pour un jeu d'événements de mise en miroir de bases de données prédéfinis et comment configurer des alertes pour des événements de mise en miroir de bases de données.  
   
  Vous pouvez surveiller une base de données mise en miroir durant une session de mise en miroir pour vérifier si le flux des données est correct. Pour configurer et gérer la surveillance d’une ou de plusieurs bases de données mises en miroir sur une instance de serveur, vous pouvez utiliser le moniteur de mise en miroir de bases de données ou les procédures stockées système **sp_dbmmonitor** .  
@@ -131,7 +132,7 @@ ms.locfileid: "70212289"
      Les administrateurs système peuvent utiliser la procédure stockée système **sp_dbmmonitorresults** pour afficher (et éventuellement mettre à jour) la table d’état si cette dernière n’a pas été mise à jour au cours des 15 secondes précédentes. Cette procédure appelle la procédure **sp_dbmmonitorupdate** et retourne une ou plusieurs lignes d’historique, en fonction de la quantité demandée dans l’appel de procédure. Pour plus d’informations sur l’état dans son jeu de résultats, consultez [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>État de la mise en miroir de base de données (par les membres dbm_monitor)  
- Comme nous l’avons mentionné, lors de la première exécution de la procédure **sp_dbmmonitorupdate** , le rôle de base de données fixe **dbm_monitor** est créé dans la base de données **msdb** . Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (** _\<heure>_ **)** et **Journal miroir (** _\<heure>_ **)** dans la page **État**.  
+ Comme nous l’avons mentionné, lors de la première exécution de la procédure **sp_dbmmonitorupdate** , le rôle de base de données fixe **dbm_monitor** est créé dans la base de données **msdb** . Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (** _\<time>_ **)** et **Journal miroir** ( _\<time>_ **)** sur la page **État**.  
   
  Les membres du rôle de base de données fixe **dbm_monitor** sont tributaires du **travail du moniteur de mise en miroir de bases de données** pour la mise à jour de la table d’état à des fréquences régulières. Si le travail n'existe pas ou si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, l'état devient de plus en plus obsolète et ne correspondra plus forcément à la configuration de la session de mise en miroir. Par exemple, après un basculement, les partenaires peuvent sembler partager le même rôle (principal ou miroir), ou le serveur principal actuel peut être affiché comme serveur miroir, alors que le serveur miroir actuel est affiché comme principal.  
   

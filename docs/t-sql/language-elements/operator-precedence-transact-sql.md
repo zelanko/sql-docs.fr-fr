@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4670ef04301bb8dc75828db97ee42d3379ecbfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706237"
 ---
 # <a name="operator-precedence-transact-sql"></a>Priorités des opérateurs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quand une expression complexe comporte plusieurs opérateurs, la priorité des opérateurs détermine l’ordre des opérations. Cet ordre peut affecter considérablement la valeur résultante.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68121917"
 |1|~ (NOT au niveau du bit)|  
 |2|* (Multiplication), / (Division), % (Modulo)|  
 |3|+ (Positif), - (Négatif), + (Addition), + (Concaténation), - (Soustraction), & (AND au niveau du bit), ^ (OR exclusif au niveau du bit), &#124; (OR au niveau du bit)|  
-|4|=, >, \<, >=, <=, <>, !=, !>, !< (opérateurs de comparaison)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (Opérateurs de comparaison)|  
 |5|NOT|  
 |6|AND|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  

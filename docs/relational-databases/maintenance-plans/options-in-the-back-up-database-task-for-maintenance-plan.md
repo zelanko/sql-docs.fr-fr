@@ -1,5 +1,6 @@
 ---
 title: Sauvegarder la base de données, tâche (Plan de maintenance) | Microsoft Docs
+description: Découvrez comment ajouter une tâche de sauvegarde à un plan de maintenance dans SQL Server à l’aide de la tâche Sauvegarder la base de données.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774400"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Options de la boîte de dialogue Sauvegarder la base de données pour le plan de maintenance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez la boîte de dialogue **Tâche Sauvegarder la base de données** pour ajouter une tâche de sauvegarde au plan de maintenance. La sauvegarde de la base de données est importante pour pallier son endommagement possible à la suite d'une défaillance matérielle ou logicielle (ou d'erreurs des utilisateurs), en permettant sa restauration à partir d'une copie de sauvegarde. Cette tâche vous permet d'effectuer des sauvegardes des journaux des transactions, des sauvegardes de groupe de fichiers et de fichiers, des sauvegardes différentielles et complètes.  
   
  **Pour créer une tâche de sauvegarde de base de données**  
@@ -38,7 +39,7 @@ ms.locfileid: "68115825"
  Crée une nouvelle connexion serveur à utiliser pour exécuter la tâche. La boîte de dialogue **Nouvelle connexion** est décrite ci-dessous.  
   
  **Bases de données**  
- Spécifie les bases de données faisant l'objet de cette tâche. Lorsque vous sélectionnez cette option, la liste déroulante comprend les options suivantes : **Toutes les bases de données**, **Toutes les bases de données système**, **Toutes les bases de données utilisateur**, **Ces bases de données**.  
+ Spécifie les bases de données faisant l'objet de cette tâche. Quand vous sélectionnez cette option, la liste déroulante comprend les options suivantes : **Toutes les bases de données**, **Toutes les bases de données système**, **Toutes les bases de données utilisateur**, **Ces bases de données**.  
   
  **Toutes les bases de données**  
  Génère un plan de maintenance qui exécute les tâches de maintenance sur toutes les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -123,10 +124,10 @@ ms.locfileid: "68115825"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] avec l’authentification Windows.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l’authentification Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas disponible.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas disponible.  
   
  **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  

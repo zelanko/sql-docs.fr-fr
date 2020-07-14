@@ -17,15 +17,15 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd315f75626b337c2183f34121aeb7660e0ed66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786877"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtenir des informations sur les déclencheurs DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cette rubrique explique comment obtenir des informations sur les déclencheurs DML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces informations peuvent inclure les types de déclencheurs existant sur une table, ainsi que leur nom, leur propriétaire et la date de leur création ou modification. Si le déclencheur n'a pas été chiffré lors de sa création, vous obtenez la définition du déclencheur. Vous pouvez utiliser la définition pour vous aider à comprendre comment un déclencheur affecte la table sur laquelle il est défini. En outre, vous pouvez déterminer les objets qu'un déclencheur spécifique utilise. Avec ces informations, vous pouvez identifier les objets dont l'éventuelle suppression ou modification aurait une répercussion sur le déclencheur.  
   
  **Dans cette rubrique**  
@@ -49,7 +49,7 @@ ms.locfileid: "72909289"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Requiert l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Par défaut, l’autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe **db_owner** . Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
@@ -72,9 +72,9 @@ ms.locfileid: "72909289"
   
 3.  Développez **Déclencheurs**, cliquez avec le bouton droit sur le déclencheur de votre choix, puis cliquez sur **Afficher les dépendances**.  
   
-4.  Dans la fenêtre **Dépendances d’objets**, sélectionnez **Objets dépendants de \<nom du déclencheur DML>** pour afficher les objets qui dépendent du déclencheur DML. Les objets apparaissent dans la zone **Dépendances** .  
+4.  Dans la fenêtre **Dépendances d’objets**, sélectionnez **Objets dépendants de \<DML trigger name>** pour afficher les objets qui dépendent du déclencheur DML. Les objets apparaissent dans la zone **Dépendances** .  
   
-     Pour afficher les objets dont dépend le déclencheur DML, sélectionnez **Objets dont dépend \<nom du déclencheur DML>** . Les objets apparaissent dans la zone **Dépendances** . Développez chaque nœud pour voir tous les objets.  
+     Pour afficher les objets dont dépend le déclencheur DML, sélectionnez **Objets dont dépend \<DML trigger name>** . Les objets apparaissent dans la zone **Dépendances** . Développez chaque nœud pour voir tous les objets.  
   
 5.  Pour obtenir des informations sur un objet qui apparaît dans la zone **Dépendances** , cliquez sur l'objet. Dans le champ **Objet sélectionné** , les informations sont fournies dans les zones **Nom**, **Type**et **Type de dépendance** .  
   

@@ -1,5 +1,6 @@
 ---
 title: Propriétés du serveur (page Sécurité) | Microsoft Docs
+description: Se familiariser avec les paramètres de sécurité du serveur dans SQL Server. En savoir plus sur les options qui contrôlent l’authentification du serveur, les comptes proxy et d’autres fonctionnalités.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e864eced90a190dc7e7c0f204691ed02b9a2cff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724001"
 ---
 # <a name="server-properties---security-page"></a>Propriétés du serveur - Page Sécurité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette page pour afficher ou modifier les options de sécurité de votre serveur.  
   
 ## <a name="server-authentication"></a>Authentification du serveur  

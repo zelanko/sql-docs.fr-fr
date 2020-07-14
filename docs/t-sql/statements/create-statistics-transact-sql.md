@@ -26,21 +26,21 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8240965a5cc057e3c22e8a721a05542aca17db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632120"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002503"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crée des statistiques d’optimisation de requête sur une ou plusieurs colonnes d’une table, d’une vue indexée ou d’une table externe. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires avec CREATE STATISTICS ou modifier la conception des requêtes pour améliorer les performances des requêtes.  
   
  Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -136,7 +136,7 @@ CREATE STATISTICS statistics_name
   
 -   Toute colonne de type CLR définie par l'utilisateur peut être spécifiée si son type prend en charge l'ordre de tri binaire. Les colonnes calculées définies en tant qu'appels à des méthodes d'une colonne de type défini par l'utilisateur peuvent être précisées si les méthodes en question sont marquées comme étant déterministes.  
   
- WHERE \<filter_predicate> spécifie une expression permettant de sélectionner un sous-ensemble des lignes à inclure lors de la création de l’objet de statistiques. Les statistiques créées avec un prédicat de filtre sont appelées des statistiques filtrées. Le prédicat de filtre utilise une logique de comparaison simple et ne peut pas référencer une colonne calculée, une colonne UDT, une colonne de type de données spatiales ou une colonne de type de données **hierarchyID**. Les comparaisons à l'aide de littéraux NULL ne sont pas autorisées avec les opérateurs de comparaison. Utilisez les opérateurs IS NULL et IS NOT NULL à la place.  
+ WHERE \<filter_predicate> Spécifie une expression permettant de sélectionner un sous-ensemble des lignes à inclure lors de la création de l'objet de statistiques. Les statistiques créées avec un prédicat de filtre sont appelées des statistiques filtrées. Le prédicat de filtre utilise une logique de comparaison simple et ne peut pas référencer une colonne calculée, une colonne UDT, une colonne de type de données spatiales ou une colonne de type de données **hierarchyID**. Les comparaisons à l'aide de littéraux NULL ne sont pas autorisées avec les opérateurs de comparaison. Utilisez les opérateurs IS NULL et IS NOT NULL à la place.  
   
  Voici quelques exemples de prédicats de filtre pour la table Production.BillOfMaterials :  
   
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
 **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.  
   
 MAXDOP = *max_degree_of_parallelism*  
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Remplace l’option de configuration **max degree of parallelism** pendant la durée de l’opération statistique. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
@@ -243,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Vous pouvez afficher jusqu’à 64 colonnes par objet de statistiques.
 * L’option MAXDOP n’est pas compatible avec les options STATS_STREAM, ROWCOUNT et PAGECOUNT.
 * L’option MAXDOP est limitée par le paramètre MAX_DOP du groupe de charge de travail de Resource Governor, le cas échéant.
+* L’utilisation de CREATE STATISTICS et DROP STATISTICS sur les tables externes n’est pas prise en charge dans Azure SQL Database.
   
 ## <a name="examples"></a>Exemples  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. Créer des statistiques sur une table externe  
- La seule décision que vous devez prendre quand vous créez des statistiques sur une table externe, en plus de fournir la liste des colonnes, est de savoir si vous allez créer les statistiques en échantillonnant les lignes ou en analysant toutes les lignes.  
+ La seule décision que vous devez prendre quand vous créez des statistiques sur une table externe, en plus de fournir la liste des colonnes, est de savoir si vous allez créer les statistiques en échantillonnant les lignes ou en analysant toutes les lignes. L’utilisation de CREATE STATISTICS et DROP STATISTICS sur les tables externes n’est pas prise en charge dans Azure SQL Database.
   
  Étant donné que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe les données de la table externe vers une table temporaire pour créer les statistiques, l’option d’analyse complète prendra beaucoup plus de temps. Pour une table volumineuse, la méthode d’échantillonnage par défaut est généralement suffisante.  
   

@@ -1,5 +1,6 @@
 ---
 title: Supprimer des index XML | Microsoft Docs
+description: Découvrez comment l’instruction DROP INDEX Transact-SQL permet de supprimer des index XML et non XML, qu’ils soient primaires ou secondaires.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5c638e405f7f2d15b5b48a483a5e46ea58b694e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 045e71896836a2ccb39e8605d14e49360a9cc7a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633193"
 ---
 # <a name="drop-xml-indexes"></a>Supprimer des index XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   L’instruction [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] permet de supprimer des index XML et non XML, qu’ils soient primaires ou secondaires. Les options DROP INDEX ne s'appliquent cependant pas aux index XML. Si vous supprimez l'index XML primaire, tous les index secondaires présents sont alors également supprimés.  
   
  La syntaxe DROP avec *TableName.IndexName* est cependant en cours de retrait des fonctionnalités et n’est pas prise en charge pour les index XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Exemple : création puis suppression d'un index XML primaire  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Exemple : Création puis suppression d’un index XML primaire  
  L’exemple suivant propose la création d’un index XML portant sur une colonne de type **xml** .  
   
 ```  
@@ -69,7 +70,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Exemple : création d'un index XML par le biais de l'option d'index DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Exemple : Création d’un index XML à l’aide de l’option d’index DROP_EXISTING  
  Dans cet exemple, un index XML est créé sur une colonne nommée`XmlColx`. Ensuite, un autre index XML portant le même nom est créé sur une autre colonne nommée`XmlColy`. L'option `DROP_EXISTING` étant spécifiée, l'index XML existant sur (`XmlColx)` est supprimé et un nouvel index sur (`XmlColy`) est créé.  
   
 ```  

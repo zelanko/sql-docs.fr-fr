@@ -15,16 +15,16 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733692"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Avant d'utiliser le suivi d'événements pour Windows (ETW) comme cible, il est recommandé d'avoir une connaissance pratique du Suivi d'événements pour Windows. Le suivi ETW est utilisé conjointement avec les Événements étendus ou en tant que consommateur d'événements des Événements étendus. Les liens externes suivants fournissent un point de départ pour obtenir des informations générales sur le suivi ETW :  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79433966"
     > [!IMPORTANT]  
     >  Le chemin d'accès ne peut pas être modifié une fois la première session démarrée.  
   
--   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.
+-   Les fichiers MOF (Managed Object Format - Format MOF) se trouvent dans *\<your install path>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->

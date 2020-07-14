@@ -1,5 +1,6 @@
 ---
 title: Utiliser la recherche en texte intégral avec des colonnes XML | Microsoft Docs
+description: Découvrez comment créer un index de recherche en texte intégral des colonnes XML et effectuer une recherche en texte intégral sur des valeurs XML à l’aide de SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 108a54614bb6d77be53b28b42a128f9db7a46aae
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0c3cc821a8630bc7afcd919c4a45140bb9a2621d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752552"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utiliser la recherche en texte intégral avec des colonnes XML
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80665012"
   
 2.  Ensuite, interrogez les valeurs XML pour lesquelles il existe un index XML sur la colonne XML.  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : association d'une recherche en texte intégral avec une requête XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : Association d’une recherche en texte intégral avec une requête XML  
  Une fois l'index de texte intégral créé sur la colonne XML, la requête suivante recherche une valeur XML contenant le mot « custom » dans le titre d'un livre :  
   
 ```sql
@@ -52,7 +53,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  De plus, la recherche en texte intégral se sert de l’extraction de radical tandis que la fonction XQuery **contains()** attend une correspondance littérale. Cette différence est expliquée dans l'exemple suivant.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : recherche en texte intégral sur des valeurs XML à l'aide de l'extraction de radical  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : Recherche en texte intégral sur des valeurs XML à l’aide de l’extraction de radical  
  La vérification XQuery **contains()** exécutée dans l’exemple précédent ne peut généralement pas être éliminée. Prenons par exemple la requête suivante :  
   
 ```sql
