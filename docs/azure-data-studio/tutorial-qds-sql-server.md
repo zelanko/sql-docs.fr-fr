@@ -1,25 +1,24 @@
 ---
 title: Activer le widget d’exemple qui affiche les cinq requêtes les plus lentes
-titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment activer le widget qui affiche les cinq requêtes les plus lentes dans le tableau de bord de la base de données.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
-ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/01/2020
+ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774542"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutoriel : Ajouter le widget d’exemple *cinq requêtes les plus lentes* au tableau de bord de la base de données
 
-Ce didacticiel montre le processus d’ajout d’un widget d’exemple intégré de [!INCLUDE[name-sos](../includes/name-sos-short.md)] au *tableau de bord de la base de données* pour afficher rapidement les cinq requêtes les plus lentes d’une base de données. Vous allez également apprendre à afficher les détails des requêtes lentes et les plans de requête à l’aide des fonctionnalités de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Dans ce didacticiel, vous apprendrez à :
+Ce didacticiel illustre le processus d’ajout d’un widget d’exemple intégré d’Azure Data Studio au *tableau de bord de base de données* pour afficher rapidement les cinq requêtes les plus lentes d’une base de données. Vous verrez également comment afficher les détails des requêtes lentes et les plans de requête à l’aide des fonctionnalités d’Azure Data Studio. Dans ce didacticiel, vous apprendrez à :
 
 > [!div class="checklist"]
 > * Activer le Magasin des requêtes sur une base de données
@@ -27,7 +26,7 @@ Ce didacticiel montre le processus d’ajout d’un widget d’exemple intégré
 > * Afficher des détails sur les requêtes les plus lentes de la base de données
 > * Afficher les plans d’exécution de requête pour les requêtes lentes
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] comprend plusieurs widgets d’insight prêts à l’emploi. Ce didacticiel montre comment ajouter le widget *query-data-store-db-insight*, mais les étapes sont fondamentalement les mêmes pour l’ajout de n’importe quel widget.
+Azure Data Studio comprend plusieurs widgets d’insight prêts à l’emploi. Ce didacticiel montre comment ajouter le widget *query-data-store-db-insight*, mais les étapes sont fondamentalement les mêmes pour l’ajout de n’importe quel widget.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -117,9 +116,7 @@ Pour ajouter le *widget de requêtes lentes* à votre tableau de bord, modifiez 
 
    ![Boîte de dialogue de détails d’insight](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Cliquez avec le bouton droit sur la cellule située à droite de **query_sql_txt** dans les **Détails de l'élément**, puis cliquez sur **Copier la cellule**.
-
-4. Fermez le volet **Insights**.
+3. Fermez le volet **Insights**.
 
 ## <a name="view-the-query-plan"></a>Afficher le plan de requête
 

@@ -1,5 +1,6 @@
 ---
 title: Résolution des problèmes liés aux index de hachage - Tables à mémoire optimisée
+description: Ces informations vous aident à résoudre les problèmes liés aux index de hachage pour les tables à mémoire optimisée dans SQL Server et Azure SQL Database.
 ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723225"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Résolution des problèmes des index de hachage pour les tables à mémoire optimisée
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="prerequisite"></a>Configuration requise  
   

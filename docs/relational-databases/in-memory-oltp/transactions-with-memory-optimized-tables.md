@@ -1,5 +1,6 @@
 ---
 title: Transactions avec tables optimisées en mémoire | Microsoft Docs
+description: Apprenez-en davantage sur les transactions pour les tables à mémoire optimisée et les procédures stockées compilées en mode natif, ainsi que leurs différences par rapport aux transactions pour les tables sur disque.
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753183"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cet article décrit tous les aspects des transactions propres aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif.  
   
@@ -114,17 +115,17 @@ Quand une table optimisée en mémoire est impliquée, la durée de vie d’une 
   
 Voici une description des phases.  
   
-#### <a name="regular-processing-phase-1-of-3"></a>Traitement normal : phase 1 (sur 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Traitement normal : Phase 1 (sur 3)  
   
 - Cette phase se compose de l’exécution de toutes les requêtes et des instructions DML de la requête.  
 - Pendant cette phase, les instructions voient la version des tables optimisées en mémoire comme l’heure de début logique de la transaction.  
   
-#### <a name="validation-phase-2-of-3"></a>Validation : phase 2 (sur 3)  
+#### <a name="validation-phase-2-of-3"></a>Validation : Phase 2 (sur 3)  
   
 - La phase de validation commence par l’assignation d’une heure de fin et donc le marquage d’une transaction comme logiquement terminée. Ceci rend toutes les modifications de la transaction visibles aux autres transactions qui dépendent de cette transaction. La validation des transactions dépendantes n’est pas autorisée tant que la validation de cette transaction n’a pas réussi. En outre, les transactions qui ont ces dépendances ne sont pas autorisées à retourner des jeux de résultats au client. De cette manière, le client voit seulement les données dont la validation a réussi dans la base de données.  
 - Cette phase comprend les validations REPEATABLE READ et SERIALIZABLE. La validation REPEATABLE READ vérifie si des lignes lues par la transaction ont été mises à jour entre-temps. La validation SERIALIZABLE vérifie si une ligne a été insérée dans une plage de données analysée par cette transaction. Selon le tableau de la section [Niveaux d’isolation et conflits](#isolation-levels), les validations REPEATABLE READ et SERIALIZABLE peuvent avoir lieu quand vous utilisez l’isolation SNAPSHOT pour valider la cohérence des contraintes de clés étrangères et uniques.  
   
-#### <a name="commit-processing-phase-3-of-3"></a>Traitement de validation : phase 3 (sur 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Traitement de la validation : Phase 3 (sur 3)  
   
 - Durant la phase de validation, les modifications apportées aux tables durables sont écrites dans le journal, et le journal est écrit sur le disque. Le contrôle est ensuite rendu au client.  
 - Une fois le traitement de validation terminé, toutes les transactions dépendantes sont informées qu’elles peuvent être validées.  
@@ -139,7 +140,7 @@ Il existe deux types de conditions d’erreur qui peuvent causer l’échec et l
 
 Voici les conditions d’erreur qui peuvent entraîner l’échec des transactions quand elles accèdent à des tables optimisées en mémoire.
 
-| Code d'erreur | Description | Cause : |
+| Code d'erreur | Description | Cause |
 | :-- | :-- | :-- |
 | **41302** | Tentative de mise à jour d’une ligne qui a été mise à jour dans une autre transaction depuis le début de la transaction actuelle. | Cette erreur se produit si deux transactions simultanées tentent de mettre à jour ou de supprimer la même ligne au même moment. L’une des deux transactions reçoit ce message d’erreur et doit être retentée. <br/><br/>  | 
 | **41305**| Échec de la validation de lecture renouvelable Une ligne lue dans une table optimisée en mémoire a été mise à jour par une autre transaction qui a été validée avant cette transaction. | Cette erreur peut se produire lors de l’utilisation du niveau d’isolation REPEATABLE READ ou SERIALIZABLE, et également si les actions d’une transaction simultanée provoquent la violation d’une contrainte FOREIGN KEY. <br/><br/>Une telle violation simultanée de contraintes de clé étrangère est rare, et indique généralement un problème avec la logique de l’application ou avec une entrée de données. Toutefois, l’erreur peut également se produire s’il n’existe aucun index sur les colonnes impliquées dans la contrainte FOREIGN KEY. Il est donc recommandé de toujours créer un index sur les colonnes de clé étrangère d’une table optimisée en mémoire. <br/><br/> Pour plus d’informations sur les échecs de validation causés par des violations de clé étrangère, consultez [ce billet de blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) de l’équipe de consultants clients de SQL Server. |  
@@ -263,7 +264,7 @@ go
   - base de données tempdb  
   - lecture seule à partir de la base de données MASTER.  
   
-- Transactions distribuées non prises en charge : Lorsque BEGIN DISTRIBUTED TRANSACTION est utilisé, la transaction ne peut pas accéder à une table optimisée en mémoire.  
+- Les transactions distribuées ne sont pas prises en charge : Lorsque BEGIN DISTRIBUTED TRANSACTION est utilisé, la transaction ne peut pas accéder à une table optimisée en mémoire.  
   
 ## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
   

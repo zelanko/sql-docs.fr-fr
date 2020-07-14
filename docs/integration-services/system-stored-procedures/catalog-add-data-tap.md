@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749774"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un drainage de données sur la sortie d'un composant dans un flux de données de package, pour une instance d'exécution.  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  Nom du fichier qui stocke les données drainées. Si la tâche de flux de données s'exécute à l'intérieur d'un conteneur de boucles Foreach ou For, des fichiers distincts stockent les données drainées pour chaque itération de la boucle. Chaque fichier a pour préfixe un nombre qui correspond à une itération.  
   
- Par défaut, le fichier est stocké dans le dossier \<*lecteur*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
+ Par défaut, le fichier est stocké dans le dossier \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
   
  *data_filename* est de type **nvarchar(4000)** .  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  Retourne l'ID de la collecte de données. *data_tap_id* est de type **bigint**.  
   
 ## <a name="example"></a>Exemple  
- Dans l’exemple suivant, un drainage de données est créé sur le chemin d’accès de flux de données, `'Paths[OLE DB Source.OLE DB Source Output]`, dans la tâche de flux de données, `\Package\Data Flow Task`. Les données drainées sont stockées dans le fichier `output0.txt` dans le dossier DataDumps (\<*lecteur*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
+ Dans l’exemple suivant, un drainage de données est créé sur le chemin d’accès de flux de données, `'Paths[OLE DB Source.OLE DB Source Output]`, dans la tâche de flux de données, `\Package\Data Flow Task`. Les données drainées sont stockées dans le fichier `output0.txt` dans le dossier DataDumps (\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Spécifications  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983), sur le site rafael-salas.com.  
+ Entrée de blog, [SSIS 2012 : aperçu de Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) sur le site rafael-salas.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

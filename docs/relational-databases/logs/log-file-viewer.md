@@ -1,5 +1,6 @@
 ---
 title: Visionneuse du fichier journal | Microsoft Docs
+description: La Visionneuse du fichier journal dans SQL Server Management Studio permet d’accéder aux informations sur les erreurs et événements capturés dans les fichiers journaux.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7425bb2175b9a2e7b813f63e7d78aec7e73ef5ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668127"
 ---
 # <a name="log-file-viewer"></a>Visionneuse du fichier journal
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La Visionneuse du fichier journal dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permet d'accéder aux informations sur les erreurs et événements capturés dans les fichiers journaux.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Avantages liés à l'utilisation de la Visionneuse du fichier journal  

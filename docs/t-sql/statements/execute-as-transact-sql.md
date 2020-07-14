@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5cb9ad962967680dd438e4842e8785e2bb33ed53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fb5a918c33a0c2017008079cc90693fb9c50309d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006272"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "81633859"
   
 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -110,7 +109,7 @@ En dehors d'un module, cette instruction n'a pas d'effet.
 Vous pouvez créer une pile de contextes d'exécution en appelant l'instruction EXECUTE AS plusieurs fois sur plusieurs principaux. Lorsqu'elle est appelée, l'instruction REVERT bascule le contexte vers la connexion ou l'utilisateur du niveau supérieur dans la pile de contexte. Pour avoir une démonstration de ce comportement, consultez [Exemple A](#_exampleA).  
   
 ##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Spécification d’un nom d’utilisateur ou d’un ID de connexion  
- Le nom d’utilisateur ou de connexion spécifié dans EXECUTE AS \<context_specification> doit exister comme principal respectivement dans **sys.database_principals** ou **sys.server_principals**. Sinon, l’instruction EXECUTE AS échoue. De plus, les autorisations IMPERSONATE doivent être accordées sur le principal. Sauf si l’appelant est le propriétaire de la base de données, ou un membre du rôle serveur fixe **sysadmin**, le principal doit exister même quand l’utilisateur a accès à la base de données ou l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fait de son appartenance à un groupe Windows. Par exemple, supposons les conditions suivantes : 
+ Le nom d’utilisateur ou de connexion spécifié dans EXECUTE AS \<context_specification> doit exister comme principal respectivement dans **sys.database_principals** ou **sys.server_principals**, à défaut de quoi, l’instruction EXECUTE AS échoue. De plus, les autorisations IMPERSONATE doivent être accordées sur le principal. Sauf si l’appelant est le propriétaire de la base de données, ou un membre du rôle serveur fixe **sysadmin**, le principal doit exister même quand l’utilisateur a accès à la base de données ou l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fait de son appartenance à un groupe Windows. Par exemple, supposons les conditions suivantes : 
   
 -   Le groupe **CompanyDomain\SQLUsers** a accès à la base de données **Sales**.  
   

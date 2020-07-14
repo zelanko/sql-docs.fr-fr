@@ -1,5 +1,6 @@
 ---
 title: Procédures stockées compilées nativement et options Set
+description: Les options SET d’une session n’affectent pas l’exécution d’une procédure stockée. Certaines options SET empêchent toutefois l’exécution des procédures stockées.
 ms.custom: seo-dt-2019
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f626c997ac0615eefa7caede0f379c22fed25ab6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e92014f68ad400183bf2e0332a9ea7d2f1a7b2d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722432"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>Procédures stockées compilées en mode natif et options SET d'exécution
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Les options de session sont fixes dans les blocs atomiques, comme décrit dans [Blocs atomiques](atomic-blocks-in-native-procedures.md). L’exécution d’une procédure stockée n’est pas affectée par les options SET d’une session, dans la mesure où les blocs atomiques sont requis. Toutefois, certaines options SET, telles que SET NOEXEC et SET SHOWPLAN_XML, empêchent l'exécution des procédures stockées (y compris des procédures stockées compilées en mode natif).   
   

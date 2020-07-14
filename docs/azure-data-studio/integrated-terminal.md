@@ -1,25 +1,24 @@
 ---
 title: Terminal intégré
-titleSuffix: Azure Data Studio
 description: En savoir plus sur le terminal intégré dans Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774592"
 ---
 # <a name="integrated-terminal"></a>Terminal intégré
 
-Dans [!INCLUDE[name-sos](../includes/name-sos-short.md)], vous pouvez ouvrir un terminal intégré, commençant à la racine de votre espace de travail. Cela peut être pratique, car vous n’avez pas besoin de changer de fenêtre ou de modifier l’état d’un terminal existant pour exécuter une tâche de ligne de commande rapide.
+Dans Azure Data Studio, vous pouvez ouvrir un terminal intégré, commençant à la racine de votre espace de travail. Cela peut être pratique, car vous n’avez pas besoin de changer de fenêtre ou de modifier l’état d’un terminal existant pour exécuter une tâche de ligne de commande rapide.
 
 Pour ouvrir le terminal :
 
@@ -30,7 +29,7 @@ Pour ouvrir le terminal :
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> Vous pouvez toujours ouvrir un interpréteur de commandes externe à l’aide de la commande **Ouvrir dans une invite de commandes** de l’Explorateur (**Ouvrir dans Terminal** sur Mac ou Linux) si vous préférez travailler en dehors de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> Vous pouvez toujours ouvrir un interpréteur de commandes externe à l’aide de la commande **Ouvrir dans une invite de commandes** de l’Explorateur (**Ouvrir dans Terminal** sur Mac ou Linux) si vous préférez travailler en dehors d’Azure Data Studio.
 
 ## <a name="managing-multiple-terminals"></a>Gestion de plusieurs terminaux
 
@@ -66,7 +65,7 @@ La configuration correcte de votre interpréteur de commandes sur Windows consis
 > Pour pouvoir être utilisé en tant que terminal intégré, l’exécutable d’interpréteur de commandes doit être une application console pour permettre la redirection de `stdin/stdout/stderr`.
 
 > [!TIP]
-> L’interpréteur de commandes du terminal intégré s’exécute avec les autorisations de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Si vous devez exécuter une commande d’interpréteur de commandes avec élévation de privilèges (administrateur) ou des autorisations différentes, vous pouvez utiliser des utilitaires de plateforme tels que `runas.exe` dans un terminal.
+> L’interpréteur de commandes du terminal intégré s’exécute avec les autorisations d’Azure Data Studio. Si vous devez exécuter une commande d’interpréteur de commandes avec élévation de privilèges (administrateur) ou des autorisations différentes, vous pouvez utiliser des utilitaires de plateforme tels que `runas.exe` dans un terminal.
 
 ### <a name="shell-arguments"></a>Arguments de l’interpréteur de commandes
 
@@ -149,5 +148,5 @@ Les sessions de terminal intégrées peuvent maintenant être renommées à l’
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Forcer les combinaisons de touches à traverser le terminal
 
-Bien que la focalisation porte sur le terminal intégré, de nombreuses combinaisons de touches ne fonctionneront pas, car les séquences de touches sont transmises à et consommées par le terminal lui-même. Le paramètre `terminal.integrated.commandsToSkipShell` peut être utilisé pour contourner ce problème. Il contient un tableau de noms de commande dont les combinaisons de touches échappent au traitement par l’interpréteur de commandes et sont à la place traitées par le système de combinaisons de touches [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Par défaut, toutes les combinaisons de touches de terminal sont incluses, en plus d’une sélection de combinaisons de touches couramment utilisées.
+Bien que la focalisation porte sur le terminal intégré, de nombreuses combinaisons de touches ne fonctionneront pas, car les séquences de touches sont transmises à et consommées par le terminal lui-même. Le paramètre `terminal.integrated.commandsToSkipShell` peut être utilisé pour contourner ce problème. Il contient un tableau de noms de commande dont les combinaisons de touches échappent au traitement par l’interpréteur de commandes et sont à la place traitées par le système de combinaisons de touches d’Azure Data Studio. Par défaut, toutes les combinaisons de touches de terminal sont incluses, en plus d’une sélection de combinaisons de touches couramment utilisées.
 

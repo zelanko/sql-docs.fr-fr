@@ -1,5 +1,6 @@
 ---
 title: Gestion de clés extensible (EKM) | Microsoft Docs
+description: Découvrez comment configurer et utiliser la gestion de clés extensible et comment celle-ci s’intègre aux fonctionnalités de chiffrement des données pour SQL Server.
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957394"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896794"
 ---
 # <a name="extensible-key-management-ekm"></a>Gestion de clés extensible (EKM)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des fonctions de chiffrement de données en même temps que la *gestion de clés extensible* (EKM, Extensible Key Management) à l’aide du fournisseur de *l’API Microsoft Cryptography* (MSCAPI) pour le chiffrement et la génération de clés. Les clés de chiffrement pour les données et le chiffrement à clé sont créés dans des conteneurs de clé transitoires, et ils doivent être exportés d'un fournisseur avant d'être stockés dans la base de données. Cette approche permet à la gestion des clés, qui comprend une hiérarchie de clé de chiffrement et une sauvegarde de clé, d'être gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Face à la demande croissante de conformité aux normes et aux problèmes liés à la confidentialité des données, les organisations font appel au chiffrement afin d'apporter une solution de « défense en profondeur ». Cette approche est souvent peu pratique car elle utilise uniquement des outils de gestion de chiffrement de base de données. Les fabricants de matériel fournissent des produits qui prennent en charge la gestion des clés dans l’entreprise à l’aide des *modules de la sécurité matériels* . Les périphériques HSM stockent des clés de chiffrement dans les modules matériels ou logiciels. Il s'agit d'une solution plus sécurisée parce que les clés de chiffrement ne résident pas avec les données de chiffrement.  
@@ -90,7 +91,7 @@ GO
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>Authentification de base spécifique au périphérique EKM à l'aide du nom d'utilisateur/mot de passe  
  Pour les modules EKM qui prennent en charge l’authentification de base à l’aide d’une paire *nom d’utilisateur/mot de passe*, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit l’authentification transparente à l’aide des informations d’identification. Pour plus d’informations sur les informations d’identification, consultez [Informations d’identification &#40;moteur de base de données&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Une information d’authentification peut être créée pour un fournisseur EKM et mappée à une connexion (comptes Windows et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) pour accéder à un module EKM sur la base d’une connexion individuelle. Le champ *Identifier* des informations d’identification contient le nom d’utilisateur. Le champ *Secret* contient un mot de passe pour la connexion à un module EKM.  
+ Une information d’authentification peut être créée pour un fournisseur EKM et mappée à une connexion (comptes Windows et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) pour accéder à un module EKM sur la base d’une connexion individuelle. Le champ *Identité* des informations d’identification contient le nom d’utilisateur. Le champ *Secret* contient un mot de passe pour la connexion à un module EKM.  
   
  En l’absence d’une information d’identification mappée à une connexion pour le fournisseur EKM, l’information d’authentification mappée au compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est utilisée.  
   

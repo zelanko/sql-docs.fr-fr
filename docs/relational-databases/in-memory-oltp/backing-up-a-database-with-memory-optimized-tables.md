@@ -1,5 +1,6 @@
 ---
 title: Sauvegarde de base de données avec des tables à mémoire optimisée
+description: Découvrez comment les tables à mémoire optimisée sont sauvegardées dans le cadre des sauvegardes de base de données normales. Apprenez-en davantage sur la sauvegarde de base de données complète et les sauvegardes différentielles.
 ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723397"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Les tables mémoire optimisées sont sauvegardées dans le cadre des sauvegardes de base de données normales. Pour les tables sur disque, la valeur CHECKSUM des paires de fichiers de données et delta est validée dans le cadre de la sauvegarde de base de données pour détecter la corruption du stockage.  
   
@@ -32,7 +33,7 @@ ms.locfileid: "74412790"
 ## <a name="full-database-backup"></a>Sauvegarde de base de données complète  
  Cette section aborde les sauvegardes de bases de données qui ne contiennent que des tables mémoire optimisées durables, car la sauvegarde de tables sur disque est identique. Les paires de fichiers de point de contrôle dans le groupe de fichiers mémoire optimisé peuvent avoir différents états. Le tableau ci-dessous indique la partie des fichiers qui est sauvegardée.  
   
-|État de la paire de fichiers de point de contrôle|Backup|  
+|État de la paire de fichiers de point de contrôle|Sauvegarde|  
 |--------------------------------|------------|  
 |PRECREATED|Métadonnées du fichier uniquement|  
 |UNDER CONSTRUCTION|Métadonnées du fichier uniquement|  

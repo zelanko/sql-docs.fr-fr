@@ -1,7 +1,8 @@
 ---
 title: Fonctionnalités des modules T-SQL compilés nativement
+description: Découvrez la surface d’exposition T-SQL et les fonctionnalités prises en charge dans le corps des modules T-SQL compilés en mode natif, tels que les procédures stockées et les fonctions scalaires définies par l’utilisateur.
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834720"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Cette rubrique présente la surface d’exposition T-SQL et dresse la liste des fonctionnalités prises en charge dans le corps des modules T-SQL compilés en mode natif, notamment les procédures stockées ([CREATE PROCEDURE Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), les fonctions scalaires définies par l’utilisateur, les fonctions table incluses inline et les déclencheurs.  
 
  Pour connaître les fonctionnalités prises en charge autour de la définition des modules natifs, consultez [DDL pris en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
-
--   [Surface d’exposition de requête dans les modules natifs](#qsancsp)  
-
--   [Modification de données](#dml)  
-
--   [Langage de contrôle de flux](#cof)  
-
--   [Opérateurs pris en charge](#so)  
-
--   [Fonctions intégrées dans les modules compilés en mode natif](#bfncsp)  
-
--   [Audit](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [Indicateurs de requête et de table](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [Limitations sur le tri](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  Pour plus d’informations sur les constructions qui ne sont pas prises en charge et sur la manière de contourner certaines des fonctionnalités non prises en charge dans les modules compilés en mode natif, consultez [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Pour plus d’informations sur les fonctionnalités non prises en charge, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
@@ -66,7 +51,7 @@ Clause SELECT :
     - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l’opérateur DISTINCT est pris en charge dans les modules compilés en mode natif.
 
-              DISTINCT aggregates are not supported.  
+        - Les fonctions d’agrégation DISTINCT ne sont pas prises en charge.  
 
 -   UNION et UNION ALL
     - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -76,9 +61,9 @@ Clause SELECT :
 
 Clause FROM :  
 
--   FROM \<table optimisée en mémoire ou variable de table>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<TVF inline compilé en mode natif>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN et INNER JOIN.
     - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -169,7 +154,7 @@ Les instructions DML suivantes sont prises en charge.
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - Pour optimiser les performances, utilisez un seul bloc TRY/CATCH pour un module T-SQL entièrement compilé en mode natif.  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,13 +163,13 @@ Les instructions DML suivantes sont prises en charge.
 ##  <a name="supported-operators"></a><a name="so"></a> Opérateurs pris en charge  
  Les opérateurs suivants sont pris en charge :  
 
--   [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (par exemple >, \<, >= et <=)  
+-   [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (par exemple, >, \<, >= et <=)  
 
 -   Opérateurs unaires (+, -).  
 
 -   Opérateurs binaires (*, /, +, -, % (modulo)).  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - L'opérateur plus (+) est pris en charge pour les nombres et les chaînes.  
 
 -   Opérateurs logiques (AND, OR, NOT).  
 
@@ -244,7 +229,7 @@ Les instructions DML suivantes sont prises en charge.
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
 
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Message 41398, Niveau 16, État 1, Procédure *\<nom_procédure>* , Ligne *\<numéro_ligne>* L’opérateur TOP peut retourner au plus 8 192 lignes ; *\<nombre>* demandées.**  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Msg 41398, Niveau 16, État 1, Procédure *\<procedureName>* , Ligne *\<lineNumber>* L’opérateur TOP peut retourner au maximum 8 192 lignes ; *\<number>* demandées.**  
 
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
 

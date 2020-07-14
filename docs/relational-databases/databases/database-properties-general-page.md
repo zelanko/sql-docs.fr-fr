@@ -1,5 +1,6 @@
 ---
 title: Propriétés de base de données (page Général) | Microsoft Docs
+description: Découvrez comment utiliser l’onglet Général de la boîte de dialogue Propriétés de la base de données pour afficher ou modifier les propriétés d’une base de données.
 ms.custom: ''
 ms.date: 10/27/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35ab83fe9c30cd51143f7267a9156d4f95a56236
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756190"
 ---
 # <a name="database-properties-general-page"></a>Propriétés de base de données (page Général)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette page vous permet d'afficher et de modifier les propriétés de la base de données sélectionnée.  
   
 ## <a name="options"></a>Options  

@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: b885504d8431be2df9ab0c841b47fe0eb7019932
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 362f907187d7fe738216ea2000f2a5c48eca7b5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780784"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |
+| :-------- | :---- |
 |Nom du produit|SQL Server|  
 |ID de l’événement|17207|  
 |Source de l’événement|MSSQLSERVER|  
@@ -36,18 +36,18 @@ ms.locfileid: "81728636"
 ## <a name="explanation"></a>Explication  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas pu ouvrir le fichier spécifié en raison de l'erreur de système d’exploitation spécifiée.  
 
-Vous pouvez voir l’erreur 17207 dans l’événement d’application Windows ou le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas ouvrir une base de données et/ou des fichiers journaux de transactions. Voici un exemple de ce à quoi cette erreur peut ressembler :
+Vous pouvez voir l’erreur 17207 dans l’événement d’application Windows ou le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas ouvrir une base de données et/ou des fichiers journaux de transactions. Voici un exemple de ce à quoi cette erreur peut ressembler.
 
 ``` 
 Error: 17207, Severity: 16, State: 1.
 FileMgr::StartSecondaryDataFiles: Operating system error 2(The system cannot find the file specified.) occurred while creating or opening file 'F:\MSSQL\DATA\MyDB_FG1_1.ndf'. Diagnose and correct the operating system error, and retry the operation.
 ```
 
-Vous pouvez voir ces erreurs pendant le processus de démarrage de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou toute opération de base de données qui tente de démarrer la base de données (par exemple ALTER DATABASE). Dans certains scénarios, vous pouvez voir les deux erreurs 17207 et 17204. Dans d’autres occasions, vous ne verrez qu’une d’entre elles.
+Vous pouvez voir ces erreurs pendant le processus de démarrage de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou toute opération de base de données qui tente de démarrer la base de données (par exemple, ALTER DATABASE). Dans certains scénarios, vous pouvez voir les deux erreurs 17207 et 17204. Dans d’autres occasions, vous ne verrez qu’une d’entre elles.
 
 Si une base de données utilisateur rencontre ces erreurs, cette base de données reste dans l’état RECOVERY_PENDING et les applications ne peuvent pas y accéder. Si une base de données système rencontre ces erreurs, l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne démarre pas et vous ne pouvez pas vous connecter à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela peut également entraîner la mise hors connexion d’une ressource de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Si le problème est lié à votre groupe de fichiers FileStream [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous remarquerez que seul le chemin d’accès complet du répertoire est indiqué à la place d’un nom de fichier. Voici un exemple : 
+Si le problème est lié à votre groupe de fichiers FileStream [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous remarquerez que seul le chemin d’accès complet du répertoire est indiqué à la place d’un nom de fichier. Voici un exemple. 
 ```
 Error: 17207, Severity: 16, State: 1.
 STREAMFCB::Startup: Operating system error 2(The system cannot find the file specified.) occurred while creating or opening file 'C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\DATA\bpa_files_test_fs_1\bpa_files_test_fs_1'. Diagnose and correct the operating system error, and retry the operation.
@@ -68,24 +68,26 @@ Ces messages d’erreur contiennent les informations suivantes :
    - FCB::RemoveAlternateStreams
   
       
-1. Les informations d’état distinguent plusieurs emplacements au sein d’une fonction qui peuvent générer ce message d’erreur
-1. Le chemin d’accès physique complet du fichier
-1. ID du fichier correspondant au fichier
-1. Code d’erreur du système d’exploitation et description de l’erreur. Dans certains cas, vous ne verrez que le code d’erreur.
+1. Les informations d’état distinguent plusieurs emplacements au sein d’une fonction qui peuvent générer ce message d’erreur.
+1. Le chemin d’accès physique complet du fichier.
+1. L’ID du fichier correspondant au fichier.
+1. Le code d’erreur du système d’exploitation et la description de l’erreur. Dans certains cas, vous ne verrez que le code d’erreur.
  
 Les informations sur l’erreur du système d’exploitation imprimées dans ces messages d’erreur sont la cause principale de l’erreur 17204. Les causes courantes de ces messages d’erreur sont un problème d’autorisation ou un chemin d’accès au fichier incorrect.
 
 
-## <a name="user-action"></a>Action de l'utilisateur  
-1. La résolution de l’erreur 17207 implique la compréhension du code d’erreur de système d’exploitation associé et le diagnostic de cette erreur. Une fois la condition d’erreur du système d’exploitation résolue, vous pouvez tenter de redémarrer la base de données (à l’aide de l’instruction ALTER DATABASE SET ONLINE, par exemple) ou de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre en ligne la base de données affectée. Dans certains cas, il se peut que vous ne puissiez pas résoudre l’erreur du système d’exploitation. Ensuite, vous devez prendre des mesures correctives spécifiques. Nous aborderons ces actions dans cette section.
+## <a name="user-action"></a>Action requise  
+1. La résolution de l’erreur 17207 implique la compréhension du code d’erreur de système d’exploitation associé et le diagnostic de cette erreur. Une fois la condition d’erreur du système d’exploitation résolue, vous pouvez tenter de redémarrer la base de données (à l’aide de l’instruction ALTER DATABASE SET ONLINE, par exemple) ou de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre en ligne la base de données affectée. Dans certains cas, il se peut que vous ne puissiez pas résoudre l’erreur du système d’exploitation. Vous devez donc prendre des mesures correctives spécifiques. Nous aborderons ces actions dans cette section.
 1. Si le message d’erreur 17207 contient uniquement un code d’erreur et non une description d’erreur, vous pouvez essayer de résoudre le code d’erreur en utilisant la commande suivante à partir d’un interpréteur de commandes de système d’exploitation : net helpmsg <error code>. Si vous obtenez un code d’état à 8 chiffres comme code d’erreur, vous pouvez vous reporter aux sources d’informations comme [Comment convertir un HRESULT en code d’erreur Win32 ?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) afin de décoder les codes d’état en erreurs de système d’exploitation.
 1. Si vous recevez l’erreur de système d’exploitation ```Access is Denied``` = 5, envisagez les méthodes suivantes :
-   -  Vérifiez les autorisations définies pour le fichier en examinant les propriétés du fichier dans l’Explorateur Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des groupes Windows pour approvisionner Access Control sur les diverses ressources de fichiers. Assurez-vous que le groupe approprié [avec des noms tels que SQLServerMSSQLUser$NomOrdinateur$MSSQLSERVER ou SQLServerMSSQLUser$NomOrdinateur$NomInstance] dispose des autorisations requises sur le fichier de base de données mentionné dans le message d’erreur. Consultez [Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md) pour plus de détails. Assurez-vous que le groupe Windows comprend réellement le compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le SID du service.
+   -  Vérifiez les autorisations définies pour le fichier en examinant les propriétés du fichier dans l’Explorateur Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des groupes Windows pour approvisionner le contrôle d’accès sur les diverses ressources de fichiers. Assurez-vous que le groupe approprié (avec des noms tels que SQLServerMSSQLUser$NomOrdinateur$MSSQLSERVER ou SQLServerMSSQLUser$NomOrdinateur$NomInstance) dispose des autorisations requises sur le fichier de base de données mentionné dans le message d’erreur. Consultez [Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md) pour plus de détails. Assurez-vous que le groupe Windows comprend réellement le compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le SID du service.
    -  Examinez le compte d’utilisateur sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution. Vous pouvez utiliser le gestionnaire des tâches de Windows pour accéder à ces informations. Recherchez la valeur « Nom d’utilisateur » pour l’exécutable « sqlservr.exe ». En outre, si vous avez récemment modifié le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sachez que la méthode prise en charge pour effectuer cette opération consiste à utiliser l’utilitaire Gestionnaire de configuration SQL Server. Pour plus d’informations à ce propos, consultez [Gestionnaire de configuration SQL Server](../sql-server-configuration-manager.md). 
-   -  Selon le type d’opération (ouverture de bases de données au démarrage serveur, attachement d’une base de données, restauration d’une base de données, etc.), le compte utilisé pour l’emprunt d’identité et l’accès au fichier de base de données peut être différent. Passez en revue la rubrique [Sécurisation des fichiers de données et des fichiers journaux](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) pour savoir quelle opération définit quelles autorisations pour quels comptes. Utilisez un outil tel que Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) pour déterminer si l’accès au fichier se produit dans le contexte de sécurité du compte de démarrage du service d’instance de SQL Server [ou du SID de service] ou d’un compte avec emprunt d’identité.
+   -  Selon le type d’opération (ouverture de bases de données au démarrage du serveur, attachement d’une base de données, restauration d’une base de données, etc.), le compte utilisé pour l’emprunt d’identité et l’accès au fichier de base de données peut être différent. Passez en revue la rubrique [Sécurisation des fichiers de données et des fichiers journaux](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) pour savoir quelle opération définit quelles autorisations pour quels comptes. Utilisez un outil tel que Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) pour déterminer si l’accès au fichier se produit dans le contexte de sécurité du compte de démarrage du service d’instance de SQL Server (ou du SID de service) ou d’un compte avec emprunt d’identité.
 
-      Si SQL Server emprunte les informations d’identification de l’utilisateur de la connexion qui exécute l’opération ALTER DATABASE ou CREATE DATABASE, vous remarquerez les informations suivantes dans l’outil Process Monitor (un exemple) :
-        ```Date & Time:      3/27/2010 8:26:08 PM
+      Si SQL Server emprunte les informations d’identification de l’utilisateur de la connexion qui exécute l’opération ALTER DATABASE ou CREATE DATABASE, vous remarquerez les informations suivantes dans l’outil Process Monitor (un exemple).
+
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -98,19 +100,21 @@ Les informations sur l’erreur du système d’exploitation imprimées dans ces
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
-1. If you are getting ```The system cannot find the file specified``` OS error = 3:
-   - Review the complete path from the error message
-   - Ensure the disk drive and the folder path is visible and accessible from Windows Explorer
-   - Review the Windows Event log to find out if any problems exist with this disk drive
-   - If the path is incorrect and if this database already exists in the system, you can change the database file paths using the methods explained in the topic [Move Database Files](../databases/move-database-files.md). You may have to use this procedure, especially for system database files which encounter 17204 or 17207 and you are working through a disaster recovery scenario where the specified disk drives are unavailable. This topic also explains how you can identify the current location of the various system databases [master, model, tempdb, msdb and mssqlsystemresource].
-   - If you see this error because the database files are missing, you have to restore the database from a valid backup.
-     - If the database file associated with the error belongs to a secondary filegroup, then you can optionally mark that filegroup offline, bring the database online and then perform a restore of that filegroup alone. For more information, refer to the OFFLINE section of the topic [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
-     - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
-   - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
-1. If you're getting the ```The process cannot access the file because it is being used by another process``` operating system error = 32:
-   - Use a tool like [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) or [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file
-   - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) )
-   - In a cluster environment, make sure that the sqlservr.exe process from the previous owning node has actually released the handles to the database files. Normally, this doesn't occur, but misconfigurations of the cluster or I/O paths can lead to such issues.
+1. Si vous obtenez l’erreur de système d’exploitation ```The system cannot find the file specified``` = 3:
+   - Examinez le chemin d’accès complet à partir du message d’erreur.
+   - Assurez-vous que le lecteur de disque et le chemin d’accès au dossier sont visibles et accessibles à partir de l’Explorateur Windows.
+   - Consultez le journal des événements Windows pour déterminer s’il existe des problèmes avec ce lecteur de disque.
+   - Si le chemin d’accès est incorrect et si cette base de données existe déjà dans le système, vous pouvez modifier les chemins d’accès des fichiers de base de données à l’aide des méthodes décrites dans l’article [Déplacer des fichiers de base de données](../databases/move-database-files.md). Vous devrez peut-être utiliser cette procédure, en particulier pour les fichiers de base de données système qui rencontrent l’erreur 17204 ou 17207, et vous utilisez un scénario de récupération d’urgence dans lequel les lecteurs de disque spécifiés ne sont pas disponibles. Cette rubrique explique également comment identifier l’emplacement actuel des différentes bases de données système [master, model, tempdb, msdb et mssqlsystemresource].
+   - Si vous voyez cette erreur parce que les fichiers de base de données sont manquants, vous devez restaurer la base de données à partir d’une sauvegarde valide :
+     - Si le fichier de base de données associé à l’erreur appartient à un groupe de fichiers secondaire, vous pouvez éventuellement marquer ce groupe de fichiers hors connexion, mettre la base de données en ligne, puis effectuer une restauration de ce groupe de fichiers uniquement. Pour plus d’informations, reportez-vous à la section OFFLINE de la rubrique [Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+     - Si le fichier qui a généré l’erreur est un fichier journal de transactions, passez en revue les informations contenues dans les sections « FOR ATTACH » et « FOR ATTACH_REBUILD_LOG » de la rubrique [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) pour comprendre comment vous pouvez recréer les fichiers journaux de transactions manquants.
+   - Assurez-vous que tous les emplacements de disque ou réseau [comme un lecteur iSCSI] sont disponibles avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne tente d’accéder aux fichiers de base de données à ces emplacements. Si nécessaire, créez les dépendances requises dans l’Administrateur de cluster ou le Gestionnaire de contrôle des services.
+
+1. Si vous obtenez l’erreur de système d’exploitation ```The process cannot access the file because it is being used by another process``` = 32 :
+   - Utilisez un outil comme [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) ou [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) à partir de Windows Sysinternals pour déterminer si un autre processus ou service a acquis un verrou exclusif sur ce fichier de base de données.
+   - Empêchez ce processus d’accéder aux fichiers de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les exemples courants incluent des programmes antivirus (pour plus d’informations sur les exclusions de fichiers, consultez l’[article suivant de la base de connaissances](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
+   - Dans un environnement de cluster, assurez-vous que le processus sqlservr. exe du nœud propriétaire précédent a effectivement libéré les descripteurs des fichiers de base de données. Normalement, cela n’arrive pas, mais les erreurs de configuration du cluster ou des chemins d’e/s peuvent entraîner de tels problèmes.
   

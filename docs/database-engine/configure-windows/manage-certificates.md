@@ -1,5 +1,6 @@
 ---
 title: Gestion des certificats (Gestionnaire de configuration SQL Server) | Microsoft Docs
+description: Découvrez comment installer des certificats dans différentes configurations SQL Server. Les instances uniques, les clusters de basculement et les groupes de disponibilité Always On en sont des exemples.
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - installing certificates
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 835d0b1da11ba014b14ede9637117357e84dc208
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68212743"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196046"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Gestion des certificats (Gestionnaire de configuration SQL Server)
 
@@ -35,8 +36,8 @@ Les certificats SSL/TLS sont largement utilisés pour sécuriser l’accès à S
 
 * Affichage et validation des certificats installés dans une instance SQL Server. 
 * Identification des certificats arrivant à expiration. 
-* Déploiement de certificats sur plusieurs machines de groupes de disponibilité à partir du nœud contenant le réplica principal. 
-* Déploiement de certificats sur plusieurs machines participant à une instance de cluster de basculement à partir du nœud actif.
+* Déploiement de certificats sur plusieurs machines d’un groupe de disponibilité Always On à partir du nœud contenant le réplica principal. 
+* Déploiement de certificats sur plusieurs machines participant à une instance de cluster de basculement Always On à partir du nœud actif.
 
 > [!NOTE]
 > Vous pouvez utiliser la gestion des certificats dans le Gestionnaire de configuration SQL Server avec des versions inférieures de SQL Server, à partir de SQL Server 2008.
@@ -54,7 +55,7 @@ Les certificats SSL/TLS sont largement utilisés pour sécuriser l’accès à S
 5. Sélectionnez **Suivant** pour valider le certificat. Si aucune erreur ne se produit, sélectionnez **Suivant** pour importer le certificat dans l’instance locale.  
   
  
-##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Pour installer un certificat dans une configuration de cluster de basculement  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-instance-configuration"></a><a name="provision-failover-cluster-cert"></a> Pour installer un certificat dans une configuration d’instance de cluster de basculement  
   
 1. Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**.
   
@@ -66,7 +67,7 @@ Les certificats SSL/TLS sont largement utilisés pour sécuriser l’accès à S
 
 5. Dans le cas d’une installation pour un nœud unique, choisissez **Parcourir**, puis le fichier de certificat. Passez ensuite à l’étape 8.
 
-6. Dans le cas de l’installation d’un certificat pour chaque nœud, sélectionnez **Suivant** pour lister les nœuds propriétaires possibles. Les propriétaires possibles pour l’instance de cluster de basculement SQL Server actuelle sont présélectionnés.
+6. Dans le cas de l’installation d’un certificat pour chaque nœud, sélectionnez **Suivant** pour lister les nœuds propriétaires possibles. Les propriétaires possibles de l’instance de cluster de basculement actuelle sont présélectionnés.
 
 7. Choisissez **Suivant** pour sélectionner le certificat à importer.
 
@@ -75,9 +76,9 @@ Les certificats SSL/TLS sont largement utilisés pour sécuriser l’accès à S
 9. Sélectionnez **Suivant** pour importer les certificats sélectionnés.
 
 > [!NOTE]
-> Effectuez ces étapes dans le nœud actif de l’instance de cluster de basculement SQL Server. L’utilisateur doit disposer des autorisations d’administrateur sur tous les nœuds de cluster.
+> Effectuez ces étapes dans le nœud actif de l’instance de cluster de basculement Always On. L’utilisateur doit disposer des autorisations d’administrateur sur tous les nœuds de cluster.
 
-##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Pour installer un certificat dans une configuration de groupe de disponibilité  
+##  <a name="to-install-a-certificate-in-an-always-on-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Pour installer un certificat dans une configuration de groupe de disponibilité Always On  
   
 1. Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**.
   

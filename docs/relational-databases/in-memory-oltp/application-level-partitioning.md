@@ -1,5 +1,6 @@
 ---
 title: Partitionnement au niveau de l’application | Microsoft Docs
+description: Passez en revue cet exemple qui traite les commandes. Cette application stocke les commandes récentes dans une table à mémoire optimisée et celles qui sont plus anciennes dans une table sur disque.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fe12efc4bbc7ba948a89e5b15fb3f869651d4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629706"
 ---
 # <a name="application-level-partitioning"></a>Partitionnement au niveau de l'application
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cette application traite les commandes. Il y a beaucoup de traitement sur les commandes récentes. Il n'y a beaucoup de traitement sur les commandes plus anciennes. Les commandes récentes sont dans une table mémoire optimisée. Les commandes plus anciennes sont dans une table sur disque. Toutes les commandes après le *hotDate* sont dans une table optimisée en mémoire. Toutes les commandes avant le *hotDate* sont dans une table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table optimisée en mémoire) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
   
  Cet exemple n'utilise pas une table partitionnée pour la table sur disque, mais effectue le suivi d'un point de fractionnement explicite entre les deux tables, à l'aide d'une troisième table. Le point de fractionnement peut être utilisé pour vous assurer que les données récemment insérées sont toujours insérées dans la table appropriées en fonction de la date. Il peut également être utilisé pour déterminer l'emplacement de recherche des données. Les données qui arrivent en retard sont insérées dans la table appropriée.  

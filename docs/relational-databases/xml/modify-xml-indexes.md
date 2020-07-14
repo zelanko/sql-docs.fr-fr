@@ -1,5 +1,6 @@
 ---
 title: Modifier les index XML | Microsoft Docs
+description: Découvrez comment utiliser l’instruction DDL ALTER INDEX (Transact-SQL) pour modifier des index XML et non XML existants.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: efe1b72c4cb98b51da065b8194432f4e8d9efa61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3e89c0bc3a0cb7731507f1693fbd554011c62926
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729870"
 ---
 # <a name="modify-xml-indexes"></a>Modifier les index XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   L’instruction DDL [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) permet de modifier des index XML et non XML existants. Les options ALTER INDEX ne sont cependant pas toutes disponibles aux index XML. Les options suivantes ne sont pas valides si vous modifiez des index XML :  
   
 -   L'option de reconstruction et de définition de valeur IGNORE_DUP_KEY n'est pas valide dans le cas d'utilisation d'index XML. L'option de reconstruction ONLINE doit toujours être définie sur OFF dans le cas d'index XML secondaires. L'option DROP_EXISTING n'est pas autorisée dans l'instruction ALTER INDEX.  

@@ -1,19 +1,14 @@
 ---
-title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 03/25/2019
-ms.reviewer: ''
+title: AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
-ms.custom: ''
-ms.manager: craigg
-ms.author: giladm
-author: giladmit
+author: DavidTrigano
+ms.author: datrigan
+ms.reviewer: vanto
 f1_keywords:
 - ADD SENSITIVITY CLASSIFICATION
 - ADD_SENSITIVITY_CLASSIFICATION
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SENSITIVITY CLASSIFICATION statement
 - add labels
@@ -24,13 +19,15 @@ helpviewer_keywords:
 - information types
 - data classification
 - rank
+ms.custom: ''
+ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: e3b5ba45e03a27f8b07f854cd94f515daefa5dec
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b8bfbab9ab06d57bdbb2b3efe3d23690f4d2f0e3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811874"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)
 
@@ -42,12 +39,12 @@ Pour SQL Server, cela a été introduit dans SQL Server 2019.
 
 Classifier des données sensibles dans votre environnement de base de données permet d’étendre la visibilité et d’améliorer la protection. Vous trouverez des informations supplémentaires dans [Mise en route avec SQL Information Protection](https://aka.ms/sqlip)
 
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe
 
 ```syntaxsql
-ADD SENSITIVITY CLASSIFICATION TO
+    ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )
 
 <object_name> ::=
 {
@@ -55,14 +52,16 @@ ADD SENSITIVITY CLASSIFICATION TO
 }
 
 <sensitivity_option> ::=  
-{   
+{
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString | 
+    INFORMATION_TYPE_ID = guidOrString |
     RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
-```  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Arguments  
 
@@ -91,8 +90,7 @@ Il s’agit d’un identificateur associé au type d’information. Il est souve
 
 *RANK*
 
-Identificateur basé sur un ensemble prédéfini de valeurs qui définissent le rang de sensibilité. Il est utilisé par d’autres services tels que le service Advanced Threat Protection pour détecter les anomalies en fonction de leur rang.
-
+Identificateur basé sur un ensemble prédéfini de valeurs qui définissent le rang de confidentialité. Il est utilisé par d’autres services tels que le service Advanced Threat Protection pour détecter les anomalies en fonction de leur rang.
 
 ## <a name="remarks"></a>Notes  
 
@@ -100,25 +98,24 @@ Identificateur basé sur un ensemble prédéfini de valeurs qui définissent le 
 - Plusieurs objets peuvent être classifiés avec une seule instruction `ADD SENSITIVITY CLASSIFICATION`.
 - L’affichage du système [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) peut être utilisé pour récupérer les informations de classification de sensibilité d’une base de données.
 
-
 ## <a name="permissions"></a>Autorisations
 
 Requiert une autorisation ALTER ANY SENSITIVITY CLASSIFICATION. La classification ALTER ANY SENSITIVITY CLASSIFICATION est impliquée par l’autorisation de base de données ALTER, ou par l’autorisation de serveur CONTROL SERVER.
-
 
 ## <a name="examples"></a>Exemples  
 
 ### <a name="a-classifying-two-columns"></a>R. Classification de deux colonnes
 
-L’exemple suivant classifie les colonnes **dbo.sales.price** et **dbo.sales.discount** avec l’étiquette de sensibilité **Hautement confidentiel** et le Type d’informations **Financier**.
+L’exemple suivant classifie les colonnes **dbo.sales.price** et **dbo.sales.discount** avec l’étiquette de confidentialité **Hautement confidentiel**, le rang **Critique** et le type d’informations **Financier**.
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
 ```  
 
 ### <a name="b-classifying-only-a-label"></a>B. Classification d’une seule étiquette
+
 L’exemple suivant classifie la colonne **dbo.customer.comments** portant l’étiquette **Confidentiel** et ID d’étiquette **643f7acd-776a-438d-890c-79c3f2a520d6**. Le type d’information n’est pas classifié pour cette colonne.
 
 ```sql
@@ -127,12 +124,9 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Confidential', LABEL_ID='643f7acd-776a-438d-890c-79c3f2a520d6' )
 ```  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
-
-[sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
-
-[Autorisations (moteur de base de données)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
-
-[Prise en main de SQL Information Protection](https://aka.ms/sqlip)
+- [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+- [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
+- [Autorisations (moteur de base de données)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
+- [Prise en main de SQL Information Protection](https://aka.ms/sqlip)

@@ -1,5 +1,6 @@
 ---
 title: Configuration avec la conformité des critères communs activée | Microsoft Docs
+description: Découvrez les critères activés par l’option de conformité des critères communs dans SQL Server, et comment se conformer au niveau d’assurance de l’évaluation 4+ des critères communs.
 ms.custom: ''
 ms.date: 08/21/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47c7e7dc3b557085bb1f5a06e86de747579df007
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2a33ce838ce32c6a7d2b883c5b256f668c213745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659812"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuration serveur avec la conformité des critères communs activée
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 L’option de conformité des critères communs active les éléments suivants qui sont nécessaires à l’évaluation [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/).  
   

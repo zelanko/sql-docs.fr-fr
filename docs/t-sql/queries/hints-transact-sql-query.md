@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731297"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Les indicateurs de requête spécifient que les indicateurs affichés doivent être utilisés dans l'ensemble de la requête. Ils s’appliquent à tous les opérateurs de l’instruction. Si une clause UNION se trouve dans la requête principale, seule la dernière requête impliquant une opération UNION peut avoir la clause OPTION. Les indicateurs de requête sont spécifiés dans la [clause OPTION](../../t-sql/queries/option-clause-transact-sql.md). L’erreur 8622 se produit si un ou plusieurs indicateurs de requête empêchent l’optimiseur de requête de générer un plan valide.  
   
@@ -238,7 +238,7 @@ Valeur de constante littérale à assigner à _\@nom\_variable_ pour l’utilise
 OPTIMIZE FOR peut contrecarrer le comportement de détection des paramètres par défaut de l’optimiseur. Utilisez également OPTIMIZE FOR pour créer des repères de plan. Pour plus d’informations, consultez [Recompiler une procédure stockée](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Indique à l’optimiseur de requête d’utiliser des données statistiques au lieu des valeurs initiales pour toutes les variables locales quand la requête est compilée et optimisée. Cette optimisation englobe les paramètres créés avec un paramétrage forcé.  
+Indique à l’optimiseur de requête d’utiliser la sélectivité moyenne du prédicat sur toutes les valeurs de colonne au lieu d’utiliser la valeur du paramètre de runtime lorsque la requête est compilée et optimisée.  
   
 Si vous utilisez OPTIMIZE FOR @variable_name = _constante\_littérale_ et OPTIMIZE FOR UNKNOWN dans le même indicateur de requête, l’optimiseur de requête utilise la _constante\_littérale_ spécifiée pour une valeur spécifique, et UNKNOWN pour les autres valeurs des variables. Les valeurs ne sont utilisées que pendant l'optimisation de la requête, et non pas lors de son exécution.  
 
@@ -349,7 +349,7 @@ Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en ch
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **’** _xml\_plan_ **’** . USE PLAN ne peut pas être spécifié avec les instructions INSERT, UPDATE, MERGE ou DELETE.  
   
-TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [ **,** ]…_n_ ] ] **)** Applique l’indicateur de table spécifié à la table ou à la vue correspondant à _nom\_objet\_exposé_. Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<table_hint> [ [ **,** ]…_n_ ] ] **)** Applique l’indicateur de table spécifié à la table ou à la vue correspondant à _nom\_objet\_exposé_. Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
   
  _nom\_objet\_exposé_ peut être l’une des références suivantes :  
   
@@ -359,8 +359,7 @@ TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [ **,** ]�
   
  Si _nom\_objet\_exposé_ est spécifié sans indicateur de table, tous les index indiqués dans la requête dans le cadre d’un indicateur de table de l’objet sont ignorés. L’optimiseur de requête détermine ensuite l’utilisation de l’index. Vous pouvez utiliser cette technique pour éliminer l'effet d'un indicateur de table INDEX lorsque vous ne pouvez pas modifier la requête d'origine. Voir l'exemple J.  
   
-**\<indicateur_table> ::=** { [ NOEXPAND ] { INDEX ( _valeur\_index_ [ ,…_n_ ] ) | INDEX = ( _valeur\_index_ ) | FORCESEEK [ **(** _valeur\_index_ **(** _nom\_colonne\_index_ [ **,** … ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
-Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_objet_exposé* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _valeur\_index_ [ ,…_n_ ] ) | INDEX = ( _valeur\_index_ ) | FORCESEEK [ **(** _valeur\_index_ **(** _nom\_colonne\_index_ [ **,** … ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_objet_exposé* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Pour plus d'informations, consultez la section Notes.  
   
@@ -405,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. Utilisation de OPTIMIZE FOR  
- L’exemple suivant indique à l’optimiseur de requête d’utiliser la valeur `'Seattle'` pour la variable locale `@city_name`, mais aussi d’utiliser des données statistiques pour déterminer la valeur de la variable locale `@postal_code` lors de l’optimisation de la requête. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ L’exemple suivant indique à l’optimiseur de requête d’utiliser la valeur `'Seattle'` pour `@city_name` et d’utiliser la sélectivité moyenne du prédicat sur toutes les valeurs de colonne pour `@postal_code` lors de l’optimisation de la requête. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. Utilisation de MAXRECURSION  

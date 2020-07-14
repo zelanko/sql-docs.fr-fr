@@ -1,29 +1,28 @@
 ---
-title: Utilisation de l’authentification Active Directory (Kerberos)
-titleSuffix: Azure Data Studio
+title: Connecter votre serveur SQL Server à l’aide de l’authentification Windows (Kerberos)
 description: Découvrez comment permettre à Kerberos d’utiliser l’authentification Active Directory pour Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: meet-bhagdev
-ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774667"
 ---
-# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>Connecter [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre SQL Server à l’aide de l’authentification Windows - Kerberos 
+# <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Connecter Azure Data Studio à votre serveur SQL Server à l’aide de l’authentification Windows - Kerberos
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] prend en charge la connexion à SQL Server à l’aide de Kerberos.
+Azure Data Studio prend en charge la connexion à SQL Server à l’aide de Kerberos.
 
-Pour utiliser l’authentification intégrée (authentification Windows) sur macOS ou Linux, vous devez configurer un **ticket Kerberos** qui lie votre utilisateur actuel à un compte de domaine Windows. 
+Pour utiliser l’authentification intégrée (authentification Windows) sur macOS ou Linux, vous devez configurer un **ticket Kerberos** qui lie votre utilisateur actuel à un compte de domaine Windows.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Accédez à un ordinateur Windows joint à un domaine afin d’interroger votre contrôleur de domaine Kerberos.
 - SQL Server doit être configuré pour autoriser l’authentification Kerberos. Pour le pilote client s’exécutant sur UNIX, l’authentification intégrée est prise en charge uniquement avec Kerberos. Pour plus d’informations, consultez [Utiliser l’authentification intégrée Kerberos pour se connecter à SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). Des noms de principal du service doivent être inscrits pour chaque instance de SQL Server à laquelle vous essayez de vous connecter. Pour plus d’informations, consultez [Inscription d’un nom de principal du service](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
@@ -167,7 +166,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-name-sos"></a>Connectez-vous avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-azure-data-studio"></a>Connexion à l’aide d’Azure Data Studio
 
 * Créez un nouveau profil de connexion
 

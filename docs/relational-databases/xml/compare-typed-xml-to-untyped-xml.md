@@ -1,5 +1,6 @@
 ---
 title: Comparer du XML typé et du XML non typé | Microsoft Docs
+description: Découvrez les différences entre le XML typé et non typé.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775549"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparer du XML typé et du XML non typé
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Vous pouvez créer des variables, des paramètres et des colonnes du type **xml** . Vous pouvez éventuellement associer une collection de schémas XML à une variable, un paramètre ou une colonne de type **xml** . Dans ce cas, l'instance de type de données **xml** est dite *typée*. Dans le cas contraire, l'instance XML est dite *non typée*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Code XML bien formé et le type de données xml  
@@ -68,14 +69,14 @@ ms.locfileid: "80664684"
   
  Dans les exemples suivants, une convention d'affectation des noms en deux parties est utilisée pour spécifier le nom de la collection de schémas XML. La première partie est le nom du schéma et la deuxième est le nom de la collection de schémas XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : association d'une collection de schémas à une variable de type xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : Association d’une collection de schémas à une variable de type xml  
  L’exemple suivant crée une variable de type **xml** et lui associe une collection de schémas. La collection de schémas spécifiée dans l'exemple est déjà importée dans la base de données **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemple: spécification d'un schéma pour une colonne de type xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemple : Spécification d’un schéma pour une colonne de type xml  
  L'exemple suivant crée une table avec une colonne de type **xml** et spécifie le schéma correspondant :  
   
 ```  
@@ -84,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Exemple : transmission d'un paramètre de type xml vers une procédure stockée  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Exemple : Passage d’un paramètre de type xml à une procédure stockée  
  L'exemple suivant passe un paramètre de type **xml** à une procédure stockée et spécifie un schéma pour la variable :  
   
 ```  
@@ -106,7 +107,7 @@ AS
   
  Dans la hiérarchie des types de données, le type de données **xml** apparaît après **sql_variant** et les types définis par l’utilisateur, mais avant tout type intégré.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemple : définition de facettes pour imposer des contraintes sur une colonne typée xml  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemple : Spécification de facettes pour imposer des contraintes sur une colonne typée xml  
  Vous pouvez définir des contraintes sur des colonnes **xml** typées de façon à n’autoriser que des éléments uniques de premier niveau pour chaque instance qui y est stockée. Pour cela, vous devez spécifier la facette facultative `DOCUMENT` lors de la création de la table, comme le montre l'exemple suivant :  
   
 ```  
