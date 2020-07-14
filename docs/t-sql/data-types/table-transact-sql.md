@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3cd285b7a90f5addd01b479eb37898827605b87
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736509"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Type de données spécial utilisé pour stocker un jeu de résultats afin de le traiter ultérieurement. **table** est principalement utilisé pour stocker temporairement un ensemble de lignes retournées comme un jeu de résultats d’une fonction table. Les fonctions et les variables peuvent être déclarées comme étant de type **table**. Les variables de **table** peuvent être utilisées dans les fonctions, les procédures stockées et les lots. Pour déclarer des variables de type **table**, utilisez [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 Les variables de **table** offrent les avantages suivants aux requêtes de petite envergure dont les plans ne changent pas et quand les problèmes de recompilation sont primordiaux :
--   Une variable de **table** se comporte comme une variable locale. Elle possède une étendue bien définie. Cette variable est la fonction, la procédure stockée ou le traitement dans lequel elle est déclarée.  
+-   Une variable de **table** se comporte comme une variable locale. Elle possède une étendue bien définie. Cette variable peut être utilisée dans la fonction, la procédure stockée ou le lot dans lequel elle est déclarée.  
      Dans les limites de son étendue, une variable de **table** peut être utilisée comme une table normale. Elle peut s'appliquer partout où une table, ou expression de table, est utilisée dans les instructions SELECT, INSERT, UPDATE et DELETE. Cependant, **table** ne peut pas être utilisée dans l’instruction suivante :  
   
 ```sql

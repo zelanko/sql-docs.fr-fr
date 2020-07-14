@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181095"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009261"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 Ajoute une ou plusieurs lignes à une table ou une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir des exemples, consultez [Exemples](#InsertExamples).  
@@ -233,7 +233,7 @@ Clause OUTPUT
  Vous ne pouvez pas spécifier de paramètre table en tant que cible d'une instruction INSERT EXEC ; néanmoins, vous pouvez le spécifier en tant que source de la chaîne ou procédure stockée INSERT EXEC. Pour plus d’informations, consultez [Utiliser les paramètres table &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  \<dml_table_source>  
- Spécifie que les lignes insérées dans la table cible sont les lignes retournées par la clause OUTPUT d'une instruction INSERT, UPDATE, DELETE ou MERGE, éventuellement filtrées par une clause WHERE. Si \<dml_table_source> est spécifié, la cible de l’instruction INSERT externe doit satisfaire les restrictions suivantes : 
+ Spécifie que les lignes insérées dans la table cible sont les lignes retournées par la clause OUTPUT d'une instruction INSERT, UPDATE, DELETE ou MERGE, éventuellement filtrées par une clause WHERE. Si \<dml_table_source> est spécifié, la cible de l’instruction INSERT externe doit respecter les restrictions suivantes : 
   
 -   La table doit être une table de base et non une vue.  
   
@@ -257,7 +257,7 @@ Clause OUTPUT
  Instruction INSERT, UPDATE, DELETE ou MERGE valide qui retourne les lignes affectées dans une clause OUTPUT. L'instruction ne peut pas contenir de clause WITH et ne peut pas cibler les tables distantes ni les vues partitionnées. Si l'instruction UPDATE ou DELETE est spécifiée, elle ne peut pas être basée sur un curseur. Les lignes sources ne peuvent pas être référencées comme des instructions DML imbriquées.  
   
  WHERE \<search_condition>  
- Toute clause WHERE contenant un \<search_condition> valide qui filtre les lignes retournées par \<dml_statement_with_output_clause>. Pour plus d’informations, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Utilisé dans ce contexte, la condition \<search_condition> ne peut pas contenir de sous-requêtes, de fonctions scalaires définies par l’utilisateur qui effectuent un accès aux données, de fonctions d’agrégation, TEXTPTR ni de prédicats de recherche en texte intégral. 
+ Toute clause WHERE contenant une \<search_condition> valide qui filtre les lignes retournées par l’\<dml_statement_with_output_clause>. Pour plus d’informations, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Utilisée dans ce contexte, la \<search_condition> ne peut pas contenir de sous-requêtes, de fonctions scalaires définies par l’utilisateur qui accèdent aux données, de fonctions d’agrégation, TEXTPTR ni de prédicats de recherche en texte intégral. 
   
  DEFAULT VALUES  
  **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
@@ -295,7 +295,7 @@ Clause OUTPUT
 > [!NOTE]
 >  Une erreur de syntaxe est générée si aucune liste de colonnes n’est fournie.  
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Pour obtenir des informations spécifiques à l’insertion de données dans des tables graphiques SQL, consultez [INSERT (graphe SQL)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## <a name="best-practices"></a>Bonnes pratiques  
@@ -1016,7 +1016,7 @@ WHERE g.CountryRegionCode = 'FR'
 OPTION ( LABEL = 'Add French Prospects', HASH JOIN);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

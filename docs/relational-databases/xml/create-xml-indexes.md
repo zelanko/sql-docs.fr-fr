@@ -1,5 +1,6 @@
 ---
 title: Créer des index XML | Microsoft Docs
+description: Découvrez comment créer des index XML primaires et secondaires dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3c83cf778439ed8508c3c0128d90b085ae358c60
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2113062f446100fc119f7eab590a610c27800075
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691414"
 ---
 # <a name="create-xml-indexes"></a>Créer des index XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cette rubrique décrit comment créer des index XML primaires et secondaires.  
   
 ## <a name="creating-a-primary-xml-index"></a>Création d'un index XML primaire  
@@ -56,7 +57,7 @@ ms.locfileid: "80664594"
   
  Lors de la création ou de la recréation d’un index XML primaire sur une colonne de type de données XML qui contient des valeurs des types de schémas XML **xs:date** ou **xs:dateTime** (ou tout sous-type de ces types) dont l’année est inférieure à 1, la création de l’index échoue dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Ces valeurs étaient autorisées, ce problème peut donc se produire lors de la création d’index dans une base de données générée dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-### <a name="example-creating-a-primary-xml-index"></a>Exemple : création d'un index XML primaire  
+### <a name="example-creating-a-primary-xml-index"></a>Exemple : Création d'un index XML primaire  
  La table T (pk INT PRIMARY KEY, xCol XML) avec une colonne XML non typée est utilisée dans la plupart des exemples. Cette syntaxe peut très aisément s'adapter à du code XML typé. Par souci de clarté, les requêtes sont décrites pour des instances de données XML, comme le montre l'exemple qui suit :  
   
 ```  
@@ -100,7 +101,7 @@ FROM    sys.xml_indexes;
   
  Les valeurs retournées dans la colonne **secondary_type_desc** peuvent être NULL, PATH, VALUE ou PROPERTY. Pour l'index XML primaire, la valeur renvoyée correspond à NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Exemple: création d'index XML secondaires  
+### <a name="example-creating-secondary-xml-indexes"></a>Exemple : Création d’index XML secondaires  
  L'exemple suivant illustre le mode de création d'index XML secondaires. Il montre également les informations relatives aux index XML que vous avez créés.  
   
 ```  

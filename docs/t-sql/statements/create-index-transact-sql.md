@@ -54,16 +54,16 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1cede57088f5d42041b28c00239ba29822f6c401
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632489"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010791"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Crée un index relationnel sur une table ou une vue. Également appelé index rowstore, car il s’agit d’un index B-Tree cluster ou non-cluster. Vous pouvez créer un index rowstore avant que la table soit remplie de données. Utilisez un index rowstore pour améliorer les performances des requêtes, en particulier quand les requêtes effectuent une sélection dans des colonnes spécifiques ou qu’elles exigent que les valeurs soient triées dans un ordre particulier.
 
@@ -590,7 +590,7 @@ Spécifie les partitions auxquelles le paramètre DATA_COMPRESSION s'applique. S
 - Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).
 - Spécifiez à la fois des plages et des partitions individuelles, par exemple : ON PARTITIONS (2, 4, 6 TO 8).
 
-\<plage> peut être spécifiée sous la forme de numéros de partitions séparés par le mot TO, par exemple : `ON PARTITIONS (6 TO 8)`.
+\<range> peut être spécifié sous la forme de numéros de partitions séparés par le mot TO, par exemple : `ON PARTITIONS (6 TO 8)`.
 
  Pour définir des types différents de compression de données pour des partitions différentes, spécifiez plusieurs fois l'option DATA_COMPRESSION, par exemple :
 
@@ -721,11 +721,11 @@ Pour plus d'informations, consultez [Indexes on Computed Columns](../../relation
 Des colonnes non clés, appelées colonnes incluses, peuvent être ajoutées au niveau feuille d'un index non cluster pour améliorer les performances d'une requête en couvrant la requête. En l'occurrence, toutes les colonnes référencées dans la requête sont incluses dans l'index sous forme de colonnes clés ou de colonnes non clés. Ainsi, l'optimiseur de requête peut rechercher toutes les informations nécessaires via une analyse de l'index ; il n'accède pas à la table, ni aux données de l'index cluster. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md) et le [Guide de conception et d’architecture d’Index SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="specifying-index-options"></a>Définition des options d'index
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit de nouvelles options d'index et modifié également la façon dont les options sont spécifiées. Dans la syntaxe à compatibilité descendante, WITH *option_name* est équivalent à WITH **(** \<option_name> **= ON )** . Lorsque vous définissez les options d'index, les règles suivantes s'appliquent :
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit de nouvelles options d'index et modifié également la façon dont les options sont spécifiées. Dans la syntaxe de compatibilité descendante, WITH *nom_option* est équivalent à WITH **(** \<option_name>  **= ON )** . Lorsque vous définissez les options d'index, les règles suivantes s'appliquent :
 
-- Les nouvelles options d’index peuvent être spécifiées uniquement en utilisant WITH ( **_option\_name_ = ON | OFF**).
+- Les nouvelles options d’index peuvent être spécifiées uniquement en utilisant WITH (**_option\_name_ = ON | OFF**).
 - Vous ne pouvez pas définir les options en utilisant la syntaxe de compatibilité descendante et la nouvelle syntaxe dans une même instruction. Par exemple, si vous définissez WITH (**DROP_EXISTING, ONLINE = ON**), l’instruction échoue.
-- Quand vous créez un index XML, les options doivent être spécifiées en utilisant WITH ( **_option_name_= ON | OFF**).
+- Quand vous créez un index XML, les options doivent être spécifiées en utilisant WITH (**_option_name_= ON | OFF**).
 
 ## <a name="drop_existing-clause"></a>Clause DROP_EXISTING
 Vous pouvez utiliser la clause DROP_EXISTING pour régénérer l'index, ajouter ou supprimer des colonnes, modifier des options, modifier l'ordre de tri des colonnes ou modifier le schéma de partition ou le groupe de fichiers.
@@ -814,8 +814,8 @@ La compression de données est décrite dans la rubrique [Compression de donnée
 Les restrictions suivantes s'appliquent aux index partitionnés :
 
 - Vous ne pouvez pas modifier le paramètre de compression d'une partition unique si la table possède des index non alignés.
-- La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l’index.
-- La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l’index.
+- L’instruction ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l’index.
+- L’instruction ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l’index.
 
 Pour évaluer la façon dont la modification de l’état de compression affecte une table, un index ou une partition, utilisez la procédure stockée [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 

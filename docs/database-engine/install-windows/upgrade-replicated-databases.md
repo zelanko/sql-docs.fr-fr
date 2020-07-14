@@ -1,5 +1,6 @@
 ---
 title: Mettre à niveau ou corriger des bases de données répliquées | Microsoft Docs
+description: SQL Server prend en charge la mise à niveau des bases de données répliquées à partir de versions précédentes de SQL Server sans arrêter l’activité sur d’autres nœuds.
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008457"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900224"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Mettre à niveau ou corriger des bases de données répliquées
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n'est pas nécessaire d'interrompre l'activité des autres nœuds lorsqu'un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
   
@@ -36,8 +37,8 @@ ms.locfileid: "72008457"
     - Un abonné à une publication de fusion peut avoir toute version égale ou inférieure à la version de l’éditeur qui est prise en charge selon le cycle de prise en charge du cycle de vie des versions.  
  
 Le chemin de mise à niveau vers SQL Server dépend du modèle de déploiement. SQL Server offre deux chemins de mise à niveau en général :
-- Côte à côte : déployez un environnement parallèle et déplacez les bases de données ainsi que les objets de niveau instance associés, tels que les connexions et les travaux, vers le nouvel environnement. 
-- Mise à niveau sur place : autorisez le support d’installation de SQL Server à mettre à niveau l’installation de SQL Server existante en remplaçant les bits de SQL Server et en mettant à niveau les objets de base de données. Pour les environnements exécutant des groupes de disponibilité Always On ou des instances de cluster de basculement, une mise à niveau sur place est combinée avec une [mise à niveau propagée](choose-a-database-engine-upgrade-method.md#rolling-upgrade) pour réduire les temps d’arrêt. 
+- Côte à côte Déployez un environnement parallèle et déplacez les bases de données ainsi que les objets de niveau instance associés, tels que les connexions et les travaux, vers le nouvel environnement. 
+- Mise à niveau sur place : Autorisez le support d’installation de SQL Server à mettre à niveau l’installation de SQL Server existante en remplaçant les bits de SQL Server et en mettant à niveau les objets de base de données. Pour les environnements exécutant des groupes de disponibilité Always On ou des instances de cluster de basculement, une mise à niveau sur place est combinée avec une [mise à niveau propagée](choose-a-database-engine-upgrade-method.md#rolling-upgrade) pour réduire les temps d’arrêt. 
 
 Une approche courante qui a été adoptée pour les mises à niveau côte à côte de topologies de réplication consiste à déplacer des paires éditeur/abonné par lots vers le nouvel environnement côte à côte, au lieu de procéder à un déplacement de la topologie complète. Cette approche par phases aide à maîtriser les temps d’arrêt et, dans une certaine mesure, à réduire l’impact sur les activités qui dépendent de la réplication.  
 

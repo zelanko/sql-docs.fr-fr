@@ -1,5 +1,6 @@
 ---
 title: Prétraiter un schéma pour fusionner des schémas inclus | Microsoft Docs
+description: Découvrez comment les schémas XML qui comportent la directive xsd:include peuvent être prétraités de façon à copier et fusionner le contenu des schémas inclus dans un seul schéma.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757511"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Prétraiter un schéma pour fusionner des schémas inclus
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   L’élément W3C XSD **include** assure la prise en charge de la modularité des schémas, selon laquelle un schéma XML peut être partitionné en plusieurs fichiers physiques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.  
   
- En guise de solution, les schémas XML comportant la directive \<xsd:include> peuvent être prétraités de façon à copier et à fusionner le contenu de tous les schémas inclus en un seul et unique schéma à télécharger vers le serveur. Vous pouvez utiliser le code C# suivant pour le prétraitement. Les commentaires dans la première partie du code fournissent des informations sur son utilisation.  
+ En guise de solution, les schémas XML comportant la directive \<xsd:include> peuvent être prétraités de façon à copier et à fusionner le contenu des schémas inclus en un seul schéma à charger sur le serveur. Vous pouvez utiliser le code C# suivant pour le prétraitement. Les commentaires dans la première partie du code fournissent des informations sur son utilisation.  
   
 ```  
 // XSD Schema Include Normalizer  

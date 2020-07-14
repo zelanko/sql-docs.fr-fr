@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767099"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crée une fonction définie par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Une fonction définie par l'utilisateur est une routine [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR (Common Language Runtime) qui accepte des paramètres, exécute une action, par exemple un calcul complexe, et retourne le résultat de cette action sous forme de valeur. La valeur retournée peut être une valeur scalaire (unique) ou une table. Utilisez cette instruction pour créer une routine réutilisable, exploitable :
 
@@ -326,9 +326,9 @@ Dans les fonctions table en ligne, la valeur de retour TABLE est définie via un
 
 *select_stmt* Instruction SELECT unique qui définit la valeur de retour d’une fonction table incluse.
 
-ORDER (\<order_clause>) Spécifie l’ordre dans lequel les résultats sont retournés à partir de la fonction table. Pour plus d’informations, consultez la section « [Utilisation de l'ordre de tri dans les fonctions table CLR](#using-sort-order-in-clr-table-valued-functions) » plus loin dans cette rubrique.
+ORDER (\<order_clause>) spécifie l’ordre dans lequel les résultats sont retournés à partir de la fonction table. Pour plus d’informations, consultez la section « [Utilisation de l'ordre de tri dans les fonctions table CLR](#using-sort-order-in-clr-table-valued-functions) » plus loin dans cette rubrique.
 
-EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
+EXTERNAL NAME \<method_specifier> *nom_assembly*.*nom_classe*.*nom_méthode*
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 et versions ultérieures)
 
 Spécifie l'assembly et la méthode auxquels doit se référer le nom de la fonction créée.
@@ -352,9 +352,9 @@ Dans un exemple classique, pour MyFood.DLL, dans lequel tous les types sont dans
 > - Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas exécuter du code CLR. Vous pouvez créer, modifier et supprimer des objets d’une base de données qui font référence à des modules CLR (Common Language Runtime) ; cependant, vous ne pouvez pas exécuter ces références dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que vous n’avez pas activé l’[option CLR enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Pour activer cette option, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 > - Cette option n'est pas disponible dans une base de données autonome.
 
-*\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Définit le type de données de la table pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)]. La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) définit le type de données de table pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)]. La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.
 
-*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
+*\< clr_table_type_definition >* ( { *nom_colonne**type_données* } [ ,...*n* ] ) **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
 
 Définit les types de données de table pour une fonction CLR. La déclaration de table ne comprend que des types de données et des noms de colonne. La table est toujours placée dans le groupe de fichiers primaire.
 
@@ -368,7 +368,7 @@ SCHEMABINDING L’argument SCHEMABINDING est obligatoire pour les fonctions scal
 
 EXECUTE AS EXECUTE AS est obligatoire pour les fonctions scalaires définies par l’utilisateur et compilées en mode natif.
 
-**\<function_option>::= and \<clr_function_option>::=**
+**\<function_option>::= et \<clr_function_option>::=**
 
 Spécifie que la fonction aura une ou plusieurs des options ci-dessous.
 
@@ -437,7 +437,7 @@ L'argument IDENTITY ne peut pas être spécifié pour les fonctions table CLR.
 
 *increment* Valeur entière à ajouter à la valeur *seed* pour des lignes successives de la table.
 
- **\< column_constraint >::= and \< table_constraint>::=**
+ **\< column_constraint >::= et \< table_constraint>::=**
 
 Définit la contrainte d'une colonne ou table spécifiée. Dans le cas des fonctions CLR, le seul type de contrainte autorisé est NULL. L'utilisation de contraintes nommées n'est pas autorisée.
 
@@ -495,13 +495,13 @@ Si une fonction définie par l’utilisateur n’est pas créée avec la clause 
 
 Si des paramètres sont spécifiés dans une fonction CLR, ils doivent être de types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tels que préalablement définis pour *scalar_parameter_data_type*. Pour obtenir des informations sur la comparaison des types de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les types de données d’intégration CLR ou les types de données CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez [Mappage des données de paramètres CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 
-Pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] référence la méthode appropriée en cas de surchargé dans une classe, la méthode indiquée dans \<method_specifier> doit présenter les caractéristiques suivantes :
+Pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] référence la méthode appropriée en cas de surcharge dans une classe, la méthode indiquée dans \<method_specifier> doit présenter les caractéristiques suivantes :
 
 - Recevoir le même nombre de paramètres que ceux spécifiés dans [ ,...*n* ].
 - Recevoir tous les paramètres par valeur, non par référence.
 - Utiliser des types de paramètre compatibles avec ceux spécifiés dans la fonction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Si le type de données de retour de la fonction CLR spécifie un type de table (RETURNS TABLE), le type de données de retour de la méthode dans \<method_specifier> doit être de type **IEnumerator** ou **IEnumerable**, et le système considère que l’interface est implémentée par le créateur de la fonction. À la différence des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], les fonctions CLR ne peuvent pas inclure de contraintes PRIMARY KEY, UNIQUE ou CHECK dans \<table_type_definition>. Les types de données des colonnes spécifiés dans \<table_type_definition> doivent correspondre aux types des colonnes correspondantes du jeu de résultats retourné par la méthode dans \<method_specifier> au moment de l’exécution. Cette vérification de type n'est pas réalisée à la création de la fonction.
+Si le type de données de retour de la fonction CLR spécifie un type de table (RETURNS TABLE), le type de données de retour de la méthode dans \<method_specifier> doit être de type **IEnumerator** ou **IEnumerable**, et le système considère que l’interface est implémentée par le créateur de la fonction. À la différence des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], les fonctions CLR ne peuvent pas inclure de contraintes PRIMARY KEY, UNIQUE ou CHECK dans \<table_type_definition>. Les types de données des colonnes spécifiés dans \<table_type_definition> doivent correspondre aux types des colonnes correspondantes du jeu de résultats retourné par la méthode dans \<method_specifier> au moment de l’exécution. Cette vérification de type n'est pas réalisée à la création de la fonction.
 
 Pour plus d’informations sur la façon de programmer des fonctions CLR, consultez [Fonctions CLR définies par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).
 

@@ -2,7 +2,7 @@
 title: Options SET d’ALTER DATABASE (Transact-SQL) | Microsoft Docs
 description: Découvrez comment définir des options de base de données comme l’optimisation automatique, le chiffrement, le Magasin des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138279"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215177"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -297,7 +297,7 @@ SET
 Nom de la base de données à modifier.
 
 CURRENT     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Exécute l’action dans la base de données actuelle. `CURRENT` n’est pas pris en charge pour toutes les options dans tous les contextes. Si `CURRENT` échoue, fournissez le nom de la base de données.
 
@@ -328,7 +328,7 @@ L'option AUTO_CLOSE est utile pour les bases de données bureautiques, puisqu'el
 >
 > La mise en miroir de bases de données exige AUTO_CLOSE OFF.
 
-Si la base de données a la valeur AUTOCLOSE = ON, une opération qui initialise un arrêt de la base de données automatique efface le cache du plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d'information suivant : `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
+Si la base de données a la valeur AUTOCLOSE = ON, une opération qui initialise un arrêt de la base de données automatique efface le cache du plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ACTIVÉ     
@@ -344,7 +344,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne `is_a
 Pour plus d’informations, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).
 
 INCREMENTAL = ON | **OFF**     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Définissez AUTO_CREATE_STATISTICS sur la valeur ON, et INCREMENTAL sur la valeur ON. Ceci définit les statistiques créées automatiquement comme étant incrémentielles, dès lors que celles-ci sont prises en charge. La valeur par défaut est OFF. Pour plus d’informations, voir [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
@@ -446,7 +446,7 @@ OFF
 Désactive le suivi des modifications pour la base de données. Désactivez le suivi des modifications sur toutes les tables avant de le désactiver sur la base de données.
 
 **\<containment_option> ::=**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Contrôle des options de la relation contenant-contenu de la base de données.
 
@@ -489,7 +489,7 @@ Le curseur n'est libéré implicitement qu'au moment de la déconnexion. Pour pl
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `is_local_cursor_default` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsLocalCursorsDefault` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<database_mirroring>**      
+**\<database_mirroring>**     
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Pour une description des arguments, voir [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
@@ -572,7 +572,7 @@ La base de données est accessible aux opérations de lecture et d'écriture.
 Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.
 
 > [!NOTE]
-> Dans les bases de données fédérées [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SET {READ_ONLY | READ_WRITE} est désactivé.
+> `SET { READ_ONLY | READ_WRITE }` est désactivé sur les bases de données fédérées [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)].
 
 **\<db_user_access_option> ::=**      
 Contrôle l'accès utilisateur à la base de données.
@@ -601,18 +601,18 @@ Tous les utilisateurs qui bénéficient des autorisations appropriées peuvent s
 Vous pouvez déterminer l’état de cette option en consultant la colonne `user_access` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `UserAccess` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<delayed_durability_option> ::=**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 Contrôle si les transactions sont validées de manière entièrement durable ou durable différée.
 
 DISABLED     
-Toutes les transactions suivant SET DISABLED sont entièrement durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
+Toutes les transactions suivant `SET DISABLED` sont entièrement durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
 ALLOWED     
-Toutes les transactions suivant SET ALLOWED sont soit entièrement durables, soit durables différées, en fonction de l'option de durabilité définie dans l'instruction de validation ou de bloc atomique.
+Toutes les transactions suivant `SET ALLOWED` sont soit entièrement durables, soit retardées durables, en fonction de l’option de durabilité définie dans l’instruction de validation ou de bloc atomique.
 
 FORCED     
-Toutes les transactions suivant SET FORCED sont durables différées. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
+Toutes les transactions suivant `SET FORCED` sont retardées durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
 **\<external_access_option> ::=**      
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -651,7 +651,7 @@ Pour définir cette option, l'autorisation `CONTROL SERVER` est nécessaire sur 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `is_trustworthy_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Spécifie la valeur de langue par défaut pour les colonnes indexées de texte intégral.
 
@@ -659,27 +659,27 @@ Spécifie la valeur de langue par défaut pour les colonnes indexées de texte i
 > Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.
 
 DEFAULT_LANGUAGE     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Spécifie la langue par défaut de toutes les nouvelles connexions. La langue peut être spécifiée en indiquant l’ID local (lcid), son nom ou son alias. Pour connaître la liste des noms et des alias de langue acceptables, voir [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.
 
 NESTED_TRIGGERS     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Spécifie si un déclencheur AFTER peut s'exécuter en cascade et, par conséquent, réaliser une action qui initialise un autre déclencheur, lequel initialise un autre déclencheur, etc. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.
 
 TRANSFORM_NOISE_WORDS     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Utilisé pour supprimer un message d'erreur si des mots parasites ou des mots vides provoquent l'échec d'une opération booléenne sur une requête de texte intégral. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.
 
 TWO_DIGIT_YEAR_CUTOFF     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Spécifie un entier compris entre 1 753 et 9 999 qui représente l'année de coupure permettant d'interpréter les années à deux chiffres comme des années à quatre chiffres. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.
 
 **\<FILESTREAM_option> ::=**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Contrôle les paramètres des FileTables.
 
@@ -702,7 +702,7 @@ Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous 
 Voir [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Contrôle si la base de données peut créer des pages initiales à l’aide d’une extension mixte pour les huit premières pages d’une table ou d’un index.
 
@@ -728,16 +728,19 @@ FORCED
 La valeur actuelle de cette option peut être déterminée en examinant la colonne `is_parameterization_forced column` dans la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Contrôle si le Magasin des requêtes est activé dans cette base de données et contrôle la suppression du contenu du Magasin des requêtes. Pour plus d’informations, consultez [Scénarios d’utilisation du magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ACTIVÉ     
 Active le magasin des requêtes.
 
-OFF     
-Désactive le magasin des requêtes. OFF est la valeur par défaut.
+OFF [ FORCED ]     
+Désactive le magasin des requêtes. OFF est la valeur par défaut. FORCED est facultatif. FORCED abandonne toutes les tâches en arrière-plan du Magasin des requêtes en cours d’exécution, et ignore le vidage synchrone lorsque le Magasin des requêtes est désactivé. Entraîne l’arrêt du Magasin des requêtes aussi vite que possible. Désactive le Magasin des requêtes immédiatement. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 introduit FORCED.
+
+> [!NOTE]  
+> Le Magasin des requêtes ne peut pas être désactivé dans la base de données unique Azure SQL Database et le pool élastique. L’exécution de l’instruction ALTER DATABASE [base de données] SET QUERY_STORE = OFF retourne l’avertissement « 'QUERY_STORE=OFF' n’est pas pris en charge dans cette version de SQL Server. » 
 
 CLEAR     
 Supprime le contenu du magasin des requêtes.
@@ -752,21 +755,25 @@ READ_ONLY
 Les informations peuvent être lues à partir du Magasin des requêtes, mais les nouvelles informations ne sont pas ajoutées. Si l’espace maximal alloué au magasin des requêtes est atteinte, le mode d’opération du magasin des requêtes passe en READ_ONLY.
 
 CLEANUP_POLICY     
-Décrit la stratégie de conservation des données du magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS détermine le nombre de jours pendant lesquels les informations d’une requête sont conservées dans le magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS est de type **bigint**.
+Décrit la stratégie de conservation des données du magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS détermine le nombre de jours pendant lesquels les informations d’une requête sont conservées dans le magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS est de type **bigint**. La valeur par défaut est 30.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Détermine la fréquence à laquelle les données écrites dans le magasin des requêtes sont stockées sur le disque. Pour optimiser les performances, les données collectées par le magasin des requêtes sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée à l'aide de l'argument DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS est de type **bigint**.
+Détermine la fréquence à laquelle les données écrites dans le magasin des requêtes sont stockées sur le disque. Pour optimiser les performances, les données collectées par le magasin des requêtes sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée à l'aide de l'argument DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS est de type **bigint**. La valeur par défaut est **900** (15 minutes).
 
 MAX_STORAGE_SIZE_MB     
-Détermine l’espace alloué au magasin des requêtes. MAX_STORAGE_SIZE_MB est de type **bigint**.
+Détermine l’espace alloué au magasin des requêtes. MAX_STORAGE_SIZE_MB est de type **bigint**. La valeur par défaut est de **100 Mo** pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la valeur par défaut est de **1 Go**.
 
 > [!NOTE]
-> La limite MAX_STORAGE_SIZE_MB n’est pas appliquée strictement. La taille de stockage est vérifiée seulement quand le Magasin des requêtes écrit des données sur le disque. Cet intervalle est défini par l’option DATA_FLUSH_INTERVAL_SECONDS ou l’option de la boîte de dialogue Magasin des requêtes [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]**Intervalle de vidage des données**. La valeur par défaut de l’intervalle est 900 secondes (ou 15 minutes).
-> Si le Magasin des requêtes a enfreint la limite MAX_STORAGE_SIZE_MB entre des vérifications de la taille de stockage, il passe en mode lecture seule. Si SIZE_BASED_CLEANUP_MODE est activé, le mécanisme de nettoyage permettant d’appliquer MAX_STORAGE_SIZE_MB est également déclenché.
+> La limite `MAX_STORAGE_SIZE_MB` n’est pas strictement appliquée. La taille de stockage est vérifiée seulement quand le Magasin des requêtes écrit des données sur le disque. Cet intervalle est défini par l’option `DATA_FLUSH_INTERVAL_SECONDS` ou l’option de la boîte de dialogue Magasin des requêtes [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] **Intervalle de vidage des données**. La valeur par défaut de l’intervalle est 900 secondes (ou 15 minutes).
+> Si le Magasin des requêtes a enfreint la limite `MAX_STORAGE_SIZE_MB` entre des vérifications de la taille de stockage, il passe en mode lecture seule. Si l’option `SIZE_BASED_CLEANUP_MODE` est activée, le mécanisme de nettoyage permettant d’appliquer la limite `MAX_STORAGE_SIZE_MB` est également déclenché.
 > Une fois que suffisamment d’espace a été libéré, le mode Magasin des requêtes revient automatiquement en lecture-écriture.
 
+> [!IMPORTANT]
+> Si vous pensez que la capture de votre charge de travail nécessite plus de 10 Go d’espace disque, vous devez probablement repenser et optimiser votre charge de travail pour réutiliser les plans de requête (par exemple, en utilisant le [paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) ou ajuster les configurations du Magasin des requêtes.    
+> À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez définir `QUERY_CAPTURE_MODE` sur CUSTOM pour disposer d’un contrôle supplémentaire sur la stratégie de capture des requêtes.
+
 INTERVAL_LENGTH_MINUTES     
-Détermine l’intervalle de temps auquel les données des statistiques d’exécution du runtime sont agrégées dans le magasin des requêtes. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette fenêtre de temps fixe est configurée à l'aide de l'argument INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES est de type **bigint**.
+Détermine l’intervalle de temps auquel les données des statistiques d’exécution du runtime sont agrégées dans le magasin des requêtes. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette fenêtre de temps fixe est configurée à l'aide de l'argument INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES est de type **bigint**. La valeur par défaut est **60**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 Contrôle si le nettoyage s’active automatiquement quand la quantité totale de données approche de la taille maximale.
@@ -779,7 +786,7 @@ Le nettoyage basé sur la taille n’est pas activé automatiquement.
 
 SIZE_BASED_CLEANUP_MODE est de type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Désigne le mode de capture de requête actif actuellement. Chaque mode définit des stratégies de capture de requête spécifiques.
 
 > [!NOTE]
@@ -795,17 +802,28 @@ Aucune
 Cesser la capture des nouvelles requêtes. Le Magasin des requêtes continue de collecter des statistiques de compilation et d’exécution pour les requêtes qui ont déjà été capturées. Utilisez cette configuration avec précaution, car vous risquez de manquer la capture de requêtes importantes.
 
 CUSTOM     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Permet de contrôler les options QUERY_CAPTURE_POLICY.
 
-QUERY_CAPTURE_MODE est de type **nvarchar**.
+QUERY_CAPTURE_MODE est de type **nvarchar**. 
 
 max_plans_per_query     
-Définit le nombre maximal de plans gérés pour chaque requête. Par défaut, la valeur est 200. MAX_PLANS_PER_QUERY est de type **int**.
+Définit le nombre maximal de plans gérés pour chaque requête. MAX_PLANS_PER_QUERY est de type **int**. La valeur par défaut est **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
+
+Contrôle si les statistiques d’attente seront capturées par requête.
+
+ACTIVÉ    
+Les informations des statistiques d’attente par requête sont capturées. Il s’agit de la valeur de configuration par défaut.
+
+OFF    
+Les informations des statistiques d’attente par requête ne seront pas capturées.
 
 **\<query_capture_policy_option_list> :: =**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Contrôle les options de stratégie de capture du magasin des requêtes. Sauf pour STALE_CAPTURE_POLICY_THRESHOLD, ces options définissent dans la valeur de la durée de validité de la stratégie de capture les conditions OR qui doivent intervenir pour que les requêtes soient capturées.
 
@@ -872,7 +890,7 @@ Prenez en considération les points suivants lorsque vous utilisez l'option PAGE
 - Quand une base de données utilisateur ou système est mise à niveau vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure, la valeur de PAGE_VERIFY (NONE ou TORN_PAGE_DETECTION) n’est pas changée. Nous vous recommandons de changer pour CHECKSUM.
 
     > [!NOTE]
-    > Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’option de base de données PAGE_VERIFY est définie par la valeur NONE pour la base de données TempDB et ne peut pas être modifiée. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, la valeur par défaut pour la base de données TempDB est CHECKSUM pour les nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quand vous mettez à niveau une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la valeur par défaut reste NONE. L'option peut être modifiée. Nous vous recommandons d'utiliser CHECKSUM pour la base de données tempdb.
+    > Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’option de base de données PAGE_VERIFY est définie par la valeur NONE pour la base de données TempDB et ne peut pas être modifiée. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la valeur par défaut pour la base de données TempDB est CHECKSUM pour les nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quand vous mettez à niveau une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la valeur par défaut reste NONE. L'option peut être modifiée. Nous vous recommandons d'utiliser CHECKSUM pour la base de données tempdb.
 
 - Même si la valeur TORN_PAGE_DETECTION utilise moins de ressources, elle ne fournit qu'un sous-ensemble limité de la protection offerte par CHECKSUM.
 - Il est possible de définir PAGE_VERIFY sans mettre la base de données hors connexion, la verrouiller ni empêcher d'une quelconque façon la concurrence pour cette base de données.
@@ -891,11 +909,11 @@ Pour plus d’informations sur les messages d’erreur 823, 824 et 825, consulte
 Vous pouvez déterminer la valeur actuelle de cette option en consultant la colonne `page_verify_option` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété `IsTornPageDetectionEnabled` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<remote_data_archive_option> ::=**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Active ou désactive Stretch Database pour la base de données. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<nom_serveur> , { CREDENTIAL = \<nom_informations_identification_délimitées_à_base_de_données> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
 ACTIVÉ     
 Active Stretch Database pour la base de données. Pour plus d’informations, notamment sur les prérequis supplémentaires, consultez [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
@@ -996,7 +1014,7 @@ La valeur actuelle de cette option peut être déterminée en examinant la colon
 > Quand une table est créée avec **DURABILITY = SCHEMA_ONLY** et que **READ_COMMITTED_SNAPSHOT** est changé par la suite à l’aide d’**ALTER DATABASE**, les données de la table sont perdues.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 ACTIVÉ     
 Quand le niveau d’isolation de la transaction est défini sur un niveau inférieur à SNAPSHOT, toutes les opérations en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété sur les tables à mémoire optimisée sont exécutées avec l’isolation SNAPSHOT. Des niveaux d’isolation inférieurs à snapshot sont, par exemple, READ COMMITTED ou READ UNCOMMITTED. Ces opérations sont exécutées si le niveau d’isolation de la transaction est défini explicitement sur le niveau de la session, ou si la valeur par défaut est utilisée implicitement.
@@ -1150,7 +1168,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne `is_r
 Vous pouvez déterminer l’état de cette option en consultant la colonne `is_recursive_triggers_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété `IsRecursiveTriggersEnabled` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**      
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est **1 minute**, ce qui signifie que la base de données utilise des points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.
 
@@ -1193,21 +1211,21 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
 |\<db_user_access_option>|Oui|Oui|
 |\<db_update_option>|Oui|Oui|
 |\<delayed_durability_option>|Oui|Oui|
-|\<external_access_option>|Oui|Non |
-|\<cursor_option>|Oui|Non |
-|\<auto_option>|Oui|Non |
-|\<sql_option>|Oui|Non |
-|\<recovery_option>|Oui|Non |
-|\<target_recovery_time_option>|Non |Oui|
-|\<database_mirroring_option>|Non |Non |
-|ALLOW_SNAPSHOT_ISOLATION|Non |Non |
-|READ_COMMITTED_SNAPSHOT|Non |Oui|
+|\<external_access_option>|Oui|Non|
+|\<cursor_option>|Oui|Non|
+|\<auto_option>|Oui|Non|
+|\<sql_option>|Oui|Non|
+|\<recovery_option>|Oui|Non|
+|\<target_recovery_time_option>|Non|Oui|
+|\<database_mirroring_option>|Non|Non|
+|ALLOW_SNAPSHOT_ISOLATION|Non|Non|
+|READ_COMMITTED_SNAPSHOT|Non|Oui|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Oui|Oui|
-|\<service_broker_option>|Oui|Non |
+|\<service_broker_option>|Oui|Non|
 |DATE_CORRELATION_OPTIMIZATION|Oui|Oui|
 |\<parameterization_option>|Oui|Oui|
 |\<change_tracking_option>|Oui|Oui|
-|\<db_encryption_option>|Oui|Non |
+|\<db_encryption_option>|Oui|Non|
 
 Le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est effacé par la configuration d'une des options suivantes :
 
@@ -1320,7 +1338,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. Activation du magasin de requêtes
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 L’exemple suivant active le magasin des requêtes et configure ses paramètres.
 
@@ -1386,7 +1404,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -1517,9 +1535,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1749,7 +1777,7 @@ La base de données est accessible aux opérations de lecture et d'écriture.
 Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.
 
 > [!NOTE]
-> Dans les bases de données fédérées [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SET {READ_ONLY | READ_WRITE} est désactivé.
+> `SET { READ_ONLY | READ_WRITE }` est désactivé sur les bases de données fédérées [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)].
 
 **\<db_user_access_option> ::=**      
 Contrôle l'accès utilisateur à la base de données.
@@ -1766,13 +1794,13 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne `user
 Contrôle si les transactions sont validées de manière entièrement durable ou durable différée.
 
 DISABLED     
-Toutes les transactions suivant SET DISABLED sont entièrement durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
+Toutes les transactions suivant `SET DISABLED` sont entièrement durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
 ALLOWED     
-Toutes les transactions suivant SET ALLOWED sont soit entièrement durables, soit durables différées, en fonction de l'option de durabilité définie dans l'instruction de validation ou de bloc atomique.
+Toutes les transactions suivant `SET ALLOWED` sont soit entièrement durables, soit retardées durables, en fonction de l’option de durabilité définie dans l’instruction de validation ou de bloc atomique.
 
 FORCED     
-Toutes les transactions suivant SET FORCED sont durables différées. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
+Toutes les transactions suivant `SET FORCED` sont retardées durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
 **\<PARAMETERIZATION_option> ::=**      
 Contrôle l'option de paramétrage.
@@ -1786,7 +1814,7 @@ FORCED
 
 La valeur actuelle de cette option peut être déterminée en examinant la colonne `is_parameterization_forced` dans la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Contrôle si le Magasin des requêtes est activé dans cette base de données et contrôle la suppression du contenu du Magasin des requêtes.
@@ -1804,21 +1832,28 @@ OPERATION_MODE
 Décrit le mode de fonctionnement du magasin des requêtes. Les valeurs valides sont READ_ONLY et READ_WRITE. En mode READ_WRITE, le magasin des requêtes collecte et conserve les informations sur le plan de requête et les statistiques d’exécution. En mode READ_ONLY, les informations peuvent être lues à partir du Magasin des requêtes, mais les nouvelles informations ne sont pas ajoutées. Si l’espace alloué maximal du magasin des requêtes est épuisé, le mode d’opération du magasin des requêtes passe à READ_ONLY.
 
 CLEANUP_POLICY     
-Décrit la stratégie de conservation des données du magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS détermine le nombre de jours pendant lesquels les informations d’une requête sont conservées dans le magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS est de type **bigint**.
+Décrit la stratégie de conservation des données du magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS détermine le nombre de jours pendant lesquels les informations d’une requête sont conservées dans le magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS est de type **bigint**. La valeur par défaut est 30. Pour l’édition [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] De base, la valeur par défaut est **7** jours.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Détermine la fréquence à laquelle les données écrites dans le magasin des requêtes sont stockées sur le disque. Pour optimiser les performances, les données collectées par le magasin des requêtes sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée à l'aide de l'argument DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS est de type **bigint**.
+Détermine la fréquence à laquelle les données écrites dans le magasin des requêtes sont stockées sur le disque. Pour optimiser les performances, les données collectées par le magasin des requêtes sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée à l'aide de l'argument DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS est de type **bigint**. La valeur par défaut est **900** (15 minutes).
 
 MAX_STORAGE_SIZE_MB     
-Détermine l’espace alloué au magasin des requêtes. MAX_STORAGE_SIZE_MB est de type **bigint**.
+Détermine l’espace alloué au magasin des requêtes. MAX_STORAGE_SIZE_MB est de type **bigint**. Pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition Premium, la valeur par défaut est de **1 Go** et pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition De base, elle est de **10 Mo**.
 
 > [!NOTE]
-> La limite MAX_STORAGE_SIZE_MB n’est pas appliquée strictement. La taille de stockage est vérifiée seulement quand le Magasin des requêtes écrit des données sur le disque. Cet intervalle est défini par l’option DATA_FLUSH_INTERVAL_SECONDS ou l’option de la boîte de dialogue Magasin des requêtes [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]**Intervalle de vidage des données**. La valeur par défaut de l’intervalle est 900 secondes (ou 15 minutes).
-> Si le Magasin des requêtes a enfreint la limite MAX_STORAGE_SIZE_MB entre des vérifications de la taille de stockage, il passe en mode lecture seule. Si SIZE_BASED_CLEANUP_MODE est activé, le mécanisme de nettoyage permettant d’appliquer MAX_STORAGE_SIZE_MB est également déclenché.
+> La limite du paramètre `MAX_STORAGE_SIZE_MB` est de 10 240 Mo sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+
+> [!NOTE]
+> La limite `MAX_STORAGE_SIZE_MB` n’est pas strictement appliquée. La taille de stockage est vérifiée seulement quand le Magasin des requêtes écrit des données sur le disque. Cet intervalle est défini par l’option `DATA_FLUSH_INTERVAL_SECONDS` ou l’option de la boîte de dialogue Magasin des requêtes [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] **Intervalle de vidage des données**. La valeur par défaut de l’intervalle est 900 secondes (ou 15 minutes).
+> Si le Magasin des requêtes a enfreint la limite `MAX_STORAGE_SIZE_MB` entre des vérifications de la taille de stockage, il passe en mode lecture seule. Si l’option `SIZE_BASED_CLEANUP_MODE` est activée, le mécanisme de nettoyage permettant d’appliquer la limite `MAX_STORAGE_SIZE_MB` est également déclenché.
 > Une fois que suffisamment d’espace a été libéré, le mode Magasin des requêtes revient automatiquement en lecture-écriture.
 
+> [!IMPORTANT]
+> Si vous pensez que la capture de votre charge de travail nécessite plus de 10 Go d’espace disque, vous devez probablement repenser et optimiser votre charge de travail pour réutiliser les plans de requête (par exemple, en utilisant le [paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) ou ajuster les configurations du Magasin des requêtes.    
+> À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez définir `QUERY_CAPTURE_MODE` sur CUSTOM pour disposer d’un contrôle supplémentaire sur la stratégie de capture des requêtes.
+
 INTERVAL_LENGTH_MINUTES     
-Détermine l’intervalle de temps auquel les données des statistiques d’exécution du runtime sont agrégées dans le magasin des requêtes. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette fenêtre de temps fixe est configurée à l'aide de l'argument INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES est de type **bigint**.
+Détermine l’intervalle de temps auquel les données des statistiques d’exécution du runtime sont agrégées dans le magasin des requêtes. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette fenêtre de temps fixe est configurée à l'aide de l'argument INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES est de type **bigint**. La valeur par défaut est **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Contrôle si le nettoyage est activé automatiquement quand la quantité totale de données approche de la taille maximale.
@@ -1831,11 +1866,14 @@ Le nettoyage basé sur la taille est activé automatiquement quand la taille sur
 
 SIZE_BASED_CLEANUP_MODE est de type **nvarchar**.
 
-QUERY_CAPTURE_MODE     
-Désigne le mode de capture de requête actif actuellement :
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+Désigne le mode de capture de requête actif actuellement. Chaque mode définit des stratégies de capture de requête spécifiques.   
+
+> [!NOTE]
+> Les curseurs, les requêtes dans les procédures stockées et les requêtes compilées en mode natif sont toujours capturés lorsque le mode de capture de requête est défini sur All (Tous), Auto ou Custom (Personnalisé).
 
 ALL     
-Toutes les requêtes sont capturées.
+Capture toutes les requêtes.
 
 AUTO     
 Capturer les requêtes pertinentes en fonction du nombre d’exécutions et de la consommation de ressources. Il s’agit de la valeur de configuration par défaut pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1843,10 +1881,37 @@ Capturer les requêtes pertinentes en fonction du nombre d’exécutions et de l
 Aucune     
 Cesser la capture des nouvelles requêtes. Le Magasin des requêtes continue de collecter des statistiques de compilation et d’exécution pour les requêtes qui ont déjà été capturées. Utilisez cette configuration avec précaution, car vous risquez de manquer la capture de requêtes importantes.
 
+CUSTOM     
+Permet de contrôler les options QUERY_CAPTURE_POLICY.
+
 QUERY_CAPTURE_MODE est de type **nvarchar**.
 
 max_plans_per_query     
-Entier représentant le nombre maximal de plans gérés pour chaque requête. La valeur par défaut est 200.
+Définit le nombre maximal de plans gérés pour chaque requête. MAX_PLANS_PER_QUERY est de type **int**. La valeur par défaut est **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Contrôle si les statistiques d’attente seront capturées par requête.
+
+ACTIVÉ    
+Les informations des statistiques d’attente par requête sont capturées. Il s’agit de la valeur de configuration par défaut.
+
+OFF    
+Les informations des statistiques d’attente par requête ne seront pas capturées.
+
+**\<query_capture_policy_option_list> :: =**      
+Contrôle les options de stratégie de capture du magasin des requêtes. Sauf pour STALE_CAPTURE_POLICY_THRESHOLD, ces options définissent dans la valeur de la durée de validité de la stratégie de capture les conditions OR qui doivent intervenir pour que les requêtes soient capturées.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Définit la période d’évaluation pour déterminer si une requête doit être capturée. La valeur par défaut est de 1 jour, les valeurs possibles oscillant entre 1 heure et sept jours. *number* est de type **int**.
+
+EXECUTION_COUNT     
+Définit le nombre d’exécutions d’une requête pendant la période d’évaluation. La valeur par défaut est 30, ce qui signifie que pour la durée de validité par défaut de la stratégie de capture, une requête doit s’exécuter au moins 30 fois dans la même journée pour devenir persistante dans le Magasin des requêtes. EXECUTION_COUNT est de type **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Définit le temps UC de compilation écoulé total utilisé par une requête pendant la période d’évaluation. La valeur par défaut est 1000 ; ainsi, pour la durée de validité par défaut de la stratégie de capture, une requête doit avoir un total d’au moins une seconde de temps processeur écoulé pendant la compilation de la requête dans une même journée pour devenir persistante dans le Magasin des requêtes. TOTAL_COMPILE_CPU_TIME_MS est de type **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Définit le temps UC d’exécution écoulé total utilisé par une requête pendant la période d’évaluation. La valeur par défaut est 100 ; ainsi, pour la durée de validité par défaut de la stratégie de capture, une requête doit avoir un total d’au moins 100 ms de temps processeur écoulé pendant l’exécution dans une même journée pour devenir persistante dans le Magasin des requêtes. TOTAL_EXECUTION_CPU_TIME_MS est de type **int**.
 
 **\<snapshot_option> ::=**      
 Détermine le niveau d'isolation de la transaction.
@@ -2079,25 +2144,24 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
 
 |Catégorie d'options|Peut être spécifiée avec d'autres options|Peut utiliser la clause WITH \<termination>|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Oui|Non |
+|\<auto_option>|Oui|Non|
 |\<change_tracking_option>|Oui|Oui|
-|\<cursor_option>|Oui|Non |
-|\<db_encryption_option>|Oui|Non |
+|\<cursor_option>|Oui|Non|
+|\<db_encryption_option>|Oui|Non|
 |\<db_update_option>|Oui|Oui|
 |\<db_user_access_option>|Oui|Oui|
 |\<delayed_durability_option>|Oui|Oui|
 |\<parameterization_option>|Oui|Oui|
-|ALLOW_SNAPSHOT_ISOLATION|Non |Non |
-|READ_COMMITTED_SNAPSHOT|Non |Oui|
+|ALLOW_SNAPSHOT_ISOLATION|Non|Non|
+|READ_COMMITTED_SNAPSHOT|Non|Oui|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Oui|Oui|
 |DATE_CORRELATION_OPTIMIZATION|Oui|Oui|
-|\<sql_option>|Oui|Non |
-|\<target_recovery_time_option>|Non |Oui|
+|\<sql_option>|Oui|Non|
+|\<target_recovery_time_option>|Non|Oui|
 
 ## <a name="examples"></a>Exemples
 
 ### <a name="a-setting-the-database-to-read_only"></a>R. Paramétrage de la base de données avec READ_ONLY
-
 Pour modifier l’état d’une base de données ou d’un groupe de fichiers en READ_ONLY ou en READ_WRITE, vous avez besoin d’un accès exclusif à la base de données. L’exemple suivant illustre le basculement de la base de données en mode `RESTRICTED_USER` pour limiter l’accès. L'exemple affecte ensuite à la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] l'état `READ_ONLY` et rend à tous les utilisateurs l'accès à la base de données.
 
 ```sql
@@ -2116,7 +2180,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Activation de l'isolement d'instantané sur une base de données
-
 L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 
 ```sql
@@ -2142,7 +2205,6 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
 |[nom_base_de_données] |1| ACTIVÉ |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Activation, modification et désactivation du suivi des modifications
-
 L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.
 
 ```sql
@@ -2166,22 +2228,65 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. Activation du magasin de requêtes
-
 L’exemple suivant active le magasin des requêtes et configure ses paramètres.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
     );
 ```
 
-## <a name="see-also"></a> Voir aussi
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. Activation du magasin des requêtes avec les statistiques d’attente
+L’exemple suivant active le magasin des requêtes et configure ses paramètres.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. Activation du magasin des requêtes avec les options de stratégie de capture personnalisée
+L’exemple suivant active le magasin des requêtes et configure ses paramètres.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
+    );
+```
+
+## <a name="see-also"></a>Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -2298,9 +2403,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2497,13 +2612,13 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne user_
 Contrôle si les transactions sont validées de manière entièrement durable ou durable différée.
 
 DISABLED     
-Toutes les transactions suivant SET DISABLED sont entièrement durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
+Toutes les transactions suivant `SET DISABLED` sont entièrement durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
 ALLOWED     
-Toutes les transactions suivant SET ALLOWED sont soit entièrement durables, soit durables différées, en fonction de l'option de durabilité définie dans l'instruction de validation ou de bloc atomique.
+Toutes les transactions suivant `SET ALLOWED` sont soit entièrement durables, soit retardées durables, en fonction de l’option de durabilité définie dans l’instruction de validation ou de bloc atomique.
 
 FORCED     
-Toutes les transactions suivant SET FORCED sont durables différées. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
+Toutes les transactions suivant `SET FORCED` sont retardées durables. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
 **\<PARAMETERIZATION_option> ::=**      
 Contrôle l'option de paramétrage.
@@ -2517,7 +2632,7 @@ FORCED
 
 La valeur actuelle de cette option peut être déterminée en examinant la colonne `is_parameterization_forced` dans la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Contrôle si le Magasin des requêtes est activé dans cette base de données et contrôle la suppression du contenu du Magasin des requêtes.
@@ -2535,16 +2650,25 @@ OPERATION_MODE
 Décrit le mode de fonctionnement du magasin des requêtes. Les valeurs valides sont READ_ONLY et READ_WRITE. En mode READ_WRITE, le magasin des requêtes collecte et conserve les informations sur le plan de requête et les statistiques d’exécution. En mode READ_ONLY, les informations peuvent être lues à partir du Magasin des requêtes, mais les nouvelles informations ne sont pas ajoutées. Si l’espace alloué maximal du magasin des requêtes est épuisé, le mode d’opération du magasin des requêtes passe à READ_ONLY.
 
 CLEANUP_POLICY     
-Décrit la stratégie de conservation des données du magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS détermine le nombre de jours pendant lesquels les informations d’une requête sont conservées dans le magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS est de type **bigint**.
+Décrit la stratégie de conservation des données du magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS détermine le nombre de jours pendant lesquels les informations d’une requête sont conservées dans le magasin des requêtes. STALE_QUERY_THRESHOLD_DAYS est de type **bigint**. La valeur par défaut est 30. Pour l’édition [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] De base, la valeur par défaut est **7** jours.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Détermine la fréquence à laquelle les données écrites dans le magasin des requêtes sont stockées sur le disque. Pour optimiser les performances, les données collectées par le magasin des requêtes sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée à l'aide de l'argument DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS est de type **bigint**.
+Détermine la fréquence à laquelle les données écrites dans le magasin des requêtes sont stockées sur le disque. Pour optimiser les performances, les données collectées par le magasin des requêtes sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée à l'aide de l'argument DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS est de type **bigint**. La valeur par défaut est **900** (15 minutes).
 
 MAX_STORAGE_SIZE_MB     
-Détermine l’espace alloué au magasin des requêtes. MAX_STORAGE_SIZE_MB est de type **bigint**.
+Détermine l’espace alloué au magasin des requêtes. MAX_STORAGE_SIZE_MB est de type **bigint**. La valeur par défaut est **100 Mo**.
+
+> [!NOTE]
+> La limite `MAX_STORAGE_SIZE_MB` n’est pas strictement appliquée. La taille de stockage est vérifiée seulement quand le Magasin des requêtes écrit des données sur le disque. Cet intervalle est défini par l’option `DATA_FLUSH_INTERVAL_SECONDS` ou l’option de la boîte de dialogue Magasin des requêtes [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] **Intervalle de vidage des données**. La valeur par défaut de l’intervalle est 900 secondes (ou 15 minutes).
+> Si le Magasin des requêtes a enfreint la limite `MAX_STORAGE_SIZE_MB` entre des vérifications de la taille de stockage, il passe en mode lecture seule. Si l’option `SIZE_BASED_CLEANUP_MODE` est activée, le mécanisme de nettoyage permettant d’appliquer la limite `MAX_STORAGE_SIZE_MB` est également déclenché.
+> Une fois que suffisamment d’espace a été libéré, le mode Magasin des requêtes revient automatiquement en lecture-écriture.
+
+> [!IMPORTANT]
+> Si vous pensez que la capture de votre charge de travail nécessite plus de 10 Go d’espace disque, vous devez probablement repenser et optimiser votre charge de travail pour réutiliser les plans de requête (par exemple, en utilisant le [paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) ou ajuster les configurations du Magasin des requêtes.    
+> À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez définir `QUERY_CAPTURE_MODE` sur CUSTOM pour disposer d’un contrôle supplémentaire sur la stratégie de capture des requêtes.
 
 INTERVAL_LENGTH_MINUTES     
-Détermine l’intervalle de temps auquel les données des statistiques d’exécution du runtime sont agrégées dans le magasin des requêtes. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette fenêtre de temps fixe est configurée à l'aide de l'argument INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES est de type **bigint**.
+Détermine l’intervalle de temps auquel les données des statistiques d’exécution du runtime sont agrégées dans le magasin des requêtes. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette fenêtre de temps fixe est configurée à l'aide de l'argument INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES est de type **bigint**. La valeur par défaut est **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Contrôle si le nettoyage est activé automatiquement quand la quantité totale de données approche de la taille maximale.
@@ -2557,7 +2681,7 @@ Le nettoyage basé sur la taille est activé automatiquement quand la taille sur
 
 SIZE_BASED_CLEANUP_MODE est de type **nvarchar**.
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Désigne le mode de capture de requête actif actuellement.
 
 ALL     
@@ -2572,7 +2696,31 @@ Cesser la capture des nouvelles requêtes. Le Magasin des requêtes continue de 
 QUERY_CAPTURE_MODE est de type **nvarchar**.
 
 max_plans_per_query     
-Entier représentant le nombre maximal de plans gérés pour chaque requête. La valeur par défaut est 200.
+Entier représentant le nombre maximal de plans gérés pour chaque requête. MAX_PLANS_PER_QUERY est de type **int**. La valeur par défaut est **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Contrôle si les statistiques d’attente seront capturées par requête.
+
+ACTIVÉ    
+Les informations des statistiques d’attente par requête sont capturées. Il s’agit de la valeur de configuration par défaut.
+
+OFF    
+Les informations des statistiques d’attente par requête ne seront pas capturées.
+
+**\<query_capture_policy_option_list> :: =**      
+Contrôle les options de stratégie de capture du magasin des requêtes. Sauf pour STALE_CAPTURE_POLICY_THRESHOLD, ces options définissent dans la valeur de la durée de validité de la stratégie de capture les conditions OR qui doivent intervenir pour que les requêtes soient capturées.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Définit la période d’évaluation pour déterminer si une requête doit être capturée. La valeur par défaut est de 1 jour, les valeurs possibles oscillant entre 1 heure et sept jours. *number* est de type **int**.
+
+EXECUTION_COUNT     
+Définit le nombre d’exécutions d’une requête pendant la période d’évaluation. La valeur par défaut est 30, ce qui signifie que pour la durée de validité par défaut de la stratégie de capture, une requête doit s’exécuter au moins 30 fois dans la même journée pour devenir persistante dans le Magasin des requêtes. EXECUTION_COUNT est de type **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Définit le temps UC de compilation écoulé total utilisé par une requête pendant la période d’évaluation. La valeur par défaut est 1000 ; ainsi, pour la durée de validité par défaut de la stratégie de capture, une requête doit avoir un total d’au moins une seconde de temps processeur écoulé pendant la compilation de la requête dans une même journée pour devenir persistante dans le Magasin des requêtes. TOTAL_COMPILE_CPU_TIME_MS est de type **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Définit le temps UC d’exécution écoulé total utilisé par une requête pendant la période d’évaluation. La valeur par défaut est 100 ; ainsi, pour la durée de validité par défaut de la stratégie de capture, une requête doit avoir un total d’au moins 100 ms de temps processeur écoulé pendant l’exécution dans une même journée pour devenir persistante dans le Magasin des requêtes. TOTAL_EXECUTION_CPU_TIME_MS est de type **int**.
 
 **\<snapshot_option> ::=**
 
@@ -2798,7 +2946,6 @@ Vous pouvez modifier les valeurs par défaut de l’une des options de base de d
 ## <a name="examples"></a>Exemples
 
 ### <a name="a-setting-the-database-to-read_only"></a>R. Paramétrage de la base de données avec READ_ONLY
-
 Pour modifier l’état d’une base de données ou d’un groupe de fichiers en READ_ONLY ou en READ_WRITE, vous avez besoin d’un accès exclusif à la base de données. L’exemple suivant illustre le basculement de la base de données en mode `RESTRICTED_USER` pour d’accès restreint. L'exemple affecte ensuite à la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] l'état `READ_ONLY` et rend à tous les utilisateurs l'accès à la base de données.
 
 ```sql
@@ -2816,7 +2963,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Activation de l'isolement d'instantané sur une base de données
-
 L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 
 ```sql
@@ -2842,7 +2988,6 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
 |[nom_base_de_données] |1| ACTIVÉ |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Activation, modification et désactivation du suivi des modifications
-
 L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.
 
 ```sql
@@ -2866,22 +3011,65 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. Activation du magasin de requêtes
-
 L’exemple suivant active le magasin des requêtes et configure ses paramètres.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
     );
 ```
 
-## <a name="see-also"></a> Voir aussi
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. Activation du magasin des requêtes avec les statistiques d’attente
+L’exemple suivant active le magasin des requêtes et configure ses paramètres.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. Activation du magasin des requêtes avec les options de stratégie de capture personnalisée
+L’exemple suivant active le magasin des requêtes et configure ses paramètres.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
+    );
+```
+
+## <a name="see-also"></a>Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -2972,7 +3160,7 @@ La valeur par défaut est ON. Nous vous recommandons d'utiliser le paramètre pa
 OFF     
 L’optimiseur de requête ne crée pas de statistiques sur les colonnes uniques des prédicats de requête quand il compile les requêtes. Si cette option a la valeur OFF, il peut en résulter des plans de requête non optimisés et une dégradation des performances des requêtes.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 Cette commande doit être exécutée lorsque vous êtes connecté à la base de données utilisateur.
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `s_auto_create_stats_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsAutoCreateStatistics` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
@@ -3023,7 +3211,7 @@ Spécifie que les jeux de résultats de requête retournés à partir de cette b
 OFF     
 Spécifie que les jeux de résultats de requête retournés à partir de cette base de données ne seront pas mis en cache dans la base de données.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure Synapse.
 
@@ -3063,7 +3251,7 @@ Active l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
 OFF     
 Désactive l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`. La définition de READ_COMMITTED_SNAPSHOT sur ON ou sur OFF pour une base de données utilisateur entraîne la fermeture de toutes les connexions ouvertes à cette base de données. Vous pouvez effectuer cette modification pendant la fenêtre de maintenance de la base de données ou attendre qu’il n’existe plus de connexion active à la base de données, à l’exception de la connexion exécutant la commande ALTER DATABASE.  Il n'est pas nécessaire que la base de données soit en mode mono-utilisateur. La modification du paramètre READ_COMMITTED_SNAPSHOT au niveau de la session n’est pas prise en charge.  Pour vérifier ce paramètre pour une base de données, vérifiez la colonne is_read_committed_snapshot_on dans sys. databases.
 

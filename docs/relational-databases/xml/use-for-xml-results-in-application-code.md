@@ -1,5 +1,6 @@
 ---
 title: Utiliser des résultats FOR XML dans le code de l’application | Microsoft Docs
+description: Découvrez comment utiliser les résultats d’une requête SQL avec des clauses FOR XML dans une application.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9927e5a4477961fbd7122ae96b05e42c74bf2196
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 430c7118d4185f123973c0ca7b00b02fb8ba39a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775546"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
   
 -   Interroger des tables SQL pour des instances de valeurs de [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -160,11 +161,11 @@ ms.locfileid: "80665047"
   
 -   **BankName:** Primary International  
   
--   **BusinessType:** OS  
+-   **BusinessType:** Système d''exploitation  
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Specialty:** Route  
   
 -   **SquareFeet:** 38000  
   

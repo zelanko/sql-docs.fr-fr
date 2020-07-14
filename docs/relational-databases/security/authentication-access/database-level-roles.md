@@ -1,9 +1,10 @@
 ---
 title: Rôles au niveau de la base de données | Microsoft Docs
+description: SQL Server fournit plusieurs rôles, qui sont des principaux de sécurité regroupant d’autres principaux, pour gérer les autorisations dans vos bases de données.
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, azure-synapse, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -38,20 +39,20 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664464"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005674"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Pour gérer facilement les autorisations dans vos bases de données, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit plusieurs *rôles* , qui sont des principaux de sécurité regroupant d'autres principaux. Ils sont similaires aux ***groupes*** du système d'exploitation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Les autorisations des rôles au niveau de la base de données ont une portée à l'échelle de la base de données.  
 
-Pour ajouter et supprimer des utilisateurs à un rôle de base de données, utilisez les options `ADD MEMBER` et `DROP MEMBER` les options de l’instruction [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] ne prend pas en charge cette utilisation de `ALTER ROLE`. Utilisez les anciennes procédures [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) et [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) à la place.
+Pour ajouter et supprimer des utilisateurs à un rôle de base de données, utilisez les options `ADD MEMBER` et `DROP MEMBER` les options de l’instruction [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] et Azure Synapse ne prennent pas en charge cette utilisation de `ALTER ROLE`. Utilisez les anciennes procédures [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) et [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) à la place.
   
  Il existe deux types de rôles au niveau de la base de données : les *rôles de base de données fixes* qui sont prédéfinis dans la base de données et les *rôles de base de données définis par l’utilisateur* que vous pouvez créer.  
   
@@ -64,7 +65,7 @@ Pour ajouter et supprimer des utilisateurs à un rôle de base de données, util
 
 Les autorisations des rôles de base de données définis par l’utilisateur peuvent être personnalisées à l’aide des instructions GRANT, DENY et REVOKE. Pour plus d’informations, consultez [Autorisations (moteur de base de données)](../../../relational-databases/security/permissions-database-engine.md).
 
-Pour obtenir une liste de toutes les autorisations, consultez l’affiche [Autorisations des moteurs de base de données](https://aka.ms/sql-permissions-poster) . (Les autorisations de niveau serveur ne peuvent pas être accordées aux rôles de base de données. Les connexions et les autres principaux au niveau du serveur (tels que les rôles de serveur) ne peuvent pas être ajoutés aux rôles de base de données. Pour la sécurité au niveau du serveur dans [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], utilisez les [rôles de serveur](../../../relational-databases/security/authentication-access/server-level-roles.md) à la place. Les autorisations de niveau serveur ne peuvent pas être accordées par le biais des rôles dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Pour obtenir une liste de toutes les autorisations, consultez l’affiche [Autorisations des moteurs de base de données](https://aka.ms/sql-permissions-poster) . Les autorisations de niveau serveur ne peuvent pas être accordées aux rôles de base de données. Les connexions et les autres principaux au niveau du serveur (tels que les rôles de serveur) ne peuvent pas être ajoutés aux rôles de base de données. Pour la sécurité au niveau du serveur dans [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], utilisez les [rôles de serveur](../../../relational-databases/security/authentication-access/server-level-roles.md) à la place. Les autorisations de niveau serveur ne peuvent pas être accordées par le biais des rôles dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et Azure Synapse.
 
 ## <a name="fixed-database-roles"></a>rôles de base de données fixes
   
@@ -72,7 +73,7 @@ Pour obtenir une liste de toutes les autorisations, consultez l’affiche [Autor
   
 |Nom du rôle de base de données fixe|Description|  
 |-------------------------------|-----------------|  
-|**db_owner**|Les membres du rôle de base de données fixe **db_owner** peuvent effectuer toutes les activités de configuration et de maintenance sur la base de données et peuvent également supprimer la base de données dans [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (Dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], certaines activités de maintenance requièrent des autorisations de niveau serveur et ne peuvent pas être effectuées par **db_owners**.)|  
+|**db_owner**|Les membres du rôle de base de données fixe **db_owner** peuvent effectuer toutes les activités de configuration et de maintenance sur la base de données et peuvent également supprimer la base de données dans [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (Dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et Azure Synapse, certaines activités de maintenance requièrent des autorisations de niveau serveur et ne peuvent pas être effectuées par **db_owners**.)|  
 |**db_securityadmin**|Les membres du rôle de base de données fixe **db_securityadmin** peuvent modifier l’appartenance au rôle pour les rôles personnalisés uniquement et gérer les autorisations. Les membres de ce rôle peuvent potentiellement élever leurs privilèges et leurs actions doivent être supervisées.|  
 |**db_accessadmin**|Les membres du rôle de base de données fixe **db_accessadmin** peuvent ajouter ou supprimer l'accès à la base de données des connexions Windows, des groupes Windows et des connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Les membres du rôle de base de données fixe **db_backupoperator** peuvent sauvegarder la base de données.|  
@@ -86,7 +87,7 @@ Les autorisations accordées aux rôles de base de données fixe ne peuvent pas 
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>Rôles spéciaux pour [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-azure-synapse"></a>Rôles spéciaux pour [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et Azure Synapse
 
 Ces rôles de base de données existent uniquement dans la base de données MASTER virtuelle. Leurs autorisations sont limitées aux actions effectuées dans MASTER. Seuls les utilisateurs de base de données de MASTER peuvent être ajoutés à ces rôles. Aucune connexion ne peut être ajoutée à ces rôles, toutefois les utilisateurs peuvent être créés en fonction des connexions et ensuite ces utilisateurs peuvent être ajoutés aux rôles. Les utilisateurs de base de données autonome dans MASTER peuvent également être ajoutés à ces rôles. Toutefois, les utilisateurs de base de données autonome ajoutés au rôle **dbmanager** dans MASTER ne peuvent pas être utilisés pour créer de nouvelles bases de données.
 
@@ -96,7 +97,7 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 |**loginmanager** | Peut créer et supprimer des connexions dans la base de données MASTER virtuelle.|
 
 > [!NOTE]
-> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation SQL Database : Octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et Azure Synapse sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation SQL Database : Octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Rôles de msdb  
  La base de données msdb contient les rôles à usages spéciaux présentés dans le tableau ci-dessous.  
@@ -128,8 +129,8 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Commande|Supprime un rôle de la base de données.|  
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Commande|Crée un rôle de base de données dans la base de données active.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Commande|Supprime un rôle de base de données de la base de données actuelle.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Commande|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Commande|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Commande|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] et Azure Synapse doivent utiliser `ALTER ROLE` à la place.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Commande|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] et Azure Synapse doivent utiliser `ALTER ROLE` à la place.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Autorisations | Ajoute l’autorisation à un rôle.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Autorisations | Refuse une autorisation à un rôle.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Autorisations | Supprime des autorisations accordées ou refusées antérieurement.

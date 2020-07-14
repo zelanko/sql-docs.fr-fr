@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659476"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Applications de sauvegarde SQL Server - Service de cliché instantané des volumes (VSS) et SQL Writer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server assure une prise en charge du service de cliché instantané (VSS, Volume Shadow Copy Service) en fournissant un enregistreur (SQL Writer) afin qu’une application de sauvegarde tierce puisse utiliser le framework VSS pour sauvegarder des fichiers de base de données. Ce document décrit le composant SQL Writer et son rôle dans le processus de création et de restauration des instantanés VSS pour les bases de données SQL Server. Il contient également des détails sur la configuration et l’utilisation de l’enregistreur SQL pour interagir avec des applications de sauvegarde dans le framework VSS.
 
@@ -357,7 +357,7 @@ L’enregistreur SQL prend en charge les opérations de sauvegarde/restauration 
 
 Dans une sauvegarde/restauration non basée sur les composants, le demandeur spécifie un volume ou une arborescence de dossiers à sauvegarder/restaurer. Toutes les données du volume/dossier spécifié sont sauvegardées/restaurées.
 
-#### <a name="backup"></a>Backup
+#### <a name="backup"></a>Sauvegarde
 
 Dans une sauvegarde non basée sur les composants, l’enregistreur SQL sélectionne implicitement des bases de données en utilisant la liste des volumes dans le jeu d’instantanés.  L’enregistreur vérifie si des bases de données sont endommagées, générant une erreur s’il en trouve. Une base de données endommagée est une base de données dans laquelle un sous-ensemble de fichiers est sélectionné par la liste des volumes.  La restauration par progression (restaurations différentielles ou de journaux) après une restauration n’est pas prise en charge via l’enregistreur SQL.
 
@@ -371,7 +371,7 @@ Pour les opérations de restauration non basée sur les composants, la restaurat
 
 Dans une sauvegarde basée sur les composants, le demandeur sélectionne explicitement les composants de base de données (à partir des métadonnées retournées par l’enregistreur SQL au client) à sauvegarder/restaurer.
 
-#### <a name="backup"></a>Backup
+#### <a name="backup"></a>Sauvegarde
 
 Dans une sauvegarde basée sur les composants, tous les volumes de stockage des bases de données sélectionnées doivent être inclus dans le jeu d’instantanés de volume.  Sinon, l’enregistreur SQL détectera des bases de données endommagées (avec des volumes de stockage en dehors du jeu d’instantanés) et fera échouer la sauvegarde.  Une sauvegarde complète sauvegarde les données de la base de données et tous les fichiers journaux nécessaires pour ramener la base de données à un état cohérent au niveau transactionnel au moment de la restauration.
 
@@ -407,7 +407,7 @@ L’enregistreur SQL signale les conteneurs de catalogues de texte intégral ave
 
 Une opération de sauvegarde différentielle sauvegarde seulement les données qui ont été modifiées depuis la sauvegarde complète de base la plus récente. Une sauvegarde différentielle contient seulement les parties des fichiers de base de données qui ont changé. Pour effectuer une telle sauvegarde, l’application de sauvegarde ou le demandeur a besoin d’informations sur l’emplacement des modifications dans les fichiers de base de données, afin que les sections appropriées du ou des fichiers puissent être sauvegardées. Lors d’une opération de sauvegarde différentielle, l’enregistreur SQL fournit ces informations au format spécifié par « Informations sur les fichiers partiels VSS ». Ces informations peuvent être utilisées pour sauvegarder seulement la partie modifiée des fichiers de base de données.
 
-### <a name="backup"></a>Backup
+### <a name="backup"></a>Sauvegarde
 
 Le demandeur peut lancer une sauvegarde différentielle en définissant l’option DIFFERENTIAL (**VSS_BT_DIFFERENTIAL**) dans le document des composants de la sauvegarde (**IVssBackupComponents::SetBackupState**) lors du lancement d’une opération de sauvegarde avec VSS.  L’enregistreur SQL passe les informations sur les fichiers partiels (qui lui sont retournées par SQL Server) à VSS.  Le demandeur peut obtenir ces informations sur les fichiers en appelant des API VSS (**IVssComponent::GetPartialFile**). Ces informations sur les fichiers partiels permettent au demandeur de choisir seulement les plages d’octets modifiées à sauvegarder pour les fichiers de base de données.
 

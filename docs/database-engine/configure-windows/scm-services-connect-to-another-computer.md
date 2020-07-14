@@ -1,5 +1,6 @@
 ---
 title: Se connecter à un autre ordinateur (Gestionnaire de configuration SQL Server) | Microsoft Docs
+description: Découvrez comment gérer les services d’un ordinateur distant. Découvrez comment utiliser le Gestionnaire de configuration SQL Server ou SQL Server Management Studio pour cette tâche.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651345"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Services SCM - Se connecter à un autre ordinateur
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cet article explique comment se connecter à un autre ordinateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Suivez la première procédure pour ouvrir la Console de gestion [!INCLUDE[msCoName](../../includes/msconame-md.md)] (mmc) de Gestion de l'ordinateur Windows, connectez-vous à l'ordinateur et développez l'arborescence Services et Applications. Suivez la deuxième procédure pour créer un fichier avec un lien vers le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur distant.
 
@@ -38,7 +39,7 @@ Pour démarrer, arrêter, interrompre ou reprendre les services sur un autre ord
 2. Dans le menu **Action**, cliquez sur **Se connecter à un autre ordinateur**.
 3. Dans la boîte de dialogue **Sélectionner un ordinateur** , dans la zone de texte **Un autre ordinateur** , tapez le nom de l'ordinateur que vous voulez gérer et cliquez sur **OK**.
 
-   La Gestion de l'ordinateur affiche les services exécutés sur l'ordinateur distant. Le nœud de niveau supérieur devient alors **Gestion de l’ordinateur** \<*ordinateur_distant*>.
+   La Gestion de l'ordinateur affiche les services exécutés sur l'ordinateur distant. Le nœud de niveau supérieur devient alors **Gestion de l’ordinateur** \<*remotecomputer*>.
 
 4. Dans l'arborescence de la console, développez **Services et applications**, puis **Gestionnaire de configuration SQL Server** pour gérer les services de l'ordinateur distant.
 
@@ -53,7 +54,7 @@ Pour démarrer, arrêter, interrompre ou reprendre les services sur un autre ord
 6. Dans la fenêtre **Gestion de l'ordinateur** , cliquez sur **Un autre ordinateur**, tapez le nom de l'ordinateur distant que vous souhaitez gérer, puis cliquez sur **Terminer**.
 7. Dans la fenêtre **Ajout d’un composant logiciel enfichable autonome** , cliquez sur **Fermer**.
 8. Dans la fenêtre **Ajouter/Supprimer un composant logiciel enfichable** , cliquez sur **OK**.
-9. Développez **Gestion de l’ordinateur (** _\<nom_ordinateur>_ **)** , puis **Services et applications**.
+9. Développez **Gestion de l’ordinateur (** _\<computer name>_ **)** , puis **Services et applications**.
 10. Cliquez avec le bouton droit sur **Gestionnaire de configuration SQL Server**, puis cliquez sur **Nouvelle fenêtre à partir d’ici**.
 11. Dans le menu **Fenêtre**, cliquez sur **Racine de la console** pour revenir à la première fenêtre et supprimez-la.
 12. Dans le menu **Fichier** , cliquez sur **Enregistrer sous**, et enregistrez le fichier dans le dossier souhaité en lui donnant un nom approprié et l’extension de fichier **.msc** . Fermez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557929"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882058"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Des informations supplémentaires sur le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont fournies dans cette rubrique. Pour plus d’informations sur le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault ](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) et [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75557929"
   
  Dans le cas du chiffrement transparent des données, voici comment procéder :  
   
--   **Dans PowerShell** : Créez une clé asymétrique (avec un nom différent de celui de votre clé asymétrique TDE) dans le coffre de clés.  
+-   **Dans PowerShell :** Créez une clé asymétrique (avec un nom différent de celui de votre clé asymétrique TDE) dans le coffre de clés.  
   
     ```powershell  
     Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -153,7 +153,7 @@ Voici un récapitulatif des étapes :
 * Accorder des autorisations au principal du service SQL Server pour utiliser ce nouveau coffre.  
 * Modifier les informations d’identification SQL Server utilisées par le moteur de base de données afin qu’elles reflètent le nom du nouveau coffre (le cas échéant).  
   
-Les sauvegardes des clés peuvent être restaurées entre les régions Azure, tant qu’elles restent dans la même région géographique ou le même cloud national : États-Unis, Canada, Japon, Australie, Inde, Asie et Pacifique du sud, Europe, Brésil, Chine, Administration américaine ou Allemagne.  
+Les sauvegardes des clés peuvent être restaurées dans les régions Azure, tant qu’elles restent dans la même région géographique ou le même cloud national : États-Unis, Canada, Japon, Australie, Inde, Asie-Pacifique, Europe, Brésil, Chine, Gouvernement des États-Unis ou Allemagne.  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Forum Aux Questions (FAQ)  
@@ -167,7 +167,7 @@ Les sauvegardes des clés peuvent être restaurées entre les régions Azure, ta
   
 ### <a name="on-configuring-ssnoversion"></a>À propos de la configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Quels sont les points de terminaison auxquels le connecteur SQL Server doit pouvoir accéder ?** Le connecteur communique avec deux points de terminaison, qui doivent figurer dans la liste verte. Le seul port requis pour la communication sortante à ces autres services est le port 443 pour Https :
+**Quels sont les points de terminaison auxquels le connecteur SQL Server doit pouvoir accéder ?** Le connecteur communique avec deux points de terminaison, qui doivent être autorisés. Le seul port requis pour la communication sortante à ces autres services est le port 443 pour Https :
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 

@@ -18,15 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812644"
 ---
 # <a name="how-online-index-operations-work"></a>Fonctionnement des opérations d'index en ligne
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cette rubrique définit les structures qui existent pendant une opération d'index en ligne et illustre les activités qui y sont associées.  
   
@@ -65,12 +65,14 @@ ms.locfileid: "67909756"
 |Build<br /><br /> Phase principale|Les données sont analysées, triées, fusionnées et insérées dans la cible au cours d'opérations de chargement en masse.<br /><br /> Les opérations de sélection, d’insertion, de mise à jour et de suppression effectuées par des utilisateurs simultanés sont appliquées à la fois aux index préexistants et à tout nouvel index en cours de régénération.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Finale<br /><br /> Phase courte|Pour que cette phase commence, toutes les transactions de mise à jour non validées doivent être terminées. Selon le verrou acquis, toutes les transactions de lecture ou d’écriture de nouveaux utilisateurs sont bloquées pendant une période courte jusqu’à l’achèvement de cette phase.<br /><br /> Les métadonnées système sont mises à jour pour remplacer la source par la cible.<br /><br /> La source est supprimée le cas échéant. Par exemple, après la régénération ou la suppression d'un index cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S sur la table en cas de création d’un index non cluster.\*<br /><br /> SCH-M (Modification du schéma) en cas de suppression de toute structure source (index ou table).\*|  
   
- \* L’opération d’index attend l’achèvement de toute transaction de mise à jour non validée avant d’acquérir le verrou S ou SCH-M sur la table.  
+ \* L’opération d’index attend l’achèvement de toute transaction de mise à jour non validée avant d’acquérir le verrou S ou SCH-M sur la table. Si une requête longue est en cours d’exécution, l’opération d’index en ligne attend la fin de la requête.
   
  ** Le verrou de ressource INDEX_BUILD_INTERNAL_RESOURCE empêche l’exécution d’opérations de langage de définition de données (DDL) simultanées sur les structures sources et préexistantes alors que l’opération d’index est en cours. Par exemple, ce verrou empêche la régénération simultanée de deux index sur la même table. Même si ce verrou de ressource est associé au verrou Sch-M, il n'empêche pas les instructions de manipulation de données.  
   
  La table précédente représente un verrou partagé (S) unique acquis lors de la phase de génération d'une opération d'index en ligne impliquant un index unique. Lorsque des index cluster et non cluster sont générés ou régénérés au cours d'une opération d'index en ligne unique (par exemple, pendant la création d'un index cluster initial sur une table contenant un ou plusieurs index non cluster), deux verrous S à court terme sont acquis au cours de la phase de génération, suivis par des verrous de partage intentionnel (IS) à long terme. Un verrou S est d'abord acquis pour la création de l'index cluster et lorsque la création de l'index cluster est terminée, un deuxième verrou S à court terme est acquis pour la création des index non-cluster. Une fois les index non-cluster créés, le verrou S redevient un verrou IS jusqu'à la phase finale de l'opération d'index en ligne.  
-  
+
+Pour plus d’informations sur l’utilisation des verrous et la façon dont vous pouvez les gérer, voir [Arguments](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments).
+
 ### <a name="target-structure-activities"></a>Activités des structures cibles  
  Le tableau suivant répertorie les activités impliquant la structure cible lors de chaque phase de l'opération d'index ainsi que la stratégie de verrouillage correspondante.  
   
@@ -91,4 +93,6 @@ ms.locfileid: "67909756"
   
  [Instructions pour les opérations d’index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
-  
+## <a name="next-steps"></a>Étapes suivantes
+
+[Options d’index ALTER TABLE](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)

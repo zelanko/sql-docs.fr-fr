@@ -1,8 +1,8 @@
 ---
-title: Attacher et détacher une base de données (SQL Server) | Microsoft Docs
+title: Attacher et détacher une base de données (SQL Server)
 description: Vous pouvez détacher et rattacher des données et des fichiers journaux de transactions d’une base de données SQL Server pour modifier la base de données vers une autre instance ou pour déplacer la base de données.
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756282"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Les données et les journaux de transactions d'une base de données peuvent être détachés, puis rattachés à la même instance ou à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le détachement et l'attachement d'une base de données sont utiles pour transférer la base de données dans une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le même ordinateur ou pour la déplacer.  
   
   
@@ -63,7 +63,13 @@ Une base de données ne peut pas être détachée si l'une des conditions suivan
   
     > [!NOTE]  
     > Un instantané de base de données ne peut pas être détaché ni attaché.  
+
+-   Cette base de données fait partie d’un groupe de disponibilité Always On.  
   
+    La base de données ne peut pas être détachée tant qu’elle n’est pas supprimée du groupe de disponibilité. Pour plus d’informations, consultez [Supprimer une base de données primaire d’un groupe de disponibilité Always On](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   La base de données est en cours de mise en miroir dans une session de mise en miroir de bases de données.  
   
     La base de données ne peut pas être détachée tant que la session n'est pas interrompue. Pour plus d’informations, consultez [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
@@ -149,7 +155,7 @@ Lorsque vous attachez une base de données à une autre instance de serveur et s
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

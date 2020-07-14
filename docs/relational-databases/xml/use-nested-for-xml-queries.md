@@ -1,5 +1,6 @@
 ---
 title: Utiliser des requêtes FOR XML imbriquées | Microsoft Docs
+description: Découvrez comment utiliser des requêtes FOR XML imbriquées.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 384e312ca4deb3266da403e796ea93e504c6ab1a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f012f629d531955a4f662dfe3ee03f691c220003
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752543"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utiliser des requêtes FOR XML imbriquées
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Le type de données **xml** et la [directive TYPE dans les requêtes FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permettent au XML retourné par les requêtes FOR XML d’être traité sur le serveur et sur le client.  
   
 ## <a name="processing-with-xml-type-variables"></a>Traitement avec des variables de type xml  

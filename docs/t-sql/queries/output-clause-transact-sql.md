@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b53928fb2f90b4e97227f933a36648acd7b60cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706031"
 ---
 # <a name="output-clause-transact-sql"></a>Clause OUTPUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des informations ou des expressions basées sur toutes les lignes affectées par une instruction INSERT, UPDATE, DELETE ou MERGE. Ces résultats peuvent être retournés à l'application en cours de traitement afin d'être utilisés notamment avec des messages de confirmation, des opérations d'archivage et d'autres spécifications d'application similaires. Il est également possible d'insérer ces résultats dans une table ou dans une variable de table. En outre, vous pouvez capturer les résultats d'une clause OUTPUT dans une instruction imbriquée INSERT, UPDATE, DELETE ou MERGE et les insérer dans une table ou une vue cible.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81636150"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -133,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Référence de colonne explicite. Toutes les références à la table en cours de modification doivent être qualifiées correctement par le préfixe INSERTED ou DELETED approprié, comme ceci : INSERTED **.** _column\_name_.  
+ Référence de colonne explicite. Toutes les références à la table en cours de modification doivent être qualifiées correctement par le préfixe INSERTED ou DELETED, le cas échéant. Exemple : INSERTED **.** _column\_name_.  
   
  $action  
- Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar(10)** dans la clause OUTPUT d’une instruction MERGE qui retourne l’une des trois valeurs suivantes pour chaque ligne : INSERT, UPDATE ou DELETE, en fonction de l’action effectuée sur cette ligne.  
+ Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar(10)** dans la clause OUTPUT d'une instruction MERGE qui retourne l'une des trois valeurs suivantes pour chaque ligne : « INSERT », « UPDATE » ou « DELETE », en fonction de l’action qui a été effectuée sur cette ligne.  
   
 ## <a name="remarks"></a>Notes  
- Les clauses OUTPUT \<dml_select_list> et OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
+ Les clauses OUTPUT \<dml_select_list> et OUTPUT \<dml_select_list> INTO { **\@** _variable\_table_ | _table\_sortie_ } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Sauf indication contraire, les références à la clause OUTPUT sont relatives aux clauses OUTPUT et OUTPUT INTO.  

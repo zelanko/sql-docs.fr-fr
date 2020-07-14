@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922207"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896013"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instructions RESTORE – Arguments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette rubrique documente les arguments qui sont décrits dans la section « Syntaxe » de l’instruction RESTORE {DATABASE|LOG} et du jeu associé d’instructions auxiliaires : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY. La plupart des arguments sont pris en charge seulement par un sous-ensemble de ces six instructions. Cette prise en charge est précisée dans la description de chacun des arguments.  
   
@@ -116,15 +116,15 @@ PAGE
  [ **,** ...*n* ]  
  Espace réservé indiquant qu'il est possible de spécifier plusieurs fichiers, groupes de fichiers et pages dans une liste séparée par des virgules. Le nombre est illimité.  
   
-FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } En général, spécifie les unités de sauvegarde à partir desquelles la sauvegarde est restaurée. Sinon, dans une instruction RESTORE DATABASE, la clause FROM peut spécifier le nom d'un instantané de base de données vers lequel vous restaurez la base de données, auquel cas, aucune clause WITH n'est autorisée.  
+FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } spécifie en général les unités de sauvegarde à partir desquelles effectuer la restauration. Sinon, dans une instruction RESTORE DATABASE, la clause FROM peut spécifier le nom d'un instantané de base de données vers lequel vous restaurez la base de données, auquel cas, aucune clause WITH n'est autorisée.  
   
  Si la clause FROM est omise, la restauration de la sauvegarde n'a pas lieu. À la place, la base de données est récupérée. Cela vous permet de récupérer une base de données restaurée avec l'option NORECOVERY, ou de basculer vers un serveur de secours. Si la clause FROM est omise, il convient de spécifier NORECOVERY, RECOVERY ou STANDBY dans la clause WITH.  
   
- \<backup_device> [ **,** ...*n* ] Spécifie les unités de sauvegarde logiques ou physiques à utiliser pour l’opération de restauration.  
+ \<backup_device> [ **,** ...*n* ] spécifie les unités de sauvegarde logiques ou physiques à utiliser pour l’opération de restauration.  
   
  **Pris en charge par :**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), et [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<backup_device>::= Spécifie une unité de sauvegarde logique ou physique à utiliser pour l’opération de sauvegarde, comme suit :  
+ \<backup_device>::= spécifie une unité de sauvegarde logique ou physique à utiliser pour l’opération de sauvegarde de la manière suivante :  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  Nom logique, qui doit respecter les règles applicables aux identificateurs, de l'unité de sauvegarde créée par **sp_addumpdevice** et à partir de laquelle est restaurée la base de données. S’il est fourni comme variable ( **@** _logical\_backup\_device\_name\_var_), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
@@ -469,7 +469,7 @@ Utilisez KEEP_REPLICATION quand vous couplez la réplication à la copie des jou
   
  Pour plus d’informations sur l’utilisation de la capture de données modifiées avec la mise en miroir de bases de données, consultez [Capture de données modifiées et autres fonctionnalités de SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  Active ou désactive la remise de messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou définit un nouvel identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Cette option est utile seulement si [!INCLUDE[ssSB](../../includes/sssb-md.md)] a été activé pour la base de données lors de la création de la sauvegarde.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ Utilisez KEEP_REPLICATION quand vous couplez la réplication à la copie des jou
  NEW_BROKER  
  Spécifie qu'un nouvel identificateur Service Broker doit être assigné à la base de données. Dans la mesure où la base de données est considérée comme un nouveau Service Broker, toutes les conversations existantes dans la base de données sont immédiatement supprimées sans générer de message de fin de dialogue. Tout itinéraire faisant référence à l'ancien identificateur Service Broker doit être recréé avec le nouvel identificateur.  
   
-#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **Pris en charge par :**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) et uniquement pour le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
   
  Vous pouvez restaurer une base de donnés à un point dans le temps ou une transaction spécifique en spécifiant le point de récupération cible dans une clause STOPAT, STOPATMARK ou STOPBEFOREMARK. Un point dans le temps ou une transaction spécifié(e) est toujours restauré(e) à partir d'une sauvegarde du journal. Dans chaque instruction RESTORE LOG de la séquence de restauration, vous devez spécifier votre point dans le temps ou transaction cible dans une clause STOPAT, STOPATMARK ou STOPBEFOREMARK identique.  

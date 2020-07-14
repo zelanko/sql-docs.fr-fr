@@ -1,5 +1,6 @@
 ---
 title: Demander des schémas comme résultats à l’aide de XMLDATA et XMLSCHEMA | Microsoft Docs
+description: Découvrez comment utiliser les options XMLDATA et XMLSCHEMA en mode RAW avec la clause FOR XML pour demander un schéma XML-DATA ou un schéma XSD dans le résultat de la requête.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632927"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Demander des schémas comme résultats à l’aide de XMLDATA et XMLSCHEMA
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La requête suivante retourne le schéma XML-DATA qui décrit la structure du document.  
   
 ## <a name="example"></a>Exemple  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> est déclaré en tant qu'espace de noms. Pour éviter les conflits d'espaces de noms lorsque plusieurs schémas XML-Data sont interrogés dans des requêtes FOR XML différentes, l'identificateur d'espace de noms, `Schema1` dans cet exemple, est modifié à chaque exécution de requête. L’identificateur d’espace de noms est composé de **Schema** _**n**_ , où _**n**_ est un entier.  
+>  <`Schema`> est déclaré en tant qu'espace de noms. Pour éviter les conflits d'espaces de noms lorsque plusieurs schémas XML-Data sont interrogés dans des requêtes FOR XML différentes, l'identificateur d'espace de noms, `Schema1` dans cet exemple, est modifié à chaque exécution de requête. L’identificateur d’espace de noms est composé de **Schema**_**n**_, où _**n**_ est un entier.  
   
  En spécifiant l'option `XMLSCHEMA` , vous pouvez demander le schéma XSD pour le résultat.  
   

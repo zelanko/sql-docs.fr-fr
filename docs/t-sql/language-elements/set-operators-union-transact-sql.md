@@ -20,16 +20,16 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f72290faba54a8130c42b0736945c6d1a2f39448
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631873"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007635"
 ---
 # <a name="set-operators---union-transact-sql"></a>Opérateurs de jeu - UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Concatène les résultats d’au moins deux requêtes en un seul jeu de résultats. Vous contrôlez si le jeu de résultats contient des lignes en double :
 
@@ -47,7 +47,7 @@ Voici les règles de base pour combiner les jeux de résultats de deux requêtes
   
 -   Les types de données doivent être compatibles.  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ Voici les règles de base pour combiner les jeux de résultats de deux requêtes
 ```  
   
 ## <a name="arguments"></a>Arguments  
-\<query_specification> | ( \<query_expression> ) Spécification ou expression de requête qui retourne les données à associer aux données d’une autre spécification ou expression de requête. Les définitions des colonnes faisant partie d'une opération UNION ne doivent pas forcément être identiques, mais elles doivent être compatibles via une conversion implicite. Lorsque les types de données diffèrent, le type de données résultant est déterminé en fonction des règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md). Le résultat se détermine d'après les mêmes règles de combinaison d'expressions si les types sont les mêmes mais diffèrent en terme de précision, d'échelle ou de longueur. Pour plus d’informations, consultez [Précision, échelle et longueur (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | ( \<query_expression> ) Est une spécification ou expression de requête qui renvoie des données à combiner avec les données provenant d’une autre spécification ou expression de requête. Les définitions des colonnes faisant partie d'une opération UNION ne doivent pas forcément être identiques, mais elles doivent être compatibles via une conversion implicite. Lorsque les types de données diffèrent, le type de données résultant est déterminé en fonction des règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md). Le résultat se détermine d'après les mêmes règles de combinaison d'expressions si les types sont les mêmes mais diffèrent en terme de précision, d'échelle ou de longueur. Pour plus d’informations, consultez [Précision, échelle et longueur (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 Les colonnes de type de données **xml** doivent être égales. Toutes les colonnes doivent être typées selon un schéma XML ou être non typées. Si elles sont typées, elles doivent l'être par rapport à la même collection de schémas XML.  
   

@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3f7bc162244e30b2ac48f9b49a6c596268b595c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee01e23c544ac01ee9fb85e5b59d31b73088987
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731286"
 ---
 # <a name="hints-transact-sql"></a>Indicateurs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Les indicateurs sont des options ou des stratégies appliquées par le processeur de requêtes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux instructions SELECT, INSERT, UPDATE ou DELETE. Les indicateurs remplacent tout plan d'exécution pouvant être sélectionné par l'optimiseur de requête pour une requête.  
   
 > [!CAUTION]  
->  Étant donné que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d’exécution pour une requête, nous vous recommandons d’utiliser les indicateurs \<join_hint>, \<query_hint> et \<table_hint> uniquement en dernier recours et si vous êtes un administrateur de base de données ou un développeur expérimenté.
+>  Étant donné que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d’exécution pour une requête, nous vous recommandons de ne recourir à ces \<join_hint>, \<query_hint> et \<table_hint> qu’en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté.
   
  Les indicateurs décrits dans cette section sont les suivants :  
   

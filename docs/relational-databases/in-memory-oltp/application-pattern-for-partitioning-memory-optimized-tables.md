@@ -1,5 +1,6 @@
 ---
 title: Modèle d’application - Partitionnement de tables à mémoire optimisée
+description: Apprenez-en davantage sur le modèle de conception d’application d’OLTP en mémoire qui stocke les données actuelles et actives dans une table à mémoire optimisée et les données plus anciennes dans une table partitionnée.
 ms.custom: seo-dt-2019,issue-PR=4700-14820
 ms.date: 05/03/2020
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee8450f69d87bce0691de5d4641c0ab68b6fe3b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730422"
 ---
-# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d’application pour partitionner des tables à mémoire optimisée
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle de conception d’application qui prodigue des ressources de performances aux données relativement récentes. Ce modèle peut s’appliquer quand les données actuelles sont lues ou mises à jour de façon beaucoup plus fréquente que les données plus anciennes. Dans ce cas, les données actuelles sont dites *actives* ou *chaudes*, tandis que les données plus anciennes sont dites *froides*.
 
@@ -59,7 +60,7 @@ Globalement, l’exemple T-SQL montre comment utiliser une table à mémoire opt
 
 Les premières phases de l’exemple T-SQL créent la base de données avant de créer des objets comme les tables de la base de données. Les phases suivantes montrent comment déplacer les données d’une table à mémoire optimisée vers une table partitionnée.
 
-### <a name="create-a-database"></a>Créer une base de données
+### <a name="create-a-database"></a>Création d'une base de données
 
 Cette section de l’exemple T-SQL crée une base de données de test. La base de données est configurée pour prendre en charge à la fois les tables à mémoire optimisée et les tables partitionnées.
 

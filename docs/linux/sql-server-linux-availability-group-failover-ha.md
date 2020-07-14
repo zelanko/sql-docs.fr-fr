@@ -1,24 +1,24 @@
 ---
 title: Gérer le basculement du groupe de disponibilité - SQL Server sur Linux
 description: 'Cet article décrit trois types de basculement : le basculement automatique, le basculement manuel programmé et le basculement manuel forcé. Avec les types automatique et manuel programmé, vos données sont conservées.'
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892306"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Basculement du groupe de disponibilité Always On sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables dans un processus appelé basculement. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et manuels programmés préservent toutes vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires (cible de basculement actuelle). 
 
@@ -81,14 +81,29 @@ Pour basculer manuellement une ressource du groupe de disponibilité nommée *ag
 Exemple de contrainte créée en raison d’un basculement manuel. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Le nom de la ressource du groupe de disponibilité dans les clusters Pacemaker sur Red Hat Enterprise Linux 8.x et Ubuntu 18.04 peut ressembler à *ag_cluster-clone*, car la nomenclature des ressources a été modifiée pour utiliser un *clone pouvant être promu*. 
+
 - **Exemple RHEL/Ubuntu**
 
    Dans la commande `cli-prefer-ag_cluster-master` ci-dessous figure l’ID de la contrainte à supprimer. `sudo pcs constraint list --full` retourne cet ID. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   ou
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   Vous pouvez également déplacer et effacer des contraintes générées automatiquement sur une seule ligne, comme suit. L’exemple suivant utilise la terminologie de *clone*, conformément à Red Hat Enterprise Linux 8.x. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **Exemple SLES**
 
    Dans la commande suivante `cli-prefer-ms-ag_cluster` figure l’ID de la contrainte. `crm config show` retourne cet ID. 

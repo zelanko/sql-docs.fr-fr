@@ -1,5 +1,6 @@
 ---
 title: Procédures stockées compilées en mode natif - applications d’accès aux données
+description: Consultez des conseils pour l’appel de procédures stockées compilées en mode natif à partir d’applications d’accès aux données, avec un exemple qui utilise le pilote ODBC SQL Server Native Client.
 ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05dcd994a1cf2387bfe7e1a1be46e7a95d24249d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723367"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cette rubrique fournit des instructions pour appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données.
 

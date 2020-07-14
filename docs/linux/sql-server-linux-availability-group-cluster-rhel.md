@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76706285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896952"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer un cluster RHEL pour le groupe de disponibilité SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Ce document explique comment créer un cluster de groupe de disponibilité à trois nœuds pour SQL Server sur Red Hat Enterprise Linux. Pour une haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, consultez [Haute disponibilité et protection des données pour les configurations de groupes de disponibilité](sql-server-linux-availability-group-ha.md). La couche de clustering est basée sur le [module complémentaire haute disponibilité](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) Red Hat Enterprise Linux (RHEL) basé sur [Pacemaker](https://clusterlabs.org/). 
 
@@ -167,7 +167,7 @@ Pour plus d’informations sur les propriétés de cluster de Pacemaker, consult
 
 ## <a name="create-availability-group-resource"></a>Créer une ressource de groupe de disponibilité
 
-Pour créer la ressource de groupe de disponibilité, utilisez la commande `pcs resource create` et définissez les propriétés de la ressource. La commande suivante crée une ressource de type Master/esclave `ocf:mssql:ag` pour le groupe de disponibilité portant le nom `ag1`.
+Pour créer la ressource de groupe de disponibilité, utilisez la commande `pcs resource create` et définissez les propriétés de la ressource. La commande suivante crée une ressource de type maître/subordonné `ocf:mssql:ag` pour le groupe de disponibilité nommé `ag1`.
 
 **RHEL 7**
 
