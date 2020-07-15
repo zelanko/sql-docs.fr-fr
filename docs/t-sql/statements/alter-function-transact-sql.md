@@ -20,19 +20,19 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b4b1a9d98e289590b35e463add7125f6421cc5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628367"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195816"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Modifie une fonction existante [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR, créée précédemment à l'aide de l'instruction CREATE FUNCTION, sans changer les autorisations ni affecter les fonctions, les procédures stockées ou les déclencheurs dépendant de celle-ci.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -274,10 +274,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
- _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
+ _\<_table\_type\_definition_\>_ ( **{** \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Définit le type de données de table pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)]. La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** {*column_name**data_type* } [ **,** ...*n* ] **)** **S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Définit les types de données de table pour une fonction CLR. La déclaration de table ne comprend que des types de données et des noms de colonne.  
   
@@ -305,7 +305,7 @@ RETURNS return_data_type
  Indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] chiffre les colonnes d'affichage catalogue qui contiennent le texte de l'instruction ALTER FUNCTION. L'utilisation de l'argument ENCRYPTION évite la publication de la fonction dans le cadre de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'argument ENCRYPTION ne peut pas être spécifié pour les fonctions CLR.  
   
  SCHEMABINDING  
- Indique que la fonction est liée aux objets de base de données auxquels elle fait référence. Cette condition empêche que des modifications ne soient apportées à la fonction si d'autres objets liés au schéma y font référence.  
+ Indique que la fonction est liée aux objets de base de données auxquels elle fait référence. Si SCHEMABINDING est précisé, les objets de base ne peuvent pas être modifiés d'une manière susceptible d'affecter la définition de la fonction. Cette fonction doit d'ailleurs être modifiée ou supprimée au préalable pour supprimer les dépendances par rapport à l'objet qui doit être modifié.  
   
  La liaison de la fonction aux objets auxquels elle fait référence est supprimée uniquement lorsqu'une des actions suivantes se produit :  
   

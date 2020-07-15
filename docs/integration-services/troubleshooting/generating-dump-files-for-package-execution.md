@@ -1,30 +1,29 @@
 ---
-title: Générer de fichiers de vidage pour l’exécution des packages | Microsoft Docs
-ms.custom: ''
+title: Générer de fichiers de vidage pour l’exécution des packages SSIS
+description: Découvrez comment dépanner SQL Server Integration Services à l’aide des options « Vidage sur incident ». Ces options génèrent un fichier de vidage du débogage. mdmp et un fichier de vidage de débogage text. tmp. En savoir plus sur les formats de fichier de vidage du débogage.
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 89e0fd965cdd2faeb522d35e892ec8f0fe79bb9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60ec7105d0942383ad1ebcd963665a8a47eab60c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295113"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669910"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Générer de fichiers de vidage pour l'exécution des packages
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Les informations contenues dans ces fichiers peuvent vous aider à résoudre des problèmes d’exécution du package.  
+Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Les informations contenues dans ces fichiers peuvent vous aider à résoudre des problèmes d’exécution du package.  
   
-> **REMARQUE !** Les fichiers de vidage de débogage peuvent contenir des informations sensibles. Pour protéger les informations sensibles, vous pouvez utiliser une liste de contrôle d'accès (ACL) afin de restreindre l'accès aux fichiers ou copier les fichiers dans un dossier avec accès limité. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+> [!NOTE]
+> Les fichiers de vidage de débogage peuvent contenir des informations sensibles. Pour protéger les informations sensibles, vous pouvez utiliser une liste de contrôle d'accès (ACL) afin de restreindre l'accès aux fichiers ou copier les fichiers dans un dossier avec accès limité. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  Lorsque vous déployez un projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez créer des fichiers de vidage qui fournissent des informations sur l'exécution des packages contenus dans le projet. Lorsque le processus ISServerExec.exe se termine, les fichiers de vidage sont créés. Vous pouvez spécifier qu'un fichier de vidage doit être créé lorsque des erreurs se produisent durant l'exécution du package. Pour ce faire, sélectionnez l'option **Vider en cas d'erreurs** dans la boîte de dialogue **Exécuter le package** . Vous pouvez également utiliser les procédures stockées suivantes :  
   
@@ -51,11 +50,9 @@ ms.locfileid: "71295113"
   
 |Type d'informations|Description|Exemple|  
 |-------------------------|-----------------|-------------|  
-|Environnement|Version de système d'exploitation, données d'utilisation de la mémoire, ID de processus et nom d'image de processus. Les informations d'environnement se trouvent au début du fichier .tmp.|# Vidage texte SSIS effectué le 13/09/2007 à 13:50:34<br /><br /> # PID 4120<br /><br /> #Nom de l'image [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Exécution sur 2 processeurs amd64 sous WOW64<br /><br /> # Mémoire : 58 % utilisé. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
+|Environnement|Version de système d'exploitation, données d'utilisation de la mémoire, ID de processus et nom d'image de processus. Les informations d'environnement se trouvent au début du fichier .tmp.|# Vidage texte SSIS effectué le 13/09/2007 à 13:50:34<br /><br /> # PID 4120<br /><br /> #Nom de l'image [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Exécution sur 2 processeurs amd64 sous WOW64<br /><br /> # Mémoire : 58 % utilisés. Physique : 845M/2044M  Pagination : 2404M/4095M (dispo/total)|  
 |Chemin d'accès et version des bibliothèques de liens dynamiques (DLL)|Chemin d'accès et numéro de version de chaque DLL que le système charge pendant le traitement d'un package.|# Module chargé : c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Module chargé : C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Module chargé : C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Messages récents|Messages récents émis par le système. Inclut l'heure, le type, la description et l'ID de thread de chaque message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description : Le composant est manquant, n’est pas enregistré, ne peut pas être mis à niveau ou des interfaces obligatoires sont manquantes. Informations de contact de ce composant : «  ».|  
+|Messages récents|Messages récents émis par le système. Inclut l'heure, le type, la description et l'ID de thread de chaque message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Horodatage : 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID du thread : 2368           (ThreadID)<br /><br /> [E:3]         Nom d'événement : OnError                        (EventName)<br /><br /> [E:3]         Nom de la source :                (SourceName)<br /><br /> [E:3]         ID de la source :                        (SourceID)<br /><br /> [E:3]         ID d'exécution :                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description : Le composant est manquant, n'est pas enregistré, ne peut pas être mis à niveau ou des interfaces obligatoires sont manquantes. Informations de contact de ce composant : «  ».|  
   
 ## <a name="related-information"></a>Informations connexes  
- [Exécuter le package, boîte de dialogue](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
-  
-  
+[Exécuter le package, boîte de dialogue](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  

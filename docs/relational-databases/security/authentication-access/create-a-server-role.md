@@ -1,5 +1,6 @@
 ---
 title: Créer un rôle serveur | Microsoft Docs
+description: Créer un rôle de serveur dans SQL Server à l’aide de SQL Server Management Studio ou de Transact-SQL. Passez en revue les limitations, les restrictions et les autorisations nécessaires.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f90781fd5e293c4de5821fc89588b9b1e38ac0b
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094955"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334268"
 ---
 # <a name="create-a-server-role"></a>Créer un rôle serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "68094955"
   
 6.  Sous **Éléments sécurisables**, sélectionnez un ou plusieurs éléments sécurisables au niveau du serveur. Lorsqu'un élément sécurisable est sélectionné, ce rôle de serveur peut se voir accorder ou refuser des autorisations sur cet élément sécurisable.  
   
-7.  Dans la zone **Autorisations : explicite** , activez la case à cocher pour accorder, accorder avec transmission des droits, ou refuser une autorisation d'accès à ce rôle serveur pour les éléments sécurisables sélectionnés. Si une autorisation ne peut pas être accordée ou refusée à tous les éléments sécurisables sélectionnés, l'autorisation est représentée sous forme de sélection partielle.  
+7.  Dans la zone **Autorisations : explicite**, cochez la case pour accorder, accorder avec transmission des droits, ou refuser une autorisation d’accès à ce rôle serveur pour les éléments sécurisables sélectionnés. Si une autorisation ne peut pas être accordée ou refusée à tous les éléments sécurisables sélectionnés, l'autorisation est représentée sous forme de sélection partielle.  
   
 8.  Dans la page **Membres** , utilisez le bouton **Ajouter** pour ajouter des connexions qui représentent des individus ou des groupes au nouveau rôle serveur.  
   
