@@ -1,5 +1,6 @@
 ---
 title: Améliorer les performances de la réplication transactionnelle | Microsoft Docs
+description: Outre des conseils généraux visant à améliorer les performances de la réplication dans SQL Server, découvrez des techniques supplémentaires pour la réplication transactionnelle.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386c475975e94408ed4260f35bb0646c6878575
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288176"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807985"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "76288176"
   
      Le fait de configurer les agents afin qu'ils s'exécutent en mode continu au lieu de planifier de fréquentes exécutions (par exemple, toutes les minutes) permet d'améliorer les performances de la réplication, car l'Agent n'a pas besoin de démarrer et de s'arrêter. Lorsque vous configurez l'Agent de distribution pour qu'il s'exécute en mode continu, les modifications sont diffusées avec une faible latence aux autres serveurs de la topologie qui sont connectés. Pour plus d'informations, consultez les pages suivantes :  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Paramètres de l'Agent de distribution et de l'Agent de lecture du journal  
 Les paramètres de profil de l’Agent sont souvent ajustés de manière à augmenter le débit de l’Agent de lecture du journal et de l’Agent de Distribution avec des systèmes OLTP à fort trafic. 
@@ -142,11 +143,11 @@ Cet exemple aboutit à un état dans lequel aucune session n’exécute leurs co
 
 Vous remarquerez peut-être les tendances suivantes dans les compteurs de performances de l’Agent de distribution pendant ce délai d’expiration de la requête : 
 
-- La valeur du compteur de performances **Serveur de distribution : commandes livrées/s** est toujours 0.
-- La valeur du compteur de performances **Serveur de distribution : transactions livrées/s** est toujours 0.
-- Le compteur de performances **Serveur de distribution : latence de livraison** indique une augmentation de la valeur jusqu’à ce que l’interblocage de thread soit résolu.
+- La valeur du compteur de performances **Serveur de distribution : commandes livrées/s** est toujours 0.
+- La valeur du compteur de performances **Serveur de distribution : transactions livrées/s** est toujours 0.
+- Le compteur de performances **Serveur de distribution : latence de livraison** indique une augmentation de la valeur jusqu’à ce que l’interblocage de thread soit résolu.
 
-La rubrique « Agent de distribution de réplication » dans la documentation en ligne de SQL Server contient la description suivante du paramètre *SubscriptionStreams* : « Si l’une des connexions ne parvient pas à s’exécuter ou à valider, toutes les connexions abandonnent le lot actuel et l’agent utilise un seul flux pour retenter les lots ayant échoué ».
+La rubrique « Agent de distribution de réplication » de la documentation en ligne de SQL Server contient la description suivante pour le paramètre *SubscriptionStreams* : « Si l’une des connexions ne réussit pas à s’exécuter ou n’est pas validée, toutes les connexions abandonneront le lot actuel, et l’Agent utilisera un flux unique pour une nouvelle tentative sur les lots ayant échoué. ».
 
 L’Agent de distribution utilise une session pour retenter le lot qui n’a pas pu être appliqué. Une fois que l’Agent de distribution applique correctement le lot, il reprend l’utilisation de plusieurs sessions sans avoir à redémarrer.
 

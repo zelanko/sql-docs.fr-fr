@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727066"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cet article décrit comment créer des index sur une vue. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.
 
@@ -92,7 +92,7 @@ Outre les options SET et les conditions requises pour les fonctions déterminist
 - Quand vous créez l’index, l’option `IGNORE_DUP_KEY` doit être définie sur OFF (valeur par défaut).
 - Les tables doivent être référencées par des noms en deux parties, _schéma_ **.** _nom_table_ , dans la définition de la vue.
 - Les fonctions définies par l’utilisateur référencées dans la vue doivent avoir été créées avec l’option `WITH SCHEMABINDING`.
-- Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, _\<schéma\>_ **.** _\<fonction\>_ .
+- Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, _\<schema\>_ **.** _\<function\>_ .
 - La propriété d’accès aux données d’une fonction définie par l’utilisateur doit avoir la valeur `NO SQL`, et la propriété d’accès externe doit avoir la valeur `NO`.
 - Les fonctions CLR (Common Language Runtime) peuvent s'afficher dans la liste SELECT de la vue mais ne peuvent pas faire partie de la définition de la clé d'index cluster. Ces fonctions ne peuvent pas apparaître dans la clause WHERE de la vue ou dans la clause ON d'une opération JOIN au sein de la vue.
 - Les propriétés des méthodes et fonctions CLR des types CLR définis par l'utilisateur employés dans la définition de vue doivent être définies de la manière illustrée dans le tableau suivant.

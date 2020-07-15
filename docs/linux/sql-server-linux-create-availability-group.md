@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077445"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896548"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Ce tutoriel traite de la création et de la configuration d’un groupe de disponibilité pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux. Contrairement à [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] et aux versions antérieures sur Windows, vous pouvez activer des groupes de disponibilité en commençant ou non par créer le cluster Pacemaker sous-jacent. Si elle est nécessaire, l’intégration au cluster est effectuée plus tard.
 
@@ -582,7 +582,9 @@ Un cluster de haute disponibilité Pacemaker sous-jacent à [!INCLUDE[ssnoversio
 
 Après la création d’un groupe de disponibilité dans [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], les ressources correspondantes doivent être créées dans Pacemaker lorsqu’un type de cluster externe est spécifié. Il existe deux ressources associées à un groupe de disponibilité : le groupe de disponibilité proprement dit et l’adresse IP. La configuration de la ressource d’adresse IP est facultative si vous n’utilisez pas la fonctionnalité d’écouteur, mais elle est recommandée.
 
-La ressource de groupe de disponibilité créée est un type spécial de ressource appelé clone. La ressource de groupe de disponibilité a essentiellement des copies sur chaque nœud, une ressource de contrôle étant appelée maître. Le maître est associé au serveur qui héberge le réplica principal. Les réplicas secondaires (standard ou de configuration uniquement) sont considérés comme des esclaves et peuvent être promus maître dans un basculement.
+La ressource de groupe de disponibilité créée est un type spécial de ressource appelé clone. La ressource de groupe de disponibilité a essentiellement des copies sur chaque nœud, une ressource de contrôle étant appelée maître. Le maître est associé au serveur qui héberge le réplica principal. Les réplicas secondaires hôtes d’autres ressources (standard ou de configuration uniquement) peuvent être promus maître dans un basculement.
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  Créez la ressource de groupe de disponibilité avec la syntaxe suivante :
 

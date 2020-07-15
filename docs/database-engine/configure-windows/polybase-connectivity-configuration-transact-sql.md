@@ -1,31 +1,32 @@
 ---
 title: Configuration de la connectivité PolyBase (Transact-SQL) | Microsoft Docs
+description: Découvrez comment utiliser sp_configure pour afficher ou modifier les paramètres de configuration globale pour la connectivité de PolyBase Hadoop et Stockage Blob Azure.
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.technology: configuration
-ms.topic: conceptual
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938951"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuration de la connectivité PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
   Affiche ou modifie les paramètres de configuration globale pour la connectivité du stockage d'objets blob Azure et PolyBase Hadoop.
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,29 +57,29 @@ RECONFIGURE
   
  Voici les paramètres de connectivité Hadoop et leurs sources de données Hadoop prises en charge correspondantes. Un seul paramètre peut être activé à la fois. Les options 1, 4 et 7 permettent de créer plusieurs types de sources de données externes et de les utiliser dans toutes les sessions sur le serveur.  
   
--   Option 0 : désactiver la connectivité Hadoop  
+-   Option 0 : désactiver la connectivité Hadoop  
   
--   Option 1 : Hortonworks HDP 1.3 sur Windows Server  
+-   Option 1 : Hortonworks HDP 1.3 sur Windows Server  
   
--   Option 1 : stockage d’objets blob Azure (WASB[S])  
+-   Option 1 : Azure Storage Blob (WASB[S])  
   
--   Option 2 : Hortonworks HDP 1.3 sur Linux  
+-   Option n°2 : Hortonworks HDP 1.3 sur Linux  
   
--   Option 3 : Cloudera CDH 4.3 sur Linux  
+-   Option 3 : Cloudera CDH 4.3 sur Linux  
   
--   Option 4 : Hortonworks HDP 2.0 sur Windows Server  
+-   Option 4 : Hortonworks HDP 2.0 sur Windows Server  
   
--   Option 4 : stockage d’objets blob Azure (WASB[S])  
+-   Option 4 : Azure Storage Blob (WASB[S])  
   
--   Option 5 : Hortonworks HDP 2.0 sur Linux  
+-   Option 5 : Hortonworks HDP 2.0 sur Linux  
   
--   Option 6 : Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 et 5.13 sur Linux  
+-   Option 6 : Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 et 5.13 sur Linux  
   
--   Option 7 : Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 sur Linux  
+-   Option 7 : Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 sur Linux  
   
--   Option 7 : Hortonworks 2.1, 2.2 et 2.3 sur Windows Server  
+-   Option 7 : Hortonworks 2.1, 2.2 et 2.3 sur Windows Server  
   
--   Option 7 : stockage d’objets blob Azure (WASB[S])  
+-   Option 7 : Azure Storage Blob (WASB[S])  
   
  **RECONFIGURE**  
  Met à jour la valeur d'exécution (run_value) afin qu’elle corresponde à la valeur de configuration (config_value). Pour connaître les définitions des valeurs run_value et config_value, consultez [Jeux de résultats](#ResultSets) . La nouvelle valeur de configuration définie par sp_configure n’est pas effective tant que la valeur d'exécution n’a pas été définie par l'instruction RECONFIGURE.  

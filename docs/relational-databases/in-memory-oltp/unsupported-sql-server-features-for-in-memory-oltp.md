@@ -1,5 +1,6 @@
 ---
 title: Fonctionnalités non prises en charge - OLTP en mémoire
+description: Apprenez-en davantage sur les fonctionnalités de SQL Server qui ne sont pas prises en charge pour les objets à mémoire optimisée. Affichez les fonctionnalités d’OLTP en mémoire qui sont prises en charge.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77558321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753168"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne sont pas prises en charge pour une utilisation avec les objets à mémoire optimisée. De plus, la section finale liste les fonctionnalités qui n’étaient pas prises en charge pour l’OLTP en mémoire, mais qui ont ensuite été prises en charge.
   

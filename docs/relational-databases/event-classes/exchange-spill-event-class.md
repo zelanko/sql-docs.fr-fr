@@ -12,15 +12,15 @@ ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12c4552ac8a78c5347f700144afa316d64774602
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 234c70cb0724bd313f7e98b92f8d043ff1e2bf5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642325"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d’événements **Exchange Spill** indique que les tampons d’un plan de requête parallèle ont été temporairement écrits dans la base de données **tempdb** . Cet événement intervient rarement, seulement lorsqu'un plan de requête inclut de multiples plages d'analyses.  
   
  Normalement, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui génère de telles plages d'analyses comprend de nombreux opérateurs BETWEEN, chacun d'entre eux permettant de sélectionner une plage de lignes à partir d'une table ou d'un index. Vous pouvez également obtenir de multiples plages via des expressions telles que (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). De plus, les plans de requête imposent que ces plages soient analysées de façon ordonnée, dans la mesure ou une clause ORDER BY est spécifiée sur T.a, ou parce qu'un itérateur du plan demande que les lignes qu'il consomme soient triées.  
@@ -60,7 +60,7 @@ ms.locfileid: "68089357"
 |**GroupID**|**int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
-|**LoginName**|**nvarchar**|Nom de la connexion de l’utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit les informations d’identification de connexion Windows au format *\<DOMAINE>\\<nom_utilisateur\>* ).|11|Oui|  
+|**LoginName**|**nvarchar**|Nom de la connexion de l’utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit les informations d’identification Windows au format *\<DOMAIN>\\<nom_utilisateur\>* ).|11|Oui|  
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans la table **syslogins** de la base de données **master** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  

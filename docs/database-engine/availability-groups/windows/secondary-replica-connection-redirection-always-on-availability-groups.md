@@ -1,6 +1,6 @@
 ---
 title: Rediriger les connexions en lecture/écriture vers le réplica principal
-description: Découvrez comment toujours rediriger les connexions en lecture/écriture vers le réplica principal d’un groupe de disponibilité Always On, quel que soit le serveur cible spécifié dans la chaîne de connexion.
+description: Découvrez comment rediriger les connexions en lecture/écriture vers le réplica principal d’un groupe de disponibilité Always On, quel que soit le serveur spécifié dans la chaîne de connexion.
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637818"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 permet désormais la *redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal* pour les groupes de disponibilité AlwaysOn. La redirection de connexion en lecture/écriture est disponible pour toutes les plateformes de système d’exploitation. Elle permet de rediriger les connexions d’applications clientes vers le réplica principal, quel que soit le serveur cible spécifié dans la chaîne de connexion. 
 

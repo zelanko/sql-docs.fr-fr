@@ -1,5 +1,6 @@
 ---
 title: Stratégie de mot de passe | Microsoft Docs
+description: Les mécanismes de stratégie de mot de passe Windows s’appliquent à une connexion qui utilise l’authentification SQL Server et à un utilisateur de base de données autonome avec un mot de passe.
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -32,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3bd3bf3de9e70095ed217a160d7f29234a65cea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68010823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725931"
 ---
 # <a name="password-policy"></a>Stratégie de mot de passe
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut exploiter les mécanismes de stratégie de mot de passe Windows. La stratégie de mot de passe s'applique à une connexion qui utilise l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à un utilisateur de base de données autonome avec un mot de passe.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appliquer aux mots de passe utilisés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des stratégies de complexité et d'expiration identiques à celles de Windows. Cette fonctionnalité dépend de l'API `NetValidatePasswordPolicy` .  

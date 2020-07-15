@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_916 | Microsoft Docs
+description: La connexion n’a pas les autorisations suffisantes pour se connecter à la base de données SQL Server nommée. Consultez une explication de l’erreur et les solutions possibles.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8dc9f9575f9e385d177d7b37f3753facfb905d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 510708fd1cd119ee3a665cecb903ff63edbb525e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80271465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636809"
 ---
 # <a name="mssqlserver_916"></a>MSSQLSERVER_916
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Détails  
   
-|||  
-|-|-|  
+| Attribut | Valeur |  
+| :-------- | :---- |  
 |Nom du produit|SQL Server|  
 |ID de l’événement|916|  
 |Source de l’événement|MSSQLSERVER|  

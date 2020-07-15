@@ -1,5 +1,6 @@
 ---
 title: OLTP en mémoire pour des performances T-SQL plus rapides
+description: Découvrez les principes de base des fonctionnalités de performances d’OLTP en mémoire de SQL Server et d’Azure SQL Database grâce à des explications rapides et des exemples de code de base pour les développeurs.
 ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e90d523b4dc17d640ebaae825abef59d80582389
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650866"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Inspection des zones initiales dans OLTP en mémoire
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 Cet article est destiné aux développeurs qui souhaitent se familiariser en quelques minutes avec les principes de base des fonctionnalités de performances OLTP en mémoire de Microsoft SQL Server et d’Azure SQL Database.  
@@ -59,7 +60,7 @@ Les systèmes qui traitent des calculs lourds dans Transact-SQL constituent d’
   
 Vous pourrez par la suite consulter les articles suivants qui offrent des démonstrations des gains de performances offerts par l’OLTP en mémoire :  
   
-- La[Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) propose une démonstration à petite échelle des gains de performances potentiels.  
+- La [Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) propose une démonstration à petite échelle des gains de performances potentiels.  
 - La page [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (Exemple de base de données pour l’OLTP en mémoire) présente une démonstration à plus grande échelle.  
   
   
@@ -93,12 +94,12 @@ Une série d’excellents billets de blog expliquent de manière élégante les 
 
 1. [Analytique opérationnelle en temps réel à l’aide de la technologie en mémoire](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
 2. [Analytique opérationnelle en temps réel - Vue d’ensemble d’un index columnstore non cluster](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [Analytique opérationnelle en temps réel : Exemple simple utilisant un index columnstore non cluster dans SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [Analytique opérationnelle en temps réel : Opérations DML et index columnstore non cluster dans SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [Analytique opérationnelle en temps réel : Index columnstore non cluster filtré](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [Analytique opérationnelle en temps réel : Option de délai de compression pour l’index columnstore non cluster](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [Analytique opérationnelle en temps réel : Option de délai de compression avec index columnstore non cluster et performances](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [Analytique opérationnelle en temps réel : Tables optimisées en mémoire et index columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+3. [Analytique opérationnelle en temps réel : Exemple simple utilisant un index columnstore non-cluster dans SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
+4. [Analytique opérationnelle en temps réel : Opérations DML et index columnstore non-cluster dans SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
+5. [Analytique opérationnelle en temps réel : Index columnstore non-cluster filtré](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
+6. [Analytique opérationnelle en temps réel : Option de délai de compression pour l’index columnstore non-cluster](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
+7. [Analytique opérationnelle en temps réel : Option de délai de compression avec index columnstore non cluster et performances](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
+8. [Analytique opérationnelle en temps réel : Tables à mémoire optimisée et index columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
 
 #### <a name="defragment-a-columnstore-index"></a>Défragmenter un index columnstore
 
@@ -107,7 +108,7 @@ Une série d’excellents billets de blog expliquent de manière élégante les 
 
 #### <a name="bulk-importation-of-data"></a>Importation en bloc des données
 
-1. [Cluster columnstore : Chargement en bloc](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
+1. [Cluster columnstore : Chargement en bloc](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
 2. [Index cluster columnstore : Optimisations du chargement des données - Journalisation minimale](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
 3. [Index cluster columnstore : Optimisations du chargement des données - Importation en bloc parallèle](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
@@ -214,7 +215,7 @@ Dans Azure SQL Database, vous ne devez et ne pouvez pas créer un groupe de fich
 
 L’exemple de script T-SQL suivant active une base de données pour OLTP en mémoire et configure tous les paramètres recommandés. Il fonctionne avec SQL Server et Azure SQL Database : [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql).
 
-Notez que toutes les fonctionnalités SQL Server ne sont pas prises en charge pour les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA. Pour plus d’informations sur les limitations, consultez [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](unsupported-sql-server-features-for-in-memory-oltp.md).
+Notez que toutes les fonctionnalités SQL Server ne sont pas prises en charge pour les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA. Pour plus d’informations sur les limitations, consultez : [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -359,18 +360,18 @@ Les sous-sections suivantes décrivent brièvement comment fonctionne l’OLTP e
 ### <a name="how-memory-optimized-tables-perform-faster"></a>Dans quelle mesure les performances des tables optimisées en mémoire sont-elles plus rapides ?  
   
   
-**Double nature :** une table optimisée en mémoire présente une double nature : une représentation en mémoire active et une autre sur le disque dur. Chaque transaction est validée dans les deux représentations de la table. Les transactions s’exécutent par rapport à la représentation en mémoire active, qui est beaucoup plus rapide. Les tables optimisées en mémoire tirent parti de la vitesse supérieure qu’offre la mémoire active par rapport au disque. En outre, grâce à la souplesse supérieure de la mémoire active, vous pouvez facilement mettre en place une structure de table plus avancée qui est optimisée pour la vitesse. De plus, comme la structure avancée ne fait pas appel à la pagination, elle évite la surcharge et la contention liées aux verrous et aux verrouillages tournants.  
+**Double nature :** une table à mémoire optimisée présente une double nature : une représentation en mémoire active et une autre sur le disque dur. Chaque transaction est validée dans les deux représentations de la table. Les transactions s’exécutent par rapport à la représentation en mémoire active, qui est beaucoup plus rapide. Les tables optimisées en mémoire tirent parti de la vitesse supérieure qu’offre la mémoire active par rapport au disque. En outre, grâce à la souplesse supérieure de la mémoire active, vous pouvez facilement mettre en place une structure de table plus avancée qui est optimisée pour la vitesse. De plus, comme la structure avancée ne fait pas appel à la pagination, elle évite la surcharge et la contention liées aux verrous et aux verrouillages tournants.  
   
   
-**Aucun verrou :** la table optimisée en mémoire s’appuie sur une approche *optimiste* des objectifs concurrents que sont, d’une part, l’intégrité des données et, d’autre part, la concurrence et le débit élevé. Pendant la transaction, la table ne place de verrous sur aucune version des lignes de données mises à jour. Cela peut réduire considérablement la contention dans certains systèmes à volumes élevés.  
+**Aucun verrou :** la table à mémoire optimisée s’appuie sur une approche *optimiste* des objectifs concurrents que sont, d’une part, l’intégrité des données et, d’autre part, la concurrence et le débit élevé. Pendant la transaction, la table ne place de verrous sur aucune version des lignes de données mises à jour. Cela peut réduire considérablement la contention dans certains systèmes à volumes élevés.  
   
   
-**Versions de ligne :** au lieu de verrous, la table optimisée en mémoire ajoute une nouvelle version d’une ligne mise à jour à la table elle-même, et non dans tempdb. La ligne d’origine est conservée jusqu’à ce que la transaction soit validée. Pendant la transaction, les autres processus peuvent lire la version d’origine de la ligne.  
+**Versions de ligne :** au lieu de verrous, la table à mémoire optimisée ajoute une nouvelle version d’une ligne mise à jour à la table elle-même, et non dans tempdb. La ligne d’origine est conservée jusqu’à ce que la transaction soit validée. Pendant la transaction, les autres processus peuvent lire la version d’origine de la ligne.  
   
 - Si plusieurs versions d’une ligne sont créées pour une table basée sur disque, les versions de ligne sont stockées temporairement dans tempdb.  
   
   
-**Moins de journalisation :** les versions avant et après des lignes mises à jour sont conservées dans la table optimisée en mémoire. La paire de lignes fournit la plupart des informations qui sont traditionnellement écrites dans le fichier journal. Ainsi, le système écrit moins d’informations, et moins souvent, dans le journal. L’intégrité transactionnelle est néanmoins assurée.  
+**Moins de journalisation :** les versions avant et après des lignes mises à jour sont conservées dans la table à mémoire optimisée. La paire de lignes fournit la plupart des informations qui sont traditionnellement écrites dans le fichier journal. Ainsi, le système écrit moins d’informations, et moins souvent, dans le journal. L’intégrité transactionnelle est néanmoins assurée.  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -396,14 +397,14 @@ Le reste de cette section répertorie les principaux éléments à prendre en co
 ### <a name="trade-offs-of-memory-optimized-tables"></a>Compromis des tables optimisées en mémoire  
   
   
-**Estimer la mémoire :** vous devez estimer la quantité de mémoire active que votre table optimisée en mémoire est appelée à consommer. Votre système informatique doit avoir une capacité de mémoire suffisante pour héberger une table optimisée en mémoire. Pour plus d’informations, consultez :  
+**Estimer la mémoire :** vous devez estimer la quantité de mémoire active que votre table à mémoire optimisée est appelée à consommer. Votre système informatique doit avoir une capacité de mémoire suffisante pour héberger une table optimisée en mémoire. Pour plus d’informations, consultez :  
   
 - [Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Taille de la table et des lignes dans les tables mémoire optimisées](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Partitionner votre table volumineuse :** une façon de répondre à la demande d’une quantité de mémoire active élevée consiste à partitionner votre table volumineuse en parties en mémoire qui stockent les lignes de données *récentes à chaud* , tandis que les autres parties sur le disque comportent les lignes *héritées à froid* (telles que les commandes qui ont été entièrement livrées et terminées). Ce partitionnement est un processus manuel de conception et d’implémentation. Consultez l'article :  
+**Partitionner votre table volumineuse :** une façon de répondre à la demande d’une quantité de mémoire active élevée consiste à partitionner votre table volumineuse en parties en mémoire qui stockent les lignes de données *récentes à chaud*, tandis que les autres parties sur le disque comportent les lignes *héritées à froid* (telles que les commandes qui ont été entièrement livrées et terminées). Ce partitionnement est un processus manuel de conception et d’implémentation. Consultez l'article :  
   
 - [Partitionnement au niveau de l’application](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Modèle d’application pour partitionner des tables mémoire optimisées](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -493,9 +494,9 @@ L’article suivant, et ses articles enfants dans la table des matières, décri
   
 ## <a name="related-links"></a>Liens connexes  
   
-- Article initial : [OLTP en mémoire (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Article initial : [In-Memory OLTP (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Voici des articles qui contiennent du code pour illustrer les gains de performance que vous pouvez obtenir à l’aide de l’OLTP en mémoire :  
   
-- La[Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) propose une démonstration à petite échelle des gains de performances potentiels.  
+- La [Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) propose une démonstration à petite échelle des gains de performances potentiels.  
 - La page [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (Exemple de base de données pour l’OLTP en mémoire) présente une démonstration à plus grande échelle.  

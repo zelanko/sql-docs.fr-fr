@@ -17,15 +17,15 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720591"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique décrit comment afficher et modifier les propriétés du serveur de distribution et du serveur de publication dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
  **Dans cette rubrique**  
@@ -61,7 +61,7 @@ ms.locfileid: "76286936"
   
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Propriétés du serveur de distribution**.  
   
-3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** .  
+3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** .  
   
     -   Pour afficher et modifier les propriétés d’une base de données de distribution, cliquez sur le bouton des propriétés ( **...** ) pour la base de données dans la page **Général** de la boîte de dialogue.  
   

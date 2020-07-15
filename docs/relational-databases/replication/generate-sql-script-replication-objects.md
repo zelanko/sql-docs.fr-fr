@@ -15,20 +15,20 @@ ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 474a65593b830e671a7a65557c4c5fec11aea07a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 33473f0d5309b3db41c65ad6c8d376ac6f75dc62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652917"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Générer un script SQL (objets de réplication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Un script de réplication contient les procédures stockées système [!INCLUDE[tsql](../../includes/tsql-md.md)] nécessaires à l'implémentation de composants de réplication en script, tels qu'une publication ou un abonnement. Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. La réplication propose deux boîtes de dialogue spécifiques à l'écriture de scripts mettant en œuvre des objets de réplication :  
   
 -   **Générer un script SQL**, disponible à partir du menu contextuel du dossier **Replication** ainsi que de tous les sous-dossiers de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cette boîte de dialogue vous permet de générer des scripts d’objets de réplication sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Générer un script SQL\<nom_objet>** , disponible à partir du menu contextuel relatif aux publications et aux abonnements. Cette boîte de dialogue vous permet de générer des scripts d'objets individuels.  
+-   **Générer un script SQL \<ObjectName>** , disponible à partir du menu contextuel relatif aux publications et aux abonnements. Cette boîte de dialogue vous permet de générer des scripts d'objets individuels.  
   
  Ces boîtes de dialogue génèrent des scripts d'objets sur une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils ne se connectent pas à d'autres instances pour permettre générer des scripts d'objets associés.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "76285814"
   
  Les procédures stockées de réplication créent les travaux nécessaires lors de leur exécution ; il n'est donc pas requis de choisir cette option. Il peut toutefois s'avérer utile d'obtenir un enregistrement des travaux créés dans le cas où un seul travail devait être recréé.  
   
-## <a name="generate-sql-script-objectname-options"></a>Options de la boîte de dialogue Générer un script SQL \<nom_objet>  
+## <a name="generate-sql-script-objectname-options"></a>Options de la boîte de dialogue Générer un script SQL \<ObjectName>  
  **Pour créer ou activer les composants** et **Pour supprimer ou désactiver les composants**  
  Permet d'indiquer si le script doit inclure des commandes de création ou de suppression d'un objet de réplication. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser la boîte de dialogue pour créer un ensemble de scripts d'activation et de désactivation de composants.  
   

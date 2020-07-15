@@ -1,5 +1,6 @@
 ---
 title: DDL pris en charge pour les modules T-SQL compilés en mode natif | Microsoft Docs
+description: Apprenez-en davantage sur les constructions en langage de définition de données (DDL, Data Definition Language) prises en charge pour les modules T-SQL compilés en mode natif, telles que les procédures stockées, les fonctions définies par l’utilisateur (UDF) scalaires, les fonctions table (TVF) inline et les déclencheurs.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fde492554b52170602e5676fa8dcce018885053
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c2a91b1568b139038cad32e81e273d564fbec98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715377"
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>DDL pris en charge pour les modules T-SQL compilés en mode natif
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cette rubrique répertorie les constructions DDL (langage de définition de données) prises en charge pour les modules T-SQL compilés en mode natif, telles que les procédures stockées, les fonctions définies par l’utilisateur (UDF) scalaires, les Fonctions table (TVF) inline et les déclencheurs.  
   
  Pour plus d’informations sur les fonctionnalités et la surface d’exposition de T-SQL qui peut être utilisée dans des modules de T-SQL compilés en mode natif, consultez [Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  

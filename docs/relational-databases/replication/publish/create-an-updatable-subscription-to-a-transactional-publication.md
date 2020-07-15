@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896816"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 > [!NOTE]  
 >  Cette fonctionnalité reste prise en charge dans les versions de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] (2012 à 2016).  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
 
@@ -201,7 +201,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour en file d’attente en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * Si la valeur de allow_queued_tran dans le jeu de résultats est 1, la publication prend en charge les abonnements avec mise à jour immédiate.
-    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, voir Procédure : activer les abonnements avec mise à jour pour les publications transactionnelles (programmation Transact-SQL de la réplication).
+    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, consultez Guide pratique pour activer les abonnements avec mise à jour pour les publications transactionnelles (programmation Transact-SQL de la réplication).
 
 2. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements par émission de données en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 

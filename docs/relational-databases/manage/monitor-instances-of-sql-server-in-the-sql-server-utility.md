@@ -1,5 +1,6 @@
 ---
 title: Surveiller des instances de SQL Server dans l’utilitaire SQL Server | Microsoft Docs
+description: Découvrez l’Utilitaire SQL Server que vous pouvez utiliser pour surveiller les instances de SQL Server. Découvrez comment afficher le tableau de bord et réduire le bruit lors de la création de rapports.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba3695cffffe5d28af15a94461f60fb207fbe665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 31db9f3aeb938cfcf2fb88834eb59b116355760b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719029"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Surveiller des instances de SQL Server dans l'utilitaire SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
   
 |Rubrique|Information|  

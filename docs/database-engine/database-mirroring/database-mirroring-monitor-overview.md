@@ -1,5 +1,6 @@
 ---
 title: Vue d’ensemble du moniteur de mise en miroir de bases de données | Microsoft Docs
+description: Découvrez comment utiliser le Moniteur de mise en miroir de bases de données pour surveiller les bases de données mises en miroir afin de vérifier le flux de données dans la session de mise en miroir de bases de données et résoudre les problèmes.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d5dbfd56f461da431843d1788d9226a72448b57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730924"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Si vous disposez des autorisations appropriées, vous pouvez utiliser le moniteur de mise en miroir de bases de données pour surveiller un sous-ensemble quelconque des bases de données mises en miroir sur une instance de serveur. La surveillance permet de vérifier si et comment les données circulent dans la session de mise en miroir de bases de données. Le moniteur de mise en miroir de bases de données permet de déterminer la cause d'une réduction du flux de données.  
   
  Vous pouvez inscrire vos bases de données mises en miroir pour une surveillance individuelle sur chaque partenaire de basculement. Lorsque vous inscrivez une base de données, le moniteur de mise en miroir de bases de données met en cache les informations suivantes relatives à la base de données :  
@@ -46,12 +47,12 @@ ms.locfileid: "68006408"
   
  Pour chaque base de données inscrite, les informations suivantes s'affichent :  
   
- _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
+ _<nom_base_de_données>_ **(** _\<Status>_ **,** _<SERVEUR_PRINCIPAL>_ **->** _<SERVEUR_MIROIR>_ **)**  
   
  *<nom_base_de_données>*  
  Nom d'une base de données mise en miroir inscrite auprès du moniteur de mise en miroir de bases de données.  
   
- *\<État>*  
+ *\<Status>*  
  Les états possibles et les icônes associées sont les suivants :  
   
 |Icône|Statut|Description|  
@@ -82,7 +83,7 @@ ms.locfileid: "68006408"
   
  Un administrateur système peut afficher la configuration actuelle des avertissements pour la base de données en sélectionnant la page à onglets **Avertissements** . À partir de là, l’administrateur peut lancer la boîte de dialogue **Définir les seuils d’avertissement** pour activer et configurer un ou plusieurs seuils d’avertissement.  
   
- Dans la bannière située au-dessus des onglets, le volet d’information indique l’heure de la dernière actualisation des informations d’état par le moniteur dans le champ **Dernière actualisation :** _\<date>\<heure>_ . En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
+ Dans la bannière située au-dessus des onglets, le volet d’informations affiche l’heure de la dernière actualisation des informations d’état par le moniteur dans le champ **Dernière actualisation :** _\<date>\<time>_ . En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
   
 ## <a name="action-menu"></a>Menu Action  
  Le menu **Action** comprend toujours les commandes suivantes :  

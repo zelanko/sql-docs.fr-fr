@@ -1,5 +1,6 @@
 ---
 title: Inscrire un nom de principal du service pour les connexions Kerberos | Microsoft Docs
+description: Découvrez comment inscrire un nom de principal du service auprès d’Active Directory. Cette inscription est requise pour l’utilisation de l’authentification Kerberos avec SQL Server.
 ms.custom: ''
 ms.date: 08/06/2019
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651751"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Pour utiliser l'authentification Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les deux conditions suivantes doivent être remplies :  
   
 -   Les ordinateurs clients et serveurs doivent faire partie du même domaine Windows ou appartenir à des domaines approuvés.  
@@ -70,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Instance nommée**  
   
--   **MSSQLSvc/\<FQDN>:[\<port> | \<nom_instance>]** , où :  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]** , où :  
   
     -   **MSSQLSvc** est le service en cours d’inscription.  
   
@@ -78,7 +79,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   **\<port>** est le numéro de port TCP.  
   
-    -   **\<nom_instance>** est le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   **\<instancename>** est le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Instance par défaut**  
   
@@ -95,17 +96,17 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
    
 |||  
 |-|-|  
-|MSSQLSvc/\<FQDN> :<port>|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé. \<port> est un numéro de port TCP.|  
+|MSSQLSvc/\<FQDN>:<port>|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé. \<port> est un numéro de port TCP.|  
 |MSSQLSvc/\<FQDN>|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé. \<FQDN> est un nom de domaine complet.|  
-|MSSQLSvc/\<FQDN>:\<nom_instance>|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé. \<Nom_instance> est le nom d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/\<FQDN>:\<instancename>|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé. \<instancename> est le nom d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 
 > [!NOTE]  
 > Dans le cas d'une connexion TCP/IP, où le port TCP est inclus dans le SPN, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit activer le protocole TCP afin de permettre à un utilisateur de se connecter à l'aide de l'authentification Kerberos. 
 
 ##  <a name="automatic-spn-registration"></a><a name="Auto"></a> Inscription automatique des SPN  
- Lors du démarrage d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’inscrire le nom SPN du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lors de l’arrêt de l’instance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’annuler l’inscription du nom SPN. Pour une connexion TCP/IP, le nom de principal du service (SPN) est inscrit au format *MSSQLSvc/\<FQDN>* : *\<port_tcp>* . Les instances nommées et l’instance par défaut sont inscrites en tant que *MSSQLSvc* et seule la valeur de *\<port_tcp>* différencie les instances.  
+ Lors du démarrage d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’inscrire le nom SPN du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lors de l’arrêt de l’instance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’annuler l’inscription du nom SPN. Pour une connexion TCP/IP, le SPN est inscrit au format *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Les instances nommées et l’instance par défaut sont inscrites en tant que *MSSQLSvc*. La valeur *\<tcpport>* est utilisée pour différencier les instances.  
   
- Pour les autres connexions qui prennent en charge Kerberos, le nom SPN est inscrit au format *MSSQLSvc/\<FQDN>* / *\<nom_instance>* pour une instance nommée. Le format pour l’inscription de l’instance par défaut est *MSSQLSvc/\<FQDN>* .  
+ Pour les autres connexions qui prennent en charge Kerberos, le SPN est inscrit au format *MSSQLSvc/\<FQDN>* / *\<instancename>* pour une instance nommée. Le format *MSSQLSvc/\<FQDN>* est utilisé pour l’inscription de l’instance par défaut.  
   
  Une intervention manuelle peut être requise pour inscrire ou annuler l'inscription du SPN si le compte de service ne possède pas les autorisations requises pour ces actions.  
   
@@ -136,7 +137,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
 ##  <a name="client-connections"></a><a name="Client"></a> Connexions clientes  
  Les SPN spécifiés par l'utilisateur sont pris en charge dans les pilotes clients. Toutefois, si aucun SPN n'est fourni, il est généré automatiquement en fonction du type de connexion cliente. Pour une connexion TCP, un nom SPN au format *MSSQLSvc*/*FQDN*:[*port*] est utilisé à la fois pour les instances nommées et par défaut.  
   
-Pour les connexions par canaux nommés et mémoire partagée, un SPN au format *MSSQLSvc/\<FQDN>:\<nom_instance>* est utilisé pour une instance nommée et *MSSQLSvc/\<FQDN>* est utilisé pour l’instance par défaut.  
+Pour les connexions par canaux nommés et mémoire partagée, un SPN au format *MSSQLSvc/\<FQDN>:\<instancename>* est utilisé pour une instance nommée et *MSSQLSvc/\<FQDN>* est utilisé pour l’instance par défaut.  
   
  **Utilisation d'un compte de service comme SPN**  
   
@@ -174,7 +175,7 @@ WHERE session_id = @@SPID;
   
  Si l'annulation de l'inscription du SPN échoue pendant l'arrêt, cet échec est consigné dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'arrêt se poursuit.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge des noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

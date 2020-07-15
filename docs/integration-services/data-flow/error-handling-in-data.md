@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292762"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469324"
 ---
 # <a name="error-handling-in-data"></a>Gestion des erreurs dans les données
 
@@ -144,7 +144,7 @@ Utilisez la boîte de dialogue **Configurer l'affichage des erreurs** pour défi
   
     -   Incluez la description d’erreur dans une colonne supplémentaire en utilisant une ligne unique de script pour appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
   
-    -   Incluez le nom de colonne dans une colonne supplémentaire en utilisant une ligne unique de script pour appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
+    -   Incluez le nom de colonne dans une colonne supplémentaire en utilisant une ligne de script pour appeler la méthode [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
      Vous pouvez ajouter le composant Script au segment d’erreur du flux de données n’importe où en aval des composants de flux de données dont vous souhaitez capturer les erreurs. En règle générale, vous placez le composant Script immédiatement avant l’écriture des lignes d’erreur dans une destination. De cette manière, le script recherche uniquement les descriptions des lignes d’erreur écrites. Le segment d’erreur du flux de données peut corriger certaines erreurs sans écrire ces lignes dans une destination d’erreur.  
 

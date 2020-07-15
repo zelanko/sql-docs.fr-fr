@@ -1,5 +1,6 @@
 ---
 title: Ajouter des fonctionnalités à une instance de SQL Server (programme d’installation) | Microsoft Docs
+description: Cet article fournit une procédure pas à pas pour ajouter des fonctionnalités dépendantes d’une instance à une instance de SQL Server 2019.
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3ddd9eba40cc7df81b0e86df7733d840bccace2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051207"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899691"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Ajouter des fonctionnalités à une instance de SQL Server (programme d’installation)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  Cet article fournit une procédure pas à pas pour ajouter des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Certains composants ou services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont spécifiques à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils sont également définis comme étant dépendants de l'instance. Ils partagent la même version que l'instance qui les héberge et sont utilisés exclusivement pour cette instance. Vous pouvez ajouter les composants dépendant d'une instance à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], avec des composants partagés s'ils ne sont pas déjà installés. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68051207"
 >  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
 > [!NOTE]  
->  Lorsque vous ajoutez des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les paramètres de rapport d'utilisation existants sont appliqués aux fonctionnalités ajoutées récemment. Pour modifier ces paramètres, utilisez l’outil **Rapports d’erreurs et d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** du menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+>  Lorsque vous ajoutez des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les paramètres de rapport d'utilisation existants sont appliqués aux fonctionnalités ajoutées récemment. Pour modifier ces paramètres, utilisez l’outil **Rapports d’erreurs et d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** du menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
 ## <a name="procedures"></a>Procédures  
   
@@ -118,15 +119,15 @@ ms.locfileid: "68051207"
   
 20. Utilisez la page Configuration de Distributed Replay Client pour spécifier les utilisateurs auxquels vous voulez accorder des autorisations administratives sur le service Distributed Replay Client. Les utilisateurs qui disposent d'autorisations administratives ont un accès illimité au service Distributed Replay Client.  
   
-     **Nom du contrôleur** est un paramètre optionnel. La valeur par défaut est \<*blank*>. Entrez le nom du contrôleur avec lequel l'ordinateur client communiquera pour le service Distributed Replay Client. Notez les points suivants :  
+     **Nom du contrôleur** est un paramètre optionnel ; la valeur par défaut est \<*blank*>. Entrez le nom du contrôleur avec lequel l'ordinateur client communiquera pour le service Distributed Replay Client. Notez les points suivants :  
   
     -   Si vous avez déjà configuré un contrôleur, entrez son nom lors de la configuration de chaque client.  
   
     -   Si vous n'avez pas encore configuré de contrôleur, vous n'êtes pas obligé de fournir le nom du contrôleur. Toutefois, vous devez entrer manuellement le nom du contrôleur dans le fichier de **configuration du client** .  
   
-     Spécifiez le **Répertoire de travail** du service Distributed Replay Client. Le répertoire de travail par défaut est \<*lettre de lecteur*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+     Spécifiez le **Répertoire de travail** du service Distributed Replay Client. Le répertoire de travail par défaut est \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
   
-     Spécifiez le **Répertoire des résultats** du service Distributed Replay Client. Le répertoire des résultats par défaut est \<*lettre de lecteur*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+     Spécifiez le **Répertoire des résultats** du service Distributed Replay Client. Le répertoire des résultats par défaut est \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
   
      Pour continuer, cliquez sur **Suivant**.  
   

@@ -1,5 +1,6 @@
 ---
 title: Principaux (moteur de base de données) | Microsoft Docs
+description: Apprenez-en davantage sur les principaux dans le Moteur de base de données (entités pouvant demander des ressources SQL Server). Il existe des principaux au niveau de SQL Server et au niveau de la base de données.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -29,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68344599"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005614"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. Le champ d'influence d'un principal dépend de l'étendue de sa définition : Windows, serveur, base de données, et du fait qu'il est indivisible ou qu'il s'agit d'une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID). Cette rubrique s’applique à toutes les versions de SQL Server, mais il existe certaines restrictions sur les principaux au niveau du serveur dans SQL Database ou SQL Data Warehouse. 
+  Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. La portée de l’influence d’un principal dépend de la portée de sa définition : Windows, serveur, base de données ; et du fait que le principal est indivisible ou qu'il s’agit d’une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID). Cette rubrique s’applique à toutes les versions de SQL Server, mais il existe certaines restrictions sur les principaux au niveau du serveur dans SQL Database ou SQL Data Warehouse. 
   
 ## <a name="sql-server-level-principals"></a>Principaux au niveau de SQL Server  
   

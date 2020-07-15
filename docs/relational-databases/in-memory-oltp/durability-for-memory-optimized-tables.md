@@ -1,5 +1,6 @@
 ---
 title: Durabilité pour les tables optimisées en mémoire | Microsoft Docs
+description: Découvrez comment OLTP en mémoire offre une durabilité complète pour les tables à mémoire optimisée, grâce à la journalisation des transactions et l’enregistrement des modifications apportées aux données dans un stockage sur disque.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723246"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] fournit la durabilité complète pour les tables optimisées en mémoire. Lorsqu'une transaction qui a modifié une table optimisée en mémoire est validée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (comme pour les tables sur disque), garantit que les modifications sont permanentes (perdureront au redémarrage d'une base de données), à condition que le stockage sous-jacent soit disponible. Il existe deux composantes clés de durabilité : l'enregistrement des transactions et la conservation des modifications de données dans un stockage sur disque.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67942808"
   
  Lorsqu'une ligne est supprimée ou mise à jour, elle n'est pas supprimée ou modifiée sur place dans le fichier de données, mais les lignes supprimées sont suivies dans un autre type de fichier : le fichier delta. Les opérations de mise à jour sont traitées comme un tuple d'opérations de suppression et d'insertion pour chaque ligne. Cela supprime les E/S aléatoires dans le fichier de données.  
  
-   Taille : chaque fichier de données a une taille d’environ 128 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 16 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle de grande taille s’il juge le sous-système de stockage assez rapide. En mode de point de contrôle de grande taille, les fichiers de données sont dimensionnés à 1 Go. Cela permet une plus grande efficacité du sous-système de stockage pour les charges de travail à débit élevé.  
+   Taille : Chaque fichier de données a une taille d'environ 128 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 16 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle de grande taille s’il juge le sous-système de stockage assez rapide. En mode de point de contrôle de grande taille, les fichiers de données sont dimensionnés à 1 Go. Cela permet une plus grande efficacité du sous-système de stockage pour les charges de travail à débit élevé.  
    
 ### <a name="the-delta-file"></a>Fichier delta  
  Chaque fichier de données est couplé à un fichier delta ayant la même plage de transactions et effectue le suivi des lignes supprimées insérées par les transactions dans cette plage. Ces données et ce fichier delta sont appelés « paire de fichiers de point de contrôle » (CFP, Checkpoint File Pair). Il s'agit de l'unité d'allocation et de désallocation, ainsi que de l'unité pour les opérations de fusion. Par exemple, un fichier delta correspondant à la plage de transaction (100, 200) enregistre les lignes supprimées qui avaient été insérées par les transactions de la plage (100, 200). Comme pour les fichiers de données, le fichier delta est accessible de manière séquentielle.  
@@ -49,7 +50,7 @@ ms.locfileid: "67942808"
  Lorsqu'une ligne est supprimée, elle n'est pas supprimée du fichier de données mais une référence à la ligne est ajoutée au fichier delta associé à la plage de transaction où la ligne de données a été insérée. Étant donné que la ligne à supprimer existe déjà dans le fichier de données, le fichier delta stocke uniquement les informations de référence sur `{inserting_tx_id, row_id, deleting_tx_id }` et suit l'ordre des opérations de suppression ou de mise à jour d'origine du journal des transactions.  
   
 
- Taille : chaque fichier delta a une taille d’environ 16 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 1 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle volumineux s’il juge le sous-système de stockage est assez rapide. En mode de point de contrôle de grande taille, les fichiers delta sont dimensionnés à 128 Mo.  
+ Taille : chaque fichier delta a une taille d’environ 16 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 1 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle volumineux s’il juge le sous-système de stockage est assez rapide. En mode de point de contrôle de grande taille, les fichiers delta sont dimensionnés à 128 Mo.  
  
 ## <a name="populating-data-and-delta-files"></a>Remplissage des fichiers de données et des fichiers delta  
  Les fichiers de données et delta sont remplis en fonction des enregistrements du journal des transactions générés par les transactions validées sur les tables optimisées en mémoire ; des informations concernant les lignes insérées et supprimées sont ajoutées dans les fichiers de données et delta appropriés. Contrairement aux tables sur disque où les pages de données/index sont vidées avec des E/S aléatoires lorsque le point de contrôle est effectué, la persistance de la table optimisée en mémoire est une opération en arrière-plan continue. Plusieurs fichiers delta sont accédés car une transaction peut supprimer ou mettre à jour toute ligne ayant été insérée par une transaction précédente. Les informations de suppression sont toujours ajoutées à la fin du fichier delta. Par exemple, une transaction avec un horodateur de validation de 600 insère une nouvelle ligne et supprime les lignes insérées par les transactions ayant un horodateur de validation de 150, 250 et 450, comme le montre l'illustration ci-après. Les quatre opérations d'E/S de fichier (trois pour les lignes supprimées et une pour les nouvelles lignes insérées) sont des opérations Append-Only sur les fichiers de données et delta correspondants.  

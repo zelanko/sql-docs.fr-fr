@@ -1,5 +1,6 @@
 ---
 title: Garbage collection de l’OLTP en mémoire | Microsoft Docs
+description: Apprenez-en davantage sur le garbage collection dans OLTP en mémoire dans SQL Server. Si une transaction qui n’est plus active supprime une ligne, elle est soumise au garbage collection.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13263d1f35d930b3bab81fc9cec099f1a96a6510
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9bc2a1d7791c593ab33335aea2967411117bac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723145"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Garbage collection de l'OLTP en mémoire
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Une ligne de données est considérée comme obsolète si elle a été supprimée par une transaction qui n'est plus active. Une ligne périmée est éligible à l'opération de garbage collection. Voici quelques caractéristiques du garbage collection dans [!INCLUDE[hek_2](../../includes/hek-2-md.md)]:  
   
 -   Non bloquant. Le garbage collection est distribué dans le temps avec un impact minimal sur la charge de travail.  

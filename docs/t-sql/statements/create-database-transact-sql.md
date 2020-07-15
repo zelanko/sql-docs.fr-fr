@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Syntaxe de création de base de données pour SQL Server, Azure SQL Database, Azure Synapse Analytics et Système de plateforme d’analyse
 ms.custom: ''
-ms.date: 03/16/2020
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91d278d564ab6647ad1a585c0641dcc17a8dd8f8
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 095e8f93377d75c411c63150203699908dee2d26
+ms.sourcegitcommit: 7679d0c5cc0edd35274a2b29e4d09347bfbefac6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987443"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664724"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -195,7 +195,8 @@ Pour plus d’informations sur les noms de classements Windows et SQL, voir [COL
 > [!NOTE]
 > Les bases de données autonomes sont classées différemment des bases de données non autonomes. Pour plus d’informations, consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md).
 
-WITH \<option> **\<filestream_options>**
+WITH \<option>
+ **\<filestream_options>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
 
@@ -207,7 +208,8 @@ Spécifie le niveau d'accès FILESTREAM non transactionnel à la base de donnée
 |READONLY|Les données FILESTREAM de cette base de données peuvent être lues par des processus non transactionnels.|
 |FULL|L'accès non transactionnel complet aux FileTables FILESTREAM est activé.|
 
-DIRECTORY_NAME = \<directory_name> **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures
+DIRECTORY_NAME = \<directory_name>
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures
 
 Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous les noms Database_Directory dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option doit être définie avant de créer un FileTable dans cette base de données.
 
@@ -237,7 +239,7 @@ Les options suivantes sont autorisées uniquement lorsque CONTAINMENT a été d�
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
-- **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<toute année comprise entre 1753 et 9999> }**
+- **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<any year between 1753 and 9999> }**
 
   Quatre chiffres qui représente une année. 2049 est la valeur par défaut. Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration du serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
 
@@ -266,7 +268,7 @@ Les options suivantes sont autorisées uniquement lorsque CONTAINMENT a été d�
 
   Lorsque cette option est spécifiée, le tampon du journal des transactions est créé sur un volume situé sur un disque avec mémoire de classe de stockage (stockage non volatil NVDIMM-N), également appelé tampon de journal persistant. Pour plus d’informations, voir [Accélération de la latence des validations de transactions avec la mémoire de classe de stockage](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/). **S’applique à** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et versions ultérieures.
 
-FOR ATTACH [ WITH \< attach_database_option > ] Spécifie que la base de données est créée en [joignant](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un ensemble existant de fichiers du système d’exploitation. Il doit exister une entrée \<filespec> spécifiant le premier fichier primaire. Les seules autres entrées \<filespec> nécessaires sont celles relatives aux fichiers dont le chemin est différent de celui existant lors de la première création de la base de données ou de son dernier attachement. Vous devez spécifier une entrée \<filespec> pour ces fichiers.
+FOR ATTACH [ WITH \< attach_database_option > ] spécifie que la base de données est créée en [joignant](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un ensemble existant de fichiers du système d’exploitation. Il doit exister une entrée \<filespec> spécifiant le premier fichier primaire. Les seules autres entrées \<filespec> nécessaires sont celles relatives aux fichiers dont le chemin est différent de celui existant lors de la première création de la base de données ou de son dernier attachement. Vous devez spécifier une entrée \<filespec> pour ces fichiers.
 
 FOR ATTACH exige les conditions suivantes :
 
@@ -280,15 +282,15 @@ Si une base de données en lecture-écriture possède un seul fichier journal qu
 
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tous les fichiers de texte intégral appartenant à la base de données qui est attachée seront attachés avec la base de données. Pour spécifier un nouveau chemin d'accès pour le catalogue de texte intégral, spécifiez le nouvel emplacement sans le nom de fichier du système d'exploitation en texte intégral. Pour plus d’informations, consultez la section Exemples.
 
-Le fait d’attacher une base de données qui contient une option FILESTREAM de « nom de répertoire », dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invitera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à vérifier que le nom Database_Directory est unique. Si ce n’est pas le cas, l’opération d’attachement échoue avec l’erreur, « FILESTREAM Database_Directory name \<name> n’est pas unique dans cette instance SQL Server ». Pour éviter cette erreur, le paramètre facultatif, *directory_name*, doit être passé à cette opération.
+Le fait d’attacher une base de données qui contient une option FILESTREAM de « nom de répertoire », dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invitera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à vérifier que le nom Database_Directory est unique. Si ce n’est pas le cas, l’opération d’attachement échoue avec l’erreur « FILESTREAM Database_Directory name \<name> n’est pas unique dans cette instance SQL Server ». Pour éviter cette erreur, le paramètre facultatif, *directory_name*, doit être passé à cette opération.
 
 FOR ATTACH ne peut pas être spécifié sur un instantané de base de données.
 
 FOR ATTACH peut spécifier l'option RESTRICTED_USER. RESTRICTED_USER permet uniquement aux membres du rôle de base de données fixe db_owner et aux rôles serveurs fixes dbcreator et sysadmin de se connecter à la base de données, mais il n'en limite pas le nombre. Les tentatives par des utilisateurs non qualifiés sont refusées.
 
-Si la base de données utilise [!INCLUDE[ssSB](../../includes/sssb-md.md)], utilisez WITH \<service_broker_option> dans la clause de votre FOR ATTACH :
+Si la base de données utilise [!INCLUDE[ssSB](../../includes/sssb-md.md)], utilisez WITH \<service_broker_option> dans votre clause FOR ATTACH :
 
-\<service_broker_option> Contrôle la remise des messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] et l’identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour la base de données. Les options [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent être spécifiées uniquement quand la clause FOR ATTACH est utilisée.
+\<service_broker_option> contrôle la remise des messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] et l’identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour la base de données. Les options [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent être spécifiées uniquement quand la clause FOR ATTACH est utilisée.
 
 ENABLE_BROKER spécifie que [!INCLUDE[ssSB](../../includes/sssb-md.md)] est activé pour la base de données spécifiée. Autrement dit, la remise des messages est démarrée et is_broker_enabled a la valeur True dans la vue de catalogue sys.databases. La base de données conserve l'identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] existant.
 
@@ -887,6 +889,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -913,6 +916,7 @@ CREATE DATABASE database_name
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -954,7 +958,7 @@ MAXSIZE : spécifie la taille maximale de la base de données. MAXSIZE doit êt
 |250 Mo|√|√|√|√|√|
 |500 Mo|√|√|√|√|√|
 |1 Go|√|√|√|√|√|
-|2 Go|√ (D)|√|√|√|√|
+|2 Go|√ (D)|√|√|√|√|
 |5 Go|N/A|√|√|√|√|
 |10 Go|N/A|√|√|√|√|
 |20 Go|N/A|√|√|√|√|
@@ -1020,15 +1024,21 @@ La valeur MAXSIZE pour le modèle DTU, si elle est spécifiée, doit être une v
 |:----- | ------: |-------: |-------: |-------: |
 |vCores max.|10|12|14|16|
 
+**Usage général - calcul serverless - Gen5 (partie 3)**
+
+|MAXSIZE|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|vCores max.|18|20|24|32|40|
+
 **Critique pour l’entreprise - calcul provisionné - Gen4 (partie 1)**
 
-|Niveau de performance|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|Taille de calcul (objectif de service)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Taille maximale des données (Go)|1 024|1 024|1 024|1 024|1 024|1 024|
 
 **Critique pour l’entreprise - calcul provisionné - Gen4 (partie 2)**
 
-|Niveau de performance|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|Taille de calcul (objectif de service)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |Taille maximale des données (Go)|1 024|1 024|1 024|1 024|1 024|1 024|
 
@@ -1061,15 +1071,15 @@ SERVICE_OBJECTIVE
 
 - **Pour les bases de données uniques et mises en pool**
 
-  - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif du service sont : `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`,`BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
+  - Spécifie la taille de calcul (objectif de service). Les valeurs disponibles pour l’objectif du service sont : `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`,`BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
 
 - **Pour les bases de données serverless**
 
-  - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif du service sont : `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`.
+  - Spécifie la taille de calcul (objectif de service). Les valeurs disponibles pour l’objectif de service sont : `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`.
 
 - **Pour les bases de données uniques du niveau de service Hyperscale**
 
-  - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif du service sont : `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+  - Spécifie la taille de calcul (objectif de service). Les valeurs disponibles pour l’objectif du service sont : `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
 Pour plus d’informations sur les objectifs de service, ainsi que sur la taille, les éditions et les combinaisons d’objectifs de service, consultez [Niveaux de service d’Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers). Si le SERVICE_OBJECTIVE spécifié n’est pas pris en charge par l’EDITION, un message d’erreur s’affiche. Si vous voulez modifier la valeur de SERVICE_OBJECTIVE pour passer d'un niveau de service à un autre (par exemple de S1 à P1), vous devrez également modifier la valeur d'EDITION. Pour plus d’informations sur les objectifs de service, ainsi que sur la taille, les éditions et les combinaisons d’objectifs de service, consultez [Niveaux de service et de performance d’Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Limites des ressources DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) et [Limites des ressources vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). La prise en charge des objectifs de service PRS a été supprimée. Pour poser des questions, utilisez cet alias de messagerie : premium-rs@microsoft.com.
 
@@ -1180,7 +1190,7 @@ CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;
 
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Création d’une copie de base de données sur un autre serveur
 
-L’exemple suivant crée une copie de la base de données db_original, nommée db_copy, dans le niveau de performance P2 pour une base de données. Cette opération est possible, que db_original se trouve dans un pool élastique ou dans un niveau de performance pour une base de données.
+L’exemple suivant crée une copie de la base de données db_original, nommée db_copy dans la taille de calcul P2 (objectif de service) pour une base de données. Cette opération est possible, que db_original se trouve dans un pool élastique ou une taille de calcul (objectif de service) pour une base de données.
 
 **S’applique à :** Bases de données uniques et mises en pool uniquement.
 
@@ -1189,7 +1199,7 @@ CREATE DATABASE db_copy
   AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' );
 ```
 
-L’exemple suivant crée une copie de la base de données db_original, nommée db_copy, dans le pool élastique nommé ep1. Cette opération est possible, que db_original se trouve dans un pool élastique ou dans un niveau de performance pour une base de données. Si db_original se trouve dans un pool élastique avec un nom différent, la création de db_copy est malgré tout effectuée dans ep1.
+L’exemple suivant crée une copie de la base de données db_original, nommée db_copy, dans le pool élastique nommé ep1. Cette opération est possible, que db_original se trouve dans un pool élastique ou une taille de calcul (objectif de service) pour une base de données. Si db_original se trouve dans un pool élastique avec un nom différent, la création de db_copy est malgré tout effectuée dans ep1.
 
 **S’applique à :** Bases de données uniques et mises en pool uniquement.
 
@@ -1341,7 +1351,7 @@ Taille maximale autorisée pour la base de données. La base de données ne peut
 
 Taille maximale autorisée pour les données rowstore dans la base de données. Les données stockées dans les tables rowstore, dans un deltastore d’index columnstore ou un index non cluster sur un index columnstore cluster, ne peuvent pas croître au-delà de MAXSIZE. Les données compressées au format columnstore n’ont pas de taille limite et ne sont pas restreintes par MAXSIZE.
 
-SERVICE_OBJECTIVE Spécifie le niveau de performance. Pour plus d’informations sur les objectifs de service d’Azure Synapse, voir [Data Warehouse Units (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE spécifie la taille de calcul (objectif de service). Pour plus d’informations sur les objectifs de service d’Azure Synapse, voir [Data Warehouse Units (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="general-remarks"></a>Remarques d'ordre général
 

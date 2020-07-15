@@ -1,5 +1,6 @@
 ---
 title: Points de contrôle de base de données (SQL Server) | Microsoft Docs
+description: Apprenez-en davantage sur les points de contrôle. Ces points de référence connus et fiables permettent au Moteur de base de données SQL Server de commencer à appliquer les modifications contenues dans le journal dans le cadre de la récupération.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,15 +28,15 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 156668084a475f71cea6c18ac050bf45eead6f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754554"
 ---
 # <a name="database-checkpoints-sql-server"></a>Points de contrôle de base de données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  Un *point de contrôle* permet la création d'un point de référence connu et fiable à partir duquel le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] peut, lors d'une récupération faisant suite à une panne ou à un arrêt imprévu, commencer à appliquer les modifications contenues dans le journal.
 
 ##  <a name="overview"></a><a name="Overview"></a> Vue d'ensemble   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759119"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique explique comment restaurer des pages dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dans la restauration de pages, l'objectif est de restaurer une ou plusieurs pages endommagées sans restaurer toute la base de données. Généralement, les pages candidates à la restauration ont été marquées « suspectes » en raison d'une erreur rencontrée lors de l'accès à la page. Les pages suspectes sont identifiées dans la table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) dans la base de données **msdb** .  
   
@@ -136,7 +136,7 @@ ms.locfileid: "82823674"
     |En-tête|Valeurs|  
     |------------|------------|  
     |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour des journaux de transactions).|  
+    |**Composant**|Composant sauvegardé : **Base de données**, **fichier** ou **\<blank>** (pour les journaux des transactions).|  
     |**Type**|Type de sauvegarde effectuée : **Complète**, **Différentielle** ou **Journal des transactions**.|  
     |**Serveur**|Nom de l'instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du moteur de base de données qui a effectué l'opération de sauvegarde.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  

@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736324"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Recherche des concordances précises ou approximatives (moins précises) avec des mots isolés ou des expressions, des termes situés à une certaine distance les uns des autres ou des concordances pondérées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS est un prédicat utilisé dans la [clause WHERE](../../t-sql/queries/where-transact-sql.md) d’une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour effectuer une recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des colonnes indexées en texte intégral qui contiennent des types de données caractères.  
@@ -174,7 +174,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Spécifie le texte à rechercher dans *column_name* et les conditions de correspondance à remplir.  
   
-*\<contains_search_condition>* est de type **nvarchar**. Une conversion implicite se produit lorsqu'un autre type de données character est utilisé comme entrée. Les chaînes longues de types varchar(max) et nvarchar(max) ne peuvent pas être utilisées. Dans l'exemple suivant, la variable `@SearchWord`, à laquelle est attribuée la valeur `varchar(30)`, provoque une conversion implicite dans le prédicat `CONTAINS`.
+*\<contains_search_condition>* est du type **nvarchar**. Une conversion implicite se produit lorsqu'un autre type de données character est utilisé comme entrée. Les chaînes longues de types varchar(max) et nvarchar(max) ne peuvent pas être utilisées. Dans l'exemple suivant, la variable `@SearchWord`, à laquelle est attribuée la valeur `varchar(30)`, provoque une conversion implicite dans le prédicat `CONTAINS`.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -210,14 +210,14 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Certaines langues, notamment certaines langues asiatiques, peuvent contenir des expressions composées d'un ou de plusieurs mots non séparés par des espaces.  
   
 \<simple_term>  
-Spécifie une correspondance pour un mot ou une expression exacts. Exemples de termes simples autorisés : « lieu dit », « lieudit » et « Microsoft SQL Server ». Les expressions doivent être mises entre des guillemets doubles (""). Les mots d’une expression doivent apparaître dans l’ordre spécifié dans *\<contains_search_condition>* , tels qu’ordre ils apparaissent dans la colonne de la base de données. La recherche de caractères dans un mot ou une expression ne respecte pas la casse. Dans des colonnes d’index de recherche en texte intégral, les mots parasites ou [mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) (par exemple « un », « et » ou « le ») ne sont pas stockés dans l’index de recherche en texte intégral. Si un mot parasite est utilisé dans la recherche d'un mot unique, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur indiquant que la requête contient uniquement des mots parasites. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une liste standard des mots parasites dans le répertoire \Mssql\Binn\FTERef de chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Spécifie une correspondance pour un mot ou une expression exacts. Exemples de termes simples autorisés : « lieu dit », « lieudit » et « Microsoft SQL Server ». Les expressions doivent être mises entre des guillemets doubles (""). Les mots d’une expression doivent apparaître dans l’ordre spécifié dans *\<contains_search_condition>* , tels qu’ils apparaissent dans la colonne de la base de données. La recherche de caractères dans un mot ou une expression ne respecte pas la casse. Dans des colonnes d’index de recherche en texte intégral, les mots parasites ou [mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) (par exemple « un », « et » ou « le ») ne sont pas stockés dans l’index de recherche en texte intégral. Si un mot parasite est utilisé dans la recherche d'un mot unique, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur indiquant que la requête contient uniquement des mots parasites. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une liste standard des mots parasites dans le répertoire \Mssql\Binn\FTERef de chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La ponctuation est ignorée. Par conséquent, `CONTAINS(testing, "computer failure")` retourne la ligne ayant la valeur « Où est mon ordinateur (computer) ? Il est en panne (Failure). » Pour plus d’informations sur le comportement des analyseurs lexicaux, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  \<prefix_term>  
  Précise une correspondance de mots ou d'expressions commençant par le texte spécifié. Placez un terme préfixe entre guillemets doubles ("") et ajoutez un astérisque (\*) avant les guillemets doubles fermants afin que tout le texte commençant par le terme simple spécifié avant l’astérisque soit pris en compte. La clause doit être définie de la manière suivante : `CONTAINS (column, '"text*"')`. L'astérisque correspond à aucun, à un ou à plusieurs caractères (du ou des mots racine dans le mot ou l'expression). Si le texte et l'astérisque ne sont pas délimités par des guillemets doubles, comme dans `CONTAINS (column, 'text*')`, la recherche en texte intégral considère l'astérisque comme un caractère et recherche les correspondances exactes avec `text*`. Le moteur d’indexation et de recherche en texte intégral ne trouve aucun mot contenant l’astérisque (\*), car les analyseurs lexicaux ignorent en général ces caractères.  
   
- Quand *\<prefix_term>* est une expression, chaque mot qui la compose est considéré comme un préfixe séparé. Ainsi, une recherche spécifiant le préfixe « contrôle des mots* » trouvera les lignes contenant le texte « contrôle des mots clés », « contrôleur des mots », etc.  
+ Lorsque *\<prefix_term>* est une expression, chaque mot qui la compose est considéré comme un préfixe séparé. Ainsi, une recherche spécifiant le préfixe « contrôle des mots* » trouvera les lignes contenant le texte « contrôle des mots clés », « contrôleur des mots », etc.  
   
  \<generation_term>  
  Précise une correspondance de mots lorsque les termes simples qui s'y trouvent contiennent des variantes du mot initial à rechercher.  
@@ -225,10 +225,10 @@ Spécifie une correspondance pour un mot ou une expression exacts. Exemples de t
  INFLECTIONAL  
  Spécifie que le générateur de formes dérivées dépendant de la langue doit être utilisé sur le terme simple spécifié. Le comportement du générateur de formes dérivées est défini en fonction des règles de racine de chaque langue spécifique. La langue neutre ne possède pas de générateur de formes dérivées associé. La langue des colonnes interrogées est utilisée pour se reporter au générateur de formes dérivées souhaité. Si *language_term* est spécifié, le générateur de formes dérivées correspondant à cette langue est utilisé.  
   
- Un *\<simple_term>* donné dans un *\<generation_term>* ne correspondra pas aux noms et aux verbes.  
+ Un *\<simple_term>* donné inclus dans un *\<generation_term>* ne peut pas correspondre à la fois aux noms et aux verbes.  
   
  THESAURUS  
- Spécifie l'utilisation du dictionnaire des synonymes correspondant à la langue de texte intégral de la colonne ou à la langue spécifiée dans la requête. Les modèles les plus longs de *\<simple_term>* sont interprétés par rapport au dictionnaire des synonymes, et des termes supplémentaires sont créés pour étendre ou remplacer le modèle initial. Si aucune correspondance n’est trouvée pour tout ou partie de *\<simple_term>* , la partie sans correspondance est traitée en tant que *simple_term*. Pour plus d’informations sur le dictionnaire des synonymes pour la recherche en texte intégral, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Spécifie l'utilisation du dictionnaire des synonymes correspondant à la langue de texte intégral de la colonne ou à la langue spécifiée dans la requête. Les modèles les plus longs de *\<simple_term>* sont recherchés dans le dictionnaire des synonymes et des termes supplémentaires sont créés pour étendre ou remplacer le modèle d’origine. Si aucune correspondance n’est trouvée pour tout ou partie du *\<simple_term>* , la partie sans correspondance est traitée en tant que *simple_term*. Pour plus d’informations sur le dictionnaire des synonymes pour la recherche en texte intégral, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Spécifie une correspondance de mots ou d'expressions qui doit figurer dans le document faisant l'objet d'une recherche.  
@@ -288,9 +288,9 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Retourne toutes les lignes qui contiennent les termes spécifiés indépendamment de la distance qui les sépare. Il s’agit de la valeur par défaut.  
   
  \<match_order>  
- Spécifie si les termes doivent apparaître dans l'ordre spécifié pour être retournés par une requête de recherche. Pour spécifier \<match_order>, vous devez également spécifier \<maximum_distance>.  
+ Spécifie si les termes doivent apparaître dans l'ordre spécifié pour être retournés par une requête de recherche. Si vous spécifiez \<match_order>, vous devez aussi spécifier \<maximum_distance>.  
   
- \<match_order> prend l’une des valeurs suivantes :  
+ \<match_order> prend l’une des valeurs suivantes :  
   
  **TRUE**  
  Impose l'ordre spécifié parmi les termes. Par exemple, `NEAR(A,B)` correspondrait uniquement à `A ... B`.  
@@ -332,7 +332,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { OR | | }  
  Indique que l'une des deux conditions de recherche de contenu doit être satisfaite pour obtenir une correspondance. Le symbole de barre verticale (|) peut être utilisé à la place du mot clé OR pour représenter l'opérateur OR.  
   
- Quand *\<contains_search_condition>* comporte des groupes placés entre parenthèses, ces groupes sont évalués en premier. Une fois ces groupes évalués, les règles suivantes sont appliquées lorsque ces opérateurs logiques sont utilisés dans les conditions de recherche de contenu :  
+ Lorsque *\<contains_search_condition>* comporte des groupes placés entre parenthèses, ces groupes sont évalués en premier. Une fois ces groupes évalués, les règles suivantes sont appliquées lorsque ces opérateurs logiques sont utilisés dans les conditions de recherche de contenu :  
   
 -   NOT est appliqué avant AND.  
   

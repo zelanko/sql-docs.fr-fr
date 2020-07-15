@@ -1,5 +1,6 @@
 ---
 title: Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio | Microsoft Docs
+description: Découvrez comment interroger des colonnes dans Always Encrypted à l’aide de SQL Server Management Studio. Récupérez des valeurs de chiffrement stockées dans des colonnes chiffrées.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627408"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Cet article explique comment interroger des colonnes chiffrées avec [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) en utilisant [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md). Avec SSMS, vous pouvez :
 - Récupérer des valeurs de chiffrement stockées dans des colonnes chiffrées. 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 Pour qu’une tentative de paramétrage aboutisse :   
 - Le type de littéral utilisé pour l’initialisation de la variable à paramétrer doit correspondre au type de la déclaration de la variable.   
-- Si le type déclaré de la variable est un type de date ou d’heure, la variable doit être initialisée à l’aide d’une chaîne à l’aide d’un des formats suivants conformes à la norme ISO 8601.   
+- Si le type déclaré de la variable est un type de date ou d’heure, la variable doit être initialisée à l’aide d’une chaîne dans l’un des [formats suivants conformes à la norme ISO 8601](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles).    
 
 Voici des exemples de déclarations de variables Transact-SQL générant des erreurs de paramétrage :   
 ```sql

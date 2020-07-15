@@ -1,5 +1,6 @@
 ---
 title: Générer un schéma XSD en ligne | Microsoft Docs
+description: Découvrez comment générer un schéma XSD en ligne à l’aide de l’option XMLSCHEMA dans la clause FOR XML d’une requête SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7b3fe9adcbbba14f4e23da33911c6dcbeaccf70c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c3792243af5a25f2ef1b9c7acd023f78acbb3eb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727028"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Générer un schéma XSD en ligne
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Dans une clause FOR XML, vous pouvez demander que votre requête retourne un schéma en ligne avec les résultats de la requête. Pour obtenir un schéma XDR, utilisez le mot clé XMLDATA dans la clause FOR XML. Pour obtenir un schéma XSD, utilisez le mot clé XMLSCHEMA.  
   
  Cette rubrique décrit le mot clé XMLSCHEMA et explique la structure du schéma XSD en ligne résultant. Les limites suivantes sont à respecter lorsque vous demandez des schémas en ligne :  
@@ -222,7 +223,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Conflits de noms d'éléments  
  Dans FOR XML, le même nom peut être utilisé pour indiquer deux sous-éléments. Par exemple, la requête ci-dessous récupère les valeurs ListPrice et DealerPrice des produits, mais la requête spécifie le même alias, Price, pour ces deux colonnes. Par conséquent, l'ensemble de lignes résultant possèdera deux colonnes du même nom.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas n° 1 : les deux sous-éléments sont des colonnes non-clés du même type et acceptent la valeur NULL  
  Dans la requête ci-dessous, les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL.  
   
 ```  
@@ -314,7 +315,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas 2 : une colonne clé et une colonne non-clé du même type  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas n° 2 : une colonne clé et une colonne non-clé du même type  
  La requête ci-dessous illustre une colonne clé et une colonne non-clé du même type.  
   
 ```  
@@ -392,7 +393,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Notez dans le schéma XSD en ligne que l'élément <`Col`> correspondant à Col2 a une valeur minOccurs égale à 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas n° 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
  La requête ci-dessous est spécifiée sur l'exemple de table défini dans le cas 2 :  
   
 ```  

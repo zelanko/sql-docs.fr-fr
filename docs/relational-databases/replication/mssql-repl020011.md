@@ -13,15 +13,15 @@ ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b0d53d04f8aecde4ddbe23b28316fc0e50d38dd2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 110f7a99f1d502951fe979072cdf9a5bc0730a87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721293"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>Détails du message  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76286710"
 |Texte du message|Le processus n'a pas pu exécuter '%1' sur '%2'.|  
   
 ## <a name="explanation"></a>Explication  
- Cette erreur peut être signalée dans plusieurs circonstances lors du traitement de la réplication transactionnelle, par exemple quand l’Agent de lecture du journal exécute **sp_replcmds** (Le processus n’a pas pu exécuter « sp_replcmds » sur \<Nom_Serveur>) ou **sp_repldone** (Le processus n’a pas pu exécuter « sp_repldone » sur \<Nom_Serveur>).  
+ Cette erreur peut être signalée dans plusieurs circonstances lors du traitement de la réplication transactionnelle, par exemple quand l’Agent de lecture du journal exécute **sp_replcmds** (Le processus n’a pas pu exécuter « sp_replcmds » sur \<ServerName>) ou **sp_repldone** (Le processus n’a pas pu exécuter « sp_repldone » sur \<ServerName>).  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Si cette erreur est signalée dans une base de données que vous venez tout juste de restaurer à partir d'une sauvegarde, vérifiez que vous avez suivi les étapes indiquées dans la documentation sur la sauvegarde et la restauration, notamment l'exécution de **sp_replrestart** si elle est appropriée. Pour plus d’informations, voir [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  

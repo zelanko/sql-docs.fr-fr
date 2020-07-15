@@ -1,5 +1,6 @@
 ---
 title: Définir des seuils d’avertissement | Microsoft Docs
+description: Découvrez comment utiliser la boîte de dialogue Définir les seuils d’avertissement pour activer et configurer les seuils d’avertissement pour les bases de données mises en miroir sélectionnées dans SQL Server.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789644"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette boîte de dialogue pour activer et configurer un ou plusieurs seuils d'avertissement pour la base de données sélectionnée dans l'arborescence de navigation de la boîte de dialogue **Moniteur de mise en miroir de bases de données** .  
   
  La boîte de dialogue tente d'établir une connexion avec les deux instances de serveurs. Ces connexions sont établies de façon asynchrone. La boîte de dialogue affiche l'état de la connexion de chaque partenaire. Si le partenaire n'est pas connecté, vous pouvez cliquer sur **Se connecter**.  
@@ -73,10 +74,10 @@ ms.locfileid: "68025215"
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Ce seuil indique la durée exprimée en minutes des transactions qui n'ont pas encore été envoyées depuis la file d'attente d'envoi vers l'instance de serveur miroir. Cette valeur permet de mesurer la perte de données potentielle en termes de temps.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Ce seuil indique le délai en millisecondes par transaction (utile uniquement en mode haute sécurité). Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression.|  
   
- **Activé sur «**   *\<instance_serveur>*   **»**  
+ **Activé à «**   *\<server instance>*   **»**  
  Une case à cocher vide indique que l'avertissement est actuellement désactivé sur l'instance de serveur. Pour activer l'avertissement, activez la case à cocher.  
   
- **Seuil à «**   *\<instance_serveur>*   **»**  
+ **Seuil à «**   *\<server instance>*   **»**  
  Lorsqu'un avertissement est activé, définissez le seuil dans la partie gauche de cette colonne. Un événement se produit si le seuil spécifié est atteint lors de la mise à jour de la table d'état. Si vous désactivez un seuil après avoir configuré une valeur, cette valeur reste dans le champ et sera utilisée lorsque vous activerez de nouveau l'avertissement.  
   
  Lorsqu'un avertissement n'est pas activé, ce champ est inactif.  

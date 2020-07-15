@@ -1,5 +1,6 @@
 ---
 title: Propriétés de la base de données (page Options) | Microsoft Docs
+description: Découvrez comment utiliser l’onglet Options de la boîte de dialogue Propriétés de la base de données pour afficher ou modifier le classement, le mode de récupération et d’autres paramètres d’une base de données.
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630946"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisez cette page pour consulter ou modifier les options de la base de données sélectionnée. Pour plus d’informations sur les options disponibles dans cette page, consultez [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) et [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -29,7 +30,7 @@ ms.locfileid: "79286743"
  Spécifiez le classement de la base de données en le sélectionnant dans la liste. Pour plus d’informations, voir [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Mode de récupération**  
- Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc**ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc** ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Niveau de compatibilité**  
  Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Pour connaître les valeurs possibles, consultez [Niveau de compatibilité avec ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quand une base de données SQL Server est mise à niveau, le niveau de compatibilité pour cette base de données est conservé si possible, ou remplacé par le niveau minimal pris en charge pour le nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -121,17 +122,17 @@ Quand une connexion à Azure SQL Database a été établie, cette section contie
  Active ou désactive la détection de paramètres sur les éventuelles bases de données secondaires. Cette propriété est équivalente à l’ [indicateur de trace 4136](https://support.microsoft.com/kb/980653).  
   
  **Correctifs de l’optimiseur de requête**  
- Active ou désactive les correctifs logiciels d’optimisation de requête sur la base de données primaire, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](https://support.microsoft.com/kb/974006).  
+ Active ou désactive les correctifs logiciels d’optimisation de requête sur la base de données primaire, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pour plus d’informations, consultez [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
  **Correctifs logiciels de l’optimiseur de requête pour la base de données secondaire**  
- Active ou désactive les correctifs logiciels d’optimisation de requête sur les éventuelles bases de données secondaires, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](https://support.microsoft.com/kb/974006).  
+ Active ou désactive les correctifs logiciels d’optimisation de requête sur les éventuelles bases de données secondaires, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pour plus d’informations, consultez [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nom du répertoire FILESTREAM**  
  Spécifiez le nom de répertoire pour les données FILESTREAM associées à la base de données sélectionnée.  
   
  **Accès FILESTREAM non transactionnel**  
- Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY**ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY** ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Divers  
 **Autoriser l’isolement d’instantané**  
