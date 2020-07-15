@@ -1,5 +1,6 @@
 ---
 title: Afficher ou configurer des options de connexion au serveur distant (SQL Server) | Microsoft Docs
+description: Découvrez comment afficher ou configurer des options de connexion au serveur distant au niveau du serveur. Vous pouvez utiliser SQL Server Management Studio ou Transact-SQL pour effectuer cette tâche.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - connections [SQL Server], remote servers
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11ca900d4a6f0f820379b0446bcca85e97462177
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec50e6ae39798add5a564dbeb8a971e879c18c27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680710"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Afficher ou configurer des options de connexion au serveur distant (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment afficher ou configurer des options de connexion au serveur distant au niveau du serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
@@ -52,7 +53,7 @@ ms.locfileid: "67945683"
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
   
-2.  Dans la boîte de dialogue **Propriétés de SQL Server - \<** _nom_serveur_ **>** , cliquez sur **Connexions**.  
+2.  Dans la boîte de dialogue **Propriétés de SQL Server - \<**_server_name_**>** , cliquez sur **Connexions**.  
   
 3.  Sur la page **Connexions** , vérifiez les paramètres **Connexions au serveur distant** et au besoin modifiez-les.  
   

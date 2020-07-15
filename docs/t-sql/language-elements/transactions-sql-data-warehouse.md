@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b731a07ea0443ff925555e5b91e68368bf69392
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631927"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197407"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Une transaction est un groupe d’une ou plusieurs instructions de base de données entièrement validées ou restaurées. Chaque transaction est atomique, cohérente, isolée et durable (ACID). Si la transaction réussit, toutes les instructions qu’elle contient sont validées. Si la transaction échoue, autrement dit si au moins une des instructions du groupe échoue, la totalité du groupe est restauré.  
   

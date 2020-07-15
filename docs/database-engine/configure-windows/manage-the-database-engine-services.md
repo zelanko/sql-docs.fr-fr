@@ -1,5 +1,6 @@
 ---
 title: Gérer les services du moteur de base de données | Microsoft Docs
+description: Familiarisez-vous avec les services disponibles dans SQL Server. Découvrez comment démarrer le Gestionnaire de configuration SQL Server, que vous pouvez utiliser pour gérer divers services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,21 +23,21 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5973b74accac8b35932edf54b51b83ec6a235aae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680972"
 ---
 # <a name="manage-the-database-engine-services"></a>Gérer les services du moteur de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur les systèmes d’exploitation en tant que service. Un service est un type d'application qui s'exécute à l'arrière-plan du système. Les services fournissent généralement les fonctions essentielles du système d'exploitation, telles que la gestion Web, l'enregistrement des événements ou la gestion de fichiers. Les services ne peuvent pas s'exécuter sans afficher une interface utilisateur sur le bureau de l'ordinateur. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent et plusieurs autres composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnent en tant que services. Ces services sont généralement démarrés en même temps que le système d'exploitation. Tout dépend de ce qui est spécifié durant l'installation ; certains services ne sont pas démarrés par défaut. Cette section décrit la gestion des différents services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Avant de vous connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez savoir comment démarrer, arrêter, interrompre et reprendre une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une fois connecté, vous pouvez exécuter diverses tâches telles que l'administration du serveur ou l'interrogation d'une base de données.  
   
 ## <a name="using-the-sql-server-service"></a>Utilisation du service SQL Server  
- Lorsque vous démarrez une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vous démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Après le démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les utilisateurs peuvent établir de nouvelles connexions au serveur. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être démarré et arrêté de manière identique à un service, localement ou à distance. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est appelé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) s’il s’agit de l’instance par défaut ou MSSQL$ *\<nom_instance\>* s’il s’agit d’une instance nommée.  
+ Lorsque vous démarrez une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vous démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Après le démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les utilisateurs peuvent établir de nouvelles connexions au serveur. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être démarré et arrêté de manière identique à un service, localement ou à distance. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait référence à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) s'il s'agit de l'instance par défaut, ou à MSSQL$ *\<instancename\>* s'il s'agit d'une instance nommée.  
   
 ## <a name="using-sql-server-configuration-manager"></a>Utilisation du Gestionnaire de configuration SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet d'arrêter, de démarrer ou d'interrompre divers services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
