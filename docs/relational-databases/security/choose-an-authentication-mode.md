@@ -1,5 +1,6 @@
 ---
 title: Choisir un mode d’authentification | Microsoft Docs
+description: Choisissez entre le mode d’authentification Windows et l’authentification en mode mixte pour le Moteur de base de données SQL Server au moment de l’installation.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ffe53e3f7819a2ca9bdd8adc9cb3db66aad57371
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75721354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627591"
 ---
 # <a name="choose-an-authentication-mode"></a>Choisir un mode d'authentification
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Pendant l’installation, vous devez sélectionner un mode d’authentification pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Deux modes sont possibles : le mode d’authentification Windows et le mode mixte. Le mode d’authentification Windows active l’authentification Windows et désactive l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le mode mixte active à la fois l’authentification Windows et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'authentification Windows est toujours disponible et ne peut pas être désactivée.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Pendant l’installation, vous devez sélectionner un mode d’authentification pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il existe deux modes possibles : Mode d'authentification Windows et mode mixte. Le mode d’authentification Windows active l’authentification Windows et désactive l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le mode mixte active à la fois l’authentification Windows et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'authentification Windows est toujours disponible et ne peut pas être désactivée.  
   
 ## <a name="configuring-the-authentication-mode"></a>Configuration du mode d'authentification  
  Si vous sélectionnez le mode d'authentification mixte au cours de l'installation, vous devez fournir, puis confirmer, un mot de passe fort pour le compte d'administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré appelé sa. Le compte sa se connecte à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

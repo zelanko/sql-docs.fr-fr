@@ -1,5 +1,6 @@
 ---
 title: Contrôler la durabilité d’une transaction | Microsoft Docs
+description: En savoir plus sur les transactions durables retardées. Les validations de transactions SQL Server peuvent avoir une durabilité complète ou une durabilité retardée, également appelée validation différée.
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8df526a46aac597c9b6fee833d2673077aaf054b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754562"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Les validations de transactions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).    
     
@@ -134,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques    
     
 |Option de durabilité de bloc atomique|Aucune transaction existante|Transaction en cours (à durabilité complète ou retardée)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    

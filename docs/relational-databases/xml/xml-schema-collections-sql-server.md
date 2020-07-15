@@ -1,5 +1,6 @@
 ---
 title: Collections de schémas XML (SQL Server) | Microsoft Docs
+description: Découvrez comment la collection de schémas XML stocke les schémas XML importés pour valider des instances XML et taper les données XML telles qu’elles sont stockées dans une base de données SQL Server.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 850e6b9b1961809f51939edfc07fc1d11943fda7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729766"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Comme l’explique la rubrique [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), SQL Server assure un stockage natif des données XML par le biais du type de données **xml**. Vous pouvez éventuellement associer des schémas XSD à une variable ou à une colonne de type **xml** à l'aide d'une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
   
 -   valider des instances XML ;  
@@ -38,7 +39,7 @@ ms.locfileid: "80664903"
   
  Remarquez que la collection de schémas XML est une entité de métadonnées de même qu'une table de la base de données. Vous pouvez les créer, les modifier et les supprimer. Les schémas spécifiés dans une instruction [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) sont automatiquement importés dans l’objet de collection de schémas XML nouvellement créé. Vous pouvez importer d’autres schémas ou composants de schéma dans un objet de collection existant dans la base de données à l’aide de l’instruction [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) .  
   
- Comme l’explique la rubrique [XML typé et non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md), le code XML stocké dans une colonne ou une variable à laquelle un schéma est associé est dit XML **typé** , car le schéma fournit toutes les informations nécessaires sur le type des données de l’instance. SQL Server utilise ces informations de type pour optimiser le stockage des données.  
+ Comme l’explique la rubrique [XML typé et non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md), le code XML stocké dans une colonne ou une variable à laquelle un schéma est associé est dit XML **typé**, car le schéma fournit toutes les informations nécessaires sur le type des données de l’instance. SQL Server utilise ces informations de type pour optimiser le stockage des données.  
   
  Le moteur de traitement des requêtes utilise aussi le schéma pour vérifier le type et optimiser les requêtes et la modification des données.  
   
@@ -173,7 +174,7 @@ ms.locfileid: "80664903"
   
  Ces méthodes sont illustrées dans les exemples ci-après.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemple : énumération des espaces de noms XML dans une collection de schémas XML  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemple : Énumération des espaces de noms XML dans une collection de schémas XML  
  Utilisez la requête suivante pour la collection de schémas XML « myCollection » :  
   
 ```sql
@@ -183,7 +184,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemple : énumération du contenu d'une collection de schémas XML  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemple : Énumération du contenu d’une collection de schémas XML  
  L'instruction suivante énumère le contenu de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
   
 ```sql
@@ -192,7 +193,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Les schémas XML individuels de la collection peuvent être obtenus sous forme d’instances de type **xml** en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()** . Cela est illustré par l'exemple suivant.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : extraction d'un schéma spécifique d'une collection de schémas XML  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : Extraction d’un schéma spécifique d’une collection de schémas XML  
  L’instruction suivante retourne le schéma XML dont l’espace de noms cible _prétendu_ est https/\/www.microsoft.com/was-books de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
   
 ```sql

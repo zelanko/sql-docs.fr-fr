@@ -1,5 +1,6 @@
 ---
 title: Propriétés du serveur (page Paramètres de base de données) | Microsoft Docs
+description: Familiarisez-vous avec les paramètres de la base de données dans SQL Server. Découvrez les options qui contrôlent le comportement de la sauvegarde, les facteurs de remplissage, les emplacements des fichiers et d’autres propriétés.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -8,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a4f5a0dacaeeeadf0446df9e4d3cdf54fcad7be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784125"
 ---
 # <a name="server-properties---database-settings-page"></a>Propriétés du serveur - page Paramètres de base de données
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette page pour consulter ou modifier vos paramètres de base de données.  
   
 ## <a name="options"></a>Options

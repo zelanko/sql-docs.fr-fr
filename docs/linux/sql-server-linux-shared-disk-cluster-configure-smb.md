@@ -8,16 +8,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558577"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902352"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - SMB - SQL Server sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Cet article explique comment configurer le stockage SMB pour une instance de cluster de basculement (FCI) sur Linux. 
  
@@ -96,7 +96,7 @@ Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
       ls <TempDir>
       ```
       
-      \<TempDir> est le nom du dossier de l’étape d.
+      \<TempDir> est le nom du dossier de l’étape d.
       
    1. Supprimez les fichiers du répertoire de données SQL Server existant. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
@@ -228,7 +228,7 @@ Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
       
       \<mssqlUID> est l’UID de l’utilisateur mssql
       
-      \<mssqlGID> est le GID de l’utilisateur mssql.
+      \<mssqlGID> est le GID de l’utilisateur mssql
       
    1. Vérifiez que le montage a réussi en émettant un montage sans commutateurs.
    
@@ -246,7 +246,7 @@ Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
       
       \<ShareName> est le nom du partage
       
-      \<FolderMountedIn> est le nom du dossier dans lequel SMB est monté.
+      \<FolderMountedIn> est le nom du dossier dans lequel SMB est monté
    
 1. Répétez les étapes pour l'autre ou les autres nœuds.
 

@@ -18,20 +18,20 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d99f732d76bda9f44c20701818e61a2b2af98e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633177"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010739"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY – refus d'autorisations de base de données (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Permet de refuser des autorisations sur une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,13 +58,13 @@ DENY <permission> [ ,...n ]
 
 *permission* spécifie une autorisation qui peut être refusée sur une base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.
 
-L’option ALL n’interdit pas toutes les autorisations possibles. L'utilisation de l'option ALL équivaut à refuser les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.
+L’option ALL n’interdit pas toutes les autorisations possibles. Cette option revient à interdire les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.
 
 PRIVILEGES Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.
 
 CASCADE indique que l’autorisation sera également refusée aux principaux auxquels le principal spécifié l’a accordée.
 
-AS \<database_principal> spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l’autorisation.
+AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation.
 
 *Database_user* Spécifie un utilisateur de base de données.
 
@@ -215,5 +215,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [Autorisations](../../relational-databases/security/permissions-database-engine.md)
+- [autorisations](../../relational-databases/security/permissions-database-engine.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)

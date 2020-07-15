@@ -1,5 +1,6 @@
 ---
 title: Effectuer une mise à niveau vers une autre édition
+description: Le programme d’installation de SQL Server prend en charge la mise à niveau d’édition entre les différentes éditions de SQL Server. Avant de commencer une mise à niveau d’édition, passez en revue les ressources de cet article.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a68c2827fffcfd5be0af38cbc38f33fd9a09dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434126"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900192"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2016 (Installation)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 L'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau d'édition entre les différentes éditions de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les chemins de mise à niveau d’édition pris en charge, consultez [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Avant de lancer la mise à niveau d’édition d’une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez les articles suivants :  
 

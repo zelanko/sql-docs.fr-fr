@@ -1,5 +1,6 @@
 ---
 title: Configurer les journaux des erreurs SQL Server | Microsoft Docs
+description: En savoir plus sur le recyclage du journal des erreurs. Découvrez comment définir une taille maximale de fichier journal et comment définir le nombre de fichiers journaux précédents que SQL Server sauvegarde et les archives.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 060b3828c772a030ab095ae1bea857dc8eaa3b5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74127482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651380"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Services SCM - Configurer les journaux des erreurs SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique indique comment consulter ou modifier la méthode de recyclage des journaux d'erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>Pour ouvrir la boîte de dialogue Configurer les journaux d'erreurs SQL Server  

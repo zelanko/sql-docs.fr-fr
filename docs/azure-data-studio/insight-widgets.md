@@ -1,23 +1,22 @@
 ---
 title: Utiliser les widgets d’insight pour superviser les serveurs et les bases de données
-titleSuffix: Azure Data Studio
 description: En savoir plus sur les widgets d’insight dans Azure Data Studio
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774600"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>Gérer les serveurs et les bases de données avec les widgets d’insight dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Gérer les serveurs et les bases de données avec les widgets d’insight dans Azure Data Studio
 
 Les widgets d’insight prennent les requêtes Transact-SQL (T-SQL) que vous utilisez pour analyser les serveurs et les bases de données et les transformer en visualisations informatives.
 
@@ -36,7 +35,7 @@ Pour vous lancer et commencer à créer différents types d’aperçus, consulte
 
 ## <a name="sql-queries"></a>Requêtes SQL
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] tente d’éviter d’introduire un autre langage ou une interface utilisateur lourde et tente donc d’utiliser le langage T-SQL le plus possible avec une configuration JSON minimale. La configuration des widgets d’insight avec T-SQL s’appuie sur les nombreuses sources existantes de requêtes T-SQL utiles qui peuvent être transformées en widgets d’insight.
+Azure Data Studio tente d’éviter d’introduire un autre langage ou une interface utilisateur lourde et tente donc d’utiliser le langage T-SQL le plus possible avec une configuration JSON minimale. La configuration des widgets d’insight avec T-SQL s’appuie sur les nombreuses sources existantes de requêtes T-SQL utiles qui peuvent être transformées en widgets d’insight.
 
 Les widgets d’insight sont composés d’une ou deux requêtes T-SQL :
 * *La requête du widget d’insight* est obligatoire et est la requête qui retourne les données qui s’affichent dans le widget.
@@ -44,7 +43,7 @@ Les widgets d’insight sont composés d’une ou deux requêtes T-SQL :
 
 Une requête de widget d’insight définit un jeu de données qui restitue un nombre ou un graphique. La requête de détails d’insight est utilisée pour répertorier les informations d’insight détaillées pertinentes dans un format tabulaire dans le panneau de détails de l’insight. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] exécute des requêtes de widget d’insight et mappe le jeu de résultats de la requête au jeu de données d’un graphique, puis le restitue. Quand les utilisateurs ouvrent les détails d’un aperçu, il exécute la requête de détails d’insight et affiche le résultat dans une vue de grille dans la boîte de dialogue.
+Azure Data Studio exécute des requêtes de widget d’insight et mappe le jeu de résultats de la requête au jeu de données d’un graphique, puis le restitue. Quand les utilisateurs ouvrent les détails d’un aperçu, il exécute la requête de détails d’insight et affiche le résultat dans une vue de grille dans la boîte de dialogue.
 
 L’idée de base est d’écrire une requête T-SQL de manière à ce qu’elle puisse être utilisée en tant que jeu de données d’un widget de nombres ou de graphiques. 
 

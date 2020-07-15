@@ -1,5 +1,6 @@
 ---
 title: Sécurité au niveau des lignes | Microsoft Docs
+description: Découvrez comment la sécurité au niveau des lignes vous permet d'utiliser l'appartenance à un groupe ou le contexte d'exécution pour contrôler l'accès aux lignes dans une table de base de données sur SQL Server.
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288976"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000531"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Graphique de sécurité au niveau des lignes](../../relational-databases/security/media/row-level-security-graphic.png "Graphique de sécurité au niveau des lignes")  
   
@@ -41,7 +42,7 @@ Implémentez une sécurité au niveau des lignes à l’aide de l’instruction 
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> Azure SQL Data Warehouse prend en charge uniquement des prédicats de filtre. Les prédicats BLOCK ne sont actuellement pas pris en charge dans Azure SQL Data Warehouse.
+> Azure Synapse prend en charge uniquement des prédicats de filtre. Les prédicats BLOCK ne sont actuellement pas pris en charge dans Azure Synapse.
 
 ## <a name="description"></a><a name="Description"></a> Description
 
@@ -159,7 +160,7 @@ Il est possible de provoquer des fuites d'informations via l'utilisation de requ
   
 - **Flux de fichier :** la sécurité au niveau des lignes est incompatible avec le flux de fichier.  
   
-- **PolyBase :** la sécurité au niveau des lignes est prise en charge avec des tables externes PolyBase pour Azure SQL Data Warehouse uniquement.
+- **PolyBase :** La sécurité au niveau des lignes est prise en charge avec des tables externes PolyBase pour Azure Synapse uniquement.
 
 - **Tables à mémoire optimisée :** la fonction table incluse utilisée comme prédicat de sécurité sur une table optimisée en mémoire doit être définie avec l’option `WITH NATIVE_COMPILATION`. Avec cette option, les fonctionnalités de langue non prises en charge par les tables optimisées en mémoire sont interdites, et l’erreur appropriée est au moment de la création. Pour plus d’informations, consultez la section **Sécurité au niveau des lignes dans les tables optimisées en mémoire** dans [Introduction aux tables optimisées en mémoire](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -185,8 +186,6 @@ Il est possible de provoquer des fuites d'informations via l'utilisation de requ
   
  Créez trois comptes d'utilisateur qui illustrent différentes fonctionnalités d'accès.  
 
-> [!NOTE]
-> Azure SQL Data Warehouse ne prend pas en charge EXECUTE AS USER, si bien que vous devez créer au préalable une connexion (CREATE LOGIN) pour chaque utilisateur. Plus tard, vous vous connecterez en tant qu’utilisateur approprié pour tester ce comportement.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse ne prend pas en charge EXECUTE AS USER. Par conséquent, connectez-vous en tant qu’utilisateur approprié pour tester le comportement ci-dessus.
-
 L'utilisateur Manager doit visualiser l'ensemble des six lignes. Les utilisateurs Sales1 et Sales2 doivent voir uniquement leurs propres ventes.
 
 Modifiez la stratégie de sécurité pour désactiver la stratégie.
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Scénarios pour l’utilisation de la sécurité au niveau des lignes sur une table externe Azure SQL Data Warehouse
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Scénarios pour l’utilisation de la sécurité au niveau des lignes sur une table externe Azure Synapse
 
 Ce petit exemple crée trois utilisateurs et une table externe de six lignes. Il crée ensuite une fonction table incluse et une stratégie de sécurité pour la table externe. L'exemple montre comment les instructions select sont filtrées pour les différents utilisateurs.
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Créez une table externe Azure SQL Data Warehouse à partir de la table Sales créée.
+Créez une table externe Azure Synapse à partir de la table Sales créée.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 Les utilisateurs Sales1 et Sales2 peuvent maintenant visualiser l'ensemble des six lignes.
 
-Connectez-vous à la base de données SQL Data Warehouse pour nettoyer les ressources
+Connectez-vous à la base de données Azure Synapse pour nettoyer les ressources
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Scénario pour les utilisateurs qui se connectent à la base de données via une application intermédiaire
 
 > [!NOTE]
-> Dans cet exemple la fonctionnalité Prédicats BLOCK n’est pas actuellement prise en charge pour Azure SQL Data Warehouse, par conséquent, l’insertion de lignes pour le mauvais identificateur d'utilisateur n’est pas bloquée avec Azure SQL Data Warehouse.
+> Dans cet exemple la fonctionnalité Prédicats BLOCK n’est pas actuellement prise en charge pour Azure Synapse, par conséquent, l’insertion de lignes pour le mauvais identificateur d'utilisateur n’est pas bloquée avec Azure Synapse.
 
 Cet exemple montre comment une application de couche intermédiaire peut implémenter le filtrage des connexions, lorsque les utilisateurs (ou locataires) d'application partagent le même utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'application). L’application définit l’ID d’utilisateur d’application actuel dans [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) après la connexion à la base de données, puis les stratégies de sécurité filtrent en toute transparence les lignes qui ne devraient pas être visibles par cet ID, et empêchent l’utilisateur d’insérer des lignes pour l’ID d’utilisateur incorrect. Aucune autre modification de l'application n'est nécessaire.  
   

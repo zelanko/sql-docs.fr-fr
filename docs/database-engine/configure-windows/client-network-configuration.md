@@ -1,5 +1,6 @@
 ---
 title: Configuration du réseau client | Microsoft Docs
+description: Découvrez comment les ordinateurs clients se connectent à une instance de SQL Server sur un réseau. En savoir plus sur les outils que vous pouvez utiliser pour gérer les clients.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759171"
 ---
 # <a name="client-network-configuration"></a>Configuration du réseau client
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Un logiciel client permet aux ordinateurs clients de se connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un réseau. Un client est une application frontale utilisant les services fournis par un serveur tel que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. L'ordinateur sur lequel se trouve cette application est appelé *ordinateur client*.  
   
  Au niveau le plus simple, un client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut résider sur le même ordinateur qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le plus souvent, cependant, un client se connecte à un ou plusieurs serveurs distants à travers un réseau. L'architecture client/serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lui permet de gérer de façon intégrée plusieurs clients et serveurs sur un réseau. Les configurations par défaut des clients suffisent à la plupart des situations.  

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 918821dfcdbddcd694b751d328332178f9f5770c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 668a7355cd1a2530b9f60a624391c2199724a62b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633693"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880391"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT – octroi d'autorisations de serveur (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permet d'accorder des autorisations sur un serveur. 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,9 +58,9 @@ GRANT permission [ ,...n ]
  *permission*  
  Spécifie une autorisation qui peut être accordée sur un serveur. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- TO \<grantee_principal> Spécifie le principal auquel l’autorisation est accordée.  
+ TO \<grantee_principal> Spécifie le principal auquel l'autorisation est accordée.  
   
- AS \<grantor_principal> Spécifie le principal à partir duquel le principal qui exécute cette requête dérive son droit d’accorder l’autorisation.  
+ AS \<grantor_principal> Spécifie le principal à partir duquel le principal qui exécute cette requête dérive son droit d'accorder l'autorisation.  
   
  WITH GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  

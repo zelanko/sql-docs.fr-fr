@@ -1,5 +1,6 @@
 ---
 title: Estimer la taille d’un segment de mémoire | Microsoft Docs
+description: Utilisez cette procédure pour estimer la quantité d’espace nécessaire au stockage des données dans une table dans SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909045"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002963"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La procédure suivante vous permet d'obtenir une estimation de la quantité d'espace nécessaire au stockage de données dans un segment de mémoire.  
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
@@ -46,7 +47,7 @@ ms.locfileid: "72909045"
   
 3.  Une partie de la ligne, connue sous le nom de bitmap NULL, est réservée pour gérer la possibilité de valeur NULL de la colonne. Calculez sa taille :  
   
-     **_Null_Bitmap_** = 2 + (( **_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_** = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Seule la partie entière de l'expression doit être utilisée. Omettez le reste.  
   
@@ -54,30 +55,30 @@ ms.locfileid: "72909045"
   
      En présence de colonnes de longueur variable dans la table, déterminez l'espace utilisé pour stocker les colonnes dans la ligne au moyen de la formule suivante :  
   
-     **_Variable_Data_Size_** = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_** = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      Les octets ajoutés à **_Max_Var_Size_** servent à assurer le suivi de chaque colonne de longueur variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de **_Max_Var_Size_** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
     >  Vous pouvez combiner des colonnes **varchar**, **nvarchar**, **varbinary**ou **sql_variant** qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne **varchar**, **nvarchar, varbinary** ou **sql_variant**. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
-     En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à **_Variable_Data_Size_** .  
+     En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à **_Variable_Data_Size_**.  
   
 5.  Calculez la taille totale de la ligne :  
   
-     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      La valeur 4 dans la formule correspond à l'espace réservé à l'en-tête de la ligne de données.  
   
 6.  Calculez le nombre de lignes par page (8 096 octets disponibles par page) :  
   
-     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      Comme les lignes ne peuvent pas être fractionnées sur plusieurs pages de données, arrondissez le nombre de lignes par page à la ligne entière inférieure. La valeur 2 dans la formule correspond à l'entrée de la ligne dans le tableau d'emplacements de la page.  
   
 7.  Calculez ensuite le nombre de pages de données requises pour le stockage de toutes les lignes :  
   
-     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      Le nombre de pages de données estimé doit être arrondi à la page entière la plus proche.  
   

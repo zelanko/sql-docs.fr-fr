@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (préversion)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Utilisez l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes.
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 455e75d13c8b083d37bbab1c6a15916871b1ffba
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987435"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091673"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -44,28 +44,34 @@ Cet article explique comment utiliser l’instruction COPY dans Azure SQL Data W
 > [!NOTE]  
 > L’instruction COPY est actuellement en préversion publique.
 
+Pour obtenir des exemples complets et des Démarrages rapides à l’aide de l’instruction COPY, consultez la documentation suivante :
+
+- [Démarrage rapide : Charger en masse des données à l’aide de l’instruction COPY](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Démarrage rapide : Exemples utilisant l’instruction COPY et les méthodes d’authentification prises en charge](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Démarrage rapide : Création de l’instruction COPY à l’aide de l’interface utilisateur de Synapse Studio enrichie (version préliminaire de l’espace de travail)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
 ## <a name="syntax"></a>Syntaxe  
 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]  
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 
@@ -125,7 +131,7 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 - ORC : Spécifie un format ORC.
 
 >[!NOTE]  
-> Le type de fichier « Texte délimité » dans Polybase est remplacé par le format de fichier « CSV » dans lequel le délimiteur par défaut (la virgule) peut être configuré à l’aide du paramètre FIELDTERMINATOR. 
+>Le type de fichier « Texte délimité » dans Polybase est remplacé par le format de fichier « CSV » dans lequel le délimiteur par défaut (la virgule) peut être configuré à l’aide du paramètre FIELDTERMINATOR. 
 
 *FILE_FORMAT = external_file_format_name*</br>
 *FILE_FORMAT* s’applique aux fichiers Parquet et ORC uniquement ; il spécifie le nom de l’objet de format de fichier externe qui stocke le type de fichier et la méthode de compression des données externes. Pour créer un format de fichier externe, utilisez [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
@@ -356,7 +362,7 @@ WITH (
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_FORMAT = myFileFormat
+    FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -369,7 +375,7 @@ FROM
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
     'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-    FILE_TYPE = 'CSV'
+    FILE_TYPE = 'CSV',
     CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
     FIELDTERMINATOR = '|'
 )
@@ -403,7 +409,7 @@ Le tableau ci-dessous indique les nombres de fichiers conseillés. Une fois le n
 |   300   |     60     |
 |   400   |     60     |
 |   500   |     60     |
-|  1 000  |    120     |
+|  1 000  |    120     |
 |  1 500  |    180     |
 |  2 000  |    240     |
 |  2 500  |    300     |

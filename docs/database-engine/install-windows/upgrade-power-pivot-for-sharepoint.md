@@ -11,16 +11,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892583"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900239"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Cet article récapitule les étapes nécessaires pour mettre à niveau un déploiement de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vers [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Les étapes spécifiques dépendent de la version de SharePoint exécutée par votre environnement et incluent le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**).  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68892583"
 Get-PowerPivotSystemService  
 ```  
   
- Vérifiez **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est la version 13.0.\<build majeur>.\<build mineur>  
+ Vérifiez **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] correspond à la version 13.0\<major build>.\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Vérifier la version du service Windows Analysis Services  
  Si vous n'avez mis à niveau que certains de vos serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dans une batterie SharePoint 2010, l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur les serveurs qui n'ont pas été mis à niveau est plus ancienne que la version attendue dans la batterie. Vous devrez effectuer une mise à niveau de tous vos serveurs vers la même version pour permettre leur utilisation. Utilisez une des méthodes suivantes pour vérifier la version du service Windows SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) sur chaque ordinateur.  
@@ -260,7 +260,7 @@ Get-PowerPivotSystemService
   
 3.  Cliquez sur **Details**.  
   
-4.  La version du fichier [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] doit être 13.00.\<build majeur>.\<build mineur>.  
+4.  La version de fichier [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] doit être 13.00\<major build>.\<minor build>.  
   
 5.  Vérifiez que ce numéro est identique à la version de la solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et du service système.  
   
@@ -310,7 +310,7 @@ Get-PowerPivotSystemService
   
 2.  Triez par nom d'assembly et recherchez **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Vérifiez que vous avez la version 13.0.\<numéro de build>.  
+3.  Vérifiez que vous avez la version 13.0.\<build number>.  
   
 ##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> Mise à niveau de plusieurs serveurs Power Pivot pour SharePoint dans une batterie de serveurs SharePoint  
  Dans une topologie à plusieurs serveurs qui inclut plusieurs serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , toutes les instances de serveur et tous les composants doivent avoir la même version. Le serveur qui exécute la version la plus récente du logiciel définit le niveau pour tous les serveurs de la batterie. Si vous ne mettez à niveau que quelques serveurs, ceux qui exécutent des versions antérieures du logiciel deviendront indisponibles jusqu'à ce qu'ils soient également mis à niveau.  

@@ -1,5 +1,6 @@
 ---
 title: Restauration et récupération de tables à mémoire optimisée | Microsoft Docs
+description: Découvrez comment la restauration d’une base de données qui utilise des tables à mémoire optimisée dans SQL Server diffère de la restauration d’une base de données qui utilise uniquement des tables sur disque.
 ms.custom: ''
 ms.date: 12/31/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5393fec82a0e1ab082369970f15756dc59e91846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722336"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables à mémoire optimisée
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Le mécanisme de base pour récupérer ou restaurer une base de données qui utilise des tables à mémoire optimisée est similaire au mécanisme pour une base de données qui utilise uniquement des tables sur disque. Mais à la différence des tables sur disque, les tables à mémoire optimisée doivent être chargées dans la mémoire avant que la base de données ne soit disponible pour l’accès utilisateur. Cette condition ajoute une nouvelle étape à la récupération de la base de données.  
   

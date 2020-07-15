@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68476299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760802"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Les sections de cette rubrique font référence aux différentes propriétés d'index disponibles au moyen des boîtes de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68476299"
  Affiche le nom de l'index. Ce champ est en lecture seule pour un index existant. Permet de taper le nom de l'index, si vous en créez un nouveau.  
   
  **Type d'index**  
- Indique le type d'index. Pour les nouveaux index, indique le type d'index sélectionné lors de l'ouverture de la boîte de dialogue. Les index peuvent être : **Cluster**, **Non cluster**, **XML primaire**, **XML secondaire**, **Spatial**, **Columnstore cluster**ou **Columnstore non cluster**.  
+ Indique le type d'index. Pour les nouveaux index, indique le type d'index sélectionné lors de l'ouverture de la boîte de dialogue. Les index peuvent être : **Cluster**, **Non cluster**, **XML primaire**, **XML secondaire**, **Spatial**, **Columnstore cluster** ou **Columnstore non cluster**.  
   
  **Remarque** Un seul index cluster est autorisé pour chaque table. Un seul index columnstore optimisé en mémoire xVelocity est autorisé pour chaque table.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476299"
  Indique si la colonne utilisée dans la clé d'index autorise le stockage de valeurs NULL dans la colonne de la table ou de la vue.  
   
  **Ajouter**  
- Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes dans** *\<nom de la table>* qui s’affiche quand vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
+ Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes à partir de** *\<table name>* qui s'affiche lorsque vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
   
  **Remove**  
  Supprime la colonne sélectionnée de la clé d'index.  

@@ -1,5 +1,6 @@
 ---
 title: Protection de votre propriété intellectuelle SQL Server | Microsoft Docs
+description: Découvrez les options de protection de la propriété intellectuelle dans une application de données SQL Server qui est distribuée aux clients.
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773887"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Protection de votre propriété intellectuelle SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Les développeurs demandent souvent comment distribuer leur application de données [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] aux clients tout en empêchant ceux-ci d’analyser et de déconstruire leur application. La protection de votre propriété intellectuelle est un aspect juridique, et cette protection doit être stipulée dans votre contrat de licence. Quand [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] est installé sur un ordinateur administré par d’autres personnes, vous perdez, par nature, certains aspects du contrôle. 
 

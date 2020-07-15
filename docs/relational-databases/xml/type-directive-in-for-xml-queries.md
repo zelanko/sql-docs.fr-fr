@@ -1,5 +1,6 @@
 ---
 title: Directive TYPE dans les requêtes FOR XML | Microsoft Docs
+description: Découvrez comment utiliser la directive TYPE avec la clause FOR XML pour demander que le résultat d’une requête soit retourné en tant que données XML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa7bd23de60f82aa83620e0d81a1887c1c997634
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729837"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directive TYPE dans les requêtes FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) vous permet éventuellement de demander que le résultat d’une requête FOR XML soit renvoyé en tant que type de données **xml** en spécifiant la directive TYPE. Cela vous permet de traiter le résultat d'une requête FOR XML sur le serveur. Par exemple, vous pouvez spécifier une requête XQuery par rapport au résultat, affecter le résultat à une variable de type **xml** ou écrire des [requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  

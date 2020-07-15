@@ -1,7 +1,7 @@
 ---
 title: Interrogation des données dans une table temporelle avec système par version | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402683"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002337"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Interrogation des données dans une table temporelle avec version gérée par le système
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Lorsque vous souhaitez obtenir l’état le plus récent (réel) des données d’une table temporelle, l’interrogation est exactement la même que pour une table non temporelle. Si les colonnes PERIOD ne sont pas masquées, leurs valeurs apparaissent dans une requête SELECT \* . Si vous avez spécifié les colonnes **PERIOD** comme étant masquées, leurs valeurs n’apparaissent pas dans une requête SELECT \*. Lorsque les colonnes **PERIOD** sont masquées, référencez spécifiquement les colonnes **PERIOD** dans la clause SELECT pour retourner les valeurs de ces colonnes.
 
@@ -32,7 +32,7 @@ Pour exécuter une analyse temporelle, utilisez la nouvelle clause **FOR SYSTEM_
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-La clause**FOR SYSTEM_TIME** peut être spécifiée de façon indépendante pour chaque table dans une requête. Elle peut être utilisée à l'intérieur d’expressions de table communes, de fonctions table incluses et de procédures stockées. Lors de l’utilisation d’un alias de table avec une table temporelle, la clause **FOR SYSTEM_TIME** doit être comprise entre le nom de la table temporelle et l’alias. Consultez le deuxième exemple dans [Requête d’un point précis dans le temps à l’aide de la sous-clause AS OF](#query-for-a-specific-time-using-the-as-of-sub-clause).
+La clause**FOR SYSTEM_TIME** peut être spécifiée de façon indépendante pour chaque table dans une requête. Elle peut être utilisée à l'intérieur d’expressions de table communes, de fonctions table incluses et de procédures stockées. Lors de l’utilisation d’un alias de table avec une table temporelle, la clause **FOR SYSTEM_TIME** doit être comprise entre le nom de la table temporelle et l’alias (consultez le deuxième exemple dans « Requête d’un point précis dans le temps à l’aide de la sous-clause AS OF »).
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Requête d’un point précis dans le temps à l'aide de la sous-clause AS OF
 

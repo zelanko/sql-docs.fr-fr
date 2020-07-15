@@ -1,5 +1,6 @@
 ---
 title: Surveiller la copie des journaux de transaction (Transact-SQL) | Microsoft Docs
+description: Découvrez les tables qui stockent l’historique contenant des informations de surveillance et des procédures stockées pour la surveillance de l’envoi de journaux dans SQL Server.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33bb8320abf11400e5224af747d71bcb49fc2d16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695870"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Surveiller la copie des journaux de transaction (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Une fois l'envoi de journaux configuré, vous pouvez contrôler les informations d'état de l'ensemble des serveurs d'envoi de journaux. L'historique et l'état des opérations d'envoi de journaux sont toujours enregistrés localement par les travaux d'envoi de journaux. L'historique et l'état de l'opération de sauvegarde sont stockés sur le serveur principal, tandis que l'historique et l'état des opérations de copie et de restauration sont stockés sur le serveur secondaire. Si vous avez implémenté un serveur moniteur distant, ces informations sont également stockées sur le serveur moniteur.  
   
  Vous pouvez définir des alertes qui se déclenchent si les opérations d'envoi de journaux ne sont pas exécutées conformément à la planification. Les erreurs sont signalées par un travail d'alerte qui surveille l'état des opérations de sauvegarde et de restauration. Vous pouvez définir des alertes qui indiquent à l'opérateur l'occurrence de ces erreurs. Si un serveur moniteur est configuré, un travail d'alerte s'exécute sur le serveur moniteur qui signale les erreurs de toutes les opérations dans la configuration d'envoi des journaux. Si aucun serveur moniteur n'est défini, un travail d'alerte s'exécute sur l'instance du serveur principal qui surveille la sauvegarde. Si aucun serveur moniteur n'est défini, un travail d'alerte s'exécute également sur chaque instance de serveur secondaire pour surveiller les opérations de copie et de restauration.  

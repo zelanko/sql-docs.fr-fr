@@ -1,5 +1,6 @@
 ---
-title: 'Dépanner : dépassement de RTO du groupe de disponibilité (SQL Server) | Microsoft Docs'
+title: 'Résoudre les problèmes : Dépassement de RTO du groupe de disponibilité (SQL Server) | Microsoft Docs'
+description: Découvrez comment résoudre les problèmes de basculement sur un groupe de disponibilité Always On lorsque le basculement prend plus de temps que votre objectif de délai de récupération dans SQL Server.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013750"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888019"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>Dépanner : dépassement de RTO du groupe de disponibilité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>Résoudre les problèmes : Dépassement de RTO du groupe de disponibilité
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Après un basculement automatique ou un basculement manuel planifié sans perte de données sur un groupe de disponibilité, vous constaterez peut-être que le temps de basculement dépasse votre RTO (objectif de temps de récupération). Vous pouvez arriver au même constat quand vous estimez le temps de basculement d’un réplica secondaire avec validation synchrone (par exemple, un partenaire de basculement automatique) à l’aide de la méthode décrite dans [Monitorer les performances des groupes de disponibilité AlwaysOn](monitor-performance-for-always-on-availability-groups.md).  
   
  Si votre basculement automatique n’est pas encore terminé, consultez [Résolution des problèmes de basculement automatique dans les environnements SQL Server 2012 Always On](https://support.microsoft.com/kb/2833707).  

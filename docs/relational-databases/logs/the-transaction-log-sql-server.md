@@ -1,5 +1,6 @@
 ---
 title: Journal des transactions (SQL Server) | Microsoft Docs
+description: Découvrez le journal des transactions. Chaque base de données SQL Server enregistre toutes les transactions et les modifications de base de données dont vous avez besoin en cas de défaillance du système.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287803"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834760"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d’entre elles.
   
 Le journal des transactions est un composant essentiel de la base de données. En cas de défaillance du système, vous aurez besoin de ce journal pour rétablir votre base de données à un état cohérent. 
@@ -133,7 +134,7 @@ La*journalisation minimale* implique de ne journaliser que les informations obli
   
  Les opérations suivantes, qui sont entièrement journalisées en mode de récupération complète, font l'objet d'une journalisation minimale en modes simple et de récupération utilisant les journaux de transactions :  
   
--   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quand la réplication transactionnelle est activée, les opérations `BULK INSERT` sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
   
@@ -157,8 +158,11 @@ Quand la réplication transactionnelle est activée, les opérations `SELECT INT
         > [!WARNING]
         > L’instruction `DBCC DBREINDEX` est **dépréciée** : ne l’utilisez pas dans de nouvelles applications.  
   
+        > [!NOTE]
+        > Les opérations de création d’index utilisent la journalisation minimale, mais peuvent être retardées lorsqu’une sauvegarde est exécutée simultanément. Ce délai est dû aux exigences de synchronisation des pages du pool de mémoires tampons journalisées minimales lors de l’utilisation du mode de récupération simple ou utilisant les journaux de transactions. 
+      
     -   Reconstruction d’un nouveau segment de mémoire [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (le cas échéant). La désallocation de pages d’index pendant une opération `DROP INDEX` est **toujours** entièrement journalisée.
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Gestion du journal des transactions**  
   

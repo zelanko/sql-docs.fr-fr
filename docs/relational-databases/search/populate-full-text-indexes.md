@@ -24,15 +24,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629266"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
   
 ##  <a name="types-of-population"></a><a name="types"></a> Types d’alimentation  
@@ -216,8 +216,8 @@ Le fichier journal de l'analyse respecte le modèle de dénomination suivant :
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 Les parties variables du nom de fichier du journal d’analyse sont les suivantes.
--   <**DatabaseID**> - ID d’une base de données. \<**dbid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
--   <**FullTextCatalogID**> - ID du catalogue de texte intégral. \<**catid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
+-   <**DatabaseID**> - ID d’une base de données. \<**dbid**> est un nombre à cinq chiffres commençant par des zéros.  
+-   <**FullTextCatalogID**> - ID du catalogue de texte intégral. \<**catid**> est un nombre à cinq chiffres commençant par des zéros.  
 -   <**n**> - Entier qui indique qu’il existe un ou plusieurs journaux d’analyse du même catalogue de texte intégral.  
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  

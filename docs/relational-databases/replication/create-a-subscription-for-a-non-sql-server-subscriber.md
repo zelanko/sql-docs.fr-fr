@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773899"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment créer un abonnement pour un abonné non-SQL Server dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La réplication transactionnelle et la réplication de capture instantanée prennent en charge la publication de données vers des abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations sur les plateformes d'Abonné prises en charge, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **Dans cette rubrique**  
@@ -47,7 +47,7 @@ ms.locfileid: "75322006"
   
          Vous devez créer l'instantané après avoir activé la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de garantir que l'Agent d'instantané génère un instantané et des scripts d'initialisation qui conviennent pour des Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Activez la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la boîte de dialogue **Propriétés de la publication - \<nom_publication>** . Consultez [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) pour plus d'informations sur cette étape.  
+3.  Activez la publication pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la boîte de dialogue **Propriétés de la publication - \<PublicationName>** . Consultez [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) pour plus d'informations sur cette étape.  
   
 4.  Créez un abonnement avec l'Assistant Nouvel abonnement. Cette rubrique fournit des informations sur cette étape.  
   

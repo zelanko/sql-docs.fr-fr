@@ -1,29 +1,28 @@
 ---
 title: Paramètres de l’utilisateur et de l’espace de travail
-titleSuffix: Azure Data Studio
 description: Comment personnaliser Azure Data Studio en modifiant les paramètres de l’utilisateur et de l’espace de travail.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758379"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modifier les paramètres de l’utilisateur et de l’espace de travail
 
-Il est facile de configurer [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre convenance par le biais de paramètres. Presque toutes les parties de l’éditeur de [!INCLUDE[name-sos](../includes/name-sos-short.md)], de l’interface utilisateur et du comportement fonctionnel disposent d’options que vous pouvez modifier.
+Il est facile de configurer Azure Data Studio à votre convenance grâce aux paramètres. Presque toutes les parties de l’éditeur d’Azure Data Studio, de l’interface utilisateur et du comportement fonctionnel disposent d’options que vous pouvez modifier.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit deux étendues différentes pour les paramètres :
+Azure Data Studio fournit deux étendues différentes pour les paramètres :
 
-* **Utilisateur** Ces paramètres s’appliquent globalement à toute instance de [!INCLUDE[name-sos](../includes/name-sos-short.md)] que vous ouvrez.
+* **Utilisateur** Ces paramètres s’appliquent globalement à toute instance d’Azure Data Studio que vous ouvrez.
 * **Espace de travail** Les paramètres de l’espace de travail sont des paramètres spécifiques à un dossier sur votre ordinateur et sont disponibles uniquement lorsque le dossier est ouvert dans la barre latérale de l’Explorateur. Les paramètres définis sur cette étendue remplacent l’étendue Utilisateur.
 
 ## <a name="creating-user-and-workspace-settings"></a>Création des paramètres de l’utilisateur et de l’espace de travail
@@ -36,9 +35,10 @@ L’exemple suivant désactive les numéros de ligne dans l’éditeur et config
 
 ![Exemples de paramètres](media/settings/sample-settings.png)
 
-Les modifications apportées aux paramètres sont rechargées par [!INCLUDE[name-sos](../includes/name-sos-short.md)] après l’enregistrement du fichier `settings.json` modifié.
+Les modifications apportées aux paramètres sont rechargées par Azure Data Studio après l’enregistrement du fichier `settings.json` modifié.
 
->**Remarque :** Les paramètres d’espace de travail sont utiles pour partager des paramètres spécifiques au projet dans une équipe.
+> [!NOTE] 
+> Les paramètres d’espace de travail sont utiles pour partager des paramètres spécifiques au projet dans une équipe.
 
 ## <a name="settings-file-locations"></a>Emplacements des fichiers de paramètres
 
@@ -48,7 +48,7 @@ En fonction de votre plateforme, le fichier de paramètres utilisateur se trouve
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-Le fichier de paramètres de l’espace de travail se trouve sous le dossier `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` dans votre projet.
+Le fichier de paramètres de l’espace de travail se trouve sous le dossier `.Azure Data Studio` dans votre projet.
 
 ## <a name="hot-exit"></a>Sortie à chaud
 
@@ -63,4 +63,4 @@ Pour simplifier l’identification des connexions que vous utilisez, ouvrez des 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Étant donné que [!INCLUDE[name-sos](../includes/name-sos-short.md)] hérite de la fonctionnalité des paramètres de l’utilisateur et de l’espace de travail de Visual Studio Code, des informations détaillées sur les paramètres se trouvent dans l’article [Paramètres de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).
+Étant donné qu’Azure Data Studio hérite de la fonctionnalité des paramètres de l’utilisateur et de l’espace de travail de Visual Studio Code, des informations détaillées sur les paramètres se trouvent dans l’article [Paramètres de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).

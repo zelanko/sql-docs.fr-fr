@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2cbdf8467ac119b4fa5831a73a03cf1a54f956c
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 8688a67d4fecaba0857f0fc1ac0e763ebbb18267
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925303"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892409"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique décrit les considérations relatives au déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], notamment les prérequis, les restrictions et les recommandations concernant les ordinateurs hôtes, les clusters de basculement Windows Server (WSFC), les instances de serveur et les groupes de disponibilité. Pour chacun de ces composants, les considérations relatives à la sécurité et les autorisations requises (le cas échéant) sont indiquées.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "82925303"
   
 3.  Utilisez l’applet de commande **Get-ClusterResource** pour rechercher la ressource de nom de réseau, puis utilisez l’applet de commande **Set-ClusterParameter** pour définir la valeur de **HostRecordTTL** , comme suit :  
   
-     Get-ClusterResource "*NomRessourceRésesau>\<* " | Set-ClusterParameter HostRecordTTL *\<DuréeEnSecondes>*  
+     Get-ClusterResource “ *\<NetworkResourceName>* ” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      L'exemple PowerShell suivant définit HostRecordTTL sur 300 secondes pour une ressource de nom réseau nommée `SQL Network Name (SQL35)`.  
   

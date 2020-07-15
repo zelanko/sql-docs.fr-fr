@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c47e7af592383bee13399c2220fee25fa8ed2c2
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: e2d2fdefb8684a95c8c80376e0bb353125b911ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642839"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d’autres fonctionnalités SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les données FILESTREAM figurant dans le système de fichiers, cette rubrique fournit quelques considérations, indications et limitations relatives à l'utilisation de FILESTREAM avec les fonctionnalités suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
@@ -69,7 +69,7 @@ ms.locfileid: "82999786"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="replication"></a><a name="Replication"></a> Replication  
- Une colonne **varbinary(max)** qui a l’attribut FILESTREAM activé sur le serveur de publication peut être répliquée sur un abonné avec ou sans l’attribut FILESTREAM. Spécifiez la façon dont la colonne est répliquée à l’aide de la boîte de dialogue **Propriétés de l’article - \<Article>** , ou du paramètre @schema_option de [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ou [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Les données répliquées sur une colonne **varbinary(max)** qui n’a pas l’attribut FILESTREAM ne doivent pas dépasser la limite de 2 Go pour ce type de données, autrement une erreur d’exécution est générée. Nous vous recommandons de répliquer l'attribut FILESTREAM, à moins que vous ne répliquiez des données sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur des abonnés [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] n'est pas prise en charge, quelle que soit l'option de schéma définie.  
+ Une colonne **varbinary(max)** qui a l’attribut FILESTREAM activé sur le serveur de publication peut être répliquée sur un abonné avec ou sans l’attribut FILESTREAM. Pour spécifier la façon dont la colonne est répliquée, utilisez la boîte de dialogue **Propriétés de l'article - \<Article>** ou le paramètre @schema_option de [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ou [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Les données répliquées sur une colonne **varbinary(max)** qui n’a pas l’attribut FILESTREAM ne doivent pas dépasser la limite de 2 Go pour ce type de données, autrement une erreur d’exécution est générée. Nous vous recommandons de répliquer l'attribut FILESTREAM, à moins que vous ne répliquiez des données sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur des abonnés [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] n'est pas prise en charge, quelle que soit l'option de schéma définie.  
   
 > [!NOTE]  
 >  La réplication de grandes valeurs de données à partir d'Abonnés [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est limitée à des valeurs de données de 256 Mo maximum. Pour plus d'informations, consultez [Spécifications de capacité maximale](https://go.microsoft.com/fwlink/?LinkId=103810).  

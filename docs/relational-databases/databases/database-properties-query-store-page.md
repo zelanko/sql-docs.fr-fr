@@ -1,5 +1,6 @@
 ---
 title: Propriétés de la base de données (page Magasin de requêtes) | Microsoft Docs
+description: Découvrez comment utiliser l’onglet Magasin des requêtes de la boîte de dialogue Propriétés de la base de données pour configurer les modes, les intervalles, les seuils et d’autres propriétés du magasin des requêtes.
 ms.custom: ''
 ms.date: 11/09/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57e3494bbb60128d24d047f904acb6990cde477c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631021"
 ---
 # <a name="database-properties-query-store-page"></a>Propriétés de la base de données (page Magasin de requêtes)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Accédez à cette page depuis la base de données principale et utilisez-la pour configurer et modifier les propriétés du magasin de requêtes de la base de données. Ces options peuvent également être configurées à l'aide des [options ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Pour plus d'informations sur le magasin de requêtes, consultez [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ||  

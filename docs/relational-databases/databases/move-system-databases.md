@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763217"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique décrit comment déplacer des bases de données système dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le déplacement des bases de données système peut être utile dans les cas suivants :  
   
@@ -189,9 +189,9 @@ ms.locfileid: "68100463"
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Déplacement de la base de données Resources  
- L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
+ L'emplacement de la base de données est \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*><>\MSSQL\Binn\\\ . La base de données ne peut pas être déplacée.  
   
-##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Suivi : Après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
   
 -   Modifiez le chemin d'accès du journal de l'Agent SQL Server. Si vous ne mettez pas à jour ce chemin d'accès, l'Agent SQL Server ne démarre pas.  
@@ -204,7 +204,7 @@ ms.locfileid: "68100463"
   
 2.  Cliquez avec le bouton droit sur **Journaux d’erreurs** , puis cliquez sur **Configurer**.  
   
-3.  Dans la boîte de dialogue **Configurer les journaux d'erreurs de l'Agent SQL Server** , spécifiez le nouvel emplacement du fichier SQLAGENT.OUT. L’emplacement par défaut est C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<nom_instance>\MSSQL\Log\\.  
+3.  Dans la boîte de dialogue **Configurer les journaux d'erreurs de l'Agent SQL Server** , spécifiez le nouvel emplacement du fichier SQLAGENT.OUT. L'emplacement par défaut est C:\Program Files\Microsoft SQL Server\MSSQL12\<version>.<nom_instance>\MSSQL\Log\\\.  
   
 #### <a name="change-the-database-default-location"></a>Modifier l'emplacement par défaut de la base de données  
   

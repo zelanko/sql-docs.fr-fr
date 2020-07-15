@@ -1,5 +1,6 @@
 ---
 title: Schéma de FileTable | Microsoft Docs
+description: En savoir plus sur le schéma prédéfini et fixe de FileTables, une fonctionnalité SQL Server qui utilise une structure de répertoire pour stocker des fichiers.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49199c617f916413e79a5c6ffc71e6c4f21a69e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767976"
 ---
 # <a name="filetable-schema"></a>Schéma de FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Décrit le schéma prédéfini et fixe d'un FileTable.  
   
-|Nom d'attribut de fichier|type|Size|Default|Description|Accessibilité du système de fichiers|  
+|Nom d'attribut de fichier|type|Taille|Default|Description|Accessibilité du système de fichiers|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variable|**hierarchyid** qui identifie la position de cet élément.|Position de ce nœud dans le FileNamespace hiérarchique.<br /><br /> Clé primaire de la table|Peut être créée et modifiée en définissant les valeurs de chemin d'accès Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Valeur retournée par la fonction **NEWID()** .|ID unique pour les données FILESTREAM.|Non applicable.|  

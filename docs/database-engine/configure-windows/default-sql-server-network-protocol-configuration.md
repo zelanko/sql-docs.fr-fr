@@ -1,5 +1,6 @@
 ---
 title: Configuration des protocoles réseau par défaut de SQL Server | Microsoft Docs
+description: Facteurs d’affichage qui déterminent si les protocoles réseau sont activés ou désactivés pendant l’installation de SQL Server. Consultez Comment configurer des protocoles après l’installation.
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772574"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuration des protocoles réseau par défaut de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Pour renforcer la sécurité, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] désactive la connectivité réseau de certaines nouvelles installations. La connectivité réseau faisant appel à TCP/IP n’est pas désactivée si vous utilisez l’édition Enterprise, Standard, Evaluation ou Workgroup ou qu’une installation précédente de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] est présente. Pour toutes les installations, le protocole de mémoire partagée est activé de manière à autoriser les connexions locales au serveur. Le service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] peut être arrêté si les conditions et options d'installation l'exigent.
 
 Utilisez le nœud Configuration du réseau [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] du Gestionnaire de configuration [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pour configurer les protocoles réseau après l’installation. Utilisez le nœud Services [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] du Gestionnaire de configuration [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pour configurer le service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser de sorte qu’il démarre automatiquement. Pour plus d’informations, consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
@@ -34,7 +35,7 @@ Le tableau suivant décrit la configuration après l'installation.
 |Édition | Nouvelle installation ou installation précédente présente | Mémoire partagée | TCP/IP | Canaux nommés|
 | -------- | -- | -- | -- | --  |  
 |Entreprise | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
-|standard | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
+|Standard | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
 |Web | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
 |Développeur | Nouvelle installation | activé | Désactivé | Désactivés pour les connexions réseau.|
 |Évaluation | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|

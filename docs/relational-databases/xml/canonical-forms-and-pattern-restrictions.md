@@ -1,5 +1,6 @@
 ---
 title: Formes canoniques et restrictions de modèle | Microsoft Docs
+description: Découvrez comment empêcher les problèmes qui se produisent lorsque la représentation canonique des types valeur primitifs ne respecte pas les restrictions de modèle d’une facette de modèle XSD.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a3720cfa4ee72df832b77ad4cab08013ddc8e0c7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1e6042ae1a63b61cd47fa42470c0707877625c5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775626"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formes canoniques et restrictions de modèle
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La facette de modèle XSD permet la restriction de l'espace lexical des types simples. Quand une restriction de modèle est appliquée à un type pour lequel il existe plusieurs représentations lexicales possibles, certaines valeurs peuvent entraîner un comportement inattendu lors de la validation.  
   
  Ce comportement se produit car les représentations lexicales de ces valeurs ne sont pas stockées dans la base de données. Par conséquent, les valeurs sont converties en leurs représentations canoniques lorsqu'elles sont sérialisées pour la sortie. Si un document contient une valeur dont la forme canonique n'est pas conforme à la restriction de modèle propre à son type, il est rejeté si un utilisateur tente de réinsérer la valeur.  

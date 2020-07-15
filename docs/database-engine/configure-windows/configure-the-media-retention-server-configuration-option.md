@@ -1,5 +1,6 @@
 ---
 title: Configurer l’option de configuration de serveur media retention | Microsoft Docs
+description: Découvrez l'option de rétention du support Découvrez comment l’utiliser pour spécifier la durée pendant laquelle SQL Server conserve les sauvegardes du journal des transactions et de la base de données.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - backup sets [SQL Server], retention duration
 - media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4009241922196894100c362fe3787fdd40d4f7dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c7e699d9af02a8d24e01d1e7461aa9ee22c956bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696960"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurer l'option de configuration de serveur media retention
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique explique comment configurer l'option de configuration de serveur **media retention** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **media retention** spécifie la durée de rétention de chaque jeu de sauvegarde. Cette option permet d'éviter l'écrasement des sauvegardes pendant le nombre de jours spécifié. Après avoir configuré l'option **media retention**, il est inutile de spécifier la durée de rétention des sauvegardes système à chaque sauvegarde. La valeur par défaut est de 0 jour et la valeur maximum de 365 jours.  
   

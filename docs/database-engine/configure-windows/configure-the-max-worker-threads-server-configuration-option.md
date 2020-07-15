@@ -1,6 +1,7 @@
 ---
 title: Configurer l’option de configuration de serveur max worker threads | Microsoft Docs
-ms.custom: ''
+description: Découvrez comment utiliser l’option max worker threads pour configurer le nombre de threads de travail disponibles pour SQL Server pour traiter certaines demandes.
+ms.custom: contperfq4
 ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -11,51 +12,62 @@ helpviewer_keywords:
 - worker threads [SQL Server]
 - max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 04a0a9401b765b86e83a6641bf8742d6b326cc13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696974"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **max worker threads** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **max worker threads** configure le nombre de threads de travail disponibles pour les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les services de thread natifs des systèmes d'exploitation pour qu'un ou plusieurs threads prennent en charge chaque réseau que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge simultanément, qu'un autre thread prenne en charge les points de contrôle de base de données et qu'un pool de threads gère tous les utilisateurs. La valeur par défaut de **Nombre maximum de threads de travail** est 0. Cela permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de configurer automatiquement le nombre de threads de travail au démarrage. Ce paramètre par défaut convient à la plupart des systèmes. Cependant, selon votre configuration système, l'attribution d'une valeur spécifique à l'option **Nombre maximum de threads de travail** permet parfois d'accroître les performances.  
-  
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Recommandations](#Recommendations)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour configurer l'option max worker threads, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   **Suivi :**  [Après avoir configuré l'option Nombre maximum de threads de travail](#FollowUp)  
+Cette rubrique explique comment configurer l'option de configuration de serveur **max worker threads** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’option **max worker threads** permet de configurer le nombre de threads de travail disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à l’ensemble du processus pour traiter les demandes de requête, la connexion, la déconnexion et les requêtes d’application similaires.
+
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les services de thread natifs des systèmes d’exploitation pour garantir les conditions suivantes :
+
+- Un ou plusieurs threads prennent simultanément en charge chaque réseau pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+- Un thread gère les points de contrôle de base de données.
+
+- Un pool de threads gère tous les utilisateurs.
+
+La valeur par défaut de **Nombre maximum de threads de travail** est 0. Cela permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de configurer automatiquement le nombre de threads de travail au démarrage. Ce paramètre par défaut convient à la plupart des systèmes. Cependant, selon votre configuration système, l'attribution d'une valeur spécifique à l'option **Nombre maximum de threads de travail** permet parfois d'accroître les performances.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
--   Lorsque le nombre de demandes de requêtes est inférieur au nombre défini dans l'option **Nombre maximum de threads de travail**, un thread traite chaque demande de requête. En revanche, si le nombre de demandes de requête dépasse la valeur définie pour l'option **Nombre maximum de threads de travail**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regroupe les threads de travail afin que le prochain thread de travail disponible puisse traiter la demande.  
+-   Le nombre de demandes de requête peut dépasser la valeur définie pour dans **nombre maximal de threads de travail**, auquel cas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regroupe les threads de travail afin que le prochain thread de travail disponible puisse traiter la demande. Un thread de travail est affecté uniquement à des requêtes actives et est libéré une fois la demande en service. Cela se produit même si la session utilisateur/connexion sur laquelle la requête a été effectuée reste ouverte. 
+
+-   L’option de configuration du serveur pour le **nombre maximal de threads de travail** ne limite pas tous les threads qui peuvent être générés dans le système. Les threads requis pour des tâches telles que LazyWriter, Checkpoint, Logwriter, Service Broker, Lock Manager ou autres sont générés en dehors de cette limite. Les groupes de disponibilité utilisent certains des threads de travail dans la limite maximale de threads de travail  **mais utilisent également** des threads système (voir [Utilisation des threads par les groupes de disponibilité](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage)) si le nombre de threads configurés est dépassé, la requête suivante fournit des informations sur les tâches système qui ont généré les threads supplémentaires.  
+  
+ ```sql  
+ SELECT  s.session_id, r.command, r.status,  
+    r.wait_type, r.scheduler_id, w.worker_address,  
+    w.is_preemptive, w.state, t.task_state,  
+    t.session_id, t.exec_context_id, t.request_id  
+ FROM sys.dm_exec_sessions AS s  
+ INNER JOIN sys.dm_exec_requests AS r  
+    ON s.session_id = r.session_id  
+ INNER JOIN sys.dm_os_tasks AS t  
+    ON r.task_address = t.task_address  
+ INNER JOIN sys.dm_os_workers AS w  
+    ON t.worker_address = w.worker_address  
+ WHERE s.is_user_process = 0;  
+ ```  
+  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
--   Seul un administrateur de base de données qualifié ou un spécialiste agréé doit changer cette option avancée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous suspectez un problème de performance, celui ne vient probablement pas de la disponibilité des threads. Le problème est plus vraisemblablement causé par des opérations d’E/S qui contraignent les threads de worker à attendre. Nous vous conseillons d’identifier la cause racine d’un problème de performance avant de changer le paramètre max worker threads.  
+-   Seul un administrateur de base de données qualifié ou un spécialiste agréé doit changer cette option avancée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous suspectez un problème de performance, celui ne vient probablement pas de la disponibilité des threads. La cause est plus probablement liée aux activités qui occupent les thread de travail et ne les mettent pas en production. Les exemples incluent des requêtes de longue durée ou des goulots d’étranglement sur le système (E/S, blocage, attentes de verrous, attentes réseau) qui entraînent des requêtes à attente longue. Nous vous conseillons d’identifier la cause racine d’un problème de performance avant de changer le paramètre max worker threads. Pour plus d’informations sur l’évaluation de la performance, consultez [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md).
   
 -   Le regroupement de threads permet d'optimiser les performances lorsque de nombreux clients sont connectés au serveur. Habituellement, un thread de système d'exploitation séparé est créé pour chaque demande de requête. Cependant, s'il existe des centaines de connexions au serveur, l'utilisation d'un thread par demande de requête peut consommer de grandes quantités de ressources système. L'option **Nombre maximum de threads de travail** permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de créer un pool de threads de travail afin de servir un grand nombre de demandes de requête, ce qui améliore les performances.  
   
--   Le tableau suivant indique le nombre maximal de threads de travail configurés automatiquement pour différentes combinaisons d’UC, d’architecture d’ordinateur et de versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l’aide de la formule : * **Nombre maximal de Workers par défaut* + ((* UC logiques * - 4) * *Workers par UC*)**.  
+-   Le tableau suivant indique le nombre maximal de threads de travail configurés automatiquement (lorsqu la valeur est définie sur 0) pour différentes combinaisons d’UC, d’architecture d’ordinateur et de versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l’aide de la formule : ***Nombre maximal de Workers par défaut* + ((* UC logiques * - 4) * *Workers par UC*)**.  
   
     |Nombre d'unités centrales|Ordinateur 32 bits (jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Ordinateur 64 bits (jusqu’à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Ordinateur 64 bits (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
@@ -90,23 +102,6 @@ ms.locfileid: "81488315"
     > Pour obtenir des recommandations concernant l’utilisation de plus de 64 unités centrales, consultez [Recommandations pour l’exécution de SQL Server sur des ordinateurs comportant plus de 64 unités centrales](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Lorsque tous les threads de travail traitent de longues requêtes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut sembler ne plus répondre jusqu'à ce qu'un thread de travail soit terminé et devienne disponible. Même s'il ne s'agit pas d'une défaillance, ce comportement peut parfois être indésirable. Si un processus semble ne pas répondre et si aucune nouvelle requête n'est traitée, connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la connexion administrateur dédiée (DAC) et terminez le processus. Pour éviter cette situation, augmentez la valeur de l'option max worker threads.  
-  
- L’option de configuration du serveur pour le **nombre maximal de threads de travail** ne limite pas tous les threads qui peuvent être générés dans le système. Les threads requis pour des tâches telles que les groupes de disponibilité, Service Broker, le gestionnaire de verrous ou autres sont générés en dehors de cette limite. Si le nombre de threads configurés est dépassé, la requête suivante fournit des informations sur les tâches système qui ont engendré les threads supplémentaires.  
-  
- ```sql  
- SELECT  s.session_id, r.command, r.status,  
-    r.wait_type, r.scheduler_id, w.worker_address,  
-    w.is_preemptive, w.state, t.task_state,  
-    t.session_id, t.exec_context_id, t.request_id  
- FROM sys.dm_exec_sessions AS s  
- INNER JOIN sys.dm_exec_requests AS r  
-    ON s.session_id = r.session_id  
- INNER JOIN sys.dm_os_tasks AS t  
-    ON r.task_address = t.task_address  
- INNER JOIN sys.dm_os_workers AS w  
-    ON t.worker_address = w.worker_address  
- WHERE s.is_user_process = 0;  
- ```  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
   
@@ -157,6 +152,4 @@ GO
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
-  
-  
+ [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)
