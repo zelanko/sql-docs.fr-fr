@@ -1,25 +1,24 @@
 ---
 title: Créer des extensions
-titleSuffix: Azure Data Studio
 description: En savoir plus sur la création et l’ajout d’extensions à Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774632"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Étendre les fonctionnalités en créant des extensions Azure Data Studio
 
-Les extensions dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] offrent un moyen simple d’ajouter des fonctionnalités à l'installation [!INCLUDE[name-sos](../includes/name-sos-short.md)] de base.
+Les extensions dans Azure Data Studio offrent un moyen simple d’ajouter des fonctionnalités à l'installation d’Azure Data Studio de base.
 
 Les extensions sont fournies par l’équipe Azure Data Studio (Microsoft), ainsi que par la communauté tierce (vous !).
 
@@ -30,7 +29,7 @@ Si vous souhaitez étendre Azure Data Studio, vous pouvez créer votre propre ex
 
 **Écriture d’une extension**
 
-***Prérequis***
+***Composants requis***
 
 Pour développer une extension, Node.js doit être installé et disponible dans votre $PATH. Node.js comprend npm, le gestionnaire de package Node.js, qui sera utilisé pour installer le générateur d’extensions.
 
@@ -43,7 +42,7 @@ Pour démarrer votre nouvelle extension, vous pouvez utiliser le générateur d�
 
 **Références d’extensibilité**
 
-Pour en savoir plus sur l’extensibilité d’Azure Data Studio, consultez [Vue d’ensemble de l’extensibilité](extensibility.md). Vous pouvez également voir des exemples d’utilisation de l’API dans des [exemples](https://github.com/Microsoft/azuredatastudio/tree/master/samples) existants.
+Pour en savoir plus sur l’extensibilité d’Azure Data Studio, consultez [Vue d’ensemble de l’extensibilité](extensibility.md). Vous pouvez également voir des exemples d’utilisation de l’API dans des [exemples](https://github.com/Microsoft/azuredatastudio/tree/main/samples) existants.
 
 
 ## <a name="debug-an-extension"></a>Déboguer une extension

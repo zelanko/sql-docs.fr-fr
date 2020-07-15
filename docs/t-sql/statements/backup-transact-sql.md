@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2019
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 52672baf04075f13e4bb88578689a82405145282
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922236"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215829"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -204,7 +204,7 @@ Vous pouvez restaurer une sauvegarde du fichier journal jusqu’à une date et h
 > [!NOTE]
 > La base de données miroir d'un partenariat de mise en miroir de bases de données ne peut pas être sauvegardée.
 
-\<file_or_filegroup> [ **,** ...*n* ] Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers, ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.
+\<file_or_filegroup> [ **,** ...*n* ] Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } Spécifie le nom logique d’un fichier ou une variable dont la valeur correspond au nom logique d’un fichier à inclure dans la sauvegarde.
 
@@ -224,13 +224,13 @@ READ_WRITE_FILEGROUPS Spécifie que tous les groupes de fichiers en lecture/écr
 > [!IMPORTANT]
 > Si, au lieu d'utiliser READ_WRITE_FILEGROUPS, vous listez de manière explicite les groupes de fichiers en lecture/écriture en utilisant FILEGROUP, vous allez créer une sauvegarde de fichiers.
 
-FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Spécifie le nom logique d’un groupe de fichiers en lecture seule ou une variable dont la valeur correspond au nom logique d’un groupe de fichiers en lecture seule à inclure dans la sauvegarde partielle. Pour plus d’informations, reportez-vous à « \<file_or_filegroup> », plus haut dans cette rubrique.
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Spécifie le nom logique d’un groupe de fichiers en lecture seule ou une variable dont la valeur correspond au nom logique d’un groupe de fichiers en lecture seule à inclure dans la sauvegarde partielle. Pour plus d'informations, consultez « \<file_or_filegroup> » plus haut dans cette rubrique.
 
 *n* Correspond à un espace réservé indiquant qu’il est possible de spécifier plusieurs groupes de fichiers en lecture seule dans une liste séparée par des virgules.
 
 Pour plus d’informations sur les sauvegardes partielles, consultez l’article [Sauvegardes partielles](../../relational-databases/backup-restore/partial-backups-sql-server.md).
 
-TO \<backup_device> [ **,** ...*n* ] Indique que le jeu des [unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) associé est soit un support de sauvegarde non miroir, soit le premier miroir d’un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).
+TO \<backup_device> [ **,** ...*n* ] Indique que le jeu d'[unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) associé est soit un support de sauvegarde non miroir, soit le premier miroir d'un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).
 
 \<backup_device>
 
@@ -267,7 +267,7 @@ Cette option est disponible uniquement dans l'édition Enterprise de [!INCLUDE[s
 > [!NOTE]
 > Pour MIRROR TO = DISK, BACKUP détermine automatiquement la taille de bloc appropriée des unités de disques, en fonction de la taille du secteur. Si le disque MIRROR TO est formaté avec une taille de secteur différente de celle du disque spécifié comme unité de sauvegarde principale, la commande de sauvegarde échoue. Pour mettre en miroir des sauvegardes sur des appareils qui ont des tailles de secteur différentes, le paramètre BLOCKSIZE doit être spécifié et doit être défini sur la taille de secteur la plus élevée parmi tous les appareils cibles. Pour plus d’informations sur la taille de bloc, consultez « BLOCKSIZE » plus loin dans cette rubrique.
 
-\<backup_device>Consultez « \<backup_device> », plus haut dans cette section.
+\<backup_device> Voir « \<backup_device> » plus haut dans cette section.
 
 *n* Correspond à un espace réservé indiquant qu’il est possible de spécifier jusqu’à 64 unités de sauvegarde dans une liste séparée par des virgules. Le nombre d'unités spécifiées dans la clause MIRROR TO doit être égal au nombre d'unités spécifiées dans la clause TO.
 
@@ -436,7 +436,7 @@ L’espace total utilisé par les mémoires tampons est déterminé par : `BUFF
 > [!NOTE]
 > Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
 > [!NOTE]
 > Lors de la création de sauvegardes à l’aide du service SQL Writer, si la base de données est configurée avec [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), ou si elle comprend des [groupes de fichiers à mémoire optimisée](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), la valeur de `MAXTRANSFERSIZE` au moment de la restauration doit être supérieure ou égale à celle du `MAXTRANSFERSIZE` qui a été utilisée lors de la création de la sauvegarde.
@@ -690,8 +690,9 @@ L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou impl
 
 Les opérations de sauvegarde inter-plateformes, impliquant éventuellement des types de processeurs différents, peuvent être réalisées tant que le classement de la base de données est pris en charge par le système d'exploitation.
 
-Lorsque vous utilisez la compression de sauvegarde avec des bases de données ne comprenant qu’un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, il est recommandé d’utiliser pour le paramètre `MAXTRANSFERSIZE` une valeur **supérieure à 65 536 (64 Ko)** .
-Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, cela permet l’utilisation d’un algorithme de compression optimisé pour les bases de données chiffrées avec TDE, qui chiffre d’abord une page, la compresse, puis la chiffre de nouveau. Si vous utilisez `MAXTRANSFERSIZE = 65536` (64 Ko), la compression de sauvegarde pour les bases de données chiffrées avec TDE va directement compresser les pages chiffrées et peut ne pas fournir de bons taux de compression. Pour plus d’informations, consultez [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, définir `MAXTRANSFERSIZE` **sur une valeur supérieure à 65536 (64 Ko)** permet d’utiliser un algorithme de compression optimisé pour les bases de données chiffrées avec [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), qui chiffre d’abord une page, la compresse, puis la chiffre de nouveau. Si `MAXTRANSFERSIZE` n’est pas spécifiée, ou si `MAXTRANSFERSIZE = 65536` (64 Ko) est utilisé, la compression de sauvegarde pour les bases de données chiffrées avec TDE compresse directement les pages chiffrées et peut ne pas fournir de bons taux de compression. Pour plus d’informations, consultez [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
+À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, la définition de `MAXTRANSFERSIZE` n’est plus nécessaire pour activer cet algorithme de compression optimisé avec TDE. Si la commande de sauvegarde est spécifiée `WITH COMPRESSION` ou que la configuration serveur de *compression par défaut des sauvegardes* est définie sur 1, `MAXTRANSFERSIZE` sera automatiquement augmentée à 128 K pour activer l’algorithme optimisé. Si `MAXTRANSFERSIZE` est spécifiée dans la commande Backup avec une valeur > 64 Ko, la valeur fournie est respectée. En d’autres termes, SQL Server ne diminue jamais automatiquement la valeur, elle l’augmente uniquement. Si vous avez besoin de sauvegarder une base de données chiffrée TDE avec `MAXTRANSFERSIZE = 65536`, vous devez spécifier `WITH NO_COMPRESSION` ou vous assurer que la configuration serveur de *compression par défaut des sauvegardes* est définie sur 0.
 
 > [!NOTE]
 > Dans certains cas, la valeur par défaut `MAXTRANSFERSIZE` est supérieure à 64 Ko :
@@ -699,7 +700,7 @@ Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures,
 > - Quand la base de données a plusieurs fichiers de données créés, elle utilise `MAXTRANSFERSIZE` > 64 Ko
 > - Quand vous effectuez une sauvegarde vers une URL, la valeur par défaut `MAXTRANSFERSIZE = 1048576` (1 Mo)
 >
-> Même si une de ces conditions s’applique, vous devez définir explicitement `MAXTRANSFERSIZE` supérieure à 64 Ko dans votre commande de sauvegarde afin d’obtenir le nouvel algorithme de compression de sauvegarde.
+> Même si une de ces conditions s’applique, vous devez définir explicitement `MAXTRANSFERSIZE` sur une valeur supérieure à 64 Ko dans votre commande de sauvegarde afin d’obtenir l’algorithme de compression de sauvegarde optimisé, sauf si vous êtes sur [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 ou version ultérieure.
 
 Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l'indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez l’article [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -1044,7 +1045,7 @@ L’espace total utilisé par les mémoires tampons est déterminé par : `BUFF
 > [!NOTE]
 > Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
 > [!NOTE]
 > Pour les bases de données comprenant un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, la valeur `MAXTRANSFERSIZE` par défaut est 65 536 (64 Ko). Pour les bases de données non chiffrées à l’aide de TDE, la valeur `MAXTRANSFERSIZE` par défaut est 1 048 576 (1 Mo) lors d’une sauvegarde vers DISK, et 65 536 (64 Ko) lors d’une sauvegarde vers VDI ou TAPE.

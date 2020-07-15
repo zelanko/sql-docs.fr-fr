@@ -1,5 +1,6 @@
 ---
 title: 'Mise à niveau : Assistant Installation (Programme d’installation)'
+description: L’Assistant Installation SQL Server fournit une arborescence de fonctionnalités unique pour mettre à niveau sur place les composants SQL Server vers la dernière version de SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258797"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900205"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 L’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une arborescence de fonctionnalités unique pour mettre à niveau sur place les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -97,7 +98,7 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
     > [!NOTE]  
-    >  Si vous avez choisi de mettre à niveau les fonctionnalités partagées en sélectionnant **\<Mettre à niveau les fonctionnalités partagées uniquement>** dans la page **Sélectionner une instance**, toutes les fonctionnalités partagées sont présélectionnées dans la page Sélection des fonctionnalités. Tous les composants partagés sont mis à niveau à la fois.  
+    >  Si vous avez choisi de mettre à niveau les fonctionnalités partagées en sélectionnant **\<Upgrade shared features only>** dans la page **Sélectionner une instance**, toutes les fonctionnalités partagées sont présélectionnées dans la page Sélection des fonctionnalités. Tous les composants partagés sont mis à niveau à la fois.  
   
 12. Dans la page Configuration de l'instance, spécifiez l'ID d'instance pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

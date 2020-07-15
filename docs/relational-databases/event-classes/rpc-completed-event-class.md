@@ -1,5 +1,6 @@
 ---
 title: RPC:Completed, classe d’événements | Microsoft Docs
+description: La classe d’événements RPC:Completed indique qu’un appel de procédure distante est terminé dans SQL Server.
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 771305c30bb4008ee3e4b937296864276cf74b73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d92083a5869e41e325c1c395ef23ab6cfac628f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727394"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed (classe d'événements)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements RPC:Completed indique qu'un appel de procédure distante a été réglé.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Colonnes de données de la classe d'événements RPC:Completed  

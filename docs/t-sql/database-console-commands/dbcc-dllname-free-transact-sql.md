@@ -26,18 +26,18 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aeac2877165b3d0b00d33fd62e8e81086d951f0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101950"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894879"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Décharge les DLL de procédure stockée étendue spécifiées de la mémoire.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
 ```sql
@@ -65,7 +65,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant suppose que `xp_sample` est implémenté en tant que fichier xp_sample.dll et a été exécuté. DBCC \<*dllname*> (FREE) décharge le fichier xp_sample.dll associé à la procédure étendue `xp_sample`.
+L’exemple suivant suppose que `xp_sample` est implémenté en tant que fichier xp_sample.dll et a été exécuté. L'instruction DBCC \<*dllname*> (FREE) décharge le fichier xp_sample.dll associé à la procédure étendue `xp_sample`.
   
 ```sql  
 DBCC xp_sample (FREE);  

@@ -1,27 +1,26 @@
 ---
 title: Créer des extraits de code réutilisables
-titleSuffix: Azure Data Studio
 description: Découvrez comment créer et utiliser des extraits de code SQL dans Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774690"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>Créer et utiliser des extraits de code pour créer rapidement des scripts Transact-SQL (T-SQL) dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Créer et utiliser des extraits de code pour créer rapidement des scripts Transact-SQL (T-SQL) dans Azure Data Studio
 
-Les extraits de code dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] sont des modèles qui facilitent la création de bases de données et d’objets de base de données. 
+Les extraits de code dans Azure Data Studio sont des modèles qui facilitent la création de bases de données et d’objets de base de données. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit plusieurs extraits de code T-SQL pour vous aider à générer rapidement la syntaxe appropriée. 
+Azure Data Studio fournit plusieurs extraits de code T-SQL pour vous aider à générer rapidement la syntaxe appropriée. 
 
 Des extraits de code définis par l’utilisateur peuvent également être créés.
 
@@ -58,7 +57,7 @@ Vous pouvez définir vos propres extraits de code. Pour ouvrir le fichier d’ex
 1. Sélectionnez **SQL** :
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] hérite de sa fonctionnalité d’extrait de code de Visual Studio Code, aussi cet article explique spécifiquement comment utiliser des extraits de code SQL. Pour plus d’informations, consultez [Création de vos propres extraits de code](https://code.visualstudio.com/docs/editor/userdefinedsnippets) dans la documentation de Visual Studio Code. 
+   > Azure Data Studio hérite de sa fonctionnalité d’extrait de code de Visual Studio Code, aussi cet article explique spécifiquement comment utiliser des extraits de code SQL. Pour plus d’informations, consultez [Création de vos propres extraits de code](https://code.visualstudio.com/docs/editor/userdefinedsnippets) dans la documentation de Visual Studio Code. 
 
    ![remplacer le champ de modèle](media/code-snippets/select-sql.png)
 

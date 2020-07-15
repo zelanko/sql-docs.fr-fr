@@ -1,5 +1,6 @@
 ---
-title: 'Exemple : spécification de la directive XMLTEXT | Microsoft Docs'
+title: 'Exemple : Spécification de la directive XMLTEXT | Microsoft Docs'
+description: Découvrez comment traiter la partie non consommée d’un document XML en spécifiant la directive XMLTEXT dans une instruction SELECT à l’aide du mode EXPLICIT.
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d6fb7538de11db0d5a37c44330bd2b0251d9031b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632321"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-xmltext-directive"></a>Exemple : Spécification de la directive XMLTEXT
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
  Soit la table `Person` . Cette table possède une colonne nommée `Overflow` , qui stocke les données non consommées du document XML.  

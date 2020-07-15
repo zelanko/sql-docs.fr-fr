@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 08454c76591d7cfb12eff07d3a05d706bd7bfe44
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ada5b781b129b56aa7b4cee63c6649fa647f9654
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628381"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895670"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Démarre ou arrête une session d'événements, ou modifie la configuration d'une session d'événements.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -129,8 +129,8 @@ ON SERVER
 |*event_field_name*|Nom du champ d'événement qui identifie la source de prédicat.|  
 |[event_module_guid].event_package_name.predicate_source_name|Nom de la source de prédicat globale, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet de prédicat.<br />-   *predicate_source_name* est défini dans la vue sys.dm_xe_objects en tant qu’object_type « pred_source ».|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|Nom de l'objet de prédicat à associer à l'événement, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet de prédicat.<br />-   *predicate_compare_name* est une source globale définie dans la vue sys.dm_xe_objects en tant qu’object_type « pred_compare ».|  
-|DROP EVENT \<event_specifier>|Supprime l’événement identifié par *\<event_specifier>* . \<event_specifier> doit être valide dans la session d’événements.|  
-|ADD TARGET \<event_target_specifier>|Associe la cible identifiée par \<event_target_specifier> à la session d’événements.|
+|DROP EVENT \<event_specifier>|Supprime l'événement identifié par *\<event_specifier>* . \<event_specifier> doit être valide dans la session d’événements.|  
+|ADD TARGET \<event_target_specifier>|Associe l’événement identifié par \<event_target_specifier> à la session d’événements.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Nom d'une cible de la session d'événements, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet d’action.<br />-   *target_name* est l’action. Les actions apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « cible ».|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Définit un paramètre cible. Les paramètres cibles apparaissent dans la vue sys.dm_xe_object_columns sous la forme column_type 'customizable' et object_name = *target_name*.<br /><br /> **REMARQUE** Si vous utilisez la cible de mémoire tampon en anneau, il est préférable de configurer le paramètre cible max_memory avec 2 048 kilo-octets (Ko) pour éviter les éventuelles données tronquées dans le résultat XML. Pour plus d’informations sur le moment où les différents types de cibles doivent être utilisés, consultez [Cibles des événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Supprime la cible identifiée par \<event_target_specifier>. \<event_target_specifier> doit être valide dans la session d’événements.|  

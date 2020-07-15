@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287573"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006004"
 ---
 # <a name="best-practices-with-query-store"></a>Bonnes pratiques relatives au Magasin des requêtes
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Cet article décrit les bonnes pratiques concernant l’utilisation du Magasin des requêtes SQL Server avec votre charge de travail.
 
@@ -34,9 +34,9 @@ Pour obtenir une description rapide de la manière d’utiliser le Magasin des r
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Utiliser Query Performance Insight dans Azure SQL Database
 
-Si vous exécutez le Magasin des requêtes dans Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous pouvez utiliser [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) pour analyser la consommation de ressources dans le temps. Même si vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) pour obtenir des détails sur la consommation en ressources de toutes vos requêtes (par exemple, processeur, mémoire et E/S), Query Performance Insight vous offre un moyen rapide et efficace de déterminer leur impact sur la consommation DTU globale de votre base de données. Pour plus d’informations, consultez [Query Performance Insight pour base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Si vous exécutez le Magasin des requêtes dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez utiliser [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) pour analyser la consommation de ressources dans le temps. Même si vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et [Azure Data Studio](../../azure-data-studio/what-is.md) pour obtenir des détails sur la consommation en ressources de toutes vos requêtes (par exemple, processeur, mémoire et E/S), Query Performance Insight vous offre un moyen rapide et efficace de déterminer leur impact sur la consommation DTU globale de votre base de données. Pour plus d’informations, consultez [Query Performance Insight pour base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
-Cette section décrit les paramètres optimaux de configuration par défaut, conçus pour garantir un fonctionnement fiable du Magasin des requêtes et des fonctionnalités dépendantes. La configuration par défaut est optimisée pour la collecte des données en continu, c’est-à-dire pour passer le moins de temps possible aux états OFF/READ_ONLY.
+Cette section décrit les paramètres optimaux de configuration par défaut, conçus pour garantir un fonctionnement fiable du Magasin des requêtes et des fonctionnalités dépendantes. La configuration par défaut est optimisée pour la collecte des données en continu, c’est-à-dire pour passer le moins de temps possible aux états OFF/READ_ONLY. Pour plus d’informations sur toutes les options de Magasin des requêtes disponibles, consultez [Options ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 | Configuration | Description | Default | Commentaire |
 | --- | --- | --- | --- |
@@ -49,9 +49,12 @@ Cette section décrit les paramètres optimaux de configuration par défaut, con
 | | | | |
 
 > [!IMPORTANT]
-> Ces paramètres par défaut sont automatiquement appliqués à l’étape finale de l’activation du Magasin des requêtes dans toutes les bases de données Azure SQL (voir la remarque importante précédente). Après cela, Azure SQL Database ne modifiera pas les valeurs de configuration définies par les clients, à moins qu’elles aient un impact négatif sur les charges de travail principales ou sur la fiabilité des opérations du Magasin des requêtes.
+> Ces paramètres par défaut sont automatiquement appliqués à l’étape finale de l’activation du Magasin des requêtes dans toutes les [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Après cela, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne modifiera pas les valeurs de configuration définies par les clients, à moins qu’elles aient un impact négatif sur les charges de travail principales ou sur la fiabilité des opérations du Magasin des requêtes.
 
-Si vous souhaitez conserver vos paramètres personnalisés, utilisez [ALTER DATABASE avec les options du magasin de requêtes](https://msdn.microsoft.com/library/bb522682.aspx) pour rétablir la configuration à l’état précédent. Découvrez les [meilleures pratiques liées au magasin de requêtes](https://msdn.microsoft.com/library/mt604821.aspx) pour savoir comment choisir des paramètres de configuration optimaux.
+> [!NOTE]  
+> Le Magasin des requêtes ne peut pas être désactivé dans la base de données unique [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et le pool élastique. L’exécution de `ALTER DATABASE [database] SET QUERY_STORE = OFF` renverra l’avertissement `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
+
+Si vous souhaitez conserver vos paramètres personnalisés, utilisez [ALTER DATABASE avec les options du magasin de requêtes](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) pour rétablir la configuration à l’état précédent. Découvrez les [meilleures pratiques liées au Magasin de données des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md) pour savoir comment choisir des paramètres de configuration optimaux.
 
 ## <a name="use-query-store-with-elastic-pool-databases"></a>Utiliser le Magasin des requêtes avec des bases de données de pool élastique
 
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 

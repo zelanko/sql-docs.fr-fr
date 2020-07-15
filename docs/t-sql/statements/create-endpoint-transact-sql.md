@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4352a1b050bc27be18d490c8790f793f57e1839
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632177"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902294"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de créer des points de terminaison et de définir leurs propriétés, ainsi que les méthodes à la disposition des applications clientes. Pour plus d’informations, consultez [GRANT - Octroyer des autorisations sur un point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81632177"
   
 > **REMARQUE :** Les services Web XML natifs (points de terminaison SOAP/HTTP) ont été supprimés dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Pour les options propres à SERVICE_BROKER, consultez la section « Options SERVICE_BROKER » ci-dessous. Pour les options propres à DATABASE_MIRRORING, consultez la section « Options DATABASE_MIRRORING » ci-dessous.  
   
- AUTHENTICATION **=** \<authentication_options> Indique les exigences d’authentification TCP/IP pour les connexions à ce point de terminaison. Le paramètre par défaut est WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Indique les exigences d'authentification TCP/IP pour les connexions à ce point de terminaison. Le paramètre par défaut est WINDOWS.  
   
  Parmi les méthodes d'authentification prises en charge figurent NTLM et/ou Kerberos.  
   

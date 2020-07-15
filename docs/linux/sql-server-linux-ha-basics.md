@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216679"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895311"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes de base de la disponibilité SQL Server pour les déploiements Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 À partir de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] est pris en charge sur Linux et sur Windows. Comme les [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]déploiements [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basés sur Windows, les bases de données et les instances doivent être hautement disponibles sous Linux. Cet article aborde les aspects techniques de la planification et du déploiement de bases de données et d’instances [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basées sur Linux à haut niveau de disponibilité, ainsi que certaines des différences par rapport aux installations Windows. Comme [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] peut être une nouveauté pour les professionnels Linux et que Linux peut être une nouveauté pour les professionnels [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], l’article présente parfois des concepts pouvant être familiers aux uns et ne pas l’être aux autres.
 
@@ -169,10 +169,13 @@ Un cluster WSFC et un cluster Pacemaker sont conçus pour une ressource. Une res
 
 Pacemaker a des ressources standard et de clonage. Les ressources de clonage s’exécutent simultanément sur tous les nœuds. Par exemple, une adresse IP qui s’exécute sur plusieurs nœuds à des fins d’équilibrage de charge. Toute ressource créée pour les instances de cluster de basculement (FCI) utilise une ressource standard, car un seul nœud peut héberger une instance de cluster de basculement (FCI) à un moment donné.
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 Quand un groupe de disponibilité est créé, il nécessite une forme spécialisée de ressource de clonage appelée ressource à plusieurs états. Bien qu’un groupe de disponibilité n’ait qu’un seul réplica principal, le groupe de disponibilité proprement dit s’exécute sur tous les nœuds sur lesquels il est configuré pour fonctionner et peut potentiellement autoriser des opérations telles que l’accès en lecture seule. Étant donné qu’il s’agit d’une utilisation « en direct » du nœud, les ressources ont le concept de deux états : maître et esclave. Pour plus d'informations, consultez [Ressources à plusieurs états : ressources qui ont plusieurs modes](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>Groupes/ensembles de ressources
-À l’instar des rôles dans un WSFC, un cluster Pacemaker a le concept d’un groupe de ressources. Un groupe de ressources (appelé ensemble dans SLES) est une collection de ressources qui fonctionnent ensemble et peuvent basculer d’un nœud à un autre en tant qu’unité unique. Les groupes de ressources ne peuvent pas contenir de ressources qui sont configurées en tant que maître/esclave ; ils ne peuvent donc pas être utilisés pour des groupes de disponibilité. Bien qu’un groupe de ressources puisse être utilisé pour les instances de cluster de basculement (FCI), ce n’est généralement pas une configuration recommandée.
+
+À l’instar des rôles dans un WSFC, un cluster Pacemaker a le concept d’un groupe de ressources. Un groupe de ressources (appelé _ensemble_ dans SLES) est une collection de ressources qui fonctionnent ensemble et peuvent basculer d’un nœud à un autre en tant qu’unité unique. Les groupes de ressources ne peuvent pas contenir de ressources qui sont configurées en tant que maître ou esclave ; ils ne peuvent donc pas être utilisés pour des groupes de disponibilité. Bien qu’un groupe de ressources puisse être utilisé pour les instances de cluster de basculement (FCI), ce n’est généralement pas une configuration recommandée.
 
 #### <a name="constraints"></a>Contraintes
 Les clusters WSFC ont différents paramètres pour les ressources, ainsi que des éléments tels que des dépendances, qui indiquent au cluster WSFC une relation parent/enfant entre deux ressources différentes. Une dépendance est simplement une règle indiquant à WSFC quelle ressource doit d’abord être en ligne.

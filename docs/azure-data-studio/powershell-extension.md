@@ -1,22 +1,21 @@
 ---
 title: Extension PowerShell
-titleSuffix: Azure Data Studio
 description: Installer et utiliser PowerShell pour Azure Data Studio
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637740"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Prise en charge de l'éditeur PowerShell pour Azure Data Studio
 
@@ -24,7 +23,6 @@ Cette extension fournit une prise en charge complète de l'éditeur PowerShell d
 Vous pouvez maintenant écrire et déboguer des scripts PowerShell en utilisant l'excellente interface de type IDE fournie par Azure Data Studio.
 
 ![Extension PowerShell](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>Fonctionnalités
 
@@ -38,7 +36,6 @@ Vous pouvez maintenant écrire et déboguer des scripts PowerShell en utilisant 
 - Exécuter la sélection du code PowerShell en utilisant <kbd>F8</kbd>
 - Lancer l'aide en ligne pour le symbole sous le curseur à l’aide de <kbd>Ctrl</kbd>+<kbd>F1</kbd>
 - Prise en charge de base de la console interactive !
-
 
 ## <a name="installing-the-extension"></a>Installation de l’extension
 
@@ -147,7 +144,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-Le module `SqlServer` contient un fournisseur appelé `SQLRegistration` qui vous permet d'accéder par programmation aux types suivants de connexions SQL Server enregistrées :
+Le module `SqlServer` contient un fournisseur appelé `SQLRegistration` qui vous permet d'accéder par programmation aux types suivants de connexions SQL Server enregistrées :
 
 + Serveur de moteur de base de données (serveurs enregistrés)
 + Serveur de gestion centralisée (CMS)
@@ -259,7 +256,7 @@ Consultez la [documentation de développement](https://github.com/PowerShell/vsc
 
 Cette extension est [accordée sous licence MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Pour plus de détails sur les binaires tiers que nous incluons avec les versions de ce projet, consultez le fichier [Mentions tierces](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Code de conduite][conduct-md]
+## <a name="code-of-conduct"></a>Code de conduite
 
 Ce projet a adopté le [Code de conduite Open Source de Microsoft][conduct-code].
 Pour plus d'informations, voir la [FAQ sur le Code de conduite ][conduct-FAQ] ou contacter [opencode@microsoft.com][conduct-email] pour toute question ou commentaire supplémentaire.

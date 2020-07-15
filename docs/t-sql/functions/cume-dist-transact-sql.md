@@ -16,22 +16,22 @@ helpviewer_keywords:
 - CUME_DIST function
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5423ab5a0748fafd2f8030c9aeebec5691d5d674
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21ee42a6901d24a0dcdd01c5c096a73cca4d95e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732462"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette fonction calcule la distribution cumulative d'une valeur dans un groupe de valeurs. Autrement dit, `CUME_DIST` calcule la position relative d'une valeur spécifiée dans un groupe de valeurs. En supposant un ordre croissant, le `CUME_DIST` d’une valeur à la ligne _r_ correspond au nombre de lignes avec des valeurs inférieures ou égales à la valeur de la ligne _r_, divisé par le nombre de lignes évaluées dans la partition ou le jeu de résultats de la requête. `CUME_DIST` est similaire à la fonction `PERCENT_RANK`.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ CUME_DIST( )
 ## <a name="arguments"></a>Arguments  
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-_partition\_by\_clause_ divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. Si l’argument _partition\_by\_clause_ n’est pas spécifié, `CUME_DIST` traite toutes les lignes du jeu de résultats de la requête comme un seul groupe. _order\_by\_clause_ détermine l’ordre logique dans lequel l’opération est effectuée. `CUME_DIST` nécessite _order\_by\_clause_. `CUME_DIST` n’acceptera pas la \<clause ROWS ou RANGE> de la syntaxe OVER. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+_partition\_by\_clause_ divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. Si l’argument _partition\_by\_clause_ n’est pas spécifié, `CUME_DIST` traite toutes les lignes du jeu de résultats de la requête comme un seul groupe. _order\_by\_clause_ détermine l’ordre logique dans lequel l’opération est effectuée. `CUME_DIST` nécessite _order\_by\_clause_. `CUME_DIST` n’accepte pas la \<rows or range clause> de la syntaxe OVER. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Types de retour
 **float(53)**

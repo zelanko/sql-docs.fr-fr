@@ -1,6 +1,6 @@
 ---
 title: Les modifications ne sont pas visibles sur le réplica de groupe de disponibilité secondaire
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: Découvrez comment déterminer pourquoi les changements sur un réplica principal ne sont pas répercutés sur le réplica secondaire dans un groupe de disponibilité Always On.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243014"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888002"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Déterminer pourquoi les changements apportés au réplica principal ne sont pas répercutés sur le réplica secondaire dans un groupe de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté. Ce cas part du principe que l’état de synchronisation de votre disponibilité est sain. La plupart du temps, ce problème se résout tout seul en quelques minutes.  
   
  Si les changements ne sont toujours pas répercutés sur le réplica secondaire après quelques minutes, le flux de synchronisation peut faire l’objet d’un goulot d’étranglement. L’emplacement du goulot d’étranglement varie selon le type de validation (synchrone ou asynchrone) défini sur le réplica secondaire.  
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  Si le thread de restauration par progression prend effectivement du retard, vous devez rechercher la cause racine de la dégradation des performances sur le réplica secondaire. En cas de contention au niveau des E/S avec la charge de travail de création de rapports, vous pouvez utiliser [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) pour contrôler les cycles d’UC utilisés par la charge de travail de création de rapports afin de contrôler indirectement, dans une certaine mesure, les cycles d’E/S entrepris. Par exemple, si votre charge de travail de création de rapports utilise 10 % de l’UC et que la charge de travail est liée aux E/S, vous pouvez utiliser Resource Governor pour limiter l’utilisation des ressources de l’UC à 5 % afin de restreindre la charge de travail de lecture et réduire l’impact sur les E/S.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Résolution des problèmes de performances dans SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
+ [Résolution des problèmes de performances dans SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
   
   

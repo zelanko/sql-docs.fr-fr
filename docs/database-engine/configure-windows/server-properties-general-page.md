@@ -1,5 +1,6 @@
 ---
 title: Propriétés du serveur (page Général) - SQL Server Management Studio | Microsoft Docs
+description: Familiarisez-vous avec les propriétés en lecture seule dans SQL Server. Les exemples incluent le nom du serveur, le système d’exploitation, le classement et la version de SQL Server.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 - sql13.swb.serverproperties.activedirectory.f1
 - sql13.swb.serverproperties.prodinfo.f1
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da2180230cfc80775f07a73dbc41f12ad9e46641
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726654"
 ---
 # <a name="server-properties---general-page"></a>Propriétés du serveur - Page Général
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette page pour consulter des informations en lecture seule sur votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Grille des propriétés  

@@ -1,5 +1,6 @@
 ---
 title: OLE Automation Procedures (option de configuration de serveur) | Microsoft Docs
+description: Découvrez l’option « Ole Automation Procedures ». Découvrez comment elle spécifie si SQL Server peut instancier des objets OLE Automation dans des lots Transact-SQL.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Ole Automation Procedures option
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: cb13d9b50c78ff3d067d97b2d5dd1b763e024608
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5390fce7517b56ea26a33392a72da7cb39dcd34d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773685"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>OLE Automation Procedures (option de configuration de serveur)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisez l’option **OLE Automation Procedures** pour spécifier si les objets OLE Automation peuvent être instanciés dans des lots [!INCLUDE[tsql](../../includes/tsql-md.md)] . Cette option peut également être configurée à l’aide de la gestion basée sur une stratégie ou de la procédure stockée **sp_configure** . Pour plus d'informations, consultez [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   

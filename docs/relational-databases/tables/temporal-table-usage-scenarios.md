@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165743"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881219"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scénarios d’utilisation de table temporelle
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Les tables temporelles sont généralement utiles dans les scénarios qui exigent un suivi de l’historique des modifications de données. Nous vous recommandons d’envisager les tables temporelles dans les cas d’usage suivants, car elles offrent des avantages importants au niveau de la productivité.
 
@@ -141,8 +141,8 @@ L’instruction AT TIME ZONE est utile dans tous les autres scénarios faisant a
 
 > [!TIP]
 > Les conditions de filtrage spécifiées dans des clauses temporelles avec FOR SYSTEM_TIME sont dites « SARG-able » ; en d’autres termes, SQL Server peut utiliser un index cluster sous-jacent pour effectuer une recherche au lieu d’une opération d’analyse.
-> Si vous interrogez directement la table d’historique, vérifiez que votre condition de filtrage est aussi « SARG-able » en spécifiant des filtres sous la forme \<colonne de période> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
-> Si vous appliquez AT TIME ZONE à des colonnes de période, SQL Server effectue une analyse de table/index, qui peut être très coûteuse. Évitez ce type de condition dans vos requêtes : \<colonne de période> AT TIME ZONE '\<votre fuseau horaire>' > {< | > | =, ...} condition_date.
+> Si vous interrogez directement la table d’historique, vérifiez que votre condition de filtrage est aussi « SARG-able » en spécifiant des filtres sous la forme \<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
+> Si vous appliquez AT TIME ZONE à des colonnes de période, SQL Server effectue une analyse de table/index, qui peut être très coûteuse. Évitez ce type de condition dans vos requêtes : \<period column> AU NIVEAU DU FUSEAU HORAIRE'\<your time zone>' > {< | > | =, ...} condition_date.
 
 Voir aussi : [Interrogation des données dans une table temporelle avec version gérée par le système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).
 

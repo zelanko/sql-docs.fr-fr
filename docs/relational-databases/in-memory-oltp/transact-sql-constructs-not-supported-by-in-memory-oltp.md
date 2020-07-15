@@ -1,5 +1,6 @@
 ---
 title: T-SQL non pris en charge par l’OLTP en mémoire
+description: Découvrez les fonctionnalités Transact-SQL qui ne sont pas prises en charge pour les tables à mémoire optimisée, les procédures stockées compilées en mode natif et les fonctions définies par l’utilisateur.
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753206"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Les tables optimisées en mémoire, les procédures stockées compilées en mode natif et les fonctions définies par l’utilisateur ne prennent pas en charge la totalité de la surface d’exposition [!INCLUDE[tsql](../../includes/tsql-md.md)] qui est prise en charge par les tables sur disque, les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées et les fonctions définies par l’utilisateur. Lorsque vous tentez d'utiliser une des fonctionnalités non prises en charge, le serveur retourne une erreur.  
   

@@ -2,7 +2,7 @@
 title: 'Tutoriel : Always Encrypted avec enclaves sécurisées avec SSMS'
 description: Ce tutoriel vous montre comment créer un environnement Always Encrypted avec enclaves sécurisées de base, comment chiffrer les données sur place et comment émettre des requêtes riches sur des colonnes chiffrées à l’aide de SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288693"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807729"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Always Encrypted avec enclaves sécurisées avec SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -115,14 +115,14 @@ Dans cette étape, vous allez configurer l’ordinateur SQL Server comme hôte S
 
 3. Quand vous y êtes invité, redémarrez votre ordinateur SQL Server pour terminer l’installation d’Hyper-V.
 
-4. Si votre ordinateur SQL Server est une machine virtuelle, ou bien une machine physique ancienne génération qui ne prend pas en charge le démarrage sécurisé UEFI ou n’est pas équipée d’IOMMU, vous devez supprimer la condition VBS pour les fonctionnalités de sécurité de la plateforme.
-    1. Supprimez la condition dans le Registre Windows.
+4. Si votre ordinateur SQL Server est une machine virtuelle, une machine physique qui ne prend pas en charge le démarrage sécurisé UEFI ou une machine physique non équipée d’IOMMU, vous devez supprimer la condition VBS pour les fonctionnalités de sécurité de la plateforme.
+    1. Supprimez l’exigence de démarrage sécurisé et d’IOMMU en exécutant la commande suivante sur votre ordinateur SQL Server dans une console PowerShell avec élévation de privilèges :
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Redémarrez l’ordinateur pour que VBS présente les conditions réduites en ligne.
+    1. Redémarrez l’ordinateur SQL Server pour que VBS présente les conditions réduites en ligne.
 
         ```powershell
        Restart-Computer

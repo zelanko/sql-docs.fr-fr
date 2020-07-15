@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284358"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817794"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Fonctionnalités Integration Services prises en charge par les éditions de SQL Server
 
@@ -39,11 +39,12 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
     
 ## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> Nouvelles fonctionnalités Integration Services dans SQL Server 2017
   
-|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out Master|Oui|||||
 |Scale Out Worker|Oui|Oui <sup>1</sup>|TBD|TBD|TBD|
 |Prise en charge de Microsoft Dynamics AX et Microsoft Dynamics CRM dans les composants OData <sup>2</sup>|Oui|Oui||||
+|Prise en charge Linux|Oui|Oui|||Oui|
 
 <sup>1</sup> Si vous exécutez des packages qui nécessitent des fonctionnalités Entreprise uniquement dans Scale Out, les Scale Out Workers doivent également s’exécuter sur des instances de SQL Server Entreprise.
 
@@ -51,13 +52,16 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 
 ## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> Assistant Importation et Exportation SQL Server
 
-|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Assistant Importation et Exportation SQL Server|Oui|Oui|Oui|Oui|Oui|  
+|Assistant Importation et Exportation SQL Server|Oui|Oui|Oui|Oui<sup>1</sup>|Oui<sup>1</sup>|
+
+<sup>1</sup> DTSWizard.exe n’est pas fourni avec SQL sur Linux. Toutefois, dtexec sur Linux peut être utilisé pour exécuter un package créé par DTSWizard sur Windows.
+
 
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
-|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Connecteurs de source de données intégrés|Oui|Oui|||| 
 |Tâches et transformations intégrées|Oui|Oui||||  
@@ -68,7 +72,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 
 ## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Integration Services - sources et destinations avancées  
   
-|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Source et destination Oracle hautes performances par Attunity|Oui|||||  
 |Source et destination hautes performances Teradata par Attunity|Oui|||||  
@@ -79,7 +83,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
   
 ## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services - Tâches et transformations avancées  
   
-|Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Composants de capture de données modifiées par Attunity <sup>1</sup>|Oui|||||  
 |Transformation de requête d'exploration de données|Oui|||||  

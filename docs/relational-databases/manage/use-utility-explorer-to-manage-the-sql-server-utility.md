@@ -1,5 +1,6 @@
 ---
 title: Utiliser l’Explorateur d’utilitaire pour gérer l’utilitaire SQL Server | Microsoft Docs
+description: Découvrez les différentes façons d’utiliser l’Explorateur de l’utilitaire pour gérer des instances SQL Server, telles que l’ajustement des définitions de stratégie et l’affichage de l’utilisation du processeur et du volume de stockage.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c34b8239b93d1b8fb9c814ab5b5ac17482f968f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785626"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'Explorateur de l'utilitaire, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se connecte aux instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour fournir une arborescence de tous les objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le volet Contenu de l'Explorateur de l'utilitaire offre plusieurs moyens de consulter les données de synthèse et détaillées sur l'état d'intégrité des instances gérées de SQL Server. L'Explorateur de l'utilitaire fournit également une interface utilisateur pour afficher et gérer des définitions des stratégies. Les fonctions de l'Explorateur de l'utilitaire varient légèrement en fonction des objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais elles comprennent en général des objets, des données et des stratégies gérés par l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Créer un point de contrôle d'utilitaire  
@@ -38,7 +39,7 @@ ms.locfileid: "68115321"
 ### <a name="sql-server-utility-navigation-pane"></a>Volet Navigation de l'utilitaire SQL Server  
  Le volet Navigation de l'Explorateur de l'utilitaire fournit une arborescence des objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , groupés par point de contrôle d'utilitaire. Pour développer des dossiers, cliquez sur le signe plus (+) ou double-cliquez sur le nom de l'UCP dans le volet Navigation de l'Explorateur de l'utilitaire. Cliquez avec le bouton droit sur les dossiers ou les objets pour réaliser des tâches courantes. Les nœuds dans l'arborescence sont les suivants :  
   
--   Le nœud supérieur dans l'arborescence est le point de contrôle d'utilitaire (UCP). Le nom du nœud se compose ainsi : « Utility_Name » (ComputerName\UCP_instance_name). Si vous n'avez pas d'UCP, vous devez en créer un. Si vous n'êtes pas connecté à un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez le faire. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Cliquez sur le nom d'UCP dans l'arborescence pour remplir le volet Contenu de l'Explorateur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les données dans l'affichage Tableau de bord. Pour plus d’informations, consultez [Tableau de bord de l’utilitaire &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   Le nœud supérieur dans l'arborescence est le point de contrôle d'utilitaire (UCP). Le nom du nœud est construit ainsi : « Nom_utilitaire » (NomOrdinateur\nom_instance_UCP). Si vous n'avez pas d'UCP, vous devez en créer un. Si vous n'êtes pas connecté à un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez le faire. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Cliquez sur le nom d'UCP dans l'arborescence pour remplir le volet Contenu de l'Explorateur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec les données dans l'affichage Tableau de bord. Pour plus d’informations, consultez [Tableau de bord de l’utilitaire &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Cliquez avec le bouton droit sur le nœud UCP pour actualiser des données dans le tableau de bord.  
   
@@ -61,9 +62,9 @@ ms.locfileid: "68115321"
  Lorsqu'un nœud contient un grand nombre d'objets, il peut être difficile de trouver l'objet que vous recherchez. Dans ce cas, utilisez la fonctionnalité de filtre de l'Explorateur de l'utilitaire pour réduire la taille de la liste. Par exemple, vous pouvez rechercher une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou seulement les ordinateurs avec un espace de fichier sous-exploité. Cliquez avec le bouton droit sur le dossier à filtrer, cliquez sur le bouton de filtre, puis sur **Paramètres du filtre** pour ouvrir la boîte de dialogue Paramètres du filtre de l’Explorateur d’utilitaire. Vous pouvez filtrer la liste par nom, processeur de l'ordinateur, processeur des instances, espace de fichier, espace de volume, paramètres de substitution de stratégie ou dernière heure signalée. Les colonnes **Operator** et **Value** fournissent des opérateurs de filtrage supplémentaires dans une liste déroulante.  
   
 ### <a name="starting-powershell"></a>Démarrage de PowerShell  
- Vous pouvez démarrer une session PowerShell en cliquant avec le bouton droit sur la plupart des dossiers et objets dans l’arborescence de l’Explorateur d’objets et en sélectionnant **Démarrer PowerShell**. Cette opération démarre une session PowerShell dont la prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell activée, et le chemin d'accès défini sur l'objet sur lequel vous avez cliqué avec le bouton droit sur dans l'Explorateur d'objets. Vous pouvez entrer ensuite des commandes PowerShell dans un environnement PowerShell interactif. Pour plus d’informations, consultez [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
+ Vous pouvez démarrer une session PowerShell en cliquant avec le bouton droit sur la plupart des dossiers et objets dans l’arborescence de l’Explorateur d’objets et en sélectionnant **Démarrer PowerShell**. Cette opération démarre une session PowerShell pour laquelle la prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell est activée, et dont le chemin est défini sur l’objet sur lequel vous avez cliqué avec le bouton droit dans l’Explorateur d’objets. Vous pouvez entrer ensuite des commandes PowerShell dans un environnement PowerShell interactif. Pour plus d’informations, consultez [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
   
- PowerShell n’offre pas d’aide accessible via la touche F1, mais inclut une applet de commande **Get-Help** qui fournit des informations sur l’utilisation de PowerShell. Pour plus d’informations sur l’utilisation de Get-Help, consultez [Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+PowerShell n’offre pas d’aide accessible via la touche F1, mais inclut une applet de commande **Get-Help** qui fournit des informations sur l’utilisation de PowerShell. Pour plus d’informations sur l’utilisation de Get-Help, consultez [Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

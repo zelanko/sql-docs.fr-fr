@@ -1,5 +1,6 @@
 ---
 title: Pool de mémoires tampons hybride | Microsoft Docs
+description: Découvrez comment le pool de mémoires tampons hybride rend les appareils persistants accessibles via le bus de mémoire. Activez ou désactivez cette fonctionnalité SQL Server 2019 et affichez les meilleures pratiques.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772424"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de mémoires tampons hybride
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Le pool de mémoires tampons hybride permet aux objets de pool de mémoires tampons de référencer des pages de données dans des fichiers de base de données résidant sur des appareils de mémoire persistante (PMEM), au lieu des copies des pages de données mises en cache dans la DRAM volatile. Cette fonctionnalité est introduite dans [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Bonnes pratiques pour le pool de mémoires tampons hybride
 
-Quand vous formatez votre appareil PMEM sur Windows, utilisez la plus grande taille d’unité d’allocation disponible pour NTFS (2 Mo dans Windows Server 2019) et vérifiez que l’appareil a été formaté pour DAX (Direct Access).
+ - Quand vous formatez votre appareil PMEM sur Windows, utilisez la plus grande taille d’unité d’allocation disponible pour NTFS (2 Mo dans Windows Server 2019) et vérifiez que l’appareil a été formaté pour DAX (Direct Access).
 
-Activez [Verrouiller les pages en mémoire](./enable-the-lock-pages-in-memory-option-windows.md) sur Windows.
+ - Activez [Verrouiller les pages en mémoire](./enable-the-lock-pages-in-memory-option-windows.md) sur Windows.
 
-Les tailles de fichiers doivent être un multiple de 2 Mo (modulo 2 Mo doit être égal à zéro).
+ - Les tailles de fichiers doivent être un multiple de 2 Mo (modulo 2 Mo doit être égal à zéro).
 
-Si le paramètre délimité au serveur pour le pool de mémoires tampons hybride est désactivé, la fonctionnalité n’est utilisée par aucune base de données utilisateur.
+ - Si le paramètre délimité au serveur pour le pool de mémoires tampons hybride est désactivé, la fonctionnalité n’est utilisée par aucune base de données utilisateur.
 
-Si le paramètre délimité au serveur pour le pool de mémoires tampons hybride est activé, vous pouvez utiliser le paramètre délimité à la base de données pour désactiver la fonctionnalité pour les bases de données utilisateur individuelles.
+ - Si le paramètre délimité au serveur pour le pool de mémoires tampons hybride est activé, vous pouvez utiliser le paramètre délimité à la base de données pour désactiver la fonctionnalité pour les bases de données utilisateur individuelles.

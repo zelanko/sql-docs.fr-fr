@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786476"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Segments (tables sans index cluster)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Un segment est une table sans index cluster. Un ou plusieurs index non cluster peuvent être créés sur des tables stockées comme segment. Les données sont stockées dans le segment sans spécifier d'ordre. Généralement, les données sont stockées initialement dans l'ordre dans lequel les lignes sont insérées dans la table, mais le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut déplacer des données dans le segment pour stocker les lignes efficacement ; l'ordre des données ne peut donc pas être prédit. Pour garantir l'ordre des lignes retournées à partir d'un segment, vous devez utiliser la clause `ORDER BY`. Pour spécifier l’ordre logique permanent à appliquer au stockage des lignes, créez un index cluster sur la table, de sorte que celle-ci ne soit pas un segment de mémoire.  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220704"
 > Il existe parfois de bonnes raisons de conserver une table comme segment plutôt que de créer un index cluster, mais l'utilisation de segments est effectivement une compétence avancée. La plupart des tables doivent avoir un index cluster soigneusement choisi, à moins qu'il n'existe une bonne raison de conserver la table comme segment.  
   
 ## <a name="when-to-use-a-heap"></a>À quel moment utiliser un segment  
-Lorsqu’une table est stockée en tant que segment de mémoire, les différentes lignes sont identifiées par référence à un identificateur de ligne (RID) de 8 octets composé d’un numéro de fichier, d’un numéro de page de données et de l’emplacement dans la page (FileID:PageID:SlotID). L’ID de ligne est une structure petite et efficace. Parfois, les professionnels des données utilisent des segments de mémoire lorsque l’accès aux données s’effectue toujours par le biais d’index non-cluster et que le RID est plus petit que la clé d’index cluster. Les segments de mémoire sont également utilisés pour   
- 
+Lorsqu’une table est stockée en tant que segment de mémoire, les différentes lignes sont identifiées par référence à un identificateur de ligne (RID) de 8 octets composé d’un numéro de fichier, d’un numéro de page de données et de l’emplacement dans la page (FileID:PageID:SlotID). L’ID de ligne est une structure petite et efficace. 
+
+Les segments de mémoire peuvent être utilisés en tant que tables de mise en lots pour des opérations d’insertion volumineuses et non ordonnées. Étant donné que les données sont insérées sans appliquer un ordre strict, l’opération d’insertion est généralement plus rapide que l’insertion équivalente dans un index cluster. Si les données du segment de mémoire sont lues et traitées dans une destination finale, il peut être utile de créer un index non cluster étroit qui couvre le prédicat de recherche utilisé par la requête de lecture. 
+
+> [!NOTE]  
+> Les données sont récupérées d’un segment de mémoire dans l’ordre des pages de données, mais pas nécessairement l’ordre dans lequel les données ont été insérées. 
+
+Parfois, les professionnels des données utilisent des segments de mémoire lorsque l’accès aux données s’effectue toujours par le biais d’index non-cluster et que le RID est plus petit que la clé d’index cluster. 
+
 Si une table est un segment de mémoire et si elle ne comprend pas d’index non-cluster, la table doit être lue dans son intégralité (analyse de table) pour trouver une ligne quelconque. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas rechercher un RID directement dans le segment de mémoire. Cela peut être acceptable si la table est petite.  
   
 ## <a name="when-not-to-use-a-heap"></a>À quel moment ne pas utiliser un segment  

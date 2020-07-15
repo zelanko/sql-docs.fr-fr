@@ -9,25 +9,26 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606875"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868439"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Connecteur Microsoft pour Oracle
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-Le connecteur Microsoft pour Oracle permet d’exporter et de charger des données dans une source de données Oracle dans un package SSIS.
+Le connecteur Microsoft pour Oracle offre la possibilité d’exporter et de charger des données dans une source de données Oracle dans un package SSIS.
 
 ## <a name="version-support"></a>Prise en charge de la version
 
 Les produits Microsoft SQL Server suivants sont pris en charge par le connecteur Microsoft pour Oracle :
 
 - À compter de SQL Server 2019 CU1
-- SSDT (SQL Server Data Tools) à partir de la version 15.9.3
+- SQL Server Data Tools (SSDT) 15.9.3 ou ultérieure pour Visual Studio 2017
+- Microsoft SQL Server Data Tools (SSDT) pour Visual Studio 2019
 
 Les versions de base de données Oracle suivantes sont prises en charge pour la source de données :
 

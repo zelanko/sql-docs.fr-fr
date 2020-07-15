@@ -1,5 +1,6 @@
 ---
 title: Basculer manuellement une session de mise en miroir de bases de données (SQL Server Management Studio) | Microsoft Docs
+description: Découvrez comment initier un basculement manuel sur un serveur miroir en utilisant SQL Server Management Studio. La base de données devient alors la base de données principale.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ab61ea2aeebb4e901e93a113fb24a7a74640b059
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05e11b27e618dfc38f818f8dc86199cce3343d21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754633"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Basculer manuellement une session de mise en miroir de bases de données (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lorsque la base de données en miroir est synchronisée (que son état est SYNCHRONIZED), le propriétaire de la base de données peut initier un basculement manuel vers le serveur miroir.  
   
  Lors d'un basculement manuel, les rôles de principal et de serveur miroir sont permutés pour la base de données concernée par le basculement. La base de données miroir devient la base de données principale et inversement. Par exemple, le tableau suivant illustre la façon dont les rôles de deux serveurs partenaires de mise en miroir sont permutés à l'occasion d'un basculement manuel : `SQLDBENGINE0_1` et `SQLDBENGINE0_2`.  

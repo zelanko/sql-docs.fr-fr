@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: Installez, mettez à jour et désinstallez SQL Server sur Linux. Cet article aborde des scénarios en ligne, hors connexion et sans assistance.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319839"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897309"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Conseils d’installation pour SQL Server sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Cet article fournit des conseils sur l’installation, la mise à jour et la désinstallation de SQL Server 2017 et de SQL Server 2019 sur Linux.
 
@@ -47,7 +47,7 @@ SQL Server est actuellement pris en charge sur Red Hat Enterprise Server (RHEL),
 
 | Plateforme | Version(s) prise(s) en charge | Obtenir
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obtenir RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Obtenir RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Obtenir SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Moteur Docker** | 1.8+ | [Obtenir Docker](https://www.docker.com/get-started)
@@ -57,12 +57,7 @@ SQL Server est actuellement pris en charge sur Red Hat Enterprise Server (RHEL),
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Plateforme | Version(s) prise(s) en charge | Obtenir
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Obtenir RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [Obtenir SLES v12](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04, 18.04 | [Obtenir Ubuntu 18.04](http://releases.ubuntu.com/bionic/)
-| **Moteur Docker** | 1.8+ | [Obtenir Docker](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 
@@ -77,7 +72,7 @@ SQL Server présente la configuration requise suivante pour Linux :
 
 |||
 |-----|-----|
-| **Mémoire** | 2 Go |
+| **Mémoire** | 2 Go |
 | **Système de fichiers** | **XFS** ou **EXT4** (les autres systèmes de fichiers, tels que **BTRFS** ne sont pas pris en charge) |
 | **Espace disque** | 6 Go |
 | **Vitesse du processeur** | 2 GHz |

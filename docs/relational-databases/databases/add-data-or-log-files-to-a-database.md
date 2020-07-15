@@ -1,5 +1,6 @@
 ---
 title: Ajouter des fichiers de données ou des fichiers journaux à une base de données | Microsoft Docs
+description: Découvrez comment ajouter des fichiers de données ou journaux dans SQL Server 2019 à l’aide de SQL Server Management Studio ou de Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727582"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Ajouter des fichiers de données ou journaux à une base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment ajouter des fichiers de données ou des fichiers journaux à une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
@@ -72,7 +73,7 @@ ms.locfileid: "68137397"
   
 6.  Sélectionnez le type de fichier : données ou journal.  
   
-7.  Pour un fichier de données, sélectionnez le groupe de fichiers dans lequel le fichier doit être inclus dans la liste, ou sélectionnez **\<nouveau_groupe_de_fichiers>** pour créer un groupe de fichiers. Les journaux des transactions ne peuvent pas être placés dans des groupes de fichiers.  
+7.  Pour un fichier de données, sélectionnez le groupe de fichiers dans lequel le fichier doit être inclus, ou sélectionnez **\<new filegroup>** pour créer un nouveau groupe de fichiers. Les journaux des transactions ne peuvent pas être placés dans des groupes de fichiers.  
   
 8.  Spécifiez la taille initiale du fichier. Attribuez aux fichiers de données un maximum d'espace en tenant compte du volume maximal de données qu'est censée contenir la base de données.  
   

@@ -1,7 +1,7 @@
 ---
 title: Définir ou changer le classement du serveur | Microsoft Docs
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733949"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Le classement du serveur agit en tant que classement par défaut pour toutes les bases de données système installées avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que pour toute base de données utilisateur nouvellement créée. Vous devez choisir avec soin le classement au niveau du serveur, car il affecte :
  - Les règles de tri et de comparaison dans `=`, `JOIN`, `ORDER BY` et d’autres opérateurs qui comparent les données textuelles.
  - Le classement des colonnes `CHAR`, `VARCHAR`, `NCHAR` et `NVARCHAR` dans les vues système, les fonctions système et les objets dans TempDB (par exemple, les tables temporaires).
@@ -29,8 +29,11 @@ ms.locfileid: "82762890"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Définition du classement du serveur dans SQL Server
 
-  Le classement du serveur est spécifié au cours de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement ne peuvent pas être spécifiés comme classement au niveau du serveur. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](collation-and-unicode-support.md).
-  
+  Le classement du serveur est spécifié au cours de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le classement au niveau du serveur par défaut est basé sur les paramètres régionaux du système d’exploitation. Par exemple, le classement par défaut pour les systèmes utilisant l’anglais américain (en US) est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement ne peuvent pas être spécifiés comme classement au niveau du serveur. Pour plus d’informations, notamment la liste des paramètres régionaux de système d’exploitation pour les mappages de classement par défaut, consultez la section « classements au niveau du serveur » de [Classement et prise en charge d’Unicode](collation-and-unicode-support.md#Server-level-collations).
+
+> [!NOTE]  
+> Le classement au niveau du serveur pour la base de données locale Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est **SQL_Latin1_General_CP1_CI_AS** et ne peut pas être modifié, pendant ou après l’installation.  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>Changement du classement du serveur dans SQL Server
 
  La modification du classement du serveur par défaut pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut s'avérer une opération complexe et implique les étapes suivantes :  
@@ -56,7 +59,7 @@ ms.locfileid: "82762890"
 - Importez toutes vos données.  
   
 > [!NOTE]  
-> Au lieu de changer le classement par défaut d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier un classement par défaut pour chaque nouvelle base de données que vous créez.  
+> Au lieu de changer le classement par défaut d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier un classement par défaut pour chaque nouvelle base de données que vous créez via la clause `COLLATE` des instructions `CREATE DATABASE` et `ALTER DATABASE`. Pour plus d’informations, voir [Set or Change the Database Collation](set-or-change-the-database-collation.md).  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Définition du classement du serveur dans Managed Instance
 Le classement au niveau du serveur dans Azure SQL Managed Instance peut être spécifié quand l’instance est créée et ne peut plus être modifiée. Vous pouvez définir le classement au niveau du serveur par le biais du [portail Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) ou de [PowerShell et du modèle Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) lors de la création de l’instance. Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement et les nouveaux classements UTF-8 ne peuvent pas être spécifiés comme classement au niveau du serveur.

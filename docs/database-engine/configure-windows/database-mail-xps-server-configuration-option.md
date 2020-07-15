@@ -1,5 +1,6 @@
 ---
 title: Database Mail XPs (option de configuration de serveur) | Microsoft Docs
+description: Découvrez l’option « DatabaseMail XPs ». Affichez les différentes façons d’activer cette option afin de pouvoir utiliser Database Mail dans SQL Server.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -11,24 +12,24 @@ helpviewer_keywords:
 - Database Mail XPs option
 - Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d495017b9bf2a5f58a5a880f1ce9696976ebd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772563"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs (option de configuration de serveur)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Utilisez **l’option** pour activer la messagerie de base de données sur ce serveur. Les valeurs possibles sont les suivantes :  
   
-- `0` : Database Mail n’est pas disponible (par défaut).  
+- `0`: Database Mail n’est pas disponible (par défaut).  
   
-- `1` : Database Mail est disponible.  
+- `1`: Database Mail est disponible.  
   
  Le paramètre prend effet immédiatement, sans arrêt et redémarrage du serveur.  
   

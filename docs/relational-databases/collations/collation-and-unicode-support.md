@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831813"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091914"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et des classements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Les classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent les règles de tri et les propriétés de respect de la casse et des accents pour vos données. Les classements utilisés avec les données de type caractère, tels que **char** et **varchar**, déterminent la page de codes et les caractères correspondants qui peuvent être représentés pour ce type de données. 
 
 Qu’il s’agisse d’installer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de restaurer une sauvegarde de base de données ou de connecter un serveur à des bases de données clientes, vous devez bien comprendre les exigences en termes de paramètres régionaux, d’ordre de tri et de respect de la casse et des accents des données que vous utilisez. Pour lister les classements disponibles sur votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -178,8 +178,8 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Arabe (Yémen)|0x2401|0x0401|Arabic_CI_AS|
 |Arménien (Arménie)|0x042b|0x0419|Latin1_General_CI_AS|
 |Assamais (Inde)|0x044d|0x044d|Non disponible au niveau du serveur|
-|Azéri (Azerbaïdjan, cyrillique)|0x082c|0x082c|Déprécié, non disponible au niveau serveur|
-|Azéri (Azerbaïdjan, latin)|0x042c|0x042c|Déprécié, non disponible au niveau serveur|
+|Azerbaïdjanais (Azerbaïdjan, cyrillique)|0x082c|0x082c|Déprécié, non disponible au niveau serveur|
+|Azerbaïdjanais (Azerbaïdjan, latin)|0x042c|0x042c|Déprécié, non disponible au niveau serveur|
 |Bachkir (Russie)|0x046d|0x046d|Latin1_General_CI_AI|
 |Basque (Basque)|0x042d|0x0409|Latin1_General_CI_AS|
 |Biélorusse (Bélarus)|0x0423|0x0419|Cyrillic_General_CI_AS|
@@ -235,7 +235,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Français (Monaco)|0x180c|0x040c|French_CI_AS|
 |Français (Suisse)|0x100c|0x040c|French_CI_AS|
 |Frison (Pays-Bas)|0x0462|0x0462|Latin1_General_CI_AI|
-|Galicien (Espagne)|0x0456|0x0409|Latin1_General_CI_AS|
+|Galicien|0x0456|0x0409|Latin1_General_CI_AS|
 |Géorgien (Géorgie)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Géorgien (Géorgie)|0x0437|0x0419|Latin1_General_CI_AS|
 |Allemand - Annuaire téléphonique (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Lituanien (Lituanie)|0x0427|0x0427|Lithuanian_CI_AS|
 |Bas-sorabe (Allemagne)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgeois (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macédoine du Nord|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macédonien (Macédoine du Nord, ARYM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malais (Brunéi Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malais (Malaisie)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (Inde)|0x044c|0x0439|Non disponible au niveau du serveur|
@@ -303,6 +303,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Roumain (Roumanie)|0x0418|0x0418|Romanian_CI_AS|
 |Romanche (Suisse)|0x0417|0x0417|Latin1_General_CI_AI|
 |Russe (Russie)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sahka (Russie)|0x0485|0x0485|Latin1_General_CI_AI|
 |Same d'Inari (Finlande)|0x243b|0x083b|Latin1_General_CI_AI|
 |Sami (Lule, Norvège)|0x103b|0x043b|Latin1_General_CI_AI|
 |Same de Lule (Suède)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Gallois (Royaume-Uni)|0x0452|0x0452|Latin1_General_CI_AI|
 |Wolof (Sénégal)|0x0488|0x040c|French_CI_AS|
 |Xhosa (Afrique du Sud)|0x0434|0x0409|Latin1_General_CI_AS|
-|Iakoute (Russie)|0x0485|0x0485|Latin1_General_CI_AI|
 |Yi (RPC)|0x0478|0x0409|Latin1_General_CI_AS|
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zoulou (Afrique du Sud)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -656,4 +656,3 @@ Pour plus d’informations, consultez le contenu connexe suivante :
 [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [Jeux de caractères codés sur un octet et multioctets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

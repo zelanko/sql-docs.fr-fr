@@ -1,5 +1,6 @@
 ---
 title: Bien démarrer avec les autorisations du moteur de base de données | Microsoft Docs
+description: Passez en revue certains concepts de sécurité de base dans SQL Server et découvrez une implémentation classique des autorisations Moteur de base de données.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903023"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005657"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Les autorisations dans le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] sont gérées au niveau du serveur, par le biais des connexions et des rôles serveur, et au niveau de la base de données, par le biais des utilisateurs de base de données et des rôles de base de données. Le modèle du [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] expose le même système dans chaque base de données, mais les autorisations de niveau serveur ne sont pas disponibles. Cette rubrique passe en revue les concepts de sécurité de base, puis décrit une implémentation classique des autorisations.  
   
@@ -228,13 +229,13 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Étapes suivantes  
  Les rubriques suivantes vous aideront à démarrer :  
   
--   [Didacticiel : mise en route du moteur de base de données](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+-   [Tutoriel : Bien démarrer avec le moteur de base de données](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [Création d’une base de données &#40;Didacticiel&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [Didacticiel : SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Tutoriel : SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [Didacticiel : écriture d'instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [Tutoriel : Écriture d’instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

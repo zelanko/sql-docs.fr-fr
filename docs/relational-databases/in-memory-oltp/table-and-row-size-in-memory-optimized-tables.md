@@ -1,5 +1,6 @@
 ---
 title: Taille de la table et des lignes dans les tables à mémoire optimisée | Microsoft Docs
+description: Découvrez la taille de table et de ligne pour les tables à mémoire optimisée. Vous pouvez créer une table avec plusieurs colonnes LOB et de grande taille.
 ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651008"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Avant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la taille des données dans la ligne d’une table à mémoire optimisée ne pouvait pas être supérieure à [8 060 octets](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Toutefois, à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans Azure SQL Database, il est désormais possible de créer une table à mémoire optimisée avec plusieurs colonnes volumineuses (par exemple, plusieurs colonnes varbinary(8000)) et colonnes LOB (c'est-à-dire, varbinary(max), varchar(max) et nvarchar(max)) et d’effectuer des opérations dessus à l’aide de modules T-SQL compilés en mode natif et des types de table. 
   
@@ -85,28 +86,28 @@ Dans cette illustration, les noms John et Jane sont hachés vers le premier comp
   
 Par conséquent, les chaînes de l'index de hachage sur le nom sont les suivantes :  
   
--   Première compartiment : (John, Pékin) ; (Jane, Prague)  
+-   Première compartiment : (John, Beijing) ; (John, Paris) ; (Jane, Prague)  
   
--   Deuxième compartiment : (Susan, Bogota)  
+-   Deuxième compartiment : (Susan, Bogota)  
   
 Les chaînes de l'index de la ville sont les suivantes :  
   
--   Première compartiment : (John, Pékin), (Susan, Bogota)  
+-   Première compartiment : (John, Beijing), (Susan, Bogota)  
   
--   Deuxième compartiment : (John, Paris), (Jane, Prague)  
+-   Deuxième compartiment : (John, Paris), (Jane, Prague)  
   
 Un horodateur de fin ∞ (infini) indique qu'il s'agit de la version actuellement valide de la ligne. La ligne n'a pas été mise à jour ou n'a pas été supprimée depuis que cette version de ligne a été écrite.  
   
 Pour un temps supérieur à 200, la table contient les lignes suivantes :  
   
-|Name|City|  
+|Nom|City|  
 |----------|----------|  
 |John|Beijing|  
 |Jane|Prague|  
   
 Toutefois, toutes les transactions actives avec une heure de début 100 verront la version de la table suivante :  
   
-|Name|City|  
+|Nom|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -124,19 +125,19 @@ Les deux tailles *taille calculée du corps de ligne* et *taille réelle du corp
   
 Le tableau suivant décrit le calcul de la taille du corps de ligne, fourni en tant que *taille réelle du corps de ligne* = SUM(*taille des types superficiels*) + 2 + 2 * *nombre de colonnes de type profond*.  
   
-|Section|Size|Commentaires|  
+|Section|Taille|Commentaires|  
 |-------------|----------|--------------|  
-|Colonnes de type superficiel|SUM ([taille des types superficiels]). Les tailles en octets des différents types sont les suivantes :<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money** : 8<br /><br /> **Numeric** (précision <=18) : 8<br /><br /> **Time** : 8<br /><br /> **Numeric**(précision >18) : 16<br /><br /> **Uniqueidentifier** : 16||  
+|Colonnes de type superficiel|SUM ([taille des types superficiels]). Les tailles en octets des différents types sont les suivantes :<br /><br /> **Bit** : 1<br /><br /> **Tinyint** : 1<br /><br /> **Smallint** : 2<br /><br /> **Int** : 4<br /><br /> **Real** : 4<br /><br /> **Smalldatetime** : 4<br /><br /> **Smallmoney** : 4<br /><br /> **Bigint** : 8<br /><br /> **Datetime** : 8<br /><br /> **Datetime2** : 8<br /><br /> **Float** : 8<br /><br /> **Money** : 8<br /><br /> **Numeric** (précision <= 18) : 8<br /><br /> **Time** : 8<br /><br /> **Numeric** (précision > 18) : 16<br /><br /> **Uniqueidentifier** : 16||  
 |Remplissage de colonne superficielle|Les valeurs possibles sont les suivantes :<br /><br /> 1 s'il y a des colonnes de type profond et la taille de données totale des colonnes superficielles est un nombre impair.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau « offset » pour les colonnes de type profond|Les valeurs possibles sont les suivantes :<br /><br /> 0 s'il n'y a aucune colonne de type profond<br /><br /> 2 + 2 * [nombre de colonnes de type profond] dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau NULL|[nombre de colonnes qui acceptent les valeurs NULL] / 8, arrondi à des octets entiers.|La table comporte un bit pour chaque colonne pouvant avoir la valeur NULL. Cela est arrondi à des octets entiers.|  
 |Remplissage du tableau NULL|Les valeurs possibles sont les suivantes :<br /><br /> 1 s'il y a des colonnes de type profond et la taille du tableau NULL a un nombre impair d'octets.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
-|Remplissage|S'il n'y a aucune colonne de type profond : 0<br /><br /> En présence de colonnes de type profond, 0-7 octets de remplissage sont ajoutés, selon le plus grand alignement requis par une colonne superficielle. Chaque colonne superficielle requiert un alignement égal à sa taille, comme indiqué précédemment, mais les colonnes GUID nécessitent un alignement d'1 octet (et non de 16) et les colonnes numériques requièrent toujours un alignement de 8 octets (jamais de 16). La plus grande spécification d'alignement entre toutes les colonnes superficielles est utilisée, et un remplissage de 0-7 octets est ajouté de sorte que la taille totale (sans les colonnes de type profond) soit un multiple de l'alignement requis.|Les types profonds sont les types (var)binary et (n)(var)char.|  
+|Remplissage|S'il n’y a aucune colonne de type profond : 0<br /><br /> En présence de colonnes de type profond, 0-7 octets de remplissage sont ajoutés, selon le plus grand alignement requis par une colonne superficielle. Chaque colonne superficielle requiert un alignement égal à sa taille, comme indiqué précédemment, mais les colonnes GUID nécessitent un alignement d'1 octet (et non de 16) et les colonnes numériques requièrent toujours un alignement de 8 octets (jamais de 16). La plus grande spécification d'alignement entre toutes les colonnes superficielles est utilisée, et un remplissage de 0-7 octets est ajouté de sorte que la taille totale (sans les colonnes de type profond) soit un multiple de l'alignement requis.|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Colonnes de type profond à longueur fixe|SUM(*taille des colonnes de type profond à longueur fixe*)<br /><br /> La taille de chaque colonne est la suivante :<br /><br /> i pour char(i) et binary(i).<br /><br /> 2 * i pour nchar(i)|Les colonnes de type profond à longueur fixe sont des colonnes de type char(i), nchar(i) ou binary(i).|  
 |Colonnes de type profond à longueur variable *taille calculée*|SUM(*taille calculée des colonnes de type profond à longueur variable*)<br /><br /> La taille calculée de chaque colonne est la suivante :<br /><br /> i pour varchar(i) et varbinary(i)<br /><br /> 2 * i pour nvarchar(i)|Cette ligne est uniquement appliquée à la *taille calculée du corps de ligne*.<br /><br /> Les colonnes de type profond à longueur variable sont des colonnes de type varchar(i), nvarchar(i), ou varbinary(i). La taille calculée est déterminée par la longueur maximale (i) de la colonne.|  
 |Colonnes de type profond à longueur variable *taille réelle*|SUM(*taille réelle des colonnes de type profond à longueur variable*)<br /><br /> La taille réelle de chaque colonne est la suivante :<br /><br /> n, où n est le nombre de caractères stocké dans la colonne, pour varchar(i).<br /><br /> 2 * n, où n est le nombre de caractères stocké dans la colonne, pour nvarchar (i).<br /><br /> n, où n est le nombre d'octets stocké dans la colonne, pour varbinary(i).|Cette ligne est uniquement appliquée à la *taille réelle du corps de ligne*.<br /><br /> La taille réelle est déterminée par les données stockées dans les colonnes dans la ligne.|   
   
-##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Exemple : Calcul de la taille des lignes et de la table  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Exemple : Calcul de la taille des lignes et de la table  
  Pour les index de hachage, le nombre de compartiments réel est arrondi à la puissance de 2 la plus proche. Par exemple, si le `bucket_count` spécifié est 100000, le nombre de compartiments réel pour l’index est 131072.  
   
 Prenons l'exemple d'une table Orders avec la définition suivante :  
@@ -155,7 +156,7 @@ GO
   
 Notez que cette table a un index de hachage et un index non cluster (clé primaire). Elle a également trois colonnes de longueur fixe et une colonne de longueur variable, avec l’une des colonnes acceptant les valeurs NULL (`OrderDescription`). Supposons que la table `Orders` contienne 8 379 lignes et que la longueur moyenne des valeurs dans la colonne `OrderDescription` soit de 78 caractères.  
   
-Pour déterminer la taille de la table, déterminez d'abord la taille des index. Le bucket_count des deux index indique 10 000. Il est arrondi à la puissance de 2 la plus proche : 16 384. Par conséquent, la taille totale des index de la table Orders est :  
+Pour déterminer la taille de la table, déterminez d'abord la taille des index. Le bucket_count des deux index indique 10 000. Il est arrondi à la puissance de 2 la plus proche : 16384. Par conséquent, la taille totale des index de la table Orders est :  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -167,7 +168,7 @@ Ce qui reste est la taille des données de la table, qui est,
 [row size] * [row count] = [row size] * 8379  
 ```  
   
-(La table de l'exemple comporte 8 379 lignes.) Maintenant, nous avons :  
+(La table de l'exemple comporte 8 379 lignes.) Maintenant, nous avons :  
   
 ```  
 [row size] = [row header size] + [actual row body size]  
@@ -204,7 +205,7 @@ Ensuite, calculons la [taille réelle du corps de ligne] :
   
     -   Le remplissage total est 24 - 22 = 2 octets.  
   
--   Aucune colonne de type profond à longueur fixe (Colonnes de type profond à longueur fixe : 0.).  
+-   Aucune colonne de type profond à longueur fixe (Colonnes de type profond à longueur fixe : 0).  
   
 -   La taille réelle de la colonne de type profond est 2 * 78 = 156. La colonne de type profond `OrderDescription` est de type `nvarchar`.  
   

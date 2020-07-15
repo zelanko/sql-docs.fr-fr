@@ -37,19 +37,19 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b35445b9b04eafb6d8d302c8627c08ca90bd745e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635531"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999814"
 ---
 # <a name="search-condition-transact-sql"></a>Condition de recherche (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Combinaison d'un ou de plusieurs prédicats qui utilisent les opérateurs logiques AND, OR et NOT.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -189,13 +189,13 @@ ms.locfileid: "81635531"
  Définit la recherche d'une expression, selon que cette dernière est incluse ou non dans une liste. L'expression de recherche peut être une constante ou un nom de colonne ; par ailleurs, la liste peut être un ensemble de constantes ou, plus généralement, une sous-requête. Mettez la liste des valeurs entre parenthèses. Pour plus d’informations, consultez [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Peut être considéré comme une instruction SELECT restreinte et est similaire à \<query_expression> dans l’instruction SELECT. La clause ORDER BY et le mot clé INTO ne sont pas autorisés. Pour plus d’informations, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Peut être considérée comme une instruction SELECT restreinte et est similaire à \<query_expression> dans l’instruction SELECT. La clause ORDER BY et le mot clé INTO ne sont pas autorisés. Pour plus d’informations, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
- Utilisé avec un opérateur de comparaison et une sous-requête. Retourne TRUE pour \<predicate> si toutes les valeurs récupérées pour la sous-requête satisfont à la comparaison. Retourne FALSE si certaines valeurs ne satisfont pas à la comparaison ou si la sous-requête ne retourne aucune ligne à l’instruction externe. Pour plus d’informations, consultez [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
+ Utilisé avec un opérateur de comparaison et une sous-requête. Retourne TRUE pour \<predicate> si toutes les valeurs récupérées pour la requête imbriquée satisfont à la comparaison. Retourne FALSE si certaines valeurs ne satisfont pas à la comparaison ou si la requête imbriquée ne retourne aucune ligne à l’instruction externe. Pour plus d’informations, consultez [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
   
  { SOME | ANY }  
- Utilisé avec un opérateur de comparaison et une sous-requête. Retourne TRUE pour \<predicate> si au moins une valeur récupérée pour la sous-requête satisfait à la comparaison. Retourne FALSE si aucune valeur dans la sous-requête ne satisfait à la comparaison ou si la sous-requête ne retourne aucune ligne à l’instruction externe. Dans les autres cas, l'expression est inconnue (UNKNOWN). Pour plus d’informations, consultez [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Utilisé avec un opérateur de comparaison et une sous-requête. Retourne TRUE pour \<predicate> au moins une valeur récupérée pour la requête imbriquée satisfait à la comparaison. Retourne FALSE si aucune valeur dans la requête imbriquée ne satisfait à la comparaison ou si la requête imbriquée ne retourne aucune ligne à l’instruction externe. Dans les autres cas, l'expression est inconnue (UNKNOWN). Pour plus d’informations, consultez [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
  EXISTS  
  Utilisé avec une sous-requête, vérifie l’existence de lignes retournées par la sous-requête. Pour plus d’informations, consultez [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  

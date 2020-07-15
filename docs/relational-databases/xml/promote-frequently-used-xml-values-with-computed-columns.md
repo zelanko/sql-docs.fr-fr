@@ -1,5 +1,6 @@
 ---
 title: Promouvoir les valeurs XML fréquentes à l’aide de colonnes calculées | Microsoft Docs
+description: Découvrez comment promouvoir les valeurs XML fréquemment utilisées en créant des colonnes calculées pour des interrogations plus efficaces.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664878"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772097"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Si les requêtes portent essentiellement sur un petit nombre de valeurs d'élément et d'attribut, vous pouvez promouvoir ces quantités dans les colonnes relationnelles. Cela peut s'avérer utile lorsque les requêtes sont émises sur une petite partie des données XML et que l'ensemble de l'instance XML est récupéré. Il n'est pas nécessaire de créer un index XML sur la colonne XML. En revanche, la colonne promue peut être indexée. Les requêtes doivent être écrites en vue de l'utilisation de la colonne promue afin que l'optimiseur de requête ne redirige plus les requêtes de la colonne XML vers la colonne promue.  
   
  La colonne promue peut être une colonne calculée de la même table ou une colonne distincte, gérée par l'utilisateur, d'une autre table. Cela suffit lorsque des valeurs singleton sont promues à partir de chaque instance XML. Toutefois, en cas de propriétés à valeurs multiples, vous devez créer une table distincte pour la propriété, comme l'explique la section suivante.  
@@ -29,7 +30,7 @@ ms.locfileid: "80664878"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Colonne calculée basée sur le type de données xml  
  Une colonne calculée peut être créée à l’aide d’une fonction définie par l’utilisateur qui appelle des méthodes du type de données **xml** . Le type de la colonne calculée peut être n'importe quel type SQL, y compris XML. L'exemple suivant illustre ce concept.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemple : colonne calculée basée sur la méthode du type de données xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemple : Colonne calculée basée sur la méthode du type de données xml  
  Créez la fonction définie par l'utilisateur pour extraire le numéro ISBN d'un livre :  
   
 ```  
@@ -51,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  La colonne calculée peut être indexée de manière habituelle.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>exemple: requêtes sur une colonne calculée basée sur les méthodes du type de données xml  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Exemple : Requêtes sur une colonne calculée basée sur les méthodes du type de données xml  
  Pour obtenir l'élément <`book`> portant le numéro ISBN 0-7356-1588-2 :  
   
 ```  
@@ -85,14 +86,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   Écrivez des requêtes qui accèdent par SQL aux tables de propriétés et par XML à la colonne XML de la table de base, et prévoyez des jointures entre les tables à l'aide de leur clé primaire.  
   
-### <a name="example-create-a-property-table"></a>Exemple : création d'une table de propriétés  
+### <a name="example-create-a-property-table"></a>Exemple : Création d’une table de propriétés  
  Supposons, dans cet exemple, que vous voulez promouvoir le prénom des auteurs. Dans la mesure où les livres peuvent avoir un ou plusieurs auteurs, le prénom est une propriété à valeurs multiples. Chaque prénom est stocké dans une ligne distincte d'une table de propriétés. La clé primaire de la table de base est dupliquée dans la table de propriétés pour la jointure en retour avec la table de base.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>exemple : création d'une fonction définie par l'utilisateur pour générer un ensemble de lignes à partir d'une instance XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemple : Création d’une fonction définie par l’utilisateur pour générer un ensemble de lignes à partir d’une instance XML  
  La fonction table suivante, udf_XML2Table, accepte une valeur de clé primaire et une instance XML. Elle récupère le prénom de tous les auteurs des éléments <`book`> et renvoie un ensemble de lignes pour les paires clé primaire/prénom.  
   
 ```  
@@ -108,7 +109,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>exemple : création de déclencheurs pour remplir une table de propriétés  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Exemple : Création de déclencheurs pour remplir une table de propriétés  
  Le déclencheur insert insère des lignes dans la table de propriétés :  
   
 ```  
@@ -155,7 +156,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemple : recherche des instances XML dont les auteurs portent le même prénom  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemple : Recherche des instances XML dont les auteurs portent le même prénom  
  La requête peut être formée sur la colonne XML. Une autre possibilité consiste à rechercher le prénom « David » dans la table de propriétés et à faire une jointure en retour avec la table de base pour renvoyer l'instance XML. Par exemple :  
   
 ```  
@@ -164,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemple : solution utilisant la fonction table multidiffusion CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemple : Solution utilisant la fonction table de streaming CLR  
  La solution se compose des étapes suivantes :  
   
 1.  Définissez une classe CLR, SqlReaderBase, qui met en œuvre ISqlReader et génère une sortie table multidiffusion par application d'une expression de chemin sur une instance XML.  

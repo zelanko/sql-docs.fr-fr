@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558540"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897253"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser une instance de cluster de basculement - SQL Server sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Cet article explique comment opérer une instance de cluster de basculement SQL Server sur Linux. Si vous n’avez pas créé d’instance de cluster de basculement SQL Server sur Linux, consultez [Configurer une instance de cluster de basculement - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
@@ -43,7 +43,7 @@ Pour effectuer un basculement manuel sur des serveurs Red Hat Enterprise Linux (
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName> est le nom de ressource Pacemaker de l’interface de cluster de basculement SQL Server.
+   \<FCIResourceName> est le nom de ressource Pacemaker de l’interface de cluster de basculement SQL Server.
 
    \<NewHostNode> est le nom du nœud de cluster sur lequel vous souhaitez héberger l’instance de cluster de basculement. 
 

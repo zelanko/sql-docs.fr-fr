@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741767"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurer PolyBase pour accéder à des données externes dans MongoDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 L’article explique comment utiliser PolyBase sur une instance SQL Server pour interroger des données externes dans MongoDB.
 
@@ -75,20 +75,19 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
 >Une fois que vous avez créé une source de données externes, vous pouvez utiliser la commande [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) afin de créer une table requêtable sur cette source. 
 
 ## <a name="flattening"></a>Aplanissement
- L’aplanissement est activé pour les données imbriquées et répétées, issues de collections de documents MongoDB. L’utilisateur doit activer `create an external table` et spécifier explicitement un schéma relationnel sur des collections de documents MongoDB dont les données peuvent être imbriquées et/ou répétées. Aux prochaines échéances, la détection de schéma automatique sera possible dans les collections de documents mongo.
-Les types de données JSON imbriquées/répétées seront aplanis comme suit :
+L’aplanissement est activé pour les données imbriquées et répétées depuis des collections de document MongoDB. L’utilisateur doit activer `create an external table` et spécifier explicitement un schéma relationnel sur des collections de documents MongoDB dont les données peuvent être imbriquées et/ou répétées. Les types de données JSON imbriquées/répétées seront aplanis comme suit :
 
 * Objets : collection de clés/valeurs non ordonnées mises entre accolades (imbriquées)
 
-   - Nous créerons une colonne de table pour chaque clé d’objet
+   - SQL Server crée une colonne de table pour chaque clé d’objet
 
      * Nom de colonne : objectname_keyname
 
 * Tableau : valeurs ordonnées, séparées par des virgules, mises entre crochets (répétées)
 
-   - Nous ajouterons une nouvelle ligne de table pour chaque élément de tableau
+   - SQL Server ajoute une nouvelle ligne de table pour chaque élément de tableau
 
-   - Nous créerons une colonne par tableau pour stocker l’index d’élément de tableau
+   - SQL Server crée une colonne par tableau pour stocker l’index d’élément de tableau
 
      * Nom de colonne : arrayname_index
 
@@ -96,11 +95,11 @@ Les types de données JSON imbriquées/répétées seront aplanis comme suit :
 
 Cette technique peut occasionner plusieurs problèmes, notamment les deux suivants :
 
-* un champ répété vide masque de facto les données contenues dans les champs plats du même enregistrement
+* Un champ répété vide masque de facto les données contenues dans les champs plats du même enregistrement
 
-* la présence de plusieurs champs répétés peut entraîner une explosion du nombre de lignes générées
+* La présence de plusieurs champs répétés peut entraîner une explosion du nombre de lignes générées
 
-À titre d’exemple, nous allons évaluer la collection de restaurants de l’exemple de jeu de données MongoDB stockée dans un format JSON non relationnel. Chaque restaurant dispose d’un champ d’adresse imbriqué et d’un tableau de notes (« grades ») attribuées à des jours différents. La figure ci-dessous illustre un restaurant type avec une adresse imbriquée et des notes imbriquées/répétées.
+À titre d’exemple, SQL Server évalue la collection de restaurants de l’exemple de jeu de données MongoDB stockée dans un format JSON non relationnel. Chaque restaurant dispose d’un champ d’adresse imbriqué et d’un tableau de notes (« grades ») attribuées à des jours différents. La figure ci-dessous illustre un restaurant type avec une adresse imbriquée et des notes imbriquées/répétées.
 
 ![Aplatissement MongoDB](../../relational-databases/polybase/media/mongo-flattening.png "Aplatissement de MongoDB Restaurant")
 

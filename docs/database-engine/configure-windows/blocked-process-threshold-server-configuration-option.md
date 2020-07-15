@@ -1,5 +1,6 @@
 ---
 title: blocked process threshold (option de configuration de serveur) | Microsoft Docs
+description: Découvrez comment utiliser l’option blocked process threshold pour spécifier l’intervalle auquel SQL Server génère des rapports de processus bloqués et des alertes de problèmes.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,19 +12,21 @@ helpviewer_keywords:
 - thresholds [SQL Server]
 - blocked process threshold option
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bdd5f7d01e7271609562fb7d42126746d6163de4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725240"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold (option de configuration de serveur)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  L'option **blocked process threshold** permet de spécifier le seuil, en secondes, à partir duquel des rapports de processus bloqués sont générés. Le seuil peut être compris entre 0 et 86 400. Par défaut, aucun rapport de processus bloqué n'est généré. Cet événement n'est pas généré pour les tâches système ou les tâches en attente de ressources qui ne génèrent pas de blocages détectables.  
+ L'option **blocked process threshold** permet de spécifier le seuil, en secondes, à partir duquel des rapports de processus bloqués sont générés. Le seuil peut être compris entre 5 et 86 400.  Le moniteur de verrou se réveille uniquement toutes les 5 secondes pour détecter les conditions de blocage (il recherche également d’autres conditions, telles que les blocages). Par conséquent, si vous affectez la valeur 1 à une valeur « blocked process threshold », il ne détecte pas un processus qui a été bloqué pendant 1 seconde. La durée minimale qui lui permet de détecter un processus bloqué est de 5 secondes.
+ 
+ Par défaut, aucun rapport de processus bloqué n'est généré. Cet événement n'est pas généré pour les tâches système ou les tâches en attente de ressources qui ne génèrent pas de blocages détectables.  
   
  Vous pouvez définir une [alerte](../../ssms/agent/alerts.md) à exécuter dès lorsque cet événement est généré. Ainsi, par exemple, vous pouvez choisir de contacter l'administrateur par récepteur de radiomessagerie afin de l'inviter à gérer la situation de blocage de manière appropriée.  
   

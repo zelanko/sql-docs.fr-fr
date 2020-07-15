@@ -1,6 +1,6 @@
 ---
 title: Récupération de base de données accélérée | Microsoft Docs
-ms.date: 08/12/2019
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58c31d9b5e0e8858cc1953a2961107caea08d381
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc137d1f94ad1919c41e3f25eb38829941d99023
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342524"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010167"
 ---
 # <a name="accelerated-database-recovery"></a>Récupération de base de données accélérée
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 La récupération de base de données accélérée améliore la disponibilité des bases de données, notamment en présence de transactions longues, grâce à une reconception du processus de récupération du moteur de base de données SQL. La récupération de base de données accélérée est une nouveauté de SQL Server 2019, et elle est également disponible pour les bases de données uniques et les bases de données en pool dans Azure SQL Database, et pour les bases de données dans Azure SQL Data Warehouse (actuellement en préversion publique). Les principaux avantages de la récupération de base de données accélérée sont les suivants :
 
@@ -135,7 +135,9 @@ Les types de clients suivants doivent envisager d’activer la récupération de
 - Les clients qui ont rencontré des cas où des transactions actives provoquent une augmentation significative du journal des transactions.  
 - Les clients qui ont connu de longues périodes d’indisponibilité d’une base de données en raison de la longue durée de la récupération de SQL Server (par exemple un redémarrage inattendu de SQL Server ou l’annulation manuelle de transactions).
 
+>[!IMPORTANT]
+>ADR n'est pas prise en charge pour les bases de données inscrites pour la mise en miroir de bases de données.
 
 ## <a name="see-also"></a>Voir aussi  
 
-  
+[Gérer la récupération de base de données accélérée](accelerated-database-recovery-management.md)

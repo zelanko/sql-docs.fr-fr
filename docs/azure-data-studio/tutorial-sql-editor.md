@@ -1,23 +1,22 @@
 ---
 title: Utiliser l’éditeur Transact-SQL pour créer des objets de base de données
-titleSuffix: Azure Data Studio
 description: Ce didacticiel présente les principales fonctionnalités d’Azure Data Studio qui simplifient l’utilisation de T-SQL.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726737"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données - Azure Data Studio
 
 La création et l’exécution de requêtes, de procédures stockées, de scripts, etc. sont les principales tâches des professionnels des bases de données. Ce didacticiel présente les principales fonctionnalités de l’éditeur T-SQL pour créer des objets de base de données.
 
@@ -60,7 +59,7 @@ Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azur
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Utiliser des extraits de code T-SQL pour créer des procédures stockées
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit de nombreux extraits de code T-SQL intégrés pour créer rapidement des instructions.
+Azure Data Studio fournit de nombreux extraits de code T-SQL intégrés pour créer rapidement des instructions.
 
 
 1. Ouvrez un nouvel éditeur de requête en appuyant sur **Ctrl + N**.
@@ -114,7 +113,7 @@ La procédure stockée est maintenant créée, et le volet **RESULTS** affiche l
 
 ## <a name="use-peek-definition"></a>Utiliser l’aperçu de définition 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] offre la possibilité d’afficher une définition d’objets à l’aide de la fonctionnalité d’aperçu de définition. Cette section crée une deuxième procédure stockée et utilise l’aperçu de définition pour voir quelles colonnes se trouvent dans une table pour créer rapidement le corps de la procédure stockée.
+Azure Data Studio offre la possibilité d’afficher une définition d’objets à l’aide de la fonctionnalité d’aperçu de définition. Cette section crée une deuxième procédure stockée et utilise l’aperçu de définition pour voir quelles colonnes se trouvent dans une table pour créer rapidement le corps de la procédure stockée.
 
 1. Ouvrez un nouvel éditeur en appuyant sur **Ctrl + N**. 
 

@@ -1,5 +1,6 @@
 ---
 title: Objet de base de données (page Propriétés étendues) | Microsoft Docs
+description: Découvrez-en plus sur la page Propriétés étendues. Apprenez comment utiliser cette page pour ajouter, afficher ou modifier les propriétés personnalisées des objets de base de données.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5bff24a63829f1820048bf371f4be497a95f6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756240"
 ---
 # <a name="database-object-extended-properties-page"></a>Objet de base de données (page Propriétés étendues)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Les propriétés étendues vous permettent d'ajouter des propriétés personnalisées aux objets de base de données. Utilisez cette page pour afficher ou modifier les propriétés étendues de l'objet sélectionné. La page **Propriétés étendues** est la même pour tous les types d’objets de base de données.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Sauvegarde de la base de données**  
  Affiche le nom de la base de données sélectionnée. Ce champ est en lecture seule.  
   

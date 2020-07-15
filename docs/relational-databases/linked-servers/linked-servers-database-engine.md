@@ -1,6 +1,6 @@
 ---
 title: Serveurs liés (Moteur de base de données) | Microsoft Docs
-ms.date: 10/14/2019
+ms.date: 06/16/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,21 +19,21 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 070dbf1c8f79a0f89364e9d0705051d9ee076627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734950"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Les serveurs liés permettent au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et à [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) de lire des données à partir des sources de données distantes et d’exécuter des commandes sur les serveurs de base de données distants (par exemple des sources de données OLE DB) en dehors de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En général, les serveurs liés sont configurés pour permettre au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui inclut des tables situées dans une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou un autre produit de base de données comme Oracle. De nombreux types de sources de données OLE DB peuvent être configurés comme serveurs liés, notamment [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel et Azure CosmosDB.
+  Les serveurs liés permettent au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et à [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] de lire des données à partir des sources de données distantes et d’exécuter des commandes sur les serveurs de base de données distants (par exemple des sources de données OLE DB) en dehors de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En général, les serveurs liés sont configurés pour permettre au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui inclut des tables situées dans une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou un autre produit de base de données comme Oracle. De nombreux types de sources de données OLE DB peuvent être configurés comme serveurs liés, notamment [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel et Azure CosmosDB.
 
 > [!NOTE]
-> Les serveurs liés sont disponibles dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et Azure SQL Database Managed Instance. Ils ne sont pas activés dans les pools élastiques et Singleton Azure SQL Database. Il existe certaines [contraintes dans Managed Instance qui sont décrites ici](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Les serveurs liés sont disponibles dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. Ils ne sont pas activés dans les pools élastiques et Singleton [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe certaines [contraintes dans Managed Instance qui sont décrites ici](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>Quand utiliser des serveurs liés ?
 
@@ -56,10 +56,10 @@ Vous pouvez configurer un serveur lié en utilisant [!INCLUDE[ssManStudioFull](.
   
 Un *fournisseur OLE°DB* représente une DLL qui gère une source de données spécifique et interagit avec elle. Une *source de données OLE DB* identifie la base de données spécifique accessible via OLE DB. Bien que les sources de données interrogées au moyen des définitions de serveurs liés soient d'ordinaire des bases de données, des fournisseurs OLE°DB existent pour différents fichiers et formats de fichiers, dont les fichiers texte, les données incluses dans des feuilles de calcul et les résultats de recherches de contenu.  
   
-Le fournisseur OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID : SQLNCLI11) est le fournisseur OLE DB officiel pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+En commençant avec [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], [Microsoft OLE DB Driver pour SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID : MSOLEDBSQL) est le fournisseur OLE DB par défaut. Dans les versions antérieures, le [fournisseur OLE DB SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID : SQLNCLI11) est le fournisseur OLE DB par défaut.
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont été conçues pour être utilisées avec tout fournisseur OLE DB qui implémente les interfaces OLE DB requises. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a été testé qu’avec le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et certains autres fournisseurs.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont été conçues pour être utilisées avec tout fournisseur OLE DB qui implémente les interfaces OLE DB requises. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été testé par rapport au fournisseur OLE DB par défaut.  
   
 ## <a name="linked-server-details"></a>Détails des serveurs liés  
  L'illustration suivante montre les aspects fondamentaux d'une configuration de serveurs liés.  
@@ -75,7 +75,7 @@ Généralement, les serveurs liés sont utilisés pour le traitement des requêt
 > Lorsqu'un fournisseur OLE DB est utilisé, le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit disposer d'autorisations de lecture et d'exécution sur le répertoire et sur tous les sous-répertoires correspondants dans lequel le fournisseur est installé. Cela inclut les fournisseurs mis en production par Microsoft, ainsi que tous les fournisseurs tiers.
 
 > [!NOTE]
-> Les serveurs liés prennent en charge l’authentification directe Active Directory au moment de l’utilisation de la délégation totale. À partir de SQL Server 2017 CU17, l’authentification directe avec délégation contrainte est également prise en charge. Toutefois, [la délégation contrainte basée sur les ressources](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) n’est pas prise en charge.
+> Les serveurs liés prennent en charge l’authentification directe Active Directory au moment de l’utilisation de la délégation totale. À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, l’authentification directe avec délégation contrainte est également prise en charge. Toutefois, la [délégation contrainte basée sur les ressources](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) n’est pas prise en charge.
 
 ## <a name="managing-providers"></a>Gestion des fournisseurs  
 Un ensemble d'options permettent de contrôler la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge et utilise des fournisseurs OLE DB spécifiés dans le Registre.  
@@ -99,17 +99,12 @@ Vous pouvez également définir des serveurs liés à l'aide de [!INCLUDE[ssManS
 > Les serveurs liés peuvent être définis de façon à repointer (en bouclage) vers le serveur sur lequel ils sont définis. Les serveurs en boucle sont particulièrement utiles pour tester une application utilisant des requêtes distribuées sur un réseau comportant un seul serveur. Les serveurs liés en boucle sont conçus à des fins de test et ne sont pas pris en charge pour de nombreuses opérations, telles que les transactions distribuées.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Créer des serveurs liés &#40;moteur de base de données SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)  
-  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
-  
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)  
+ [Créer des serveurs liés &#40;Moteur de base de données SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)    
   
 ## <a name="related-content"></a>Contenu associé  
- [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)  
-  
+ [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-  
-  
+

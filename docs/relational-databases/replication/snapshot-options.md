@@ -15,24 +15,24 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767602"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modifier les options d’initialisation d’instantané pour la réplication SQL 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Il existe un certain nombre d’options pour spécifier quand [initialiser un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md).
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>spécifier le format d'instantané (SQL Server Management Studio)
-  Spécifiez le format d’instantané dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+  Spécifiez le format d’instantané dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication – \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="to-specify-snapshot-format"></a>Pour spécifier le format d'instantané  
   
-1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez **SQL Server natif - tous les Abonnés doivent être des serveurs qui exécutent SQL Server** ou **Caractère - obligatoire si un serveur de publication ou un Abonné n’exécute pas SQL Server**.  
+1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication – \<Publication>** , sélectionnez **SQL Server natif – tous les Abonnés doivent être des serveurs qui exécutent SQL Server** ou **Caractère – obligatoire si un serveur de publication ou un Abonné n’exécute pas SQL Server**.  
   
     > [!NOTE]  
     >  Il est conseillé de sélectionner le format natif, à moins que cette publication ne doive prendre en charge les abonnements à une base de données SQL Server ou à une base de données non-SQL Server.  
@@ -44,12 +44,12 @@ Il existe un certain nombre d’options pour spécifier quand [initialiser un ab
 ### <a name="default-snapshot-location"></a>Emplacement par défaut des instantanés
 Spécifiez l'emplacement par défaut des instantanés dans la page **Dossier d'instantanés** de l'Assistant Configuration de la distribution. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md). Si vous créez une publication sur un serveur qui n'est pas configuré en tant que serveur de distribution, spécifiez un emplacement d'instantanés par défaut dans la page **Dossier d'instantanés** de l'Assistant Nouvelle publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
- Modifiez l’emplacement par défaut des instantanés dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur de distribution>** . Pour plus d’informations, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Définissez le dossier d’instantanés pour chaque publication dans la boîte de dialogue **Propriétés de publication - \<Publication>** . Pour plus d'informations, voir [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Modifiez l’emplacement par défaut des instantanés dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution – \<Distributor>** . Pour plus d’informations, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Définissez le dossier d'instantanés pour chaque publication de la boîte de dialogue **Propriétés de la publication – \<Publication>** . Pour plus d'informations, voir [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>Pour modifier l'emplacement par défaut des instantanés  
   
-1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_de_distribution>** , cliquez sur le bouton des propriétés ( **…** ) du serveur de publication pour lequel vous voulez modifier l’emplacement par défaut des captures instantanées.    
-2.  Dans la boîte de dialogue **Propriétés du serveur de publication - \<Serveur de publication>** , entrez une valeur pour la propriété **Dossier des captures instantanées par défaut**.  
+1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de publication – \<Distributor>** , cliquez sur le bouton des propriétés ( **...** ) du serveur de publication pour lequel vous voulez modifier l’emplacement par défaut des captures instantanées.    
+2.  Dans la boîte de dialogue **Propriétés du serveur de publication – \<Publisher>** , entrez une valeur pour la propriété du **Dossier d’instantanés par défaut**.  
   
     > [!NOTE]  
     >  L'Agent d'instantané doit posséder des autorisations en écriture sur le répertoire spécifié et les Agents de distribution et de fusion des autorisations en lecture. Si vous utilisez des abonnements par extraction, vous devez définir un répertoire partagé en tant que chemin UNC, par exemple \\\nom_ordinateur\snapshot. Pour plus d’informations, consultez [Sécuriser le dossier d’instantanés](../../relational-databases/replication/security/secure-the-snapshot-folder.md).    
@@ -70,7 +70,7 @@ Si vous souhaitez spécifier un autre emplacement pour le dossier d'instantanés
 >  N'utilisez pas WebSync et d'autres emplacements de dossier d'instantanés à la fois.  
   
 #### <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
-1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication - \<Publication>**  :  
+1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication – \<Publication>**  :  
   
     1.  Sélectionnez **Placer les fichiers dans le dossier suivant**puis cliquez sur **Parcourir** pour accéder à un répertoire ou entrez le chemin d'accès au répertoire dans lequel stocker les fichiers d'instantanés.  
   
@@ -98,7 +98,7 @@ Lors de la [configuration des propriétés des instantanés &#40;programmation T
 >  Compresser les instantanés permet dans certains cas d'améliorer les performances du transfert des fichiers d'instantanés sur le réseau. Toutefois, la compression de l'instantané nécessite un traitement supplémentaire de la part de l'Agent d'instantané lors de la génération des fichiers d'instantanés, et de la part de l'Agent de distribution lors de l'application de ces fichiers. Dans certains cas, cela peut ralentir la génération de l'instantané et rallonger le délai d'application d'un instantané. De plus, les instantanés compressés ne peuvent pas reprendre si une défaillance du réseau se produit ; ils ne conviennent donc pas aux réseaux non fiables. Évaluez ces différents facteurs avec précaution lors de l'utilisation d'instantanés compressés sur un réseau.  
   
 ### <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
-1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication - \<Publication>**  :  
+1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication – \<Publication>**  :  
   
     1.  Sélectionnez **Placer les fichiers dans le dossier suivant**puis cliquez sur **Parcourir** pour accéder à un répertoire ou entrez le chemin d'accès au répertoire dans lequel stocker les fichiers d'instantanés.  
   
@@ -128,7 +128,7 @@ Vous pouvez spécifier les scripts à exécuter sur l'Abonné avant ou après l'
 
 ### <a name="execute-a-script"></a>Exécuter un script 
 
-1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication - \<Publication>**  :    
+1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication – \<Publication>**  :    
     -   Pour spécifier un script à exécuter avant l'application de l'instantané, cliquez sur **Parcourir** pour rechercher le script, ou entrez un chemin d'accès pour le script dans la zone de texte **Exécuter ce script avant l'application de l'instantané** .  
   
         > [!NOTE]  

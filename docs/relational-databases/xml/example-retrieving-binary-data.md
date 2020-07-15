@@ -1,5 +1,6 @@
 ---
-title: 'Exemple : extraction de données binaires | Microsoft Docs'
+title: 'Exemple : Récupération de données binaires | Microsoft Docs'
+description: Affichez un exemple de requête SQL qui extrait des données binaires à l’aide des options RAW et BINARY BASE64 avec la clause FOR XML.
 ms.custom: ''
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 8d66e1ec9c580030f1f65f030cdb0367d8f4f430
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 08010e294b1b143c941774912d661a53c021a6ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632786"
 ---
-# <a name="example-retrieving-binary-data"></a>Exemple : extraction de données binaires
+# <a name="example-retrieving-binary-data"></a>Exemple : Extraction de données binaires
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 La requête ci-dessous retourne la photo du produit stockée dans une colonne de type **varbinary(max)** . L'option `BINARY BASE64` est spécifiée dans la requête pour retourner les données binaires au format encodé en base64.
 

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0bae370acd535f331d287cea38de04375891db0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9d655cdbec3b353455f2da13ea0cb17e9d4cee0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823896"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011471"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Pour une base de données spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette fonction retourne le paramètre actuel de l’option ou de la propriété de base de données spécifiée.
   
@@ -56,7 +56,7 @@ Expression spécifiant le nom de la propriété de base de données à retourner
 |---|---|---|
 |Classement|Nom du classement par défaut de la base de données|Nom du classement<br /><br /> NULL : la base de données n’est pas démarrée.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |ComparisonStyle|Style de comparaison Windows du classement. Pour générer une bitmap pour la valeur ComparisonStyle terminée, utilisez les valeurs de style suivantes :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131 072<br /><br /> <br /><br /> Par exemple, la valeur par défaut 196609 est le résultat de la combinaison des options permettant d'ignorer la casse, le type de caractères Kana et la largeur.|Retourne le style de comparaison.<br /><br /> Renvoie 0 pour tous les classements binaires.<br /><br /> Type de données de base : **int**|  
-|Édition|Édition de la base de données ou couche de service.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Usage général<br /><br /> Critique pour l’entreprise<br /><br /> De base<br /><br /> standard<br /><br /> Premium<br /><br /> Système (pour la base de données master)<br /><br /> NULL : la base de données n’est pas démarrée.<br /><br /> Type de données de base : **nvarchar**(64)|  
+|Édition|Édition de la base de données ou couche de service.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Usage général<br /><br /> Critique pour l’entreprise<br /><br /> De base<br /><br /> Standard<br /><br /> Premium<br /><br /> Système (pour la base de données master)<br /><br /> NULL : la base de données n’est pas démarrée.<br /><br /> Type de données de base : **nvarchar**(64)|  
 |IsAnsiNullDefault|La base de données suit les règles ISO d'autorisation des valeurs Null.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**|  
 |IsAnsiNullsEnabled|Toutes les comparaisons à une valeur NULL produisent le résultat UNKNOWN (inconnu).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**|  
 |IsAnsiPaddingEnabled|Les chaînes sont complétées à la même longueur avant leur comparaison ou insertion.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**|  
@@ -87,7 +87,7 @@ Expression spécifiant le nom de la propriété de base de données à retourner
 |IsXTPSupported|Indique si la base de données prend en charge l’option OLTP en mémoire, à savoir la création et l’utilisation de tables à mémoire optimisée et de modules compilés en mode natif.<br /><br /> Spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> La propriété IsXTPSupported est indépendante de l’existence de tout groupe de fichiers MEMORY_OPTIMIZED_DATA, qui est nécessaire pour la création d’objets OLTP en mémoire.|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide, erreur ou non applicable<br /><br /> Type de données de base : **int**|  
 |LastGoodCheckDbTime|Date et heure de la dernière exécution réussie de DBCC CHECKDB sur la base de données spécifiée. <sup>1</sup> Si DBCC CHECKDB n’a pas été exécuté sur une base de données, 1900-01-01 00:00:00.000 est retourné.|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] depuis SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] à compter de la mise à jour cumulative 9 (CU9).</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] ou une version ultérieure.</br>Azure SQL Database.<br/><br/>Valeur DateHeure<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **datetime**| 
 |LCID|Identificateur de paramètres régionaux (LCID) Windows de classement.|Valeur LCID (au format décimal).<br /><br /> Type de données de base : **int**|  
-|MaxSizeInBytes|Taille maximale de la base de données, en octets.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL : la base de données n’est pas démarrée<br /><br /> Type de données de base : **bigint**|  
+|MaxSizeInBytes|Taille maximale de la base de données, en octets.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Azure SQL Database et Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – La valeur est basée sur SLO, sauf si un stockage supplémentaire a été acheté.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – La valeur est en incréments de 1 Go jusqu’à la taille maximale.<br /><br />NULL : la base de données n’est pas démarrée<br /><br /> Type de données de base : **bigint**|  
 |Récupération|Mode de récupération de base de données|FULL : Mode de restauration complète<br /><br /> BULK_LOGGED : mode de récupération utilisant les journaux de transactions<br /><br /> SIMPLE : Mode de récupération simple<br /><br /> Type de données de base : **nvarchar(128)**|  
 |ServiceObjective|Décrit le niveau de performance de la base de données dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ou [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> NULL : base de données non démarrée<br /><br /> Shared (pour l'édition Web/Business)<br /><br /> De base<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Système (pour base de données master)<br /><br /> Type de données de base : **nvarchar(32)**|  
 |ServiceObjectiveId|ID de l'objectif de service dans la [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier** qui identifie l’objectif de service.|  

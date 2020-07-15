@@ -1,5 +1,6 @@
 ---
 title: Configuration de la visibilité des métadonnées | Microsoft Docs
+description: Découvrez comment configurer la visibilité des métadonnées pour les éléments sécurisables qu’un utilisateur possède ou pour lesquels ils a reçu des autorisations dans SQL Server.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661216"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979441"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuration de la visibilité des métadonnées
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La visibilité des métadonnées est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Par exemple, la requête suivante retourne une ligne si l'utilisateur bénéficie d'une autorisation telle que SELECT ou INSERT sur la table `myTable`.  
   
 ```  
@@ -45,7 +46,7 @@ GO
   
 |||  
 |-|-|  
-|Affichages catalogue|Procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**du**|  
+|Affichages catalogue|Procédures stockées **sp_help** du [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |Métadonnées exposant des fonctions intégrées|Affichages des schémas d'information|  
 |vues de compatibilité ;|Propriétés étendues|  
   
@@ -65,7 +66,7 @@ GO
   
 -   Les fonctions intégrées émettant des métadonnées telles que OBJECTPROPERTYEX peuvent renvoyer une valeur NULL.  
   
--   Les procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**du**peuvent uniquement retourner un sous-ensemble de lignes ou la valeur NULL.  
+-   Les procédures stockées **sp_help** du [!INCLUDE[ssDE](../../includes/ssde-md.md)]peuvent uniquement retourner un sous-ensemble de lignes ou la valeur NULL.  
   
  Les modules SQL, tels que les procédures stockées et les déclencheurs, fonctionnent dans le contexte de sécurité de l'appelant et, par conséquent, auront un accès limité aux métadonnées. Dans le code suivant par exemple, lorsque la procédure stockée tente d'accéder aux métadonnées de la table `myTable` pour laquelle l'appelant n'a aucune autorisation, un jeu de résultats vide est renvoyé. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une ligne est renvoyée.  
   

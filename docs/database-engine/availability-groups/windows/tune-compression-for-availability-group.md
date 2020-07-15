@@ -1,5 +1,6 @@
 ---
 title: Régler la compression pour un groupe de disponibilité | Microsoft Docs
+description: Découvrez comment SQL Server compresse les flux de données pour les groupes de disponibilité, ce qui réduit le trafic réseau, augmente la charge du processeur et peut induire une latence.
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013675"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888011"
 ---
 # <a name="tune-compression-for-availability-group"></a>Régler la compression pour un groupe de disponibilité
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Par défaut, SQL Server compresse les flux de données pour les groupes de disponibilité, si besoin. La compression réduit le trafic réseau, augmente la charge processeur et peut entraîner une latence. Vous devez être membre du rôle de serveur fixe pour activer la compression. Le tableau suivant indique à quel moment SQL Server utilise la compression pour les flux de journaux des groupes de disponibilité :
 
 | Scénario | Paramètre de compression
@@ -24,6 +25,7 @@ Par défaut, SQL Server compresse les flux de données pour les groupes de dispo
 | Réplica à validation synchrone | Non compressé
 | Réplicas à validation asynchrone | Compressé
 | Pendant l’amorçage automatique | Non compressé
+| TDE activée dans la base de données  | Non compressé
 
 ## <a name="trace-flags-for-availability-group-compression"></a>Indicateurs de trace pour la compression du groupe de disponibilité 
 
