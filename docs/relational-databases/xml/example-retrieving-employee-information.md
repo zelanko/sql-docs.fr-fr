@@ -1,5 +1,6 @@
 ---
-title: 'Exemple : extraction d’informations sur les employés | Microsoft Docs'
+title: 'Exemple : Récupération d’informations sur les employés | Microsoft Docs'
+description: Affichez un exemple d’extraction d’informations sur les employés à partir d’une base de données au format XML à l’aide d’une requête avec FOR XML EXPLICIT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 692ceb3d2c25bab437d92c5634a0b9c89d3b3221
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 827334e3e132128ed78f612788c96e8ad15f5443
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632774"
 ---
-# <a name="example-retrieving-employee-information"></a>Exemple : extraction d'informations sur les employés
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-retrieving-employee-information"></a>Exemple : Extraction d’informations sur les employés
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
   
  Supposons que vous souhaitez générer un document XML à l'aide de la transformation FOR XML EXPLICIT comme suit :  

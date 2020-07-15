@@ -1,5 +1,6 @@
 ---
 title: Spécifier la directive ELEMENT et l’encodage d’entité | Microsoft Docs
+description: Découvrez comment spécifier la directive ELEMENT dans une requête SQL afin que le résultat de la requête soit un encodage d’entité.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +14,16 @@ ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 62d9a167e73748a1fb5ae801f6a99c6211644b82
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 176cbbd92b55ada81a845018826cbf0b899b3475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632657"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemple : spécification de la directive ELEMENT et de l'encodage d'entité
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cet exemple illustre la différence entre les directives **ELEMENT** et **XML** . La directive **ELEMENT** décompose les données en entités, contrairement à la directive **XML** . L’élément \<Summary> reçoit des données XML, `<Summary>This is summary description</Summary>`, dans la requête.  
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Cet exemple illustre la différence entre les directives **ELEMENT** et **XML** . La directive **ELEMENT** décompose les données en entités, contrairement à la directive **XML** . L'élément \<Summary> reçoit des données XML, `<Summary>This is summary description</Summary>`, dans la requête.  
   
  Prenons par exemple la requête suivante :  
   

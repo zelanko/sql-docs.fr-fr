@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a2bbbbc6bb18e3239091e0d2902bf65b85deec2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907956"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883223"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Dépannage des serveurs de publication Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique présente une liste de plusieurs problèmes qui peuvent se produire lors de la configuration et de l'utilisation d'un serveur de publication Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Une erreur s'est produite avec le logiciel client et réseau d'Oracle  
@@ -67,9 +67,9 @@ ms.locfileid: "72907956"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Le serveur de publication Oracle est associé à un autre serveur de distribution  
  Un serveur de publication Oracle peut être associé avec un seul serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si un autre serveur de distribution est associé au serveur de publication Oracle, il doit être supprimé avant de pouvoir utiliser un autre distributeur. Si le serveur de distribution en cours n'est pas d'abord supprimé, vous recevez un des messages d'erreur suivants :  
   
--   « L’instance de serveur Oracle '\<*NomServeurPublicationOracle*>' a été précédemment configurée pour utiliser '\<*NomServeurDistributionSQLServer*>' en tant que serveur de distribution. Pour démarrer l’utilisation de '\<*NouveauNomServeurDistributionSQLServer*>' en tant que serveur de distribution, vous devez supprimer la configuration de réplication actuelle sur l’instance de serveur Oracle, ce qui entraînera également la suppression de toutes les publications sur cette instance de serveur. »  
+-   « L'instance de serveur Oracle '\<*OraclePublisherName*>' a été précédemment configurée pour utiliser '\<*SQLServerDistributorName*>' en tant que serveur de distribution. Pour démarrer l'utilisation de '\<*NewSQLServerDistributorName*>' en tant que serveur de distribution, vous devez supprimer la configuration de réplication actuelle sur l'instance de serveur Oracle, ce qui entraînera également la suppression de toutes les publications sur cette instance de serveur. »  
   
--   « Le serveur Oracle '\<*NomServeurOracle*>' est déjà défini comme serveur de publication '\<*NomServeurPublicationOracle*>' sur le serveur de distribution '\<*NomServeurDistributionSQLServer*>. *\<NomBaseDeDonnéesDistribution>* . Supprimez le serveur de publication ou le synonyme public ' *\<NomSynonyme>* ' à recréer. »  
+-   « Le serveur Oracle '\<*OracleServerName*> est déjà défini comme serveur de publication '\<*OraclePublisherName*>' sur le serveur de distribution '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '. Supprimez le serveur de publication ou le synonyme public ' *\<SynonymName>* ' pour le recréer. »  
   
  Quand un serveur de publication Oracle est supprimé, les objets de réplication de la base de données Oracle sont automatiquement nettoyés. Cependant, un nettoyage manuel des objets de réplication Oracle est nécessaire dans certains cas. Pour nettoyer manuellement des objets de réplication Oracle créés par réplication :  
   
@@ -82,14 +82,14 @@ ms.locfileid: "72907956"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Une erreur SQL Server 21663 est provoquée par l'absence d'une clé primaire  
  Les articles des publications transactionnelles doivent avoir une clé primaire valide. Si ce n'est pas le cas, vous recevez le message d'erreur suivant si vous essayez d'ajouter un article :  
   
- « Aucune clé primaire valide n’a été trouvée pour la table source [\<*PropriétaireTable*>].[\<*NomTable*>] »  
+ « Aucune clé primaire valide n'a été trouvée pour la table source [\<*TableOwner*>].[\<*TableName*>]. »  
   
  Pour des informations sur les conditions requises des clés primaires, consultez la section « Contraintes et index uniques » dans la rubrique [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Une erreur SQL Server 21642 est provoquée par une connexion à un serveur lié en double  
  Quand un serveur de publication Oracle est initialement configuré, une entrée de serveur lié est créée pour la connexion entre le serveur de publication et le serveur de distribution. Le serveur lié a le même nom que le service TNS d'Oracle. Si vous essayez de créer un serveur lié avec le même nom, le message d'erreur suivant apparaît :  
   
- « Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé ' *\<NomServeurLié>* existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication. »  
+ « Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé ' *\<LinkedServerName>* ' existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication. »  
   
  Cette erreur peut se produire si vous tentez de créer directement un serveur lié ou si vous avez précédemment supprimé la relation entre le serveur de publication Oracle et le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et que vous tentez de le reconfigurer. Si vous recevez cette erreur en tentant de reconfigurer le serveur de publication, supprimez le serveur lié avec [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   
@@ -156,7 +156,7 @@ ms.locfileid: "72907956"
   
 2.  Dans la boîte de dialogue **Exécuter** , tapez **regedit**et cliquez sur **OK**.  
   
-3.  Accédez à HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<Nom_instance>* \Providers.  
+3.  Accédez à HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\\ *\<InstanceName>* \Providers.  
   
      Sous Providers doit se trouver un répertoire nommé OraOLEDB.Oracle contenant le nom de valeur DWORD **AllowInProcess**, définie à **1**.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "72907956"
 ## <a name="oracle-error-ora-01555"></a>Erreur Oracle ORA-01555  
  L'erreur de base de données Oracle suivante n'est pas liée à la réplication d'instantané ; elle est liée à la façon dont Oracle construit des vues de données cohérentes en lecture :  
   
- « ORA-01555 : Instantané trop ancien »  
+ « ORA-01555 : capture instantanée trop ancienne »  
   
  À l'aide d'objets appelés segments d'annulation, Oracle construit des vues de données cohérentes en lecture à partir du moment où une instruction SQL est émise. Une erreur « instantané trop ancien » peut se produire quand des informations de restauration sont écrasées par d'autres sessions concurrentes. Avant Oracle 9i, la méthode recommandée pour réduire la fréquence de cette erreur était d'augmenter la taille et/ou le nombre de segments d'annulation, et d'attribuer les grosses transactions à un segment d'annulation spécifique.  
   

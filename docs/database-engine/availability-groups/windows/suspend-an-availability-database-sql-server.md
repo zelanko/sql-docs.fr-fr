@@ -1,6 +1,6 @@
 ---
 title: Mettre en suspens une base de données de disponibilité
-description: Découvrez comment mettre en suspens le déplacement des données d’une base de données d’un groupe de disponibilité Always On à l’aide de SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou PowerShell.
+description: Découvrez comment mettre en suspens le déplacement des données d’une base de données d’un groupe de disponibilité Always On à l’aide de SQL Server Management Studio, Transact-SQL ou PowerShell.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900711"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Interrompre une base de données de disponibilité (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Vous pouvez interrompre une base de données de disponibilité dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Notez qu'une commande d'interruption doit être émise sur l'instance du serveur qui héberge la base de données à interrompre ou à reprendre.  
   
  L'effet d'une commande d'interruption varie selon que vous interrompez une base de données principale ou secondaire, comme suit :  
   
 |Base de données interrompue|Effet de la commande d'interruption|  
 |------------------------|-------------------------------|  
-|Base de données secondaire|Seule la base de données secondaire locale est interrompue et son état de synchronisation devient NOT SYNCHRONIZING. Les autres bases de données secondaires ne sont pas affectées. La base de données interrompue cesse de recevoir et d'appliquer des données (enregistrements de journal) et commence à se situer en retrait par rapport à la base de données principale. Les connexions existantes sur le réplica secondaire accessible en lecture restent utilisables. Les nouvelles connexions à la base de données suspendue sur le réplica secondaire accessible en lecture ne sont pas autorisées tant que le déplacement des données n'a pas repris.<br /><br /> La base de données primaire reste disponible. Si vous interrompez chaque base de données secondaire correspondante, la base de données principale est exposée.<br /><br /> **\*\* Important \*\*** Quand une base de données secondaire est suspendue, la file d’attente d’envoi de la base de données primaire correspondante accumule des enregistrements du journal des transactions non envoyés. Les connexions au réplica secondaire retournent des données qui étaient disponibles lorsque le déplacement des données a été suspendu.|  
+|Base de données secondaire|Seule la base de données secondaire locale est interrompue et son état de synchronisation devient NOT SYNCHRONIZING. Les autres bases de données secondaires ne sont pas affectées. La base de données interrompue cesse de recevoir et d'appliquer des données (enregistrements de journal) et commence à se situer en retrait par rapport à la base de données principale. Les connexions existantes sur le réplica secondaire accessible en lecture restent utilisables. Les nouvelles connexions à la base de données suspendue sur le réplica secondaire accessible en lecture ne sont pas autorisées tant que le déplacement des données n'a pas repris. Ce comportement s’applique uniquement lorsque les connexions sont ouvertes à l’aide de l’écouteur et du routage en lecture seule.<br /><br /> La base de données primaire reste disponible. Si vous interrompez chaque base de données secondaire correspondante, la base de données principale est exposée.<br /><br /> **\*\* Important \*\*** Quand une base de données secondaire est suspendue, la file d’attente d’envoi de la base de données primaire correspondante accumule des enregistrements du journal des transactions non envoyés. Les connexions au réplica secondaire retournent des données qui étaient disponibles lorsque le déplacement des données a été suspendu.|  
 |Base de données principale|La base de données principale cesse le déplacement des données vers chaque base de données secondaire connectée. La base de données principale continue à s'exécuter, en mode exposé. La base de données principale reste à la disposition des clients, les connexions existantes sur un réplica secondaire accessible en lecture restent utilisables et de nouvelles connexions peuvent être établies.|  
   
 > [!NOTE]  

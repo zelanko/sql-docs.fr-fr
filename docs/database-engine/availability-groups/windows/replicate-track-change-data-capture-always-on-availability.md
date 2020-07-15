@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433756"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888054"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La réplication, la capture de données modifiées (CDC) et le suivi des modifications (CT) sont pris en charge sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aide à fournir des fonctionnalités haute disponibilité et de récupération de base de données supplémentaires.  
   
@@ -190,15 +190,15 @@ Si la capture des données modifiées doit être désactivé sur une base de don
 ##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> Conditions préalables requises, restrictions et considérations relatives à l'utilisation de la réplication  
  Cette section décrit les considérations à prendre en compte pour déployer la réplication avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], y compris les conditions préalables requises, les restrictions et les recommandations.  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
   
 -   Lors de l'utilisation de la réplication transactionnelle, si la base de données de publication se trouve dans un groupe de disponibilité, le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. L'abonné peut utiliser un niveau inférieur de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Lors de l'utilisation de la réplication de fusion, si la base de données de publication se trouve dans un groupe de disponibilité :  
   
-    -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Abonnement par extraction de données : le serveur de publication, le serveur de distribution et les bases de données de l'abonné doivent s'exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
+    -   Abonnement par extraction : le serveur de publication, le serveur de distribution et les bases de données de l’abonné doivent s’exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
   
 -   Les instances de serveur de publication satisfont toutes les conditions préalables pour faire partie d’un groupe de disponibilité Always On. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -208,7 +208,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
 |||||  
 |-|-|-|-|  
 ||**Publisher**|**Serveur de distribution**|**Abonné**|  
-|**Transactionnelle**|Oui<br /><br /> Remarque : n’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
+|**Transactionnelle**|Oui<br /><br /> Remarque : N’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
 |**P2P**|Non|Non|Non|  
 |**Fusionner**|Oui|Non|Non|  
 |**Instantané**|Oui|Non|Oui|
@@ -217,11 +217,15 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 ### <a name="considerations"></a>Considérations  
   
--   La base de données de distribution n'est pas prise en charge en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données. La configuration de la réplication est couplée à l'instance de SQL Server sur laquelle le serveur de distribution est configuré ; par conséquent la base de données de distribution ne peut pas être mise en miroir ni répliquée. Pour fournir une haute disponibilité au serveur de distribution, utilisez un cluster de basculement SQL Server. Pour plus d'informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   La base de données de distribution n’est pas prise en charge pour une utilisation avec la mise en miroir de bases de données, mais elle est prise en charge avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] soumise à certaines limitations, consultez [Configurer le groupe de disponibilité de distribution](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions). La configuration de la réplication est couplée à l'instance de SQL Server sur laquelle le serveur de distribution est configuré ; par conséquent la base de données de distribution ne peut pas être mise en miroir ni répliquée. Pour fournir une haute disponibilité au serveur de distribution, utilisez un cluster de basculement SQL Server. Pour plus d'informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Le basculement d’abonné vers une base de données secondaire, s’il est pris en charge, est une procédure manuelle pour les abonnés de réplication de fusion. La procédure est, pour l'essentiel, identique à la méthode utilisée pour le basculement vers une base de données de l'abonné en miroir. Les abonnés de réplication transactionnelle ne nécessitent pas de traitement spécial lorsqu’ils participent à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Les abonnés doivent exécuter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou une version ultérieure pour pouvoir participer à un groupe de disponibilité.  Pour plus d’informations, consultez [Abonnés de réplication et groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
 -   Les métadonnées et les objets qui existent en dehors de la base de données, c'est-à-dire les connexions, les travaux et les serveurs liés, ne sont pas propagés vers les réplicas secondaires. Si vous voulez faire figurer les métadonnées et les objets dans la nouvelle base de données principale après le basculement, vous devez les copier manuellement. Pour plus d’informations, consultez [Gestion des connexions et des travaux pour les bases de données d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
+
+### <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
+
+Le serveur de publication ou la base de données de distribution d’un groupe de disponibilité ne peuvent pas être configurés dans le cadre d’un groupe de disponibilité distribué. La base de données du serveur de publication dans un groupe de disponibilité et la base de données de distribution dans un groupe de disponibilité nécessitent toutes deux un point de terminaison d’écouteur pour une configuration et une utilisation appropriées. Toutefois, il n’est pas possible de configurer un point de terminaison d’écouteur pour un groupe de disponibilité distribué.
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Réplication**  
@@ -252,7 +256,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
  [Abonnés de réplication et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Groupes de disponibilité Always On : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Groupes de disponibilité Always On : Interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [À propos du suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
