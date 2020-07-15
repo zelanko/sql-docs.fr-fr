@@ -1,5 +1,6 @@
 ---
 title: Statistiques pour les tables optimisées en mémoire | Microsoft Docs
+description: Découvrez comment l’optimiseur de requête utilise des statistiques sur les colonnes dans l'optique de créer des plans de requête qui améliorent les performances des requêtes pour In-Memory OLTP.
 ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a86f94a141b1f15e2bfb7e9ff3c4428f5b33707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734956"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiques pour les tables optimisées en mémoire
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   L'optimiseur de requête utilise des statistiques sur les colonnes dans l'optique de créer des plans de requête qui améliorent les performances des requêtes. Les statistiques sont collectées dans les tables de la base de données et stockées dans les métadonnées de la base de données.  
   

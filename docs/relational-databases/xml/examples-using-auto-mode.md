@@ -1,5 +1,6 @@
 ---
-title: 'Exemples : utilisation du mode AUTO | Microsoft Docs'
+title: 'Exemples : Utilisation du mode AUTO | Microsoft Docs'
+description: Consultez des exemples de requêtes qui utilisent le mode FOR XML AUTO.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 782da9544dd1cf6e084793754fb31f81109d1810
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 68dfbbf0d1e2a2cf160b728b5f0acd9553be7922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775574"
 ---
-# <a name="examples-using-auto-mode"></a>Exemples : utilisation du mode AUTO
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-auto-mode"></a>Exemples : Utilisation du mode AUTO
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Les exemples suivants illustrent l'utilisation du mode AUTO. Un grand nombre de ces requêtes sont spécifiées sur les documents XML d'instructions de fabrication de bicyclettes, stockés dans la colonne Instructions de la table ProductModel dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemple : extraction des informations sur les clients, les commandes et les détails des commandes  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemple : Récupération d’informations sur les clients, les commandes et les détails des commandes  
  Cette requête extrait les informations de client, de commande et de détail de commande relatives à un client spécifique.  
   
 ```  
@@ -94,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Exemple : spécification de la clause GROUP BY et de fonctions d'agrégation  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Exemple : Spécification de la clause GROUP BY et de fonctions d’agrégation  
  La requête suivante renvoie des ID de client spécifiques et le nombre de commandes passées par chaque client.  
   
 ```  
@@ -114,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemple : spécification de colonnes calculées en mode AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemple : Spécification de colonnes calculées en mode AUTO  
  Cette requête renvoie des noms concaténés de clients spécifiques et les informations de commande. Étant donné que la colonne calculée est affectée au niveau le plus profond rencontré à ce stade, l'élément <`SOH`> est utilisé dans cet exemple. Les noms concaténés des clients sont ajoutés comme attributs de l'élément <`SOH`> dans le résultat.  
   
 ```  
@@ -167,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Exemple : renvoi de données binaires  
+## <a name="example-returning-binary-data"></a>Exemple : Retour de données binaires  
  Cette requête retourne une photo du produit de la table `ProductPhoto` . `ThumbNailPhoto` est une colonne **varbinary (max)** dans la table `ProductPhoto` . Par défaut, le mode `AUTO` renvoie vers les données binaires une référence, en l'occurrence une URL relative pointant vers la racine virtuelle de la base de données dans laquelle la requête est exécutée. L'attribut de clé `ProductPhotoID` doit être spécifié pour identifier l'image. Lors de l'extraction d'une référence d'image telle qu'elle apparaît dans cet exemple, la clé primaire de la table doit aussi être spécifiée dans la clause `SELECT` pour identifier une ligne de façon univoque.  
   
 ```  
@@ -223,7 +224,7 @@ FOR XML AUTO;
   
  Cela peut poser un problème, notamment lorsque des requêtes dbobject sont exécutées sur une base de données respectant la casse. Pour l'éviter, la casse du nom de table ou de colonne spécifié dans les requêtes doit correspondre à celle du nom de table ou de colonne défini dans la base de données.  
   
-## <a name="example-understanding-the-encoding"></a>Exemple : présentation de l'encodage  
+## <a name="example-understanding-the-encoding"></a>Exemple : Fonctionnement de l’encodage  
  Cet exemple montre les différents encodages qui se produisent dans les résultats.  
   
  Créez cette table :  
@@ -266,7 +267,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Dans le résultat de la requête, les caractères spéciaux XML et URL qui se trouvent dans les noms d'éléments et d'attributs renvoyés sont encodés avec la valeur hexadécimale du caractère Unicode correspondant. Dans le résultat précédent, le nom d'élément <`Special Chars`> est renvoyé comme <`Special_x0020_Chars`>. Le nom de l’attribut <`Col#&2`> est retourné en tant que <`Col_x0023__x0026_2`>. Les caractères spéciaux XML et URL sont encodés.  
   
--   Si les valeurs des éléments ou des attributs contiennent une des cinq entités de caractères XML standard (', "", \<, > et &), ces caractères XML spéciaux sont toujours encodés selon l’encodage de caractère XML. Dans le résultat précédent, la valeur `&` contenue dans la valeur de l'attribut <`Col1`> est encodée sous la forme `&`. Cependant, le caractère « # » reste sous la forme « # » parce qu'il s'agit d'un caractère XML valide et non d'un caractère XML spécial.  
+-   Si les valeurs des éléments ou des attributs contiennent une des cinq entités de caractères XML standard (', "", \<, >, > et &), ces caractères XML spéciaux sont toujours encodés selon l’encodage de caractère XML. Dans le résultat précédent, la valeur `&` contenue dans la valeur de l'attribut <`Col1`> est encodée sous la forme `&`. Cependant, le caractère « # » reste sous la forme « # » parce qu'il s'agit d'un caractère XML valide et non d'un caractère XML spécial.  
   
 -   Si les valeurs des éléments ou des attributs contiennent un des caractères URL spéciaux ayant donc une signification particulière dans l'URL, ils sont encodés seulement dans la valeur URL DBOBJECT et uniquement lorsque le caractère spécial fait partie d'un nom de table ou de colonne. Dans le résultat, le caractère « `#` » qui fait partie du nom de table `Col#&2` est encodé sous la forme `_x0023_ in the DBOJBECT URL`.  
   

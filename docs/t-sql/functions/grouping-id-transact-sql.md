@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cfbecf5689432a0e9053abf043225b9f9ff596b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631563"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Fonction qui calcule le niveau de regroupement. GROUPING_ID peut être utilisé uniquement dans les clauses SELECT \<list>, HAVING et ORDER BY lorsque GROUP BY est spécifié.  
+  Fonction qui calcule le niveau de regroupement. GROUPING_ID peut être utilisé uniquement dans les clauses SELECT \<select> list, HAVING et ORDER BY lorsque GROUP BY est spécifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
@@ -47,10 +47,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>Notes  
- L’argument \<column_expression> de GROUPING_ID doit correspondre exactement à l’expression dans la liste GROUP BY. Par exemple, si vous groupez par DATEPART (yyyy, \<*column name*>), utilisez GROUPING_ID (DATEPART (yyyy, \<*column name*>)) ; ou si vous groupez par \<*column name*>, utilisez GROUPING_ID (\<*column name*>).  
+ Le GROUPING_ID \<column_expression> doit correspondre exactement à l’expression dans la liste GROUP BY. Par exemple, si vous groupez par DATEPART (yyyy, \<*column name*>), utilisez GROUPING_ID (DATEPART (yyyy, \<*column name*>)) ; ou si vous groupez par \<*column name*>, utilisez GROUPING_ID (\<*column name*>).  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>Comparaison de GROUPING_ID () à GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,** ...*n* ]) entre l’équivalent du retour de GROUPING (\<column_expression>) pour chaque colonne dans sa liste de colonnes dans chaque ligne de sortie en tant que chaîne de uns et de zéros. GROUPING_ID interprète cette chaîne comme nombre de base 2 et retourne l'entier équivalent. Par exemple, considérez l’instruction suivante : `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Le tableau suivant indique les valeurs d'entrée et de sortie de GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) entre l'équivalent du retour de GROUPING (\<column_expression>) pour chaque colonne dans sa liste de colonnes dans chaque ligne de sortie en tant que chaîne de uns et de zéros. GROUPING_ID interprète cette chaîne comme nombre de base 2 et retourne l'entier équivalent. Par exemple, considérez l’instruction suivante : `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Le tableau suivant indique les valeurs d'entrée et de sortie de GROUPING_ID ().  
   
 |Colonnes agrégées|Entrée GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Sortie GROUPING_ID ()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  Voici le jeu de résultats non filtré.  
   
-|Name|Intitulé|Grouping Level|Employee Count|Name|  
+|Nom|Intitulé|Grouping Level|Employee Count|Nom|  
 |----------|-----------|--------------------|--------------------|----------|  
 |Document Control|Control Specialist|0|2|Document Control|  
 |Document Control|Document Control Assistant|0|2|Document Control|  

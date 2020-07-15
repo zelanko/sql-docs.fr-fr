@@ -1,5 +1,6 @@
 ---
 title: Aide (F1) sur l’Explorateur d’utilitaire | Microsoft Docs
+description: Familiarisez-vous avec les fonctionnalités proposées dans différentes zones de l’Utilitaire SQL Server. En savoir plus sur les affichages, le tableau de bord et les onglets administration de l’utilitaire.
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640403"
 ---
 # <a name="utility-explorer-f1-help"></a>Aide sur l'Explorateur d'objets accessible via la touche F1
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les sections suivantes documentent les fonctionnalités de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les opérations associées.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Tableau de bord de l'utilitaire (utilitaire SQL Server)
@@ -36,7 +37,7 @@ ms.locfileid: "68024484"
  Pour plus d’informations sur la création d’un point de contrôle d’utilitaire, consultez [Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Pour plus d’informations sur l’ajout d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Inscrire une instance de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
-### <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments UI  
  Intégrité de l'instance gérée  
  L'état d'intégrité des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affiche sur le côté gauche du volet de contenu de l'Explorateur de l'utilitaire.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "68024484"
  ## <a name="deployed-data-tier-application-details-sql-server-utility"></a>Détails des applications de la couche Données déployées (utilitaire SQL Server)
   Les informations de la vue Applications de la couche Données déployées de l'Explorateur de l'utilitaire fournissent des données d'utilisation pour les applications de la couche Données, l'historique de l'utilisation du processeur, des détails sur l'utilisation du stockage au niveau du fichier, ainsi que la capacité d'afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l'application de la couche Données pour l'utilisation du processeur et pour les fichiers des données de la base de données et les fichiers journaux. Vous pouvez également consulter les détails des propriétés des applications de la couche Données.  
   
-### <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments UI  
  Mode Liste  
  Le mode Liste, dans le volet supérieur, affiche des données concernant des applications de la couche Données. Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque application de la couche Données par catégorie d'utilisation :  
   
@@ -153,7 +154,7 @@ ms.locfileid: "68024484"
   
     -   Flèche haut rouge : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichier journal est surexploité. Notez que, si une base de données se trouve dans l’état « urgence », l’état d’intégrité affiche l’espace de fichier journal surexploité.  
   
-     Pour afficher ou modifier les limites de la stratégie d'espace de fichier, cliquez sur l'onglet **Utilisation du stockage**.  
+     Pour afficher ou modifier les limites de la stratégie d’espace de fichier, cliquez sur l’onglet **Utilisation du stockage** .  
   
 -   Espace de volume : affiche un résumé des états d'intégrité de l'utilisation de l'espace de volume pour tous les volumes contenant des bases de données qui appartiennent à l'application de la couche Données sélectionnée. Si l'état d'intégrité d'un des volumes est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant surexploité. Si l'état d'intégrité d'un des volumes de données est sous-exploité et qu'aucun volume n'est surexploité, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant sous-exploité. Sinon, l'état d'intégrité de l'espace de volume sera signalé en mode Liste comme étant correctement utilisé. Pour afficher ou modifier les limites de la stratégie, cliquez sur l’onglet **Utilisation du stockage** .  
   
@@ -167,17 +168,17 @@ ms.locfileid: "68024484"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement activé : (True ou False)  
+-   Chiffrement activé : (True ou False)  
   
--   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
+-   Mode de récupération : (Simple, complète et utilisant les journaux de transactions)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Dernière heure signalée : cette colonne affiche l’heure et la date locales du processeur à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Onglet Utilisation du processeur  
  L'onglet d'utilisation du processeur affiche côte à côte des graphiques de données d'historique pour l'application de la couche Données et l'utilisation du processeur de l'ordinateur.  
@@ -244,22 +245,22 @@ ms.locfileid: "68024484"
   
 -   Date déployée  
   
--   Digne de confiance : (True ou False)  
+-   Digne de confiance : (True ou False)  
   
 -   Classement  
   
 -   Niveau de compatibilité : (par exemple, Version100)  
   
--   Chiffrement activé : (True ou False)  
+-   Chiffrement activé : (True ou False)  
   
--   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
+-   Mode de récupération : (Simple, complète et utilisant les journaux de transactions)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Dernière heure signalée : cette colonne affiche l’heure et la date locales du processeur à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
  Les informations de la vue Instances managées de l’Explorateur de l’utilitaire fournissent des données d’utilisation pour les instances individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un historique d’utilisation du processeur, les détails de l’utilisation du stockage au niveau du fichier, et la possibilité d’afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pour un ordinateur, pour les fichiers de base de données et les fichiers journaux, ainsi qu’au niveau des volumes de stockage. Vous pouvez également consulter les détails des propriétés des instances managées individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments UI  
  Mode Liste  
  Le mode Liste, dans le volet supérieur, affiche des données sur les instances individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] répertoriées dans les lignes par ComputerName\InstanceName.  
   
@@ -307,17 +308,17 @@ ms.locfileid: "68024484"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   En cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   Respecter la casse : (True ou False)  
+-   Respect de la casse (True ou False)  
   
 -   Language :  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Dernière heure signalée : cette colonne affiche l’heure et la date locales du processeur à l’aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Onglet Utilisation du processeur  
  L’onglet d’utilisation du processeur affiche côte à côte des graphiques de données d’historique pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’utilisation du processeur de l’ordinateur.  
@@ -404,20 +405,20 @@ ms.locfileid: "68024484"
   
 -   Édition de SQL Server :  
   
--   Cluster : (True ou False)  
+-   En cluster : (True ou False)  
   
 -   Répertoire de sauvegarde :  
   
 -   Classement :  
   
--   Respecter la casse : (True ou False)  
+-   Respect de la casse (True ou False)  
   
 -   Language :  
 
 ## <a name="utility-administration-sql-server-utility"></a>Administration de l'utilitaire (utilitaire SQL Server)
 Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres de stratégie, de sécurité et d'entrepôt de données pour un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les concepts de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur
+### <a name="ui-element-list"></a>Liste d’éléments UI
  **Onglet Stratégie** : utilisez l’onglet de stratégie pour afficher ou spécifier des stratégies d’analyse globales.  
   
  Définissez des stratégies globales de surveillance des applications de couche Données. Pour développer la liste des valeurs de cette option, cliquez sur la flèche en regard du nom de la stratégie ou cliquez sur le titre de la stratégie.  
@@ -486,13 +487,13 @@ Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres 
  Informations de configuration de l'entrepôt de données de l'utilitaire  
  Les paramètres de configuration suivants ne sont pas configurables dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   Nom de l’UMDW : Sysutility_mdw_\<GUID>_DATA.  
+-   Nom UMDW : Sysutility_mdw_\<GUID>_DATA.  
   
--   fréquence de téléchargement du jeu d'éléments de collecte : toutes les 15 minutes.  
+-   Fréquence de téléchargement du jeu d’éléments de collecte : toutes les 15 minutes.  
   
- Le répertoire UMDW est configurable : \<Lecteur_système:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nom_UCP>\MSSQL\Data\\, où \<Lecteur_système est normalement le lecteur C:\. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
+ Le répertoire UMDW est configurable : \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nom_UCP>\MSSQL\Data\\, où \<System drive> est normalement le lecteur C:\. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
   
-> **REMARQUE :** l’emplacement du fichier UMDW (sysutility_mdw) peut être modifié à l’aide des opérations de détachement et d’attachement ou d’ALTER DATABASE. Nous recommandons l'utilisation d'ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **REMARQUE :** L'emplacement du fichier UMDW (sysutility_mdw) peut être modifié à l'aide des opérations de détachement et d'attachement ou d'ALTER DATABASE. Nous recommandons l'utilisation d'ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Revenir aux valeurs par défaut prédéfinies  
  Pour rétablir les valeurs par défaut des paramètres de cet onglet, cliquez sur le bouton **Paramètres par défaut** , puis sur **Appliquer**.  

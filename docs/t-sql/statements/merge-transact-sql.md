@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834670"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Exécute des opérations d'insertion, de mise à jour ou de suppression sur une table cible à partir des résultats d'une jointure avec une table source. Par exemple, synchronisez deux tables en insérant, mettant à jour ou supprimant des lignes dans une seule table selon les différences trouvées dans l'autre table.  
   
@@ -78,41 +78,12 @@ MERGE
     { [ <table_hint_limited> [ ,...n ] ]  
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
-  
-<table_source> ::=
-{  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
-        [ WITH ( table_hint [ [ , ]...n ] ) ]
-  | rowset_function [ [ AS ] table_alias ]
-        [ ( bulk_column_alias [ ,...n ] ) ]
-  | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
-  | <joined_table>
-  | <pivoted_table>
-  | <unpivoted_table>
-}  
-  
+
 <merge_search_condition> ::=  
     <search_condition>  
   
 <merge_matched>::=  
     { UPDATE SET <set_clause> | DELETE }  
-  
-<set_clause>::=  
-SET  
-  { column_name = { expression | DEFAULT | NULL }  
-  | { udt_column_name.{ { property_name = expression  
-                        | field_name = expression }  
-                        | method_name ( argument [ ,...n ] ) }  
-    }  
-  | column_name { .WRITE ( expression , @Offset , @Length ) }  
-  | @variable = expression  
-  | @variable = column = expression  
-  | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
@@ -122,58 +93,7 @@ SET
 }  
   
 <clause_search_condition> ::=  
-    <search_condition>  
-  
-<search condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-
-<search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> )
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
-[ ,...n ]  
-
-<predicate> ::=
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
-    | string_expression [ NOT ] LIKE string_expression
-  [ ESCAPE 'escape_character' ]
-    | expression [ NOT ] BETWEEN expression AND expression
-    | expression IS [ NOT ] NULL
-    | CONTAINS
-  ( { column | * } , '< contains_search_condition >' )
-    | FREETEXT ( { column | * } , 'freetext_string' )
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
-  { ALL | SOME | ANY} ( subquery )
-    | EXISTS ( subquery ) }
-
-<graph_search_pattern> ::=
-    { <node_alias> {
-                      { <-( <edge_alias> )- }
-                    | { -( <edge_alias> )-> }
-                    <node_alias>
-                   }
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
-
-<output_clause>::=  
-{  
-    [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
-        [ (column_list) ] ]  
-    [ OUTPUT <dml_select_list> ]  
-}  
-  
-<dml_select_list>::=  
-    { <column_name> | scalar_expression }
-        [ [AS] column_alias_identifier ] [ ,...n ]  
-  
-<column_name> ::=  
-    { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
+    <search_condition> 
 ```  
   
 ## <a name="arguments"></a>Arguments
@@ -207,7 +127,7 @@ Autre nom utilisé pour faire référence à une table.
 USING \<table_source>  
 Spécifie la source de données correspondant aux lignes de données dans *target_table* en fonction de \<merge_search condition>. Le résultat de cette correspondance dicte les actions à effectuer par les clauses WHEN de l'instruction MERGE. \<table_source> peut être une table distante ou une table dérivée qui accède à des tables distantes.
   
-\<table_source> peut être une table dérivée qui utilise le [constructeur de valeurs de table](../../t-sql/queries/table-value-constructor-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] pour construire une table en spécifiant plusieurs lignes.  
+\<table_source> peut être une table dérivée qui utilise le [!INCLUDE[tsql](../../includes/tsql-md.md)][constructeur de valeurs de table](../../t-sql/queries/table-value-constructor-transact-sql.md) pour construire une table en spécifiant plusieurs lignes.  
   
 Pour plus d’informations sur la syntaxe et les arguments de cette clause, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
@@ -223,14 +143,14 @@ Spécifie que toutes les lignes de *target_table qui correspondent aux lignes re
 L'instruction MERGE peut avoir au plus deux clauses WHEN MATCHED. Si deux clauses sont spécifiées, la première clause doit être accompagnée d’une clause AND \<search_condition>. Pour toute ligne donnée, la deuxième clause WHEN MATCHED est appliquée uniquement si la première ne l'est pas. En présence de deux clauses WHEN MATCHED, l'une d'elles doit spécifier une action UPDATE et l'autre une action DELETE. Lorsque l’action UPDATE est spécifiée dans la clause \<merge_matched> et que plusieurs lignes de \<table_source> correspondent à une ligne dans *target_table* en fonction de \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. L'instruction MERGE ne peut pas mettre à jour la même ligne plus d'une fois, ou mettre à jour et supprimer la même ligne.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Spécifie qu’une ligne est insérée dans *target_table* pour chaque ligne retournée par \<table_source> ON \<merge_search_condition> qui ne correspond pas à une ligne dans *target_table*, mais satisfait à un critère de recherche supplémentaire, le cas échéant. Les valeurs à insérer sont spécifiées par la clause \<merge_not_matched>. L’instruction MERGE peut avoir une seule clause WHEN NOT MATCHED [ BY TARGET ].
+Spécifie qu’une ligne est insérée dans *target_table* pour chaque ligne retournée par \<table_source>ON \<merge_search_condition>qui ne correspond pas à une ligne dans *target_table*, mais satisfait à un critère de recherche supplémentaire, le cas échéant. Les valeurs à insérer sont spécifiées par la clause \<merge_not_matched>. L’instruction MERGE peut avoir une seule clause WHEN NOT MATCHED [ BY TARGET ].
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
-Spécifie que toutes les lignes de *target_table qui ne correspondent pas aux lignes retournées par \<table_source> ON \<merge_search_condition>, et qui répondent aux critères de recherche supplémentaires, sont mises à jour ou supprimées selon la clause \<merge_matched>.  
+Spécifie que toutes les lignes de *target_table qui correspondent aux lignes renvoyées par \<table_source> ON \<merge_search_condition>, et qui répondent aux conditions de recherche supplémentaires, sont mises à jour ou supprimées en fonction de la clause \<merge_matched>.  
   
 L'instruction MERGE peut avoir au plus deux clauses WHEN NOT MATCHED BY SOURCE. Si deux clauses sont spécifiées, la première clause doit être accompagnée d’une clause AND \<clause_search_condition>. Pour toute ligne donnée, la deuxième clause WHEN NOT MATCHED BY SOURCE est appliquée uniquement si la première ne l'est pas. En présence de deux clauses WHEN NOT MATCHED BY SOURCE, l'une d'elles doit spécifier une action UPDATE et l'autre une action DELETE. Seules les colonnes de la table cible peuvent être référencées dans \<clause_search_condition>.  
   
-Quand aucune ligne n’est retournée par \<table_source>, les colonnes de la table source ne sont pas accessibles. Si l’opération de mise à jour ou de suppression spécifiée dans la clause \<merge_matched> référence des colonnes dans la table source, l’erreur 207 (nom de colonne non valide) est retournée. Par exemple, la clause `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` peut faire en sorte que l'instruction échoue dans la mesure où `Col1` dans la table source est inaccessible.  
+Quand aucune ligne n’est retournée par \<table_source>, les colonnes de la table source ne sont pas accessibles. Si l’opération de mise à jour ou de suppression spécifiée dans la clause \<merge_matched> des colonnes dans la table source, l’erreur 207 (nom de colonne non valide) est retournée. Par exemple, la clause `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` peut faire en sorte que l'instruction échoue dans la mesure où `Col1` dans la table source est inaccessible.  
   
 AND \<clause_search_condition>  
 Spécifie toute condition de recherche valide. Pour plus d’informations, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -248,7 +168,7 @@ La spécification de l'indicateur TABLOCK sur une table qui est la cible d'une i
 INDEX ( index_val [ ,...n ] )  
 Spécifie le nom ou l'ID d'un ou de plusieurs index sur la table cible pour effectuer une jointure implicite avec la table source. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
-\<OUTPUT_Clause>  
+\<output_clause>  
 Retourne une ligne pour chaque ligne dans *target_table* qui est mise à jour, insérée ou supprimée, peu importe l’ordre. **$action** peut être spécifié dans la clause de sortie. **$action** est une colonne de type **nvarchar(10)** qui retourne l’une des trois valeurs possibles pour chaque ligne : « INSERT », « UPDATE » ou « DELETE », en fonction de l'action effectuée sur cette ligne. Pour plus d’informations sur les arguments et le comportement de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
@@ -279,13 +199,13 @@ Force la ligne insérée à prendre les valeurs par défaut définies pour chaqu
   
 Pour plus d’informations sur cette clause, consultez [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
-\<search condition>  
-Spécifie les conditions de recherche utilisées pour spécifier \<merge_search_condition> ou \<clause_search_condition>. Pour plus d’informations sur les arguments pour cette clause, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition>  
+Spécifie les conditions de recherche pour spécifier \<merge_search_condition> ou \<clause_search_condition>. Pour plus d’informations sur les arguments pour cette clause, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
 
 \<graph search pattern>  
 Spécifie le modèle de correspondance de graphe. Pour plus d’informations sur les arguments de cette clause, consultez [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Au moins l'une des trois clauses MATCHED doit être spécifiée, mais cela peut être dans n'importe quel ordre. Une variable ne peut pas être mise à jour plus d'une fois dans la même clause MATCHED.  
   
@@ -631,7 +551,7 @@ WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)

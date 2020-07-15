@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728487"
 ---
 # <a name="backup-encryption"></a>Chiffrement de sauvegarde
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique fournit une présentation des options de chiffrement pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle contient des informations détaillées sur l'utilisation, les avantages et les méthodes recommandées de chiffrement pendant la sauvegarde.  
 
 ## <a name="overview"></a><a name="Overview"></a> Vue d'ensemble  
@@ -73,8 +73,20 @@ ms.locfileid: "82220520"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
 
-Pour chiffrer une sauvegarde ou restaurer à partir d’une sauvegarde chiffrée, utilisez l’autorisation **VIEW DEFINITION** sur le certificat ou la clé asymétrique utilisée pour chiffrer la sauvegarde de la base de données.  
-  
+Le compte qui effectue les opérations de sauvegarde sur une base de données chiffrée requiert des autorisations spécifiques. 
+
+- Rôle de niveau base de données **db_backupoperator** sur la base de données en cours de sauvegarde. Cela est nécessaire, indépendamment du chiffrement. 
+- Nécessite l'autorisation **VIEW DEFINITION** sur le certificat dans la `master`base de données.
+
+   L’exemple suivant octroie les autorisations appropriées pour le certificat. 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > L'accès au certificat de chiffrement transparent des données n'est pas nécessaire pour la sauvegarde ou la restauration d'une base de données protégée par chiffrement transparent des données.  
   
@@ -132,5 +144,5 @@ Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDa
 |[Créer une sauvegarde chiffrée](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Décrit les étapes de base requises pour créer une sauvegarde chiffrée.|  
 |[Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fournit un exemple de création d'une sauvegarde chiffrée protégée par des clés dans le coffre de clés Azure.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  

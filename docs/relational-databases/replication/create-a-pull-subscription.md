@@ -1,5 +1,6 @@
 ---
 title: Créer un abonnement par extraction | Microsoft Docs
+description: Découvrez comment créer une abonnement par extraction dans SQL Server à l’aide de SQL Server Management Studio, Transact-SQL ou Replication Management Objects.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773930"
 ---
 # <a name="create-a-pull-subscription"></a>Créer un abonnement par extraction de données (pull)
 
@@ -33,7 +34,7 @@ No article in 2016+ should ever have the moniker 'sql-server-2014' on its metada
 Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
 -->
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique explique comment créer un abonnement par extraction de données (pull) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
  La définition d'un abonnement par extraction de données (pull) pour la réplication P2P est possible au moyen d'un script, mais n'est pas disponible via l'assistant.  
@@ -81,7 +82,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  Cliquez avec le bouton droit sur le dossier **Abonnements locaux** , puis cliquez sur **Nouveaux abonnements**.  
   
-4.  Dans la page **Publication** de l’Assistant Nouvel abonnement, sélectionnez **\<Rechercher un serveur de publication SQL>** ou **\<Rechercher un serveur de publication Oracle>** dans la liste déroulante **Serveur de publication**.  
+4.  Dans la page **Publication** de l’Assistant Nouvel abonnement, sélectionnez **\<Find SQL Server Publisher>** ou **\<Find Oracle Publisher>** dans la liste déroulante **Serveur de publication**.  
   
 5.  Connectez-vous au serveur de publication dans la boîte de dialogue **Se connecter au serveur** .  
   
