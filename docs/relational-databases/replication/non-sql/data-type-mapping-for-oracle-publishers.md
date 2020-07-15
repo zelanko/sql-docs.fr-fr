@@ -1,5 +1,6 @@
 ---
 title: Mappage de type de données pour les serveurs de publication Oracle | Microsoft Docs
+description: Découvrez les mappages par défaut des types de données entre Oracle et SQL Server lorsque les données sont déplacées du serveur de publication Oracle vers le serveur de distribution SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d7063beae88d6bbf0de9af735e6e5d87c94a15a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901121"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896805"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mappage de type de données pour les serveurs de publication Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Les types de données Oracle et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne correspondent pas toujours exactement. Dans la mesure du possible, le type de données correspondant est sélectionné automatiquement lors de la publication d'une table Oracle. Dans les cas où un mappage de type de données simple n'est pas clair, des mappages de type de données de remplacement sont fournis. Pour plus d'informations sur la sélection de mappages de remplacement, consultez la section « Spécification de mappages de type de données de remplacement » plus loin dans cette rubrique.  
   
  Le tableau suivant indique comment les types de données sont mappés par défaut entre Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque les données sont déplacées du serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La colonne Alternatives indique si des mappages de remplacement sont disponibles.  
@@ -82,7 +83,7 @@ ms.locfileid: "67901121"
 ### <a name="float-and-number-types"></a>Types FLOAT et NUMBER  
  L'échelle et la précision spécifiées lors du mappage des types de données FLOAT et NUMBER dépendent de l'échelle et de la précision spécifiées pour la colonne utilisant le type de données dans la base de données Oracle. La précision est le nombre de chiffres qui composent un nombre. L'échelle est le nombre de chiffres à droite du séparateur décimal dans un nombre. Par exemple, le nombre 123,45 a une précision de 5 et une échelle de 2.  
   
- Oracle permet de définir des nombres dont l'échelle est supérieure à la précision, par exemple NUMBER(4,5), mais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite une précision supérieure ou égale à l'échelle. Afin d'éviter les troncations de données, si l'échelle est supérieure à la précision sur le serveur de publication Oracle, la précision est définie comme étant égale à l'échelle lorsque le type de données est mappé : NUMBER(4,5) sera mappé comme NUMERIC(5,5).  
+ Oracle permet de définir des nombres dont l'échelle est supérieure à la précision, par exemple NUMBER(4,5), mais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite une précision supérieure ou égale à l'échelle. Pour éviter les troncations de données, si l’échelle est supérieure à la précision sur le serveur de publication Oracle, la précision est définie comme étant égale à l’échelle quand le type de données est mappé : NUMBER(4,5) sera mappé NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Si vous n'indiquez pas d'échelle ni de précision pour NUMBER, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise par défaut les valeurs maximales d'échelle (8) et de précision (38). Nous vous recommandons de définir une échelle et une précision spécifiques dans Oracle, afin d'optimiser le stockage et les performances lorsque les données sont répliquées.  

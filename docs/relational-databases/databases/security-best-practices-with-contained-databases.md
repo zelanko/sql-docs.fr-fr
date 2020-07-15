@@ -1,5 +1,6 @@
 ---
 title: Meilleures pratiques de sécurité recommandées avec les bases de données autonomes | Microsoft Docs
+description: Comprenez et atténuez les menaces uniques pour les bases de données autonomes, y compris celles associées à l’UTILISATEUR avec le processus d’authentification par MOT DE PASSE dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
-ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b864e61050b4bd49582d5579f222091e8c7329
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759005"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Les bases de données autonomes présentent quelques menaces originales que les administrateurs du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doivent connaître et limiter. La plupart de ces menaces sont liées au processus d’authentification **USER WITH PASSWORD** , qui déplace la limite de l’authentification du niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers celui de la base de données.  
   
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Création d'un utilisateur qui duplique une connexion  
  Lorsqu'un utilisateur de base de données autonome est créé avec un mot de passe, si vous utilisez le même nom qu'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue en spécifiant la base de données autonome comme catalogue initial, la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera impossible. La connexion sera évaluée en tant qu'utilisateur de base de données autonome avec principal de mot de passe sur la base de données autonome et non en tant qu'utilisateur basé sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela risque de provoquer un déni de service intentionnel ou accidentel pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Il est recommandé que les membres du rôle serveur fixe **sysadmin** se connectent toujours sans utiliser l'option de catalogue initial. Cela connecte la connexion à la base de données master et évite toute utilisation malveillante de la tentative de connexion de la part d'un propriétaire de base de données. L’administrateur peut ensuite indiquer la base de données autonome, à l’aide de l’instruction **USE** _\<base_de_données&gt;_ . Vous pouvez également définir la base de données par défaut de la connexion sur la base de données autonome, qui complète la connexion à **master**, puis transférer la connexion vers la base de données autonome.  
+-   Il est recommandé que les membres du rôle serveur fixe **sysadmin** se connectent toujours sans utiliser l'option de catalogue initial. Cela connecte la connexion à la base de données master et évite toute utilisation malveillante de la tentative de connexion de la part d'un propriétaire de base de données. L’administrateur peut ensuite indiquer la base de données autonome, à l’aide de l’instruction **USE** _\<database>_ . Vous pouvez également définir la base de données par défaut de la connexion sur la base de données autonome, qui complète la connexion à **master**, puis transférer la connexion vers la base de données autonome.  
   
 -   Il est recommandé de ne pas créer d'utilisateurs de base de données autonome avec mot de passe en utilisant le même nom que les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

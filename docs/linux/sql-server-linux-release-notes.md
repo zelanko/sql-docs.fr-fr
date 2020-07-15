@@ -3,21 +3,21 @@ title: Notes de publication pour SQL Server 2017 sur Linux
 description: Cet article contient les notes de publication et fonctionnalités prises en charge pour SQL Server 2017 s’exécutant sur Linux. Les notes de publication sont incluses dans la mise en production la plus récente et dans plusieurs mises en production précédentes.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298259"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882702"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour SQL Server 2017 sur Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Les notes de publication suivantes s’appliquent à [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] s’exécutant sur Linux. Cet article est divisé en sections pour chaque mise en production. La mise en production GA offre une prise en charge détaillée et des problèmes connus répertoriés. Chaque mise à jour cumulative (CU) ou la mise à jour de distribution générale (GDR) a un lien vers un article de support décrivant les modifications de la CU, ainsi que des liens de téléchargement des packages Linux.
 
@@ -46,6 +46,7 @@ La table suivante énumère l’historique des mises en production pour [!INCLUD
 
 | Libérer               | Version       | Date de publication |
 |-----------------------|---------------|--------------|
+| [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 09-12-2019   |
@@ -81,6 +82,27 @@ Si vous mettez à jour des packages [!INCLUDE[ssNoVersion](../includes/ssnoversi
 - [Installer un package de recherche en texte intégral](sql-server-linux-setup-full-text-search.md)
 - [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Activer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21 (juillet 2020)
+
+Il s’agit de la mise en production de la mise à jour cumulative 21 (CU21) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3335.7. Pour plus d’informations sur les correctifs et les améliorations de cette version, consultez <https://support.microsoft.com/help/4557397>.
+
+### <a name="package-details"></a>Détails du package
+
+Pour les installations du package manuelles ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations figurant dans la table suivante :
+
+> [!NOTE]
+> **Ubuntu 18.04** et **RHEL 8** sont maintenant pris en charge sur SQL Server 2017 à compter de CU20.
+>
+> Les liens d’installation du package hors connexion pour Ubuntu pointent vers les packages Ubuntu 18.04, à l’exception du package SSIS (qui n’est pas disponible pour Ubuntu 18.04). Si vous recherchez les packages Ubuntu 16.04, reportez-vous au chemin de téléchargement <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
+>
+> Les liens d’installation de package hors connexion pour Red Hat pointent vers des packages RHEL 8, à l’exception du package SSIS (qui n’est pas disponible pour RHEL 8). Si vous recherchez les packages RHEL 7, reportez-vous au chemin de téléchargement <https://packages.microsoft.com/rhel/7/mssql-server-2017/>.
+
+| Package | Version du package | Téléchargements |
+|-----|-----|-----|
+| Package Red Hat RPM | 14.0.3335.7-17 | [Package RPM du moteur](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Package SLES RPM | 14.0.3335.7-17 | [Package RPM du moteur mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm) | 
+| Package Ubuntu 18.04 Debian | 14.0.3335.7-17 | [Package Debian du moteur](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)</br>[Package Debian haute disponibilité](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br/>[Package SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20 (avril 2020)
 
@@ -583,7 +605,7 @@ Si vous utilisez des partages distants **NFS (Network File System)** en producti
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- Quand vous exécutez la configuration mssql-conf et que vous effectuez une installation non anglaise de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], des caractères étendus incorrects sont affichés après le texte localisé « Configuration de SQL Server... ». Ou, pour les installations non latines, la phrase peut manquer complètement. La phrase manquante doit afficher la chaîne localisée suivante : « Le PID de gestion des licences a été traité avec succès. La nouvelle édition est [édition \<Nom\>] ». Cette chaîne est générée à titre d’information uniquement et la mise à jour cumulative [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] suivante répond en toutes les langues. Cela n’affecte en rien la réussite de l’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+- Quand vous exécutez la configuration mssql-conf et que vous effectuez une installation non anglaise de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], des caractères étendus incorrects sont affichés après le texte localisé « Configuration de SQL Server... ». Ou, pour les installations non latines, la phrase peut manquer complètement. La phrase manquante doit afficher la chaîne localisée suivante : « Le PID de gestion des licences a été traité avec succès. La nouvelle édition est [\<Name\> edition] ». Cette chaîne est générée à titre d’information uniquement et la mise à jour cumulative [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] suivante répond en toutes les langues. Cela n’affecte en rien la réussite de l’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 #### <a name="full-text-search"></a>Recherche en texte intégral
 

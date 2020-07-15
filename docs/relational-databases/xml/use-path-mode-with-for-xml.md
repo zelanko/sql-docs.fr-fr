@@ -1,5 +1,6 @@
 ---
 title: Utiliser le mode PATH avec FOR XML | Microsoft Docs
+description: Découvrez comment utiliser le mode PATH avec des requêtes FOR XML imbriquées et la directive TYPE pour écrire des requêtes moins complexes qui retournent des instances de type XML.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5073f921a7d80df9e59e93915dedaec11fddcf76
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff6beee153a5f923178436710d1b38b1151d6c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724544"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Utiliser le mode PATH avec FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Comme décrit dans la rubrique [Construction de code XML à l’aide de FOR XML](../../relational-databases/xml/for-xml-sql-server.md), le mode PATH permet de combiner des éléments et des attributs de façon simplifiée. En outre, il facilite l'extension de l'imbrication pour la représentation des propriétés complexes. Vous pouvez utiliser des requêtes en mode FOR XML EXPLICIT pour construire un document XML de ce type à partir d'un ensemble de lignes, mais le mode PATH offre une solution plus simple que les requêtes en mode EXPLICIT potentiellement lourdes. Le mode PATH, allié à la possibilité d’écrire des requêtes FOR XML imbriquées et de faire appel à la directive TYPE pour renvoyer les instances de type **xml** , vous permet d’écrire des requêtes de moindre complexité.  
   
  En mode PATH, les noms ou alias de colonnes sont traités en tant qu'expressions XPath. Ces expressions indiquent comment les valeurs sont mappées au document XML. Chaque expression XPath est un chemin d'accès XPath relatif qui fournit le type d'élément, tel que les valeurs d'attribut, d'élément et scalaire, ainsi que le nom et la hiérarchie du nœud à générer par rapport à l'élément de ligne.  
@@ -49,7 +50,7 @@ ms.locfileid: "80664974"
   
 -   [Prise en charge d'espace de noms en mode PATH](../../relational-databases/xml/namespace-support-in-path-mode.md)  
   
--   [Exemples : utilisation du mode PATH](../../relational-databases/xml/examples-using-path-mode.md)  
+-   [Exemples : Utilisation du mode PATH](../../relational-databases/xml/examples-using-path-mode.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

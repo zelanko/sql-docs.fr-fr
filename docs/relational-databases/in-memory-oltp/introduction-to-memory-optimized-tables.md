@@ -1,5 +1,6 @@
 ---
 title: Introduction aux tables optimisées en mémoire | Microsoft Docs
+description: En savoir plus sur les tables optimisées en mémoire, qui sont durables et prennent en charge les transactions atomiques, cohérentes, isolées et durables.
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723121"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Les tables à mémoire optimisée sont créées à l’aide de [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -69,20 +70,20 @@ Les tables optimisées en mémoire sont plus efficacement accessibles à partir 
 
 Les facteurs suivants affectent les gains de performance pouvant être obtenus avec l'OLTP en mémoire :  
   
-*Communication :* Une application comportant de nombreux appels à des procédures stockées courtes a un moindre gain de performances par rapport à une application comportant moins d’appels et plus de fonctionnalités implémentées dans chaque procédure stockée.  
+*Communication :* Une application comportant de nombreux appels à des procédures stockées courtes aura un moindre gain de performances par rapport à une application comportant moins d'appels et plus de fonctionnalités implémentées dans chaque procédure stockée.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] Exécution :* L’OLTP en mémoire offre des performances optimales si vous utilisez des procédures stockées compilées en mode natif plutôt que des procédures stockées interprétées ou l’exécution de requêtes. Il peut être avantageux d’accéder aux tables optimisées en mémoire à partir de ces procédures stockées.  
+*Exécution de [!INCLUDE[tsql](../../includes/tsql-md.md)] :* L'OLTP en mémoire offre des performances optimales si vous utilisez des procédures stockées compilées en mode natif plutôt que des procédures stockées interprétées ou l'exécution de requêtes. Il peut être avantageux d’accéder aux tables optimisées en mémoire à partir de ces procédures stockées.  
   
-*Comparaison entre l’analyse de plage et la recherche de points :* Les index non cluster optimisés en mémoire prennent en charge les analyses de plage et les analyses triées. Pour les recherches de points, les index de hachage optimisés en mémoire offrent de meilleures performances que les index non cluster optimisés en mémoire. Les index non cluster optimisés en mémoire offrent de meilleures performances que les index sur disque.
+*Comparaison entre l’analyse de plage et la recherche de points :* Les index non cluster mémoire optimisés prennent en charge les analyses de plage et les analyses triées. Pour les recherches de points, les index de hachage optimisés en mémoire offrent de meilleures performances que les index non cluster optimisés en mémoire. Les index non cluster optimisés en mémoire offrent de meilleures performances que les index sur disque.
 
 - À partir de SQL Server 2016, le plan de requête pour une table optimisée en mémoire peut analyser la table en parallèle. Les requêtes analytiques sont donc plus performantes.
   - Les index de hachage peuvent également être analysés en parallèle à partir de SQL Server 2016.
   - Les index non cluster peuvent également être analysés en parallèle à partir de SQL Server 2016.
   - Les index columnstore peuvent être analysés en parallèle depuis leur création dans SQL Server 2014.
   
-*Opérations d’index :* Les opérations d’index ne sont pas stockées et existent uniquement en mémoire.  
+*Opérations d’index :* les opérations d’index ne sont pas journalisées et existent uniquement en mémoire.  
   
-*Accès simultané :* Pour les applications dont les performances sont affectées par l’accès simultané au niveau du moteur, tel que la contention de verrous internes ou le blocage, les performances s’améliorent de façon significative quand l’application passe à l’OLTP en mémoire.  
+*Accès simultané :* Pour les applications dont les performances sont affectées par l'accès simultané au niveau du moteur, tel que la contention de verrous internes ou le blocage, les performances s'améliorent de façon significative lorsque l'application passe à l'OLTP en mémoire.  
   
 Le tableau suivant répertorie les problèmes de performance et d'extensibilité couramment rencontrés dans les bases de données relationnelles et indique comment l'OLTP peut améliorer les performances.  
   

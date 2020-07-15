@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981726"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007595"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - Clause INTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT...INTO crée une table dans le groupe de fichiers par défaut et y insère les lignes résultantes de la requête. Pour afficher la syntaxe SELECT complète, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,9 @@ L’instruction `SELECT...INTO` s’exécute en deux temps : la nouvelle table 
  Lorsqu'une colonne calculée est comprise dans la liste de sélection, la colonne correspondante de la nouvelle table n'est pas une colonne calculée. Les valeurs de la nouvelle colonne sont les valeurs calculées au moment de l’exécution de l’instruction `SELECT...INTO`.  
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
- La quantité d’informations journalisées pour `SELECT...INTO` dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, l’utilisation de l’instruction `SELECT...INTO` peut s’avérer plus efficace que la création d’une table et son remplissage avec une instruction INSERT. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ La quantité d’informations journalisées pour `SELECT...INTO` dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, l’utilisation de l’instruction `SELECT...INTO` peut s’avérer plus efficace que la création d’une table et son remplissage avec une instruction INSERT. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
+ 
+Les instructions `SELECT...INTO` qui contiennent des fonctions définies par l’utilisateur (UDF) sont des opérations entièrement journalisées. Si les fonctions définies par l’utilisateur utilisées dans l’instruction `SELECT...INTO` n’effectuent aucune opération d’accès aux données, vous pouvez spécifier la clause SCHEMABINDING pour les fonctions définies par l’utilisateur, qui définira la propriété UserDataAccess dérivée de ces fonctions définies par l’utilisateur sur 0. Après cette modification, les instructions `SELECT...INTO` sont journalisées de façon minimale. Si l’instruction `SELECT...INTO` fait toujours référence à au moins une fonction définie par l’utilisateur dont la propriété a la valeur 1, l’opération est entièrement journalisée.
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE TABLE dans la base de données de destination.  

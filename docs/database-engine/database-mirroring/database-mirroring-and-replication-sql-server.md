@@ -1,5 +1,6 @@
 ---
 title: Mise en miroir de bases de données et réplication (SQL Server) | Microsoft Docs
+description: Découvrez comment utiliser la mise en miroir des bases de données parallèlement à la réplication afin d’améliorer la disponibilité de la base de données de publication dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789686"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mise en miroir de bases de données et réplication (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La mise en miroir des bases de données peut avoir lieu en parallèle à la réplication afin d'améliorer la disponibilité de la base de données de publication. La mise en miroir des bases de données consiste à avoir deux exemplaires d'une même base de données qui résident généralement sur des ordinateurs différents. À un moment donné précis, les clients ne peuvent accéder qu'à un seul exemplaire de la base de données. Cet exemplaire s'appelle la base de données principale. Les mises à jour apportées par les clients sur la base de données principale sont appliquées à l'autre exemplaire de la base de données, appelé base de données miroir. La mise en miroir consiste à répercuter dans la base de données miroir chaque insertion, mise à jour ou suppression apportée à la base de données principale.  
   
  Le basculement de réplication vers un miroir est entièrement pris en charge pour les bases de données de publication, avec la prise en charge limitée des bases de données d'abonnement. La mise en miroir de bases de données n'est pas prise en charge pour la base de données de distribution. Pour plus d’informations sur la façon de récupérer une base de données de distribution ou d’abonnement sans avoir à reconfigurer la réplication, consultez [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   

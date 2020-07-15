@@ -1,5 +1,6 @@
 ---
 title: Vue d’ensemble de la gestion de clés pour Always Encrypted | Microsoft Docs
+description: 'Découvrez comment gérer les deux types de clés de chiffrement utilisés par Always Encrypted pour protéger vos données dans SQL Server : clé de chiffrement de colonne et clé principale de colonne.'
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784010"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion de clés pour Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) utilise deux types de clés de chiffrement pour protéger vos données : une clé pour chiffrer les données et une autre clé pour chiffrer la clé qui chiffre vos données. La clé de chiffrement de colonne chiffre vos données, tandis que la clé principale de colonne chiffre la clé de chiffrement de colonne. Cet article fournit une présentation détaillée de la gestion de ces clés de chiffrement.  
@@ -58,7 +59,7 @@ Si l’on considère les rôles ci-dessus, il existe deux façons d’effectuer 
 ## <a name="managing-keys-with-role-separation"></a>Gestion des clés avec séparation des rôles
 Quand les clés Always Encrypted sont gérées avec séparation des rôles, différentes personnes au sein d’une organisation assument les rôles d’administrateur de sécurité et d’administrateur de base de données. Un processus de gestion des clés avec séparation des rôles garantit que les administrateurs de base de données n’ont pas accès aux clés ou aux magasins de clés contenant les clés, et que les administrateurs de sécurité n’ont pas accès à la base de données contenant des données sensibles. La gestion des clés avec séparation des rôles est recommandée si votre objectif est de garantir que les administrateurs de base de données de votre organisation ne peuvent pas accéder aux données sensibles. 
 
-**Remarque :** les administrateurs de sécurité génèrent et utilisent des clés en texte clair. Ils ne doivent donc jamais effectuer leurs tâches sur des ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles par les administrateurs de base de données ou toute autre personne pouvant être un adversaire potentiel. 
+**Remarque :** Les administrateurs de sécurité génèrent et utilisent des clés en texte en clair. Ils ne doivent donc jamais effectuer leurs tâches sur les mêmes ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles des par des DBA ou toute autre personne pouvant être un adversaire potentiel. 
 
 ## <a name="managing-keys-without-role-separation"></a>Gestion des clés sans séparation des rôles
 Quand les clés Always Encrypted sont gérées sans séparation des rôles, une seule personne peut assumer les rôles d’administrateur de base de données et d’administrateur de sécurité. Cette personne doit donc pouvoir accéder aux clés, aux magasins de clés et aux métadonnées de clés, et les gérer. La gestion des clés sans séparation des rôles est recommandée pour les organisations qui utilisent le modèle DevOps, ou si la base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de base de données) aux données sensibles.

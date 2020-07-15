@@ -23,16 +23,16 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488008"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003918"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Activer la compression sur une table ou un index
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cette rubrique explique comment activer la compression sur une table ou un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -202,7 +202,11 @@ ms.locfileid: "81488008"
      Une fois terminé, cliquez sur **Fermer**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
-  
+
+### <a name="sql-server"></a>SQL Server
+
+Dans SQL Server, exécutez `sp_estimate_data_compression_savings` puis activez la compression sur la table ou l’index. Consultez les sections suivantes. 
+
 #### <a name="to-enable-compression-on-a-table"></a>Pour activer la compression sur une table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -245,7 +249,47 @@ ms.locfileid: "81488008"
   
     ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
     GO  
+    ``` 
+    
+### <a name="on-azure-sql-database"></a>Sur Azure SQL Database
+
+Azure SQL Database ne prend pas en charge `sp_estimate_data_compression`. Les scripts suivants activent la compression sans estimer le montant de compression. 
+
+#### <a name="to-enable-compression-on-a-table"></a>Pour activer la compression sur une table  
+  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple active la compression ROW sur toutes les partitions dans la table spécifiée.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
     ```  
+  
+#### <a name="to-enable-compression-on-an-index"></a>Pour activer la compression sur un index  
+  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Dans l'exemple, l'affichage catalogue `sys.indexes` est d'abord interrogé pour retourner le nom et l' `index_id` de chaque index de la table `Production.TransactionHistory` . Enfin, l'exemple reconstruit ID d'index 2 (`IX_TransactionHistory_ProductID`), en spécifiant la compression PAGE.  
+  
+    ```sql  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+    
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ``` 
   
  Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) et [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

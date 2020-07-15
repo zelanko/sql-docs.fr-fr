@@ -20,26 +20,26 @@ helpviewer_keywords:
 - valid numeric type [SQL Server]
 - checking valid numeric type
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c637c28f2bd090a47701b2e371fdde5cf4dba74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 813d2b8be0797e510728e9d61f9e2bb965931e29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804176"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012835"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Détermine si une expression est un type numérique valide.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+``` 
 ISNUMERIC ( expression )  
 ```  
   
@@ -53,44 +53,41 @@ ISNUMERIC ( expression )
 ## <a name="remarks"></a>Notes  
  ISNUMERIC retourne 1 lorsque l'expression entrée correspond à un type de données numérique valide ; dans le cas contraire, ISNUMERIC retourne 0. Parmi les [types de données numériques](../../t-sql/data-types/numeric-types.md) valides, citons les suivants :  
 
-|||
+| Domaine | Types de données numériques |
 |-|-|
 | [Valeurs numériques exactes](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint**, **bit** |
 | [Précision fixe](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**, **numeric** |
 | [Approximatif](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**, **real** |
 | [Valeurs monétaires](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**, **smallmoney** |
 
-  
 > [!NOTE]  
->  ISNUMERIC retourne 1 pour certains caractères qui ne sont pas des nombres, tels que les signes plus (+) et moins (-), et les symboles monétaires valides tels que le symbole dollar ($). Pour obtenir la liste complète des symboles monétaires, consultez [money et smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+> ISNUMERIC retourne 1 pour certains caractères qui ne sont pas des nombres, tels que les signes plus (+) et moins (-), et les symboles monétaires valides tels que le symbole dollar ($). Pour obtenir la liste complète des symboles monétaires, consultez [money et smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `ISNUMERIC` pour retourner tous les codes postaux qui ne sont pas des valeurs numériques.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT City, PostalCode  
 FROM Person.Address   
-WHERE ISNUMERIC(PostalCode)<> 1;  
+WHERE ISNUMERIC(PostalCode) <> 1;  
 GO  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant utilise `ISNUMERIC` pour retourner tous les codes postaux qui ne sont pas des valeurs numériques.  
   
-```  
+```sql
 USE master;  
 GO  
-SELECT name, isnumeric(name) AS IsNameANumber, database_id, isnumeric(database_id) AS IsIdANumber   
+SELECT name, ISNUMERIC(name) AS IsNameANumber, database_id, ISNUMERIC(database_id) AS IsIdANumber   
 FROM sys.databases;  
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
 
+- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)
+- [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

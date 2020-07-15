@@ -25,19 +25,19 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 664e3cd0fc687509c630258a681c155d94863d39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 579c73661c3893fdd1346ccc60b64103a4326c2d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943061"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003990"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (OR exclusif au niveau du bit) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Effectue une opération OR exclusive au niveau du bit entre deux valeurs entières.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,17 +62,15 @@ expression ^ expression
 ## <a name="remarks"></a>Notes  
  L’opérateur au niveau du bit **^** effectue une opération OR logique au niveau du bit entre les deux expressions, évaluant chaque bit correspondant dans les deux expressions. Dans le résultat, les bits prennent la valeur 1 si l'un ou l'autre (mais pas les deux) des bits correspondants (pour la position en cours d'évaluation) dans les deux expressions d'entrées ont une valeur de 1 Si les deux bits ont pour valeur 0 ou 1, le bit du résultat prend la valeur 0.  
   
- Si les expressions de droite et de gauche ont des types de données integer (entier) différents (par exemple, l’*expression* de gauche est de type **smallint** et l’*expression* de droite est de type **int**), l’argument du type de données le plus petit est converti dans le type de données plus grand. Dans cet exemple, l’**expression**_smallint_ est convertie en **int**.  
+ Si les expressions de droite et de gauche ont des types de données integer (entier) différents (par exemple, l’*expression* de gauche est de type **smallint** et l’*expression* de droite est de type **int**), l’argument du type de données le plus petit est converti dans le type de données plus grand. Dans cet exemple, l’**expression** _smallint_ est convertie en un **int**.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une table avec le type de données **int** pour stocker les valeurs d’origine et insère deux valeurs dans une ligne.  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (   
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

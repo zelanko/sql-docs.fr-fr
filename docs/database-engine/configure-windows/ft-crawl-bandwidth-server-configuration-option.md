@@ -1,5 +1,6 @@
 ---
 title: ft crawl bandwidth (option de configuration de serveur) | Microsoft Docs
+description: En savoir plus sur l’option « ft crawl bandwidth ». Découvrez comment elle affecte le nombre de mémoires tampons que SQL Server gère dans le pool des grandes mémoires tampons.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - memory [SQL Server], buffers
 - ft crawl bandwidth option
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c83790146e7572c8854cf12deda586adb1c0caeb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 59caa1e868c4caab24afd17909c34f57c96f0005
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789793"
 ---
 # <a name="ft-crawl-bandwidth-server-configuration-option"></a>ft crawl bandwidth (option de configuration de serveur)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisez l’option **ft crawl bandwidth** pour spécifier la taille jusqu’à laquelle le pool des mémoires tampons volumineuses peut croître. Les mémoires tampons volumineuses ont une taille de 4 mégaoctets (Mo). La valeur du paramètre **max** spécifie le nombre maximal de mémoires tampons que le gestionnaire de mémoire de texte intégral doit conserver dans un pool de mémoires tampons volumineuses. Si la valeur **max** est nulle, il n’existe aucune limite supérieure au nombre possible de mémoires tampons dans un pool de mémoires tampons volumineuses.  
   

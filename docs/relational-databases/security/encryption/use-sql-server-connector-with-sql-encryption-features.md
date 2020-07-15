@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725952"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Les activités de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] courantes à l’aide d’une clé asymétrique protégée par le coffre Azure Key Vault incluent les trois domaines suivants.  
   
 -   Chiffrement TDE (Transparent Data Encryption) à l’aide d’une clé asymétrique dans Azure Key Vault  
@@ -53,12 +53,14 @@ Vous devez créer des informations d’identification et une connexion, puis cr�
         - Si vous utilisez **Azure global**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
         - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure Chine 21Vianet ou Azure Allemagne), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.   
   
-    -   Remplacez la première partie de l’argument `SECRET` par l’ **ID client** Azure Active Directory mentionné dans la Partie I. Dans cet exemple, l’ **ID client** est `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Remplacez la première partie de l’argument `SECRET` par l’ **ID client** Azure Active Directory mentionné dans la Partie I. Dans cet exemple, l’ **ID client** est `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  Vous devez supprimer les tirets de l’ **ID client**.  
   
-    -   Complétez la deuxième partie de l’argument `SECRET` avec la **clé secrète client** mentionnée dans la Partie I. Dans cet exemple, la **clé secrète client** de la Partie I est `Replace-With-AAD-Client-Secret`. La chaîne finale pour l’argument `SECRET` est une longue séquence de lettres et de chiffres, *sans tirets*.  
+    -   Complétez la deuxième partie de l’argument `SECRET` avec la **Clé secrète client** mentionnée dans la Partie 1. Dans cet exemple, la **clé secrète client** de la Partie 1 est `ReplaceWithAADClientSecret`. 
+  
+    -   La chaîne finale pour l’argument SECRET est une longue séquence de lettres et de chiffres, sans tirets.
   
     ```sql  
     USE master;  
@@ -67,7 +69,7 @@ Vous devez créer des informations d’identification et une connexion, puis cr�
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   

@@ -20,19 +20,19 @@ ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41b887a632d2c24e23b24bbfe5eb50b58f0352d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86ec4ba1a3dce9ec818c9756261d19a775d3a1da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828671"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003714"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne la partie de droite d'une chaîne de caractères avec le nombre spécifié de caractères.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,6 +43,9 @@ RIGHT ( character_expression , integer_expression )
 ## <a name="arguments"></a>Arguments  
  *expression_caractère*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données binaires ou caractères. *character_expression* peut être une constante, une variable ou une colonne. *character_expression* peut être de n’importe quel type de données, à l’exception de **text** et **ntext**, qui peut être converti implicitement en **varchar** ou **nvarchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
+   
+> [!NOTE]  
+> Si *string_expression* est de type **fixe** ou **variable**, RIGHT effectuera une conversion implicite vers **varchar**, et ne préservera donc pas l'entrée fixe.  
   
  *integer_expression*  
  Entier positif qui spécifie le nombre de caractères de *character_expression* à retourner. Si *integer_expression* est négatif, une erreur est retournée. Si *integer_expression* est de type **bigint** et contient une valeur de grande taille, *character_expression* doit être d’un type de données de grande taille, tel que **varchar(max)** .  
@@ -57,7 +60,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-right-with-a-column"></a>A. Utilisation de RIGHT avec une colonne  
+### <a name="a-using-right-with-a-column"></a>A : Utilisation de RIGHT avec une colonne  
  L'exemple suivant retourne les cinq derniers caractères les plus à droite du prénom de chaque personne dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

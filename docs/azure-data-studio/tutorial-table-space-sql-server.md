@@ -1,23 +1,22 @@
 ---
 title: Activer le widget d’exemple d’insight d’utilisation d’espace de table
-titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment activer le widget d’insight d’utilisation de l’espace de table sur le tableau de bord d’une base de données Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726701"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Tutoriel : Activer le widget d’exemple d’insight d’utilisation d’espace de table avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Tutoriel : Activer le widget d’exemple d’insight d’utilisation d’espace de table avec Azure Data Studio
 
 Ce didacticiel montre comment activer un widget d’insight sur le tableau de bord d’une base de données, en fournissant une vue d’ensemble de l’utilisation de l’espace pour toutes les tables d’une base de données. Dans ce didacticiel, vous apprendrez à :
 
@@ -33,9 +32,9 @@ Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azur
 * [Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Se connecter à et interroger Azure SQL Database avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Activer un insight de gestion sur le tableau de bord d’une base de données [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>Activer un insight de gestion sur le tableau de bord d’une base de données Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] dispose d’un exemple de widget intégré pour surveiller l’espace utilisé par les tables dans une base de données.
+Azure Data Studio dispose d’un exemple de widget intégré pour surveiller l’espace utilisé par les tables dans une base de données.
 
 1. Ouvrez les *Paramètres utilisateur* en appuyant sur **Ctrl+Maj+P** pour ouvrir la *Palette de commandes*.
 
@@ -78,11 +77,11 @@ Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azur
 
 ## <a name="working-with-the-insight-chart"></a>Utilisation du graphique d’insight
 
-Le graphique d’insight de [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit des options de filtrage et d’affichage de détails lors du pointage de la souris. Pour essayer cela :
+Le graphique d’insight d’Azure Data Studio fournit des options de filtrage et d’affichage de détails lors du pointage de la souris. Pour essayer cela :
 
-1. Cliquez et basculez la légende *row_count* sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] affiche et masque les séries de données lorsque vous activez ou désactivez une légende.
+1. Cliquez et basculez la légende *row_count* sur le graphique. Azure Data Studio affiche et masque les séries de données lorsque vous activez ou désactivez une légende.
 
-2. Placez le pointeur de la souris sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] affiche plus d’informations sur l’étiquette de la série de données et sa valeur, comme indiqué dans la capture d’écran suivante.
+2. Placez le pointeur de la souris sur le graphique. Azure Data Studio affiche plus d’informations sur l’étiquette de la série de données et sa valeur, comme indiqué dans la capture d’écran suivante.
 
    ![Bouton bascule et légende du graphique](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

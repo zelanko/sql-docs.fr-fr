@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748954"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Vérifie l'intégrité logique et physique de tous les objets de la base de données spécifiée en effectuant les opérations suivantes :    
     
@@ -221,7 +221,13 @@ Une fois la commande DBCC CHECKDB exécutée, un message est consigné dans le j
 |3|Ceci indique une corruption des métadonnées qui a arrêté la commande DBCC.|    
 |4|Une assertion ou une violation d'accès a été détectée.|    
 |5|Une erreur inconnue s'est produite et a arrêté la commande DBCC.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enregistre la date et l’heure d’exécution d’une vérification de cohérence pour une base de données sans erreurs (ou une vérification de cohérence « propre »). C’est ce que l’on appelle `last known clean check`. Quand une base de données est démarrée pour la première fois, cette date est écrite dans le journal des événements (EventID-17573) et dans le journal des erreurs au format suivant : 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>Rapport d'erreurs    
 Un fichier de vidage (`SQLDUMP*nnnn*.txt`) est créé dans le répertoire LOG de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chaque fois que DBCC CHECKDB détecte une erreur d’endommagement. Quand les fonctionnalités *Rapport d’erreurs* et de collecte des données *Utilisation de fonctionnalités* sont activées pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce fichier est automatiquement transféré à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Les données collectées sont utilisées pour améliorer les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Le fichier de vidage contient les résultats de la commande DBCC CHECKDB ainsi que des informations de diagnostic supplémentaires. L’accès est limité au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux membres du rôle sysadmin. Par défaut, le rôle sysadmin contient tous les membres du groupe Windows `BUILTIN\Administrators` et du groupe Administrateurs local. La commande DBCC n'échoue pas si le processus de collecte des données échoue.

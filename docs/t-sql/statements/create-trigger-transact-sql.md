@@ -28,15 +28,15 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766946"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 Crée un déclencheur DML, DDL ou de connexion. Un déclencheur est un type particulier de procédure stockée qui s’exécute automatiquement quand un événement se produit sur le serveur de base de données. Les déclencheurs DML s'exécutent lorsqu'un utilisateur essaie de modifier des données via un événement DML (Data Manipulation Language). Les événements DML sont des instructions INSERT, UPDATE ou DELETE exécutées sur une table ou une vue. Ces déclencheurs s'activent au déclenchement d'un événement valide, que des lignes de table soient affectées ou non. Pour plus d'informations, consultez [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
@@ -264,7 +264,8 @@ Les déclencheurs DDL et de connexion capturent des informations sur l’événe
   
 Pour les déclencheurs sur les tables optimisées en mémoire, la seule instruction *sql_statement* autorisée au niveau supérieur est un bloc ATOMIC. Le code T-SQL autorisé dans le bloc ATOMIC est limité par le code T-SQL autorisé dans les procédures natives.  
   
-\< method_specifier > **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+\< method_specifier > 
+**S’applique à**; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 Pour un déclencheur CLR, spécifie la méthode de liaison d'un assembly avec le déclencheur. La méthode ne doit prendre aucun argument et retourner une valeur vide. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister comme classe dans l’assembly avec une visibilité de l’assembly. Si la classe a un nom qualifié par un espace de noms qui utilise '.' pour séparer les parties de l'espace de noms, le nom de la classe doit être délimité par des crochets ([ ]) ou des guillemets doubles (" "). La classe ne peut pas être imbriquée.  
   

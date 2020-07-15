@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5510106a1b37e43210d043856825cfff56763e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 489b6c35f523c6f19d5b763cc54e5aeb6ace1e4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634091"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894535"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de principal de serveur (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de révoquer des autorisations accordées et refusées sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,7 +65,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Spécifie le rôle de serveur sur lequel l'autorisation est révoquée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
- { FROM | TO } \<server_principal> spécifie le rôle serveur ou la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel l’autorisation est révoquée.  
+ { FROM | TO } \<server_principal> Spécifie le rôle de serveur ou le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de connexion pour lequel l'autorisation est révoquée.  
   
  *SQL_Server_login*  
  Spécifie le nom d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

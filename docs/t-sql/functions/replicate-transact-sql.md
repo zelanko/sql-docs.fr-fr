@@ -20,32 +20,35 @@ ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9668bea1b876b650f835b00ed2df2c22ae7213ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db82218c76a9459c992b3cb8a5177cd06e319053
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823697"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003737"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Répète une valeur de chaîne un nombre spécifié de fois.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-REPLICATE ( string_expression ,integer_expression )   
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
 ## <a name="arguments"></a>Arguments  
  *string_expression*  
- Correspond à une expression d'un type de données binaire ou de chaîne de caractères. *string_expression* peut correspondre à des données binaires ou caractères.  
+ Correspond à une expression d'un type de données binaire ou de chaîne de caractères.  
   
 > [!NOTE]  
->  Si *string_expression* n’est pas de type **varchar(max)** ni **nvarchar(max)** , REPLICATE tronque la valeur renvoyée à 8 000 octets. Pour renvoyer des valeurs supérieures à 8 000 octets, il est nécessaire d’effectuer explicitement le transtypage de *string_expression* vers le type de données de valeur de grande taille approprié.  
+> Si *string_expression* est de type **binaire**, REPLICATE effectuera une conversion implicite vers **varchar**, et ne préservera donc pas l'entrée binaire.  
+
+> [!NOTE]  
+> Si *string_expression* est de type **varchar(max)** ou **nvarchar(max)** , REPLICATE tronque la valeur renvoyée à 8 000 octets. Pour renvoyer des valeurs supérieures à 8 000 octets, il est nécessaire d’effectuer explicitement le transtypage de *string_expression* vers le type de données de valeur de grande taille approprié.  
   
  *integer_expression*  
  Expression de n’importe quel type entier, y compris **bigint**. Si *integer_expression* est négatif, la valeur NULL est renvoyée.  
@@ -119,7 +122,7 @@ Varchar Column        Char Column
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C. Utilisation de REPLICATE  
+### <a name="c-using-replicate"></a>C : Utilisation de REPLICATE  
  L’exemple suivant réplique un caractère `0` quatre fois devant une valeur `ItemCode`.  
   
 ```  

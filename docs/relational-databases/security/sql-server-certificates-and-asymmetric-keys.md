@@ -1,5 +1,6 @@
 ---
 title: Certificats et clés asymétriques SQL Server | Microsoft Docs
+description: Découvrez les certificats et les clés asymétriques dans SQL Server, y compris les certificats, les outils et les tâches connexes générés en externe ou par SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153127"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001021"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificats et clés asymétriques SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  Le chiffrement à clé publique est une forme de confidentialité des messages dans laquelle un utilisateur crée une clé *publique* et une clé *privée*. La clé privée est gardée secrète, alors que la clé publique peut être distribuée aux autres. Bien que les clés soient liées mathématiquement, la clé privée ne peut pas être dérivée facilement de la clé publique. La clé publique permet de chiffrer des données que seule la clé privée correspondante sera en mesure de déchiffrer. Cela permet de chiffrer les messages adressés au propriétaire de la clé privée. De façon similaire, le propriétaire d’une clé privée peut chiffrer des données qui peuvent être déchiffrées uniquement avec la clé publique. Cette utilisation constitue la base des certificats numériques, dans lesquels les informations sont chiffrées par le propriétaire d’une clé privée, assurant ainsi l’auteur du contenu. Comme les clés de chiffrement et de déchiffrement sont différentes, on parle de clés *asymétriques*.
   
@@ -81,7 +82,7 @@ ms.locfileid: "82153127"
   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)   
  [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)  
   

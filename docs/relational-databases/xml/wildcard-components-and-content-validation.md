@@ -1,5 +1,6 @@
 ---
 title: Composants génériques et validation de contenu | Microsoft Docs
+description: Découvrez comment l’élément XML et les composants du caractère générique Attribut sont utilisés pour accroître la flexibilité au niveau des éléments pouvant apparaître dans un modèle de contenu.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b8613bed755158854851483faf3ea6af4fb60402
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729819"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Composants génériques et validation de contenu
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Les composants génériques sont utilisés pour accroître la flexibilité en termes d'éléments pouvant apparaître dans un modèle de contenu. Ils sont pris en charge comme suit dans le langage XSD :  
   
--   Composants génériques éléments. Ils sont représentés par l’élément **\<xsd:any>** .  
+-   Composants génériques éléments. Ils sont représentés par l'élément **\<xsd:any>** .  
   
--   Composants génériques attributs. Ils sont représentés par l’élément **\<xsd:anyAttribute>** .  
+-   Composants génériques attributs. Ils sont représentés par l'élément **\<xsd:anyAttribute>** .  
   
- Ces deux éléments de caractère générique, **\<xsd:any>** et **\<xsd:anyAttribute>** , prennent en charge l’utilisation d’un attribut **processContents**. Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
+ Ces deux types de caractères génériques, **\<xsd:any>** et **\<xsd:anyAttribute>** , prennent en charge l'emploi d'un attribut **processContents**. Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
   
 -   La valeur **strict** indique que le contenu est entièrement validé.  
   

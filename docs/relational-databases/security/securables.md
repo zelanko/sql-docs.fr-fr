@@ -1,5 +1,6 @@
 ---
 title: Éléments sécurisables | Microsoft Docs
+description: Découvrez les étendues sécurisables, que le système d'autorisation du moteur de base de données SQL Server utilise pour réguler l'accès aux sécurisables.
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -19,19 +20,19 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0d87132c7a0d0d6b9f44e28ca3d797d20fb4b32
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986567"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999606"
 ---
 # <a name="securables"></a>Éléments sécurisables
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Les éléments sécurisables sont les ressources auxquelles le système d'autorisation du moteur de base de données [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] régule l'accès. Par exemple, une table est un élément sécurisable. Certains éléments sécurisables peuvent être contenus dans d'autres, de façon à créer des hiérarchies imbriquées appelées « étendues », pouvant elles-mêmes être sécurisées. L'étendue de ces éléments sécurisables est constituée par le **serveur**, la **base de données**et le **schéma**.  
   
-## <a name="securable-scope-server"></a>Étendue des éléments sécurisables : serveur  
+## <a name="securable-scope-server"></a>Étendue sécurisable : Serveur  
  Les éléments sécurisables du **serveur** sont les suivants :  
   
 -   Groupe de disponibilité  
@@ -44,7 +45,7 @@ ms.locfileid: "67986567"
   
 -   Base de données  
   
-## <a name="securable-scope-database"></a>Étendue des éléments sécurisables : base de données  
+## <a name="securable-scope-database"></a>Étendue sécurisable : Base de données  
  Les éléments sécurisables de la **base de données** sont les suivants :  
   
 -   Rôle d'application  
@@ -79,7 +80,7 @@ ms.locfileid: "67986567"
   
 -   Utilisateur  
   
-## <a name="securable-scope-schema"></a>Étendue des éléments sécurisables : schéma  
+## <a name="securable-scope-schema"></a>Étendue sécurisable : schéma  
  Les éléments sécurisables du **schéma** sont les suivants :  
   
 -   Type  

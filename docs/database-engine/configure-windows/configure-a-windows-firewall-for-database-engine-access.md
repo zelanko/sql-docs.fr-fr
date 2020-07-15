@@ -1,5 +1,6 @@
 ---
 title: Configurer un pare-feu Windows pour l’accès au moteur de base de données | Microsoft Docs
+description: Découvrez comment configurer un pare-feu Windows afin que les ordinateurs clients puissent accéder à une instance du Moteur de base de données SQL Server par le biais du pare-feu.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784140"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurer un pare-feu Windows pour accéder au moteur de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
   Cette rubrique explique comment configurer un pare-feu Windows pour l'accès du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration SQL Server. Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Pour accéder à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] par le biais d'un pare-feu, vous devez configurer le pare-feu de l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour autoriser l'accès.  
@@ -96,6 +97,6 @@ ms.locfileid: "68012893"
 7.  Dans la boîte de dialogue **Nom**, entrez un nom et une description pour cette règle, puis cliquez sur **Terminer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des paramètres du pare-feu (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [Procédure : configurer les paramètres de pare-feu (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

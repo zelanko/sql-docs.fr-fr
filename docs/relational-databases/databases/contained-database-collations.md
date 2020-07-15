@@ -1,5 +1,6 @@
 ---
 title: Classements de base de données autonome | Microsoft Docs
+description: Découvrez comment classer les tâches dans les bases de donnés non autonomes et autonomes. Voir les problèmes qui peuvent survenir lorsque les sessions passent d'un environnement autonome à un environnement non autonome.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763629"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diverses propriétés affectent l'ordre de tri et la sémantique d'égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Les classements ne s'appliquent pas seulement aux données stockées dans les tables utilisateur, mais à tout le texte géré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les métadonnées, les objets temporaires, les noms de variable, etc. Leur gestion est différente dans une base de données autonome et dans une base de données non autonome. Cette modification n'affecte pas de nombreux utilisateurs, mais permet l'indépendance et l'uniformité des instances. Cependant, elle peut provoquer également quelques confusions, ainsi que des problèmes pour les sessions qui accèdent à la fois à des bases de données autonomes et à des bases de données non autonomes.  

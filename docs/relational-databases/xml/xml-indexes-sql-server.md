@@ -1,5 +1,6 @@
 ---
 title: Index XML (SQL Server) | Microsoft Docs
+description: Découvrez comment la création d’index XML sur des colonnes de type de données XML peut tirer parti de votre application en améliorant les performances des requêtes.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6aeeb9e0fdadda5635888fe2a88e0ea84b6ede12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729776"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Des index XML peuvent être créés sur des colonnes de type **xml** . L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
   
 -   Les requêtes portant sur des colonnes XML sont fréquentes dans votre charge de travail. Le coût de la maintenance des index XML au cours de la modification des données doit être pris en compte lors de l'évaluation des avantages.  
@@ -54,7 +55,7 @@ ms.locfileid: "80664893"
   
 -   Index XML secondaires  
   
- Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE, and PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
+ Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l’index XML primaire, les trois types d’index secondaires suivants sont pris en charge : PATH, VALUE et PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas créer ou modifier d'index XML à moins que les options de base de données ne soient définies correctement pour utiliser le type de données **xml** . Pour plus d’informations, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  

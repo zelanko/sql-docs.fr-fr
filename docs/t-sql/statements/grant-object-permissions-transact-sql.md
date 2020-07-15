@@ -16,21 +16,21 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75542c488b9033cb791b731535eaab6a14c72c72
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f110124a562ccf6f1cc7ee1d570d29b67c49785
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633679"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004715"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Permet d'accorder des autorisations sur une table, une vue, une fonction table, une procédure stockée, une procédure stockée étendue, une fonction scalaire, une fonction d'agrégation, une file d'attente de service ou un synonyme.  
   
 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ GRANT <permission> [ ,...n ] ON
   
 - Autorisations de fonction scalaire : EXECUTE, REFERENCES.  
 - Autorisations de fonction table : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- Autorisations de procédure stockée : EXECUTE.  
+- Autorisations de procédure stockée : EXECUTE.  
 - Autorisations de table : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Autorisations de vue : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
@@ -86,7 +86,7 @@ PRIVILEGES
  WITH GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
- AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit d’octroyer l’autorisation.  
+ AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit d’accorder l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  
@@ -115,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
->  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l'exécuter. Dans ce cas, l'utilisateur aurait également besoin de l'autorisation SELECT sur la colonne calculée.  
+>  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Par exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l’exécuter. Dans ce cas, l'utilisateur aurait également besoin de l'autorisation SELECT sur la colonne calculée.  
   
  Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   

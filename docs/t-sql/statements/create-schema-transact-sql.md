@@ -24,19 +24,19 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 586848ae7fceda7e31b3002e8e1d9a3c63259006
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 9fe651c706bcbe41ea688d0f9e661ff483a70d72
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138260"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001492"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crée un schéma dans la base de données active. La transaction CREATE SCHEMA peut également créer des tables et des vues dans le nouveau schéma et définir des autorisations GRANT, DENY ou REVOKE sur ces objets.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Ce comportement est nécessaire pour permettre aux utilisateurs basés sur des groupes Windows de créer et de posséder des objets. Il peut cependant entraîner la création involontaire de schémas et d'utilisateurs. Pour éviter la création implicite d'utilisateurs et de schémas, dans la mesure du possible vous devez créer de manière explicite des principaux de base de données et assigner un schéma par défaut. Vous pouvez également déclarer de manière explicite un schéma existant lors de la création d'objets dans une base de données, à l'aide de noms d'objets en deux ou trois parties.  
 
 > [!NOTE]
->  La création implicite d’un utilisateur Azure Active Directory n’est pas possible sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Étant donné que la création d’un utilisateur Azure AD à partir du fournisseur externe doit vérifier l’état des utilisateurs dans l’annuaire AAD, la création de l’utilisateur échoue avec l’erreur 2760 : **Le nom de schéma spécifié « \<user_name@domain> » n’existe pas ou vous n’avez pas l’autorisation de l’utiliser.** Puis avec l’erreur 2759 : **Échec de CREATE SCHEMA en raison d’erreurs antérieures.** Pour contourner ces erreurs, créez d’abord l’utilisateur Azure AD à partir du fournisseur externe, puis réexécutez l’instruction de création de l’objet.
+>  La création implicite d’un utilisateur Azure Active Directory n’est pas possible sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Étant donné que la création d’un utilisateur Azure AD à partir du fournisseur externe doit vérifier l’état des utilisateurs dans l’annuaire AAD, la création de l’utilisateur échoue avec l’erreur 2760 : **Le nom de schéma spécifié « \<user_name@domain> » n’existe pas ou vous n’êtes pas autorisé à l’utiliser.** Puis avec l’erreur 2759 : **Échec de CREATE SCHEMA en raison d’erreurs antérieures.** Pour contourner ces erreurs, créez d’abord l’utilisateur Azure AD à partir du fournisseur externe, puis réexécutez l’instruction de création de l’objet.
  
   
 ## <a name="deprecation-notice"></a>Note relative à la suppression de fonctionnalités  

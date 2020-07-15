@@ -1,5 +1,6 @@
 ---
 title: Connexion de diagnostic pour les administrateurs de base de données | Microsoft Docs
+description: Découvrez la connexion administrateur dédiée (DAC). Affichez ses restrictions, des instructions sur la façon de l’établir et des exemples illustrant son utilisation.
 ms.custom: ''
 ms.date: 02/27/2019
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a7843b981dbad450e49f0c1f5cf27b175ce635e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772540"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connexion de diagnostic pour les administrateurs de base de données
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit aux administrateurs une connexion de diagnostic spéciale lorsque des connexions standard au serveur sont impossibles. Cette connexion de diagnostic permet aux administrateurs d'accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter des requêtes de diagnostic et résoudre des problèmes, même lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne répond pas à des demandes de connexion standard.  
   
  Cette connexion administrateur dédiée (DAC) prend en charge le chiffrement et d'autres fonctions de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle permet uniquement de changer de contexte utilisateur pour un autre administrateur.  
@@ -100,7 +101,7 @@ ms.locfileid: "82588105"
   
  Le port DAC est affecté dynamiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pendant le démarrage. Lors d’une connexion à l’instance par défaut, la DAC évite d’utiliser une demande SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) à SQL Server Browser Service lors de la connexion. Elle se connecte d'abord sur le port TCP 1434. Si cette tentative échoue, elle effectue un appel SSRP pour obtenir le port. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser n'écoute pas les demandes SSRP, la demande de connexion retourne une erreur. Reportez-vous au journal des erreurs pour trouver le numéro de port que la DAC écoute. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter les connexions d'administration distante, la DAC doit être initialisée avec un numéro de port explicite :  
   
- **sqlcmd -S tcp:** _\<serveur>,\<port>_  
+ **sqlcmd -S tcp:** _\<server>,\<port>_  
   
  Le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indique le numéro de port de la connexion DAC, qui est 1434 par défaut. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter uniquement des connexions DAC locales, connectez-vous au moyen de l'adaptateur de bouclage en utilisant la commande suivante :  
   
@@ -109,7 +110,7 @@ ms.locfileid: "82588105"
 > [!TIP]  
 >  Lors de la connexion à [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] via une connexion DAC, vous devez également spécifier le nom de la base de données dans la chaîne de connexion, à l’aide de l’option -d.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans cet exemple, un administrateur note que le serveur `URAN123` ne répond pas et souhaite diagnostiquer le problème. Pour ce faire, l'utilisateur active l'utilitaire de ligne de commande `sqlcmd` et se connecte au serveur `URAN123` en utilisant `-A` pour indiquer la connexion DAC.  
   
  `sqlcmd -S URAN123 -U sa -P <xxx> -A`  

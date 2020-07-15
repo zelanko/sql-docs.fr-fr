@@ -1,5 +1,6 @@
 ---
 title: Suppression de la mise en miroir de bases de données (SQL Server) | Microsoft Docs
+description: Découvrez l’impact de l’arrêt d’une session de mise en miroir de bases de données, que le propriétaire d’une base de données peut effectuer à tout moment sur l’un des partenaires de SQL Server.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3da88574635b01afd7f309bb09b8850e072a241
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735170"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Suppression d'une mise en miroir des bases de données (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le propriétaire de la base de données peut arrêter manuellement une session de mise en miroir de base de données à tout moment et sur n'importe quel serveur partenaire.  
   
 ## <a name="impact-of-removing-mirroring"></a>Impact de la suppression d'une mise en mémoire  

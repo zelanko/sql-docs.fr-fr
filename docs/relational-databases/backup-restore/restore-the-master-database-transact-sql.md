@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c8bfaa8ffee65be6c0c5693420c89032c9b83763
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98b00f32fd2a49d8a326a2df94d84c72fa999cf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759117"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurer la base de données MASTER (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique explique comment restaurer la base de données **master** à partir d'une sauvegarde complète d'une base de données.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "82180716"
   
 3.  Redémarrez l'instance du serveur et poursuivez les autres étapes de récupération telles que la restauration d'autres bases de données, l'attachement de bases de données et la correction des incompatibilités au niveau utilisateur.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans l'exemple suivant, la base de données `master` est restaurée sur l'instance du serveur par défaut. L'exemple suppose que l'instance du serveur s'exécute déjà en mode mono-utilisateur. L’exemple démarre `sqlcmd` et exécute une instruction `RESTORE DATABASE` qui restaure une sauvegarde complète de la base de données de `master` à partir d’une unité de disque : `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Dans le cas d’une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S** _\<NomOrdinateur>_ \\ *\<NomInstance>* .  
+>  Pour une instance nommée, la commande **sqlcmd** doit spécifier l'option **-S** _\<ComputerName>_ \\ *\<InstanceName>* .  
   
 ```  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82180716"
 2> GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

@@ -1,5 +1,6 @@
 ---
 title: Propriétés du serveur (page Avancé) | Microsoft Docs
+description: Familiarisez-vous avec les paramètres avancés du serveur SQL Server. Découvrez les options de FILESTREAM, les différents seuils, les possibilités de mise à jour du texte intégral et d'autres paramètres.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 796c722db124b9eda448652dc29f5571ea41b747
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771805"
 ---
 # <a name="server-properties---advanced-page"></a>Propriétés du serveur - page Avancé
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilisez cette page pour afficher ou modifier vos paramètres de serveur avancés.  
   
  **Pour afficher les pages de propriétés de serveur**  

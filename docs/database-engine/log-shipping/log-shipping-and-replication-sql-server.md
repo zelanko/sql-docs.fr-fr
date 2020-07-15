@@ -1,5 +1,6 @@
 ---
 title: Copie des journaux de transaction et réplication (SQL Server) | Microsoft Docs
+description: Découvrez comment la copie des journaux de transaction répercute dans la base de données secondaire chaque insertion, mise à jour ou suppression apportée à la base de données primaire.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696048"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Copie des journaux de transaction et réplication (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La copie des journaux de transaction consiste à avoir deux exemplaires d'une même base de données qui résident généralement sur des ordinateurs différents. À un moment donné précis, les clients ne peuvent accéder qu'à un seul exemplaire de la base de données. Cet exemplaire s'appelle la base de données primaire. Les mises à jour apportées par les clients à la base de données primaire sont répercutées, par copie des journaux de transaction, à l'autre exemplaire de la base de données appelé base de données secondaire. La copie des journaux de transaction consiste à répercuter dans la base de données secondaire chaque insertion, mise à jour ou suppression apportée à la base de données primaire.  
   
  La copie des journaux de transaction peut intervenir en parallèle à la réplication selon les principes suivants :  
@@ -109,7 +110,7 @@ ms.locfileid: "68030820"
   
     -   Si la publication n'est pas filtrée, vous devriez pouvoir mettre à jour la base de données de publication en la synchronisant avec l'Abonné le plus à jour.  
   
-    -   Si la publication est filtrée, il est possible que vous ne puissiez pas mettre à jour la base de données de publication. Supposons une table qui est partitionnée de façon telle que chaque abonnement reçoit des données client seulement pour une région : Nord, Est, Sud et Ouest. S'il y a au moins un Abonné pour chaque partition de données, la synchronisation avec un Abonné pour chaque partition doit permettre la mise à jour de la base de données de publication. Cependant, si par exemple des données de la partition Ouest n'ont été répliquées vers aucun des Abonnés, ces données ne peuvent pas être mises à jour au niveau du serveur de publication. Dans ce cas, nous vous conseillons de réinitialiser tous les abonnements de façon à ce que les données du serveur de publication et des Abonnés convergent. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Si la publication est filtrée, il est possible que vous ne puissiez pas mettre à jour la base de données de publication. Prenez une table qui est partitionnée de telle façon que chaque abonnement reçoit des données client seulement pour une région : Nord, Est, Sud et Ouest. S'il y a au moins un Abonné pour chaque partition de données, la synchronisation avec un Abonné pour chaque partition doit permettre la mise à jour de la base de données de publication. Cependant, si par exemple des données de la partition Ouest n'ont été répliquées vers aucun des Abonnés, ces données ne peuvent pas être mises à jour au niveau du serveur de publication. Dans ce cas, nous vous conseillons de réinitialiser tous les abonnements de façon à ce que les données du serveur de publication et des Abonnés convergent. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
      Si la synchronisation se fait avec un Abonné exécutant une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme. Il doit s'agir d'un abonnement client ou d'un abonnement serveur (appelées abonnement local et abonnement global dans les versions précédentes). Pour plus d’informations, consultez [Synchroniser les données](../../relational-databases/replication/synchronize-data.md).  
   

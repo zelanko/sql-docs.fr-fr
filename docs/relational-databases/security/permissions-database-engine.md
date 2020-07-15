@@ -1,5 +1,6 @@
 ---
 title: Autorisations (moteur de base de données) | Microsoft Docs
+description: Consultez cette liste complète des autorisations de SQL Server pour savoir quelles autorisations s’appliquent aux plateformes que vous utilisez.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995850"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009395"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Chaque élément sécurisable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a des autorisations associées qui peuvent être accordées à un principal. Les autorisations dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont gérées au niveau du serveur pour les connexions et les rôles de serveur, et au niveau de la base de données pour les utilisateurs de base de données et les rôles de base de données. Le modèle pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] a le même système pour les autorisations de base de données, mais les autorisations de niveau serveur ne sont pas disponibles. Cette rubrique contient la liste complète des autorisations. Pour une implémentation classique des autorisations, consultez [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -51,11 +52,11 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
      Confère la capacité de modifier les propriétés, excepté l'appartenance, d'un élément sécurisable particulier. Lorsque ALTER est accordé sur une portée, ALTER octroie également la capacité de modifier, de créer ou de supprimer tous les éléments sécurisables contenus dans cette portée. Par exemple, l'autorisation ALTER sur un schéma inclut la capacité de créer, de modifier et de supprimer les objets du schéma.  
   
--   ALTER ANY \<*Élément sécurisable du serveur*>, où *Élément sécurisable du serveur* désigne n’importe quel élément sécurisable du serveur.  
+-   ALTER ANY \<*Server Securable*>, où *Serveur Sécurisable*, désigne n’importe quel élément sécurisable du serveur.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable du serveur*. Par exemple, ALTER ANY LOGIN confère la capacité de créer, de modifier ou de supprimer n'importe quelle connexion dans l'instance.  
   
--   ALTER ANY \<*Élément sécurisable de base de données*>, où *Élément sécurisable de base de données* désigne n’importe quel élément sécurisable au niveau de la base de données.  
+-   ALTER ANY \<*Database Securable*> où *Élément sécurisable de la base de données* désigne n’importe quel élément sécurisable au niveau de la base de données.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable de base de données*. Par exemple, ALTER ANY SCHEMA confère la capacité de créer, de modifier ou de supprimer n'importe quel schéma dans la base de données.  
   
@@ -63,23 +64,23 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
      Permet au bénéficiaire d'obtenir la propriété de l'élément sécurisable sur lequel cette autorisation est accordée.  
   
--   IMPERSONATE \<*Connexion*>  
+-   IMPERSONATE \<*Login*>  
   
      Permet au bénéficiaire d'emprunter l'identité impliquée dans la connexion.  
   
--   IMPERSONATE \<*Utilisateur*>  
+-   IMPERSONATE \<*User*>  
   
      Permet au bénéficiaire d'emprunter l'identité de l'utilisateur.  
   
--   CREATE \<*Élément sécurisable du serveur*>  
+-   CREATE \<*Server Securable*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur*.  
   
--   CREATE \<*Élément sécurisable de base de données*>  
+-   CREATE \<*Database Securable*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données*.  
   
--   CREATE \<*Élément sécurisable contenu dans le schéma*>  
+-   CREATE \<*Schema-contained Securable*>  
   
      Confère la capacité de créer l'élément sécurisable contenu dans le schéma. Toutefois, l'autorisation ALTER sur le schéma est requise pour créer l'élément sécurisable dans un schéma particulier.  
   
@@ -102,8 +103,8 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 |Autorisation|S’applique à|  
 |----------------|----------------|  
 |ALTER|Toutes les classes d’objets, à l’exception de TYPE.|  
-|CONTROL|Toutes les classes d’objets : <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW et<br />XML SCHEMA COLLECTION|  
-|Suppression|Toutes les classes d’objets, à l’exception de DATABASE SCOPED CONFIGURATION et SERVER.|  
+|CONTROL|Toutes les classes d’objets : <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW et<br />XML SCHEMA COLLECTION|  
+|Suppression|Toutes les classes d’objets, à l’exception de DATABASE SCOPED CONFIGURATION, SERVER et TYPE.|  
 |Exécutez|Types CLR, scripts externes, procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR), fonctions scalaires et d’agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR) et synonymes|  
 |IMPERSONATE|Connexions et utilisateurs|  
 |INSERT|Synonymes, tables et colonnes, vues et colonnes. l’autorisation peut être accordée au niveau de la base de données, du schéma ou de l’objet.|  
@@ -417,7 +418,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Considérations spéciales relatives aux autorisations au niveau des colonnes
 
-Les autorisations au niveau des colonnes sont accordées avec la syntaxe *<nom_table>(\<nom_colonne>)* . Par exemple :
+Les autorisations au niveau des colonnes sont accordées avec la syntaxe *<nom_table>(\<column _name>)* . Par exemple :
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

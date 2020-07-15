@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220492"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834800"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
@@ -101,7 +101,7 @@ ms.locfileid: "82220492"
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et les versions ultérieures prennent en charge la compression des sauvegardes. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures peuvent restaurer une sauvegarde compressée. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Restrictions des opérations de sauvegarde 
- La sauvegarde peut être effectuée si la base de données est en ligne et en cours d'utilisation. Cependant, les restrictions suivantes existent.  
+ La sauvegarde peut être effectuée si la base de données est en ligne et en cours d'utilisation. Cependant, les restrictions suivantes existent :  
   
 ### <a name="cannot-back-up-offline-data"></a>Impossible de sauvegarder des données hors connexion  
  Toute sauvegarde qui fait implicitement ou explicitement référence à des données hors connexion échoue. Voici quelques exemples classiques de cette situation :  

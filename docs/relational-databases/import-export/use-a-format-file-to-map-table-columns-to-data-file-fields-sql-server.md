@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 821d9e5339c70551a3503faa81ca15276892ed86
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 39e2660619221af7957a2d84530d2ab800333cf7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529218"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004697"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Il se peut que les champs d'un fichier de données ne soient pas dans le même ordre que les colonnes correspondantes présentes dans la table. Cette rubrique présente les fichiers de format XML et non-XML ayant été modifiés de sorte à accepter un fichier de données dont les champs sont organisés dans un ordre différent de celui des colonnes de la table correspondante. Le fichier de format modifié permet de mapper les champs de données sur les colonnes correspondantes de la table.  Veuillez consulter [Créer un fichier de format (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) pour plus d’informations.
 
 |Contour|
@@ -115,43 +115,43 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ### <a name="modifying-the-xml-format-file"></a>Modification du fichier de format XML <a name="modify_xml_format_file"></a>
 Consultez [Syntaxe de schéma pour les fichiers de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) pour la terminologie.  Ouvrez `D:\BCP\myRemap.xml` dans Bloc-notes et effectuez les modifications suivantes :
 1. L’ordre dans lequel les éléments \<FIELD> sont déclarés dans le format de fichier est l’ordre dans lequel ces champs s’affichent dans le fichier de données, par conséquent, inversez l’ordre pour les éléments \<FIELD> avec les attributs d’ID 2 et 3.
-2. Vérifiez que les valeurs de l’attribut \<FIELD> ID sont séquentielles.
-3. L’ordre des éléments \<COLUMN> dans l’élément \<ROW> définit l’ordre dans lequel ils sont envoyés à la cible par l’opération en bloc.  Le fichier de format XML assigne à chaque élément \<COLUMN> un nom local qui n’a aucune relation avec la colonne dans la table cible d’une opération d’importation en bloc.  L’ordre des éléments \<COLUMN> est indépendant de l’ordre des éléments \<FIELD> dans une définition \<RECORD>.  Chaque élément \<COLUMN> correspond à un élément \<FIELD> (dont l’ID est spécifié dans l’attribut SOURCE de l’élément \<COLUMN>).  Par conséquent, les valeurs de \<COLUMN> SOURCE sont ls seuls attributs qui nécessitent une révision.  Inversez l’ordre pour les attributs 2 et 3 de \<COLUMN> SOURCE.
+2. Vérifiez que les valeurs de l’attribut \<FIELD>ID sont séquentielles.
+3. L’ordre des éléments \<COLUMN> dans l’élément \<ROW> définit l’ordre dans lequel ils sont envoyés à la cible par l’opération en bloc.  Le fichier de format XML assigne à chaque élément \<COLUMN> un nom local qui n’a aucune relation avec la colonne dans la table cible d’une opération d’importation en bloc.  L’ordre des éléments \<COLUMN> est indépendant de l’ordre des éléments \<FIELD>dans une définition \<RECORD>.  Chaque élément \<COLUMN>correspond à un élément \<FIELD> (dont l’ID est spécifié dans l’attribut SOURCE de l’élément \<COLUMN>).  Par conséquent, les valeurs de \<COLUMN> SOURCE sont les seuls attributs qui nécessitent une révision.  Inversez l’ordre pour les attributs 2 et 3 de \<COLUMN> SOURCE.
 
 Comparez les modifications :  
 **Avant**
 ```
-\<?xml version="1.0"?>
-\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
 **Après**
 ```
-\<?xml version="1.0"?>
-\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  \<COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  <COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```

@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 624668f7e9ef3432e9ed295d81a95b5c96636383
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1a364e553f3d50ca0202b9ab591e43f88f3bf1e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735531"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT – octroi d'autorisations de clé symétrique (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Permet d'accorder des autorisations sur une clé symétrique. 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +66,7 @@ GRANT permission [ ,...n ]
  WITH GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
- AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit d’octroyer l’autorisation.  
+ AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit d’accorder l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  

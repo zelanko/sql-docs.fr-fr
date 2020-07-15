@@ -1,5 +1,6 @@
 ---
 title: Choisir un algorithme de chiffrement | Microsoft Docs
+description: Utilisez ce guide pour choisir un algorithme de chiffrement afin de sécuriser une instance de SQL Server, qui prend en charge plusieurs algorithmes courants.
 ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d0d6cdf244cfb9e08993c91737a14a1d2b24b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61fc3a3e63d2fe4ff17865253607944c722b154c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957455"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005580"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Choisir un algorithme de chiffrement
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Le chiffrement est l'une des mesures préventives à la disposition des administrateurs qui souhaitent sécuriser une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Les algorithmes de chiffrement définissent les transformations de données qui ne peuvent pas être facilement inversées par les utilisateurs non autorisés. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux administrateurs et aux développeurs de choisir entre plusieurs algorithmes, notamment DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 128 bits, DESX, AES 128 bits, AES 192 bits et AES 256 bits.  

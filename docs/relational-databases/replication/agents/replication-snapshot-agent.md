@@ -1,5 +1,6 @@
 ---
 title: Agent d’instantané de réplication | Microsoft Docs
+description: Dans SQL Server, l’Agent d’instantané de réplication prépare les fichiers d’instantanés, les stocke dans un dossier et enregistre les tâches de synchronisation dans la base de données de distribution.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c48422e86cfd3f42e6634a3ca3be1d0dbc85f24
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 7132154bcb61e84d052891c200589cf157b31f65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730216"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   L'Agent d'instantané de réplication est un fichier exécutable qui prépare les fichiers d'instantané contenant les schémas ainsi que les données des tables et des objets de base de données publiés, stocke les fichiers dans le dossier d'instantanés, et enregistre les travaux de synchronisation dans la base de données de distribution.  
   
 > [!NOTE]  

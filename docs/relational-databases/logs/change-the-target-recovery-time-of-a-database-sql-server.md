@@ -1,6 +1,6 @@
 ---
 title: Modifier la durée de récupération cible d’une base de données
-ms.custom: seo-lt-2019
+description: Découvrez comment définir ou modifier le temps de récupération cible d'une base de données SQL Server dans SQL Server à l’aide de SQL Server Management Studio ou Transact-SQL.
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: cbc9d56a0c084fe912ad9af0136166cdcf804ebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734972"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modifier la durée de récupération cible d'une base de données (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment modifier le temps de récupération cible d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par défaut, le temps de récupération cible est de 60 secondes, et la base de données utilise des *points de contrôle indirects*. Le temps de récupération cible établit une limite supérieure sur le temps de récupération pour cette base de données.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Cette rubrique explique comment régler ou modifier le temps de récupération cible d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par défaut, le temps de récupération cible est de 60 secondes, et la base de données utilise des *points de contrôle indirects*. Le temps de récupération cible établit une limite supérieure sur le temps de récupération pour cette base de données.  
   
 > [!NOTE]  
 >  La limite supérieure spécifiée pour une base de données spécifique par son paramètre de temps de récupération cible peut être dépassée si une transaction longue entraîne des durées UNDO excessives.  

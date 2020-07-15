@@ -1,5 +1,6 @@
 ---
 title: Charger des données XML | Microsoft Docs
+description: Découvrez plusieurs méthodes de transfert de données XML dans des bases de données SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c30b896ca36d84866244553d6420db8c66287f59
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738413"
 ---
 # <a name="load-xml-data"></a>Charger des données XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Par exemple :  
   
 -   Si vos données figurent dans une colonne de type [n]text ou image, dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez importer la table par le biais de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modifiez ensuite le type de colonne en XML à l'aide de l'instruction ALTER TABLE.  
@@ -33,7 +34,7 @@ ms.locfileid: "80665132"
 ## <a name="bulk-loading-xml-data"></a>Chargement en masse de données XML  
  Vous pouvez charger en masse des données XML sur le serveur en utilisant les fonctions de chargement en masse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme bcp. OPENROWSET vous permet de charger des données dans une colonne XML à partir de fichiers. L'exemple suivant illustre ce comportement :  
   
-##### <a name="example-loading-xml-from-files"></a>Exemple : chargement de données XML à partir de fichiers  
+##### <a name="example-loading-xml-from-files"></a>Exemple : Chargement de données XML à partir de fichiers  
  Cet exemple montre comment insérer une ligne dans la table T. La valeur de la colonne XML est chargée à partir du fichier C:\MyFile\xmlfile.xml en tant que CLOB, et la colonne integer prend la valeur 10.  
   
 ```  
@@ -53,7 +54,7 @@ FROM    (SELECT *
   
 -   Pour utiliser un encodage explicite, utilisez le type **varbinary()** , qui n’a aucune interaction avec les pages de codes, ou utilisez un type chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : mention explicite d'un encodage  
+### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : Spécification implicite d’un encodage  
  Supposez que vous avez un document XML, vcdoc, stocké au format **varchar(max)** , qui ne comporte aucune déclaration XML explicite. L’instruction ci-dessous permet d’ajouter une déclaration XML mentionnant l’encodage « iso8859-1 », de concaténer le document XML, de convertir le résultat au format **varbinary(max)** de façon à conserver la représentation en octets, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
   
 ```  

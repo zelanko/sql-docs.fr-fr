@@ -1,5 +1,6 @@
 ---
 title: Agent de distribution de réplication | Microsoft Docs
+description: Déplacer un instantané et les transactions conservées dans les tables de la base de données de distribution vers les tables de destination des abonnés à l’aide de l’Agent de distribution de réplication.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: e36bac1d2455b82502c481ad811de7aac262a6b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722220"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   L'Agent de distribution de réplication est un fichier exécutable qui déplace l'instantané (pour la réplication d'instantané et la réplication transactionnelle) et les transactions contenues dans les tables de base de données de distribution (pour la réplication transactionnelle) vers les tables de destination au niveau des Abonnés.  
   
 > [!NOTE]  

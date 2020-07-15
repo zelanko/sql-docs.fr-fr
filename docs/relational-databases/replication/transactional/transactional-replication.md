@@ -1,5 +1,6 @@
 ---
 title: Réplication transactionnelle | Microsoft Docs
+description: La réplication transactionnelle utilise un instantané de la base de données, en appliquant les modifications apportées à l’Abonné à mesure qu’elles se sont produites sur le Serveur de publication pour garantir la cohérence.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f7970284d3960b9c9ea91067a9adef553655b09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716657"
 ---
 # <a name="transactional-replication"></a>Réplication transactionnelle
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   La réplication transactionnelle commence en général avec l'instantané des objets et des données de la base de données de publication. Dès que l'instantané initial est effectué, les changements de données et les modifications de schémas effectués ensuite au niveau du serveur de publication sont en général transmis à l'Abonné à mesure qu'ils se produisent (presque en temps réel). Les changements de données sont appliqués à l'Abonné dans le même ordre et dans les mêmes limites de transaction que sur le serveur de publication ; c'est pourquoi, dans une publication, la cohérence des transactions est garantie.  
   
  La réplication transactionnelle est en général utilisée dans les environnements serveur à serveur, et convient pour chacun des cas suivants :  

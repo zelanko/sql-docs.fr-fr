@@ -1,5 +1,6 @@
 ---
 title: SQL Server Audit (moteur de base de données) | Microsoft Docs
+description: En savoir plus sur les audits de serveur pour le Moteur de base de données SQL Server ou une base de données individuelle. Les audits de serveurs contiennent des spécifications de l’audit du serveur et de la base de données.
 ms.custom: ''
 ms.date: 01/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d9d459729a05078043b5365a54d16ade45df31d
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243409"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85294634"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +128,7 @@ ms.locfileid: "80243409"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mise en miroir de bases de données et SQL Server Audit  
  Une base de données qui possède une spécification d'audit définie et qui utilise la mise en miroir de bases de données inclut la spécification de l'audit de la base de données. Pour fonctionner correctement sur l'instance SQL en miroir, les éléments suivants doivent être configurés :  
   
--   Le serveur miroir doit avoir un audit avec le même GUID afin de permettre à la spécification de l'audit de la base de données d'écrire des enregistrements d'audit. La commande CREATE AUDIT WITH GUID **=** _\<GUID_de_l’audit_de_serveur_source_> permet d’obtenir cette configuration.  
+-   Le serveur miroir doit avoir un audit avec le même GUID afin de permettre à la spécification de l'audit de la base de données d'écrire des enregistrements d'audit. La commande CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_> permet d’obtenir cette configuration.  
   
 -   Si la cible est un fichier binaire, le compte de service de serveur miroir doit avoir des autorisations appropriées pour l'emplacement où le journal d'audit est écrit.  
   
@@ -214,7 +215,7 @@ ms.locfileid: "80243409"
  [Déclencheurs DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Explique comment utiliser des déclencheurs DDL (Data Definition Language) pour effectuer le suivi des modifications de vos bases de données.  
   
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet - TechCenter SQL Server : Sécurité et protection SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fournit des informations à jour sur la sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

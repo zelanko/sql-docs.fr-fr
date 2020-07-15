@@ -1,5 +1,6 @@
 ---
 title: Table à mémoire optimisée et procédure stockée compilée nativement
+description: Cet exemple vous présente la syntaxe de l'OLTP en mémoire pour créer un tableau optimisé pour la mémoire et une procédure stockée compilée nativement.
 ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e8793d5fc14401cbe800604accc6642a424fbbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba66306b4ce798e48e22d77c5b1ae0c37c8ec91b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723311"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Création d'une table mémoire optimisée et d'une procédure stockée compilée en mode natif
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette rubrique contient un exemple qui présente la syntaxe de l'OLTP en mémoire.  
 

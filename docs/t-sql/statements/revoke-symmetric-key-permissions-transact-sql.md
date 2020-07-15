@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5adf46b8464541db3068dc439cd382e1562dfe7f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ead3a0c0b9feeeffff7491995c63926ec64ad5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765938"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de clé symétrique (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Permet de révoquer des autorisations accordées ou refusées sur une clé symétrique.  
    
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,7 +73,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  { TO | FROM } \<*database_principal*>  
  Spécifie le principal pour lequel l'autorisation est révoquée.  
   
- AS \<database_principal> Spécifie un principal duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
+ AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  

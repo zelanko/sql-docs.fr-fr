@@ -1,5 +1,6 @@
 ---
 title: Mise à niveau des instances en miroir | Microsoft Docs
+description: Découvrez comment réduire les temps d’arrêt lors de la mise à niveau d’une instance SQL Server en miroir à l’aide d’une mise à niveau propagée. Cet article présente les meilleures pratiques.
 ms.custom: ''
 ms.date: 02/01/2016
 ms.prod: sql
@@ -14,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eeb7b6d13a49262554dc98767b2bc8117ba007ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758214"
 ---
 # <a name="upgrading-mirrored-instances"></a>Mise à niveau des instances en miroir
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lors de la mise à niveau d’une instance en miroir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , un nouveau Service Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou une mise à jour cumulative, ou vers un nouveau Service Pack ou une nouvelle mise à jour cumulative de Windows, vous pouvez réduire le temps d’arrêt pour chaque base de données en miroir à un seul basculement manuel en effectuant une mise à niveau propagée (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine). Une mise à niveau propagée est un processus en plusieurs étapes qui, dans sa forme la plus simple, consiste à mettre à niveau l’instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui agit actuellement en tant que serveur miroir dans une session de mise en miroir, puis à basculer manuellement la base de données mise en miroir, à mettre à niveau l’ancienne instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] principale et à reprendre la mise en miroir. En pratique, le processus exact dépend du mode d’opération, du nombre et de la disposition de sessions de mise en miroir qui s’exécutent sur les instances [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que vous mettez à niveau.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation de la mise en miroir de base de données avec la copie des journaux de transaction lors d’une migration, téléchargez ce [livre blanc sur la mise en miroir de base de données et la copie de journaux de transaction](https://t.co/RmO6ruCT4J).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md) : vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
+-   [Choisir une méthode de mise à niveau du moteur de base de données](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) : sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
   
--   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
+-   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) : consultez les notes de publication et les problèmes de mise à niveau connus ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
+-   [Configurations matérielle et logicielle requises pour l’installation de SQL Server  2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) :  passez en revue les configurations matérielle et logicielle requises pour l’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
   
 ## <a name="recommended-preparation-best-practices"></a>Préparation recommandée (Meilleures pratiques)  
  Avant de commencer une mise à niveau propagée, nous recommandons d'effectuer les opérations suivantes :  
@@ -82,7 +83,7 @@ ms.locfileid: "68050630"
     > [!IMPORTANT]  
     >  Si le serveur miroir est géographiquement distant du serveur principal, une mise à niveau propagée peut être inappropriée.  
   
-    -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : affectez la valeur **Haute sécurité sans basculement automatique (synchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données**. Pour plus d’informations sur la façon d’accéder à cette page, consultez [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : affectez la valeur **Haute sécurité sans basculement automatique (synchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données**. Pour plus d’informations sur la façon d’accéder à cette page, consultez [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
     -   Dans [!INCLUDE[tsql](../../includes/tsql-md.md)] : attribuez à la sécurité des transactions la valeur FULL. Pour plus d’informations, consultez [Modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
@@ -91,13 +92,13 @@ ms.locfileid: "68050630"
 1.  Si une session de mise en miroir fait intervenir un témoin, nous vous recommandons de le supprimer avant d'effectuer une mise à niveau propagée. Sinon, lorsque l'instance de serveur miroir est mise à niveau, la disponibilité de la base de données dépend du témoin qui reste connecté à l'instance de serveur principal. Après avoir supprimé un témoin, vous pouvez le mettre à niveau à tout moment pendant le processus de mise à niveau propagée sans risquer un temps mort de la base de données.  
   
     > [!NOTE]  
-    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
     -   [Supprimer le témoin d’une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>Pour effectuer la mise à niveau propagée  
   
-1.  Pour réduire le temps mort, nous vous recommandons d'appliquer la procédure suivante : démarrez la mise à niveau propagée en mettant à jour tout serveur partenaire de mise en miroir qui fait actuellement office de serveur miroir dans toutes ses sessions de mise en miroir. Vous pourriez devoir mettre à jour plusieurs instances de serveur à ce stade.  
+1.  Pour réduire le temps mort, nous vous recommandons d’appliquer la procédure suivante : démarrez la mise à niveau propagée en mettant à jour tout serveur partenaire de mise en miroir qui fait actuellement office de serveur miroir dans toutes ses sessions de mise en miroir. Vous pourriez devoir mettre à jour plusieurs instances de serveur à ce stade.  
   
     > [!NOTE]  
     >  Un témoin peut être mis à niveau à tout moment au cours du processus de mise à niveau propagée. Par exemple, si une instance de serveur est un serveur miroir dans la session 1 et un témoin dans la session 2, vous pouvez la mettre à niveau dès maintenant.  
@@ -139,9 +140,9 @@ ms.locfileid: "68050630"
   
 1.  Rétablissez éventuellement le mode hautes performances en appliquant l'une des méthodes suivantes :  
   
-    -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: affectez la valeur **Haute performance (asynchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données** .  
+    -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : affectez la valeur **Haute performance (asynchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données**.  
   
-    -   Dans [!INCLUDE[tsql](../../includes/tsql-md.md)]: utilisez l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)pour désactiver (OFF) la sécurité des transactions.  
+    -   Dans [!INCLUDE[tsql](../../includes/tsql-md.md)] : utilisez l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) pour désactiver (OFF) la sécurité des transactions.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Pour ajouter de nouveau un témoin dans une session de mise en miroir  
   

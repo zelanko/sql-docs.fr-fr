@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75320761"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900656"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Spécifier des mappages de types de données pour un Serveur de publication Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment spécifier des mappages de type de données pour un Serveur de publication Oracle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Bien qu'un jeu de mappages de type de données par défaut soit fourni pour les serveurs de publication Oracle, il peut être nécessaire de spécifier des mappages différents pour une publication donnée.  
   
  **Dans cette rubrique**  
@@ -39,7 +39,7 @@ ms.locfileid: "75320761"
   
 #### <a name="to-specify-a-data-type-mapping"></a>Pour spécifier un mappage de types de données  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table et cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table, puis cliquez sur **Propriétés de l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de Table en surbrillance**.  
   

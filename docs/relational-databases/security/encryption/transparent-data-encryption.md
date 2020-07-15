@@ -1,5 +1,6 @@
 ---
 title: Chiffrement TDE (Transparent Data Encryption) | Microsoft Docs
+description: Découvrez Transparent Data Encryption, qui chiffre les bases de données SQL Server, Azure SQL Database et Azure Synapse Analytics. Il est également appelé chiffrement des données au repos.
 ms.custom: ''
 ms.date: 05/09/2019
 ms.prod: sql
@@ -18,16 +19,16 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e64ad8fb58258006fedbf527b26b59f8120f3ec8
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: b37932efe96f0892e5e2e3ce6c30c4adf1de557d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987413"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002791"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 *Transparent Data Encryption* (TDE) chiffre les fichiers de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)]. Ce chiffrement est connu sous le nom de chiffrement de données au repos.
 
@@ -140,9 +141,9 @@ Le tableau suivant fournit des liens et des explications pour les commandes et l
 
 ## <a name="catalog-views-and-dynamic-management-views"></a>Vues catalogue et vues de gestion dynamique
 
- Le tableau suivant indique les vues catalogue et les vues de gestion dynamique du chiffrement transparent des données.
+ Le tableau suivant indique les affichages catalogue et les vues de gestion dynamique du chiffrement transparent des données.
 
-|Vue catalogue ou vue de gestion dynamique|Objectif|
+|Affichage catalogue ou vue de gestion dynamique|Objectif|
 |---------------------------------------------|-------------|
 |[sys.databases (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Vue catalogue qui affiche des informations sur la base de données|
 |[sys.certificates (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vue catalogue qui présente les certificats d’une base de données|
@@ -289,7 +290,7 @@ Si l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] red
 
 Quand vous chiffrez une base de données à l’aide de TDE, les fichiers associés à l’extension du pool de mémoires tampons (BPE) ne sont pas chiffrés. Pour ces fichiers, utilisez des outils de chiffrement comme BitLocker ou EFS au niveau du système de fichiers.
 
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption et OLTP en mémoire
+## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Chiffrement transparent des données et OLTP en mémoire
 
 Vous pouvez activer TDE sur une base de données contenant des objets OLTP en mémoire. Dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], les enregistrements de journal et les données OLTP en mémoire sont chiffrés si vous activez TDE. Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], les enregistrements de journal OLTP en mémoire sont chiffrés si vous activez TDE, mais les fichiers contenus dans le groupe de fichiers MEMORY_OPTIMIZED_DATA ne le sont pas.
 

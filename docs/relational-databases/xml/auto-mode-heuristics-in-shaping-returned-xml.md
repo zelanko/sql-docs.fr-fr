@@ -1,5 +1,6 @@
 ---
 title: Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées | Microsoft Docs
+description: Apprenez à utiliser les heuristiques en mode AUTO avec la clause FOR XML pour comparer les valeurs des colonnes dans les lignes adjacentes et déterminer la forme du XML renvoyé par une requête.
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 68fec5b01fc88fba356c0091066850908804a88d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 99a1858ce4784c9a320258689827110e0df3dd8e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664744"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529381"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées
 

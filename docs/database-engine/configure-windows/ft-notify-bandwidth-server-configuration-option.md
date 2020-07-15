@@ -1,5 +1,6 @@
 ---
 title: ft notify bandwidth (option de configuration de serveur) | Microsoft Docs
+description: En savoir plus sur l’option « ft notify bandwidth ». Découvrez comment elle affecte le nombre de mémoires tampons que SQL Server gère dans le pool des petites mémoires tampons.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - small memory buffers
 - memory [SQL Server], buffers
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6b0589f5b3622d4271f6307427f49d804b76c4e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb6bf13a1f8e71f419350946d156f2504274b6d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772465"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth (option de configuration de serveur)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisez l’option **ft notify bandwidth** pour spécifier la taille maximale que peut prendre le pool des petites mémoires tampons. Les petites mémoires tampons ont une taille de 64 kilo-octets (Ko). La valeur du paramètre *max* spécifie le nombre maximal de tampons que le gestionnaire de mémoire de texte intégral doit maintenir dans un pool de petites mémoires tampons. Si la valeur **max** vaut zéro, aucune limite n’est imposée quant au nombre de tampons que peut contenir un pool de petites mémoires tampons.  
   

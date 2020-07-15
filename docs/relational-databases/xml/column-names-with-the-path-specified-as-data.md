@@ -1,5 +1,6 @@
 ---
 title: Noms de colonnes avec le chemin spécifié sous la forme data() | Microsoft Docs
+description: En savoir plus sur les requêtes XML contenant des noms de colonnes avec le chemin d’accès spécifié sous la forme Data ().
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc2d5d801eb99f2097655c94c15cef16038b3ca4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 71cddb62a7277d32d9f43f499c83f3df9e9f69d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775594"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>Noms de colonnes avec le chemin d'accès spécifié sous la forme data()
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Si le chemin d'accès spécifié comme nom de colonne est « data() », la valeur est traitée en tant que valeur atomique dans le document XML généré. Un espace est ajouté au document XML si l'élément suivant dans la sérialisation est également une valeur atomique. Cela est utile lorsque vous créez une liste de valeurs d'élément et d'attribut de type liste. La requête suivante extrait l'ID de modèle, le nom et la liste des produits pour le modèle concerné.  
   

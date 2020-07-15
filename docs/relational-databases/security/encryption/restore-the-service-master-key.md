@@ -1,5 +1,6 @@
 ---
 title: Restaurer la clé principale du service | Microsoft Docs
+description: Découvrez comment restaurer une clé principale de service dans SQL Server à l’aide de Transact-SQL. La clé principale du service est la racine de la hiérarchie de chiffrement de Microsoft SQL Server.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957383"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898019"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurer la clé principale du service
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment restaurer la clé principale de service dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  

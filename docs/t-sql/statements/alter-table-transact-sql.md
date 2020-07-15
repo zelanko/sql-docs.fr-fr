@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,16 +59,16 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925383"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000667"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Modifie une définition de table en modifiant, ajoutant ou déposant des colonnes et des contraintes. ALTER TABLE réaffecte et reconstruit également des partitions, ou désactive et active des contraintes et des déclencheurs.
 
@@ -349,6 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
+## <a name="syntax-for-azure-synapse-analytics"></a>Syntaxe sur Azure Synapse Analytics
+
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
@@ -385,7 +387,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     [ CONSTRAINT constraint_name ] 
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
@@ -563,7 +565,7 @@ Spécifie un masque dynamique des données. *mask_function* est le nom de la fon
 
 Pour supprimer un masque, utilisez `DROP MASKED`. Pour les paramètres de fonction, consultez [Masquage dynamique des données](../../relational-databases/security/dynamic-data-masking.md).
 
-WITH ( ONLINE = ON | OFF) \<s’applique à la modification d’une colonne>  
+WITH (ONLINE = ON/OFF) \<as applies to altering a column>  
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Permet d'effectuer de nombreuses actions de modification de colonne pendant que la table reste disponible. La valeur par défaut est OFF. Vous pouvez exécuter la modification de colonne en ligne pour les modifications de colonne liées à un type de données, à la longueur de colonne ou à la précision, à la possibilité de valeur null, au caractère épars et au classement.
@@ -685,7 +687,7 @@ Pour plus d’informations, consultez [Configurer des opérations d’index para
 > [!NOTE]
 > Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) et [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-ONLINE **=** { ON | **OFF** } \<< s’applique à drop_clustered_constraint_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 Indique si les tables sous-jacentes et les index associés sont disponibles pour les requêtes et la modification de données pendant l'opération d'index. La valeur par défaut est OFF. Vous pouvez exécuter REBUILD en tant qu’opération ONLINE.
 
 ACTIVÉ  
@@ -1031,7 +1033,7 @@ L’option ONLINE **=** ON est soumise aux restrictions suivantes :
 Pour supprimer un index cluster, l'espace disque temporaire doit être égal à la taille de l'index cluster existant. Cet espace supplémentaire est libéré dès que l'opération est terminée.
 
 > [!NOTE]
-> Les options répertoriées sous *\<drop_clustered_constraint_option>* s’appliquent aux index cluster des tables et ne peuvent pas être appliquées aux index cluster des vues ou aux index non-cluster.
+> Les options listés sous *\<drop_clustered_constraint_option>* s'appliquent aux index cluster des tables et elles ne s'appliquent pas aux index cluster des vues ou aux index non cluster.
 
 ## <a name="replicating-schema-changes"></a>Réplication des modifications de schéma
 

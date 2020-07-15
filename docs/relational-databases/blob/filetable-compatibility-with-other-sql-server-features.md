@@ -1,6 +1,6 @@
 ---
 title: Compatibilité de FileTable | Microsoft Docs
-description: Compatibilité de FileTable avec d’autres fonctionnalités SQL Server
+description: Découvrez comment FileTables fonctionne avec les autres fonctionnalités de SQL Server. Apprenez quelles fonctionnalités SQL Server prend en charge avec FileTables et quelles contraintes il applique.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1899aefaeeef896112a903f1fe69b289740ef09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642558"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d’autres fonctionnalités SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Décrit le fonctionnement des FileTables avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> Groupes de disponibilité AlwaysOn et FileTables  
@@ -29,7 +29,7 @@ ms.locfileid: "75252712"
   
 -   La fonctionnalité FileTable n'est prise en charge que partiellement par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Après un basculement, les données FileTable sont accessibles sur le réplica principal, mais pas sur les réplicas secondaires avec accès en lecture.  
   
-    > **REMARQUE :**  notez qu’après un basculement, l’intégralité des fonctionnalités FILESTREAM est prise en charge. Les données FILESTREAM sont accessibles à la fois sur les réplicas secondaires avec accès en lecture et sur le nouveau réplica principal.  
+    > **REMARQUE :**  Notez qu'après un basculement, l'intégralité des fonctionnalités FILESTREAM est prise en charge. Les données FILESTREAM sont accessibles à la fois sur les réplicas secondaires avec accès en lecture et sur le nouveau réplica principal.  
   
 -   Les fonctions FILESTREAM et FileTable acceptent ou retournent des noms de réseau virtuel (VNN) à la place de noms d'ordinateur. Pour plus d’informations sur ces fonctions, consultez [Fonctions FileStream et FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   

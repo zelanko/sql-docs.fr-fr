@@ -1,5 +1,6 @@
 ---
 title: Choisir une méthode de mise à niveau du moteur de base de données | Microsoft Docs
+description: Cet article décrit les chemins de mise à niveau pour le Moteur de base de données dans SQL Server, y compris la mise à niveau sur place, la migration vers une nouvelle installation et une mise à niveau propagée.
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7331bc542db301e519b8a75c43b47129c845bb45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287043"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901588"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Choisir une méthode de mise à niveau du moteur de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à partir d’une version Release antérieure de SQL Server, pour réduire les interruptions de service et les risques, plusieurs approches sont possibles. Vous pouvez effectuer une mise à niveau sur place, une migration vers une nouvelle installation ou une mise à niveau propagée. Le diagramme suivant vous aidera à choisir l’approche appropriée. Les différentes approches sont également décrites ci-dessous. Pour vous aider avec les points de décision du diagramme, voir aussi [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   

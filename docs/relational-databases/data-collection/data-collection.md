@@ -1,5 +1,6 @@
 ---
 title: Collecte de données | Microsoft Docs
+description: Découvrez les informations d’introduction sur le collecteur de données, un composant de SQL Server 2019 qui collecte différents jeux de données.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cba83176d921846f1eac55ef84a70eebd5af42a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733842"
 ---
 # <a name="data-collection"></a>Collecte de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le collecteur de données est un composant de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui recueille différents jeux de données. La collecte de données peut s'exécuter de façon constante ou selon une planification définie par l'utilisateur. Le collecteur de données stocke les données recueillies dans une base de données relationnelle appelée entrepôt de données de gestion.  
   
 ## <a name="what-is-data-collector"></a>Qu’est-ce que le collecteur de données ? 
