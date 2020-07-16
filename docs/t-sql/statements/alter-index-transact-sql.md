@@ -46,14 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000710"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381213"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifie une table ou un index d’affichage (rowstore, columnstore ou XML) existant en désactivant, en régénérant ou en réorganisant l’index d’une part, ou en définissant les options portant sur l’index d’autre part.  
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Arguments
 
  *index_name*  
@@ -677,8 +681,8 @@ Si `ALLOW_ROW_LOCKS = OFF` et `ALLOW_PAGE_LOCK = OFF`, seul un verrou au niveau 
   
 Si ALL est indiqué lors de la définition des options de verrouillage de ligne ou de page, les paramètres s'appliquent à tous les index. Si la table sous-jacente correspond à un segment de mémoire, les paramètres s'appliquent des façons suivantes :  
   
-|||  
-|-|-|  
+|Option|Détails|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON ou OFF|S'applique au segment de mémoire et à tout index non cluster qui lui est associé.|  
 |ALLOW_PAGE_LOCKS = ON|S'applique au segment de mémoire et à tout index non cluster qui lui est associé.|  
 |ALLOW_PAGE_LOCKS = OFF|Verrou entier pour les index non cluster. En d'autres termes, tous les verrous de page ne sont pas autorisés sur les index non cluster. En ce qui concerne le segment de mémoire, seul les verrous partagé (P), de mise à jour (M) et exclusifs (E) ne sont pas autorisés. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut toujours acquérir un verrou de page intentionnel (IS, IU ou IX) à des fins internes.|  
