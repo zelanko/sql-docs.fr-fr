@@ -1,5 +1,6 @@
 ---
 title: Afficher les fichiers journaux hors connexion | Microsoft Docs
+description: Découvrez comment vous pouvez consulter les fichiers journaux SQL Server à partir d’une instance locale ou distante de SQL Server lorsque l’instance cible est hors connexion ou ne peut pas démarrer.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667857"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez consulter les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une instance locale ou distante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance cible est hors connexion ou ne peut pas démarrer.  
   
  Vous pouvez accéder aux fichiers journaux hors connexion à partir des serveurs inscrits, ou par programmation via des requêtes WMI et WQL (WMI Query Language).  
@@ -32,7 +33,7 @@ ms.locfileid: "72908558"
 ## <a name="before-you-begin"></a>Avant de commencer  
  Pour vous connecter aux fichiers journaux hors connexion, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être installée sur l'ordinateur que vous utilisez pour consulter les fichiers journaux hors connexion, ainsi que sur l'ordinateur où se trouvent les fichiers journaux en question. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée sur les deux ordinateurs, vous pouvez afficher les fichiers hors connexion pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et pour les instances qui exécutent des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur ces ordinateurs.  
   
- Si vous utilisez des serveurs inscrits, l'instance à laquelle vous voulez vous connecter doit être enregistrée sous **Groupes de serveurs locaux** ou **Serveurs de gestion centralisée** (l'instance peut être enregistrée seule ou être membre d'un groupe de serveurs). Pour plus d'informations sur l'ajout d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des serveurs inscrits, consultez les rubriques suivantes :  
+ Si vous utilisez des serveurs inscrits, l'instance à laquelle vous voulez vous connecter doit être enregistrée sous **Groupes de serveurs locaux** ou **Serveurs de gestion centralisée** (l'instance peut être enregistrée seule ou être membre d'un groupe de serveurs). Pour plus d'informations sur l'ajout d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des serveurs inscrits, consultez les rubriques suivantes :  
   
 -   [Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -51,9 +52,9 @@ ms.locfileid: "72908558"
   
 -   Accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Par défaut, tout le monde dispose de l'accès en lecture via l'autorisation Activer le compte. Pour plus d'informations, consultez la procédure « Pour vérifier les autorisations WMI », plus loin dans cette section.  
   
--   Autorisation en lecture pour le dossier qui contient les fichiers journaux des erreurs. Par défaut, ces fichiers journaux se trouvent à l’emplacement suivant (où \<*Lecteur>* représente le lecteur sur lequel vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et où \<*NomInstance*> est le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) :  
+-   Autorisation en lecture pour le dossier qui contient les fichiers journaux des erreurs. Par défaut, ces fichiers journaux se trouvent à l'emplacement suivant (où \<*Drive> représente le lecteur sur lequel vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et \<*InstanceName*> est le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) :  
   
-     **\<Lecteur>:\Program Files\Microsoft SQL Server\MSSQL13.\<NomInstance>\MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   
  Pour vérifier les paramètres de sécurité de l'espace de noms WMI, utilisez le composant logiciel enfichable Contrôle WMI.  
   
