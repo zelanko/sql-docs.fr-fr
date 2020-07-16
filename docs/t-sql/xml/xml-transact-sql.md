@@ -1,5 +1,5 @@
 ---
-title: xml (Transact-SQL) | Microsoft Docs
+title: xml (Transact-SQL)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66e49e14785f3e99bde79c1de987ea5ac38d06d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b06e817cd649937b48c95fb6dc31e2ae38978c7a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754791"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393237"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Type de données qui stocke les données XML. Vous pouvez stocker des instances **xml** dans une colonne ou une variable de type **xml**.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,9 @@ ms.locfileid: "85754791"
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  CONTENT  
  Limite l’instance **xml** pour qu’elle corresponde à un fragment XML correctement formé. Les données XML peuvent contenir zéro ou plusieurs éléments au niveau supérieur. Les nœuds de texte sont également autorisés au niveau supérieur.  
   

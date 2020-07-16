@@ -1,5 +1,5 @@
 ---
-title: insert (DML XML) | Microsoft Docs
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731071"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393067"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *Expression1*  
  Identifie un ou plusieurs nœuds à insérer. Il peut s’agir d’une instance XML constante, d’une référence à une instance de type de données XML typée de la même collection de schémas XML à laquelle la méthode modify est appliquée, d’une instance de type de données XML non typée à l’aide d’une fonction **sql:column()** /**sql:variable()** autonome ou encore d’une expression de requête Xml. L'expression peut résulter en un nœud, un nœud de texte ou une séquence ordonnée de nœuds. Le résultat ne peut pas être le nœud racine (/). Si l'expression a pour résultat une valeur ou une séquence de valeurs, ces valeurs sont insérées en tant que nœud de texte unique avec un espace séparant chaque valeur dans la séquence. Si vous spécifiez plusieurs nœuds sous la forme d'une constante, les nœuds sont inclus entre parenthèses et sont séparés par des virgules. Vous ne pouvez pas insérer des séquences hétérogènes telles qu'une séquence d'éléments, d'attributs ou de valeurs. Si *Expression1* est une séquence vide, aucune insertion n’a lieu et aucune erreur n’est retournée.  
   

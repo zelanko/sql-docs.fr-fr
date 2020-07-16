@@ -1,5 +1,5 @@
 ---
-title: Méthode nodes() (type de données xml) | Microsoft Docs
+title: Méthode nodes() (type de données xml)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731051"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393057"
 ---
 # <a name="nodes-method-xml-data-type"></a>Méthode nodes() (type de données xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ Vous pouvez extraire plusieurs valeurs de l'ensemble de lignes. Par exemple, vou
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 *XQuery*  
 Littéral de chaîne, représentant une expression XQuery. Si l'expression de requête construit des nœuds, ceux-ci sont exposés dans l'ensemble de lignes obtenu. Si l’expression de requête aboutit à une séquence vide, l’ensemble de lignes est également vide. Si l'expression de requête aboutit de façon statique à une séquence qui contient des valeurs atomiques au lieu de nœuds, une erreur statique est déclenchée.  
   

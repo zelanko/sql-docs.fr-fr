@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d9a3f6e52547b40adefd2b94ab320ae4784837aa
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150592"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301998"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie un groupe de disponibilité AlwaysOn existant dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des arguments ALTER AVAILABILITY GROUP ne sont pris en charge que par le réplica principal actuel. Toutefois, les arguments JOIN, FAILOVER et FORCE_FAILOVER_ALLOW_DATA_LOSS, ne sont pris en charge que sur les réplicas secondaires.  
   
@@ -156,7 +156,10 @@ ALTER AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *group_name*  
  Spécifie le nom du nouveau groupe de disponibilité. *group_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit être unique parmi tous les groupes de disponibilité du cluster WSFC.  
   
@@ -388,7 +391,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  ALL  
  Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du comportement par défaut.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n*] **)** | NONE }  
  Spécifie une liste séparée par des virgules des instances de serveur qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité qui répondent aux conditions suivantes lors de l'exécution sous le rôle secondaire :  
   
 -   Être configurés pour autoriser les connexions ou connexions en lecture seule (voir l'argument ALLOW_CONNECTIONS de l'option de SECONDARY_ROLE, ci-dessus).  

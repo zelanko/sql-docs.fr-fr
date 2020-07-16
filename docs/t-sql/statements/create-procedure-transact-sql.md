@@ -1,5 +1,5 @@
 ---
-title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
+title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ee4bfb4884fe649993eeefde51ea9c329ad696
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010784"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392887"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -140,6 +140,8 @@ CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
 AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Arguments
 
@@ -401,13 +403,16 @@ L'instruction CREATE PROCEDURE ne peut pas s'utiliser conjointement avec d'autre
 
 Les instructions suivantes ne peuvent pas être utilisées dans le corps d'une procédure stockée.
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|
-|CREATE DEFAULT|CREATE ou ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE ou ALTER FUNCTION|CREATE ou ALTER VIEW|USE *database_name*|
-|CREATE ou ALTER PROCEDURE|SET PARSEONLY||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | SET SHOWPLAN_TEXT | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | SET PARSEONLY |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE ou ALTER TRIGGER |
+| CREATE ou ALTER FUNCTION |
+| CREATE ou ALTER PROCEDURE |
+| CREATE ou ALTER VIEW |
 
  Une procédure peut faire référence à des tables qui n'existent pas encore. Au moment de la création, seul le contrôle de la syntaxe est effectué. La procédure n'est compilée qu'à sa première exécution. Ce n'est qu'au moment de la compilation que la procédure résout les références aux objets. Par conséquent, une procédure syntaxiquement correcte faisant référence à des tables qui n’existent pas peut toujours être créée sans problème, mais son exécution échoue car les tables référencées n’existent pas.
 
@@ -1004,7 +1009,7 @@ GO
 EXEC Get10TopResellers;
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)
 - [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)

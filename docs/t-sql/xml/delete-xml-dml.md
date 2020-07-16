@@ -1,5 +1,5 @@
 ---
-title: delete (DML XML) | Microsoft Docs
+title: delete (DML XML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e06e1679a8a416bbcdba8d1a2930ccd50f4ce74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765641"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393097"
 ---
 # <a name="delete-xml-dml"></a>delete (DML XML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85765641"
 delete Expression  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *Expression*  
  Expression XQuery qui identifie les nœuds à supprimer. Tous les nœuds sélectionnés par l'expression, ainsi que la totalité des nœuds ou des valeurs contenus dans les nœuds sélectionnés, sont supprimés. Comme l’indique l’article [insert (DML XML)](../../t-sql/xml/insert-xml-dml.md), cette instruction doit être une référence à un nœud existant dans le document. Ce ne peut pas être un nœud construit. L'expression ne peut pas être le nœud racine (/). Si l'expression renvoie une séquence vide, aucune suppression ne se produit et aucune erreur n'est renvoyée.  
   

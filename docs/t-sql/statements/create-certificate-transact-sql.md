@@ -27,15 +27,15 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0f1a4e939a6e61881359f1e13a3bbe84cc8e9f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f4a1209a68dc011aafdc43f631766a35c5a243
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77074437"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392717"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   Permet d'ajouter un certificat à une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -45,7 +45,7 @@ ms.locfileid: "77074437"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]   
@@ -84,8 +84,11 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
     START_DATE = 'datetime' | EXPIRY_DATE = 'datetime'  
 ```  
   
-```  
--- Syntax for Parallel Data Warehouse  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+   
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -109,7 +112,9 @@ CREATE CERTIFICATE certificate_name
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *certificate_name*  
  Nom du certificat dans la base de données.  
   
@@ -181,7 +186,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 > Les fonctions intégrées de chiffrement et de signature ne vérifient pas les dates d'expiration des certificats. Les utilisateurs de ces fonctions doivent décider quand vérifier l'expiration des certificats.  
   
- Vous pouvez créer une description binaire d’un certificat à l’aide des fonctions [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) et [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). L’exemple B de l’article [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) utilise **CERTPRIVATEKEY** et **CERTENCODED** afin de copier un certificat dans une autre base de données.  
+ Vous pouvez créer une description binaire d’un certificat à l’aide des fonctions [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) et [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). L’exemple B de l’article **CERTENCODED &#40;Transact-SQL&#41;** utilise **CERTPRIVATEKEY** et [CERTENCODED](../../t-sql/functions/certencoded-transact-sql.md) afin de copier un certificat dans une autre base de données.  
 
 Les algorithmes MD2, MD4, MD5, SHA et SHA1 sont dépréciés dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Jusqu’à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], un certificat auto-signé est créé à l’aide de l’algorithme SHA1. À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], un certificat auto-signé est créé à l’aide de l’algorithme SHA2_256.
 

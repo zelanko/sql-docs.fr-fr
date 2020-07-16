@@ -1,5 +1,5 @@
 ---
-title: replace value of (DML XML) | Microsoft Docs
+title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731042"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393047"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 *Expression1*  
 Identifie un nœud dont la valeur doit être mise à jour. Un seul nœud doit être désigné, Autrement dit, *Expression1* doit être un singleton statique. Si le XML est typé, le type du nœud doit être un type simple. Si plusieurs nœuds sont sélectionnés, une erreur est générée. Si *Expression1* retourne une séquence vide, aucun remplacement de valeur n’a lieu et aucune erreur n’est retournée. *Expression1* doit retourner un seul élément avec un contenu de type simple (type de liste ou atomique), un nœud de texte ou un nœud d’attribut. *Expression1* ne peut pas être de type union, de type complexe, une instruction de traitement, un nœud de document ou un nœud de commentaire. Sinon, une erreur est retournée.  
   

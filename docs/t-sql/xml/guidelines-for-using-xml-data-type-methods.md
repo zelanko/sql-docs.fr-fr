@@ -1,5 +1,5 @@
 ---
-title: Instructions pour l’utilisation des méthodes de type de données XML | Microsoft Docs
+title: Instructions pour l'utilisation des méthodes de type de données XML
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bddba19824a9c66d12d290f2212396724d88082f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731076"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393077"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Instructions pour l'utilisation des méthodes de type de données XML
 
@@ -71,7 +71,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 Les étapes d'emplacement, les paramètres de fonction et les opérateurs qui réclament des singletons renverront une erreur lorsque le compilateur n'arrive pas à savoir si la présence d'un singleton est garantie lors de l'exécution. Ce problème se produit souvent avec des données non typées. Par exemple, la recherche d'un attribut exige un élément parent unique. Un nombre ordinal qui sélectionne un nœud parent unique suffit. L’évaluation d’une combinaison **node()** -**value()** pour extraire des valeurs d’attribut ne nécessite pas de spécification ordinale. comme le montre l'exemple suivant.
 
-### <a name="example-known-singleton"></a>Exemple : Singleton connu
+### <a name="example-known-singleton"></a>Exemple : Singleton connu
 
 Dans cet exemple, la méthode **nodes()** génère une ligne distincte pour chaque élément `<book>`. La méthode **value()** qui est évaluée sur un nœud `<book>` extrait la valeur de `@genre` qui, puisqu’il s’agit d’un attribut, est un singleton.
 
@@ -84,7 +84,7 @@ Le schéma XML sert à vérifier le type en cas de code XML typé. Si un nœud e
 
 Il faut toujours garder à l’esprit la différence entre `//first-name[1]` et `(//first-name)[1]` pour la vérification du type. Le premier retourne une séquence de nœuds `<first-name>`, où chaque nœud est le nœud `<first-name>` le plus à gauche de ses frères. Le deuxième retourne le premier nœud `<first-name>` singleton dans l’ordre des documents de l’instance XML.
 
-### <a name="example-using-value"></a>Exemple : Utilisation de value()
+### <a name="example-using-value"></a>Exemple : Utilisation de value()
 
 La requête suivante porte sur une colonne XML non typée et génère une erreur de compilation statique. La raison en est que **value()** attend un nœud singleton comme premier argument, et que le compilateur ne peut pas déterminer si un seul et unique nœud `<last-name>` est rencontré au moment de l’exécution :
 

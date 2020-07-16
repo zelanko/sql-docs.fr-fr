@@ -1,5 +1,6 @@
 ---
 title: Surveiller la réplication par programmation | Microsoft Docs
+description: Le moniteur de réplication est un outil graphique. Utiliser le moniteur de réplication pour surveiller une topologie de réplication dans le Microsoft SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,15 +30,15 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0a91efd6e7a7845243c75f1811417abdecc5fcb9
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287856"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159777"
 ---
 # <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programme
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Le moniteur de réplication est un outil graphique permettant d'analyser une topologie de réplication. Vous pouvez accéder par programmation aux mêmes données d'analyse en utilisant les procédures stockées de réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou les objets RMO (Replication Management Objects). Ces objets permettent de programmer les tâches suivantes :  
   
 -   Analyser l'état des serveurs de publication, des publications et des abonnements.  

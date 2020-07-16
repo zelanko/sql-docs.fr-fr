@@ -24,16 +24,16 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 94b2e39d9767a8f75660b533231e5fe4ac16d8de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633256"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392827"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Crée des informations d’identification au niveau du serveur. Les informations d’identification sont un enregistrement qui contient les informations d’authentification requises pour la connexion à une ressource en dehors de SQL Server. La plupart des informations d'identification incluent un utilisateur et un mot de passe Windows. Par exemple, pour enregistrer une sauvegarde de base de données à un certain emplacement, il peut être nécessaire que SQL Server fournisse des informations d’identification spéciales afin d’accéder à cet emplacement. Pour plus d’informations, consultez [Informations d’identification (moteur de base de données)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
@@ -51,6 +51,8 @@ WITH IDENTITY = 'identity_name'
         [ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name ]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Arguments
 
 *credential_name* : Spécifie le nom des informations d’identification à créer. *credential_name* ne peut pas commencer par le signe dièse (#). Les informations d'identification système commencent avec ##. 
@@ -65,7 +67,7 @@ IDENTITY **=’** _identity\_name_ **’**  : Spécifie le nom du compte à uti
 
 SECRET **=’** _secret_ **’**  : Spécifie le secret nécessaire pour l’authentification sortante.
 
-Quand les informations d’identification sont utilisées pour accéder à Azure Key Vault, l’argument **SECRET** de **CREATE CREDENTIAL** exige que le *\<Client ID>* (sans tirets) et le *\<Secret>* d’un **principal du service** dans Azure Active Directory soient passés ensemble sans espace les séparant. Consultez l'exemple C ci-dessous. Quand les informations d’identification utilisent une signature d’accès partagé, **SECRET** est le jeton de signature d’accès partagé. Consultez l’exemple D ci-dessous. Pour plus d’informations sur la création d’une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure, consultez [Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
+Quand les informations d’identification sont utilisées pour accéder à Azure Key Vault, l’argument **SECRET** de **CREATE CREDENTIAL** exige que le *\<Client ID>* (sans tirets) et le *\<Secret>* d’un **Principal de service** dans Azure Active Directory soient passés ensemble sans espace les séparant. Consultez l'exemple C ci-dessous. Quand les informations d’identification utilisent une signature d’accès partagé, **SECRET** est le jeton de signature d’accès partagé. Consultez l’exemple D ci-dessous. Pour plus d’informations sur la création d’une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure, consultez [Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
 
 FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* : Spécifie le nom d’un *fournisseur de gestion de clés d’entreprise (EKM)* . Pour plus d’informations sur la gestion des clés, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
@@ -117,7 +119,7 @@ ADD CREDENTIAL CredentialForEKM;
 L’exemple suivant crée des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisables par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lors de l’accès à Azure Key Vault à l’aide du **connecteur SQL Server pour Microsoft Azure Key Vault**. Pour obtenir un exemple complet d’utilisation du connecteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).
 
 > [!IMPORTANT]
-> L'argument **IDENTITY** de **CREATE CREDENTIAL** nécessite le nom du coffre de clés. Concernant l’argument **SECRET** de **CREATE CREDENTIAL**, *\<Client ID>* (sans tirets) et *\<Secret>* doivent être passés ensemble sans espace les séparant.
+> L'argument **IDENTITY** de **CREATE CREDENTIAL** nécessite le nom du coffre de clés. L’argument **SECRET** de **CREATE CREDENTIAL** nécessite que *\<Client ID>* (sans tirets) et *\<Secret>* soient passés ensemble sans espace les séparant.
 
  Dans l'exemple suivant, l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) est débarrassé des tirets et entré comme chaîne `EF5C8E094D2A4A769998D93440D8115D` , tandis que la **clé secrète** est représentée par la chaîne *SECRET_DBEngine*.
 

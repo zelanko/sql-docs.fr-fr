@@ -1,5 +1,5 @@
 ---
-title: CREATE SEQUENCE (Transact-SQL) | Microsoft Docs
+title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bd52e325726f9874b29ebc791eb049e4c0daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f350f2d2a9b1f4b90030f928792570cc80653916
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767048"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392957"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Crée un objet séquence et spécifie ses propriétés. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut être configurée pour redémarrer (cycle) lorsque épuisée. Les séquences, contrairement aux colonnes d'identité, ne sont pas associées aux tables spécifiques. Les applications font référence à un objet séquence pour extraire sa valeur suivante. La relation entre les séquences et les tables est contrôlée par l'application. Les applications utilisateur peuvent référencer un objet séquence et coordonner les valeurs sur plusieurs lignes et tables.  
@@ -54,7 +55,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 *sequence_name*  
 Spécifie le nom unique sous lequel la séquence est connue dans la base de données. Le type est **sysname**.  
   
@@ -240,7 +243,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  Une liste partielle de la sortie montre les valeurs par défaut.  
   
-|||  
+| Output | Valeur par défaut|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  
