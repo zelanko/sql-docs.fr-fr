@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 956cdd77674442be8b375772175fdd5fa95b2567
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a1f87c0c69a990ffa98a560998068b95b52df319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766984"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Crée un index spatial sur une table et une colonne spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un index peut être créé avant que la table soit remplie de données. Les index peuvent être créés sur des tables ou des vues d'une autre base de données en spécifiant un nom de base de données qualifié. Les index spatiaux exigent que la table ait une clé primaire cluster. Pour plus d’informations sur les index spatiaux, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
+  Crée un index spatial sur une table et une colonne spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un index peut être créé avant que la table soit remplie de données. Les index peuvent être créés sur des tables ou des vues d'une autre base de données en spécifiant un nom de base de données qualifié. Les index spatiaux exigent que la table ait une clé primaire cluster. Des index spatiaux ne peuvent pas être spécifiés sur des vues indexées. Pour plus d’informations sur les index spatiaux, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

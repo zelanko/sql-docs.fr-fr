@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767123"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crée une session d'événements étendus qui identifie la source des événements, les cibles de la session d'événements et les options de la session d'événements.
 
@@ -127,7 +127,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 Les actions apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « action ».
 
-WHERE \<predicate_expression> Spécifie l’expression de prédicat utilisée pour déterminer si un événement doit être traité. Si \<predicate_expression> est true, le traitement de l’événement par les actions et les cibles pour la session se poursuit. Si \<predicate_expression> est false, l’événement est supprimé par la session avant d’être traité par les actions et les cibles pour la session. Les expressions de prédicat sont limitées à 3 000 caractères, ce qui limite les arguments de chaîne.
+WHERE \<predicate_expression> Spécifie l'expression de prédicat utilisée pour déterminer si un événement doit être traité. Si \<predicate_expression> est true, le traitement de l’événement par les actions et les cibles pour la session se poursuit. Si \<predicate_expression> est false, l’événement est supprimé par la session avant d’être traité par les actions et les cibles pour la session. Les expressions de prédicat sont limitées à 3 000 caractères, ce qui limite les arguments de chaîne.
 
 *event_field_name* Nom du champ d'événement qui identifie la source de prédicat.
 
@@ -158,7 +158,7 @@ SET { *target_parameter_name*= \<value> [, ...*n*] } Définit un paramètre cibl
 > [!IMPORTANT]
 > Si vous utilisez la cible de mémoire tampon en anneau, il est préférable de configurer le paramètre cible max_memory avec 2 048 kilo-octets (Ko) pour éviter les éventuelles données tronquées dans le résultat XML. Pour plus d’informations sur le moment où les différents types de cibles doivent être utilisés, consultez [Cibles des événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).
 
-WITH ( \<event_session_options> [ ,...*n*] ) Spécifie les options à utiliser avec la session d’événements.
+WITH ( \<event_session_options> [ ,...*n*] ) Spécifie les options à utiliser avec la session d'événements.
 
 MAX_MEMORY =*size* [ KB | **MB** ] Spécifie la quantité de mémoire maximale à allouer à la session pour la mise en mémoire tampon d'événement. La valeur par défaut est 4 Mo. *size* est un nombre entier qui peut s’exprimer en kilo-octets (Ko) ou en mégaoctets (Mo). La valeur maximale ne peut pas dépasser 2 Go (moins de 2 048 Mo). Toutefois, il est déconseillé d’utiliser des plages de valeurs de mémoire exprimées en Go.
 

@@ -15,15 +15,15 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722196"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La boîte de dialogue **Propriétés de l'article** est accessible depuis l'Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication** . Elle permet d'afficher et de définir les propriétés de tous les types d'articles. Certaines propriétés peuvent être définies uniquement lors de la création de la publication, et d'autres uniquement si la publication n'a pas d'abonnements actifs. Les propriétés qui ne peuvent pas être définies s'affichent en lecture seule.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "76288259"
  Détermine si les types de données définis par l'utilisateur doivent être convertis en types de données de base lors de la création d'objets au niveau de l'Abonné. Les types de données définis par l'utilisateur incluent les types CLR introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Définissez la valeur **True** si vous répliquez ces types de données vers plusieurs versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]afin qu'ils soient traités correctement au niveau de l'Abonné.  
   
  **Créer des schémas sur l'Abonné**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit des schémas qui sont définis en utilisant l'instruction CREATE SCHEMA. Un schéma est le propriétaire d’un objet ; il est utilisé dans un nom composé, tel que \<Base_de_données>.\<Schéma>.\<Objet>. Si la base de données contient des objets appartenant à des schémas autres que DBO, la réplication peut créer ces schémas au niveau de l'Abonné pour pouvoir créer des objets publiés.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit des schémas qui sont définis en utilisant l'instruction CREATE SCHEMA. Un schéma est le propriétaire d’un objet ; il est utilisé dans un nom composé, tel que \<Database>.\<Schema>.\<Object>. Si la base de données contient des objets appartenant à des schémas autres que DBO, la réplication peut créer ces schémas au niveau de l'Abonné pour pouvoir créer des objets publiés.  
   
  Si vous répliquez les données vers des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76288259"
  Cette option s'applique uniquement aux procédures stockées. Elle permet d'indiquer si vous voulez répliquer la définition de la procédure stockée (instruction CREATE PROCEDURE) ou son exécution. Si vous répliquez l'exécution de la procédure, la définition de la procédure est répliquée vers l'Abonné lors de l'initialisation de l'abonnement. Lorsque la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante au niveau de l'Abonné. Ceci peut améliorer les performances de manière significative lorsque des opérations de traitement par lot volumineuses sont exécutées. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Options des publications de fusion  
- La boîte de dialogue **Propriétés de l'article** des publications de fusion contient deux onglets : **Propriétés** et **Résolveur**.  
+ La boîte de dialogue **Propriétés de l’article** des publications de fusion contient deux onglets : **Propriétés** et **Résolveur**.  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Direction de la synchronisation**  
@@ -137,7 +137,7 @@ ms.locfileid: "76288259"
  Tous les résolveurs COM fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] sont signés. Sélectionnez cette option pour vérifier que le résolveur est valide lors de la synchronisation.  
   
 ## <a name="options-for-oracle-publications"></a>Options des publications Oracle  
- La boîte de dialogue **Propriétés de l'article** des publications Oracle contient deux onglets : **Propriétés** et **Mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ La boîte de dialogue **Propriétés de l’article** des publications Oracle contient deux onglets : **Propriétés** et **Mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Copie des procédures stockées INSERT, UPDATE et DELETE**  

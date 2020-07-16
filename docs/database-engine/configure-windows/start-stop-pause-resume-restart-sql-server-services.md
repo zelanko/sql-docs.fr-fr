@@ -1,5 +1,6 @@
 ---
 title: Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server
+description: Découvrez comment démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server. Découvrez comment utiliser Transact-SQL, PowerShell et d’autres outils pour ces actions.
 ms.custom: ''
 ms.date: 03/05/2020
 ms.prod: sql
@@ -37,19 +38,19 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81287859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763984"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette rubrique explique comment démarrer, arrêter, suspendre, reprendre ou redémarrer le moteur de base de données SQL Server, SQL Server Agent ou le service SQL Server Browser à l’aide du Gestionnaire de configuration SQL Server, de SQL Server Management Studio (SSMS), des commandes net d’une invite de commandes, de Transact-SQL ou de PowerShell.
 
@@ -187,7 +188,7 @@ Les services Microsoft SQL Server peuvent être démarrés, arrêtés ou suspend
 
 ### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Pour démarrer une instance nommée du moteur de base de données
 
-- À partir d'une invite de commandes, entrez l'une des commandes suivantes. Remplacez *\<nom_instance>* par le nom de l’instance à gérer.  
+- À partir d'une invite de commandes, entrez l'une des commandes suivantes. Remplacez le *\<instancename>* par le nom de l'instance à gérer.  
   
     **net start "SQL Server (** *nom_instance* **)"**
   
