@@ -1,5 +1,5 @@
 ---
-title: Liaison de données relationnelles dans des données XML | Microsoft Docs
+title: Liaison de données relationnelles dans des données XML
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a3dfe3480b6f2756ebff68f27574c8b72f6ae61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751442"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392837"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Liaison de données relationnelles dans des données XML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85751442"
   
  En outre, cette liaison est destinée à un emploi en lecture seule. Cela signifie que vous ne pouvez pas écrire de données dans les colonnes qui utilisent ces fonctions. Par exemple, l’instruction sql:variable("\@x")="*expression quelconque"* n’est pas autorisée.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemple : requête inter-domaines utilisant sql:variable()  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemple : requête inter-domaines utilisant sql:variable()  
  Cet exemple montre comment **sql:variable()** peut permettre à une application de paramétrer une requête. Le numéro ISBN est passé en utilisant une variable SQL @isbn. En remplaçant la constante par **sql:variable()** , vous pouvez utiliser la requête pour rechercher n’importe quel numéro ISBN et pas seulement le numéro 0-7356-1588-2.  
   
 ```  

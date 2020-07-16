@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: a37a0b4c0f474323680213d3719ae85cff7a5ecc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895687"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279495"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -191,6 +191,8 @@ Cette valeur est valide uniquement pour les bases de données secondaires lorsqu
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 Active ou désactive les correctifs logiciels d’optimisation de requête, quel que soit le niveau de compatibilité de la base de données. La valeur par défaut est **OFF**, laquelle désactive les correctifs logiciels d’optimisation des requêtes qui ont été publiés après l’arrivée du plus haut niveau de compatibilité d’une version donnée (post-RTM). L’utilisation de la valeur **ON** équivaut à activer [l’indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+
+**S’APPLIQUE À** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!TIP]
 > Pour définir cette option au niveau de la requête, ajoutez l’[indicateur de requête](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.

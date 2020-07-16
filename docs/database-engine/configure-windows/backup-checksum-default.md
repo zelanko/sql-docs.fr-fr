@@ -1,5 +1,6 @@
 ---
 title: backup checksum default | Microsoft Docs
+description: Découvrez l'option backup checksum default. Apprenez comment l’utiliser pour activer ou désactiver la somme de contrôle de sauvegarde pendant les opérations de sauvegarde et de restauration SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725250"
 ---
 # <a name="backup-checksum-default"></a>paramètre par défaut de la somme de contrôle de sauvegarde
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisez le paramètre par défaut de la somme de contrôle de sauvegarde pour activer ou désactiver la somme de contrôle de sauvegarde lors d’une sauvegarde et d’une restauration.  
   

@@ -1,5 +1,6 @@
 ---
-title: 'Exemples : utilisation du mode PATH | Microsoft Docs'
+title: 'Exemples : Utilisation du mode PATH | Microsoft Docs'
+description: Découvrez des exemples d’utilisation du mode PATH pour générer du code XML à partir d’une requête SELECT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 51bdad5bc62e9dc47a3f9cd4c3bf90d0c41c59bb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 74e447caefd30eba8ccfc9ab27db2c74d2f63c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729954"
 ---
-# <a name="examples-using-path-mode"></a>Exemples : utilisation du mode PATH
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-path-mode"></a>Exemples : Utilisation du mode PATH
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Les exemples suivants montrent comment utiliser le mode PATH pour générer un document XML à partir d'une requête SELECT. Nombre de ces requêtes sont spécifiées par rapport aux documents XML des instructions de fabrication de bicyclettes stockés dans la colonne Instructions de la table ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Spécification d'une requête simple en mode PATH  

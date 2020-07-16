@@ -1,5 +1,6 @@
 ---
 title: Administrer plusieurs serveurs à l’aide de serveurs d’administration centrale
+description: Apprenez à administrer plusieurs serveurs sur SQL Server en désignant des serveurs de gestion centralisée et en créant des groupes de serveurs.
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +18,15 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a2e2da55bd04ba29cf1c6ef81757488f8d50fd24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc7868735a05a81afe324755d880cc9e63353c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754574"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Administrer plusieurs serveurs à l’aide de serveurs d’administration centrale
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   Vous pouvez administrer plusieurs serveurs en désignant des serveurs de gestion centralisée et en créant des groupes de serveurs.  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>Qu’est-ce qu’un serveur de gestion centralisée et des groupes de serveurs ?  

@@ -1,5 +1,6 @@
 ---
 title: Agent XPs (option de configuration de serveur) | Microsoft Docs
+description: Découvrez comment utiliser l’option Agent XPs pour activer les procédures stockées étendues du SQL Server Agent. Affichez un exemple qui utilise cette option.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - Agent XPs option
 - extended stored procedures [SQL Server], SQL Server Agent
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e7e2e655be19ac8f84378930e1dfada525007504
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 19e6eb1601d0640e68ee17617154e4964a1f43a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725271"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XPs (option de configuration de serveur)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisez l’option **Agent XPs** pour activer les procédures stockées étendues de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur ce serveur. Si cette option n'est pas activée, le nœud de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas disponible dans l'Explorateur d'objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   

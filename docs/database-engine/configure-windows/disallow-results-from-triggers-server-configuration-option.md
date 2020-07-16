@@ -1,5 +1,6 @@
 ---
 title: disallow results from triggers (option de configuration de serveur) | Microsoft Docs
+description: Découvrez l’option « disallow results from triggers ». Découvrez comment elle peut éviter des problèmes dans les applications qui ne sont pas conçues pour fonctionner avec des jeux de résultats.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - result sets [SQL Server], triggers
 - disallow results from triggers option
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28bf3b201d54798f26c9e887e86a9d0bed78ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8cbe799b72a88da9785e778cb0688fe3ff1a3f44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772529"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>disallow results from triggers (option de configuration de serveur)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L’option **disallow results from triggers** permet de spécifier si les déclencheurs doivent ou non retourner des ensembles de résultats. Les déclencheurs qui renvoient des jeux de résultats peuvent provoquer un comportement inattendu des applications qui ne sont pas conçues pour interagir avec eux.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68011863"
   
  L’option **disallow results from triggers** est activée quand la valeur 1 lui est attribuée. La valeur par défaut de cette option est 0 (désactivé). Si cette option est définie sur 1 (activé), toute tentative de la part d'un déclencheur de renvoyer un ensemble de résultats échoue, tandis l'utilisateur obtient le message d'erreur suivant :  
   
- « Msg 524, Niveau 16, État 1, Procédure \<nom_procédure>, Ligne \<n°_ligne>  
+ « Msg 524, Niveau 16, État 1, Procédure \<Procedure Name>, Ligne \<Line#>  
   
  « Un déclencheur a retourné un ensemble de résultats et l'option de serveur « disallow_results_from_triggers » a la valeur TRUE. »  
   

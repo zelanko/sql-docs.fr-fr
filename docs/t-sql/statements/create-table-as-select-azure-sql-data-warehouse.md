@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e71924aa85d4761448c340f1f0554c383df288d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632919"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279515"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) est l’une des fonctionnalités de T-SQL les plus importantes. Il s’agit d’une opération entièrement parallélisée qui crée une table en fonction de la sortie d’une instruction SELECT. CTAS offre le moyen le plus simple et le plus rapide de créer une copie de table.   
  
@@ -33,7 +33,7 @@ CREATE TABLE AS SELECT (CTAS) est l’une des fonctionnalités de T-SQL les plus
 > [!NOTE]  
 > CTAS s’ajoute aux fonctionnalités de création de table. Ainsi, au lieu de répéter le contenu de la rubrique CREATE TABLE, cette rubrique décrit les différences entre les instructions CTAS et CREATE TABLE. Pour plus d’informations sur l’instruction CREATE TABLE, consultez [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/). 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 
@@ -136,7 +136,6 @@ Pour plus d’informations, consultez [Remarques d’ordre général](https://ms
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
-Azure SQL Data Warehouse ne prend pas encore en charge la création ou la mise à jour automatiques des statistiques.  Pour optimiser les performances de vos requêtes, il est important de créer des statistiques sur toutes les colonnes de toutes les tables après avoir exécuté CTAS et après que les données ont subi des modifications importantes. Pour plus d’informations, consultez [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
 Un index columnstore cluster ordonné peut être créé sur les colonnes de tout type de données pris en charge dans Azure SQL Data Warehouse à l’exception des colonnes de type chaîne.  
 
