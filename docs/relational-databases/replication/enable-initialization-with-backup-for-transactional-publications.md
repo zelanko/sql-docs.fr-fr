@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 11670347380a3336068091601e739b28d4d34a39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0416bc5ff174520ef5548ec6ad91eea647eafaf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653038"
 ---
 # <a name="enable-initialization-with-backup-for-transactional-publications"></a>Activer l’initialisation avec une sauvegarde pour les publications transactionnelles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Pour initialiser un abonnement à une publication transactionnelle à partir d'une sauvegarde, vous devez configurer la publication de telle sorte qu'elle autorise une initialisation à partir d'une sauvegarde puis spécifier les informations de sauvegarde lors de la création de l'abonnement :  
   
 -   Activez la publication dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
