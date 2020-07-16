@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816414"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006210"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 La fonctionnalité de magasin de requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous fournit des informations sur le choix de plan de requête et sur les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par des changements de plan de requête. Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de révision. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment les changements de plan de requête ont eu lieu sur le serveur. Vous pouvez configurer le magasin de requêtes à l’aide de l’option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -153,29 +153,11 @@ Voici quelques exemples vous permettant d’obtenir plus d’insights sur votre 
 
 ## <a name="configuration-options"></a><a name="Options"></a> Options de configuration
 
-Les options suivantes sont disponibles pour configurer les paramètres du magasin des requêtes.
-
-*OPERATION_MODE* Peut être défini avec la valeur **READ_WRITE** (par défaut) ou READ_ONLY.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* Configurez l’argument `STALE_QUERY_THRESHOLD_DAYS` pour spécifier le nombre de jours de conservation des données dans le Magasin des requêtes. La valeur par défaut est 30. Pour l’édition [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] De base, la valeur par défaut est **7** jours.
-
-*DATA_FLUSH_INTERVAL_SECONDS* Détermine la fréquence à laquelle les données écrites dans le Magasin des requêtes sont conservées sur le disque. Pour optimiser les performances, les données collectées par le magasin de requête sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée par le biais de `DATA_FLUSH_INTERVAL_SECONDS`. La valeur par défaut est **900** (15 minutes).
-
-*MAX_STORAGE_SIZE_MB* Configure la taille maximale du Magasin des requêtes. Si les données du magasin des requêtes atteignent la limite `MAX_STORAGE_SIZE_MB`, le magasin des requêtes change automatiquement son état de Lecture-écriture en Lecture seule et cesse la collecte de nouvelles données. La valeur par défaut est de **100 Mo** pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la valeur par défaut est de **1 Go**. Pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition Premium, la valeur par défaut est de **1 Go** et pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition De base, elle est de **10 Mo**.
-
-*INTERVAL_LENGTH_MINUTES* Détermine l’intervalle de temps auquel les données de statistiques d’exécution du runtime sont agrégées dans le Magasin des requêtes. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette période fixe est configurée via `INTERVAL_LENGTH_MINUTES`. La valeur par défaut est **60**.
-
-*SIZE_BASED_CLEANUP_MODE* Contrôle si le nettoyage est activé automatiquement quand la quantité totale de données se rapproche de la taille maximale. Peut être défini avec la valeur **AUTO** (par défaut) or OFF.
-
-*QUERY_CAPTURE_MODE* Indique si le Magasin des requêtes capture toutes les requêtes ou seulement celles qui sont pertinentes en fonction du nombre d’exécutions et de la consommation de ressources, ou s’il stoppe l’ajout de nouvelles requêtes et effectue uniquement un suivi des requêtes actives. Peut être défini sur **ALL** (capturer toutes les requêtes), AUTO (ignorer les requêtes peu fréquentes et celles dont la durée de compilation et d’exécution est négligeable), CUSTOM (stratégie de capture définie par l’utilisateur) ou NONE (arrêter la capture des nouvelles requêtes). La valeur par défaut est **ALL** pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la valeur par défaut est **AUTO**. La valeur par défaut pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] est **AUTO**.
-
-*MAX_PLANS_PER_QUERY* Entier représentant le nombre maximal de plans gérés pour chaque requête. La valeur par défaut est **200**.
-
-*WAIT_STATS_CAPTURE_MODE* Contrôle si le Magasin des requêtes capture les informations statistiques d’attente. Peut avoir la valeur OFF ou **ON** (par défaut).
+Pour connaître les options disponibles pour configurer les paramètres du Magasin des requêtes, consultez les options [ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Interrogez la vue **sys.database_query_store_options** pour déterminer les options actuelles du magasin des requêtes. Pour plus d’informations sur les valeurs, consultez [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-Pour plus d'informations sur la définition des options à l'aide d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez [Gestion des options](#OptionMgmt).
+Pour obtenir des exemples sur la définition des options à l'aide d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez [Gestion des options](#OptionMgmt).
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Vues, fonctions et procédures associées
 
