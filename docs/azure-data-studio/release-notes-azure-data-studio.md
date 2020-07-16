@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758409"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406252"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="july-2020"></a>Juillet 2020
+
+15 juillet 2020 &nbsp; / &nbsp; version : 1.20.0
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Ajout d’une visite guidée des nouvelles fonctionnalités | À partir de la page d’accueil et de la palette de commandes, les utilisateurs peuvent maintenant lancer une visite guidée des fonctionnalités pour passer en revue les fonctionnalités couramment utilisées, notamment la section Connexions, la section Notebooks et la place de marché des extensions. |
+| Nouvelles fonctionnalités des notebooks | &bull; &nbsp; Prise en charge des en-têtes dans la barre d’outils Markdown<br/> &bull; &nbsp; Aperçu du Markdown côte à côte dans les cellules de texte
+| Glisser-déposer des colonnes et des tables dans l’Éditeur de requête | Les utilisateurs peuvent directement glisser-déposer des colonnes et des tables à partir de la section Connexions vers l’Éditeur de requête |
+| Ajout de l’icône Compte Azure à la barre d’activités | Connexion à Azure plus découvrable |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed) |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>Juin 2020
 

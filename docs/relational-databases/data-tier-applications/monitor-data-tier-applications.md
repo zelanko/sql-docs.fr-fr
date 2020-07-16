@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a07244e6f34dc8b6ec645bb31517e739b32265d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781668"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406122"
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Une application de la couche Données (DAC) peut être analysée à partir de l’ **Explorateur de l’utilitaire** et de l’ **Explorateur d’objets** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), avec les vues et les tables système. De plus, tous les objets dans la base de données contenue dans la DAC peuvent être analysés à l'aide des techniques d'analyse de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de base de données standard.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
- Si vous déployez une DAC dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], les informations sur la DAC déployée sont incorporées dans l’Utilitaire SQL Server quand le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. Vous pouvez ensuite afficher les informations d’intégrité de base sur la DAC à l’aide de l’[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Explorateur de l’utilitaire**de**.  
+ Si vous déployez une DAC dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], les informations sur la DAC déployée sont incorporées dans l’Utilitaire SQL Server quand le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. Vous pouvez ensuite afficher les informations d’intégrité de base sur la DAC à l’aide de l’**Explorateur de l’utilitaire** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  L' **Explorateur d'objets** de SSMS affiche les informations de configuration de base sur chaque DAC déployée sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], que l'instance soit gérée ou non dans l'utilitaire SQL Server. En outre, la base de données associée à une DAC déployée peut être analysée à l'aide des mêmes procédures d'analyse que celles employées pour toute base de données.  
   
 ## <a name="using-the-sql-server-utility"></a>Utilisation de l'utilitaire SQL Server  
- La page de détails **Applications de la couche de données déployées** de l’[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Explorateur de l’utilitaire**de** affiche un tableau de bord qui indique l’utilisation des ressources de toutes les DAC déployées sur des instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le volet supérieur de la page des détails répertorie chaque DAC déployée avec des indicateurs visuels qui signalent si leur utilisation du processeur et des ressources de fichiers se situe hors des stratégies définies pour l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez une DAC en mode Liste, des détails supplémentaires sont affichés sous les onglets dans le volet inférieur de la page. Pour plus d’informations sur les informations présentées dans la page de détails, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ La page de détails **Applications de la couche de données déployées** de l’**Explorateur de l’utilitaire** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche un tableau de bord qui indique l’utilisation des ressources de toutes les DAC déployées sur des instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le volet supérieur de la page des détails répertorie chaque DAC déployée avec des indicateurs visuels qui signalent si leur utilisation du processeur et des ressources de fichiers se situe hors des stratégies définies pour l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez une DAC en mode Liste, des détails supplémentaires sont affichés sous les onglets dans le volet inférieur de la page. Pour plus d’informations sur les informations présentées dans la page de détails, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Après avoir utilisé la page des détails **Applications de la couche Données déployées** pour identifier rapidement toutes les DAC qui utilisent trop ou pas assez leurs ressources matérielles, vous pouvez élaborer des plans pour traiter tous les problèmes. Plusieurs DAC qui n'utilisent pas pleinement leurs ressources matérielles actuelles pourraient être consolidées en un serveur unique, ce qui libérerait certains des serveurs pour d'autres utilisations. Si une DAC utilise trop les ressources sur son serveur en cours, elle peut être déplacée vers un plus grand serveur ou d'autres ressources peuvent être ajoutées au serveur en cours.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85781668"
   
 1.  Sélectionnez le menu **Affichage/Explorateur d’objets** .  
   
-2.  Connectez-vous à l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]à partir du volet de l'Explorateur d'objets.  
+2.  Connectez-vous à l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à partir du volet de l’Explorateur d’objets.  
   
 3.  Sélectionnez le menu **Affichage/Détails de l’Explorateur d’objets** .  
   

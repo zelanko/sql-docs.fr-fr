@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 6/15/2020
-ms.openlocfilehash: 249dfc97acea8228eef1234a41f1510e8b223788
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 7/15/2020
+ms.openlocfilehash: 793dde7b683f5e66a6841367e82c78d64bf01f86
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774684"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406262"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Télécharger et installer Azure Data Studio
 
@@ -27,9 +27,9 @@ Téléchargez et installez la dernière version :
 
 |Plateforme|Téléchargement|Date de publication| Version |
 |:---|:---|:---|:---|
-| Windows | [Programme d’installation utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2132348)<br>[Programme d’installation système](https://go.microsoft.com/fwlink/?linkid=2132347)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2132518) | 15 juin 2020 | 1.19.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2132519) | 15 juin 2020 | 1.19.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2132350)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2132351)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132349) | 15 juin 2020| 1.19.0 |
+| Windows | [Programme d’installation utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[Programme d’installation système](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 15 juillet 2020 | 1.20.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 15 juillet 2020 | 1.20.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 15 juillet 2020| 1.20.0 |
 
 Pour plus d’informations sur la dernière version, consultez les [notes de publication](release-notes.md).
 
@@ -41,32 +41,32 @@ Le *programme d’installation utilisateur* est recommandé, car il ne nécessit
 
 **Programme d' installation utilisateur** (recommandé)
 
-1. Téléchargez et exécutez le programme d’installation *utilisateur* [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Windows](https://go.microsoft.com/fwlink/?linkid=2132348).
+1. Téléchargez et exécutez le programme d’installation *utilisateur* [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Windows](https://go.microsoft.com/fwlink/?linkid=2135512).
 2. Démarrez l’application [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **Programme d’installation système**
 
-1. Téléchargez et exécutez le programme d’installation *système* [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Windows](https://go.microsoft.com/fwlink/?linkid=2132347).
+1. Téléchargez et exécutez le programme d’installation *système* [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Windows](https://go.microsoft.com/fwlink/?linkid=2135513).
 2. Démarrez l’application [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **Fichier zip**
 
-1. Téléchargez [[!INCLUDE[name-sos](../includes/name-sos-short.md)].zip pour Windows](https://go.microsoft.com/fwlink/?linkid=2132518).
+1. Téléchargez [[!INCLUDE[name-sos](../includes/name-sos-short.md)].zip pour Windows](https://go.microsoft.com/fwlink/?linkid=2135514).
 2. Accédez au fichier téléchargé et extrayez-le.
 3. Exécutez `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## <a name="get-azure-data-studio-for-macos"></a>Obtenir Azure Data Studio pour macOS
 
-1. Téléchargez [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour macOS](https://go.microsoft.com/fwlink/?linkid=2132519).
+1. Téléchargez [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour macOS](https://go.microsoft.com/fwlink/?linkid=2135266).
 2. Pour développer le contenu du fichier zip, double-cliquez dessus.
 3. Pour rendre Azure Data Studio disponible dans le *Launchpad*, faites glisser *Azure Data Studio.app* vers le dossier *Applications*.
 
 ## <a name="get-azure-data-studio-for-linux"></a>Obtenir Azure Data Studio pour Linux
 
 1. Téléchargez [!INCLUDE[name-sos](../includes/name-sos-short.md)] à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2132350)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2132351)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132349)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267)
 1. Pour extraire le fichier et lancer [!INCLUDE[name-sos](../includes/name-sos-short.md)], ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation Debian :**
@@ -165,11 +165,10 @@ Azure Data Studio s’exécute sur Windows, macOS et Linux et est pris en charge
 
 ## <a name="recommended-system-requirements"></a>Configuration système recommandée
 
-|             | Cœurs de processeur | Mémoire/RAM |
-|:-----------|:---------|:----------|
-| Recommandé |     4     |      8 Go    |
-|   Minimum   |     2     |      4 Go     |
-|             |           |            |
+| Recommandé/Minimum | Cœurs de processeur | Mémoire/RAM |
+|---------------------|-----------|------------|
+| Recommandé         |     4     |   8 Go     |
+|   Minimum           |     2     |   4 Go     |
 
 ## <a name="check-for-updates"></a>Rechercher les mises à jour
 

@@ -1,7 +1,8 @@
 ---
 title: Guide d’architecture de thread et de tâche | Microsoft Docs
+description: En savoir plus sur l’architecture des threads et des tâches dans SQL Server, notamment la planification des tâches, l’ajout à chaud du processeur et les meilleures pratiques pour l’utilisation d’ordinateurs avec plus de 64 UC.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 07/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +15,15 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287353"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158917"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guide d’architecture de thread et de tâche
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="operating-system-task-scheduling"></a>Planification des tâches du système d'exploitation
 Les threads sont les plus petites unités de traitement pouvant être exécutées par un système d'exploitation. Ils permettent de séparer la logique d’application en plusieurs chemins d’exécution parallèle. Les threads sont utiles lorsque des applications complexes comprennent un grand nombre de tâches à exécuter simultanément. 
@@ -34,19 +35,122 @@ Les threads permettent aux applications complexes d'utiliser plus efficacement u
 ## <a name="sql-server-task-scheduling"></a>Planification de tâches SQL Server
 Dans l’étendue de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], une **requête** est la représentation logique d’une requête ou d’un lot. Une requête représente également des opérations requises par des threads de système, telles qu’un point de contrôle ou un enregistreur de journal. Les requêtes existent dans différents états pendant toute leur durée de vie et peuvent accumuler les attentes lorsque les ressources requises pour exécuter la requête, par exemple des [verrouiller](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) ou [verrous](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches), ne sont pas disponibles. Pour plus d’informations sur les états des requêtes, consultez [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
-Une **tâche** représente l’unité de travail à effectuer pour exécuter la requête. Une ou plusieurs tâches peuvent être attribuées à une seule requête. Des requêtes parallèles ont plusieurs tâches actives, qui sont exécutées simultanément et non pas en série. Une requête qui s’exécute en série n’a qu’une tâche active à un moment donné. Les tâches existent dans différents états pendant toute leur durée de vie. Pour plus d’informations sur les états des tâches, consultez [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Les tâches dans l’état SUSPENDED attendent que les ressources requises pour exécuter la tâche soient disponibles. Pour plus d’informations sur la tâche en attente, consultez [sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+Une **tâche** représente l’unité de travail à effectuer pour exécuter la requête. Une ou plusieurs tâches peuvent être attribuées à une seule requête. 
+-  Les requêtes parallèles comporteront plusieurs tâches actives qui sont exécutées simultanément plutôt qu’en série, avec une **tâche parente** (ou une tâche qui coordonne) et plusieurs **tâches enfants**. Un plan d'exécution pour une requête parallèle peut avoir des branches en série - des zones du plan avec des opérateurs qui n'exécutent pas en parallèle. La tâche parente est également chargée de l’exécution de ces opérateurs en série.
+-  Les requêtes en série n'auront qu'une seule tâche active à un moment donné de leur exécution.     
+Les tâches existent dans différents états pendant toute leur durée de vie. Pour plus d’informations sur les états des tâches, consultez [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Les tâches dans l’état SUSPENDED attendent que les ressources requises pour exécuter la tâche soient disponibles. Pour plus d’informations sur les tâches en attente, consultez [sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Un **thread de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], également appelé Worker ou thread, est une représentation logique d’un thread de système d’exploitation. Lors de l’exécution de requêtes en série, la [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] génère un Worker pour exécuter la tâche active. Lors de l’exécution de requêtes parallèles en [mode en ligne](../relational-databases/query-processing-architecture-guide.md#execution-modes), le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] affecte un Worker pour coordonner les travailleurs enfants chargés de l’exécution des tâches qui leur sont attribuées. Le nombre de threads de travail générés pour chaque tâche dépend de ce qui suit :
+Un **thread de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], également appelé Worker ou thread, est une représentation logique d’un thread de système d’exploitation. Lors de l’exécution de **requêtes en série**, la [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] génère un Worker pour exécuter la tâche active (1:1). Lors de l’exécution de **requêtes parallèles** en [mode en ligne](../relational-databases/query-processing-architecture-guide.md#execution-modes), le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] affecte un worker pour coordonner les travailleurs enfants chargés de l’exécution des tâches qui leur sont attribuées (1:1), appelées **le thread parent** (ou coordonner le thread). Une tâche parente est associée à un thread parent. Le thread parent est le point d’entrée de la demande et existe même avant que le moteur n’analyse une requête. Les principales responsabilités du thread parent sont les suivantes : 
+-  Coordonner une analyse parallèle.
+-  Démarrer les threads de travail parallèles enfants.
+-  Collecter les lignes des threads parallèles et les envoyer au client.
+-  Effectuer des agrégations locales et globales.    
+
+> [!NOTE]
+> Si un plan de requête a des branches en série et parallèles, l’une des tâches parallèles est chargée de l’exécution de la branche en série. 
+
+Le nombre de threads de travail générés pour chaque tâche dépend de ce qui suit :
 -   Si la requête était éligible pour le parallélisme comme déterminé par l’optimiseur de requête.
 -   Quel est le [degré de parallélisme (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) effectif disponible dans le système en fonction de la charge actuelle. Cela peut diverger du degré de parallélisme estimé, qui est basé sur la configuration du serveur pour le degré maximal de parallélisme (MAXDOP). Par exemple, la configuration du serveur pour MAXDOP peut être 8, mais le DOP disponible au moment de l’exécution peut être de 2 seulement, ce qui affecte les performances des requêtes. 
 
 > [!NOTE]
-> La limite du **degré maximal de parallélisme (MAXDOP)** est spécifiée par tâche, pas par requête. Cela signifie que lors d’une exécution de requête parallèle, une seule requête peut générer plusieurs tâches et que chaque tâche peut utiliser plusieurs Workers jusqu’à la limite de MAXDOP. Pour plus d’informations sur MAXDOP, consultez [Configurer l’option de configuration serveur du degré maximal de parallélisme](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+> La limite du **degré maximal de parallélisme (MAXDOP)** est spécifiée par tâche, pas par requête. Cela signifie que lors d’une exécution de requête parallèle, une seule requête peut générer plusieurs tâches jusqu’à la limite de MAXDOP et que chaque tâche utilisera un worker. Pour plus d’informations sur MAXDOP, consultez [Configurer l’option de configuration serveur du degré maximal de parallélisme](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 Un **planificateur**, également appelé planificateur SOS, gère les threads de travail nécessitant un temps de traitement pour effectuer le travail résultant de tâches. Chaque planificateur est mappé à un processeur (UC) individuel. La durée pendant laquelle un Worker peut rester actif dans un planificateur est appelée quantum de système d’exploitation, avec un maximum de 4 ms. Une fois que son temps de quantum a expiré, un thread de travail consacre son temps à d’autres threads ayant besoin d’accéder aux ressources de l’UC et change d’état. Cette coopération entre les Workers pour optimiser l’accès aux ressources de l’UC est appelée **planification coopérative**, également connue sous le nom de planification non préemptive. À son tour, la modification de l’état du Worker est propagée à la tâche associée à ce Worker ainsi qu’à la requête associée à la tâche. Pour plus d’informations sur les états des Workers, consultez [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Pour plus d’informations sur les planificateurs, consultez [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
+En résumé, une **requête** peut générer une ou plusieurs **tâches** pour effectuer des unités de travail. Chaque tâche est assignée à un **thread de travail** qui est responsable de l’exécution de la tâche. Chaque thread de travail doit être planifié (placé sur un **planificateur**) pour l’exécution active de la tâche. 
+
+### <a name="scheduling-parallel-tasks"></a>Planification de tâches parallèles
+Imaginez une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurée avec MaxDOP 8, et l’affinité du processeur est configurée pour 24 UC (planificateurs) sur les nœuds NUMA 0 et 1. Les planificateurs de 0 à 11 appartiennent au nœud NUMA 0, les planificateurs de 12 à 23 appartiennent au nœud NUMA 1. Une application envoie la requête suivante (request) au [!INCLUDE[ssde_md](../includes/ssde_md.md)] :
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> L’exemple de requête peut être exécuté à l’aide de la base de données [AdventureWorks2016_EXT sample database](../samples/adventureworks-install-configure.md). Les tables `Sales.SalesOrderHeader` et `Sales.SalesOrderDetail` ont été augmentées 50 fois et renommées en `Sales.SalesOrderHeaderBulk` et `Sales.SalesOrderDetailBulk`.
+
+Le plan d’exécution affiche une [jointure de hachage](../relational-databases/performance/joins.md#hash) entre deux tables, et chacun des opérateurs exécutés en parallèle, comme indiqué par le cercle jaune avec deux flèches. Chaque opérateur de parallélisme est une branche différente dans le plan. Par conséquent, il existe trois branches dans le plan d’exécution ci-dessous. 
+
+![Plan de requête en parallèle](../relational-databases/media/schedule-parallel-query-plan.png)
+
+> [!NOTE]
+> Si vous visualisez un plan d’exécution comme une arborescence, une **branche** est une zone du plan qui regroupe un ou plusieurs opérateurs entre les opérateurs de parallélisme, également appelés itérateurs d’échange. Pour plus d’informations sur les opérateurs de plan, consultez le [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
+
+Bien qu’il y ait trois branches dans le plan d’exécution, à tout moment pendant l’exécution, seules deux branches peuvent s’exécuter simultanément dans ce plan d’exécution :
+1.  La branche dans laquelle une *analyse d’index cluster* est utilisée sur `Sales.SalesOrderHeaderBulk` (entrée de build de la jointure) s’exécute seule.
+2.  Ensuite, la branche dans laquelle une *Analyse d’index cluster*  est utilisée sur le `Sales.SalesOrderDetailBulk` (entrée build de la jointure) s’exécute simultanément avec la branche dans laquelle le *Bitmap* a été créé et où le *Hash Match* s’exécute.
+
+Le plan d'exécution de requêtes XML montre que 16 threads de travail ont été réservés et utilisés sur le nœud NUMA 0 :
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
+</ThreadStat>
+```
+
+La réservation de thread garantit que le [!INCLUDE[ssde_md](../includes/ssde_md.md)] dispose de suffisamment de threads de travail pour effectuer toutes les tâches qui seront nécessaires pour la requête. Les threads peuvent être réservés sur plusieurs nœuds NUMA ou être réservés dans un seul nœud NUMA. La réservation de thread est effectuée au moment de l’exécution avant le démarrage de l’exécution, et dépend de la charge du planificateur. Le nombre de threads de travail réservés est dérivé de façon générique à partir de la formule ***d’exécution DOP* * *parallélisme de Runtime*** et exclut le thread de travail parent. Chaque branche est limitée à un nombre de threads de travail égaux à MaxDOP. Dans cet exemple, il existe deux branches simultanées et MaxDOP a pour valeur 8, par conséquent **2 * 8 = 16**.
+
+Pour référence, observez le plan d’exécution en direct à partir de [Statistiques des Requêtes en direct](../relational-databases/performance/live-query-statistics.md), où une branche est terminée et que deux branches s’exécutent simultanément.
+
+![Plan de requête parallèle en direct](../relational-databases/media/schedule-parallel-query-live-plan.png)
+
+L' [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assignera un thread de travail pour exécuter une tâche active (1:1), qui peut être observée pendant l’exécution de la requête en interrogeant la DMV [sys. dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md), comme indiqué dans l’exemple suivant :
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> La colonne `parent_task_address` est toujours NULL pour la tâche parente. 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)] Notez qu’il y a 17 tâches actives pour les branches qui sont en cours d’exécution : 16 tâches enfants correspondant aux threads réservés, plus la tâche parente ou la tâche de coordination.
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|NULL|**0x000001EF4758ACA8**|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> Sur un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]très occupé, il est possible de voir un certain nombre de tâches actives sur la limite définie par les threads réservés. Ces tâches peuvent appartenir à une branche qui n’est plus utilisée et qui sont dans un état transitoire, en attente de nettoyage. 
+
+Notez que chacune des 16 tâches enfants a un thread de travail différent affecté (vu dans la colonne `worker_address`), mais que tous les workers sont affectés au même pool de huit planificateurs (0, 5, 6, 7, 8, 9, 10, 11) et que la tâche parente est affectée à un planificateur en dehors de ce pool (3).
+
+> [!IMPORTANT]
+> Une fois le premier ensemble de tâches parallèles sur une branche donnée planifiée, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] utilise ce même pool de planificateurs pour toutes les tâches supplémentaires sur d’autres branches. Cela signifie que le même ensemble de planificateurs sera utilisé pour toutes les tâches parallèles dans le plan d’exécution entier, limité uniquement par MaxDOP.  
+> Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] essaiera toujours d’affecter des planificateurs du même nœud NUMA pour l’exécution des tâches et de les affecter de manière séquentielle (en mode tourniquet) si les planificateurs sont disponibles. Toutefois, le thread de travail affecté à la tâche parente peut être placé dans un autre nœud NUMA à partir d’autres tâches.
+
+Un thread de travail ne peut rester actif dans le planificateur que pour la durée de son quantum (4 ms) et doit générer son planificateur après que ce quantum se soit écoulé, de sorte qu’un thread de travail affecté à une autre tâche peut devenir actif. Quand le quantum d’un worker arrive à expiration et qu’il n’est plus actif, la tâche correspondante est placée dans une file d’attente FIFO dans un état EXÉCUTABLE, en supposant que la tâche ne nécessitera pas l'accès à des ressources qui ne sont pas disponibles pour le moment, comme un verrou ou une serrure, auquel cas la tâche serait placée dans un état SUSPENDU au lieu d’EXÉCUTABLE, jusqu'à ce que ces ressources soient disponibles.  
+
+> [!TIP] 
+> Pour la sortie de la vue DMV indiquée ci-dessus, toutes les tâches actives sont en état SUSPENDU. Pour plus d’informations sur les tâches en attente, vous pouvez interroger la DMV [sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
+
+En résumé, une requête parallèle engendrera de multiples tâches, où chaque tâche doit être assignée à un seul thread de travail, et chaque thread de travail doit être assigné à un seul planificateur. Par conséquent, le nombre de planificateurs en cours d’utilisation ne peut pas dépasser le nombre de tâches parallèles par branche, qui est définie sur mon MaxDOP. 
+
 ### <a name="allocating-threads-to-a-cpu"></a>Allocation de threads à une UC
-Par défaut, chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence chaque thread, et le système d’exploitation répartit les threads à partir des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre les processeurs (UC) sur un ordinateur en fonction de la charge. Si l'affinité de processus a été activée au niveau du système d'exploitation, ce dernier attribue chaque thread à une UC spécifique. En revanche, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] attribue des **threads de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aux **planificateurs** qui distribuent les threads de manière équitable entre les processeurs.
+Par défaut, chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence chaque thread, et le système d’exploitation répartit les threads à partir des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre les processeurs (UC) sur un ordinateur en fonction de la charge. Si l'affinité de processus a été activée au niveau du système d'exploitation, ce dernier attribue chaque thread à une UC spécifique. En revanche, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] attribue des **threads de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aux **planificateurs** qui distribuent les threads de manière équitable entre les processeurs en mode tourniquet (round robin).
     
 Pour exécuter des travaux multitâches, par exemple lorsque plusieurs applications accèdent au même ensemble d’UC, le système d’exploitation déplace parfois les threads de travail entre les différentes UC. Même si cela est efficace du point de vue du système d'exploitation, cette activité peut réduire les performances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] du fait des charges système élevées, puisque chaque cache de processeur est rechargé par des données de façon répétée. L'affectation d’UC à des threads spécifiques permet d'améliorer les performances dans ces conditions en éliminant les rechargements de processeurs et en réduisant la migration des threads entre les UC (réduisant ainsi les changements de contexte) ; une telle association entre un thread et un processeur est appelée affinité du processeur. Si l'affinité a été activée, le système d'exploitation attribue chaque thread à une UC spécifique. 
 
