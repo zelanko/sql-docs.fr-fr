@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d03b67e5a047d615a53e1053d39b75d41f7cbc09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 514e0d342fb542ade5cefaf0f405f9caf1cd0b1d
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733822"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279595"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,13 +54,14 @@ Si l'erreur 605 n'est pas temporaire, le problème est grave et doit être rés
   
 1.  Identifiez les tables associées aux unités d'allocation spécifiées dans le message en exécutant la requête suivante. Remplacez `allocation_unit_id` par les unités d'allocation spécifiées dans le message d'erreur.  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
   
     SELECT au.allocation_unit_id, OBJECT_NAME(p.object_id) AS table_name, fg.name AS filegroup_name,  
   
-    au.type_desc allocation_type AS, au.data_pages, partition_number  
+    au.type_desc AS allocation_type, au.data_pages, partition_number  
   
     FROM sys.allocation_units AS au  
   
@@ -73,6 +74,7 @@ Si l'erreur 605 n'est pas temporaire, le problème est grave et doit être rés
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  Exécutez DBCC CHECKTABLE sans clause REPAIR sur la table associée au deuxième ID d'unité d'allocation spécifié dans le message d'erreur.  
   

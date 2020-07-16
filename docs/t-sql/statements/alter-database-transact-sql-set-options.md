@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215177"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159737"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -730,17 +730,17 @@ La valeur actuelle de cette option peut être déterminée en examinant la colon
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** | CLEAR [ ALL ]     
 Contrôle si le Magasin des requêtes est activé dans cette base de données et contrôle la suppression du contenu du Magasin des requêtes. Pour plus d’informations, consultez [Scénarios d’utilisation du magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ACTIVÉ     
 Active le magasin des requêtes.
 
-OFF [ FORCED ]     
-Désactive le magasin des requêtes. OFF est la valeur par défaut. FORCED est facultatif. FORCED abandonne toutes les tâches en arrière-plan du Magasin des requêtes en cours d’exécution, et ignore le vidage synchrone lorsque le Magasin des requêtes est désactivé. Entraîne l’arrêt du Magasin des requêtes aussi vite que possible. Désactive le Magasin des requêtes immédiatement. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 introduit FORCED.
+OFF      
+Désactive le magasin des requêtes. OFF est la valeur par défaut. 
 
 > [!NOTE]  
-> Le Magasin des requêtes ne peut pas être désactivé dans la base de données unique Azure SQL Database et le pool élastique. L’exécution de l’instruction ALTER DATABASE [base de données] SET QUERY_STORE = OFF retourne l’avertissement « 'QUERY_STORE=OFF' n’est pas pris en charge dans cette version de SQL Server. » 
+> Le Magasin des requêtes ne peut pas être désactivé dans la base de données unique [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et le pool élastique. L’exécution de `ALTER DATABASE [database] SET QUERY_STORE = OFF` renverra l’avertissement `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Supprime le contenu du magasin des requêtes.

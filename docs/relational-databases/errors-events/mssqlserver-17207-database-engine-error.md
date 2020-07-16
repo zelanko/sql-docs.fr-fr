@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 362f907187d7fe738216ea2000f2a5c48eca7b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780784"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279625"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ Les informations sur l’erreur du système d’exploitation imprimées dans ces
         Impersonating: DomainName\UserName
         ```
   
-1. Si vous obtenez l’erreur de système d’exploitation ```The system cannot find the file specified``` = 3:
+1. Si vous obtenez l’erreur de système d’exploitation `The system cannot find the file specified` = 3:
    - Examinez le chemin d’accès complet à partir du message d’erreur.
    - Assurez-vous que le lecteur de disque et le chemin d’accès au dossier sont visibles et accessibles à partir de l’Explorateur Windows.
    - Consultez le journal des événements Windows pour déterminer s’il existe des problèmes avec ce lecteur de disque.
@@ -113,7 +113,7 @@ Les informations sur l’erreur du système d’exploitation imprimées dans ces
      - Si le fichier qui a généré l’erreur est un fichier journal de transactions, passez en revue les informations contenues dans les sections « FOR ATTACH » et « FOR ATTACH_REBUILD_LOG » de la rubrique [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) pour comprendre comment vous pouvez recréer les fichiers journaux de transactions manquants.
    - Assurez-vous que tous les emplacements de disque ou réseau [comme un lecteur iSCSI] sont disponibles avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne tente d’accéder aux fichiers de base de données à ces emplacements. Si nécessaire, créez les dépendances requises dans l’Administrateur de cluster ou le Gestionnaire de contrôle des services.
 
-1. Si vous obtenez l’erreur de système d’exploitation ```The process cannot access the file because it is being used by another process``` = 32 :
+1. Si vous obtenez l’erreur de système d’exploitation `The process cannot access the file because it is being used by another process` = 32 :
    - Utilisez un outil comme [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) ou [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) à partir de Windows Sysinternals pour déterminer si un autre processus ou service a acquis un verrou exclusif sur ce fichier de base de données.
    - Empêchez ce processus d’accéder aux fichiers de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les exemples courants incluent des programmes antivirus (pour plus d’informations sur les exclusions de fichiers, consultez l’[article suivant de la base de connaissances](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - Dans un environnement de cluster, assurez-vous que le processus sqlservr. exe du nœud propriétaire précédent a effectivement libéré les descripteurs des fichiers de base de données. Normalement, cela n’arrive pas, mais les erreurs de configuration du cluster ou des chemins d’e/s peuvent entraîner de tels problèmes.

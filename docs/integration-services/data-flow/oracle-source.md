@@ -1,5 +1,5 @@
 ---
-title: Source Oracle | Microsoft Docs
+title: Source Oracle
 ms.custom: ''
 ms.date: 08/14/2019
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542205"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196091"
 ---
 # <a name="oracle-source"></a>Source Oracle
 
@@ -70,7 +70,7 @@ Pour plus d’informations, consultez l’une des sections suivantes :
 - [Éditeur de source Oracle (page Colonnes)](#oracle-source-editor-columns-page)
 - [Éditeur de source Oracle (page Sortie d’erreur)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Source Oracle](media/oracle-source.png)
 
 La **boîte de dialogue Éditeur avancé** contient les propriétés qui peuvent être définies par programmation.
 
