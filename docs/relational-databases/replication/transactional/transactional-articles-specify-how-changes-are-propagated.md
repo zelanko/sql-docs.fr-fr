@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c86cfa1337323ed03cdb8b22cae9c951c110a139
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286960"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159397"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Articles transactionnels - Spécifier le mode de propagation des modifications
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   La réplication transactionnelle permet de préciser comment les modifications des données sont propagées entre le serveur de publication et les Abonnés. Pour chaque table publiée, vous pouvez spécifier l'une des quatre méthodes de propagation possibles d'une opération (INSERT, UPDATE ou DELETE) vers l'Abonné :  
   
 -   Spécifier que la réplication transactionnelle doit générer un script puis appeler une procédure stockée pour propager les modifications aux Abonnés (option par défaut).  
@@ -40,13 +40,13 @@ ms.locfileid: "76286960"
 ## <a name="default-and-custom-stored-procedures"></a>Procédures stockées par défaut et personnalisées  
  Trois procédures sont créées par défaut par la réplication pour chaque article de table :  
   
--   **sp_MSins_\<** *nomdetable* **>** , qui gère les insertions.  
+-   **sp_MSins_\<** *tablename* **>** , qui gère les insertions.  
   
--   **sp_MSupd_\<** *nomdetable* **>** , qui gère les mises à jour.  
+-   **sp_MSupd_\<** *tablename* **>** , qui gère les mises à jour.  
   
--   **sp_MSdel_\<** *nomdetable* **>** , qui gère les suppressions.  
+-   **sp_MSdel_\<** *tablename* **>** , qui gère les suppressions.  
   
- Le **\<** _nomdetable_ **>** employé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
+ Le **\<**_tablename_**>** utilisé dans la procédure varie en fonction de la méthode employée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table avec un nom identique mais avec un propriétaire différent.  
   
  N'importe laquelle de ces procédures peut être remplacée par une procédure personnalisée que vous spécifiez lors de l'ajout d'un article à une publication. Les procédures personnalisées sont utilisées dans le cas où l'application exige une logique personnalisée, par exemple l'insertion de données dans une table d'audit lors de la mise à jour d'une ligne sur l'Abonné. Pour plus d'informations sur la définition de procédures stockées personnalisées, reportez-vous à la liste des rubriques ci-dessus.  
   

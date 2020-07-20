@@ -15,15 +15,15 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 00ab2a45675b237e3e15e340cc3789b1b79cdafc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95c083aeb156915bb9819479619332b3abaa954f
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287540"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159877"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Définir la méthode de propagation des modifications de données des articles transactionnels
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique explique comment définir la méthode de propagation pour les modifications de données d'articles transactionnels dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Par défaut, la réplication transactionnelle propage les modifications vers les Abonnés à l'aide d'un ensemble de procédures stockées pour chaque article. Vous pouvez remplacer ces procédures par des procédures personnalisées. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "76287540"
   
 #### <a name="to-specify-the-propagation-method"></a>Pour spécifier la méthode de propagation  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table et cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table, puis cliquez sur **Propriétés de l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de Table en surbrillance**.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "76287540"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
 
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>Pour générer et utiliser des procédures stockées personnalisées  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table et cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table, puis cliquez sur **Propriétés de l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de Table en surbrillance**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "76287540"
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 5.  Lorsque l'instantané de la publication est généré, il inclut la procédure spécifiée à l'étape précédente. Les procédures utilisent la syntaxe CALL spécifiée, mais incluent également la logique par défaut utilisée par la réplication.  
   

@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719556"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279635"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ Pour plus d’informations sur la surcharge de performances liée au profilage d
 
 > [!NOTE]
 > Les événements étendus avec profilage léger utilisent les informations du profilage standard quand l’infrastructure de celui-ci est déjà activée. Par exemple, une session d’événements étendus utilisant `query_post_execution_showplan` est exécutée, et une autre session utilisant `query_post_execution_plan_profile` est démarrée. La deuxième session continuera d’utiliser les informations du profilage standard.
+
+> [!NOTE]
+> Sur [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], le profilage léger est désactivé par défaut, mais il est activé quand une trace XEvent basée sur `query_post_execution_plan_profile` est démarrée, puis est de nouveau désactivée quand la trace est arrêtée. Par conséquent, si les suivis XEvent basés sur `query_post_execution_plan_profile` sont souvent démarrés et arrêtés sur une instance de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], il est vivement recommandé d’activer le profilage léger au niveau global avec l’indicateur de trace 7412 pour éviter la surcharge due à des activations/désactivations répétées. 
 
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262104"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279505"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instructions RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Date d'expiration du jeu de sauvegardes.|  
 |**Compressed**|**BIT(1)**|Indique si le jeu de sauvegarde a fait l'objet d'une compression logicielle :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
 |**Position**|**smallint**|Position du jeu de sauvegardes dans le volume (utilisée avec l'option FILE =).|  
-|**DeviceType**|**tinyint**|Numéro correspondant à l'unité utilisée pour la sauvegarde.<br /><br /> Disque :<br /><br /> **2** = Logique<br /><br /> **102** = Physique<br /><br /> Bande :<br /><br /> **5** = Logique<br /><br /> **105** = Physique<br /><br /> Unité virtuelle :<br /><br /> **7** = Logique<br /><br /> **107** = Physique<br /><br /> Les noms d’unité logiques et les numéros d’unités se trouvent dans **sys.backup_devices** ; pour plus d’informations, consultez [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Numéro correspondant à l'unité utilisée pour la sauvegarde.<br /><br /> Disque :<br /><br /> **2** = Logique<br /><br /> **102** = Physique<br /><br /> Bande :<br /><br /> **5** = Logique<br /><br /> **105** = Physique<br /><br /> Unité virtuelle :<br /><br /> **7** = Logique<br /><br /> **107** = Physique<br /><br /> URL<br /><br /> **9** = Logique<br /><br /> **109** = Physique<br /><br />  Les noms d’unité logiques et les numéros d’unités se trouvent dans **sys.backup_devices** ; pour plus d’informations, consultez [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Nom de l'utilisateur qui a effectué l'opération de sauvegarde.|  
 |**ServerName**|**nvarchar(128)**|Nom du serveur qui a permis l'écriture du jeu de sauvegardes.|  
 |**DatabaseName**|**nvarchar(128)**|Nom de la base de données qui a été sauvegardée.|  
@@ -151,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) via la version actuelle.<br /><br /> Type de chiffreur utilisé : certificat ou clé asymétrique. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
   
 > [!NOTE]  
->  Si des mots de passe sont définis pour les jeux de sauvegarde, RESTORE HEADERONLY n'affiche que les informations complètes relatives au jeu de sauvegarde dont le mot de passe correspond à la définition de l'option PASSWORD de la commande. RESTORE HEADERONLY affiche également les informations complètes relatives aux jeux de sauvegarde non protégés. La colonne **BackupName** des autres jeux de sauvegarde du support protégés par mot de passe prend la valeur ' **_Password Protected_** ', et toutes les autres colonnes ont la valeur NULL.  
+>  Si des mots de passe sont définis pour les jeux de sauvegarde, RESTORE HEADERONLY n'affiche que les informations complètes relatives au jeu de sauvegarde dont le mot de passe correspond à la définition de l'option PASSWORD de la commande. RESTORE HEADERONLY affiche également les informations complètes relatives aux jeux de sauvegarde non protégés. La colonne **BackupName** des autres jeux de sauvegarde du support protégés par mot de passe prend la valeur '**_Password Protected_**', et toutes les autres colonnes ont la valeur NULL.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Un client peut utiliser RESTORE HEADERONLY pour récupérer toutes les informations des en-têtes de sauvegarde pour toutes les sauvegardes figurant sur une unité particulière. Pour chaque sauvegarde réalisée sur une unité de sauvegarde, le serveur envoie les informations d'en-tête sous forme de ligne.  

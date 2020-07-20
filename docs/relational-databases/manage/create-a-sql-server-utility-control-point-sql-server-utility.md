@@ -1,5 +1,5 @@
 ---
-title: Créer un point de contrôle de l’utilitaire SQL Server (Utilitaire SQL Server) | Microsoft Docs
+title: Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
 description: Obtenez de l’aide pour identifier les goulots d’étranglement pour l’utilisation des ressources et les opportunités de consolidation en créant un point de contrôle de l’utilitaire SQL Server (UCP).
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776020"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196879"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,9 +101,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 >  Le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est pris en charge côte à côte avec les jeux d'éléments de collecte d'utilitaires non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Autrement dit, une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être surveillée par d'autres jeux d'éléments de collecte bien qu'elle soit membre d'un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Notez, toutefois, que tous les jeux d'éléments de collecte sur l'instance gérée téléchargeront leurs données à l'entrepôt de données de gestion de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Considérations sur l’exécution de jeux d’éléments de collecte de l’utilitaire et non-utilitaire sur la même instance de SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) et [Configurer votre entrepôt de données de point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
 ## <a name="wizard-steps"></a>Étapes de l'Assistant  
- ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
+ ![Créer un UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- Les sections suivantes fournissent des informations sur chaque page du flux de travail de l'Assistant pour créer un UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour lancer l’Assistant pour créer un UCP, ouvrez le volet Explorateur de l’utilitaire dans le menu Affichage de SSMS, puis cliquez sur le bouton ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Créer un UCP** en haut du volet Explorateur de l’utilitaire.  
+ Les sections suivantes fournissent des informations sur chaque page du flux de travail de l'Assistant pour créer un UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour lancer l’Assistant pour créer un UCP, ouvrez le volet Explorateur de l’utilitaire dans le menu Affichage dans SSMS, puis cliquez sur le bouton ![Créer un UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Créer un UCP** en haut du volet Explorateur de l’utilitaire.  
   
  Cliquez sur un lien dans la liste ci-dessous pour accéder aux détails d'une page dans l'Assistant :  
   
@@ -126,9 +126,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> Introduction à l'Assistant Créer un UCP  
  Si vous ouvrez l'Explorateur de l'utilitaire et qu'aucun point de contrôle d'utilitaire n'est connecté, vous devez en connecter un ou en créer un.  
   
- **Se connecter à un UCP existant** – Si un point de contrôle d’utilitaire existe déjà dans votre déploiement, vous pouvez vous y connecter en cliquant sur le bouton ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Se connecter à l’utilitaire** en haut du volet Explorateur de l’utilitaire. Pour se connecter à un UCP existant, vous devez disposer d'informations d'identification d'administrateur ou être membre du rôle de lecteur d'utilitaire. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que vous ne pouvez être connecté qu'à un UCP d'une instance de SSMS.  
+ **Se connecter à un UCP existant** - Si un point de contrôle d’utilitaire existe déjà dans votre déploiement, vous pouvez vous y connecter en cliquant sur le bouton ![Se connecter à l’utilitaire](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Se connecter à l’utilitaire** en haut du volet Explorateur de l’utilitaire. Pour se connecter à un UCP existant, vous devez disposer d'informations d'identification d'administrateur ou être membre du rôle de lecteur d'utilitaire. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que vous ne pouvez être connecté qu'à un UCP d'une instance de SSMS.  
   
- **Créer un UCP** – Pour créer un point de contrôle d’utilitaire, cliquez sur le bouton ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Créer un UCP** en haut du volet Explorateur de l’utilitaire. Pour créer un UCP, vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournir des informations d'identification d'administrateur dans le dialogue de connexion. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Créer un UCP** - Pour créer un point de contrôle d’utilitaire, cliquez sur le bouton ![Créer un UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Créer un UCP** en haut du volet Explorateur de l’utilitaire. Pour créer un UCP, vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournir des informations d'identification d'administrateur dans le dialogue de connexion. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="specify-instance"></a><a name="Instance_name"></a> Spécifier une instance  
  Spécifiez les informations suivantes à propos de l'UCP que vous créez :  

@@ -33,14 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003430"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197437"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS affiche les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée. L'optimiseur de requête utilise des statistiques pour estimer le nombre de lignes, également appelé cardinalité, dans le résultat de la requête, ce qui lui permet de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête pourrait utiliser des estimations de cardinalité afin de choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index dans le plan de requête. Cela permettrait d'améliorer les performances des requêtes car le recours à une analyse d'index monopolisant de nombreuses ressources serait ainsi évité.
@@ -53,8 +54,8 @@ Pour plus d’informations, consultez [Statistiques](../../relational-databases/
   
 ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Syntaxe  
-  
+## <a name="syntax"></a>Syntaxe
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -69,10 +70,13 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>Arguments  
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
+
  *table_or_indexed_view_name*  
  Nom de la table ou de la vue indexée dont les informations statistiques doivent être affichées.  
   
@@ -86,12 +90,12 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
- La spécification d'une ou de plusieurs de ces options limite les jeux de résultats retournés par l'instruction aux options spécifiées. Si aucune option n'est spécifiée, toutes les informations statistiques sont retournées.  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ **,** _n_ ] La spécification d’une ou de plusieurs de ces options limite les jeux de résultats retournés par l’instruction aux options spécifiées. Si aucune option n'est spécifiée, toutes les informations statistiques sont retournées.  
+
  STATS_STREAM est [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="result-sets"></a>Jeux de résultats  
+## <a name="result-sets"></a>Jeux de résultats
+
 Le tableau suivant décrit les colonnes retournées dans le jeu de résultats lorsque STAT_HEADER est spécifié.
   
 |Nom de la colonne|Description|  
@@ -130,14 +134,15 @@ Le tableau suivant décrit les colonnes retournées dans le jeu de résultats lo
 
 La date de mise à jour des statistiques est stockée dans l’[objet blob de statistiques](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) avec l’[histogramme](#histogram) et le [vecteur de densité](#density), et non dans les métadonnées. Quand aucune donnée n’est lue pour générer des données de statistiques, l’objet blob des statistiques n’est pas créé, la date n’est pas disponible et la colonne *mise à jour* a la valeur Null. C’est le cas pour les statistiques filtrées pour lesquelles le prédicat ne renvoie aucune ligne, ou pour les nouvelles tables vides.
   
-## <a name="histogram"></a><a name="histogram"></a> Histogramme  
+## <a name="histogram"></a><a name="histogram"></a> Histogramme
+
 Un histogramme mesure la fréquence des occurrences de chaque valeur distincte dans un jeu de données. L'optimiseur de requête calcule un histogramme sur les valeurs de colonnes de la première colonne clé de l'objet de statistiques, en sélectionnant les valeurs de colonnes au moyen d'un échantillonnage statistique des lignes ou d'une analyse complète de toutes les lignes dans la table ou la vue. Si l'histogramme est créé à partir d'un jeu de lignes échantillonnées, les totaux stockés pour le nombre de lignes et le nombre de valeurs distinctes sont des estimations et ne doivent pas nécessairement être des nombres entiers.
   
 Pour créer l'histogramme, l'optimiseur de requête trie les valeurs de colonnes, calcule le nombre de valeurs qui correspondent à chaque valeur de colonne distincte, puis regroupe les valeurs de colonnes dans 200 étapes d'histogramme contiguës au maximum. Chaque étape inclut une plage de valeurs de colonnes suivie d'une valeur de colonne de limite supérieure. La plage comprend toutes les valeurs de colonnes possibles entre des valeurs limites, à l'exception des valeurs limites elles-mêmes. La plus basse des valeurs de colonnes triées est la valeur de limite supérieure pour la première étape d'histogramme.
   
 Le diagramme suivant illustre un histogramme avec six étapes : La zone située à gauche de la première valeur limite supérieure représente la première étape.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![Histogramme](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 Pour chaque étape d'histogramme :
 -   La ligne en gras représente la valeur limite supérieure (RANGE_HI_KEY) et le nombre d'occurrences (EQ_ROWS) correspondant.  

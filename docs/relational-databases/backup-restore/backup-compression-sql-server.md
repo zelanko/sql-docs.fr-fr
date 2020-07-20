@@ -2,7 +2,7 @@
 title: Compression des sauvegardes (SQL Server) | Microsoft Docs
 description: Découvrez la compression des sauvegardes SQL Server, notamment les restrictions, les compromis à faire au niveau des performances, la configuration de la compression des sauvegardes et le taux de compression.
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728544"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196943"
 ---
 # <a name="backup-compression-sql-server"></a>Compression de sauvegardes (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,15 +82,24 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
      En général, si une page contient plusieurs lignes dans lesquelles un champ contient la même valeur, une compression importante peut se produire pour cette valeur. En revanche, pour une base de données qui contient des données aléatoires ou qui contient une seule grande ligne par page, une sauvegarde compressée serait presque aussi importante qu'une sauvegarde non compressée.  
   
--   Si les données sont chiffrées.  
+-   Si les données sont chiffrées  
   
-     Le taux de compression des données chiffrées est beaucoup moins élevé que celui des données non chiffrées correspondantes. Si le chiffrement transparent des données est utilisé pour chiffrer une base de données entière, la compression des sauvegardes ne réduit pas leur taille de manière significative, voire pas du tout.  
-  
+     Le taux de compression des données chiffrées est beaucoup moins élevé que celui des données non chiffrées correspondantes. Par exemple, si les données sont chiffrées au niveau de la colonne avec Always Encrypted, ou avec un autre chiffrement au niveau de l’application, la compression des sauvegardes peut ne pas réduire la taille de manière significative.
+
+     Pour plus d’informations sur la compression des bases de données chiffrées avec Transparent Data Encryption (TDE), consultez [Compression des sauvegardes avec TDE](#backup-compression-with-tde).
+
 -   Si la base de données est compressée.  
   
      Si la base de données est compressée, compresser des sauvegardes peut réduire faiblement leur taille, voire pas du tout.  
-  
-  
+
+## <a name="backup-compression-with-tde"></a>Compression des sauvegardes avec TDE
+
+Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, définir `MAXTRANSFERSIZE` **sur une valeur supérieure à 65536 (64 Ko)** permet d’utiliser un algorithme de compression optimisé pour les bases de données chiffrées avec [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), qui chiffre d’abord une page, la compresse, puis la chiffre de nouveau. Si `MAXTRANSFERSIZE` n’est pas spécifiée, ou si `MAXTRANSFERSIZE = 65536` (64 Ko) est utilisé, la compression de sauvegarde pour les bases de données chiffrées avec TDE compresse directement les pages chiffrées et peut ne pas fournir de bons taux de compression. Pour plus d’informations, consultez [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
+À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, la définition de `MAXTRANSFERSIZE` n’est plus nécessaire pour activer cet algorithme de compression optimisé avec TDE. Si la commande de sauvegarde est spécifiée `WITH COMPRESSION` ou que la configuration serveur de *compression par défaut des sauvegardes* est définie sur 1, `MAXTRANSFERSIZE` sera automatiquement augmentée à 128 K pour activer l’algorithme optimisé. Si `MAXTRANSFERSIZE` est spécifiée dans la commande Backup avec une valeur > 64 Ko, la valeur fournie est respectée. En d’autres termes, SQL Server ne diminue jamais automatiquement la valeur, elle l’augmente uniquement. Si vous avez besoin de sauvegarder une base de données chiffrée TDE avec `MAXTRANSFERSIZE = 65536`, vous devez spécifier `WITH NO_COMPRESSION` ou vous assurer que la configuration serveur de *compression par défaut des sauvegardes* est définie sur 0.
+
+Pour plus d’informations, consultez [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
+
 ##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Allocation d'espace pour le fichier de sauvegarde  
  Pour les sauvegardes compressées, la taille du fichier de sauvegarde final dépend de la capacité de compression des données. Or, celle-ci n'est pas connue avant la fin de l'opération de sauvegarde.  Par conséquent, par défaut, lors de la sauvegarde d'une base de données faisant appel à la compression, le moteur de base de données utilise un algorithme de préallocation pour le fichier de sauvegarde. Cette algorithme préalloue un pourcentage prédéfini de la taille de la base de données pour le fichier de sauvegarde. Si davantage d'espace est requis au cours de l'opération de sauvegarde, le moteur de base de données augmente la taille du fichier. Si la taille finale est inférieure à l'espace alloué, à la fin de l'opération de sauvegarde, le moteur de base de données réduit le fichier à la taille finale réelle de la sauvegarde.  
   
@@ -108,7 +117,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   

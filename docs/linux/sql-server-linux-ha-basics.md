@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895311"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196846"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes de base de la disponibilité SQL Server pour les déploiements Linux
 
@@ -146,7 +146,7 @@ Toutes les distributions actuellement prises en charge sont livrées avec le mod
 
 Certains points de cette solution sont similaires au déploiement de configurations en cluster à l’aide de Windows, mais d’autres diffèrent. Dans Windows, la forme de disponibilité du clustering, appelée cluster de basculement Windows Server (WSFC), est intégrée au système d’exploitation, et la fonctionnalité qui permet la création d’un WSFC, clustering de basculement, est désactivée par défaut. Dans Windows, les groupes de disponibilité et les instances de cluster de basculement (FCI) sont basés sur un WSFC et ont en commun une intégration avancée en raison de la DLL de ressource spécifique fournie par [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Cette solution fortement couplée est possible dans l’ensemble parce que tout vient d’un seul fournisseur.
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![Concepts de base de la haute disponibilité](./media/sql-server-linux-ha-basics/image1.png)
 
 Sur Linux, alors que chaque distribution prise en charge dispose d’un Pacemaker, chaque distribution peut être personnalisée et avoir des implémentations et des versions légèrement différentes. Certaines des différences sont reflétées par les instructions données dans cet article. La couche de clustering étant open source, bien qu’elle soit fournie avec les distributions, elle n’est pas fortement intégrée de la même façon qu’un WSFC sous Windows. C’est pourquoi Microsoft fournit *mssql-server-ha*, de sorte que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] et la pile de Pacemaker peuvent fournir une expérience proche de celle de Windows, mais pas exactement identique, pour les groupes de disponibilité et les instances de cluster de basculement (FCI).
 

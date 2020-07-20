@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9baaecd792c2dae1d23a47fa6ab7a72933412a55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0346aa532756905d04cdd1f7938962ac6be39cc
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760947"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381103"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Spécifie les propriétés d’une contrainte PRIMARY KEY, UNIQUE, FOREIGN KEY ou CHECK, ou encore une définition DEFAULT ajoutée à une table par le biais de l’instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,9 @@ ms.locfileid: "85760947"
 }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  CONSTRAINT  
  Spécifie le début d'une définition de contrainte PRIMARY KEY, UNIQUE, FOREIGN KEY ou CHECK, ou d'une définition DEFAULT.  
   
@@ -107,7 +109,7 @@ ms.locfileid: "85760947"
  *ref_column*  
  Colonne ou liste de colonnes, entre parenthèses, référencée par la nouvelle contrainte FOREIGN KEY.  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Spécifie l'action qui se produit dans les lignes de la table modifiée, si ces lignes comportent une relation référentielle et que la ligne référencée est supprimée de la table parent. La valeur par défaut est NO ACTION.  
   
  NO ACTION  
@@ -132,7 +134,7 @@ ms.locfileid: "85760947"
   
  En revanche, si la valeur NO ACTION est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur et restaure l’action de suppression sur la ligne de la table **Vendor** quand au moins une ligne de la table **ProductVendor** y fait référence.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Spécifie l'action qui se produit sur les lignes de la table modifiée, si chacune de ces lignes possède une relation référentielle et que la ligne référencée correspondante est mise à jour dans la table parent. La valeur par défaut est NO ACTION.  
   
  NO ACTION  

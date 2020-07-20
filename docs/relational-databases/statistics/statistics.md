@@ -1,5 +1,5 @@
 ---
-title: Statistiques | Microsoft Docs
+title: Statistiques
 ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cda8a71b0023cfc5cb7e697bf98e06b4e8955f8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b509109cd155d0990950afbd073709325b01f5b9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012234"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196747"
 ---
 # <a name="statistics"></a>Statistiques
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   L'optimiseur de requête utilise des statistiques dans l'optique de créer des plans de requête qui améliorent les performances des requêtes. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires ou modifier la conception des requêtes pour obtenir des résultats optimaux. Cette rubrique traite des concepts de statistiques et fournit des instructions pour vous permettre d'utiliser efficacement les statistiques d'optimisation de requête.  
   
@@ -59,7 +60,7 @@ Plus précisément, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cr
 
 Le diagramme suivant illustre un histogramme avec six étapes : La zone située à gauche de la première valeur limite supérieure représente la première étape.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
+![Histogramme](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramme") 
   
 Pour chaque étape de l’histogramme ci-dessus :
 -   La ligne en gras représente la valeur limite supérieure (*range_high_key*) et le nombre d’occurrences (*equal_rows*) correspondant.  

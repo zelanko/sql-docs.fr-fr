@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896548"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196737"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 
@@ -326,7 +326,7 @@ Cette section montre comment créer un groupe de disponibilité avec un type de 
 
 3.  Dans la boîte de dialogue Spécifier les options du groupe de disponibilité, entrez un nom pour le groupe de disponibilité et sélectionnez un type de cluster EXTERNAL (externe) ou NONE (aucun) dans la liste déroulante. Externe doit être utilisé lorsque Pacemaker est déployé. Aucun est destiné à des scénarios spécialisés, tels que le scale-out de lecture. La sélection de l’option de détection d’intégrité au niveau de la base de données est facultative. Pour plus d’informations sur cette option, consultez [Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Cliquez sur **Suivant**.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Créer un groupe de disponibilité 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  Dans la boîte de dialogue Sélectionner les bases de données, sélectionnez la ou les bases de données qui participeront au groupe de disponibilité. Chaque base de données doit avoir une sauvegarde complète avant de pouvoir être ajoutée à un groupe de disponibilité. Cliquez sur **Suivant**.
 
@@ -340,17 +340,17 @@ Cette section montre comment créer un groupe de disponibilité avec un type de 
 
     L’exemple suivant montre un groupe de disponibilité avec deux réplicas, un type de cluster externe et un réplica de configuration uniquement.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Créer un groupe de disponibilité 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     L’exemple suivant montre un groupe de disponibilité avec deux réplicas, un type de cluster None et un réplica de configuration uniquement.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Créer un groupe de disponibilité 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  Si vous souhaitez modifier les préférences de sauvegarde, cliquez sur l’onglet Préférences de sauvegarde. Pour plus d’informations sur les préférences de sauvegarde, consultez [Configurer la sauvegarde sur des réplicas de disponibilité](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. Si vous utilisez des réplicas secondaires lisibles ou créez un groupe de disponibilité avec un type de cluster None pour l’échelle lecture, vous pouvez créer un écouteur en sélectionnant l’onglet Écouteur. Un écouteur peut également être ajouté ultérieurement. Pour créer un écouteur, choisissez l’option **Créer un écouteur de groupe de disponibilité**, entrez un nom, un port TCP/IP et indiquez si vous souhaitez utiliser une adresse IP DHCP affectée automatiquement ou statique. N’oubliez pas que pour un groupe de disponibilité avec un type de cluster None, l’adresse IP doit être statique et définie sur l’adresse IP du principal.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Créer un groupe de disponibilité 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. Si un écouteur est créé pour des scénarios lisibles, SSMS 17.3 ou version ultérieure autorise la création du routage en lecture seule dans l’Assistant. Il peut également être ajouté ultérieurement via SSMS ou Transact-SQL. Pour activer le routage en lecture seule maintenant :
 

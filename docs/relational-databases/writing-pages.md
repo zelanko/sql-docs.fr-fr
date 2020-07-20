@@ -13,12 +13,12 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f9bf3a75323a18b500c5bec35e0a01cb48fa754e
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998306"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302008"
 ---
 # <a name="writing-pages"></a>Écritures de pages
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ Une page de modifications est écrite sur le disque selon trois méthodes :
  L'écriture différée est un processus système qui assure la disponibilité des tampons libres en supprimant les pages peu fréquemment utilisées du cache des tampons. Les pages de modifications sont écrites en priorité sur le disque. 
 
 * Écriture anticipée   
- Ce processus écrit les pages de données incorrectes associées à des opérations non consignées telles que bulk insert et select into. Ce processus permet la création et l'écriture en parallèle de nouvelles pages. Autrement dit, il n'est pas nécessaire que l'opération d'appel attende la fin de l'opération entière avant d'écrire les pages sur le disque.
+ Le processus d’écriture anticipée écrit les pages de données incorrectes associées à des opérations non consignées, comme bulk insert et select into. Ce processus permet la création et l'écriture en parallèle de nouvelles pages. Autrement dit, il n'est pas nécessaire que l'opération d'appel attende la fin de l'opération entière avant d'écrire les pages sur le disque.
 
 * Point de contrôle   
  Le processus de point de contrôle analyse régulièrement le cache à la recherche de tampons contenant des pages issues d'une base de données spécifiée et écrit toutes les pages de modifications sur le disque. Les points de contrôle permettent une récupération ultérieure du système en créant un point où toutes les pages de modifications sont effectivement écrites sur le disque. L’utilisateur peut demander une opération de point de contrôle à l’aide de la commande CHECKPOINT, ou le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut générer des points de contrôle automatiques en fonction de la quantité d’espace de journal utilisée et la durée écoulée depuis le dernier point de contrôle. De plus, un point de contrôle est généré si certaines activités se produisent. Par exemple, si un fichier journal ou de données est ajouté ou supprimé d’une base de données, ou en cas d’arrêt de l’instance de SQL Server. Pour plus d’informations, voir [Points de contrôle et partie active du journal](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

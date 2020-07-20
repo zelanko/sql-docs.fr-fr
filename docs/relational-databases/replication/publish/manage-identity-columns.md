@@ -17,15 +17,15 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287623"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159887"
 ---
 # <a name="manage-identity-columns"></a>Gérer des colonnes d'identité
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique explique comment gérer des colonnes d'identité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Lorsque les insertions de l'Abonné sont répliquées sur le serveur de publication, les colonnes d'identité doivent être gérées afin d'éviter d'affecter la même valeur d'identité sur l'Abonné et sur le serveur de publication. La réplication peut gérer automatiquement les plages d'identité ou vous pouvez choisir de les gérer manuellement.  Pour plus d’informations sur les options de gestion des plages d’identité fournies par la réplication, consultez [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **Dans cette rubrique**  
@@ -73,7 +73,7 @@ ms.locfileid: "76287623"
     |------------|-----------|-----------------|  
     |**Taille de la plage sur le serveur de publication**|Valeur entière représentant la taille de la plage (par exemple, 20000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Taille de la plage sur l'Abonné**|Valeur entière représentant la taille de la plage (par exemple, 10000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-    |**Pourcentage du seuil de plage**|Valeur entière représentant le pourcentage du seuil (par exemple, 90 signifie 90 %)|Pourcentage représentant le nombre total de valeurs d'identité utilisées sur un nœud avant d'affecter une nouvelle plage d'identité.<br /><br /> <br /><br /> Remarque : cette valeur doit être spécifiée, mais n’est utilisée que par les Abonnés utilisant des abonnements mis à jour en attente et les Abonnés aux publications de fusion qui exécutent [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou des versions antérieures d’autres éditions de SQL Server. Pour plus d’informations, consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+    |**Pourcentage du seuil de plage**|Valeur entière représentant le pourcentage du seuil (par exemple, 90 signifie 90 %)|Pourcentage représentant le nombre total de valeurs d'identité utilisées sur un nœud avant d'affecter une nouvelle plage d'identité.<br /><br /> <br /><br /> Remarque : Cette valeur doit être spécifiée mais elle est uniquement utilisée par : les Abonnés utilisant des abonnements mis à jour en attente et les Abonnés aux publications de fusion qui exécutent [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou des versions antérieures d’autres éditions de SQL Server. Pour plus d’informations, consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Valeur de départ de la prochaine plage**|Valeur de type entier. Lecture seule.|Valeur de départ de la prochaine plage. Si, par exemple, la plage actuelle va de 5001 à 6000, il s'agira de la valeur 6001.|  
     |**Valeur d'identité maximale**|Valeur de type entier. Lecture seule.|Valeur maximale de la colonne identité. Déterminée par le type de données de base de la colonne.|  
     |**Incrément**|Valeur de type entier. Lecture seule.|Valeur utilisée pour augmenter ou diminuer le nombre de la colonne d'identité à chaque insertion : en règle générale définie à 1.|  
@@ -82,15 +82,15 @@ ms.locfileid: "76287623"
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>Pour modifier les seuils et les plages d'identité après la publication d'une table  
   
-1.  Dans la page **Articles** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table présentant une colonne d’identité.  
+1.  Dans la page **Articles** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table avec une colonne d’identité.  
   
 2.  Cliquez sur **Propriétés de l'article**puis sur **Définir les propriétés de l'article de la table en surbrillance**.  
   
-3.  Sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** , dans la section **Gestion des plages d’identité**, entrez des valeurs pour une ou plusieurs des propriétés suivantes : **Taille de la plage sur le serveur de publication**, **Taille de la plage sur l’Abonné** et **Pourcentage du seuil de plage**.  
+3.  Dans l’onglet **Propriétés**, dans la boîte de dialogue **Propriétés de l’article - \<Article>** au sein de la section **Gestion des plages d’identité**, entrez des valeurs pour une ou plusieurs des propriétés suivantes : **Taille de la plage sur le serveur de publication**, **Taille de la plage sur l’Abonné** et **Pourcentage du seuil de plage**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK**.  
+5.  Cliquez sur **OK** dans la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez utiliser des procédures stockées de réplication pour spécifier les options de gestion des plages d'identité lors de la création d'un article.  

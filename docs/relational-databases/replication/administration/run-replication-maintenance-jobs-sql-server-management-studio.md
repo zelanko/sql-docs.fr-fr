@@ -14,15 +14,15 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 19ad038e69144b4f9f570ef9d647a5f528945542
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c53fe453c141af32e1b31aad4ec15dc29351d96
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288339"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158907"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Exécuter des travaux de maintenance de réplication (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Les travaux de maintenance de la réplication sont les suivants :  
   
 -   **Réinitialiser les abonnements présentant des erreurs de validation de données**  
@@ -37,7 +37,7 @@ ms.locfileid: "76288339"
   
 -   **Nettoyage de l'abonnement expiré**  
   
- Démarrez et arrêtez ces travaux à partir du dossier **Travaux** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et à partir de l’onglet **Agents** du moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md). Affichez et modifiez les propriétés de chaque travail dans la boîte de dialogue **Propriétés du travail - \<Travail>** , disponible à partir du même dossier et du même onglet.  
+ Démarrez et arrêtez ces travaux à partir du dossier **Travaux** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et à partir de l’onglet **Agents** du moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md). Affichez et modifiez les propriétés de chaque travail dans la boîte de dialogue **Propriétés du travail - \<Job>** , qui est disponible à partir du même dossier et du même onglet.  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>Pour démarrer ou arrêter un travail de maintenance de réplication dans Management Studio  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76288339"
   
 3.  Cliquez avec le bouton droit sur un travail, puis sélectionnez **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés du travail - \<Travail>** , modifiez des propriétés si nécessaire, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés du travail - \<Job>** , modifiez les propriétés selon les besoins, puis cliquez sur **OK**.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>Pour afficher et modifier les propriétés d'un travail de maintenance de réplication dans le moniteur de réplication  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76288339"
   
 3.  Cliquez avec le bouton droit sur un travail dans la grille, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés du travail - \<Travail>** , modifiez des propriétés si nécessaire, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés du travail - \<Job>** , modifiez les propriétés selon les besoins, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

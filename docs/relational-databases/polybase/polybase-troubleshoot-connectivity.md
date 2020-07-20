@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203556"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196167"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
 
@@ -52,7 +52,7 @@ Dans PolyBase, quand une authentification est demandée pour une ressource sécu
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revient au centre KDC, renvoie le ticket TGT et demande un ticket de service pour accéder à cette ressource sécurisée particulière. Le ticket de service est chiffré avec la clé privée du service sécurisé.
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère le ticket de service à Hadoop et est authentifié pour qu’une session soit créée sur ce service.
 
-![](./media/polybase-sqlserver.png)
+![SQL Server PolyBase](./media/polybase-sqlserver.png)
 
 Les problèmes d’authentification relèvent de l’une ou plusieurs des quatre étapes ci-dessus. Pour permettre un débogage plus rapide, PolyBase a introduit un outil de diagnostic intégré pour mieux identifier le point de défaillance.
 

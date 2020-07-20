@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 023c80f9f2e5ab5194c5e58ae2066e4758ad440c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697189"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159727"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur max degree of parallelism
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85697189"
   
 -   Si l'option affinity mask n'est pas définie sur la valeur par défaut, il est possible qu'elle limite le nombre de processeurs disponibles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les systèmes de multitraitement symétrique (SMP, symmetric multiprocessing).  
 
--   La limite du **degré maximal de parallélisme (MAXDOP)**  est spécifiée par [tâche](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Il ne s’agit pas d’une limite par [requête](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Cela signifie que lors d’une exécution de requête parallèle, une requête unique peut générer plusieurs tâches qui sont affectées à un planificateur. Pour plus d’informations, consultez le [Guide de l’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md). 
+-   La limite du **degré maximal de parallélisme (MAXDOP)**  est spécifiée par [tâche](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Il ne s’agit pas d’une limite par [requête](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Cela signifie que lors d’une exécution de requête parallèle, une seule requête peut générer plusieurs tâches jusqu’à la limite de MAXDOP, et que chaque tâche utilisera un Worker et un planificateur. Pour plus d’informations, consultez la section *Planification de tâches parallèles* du [Guide de l’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md). 
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   

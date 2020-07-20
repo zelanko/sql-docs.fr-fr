@@ -9,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901551"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196967"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurer Pacemaker pour les groupes de disponibilité Always On et les instances de cluster de basculement
 
@@ -28,17 +28,17 @@ Quand un groupe de disponibilité Always On ou une instance de cluster de bascul
 
 La création d’adresses IP pour le groupe de disponibilité ou l’instance de cluster de basculement (FCI) est effectuée sur le réseau local virtuel. Dans l’exemple suivant, le réseau local virtuel a un sous-réseau 192.168.3.*x*, si bien que l’adresse IP créée pour le groupe de disponibilité ou pour l’instance de cluster de basculement (FCI) est 192.168.3.104. Il n’y a rien de plus à configurer, car une seule adresse IP est attribuée au groupe de disponibilité ou à l’instance de cluster de basculement (FCI).
 
-![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
+![Configurer plusieurs sous-réseaux 01](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
 ## <a name="configuration-with-pacemaker"></a>Configuration avec Pacemaker
 
 Dans le monde de Windows, un cluster de basculement Windows Server (WSFC) prend en charge en mode natif plusieurs sous-réseaux et gère plusieurs adresses IP via une dépendance OU sur l’adresse IP. Sur Linux, il n’y a pas de dépendance OU, mais il existe un moyen d’obtenir un sous-réseau multiple approprié de manière native avec Pacemaker, comme indiqué dans ce qui suit. Pour ce faire, il ne suffit pas d’utiliser la ligne de commande Pacemaker normale pour modifier une ressource. Vous devez modifier la base d’informations de cluster (CIB). La base d’informations de cluster est un fichier XML avec la configuration Pacemaker.
 
-![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
+![Configurer plusieurs sous-réseaux 02](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
 ### <a name="update-the-cib"></a>Mettez à jour la base d’informations de cluster
 
-1.  Exportez la base d’informations de cluster.
+1. Exportez la base d’informations de cluster.
 
     **Red Hat Enterprise Linux (RHEL) et Ubuntu**
 
@@ -54,7 +54,7 @@ Dans le monde de Windows, un cluster de basculement Windows Server (WSFC) prend 
 
     Où *filename* est le nom que vous souhaitez donner à la base d’informations de cluster.
 
-2.  Modifiez le fichier qui a été créé. Recherchez la section `<resources>`. Vous voyez les différentes ressources qui ont été créées pour le groupe de disponibilité ou pour l’instance de cluster de basculement (FCI). Trouvez celle associée à l'adresse IP. Ajoutez une section `<instance attributes>` avec les informations relatives à la deuxième adresse IP, soit au-dessus, soit en dessous de l’adresse existante, mais avant `<operations>`. Cela ressemble à la syntaxe suivante :
+2. Modifiez le fichier qui a été créé. Recherchez la section `<resources>`. Vous voyez les différentes ressources qui ont été créées pour le groupe de disponibilité ou pour l’instance de cluster de basculement (FCI). Trouvez celle associée à l'adresse IP. Ajoutez une section `<instance attributes>` avec les informations relatives à la deuxième adresse IP, soit au-dessus, soit en dessous de l’adresse existante, mais avant `<operations>`. Cela ressemble à la syntaxe suivante :
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -80,7 +80,7 @@ Dans le monde de Windows, un cluster de basculement Windows Server (WSFC) prend 
     </instance attributes>
     ```
 
-3.  Importez le CIB modifié et reconfigurez Pacemaker.
+3. Importez le CIB modifié et reconfigurez Pacemaker.
 
     **RHEL/Ubuntu**
     
@@ -98,7 +98,7 @@ Dans le monde de Windows, un cluster de basculement Windows Server (WSFC) prend 
 
 ### <a name="check-and-verify-failover"></a>Vérifier le basculement
 
-1.  Une fois que le CIB est appliqué avec la configuration mise à jour, effectuez un test Ping du nom DNS associé à la ressource d’adresse IP dans Pacemaker. Il doit refléter l’adresse IP associée au sous-réseau qui héberge actuellement le groupe de disponibilité ou l’instance de cluster de basculement (FCI).
-2.  Faites basculer le groupe de disponibilité ou l’instance de cluster de basculement (FCI) sur l’autre sous-réseau.
-3.  Une fois que le groupe de disponibilité ou l’instance de cluster de basculement (FCI) est entièrement en ligne, effectuez un test Ping du nom DNS associé à l’adresse IP. Il doit refléter l’adresse IP dans le deuxième sous-réseau.
-4.  Si vous le souhaitez, vous pouvez faire basculer à nouveau le groupe de disponibilité ou l’instance de cluster de basculement (FCI) vers le sous-réseau d’origine.
+1. Une fois que le CIB est appliqué avec la configuration mise à jour, effectuez un test Ping du nom DNS associé à la ressource d’adresse IP dans Pacemaker. Il doit refléter l’adresse IP associée au sous-réseau qui héberge actuellement le groupe de disponibilité ou l’instance de cluster de basculement (FCI).
+2. Faites basculer le groupe de disponibilité ou l’instance de cluster de basculement (FCI) sur l’autre sous-réseau.
+3. Une fois que le groupe de disponibilité ou l’instance de cluster de basculement (FCI) est entièrement en ligne, effectuez un test Ping du nom DNS associé à l’adresse IP. Il doit refléter l’adresse IP dans le deuxième sous-réseau.
+4. Si vous le souhaitez, vous pouvez faire basculer à nouveau le groupe de disponibilité ou l’instance de cluster de basculement (FCI) vers le sous-réseau d’origine.

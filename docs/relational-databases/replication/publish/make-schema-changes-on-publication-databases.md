@@ -19,15 +19,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807631"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160127"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Quand vous effectuez une des modifications de schéma suivantes dans l’objet publié approprié sur un Abonné [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
@@ -90,9 +90,9 @@ ms.locfileid: "83807631"
   
 #### <a name="adding-columns"></a>Ajout de colonnes  
   
--   Pour ajouter une nouvelle colonne à une table et inclure la colonne dans une publication existante, exécutez ALTER TABLE \<Table> ADD \<Colonne>. Par défaut, la colonne est alors répliquée sur tous les Abonnés. La colonne doit accepter des valeurs NULL ou inclure une contrainte par défaut. Pour plus d'informations sur l'ajout de colonnes, consultez la section « Réplication de fusion » de cette rubrique.  
+-   Pour ajouter une nouvelle colonne à une table et inclure la colonne dans une publication existante, exécutez ALTER TABLE \<Table> ADD \<Column>. Par défaut, la colonne est alors répliquée sur tous les Abonnés. La colonne doit accepter des valeurs NULL ou inclure une contrainte par défaut. Pour plus d'informations sur l'ajout de colonnes, consultez la section « Réplication de fusion » de cette rubrique.  
   
--   Pour ajouter une nouvelle colonne à une table sans inclure cette colonne dans une publication existante, désactivez la réplication des modifications de schéma, puis exécutez ALTER TABLE \<Table> ADD \<Colonne>.  
+-   Pour ajouter une nouvelle colonne à une table sans inclure cette colonne dans une publication existante, désactivez la réplication des modifications de schéma, puis exécutez ALTER TABLE \<Table> ADD \<Column>.  
   
 -   Pour inclure une colonne existante dans une publication existante, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
@@ -102,7 +102,7 @@ ms.locfileid: "83807631"
   
 #### <a name="dropping-columns"></a>Suppression de colonnes  
   
--   Pour supprimer une colonne d’une publication existante et de la table sur le serveur de publication, exécutez ALTER TABLE \<Table> DROP \<Colonne>. Par défaut, la colonne est alors supprimée de la table sur tous les Abonnés.  
+-   Pour supprimer une colonne d’une publication existante et de la table sur le serveur de publication, exécutez ALTER TABLE \<Table> DROP \<Column>. Par défaut, la colonne est alors supprimée de la table sur tous les Abonnés.  
   
 -   Pour supprimer une colonne d’une publication existante, tout en la conservant dans la table sur le serveur de publication, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   

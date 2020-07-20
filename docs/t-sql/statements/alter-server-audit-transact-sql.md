@@ -20,19 +20,19 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ac2182dd3878f5b61ed4ae1fea6b2f2851f8c129
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735990"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381293"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifie un objet d'audit du serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,9 +73,11 @@ ALTER SERVER AUDIT audit_name
 <predicate_factor>::=   
     event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
 ```  
-  
-## <a name="arguments"></a>Arguments  
- TO { FILE | APPLICATION_LOG | SECURITY |URL}  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
+ TO { FILE \| APPLICATION_LOG \| SECURITY \|URL}  
  Détermine l'emplacement de la cible de l'audit. Les options sont un fichier binaire, le journal des applications Windows ou le journal de sécurité Windows.  
 
 > [!IMPORTANT]

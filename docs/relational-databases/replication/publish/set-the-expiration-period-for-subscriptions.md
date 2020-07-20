@@ -16,15 +16,15 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6dc18d925e014ccd17303e4e3d2698ad72b3758d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b043256a60aa5d057139e1eab1127fff8debeecf
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287539"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159947"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Définir la période d'expiration des abonnements
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique explique comment définir la période d'expiration des abonnements dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La période d'expiration des abonnements détermine le temps qui précède l'expiration et la suppression d'un abonnement. Pour plus d’informations, voir [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **Dans cette rubrique**  

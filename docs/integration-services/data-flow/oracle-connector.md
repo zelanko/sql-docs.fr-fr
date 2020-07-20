@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 9ee026ab80e7afcd801b96411575f5ef4a61afd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868439"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196090"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Connecteur Microsoft pour Oracle
 
@@ -36,6 +36,7 @@ Les versions de base de données Oracle suivantes sont prises en charge pour la 
 - Oracle 11.x
 - Oracle 12c
 - Oracle 18c (sans prise en charge de l’authentification Windows)
+- Oracle 19c (sans prise en charge de l’authentification Windows)
 
 La base de données Oracle est prise en charge sur tous les systèmes d’exploitation et plateformes.
 > [!NOTE]

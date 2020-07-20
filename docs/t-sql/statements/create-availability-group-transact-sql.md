@@ -24,17 +24,18 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 1f287a864113bdd5cc1d8829ad080277c1a1d91d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091629"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393177"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Crée un nouveau groupe de disponibilité, si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est activée pour la fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+Crée un nouveau groupe de disponibilité, si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est activée pour la fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 > [!IMPORTANT]  
 >  Exécutez CREATE AVAILABILITY GROUP sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous projetez d'utiliser comme réplica principal initial de votre nouveau groupe de disponibilité. Cette instance de serveur doit résider sur un nœud de clustering de basculement Windows Server (WSFC).  
@@ -113,11 +114,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>Arguments  
- *group_name*  
- Spécifie le nom du nouveau groupe de disponibilité. *group_name* doit être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][identificateur](../../relational-databases/databases/database-identifiers.md) valide et doit être unique sur tous les groupes de disponibilité du cluster WSFC. La longueur maximale d'un nom de groupe de disponibilité est de 128 caractères.  
-  
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
+
+*group_name*  
+Spécifie le nom du nouveau groupe de disponibilité. *group_name* doit être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][identificateur](../../relational-databases/databases/database-identifiers.md) valide et doit être unique sur tous les groupes de disponibilité du cluster WSFC. La longueur maximale d'un nom de groupe de disponibilité est de 128 caractères.  
+
+AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  Spécifie une préférence sur la manière dont un travail de sauvegarde doit évaluer le réplica principal lorsqu'on choisit où effectuer des sauvegardes. Vous pouvez écrire un travail de sauvegarde donné pour prendre en compte la préférence de sauvegarde automatisée. Il est important de comprendre que la préférence n'est pas appliquée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par conséquent, elle n'a aucune incidence sur les sauvegardes ad hoc.  
   
  Les valeurs prises en charge sont les suivantes :  
@@ -143,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Pour voir la préférence de sauvegarde automatisée d’un groupe de disponibilité existant, sélectionnez la colonne **automated_backup_preference** ou **automated_backup_preference_desc** de la vue de catalogue [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). De plus, vous pouvez utiliser [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) pour déterminer le réplica de sauvegarde par défaut.  Cette fonction retourne 1 pour au moins l’un des réplicas, même avec `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  Spécifie les conditions d’échec qui déclenchent un basculement automatique pour ce groupe de disponibilité. FAILURE_CONDITION_LEVEL est défini au niveau du groupe, mais s’applique uniquement aux réplicas de disponibilité configurés pour le mode de disponibilité de validation synchrone (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). En outre, les conditions d’échec ne peuvent déclencher un basculement automatique que si les réplicas principaux et secondaires sont configurés pour le mode de basculement automatique (FAILOVER_MODE **=** AUTOMATIC), et si le réplica secondaire est actuellement synchronisé avec le réplica principal.  
   
  Les niveaux de condition d’échec (1-5) s’étendent du moins restrictif, le niveau 1, au plus restrictif, le niveau 5. Un niveau de condition donné comprend tous les niveaux moins restrictifs. Par conséquent, le niveau de condition le plus strict, le niveau 5, inclut les quatre niveaux de condition moins restrictifs (1 à 4), le niveau 4 inclut les niveaux 1 à 3, et ainsi de suite. Le tableau suivant décrit la condition d'échec qui correspond à chaque niveau.  

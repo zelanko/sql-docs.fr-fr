@@ -8,12 +8,12 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896525"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196757"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Déployer un cluster Pacemaker pour SQL Server sur Linux
 
@@ -175,7 +175,7 @@ Le processus de création d’un cluster Pacemaker est complètement différent 
    ```
    
 7. Si vous avez configuré une adresse IP pour l’administration, vous pouvez la tester dans un navigateur, ce qui permet également de tester la modification du mot de passe pour *hacluster*.
-   ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
+   ![hacLuster](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. Sur un autre serveur SLES qui sera un nœud du cluster, exécutez 
    ```bash

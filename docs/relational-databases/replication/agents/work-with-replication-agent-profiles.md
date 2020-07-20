@@ -16,15 +16,15 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c3ee49fac628bc733ac5394d47e5a9187081a1a
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288236"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159967"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utiliser des profils d'agent de réplication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique explique comment utiliser les profils de l'Agent de réplication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Le comportement de chaque agent de réplication est contrôlé par un jeu de paramètres que vous pouvez configurer dans un profil de l'Agent. Chaque agent possède un profil par défaut et certains possèdent d'autres profils prédéfinis ; un Agent ne peut avoir qu'un profil actif à tout moment.  
   
  **Dans cette rubrique**  
@@ -69,7 +69,7 @@ ms.locfileid: "76288236"
   
 ###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> Pour accéder à la boîte de dialogue Profils d'Agent à partir de SQL Server Management Studio  
   
-1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution**, cliquez sur **Profils par défaut**.  
+1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** , cliquez sur **Profils par défaut**.  
 
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>Pour accéder à la boîte de dialogue Profils d'Agent à partir du moniteur de réplication  
   
@@ -95,7 +95,7 @@ ms.locfileid: "76288236"
   
 2.  Cliquez sur le bouton des propriétés ( **...** ) en regard d’un profil.  
   
-3.  Affichez les paramètres et les valeurs dans la boîte de dialogue **Propriétés du profil \<Nom_du_profil**.  
+3.  Affichez les paramètres et les valeurs dans la boîte de dialogue **Propriétés du profil \<ProfileName>** .  
   
     -   Les paramètres des profils définis par l'utilisateur peuvent être modifiés, ce qui n'est pas le cas des profils système prédéfinis.  
   

@@ -18,15 +18,15 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 420a68755ca7a8adbcc9cfa1dbbf40afaa5f76f7
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 11d2020fff776707da786babb18c07a0a7ab20b1
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808047"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159467"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Afficher et modifier les paramètres de sécurité de la réplication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique décrit comment afficher et modifier les paramètres de sécurité de la réplication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Par exemple, vous voulez peut-être modifier la connexion de l'Agent de lecture du journal au serveur de publication de l'authentification SQL Server à l'authentification intégrée de Windows, ou vous avez peut-être besoin de modifier les informations d'identification utilisées pour exécuter un travail de l'Agent lorsque le mot de passe du compte Windows a changé. Pour plus d’informations sur les autorisations requises par chaque agent, consultez [Modèle de sécurité de l’Agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **Dans cette rubrique**  
@@ -67,11 +67,11 @@ ms.locfileid: "83808047"
   
 2.  La page **Sécurité de l’agent** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  La boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+3.  La boîte de dialogue **Propriétés de l’abonnement - \<Subscription>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
-4.  Les boîtes de dialogue **Propriétés du serveur de distribution - \<Serveur_distribution>** et **Propriétés de la base de données de distribution - \<Base_de_données>** . Pour plus d'informations sur l'accès à ces boîtes de dialogue, consultez [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+4.  Les boîtes de dialogue **Propriétés du serveur de distribution - \<Distributor>** et **Propriétés de la base de données de distribution - \<Database>** . Pour plus d'informations sur l'accès à ces boîtes de dialogue, consultez [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  La boîte de dialogue **Propriétés du serveur de publication - \<Serveur_publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  La boîte de dialogue **Propriétés du serveur de publication - \<Publisher>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Pour modifier le mot de passe d'un compte utilisé par un ou plusieurs agents  
   
@@ -105,7 +105,7 @@ ms.locfileid: "83808047"
     -   Entrez un nouveau mot de passe fort dans les zones de texte **Mot de passe** et **Confirmer le mot de passe** .  
   
     > [!NOTE]  
-    >  Si le serveur de publication est un serveur de publication Oracle, le contexte de connexion est spécifié dans la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_distribution>** . Consultez la procédure de modification du contexte ci-dessous.  
+    >  Si le serveur de publication est un serveur de publication Oracle, le contexte de connexion est spécifié dans la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** . Consultez la procédure de modification du contexte ci-dessous.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -126,7 +126,7 @@ ms.locfileid: "83808047"
     -   Entrez un nouveau mot de passe fort dans les zones de texte **Mot de passe** et **Confirmer le mot de passe** .  
   
     > [!NOTE]  
-    >  Si le serveur de publication est un serveur de publication Oracle, le contexte de connexion est spécifié dans la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_distribution>** . Modifiez le contexte à l'aide de la procédure suivante.  
+    >  Si le serveur de publication est un serveur de publication Oracle, le contexte de connexion est spécifié dans la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** . Modifiez le contexte à l'aide de la procédure suivante.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -135,7 +135,7 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>Pour modifier le contexte sous lequel l'Agent d'instantané et l'Agent de lecture du journal d'une publication Oracle établissent des connexions sur le serveur de publication  
   
-1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_distribution>** , cliquez sur le bouton des propriétés ( **...** ) à côté d’un serveur de publication.  
+1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** , cliquez sur le bouton des propriétés ( **...** ) à côté d’un serveur de publication.  
   
 2.  Dans la section **Connexion de l'Agent au serveur de publication** , spécifiez le nom d'accès et le mot de passe utilisés par le schéma utilisateur d'administration de réplication que vous avez configuré. Pour plus d’informations, consultez [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
@@ -143,7 +143,7 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>Pour modifier les paramètres de sécurité relatifs à l'Agent de distribution pour un abonnement par émission de données  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur le serveur de publication, vous pouvez apporter les modifications suivantes :  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Subscription>** sur le serveur de publication, vous pouvez effectuer les modifications suivantes :  
   
     -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions au serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
   
@@ -155,7 +155,7 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>Pour modifier les paramètres de sécurité relatifs à l'Agent de distribution pour un abonnement par extraction  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, vous pouvez apporter les modifications suivantes :  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Subscription>** sur l’abonné, vous pouvez effectuer les modifications suivantes :  
   
     -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
   
@@ -167,7 +167,7 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>Pour modifier les paramètres de sécurité relatifs à l'Agent de fusion pour un abonnement par émission de données  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur le serveur de publication, vous pouvez apporter les modifications suivantes :  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Subscription>** sur le serveur de publication, vous pouvez effectuer les modifications suivantes :  
   
     -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions au serveur de publication et au serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
   
@@ -177,7 +177,7 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>Pour modifier les paramètres de sécurité relatifs à l'Agent de fusion pour un abonnement par extraction  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, vous pouvez apporter les modifications suivantes :  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Subscription>** sur l’abonné, vous pouvez effectuer les modifications suivantes :  
   
     -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
   
@@ -187,9 +187,9 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Pour modifier le compte sous lequel s'exécute l'Agent de lecture de la file d'attente  
   
-1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_de_distribution>** , cliquez sur le bouton des propriétés ( **...** ) à côté de la base de données de distribution.  
+1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** , cliquez sur le bouton des propriétés ( **…** ) en regard de la base de données de distribution.  
   
-2.  Dans la boîte de dialogue **Propriétés de la base de données de distribution - \<Base_de_données>** , cliquez sur le bouton **Paramètres de sécurité** à côte de la zone de texte **Compte de processus de l’agent**.  
+2.  Dans la boîte de dialogue **Propriétés de la base de données de distribution - \<Database>** , cliquez sur le bouton **Paramètres de sécurité** en regard de la zone de texte **Compte de processus de l’agent**.  
   
 3.  Dans la boîte de dialogue **Sécurité de l'Agent de lecture de la file d'attente** , spécifiez le compte sous lequel l'agent s'exécute et établit des connexions sur le serveur de distribution :  
   
@@ -204,7 +204,7 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>Pour modifier le contexte sous lequel l'Agent de lecture de la file d'attente établit des connexions au serveur de publication  
   
-1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** , cliquez sur le bouton des propriétés ( **...** ) à côté du serveur de publication.  
+1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** , cliquez sur le bouton des propriétés ( **...** ) en regard du serveur de publication.  
   
 2.  Dans la section **Connexion de l'Agent au serveur de publication** , spécifiez une valeur **Imiter le compte de processus de l'Agent** ou **Authentification SQL Server** pour l'option **Mode de connexion de l'agent** . Si vous spécifiez **Authentification SQL Server**, indiquez également des valeurs pour **Nom d'accès** et **Mot de passe**.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Pour modifier les paramètres de sécurité pour un abonnement par extraction de données (pull) mis à jour immédiatement  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, cliquez sur la ligne **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **&#x2026;** ) dans la ligne.  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Subscription>** sur l’abonné, cliquez sur la ligne **Connexion du serveur de publication** puis cliquez sur le bouton des propriétés ( **&#x2026;** ) dans la ligne.  
   
 2.  Dans la boîte de dialogue **Entrer les informations de connexion** , sélectionnez une des options suivantes :  
   
@@ -236,11 +236,11 @@ ms.locfileid: "83808047"
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>Pour modifier le mot de passe pour la connexion administrative du serveur de publication au serveur de distribution  
   
-1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_distribution>** , entrez un mot de passe fort dans les zones de texte **Mot de passe** et **Confirmer le mot de passe**.  
+1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Distributor>** , entrez un mot de passe fort dans les zones de texte **Mot de passe** et **Confirmer le mot de passe**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de publication - \<Serveur_publication>** , entrez un mot de passe fort dans les zones de texte **Mot de passe** et **Confirmer le mot de passe**.  
+3.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de publication - \<Publisher>** , entrez un mot de passe fort dans les zones de texte **Mot de passe** et **Confirmer le mot de passe**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

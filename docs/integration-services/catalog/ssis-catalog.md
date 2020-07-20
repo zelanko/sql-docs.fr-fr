@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925166"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279405"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
 
@@ -87,7 +87,7 @@ ms.locfileid: "82925166"
 ###  <a name="folder-project-environment"></a><a name="Folder"></a> Dossier, projet, environnement  
  Lorsque vous renommez un dossier, un projet ou un environnement, respectez les règles suivantes.  
   
--   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), le signe supérieur à (>), la barre verticale (|), le retour arrière (\b), la valeur null (\0) et la tabulation (\t).  
+-   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), greater than (>), la barre verticale (|), le retour arrière (\b), Null (\0) et la tabulation (\t).  
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82925166"
 ###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> Variable d'environnement  
  Lorsque vous attribuez un nom à une variable d'environnement, respectez les règles suivantes :  
   
--   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), le signe supérieur à (>), la barre verticale (|), le retour arrière (\b), la valeur null (\0) et la tabulation (\t).  
+-   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), greater than (>), la barre verticale (|), le retour arrière (\b), Null (\0) et la tabulation (\t).  
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
@@ -661,6 +661,18 @@ Si l’option **Activer la prise en charge d’Always On** du menu contextuel se
 4.  Suivez les instructions de l’[étape 2 : Ajouter la base de données SSISDB à un groupe de disponibilité Always On](#Step2) pour rajouter la base de données SSISDB à un groupe de disponibilité.  
   
 5.  Suivez les instructions de l’[étape 3 : Activer la prise en charge de SSIS pour Always On](#Step3).  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>Catalogue et délégation SSISDB dans les scénarios à double tronçon
+
+Par défaut, l’appel à distance des packages SSIS stockés dans le catalogue SSISDB ne prend pas en charge la délégation des informations d’identification, parfois appelée double tronçon. 
+
+Imaginez un scénario dans lequel un utilisateur se connecte à la machine cliente A et lance SQL Server Management Studio (SSMS). À partir de SSMS, l’utilisateur se connecte à un serveur SQL Server hébergé sur la machine B, qui a le catalogue SSISDB. Le package SSIS est stocké sous ce catalogue SSISDB et le package se connecte à son tour à un service SQL Server qui s’exécute sur la machine C (le package peut également accéder à d’autres services). Quand l’utilisateur appelle l’exécution du package SSIS à partir de la machine A, SSMS passe d’abord les informations d’identification de l’utilisateur de la machine A à la machine B (où le processus de runtime SSIS exécute le package). Le processus de runtime d’exécution SSIS (ISServerExec.exe) est maintenant nécessaire pour déléguer les informations d’identification de l’utilisateur de la machine B à la machine C pour que l’exécution s’effectue correctement. Cependant, la délégation des informations d’identification n’est pas activée par défaut.
+
+Un utilisateur peut activer la délégation des informations d’identification en octroyant le droit *Approuver cet utilisateur pour la délégation à tous les services (Kerberos uniquement)* au compte de service SQL Server (sur la machine B), qui lance ISServerExec.exe en tant que processus enfant. Ce processus est appelé « configuration d’une délégation non contrainte » ou « délégation ouverte » pour un compte de service SQL Server. Avant d’octroyer ce droit, demandez-vous s’il est conforme aux exigences de sécurité de votre organisation.
+
+SSISDB ne prend pas en charge la délégation contrainte. Dans un environnement à double tronçon, si le compte de service du serveur SQL Server qui héberge le catalogue SSISDB (la machine B dans notre exemple) est configuré pour la délégation contrainte, ISServerExec.exe ne peut pas déléguer les informations d’identification à la troisième machine (la machine C). Ceci s’applique aux scénarios dans lesquels Windows Credential Guard est activé, qui nécessite impérativement la configuration de la délégation contrainte.
+
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   

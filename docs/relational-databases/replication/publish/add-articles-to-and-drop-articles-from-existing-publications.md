@@ -21,15 +21,15 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1bd5e9d25a2f45718e7ac03de1edced942702198
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfaa32b87c5e7cffa60f3eef9d5b20ae85a747e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286526"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159917"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Ajouter et supprimer des articles de publications existantes
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Après la création d'une publication, il est possible d'ajouter et de supprimer des articles. Vous pouvez ajouter des articles à tout moment ; en revanche, les actions visant à supprimer les articles dépendent du type de réplication et du moment de la suppression de l'article.  
   
 ## <a name="adding-articles"></a>ajout d'articles  
@@ -59,7 +59,7 @@ ms.locfileid: "76286526"
 ## <a name="dropping-articles"></a>abandon d'articles  
  Les articles peuvent être supprimés d'une publication à tout moment mais vous devez prendre en compte les comportements suivants :  
   
--   La suppression d'un article d'une publication ne supprime pas l'objet de la base de données de publication ou l'objet correspondant de la base de données d'abonnement. Utilisez DROP \<objet> pour supprimer ces objets, le cas échéant. Lorsque vous supprimez un article lié à d’autres articles publiés par l’intermédiaire de contraintes de clés étrangères, il est conseillé de supprimer manuellement la table sur l’Abonné ou d’avoir recours à une exécution de script à la demande : spécifiez un script qui comprend les instructions DROP \<objet> appropriées. Pour plus d’informations, consultez [Exécuter des scripts pendant la synchronisation &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   La suppression d'un article d'une publication ne supprime pas l'objet de la base de données de publication ou l'objet correspondant de la base de données d'abonnement. Utilisez DROP \<Object> pour supprimer ces objets si nécessaire. Quand vous supprimez un article lié à d’autres articles publiés via des contraintes de clés étrangères, il est conseillé de supprimer manuellement la table sur l’abonné ou d’avoir recours à l’exécution d’un script à la demande : spécifiez un script qui comprend les instructions DROP \<Object> appropriées. Pour plus d’informations, consultez [Exécuter des scripts pendant la synchronisation &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   Pour les publications de fusion présentant un niveau de compatibilité égal ou supérieur à 90RTM, les articles peuvent être supprimés à tout moment mais un nouvel instantané s'impose. De plus :  
   

@@ -17,15 +17,15 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af5e23db429ddd7dcb41b6bf84c1c513e0332609
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: acc5a14210137a8926635d1576803e5db151220c
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807895"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160137"
 ---
 # <a name="create-a-publication"></a>Créer une publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique explique comment créer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
  **Dans cette rubrique**  
@@ -48,13 +48,13 @@ ms.locfileid: "83807895"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
--   Les noms de publications et d’articles ne peuvent pas contenir les caractères suivants : % , \* , [ , ] , | , : , " , ? , ' , \ , / , < , >. Si les objets de la base de données contiennent l’un de ces caractères, et si vous voulez les répliquer, vous devez spécifier un nom d’article différent du nom de l’objet dans la boîte de dialogue **Propriétés de l’article - \<Article>** , qui est disponible dans la page **Articles** de l’Assistant.  
+-   Les noms de publications et d’articles ne peuvent pas contenir les caractères suivants : % , \* , [ , ] , | , : , " , ? , ' , \ , / , < , >. Si les objets de la base de données contiennent un de ces caractères et que vous voulez les répliquer, vous devez spécifier un nom d’article différent du nom de l’objet dans la boîte de dialogue **Propriétés de l’article - \<Article>** , qui est disponible dans la page **Articles** de l’Assistant.  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Créez des publication et définissez des articles avec l'Assistant Nouvelle publication. Après avoir créé une publication, affichez et modifiez les propriétés de publication dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur la création d’une publication à partir d’une base de données Oracle, consultez [Créer une publication à partir d’une base de données Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
+ Créez des publication et définissez des articles avec l'Assistant Nouvelle publication. Après avoir créé une publication, affichez et modifiez les propriétés de publication dans la boîte de dialogue **Propriétés de la publication – \<Publication>** . Pour plus d’informations sur la création d’une publication à partir d’une base de données Oracle, consultez [Créer une publication à partir d’une base de données Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Pour créer une publication et définir des articles  
   

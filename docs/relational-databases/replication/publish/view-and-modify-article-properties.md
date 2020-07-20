@@ -22,15 +22,15 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63fa5ab8c3eea6db950fb2c74a26b7087c5927c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f84fc174f63ebf6e58e93a3ba19b39897fbf7e9
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287516"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159517"
 ---
 # <a name="view-and-modify-article-properties"></a>Afficher et modifier les propriétés d'un article
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique décrit comment afficher et modifier les propriétés de l'article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
  **Dans cette rubrique**  
@@ -60,7 +60,7 @@ ms.locfileid: "76287516"
 -   Après qu'une publication a été créée, certaines modifications de propriétés nécessitent un nouvel instantané. Si une publication dispose d'abonnements, ces abonnements pourraient devoir alors être réinitialisés selon les modifications que vous avez apportées. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Affichez et modifiez les propriétés de l’article dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , disponible dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et le Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Affichez et modifiez les propriétés de l’article dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , qui est disponible dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]et dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 -   La page **Général** contient le nom et la description de la publication, le nom de la base de données, le type de publication et les paramètres d'expiration des abonnements.  
   
@@ -88,16 +88,16 @@ ms.locfileid: "76287516"
   
 2.  Sélectionnez les articles auxquels les modifications des propriétés doivent s'appliquer :  
   
-    -   Cliquez sur **Définir les propriétés de l’article de \<type_objet> en surbrillance** pour ouvrir la boîte de dialogue **Propriétés de l’article - \<nom_objet>** . Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées uniquement à l’objet en surbrillance dans le volet Objet de la page **Articles**.  
+    -   Cliquez sur **Définir les propriétés de l’article de \<ObjectType> en surbrillance** pour ouvrir la boîte de dialogue **Propriétés de l’article - \<ObjectName>** . Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées uniquement à l’objet en surbrillance dans le volet Objet de la page **Articles**.  
   
-    -   Cliquez sur **Définir les propriétés de tous les articles \<type_objet>** pour ouvrir la boîte de dialogue **Propriétés pour tous les articles \<type_objet>** . Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées à tous les objets de ce type dans le volet Objet de la page **Articles**, notamment ceux qui ne sont pas encore sélectionnés pour la publication.  
+    -   Cliquez sur **Définir les propriétés de tous les \<ObjectType>articles**  pour ouvrir la boîte de dialogue **Propriétés pour tous les \<ObjectType> articles**. Les modifications de propriétés apportées dans cette boîte de dialogue sont appliquées à tous les objets de ce type dans le volet Objet de la page **Articles**, notamment ceux qui ne sont pas encore sélectionnés pour la publication.  
   
         > [!NOTE]  
-        >  Les modifications de propriétés apportées dans la boîte de dialogue **Propriétés pour tous les articles \<type_objet>** remplacent celles apportées dans la boîte de dialogue **Propriétés de l’article - \<nom_objet>** . Ainsi, si vous voulez définir un certain nombre de valeurs par défaut applicables à tous les articles d'un type d'objet mais souhaitez également définir des propriétés pour des objets spécifiques, vous devez d'abord définir les valeurs par défaut pour tous les articles. Définissez ensuite les propriétés des objets individuels.  
+        >  Les modifications de propriétés apportées dans la boîte de dialogue **Propriétés pour tous les \<ObjectType> articles** remplacent celles apportées dans la boîte de dialogue **Propriétés de l’article - \<ObjectName>** . Ainsi, si vous voulez définir un certain nombre de valeurs par défaut applicables à tous les articles d'un type d'objet mais souhaitez également définir des propriétés pour des objets spécifiques, vous devez d'abord définir les valeurs par défaut pour tous les articles. Définissez ensuite les propriétés des objets individuels.  
   
 3.  Modifiez les propriétés si nécessaire, puis cliquez sur **OK**.  
   
-4.  Dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK**.  
+4.  Cliquez sur **OK** dans la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les articles peuvent être modifiés et leurs propriétés retournées, par programme, à l'aide des procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'article appartient.  

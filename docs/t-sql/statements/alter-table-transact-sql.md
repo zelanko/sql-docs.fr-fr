@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c83519d96d336da2e7577a2b9ea7d3693732d5c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000667"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391878"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -401,6 +401,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Arguments
 
@@ -765,7 +767,7 @@ Pour plus d’informations sur les restrictions relatives à **SWITCH** lors de 
 
 Les index columnstore non-clusters générés pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 et pour SQL Database avant la version V12 présentaient un format en lecture seule. Vous devez reconstruire les index columnstore non-cluster au format actuel (qui peut être mis à jour) avant de pouvoir exécuter une opération PARTITION.
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)**  
+SET **(** FILESTREAM_ON = { *nom_schéma_partitions* \| *nom_groupe_de_fichiers_flux_de_fichier* \| **"** default **"** \| **"** NULL **"** } **)**  
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge `FILESTREAM`.
 
 Spécifie où les données FILESTREAM sont stockées.
@@ -785,12 +787,12 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 
 Active ou désactive la gestion système des versions d’une table. Pour activer la gestion système des versions d’une table, le système vérifie que le type de données, la contrainte de possibilité de valeur null et les spécifications de contrainte de clé primaire pour la gestion système des versions sont satisfaits. Si vous n’utilisez pas l’argument HISTORY_TABLE, le système génère une nouvelle table d’historique qui correspond au schéma de la table actuelle, crée un lien entre les deux tables et permet au système d’enregistrer l’historique de chaque enregistrement dans la table actuelle de la table d’historique. Le nom de cette table d’historique sera `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Si vous utilisez l’argument HISTORY_TABLE pour créer un lien vers une table d’historique existante et utiliser cette table, le système crée un lien entre la table actuelle et la table spécifiée. Lorsque vous créez un lien vers une table de l’historique existante, vous pouvez choisir d’effectuer une vérification de cohérence des données. Cette vérification de cohérence des données garantit que les enregistrements existants ne se chevauchent pas. La vérification de cohérence des données est effectuée par défaut. Pour plus d’informations, voir [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} }  
+HISTORY_RETENTION_PERIOD = { **INFINITE** \| nombre {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
 **S’applique à**  : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Spécifie la rétention finie ou infinie des données d’historique dans une table temporelle. Si vous l’omettez, la rétention infinie est appliquée.
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
+SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Spécifie les méthodes autorisées d'escalade de verrous pour une table.

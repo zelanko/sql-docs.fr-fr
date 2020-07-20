@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091780"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196071"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps Tools
 
@@ -313,9 +313,9 @@ Le schéma JSON de configuration comporte trois couches :
 
 |Propriété  |Description  |Notes  |
 |---------|---------|---------|
-|name|Nom du paramètre.|Le paramètre peut être un *paramètre de projet* ou un *paramètre de package*. <br> Le paramètre est ignoré s’il n’existe pas dans le projet parent.|
-|conteneur|Conteneur du paramètre.|<li>Si le paramètre est un paramètre de projet, le *conteneur* doit être le nom du projet. <li>S’il s’agit d’un paramètre de package, le *conteneur* doit être le nom du package avec l’extension **.dtsx**. <li> Si le paramètre est une propriété du gestionnaire de connexions, le nom doit respecter le format suivant : **CM.\<Connection Manager Name>.\<Property Name>** .|
-|value|Valeur du paramètre.|<li>Quand *valueType* est *referenced* : la valeur est une référence à une variable d’environnement avec le type *string*. <li> Quand *valueType* est *literal* : cet attribut prend en charge toutes les valeurs JSON de type *boolean*, *number* ou *string* valides. <br> La valeur est convertie au type du paramètre cible. Une erreur se produit si la valeur ne peut pas être convertie.<li> La valeur *Null* n’est pas valide. La tâche ignore cet objet paramètre et génère un avertissement.|
+|name|Nom du paramètre.|<li>Le paramètre peut être un paramètre de projet ou un paramètre de package. <li>Le paramètre est ignoré s’il n’existe pas. <li>Si le paramètre est une propriété du gestionnaire de connexions, le nom doit être au format suivant : **CM.\<Connection Manager Name>.\<Property Name>** . |
+|conteneur|Conteneur du paramètre.|<li>Si le paramètre est un paramètre de projet, le *conteneur* doit être le nom du projet. <li>S’il s’agit d’un paramètre de package, le *conteneur* doit être le nom du package avec l’extension **.dtsx**.|
+|value|Valeur du paramètre.|<li>Quand *valueType* est *referenced* : la valeur est une référence à une variable d’environnement avec le type *string*. <li> Quand *valueType* est *literal* : cet attribut prend en charge toutes les valeurs JSON de type *boolean*, *number* ou *string* valides. <li> La valeur est convertie au type du paramètre cible. Une erreur se produit si la valeur ne peut pas être convertie.<li> La valeur *Null* n’est pas valide. La tâche ignore cet objet paramètre et génère un avertissement.|
 |valueType|Type de la valeur du paramètre.|Les types valides sont : <br> *literal* (littéral) : l’attribut *value* représente une valeur littérale. <br> *referenced* (référencé) : l’attribut *value* représente une référence à une variable d’environnement.|
 
 ##### <a name="reference-attributes"></a>Attributs de référence

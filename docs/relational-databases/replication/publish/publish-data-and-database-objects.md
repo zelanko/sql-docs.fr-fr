@@ -43,15 +43,15 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7c1b58a9396daba1a4b10b4a52fd02eaa30fc642
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807306"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159537"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Lors de la création d'une publication, vous choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
   
 |Objet de base de données|Réplication d'instantané et réplication transactionnelle|Réplication de fusion|  
@@ -183,7 +183,7 @@ ms.locfileid: "83807306"
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l’article - \<** _Article_ **>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être changé via la boîte de dialogue **Propriétés de l’article\<**_Article_**>** et via les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publication de données sur les Abonnés exécutant des versions antérieures de SQL Server  
   

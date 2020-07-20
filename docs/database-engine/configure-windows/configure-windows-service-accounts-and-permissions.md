@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728679"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196939"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 
@@ -83,6 +83,9 @@ En fonction des composants que vous décidez d'installer, le programme d'install
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  : fournit des fonctionnalités OLAP et d’exploration de données pour les applications Business Intelligence. Le fichier exécutable est \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  : gère, exécute, crée, planifie et publie les rapports. Le fichier exécutable est \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  : assure la prise en charge de la gestion du stockage et de l’exécution des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le chemin du fichier exécutable est \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut inclure des services supplémentaires pour les déploiements avec scale-out. Pour plus d’informations, consultez [Procédure pas à pas : Configurez le scale-out d’Integration Services (SSIS)](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md).
+
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** : service de résolution de noms qui fournit des informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les ordinateurs clients. Le chemin d’accès du fichier exécutable est c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe
 - **Recherche en texte intégral** : crée rapidement des index de recherche en texte intégral sur le contenu et des propriétés de données structurées et semi-structurées pour fournir un filtrage de document et l’analyse lexicale pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - **SQL Writer** : permet aux applications de sauvegarde et restauration de fonctionner dans l’infrastructure du service de cliché instantané de volume (VSS).

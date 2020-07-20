@@ -1,5 +1,5 @@
 ---
-title: Aide (F1) sur l’Explorateur d’utilitaire | Microsoft Docs
+title: Aide sur l'Explorateur d'objets accessible via la touche F1
 description: Familiarisez-vous avec les fonctionnalités proposées dans différentes zones de l’Utilitaire SQL Server. En savoir plus sur les affichages, le tableau de bord et les onglets administration de l’utilitaire.
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640403"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197270"
 ---
 # <a name="utility-explorer-f1-help"></a>Aide sur l'Explorateur d'objets accessible via la touche F1
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les sections suivantes documentent les fonctionnalités de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les opérations associées.  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640403"
  Mode Liste  
  Le mode Liste, dans le volet supérieur, affiche des données concernant des applications de la couche Données. Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque application de la couche Données par catégorie d'utilisation :  
   
--   Coche verte – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Nombre d’applications de la couche Données qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
+-   Coche verte : :::image type="icon" source="media/well-utilized.png" border="false"::: - nombre d’applications de la couche Données qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
   
--   Flèche bas verte – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Les ressources sont sous-utilisées.  
+-   Flèche bas verte – ![Flèche bas](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Les ressources sont sous-utilisées.  
   
--   Flèche haut rouge – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Les ressources sont surutilisées.  
+-   Flèche haut rouge – ![Flèche haut](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Les ressources sont surutilisées.  
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640403"
   
  Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par catégorie d'utilisation :  
   
--   Coche verte – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Nombre d’instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
+-   Coche verte – ![Coche verte](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Nombre d’instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d’utilisation des ressources. Les ressources sont bien utilisées.  
   
--   Flèche bas verte – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Les ressources sont sous-utilisées.  
+-   Flèche bas verte – ![Flèche bas](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Les ressources sont sous-utilisées.  
   
--   Flèche haut rouge – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Les ressources sont surutilisées.  
+-   Flèche haut rouge – ![Flèche haut](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Les ressources sont surutilisées.  
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   

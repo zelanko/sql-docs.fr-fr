@@ -18,15 +18,15 @@ ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0b0194dec7902311ef48dc889dab6eb6d299df9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3489da21ccd65180f73866bb1fb1c260da927f10
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286546"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159927"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>Ajouter et supprimer des articles dans une publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Ajoutez initialement des articles à une publication quand vous la créez dans l'Assistant Nouvelle Publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
  Après la création d’une publication, vous pouvez ajouter et supprimer des articles sur la page **Articles** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Pour plus d’informations sur l’ajout et la suppression d’articles, consultez [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  

@@ -15,15 +15,15 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f578311d9daa9e54830ad5aa8330fc8bc2c7ac71
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a73fcd84d31a5cde4cfed1e58a611ccac76ed42
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288086"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159357"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Démarrer et arrêter un Agent de réplication (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Démarrez et arrêtez des agents à partir du dossier **Travaux** et du dossier **Réplication** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou à partir du moniteur de réplication. Démarrez et arrêtez les Agents et les travaux suivants :  
   
 -   Agent d'instantané, utilisé par toutes les publications  
@@ -58,7 +58,7 @@ ms.locfileid: "76288086"
   
 2.  Développez le dossier **Agent SQL Server** puis développez le dossier **Travaux** .  
   
-3.  Cliquez avec le bouton droit sur le travail de l'agent puis cliquez sur **Démarrer le travail** ou **Arrêter le travail**. Le nom du travail de l’Agent de lecture de la file d’attente se présente sous la forme **[\<Serveur de distribution>].\<entier>** .  
+3.  Cliquez avec le bouton droit sur le travail de l'agent puis cliquez sur **Démarrer le travail** ou **Arrêter le travail**. Le nom du travail de l’Agent de lecture de la file d’attente est au format **[\<Distributor>].\<integer>** .  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>Pour démarrer et arrêter un Agent d'instantané, un Agent de lecture du journal ou un Agent de lecture de file d'attente dans le moniteur de réplication  
   

@@ -20,15 +20,15 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: eab592c7a0b95262e551eea02eef625ad653e12d
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 84d062ef8fb1754baf3cbca2ff9f6148593f731d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807834"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159507"
 ---
 # <a name="view-and-modify-publication-properties"></a>Afficher et modifier les propriétés d'une publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique décrit comment afficher et modifier les propriétés de la publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
  **Dans cette rubrique**  
@@ -58,9 +58,9 @@ ms.locfileid: "83807834"
 -   Après qu'une publication a été créée, certaines modifications de propriétés nécessitent un nouvel instantané. Si une publication dispose d'abonnements, ces abonnements pourraient devoir alors être réinitialisés selon les modifications que vous avez apportées. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Affichez et modifiez les propriétés de la publication dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , disponible dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Affichez et modifiez les propriétés de la publication dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , qui est disponible dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et dans le Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
- La boîte de dialogue **Propriétés de la publication - \<Publication>** comprend les pages suivantes :  
+ La boîte de dialogue **Propriétés de la publication - \<Publication>** comprend les pages suivantes :  
   
 -   La page **Général** contient le nom et la description de la publication, le nom de la base de données, le type de publication et les paramètres d'expiration des abonnements.  
   

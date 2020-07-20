@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,14 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902294"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392737"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de créer des points de terminaison et de définir leurs propriétés, ainsi que les méthodes à la disposition des applications clientes. Pour plus d’informations, consultez [GRANT - Octroyer des autorisations sur un point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *endPointName*  
  Correspond au nom affecté au point de terminaison que vous créez. À utiliser lors de la mise à jour ou la suppression du point de terminaison.  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Indique que le point de terminaison doit se connecter à l'aide du protocole d'authentification Windows pour authentifier les points de terminaison. Il s’agit de la valeur par défaut.  
   
  Si vous spécifiez une méthode d'autorisation (NTLM ou KERBEROS), cette méthode est utilisée en tant que protocole d'authentification. Avec la valeur par défaut, NEGOTIATE, le point de terminaison utilise le protocole de négociation Windows pour choisir NTLM ou Kerberos.  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  Indique que le point de terminaison doit authentifier la connexion à l’aide du certificat spécifié par l’argument *certificate_name* afin de déterminer l’identité requise pour l’autorisation. Le point de terminaison éloigné doit disposer d'un certificat dont la clé publique correspond à la clé privée du certificat spécifié.  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *nom_certificat*  
  Indique que le point de terminaison doit essayer de se connecter à l'aide de l'authentification Windows et qu'en cas d'échec, il doit essayer en utilisant le certificat spécifié.  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *nom_certificat* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Indique que le point de terminaison doit essayer de se connecter à l'aide du certificat spécifié et qu'en cas d'échec, il doit essayer en utilisant l'authentification Windows.  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  Spécifie si le chiffrement est utilisé dans le processus. La valeur par défaut est REQUIRED.  
   
  DISABLED  

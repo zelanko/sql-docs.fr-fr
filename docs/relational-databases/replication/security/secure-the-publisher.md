@@ -18,15 +18,15 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6f3b56ec2a45420e56add4d3e746bcca5fb6eba
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287267"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159497"
 ---
 # <a name="secure-the-publisher"></a>Sécuriser le serveur de publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   
 Les Agents de réplication suivants se connectent au serveur de publication :  
   
@@ -43,7 +43,7 @@ Les Agents de réplication suivants se connectent au serveur de publication :
  Cette dernière constitue le mécanisme principal assurant la sécurité des publications sur le serveur de publication. La liste d'accès à la publication fonctionne de manière similaire à une liste de contrôle d'accès [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Lorsque vous créez une publication, la réplication crée une liste d'accès aux publications pour cette première. Cette PAL peut être configurée pour contenir un ensemble de noms de connexions et de groupes disposant de l'autorisation d'accès à la publication. Lorsqu'un agent se connecte au serveur de publication ou de distribution et demande l'accès à une publication, les informations d'authentification figurant dans la PAL sont comparées aux informations de connexion fournies par l'agent. Ce processus permet d'assurer un niveau de sécurité supplémentaire vis-à-vis du serveur de publication en empêchant l'utilisation des informations de connexion du serveur de publication et du serveur de distribution par un outil client pouvant procéder à des modifications directement sur le serveur de publication.  
   
 > [!NOTE]  
->  La réplication crée un rôle sur le serveur de publication pour que chaque publication exige l'appartenance à la PAL. Le rôle a un nom sous la forme **Msmerge_** _\<ID_Publication>_ pour la réplication de fusion et **MSReplPAL_** _\<Id_base_de_données_publication>_ **_** _\<ID_Publication>_ pour la réplication transactionnelle et d’instantané.  
+>  La réplication crée un rôle sur le serveur de publication pour que chaque publication exige l'appartenance à la PAL. Le rôle a un nom au format **Msmerge_** _\<PublicationID>_ pour la réplication de fusion, et au format **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ pour la réplication transactionnelle et d’instantané.  
   
  Par défaut, les connexions suivantes figurent dans la PAL : les membres du rôle serveur fixe **sysadmin** (au moment de la création de la publication) et le nom de connexion utilisé pour créer la publication. Par défaut, toutes les connexions qui sont membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** sur la base de données de publication peuvent s'abonner à une publication sans être explicitement ajoutées à la PAL.  
   

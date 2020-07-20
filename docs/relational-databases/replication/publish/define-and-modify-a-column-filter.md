@@ -16,15 +16,15 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: efda97d51b3cbbe5137c89405c3534f48027a633
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c711285e4b51876548934c41030e154a81fcf4a6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286366"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159607"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Définir et modifier un filtre de colonne
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Cette rubrique décrit comment définir et modifier un filtre de colonne dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  

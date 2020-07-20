@@ -2,7 +2,7 @@
 title: Actions et groupes d’actions SQL Server Audit | Microsoft Docs
 description: En savoir plus sur les groupes d’actions au niveau du serveur, au niveau de la base de données et au niveau de l’audit, ainsi que les actions individuelles dans SQL Server Audit.
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885598"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301894"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885598"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois qu'un mot de passe est modifié pour un rôle d'application. Équivaut à la [classe d’événements Audit App Role Change Password](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'un audit est créé, modifié ou supprimé. Cet événement est déclenché chaque fois qu'une spécification d'audit est créée, modifiée ou supprimée. Toute modification apportée à un audit est auditée dans cet audit. Équivaut à la [classe d’événements Audit Change Audit](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Cet événement est déclenché chaque fois qu'une commande de sauvegarde ou de restauration est émise. Équivaut à la [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
-|BATCH_COMPLETED_GROUP|Cet événement se déclenche chaque fois que l’exécution d’une opération de gestion de transaction, de texte de lot ou de procédure stockée se termine. Il se déclenche à la fin du lot et audite l’ensemble du texte du lot ou de la procédure stockée, tel qu’il est envoyé par le client, y compris le résultat.|  
-|BATCH_STARTED_GROUP|Cet événement se déclenche chaque fois qu’une opération de gestion de transaction, de texte de lot ou de procédure stockée commence à s’exécuter. Il se déclenche avant l’exécution et audite l’ensemble du texte du lot ou de la procédure stockée, tel qu’il est envoyé par le client.|  
+|BATCH_COMPLETED_GROUP|Cet événement se déclenche chaque fois que l’exécution d’une opération de gestion de transaction, de texte de lot ou de procédure stockée se termine. Il se déclenche à la fin du lot et audite l’ensemble du texte du lot ou de la procédure stockée, tel qu’il est envoyé par le client, y compris le résultat. **Ajouté dans SQL Server 2019.**|  
+|BATCH_STARTED_GROUP|Cet événement se déclenche chaque fois qu’une opération de gestion de transaction, de texte de lot ou de procédure stockée commence à s’exécuter. Il se déclenche avant l’exécution et audite l’ensemble du texte de lot ou de procédure stockée, tel qu’il est envoyé par le client. **Ajouté dans SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Cet événement est déclenché pour signaler des messages d'audit relatifs à la sécurité du transport Service Broker. Équivaut à la [classe d’événements Audit Broker Login](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Cet événement est déclenché lors de la création, de la modification ou de la suppression d'une base de données. Cet événement est déclenché chaque fois qu'une base de données est créée, modifiée ou supprimée. Équivaut à la [classe d’événements Audit Database Management](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données.|  

@@ -13,15 +13,15 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2e115bd7007d967429495a18a1421ee4bd46687d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9038bb495fe5fcfafefed71e7e5da14f5c0935b6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287716"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159767"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Actualiser des données dans le Moniteur de réplication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Dans le moniteur de réplication, la fenêtre principale et les fenêtres de détails (ces fenêtres lancées à partir de la fenêtre principale) peuvent être actualisées automatiquement ou manuellement. Pour actualiser une fenêtre manuellement, appuyez sur la touche F5. Par défaut, la fenêtre principale est actualisée automatiquement toutes les cinq secondes ; la fréquence peut être personnalisée pour chaque serveur de publication.  
   
  Les données affichées dans le moniteur de réplication sont recherchées dans une mémoire cache. Pour plus d’informations sur les relations entre la mémoire cache et l’actualisation du moniteur de réplication, consultez [Mise en cache, actualisation et performances du moniteur de réplication](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md). Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "76287716"
   
     3.  Cliquez avec le bouton droit sur un abonnement, puis cliquez sur **Afficher les détails**.  
   
-2.  Dans la fenêtre de détails **Abonnement \<Nom_Abonnement>** , cliquez sur **Action**, puis sur **Actualisation automatique**. La fréquence d'actualisation est déterminée par le paramètre **Fréquence d'actualisation** dans la boîte de dialogue **Paramètres du serveur de publication** .  
+2.  Dans la fenêtre **Détail de l’abonnement \<SubscriptionName>** , cliquez sur **Action**, puis cliquez sur **Actualisation automatique**. La fréquence d'actualisation est déterminée par le paramètre **Fréquence d'actualisation** dans la boîte de dialogue **Paramètres du serveur de publication** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  

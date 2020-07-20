@@ -14,15 +14,15 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2aa15e60680419fc2f6c74034ce7063ecabdbf77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c8d19d21b7bcd1e9ab72732dab439355da1794e0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626041"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197430"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Utilisez les instructions [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** et **DENY** pour accorder ou refuser une autorisation (comme **UPDATE**) sur un élément sécurisable (par exemple, une base de données, une table, une vue, etc.) à un principal de sécurité (une connexion, un utilisateur de base de données ou un rôle de base de données). Utilisez **REVOKE** pour supprimer l’accord ou le refus d’une autorisation.  
   
@@ -81,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  Une ou plusieurs autorisations à accorder, refuser ou révoquer.  
   
- ON [ \<class_type> :: ] *securable* La clause **ON** décrit le paramètre de l’élément sécurisable pour lequel accorder, refuser ou révoquer des autorisations.  
+ ON [ \<class_type> :: ] *securable* La clause **ON** décrit le paramètre sécurisable pour lequel accorder, refuser ou révoquer des autorisations.  
   
  \<class_type> Type de classe de l’élément sécurisable. Il peut s’agir de **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Les autorisations peuvent également être accordées à **SERVER**_class\_type_, mais **SERVER** n’est pas spécifié pour ces autorisations. **DATABASE** n’est pas spécifié quand l’autorisation comprend le mot **DATABASE** (par exemple, **ALTER ANY DATABASE**). Quand aucun *class_type* n’est spécifié et que le type d’autorisation n’est pas limité au serveur ou à la classe de base de données, la classe est assimilée à **OBJECT**.  
   

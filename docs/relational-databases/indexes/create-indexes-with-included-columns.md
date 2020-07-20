@@ -21,12 +21,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9aa3bdca463f48f35b5114d4aa905f05d50dc30f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1042bcf452b369b295476a662028350f75e2aaab
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760825"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279186"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85760825"
   
 ###  <a name="design-recommendations"></a><a name="DesignRecs"></a> Recommandations relatives à la conception  
   
--   La conception d'index non-cluster doit être réalisée avec une clé d'index de grande taille, de sorte que seules les colonnes utilisées pour la recherche sont les colonnes clés. Toutes les autres colonnes qui couvrent la requête doivent être des colonnes non-clés. De cette manière, vous disposez de toutes les colonnes nécessaires pour couvrir la requête, mais la clé d'index elle-même est petite et efficace.  
+-   Refaites la conception des index non-cluster qui ont une clé d’index de grande taille, de sorte que seules les colonnes utilisées pour la recherche soient des colonnes clés. Toutes les autres colonnes qui couvrent la requête doivent être des colonnes non-clés. De cette manière, vous disposez de toutes les colonnes nécessaires pour couvrir la requête, mais la clé d'index elle-même est petite et efficace.  
   
 -   Incluez les colonnes non clés dans un index non cluster pour éviter de dépasser les limitations actuelles de taille d’index, établies à 32 colonnes clés au maximum et à une taille de clé d’index maximale de 1 700 octets (16 colonnes clés et 900 octets avant [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne tient pas compte des colonnes non-clés lors du calcul du nombre de colonnes clés d'index ou de la taille de la clé d'index.  
   

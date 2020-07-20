@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774055"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159827"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ Une fois qu’une base de données de distribution du groupe de disponibilité a
    >[!NOTE]
    >Avant d’exécuter l’une des procédures stockées de réplication (par exemple, `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb`, `sp_adddistpublisher`) sur un réplica secondaire, vérifiez que le réplica est entièrement synchronisé.
 
-- Tous les réplicas secondaires d’un groupe de disponibilité de base de données de distribution doivent être accessibles en lecture.
+- Tous les réplicas secondaires d’un groupe de disponibilité de base de données de distribution doivent être accessibles en lecture. Si un réplica secondaire n’est pas lisible, les propriétés du serveur de distribution dans SQL Server Management Studio sur le réplica secondaire particulier ne sont pas accessibles, mais la réplication continue à fonctionner correctement. 
 - Tous les nœuds du groupe de disponibilité de base de données de distribution doivent utiliser le même compte de domaine pour exécuter l’Agent SQL Server, et ce compte de domaine doit avoir les mêmes privilèges sur chaque nœud.
 - Si des agents de réplication s’exécutent sous un compte proxy, le compte proxy doit se trouver sur chaque nœud du groupe de disponibilité de base de données de distribution et avoir les mêmes privilèges sur chaque nœud.
 - Modifiez les propriétés du serveur de distribution et de la base de données dans tous les réplicas qui se trouvent dans le groupe de disponibilité de base de données.
@@ -117,12 +117,18 @@ Cet exemple configure un nouveau serveur de distribution et un nouveau serveur d
 
    La valeur de `@working_directory` doit être un chemin réseau indépendant de DIST1, DIST2 et DIST3.
 
-1. Sur DIST2 et DIST3, exécutez ce qui suit :  
+1. Sur DIST2 et DIST3, si le réplica est lisible en tant que réplica secondaire, exécutez :  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Si un réplica n’est pas lisible en tant que réplica secondaire, effectuez un basculement de sorte que le réplica devienne le réplica principal et exécutez 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    La valeur de `@working_directory` doit être identique à celle de l’étape précédente.
 
 ### <a name="publisher-workflow"></a>Flux de travail du serveur de publication
@@ -196,12 +202,18 @@ Cet exemple ajoute un nouveau serveur de distribution à une configuration de r�
    sp_adddistributiondb 'distribution'
    ```
 
-4. Sur DIST3, exécutez ce qui suit : 
+4. Sur DIST3, si le réplica est lisible en tant que réplica secondaire, exécutez : 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Si le réplica n’est pas lisible en tant que réplica secondaire, effectuez un basculement de sorte que le réplica devienne le réplica principal et exécutez :
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    La valeur de `@working_directory` doit être identique à celle spécifiée pour DIST1 et DIST2.
 
 4. Sur DIST3, vous devez recréer les serveurs liés pour les abonnés.

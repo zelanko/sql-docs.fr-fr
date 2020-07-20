@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883079"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279335"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85883079"
 
 ### <a name="service-master-key"></a>Clé principale du service
   
- La clé principale du service représente la racine de la hiérarchie de chiffrement SQL Server. La clé SMK est générée automatiquement la première fois que l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarrée et utilisée pour chiffrer un mot de passe de serveur lié, des informations d’identification et la clé principale de base de données. La clé SMK est chiffrée en utilisant la clé de l’ordinateur local à l’aide de l’API de protection des données Windows (DPAPI). L’interface DPAPI utilise une clé dérivée des informations d’identification Windows du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des informations d’identification de l’ordinateur. La clé principale de service peut être déchiffrée uniquement par le compte de service sous lequel elle a été créée ou par un principal qui a accès aux informations d'identification de l'ordinateur.
+ La clé principale du service représente la racine de la hiérarchie de chiffrement SQL Server. La clé SMK est générée automatiquement la première fois que l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarrée, et elle est utilisée pour chiffrer un mot de passe de serveur lié, les informations d’identification et la clé principale de base de données dans chaque base de données. La clé SMK est chiffrée en utilisant la clé de l’ordinateur local à l’aide de l’API de protection des données Windows (DPAPI). L’interface DPAPI utilise une clé dérivée des informations d’identification Windows du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des informations d’identification de l’ordinateur. La clé principale de service peut être déchiffrée uniquement par le compte de service sous lequel elle a été créée ou par un principal qui a accès aux informations d'identification de l'ordinateur.
 
 La clé principale du service ne peut être ouverte que par le compte de service Windows sous lequel elle a été créée ou par un principal ayant accès au nom du compte de service et à son mot de passe.
 
