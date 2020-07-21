@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af86c3453edc2d18eb11e0cd58b3c677e69dc468
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a9feb602d9ddd68acf45fe58884b238bf830aac9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054159"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552044"
 ---
 # <a name="mssqlserver_2534"></a>MSSQLSERVER_2534
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|2534|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|Texte du message|Erreur de table : la page P_ID, dont l'en-tête indique qu'elle est assignée à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE), est assignée par un autre objet.|  
+|Texte du message|Erreur de table, la page P_ID, dont l’en-tête indique qu'elle est assignée à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE), est assignée par un autre objet.|  
   
 ## <a name="explanation"></a>Explication  
  L’en-tête de la page contient l’ID d’unité d’allocation *A_ID*, mais aucune des pages IAM (Index Allocation Map) de cette unité d’allocation n’alloue la page. L'en-tête de la page ne contenant pas l'ID d'unité d'allocation correct, la page génère une erreur de correspondance MSSQLServer_2533 qui se réfère à l'ID d'unité d'allocation auquel la page est de fait allouée.  

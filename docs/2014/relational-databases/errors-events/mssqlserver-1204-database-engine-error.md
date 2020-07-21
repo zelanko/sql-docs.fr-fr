@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34b77db95ed4409682b42c0245cf229692b5029a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 0b54380be2a27b187a8d74fdb2a1af24042c3035
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969729"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553924"
 ---
 # <a name="mssqlserver_1204"></a>MSSQLSERVER_1204
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|1204|  

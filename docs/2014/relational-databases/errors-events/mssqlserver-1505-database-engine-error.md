@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 1b23850ffcaf7ae4e4d63775cd6a7c112ef44e00
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969523"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553784"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|1505|  
@@ -58,7 +58,7 @@ ms.locfileid: "84969523"
   
 -   Lors de la sélection des colonnes d'un index unique ou d'une contrainte unique, sélectionnez donc les colonnes qui n'acceptent pas par définition les valeurs NULL. La possibilité d'une violation d'unicité provoquée lorsque plusieurs lignes contiennent NULL dans les valeurs de clés est ainsi écartée.  
   
--   Lorsque les valeurs dupliquées sont issues d'erreurs de saisie des données, corrigez manuellement les données, puis créez l'index ou la contrainte. Pour plus d’informations sur la suppression des lignes dupliquées d’une table, consultez l’article 139444 de la Base de connaissances : [Comment faire pour supprimer des lignes en double d’une table dans SQL Server](https://support.microsoft.com/kb/139444).  
+-   Lorsque les valeurs dupliquées sont issues d'erreurs de saisie des données, corrigez manuellement les données, puis créez l'index ou la contrainte. Pour plus d’informations sur la suppression de lignes en double d’une table, consultez l’article 139444 de la Base de connaissances : [Comment faire pour supprimer des lignes en double d’une table dans SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

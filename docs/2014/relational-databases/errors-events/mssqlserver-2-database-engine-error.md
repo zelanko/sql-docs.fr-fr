@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fdf89a03e13c40e1b72d621c120db82356db1a7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f9bfdca119a99dd07512753beeb3e0399e4c53a2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034779"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552224"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|2|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
-|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d'ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net)|  
+|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net).|  
   
 ## <a name="explanation"></a>Explication  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas répondu à la demande du client parce que le serveur n’a probablement pas été démarré.  
@@ -40,7 +40,7 @@ ms.locfileid: "85034779"
  Assurez-vous que le serveur a été démarré.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les services Moteur de base de données](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
+ [Gérer les services du moteur de base de données](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Configurer des protocoles clients](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Protocoles réseau et bibliothèques réseau](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configuration du réseau client](../../database-engine/configure-windows/client-network-configuration.md)   

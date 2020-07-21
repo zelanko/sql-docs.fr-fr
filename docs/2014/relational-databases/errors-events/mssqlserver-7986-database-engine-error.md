@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05577850e65e7bb180aebf2d535d7d59e3fb1986
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 87a6fc35b72b608e57fe3f3eb4b9273a13eab40c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032021"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553297"
 ---
 # <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7986|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|Texte du message|Pré-vérifications de table système : l'ID d'objet O_ID possède une liaison de chaînes croisées. La page P_ID1 pointe vers P_ID2 dans l'ID d'unité d'allocation A_ID1 (doit être A_ID2). L’instruction de vérification s’est arrêtée en raison d’une erreur irréparable.|  
+|Texte du message|Pré-vérifications de table système : l’ID d’objet ID O_ID possède une liaison de chaînes croisées. La page P_ID1 pointe vers P_ID2 dans l'ID d'unité d'allocation A_ID1 (doit être A_ID2). L’instruction de vérification s’est arrêtée en raison d’une erreur irréparable.|  
   
 ## <a name="explanation"></a>Explication  
  La première étape d'un DBCC CHECKDB consiste à effectuer des prévérifications sur les pages de données des tables système critiques. Toute erreur détectée à ce stade étant irréparable, DBCC CHECKDB s'arrête immédiatement. Le pointeur de page suivant de la page *P_ID1* dans le niveau de données de l’objet spécifié pointe vers une page, *P_ID2*, dans un objet différent.  

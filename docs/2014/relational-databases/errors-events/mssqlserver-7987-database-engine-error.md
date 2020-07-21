@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98e5ebb3a9dd798e5181c56e67c8ee770f0d6a10
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: adc730a651f1b2fce16cc0d907a6f2f2003fe1f8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031946"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553248"
 ---
 # <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7987|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Texte du message|Pré-vérifications de table système : non-correspondance de liaisons de chaînes dans l'ID d'objet O_ID. P_ID1->suiv. = P_ID2, mais P_ID2->préc. = P_ID3. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
+|Texte du message|Pré-vérifications de table système : non-correspondance de liaisons de chaînes dans l’ID d’objet O_ID. P_ID1->suiv. = P_ID2, mais P_ID2->préc. = P_ID3. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
   
 ## <a name="explanation"></a>Explication  
  La première étape d'un DBCC CHECKDB consiste à effectuer des prévérifications sur les pages de données des tables système critiques. Toute erreur détectée à ce stade étant irréparable, DBCC CHECKDB s'arrête immédiatement.  

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f8a3ddf0282ee76655d930baf101c73c9110938
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: deb4f24860a8cbe7f15ec824f48943724fdd68e6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032336"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553354"
 ---
 # <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7908|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Texte du message|Erreur de table : le fichier 'FILE' dans l'ID de partition PN_ID n'est pas un fichier Filestream valide.|  
+|Texte du message|Erreur de table, Le fichier 'FILE' dans l’ID de partition PN_ID n’est pas un fichier Filestream valide.|  
   
 ## <a name="explanation"></a>Explication  
  Le nom d'un fichier FILESTREAM dans un répertoire de colonnes est un ROWGUID. Si le nom d'un fichier inclus dans un répertoire de colonnes ne peut pas être converti en ROWGUID, le fichier n'est pas valide.  

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d41d6973ecd7cd047a0fe071ba4c6361a2b929a8
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 63775efe4322b2554248b94cee0f71d1fb33b797
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034577"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552154"
 ---
 # <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|2512|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_DUPLICATE_KEYS|  
-|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE). Clés en double sur la page P_ID1, emplacement SLOT1, et sur la page P_ID2, emplacement SLOT2.|  
+|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE). Clés en double sur la page P_ID1, emplacement SLOT1, et sur la page P_ID2, emplacement SLOT2.|  
   
 ## <a name="explanation"></a>Explication  
  Les deux emplacements spécifiés ont des clés identiques, y compris tout `uniqueifiers`.  

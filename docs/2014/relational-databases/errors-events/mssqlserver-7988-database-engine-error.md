@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 29b967b8-de30-4618-99a8-8b1155e69026
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62e5d41248aa5f79f5f0537c794d20b92f0e096f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 30b9e0daa53341b60e524daea061536f826f3603
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032008"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553247"
 ---
 # <a name="mssqlserver_7988"></a>MSSQLSERVER_7988
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7988|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|Texte du message|Pré-vérifications de table système : ID d'objet O_ID. Boucle dans la chaîne des données détectée à P_ID. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
+|Texte du message|Pré-vérifications de table système : ID d’objet O_ID. Boucle dans la chaîne des données détectée à P_ID. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
   
 ## <a name="explanation"></a>Explication  
  La première étape d'un DBCC CHECKDB consiste à effectuer des prévérifications sur les pages de données des tables système critiques. Toute erreur détectée à ce stade étant irréparable, DBCC CHECKDB s’arrête immédiatement. Une boucle de liaison de page a été détectée dans la page *P_ID*. Cela se produit lorsque les pointeurs d'une page menant à la page suivante finissent par revenir à cette page.  

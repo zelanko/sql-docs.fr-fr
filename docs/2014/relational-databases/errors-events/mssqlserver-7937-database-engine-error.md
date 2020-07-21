@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0e399dfc44534a384d1babd8125aa10fb7be44e8
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: bec894ea9d28601c962d2f3d93885344d101b293
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032042"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553298"
 ---
 # <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7937|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Texte du message|Erreur de table : le répertoire Filestream correspondant à l'ID de colonne C_ID de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID est introuvable.|  
+|Texte du message|Erreur de table, le répertoire Filestream correspondant à l’ID de colonne C_ID de l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID est introuvable.|  
   
 ## <a name="explanation"></a>Explication  
  La colonne spécifiée existe dans une partition ; toutefois, son répertoire FILESTREAM correspondant est introuvable dans l'espace de données FILESTREAM.  
