@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 28270d98-c543-4e7d-b40c-2200e38dce1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d6fc5ef92d3092763de2f4d3fb7e26c6ac2f828e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b67d1d9dc7d73f46e0b267d66651f1dfe1a4c8d9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032963"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551404"
 ---
 # <a name="mssqlserver_41342"></a>MSSQLSERVER_41342
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID de l’événement|41342|  
@@ -38,6 +38,6 @@ ms.locfileid: "85032963"
  Mettez à niveau votre processeur. Si votre processeur prend en charge l'instruction et que vous exécutez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur virtuel, modifiez la configuration afin de prendre en charge l'instruction CMPXCHG16B.  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;optimisation en mémoire&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

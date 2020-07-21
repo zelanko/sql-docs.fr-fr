@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4879d1e8a459994704849cead8ea873e479f5869
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 35b375cb93c11dea1284446dbce22ea5ee22f5a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032311"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550974"
 ---
 # <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7934|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Texte du message|Erreur de table : l'ID de répertoire FILESTREAM F_ID correspondant à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, est introuvable.|  
+|Texte du message|Erreur de table, l’ID de répertoire FILESTREAM F_ID correspondant à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, est introuvable.|  
   
 ## <a name="explanation"></a>Explication  
  Au cours de l'exécution de DBCC CHECKDB, une partition a été trouvée, mais son répertoire d'ensemble de lignes FILESTREAM correspondant dans l'espace de données FILESTREAM reste introuvable.  

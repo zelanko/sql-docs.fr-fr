@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f40ac3a566280526757bd8b83c784954ba3dde
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 33302a6bccca3d83ef16172eaac7dcfc156ec3a8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032795"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551264"
 ---
 # <a name="mssqlserver_5231"></a>MSSQLSERVER_5231
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|5231|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_DEADLOCK_SKIPPED_OBJECT|  
-|Texte du message|ID d'objet O_ID (objet 'NAME') : un blocage s'est produit lors de la tentative de verrouillage de cet objet en vue d'une vérification. Cet objet a été ignoré et il ne sera pas traité.|  
+|Texte du message|ID d’objet O_ID (objet 'NAME') : un blocage s’est produit lors de la tentative de verrouillage de cet objet en vue d’une vérification. Cet objet a été ignoré et il ne sera pas traité.|  
   
 ## <a name="explanation"></a>Explication  
  Un blocage s'est produit lorsque DBCC essayait de verrouiller l'objet et DBCC a été choisi comme victime du blocage. L'objet ne sera pas traité.  

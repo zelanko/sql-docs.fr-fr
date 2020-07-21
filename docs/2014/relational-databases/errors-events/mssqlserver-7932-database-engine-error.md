@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f1540fd8cd5f483b6c841f209a6f37dea536c91
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c2c04b1d4e29489406465c9dfd11c49305ccbbe2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053708"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550996"
 ---
 # <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7932|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|Texte du message|Erreur de table : l'ID de répertoire FILESTREAM correspondant à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, figure dans le groupe de fichiers FG_ID1, alors qu'il devrait être dans le groupe de fichiers FG_ID2.|  
+|Texte du message|Erreur de table, l’ID de répertoire FILESTREAM correspondant à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, figure dans le groupe de fichiers FG_ID1, alors qu'il devrait être dans le groupe de fichiers FG_ID2.|  
   
 ## <a name="explanation"></a>Explication  
  Au cours de l'exécution de DBCC CHECKDB, le stockage FILESTREAM de l'objet spécifié a été détecté dans le mauvais groupe de fichiers. Il peut s'agir d'une altération dans les métadonnées de l'objet.  

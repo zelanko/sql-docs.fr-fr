@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2e50841f-2b99-45f4-aec5-aa4add70cbeb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b40fe70db8849d09f9296a06cbeed65a9c71e5a5
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4aec35b54d62178ab27b9df007b126e4c05a5a21
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053487"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550772"
 ---
 # <a name="mssqlserver_9002"></a>MSSQLSERVER_9002
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|9002|  
@@ -38,7 +38,7 @@ ms.locfileid: "85053487"
  Utilisez **sys.databases** pour comprendre pourquoi le journal est plein, puis corrigez la condition. Pour plus d’informations, consultez « Résolution des problèmes en cas de journal des transactions saturé (erreur 9002) » dans la documentation en ligne de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résolvez les problèmes liés à un journal des transactions complet &#40;SQL Server erreur 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)   
+ [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   

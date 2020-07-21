@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fec0661d5508acdd268ba5d153066399c43e8e0c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f67b02113f79e1097693c1785ce10e8497a96d4c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053973"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551384"
 ---
 # <a name="mssqlserver_41350"></a>MSSQLSERVER_41350
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID de l’événement|41350|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_CREATE_TABLE_WITH_ENCRYPTION|  
-|Texte du message|Avertissement : une table optimisée en mémoire avec la durabilité SCHEMA_AND_DATA a été créée dans une base de données dont le chiffrement est activé. Les données de la table optimisée en mémoire ne seront pas chiffrées.|  
+|Texte du message|Avertissement : une table optimisée par mémoire avec la durabilité SCHEMA_AND_DATA a été créée dans une base de données activée pour le chiffrement. Les données de la table optimisée en mémoire ne seront pas chiffrées.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd78df21c50951991b048d767faacb01d8677b3a
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c8a071caf6eb989758564731fd68f424821b6681
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032515"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551071"
 ---
 # <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7903|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ORPHANED_FILE|  
-|Texte du message|Erreur de table : le fichier orphelin 'FILE' a été trouvé dans le répertoire FileStream de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID de colonne C_ID.|  
+|Texte du message|Erreur de table, le fichier orphelin 'FILE' a été trouvé dans le répertoire FileStream de l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID de colonne C_ID.|  
   
 ## <a name="explanation"></a>Explication  
  Un fichier FILESTREAM figure dans un répertoire de colonnes FILESTREAM, mais la valeur de colonne correspondante est absente de la partition.  

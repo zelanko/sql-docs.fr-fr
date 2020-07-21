@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f26231b6740db533e36afcd239115b606e7175f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 0777e25a68193527a6d4265a436ddb96752ef6cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032068"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550964"
 ---
 # <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|7936|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Texte du message|Erreur de table : le répertoire FileStream existe pour l'ID de colonne C_ID de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, mais cette colonne n'est pas une colonne FileStream.|  
+|Texte du message|Erreur de table, le répertoire FileStream existe pour l’ID de colonne C_ID de l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, mais cette colonne n'est pas une colonne FileStream.|  
   
 ## <a name="explanation"></a>Explication  
  Au cours de l'exécution de DBCC CHECKDB, un répertoire FILESTREAM a été trouvé pour la colonne spécifiée ; toutefois, la colonne n'est pas de type `FILESTREAM`.  
