@@ -10,11 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 316c3c95e0928fc4b1ed0c0d4235220c527e68f6
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052745"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485095"
 ---
 # <a name="adventureworks-sample-databases"></a>Exemples de bases de données AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,13 +30,15 @@ Pour plus d’informations sur les exemples, consultez le [référentiel GitHub 
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) ou [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
-## <a name="download-bak-files"></a>Télécharger des fichiers. bak 
+## <a name="download-backup-files"></a>Télécharger les fichiers de sauvegarde 
 
 Utilisez ces liens pour télécharger l’exemple de base de données approprié pour votre scénario. 
 
 - Les données **OLTP** sont pour la plupart des charges de travail de traitement de transactions en ligne courantes. 
 - Les données de **Data Warehouse (DW)** sont destinées aux charges de travail d’entreposage de données. 
 - Les données **légères (LT)** sont une version légère et réduite de l’exemple **OLTP** . 
+
+Si vous n’êtes pas sûr de ce dont vous avez besoin, commencez par la version OLTP qui correspond à votre version de SQL Server. 
 
 |**OLTP** |**Data Warehouse** |**Légèreté**|
 |---------|---------|---------|
@@ -64,7 +67,7 @@ Si vous n’êtes pas familiarisé avec l’utilisation de SQL Server Management
 
 Pour restaurer votre base de données dans SQL Server Management Studio, procédez comme suit :
 
-1. Téléchargez le `.bak` fichier approprié à partir de l’un des liens fournis dans la section [download. bak Files](#download-bak-files) .
+1. Téléchargez le `.bak` fichier approprié à partir de l’un des liens fournis dans la section [Télécharger les fichiers de sauvegarde](#download-backup-files) .
 2. Déplacez le `.bak` fichier vers votre SQL Server emplacement de sauvegarde. Cela dépend de votre emplacement d’installation, du nom de l’instance et de la version de SQL Server. Par exemple, l’emplacement par défaut d’une instance par défaut de SQL Server 2019 est :
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
@@ -106,7 +109,7 @@ Si vous n’êtes pas familiarisé avec [Azure Data Studio Studio](../azure-data
 
 Pour restaurer votre base de données dans Azure Data Studio, procédez comme suit :
 
-1. Téléchargez le `.bak` fichier approprié à partir de l’un des liens fournis dans la section [download. bak Files](#download-bak-files) .
+1. Téléchargez le `.bak` fichier approprié à partir de l’un des liens fournis dans la section [Télécharger les fichiers de sauvegarde](#download-backup-files) .
 1. Déplacez le `.bak` fichier vers votre SQL Server emplacement de sauvegarde. Cela dépend de votre emplacement d’installation, du nom de l’instance et de la version de SQL Server. Par exemple, l’emplacement par défaut d’une instance par défaut de SQL Server 2019 est :
 
     `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
@@ -150,7 +153,7 @@ Procédez comme suit pour utiliser un exemple de base de données pour créer un
 
 1. Connectez-vous à votre Portail Azure.
 1. Sélectionnez **créer une ressource** dans le coin supérieur gauche du volet de navigation. 
-1. Sélectionnez **Bases de données**, puis **Base de données SQL**. 
+1. Sélectionnez **bases de données** , puis **SQL Database**. 
 1. Renseignez les informations demandées pour créer votre base de données. 
 1. Sous l’onglet **paramètres supplémentaires** , choisissez **exemple** comme données existantes sous **source de données**: 
 
