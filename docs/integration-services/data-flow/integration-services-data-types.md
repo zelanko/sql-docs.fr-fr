@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff0ae9555fcd17ccb79fc239f3ef1e125706dc75
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921927"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86904849"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Quand des données entrent dans un flux de données dans un package, la source qui extrait les données les convertit en type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les données numériques se voient attribuer le type de données numeric, les données chaînes le type de données character et les dates le type de données date. Le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié est également affecté aux autres données, comme les GUID et les BLOB (Binary Large Object Blocks). Si le type des données ne peut pas être converti en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une erreur se produit.  

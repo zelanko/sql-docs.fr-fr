@@ -9,16 +9,16 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58225c6728915c5b9dcd73937b2bd645bd08950f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285215"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910122"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Découvrez la série des opérations de l’Assistant Importation et exportation SQL Server en suivant un scénario courant : l’importation de données à partir d’une feuille de calcul Excel dans une base de données SQL Server. Même si vous envisagez d’utiliser une source et une destination différentes, cette rubrique vous montre l’essentiel de ce que vous devez savoir sur l’exécution de l’Assistant.

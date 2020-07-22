@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efc8ce0a541a508f88e7b1122b561008e25f4d51
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d32d104426b76be32510fc3737763d6436a0c816
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292667"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906561"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extraire des données à l'aide de la source ODBC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Cette procédure explique comment extraire des données à l'aide d'une source ODBC. Pour pouvoir ajouter et configurer une source ODBC, le package doit inclure au moins une tâche de flux de données.  

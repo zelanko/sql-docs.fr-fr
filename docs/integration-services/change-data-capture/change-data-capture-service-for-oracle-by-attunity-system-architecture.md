@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c6c809aaa32bd8f953061c48bde6bf43d012aa4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3aa815b1b6ad558ac5a7d2cf705c8d139dd1b25a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294851"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912275"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Architecture système du service de capture de données modifiées pour Oracle par Attunity
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Le service de capture de données modifiées pour Oracle capture les modifications apportées aux tables sélectionnées dans une ou plusieurs bases de données Oracle sources dans les bases de données CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] situées sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le diagramme suivant montre les composants qui composent le service de capture de données modifiées pour Oracle.  

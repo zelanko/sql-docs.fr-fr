@@ -17,15 +17,15 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 318b9e7a78612c6f89d9ccb75fc3d68a09c443c2
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 4570d85074e2d339162aefa681bc92d35c99f3bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159647"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906275"
 ---
 # <a name="replication-log-reader-agent"></a>Agent de lecture du journal des réplications
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   L'Agent de lecture du journal des réplications est un fichier exécutable qui analyse le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et qui copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution.  
   
 > [!NOTE]  

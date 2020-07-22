@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: b359aff3a8164c9d25782b0b10c05f1b68ac5230
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159627"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908945"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 Le moniteur de réplication fournit un certain nombre d’onglets et d’options vous permettant d’afficher des informations et d’effectuer des tâches diverses. Cet article décrit les informations que vous pouvez afficher et les tâches que vous pouvez accomplir à l’aide du moniteur de réplication. 
 
 
