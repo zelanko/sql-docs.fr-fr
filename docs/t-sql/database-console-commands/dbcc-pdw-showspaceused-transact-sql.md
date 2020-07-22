@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -12,21 +12,22 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8a016fe9852c076b563796caf4cc196ea3ecce
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 748ed216b16788e176db5ad459d8e2b05c563c96
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197216"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484234"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Affiche le nombre de lignes, l’espace disque réservé et l’espace disque utilisé pour une table spécifique ou pour toutes les tables dans une base de données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe
   
 ```syntaxsql
 -- Show the space used for all user tables and system tables in the current database  
@@ -37,15 +38,18 @@ DBCC PDW_SHOWSPACEUSED
 DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name .] table_name  " )  
 [;]  
 ```  
-  
-## <a name="arguments"></a>Arguments  
+
+## <a name="arguments"></a>Arguments
+
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
- Nom en une, deux ou trois parties de la table à afficher. Les noms de table en deux ou trois parties doivent être placés entre guillemets doubles (""). L’utilisation de guillemets autour d’un nom de table en une partie est facultative. Quand aucun nom de table n’est spécifié, les informations s’affichent pour la base de données actuelle.  
+Nom en une, deux ou trois parties de la table à afficher. Les noms de table en deux ou trois parties doivent être placés entre guillemets doubles (""). L’utilisation de guillemets autour d’un nom de table en une partie est facultative. Quand aucun nom de table n’est spécifié, les informations s’affichent pour la base de données actuelle.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Autorisations
+
 Requiert l'autorisation VIEW SERVER STATE.
   
-## <a name="result-sets"></a>Jeux de résultats  
+## <a name="result-sets"></a>Jeux de résultats
+
 Voici le jeu de résultats pour toutes les tables.
   
 |Colonne|Type de données|Description|  
@@ -82,6 +86,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 ```  
   
 ### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. Afficher l’espace disque utilisé par toutes les tables dans la base de données actuelle  
+
  L’exemple suivant montre l’espace disque réservé et utilisé par toutes les tables utilisateur et système dans la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```sql
@@ -89,8 +94,8 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
- ## <a name="see-also"></a>Voir aussi
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
-  
+## <a name="see-also"></a>Voir aussi
+
+- [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+- [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)

@@ -26,14 +26,15 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7a8d3d3f24bcbd2b94dd8d4c0c84eff9d513e6cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790034"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485573"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Vérifie la cohérence des structures d'allocation de l'espace disque pour une base de données spécifiée.
@@ -60,7 +61,9 @@ DBCC CHECKALLOC
 ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *database_name* | *database_id* | 0   
  Nom ou ID de la base de données sur laquelle l’allocation et l’utilisation des pages doivent être vérifiées.
 En l'absence de spécification, ou si 0 est spécifié, la base de données actuelle est utilisée.

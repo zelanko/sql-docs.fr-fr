@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2a1c3460d3633ddb8b17582eea53a2c8d740b2ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899903"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483888"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85899903"
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  **'** *username* **'**  
  Nom d'un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows dans la base de données active dont l'identité est empruntée. Quand aucun *username* n’est spécifié, l’identité d’origine de l’administrateur système ou du propriétaire de la base de données qui emprunte l’identité de l’utilisateur est réinitialisée.  
   

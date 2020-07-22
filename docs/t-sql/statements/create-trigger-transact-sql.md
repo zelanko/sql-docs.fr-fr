@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
+title: CREATE TRIGGER (Transact-SQL)
 description: Référence Transact-SQL pour l’instruction CREATE TRIGGER qui permet de créer un déclencheur DML, DDL ou de connexion.
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766946"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481775"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crée un déclencheur DML, DDL ou de connexion. Un déclencheur est un type particulier de procédure stockée qui s’exécute automatiquement quand un événement se produit sur le serveur de base de données. Les déclencheurs DML s'exécutent lorsqu'un utilisateur essaie de modifier des données via un événement DML (Data Manipulation Language). Les événements DML sont des instructions INSERT, UPDATE ou DELETE exécutées sur une table ou une vue. Ces déclencheurs s'activent au déclenchement d'un événement valide, que des lignes de table soient affectées ou non. Pour plus d'informations, consultez [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Arguments
 OR ALTER  
 **S’applique à** : Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
@@ -310,20 +312,27 @@ Bien qu'une instruction TRUNCATE TABLE soit appliquée dans une instruction DELE
 L'instruction WRITETEXT, enregistrée ou non dans le journal, n'active pas un déclencheur.  
   
 Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes ne sont pas autorisées dans un déclencheur DML :  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 De plus, les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes ne sont pas autorisées dans le corps d'un déclencheur DML lorsque celui-ci est utilisé sur la table ou la vue cible de l'action de déclenchement.  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (y compris CREATE SPATIAL INDEX et CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE quand elle est utilisée pour effectuer les actions suivantes :<br /><br /> ajout, modification ou suppression de colonnes ;<br /><br /> changement de partitions ;<br /><br /> ajout ou suppression de contraintes PRIMARY KEY ou UNIQUE.|||  
-  
+- CREATE INDEX (y compris CREATE SPATIAL INDEX et CREATE XML INDEX)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- ALTER TABLE quand elle est utilisée pour effectuer les actions suivantes :
+    - ajout, modification ou suppression de colonnes ;
+    - changement de partitions ;
+    - ajout ou suppression de contraintes PRIMARY KEY ou UNIQUE.
+
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prenant pas en charge les déclencheurs définis par l'utilisateur sur des tables système, nous recommandons de ne pas en créer. 
 

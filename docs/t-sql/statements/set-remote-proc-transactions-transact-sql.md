@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d72a643f1bc9774ebfa412ff50db21b8800e934e
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882595"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484851"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85882595"
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  ON | OFF  
  Si l'option est activée (ON), une transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] est démarrée lorsqu'une procédure stockée distante est exécutée à partir d'une transaction locale. Si elle est désactivée, l'appel d'une procédure stockée distante depuis une transaction locale n'entraîne pas le démarrage d'une transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

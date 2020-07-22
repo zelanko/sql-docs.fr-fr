@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) | Microsoft Docs
+title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012562"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484823"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Refuse une autorisation à un principal. Empêche ce principal d'hériter de l'autorisation par ses appartenances à des groupes ou à des rôles. DENY est prioritaire par rapport à toutes les autres autorisations, sauf qu’elle ne s’applique pas aux propriétaires d’objets ou aux membres du rôle serveur fixe sysadmin.
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  ALL  
  Cette option n'interdit pas toutes les autorisations possibles. Cette option revient à interdire les autorisations suivantes.  
   
@@ -153,11 +156,12 @@ L’utilisation de AS dans cette instruction n’implique pas la possibilité d�
   
  Les détenteurs de l'autorisation CONTROL SERVER, tels que les membres du rôle de serveur fixe sysadmin, peuvent refuser une autorisation sur n'importe quel élément sécurisable du serveur. Les détenteurs de l'autorisation CONTROL sur la base de données, tels que les membres du rôle de base de données fixe db_owner, peuvent refuser une autorisation sur n'importe quel élément sécurisable de la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent refuser une autorisation sur n'importe quel objet dans ce schéma. Si vous utilisez la clause AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel les autorisations sont refusées.  
   
-## <a name="examples"></a>Exemples  
+## <a name="examples"></a>Exemples
+
  Le tableau suivant répertorie les éléments sécurisables et les rubriques qui décrivent leur syntaxe.  
   
-|||  
-|-|-|  
+|Éléments sécurisables|Syntaxe|
+|----------|------|
 |Rôle d'application|[DENY - Refuser des autorisations à un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Assembly|[REVOKE - Révoquer des autorisations sur un assembly &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |Clé asymétrique|[DENY - Refuser des autorisations sur une clé asymétrique &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
