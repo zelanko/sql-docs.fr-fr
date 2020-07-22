@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ba1d23e85d18215092768e41f7962516b3ff036a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8e05b92fdbbcfb34d4e1eb82c4bf159d911b628
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748725"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555639"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retourne un objet qui représente l’enveloppe convexe d’une instance **geome
 .STConvexHull ( )  
 ```  
   
-## <a name="return-types"></a>Types de retour  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Types de retour
  Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  

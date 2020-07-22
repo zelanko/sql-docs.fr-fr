@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0e37094620354c86185244326d6dcd3c3cb35640
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e562dec75bf6a91bb9166b4d711831e03258bb5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701356"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555804"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (type de données geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,10 @@ Effectue une opération d'union sur un jeu d'objets de type geography.
   
 UnionAggregate ( geography_operand )  
 ```  
-  
-## <a name="arguments"></a>Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *geography_operand*  
  Colonne de table de type **geography** qui contient l’ensemble d’objets **geography** sur lequel effectuer une opération d’union.  
   

@@ -16,19 +16,19 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5661008bcb550461466deddea947f205639ae98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008005"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555604"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar et nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Les types de données de caractères qui sont soit de taille fixe, **nchar**, soit de taille variable, **nvarchar**. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], quand un classement prenant en charge les [caractères supplémentaires (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) est utilisé, ces types de données stockent la plage complète des données caractères [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) et utilisent le codage de caractères [UTF-16 ](https://www.wikipedia.org/wiki/UTF-16). Si un classement autre que SC est spécifié, ces types de données stockent uniquement le sous-ensemble de données caractères pris en charge par le codage de caractères [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
-  
-## <a name="arguments"></a>Arguments  
+
+## <a name="arguments"></a>Arguments
 **nchar** [ ( n ) ]  
 Données de type chaîne de taille fixe. *n* définit la taille de chaîne en paires d’octets et doit être une valeur comprise entre 1 et 4 000. La taille de stockage est le double de *n* octets. Pour l'encodage [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), la taille de stockage est deux fois *n* octets et le nombre de caractères pouvant être stockés est également *n*. Pour l'encodage UTF-16, la taille de stockage est toujours deux fois *n* octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*, car les caractères supplémentaires utilisent deux paires d'octets (également appelées [paires de remplacement](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Les synonymes ISO de **nchar** sont **national char** et **national character**.
   

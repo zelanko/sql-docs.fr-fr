@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e18c2348b5d4fe1a791d2a30c691d393a37bdcd1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1304836d2408cff52e96138d163423dc407d0104
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736138"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555436"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Cette méthode de type de données **geography** prend en charge les instances *
 EnvelopeCenter( )  
 ```  
   
-## <a name="return-types"></a>Types de retour  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Types de retour
 Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
 Type de retour CLR : **SqlGeography**  

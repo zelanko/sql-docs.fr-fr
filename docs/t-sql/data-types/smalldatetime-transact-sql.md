@@ -22,14 +22,15 @@ ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eaec4d3e43f0a24b0b7ed297589a2699e41bc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ac0442c2dfe609d112c12ada4f2dedb3be20b8ee
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007995"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556184"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Définit une date qui est associée à une heure de la journée. L'heure est basée sur une journée de 24 heures, les secondes ayant toujours la valeur zéro (:00) et sans fractions de seconde.
@@ -39,8 +40,8 @@ Définit une date qui est associée à une heure de la journée. L'heure est bas
   
 ## <a name="smalldatetime-description"></a>Description de smalldatetime
   
-|||  
-|-|-|  
+|Propriété|Valeur|
+|--------|-----|
 |Syntaxe|**smalldatetime**|  
 |Usage|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Formats de littéraux de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|Non applicable|  

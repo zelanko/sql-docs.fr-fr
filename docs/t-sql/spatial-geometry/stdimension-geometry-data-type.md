@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b0a53e3eca76e5798b891943aff775844618dbf8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19df63a5bb10ad8015e4ecf25e77c113829f1f17
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748668"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555031"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retourne la dimension maximale d’une instance **geometry**.
 .STDimension ( )  
 ```  
   
-## <a name="return-types"></a>Types de retour  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Types de retour
  Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type de retour CLR : **SqlInt32**  

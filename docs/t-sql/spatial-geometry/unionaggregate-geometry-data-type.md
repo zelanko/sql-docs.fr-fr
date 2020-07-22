@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3f0d5de286e36671341f60e13c5837a132f748e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f518b22b4d7aaaf6e100a4f10c91d463d80e495
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762077"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554885"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (type de données geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ Effectue une opération d'union sur un jeu d'objets géométriques.
 UnionAggregate ( geometry_operand )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *geometry_operand*  
  Colonne de table de type **geometry** qui contient l’ensemble d’objets **geometry** sur lequel effectuer une opération d’union.  
   

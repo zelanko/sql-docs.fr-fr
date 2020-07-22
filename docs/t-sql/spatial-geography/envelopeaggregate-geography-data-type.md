@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9dd038549300b65ec14656dfc948f5036ba47f86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e90ae8b7716c3ede90a2a80f5c904f0d02216a5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736187"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555449"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (type de données geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Retourne un objet englobant pour un ensemble donné d’objets **geography**. L�
 EnvelopeAggregate ( geography_operand )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *geography_operand*  
  Colonne de table de type **geography** qui contient l’ensemble d’objets **geography** sur lequel effectuer une opération d’agrégation d’enveloppe.  
   

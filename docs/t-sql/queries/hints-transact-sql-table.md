@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731332"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555859"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 À quelques exceptions près, les indicateurs de table sont pris en charge dans la clause FROM uniquement lorsque les indicateurs sont spécifiés à l'aide du mot clé WITH. En outre, les indicateurs de table doivent être spécifiés avec des parenthèses.  
   
@@ -393,18 +395,20 @@ L'optimiseur de requête ne prendra pas en compte un indicateur d'index si les o
 NOEXPAND s’applique uniquement aux *vues indexées*. Une vue indexée comporte un index cluster unique, créé sur cette dernière. Si une requête contient des références à des colonnes présentes à la fois dans une vue indexée et dans des tables de base, et que l'optimiseur de requête préconise l'utilisation de la vue indexée comme méthode d'exécution de la requête, il utilise alors l'index sur la vue. Cette fonctionnalité est appelée *correspondance de vue indexée*. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l’utilisation automatique d’une vue indexée par l’optimiseur de requête est prise en charge uniquement dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 Toutefois, pour que l'optimiseur prenne en considération les vues indexées pour la mise en correspondance ou utilise une vue indexée référencée avec l'indicateur NOEXPAND, les options SET suivantes doivent avoir pour valeur ON.  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] prend en charge l’utilisation automatique de vues indexées sans spécifier l’indicateur NOEXPAND.
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ARITHABORT a implicitement la valeur ON quand ANSI_WARNINGS a la valeur ON. Par conséquent, vous n'avez pas besoin d'ajuster ce paramètre manuellement.  
-  
- En outre, l'option NUMERIC_ROUNDABORT doit être désactivée (OFF).  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ARITHABORT a implicitement la valeur ON quand ANSI_WARNINGS a la valeur ON. Par conséquent, vous n'avez pas besoin d'ajuster ce paramètre manuellement.  
+
+En outre, l'option NUMERIC_ROUNDABORT doit être désactivée (OFF).  
   
  Pour contraindre l'optimiseur à utiliser un index pour une vue indexée, spécifiez l'option NOEXPAND. Cet indicateur peut être utilisé uniquement si la vue est également nommée dans la requête. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas d'indicateur pour imposer l'utilisation d'une vue indexée particulière dans une requête qui ne nomme pas directement la vue dans la clause FROM ; toutefois, l'optimiseur de requête admet l'utilisation de vues indexées même si elles ne sont pas référencées directement dans la requête. SQL Server crée automatiquement des statistiques sur une vue indexée uniquement quand un indicateur de table NOEXPAND est utilisé. L’omission de cet indicateur peut entraîner l’affichage d’avertissements de plan d’exécution concernant des statistiques manquantes, qui ne peuvent pas être résolus en créant manuellement des statistiques. Lors de l’optimisation de requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les statistiques d’affichage qui ont été créées automatiquement ou manuellement quand la requête référence directement la vue et que l’indicateur NOEXPAND est utilisé.    
   

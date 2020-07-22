@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 576e026f19310ac596e4808b104e21bfb94cee7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731249"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555584"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -113,7 +113,9 @@ n -  positive integer only.
  
 ```
 
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 *graph_search_pattern*  
 Spécifie le modèle à rechercher ou le chemin à parcourir dans le graphique. Ce modèle utilise la syntaxe d’art ASCII pour parcourir un chemin dans le graphique. Le modèle passe d’un nœud à un autre par une arête, dans la direction de la flèche fournie. Les noms ou alias des arêtes sont spécifiés entre parenthèses. Les noms ou alias des nœuds sont spécifiés à chaque extrémité de la flèche. La flèche peut aller dans les deux directions dans le modèle.
 

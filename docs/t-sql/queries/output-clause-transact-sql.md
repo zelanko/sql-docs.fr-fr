@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a63b7d9565f93a770061fc39a9aac7eb4e496366
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706031"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554774"
 ---
 # <a name="output-clause-transact-sql"></a>Clause OUTPUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,9 @@ ms.locfileid: "85706031"
     | $action  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  \@*table_variable*  
  Spécifie une variable **table** dans laquelle les lignes retournées sont insérées au lieu d’être retournées à l’appelant. \@*table_variable* doit être déclaré avant les instructions INSERT, UPDATE, DELETE et MERGE.  
   

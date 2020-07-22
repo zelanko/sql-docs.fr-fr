@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a2d70a6af55587d87272c2317ea13e23f1d3a9ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 94dfdbf56290a38b99fd031771777970597536de
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702324"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556047"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85702324"
 .STOverlaps ( other_geography )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *other_geography*  
  Autre instance **geography** à comparer à l’instance sur laquelle `STOverlaps()` est appelé.  
   
