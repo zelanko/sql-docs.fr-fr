@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 8a341ebc8ba5b80b61cbc5c9337b4ea6ad41f34c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 346eccd3668808225a707233703117736928502d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85011265"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554244"
 ---
 # <a name="title-transact-sql"></a>Title (Transact-SQL)
 
@@ -29,9 +29,7 @@ Cliquez sur l’un des onglets suivants pour connaître la syntaxe, les argument
 
 Pour plus d’informations sur les conventions de la syntaxe, consultez [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Cliquez sur un produit !
-
-Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le clic affiche un contenu différent ici dans cette page web, approprié pour le produit sur lequel vous cliquez.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 

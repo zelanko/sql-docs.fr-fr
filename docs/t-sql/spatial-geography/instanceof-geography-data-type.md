@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3a6939de145d3e63341bddda70d6fa04d9af9b69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09d468b4f39ba50a0c195287961f3c3dc76e0ccd
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731152"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552924"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Teste si l’instance **geography** est du même type que l’instance spécifi�
 .InstanceOf ( 'geography_type')  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 *geography_type*  
 Chaîne **nvarchar(4000)** spécifiant l’un des 16 types exposés dans la hiérarchie de type **geography**.  
   

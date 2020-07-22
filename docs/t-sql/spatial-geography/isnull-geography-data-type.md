@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f620cef1cb6ad91b3894000f91a973d049dd9ee2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98a68bfbdc39bd0731e047e5d6876410d4daf263
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731145"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552914"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85731145"
 .IsNull  
 ```  
   
-## <a name="return-types"></a>Types de retour  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Types de retour
  Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type CLR : **SqlBoolean**  

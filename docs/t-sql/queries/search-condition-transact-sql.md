@@ -37,12 +37,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff6ea88da299779e334f51f653888f29ff6e8bf2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999814"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554444"
 ---
 # <a name="search-condition-transact-sql"></a>Condition de recherche (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "85999814"
     | expression [ NOT ] EXISTS (subquery)     }   
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  \<search_condition>  
  Pour une instruction SELECT, une expression de requête ou une sous-requête, spécifie les conditions des lignes retournées dans le jeu de résultats. Pour une instruction UPDATE, spécifie les lignes à mettre à jour. Pour une instruction DELETE, spécifie les lignes à supprimer. Le nombre de prédicats pouvant être inclus dans une condition de recherche d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est illimité.  
   

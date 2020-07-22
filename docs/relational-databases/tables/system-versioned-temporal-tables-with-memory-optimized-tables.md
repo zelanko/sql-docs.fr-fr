@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cd143092a666a9e1fd661651d0bfe9620db7cc8c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85984513"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554534"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Les tables temporelles à système par version pour les [tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sont conçues pour fournir une solution rentable dans des scénarios où [l’audit de données et l’analyse à un moment donné](https://msdn.microsoft.com/library/mt631669.aspx) sont nécessaires sur des données collectées à l’aide de charges de travail OLTP en mémoire. Elles offrent un débit transactionnel élevé et une simultanéité sans verrouillage, ainsi que la possibilité de stocker un grand nombre de données d’historique pouvant être interrogées facilement.
 

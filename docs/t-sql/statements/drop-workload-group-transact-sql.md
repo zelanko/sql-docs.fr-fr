@@ -17,18 +17,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 149c0e80cc64c1511c074a60595b26b668cfae8e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 74725f71656141c4e441f80b4ba059012b4b65bb
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83605701"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552754"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
-## <a name="click-a-product"></a>Cliquez sur un produit !
-
-Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le clic affiche un contenu différent ici dans cette page web, approprié pour le produit sur lequel vous cliquez.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -84,7 +82,7 @@ DROP WORKLOAD GROUP group_name
 *group_name*  
 Nom d'un groupe de charges de travail défini par l'utilisateur existant.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Un groupe de charge de travail ne peut pas être supprimé si des classifieurs ont été définis pour lui.  Vous devez supprimer les classifieurs existants avant de supprimer le groupe de charge de travail.  Si des requêtes actives utilisant des ressources du groupe de charge de travail sont supprimées, l’instruction de suppression du groupe de charge de travail est bloquée.
 
