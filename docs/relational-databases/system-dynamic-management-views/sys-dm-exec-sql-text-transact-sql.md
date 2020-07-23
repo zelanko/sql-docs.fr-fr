@@ -20,12 +20,12 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734664"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943101"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +85,7 @@ Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique sui
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Pour les requêtes ad hoc, les handles SQL sont des valeurs de hachage basées sur le texte SQL qui est envoyé au serveur et peuvent provenir de n’importe quelle base de données. 
 
 Pour des objets de base de données tels que des procédures stockées, des déclencheurs ou des fonctions, les handles SQL sont dérivés de l'ID de la base de données, de l'ID de l'objet et du numéro de l'objet. 
@@ -110,7 +110,7 @@ Exécutez le code T-SQL suivant dans une nouvelle fenêtre de requête dans [!IN
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Utilisation de **Cross Apply**.  
+  2.  Utilisation de **Cross Apply**.  
     Le sql_handle de **sys. dm_exec_requests** sera passé à **sys. dm_exec_sql_text** à l’aide de **Cross Apply**. Ouvrez une nouvelle fenêtre de requête et transmettez le SPID identifié à l’étape 1. Dans cet exemple, le SPID se présente comme suit `59` :.
 
         ```sql
@@ -120,7 +120,7 @@ Exécutez le code T-SQL suivant dans une nouvelle fenêtre de requête dans [!IN
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  Transmission directe de **sql_handle** .  
+  2.  Transmission directe de **sql_handle** .  
 Acquérir le **sql_handle** à partir de **sys. dm_exec_requests**. Ensuite, transmettez le **sql_handle** directement à **sys. dm_exec_sql_text**. Ouvrez une nouvelle fenêtre de requête et transmettez le SPID identifié à l’étape 1 à **sys. dm_exec_requests**. Dans cet exemple, le SPID se présente comme suit `59` :. Transmettez ensuite le **sql_handle** retourné en tant qu’argument à **sys. dm_exec_sql_text**.
 
         ```sql
@@ -179,10 +179,10 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys. dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

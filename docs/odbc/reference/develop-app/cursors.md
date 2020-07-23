@@ -1,5 +1,5 @@
 ---
-title: Curseurs | Microsoft Docs
+title: Curseurs (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da899e4dc47daff03c31277b3edd4d9c642b87cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305290"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977776"
 ---
 # <a name="cursors"></a>Curseurs
 Une application extrait les données à l’aide d’un *curseur*. Un curseur est différent d’un jeu de résultats : un jeu de résultats est l’ensemble de lignes correspondant à des critères de recherche particuliers, tandis qu’un curseur est le logiciel qui renvoie ces lignes à l’application. Le curseur de nom *,* tel qu’il s’applique aux bases de données, provient probablement du curseur clignotant sur un terminal informatique. Tout comme le curseur indique la position actuelle à l’écran et l’endroit où les mots tapés s’affichent ensuite, un curseur sur un jeu de résultats indique la position actuelle dans le jeu de résultats et la ligne qui sera retournée ensuite.  

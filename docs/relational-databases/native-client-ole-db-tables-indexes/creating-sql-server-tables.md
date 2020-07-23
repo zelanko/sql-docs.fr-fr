@@ -1,5 +1,5 @@
 ---
-title: Création de tables SQL Server | Microsoft Docs
+title: Créer des tables SQL Server (fournisseur Native Client OLE DB) | Microsoft Docs
 description: Découvrez comment le fournisseur de OLE DB SQL Server Native Client expose les fonctions qui permettent aux consommateurs de créer SQL Server tables.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +18,12 @@ ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5893fa37398472b986e1eae1543ff25c41a0600
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9740c208db10484ee1e3c5ef807c5223fe6adfd6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012930"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977722"
 ---
 # <a name="creating-sql-server-tables"></a>Création de tables SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

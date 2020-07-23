@@ -18,12 +18,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719181"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977710"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Premier**|Le déclencheur est activé en premier.|  
+|**First**|Le déclencheur est activé en premier.|  
 |**Famille**|Le déclencheur est activé en dernier.|  
 |**Aucun**|L'ordre d'activation du déclencheur n'est pas défini.|  
   
@@ -63,14 +63,12 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  ** \@ espace de noms =** { **'base de données**'  |  **'serveur'** | NUL  
  Quand *triggername* est un déclencheur DDL, l' ** \@ espace de noms** spécifie si *triggername* a été créé avec une étendue de base de données ou de serveur. Si *triggername* est un déclencheur LOGON, le serveur doit être spécifié. Pour plus d’informations sur la portée du déclencheur DDL, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md). S’il n’est pas spécifié, ou si NULL est spécifié, *triggername* est un déclencheur DML.  
   
-||  
-|-|  
-|Le serveur s’applique à : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|  
+* Le serveur s’applique à : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) et 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="dml-triggers"></a>Déclencheurs DML  
  Il ne peut y avoir qu’un seul **premier** et **dernier** déclencheur pour chaque instruction sur une table unique.  

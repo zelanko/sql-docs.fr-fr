@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc333e99ab9dcf2b74c8c829ca27faf77d8b08b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5949e1667040296e2eb5472dd92bdb2a12db424e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888474"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915605"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Fournit des propriétés pour l'affichage des informations relatives à un fichier journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -39,18 +39,18 @@ class SQLErrorLogFile
 ## <a name="properties"></a>Propriétés  
  La classe SQLErrorLogFile définit les propriétés suivantes.  
   
-|||  
-|-|-|  
+| Propriété | Description |
+| -------- | ----------- |
 |ArchiveNumber|Type de données : **UInt32**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Numéro d'archive pour le fichier journal.|  
 |InstanceName|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le fichier journal réside.|  
 |LastModified|Type de données : **DateTime**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Date de la dernière modification du fichier journal.|  
 |LogFileSize|Type de données : **UInt32**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Taille du fichier journal, en octets.|  
 |Nom|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom du fichier journal.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
-|||  
-|-|-|  
+| Type | Nom |
+| ---- | ---- |
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
 |Espace de noms|\root\Microsoft\SqlServer\ComputerManagement10|  
