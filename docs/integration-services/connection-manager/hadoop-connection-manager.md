@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735111"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915096"
 ---
 # <a name="hadoop-connection-manager"></a>Gestionnaire de connexions Hadoop
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Le Gestionnaire de connexions Hadoop permet à un package SSIS (SQL Server Integration Services) de se connecter à un cluster Hadoop en utilisant les valeurs que vous spécifiez pour les propriétés.  

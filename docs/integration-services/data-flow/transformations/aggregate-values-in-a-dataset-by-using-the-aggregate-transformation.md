@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b6f11ac0a41b52f6b8e197b21279a22df46703d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7290cc15e5721918af9eaa3507465db222f812cf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903750"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915769"
 ---
 # <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>Agréger les valeurs dans un dataset avec la transformation d’agrégation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Pour pouvoir ajouter et configurer une transformation d'agrégation, le package doit inclure au moins une tâche de flux de données et une source.  

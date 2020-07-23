@@ -16,16 +16,16 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 1adc541d08e5ce74e6130d6994bd583ae58030d1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087419"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916070"
 ---
 # <a name="power-query-source-preview"></a>Source Power Query (préversion)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Cet article décrit comment configurer les propriétés de la source Power Query dans le flux de données SQL Server Integration Services (SSIS). Power Query est une technologie qui vous permet de vous connecter à diverses sources de données et de transformer des données à l’aide d’Excel/Power BI Desktop. Pour plus d’informations, consultez l’article [Power Query - Présentation et formation](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). Le script généré par Power Query peut copié et collé dans la source Power Query dans le flux de données SSIS pour le configurer.
   
