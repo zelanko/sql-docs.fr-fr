@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896816"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942834"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
     * `sync tran` - active l’abonnement pour la mise à jour immédiate.
     * `failover` - active l’abonnement pour la mise à jour immédiate avec mise à jour en file d’attente sous forme d’option de basculement.
     > [!NOTE]  
->  `failover` requiert que la publication soit également activée pour les abonnements avec mise à jour en file d’attente. 
+    >  `failover` requiert que la publication soit également activée pour les abonnements avec mise à jour en file d’attente. 
  
 4. Sur l'Abonné, exécutez [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez les éléments suivants :
 
@@ -150,7 +150,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
     * Informations d’identification Windows sous lesquelles l’Agent de distribution s’exécute sur le serveur de distribution pour `@job_login` et `@job_password`. 
 
     > [!NOTE]  
->  Les connexions établies à l’aide de l’authentification intégrée Windows utilisent toujours les informations d’identification Windows spécifiées par `@job_login` et `@job_password`. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations. 
+    >  Les connexions établies à l’aide de l’authentification intégrée Windows utilisent toujours les informations d’identification Windows spécifiées par `@job_login` et `@job_password`. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations. 
 
     * (Facultatif) Une valeur de `0` pour `@subscriber_security_mode` et les informations de connexion SQL Server pour `@subscriber_login` et `@subscriber_password`, si vous devez utiliser l’authentification SQL Server lors de la connexion de l’abonné. 
     * Planification du travail de l'Agent de distribution pour cet abonnement.
@@ -180,7 +180,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
     * `queued failover` - active la prise en charge de la mise à jour en file d’attente avec mise à jour immédiate comme option de basculement.
 
     > [!NOTE]  
->  `queued failover` requiert que la publication soit également activée pour les abonnements avec mise à jour immédiate. Pour basculer sur la mise à jour immédiate, vous devez utiliser [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) pour définir les informations d’identification sous lesquelles les modifications au niveau de l’Abonné sont répliquées sur le serveur de publication.
+    >  `queued failover` requiert que la publication soit également activée pour les abonnements avec mise à jour immédiate. Pour basculer sur la mise à jour immédiate, vous devez utiliser [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) pour définir les informations d’identification sous lesquelles les modifications au niveau de l’Abonné sont répliquées sur le serveur de publication.
  
 4. Sur l'Abonné, exécutez [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez les paramètres suivants :
 
