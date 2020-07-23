@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 521cc4edfb5033b545822b6ac145549fa802e707
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a33855bdd5871f39911210c1fa5afe38414268ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001151"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917719"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Connecteur Microsoft pour Teradata
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Le connecteur Microsoft pour Teradata permet d’exporter des données à partir de bases de données Teradata et de charger des données dans ces bases dans un package SSIS.
 

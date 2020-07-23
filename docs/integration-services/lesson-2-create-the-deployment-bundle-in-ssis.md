@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0ad24013ea2662898857cef3b1359e284e5244b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296009"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916869"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Leçon 2 : Créer l’application de déploiement dans SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Dans la [Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), vous avez créé le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] intitulé Didacticiel de déploiement, ajouté les packages et les fichiers de prise en charge au projet, et implémenté les configurations dans les packages.  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d21140c43c3d584f8e2dac988c0125efd49d8557
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288495"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919083"
 ---
 # <a name="property-expressions-editor"></a>Éditeur d'expressions de la propriété
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilisez la boîte de dialogue **Éditeur d'expressions de la propriété** pour créer, modifier ou supprimer les expressions de la propriété qui mettent à jour les valeurs de propriété.  
