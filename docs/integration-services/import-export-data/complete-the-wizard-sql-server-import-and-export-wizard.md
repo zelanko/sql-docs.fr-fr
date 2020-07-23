@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e37b76232b76590593c384da8e83bc099ce6c11
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296369"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913344"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Terminer l'Assistant (Assistant Importation et Exportation SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Une fois que vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement, et après l’enregistrement facultatif du package créé par l’Assistant, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Terminer l’Assistant**. Cette page vous permet de vérifier les choix effectués dans l’Assistant, puis de cliquer sur **Terminer** pour démarrer l’opération de copie.
