@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669923"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970234"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   La fonction Top **percent** retourne, dans l’ordre décroissant, les lignes les plus importantes d’une table dont le total cumulé est au moins un pourcentage spécifié.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -28,13 +28,13 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une \< référence de colonne de table>, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’un \<table column reference> , ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression de table>  
+ \<table expression>  
   
-## <a name="remarks"></a>Notes  
- La fonction Top **percent** retourne les lignes les plus hauts dans l’ordre décroissant de classement en fonction de la valeur évaluée de l' \< expression de classement> argument pour chaque ligne, de telle sorte que la somme de l' \< expression de classement> valeurs soit au moins égale au pourcentage donné spécifié par l' \< argument de pourcentage>. La propriété de **pourcentage** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de pourcentage spécifiée.  
+## <a name="remarks"></a>Remarques  
+ La fonction Top **percent** retourne les lignes les plus hauts dans l’ordre décroissant de classement en fonction de la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au pourcentage donné spécifié par l' \<percent> argument. La propriété de **pourcentage** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de pourcentage spécifiée.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

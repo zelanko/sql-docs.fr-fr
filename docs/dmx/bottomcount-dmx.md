@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669848"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969959"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne le nombre spécifié de lignes les plus basses, dans l'ordre croissant, comme indiqué par une expression.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une \< référence de colonne de table>, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’un \<table column reference> , ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression de table>  
+ \<table expression>  
   
-## <a name="remarks"></a>Notes  
- La valeur fournie par l' \< expression de classement> argument détermine l’ordre croissant de classement des lignes fournies dans l' \< expression de table> argument, et le nombre de lignes les plus basses spécifiées dans l' \< argument Count> est retourné.  
+## <a name="remarks"></a>Remarques  
+ La valeur fournie par l' \<rank expression> argument détermine l’ordre croissant de classement pour les lignes fournies dans l' \<table expression> argument, et le nombre de lignes les plus basses spécifiées dans l' \<count> argument est retourné.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

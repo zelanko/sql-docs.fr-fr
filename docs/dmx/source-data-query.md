@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670014"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970277"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;requête de données sources&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Pour effectuer l’apprentissage d’un modèle d’exploration de données et créer des prédictions à partir d’un modèle d’exploration de données, vous devez accéder aux données qui sont externes à la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Vous utilisez la \< clause de> de requête de données source dans les extensions DMX (Data Mining Extensions) pour définir ces données externes. L' [insertion dans &#40;&#41;DMX ](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), et [Select from Natural PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) states use ** \< source Data Query>**.  
+  Pour effectuer l’apprentissage d’un modèle d’exploration de données et créer des prédictions à partir d’un modèle d’exploration de données, vous devez accéder aux données qui sont externes à la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Vous utilisez la \<source data query> clause dans les extensions DMX (Data Mining Extensions) pour définir ces données externes. L' [insertion dans &#40;&#41;DMX ](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), et [Select from Natural PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) All use **\<source data query>** .  
   
 ## <a name="query-types"></a>Types de requêtes  
  Les trois méthodes les plus courantes pour spécifier les données source sont :  

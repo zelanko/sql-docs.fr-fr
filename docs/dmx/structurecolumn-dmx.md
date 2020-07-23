@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669981"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970302"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne la valeur de la colonne de structure qui correspond au cas spécifié, ou la valeur de table pour une table imbriquée dans le cas spécifié.  
   
@@ -32,11 +32,11 @@ StructureColumn('structure column name')
  Nom d'une colonne de structure d'exploration de données de table imbriquée ou de cas.  
   
 ## <a name="result-type"></a>Type de résultat  
- Le type retourné dépend du type de la colonne référencée dans le \< paramètre nom de la colonne de structure>. Par exemple, si la colonne de structure d'exploration de données référencée contient une valeur scalaire, la fonction renvoie une valeur scalaire.  
+ Le type retourné dépend du type de la colonne référencée dans le \<structure column name> paramètre. Par exemple, si la colonne de structure d'exploration de données référencée contient une valeur scalaire, la fonction renvoie une valeur scalaire.  
   
  Si la colonne de structure d'exploration de données référencée est une table imbriquée, la fonction renvoie une valeur de table. La valeur de table retournée peut être utilisée dans la clause FROM d'une instruction sub-SELECT.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction est polymorphe et peut être utilisée n'importe où dans une instruction qui autorise des expressions, y compris une liste d'expressions SELECT, une expression de condition WHERE et une expression ORDER BY.  
   
  Le nom de la colonne dans la structure d’exploration de données est une valeur de chaîne et, par conséquent, doit être placé entre guillemets simples : par exemple, `StructureColumn('` **colonne 1** `')` . S'il y a plusieurs colonnes qui ont le même nom, le nom est résolu dans le contexte de l'instruction SELECT englobante.  

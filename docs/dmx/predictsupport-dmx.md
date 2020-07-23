@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667190"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970697"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne la valeur de support pour un état spécifié.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -31,12 +31,12 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Colonne scalaire  
   
 ## <a name="return-type"></a>Type de retour  
- Valeur scalaire du type qui est spécifié par la *\<* référence de colonne scalaire *>* .  
+ Valeur scalaire du type spécifié par *\<*scalar column reference*>* .  
   
 ## <a name="remarks"></a>Remarques  
- Si l'état prévisible est omis, c'est l'état doté de la probabilité de prévision la plus élevée qui est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, définissez l' \< État prédit> sur **INCLUDE_NULL**.  
+ Si l'état prévisible est omis, c'est l'état doté de la probabilité de prévision la plus élevée qui est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, affectez à la valeur \<predicted state> **INCLUDE_NULL**.  
   
- Pour retourner la prise en charge des États manquants, définissez l' \< État prédit> sur la valeur null.  
+ Pour retourner la prise en charge des États manquants, affectez la valeur \<predicted state> null.  
   
 > [!NOTE]  
 >  Les valeurs de support sont calculées différemment ou peuvent avoir une interprétation différente selon le type de modèle que vous interrogez. Pour plus d’informations sur la façon dont la prise en charge est calculée pour un type de modèle particulier, consultez le type d’algorithme individuel dans [contenu du modèle d’exploration de données &#40;Analysis Services-exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

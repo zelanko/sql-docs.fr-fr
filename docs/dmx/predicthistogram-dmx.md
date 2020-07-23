@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666792"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967813"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne une table qui représente un histogramme de la prévision d'une colonne donnée.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -33,11 +33,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Type de retour  
  Table.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un histogramme génère des colonnes statistiques. La structure de colonne de l’histogramme retourné dépend du type de référence de colonne utilisé avec la fonction **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colonnes scalaires  
- Pour une \< référence de colonne scalaire>, l’histogramme retourné par la fonction **PredictHistogram** se compose des colonnes suivantes :  
+ Pour un \<scalar column reference> , l’histogramme retourné par la fonction **PredictHistogram** se compose des colonnes suivantes :  
   
 -   La valeur actuellement en cours de prévision  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      La colonne **$AdjustedProbability** est une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extension de la [!INCLUDE[msCoName](../includes/msconame-md.md)] spécification OLE DB pour l’exploration de données.  
   
 ## <a name="cluster-columns"></a>Colonnes de cluster  
- L’histogramme retourné par la fonction **PredictHistogram** pour une \< référence de colonne de cluster> se compose des colonnes suivantes :  
+ L’histogramme retourné par la fonction **PredictHistogram** pour un \<cluster column reference> se compose des colonnes suivantes :  
   
 -   **$Cluster** (représente le nom du cluster)  
   

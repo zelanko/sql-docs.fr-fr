@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669841"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969932"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne, dans l'ordre croissant, les lignes les plus basses d'une table dont le total cumulé est au moins égal à une valeur spécifiée.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une \< référence de colonne de table>, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’un \<table column reference> , ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression de table>  
+ \<table expression>  
   
-## <a name="remarks"></a>Notes  
- La fonction **BottomSum** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \< expression de classement> argument pour chaque ligne, de telle sorte que la somme de l' \< expression de classement> valeurs soit au moins égale au total spécifié par l' \< argument Sum>. **BottomSum** retourne le plus petit nombre d’éléments possible tout en continuant à répondre à la valeur de somme spécifiée.  
+## <a name="remarks"></a>Remarques  
+ La fonction **BottomSum** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au total spécifié par l' \<sum> argument. **BottomSum** retourne le plus petit nombre d’éléments possible tout en continuant à répondre à la valeur de somme spécifiée.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

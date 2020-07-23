@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def9b352b97921b080e379d235972bb9dfc84510
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666754"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970707"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne l'écart-type prévu pour la colonne spécifiée.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -31,9 +31,9 @@ PredictStdev(<scalar column reference>)
  Colonne scalaire  
   
 ## <a name="return-type"></a>Type de retour  
- Valeur scalaire du type qui est spécifié par la * \< référence de colonne scalaire>*.  
+ Valeur scalaire du type spécifié par *\<scalar column reference>* .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si la référence de colonne est discrète, **PredictStdev** retourne 0, car l’écart type ne peut pas être calculé à partir de valeurs discrètes.  
   
 ## <a name="examples"></a>Exemples  

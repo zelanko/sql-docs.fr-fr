@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669609"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970609"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Sélectionnez à partir du &lt; modèle &gt; . CAS (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Prend en charge l'extraction et retourne les cas qui ont été utilisés pour l'apprentissage du modèle. Vous pouvez également retourner des colonnes de structure qui ne sont pas incluses dans le modèle si l'extraction a été activée sur la structure d'exploration de données et sur le modèle d'exploration de données et que vous disposez des autorisations appropriées.  
   
@@ -53,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *expression*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si l'extraction est activée à la fois sur le modèle d'exploration de données et la structure d'exploration de données, les utilisateurs membres d'un rôle qui a des autorisations d'extraction sur le modèle et la structure peuvent accéder aux colonnes de la structure d'exploration de données qui ne sont pas incluses dans le modèle d'exploration de données. Par conséquent, pour protéger des données sensibles ou des informations personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder l’autorisation **AllowDrillThrough** sur une structure d’exploration de données uniquement lorsque cela est nécessaire.  
   
  Le [décalage &#40;fonction DMX&#41;](../dmx/lag-dmx.md) peut être utilisé avec les modèles de série chronologique pour retourner ou filtrer sur le décalage horaire entre chaque cas et l’heure initiale.  

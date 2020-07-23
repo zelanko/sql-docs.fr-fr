@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669448"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971802"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Crée une structure d'exploration de données dans une base de données et, éventuellement, définit les partitions d'apprentissage et de test. Une fois que vous avez créé la structure d’exploration de données, vous pouvez utiliser l’instruction [ALTER Mining structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) pour ajouter des modèles à la structure d’exploration de données.  
   
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *structure*  
+ *arborescence*  
  Nom unique de la structure.  
   
  *liste de définitions de colonnes*  
@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valeur par défaut : RÉPÉTABLE(0)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous définissez une structure d'exploration de données en spécifiant une liste de colonnes, en spécifiant éventuellement des relations hiérarchiques entre les colonnes, puis en partitionnant éventuellement la structure d'exploration de données en jeux de données d'apprentissage et de test.  
   
  Le mot clé SESSION facultatif indique que la structure est une structure temporaire que vous pouvez utiliser uniquement pour la durée de la session active. Une fois la session terminée, la structure, ainsi que tous les modèles sur celle-ci, seront supprimés. Pour créer des modèles et des structures d’exploration de données temporaires, vous devez d’abord définir la propriété de base de données AllowSessionMiningModels,. Pour plus d’informations, consultez [Propriétés de l’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Vous pouvez définir plusieurs valeurs d'indicateur de modélisation pour une colonne. Toutefois, vous ne pouvez avoir qu'un seul type de contenu et qu'un seul type de données pour une colonne.  
   
 ### <a name="column-relationships"></a>Relations de colonnes  
- Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge l’utilisation de la \< clause de> de relation de colonne suivante.  
+ Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge l’utilisation de la \<column relationship> clause suivante.  
   
  **EN RAPPORT AVEC**  
  Indique une hiérarchie de valeur. La cible d'une colonne RELATED TO peut être une colonne clé dans une table imbriquée, une colonne de valeurs discrètes dans la ligne de cas ou une autre colonne RELATED TO qui indique une hiérarchie plus profonde.  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: af2d52f176b67b27a29eafb662ca539ced53ebbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f387d0524ea22aca3c2bb7eb073af07bbdf0612
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139101"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970050"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 
@@ -45,15 +45,15 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  *Include_Calc_Members*  
  Mot clé permettant d'activer les membres calculés à inclure dans les résultats de l'extraction vers le bas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction retourne un jeu de membres enfants classés par hiérarchie et inclut les membres spécifiés dans le premier jeu qui sont également présents dans le deuxième jeu. Les membres parents ne seront pas extraits vers le bas si le premier jeu contient le membre parent et un ou plusieurs enfants. Le premier jeu peut avoir n'importe quelle dimensionnalité mais le deuxième jeu doit contenir un jeu unidimensionnel. L'ordre est conservé parmi les membres d'origine dans le premier jeu, à ceci près que tous les membres enfants inclus dans l'ensemble de résultats de la fonction sont placés immédiatement après leur membre parent. La fonction construit l'ensemble de résultats en récupérant les enfants de chaque membre dans le premier jeu également présent dans le deuxième jeu. Si la fonction **récursive** est spécifiée, la fonction continue de comparer de manière récursive les membres du jeu de résultats par rapport au deuxième jeu, en extrayant les enfants de chaque membre du jeu de résultats qui est également présent dans le deuxième jeu jusqu’à ce qu’aucun autre membre du jeu de résultats ne puisse être trouvé dans le deuxième jeu.  
   
- L’interrogation de la propriété XMLA **MdpropMdxDrillFunctions** vous permet de vérifier le niveau de prise en charge fourni par le serveur pour les fonctions de perçage. Pour plus d’informations, consultez [Propriétés XMLA prises en charge &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ L’interrogation de la propriété XMLA **MdpropMdxDrillFunctions** vous permet de vérifier le niveau de prise en charge fourni par le serveur pour les fonctions de perçage. Pour plus d’informations, consultez [Propriétés XMLA prises en charge &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
  Le premier jeu peut contenir des tuples au lieu de membres. L'exploration vers le bas des tuples est une extension d'OLE DB et retourne un jeu de tuples à la place des membres.  
   
 > [!IMPORTANT]  
->  Un membre ne fait pas l'objet d'une exploration vers le bas s'il est aussitôt suivi d'un de ses enfants. L’ordre des membres dans le jeu est important pour les familles de fonctions descendante * et haut\* .  
+>  Un membre ne fait pas l'objet d'une exploration vers le bas s'il est aussitôt suivi d'un de ses enfants. L’ordre des membres dans le jeu est important pour les familles de fonctions descendante * et haut \* .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous descend les niveaux concernant l'Australie, soit le membre du premier jeu également présent dans le deuxième jeu.  

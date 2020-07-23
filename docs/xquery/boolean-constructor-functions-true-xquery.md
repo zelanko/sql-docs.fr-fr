@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 614128995edaefae4fb5f6746d092a6d3f74c1ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3661757a2352c5a4a968e58c8676aec609391652
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726761"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914639"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Fonctions constructeurs booléennes : true (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Retourne la valeur xs:boolean True. Ceci équivaut à `xs:boolean("1")`.  
   
@@ -37,7 +37,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>A. Utilisation de la fonction booléenne XQuery true()  
+### <a name="a-using-the-true-xquery-boolean-function"></a>R. Utilisation de la fonction booléenne XQuery true()  
  L’exemple suivant interroge une variable **XML** non typée. L’expression dans la méthode **value ()** retourne la valeur booléenne **true ()** si « AAA » est la valeur de l’attribut. La méthode **value ()** du type de données **XML** convertit la valeur booléenne en un bit et la retourne.  
   
 ```  

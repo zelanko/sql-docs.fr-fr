@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2966868205cdf06ddabf1a86245d2f53da5c82e5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 063c436f2e0d76ca891f332f25be385c2f16fdfa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670162"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969639"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indique si le nœud spécifié contient le cas courant.  
   
@@ -30,7 +30,7 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>Type de retour  
  Type booléen  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **IsInNode** est utilisé uniquement dans les [&#62; de modèle Select from &#60;. CAS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) et [sélectionner des&#62; de &#60;modèle. SAMPLE_CASES &#40;des requêtes&#41;DMX](../dmx/select-from-model-sample-cases-dmx.md) .  
   
 ## <a name="examples"></a>Exemples  

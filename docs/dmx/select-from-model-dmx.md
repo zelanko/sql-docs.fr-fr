@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666664"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970539"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SÉLECTIONNER à partir du &lt; modèle &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Effectue une jointure de prédiction vide, retournant la ou les valeurs les plus probables pour les colonnes spécifiées. Seul le contenu provenant du modèle d'exploration de données est utilisé pour créer la prédiction.  
   
@@ -45,7 +45,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *expression*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les colonnes de la *liste d’expressions* doivent être définies comme prédiction ou prédire uniquement ou associées à une colonne prévisible.  
   
 ## <a name="naive-bayes-example"></a>Exemple de modèle Naive Bayes  

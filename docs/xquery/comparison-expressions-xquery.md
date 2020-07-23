@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729513"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922320"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressions de comparaison (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery fournit les types d'opérateurs de comparaison suivants :  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85729513"
 |Opérateur|Description|  
 |--------------|-----------------|  
 |=|Equal|  
-|!=|Non égal à|  
+|!=|Différent de|  
 |\<|Inférieur à|  
 |>|Supérieur à|  
 |\<=|Inférieur ou égal à|  
@@ -142,8 +142,8 @@ WHERE ContactID=1
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|eq|Equal|  
-|ne|Non égal à|  
+|eq|Égal à|  
+|ne|Différent de|  
 |lt|Inférieur à|  
 |gt|Supérieur à|  
 |le|Inférieur ou égal à|  

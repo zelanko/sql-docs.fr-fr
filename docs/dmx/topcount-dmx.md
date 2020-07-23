@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669949"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970253"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne le nombre spécifié de lignes les plus hautes dans l'ordre décroissant, comme indiqué par une expression.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une \< référence de colonne de table>, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’un \<table column reference> , ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression de table>  
+ \<table expression>  
   
-## <a name="remarks"></a>Notes  
- La valeur fournie par l’expression de \< classement> argument détermine l’ordre de classement décroissant des lignes fournies dans l' \< expression de table> argument, et le nombre de lignes supérieures spécifié dans l' \< argument Count> est retourné.  
+## <a name="remarks"></a>Remarques  
+ La valeur fournie par l' \<rank expression> argument détermine l’ordre de classement décroissant pour les lignes fournies dans l' \<table expression> argument, et le nombre de lignes les plus haut spécifiées dans l' \<count> argument est retourné.  
   
  La fonction TopCount a été introduite à l’origine pour activer les prédictions associatives et, en général, produit les mêmes résultats qu’une instruction qui comprend des clauses **SELECT TOP** et **order by** . Vous obtiendrez de meilleures performances pour les prédictions associatives si vous utilisez la fonction **Predict (DMX)** , qui prend en charge la spécification d’un certain nombre de prédictions à retourner.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af6e9ba832a267c2f85bbe2f44f087399384179c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726788"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914660"
 ---
 # <a name="aggregate-functions---avg"></a>Fonctions d’agrégation : avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Retourne la moyenne d'une série de nombres.  
   
@@ -57,7 +57,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Utilisation de la fonction XQuery avg() pour rechercher les ateliers dans le processus de fabrication, dans lesquels le nombre d'heures de travail est supérieur à la moyenne de tous les ateliers.  
+### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>R. Utilisation de la fonction XQuery avg() pour rechercher les ateliers dans le processus de fabrication, dans lesquels le nombre d'heures de travail est supérieur à la moyenne de tous les ateliers.  
  Vous pouvez réécrire la requête fournie dans la [fonction min (XQuery)](../xquery/aggregate-functions-min.md) pour utiliser la fonction **AVG ()** .  
   
 ## <a name="implementation-limitations"></a>Limites de mise en œuvre  

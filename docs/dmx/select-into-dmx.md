@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a0a245d152ddd9946142f5f115ee1db64ee5998b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670088"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970507"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Crée un modèle d'exploration de données, sur la base de la structure d'exploration de données d'un modèle existant. L’instruction **SELECT INTO** crée le nouveau modèle d’exploration de données en copiant le schéma et d’autres informations qui ne sont pas spécifiques à l’algorithme réel.  
   
@@ -45,7 +45,7 @@ FROM <existing model>
  *modèle existant*  
  Nom du modèle existant à copier.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si l'apprentissage du modèle existant est effectué, le nouveau modèle est automatiquement traité lors de l'exécution de cette instruction. Dans le cas contraire, le nouveau modèle reste non traité.  
   
  L’instruction **SELECT INTO** fonctionne uniquement si la structure du modèle existant est compatible avec l’algorithme du nouveau modèle. Par conséquent, cette instruction s'avère très utile pour créer et tester rapidement des modèles basés sur le même algorithme. Si vous modifiez le type d'algorithme, le nouvel algorithme doit prendre en charge le type de données de chaque colonne du modèle existant, sinon une erreur peut se produire lors du traitement du modèle.  

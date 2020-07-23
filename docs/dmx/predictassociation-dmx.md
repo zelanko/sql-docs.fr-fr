@@ -8,21 +8,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668761"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968223"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Prévoit une appartenance associative.  
   
 Par exemple, vous pouvez utiliser la fonction PredictAssociation pour obtenir l’ensemble de recommandations en fonction de l’état actuel du panier d’achat d’un client. 
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -33,9 +33,9 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  Les algorithmes qui contiennent des tables imbriquées prévisibles, y compris l’Association et certains algorithmes de classification. Les algorithmes de classification qui prennent en charge les tables imbriquées incluent les [!INCLUDE[msCoName](../includes/msconame-md.md)] arbres de décision, les [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes et les [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes de réseau neuronal.  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression de table>  
+ \<table expression>  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les options de la fonction **PredictAssociation** sont EXCLUDE_NULL, INCLUDE_NULL, inclusives, exclusives (par défaut), INPUT_ONLY, INCLUDE_STATISTICS et INCLUDE_NODE_ID.  
   
 > [!NOTE]  

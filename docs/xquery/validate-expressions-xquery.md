@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba7b28277db82a39de449a51776b9893419d9db6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 213a386866ee85e06787c541e4b4578ac9e4c19a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765569"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918912"
 ---
 # <a name="validate-expressions-xquery"></a>Expressions validate (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Dans cette implémentation, l’expression de **validation** n’est pas prise en charge. Le résultat des expressions de construction XQuery sont toujours non typées. Si le résultat d’une expression XQuery doit être typé, utilisez l’expression SQL CAST pour effectuer un cast du résultat en un type de données **XML** avec la collection de schémas par défaut.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670113"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970502"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Sélectionnez à partir du &lt; modèle &gt; . SAMPLE_CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne les exemples de cas qui sont représentatifs des cas utilisés pour l'apprentissage du modèle d'exploration de données.  
   
@@ -46,10 +46,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *expression*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les exemples de cas peuvent être générés et ne pas réellement exister dans les données d'apprentissage. Le cas retourné est représentatif du nœud de contenu spécifié.  
   
- Bien que l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme Sequence Clustering soit le seul [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme qui prend en charge l’utilisation de l’option SELECT FROM \< Model>. SAMPLE_CASES, les algorithmes tiers peuvent également le prendre en charge.  
+ Bien que l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme Sequence Clustering soit le seul [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme qui prend en charge l’utilisation de SELECT FROM \<model> . SAMPLE_CASES, les algorithmes tiers peuvent également le prendre en charge.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne les exemples de cas utilisés pour l'apprentissage du modèle d'exploration de données Target Mail (Courrier cible). L’utilisation de la fonction [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) dans la clause **Where** renvoie uniquement les cas associés au nœud « 000000003 ». La chaîne de nœud peut être trouvée dans la colonne NODE_UNIQUE_NAME de l'ensemble de lignes du schéma.  

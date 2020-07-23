@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 71e6c616cef5a2f4945a1335e1297aa3ad3a2ce4
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4f0f01b0dc3550c6b09e6c2342232e6b7c7fac8f
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669375"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969910"
 ---
 # <a name="---comment-dmx-summary"></a>--(Commentaire) résumé (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indique une chaîne de texte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne doit pas exécuter. Vous pouvez imbriquer les commentaires dans une instruction DMX (Data Mining Extensions), les ajouter à la fin d'une ligne de code ou les insérer sur une ligne séparée.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "83669375"
  *Comment_Text*  
  Chaîne contenant le texte du commentaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez cet opérateur pour un commentaire d'une seule ligne ou imbriqué. Les commentaires insérés à l’aide de--sont délimités par le caractère de saut de ligne.  
   
  Il n'y a pas de longueur maximale pour les commentaires.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669831"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969949"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne, dans l'ordre croissant, les lignes les plus basses d'une table dont le total cumulé est au moins égal au pourcentage spécifié.  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *\<Expression de table>*  
+ *\<Table expression>*  
  Nom d'une colonne de table imbriquée ou d'une expression table.  
   
- *\<>de l’expression de classement*  
+ *\<rank expression>*  
  Colonne dans la table imbriquée ou expression dont le résultat est une colonne.  
   
- *\<pourcentage de>*  
+ *\<percent>*  
  Valeur « double » qui indique le pourcentage cible total.  
   
 ## <a name="result-type"></a>Type de résultat  
  Table.  
   
-## <a name="remarks"></a>Notes  
- La fonction **BottomPercent** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \< expression de classement> argument pour chaque ligne, de telle sorte que la somme de l' \< expression de classement> valeurs soit au moins égale au pourcentage spécifié par l’argument de \< pourcentage>. **BottomPercent** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de pourcentage spécifiée.  
+## <a name="remarks"></a>Remarques  
+ La fonction **BottomPercent** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au pourcentage spécifié par l' \<percent> argument. **BottomPercent** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de pourcentage spécifiée.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous avez créé dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

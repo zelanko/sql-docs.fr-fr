@@ -11,14 +11,15 @@ ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce194b0cfadb4ec9fecb207848d1f784cede0259
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ab2f62063c87dcf55fdbb52eaaa9f7ba2d075a8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003047"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913165"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Renvoie une ligne pour chaque événement d’une session d’événements.  
   
@@ -39,12 +40,11 @@ ms.locfileid: "86003047"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarques  
  Cette vue a les cardinalités de relation suivantes.  
   
-||||  
-|-|-|-|  
-|À partir|À|Relation|  
+| À partir | À | Relation |
+| ---- | -- | ------------ |
 |sys. database_event_session_events. event_session_id|sys. database_event_sessions. event_session_id|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  

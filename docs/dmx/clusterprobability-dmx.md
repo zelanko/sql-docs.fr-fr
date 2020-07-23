@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669352"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969936"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne la probabilité que le cas d'entrée appartient au cluster spécifié.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -33,16 +33,16 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>Type de retour  
  Valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La syntaxe suivante utilise l'ensemble de lignes du schéma Content du modèle d'exploration de données pour retourner les légendes de nœud existant au sein du modèle.  
   
 ```  
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Pour plus d’informations sur l’utilisation de cette syntaxe, consultez [SELECT FROM &#60;model&#62;. CONTENU &#40;&#41;DMX ](../dmx/select-from-model-content-dmx.md). Pour plus d’informations sur l’ensemble de lignes de schéma du contenu du modèle d’exploration de données, consultez [DMSCHEMA_MINING_MODEL_CONTENT rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ Pour plus d’informations sur l’utilisation de cette syntaxe, consultez [SELECT FROM &#60;model&#62;. CONTENU &#40;&#41;DMX ](../dmx/select-from-model-content-dmx.md). Pour plus d’informations sur l’ensemble de lignes de schéma du contenu du modèle d’exploration de données, consultez [DMSCHEMA_MINING_MODEL_CONTENT rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
- Si un \<> de légende de nœud n’est pas spécifié, la fonction retourne la probabilité que les cas d’entrée appartiennent au cluster le plus probable. Utilisez la fonction **cluster** pour retourner le cluster le plus probable.  
+ Si un \<node caption> n’est pas spécifié, la fonction retourne la probabilité que les cas d’entrée appartiennent au cluster le plus probable. Utilisez la fonction **cluster** pour retourner le cluster le plus probable.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne la probabilité que le cas spécifié existe dans le cluster nommé Cluster 2.  

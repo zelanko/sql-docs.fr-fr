@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670131"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970501"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Utilise un modèle d'exploration de données pour prévoir les états des colonnes dans une source de données externe. L’instruction **PREDICTION JOIN** correspond à chaque cas de la requête source au modèle.  
   
@@ -56,8 +56,8 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
- La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes de la \< *liste de mappage de jointure*> sont associées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
+## <a name="remarks"></a>Remarques  
+ La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes du \<*join mapping list*> sont liées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La requête source de la jointure de prévision peut être une table ou une requête singleton.  
   
- Vous pouvez spécifier des fonctions de prédiction qui ne retournent pas d’expression de table dans la \< *liste Sélectionner* une expression> et l' \< *expression de condition*>.  
+ Vous pouvez spécifier des fonctions de prédiction qui ne retournent pas d’expression de table dans \<*select expression list*> et \<*condition expression*> .  
   
  La **jointure de prédiction naturelle** mappe automatiquement les noms de colonnes de la requête source qui correspondent aux noms de colonne dans le modèle. Si vous utilisez la **prédiction naturelle**, vous pouvez omettre la clause on.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d75bd4a1d4b75d9acb153c3a3aec9efcf58d876
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 01d9c838e8b7a40d19a59997ae670eee19e6309b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669738"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969850"
 ---
 # <a name="divide-dmx"></a>(Diviser) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Exécute une opération arithmétique qui divise un nombre par un autre.  
   
@@ -37,7 +37,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>Valeur renvoyée  
  Valeur qui possède le type de données du paramètre doté de la priorité la plus élevée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La valeur retournée par cet opérateur représente le quotient de la première expression divisée par la seconde expression.  
   
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si l'expression Divisor renvoie une valeur NULL, l'opérateur génère une erreur. Si les expressions Divisor et Dividend renvoient toutes les deux une valeur NULL, l'opérateur retourne une valeur NULL.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2ef32a9e133c199aae0779c819736d77e0d15c45
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bab465fe98c9509eaa99999a321317ee8013a74d
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670063"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969760"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indique si le nœud actuel provient du nœud spécifié.  
   
@@ -30,7 +30,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Type de retour  
  Type booléen  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **IsDescendant** est utilisé uniquement dans les [&#62; de modèle Select from &#60;. CONTENU &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md) et [sélectionnez &#60;&#62; de modèle. DIMENSION_CONTENT &#40;des requêtes&#41;DMX](../dmx/select-from-model-dimension-content-dmx.md) .  
   
 ## <a name="examples"></a>Exemples  

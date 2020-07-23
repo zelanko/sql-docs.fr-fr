@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666697"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970687"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne les valeurs suivantes prédites pour les données de série chronologique. Les données de séries chronologiques étant continues, elles peuvent être stockées dans une table imbriquée ou une table de cas. La fonction **PredictTimeSeries** retourne toujours une table imbriquée.  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Arguments  
- * \< référence de colonne de table>, référence *de * \< colonne scalaire>*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  Spécifie le nom de la colonne à prédire. La colonne peut contenir des données scalaires ou tabulaires.  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n-end* doit être un entier supérieur à *n-Start*.  
   
- *\<>de requête source*  
+ *\<source query>*  
  Définit les données externes qui sont utilisées pour faire des prédictions.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,9 +65,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Ces arguments peuvent être uniquement utilisés lorsque les nouvelles données sont ajoutées à l'aide d'une instruction PREDICTION JOIN. Si vous utilisez une requête PREDICTION JOIN et que vous ne spécifiez pas d'argument, la valeur par défaut est EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Type de retour  
- \< *Expression de table*>.  
+ Un \<*table expression*>.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) ne prend pas en charge la prédiction historique lorsque vous utilisez l'instruction PREDICTION JOIN pour ajouter de nouvelles données.  
   
  Dans une instruction PREDICTION JOIN, le processus de prédiction commence toujours à l'étape venant immédiatement après la fin de la série d'apprentissage d'origine. Cela est vrai même si vous ajoutez de nouvelles données. Par conséquent, le paramètre *n* et les valeurs de paramètre *n-Start* doivent être un entier supérieur à 0.  

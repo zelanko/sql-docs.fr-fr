@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 88e1619ce37de7c7a334ee7d915115f2deef47ef
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400942"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941071"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Surveiller l’appliance à l’aide de la console d’administration-analyse système de plateforme
 La console d’administration est une application Web SQL Server PDW qui couvre les informations relatives à l’État, à l’intégrité et aux performances de l’appliance. Les utilisateurs se connectent à la console d’administration via Internet Explorer.  
@@ -26,7 +26,7 @@ La console d’administration est une application Web SQL Server PDW qui couvre 
 Accueil  
 Fournit un résumé rapide de l’état de l’appliance.  
   
-Intégrité  
+Santé  
 Affiche la topologie de l’appliance avec des indicateurs indiquant l’intégrité de chaque composant analysé au sein de chaque nœud. Vous permet d’afficher l’état actuel des nœuds et des propriétés individuels des composants de nœud.  
   
 Affiche les alertes matérielles et logicielles.  
@@ -50,7 +50,7 @@ Affiche les plans de charge, l’état actuel des chargements PDW et les erreurs
 Sauvegardes/restaurations  
 Affiche un journal des opérations de sauvegarde et de restauration PDW.  
   
-Intégrité  
+Santé  
 Affiche la topologie PDW avec des indicateurs indiquant l’intégrité de chaque composant analysé au sein de chaque nœud. Vous permet d’afficher l’état actuel des nœuds et des propriétés individuels des composants de nœud.  
   
 Affiche les alertes matérielles et logicielles.  
@@ -76,14 +76,13 @@ Pour vous connecter à la console d’administration, requiert :
   
 -   Adresse IP du cluster de nœuds de contrôle.  Procurez-vous auprès de votre administrateur SQL Server PDW.  
   
-Pour vous connecter à la console d’administration, utilisez Internet Explorer et HTTPS pour accéder à l’adresse IP du cluster de nœuds de contrôle. Par exemple, si l’adresse IP du cluster de nœuds de `10.192.63.102`contrôle est `https://10.192.63.102` , entrez dans la barre d’adresse de votre navigateur. Le premier écran vous demande votre **connexion** et votre **mot de passe**. Fournissez une connexion d’authentification SQL Server et un mot de passe, ou bien une connexion d’authentification Windows et un mot de passe Windows. Si vous utilisez une connexion d’authentification Windows, la console d’administration utilise l’emprunt d’identité.  
+Pour vous connecter à la console d’administration, utilisez Internet Explorer et HTTPS pour accéder à l’adresse IP du cluster de nœuds de contrôle. Par exemple, si l’adresse IP du cluster de nœuds de contrôle est `10.192.63.102` , entrez `https://10.192.63.102` dans la barre d’adresse de votre navigateur. Le premier écran vous demande votre **connexion** et votre **mot de passe**. Fournissez une connexion d’authentification SQL Server et un mot de passe, ou bien une connexion d’authentification Windows et un mot de passe Windows. Si vous utilisez une connexion d’authentification Windows, la console d’administration utilise l’emprunt d’identité.  
   
 ## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>Tâches de la console d’administration  
 La console d’administration vous permet d’analyser les éléments suivants :  
   
-|||  
-|-|-|  
-|**Type d’informations**|**Comment accéder à dans la console d’administration**|  
+|Type d’informations|Comment accéder à dans la console d’administration|
+|-|-|
 |État global de l’appliance|Cliquez sur état de l' **Appliance** dans le menu supérieur ou **page d’hébergement**.|  
 |Alertes|Cliquez sur **Alertes**. Pour plus d’informations, voir fonctionnement des alertes de la [console d’administration &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Composants de l’appliance et leur état|Cliquez sur état de l' **Appliance** dans le menu supérieur ou **page d’hébergement**.|  

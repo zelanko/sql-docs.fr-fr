@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 33c84ada33abee06a78fe0a9f8cc3f37242458ac
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ef4dc17d77707ca5bf08f935fb4a62f6d979ae05
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670230"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969546"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indique si un cas est utilisé comme cas de test pour le modèle d'exploration de données ou la structure d'exploration de données spécifiés.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -30,7 +30,7 @@ IsTestCase()
 ## <a name="result-type"></a>Type de résultat  
  Retourne la **valeur true** si le cas fait partie du jeu de données de test ; Sinon, **false**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si vous utilisez l'Assistant Exploration de données pour créer une structure d'exploration de données et un modèle d'exploration de données connexe, 30 % des cas sont, par défaut, réservés pour une utilisation en tant que jeu de données de test. Les cas restants sont utilisés pour l'apprentissage du modèle d'exploration de données. Le même jeu de données de test peut être utilisé avec tous les modèles qui sont basés sur cette structure. Toutefois, si vous utilisez DMX pour créer le modèle d'exploration de données, toutes les données sont, par défaut, utilisées pour l'apprentissage du modèle, et aucun jeu de test n'est créé. Pour permettre la création d’un jeu de données de test, vous devez définir les paramètres de la clause WITH exclusion.  
   
  Vous pouvez déterminer si un jeu de test a été créé sur une structure d'exploration de données particulière en consultant la valeur des propriétés <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> et <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 543a69c7bc6d7141f841db94847fc8620795fa06
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bf313e45daa7daa07a58a09ce68bb9b2de56245f
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669958"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970254"
 ---
 # <a name="--subtract-dmx"></a>- (Soustraction) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Exécute une opération arithmétique qui soustrait un nombre d'un autre.  
   
@@ -34,7 +34,7 @@ Numeric_Expression - Numeric_Expression
 ## <a name="return-value"></a>Valeur renvoyée  
  Valeur qui possède le type de données du paramètre doté de la priorité la plus élevée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si une expression s'évalue à NULL, l'opérateur retourne le résultat de l'autre expression.  
   
 ## <a name="see-also"></a>Voir aussi  

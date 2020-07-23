@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670239"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971711"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne la **valeur true** si la sous-requête spécifiée retourne au moins une ligne.  
   
@@ -28,13 +28,13 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *sous-requête*  
- Une instruction SELECT de la forme SELECT * FROM \< Column name> [where \< predicate List>].  
+ *subquery*  
+ Une instruction SELECT de la forme SELECT * FROM \<column name> [where \<predicate list> ].  
   
 ## <a name="result-type"></a>Type de résultat  
  Retourne la **valeur true** si le jeu de résultats retourné par la sous-requête contient au moins une ligne ; Sinon, retourne **false**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez utiliser le mot clé NOT avant EXISTS ; par exemple, `WHERE NOT EXISTS (<subquery>)`.  
   
  La liste des colonnes que vous ajoutez à l'argument de sous-requête d'EXISTS est inappropriée ; la fonction vérifie uniquement l'existence d'une ligne qui remplit la condition.  

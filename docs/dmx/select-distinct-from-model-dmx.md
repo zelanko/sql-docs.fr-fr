@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669620"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970624"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; Model &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne tous les états possibles de la colonne sélectionnée dans le modèle. Les valeurs qui sont retournées varient selon que la colonne spécifiée contient des valeurs discrètes, des valeurs numériques discrétisées ou des valeurs numériques continues.  
   
@@ -44,7 +44,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  facultatif. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’instruction **Select distinct from** ne fonctionne qu’avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
   
  L’instruction **Select distinct from** vous permet de référencer directement une colonne à l’intérieur d’une table imbriquée. Par exemple :  
@@ -53,9 +53,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- Les résultats de l’instruction **Select distinct from \< Model>** varient en fonction du type de colonne. Le tableau ci-dessous décrit les types de colonnes pris en charge et le résultat de l'instruction.  
+ Les résultats de l’instruction **Select distinct \<model> from** varient en fonction du type de colonne. Le tableau ci-dessous décrit les types de colonnes pris en charge et le résultat de l'instruction.  
   
-|Type de colonne|Output|  
+|Type de colonne|Sortie|  
 |-----------------|------------|  
 |Discret|Valeurs uniques de la colonne|  
 |Discrétisé|Point milieu de chaque compartiment discrétisé de la colonne.|  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669607"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970611"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   L’instruction **Select** dans les extensions DMX (Data Mining Extensions) est utilisée pour les tâches suivantes dans l’exploration de données :  
   
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>\<N premiers> et trier par  
- Vous pouvez classer les résultats d’une requête à l’aide d’une expression, puis retourner un sous-ensemble des résultats à l’aide d’une combinaison des clauses **order by** et **Top** . Ceci s'avère utile dans les scénarios du type publipostage ciblé dans lesquels vous souhaitez uniquement envoyer les résultats aux personnes les plus probables. Vous pouvez classer les résultats d’une requête de prédiction de publipostage cible par la probabilité de prédiction, puis retourner uniquement les \< n premiers résultats>.  
+## <a name="top-n-and-order-by"></a>TOP \<n> et Order By  
+ Vous pouvez classer les résultats d’une requête à l’aide d’une expression, puis retourner un sous-ensemble des résultats à l’aide d’une combinaison des clauses **order by** et **Top** . Ceci s'avère utile dans les scénarios du type publipostage ciblé dans lesquels vous souhaitez uniquement envoyer les résultats aux personnes les plus probables. Vous pouvez classer les résultats d’une requête de prédiction de publipostage cible par la probabilité de prédiction, puis retourner uniquement les premiers \<n> résultats.  
   
 ## <a name="select-list"></a>Select list  
- La * \< liste de sélection>* peut inclure des références de colonnes scalaires, des fonctions de prédiction et des expressions. Les options disponibles dépendent de l'algorithme et des contextes suivants :  
+ *\<select list>* Peut inclure des références de colonnes scalaires, des fonctions de prédiction et des expressions. Les options disponibles dépendent de l'algorithme et des contextes suivants :  
   
 -   si vous interrogez une structure ou un modèle d'exploration de données ;  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- Vous pouvez limiter les cas retournés par la requête à l’aide d’une clause **Where** . La clause **Where** spécifie que les références de colonne dans l’expression **Where** doivent avoir la même sémantique que les références de colonne dans la * \< liste de sélection>* de l’instruction **Select** , et ne peuvent retourner qu’une expression booléenne. La syntaxe de la clause **Where** est la suivante :  
+ Vous pouvez limiter les cas retournés par la requête à l’aide d’une clause **Where** . La clause **Where** spécifie que les références de colonne dans l’expression **Where** doivent avoir la même sémantique que les références de colonne dans le *\<select list>* de l’instruction **Select** et ne peuvent retourner qu’une expression booléenne. La syntaxe de la clause **Where** est la suivante :  
   
 ```  
 WHERE < condition expression >  

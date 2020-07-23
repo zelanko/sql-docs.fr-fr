@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2933700c24e34748d2c0d6593d5f34eb8e69bc2
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666953"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970821"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne la probabilité pour un état spécifié.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -34,7 +34,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  Valeur scalaire.  
   
 ## <a name="remarks"></a>Remarques  
- Si l'état prédit est omis, l'état ayant la probabilité la plus élevée est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, définissez l' \< État prédit> sur **INCLUDE_NULL**. Pour retourner la probabilité pour les États manquants, définissez l' \< État prédit> sur null.  
+ Si l'état prédit est omis, l'état ayant la probabilité la plus élevée est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, affectez à la valeur \<predicted state> **INCLUDE_NULL**. Pour retourner la probabilité pour les États manquants, affectez la valeur \<predicted state> null.  
   
 > [!NOTE]  
 >  Certains modèles d'exploration de données ne fournissent pas de valeurs de probabilité et ne peuvent donc pas utiliser cette fonction. De plus, les valeurs de probabilité des valeurs cibles spécifiques sont calculées différemment ou peuvent avoir une interprétation différente selon le type de modèle que vous interrogez. Pour plus d’informations sur la façon dont la probabilité est calculée pour un type de modèle particulier, consultez la rubrique relative à l’algorithme dans [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

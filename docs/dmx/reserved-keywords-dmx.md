@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669649"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970629"
 ---
 # <a name="reserved-keywords-dmx"></a>Mots clés réservés (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] réserve certains mots clés pour son usage exclusif. Ces mots clés peuvent être utilisés dans les instructions DMX (Data Mining Extensions) uniquement dans les positions définies par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans la référence au langage DMX. Ces mots clés DMX restreints incluent les membres suivants :  
   

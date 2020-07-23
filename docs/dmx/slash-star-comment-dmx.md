@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b3186c0646ad54fc0632f8b023dcd448cebd1ee9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: f09533b68ab6dc3c771a09b70faf71087ed69a62
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670038"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970401"
 ---
 # <a name="slash-star-comment-dmx"></a>Barre oblique étoile (commentaire) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indique une chaîne de texte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne doit pas exécuter. Le serveur n’évalue pas le texte entre les caractères de commentaire/* et \* /. Vous pouvez imbriquer les commentaires dans une instruction DMX (Data Mining Extensions), les ajouter à la fin d'une ligne de code ou les insérer sur une ligne séparée.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "83670038"
  *Comment_Text*  
  Chaîne contenant le texte du commentaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les commentaires de plusieurs lignes doivent être signalés par /* et \*/.  
   
  Il n'y a pas de longueur maximale pour les commentaires.  

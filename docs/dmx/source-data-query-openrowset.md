@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 125fe829c3b76be0d92a3519249df571890efbf2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: b19b897b65ffb3a4c9e940370ffdead1e10b6d31
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670018"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970317"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;requête de données sources &gt; -OpenRowset
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Remplace la requête de données source par une requête vers un fournisseur externe. Les instructions INSERT, SELECT FROM PREDICTION JOIN et SELECT FROM NATURAL PREDICTION JOIN prennent en charge **OpenRowset**.  
   
@@ -37,7 +37,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  Syntaxe de requête qui retourne un ensemble de lignes.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le fournisseur d’exploration de données établit une connexion à l’objet de source de données à l’aide de *provider_name* et *provider_string* et exécute la requête spécifiée dans *query_syntax* pour récupérer l’ensemble de lignes à partir des données sources.  
   
 ## <a name="examples"></a>Exemples  

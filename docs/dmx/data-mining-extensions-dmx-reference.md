@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670400"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971777"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Guide de référence du langage DMX (Data Mining Extensions)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   DMX (Data Mining Extensions) est un langage que vous pouvez utiliser pour créer et utiliser des modèles d’exploration de données dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez utiliser DMX pour créer la structure de nouveaux modèles d'exploration de données, pour l'apprentissage de ces modèles et pour les explorer, les gérer et y effectuer des prévisions. Le langage DMX se compose d'instructions DDL (langage de définition de données), d'instructions DML (langage de manipulation de données), de fonctions et d'opérateurs.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "83670400"
   
  En utilisant les instructions de manipulation de données dans DMX, vous pouvez effectuer les tâches suivantes :  
   
--   Effectuer l’apprentissage d’un modèle d’exploration de données à l’aide de l’instruction [insert into](../dmx/insert-into-dmx.md) . Cette opération n'insert pas les données source réelles dans un modèle d'exploration de données, mais crée plutôt une abstraction qui décrit le modèle d'exploration de données que l'algorithme crée. La requête source d’une instruction INSERT INTO est décrite dans [ \<>des requêtes de données sources ](../dmx/source-data-query.md).  
+-   Effectuer l’apprentissage d’un modèle d’exploration de données à l’aide de l’instruction [insert into](../dmx/insert-into-dmx.md) . Cette opération n'insert pas les données source réelles dans un modèle d'exploration de données, mais crée plutôt une abstraction qui décrit le modèle d'exploration de données que l'algorithme crée. La requête source pour une instruction INSERT INTO est décrite dans [\<source data query>](../dmx/source-data-query.md) .  
   
 -   Étendez l’instruction SELECT pour parcourir les informations calculées lors de l’apprentissage du modèle et stockées dans le modèle d’exploration de données, telles que les statistiques des données sources. Voici les clauses que vous pouvez inclure pour étendre la puissance de l’instruction SELECT :  
   
@@ -82,7 +82,7 @@ ms.locfileid: "83670400"
   
     -   [Sélectionnez &#60;&#62; de modèle.&#41;DIMENSION_CONTENT &#40;DMX](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   Créez des prédictions basées sur un modèle d’exploration de données existant à l’aide de la clause [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) de l’instruction SELECT. La requête source pour une instruction PREDICTION JOIN est décrite dans [ \<>de requête de données sources ](../dmx/source-data-query.md).  
+-   Créez des prédictions basées sur un modèle d’exploration de données existant à l’aide de la clause [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) de l’instruction SELECT. La requête source pour une instruction PREDICTION JOIN est décrite dans [\<source data query>](../dmx/source-data-query.md) .  
   
 -   Supprimer toutes les données formées d’un modèle ou d’une structure à l’aide de l’instruction [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md) .  
   
