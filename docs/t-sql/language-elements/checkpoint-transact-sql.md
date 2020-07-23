@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: edb989e798274860359a89d4a7a184ba19fd04b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706647"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923370"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "85706647"
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *checkpoint_duration*  
  Spécifie le temps requis (en secondes) pour terminer le point de contrôle manuel. Quand *checkpoint_duration* est spécifiée, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tente de réaliser un point de contrôle dans le laps de temps imparti. *checkpoint_duration* doit être une expression de type **int** et sa valeur doit être supérieure à zéro. Lorsque ce paramètre est omis, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] règle la durée du point de contrôle pour minimiser l'impact sur les performances des applications de base de données. *checkpoint_duration* est une option avancée.  
   

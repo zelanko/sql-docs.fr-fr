@@ -24,15 +24,15 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f0a59dff4420aa4cab9a7ce62a99315196007691
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 206bf3691786007fe4ab8ac8b446af13604341a0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159687"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923425"
 ---
 # <a name="replication-agent-administration"></a>Administration de l'Agent de réplication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Les agents de réplication accomplissent de nombreuses tâches associées à la réplication, notamment la création de copies du schéma et des données, la détection des mises à jour sur le serveur de publication ou sur l'Abonné, et la propagation des modifications entre les serveurs. Par défaut, les agents de réplication s’exécutent au titre des étapes de travail [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Les agents sont simplement des exécutables et peuvent donc être appelés directement à partir de la ligne de commande et de scripts de commande par lot. Chaque agent de réplication prend en charge un ensemble de paramètres d'exécution utilisés pour contrôler comment il s'exécute ; ces paramètres sont spécifiés dans un profil d'agent ou sur la ligne de commande.  
   
 > [!IMPORTANT]  
