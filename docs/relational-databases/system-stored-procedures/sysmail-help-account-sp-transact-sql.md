@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890927"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122690"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,12 +49,11 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats contenant les colonnes répertoriées ci-après.  
   
-||||  
-|-|-|-|  
-|Nom de la colonne|Type de données|Description|  
+| Nom de la colonne | Type de données | Description |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|Identificateur du compte.|  
 |**name**|**sysname**|Nom du compte|  
-|**description**|**nvarchar(256)**|Description du compte.|  
+|**description**|**nvarchar (256)**|Description du compte.|  
 |**email_address**|**nvarchar(128)**|Adresse électronique à partir de laquelle les messages sont envoyés.|  
 |**display_name**|**nvarchar(128)**|Nom d'affichage du compte|  
 |**replyto_address**|**nvarchar(128)**|Adresse à laquelle les réponses aux messages de ce compte sont envoyées.|  
@@ -65,7 +64,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque ce paramètre est 1, Database Mail utilise les informations d’identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Lorsque ce paramètre a la valeur 0, Database Mail utilise le ** \@ nom d’utilisateur** et le ** \@ mot de passe** pour l’authentification sur le serveur SMTP. Si le ** \@ nom d’utilisateur** et le ** \@ mot de passe** sont NULL, Database mail utilise l’authentification anonyme. Consultez l’administrateur SMTP avant de spécifier ce paramètre.|  
 |**enable_ssl**|**bit**|Spécifie si Database Mail chiffre les communications à l’aide du protocole TLS (Transport Layer Security), précédemment connu sous le nom de protocole SSL (SSL). Utilisez cette option si TLS est requis sur votre serveur SMTP. **enable_ssl** est de bits, sans valeur par défaut. 1 indique Database Mail chiffre les communications à l’aide de TLS. 0 indique Database Mail envoie le courrier sans chiffrement TLS.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Quand aucun *account_id* ou *account_name* n’est fourni, **sysmail_help_account** répertorie des informations sur tous les comptes de Database mail de l’instance Microsoft SQL Server.  
   
  La procédure stockée **sysmail_help_account_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  

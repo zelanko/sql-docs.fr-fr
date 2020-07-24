@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890890"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122731"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,22 +55,21 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats qui contient les colonnes répertoriées dans le tableau ci-dessous.  
   
-||||  
-|-|-|-|  
-|Nom de la colonne|Type de données|Description|  
+| Nom de la colonne | Type de données | Description |
+| ----------- | --------- | ----------- |
 |**principal_id**|**int**|Identificateur de l'utilisateur de la base de données.|  
 |**principal_name**|**sysname**|Nom de l’utilisateur de base de données.|  
 |**profile_id**|**int**|Numéro d'identification du profil de messagerie de la base de données.|  
 |**profile_name**|**sysname**|Nom du profil de messagerie de la base de données.|  
 |**is_default**|**bit**|Indicateur signalant s'il s'agit du profil par défaut de l'utilisateur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si **sysmail_help_principalprofile_sp** est appelée sans paramètres, le jeu de résultats retourné répertorie toutes les associations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sinon, l'ensemble de résultats contient des informations pour les associations qui correspondent aux paramètres fournis. Par exemple, la procédure répertorie toutes les associations d'un profil lorsque le nom de ce dernier est fourni.  
   
  **sysmail_help_principalprofile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   

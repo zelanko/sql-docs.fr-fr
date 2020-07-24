@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890574"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123020"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tables d’applications de la couche Données - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85890574"
 |**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = connexion<br /><br /> **2** = base de données|  
 |**dac_object_type_name**|**varchar (8)**|Nom du type d'objet affecté par l'action :<br /><br /> **dacpac** = instance DAC<br /><br /> **connexion**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code qui identifie l'état actuel de l'action :<br /><br /> **0** = en attente<br /><br /> **1** = réussite<br /><br /> **2** = échec|  
-|**action_status_name**|**varchar (11)**|État actuel de l'action :<br /><br /> **en attente**<br /><br /> **fructueux**<br /><br /> **incident**|  
+|**action_status_name**|**varchar (11)**|État actuel de l'action :<br /><br /> **instance**<br /><br /> **fructueux**<br /><br /> **Échec**|  
 |**Obligatoire**|**bit**|Utilisé par lors de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] restauration d’une opération DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nom de l'objet avant la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**dac_object_name_posttran**|**sysname**|Nom de l'objet après la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
@@ -51,12 +51,11 @@ ms.locfileid: "85890574"
 |**date_created**|**datetime**|Date et heure de création de cette entrée.|  
 |**date_modified**|**datetime**|Date et heure de la dernière modification apportée à l'entrée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les actions de gestion de la DAC, telles que le déploiement ou la suppression d'une DAC, génèrent plusieurs étapes. Un identificateur d'action est attribué à chaque action. Chaque étape est assignée à un numéro de séquence et à une ligne dans **sysdac_history_internal**, où l’état de l’étape est enregistré. Chaque ligne est créée lors du démarrage de l'étape de l'action et est mise à jour autant que nécessaire pour refléter l'état de l'opération. Par exemple, une action de déploiement de la DAC peut être affectée **action_id** 12 et obtenir quatre lignes dans **sysdac_history_internal**:  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|dacpac|  
 |12|1|create|login|  
 |12|2|create|database|  
@@ -80,7 +79,7 @@ WHERE instance_id NOT IN
  Nécessite l'appartenance au rôle serveur fixe sysadmin. L’accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la base de données Master.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications de la couche données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   

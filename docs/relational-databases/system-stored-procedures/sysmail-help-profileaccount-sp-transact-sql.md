@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890873"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122691"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,16 +57,15 @@ sysmail_help_profileaccount_sp
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats comportant les colonnes suivantes.  
   
-||||  
-|-|-|-|  
-|Nom de la colonne|Type de données|Description|  
+| Nom de la colonne | Type de données | Description |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|ID de profil du profil.|  
 |**profile_name**|**sysname**|Nom du profil.|  
 |**account_id**|**int**|ID du compte.|  
 |**account_name**|**sysname**|Nom du compte|  
 |**sequence_number**|**int**|Numéro de séquence du compte dans le profil.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Quand aucun *profile_id* ou *profile_name* n’est spécifié, cette procédure stockée retourne des informations pour chaque profil de l’instance.  
   
  La procédure stockée **sysmail_help_profileaccount_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  

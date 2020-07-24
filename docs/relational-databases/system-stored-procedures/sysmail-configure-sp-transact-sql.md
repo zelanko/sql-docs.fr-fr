@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890994"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122328"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,8 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>Notes  
  La messagerie de base de données utilise les paramètres suivants :  
   
-||||  
-|-|-|-|  
-|Nom du paramètre|Description|Valeur par défaut|  
+| Nom du paramètre | Description | Valeur par défaut |
+| -------------- | ----------- | ------------- |
 |*AccountRetryAttempts*|Nombre de fois où le processus de messagerie externe tente d'envoyer le message électronique à l'aide de chaque compte présent dans le profil spécifié.|**1**|  
 |*AccountRetryDelay*|Quantité de temps, en secondes, d'attente du processus de messagerie externe entre chaque tentative d'envoi d'un message.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Durée minimale (en secondes) pendant laquelle le processus de messagerie externe reste actif. Lorsque la messagerie de base de données envoie un nombre important de messages, augmentez cette valeur afin de conserver cette messagerie de base de données active et d'éviter la charge de gestion engendrée par des démarrages et arrêts fréquents.|**600**|  
