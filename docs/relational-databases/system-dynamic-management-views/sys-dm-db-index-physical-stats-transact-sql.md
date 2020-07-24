@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677913"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112760"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,11 +110,17 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Taille moyenne des enregistrements en octets.<br /><br /> Pour un index, la taille moyenne des enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit de la taille moyenne des enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, il s'agit de la taille moyenne des enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Nombre d'enregistrements d'un segment de mémoire qui contiennent des pointeurs avant vers un autre emplacement de données. (Cet état se produit pendant une mise à jour, lorsque l'espace disponible est insuffisant pour stocker la nouvelle ligne à l'emplacement d'origine.)<br /><br /> NULL pour toute unité d'allocation différente des unités d'allocation IN_ROW_DATA d'un segment de mémoire.<br /><br /> NULL pour les segments de mémoire lorsque *mode* = Limited.|  
 |compressed_page_count|**bigint**|Nombre de pages compressées.<br /><br /> Pour les segments de mémoire, les pages allouées récemment ne sont pas compressées avec le mode PAGE. Un segment de mémoire est compressé avec le mode PAGE sous deux conditions spéciales : lorsque les données sont importées en bloc ou lorsqu'un segment de mémoire est reconstruit. Les opérations DML par défaut qui provoquent des allocations de page ne sont pas compressées avec le mode PAGE. Reconstruisez un segment de mémoire lorsque la valeur compressed_page_count dépasse le seuil que vous souhaitez.<br /><br /> Pour les tables qui ont un index cluster, la valeur compressed_page_count indique l'efficacité de la compression PAGE.|  
-|hobt_id|bigint|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Pour les index ColumnStore uniquement, il s’agit de l’ID d’un ensemble de lignes qui effectue le suivi des données ColumnStore internes pour une partition. Les ensembles de lignes sont stockés sous forme de tas de données ou d’arborescences binaires. Ils ont le même ID d’index que l’index ColumnStore parent. Pour plus d’informations, consultez [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
-|column_store_delete_buffer_state|TINYINT|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINAGE<br /><br /> 3 = VIDAGE<br /><br /> 4 = RETRAIT<br /><br /> 5 = PRÊT|  
-|column_store_delete_buff_state_desc||**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> NON valide : l’index parent n’est pas un index ColumnStore.<br /><br /> Les scanneurs et les relecteurs ouverts utilisent cette.<br /><br /> DRAINAGE-les suppressions s’impriment, mais les scanneurs l’utilisent encore.<br /><br /> Le vidage du tampon est fermé et les lignes de la mémoire tampon sont écrites dans le bitmap de suppression.<br /><br /> Mise hors service : les lignes du tampon de suppression fermé ont été écrites dans le bitmap de suppression, mais la mémoire tampon n’a pas été tronquée, car les scanneurs l’utilisent encore. Les nouveaux scanneurs n’ont pas besoin d’utiliser la mémoire tampon de mise hors service, car la mémoire tampon ouverte est suffisante.<br /><br /> PRÊT : ce tampon de suppression est prêt à être utilisé.|  
-  
-## <a name="remarks"></a>Remarques  
+|hobt_id|bigint|Pour les index ColumnStore uniquement, il s’agit de l’ID d’un ensemble de lignes qui effectue le suivi des données ColumnStore internes pour une partition. Les ensembles de lignes sont stockés sous forme de tas de données ou d’arborescences binaires. Ils ont le même ID d’index que l’index ColumnStore parent. Pour plus d’informations, consultez [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si <br /><br /> **S’applique à**: SQL Server 2016 et versions ultérieures, Azure SQL Database, Managed instance SQL Azure|  
+|column_store_delete_buffer_state|TINYINT| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINAGE<br /><br /> 3 = VIDAGE<br /><br /> 4 = RETRAIT<br /><br /> 5 = PRÊT<br /><br />**S’applique à**: SQL Server 2016 et versions ultérieures, Azure SQL Database, Managed instance SQL Azure|  
+|column_store_delete_buff_state_desc|| NON valide : l’index parent n’est pas un index ColumnStore.<br /><br /> Les scanneurs et les relecteurs ouverts utilisent cette.<br /><br /> DRAINAGE-les suppressions s’impriment, mais les scanneurs l’utilisent encore.<br /><br /> Le vidage du tampon est fermé et les lignes de la mémoire tampon sont écrites dans le bitmap de suppression.<br /><br /> Mise hors service : les lignes du tampon de suppression fermé ont été écrites dans le bitmap de suppression, mais la mémoire tampon n’a pas été tronquée, car les scanneurs l’utilisent encore. Les nouveaux scanneurs n’ont pas besoin d’utiliser la mémoire tampon de mise hors service, car la mémoire tampon ouverte est suffisante.<br /><br /> PRÊT : ce tampon de suppression est prêt à être utilisé. <br /><br /> **S’applique à**: SQL Server 2016 et versions ultérieures, Azure SQL Database, Managed instance SQL Azure|  
+|version_record_count|**bigint**|Il s’agit du nombre d’enregistrements de version de ligne en cours de conservation dans cet index.  Ces versions de ligne sont gérées par la fonctionnalité [de récupération de base de données accélérée](../../relational-databases/accelerated-database-recovery-concepts.md) . <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|Nombre d’enregistrements de version ADR conservés dans la ligne de données pour une récupération rapide. <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e|  
+|inrow_diff_version_record_count|**bigint**| Nombre d’enregistrements de version ADR conservés sous la forme de différences par rapport à la version de base. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|Taille totale en octets des enregistrements de version contrôles pour cet index. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|Nombre d’enregistrements de version conservés en dehors de la ligne de données d’origine. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|Nombre d’enregistrements de version considérés à long terme. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
+## <a name="remarks"></a>Notes  
  La fonction de gestion dynamique sys.dm_db_index_physical_stats remplace l'instruction DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modes d'analyse  
@@ -424,12 +430,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

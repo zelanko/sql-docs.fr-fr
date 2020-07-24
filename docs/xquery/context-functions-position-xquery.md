@@ -41,7 +41,7 @@ fn:position() as xs:integer
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>R. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
  La requête suivante récupère les deux premières fonctionnalités, les deux premiers éléments enfants de l’élément <`Features`>, à partir de la description du catalogue du modèle de produit. S’il y a plus de fonctionnalités, il ajoute un <`there-is-more/` élément> au résultat.  
   
 ```  

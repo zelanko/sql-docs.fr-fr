@@ -1,6 +1,6 @@
 ---
 title: Instruction CREATe MEMBER (MDX) | Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69494072"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110157"
 ---
 # <a name="mdx-data-definition---create-member"></a>Définition de données MDX - CREATE MEMBER
 
@@ -105,7 +105,7 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>Propriétés standard  
- Chaque membre calculé possède un jeu de propriétés par défaut. Lorsqu’une application cliente est connectée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les propriétés par défaut sont prises en charge ou disponibles pour être prises en charge, comme l’administrateur le choisit.  
+ Chaque membre calculé possède un jeu de propriétés par défaut. Lorsqu’une application cliente est connectée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , les propriétés par défaut sont prises en charge ou disponibles pour être prises en charge, comme l’administrateur le choisit.  
   
  Des propriétés de membre supplémentaires peuvent être disponibles, selon la définition du cube. Les propriétés suivantes représentent des informations relatives au niveau de dimension dans le cube.  
   
@@ -114,9 +114,9 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Ordre dans lequel le membre calculé sera résolu si un membre calculé fait référence à un autre membre calculé (c'est-à-dire à l'intersection des membres calculés).|  
 |FORMAT_STRING|Chaîne de format de style Office que l’application cliente peut utiliser lors de l’affichage des valeurs de cellule.|  
 |VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Les membres calculés visibles peuvent être ajoutés à un ensemble à l’aide de la fonction [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *visible*.<br /><br /> Les membres calculés qui ne sont pas visibles (possédant la valeur zéro) sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
-|NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.<br /><br /> ** \* Avertissement \* \* ** Cette propriété est déconseillée. Évitez de l'utiliser. Pour plus d’informations, consultez [fonctionnalités de Analysis Services dépréciées dans SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) .|  
+|NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.<br /><br /> AVERTISSEMENT Cette propriété est déconseillée. ** \* \* \* \* ** Évitez de l'utiliser. Pour plus d’informations, consultez [fonctionnalités de Analysis Services dépréciées dans SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) .|  
 |CAPTION|Chaîne que l'application cliente utilise à titre de légende du membre.|  
-|DISPLAY_FOLDER|Chaîne qui identifie le chemin d'accès du dossier d'affichage que l'application cliente utilise pour afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique\\inverse () est le séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
+|DISPLAY_FOLDER|Chaîne qui identifie le chemin d'accès du dossier d'affichage que l'application cliente utilise pour afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barre oblique inverse ( \\ ) est le séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
 |ASSOCIATED_MEASURE_GROUP|Nom du groupe de mesures auquel ce membre est associé.|  
   
 ## <a name="see-also"></a>Voir aussi  

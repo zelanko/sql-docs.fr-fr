@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e6a0d89b4976076f14fe567b7a95e7cbb47c9f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401122"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942331"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Installation matérielle pour l’appliance Analytics Platform System (APS)
 Cet article explique comment déplacer, décompresser et installer le matériel de votre appareil SQL Server PDW. Cet article est purement informatif et est destiné à vous aider à comprendre le processus. Votre appliance doit être décompressée, installée et vérifiée avant d’être retournée. La participation des clients est requise pour les éléments tels que l’accès au centre de données, l’alimentation électrique et les connexions Ethernet.  
@@ -54,12 +54,12 @@ Utilisez la liste de vérification suivante pour déplacer chaque rack d’appli
 ## <a name="install-additional-components"></a><a name="AfterMoving"></a>Installer des composants supplémentaires  
 Utilisez la liste de vérification suivante pour installer les composants supplémentaires.  
   
-|Tâche|Description||  
-|--------|---------------|-|  
-|Déballer et monter en rack les commutateurs et les PDU du réseau|Utilisez les diagrammes de rack pour placer les commutateurs réseau et les PDU à l’emplacement approprié dans le rack.||  
-|Connectez les câbles InfiniBand et Ethernet en fonction des étiquettes de câble.|Consultez le diagramme de câblage. Chaque câble a une étiquette à chaque extrémité qui spécifie l’emplacement où il doit être connecté.||  
-|Connecter tous les câbles d’alimentation|Consultez le diagramme de câblage.||  
-|Mettez l’alimentation sur les racks et les PDU.|Connectez l’alimentation aux racks et des racks aux PDU. **N’mettez pas hors tension les autres composants de l’appliance à l’heure actuelle.**||  
+|Tâche|Description|
+|--------|---------------|
+|Déballer et monter en rack les commutateurs et les PDU du réseau|Utilisez les diagrammes de rack pour placer les commutateurs réseau et les PDU à l’emplacement approprié dans le rack.|
+|Connectez les câbles InfiniBand et Ethernet en fonction des étiquettes de câble.|Consultez le diagramme de câblage. Chaque câble a une étiquette à chaque extrémité qui spécifie l’emplacement où il doit être connecté.|
+|Connecter tous les câbles d’alimentation|Consultez le diagramme de câblage.|
+|Mettez l’alimentation sur les racks et les PDU.|Connectez l’alimentation aux racks et des racks aux PDU. **N’mettez pas hors tension les autres composants de l’appliance à l’heure actuelle.**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

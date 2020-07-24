@@ -34,7 +34,7 @@ Numeric_Expression + Numeric_Expression
 ## <a name="return-value"></a>Valeur renvoyée  
  Valeur qui possède le type de données du paramètre doté de la priorité la plus élevée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si une expression s'évalue à NULL, l'opérateur retourne le résultat de l'autre expression.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -2,7 +2,7 @@
 title: Sécurité de l’intégration du CLR | Microsoft Docs
 description: SQL Server l’intégration avec la sécurité .NET Framework CLR gère l’accès entre les objets. Les vérifications de sécurité effectuées sur les objets dépendent des appels impliqués.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86785198441bab1210f6b089293d4f174e8dd1b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd0f9f37b3381705a2e739276a7a044837fb20ad
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885791"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110160"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
 
@@ -56,7 +56,7 @@ ms.locfileid: "85885791"
  [Autorisation d'appelants partiellement approuvés](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Discute des problèmes qui surviennent lorsqu'une méthode managée appelle une méthode dans une classe contenue dans un autre assembly.  
   
- [Domaines d'application et sécurité de l'intégration du CLR](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [Domaines d'application et sécurité de l'intégration du CLR](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Décrit la façon dont les assemblys sont chargés dans les domaines d'application.  
   
 ## <a name="see-also"></a>Voir aussi  

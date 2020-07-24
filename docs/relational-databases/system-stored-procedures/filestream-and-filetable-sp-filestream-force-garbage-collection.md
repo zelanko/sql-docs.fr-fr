@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0068e1afb8f096b3758d45a770f1aac56512d0c6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717436"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977593"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +53,8 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>Codet de retour  
   
-|||  
-|-|-|  
-|Valeur|Description|  
+| Valeur | Description |
+| ----- | ----------- |   
 |0|Réussite de l'opération|  
 |1|Échec de l'opération|  
   
@@ -69,7 +68,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|Indique le nombre d'éléments FILESTREAM éligibles (fichiers ou répertoires) qui n'ont pas été traités pour le garbage collection dans ce conteneur FILESTREAM. Les éléments peuvent être inexploités pour différentes raisons, notamment :<br /><br /> Fichiers qui doivent être épinglés car la sauvegarde de journal ou le point de contrôle n'a pas été accepté.<br /><br /> Fichiers en mode de récupération FULL ou BULK_LOGGED.<br /><br /> Il existe une transaction active de longue durée.<br /><br /> Le travail du lecteur du journal de réplication n’a pas été exécuté. Pour plus d’informations, consultez le livre blanc [stockage FILESTREAM dans SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) .|  
 |*last_collected_xact_seqno*|Retourne le dernier numéro séquentiel dans le journal correspondant (LSN) jusqu'aux fichiers récupérés par le garbage collector pour le conteneur FILESTREAM spécifié.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Exécute explicitement la tâche de Garbage collector FILESTREAM à l'achèvement sur la base de données demandée (et le conteneur FILESTREAM). Les fichiers qui ne sont plus nécessaires sont supprimés par le processus de garbage collection. La durée d'exécution de cette opération varie selon la taille des données FILESTREAM dans cette base de données ou ce conteneur, ainsi qu'en fonction de l'activité DML qui s'est produite récemment sur les données FILESTREAM. Bien que cette opération puisse être exécutée avec la base de données en ligne, cela peut affecter les performances de la base de données pendant son exécution en raison des différentes activités d'entrées/sorties effectuées par le processus de garbage collection.  
   
 > [!NOTE]  
@@ -108,8 +107,8 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ## <a name="see-also"></a>Voir aussi  
 [FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
-<br>[Vues de gestion dynamique liées à Filestream et FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-<br>[Affichages catalogue FILESTREAM et FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Vues de gestion dynamiques Filestream et FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Vues de catalogue Filestream et FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

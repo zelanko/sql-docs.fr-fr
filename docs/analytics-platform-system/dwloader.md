@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401175"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942341"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Chargeur de ligne de commande dwloader pour les Data Warehouse parallèles
 **dwloader** est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (mode*Append* ou *mode fastappend*), ajouter de nouvelles lignes et mettre à jour les lignes existantes (*mode upsert*), ou supprimer toutes les lignes existantes avant le chargement, puis insérer toutes les lignes dans une table vide (*mode de rechargement*).  
@@ -43,7 +43,7 @@ ms.locfileid: "74401175"
   
 5.  Exécutez **dwloader**.  
   
-    Connectez-vous au serveur de chargement et exécutez le fichier exécutable **dwloader. exe** avec les options de ligne de commande appropriées.  
+    Connectez-vous au serveur de chargement et exécutez le **dwloader.exe** exécutable avec les options de ligne de commande appropriées.  
   
 6.  Vérifiez les résultats.  
   
@@ -123,7 +123,7 @@ Affiche des informations d’aide simples sur l’utilisation du chargeur. L’a
 **-U** *login_name*  
 Une connexion d’authentification SQL Server valide avec les autorisations appropriées pour effectuer la charge.  
   
-**-P** *mot de passe*  
+**-P** *password*  
 Mot de passe d’une *Login_name*d’authentification SQL Server.  
   
 **-W**  
@@ -136,7 +136,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Utilisez un fichier de paramètres, *parameter_file_name*, à la place des paramètres de ligne de commande. *parameter_file_name* peut contenir n’importe quel paramètre de ligne de commande, à l’exception de *user_name* et du *mot de passe*. Si un paramètre est spécifié sur la ligne de commande et dans le fichier de paramètres, la ligne de commande remplace le paramètre de fichier.  
   
-Le fichier de paramètres contient un paramètre, sans **-** le préfixe, par ligne.  
+Le fichier de paramètres contient un paramètre, sans le **-** préfixe, par ligne.  
   
 Exemples :  
   
@@ -195,21 +195,21 @@ Pour charger plusieurs fichiers à l’aide d’une commande :
   
 Exemples :  
   
--   -i \\\loadserver\loads\daily\\*. gz  
+-   -i \\ \loadserver\loads\daily \\ *. gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\ \loadserver\loads\daily \\ *. txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 En cas d’échec de chargement, **dwloader** stocke la ligne qui n’a pas pu être chargée et la description de l’erreur les informations d’échec dans un fichier nommé *load_failure_file_name*. Si ce fichier existe déjà, dwloader remplacera le fichier existant. *load_failure_file_name* est créé lorsque le premier échec se produit. Si toutes les lignes sont chargées avec succès, *load_failure_file_name* n’est pas créé.  
   
 **-fh** *number_header_rows*  
-Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
+Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
   
 <variable_length_column_options>  
 Les options d’une *source_data_file_name* qui contient des colonnes de longueur variable délimitées par des caractères. Par défaut, *source_data_file_name* contient des caractères ASCII dans des colonnes de longueur variable.  
@@ -290,9 +290,9 @@ Chemin d’accès et nom du fichier de configuration qui spécifie le nombre de 
   
 Ce fichier doit résider sur le serveur de chargement. Le chemin d’accès peut être un chemin d’accès UNC, relatif ou absolu. Chaque ligne de *fixed_width_config_file* contient le nom d’une colonne et le nombre de caractères de cette colonne. Il y a une ligne par colonne, comme suit, et l’ordre dans le fichier doit correspondre à l’ordre dans la table de destination :  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
 Exemple de fichier de configuration de largeur fixe :  
   
@@ -340,17 +340,17 @@ Exemples de LF :
   
 Un LF est requis pour UNIX. Un CR est requis pour Windows.  
   
-**-D** { **AMJ** | ydm | mja | MYD |  DMY | DYM | *custom_date_format* }  
+**-D** { **AMJ** \| ydm \| mja \| MYD \| DMY \| Dym \| *custom_date_format* }  
 Spécifie l’ordre du mois (m), du jour (d) et de l’année (y) pour tous les champs DateTime du fichier d’entrée. L’ordre par défaut est AMJ. Pour spécifier plusieurs formats de commande pour le même fichier source, utilisez l’option-DT.  
   
-AMJ | DMY  
+\|DMY AMJ  
 ydm et DMY autorisent les mêmes formats d’entrée. Tous deux autorisent l’année à se trouver au début ou à la fin de la date. Par exemple, pour les formats de date **ydm** et **DMY** , vous pouvez avoir 2013-02-03 ou 02-03-2013 dans le fichier d’entrée.  
   
 ydm  
 Vous pouvez uniquement charger l’entrée mise en forme en tant que ydm dans les colonnes de type de données DateTime et smalldatetime. Vous ne pouvez pas charger les valeurs ydm dans une colonne du type de données datetime2, date ou DateTimeOffset.  
   
 mja  
-<month> <space> <day>mja autorise <comma>. <year>  
+mja autorise \<month> \<space> \<day> \<comma> \<year> .  
   
 Exemples de données d’entrée mja pour le 1er janvier 1975 :  
   
@@ -490,7 +490,7 @@ Disponible avec la mise à jour CU 7.4, spécifie la longueur maximale de ligne 
 ## <a name="return-code-values"></a>Codet de retour  
 0 (succès) ou autre valeur entière (échec)  
   
-Dans une fenêtre de commande ou un fichier de `errorlevel` commandes, utilisez pour afficher le code de retour. Par exemple :  
+Dans une fenêtre de commande ou un fichier de commandes, utilisez `errorlevel` pour afficher le code de retour. Par exemple :  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-Lorsque vous utilisez PowerShell, `$LastExitCode`utilisez.  
+Lorsque vous utilisez PowerShell, utilisez `$LastExitCode` .  
   
 ## <a name="permissions"></a>Autorisations  
 Nécessite l’autorisation de chargement et les autorisations applicables (insertion, mise à jour, suppression) sur la table de destination. Nécessite l’autorisation CREATe (pour créer une table temporaire) sur la base de données de mise en lots. Si aucune base de données de mise en lots n’est utilisée, l’autorisation créer est requise sur la base de données de destination. 
@@ -568,7 +568,7 @@ Le tableau ci-dessus affiche **dwloader** en utilisant le mode Append chargé da
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-simple-dwloader-example"></a>R. Exemple de dwloader simple  
-L’exemple suivant illustre l’initiation du **chargeur** avec uniquement les options requises sélectionnées. D’autres options sont extraites du fichier de configuration global, *loadparamfile. txt*.  
+L’exemple suivant illustre l’initiation du **chargeur** avec uniquement les options requises sélectionnées. D’autres options sont extraites du fichier de configuration global, *loadparamfile.txt*.  
   
 Exemple utilisant l’authentification SQL Server.  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. Charger des données dans une table AdventureWorks  
-L’exemple suivant fait partie d’un script de commandes qui charge des données dans **AdventureWorksPDW2012**.  Pour afficher le script complet, ouvrez le fichier aw_create. bat fourni avec le package d’installation **AdventureWorksPDW2012** . 
+L’exemple suivant fait partie d’un script de commandes qui charge des données dans **AdventureWorksPDW2012**.  Pour afficher le script complet, ouvrez le fichier aw_create.bat fourni avec le package d’installation **AdventureWorksPDW2012** . 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. S’il utilisait InfiniBand, le serveur *<appliance_name>* `-SQLCTL01`.  
+L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. S’il utilisait InfiniBand, le serveur *<appliance_name>* `-SQLCTL01` .  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-Voici un exemple de fichier de données, DimAccount. txt, qui contient les données à charger dans la table DimAccount.  
+Voici un exemple de fichier de données, DimAccount.txt, qui contient les données à charger dans la table DimAccount.  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Description des paramètres de ligne de commande :  
   
--   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* est l’emplacement d’installation de dwloader. exe.  
+-   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* correspond à l’emplacement d’installation de dwloader.exe.  
   
 -   *-S* est suivi de l’adresse IP du nœud de contrôle.  
   
@@ -685,15 +685,15 @@ Description des paramètres de ligne de commande :
   
 -   *-e UTF16* indique que le fichier source utilise le type d’encodage de caractères primauté des octets de poids faible (Little endian).  
   
--   *-i .\DimAccount.txt* spécifie que les données se trouvent dans un fichier appelé DimAccount. txt, qui existe dans le répertoire actif.  
+-   *-i .\DimAccount.txt* spécifie que les données se trouvent dans un fichier nommé DimAccount.txt qui existe dans le répertoire actif.  
   
 -   *-T AdventureWorksPDW2012. dbo. DimAccount* spécifie le nom en trois parties de la table pour recevoir les données.  
   
 -   *-R DimAccount. Bad* spécifie que les lignes dont le chargement a échoué seront écrites dans un fichier appelé DimAccount. Bad.  
   
--   *-t "|"* indique que les champs du fichier d’entrée, DimAccount. txt, sont séparés par un caractère de barre verticale.  
+-   *-t "|"* indique que les champs du fichier d’entrée, DimAccount.txt, sont séparés par le caractère de barre verticale.  
   
--   *-r \r\n* spécifie chaque ligne dans DimAccount. txt se termine par un retour chariot et un caractère de saut de ligne.  
+-   *-r \r\n* spécifie chaque ligne dans DimAccount.txt se termine par un retour chariot et un caractère de saut de ligne.  
   
 -   *-U <login_name>-P <password> * spécifie la connexion et le mot de passe de la connexion qui dispose des autorisations nécessaires pour effectuer la charge.  
   

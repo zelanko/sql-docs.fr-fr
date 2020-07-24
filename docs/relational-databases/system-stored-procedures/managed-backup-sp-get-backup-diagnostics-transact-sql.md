@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053493"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977511"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86053493"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  @xevent_channel  
  Type d'événement étendu. La valeur par défaut retourne tous les événements enregistrés au cours des 30 dernières minutes. Les événements enregistrés dépendent des types d'événements étendus activés. Vous pouvez utiliser ce paramètre pour filtrer la procédure stockée et afficher uniquement les événements d'un type spécifique. Vous pouvez spécifier le nom complet de l’événement ou spécifier une sous-chaîne telle que : **« admin**», « Analytics **»**, **« Operational »** et **« Debug »**. Est de type @event_channel **VARCHAR (255)**.  
   
@@ -56,9 +57,8 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>Table retournée  
  Cette procédure stockée retourne une table contenant les informations suivantes :  
   
-||||  
-|-|-|-|  
-|Nom de la colonne|Type de données|Description|  
+| Nom de la colonne | Type de données | Description |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|Type d’événement étendu.|  
 |Événement|NVARCHAR (512)|Récapitulatif des journaux d'événements.|  
 |Timestamp|timestamp|Horodateur de l'événement indiquant à quel moment l'événement s'est produit.|  

@@ -20,11 +20,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091776"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977735"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -61,14 +62,14 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Colonne de l'ID interne de document (DocId) qui correspond à la valeur de la clé.|  
-|Clé :|*|Valeur de la clé de texte intégral pour une table spécifiée.<br /><br /> Si aucune clé de texte intégral n'existe dans la table de mappage, un ensemble de lignes vide est retourné.|  
+|Clé|*|Valeur de la clé de texte intégral pour une table spécifiée.<br /><br /> Si aucune clé de texte intégral n'existe dans la table de mappage, un ensemble de lignes vide est retourné.|  
   
  <sup>*</sup>Le type de données de la clé est identique au type de données de la colonne clé de texte intégral dans la table de base.  
   
 ## <a name="permissions"></a>Autorisations  
  Cette fonction est publique et ne requiert pas d'autorisation spéciale.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le tableau ci-dessous décrit l'impact de l'utilisation d'un, de deux ou de trois paramètres.  
   
 |Cette liste de paramètres...|A ce résultat...|  
@@ -90,7 +91,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  Les exemples de cette section utilisent la table `Production.ProductReview` de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Vous pouvez créer cet index en exécutant l’exemple fourni pour la `ProductReview` table dans [CREATE FULLTEXT index &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>R. Obtention de toutes les valeurs de clés et valeurs DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtention de toutes les valeurs de clés et valeurs DocId  
  L’exemple suivant utilise une instruction [Declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) pour créer une variable locale `@table_id` et assigner l’ID de la `ProductReview` table en tant que valeur. L’exemple exécute **sp_fulltext_keymappings** en spécifiant `@table_id` pour le paramètre *table_id* .  
   
 > [!NOTE]  
@@ -107,9 +108,8 @@ GO
   
  Cet exemple retourne toutes les clés DocIds et toutes les clés de texte intégral de la table, comme suit :  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | ID | key |
+| ----- | ----- | --- |
 |`1`|`1`|`1`|  
 |`2`|`2`|`2`|  
 |`3`|`3`|`3`|  
@@ -132,9 +132,8 @@ GO
   
  Cet exemple retourne les résultats suivants.  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | ID | key |
+| ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
 ## <a name="see-also"></a>Voir aussi  

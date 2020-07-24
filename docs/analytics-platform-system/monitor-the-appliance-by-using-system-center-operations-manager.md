@@ -1,5 +1,5 @@
 ---
-title: Surveiller avec SCOM
+title: Utiliser System Center Operations Manager pour surveiller les points d’accès
 description: Utilisez System Center Operations Manager (SCOM) pour surveiller l’appliance Analytics Platform System (APS).
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400968"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941121"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Surveiller avec System Center Operations Manager-Analytics Platform System
 Utilisez System Center Operations Manager (SCOM) pour surveiller l’appliance Analytics Platform System (APS).

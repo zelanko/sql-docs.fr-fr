@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717399"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977539"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -70,7 +70,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**Aucune**|N'utilise pas de commande.|  
 ||**Déplacez**|Supprime la table de destination.|  
 ||**delete**|Détruit la table de destination.|  
-||**tronquer**|Tronque la table de destination.|  
+||**truncate**|Tronque la table de destination.|  
 |**pub_identity_range**||Contrôle la taille des plages d'identité affectées à l'abonné. Non pris en charge pour la réplication d'égal à égal.|  
 |**schema_option**||Spécifie le bitmap de l'option de génération de schéma pour l'article considéré. *schema_option* est **de type binaire (8)**. Pour plus d'informations, consultez la section « Notes » plus loin dans cette rubrique.|  
 ||**0x00**|Désactive les scripts de l'Agent d'instantané.|  
@@ -165,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_changearticle** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
  Lorsqu’un article appartient à une publication qui prend en charge la réplication transactionnelle d’égal à égal, vous ne pouvez modifier que les propriétés **Description**, **ins_cmd**, **upd_cmd**et **del_cmd** .  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>Options de schéma valides  
  Le tableau suivant décrit les valeurs autorisées de *schema_option* en fonction du type de réplication (indiqué dans la partie supérieure) et du type d’article (indiqué dans la première colonne).  
   
-|Type de l'article|Type de réplication||  
-|------------------|----------------------|------|  
-||Transactionnelle|Instantané|  
+| Type de l'article | Type de réplication-transactionnel | Type de réplication-instantané |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|Toutes les options|Toutes les options, sauf **0x02**|  
 |**logbased manualfilter**|Toutes les options|Toutes les options, sauf **0x02**|  
 |**logbased manualview**|Toutes les options|Toutes les options, sauf **0x02**|  
@@ -238,7 +237,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un article](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Modifier les propriétés de publication et d’article](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
