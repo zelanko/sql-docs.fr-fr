@@ -1,1 +1,0 @@
-**Cette rubrique s’applique à :** ![Oui](media/yes-icon.png "oui")SQL Server \(à partir\) de 2008 ![non](media/no-icon.png "non") ![Azure SQL Database aucun](media/no-icon.png "non")Azure SQL Data Warehouse ![aucune](media/no-icon.png "non")Data Warehouse parallèle

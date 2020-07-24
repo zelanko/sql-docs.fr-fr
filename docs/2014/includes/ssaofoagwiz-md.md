@@ -1,1 +1,0 @@
-Assistant Basculer le groupe de disponibilité

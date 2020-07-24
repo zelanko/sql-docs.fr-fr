@@ -1,1 +1,0 @@
-Exécutez toujours les services SQL Server avec le niveau de droits d'utilisateur le plus bas possible.

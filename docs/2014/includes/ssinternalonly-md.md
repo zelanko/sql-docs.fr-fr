@@ -1,1 +1,0 @@
-Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.
