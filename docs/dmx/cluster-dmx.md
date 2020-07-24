@@ -20,7 +20,7 @@ ms.locfileid: "86969920"
 
   Retourne le cluster qui est le plus susceptible de contenir le cas d'entrée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,7 +35,7 @@ Cluster()
   
  La fonction **cluster** retourne une valeur scalaire d’un nom de cluster. Toutefois, si vous utilisez cette fonction en tant qu’argument d’une autre fonction, vous devez la considérer comme un \<cluster column reference> .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **cluster** peut également être utilisé en tant que `<` référence `>` de colonne de cluster pour une fonction **PredictHistogram** .  
   
 ## <a name="examples"></a>Exemples  

@@ -35,7 +35,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *arborescence*  
  Identificateur de la structure  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous ne spécifiez pas de **modèle** d’exploration de données ou de **structure d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
  Le tableau ci-dessous décrit le résultat obtenu en utilisant différentes formes de la syntaxe.  

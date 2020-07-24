@@ -20,7 +20,7 @@ ms.locfileid: "86969936"
 
   Retourne la probabilité que le cas d'entrée appartient au cluster spécifié.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>Type de retour  
  Valeur scalaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La syntaxe suivante utilise l'ensemble de lignes du schéma Content du modèle d'exploration de données pour retourner les légendes de nœud existant au sein du modèle.  
   
 ```  

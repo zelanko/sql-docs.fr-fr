@@ -20,7 +20,7 @@ ms.locfileid: "86970232"
 
   Retourne, dans l'ordre décroissant, les lignes supérieures d'une table dont le total cumulé est au moins égal à la valeur spécifiée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Type de retour  
  \<table expression>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction **Tops** retourne les lignes les plus hauts dans l’ordre décroissant de classement en fonction de la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au total spécifié par l' \<sum> argument. **Tops** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de somme spécifiée.  
   
 ## <a name="examples"></a>Exemples  

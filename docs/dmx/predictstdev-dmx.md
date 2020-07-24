@@ -20,7 +20,7 @@ ms.locfileid: "86970707"
 
   Retourne l'écart-type prévu pour la colonne spécifiée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ PredictStdev(<scalar column reference>)
 ## <a name="return-type"></a>Type de retour  
  Valeur scalaire du type spécifié par *\<scalar column reference>* .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si la référence de colonne est discrète, **PredictStdev** retourne 0, car l’écart type ne peut pas être calculé à partir de valeurs discrètes.  
   
 ## <a name="examples"></a>Exemples  

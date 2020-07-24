@@ -32,12 +32,12 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Facultatif. type de l’objet à exporter (modèle d’exploration de données ou structure d’exploration de données).  
   
  *nom de l’objet*  
- facultatif. Nom de l'objet à exporter.  
+ Optionnel. Nom de l'objet à exporter.  
   
  *extension*  
  Nom et emplacement du fichier à exporter en tant que chaîne.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si l'instruction spécifie un modèle d'exploration de données, le fichier obtenu contiendra également une structure d'exploration de données associée.  Si l’instruction spécifie **des dépendances**, tous les objets requis pour traiter l’objet (par exemple, la source de données et la vue de source de données) sont inclus dans le fichier. ABF.  
   
  Vous devez être un administrateur de base de données ou de serveur pour exporter ou importer des objets à partir d’une [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données.  

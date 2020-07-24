@@ -22,7 +22,7 @@ ms.locfileid: "86968223"
   
 Par exemple, vous pouvez utiliser la fonction PredictAssociation pour obtenir l’ensemble de recommandations en fonction de l’état actuel du panier d’achat d’un client. 
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,7 +35,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>Type de retour  
  \<table expression>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les options de la fonction **PredictAssociation** sont EXCLUDE_NULL, INCLUDE_NULL, inclusives, exclusives (par défaut), INPUT_ONLY, INCLUDE_STATISTICS et INCLUDE_NODE_ID.  
   
 > [!NOTE]  

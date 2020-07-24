@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717444"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943058"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *schema_name. referenced*_*entity_name*  
- Nom de l’entité référencée.  
+ `schema_name.referenced_entity_name`Nom de l’entité référencée.  
   
- *schema_name* est obligatoire, sauf lorsque la classe référencée est PARTITION_FUNCTION.  
+ `schema_name` est requis, sauf lorsque la classe référencée est PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* est **de type nvarchar (517)**.  
+ `schema_name.referenced_entity_name`est **de type nvarchar (517)**.  
   
- *<referenced_class>* :: = {Object | TAPEZ | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
- Classe de l'entité référencée. Une seule classe peut être spécifiée par instruction.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`Est la classe de l’entité référencée. Une seule classe peut être spécifiée par instruction.  
   
- *<referenced_class>* est de type **nvarchar**(60).  
+ `<referenced_class>`est de type **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -96,7 +94,7 @@ sys.dm_sql_referencing_entities (
   
  Retourne une erreur lorsque l'entité référencée spécifiée est une procédure stockée numérotée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le tableau suivant répertorie les types des entités pour lesquelles les informations de dépendance sont créées et gérées. Les informations de dépendance ne sont pas créées ni gérées pour les règles, les valeurs par défaut, les tables temporaires, les procédures stockées temporaires ou les objets système.  
   
 |Type d'entité|Entité de référence|Entité référencée|  
@@ -112,7 +110,7 @@ sys.dm_sql_referencing_entities (
 |Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Procédures stockées étendues|Non|Oui|  
-|File d'attente|Non|Oui|  
+|File d’attente|Non|Oui|  
 |Synonyme|Non|Oui|  
 |Type (alias et type CLR défini par l'utilisateur)|Non|Oui|  
 |Collection de schémas XML|Non|Oui|  

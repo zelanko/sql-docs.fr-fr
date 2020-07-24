@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15cc2596022889fe855145cd538d82676620aa13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2ac5645910a4b5339e696d793c167222b80cc6c3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752625"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942853"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "82752625"
   
 ## <a name="methods"></a>Méthodes  
   
-|||  
+|Méthode|Description|  
 |-|-|  
 |[ConvertToString, méthode (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Convertit un Recordset en chaîne MIME64.|  
 |[CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crée et retourne un jeu d’enregistrements vide.|  

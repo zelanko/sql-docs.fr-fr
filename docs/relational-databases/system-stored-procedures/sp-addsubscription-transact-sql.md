@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716352"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918936"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Ajoute un abonnement à une publication et définit l'état de l'abonné. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
@@ -96,7 +96,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Aucun|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : cette option est dépréciée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
+|aucun|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : cette option est dépréciée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
 |automatic (valeur par défaut)|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
 |replication support only|Fournit une génération automatique au niveau de l'Abonné des procédures stockées personnalisées de l'article et des déclencheurs qui prennent en charge les abonnements de mise à jour, le cas échéant. Considère que l'Abonné dispose déjà du schéma et des données initiales pour les tables publiées. Lors de la configuration d'une topologie de réplication transactionnelle d'égal à égal, veillez à ce que les données de tous les nœuds de la topologie soient identiques. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Non pris en charge pour les abonnements à des publications non-SQL Server.*|  
 |initialize with backup|Le schéma et les données initiales destinées aux tables publiées proviennent d'une sauvegarde de la base de données de publication. L'abonné est censé avoir accès à une sauvegarde de la base de données de publication. L’emplacement de la sauvegarde et le type de support pour la sauvegarde sont spécifiés par *backupdevicename* et *BackupDeviceType*. Lors de l'utilisation de cette option, il n'est pas nécessaire de suspendre la topologie de réplication transactionnelle d'égal à égal pendant la configuration.<br /><br /> *Non pris en charge pour les abonnements à des publications non-SQL Server.*|  
@@ -163,9 +163,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|1|Premier|  
+|1|First|  
 |2|Seconde|  
-|4|Troisième|  
+|4|Third|  
 |8|Quatrième|  
 |16|Dernier|  
 |NULL (par défaut)||  
@@ -295,7 +295,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  sp_addsubscription est utilisé lors des réplications d'instantané et transactionnelle.  
   
- Lorsque sp_addsubscription est exécuté par un membre du rôle serveur fixe sysadmin pour créer un abonnement envoyé, la tâche de l'Agent de distribution est implicitement créée et s'exécute sous le compte du service Agent SQL Server. Nous vous recommandons d’exécuter [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) et de spécifier les informations d’identification d’un autre compte Windows spécifique à l’agent pour @job_login et @job_password . Pour plus d’informations, consultez [modèle de sécurité de l’agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Lorsque sp_addsubscription est exécuté par un membre du rôle serveur fixe sysadmin pour créer un abonnement envoyé, la tâche de l'Agent de distribution est implicitement créée et s'exécute sous le compte du service Agent SQL Server. Nous vous recommandons d’exécuter [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) et de spécifier les informations d’identification d’un autre compte Windows spécifique à l’agent pour @job_login et @job_password . Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  sp_addsubscription empêche les abonnés ODBC et OLE DB d'accéder aux publications qui :  
   
@@ -320,7 +320,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a> Voir aussi  
- [Créer un abonnement par émission de notification](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

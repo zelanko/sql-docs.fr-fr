@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
   
  *sélectionner la liste d’expressions*  
  Liste séparée par des virgules des identificateurs de colonnes et expressions dérivées du modèle d'exploration de données.  
@@ -48,15 +48,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Requête source  
   
  *liste de mappage de jointure*  
- facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
+ Optionnel. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
   
  *expression de condition*  
- facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ Optionnel. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Optionnel. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes du \<*join mapping list*> sont liées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
   
 ```  

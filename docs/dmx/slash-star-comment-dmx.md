@@ -31,7 +31,7 @@ ms.locfileid: "86970401"
  *Comment_Text*  
  Chaîne contenant le texte du commentaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les commentaires de plusieurs lignes doivent être signalés par /* et \*/.  
   
  Il n'y a pas de longueur maximale pour les commentaires.  

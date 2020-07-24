@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: da6fd21ce642e052686372470b111b593a0bc91f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 65516f633d0e639a0263006639f0078967397459
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666781"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970767"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne le Node_ID du nœud dans lequel le cas est classé.  
   
@@ -31,7 +31,7 @@ PredictNodeId(<scalar column reference>)
  Colonne scalaire  
   
 ## <a name="return-type"></a>Type de retour  
- \<> d’expression scalaire  
+ \<scalar expression>  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant indique si la personne spécifiée est susceptible d'acheter une bicyclette et retourne l'identificateur nodeID du nœud dont elle est le plus susceptible de faire partie.  

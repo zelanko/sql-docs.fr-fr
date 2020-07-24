@@ -30,7 +30,7 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>Type de retour  
  Type booléen  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **IsInNode** est utilisé uniquement dans les [&#62; de modèle Select from &#60;. CAS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) et [sélectionner des&#62; de &#60;modèle. SAMPLE_CASES &#40;des requêtes&#41;DMX](../dmx/select-from-model-sample-cases-dmx.md) .  
   
 ## <a name="examples"></a>Exemples  

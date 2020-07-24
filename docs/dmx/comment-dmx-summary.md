@@ -31,7 +31,7 @@ ms.locfileid: "86969910"
  *Comment_Text*  
  Chaîne contenant le texte du commentaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez cet opérateur pour un commentaire d'une seule ligne ou imbriqué. Les commentaires insérés à l’aide de--sont délimités par le caractère de saut de ligne.  
   
  Il n'y a pas de longueur maximale pour les commentaires.  

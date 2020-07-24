@@ -30,9 +30,9 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>Type de retour  
- Un \<table expression>.  
+ \<table expression>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si le paramètre *n* est spécifié, les valeurs suivantes sont renvoyées :  
   
 -   Si *n* est supérieur à zéro, les valeurs de séquence les plus probables dans les *n* étapes suivantes.  

@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valeur par défaut : RÉPÉTABLE(0)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous définissez une structure d'exploration de données en spécifiant une liste de colonnes, en spécifiant éventuellement des relations hiérarchiques entre les colonnes, puis en partitionnant éventuellement la structure d'exploration de données en jeux de données d'apprentissage et de test.  
   
  Le mot clé SESSION facultatif indique que la structure est une structure temporaire que vous pouvez utiliser uniquement pour la durée de la session active. Une fois la session terminée, la structure, ainsi que tous les modèles sur celle-ci, seront supprimés. Pour créer des modèles et des structures d’exploration de données temporaires, vous devez d’abord définir la propriété de base de données AllowSessionMiningModels,. Pour plus d’informations, consultez [Propriétés de l’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  

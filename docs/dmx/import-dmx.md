@@ -31,7 +31,7 @@ IMPORT FROM <filename>
  *extension*  
  Chaîne contenant le nom et l'emplacement du fichier à importer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si aucun objet n'est spécifié, la totalité du contenu du fichier .dmb est chargée. Si le fichier .dmb comprend une base de données qui n'existe pas sur le serveur, la base de données est créée.  
   
  Pour exporter ou importer des objets, vous devez être administrateur de base de données ou de serveur.  

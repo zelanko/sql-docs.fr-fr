@@ -1,5 +1,5 @@
 ---
-title: NumericScale et Precision, exemple de propriétés (VB) | Microsoft Docs
+title: NumericScale et Precision Properties, exemple de code ADOX (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38204684695f166032c61898457e697f60659723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d7a9f2ccb99d8ef442a45f6739efa5046620449
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764190"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942731"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Exemple de code ADOX : NumericScale et Precision, exemple de propriétés (VB)
 Cet exemple illustre les propriétés [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) et [PRECISION](../../../ado/reference/adox-api/precision-property-adox.md) de l’objet [Column](../../../ado/reference/adox-api/column-object-adox.md) . Ce code affiche la valeur de la table **Order Details** de la base de données *Northwind* .  

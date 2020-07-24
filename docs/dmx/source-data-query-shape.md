@@ -54,7 +54,7 @@ APPEND ({ <child table query> }
  *nom de la table de colonnes*  
  Nom de la nouvelle colonne dans la table parent de la table imbriquée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez ordonner les requêtes par la colonne qui relie la table parent à la table enfant.  
   
 ## <a name="examples"></a>Exemples  

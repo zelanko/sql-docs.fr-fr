@@ -1,5 +1,5 @@
 ---
-title: Surveiller avec SCOM
+title: Configurer System Center Operations Manager pour surveiller les points d’accès
 description: Procédez comme suit pour configurer les packs d’administration System Center Operations Manager (SCOM) pour Analytics Platform System. Les packs d’administration sont requis pour analyser le système de plateforme d’analyse à partir de SCOM.
 author: mzaman1
 ms.prod: sql
@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0786cbc8230ecf29dd377a35fefc6969072512b3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401299"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942211"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurer System Center Operations Manager (SCOM) pour surveiller Analytics Platform System
 Procédez comme suit pour configurer les packs d’administration System Center Operations Manager (SCOM) pour Analytics Platform System. Les packs d’administration sont requis pour analyser le système de plateforme d’analyse à partir de SCOM.  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Avant de commencer  
-**Conditions préalables**  
+**Composants requis**  
   
 System Center Operations Manager 2007 R2 doit être installé et en cours d’exécution.  
   
@@ -37,7 +37,7 @@ Voici des instructions détaillées sur la façon d’effectuer les tâches :
   
 1.  Créez le compte d’identification de l' **Observateur APS** avec le type de compte **Windows** pour l’utilisateur de domaine de l' **Observateur APS** .  
   
-    1.  Accédez au volet **administration** , cliquez avec le bouton droit sur **exécuter en tant que** -> **comptes** de configuration, puis sélectionnez créer un compte d’identification **...**  
+    1.  Accédez au volet **administration** , cliquez avec le bouton droit sur **exécuter en tant que**  ->  **comptes** de configuration, puis sélectionnez créer un compte d’identification **...**  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
@@ -61,7 +61,7 @@ Voici des instructions détaillées sur la façon d’effectuer les tâches :
   
 2.  Définissez le profil de **compte Microsoft APS Watcher** pour utiliser le compte d’identification d' **Observateur APS** .  
   
-    1.  Accédez à **administration** -> **exécuter en tant que** -> **profils**de configuration.  
+    1.  Accédez à **administration**  ->  **exécuter en tant que**  ->  **profils**de configuration.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -81,7 +81,7 @@ Voici des instructions détaillées sur la façon d’effectuer les tâches :
   
 3.  Attendez la fin de la découverte des appliances APS.  
   
-    1.  Accédez au volet **analyse** et ouvrez l’affichage État des**appareils**  -> **Microsoft Analytics Platform System** -> de l' **Appliance SQL Server**.  
+    1.  Accédez au volet **analyse** et ouvrez l' **SQL Server Appliance**  ->  **Microsoft Analytics Platform System**  ->  affichage État des**appareils** Microsoft Analytics Platform System de l’appliance SQL Server.  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   

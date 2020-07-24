@@ -30,7 +30,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier spécifiant le nombre de lignes à retourner.  
+ Optionnel. Entier spécifiant le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste séparée par des virgules des identificateurs des colonnes associées (dérivées du modèle) ou expressions.  
@@ -42,9 +42,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Optionnel. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’instruction **Select distinct from** ne fonctionne qu’avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
   
  L’instruction **Select distinct from** vous permet de référencer directement une colonne à l’intérieur d’une table imbriquée. Par exemple :  

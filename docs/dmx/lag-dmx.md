@@ -30,7 +30,7 @@ Lag()
 ## <a name="return-type"></a>Type de retour  
  Valeur scalaire de type entier.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si la fonction **lag** est utilisée sur un modèle où la colonne Key Time se trouve dans une table imbriquée, la fonction doit se trouver dans la sous-sélection de l’instruction.  
   
 ## <a name="examples"></a>Exemples  

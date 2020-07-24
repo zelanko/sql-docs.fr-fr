@@ -20,7 +20,7 @@ ms.locfileid: "86970234"
 
   La fonction Top **percent** retourne, dans l’ordre décroissant, les lignes les plus importantes d’une table dont le total cumulé est au moins un pourcentage spécifié.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="return-type"></a>Type de retour  
  \<table expression>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction Top **percent** retourne les lignes les plus hauts dans l’ordre décroissant de classement en fonction de la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au pourcentage donné spécifié par l' \<percent> argument. La propriété de **pourcentage** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de pourcentage spécifiée.  
   
 ## <a name="examples"></a>Exemples  

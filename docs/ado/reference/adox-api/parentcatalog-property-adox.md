@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c3557af934ab7029822b5f9d3657828ee5d2a75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c4d3874ea1289dd086d70f06434adc666691f521
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763760"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943181"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog, propriété (ADOX)
 Spécifie le catalogue parent d’un objet table, User ou Column pour permettre l’accès aux propriétés spécifiques au fournisseur.  
@@ -59,11 +59,18 @@ Spécifie le catalogue parent d’un objet table, User ou Column pour permettre 
  Une erreur se produit lorsque la table ou la colonne est ajoutée à un autre **catalogue** que le **ParentCatalog**.  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
-  
+
+:::row:::
+    :::column:::
+        [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [ParentCatalog, exemple de propriété (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

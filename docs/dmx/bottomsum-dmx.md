@@ -20,7 +20,7 @@ ms.locfileid: "86969932"
 
   Retourne, dans l'ordre croissant, les lignes les plus basses d'une table dont le total cumulé est au moins égal à une valeur spécifiée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Type de retour  
  \<table expression>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction **BottomSum** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au total spécifié par l' \<sum> argument. **BottomSum** retourne le plus petit nombre d’éléments possible tout en continuant à répondre à la valeur de somme spécifiée.  
   
 ## <a name="examples"></a>Exemples  

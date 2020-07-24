@@ -37,7 +37,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>Valeur renvoyée  
  Valeur qui possède le type de données du paramètre doté de la priorité la plus élevée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La valeur retournée par cet opérateur représente le quotient de la première expression divisée par la seconde expression.  
   
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si l'expression Divisor renvoie une valeur NULL, l'opérateur génère une erreur. Si les expressions Divisor et Dividend renvoient toutes les deux une valeur NULL, l'opérateur retourne une valeur NULL.  

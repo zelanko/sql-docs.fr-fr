@@ -40,7 +40,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Type de résultat  
  Table.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction **BottomPercent** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au pourcentage spécifié par l' \<percent> argument. **BottomPercent** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de pourcentage spécifiée.  
   
 ## <a name="examples"></a>Exemples  

@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste séparée par des virgules des identificateurs des colonnes associées.  
@@ -41,12 +41,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  Identificateur du modèle  
   
  *liste de conditions*  
- facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
+ Optionnel. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Optionnel. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les exemples de cas peuvent être générés et ne pas réellement exister dans les données d'apprentissage. Le cas retourné est représentatif du nœud de contenu spécifié.  
   
  Bien que l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme Sequence Clustering soit le seul [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme qui prend en charge l’utilisation de SELECT FROM \<model> . SAMPLE_CASES, les algorithmes tiers peuvent également le prendre en charge.  

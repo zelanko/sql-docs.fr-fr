@@ -37,7 +37,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Valeur renvoyée  
  Valeur booléenne qui retourne TRUE si l'un ou l'autre ou les deux arguments donnent comme résultat la valeur TRUE ; dans le cas contraire, elle retourne FALSE.   
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les deux arguments sont considérés comme valeurs booléennes (0 correspond à la valeur FALSE ; sinon TRUE) avant que l'opérateur effectue la disjonction logique. Si l'un ou l'autre ou les deux arguments donnent comme résultat la valeur TRUE, l'opérateur retourne TRUE. Si *expression1* prend la valeur true et que *Expression2* a la valeur false, l’opérateur retourne true.  
   
  Le tableau ci-dessous explique comment s'effectue la disjonction logique.  

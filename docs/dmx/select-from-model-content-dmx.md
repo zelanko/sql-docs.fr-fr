@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669592"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970597"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Sélectionnez à partir du &lt; modèle &gt; . CONTENU (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retourne l'ensemble de lignes du schéma de modèle d'exploration de données pour le modèle d'exploration de données spécifié.  
   
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste de colonnes séparées par des virgules, dérivées de l'ensemble de lignes du schéma Content.  
@@ -40,13 +40,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Identificateur du modèle  
   
  *expression de condition*  
- facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ Optionnel. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Optionnel. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- >**de modèle Select from** _ \< Model _ **. **L’instruction content retourne le contenu qui est spécifique à chaque algorithme. Imaginons par exemple que vous souhaitez utiliser les descriptions de toutes les règles d'un modèle de règles d'association dans une application personnalisée. Vous pouvez utiliser une **> de \< modèle Select from Model. Instruction CONTENT** pour retourner des valeurs dans la colonne NODE_RULE du modèle.  
+ **Select from** _\<model>_ **. **L’instruction content retourne le contenu qui est spécifique à chaque algorithme. Imaginons par exemple que vous souhaitez utiliser les descriptions de toutes les règles d'un modèle de règles d'association dans une application personnalisée. Vous pouvez utiliser une **sélection à partir de \<model> . Instruction CONTENT** pour retourner des valeurs dans la colonne NODE_RULE du modèle.  
   
  Le tableau suivant répertorie les colonnes incluses dans le contenu du modèle d'exploration de données.  
   

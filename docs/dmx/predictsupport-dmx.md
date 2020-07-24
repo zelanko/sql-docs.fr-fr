@@ -20,7 +20,7 @@ ms.locfileid: "86970697"
 
   Retourne la valeur de support pour un état spécifié.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Type de retour  
  Valeur scalaire du type spécifié par *\<*scalar column reference*>* .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si l'état prévisible est omis, c'est l'état doté de la probabilité de prévision la plus élevée qui est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, affectez à la valeur \<predicted state> **INCLUDE_NULL**.  
   
  Pour retourner la prise en charge des États manquants, affectez la valeur \<predicted state> null.  

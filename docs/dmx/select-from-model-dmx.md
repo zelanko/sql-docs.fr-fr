@@ -34,18 +34,18 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Liste séparée par des virgules des expressions, ou des colonnes de type Predict ou Predict only.   
   
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
   
  *model*  
  Identificateur du modèle  
   
  *liste de conditions*  
- facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
+ Optionnel. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Optionnel. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les colonnes de la *liste d’expressions* doivent être définies comme prédiction ou prédire uniquement ou associées à une colonne prévisible.  
   
 ## <a name="naive-bayes-example"></a>Exemple de modèle Naive Bayes  

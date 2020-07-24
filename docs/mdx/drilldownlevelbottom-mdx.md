@@ -37,12 +37,12 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
  *Numeric_Expression*  
- facultatif. Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
+ Optionnel. Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *Include_Calc_Members*  
- facultatif. Mot clé qui ajoute des membres calculés aux résultats d’exploration.  
+ Optionnel. Mot clé qui ajoute des membres calculés aux résultats d’exploration.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si une expression numérique est spécifiée, la fonction **DrilldownLevelBottom** trie, par ordre croissant, les enfants de chaque membre dans le jeu spécifié, en fonction de la valeur spécifiée, évaluée sur le jeu de membres enfants. Si une expression numérique n'est pas spécifiée, la fonction trie, dans l'ordre croissant, les enfants de chaque membre dans le jeu spécifié, d'après les valeurs des cellules représentées par le jeu de membres enfants, comme déterminé par le contexte de requête ; ce comportement est semblable aux fonctions BottomCount et Tail (MDX) qui retournent un jeu de membres dans l'ordre naturel, sans tri.  
   
  Après le tri, la fonction **DrilldownLevelBottom** retourne un jeu qui contient les membres parents et le nombre de membres enfants, spécifiés dans *Count*, avec la valeur la plus faible.  

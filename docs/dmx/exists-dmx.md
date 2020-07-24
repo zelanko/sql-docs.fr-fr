@@ -34,7 +34,7 @@ EXISTS(<subquery>)
 ## <a name="result-type"></a>Type de résultat  
  Retourne la **valeur true** si le jeu de résultats retourné par la sous-requête contient au moins une ligne ; Sinon, retourne **false**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser le mot clé NOT avant EXISTS ; par exemple, `WHERE NOT EXISTS (<subquery>)`.  
   
  La liste des colonnes que vous ajoutez à l'argument de sous-requête d'EXISTS est inappropriée ; la fonction vérifie uniquement l'existence d'une ligne qui remplit la condition.  

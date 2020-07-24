@@ -37,7 +37,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>R. Utilisation de la fonction booléenne XQuery true()  
+### <a name="a-using-the-true-xquery-boolean-function"></a>A. Utilisation de la fonction booléenne XQuery true()  
  L’exemple suivant interroge une variable **XML** non typée. L’expression dans la méthode **value ()** retourne la valeur booléenne **true ()** si « AAA » est la valeur de l’attribut. La méthode **value ()** du type de données **XML** convertit la valeur booléenne en un bit et la retourne.  
   
 ```  

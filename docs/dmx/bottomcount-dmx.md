@@ -20,7 +20,7 @@ ms.locfileid: "86969959"
 
   Retourne le nombre spécifié de lignes les plus basses, dans l'ordre croissant, comme indiqué par une expression.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Type de retour  
  \<table expression>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La valeur fournie par l' \<rank expression> argument détermine l’ordre croissant de classement pour les lignes fournies dans l' \<table expression> argument, et le nombre de lignes les plus basses spécifiées dans l' \<count> argument est retourné.  
   
 ## <a name="examples"></a>Exemples  

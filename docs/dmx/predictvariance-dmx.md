@@ -20,7 +20,7 @@ ms.locfileid: "86970671"
 
   Retourne la variance d'une colonne spécifiée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ PredictVariance(<scalar column reference>)
 ## <a name="return-type"></a>Type de retour  
  Valeur scalaire du type spécifié par *\<scalar column reference>* .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si la référence de colonne est discrète, la fonction **PredictVariance** retourne 0 car la variance ne peut être calculée à partir de valeurs discrètes.  
   
 ## <a name="examples"></a>Exemples  

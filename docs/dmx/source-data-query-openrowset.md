@@ -37,7 +37,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  Syntaxe de requête qui retourne un ensemble de lignes.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le fournisseur d’exploration de données établit une connexion à l’objet de source de données à l’aide de *provider_name* et *provider_string* et exécute la requête spécifiée dans *query_syntax* pour récupérer l’ensemble de lignes à partir des données sources.  
   
 ## <a name="examples"></a>Exemples  

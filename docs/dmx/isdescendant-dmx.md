@@ -30,7 +30,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Type de retour  
  Type booléen  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **IsDescendant** est utilisé uniquement dans les [&#62; de modèle Select from &#60;. CONTENU &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md) et [sélectionnez &#60;&#62; de modèle. DIMENSION_CONTENT &#40;des requêtes&#41;DMX](../dmx/select-from-model-dimension-content-dmx.md) .  
   
 ## <a name="examples"></a>Exemples  

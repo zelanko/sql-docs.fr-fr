@@ -20,7 +20,7 @@ ms.locfileid: "86967813"
 
   Retourne une table qui représente un histogramme de la prévision d'une colonne donnée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Type de retour  
  Table.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un histogramme génère des colonnes statistiques. La structure de colonne de l’histogramme retourné dépend du type de référence de colonne utilisé avec la fonction **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colonnes scalaires  

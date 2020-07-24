@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9c4f8c1b48ccc6b3f2c2363671f5e3c072f77042
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669175"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971537"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Modifie la colonne **NODE_CAPTION** dans le modèle d’exploration de données.  
   
@@ -37,7 +37,7 @@ SET NODE_CAPTION='new caption'
  Chaîne qui contient le nouveau nom de la colonne **NODE_CAPTION** .  
   
  *expression de condition*  
- facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ Optionnel. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
 ## <a name="examples"></a>Exemples  
  Dans l’exemple suivant, l’instruction **Update** modifie le nom par défaut, `Cluster 1` , pour `001` le cluster avec le nom plus descriptif, `Likely Customers` .  

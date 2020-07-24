@@ -20,7 +20,7 @@ ms.locfileid: "86970253"
 
   Retourne le nombre spécifié de lignes les plus hautes dans l'ordre décroissant, comme indiqué par une expression.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +33,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Type de retour  
  \<table expression>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La valeur fournie par l' \<rank expression> argument détermine l’ordre de classement décroissant pour les lignes fournies dans l' \<table expression> argument, et le nombre de lignes les plus haut spécifiées dans l' \<count> argument est retourné.  
   
  La fonction TopCount a été introduite à l’origine pour activer les prédictions associatives et, en général, produit les mêmes résultats qu’une instruction qui comprend des clauses **SELECT TOP** et **order by** . Vous obtiendrez de meilleures performances pour les prédictions associatives si vous utilisez la fonction **Predict (DMX)** , qui prend en charge la spécification d’un certain nombre de prédictions à retourner.  

@@ -26,7 +26,7 @@ ms.locfileid: "86969880"
   
 -   Long  
   
--   Booléen  
+-   Boolean  
   
 -   Double  
   
