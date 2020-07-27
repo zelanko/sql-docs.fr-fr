@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286587"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914231"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Présentation du modèle objet du composant Script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Comme expliqué dans [Codage et débogage du composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), le projet de composant Script contient trois éléments de projet :  
@@ -128,16 +128,16 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Composants fournis par l'élément de projet ComponentWrapper  
  L’élément de projet ComponentWrapper contient une classe nommée **UserComponent** dérivée de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe **ScriptMain** dans laquelle vous écrivez votre code personnalisé dérive à son tour de **UserComponent**. La classe **UserComponent** contient les méthodes suivantes :  
   
--   Une implémentation substituée de la méthode **ProcessInput**. Il s’agit de la méthode que le moteur de flux de données appelle au moment de l’exécution, juste après la méthode **PreExecute**. Elle peut être appelée plusieurs fois. **ProcessInput** transfère le traitement à la méthode **\<inputbuffer> _ProcessInput**. La méthode **ProcessInput** recherche ensuite la fin de la mémoire tampon d’entrée et, si elle la trouve, appelle la méthode remplçable **FinishOutputs** et la méthode privée **MarkOutputsAsFinished**. La méthode **MarkOutputsAsFinished** appelle ensuite **SetEndOfRowset** sur la dernière mémoire tampon de sortie.  
+-   Une implémentation substituée de la méthode **ProcessInput**. Il s’agit de la méthode que le moteur de flux de données appelle au moment de l’exécution, juste après la méthode **PreExecute**. Elle peut être appelée plusieurs fois. **ProcessInput** transfère le traitement à la méthode **\<inputbuffer>_ProcessInput**. La méthode **ProcessInput** recherche ensuite la fin de la mémoire tampon d’entrée et, si elle la trouve, appelle la méthode remplçable **FinishOutputs** et la méthode privée **MarkOutputsAsFinished**. La méthode **MarkOutputsAsFinished** appelle ensuite **SetEndOfRowset** sur la dernière mémoire tampon de sortie.  
   
--   Une implémentation substituable de la méthode **\<inputbuffer>_ProcessInput**. Cette implémentation par défaut parcourt simplement chaque ligne d’entrée et appelle **\<inputbuffer>_ProcessInputRow**.  
+-   Une implémentation substituable de la méthode **\<inputbuffer>_ProcessInput** Cette implémentation par défaut parcourt simplement chaque ligne d’entrée et appelle **\<inputbuffer>_ProcessInputRow**.  
   
 -   Une implémentation substituable de la méthode **\<inputbuffer>_ProcessInputRow**. L'implémentation par défaut est vide. Il s'agit normalement de la méthode que vous devez substituer pour écrire votre code de traitement de données personnalisé.  
   
 #### <a name="what-your-custom-code-should-do"></a>Opérations à effectuer par votre code personnalisé  
  Vous pouvez utiliser les méthodes suivantes pour traiter l’entrée dans la classe **ScriptMain** :  
   
--   Substituez **\<inputbuffer>_ProcessInputRow** pour traiter les données dans chaque ligne d’entrée lors de leur transfert.  
+-   Substituez **\<inputbuffer>_ProcessInputRow** pour traiter les données sur chaque ligne d’entrée lors de leur transfert.  
   
 -   Substituez **\<inputbuffer>_ProcessInput** uniquement si vous devez effectuer une autre opération pendant que vous parcourez les lignes d’entrée, (par exemple, lorsque vous devez vérifier si **EndOfRowset** exécute une autre action une fois que toutes les lignes ont été traitées). Appelez **\<inputbuffer>_ProcessInputRow** pour effectuer le traitement de la ligne.  
   

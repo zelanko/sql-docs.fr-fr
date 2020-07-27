@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 334b50ec74ebd8d67b2598740a0bb8f2c7f48059
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293833"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913870"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Validez des documents XML et obtenez une sortie d’erreur détaillée en activant la propriété **ValidationDetails** de la tâche XML.  
@@ -58,7 +58,7 @@ ms.locfileid: "71293833"
 ```  
   
 ## <a name="sample-output-for-xml-thats-not-valid"></a>Exemple de sortie pour XML non valide  
- Voici un exemple de fichier de sortie présentant les résultats de validation d’un fichier XML contenant un petit nombre d’erreurs. Le texte des éléments \<error> a été encapsulé pour améliorer la lisibilité.  
+ Voici un exemple de fichier de sortie présentant les résultats de validation d’un fichier XML contenant un petit nombre d’erreurs. Le texte des éléments \<error> a été renvoyé à la ligne pour améliorer la lisibilité.  
   
 ```xml  
   

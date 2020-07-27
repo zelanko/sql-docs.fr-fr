@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406252"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458884"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="july-2020-hotfix"></a>Juillet 2020 (correctif)
+
+17 juillet 2020 &nbsp; / &nbsp; version : 1.20.1
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Correction de bogue n°11372 : l’opération glisser-déposer sur une table dans l’Explorateur d’objets renvoie de manière incorrecte les noms de tables à la ligne | [N°11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| Correction de bogue n°11356 : le thème sombre est désormais le thème par défaut | [N°11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Problème connu
+
+- Certains utilisateurs ont signalé des erreurs de connexion à partir de la nouvelle version MMicrosoft.Data.SqlClient v2.0.0 incluse dans cette mise en production. Les utilisateurs ont constaté que [ces instructions](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111) permettaient d’établir une connexion
 
 ## <a name="july-2020"></a>Juillet 2020
 

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a99770eded434ef15966535f082bbd25e07aece7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298525"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923112"
 ---
 # <a name="msmq-connection-manager"></a>Gestionnaire de connexions MSMQ
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Un gestionnaire de connexions MSMQ permet à un package de se connecter à une file d'attente de messages qui utilise Message Queuing (MSMQ). La tâche MSMQ incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions MSMQ.  
@@ -43,8 +43,8 @@ ms.locfileid: "71298525"
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
-|Privé|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
+|Public|\<computer name>\\<nom_file_d’attente\>|  
+|Privé|\<computer name>\Private$\\<nom_file_d’attente\>|  
   
  Vous pouvez utiliser un point (.) pour représenter l'ordinateur local.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "71298525"
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
-|Privé|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
+|Public|\<computer name>\\<nom_file_d’attente\>|  
+|Privé|\<computer name>\Private$\\<nom_file_d’attente\>|  
   
  Vous pouvez utiliser "." pour représenter l'ordinateur local.  
   

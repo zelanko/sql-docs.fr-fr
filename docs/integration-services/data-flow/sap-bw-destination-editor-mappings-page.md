@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2878b4691515c835165f764e09735bafb617b0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298093"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917865"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Éditeur de destination SAP BW (page Mappages)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La page **Mappages** de **l’Éditeur de destination SAP BW** vous permet de mapper les colonnes d’entrée aux colonnes de destination.  
@@ -77,7 +77,7 @@ ms.locfileid: "71298093"
  **Colonne d'entrée**  
  Affichez les colonnes d'entrée que vous avez sélectionnées.  
   
- Pour mapper une colonne d'entrée différente à la même colonne de destination, sélectionnez une colonne d'entrée différente dans la liste. Pour supprimer un mappage, sélectionnez **\<ignorer>** pour exclure la colonne d’entrée de la sortie.  
+ Pour mapper une colonne d'entrée différente à la même colonne de destination, sélectionnez une colonne d'entrée différente dans la liste. Pour supprimer un mappage, sélectionnez **\<ignore>** afin d’exclure la colonne d’entrée de la sortie.  
   
  **Colonne de destination**  
  Affichez chaque colonne de destination disponible, qu'elle soit mappée ou non.  

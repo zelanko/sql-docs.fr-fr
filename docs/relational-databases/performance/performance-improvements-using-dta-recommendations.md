@@ -1,5 +1,6 @@
 ---
 title: Améliorations du niveau de performance recommandées par DTA
+description: Découvrez comment l’Assistant Paramétrage du moteur de base de données peut recommander une combinaison d’index rowstore et columnstore en analysant une charge de travail de base de données dans SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3dcd1405bb41243bf2bd618d3fe8ed89393ed5d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abad80759ccfbc2d5315c5f89cf1dcce3172c9f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762838"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458281"
 ---
 # <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Amélioration des performances avec les recommandations de l’Assistant Paramétrage du moteur de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ L’Assistant Paramétrage du moteur de base de données (DTA), à compter de SQ
 
 Pour démontrer les avantages des recommandations de l’Assistant DTA sur les performances de charge de travail, nous avons expérimenté plusieurs charges de travail client réelles. Pour chaque charge de travail client, nous avons laissé l’Assistant DTA analyser les requêtes individuelles, ainsi que la charge de travail complète des requêtes. Nous considérons trois possibilités :
   
-  1. **ColumnStore uniquement** : générer uniquement des index columnstore pour toutes les tables sans utiliser l’Assistant DTA. 
+  1. **Columnstore uniquement** : générer uniquement des index columnstore pour toutes les tables sans utiliser l’Assistant DTA. 
   2. **DTA (rowstore uniquement)**  : exécuter l’Assistant DTA avec l’option permettant de recommander les index rowstore uniquement.
   3. **DTA (rowstore + columnstore)**  : exécuter l’Assistant DTA avec l’option permettant de recommander à la fois les index rowstore et columnstore.  
    

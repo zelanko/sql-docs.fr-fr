@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4f1eec14ca75ed6f878a7bdb077b899ea05993d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287148"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920771"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codage d'un module fournisseur d'informations personnalisé
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  
@@ -136,7 +136,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Écriture des entrées du journal  
- La méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> est appelée chaque fois qu’un objet compris dans le package déclenche un événement en appelant une méthode Fire\<événement> sur l’une des interfaces d’événements. Chaque événement est déclenché avec des informations sur son contexte et habituellement un message explicatif. Toutefois, tous les appels de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> n'incluent pas d'informations sur chaque paramètre de méthode. Par exemple, certains événements standard dont les noms sont évidents ne fournissent pas MessageText, et DataCode et DataBytes sont prévus pour des informations supplémentaires facultatives.  
+ La méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> est appelée chaque fois qu’un objet compris dans le package déclenche un événement en appelant une méthode Fire\<event> sur l’une des interfaces d’événements. Chaque événement est déclenché avec des informations sur son contexte et habituellement un message explicatif. Toutefois, tous les appels de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> n'incluent pas d'informations sur chaque paramètre de méthode. Par exemple, certains événements standard dont les noms sont évidents ne fournissent pas MessageText, et DataCode et DataBytes sont prévus pour des informations supplémentaires facultatives.  
   
  L'exemple de code suivant implémente la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> et écrit les événements dans le flux qui a été ouvert dans la section précédente.  
   

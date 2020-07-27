@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283271"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922225"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Leçon 3-2 : Ajouter et configurer la journalisation
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ Au cours de cette tâche, vous allez activer la journalisation du flux de donné
   
 5.  Modifiez éventuellement les informations figurant dans **Description**.  
   
-6.  Dans la colonne **Configuration**, sélectionnez **\<Nouvelle connexion>** pour spécifier l’emplacement auquel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enregistre les informations de journal.  
+6.  Dans la colonne **Configuration**, sélectionnez **\<New Connection>** pour spécifier l’emplacement où [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enregistre les informations de journal.  
   
     Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers**, pour **Type d’utilisation**, sélectionnez **Créer un fichier**, puis **Parcourir**. Par défaut, la boîte de dialogue **Sélectionner un fichier** ouvre le dossier du projet, mais il est possible d’enregistrer les informations de journal n’importe où ailleurs.  
   

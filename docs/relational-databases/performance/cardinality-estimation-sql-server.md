@@ -1,5 +1,6 @@
 ---
 title: Évaluation de la cardinalité (SQL Server) | Microsoft Docs
+description: L’optimiseur de requête SQL Server sélectionne les plans de requête dont le coût de traitement estimé est le plus faible, qu’il détermine en fonction des lignes traitées et d’un modèle de coût.
 ms.custom: ''
 ms.date: 02/24/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730295"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457701"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 
@@ -287,7 +288,7 @@ WHERE s.ticket = r.ticket AND
       r.date = '2016-05-11';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimiser vos plans de requêtes avec l’Estimateur de la cardinalité de SQL Server 2014)](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Indicateurs de requête](../../t-sql/queries/hints-transact-sql-query.md)     

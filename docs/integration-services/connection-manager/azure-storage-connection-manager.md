@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687192"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913639"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestionnaire de connexions de Stockage Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Le gestionnaire de connexions de Stockage Azure permet à un package SQL Server Integration Services (SSIS) de se connecter à un compte de Stockage Azure. Le gestionnaire de connexions est un composant du [Feature Pack SSIS (SQL Server Integration Services) pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
@@ -33,11 +33,15 @@ Les propriétés suivantes sont disponibles.
 
 - **Service :** spécifie le service de stockage auquel se connecter.
 - **Account name (Nom du compte) :** spécifie le nom du compte de stockage.
-- **Authentication (Authentification) :** spécifie la méthode d’authentification à utiliser. Les authentifications AccessKey et ServicePrincipal sont prises en charge.
+- **Authentication (Authentification) :** spécifie la méthode d’authentification à utiliser. Les authentifications AccessKey, ServicePrincipal et SharedAccessSignature sont prises en charge.
     - **AccessKey :** pour cette méthode d’authentification, spécifiez la **clé de compte**.
     - **ServicePrincipal :** pour cette méthode d’authentification, spécifiez l’**ID d’application**, la **clé d’application** et l’**ID de locataire** du principal du service.
       Pour que la **connexion de test** fonctionne, le principal de service doit disposer au moins du rôle **Lecteur des données Blob du stockage** pour le compte de stockage.
       Pour plus d’informations, consultez [Octroyer l’accès aux données blob et de file d’attente Azure avec RBAC dans le Portail Azure](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+    - **SharedAccessSignature :** pour cette méthode d’authentification, spécifiez au moins le **jeton** de la signature d’accès partagé.
+      Pour tester la connexion, spécifiez en plus l’étendue de ressource à tester. Il peut s’agir de **Service**, **Conteneur** ou **Objet blob**.
+      Pour **Conteneur** et **Objet blob**, spécifiez respectivement le nom du conteneur et le chemin de l’objet blob.
+      Pour plus d’informations, consultez [Vue d’ensemble de la signature d’accès partagé de Stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-sas-overview).
 - **Environment :** spécifie l’environnement de cloud qui héberge le compte de stockage.
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Identités managées pour l’authentification des ressources Azure

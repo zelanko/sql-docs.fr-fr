@@ -1,5 +1,6 @@
 ---
 title: Mettre à niveau des bases de données à l’aide de l’Assistant Paramétrage de requêtes
+description: Découvrez comment l’Assistant Paramétrage de requêtes vous guide tout au long du workflow recommandé pour maintenir la stabilité des performances lors des mises à niveau vers des versions plus récentes de SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 25083a6254d05abb44a4df3e96d5b070c3d0ba37
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598745"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457566"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

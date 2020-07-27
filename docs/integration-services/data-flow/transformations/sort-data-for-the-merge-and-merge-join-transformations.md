@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297788"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914295"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Trier des données pour les transformations de fusion et de jointure de fusion
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], les transformations de fusion et de jointure de fusion nécessitent des données triées pour leurs entrées. Les données d'entrée doivent être triés physiquement et les options de tri doivent être définies sur les sorties et les colonnes de sortie dans la source ou dans la transformation amont. Si les options de tri indiquent que les données sont triées alors qu'elles ne le sont pas en réalité, les résultats de l'opération de fusion ou de jointure de fusion sont imprévisibles.  
@@ -75,7 +75,7 @@ ms.locfileid: "71297788"
   
 5.  Cliquez sur l'onglet **Propriétés d'entrée et de sortie** .  
   
-6.  Cliquez sur Sortie de **\<nom_composant**, puis affectez la valeur **True** à la propriété **IsSorted**.  
+6.  Cliquez sur **Sortie de \<component name>** , puis affectez la valeur **True** à la propriété **IsSorted**.  
   
     > [!NOTE]  
     >  Si vous affectez manuellement la valeur **True** à la propriété **IsSorted** de la sortie et que les données ne sont pas triées, il se peut que des données soient manquantes ou que des comparaisons de données incorrectes figurent dans la transformation de fusion ou de jointure de fusion en aval lors de l’exécution du package.  

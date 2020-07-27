@@ -1,5 +1,5 @@
 ---
-title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
+title: DBCC UPDATEUSAGE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -33,14 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2528ac49fb62a41bebe55cb50392cb306ec93edf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643853"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484200"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Indique et corrige le nombre de pages et de lignes inexact dans les vues de catalogue. En raison de ces inexactitudes, la procédure stockée système sp_spaceused peut retourner des rapports incorrects en matière d'utilisation de l'espace.
@@ -57,14 +58,16 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]   
 ```  
   
-## <a name="arguments"></a>Arguments  
-*database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
+*database_name* \| *database_id* \| 0  
 Nom ou identificateur de la base de données pour laquelle les statistiques d'utilisation de l'espace doivent être consignées et corrigées. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
-*table_name* | *table_id* | *view_name* | *view_id*  
+*table_name* \| *table_id* \| *view_name* \| *view_id*  
 Nom ou identificateur de la table ou de la vue indexée dont les statistiques d'utilisation de l'espace doivent être consignées et corrigées. Les noms des tables et des vues doivent suivre les règles applicables aux identificateurs.  
   
-*index_id* | *index_name*  
+*index_id* \| *index_name*  
 Identificateur ou nom de l'index à utiliser. Si aucun index n'est spécifié, l'instruction traite tous les index pour la table ou la vue indiquée.  
   
 WITH  

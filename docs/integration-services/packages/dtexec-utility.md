@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761853"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919208"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -68,22 +68,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Considérations concernant l'installation sur les ordinateurs 64 bits  
  Sur un ordinateur 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe une version 64 bits de l’utilitaire **dtexec** (dtexec.exe). Si vous devez exécuter certains packages en mode 32 bits, installez la version 32 bits de l’utilitaire **dtexec** . Pour installer la version 32 bits de l’utilitaire **dtexec** , vous devez sélectionner Outils clients ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pendant l’installation.  
   
- Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin du répertoire 32 bits est *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, tandis que le chemin du répertoire 64 bits est *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin du répertoire 32 bits est *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, tandis que le chemin du répertoire 64 bits est *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **REMARQUE :** Si vous utilisez SQL Server Agent pour exécuter l'utilitaire, il utilise automatiquement la version 64 bits de ce dernier. SQL Server Agent utilise le Registre, et non la variable d'environnement PATH, pour localiser le fichier exécutable correct de l'utilitaire.  
   
  Pour vous assurer que vous exécutez la version 64 bits de l'utilitaire à l'invite de commandes, vous pouvez effectuer l'une des actions suivantes :  
   
--   Ouvrez une fenêtre d’invite de commandes, indiquez le répertoire qui contient la version 64 bits de l’utilitaire ( *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn), puis exécutez celui-ci à partir de cet emplacement.  
+-   Ouvrez une fenêtre d’invite de commandes, accédez au répertoire qui contient la version 64 bits de l’utilitaire ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn), puis exécutez l’utilitaire à partir de cet emplacement.  
   
--   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet ( *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) de la version 64 bits de l’utilitaire.  
+-   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) de la version 64 bits de l’utilitaire.  
   
--   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin 64 bits ( *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) avant le chemin 32 bits ( *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) dans la variable.  
+-   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin 64 bits ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) avant le chemin 32 bits ( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) dans la variable.  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Remarques concernant les ordinateurs dotés d'installations côte à côte  
  Lousque [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] est installé sur un oudinateur sur lequel [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] est installé, plusieurs versions de l'utilitaire **dtexec** sont installées.  
   
- Pour être certain d’exécuter la version appropriée de l’utilitaire, à l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet ( *\<lecteur>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
+ Pour vérifier que vous exécutez la version appropriée de l’utilitaire, à l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet ( *\<drive>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a> Phases d'exécution  
  L'utilitaire s'exécute en quatre phases. Ces phases sont les suivantes :  
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_: Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** _error code_: Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **REMARQUE :** Les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de Microsoft.  
   
@@ -255,7 +255,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError** : (Facultatif) Crée les fichiers de vidage du débogage, .mdmp et .tmp, lorsqu'une erreur se produit pendant l'exécution du package.  
   
-     Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier, *\<lecteur>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **REMARQUE :** Les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de Microsoft.  
   

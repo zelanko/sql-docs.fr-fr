@@ -1,5 +1,6 @@
 ---
 title: SQL Server, nœud de mémoire | Microsoft Docs
+description: Découvrez l’objet Nœud de mémoire, qui fournit des compteurs permettant de superviser l’utilisation de la mémoire du serveur sur des nœuds NUMA dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cfa8eb11b89919a3a1f151a0deddd24528631fe1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9afe187c8a9a732145862040ab09f0377aa59a60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775791"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458781"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, nœud de mémoire
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'objet **Nœud de mémoire** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs permettant de surveiller l'utilisation globale de la mémoire sur des nœuds NUMA.  
   
 ## <a name="memory-node-counters"></a>Compteurs de nœuds de mémoire  
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Nœud de mémoire**de**.  
+ Ce tableau décrit les compteurs **Nœud de mémoire** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs du Gestionnaire de mémoire de SQL Server|Description|  
 |----------------------------------------|-----------------|  

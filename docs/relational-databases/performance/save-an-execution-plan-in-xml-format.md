@@ -1,5 +1,6 @@
 ---
 title: Enregistrer un plan d’exécution au format XML | Microsoft Docs
+description: Découvrez comment utiliser SQL Server Management Studio pour enregistrer des plans d’exécution au format XML et les ouvrir afin de les afficher. Vous devez disposer des autorisations appropriées.
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc50eb9e0f045edc0948ce2416625643ce0a8942
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bcf97d3f0e3607d9444c6ab5b3b101004d3926b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758856"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457615"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Enregistrer un plan d'exécution au format XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

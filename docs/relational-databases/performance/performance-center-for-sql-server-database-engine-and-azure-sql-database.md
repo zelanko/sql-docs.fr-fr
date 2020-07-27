@@ -1,5 +1,6 @@
 ---
 title: Centre de performances
+description: Recherchez les informations dont vous avez besoin sur les performances dans le moteur de base de données SQL Server et Azure SQL Database.
 ms.custom: seo-dt-2019
 ms.date: 12/11/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e5149d0b1128b2ecb0c934ad9abf3ec7979e532e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a0a4e7305ec54193b933f7360c32ef864f0c6ec
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758863"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457658"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85758863"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimisation du parallélisme**|[Configurer l'option de configuration du serveur max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimisation de l’optimiseur de requête**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Statistiques](../../relational-databases/statistics/statistics.md)**|[Quand mettre à jour des statistiques](../statistics/statistics.md)<br />[Mettre à jour les statistiques](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Création de tables et accès dans TempDB à partir de procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Résoudre les problèmes de performance courants avec les index de hachage à mémoire optimisée](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Création de tables et accès dans TempDB à partir de procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Résoudre les problèmes de performance courants avec les index de hachage à mémoire optimisée](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />La [Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md)**|[Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md)|
   
 ## <a name="see-also"></a>Voir aussi  

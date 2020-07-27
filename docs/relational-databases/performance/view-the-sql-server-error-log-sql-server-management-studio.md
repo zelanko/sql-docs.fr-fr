@@ -1,6 +1,6 @@
 ---
 title: Voir le journal des erreurs SQL Server (SSMS)
-description: Visualisez le journal des erreurs SQL Server dans SSMS (SQL Server Management Studio).
+description: Découvrez le journal des erreurs SQL Server, qui contient des événements définis par l’utilisateur et certains événements système utiles pour la résolution des problèmes.
 ms.custom: seo-dt-2019
 ms.date: 09/29/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54aa4b48837f171406edbbe4cbadcacf5b910a99
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737083"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458051"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>Voir le journal des erreurs SQL Server dans SSMS (SQL Server Management Studio)
 

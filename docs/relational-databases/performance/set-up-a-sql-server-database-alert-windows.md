@@ -1,5 +1,6 @@
 ---
 title: Configurer une alerte de base de données SQL Server (Windows) | Microsoft Docs
+description: Découvrez comment créer une alerte devant être déclenchée quand la valeur seuil est atteinte par le compteur du Moniteur système. En réponse, le Moniteur système peut lancer une application.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1a4cb551f72b408210064f88e0387c2fc4f3d638
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 982feaae1638250c80091778cdbacbfc21b0b3af
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716881"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458701"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Configurer une alerte de base de données SQL Server (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

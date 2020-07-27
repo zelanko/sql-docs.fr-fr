@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet Buffer Manager | Microsoft Docs
+description: Découvrez l’objet Buffer Manager, qui fournit des compteurs permettant de superviser l’utilisation globale de la mémoire du serveur dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bab9dfb83a918fe072cc4a97f974f77b0243d06e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1317d52ca3075a5726e528216f569bd91c2a15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775806"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458794"
 ---
 # <a name="sql-server-memory-manager-object"></a>Objet SQLServer:Memory Manager
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85775806"
 -   si les performances des requêtes peuvent être améliorées en ajoutant de la mémoire ou en mettant plus de mémoire à la disposition du cache des données ou des structures internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="memory-manager-counters"></a>Compteurs du Gestionnaire de mémoire  
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de mémoire**de**.  
+ Ce tableau décrit les compteurs **Gestionnaire de mémoire** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs du Gestionnaire de mémoire de SQL Server|Description|  
 |----------------------------------------|-----------------|  
@@ -39,10 +40,10 @@ ms.locfileid: "85775806"
 |**Mémoire disponible (Ko)**|Spécifie la quantité de mémoire allouée actuellement non utilisée par le serveur.|  
 |**Mémoire réservée de l'espace de travail (Ko)**|Spécifie la quantité totale de mémoire actuellement réservée à l'exécution de processus tels que les opérations de hachage, de tri, de copie en bloc et de créations d'index.|  
 |**Blocs de verrous**|Spécifie le nombre actuel de blocs de verrous utilisés sur le serveur (mis à jour régulièrement). Un bloc de verrous représente une ressource individuelle verrouillée, comme une table, une page ou une ligne.|  
-|**Blocs de verrous alloués**|Spécifie le nombre actuel de blocs de verrous alloués. Au démarrage du serveur, le nombre de blocs de verrous alloués plus le nombre de blocs propriétaires de verrous alloués dépendent de l’option de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verrous**de**. Si un plus grand nombre de blocs de verrous est nécessaire, cette valeur augmente.|  
+|**Blocs de verrous alloués**|Spécifie le nombre actuel de blocs de verrous alloués. Au démarrage du serveur, le nombre de blocs de verrous alloués plus le nombre de blocs propriétaires de verrous alloués dépendent de l’option de configuration **Verrous** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si un plus grand nombre de blocs de verrous est nécessaire, cette valeur augmente.|  
 |**Mémoire des verrous (Ko)**|Spécifie la quantité totale de mémoire dynamique qu'utilise le serveur pour les verrous.|  
 |**Blocs propriétaires de verrous**|Spécifie le nombre actuel de blocs propriétaires de verrous utilisés sur le serveur (mis à jour régulièrement). Un bloc propriétaire de verrous représente l'appropriation d'un objet par un verrou via un thread individuel. Par conséquent, si trois threads disposent chacun d'un verrou partagé sur une page, il y aura trois blocs propriétaires de verrous.|  
-|**Blocs propriétaires de verrous alloués**|Spécifie le nombre actuel de blocs propriétaires de verrous alloués. Au démarrage du serveur, le nombre de blocs propriétaires de verrous alloués et le nombre de blocs de verrous alloués dépendent de l’option de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verrous**de**. Si un plus grand nombre de blocs propriétaires de verrous est nécessaire, cette valeur augmente dynamiquement.|  
+|**Blocs propriétaires de verrous alloués**|Spécifie le nombre actuel de blocs propriétaires de verrous alloués. Au démarrage du serveur, le nombre de blocs propriétaires de verrous alloués et le nombre de blocs de verrous alloués dépendent de l’option de configuration **Verrous** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si un plus grand nombre de blocs propriétaires de verrous est nécessaire, cette valeur augmente dynamiquement.|  
 |**Mémoire du pool de journal (Ko)**|Quantité de mémoire dynamique utilisée par le serveur pour le pool du journal.| 
 |**Mémoire maximale de l'espace de travail (Ko)**|Indique la quantité maximale de mémoire disponible pour exécuter des processus, tels que les opérations de hachage, de tri, de copie en bloc et de création d'index.|  
 |**Demandes de mémoire satisfaites**|Spécifie le nombre total de processus qui ont acquis avec succès une allocation de mémoire de l'espace de travail.|  

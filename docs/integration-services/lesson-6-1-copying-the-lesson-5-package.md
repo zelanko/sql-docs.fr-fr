@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c4c895e71da13d7de38bf5dfc64f27829206d25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8df0901617b22317b2a87616be7b769c749d298
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283114"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922125"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>Leçon 6-1 : Copier le package de la leçon 5
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -48,7 +48,7 @@ Utilisez cette procédure si vous copiez le package final de la leçon 5.  Pour
 
 7.  Dans la fenêtre **Propriétés**, remplacez la propriété **Name** par **Lesson 6**.
 
-8.  Sélectionnez la zone de la propriété **ID**, la flèche déroulante, puis **\<Générer un nouvel ID>** .
+8.  Sélectionnez la zone de la propriété **ID**, la flèche déroulante, puis **\<Generate New ID>** .
 
 ## <a name="add-the-completed-lesson-5-package"></a>Ajouter le package final de la leçon 5
 

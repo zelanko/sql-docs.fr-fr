@@ -2,7 +2,7 @@
 title: Options de configuration du serveur (SQL Server) | Microsoft Docs
 description: Découvrez comment gérer et optimiser les ressources SQL Server. Consultez les options de configuration disponibles, les paramètres possibles, les valeurs par défaut et les exigences liées au redémarrage.
 ms.custom: ''
-ms.date: 04/13/2017
+ms.date: 07/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e776fdc4ac65d640728bffad774ef3fbc253d172
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 6ffbb3df5a8a8dac4ce22c27a1194520e8b058de
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279458"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923606"
 ---
 # <a name="server-configuration-options-sql-server"></a>Options de configuration du serveur (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -149,6 +149,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
 | [set working set size](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md) (A, RR, obsolète) | 0 | 1 | 0 |
 | [show advanced options](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md) | 0 | 1 | 0 |
 | [SMO and DMO XPs](../../database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md) (A) | 0 | 1 | 1 |
+| [supprimer les erreurs de mode de récupération](../../database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md) (A) <br/><br/>[!INCLUDE [asdbmi](../../includes/applies-to-version/_asdbmi.md)]| 0 | 1 | 0 |
 | [tempdb metadata memory-optimized](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) (A) <br/><br/> [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)].| 0 | 1 | 0 |
 | [transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) (A) | 1753 | 9 999 | 2049 |

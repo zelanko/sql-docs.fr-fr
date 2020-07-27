@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet columnstore | Microsoft Docs
+description: Découvrez l’objet SQLServer:Columnstore, qui fournit des compteurs permettant de superviser l’exécution des index columnstore dans SQL Server.
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8274597a9dddc42b9745d99add5160889f814572
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f00f4405144cec17b0b0266308ebc6df39336a70
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787319"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458412"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, objet columnstore
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L’objet **SQLServer:Columnstore** fournit des compteurs permettant de surveiller l’exécution des index columnstore dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le tableau suivant décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Columnstore**de**.  
+ Le tableau suivant décrit les compteurs **Columnstore** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs ColumnStore|Description|  
 |--------------------------|-----------------|  

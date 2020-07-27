@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e936a0afefa71969cf9e27c2c222d8780532610
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296448"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914137"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Création d'une source à l'aide du composant Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Les composants sources dans le flux d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent de charger des données à partir d'une source de données et de les transférer à des transformations et des destinations en aval. En principe, vous vous connectez à la source de données via un gestionnaire de connexions existant.  
@@ -64,7 +64,7 @@ ms.locfileid: "71296448"
 -   Vous pouvez créer une ou plusieurs sorties supplémentaires, telles qu'une sortie d'erreur simulée pour les lignes qui contiennent des valeurs inattendues. Utilisez les boutons **Ajouter une sortie** et **Supprimer une sortie** pour gérer les sorties du composant source. Toutes les lignes d'entrée sont dirigées vers toutes les sorties disponibles, sauf si vous attribuez une valeur identique non nulle à la propriété **ExclusionGroup** de ces sorties, auquel cas vous pourrez diriger chaque ligne vers une seule de ces sorties partageant la même valeur **ExclusionGroup** . La valeur entière particulière sélectionnée pour identifier **ExclusionGroup** n'a pas d'importance.  
   
     > [!NOTE]  
-    >  Vous pouvez également utiliser une valeur de propriété **ExclusionGroup** non nulle avec une sortie unique lorsque vous ne souhaitez pas générer des sorties pour toutes les lignes. Toutefois, dans ce cas, vous devez appeler explicitement la méthode **DirectRowTo\<outputbuffer>** pour chaque ligne que vous souhaitez envoyer à la sortie.  
+    >  Vous pouvez également utiliser une valeur de propriété **ExclusionGroup** non nulle avec une sortie unique lorsque vous ne souhaitez pas générer des sorties pour toutes les lignes. Dans ce cas, toutefois, vous devez appeler explicitement la méthode **DirectRowTo\<outputbuffer>** pour chaque ligne que vous souhaitez envoyer à la sortie.  
   
 -   Vous pouvez assigner un nom convivial aux sorties. Vous ferez ultérieurement référence aux sorties par leur nom dans le script, à l'aide des propriétés d'accesseur typées, créées dans le code généré automatiquement.  
   

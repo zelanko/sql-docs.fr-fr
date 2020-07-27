@@ -1,7 +1,7 @@
 ---
 title: Créer et tester des repères de plan
 titleSuffix: SQL Server Profiler
-description: Création et test de repères de plan dans SQL Server Profiler.
+description: Recourez à SQL Server Profiler pour capturer le texte de requête exact à utiliser dans l’argument statement_text de la procédure stockée sp_create_plan_guide dans SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd63a1de999b04ed1c6c3b80efabdf9fc5dc1919
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737099"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455831"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Utiliser SQL Server Profiler pour créer et tester des repères de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

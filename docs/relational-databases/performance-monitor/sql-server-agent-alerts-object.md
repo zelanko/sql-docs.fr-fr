@@ -1,5 +1,6 @@
 ---
 title: SQL Server Agent, objet Alerts | Microsoft Docs
+description: Découvrez l’objet de performance Alerts de l’Agent SQL Server, qui contient des compteurs fournissant des informations sur les alertes SQL Server Agent.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 425a2330f8ecb3f33380cf0500de32e82463634e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9fe293b70b074322380dc55f4294971908c106ee
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787399"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457462"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server Agent, objet Alerts
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787399"
   
  Le tableau suivant contient les compteurs **SQLAgent:Alerts** .  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |**Alertes activées**|Ce compteur donne le nombre total d'alertes que l'Agent SQL Server a activées depuis son dernier redémarrage.|  
 |**Alertes activées/minute**|Ce compteur donne le nombre d'alertes que l'Agent SQL Server a activées au cours de la dernière minute.|  

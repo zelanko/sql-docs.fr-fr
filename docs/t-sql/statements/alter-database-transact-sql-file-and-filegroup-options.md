@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdeab9ba00b4c498970ebac378c4abe53f4fbd2c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628609"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552418"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)
 
@@ -57,9 +57,7 @@ Modifie les fichiers et groupes de fichiers associés à la base de données. Aj
 
 Pour plus d’informations sur les conventions de la syntaxe, consultez [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Cliquez sur un produit
-
-Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le clic affiche un contenu différent ici dans cette page web, approprié pour le produit sur lequel vous cliquez.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -140,7 +138,7 @@ REMOVE FILE *logical_file_name* Supprime la description du fichier logique d’u
 > [!WARNING]
 > Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, voir [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)(en anglais). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
 
-MODIFY FILE Spécifie le fichier à modifier. Vous pouvez modifier une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.
+MODIFY FILE Spécifie le fichier à modifier. Vous pouvez changer une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.
 
 Pour modifier le nom logique d'un fichier de données ou d'un fichier journal, spécifiez le nom logique du fichier à renommer dans la clause `NAME` et indiquez le nouveau nom logique à appliquer dans la clause `NEWNAME`. Par exemple :
 
@@ -163,7 +161,7 @@ Pour un groupe de fichiers FILESTREAM, NAME peut être modifié en ligne. FILENA
 Vous pouvez définir un fichier FILESTREAM sur OFFLINE. Lorsqu'un fichier FILESTREAM est hors connexion, son groupe de fichiers parent est marqué en interne comme hors connexion ; par conséquent, tout accès aux données FILESTREAM dans ce groupe de fichiers échoue.
 
 > [!NOTE]
-> Les options \<add_or_modify_files&gt; ne sont pas disponibles dans une base de données autonome.
+> Les options \<add_or_modify_files> ne sont pas disponibles dans une base de données autonome.
 
 **\<filespec>::=**
 
@@ -256,7 +254,7 @@ OFFLINE Place le fichier en mode hors connexion et rend tous les objets du group
 > [!CAUTION]
 > Utilisez cette option uniquement lorsque le fichier est endommagé et peut être restauré. Un fichier configuré avec l'option OFFLINE ne peut être remis en ligne qu'en le restaurant à partir d'une sauvegarde. Pour plus d’informations sur la restauration d’un fichier unique, consultez l’article sur l’instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).
 >
-> Les options \<filespec&gt; ne sont pas disponibles dans une base de données autonome.
+> Les options \<filespec> ne sont pas disponibles dans une base de données autonome.
 
 **\<add_or_modify_filegroups>::=**
 
@@ -279,7 +277,7 @@ REMOVE FILEGROUP *filegroup_name* Supprime un groupe de fichiers de la base de d
 
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifie le groupe de fichiers en définissant l’état sur READ_ONLY ou READ_WRITE, en définissant le groupe de fichiers comme groupe par défaut pour la base de données ou en changeant le nom du groupe de fichiers.
 
-\<filegroup_updatability_option> Définit la propriété de lecture seule ou de lecture/écriture du groupe de fichiers.
+\<filegroup_updatability_option> Définit la propriété read-only ou read/write du groupe de fichiers.
 
 DEFAULT Remplace le groupe de fichiers par défaut de la base de données par *filegroup_name*. Dans une base de données, un seul groupe de fichiers peut être choisi comme groupe de fichiers par défaut. Pour plus d'informations, consultez [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 
@@ -751,7 +749,7 @@ REMOVE FILE *logical_file_name* Supprime la description du fichier logique d’u
 
 *logical_file_name* Spécifie le nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-MODIFY FILE Spécifie le fichier à modifier. Vous pouvez modifier une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.
+MODIFY FILE Spécifie le fichier à modifier. Vous pouvez changer une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.
 
 **\<filespec>::=**
 
@@ -812,7 +810,7 @@ REMOVE FILEGROUP *filegroup_name* Supprime un groupe de fichiers de la base de d
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifie le groupe de fichiers en définissant l’état sur READ_ONLY ou READ_WRITE, en définissant le groupe de fichiers comme groupe par défaut pour la base de données ou en changeant le nom du groupe de fichiers.
 
-\<filegroup_updatability_option> Définit la propriété de lecture seule ou de lecture/écriture du groupe de fichiers.
+\<filegroup_updatability_option> Définit la propriété read-only ou read/write du groupe de fichiers.
 
 DEFAULT Remplace le groupe de fichiers par défaut de la base de données par *filegroup_name*. Dans une base de données, un seul groupe de fichiers peut être choisi comme groupe de fichiers par défaut. Pour plus d'informations, consultez [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet General Statistics | Microsoft Docs
+description: Découvrez l’objet SQLServer:General Statistics, qui fournit des compteurs permettant de superviser l’activité générale d’un serveur, telle que le nombre de connexions en cours.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 854345e3985d3254e774071e8e6cc4df36be177b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d146725df4f8c2eaffafb0c46f8062849857ad01
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775859"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458291"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, objet General Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L’objet **SQLServer:General Statistics** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour surveiller l’activité générale du serveur, comme le nombre de connexions actives et le nombre d’utilisateurs se connectant et se déconnectant à la seconde d’ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela s'avère utile lorsque vous travaillez sur des systèmes OLTP importants sur lesquels de nombreux clients se connectent et se déconnectent d'ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Statistiques générales**de**.  
+ Ce tableau décrit les compteurs **Statistiques générales** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs statistiques générales de SQL Server|Description|  
 |--------------------------------------------|-----------------|  

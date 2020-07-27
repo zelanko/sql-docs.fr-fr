@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet Locks | Microsoft Docs
+description: Découvrez l’objet SQLServer:Locks, qui fournit des informations sur les verrous SQL Server dans les types de ressources individuels.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775827"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458119"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, objet Locks
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'objet **SQLServer:Locks** dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des informations sur les verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les types de ressources individuels. Des verrous sont placés sur les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telles que les lignes lues ou modifiées lors d'une transaction, pour empêcher d'autres transactions d'utiliser simultanément les ressources. Par exemple, si un verrou exclusif (X) est mis en place dans une ligne de table par une transaction, aucune autre transaction ne peut modifier cette ligne jusqu'à ce que le verrou soit débloqué. Un nombre minimal de verrous favorise la concurrence, ce qui peut améliorer les performances. Plusieurs instances de l'objet **Verrous** peuvent être surveillées simultanément, chaque instance représentant un verrou sur un type de ressource.  
   
- Le tableau ci-dessous décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verrous**de**.  
+ Le tableau ci-dessous décrit les compteurs **Verrous** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs de verrous de SQL Server|Description|  
 |-------------------------------|-----------------|  

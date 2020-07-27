@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216894"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920331"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Cette procédure pas à pas fournit des étapes détaillées sur la publication d’un package SSIS en tant que vue SQL dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -164,9 +164,9 @@ ms.locfileid: "80216894"
   
 1.  Lancez SQL Server Management Studio.  
   
-2.  Développez \<**nom machine**>, **Bases de données**, \<**base de données sélectionnée dans l’Assistant**> et **Vues**.  
+2.  Développez \<**machine name**>, **Bases de données**, \<**database you selected in the wizard**> et **Vues**.  
   
-3.  Cliquez avec le bouton droit sur la \<**vue créée par l’Assistant**>, puis cliquez sur **Sélectionner les 1000 premières lignes**.  
+3.  Cliquez avec le bouton droit sur la \<**view created by the wizard**> créée par l’Assistant, puis cliquez sur **Sélectionner les 1000 premières lignes**.  
   
 4.  Vérifiez que vous voyez bien les résultats du package SSIS.  
   

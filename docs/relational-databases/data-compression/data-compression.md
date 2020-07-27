@@ -1,5 +1,6 @@
 ---
 title: Compression de données | Microsoft Docs
+description: Appliquez la compression des données de ligne et de page ou la compression columnstore et d’archivage columnstore, à l’aide de SQL Server et d’Azure SQL Database.
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464f83e573f76bb74158fc8eee6a798089734006
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5da071f378edb771d4b1dc70ac8257febd78a522
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679721"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459009"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +187,7 @@ Le tableau suivant illustre les paramètres de réplication qui contrôlent la c
 |Intention de l'utilisateur|Répliquer le schéma de partition pour une table ou un index|Répliquer les paramètres de compression|Comportement de script|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
 |Répliquer le schéma de partition et activer la compression sur l'Abonné sur la partition.|True|True|Inclut dans le script le schéma de partition et les paramètres de compression.|  
-|Répliquer le schéma de partition mais ne pas compresser les données sur l'Abonné.|True|False|Exclut le schéma de partition du script, mais pas les paramètres de compression pour la partition.|  
+|Répliquer le schéma de partition mais ne pas compresser les données sur l'Abonné.|Vrai|Faux|Exclut le schéma de partition du script, mais pas les paramètres de compression pour la partition.|  
 |Ne pas répliquer le schéma de partition et ne pas compresser les données sur l'Abonné.|False|False|Exclut du script la partition et les paramètres de compression.|  
 |Compresser la table sur l'Abonné si toutes les partitions sont compressées sur le serveur de publication, mais ne pas répliquer le schéma de partition.|False|True|Vérifie si toutes les partitions sont activées pour la compression.<br /><br /> Exclut la compression du script au niveau de la table.|  
   

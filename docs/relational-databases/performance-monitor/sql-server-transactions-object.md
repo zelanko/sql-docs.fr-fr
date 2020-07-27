@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet Transactions | Microsoft Docs
+description: Découvrez l’objet Transactions, qui fournit des compteurs chargés de superviser les transactions actives dans le moteur de base de données et les effets des transactions dans SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 635bb13a1d6e44f5fc8f694cb2618a19c08831f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a7d51ee275f234de0be33a5bfa618684ee2e07e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758956"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458757"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objet Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  L'objet **Transactions** dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour analyser le nombre de transactions actives dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ainsi que les effets de ces transactions sur les ressources, tels que la banque de versions de lignes avec isolement d'instantané dans **tempdb**. Les transactions sont des unités logiques de travail, c'est-à-dire un ensemble d'opérations qui doivent toutes aboutir ou être toutes supprimées d'une base de données afin de maintenir l'intégrité logique des données. Toutes les modifications de données dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont effectuées dans des transactions.  
+  L’objet **Transactions** dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour analyser le nombre de transactions actives dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], ainsi que les effets de ces transactions sur les ressources, telles que la banque de versions de lignes avec isolement de capture instantanée dans **tempdb**. Les transactions sont des unités logiques de travail, c'est-à-dire un ensemble d'opérations qui doivent toutes aboutir ou être toutes supprimées d'une base de données afin de maintenir l'intégrité logique des données. Toutes les modifications de données dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont effectuées dans des transactions.  
   
  Lorsqu'une base de données est configurée pour autoriser un niveau d'isolement d'instantané, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit gérer un enregistrement des modifications apportées à chaque ligne de la base de données. Chaque fois qu'une ligne est modifiée, une copie de la ligne telle qu'elle existait avant la modification est enregistrée dans une banque de versions de lignes dans **tempdb**. De nombreux compteurs de l'objet **Transaction** peuvent être utilisés pour analyser la taille et le taux de croissance de la banque de versions de lignes dans **tempdb**.  
   
@@ -35,7 +36,7 @@ ms.locfileid: "85758956"
 |**Espace disponible dans tempdb (Ko)**|Quantité d’espace (en kilo-octets) disponible dans **tempdb**. Il faut suffisamment d'espace libre pour contenir le magasin de versions avec niveau d'isolement d'instantané et tous les nouveaux objets temporaires créés dans cette instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Délai le plus long d'exécution de transaction**|Durée d'attente (en secondes) depuis le démarrage de la transaction qui a été active plus longtemps que toute autre transaction actuelle. Ce compteur ne montre une activité que lorsque la base de données est exécutée avec le niveau d'isolement d'instantané de lecture validée. Il ne consigne aucune activité si la base de données se trouve dans n'importe quel autre niveau d'isolement.|  
 |**Transactions de versions non liées à des instantanés**|Nombre de transactions actives n'utilisant pas le niveau d'isolement d'instantané et ayant apporté des modifications aux données, qui ont généré des versions de lignes dans le magasin de versions **tempdb** .|  
-|**Transactions d'instantanés**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané.<br /><br /> Remarque : Le compteur d’objets **Transactions de captures instantanées** répond lors du premier accès aux données et pas lors de l’émission de l’instruction `BEGIN TRANSACTION` .|  
+|**Transactions d'instantanés**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané.<br /><br /> Remarque : Le compteur d’objets **Transactions d’instantanés** répond lors du premier accès aux données et non lors de l’émission de l’instruction `BEGIN TRANSACTION`.|  
 |**Transactions**|Nombre de transactions actives de tous types.|  
 |**Proportion de conflits de mise à jour**|Pourcentage des transactions utilisant le niveau d'isolement d'instantané et qui ont rencontré des conflits de mise à jour au cours de la dernière seconde. Un conflit de mise à jour se produit lorsqu'une transaction de niveau d'isolement d'instantané tente de modifier une ligne dont la dernière modification a été effectuée par une autre transaction qui n'était pas validée lors du démarrage de la transaction de niveau d'isolement d'instantané.|  
 |**Base de la proportion de conflits de mise à jour**|À usage interne uniquement.|

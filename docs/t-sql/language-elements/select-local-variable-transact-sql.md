@@ -1,5 +1,5 @@
 ---
-title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1d8bad77c52fcabb3190e28767c945718e1d72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630234"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910552"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Affecte à une variable locale la valeur d’une expression.  
@@ -48,38 +49,43 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
     [ ,...n ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
+
 @*local_variable*  
  Variable déclarée à laquelle doit être assignée une valeur.  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 Assignez la valeur située à droite à la variable située à gauche.  
   
 Opérateur d'assignation composé :  
-  |operator |action |   
-  |-----|-----|  
-  | = | Affecte à la variable l’expression qui suit. |  
-  | += | Additionner et assigner |   
-  | -= | Soustraire et assigner |  
-  | \*= | Multiplier et assigner |  
-  | /= | Diviser et assigner |  
-  | %= | Modulo et assigner |  
-  | &= | AND au niveau du bit et assigner |  
-  | ^= | XOR au niveau du bit et assigner |  
-  | \|= | OR au niveau du bit et assigner |  
-  
- *expression*  
- Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Cela comprend une sous-requête scalaire.  
-  
-## <a name="remarks"></a>Notes  
- L’instruction SELECT @*local_variable* est généralement utilisée pour retourner une valeur unique vers la variable. Toutefois, quand *expression* correspond au nom d’une colonne, plusieurs valeurs peuvent être retournées. Si l'instruction SELECT retourne plusieurs valeurs, la dernière valeur retournée est affectée à la variable.  
-  
- Si l'instruction SELECT ne retourne aucune ligne, la variable conserve sa valeur actuelle. Si *expression* est une sous-requête scalaire qui ne retourne aucune valeur, la valeur affectée à la variable est NULL.  
-  
- Une instruction SELECT peut initialiser plusieurs variables locales.  
-  
-> [!NOTE]  
->  Une instruction SELECT contenant une affectation de variable ne peut pas être utilisée pour effectuer également des opérations d'extraction habituelles dans les jeux de résultats.  
+
+| operator | action |  
+| -------- | ------ |  
+| = | Affecte à la variable l’expression qui suit. |  
+| += | Additionner et assigner |  
+| -= | Soustraire et assigner |  
+| \*= | Multiplier et assigner |  
+| /= | Diviser et assigner |  
+| %= | Modulo et assigner |  
+| &= | AND au niveau du bit et assigner |  
+| ^= | XOR au niveau du bit et assigner |  
+| \|= | OR au niveau du bit et assigner |  
+
+*expression*  
+Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Cela comprend une sous-requête scalaire.  
+
+## <a name="remarks"></a>Notes
+
+L’instruction SELECT @*local_variable* est généralement utilisée pour retourner une valeur unique vers la variable. Toutefois, quand *expression* correspond au nom d’une colonne, plusieurs valeurs peuvent être retournées. Si l'instruction SELECT retourne plusieurs valeurs, la dernière valeur retournée est affectée à la variable.  
+
+Si l'instruction SELECT ne retourne aucune ligne, la variable conserve sa valeur actuelle. Si *expression* est une sous-requête scalaire qui ne retourne aucune valeur, la valeur affectée à la variable est NULL.  
+
+Une instruction SELECT peut initialiser plusieurs variables locales.  
+
+> [!NOTE]
+> Une instruction SELECT contenant une affectation de variable ne peut pas être utilisée pour effectuer également des opérations d'extraction habituelles dans les jeux de résultats.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -99,7 +105,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +127,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +138,3 @@ NULL
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  

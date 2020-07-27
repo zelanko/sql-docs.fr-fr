@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298303"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917925"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
@@ -148,7 +148,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**Nouvelle connexion...** >.  
+ Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**New connection...**>.  
   
  **SQLSourceType**  
  Sélectionnez le type de source de l'instruction SQL qui exécute la tâche.  
@@ -190,13 +190,13 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connexion de fichiers  
  **FileConnection**  
- Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**New connection...**> pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
+ Sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -205,7 +205,7 @@ Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur d
   
 ### <a name="options"></a>Options  
  **Nom de la variable**  
- Après avoir ajouté un mappage de paramètre en cliquant sur **Ajouter**, sélectionnez une variable système ou une variable définie par l’utilisateur dans la liste, ou cliquez sur \<**Nouvelle variable...** > pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
+ Après avoir ajouté un mappage de paramètre en cliquant sur **Ajouter**, sélectionnez une variable système ou une variable définie par l’utilisateur dans la liste, ou cliquez sur \<**New variable...**> pour ajouter une nouvelle variable par le biais de la boîte de dialogue **Ajouter une variable**.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -244,7 +244,7 @@ Utilisez la page **Jeu de résultats** de la boîte de dialogue **Éditeur de t�
  
   
  **Nom de la variable**  
- Mappez le jeu de résultats à une variable en sélectionnant celle-ci, ou cliquez sur \<**Nouvelle variable...** > pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
+ Mappez le jeu de résultats à une variable en sélectionnant celle-ci, ou cliquez sur \<**New variable...**> pour ajouter une nouvelle variable par le biais de la boîte de dialogue **Ajouter une variable**.  
   
  **Ajouter**  
  Ajoute une correspondance de jeu de résultats.  
@@ -282,7 +282,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
 |Type de connexion|Marqueur de paramètre|Nom du paramètre|Exemple de commande SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nom du paramètre>|\@\<nom du paramètre>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL et OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -421,7 +421,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
     |Type de connexion|Marqueur de paramètre|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET et SQLMOBILE|\@\<nom du paramètre>|  
+    |ADO.NET et SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL et OLE DB|?|  
   
@@ -444,7 +444,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
     |Type de connexion|Nom du paramètre|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET et SQLMOBILE|\@\<nom du paramètre>|  
+    |ADO.NET et SQLMOBILE|\@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL et OLE DB|0, 1, 2, 3, ...|  
   
@@ -511,7 +511,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
   
  Si le type de l'ensemble de résultats est **Ligne unique**, vous pouvez lier une colonne du résultat obtenu à une variable en utilisant le nom de colonne comme nom d'ensemble de résultats. Vous pouvez également utiliser comme nom la position ordinale de la colonne dans la liste des colonnes. Par exemple, le nom de l'ensemble de résultats de la requête `SELECT Color FROM Production.Product WHERE ProductID = ?` pourrait être **Color** ou **0**. Si la requête retourne plusieurs colonnes et que vous souhaitez accéder aux valeurs de toutes les colonnes, vous devez lier chaque colonne à une variable différente. Si vous mappez des colonnes à des variables en utilisant des numéros comme noms de jeux de résultats, ces numéros reflètent l'ordre d'apparition des colonnes dans la liste des colonnes de la requête. Par exemple, dans la requête `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, vous utilisez 0 pour la colonne **Color** et 1 pour la colonne **ListPrice** . La possibilité d'utiliser un nom de colonne comme nom d'ensemble de résultats dépend du fournisseur que la tâche a été configurée pour utiliser. Tous les fournisseurs ne rendent pas les noms de colonnes disponibles.  
   
- Certaines requêtes qui retournent une valeur unique peuvent ne pas inclure de noms de colonnes. Par exemple, l'instruction `SELECT COUNT (*) FROM Production.Product` ne retourne aucun nom de colonne. Vous pouvez accéder à l'ensemble de résultats en utilisant la position ordinale, 0, comme nom de résultat. Pour accéder au résultat de retour par nom de colonne, la requête doit inclure une clause AS \<nom alias> pour fournir un nom de colonne. L'instruction `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`, fournit la colonne **CountOfProduct** . Vous pouvez ensuite accéder à la colonne de résultat de retour en utilisant le nom de colonne **CountOfProduct** ou la position ordinale, 0.  
+ Certaines requêtes qui retournent une valeur unique peuvent ne pas inclure de noms de colonnes. Par exemple, l'instruction `SELECT COUNT (*) FROM Production.Product` ne retourne aucun nom de colonne. Vous pouvez accéder à l'ensemble de résultats en utilisant la position ordinale, 0, comme nom de résultat. Pour accéder au résultat de retour par nom de colonne, la requête doit inclure une clause AS \<alias name> pour fournir un nom de colonne. L'instruction `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`, fournit la colonne **CountOfProduct** . Vous pouvez ensuite accéder à la colonne de résultat de retour en utilisant le nom de colonne **CountOfProduct** ou la position ordinale, 0.  
   
  Si le type de l'ensemble de résultats est **Ensemble de résultats complet** ou **XML**, vous devez utiliser 0 comme nom de jeu de résultats.  
   

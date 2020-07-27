@@ -1,5 +1,6 @@
 ---
 title: Afficher le journal des applications Windows (Windows) | Microsoft Docs
+description: Quand SQL Server est configuré pour vous permettre d’utiliser le journal des applications Windows, chaque session y enregistre des événements. Découvrez comment afficher le journal des applications Windows.
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2e6e721948c2e875a5f9d6e100cdb29f928b4042
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d733c8c50768f5639c1af8b20f9c2b9028f7cfc1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655272"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458681"
 ---
 # <a name="view-the-windows-application-log-windows-10"></a>Afficher le journal des applications Windows (Windows 10)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -12,16 +12,16 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763658"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913895"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tâche Azure Data Lake Analytics
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -60,7 +60,7 @@ La configuration U-SQL comporte deux paramètres : **SourceType** et des option
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Tapez directement la requête U-SQL à envoyer dans la zone des options, ou sélectionnez le bouton Parcourir (…) pour la taper dans la boîte de dialogue **Entrer une requête U-SQL**.|  
 |**SourceType = FileConnection**|Sélectionnez un gestionnaire de connexions de fichiers existant ou <**Nouvelle connexion…** > pour créer une connexion de fichiers. Pour des informations connexes, consultez : [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md) et [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Sélectionnez une variable existante, ou \<**Nouvelle variable...** > pour en créer une. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) et [Ajouter une Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = Variable**|Sélectionnez une variable existante, ou sélectionnez \<**New variable...**> pour en créer une. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) et [Ajouter une Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 | &nbsp; | &nbsp; |
 
 

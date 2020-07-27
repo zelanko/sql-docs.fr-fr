@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736324"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552572"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Recherche des concordances précises ou approximatives (moins précises) avec des mots isolés ou des expressions, des termes situés à une certaine distance les uns des autres ou des concordances pondérées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS est un prédicat utilisé dans la [clause WHERE](../../t-sql/queries/where-transact-sql.md) d’une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] pour effectuer une recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des colonnes indexées en texte intégral qui contiennent des types de données caractères.  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *column_name*  
  Nom d'une colonne d'index de recherche en texte intégral de la table spécifiée dans la clause FROM. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
   
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Définit une valeur de pondération qui est un nombre compris entre 0,0 et 1,0. Chaque élément de *\<weighted_term>* peut inclure une valeur *weight_value*. *weight_value* permet de changer l’influence de diverses parties d’une requête sur la valeur de classement assignée à chaque ligne correspondant à la requête. WEIGHT n’a pas d’incidence sur les résultats des requêtes CONTAINS, mais impacte le classement dans les requêtes [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
   
 > [!NOTE]  
->  Le séparateur de décimale est toujours un point, quels que soient les paramètres régionaux du système d'exploitation.  
+> Le séparateur de décimale est toujours un point, quels que soient les paramètres régionaux du système d'exploitation.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  Spécifie une opération logique entre deux conditions de recherche de contenu.  
   
- { AND | & }  
+ { AND \| & }  
  Indique que les deux conditions de recherche de contenu doivent être satisfaites pour obtenir une correspondance. Vous pouvez utiliser une esperluette (&) à la place du mot clé AND pour représenter l’opérateur AND.  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  Indique que la deuxième condition de recherche ne doit pas être satisfaite pour obtenir une correspondance. Vous pouvez utiliser une esperluette suivie d’un point d’exclamation (&!) à la place du mot clé AND NOT pour représenter l’opérateur AND NOT.  
   
- { OR | | }  
+ { OR \| \| }  
  Indique que l'une des deux conditions de recherche de contenu doit être satisfaite pour obtenir une correspondance. Le symbole de barre verticale (|) peut être utilisé à la place du mot clé OR pour représenter l'opérateur OR.  
   
  Lorsque *\<contains_search_condition>* comporte des groupes placés entre parenthèses, ces groupes sont évalués en premier. Une fois ces groupes évalués, les règles suivantes sont appliquées lorsque ces opérateurs logiques sont utilisés dans les conditions de recherche de contenu :  

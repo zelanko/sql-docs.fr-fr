@@ -1,5 +1,6 @@
 ---
 title: Resource Governor | Microsoft Docs
+description: Découvrez la fonctionnalité SQL Server Resource Governor qui limite la quantité de ressources de processeur, d’E/S physiques et de mémoire que les demandes entrantes d’applications peuvent utiliser.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc24afebe163f3fbab8c7f1a2317b62d8c818223
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8654f25318bfc947394b0acaf0df19a8f7eb2bc3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729291"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457820"
 ---
 # <a name="resource-governor"></a>gouverneur de ressources
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -12,12 +12,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de347e9f950c16ccbbe014a9b2c07a76aaf168a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdbc04c4a1294605b59c04fb9df9a3c44b1f077f
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881183"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483690"
 ---
 # <a name="manage-trigger-security"></a>Gérer la sécurité des déclencheurs
 
@@ -60,7 +60,7 @@ Ce déclencheur signifie que dès qu’un utilisateur disposant de l’autorisat
     ```  
 
    > [!NOTE]
-   > Seul **sys.triggers** est disponible pour Azure SQL Database, sauf si vous utilisez Managed Instance.
+   > Seul **sys.triggers** est disponible pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], sauf si vous utilisez [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 ::: moniker-end
 
@@ -124,5 +124,4 @@ Ce déclencheur signifie que dès qu’un utilisateur disposant de l’autorisat
  [Déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)   
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)  
  [Déclencheurs de connexion](../../relational-databases/triggers/logon-triggers.md)  
-  
   

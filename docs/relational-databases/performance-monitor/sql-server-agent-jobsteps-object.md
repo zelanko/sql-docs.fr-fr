@@ -1,5 +1,6 @@
 ---
 title: SQL Server Agent, objet JobSteps | Microsoft Docs
+description: Découvrez l’objet de performance JobSteps de l’Agent SQL Server, qui contient des compteurs fournissant des informations sur les étapes des travaux SQL Server Agent.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b3d0c8197f275801140bec48ab05dc6bc19324eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14a13671c5447872e1c4c0030c8717e471d8114f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787391"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457451"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objet JobSteps
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787391"
   
  Le tableau suivant énumère les compteurs **SQLAgent:JobSteps** .  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |**Étapes actives**|Ce compteur fait état du nombre d'étapes de travail en cours d'exécution.|  
 |**Étapes en attente**|Ce compteur fait état du nombre d'étapes de travail en mesure d'être exécutées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais dont l'exécution n'a pas encore commencé.|  

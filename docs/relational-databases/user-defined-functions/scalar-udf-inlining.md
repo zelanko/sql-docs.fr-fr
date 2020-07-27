@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727092"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484420"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -29,7 +29,7 @@ ms.locfileid: "85727092"
 Cet article présente l’incorporation (inlining) des fonctions UDF scalaires. Il s’agit d’une fonctionnalité qui est prise en charge dans la suite de fonctionnalités de [traitement intelligent des requêtes](../../relational-databases/performance/intelligent-query-processing.md). Cette fonctionnalité améliore les performances des requêtes qui appellent des fonctions scalaires définies par l’utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Fonctions UDF (définies par l’utilisateur) scalaires T-SQL
-Les fonctions définies par l’utilisateur (UDF) qui sont implémentées dans [!INCLUDE[tsql](../../includes/tsql-md.md)] et qui retournent une valeur de données unique sont appelées fonctions UDF (définies par l’utilisateur) scalaires T-SQL. Les fonctions UDF T-SQL offrent une façon élégante de réutiliser le code et d’assurer la modularité entre les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Certains calculs (tels que des règles métier complexes) sont plus faciles à exprimer sous forme de fonctions UDF impératives. Les fonctions UDF favorisent la création d’une logique complexe sans devoir savoir écrire des requêtes SQL complexes.
+Les fonctions définies par l’utilisateur (UDF) qui sont implémentées dans [!INCLUDE[tsql](../../includes/tsql-md.md)] et qui retournent une valeur de données unique sont appelées fonctions UDF (définies par l’utilisateur) scalaires T-SQL. Les fonctions UDF T-SQL offrent une façon élégante de réutiliser le code et d’assurer la modularité entre les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Certains calculs (tels que des règles métier complexes) sont plus faciles à exprimer sous forme de fonctions UDF impératives. Les fonctions UDF favorisent la création d’une logique complexe sans devoir savoir écrire des requêtes SQL complexes. Pour plus d’informations sur les fonctions UDF, consultez [Créer des fonctions définies par l’utilisateur (moteur de base de données)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
 ## <a name="performance-of-scalar-udfs"></a>Performances des fonctions UDF scalaires
 Les fonctions UDF scalaires présentent généralement des performances médiocres pour les raisons suivantes :
@@ -134,16 +134,16 @@ Comme mentionné précédemment, le plan de requête n’a plus d’opérateur d
 Selon la complexité de la logique dans la fonction UDF, le plan de requête obtenu peut également grandir et se complexifier. Comme nous pouvons le constater, les opérations au sein de la fonction UDF ne sont plus une boîte noire et, par conséquent, l’optimiseur de requête est en mesure d’évaluer le coût de ces opérations et de les optimiser. En outre, comme la fonction UDF n’est plus dans le plan, l’appel itératif de la fonction UDF est remplacé par un plan qui permet d’éviter toute surcharge d’appel de fonction.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Exigences des fonctions UDF scalaires incorporables
-<a name="requirements"></a> Une fonction UDF T-SQL scalaire peut être incorporée si toutes les conditions suivantes sont remplies :
+<a name="requirements"></a> Une fonction UDF T-SQL scalaire peut être inlined si toutes les conditions suivantes sont remplies :
 
 - La fonction UDF est écrite à l’aide des constructions suivantes :
     - `DECLARE`, `SET` : déclaration et affectations des variables.
-    - `SELECT`: requête SQL avec une ou plusieurs affectations de variables<sup>1</sup>.
+    - `SELECT`: requête SQL avec une ou plusieurs affectations de variables <sup>1</sup>.
     - `IF`/`ELSE` : création de branches avec des niveaux d’imbrication arbitraires.
     - `RETURN`: une ou plusieurs instructions return.
-    - `UDF`: appels de fonction imbriqués/récursifs<sup>2</sup>.
+    - `UDF`: appels de fonction imbriqués/récursifs <sup>2</sup>.
     - Autres : opérations relationnelles telles que `EXISTS`, `ISNULL`.
-- La fonction UDF n’appelle pas de fonction intrinsèque dépendante du temps (telle que `GETDATE()`) ou ayant des effets secondaires<sup>3</sup> (telle que `NEWSEQUENTIALID()`).
+- La fonction UDF n’appelle pas de fonction intrinsèque dépendante du temps (telle que `GETDATE()`) ou ayant des effets secondaires <sup>3</sup> (telle que `NEWSEQUENTIALID()`).
 - La fonction UDF utilise la clause `EXECUTE AS CALLER` (comportement par défaut si la clause `EXECUTE AS` n’est pas spécifiée).
 - La fonction UDF ne référence pas de variables de table ni de paramètres table.
 - La requête qui appelle une fonction UDF scalaire ne référence pas un appel de fonction UDF scalaire dans sa clause `GROUP BY`.
@@ -154,25 +154,31 @@ Selon la complexité de la logique dans la fonction UDF, le plan de requête obt
 - La fonction UDF ne référence pas de types définis par l’utilisateur.
 - Aucune signature n’est ajoutée à la fonction UDF.
 - La fonction UDF n’est pas une fonction de partition.
-- La fonction UDF ne contient aucune référence à des expressions de table commune (CTE)
-- La fonction UDF ne contient pas de références à des fonctions intrinsèques (par exemple, @@ROWCOUNT) qui peuvent modifier les résultats en cas d’inlined (restriction ajoutée dans Microsoft SQL Server 2019 CU2).
-- La fonction UDF ne contient pas de fonctions d’agrégation transmises comme paramètres à une fonction UDF scalaire (restriction ajoutée à Microsoft SQL Server 2019 CU2).
-- La fonction UDF ne fait pas référence aux vues intégrées (par exemple, OBJECT_ID, restriction ajoutée dans Microsoft SQL Server 2019 CU2).
--   La fonction UDF ne fait pas référence aux méthodes XML (restriction ajoutée dans Microsoft SQL Server 2019 CU4).
--   La fonction UDF ne contient pas de SELECT avec ORDER BY sans « TOP 1 » (restriction ajoutée dans Microsoft SQL Server 2019 CU4).
--   La fonction UDF ne contient pas de requête SELECT qui effectue une attribution conjointement à la clause ORDER BY (par exemple, SELECT @x = @x + 1 FROM table ORDER BY column_name, restriction ajoutée dans Microsoft SQL Server 2019 CU4).
-- La fonction UDF ne contient pas plusieurs instructions RETURN (restriction ajoutée à SQL Server 2019 CU5).
-- La fonction UDF n’est pas appelée par une instruction RETURN (restriction ajoutée à SQL Server 2019 CU5).
-- La fonction UDF ne fait pas référence à la fonction STRING_AGG (restriction ajoutée dans SQL Server 2019 CU5). 
+- La fonction UDF ne contient aucune référence à des expressions de table commune (CTE).
+- Quand elle est inlined, la fonction UDF ne contient pas de références à des fonctions intrinsèques qui peuvent modifier les résultats (comme `@@ROWCOUNT`) <sup>4</sup>.
+- La fonction UDF ne contient pas de fonctions d’agrégation transmises comme paramètres à une fonction UDF scalaire <sup>4</sup>.
+- La fonction UDF ne référence pas de vues intégrées (comme `OBJECT_ID`) <sup>4</sup>.
+- La fonction UDF ne référence pas de méthodes XML <sup>5</sup>.
+- La fonction UDF ne contient pas de SELECT avec `ORDER BY` sans clause `TOP 1` <sup>5</sup>.
+- La fonction UDF ne contient pas de requête SELECT qui effectue une assignation conjointement avec la clause `ORDER BY` (par exemple, `SELECT @x = @x + 1 FROM table1 ORDER BY col1`) <sup>5</sup>.
+- La fonction UDF ne contient pas plusieurs instructions RETURN <sup>6</sup>.
+- La fonction UDF n’est pas appelée à partir d’une instruction RETURN <sup>6</sup>.
+- La fonction UDF ne référence pas la fonction `STRING_AGG` <sup>6</sup>. 
 
-<sup>1</sup> `SELECT` avec une accumulation/agrégation de variable (par exemple, `SELECT @val += col1 FROM table1`) n’est pas pris en charge pour l’incorporation.
+<sup>1</sup> `SELECT` avec une accumulation/agrégation de variable n’est pas pris en charge pour l’inlining (par exemple, `SELECT @val += col1 FROM table1`).
 
 <sup>2</sup> Les fonctions UDF récursives sont incorporées seulement jusqu’à une certaine profondeur.
 
 <sup>3</sup> Les fonctions intrinsèques dont les résultats dépendent de l’heure système actuelle sont dépendantes de l’heure. Une fonction intrinsèque qui peut mettre à jour un état global interne est un exemple de fonction avec effets secondaires. Ces fonctions retournent des résultats différents chaque fois qu’elles sont appelées, selon l’état interne.
 
+<sup>4</sup> Restriction ajoutée dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2
+
+<sup>5</sup> Restriction ajoutée dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
+
+<sup>6</sup> Restriction ajoutée dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
 > [!NOTE]
-> Pour plus d’informations sur les derniers correctifs d’incorporation des fonctions UDF scalaires T-SQL et les dernières modifications apportées aux scénarios d’éligibilité d’incorporation, consultez l’article de la base de connaissances : [CORRECTIF : Problèmes d’incorporation de FDU scalaires dans SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
+> Pour plus d’informations sur les derniers correctifs d’incorporation des fonctions UDF scalaires T-SQL et les dernières modifications apportées aux scénarios d’éligibilité d’incorporation, consultez l’article de la base de connaissances : [CORRECTIF : Problèmes d’incorporation de FDU scalaires dans SQL Server 2019](https://support.microsoft.com/help/4538581).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>Vérification du fait qu’une fonction UDF peut être ou non incorporée
 Pour chaque fonction UDF scalaire T-SQL, la vue de catalogue [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) inclut une propriété appelée `is_inlineable`, qui indique si une fonction UDF est incorporable ou non. 
@@ -233,7 +239,8 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 
-Un indicateur de requête `USE HINT` est prioritaire par rapport à la configuration étendue à la base de données et par rapport à un paramètre de niveau de compatibilité.
+> [!TIP]
+> Un indicateur de requête `USE HINT` est prioritaire par rapport à la configuration étendue à la base de données et par rapport à un paramètre de niveau de compatibilité.
 
 L’incorporation des fonctions UDF scalaires peut également être désactivée pour une fonction UDF spécifique à l’aide de la clause INLINE dans l’instruction `CREATE FUNCTION` ou `ALTER FUNCTION`.
 Par exemple :
@@ -271,13 +278,14 @@ Comme cela est décrit dans cet article, l’incorporation des fonctions UDF sca
 1. Les indicateurs de jointure au niveau des requêtes ne sont peut-être plus valides, car l’incorporation peut introduire de nouvelles jointures. Les indicateurs de jointure locaux doivent être utilisés à la place.
 1. Les vues qui référencent des fonctions UDF scalaires inline ne peuvent pas être indexées. Si vous avez besoin de créer un index sur ces vues, désactivez l’incorporation pour les fonctions UDF référencées.
 1. Il peut y avoir des différences de comportement de [Dynamic Data Masking](../security/dynamic-data-masking.md) avec l’incorporation des données UDF. Dans certaines situations (selon la logique utilisée dans la fonction UDF), l’incorporation peut être plus conservatrice que le masquage des colonnes de sortie. Dans les scénarios où les colonnes référencées dans une fonction UDF ne sont pas les colonnes de sortie, elles ne sont pas masquées. 
-1. Si une fonction UDF référence des fonctions intégrées telles que `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, la valeur retournée par la fonction intégrée change avec l’incorporation. Ce changement de comportement est dû au fait que l’incorporation modifie l’étendue des instructions au sein de la fonction UDF. À compter de Microsoft SQL Server 2019 CU2, nous bloquerons l’incorporation si la fonction UDF fait référence à certaines fonctions intrinsèques (par exemple, @@ROWCOUNT).
+1. Si une fonction UDF référence des fonctions intégrées telles que `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, la valeur retournée par la fonction intégrée change avec l’incorporation. Ce changement de comportement est dû au fait que l’incorporation modifie l’étendue des instructions au sein de la fonction UDF. À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, l’inlining est bloqué si la fonction UDF référence certaines fonctions intrinsèques (par exemple `@@ROWCOUNT`).
 
 ## <a name="see-also"></a>Voir aussi
+[Créer des fonctions définies par l’utilisateur (moteur de base de données)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)     
 [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Jointures](../../relational-databases/performance/joins.md)     
 [Illustration du traitement de requêtes intelligent](https://aka.ms/IQPDemos)     
-[CORRECTIF : Problèmes d’incorporation de la fonction FDU scalaire dans SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+[CORRECTIF : Problèmes d’incorporation de la fonction FDU scalaire dans SQL Server 2019](https://support.microsoft.com/help/4538581)     
 

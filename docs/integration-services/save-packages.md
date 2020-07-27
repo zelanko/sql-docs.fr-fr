@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295738"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913265"
 ---
 # <a name="save-packages"></a>Enregistrer des packages
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , vous créez des packages à l’aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et vous les enregistrez dans le système de fichiers sous forme de fichiers XML (fichiers .dtsx). Vous pouvez également enregistrer des copies du fichier XML des packages dans la base de données msdb dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans le magasin de packages. Le magasin de packages représente les dossiers de l’emplacement du système de fichiers gérés par le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "71295738"
   
 1.  Dans l'Explorateur de solutions, double-cliquez sur le package dont vous voulez enregistrer une copie.  
   
-2.  Dans le menu **Fichier**, cliquez sur **Enregistrer une copie de \<fichier_package> sous**.  
+2.  Dans le menu **Fichier**, cliquez sur **Enregistrer une copie de \<package file> en tant que** .  
   
 3.  Dans la boîte de dialogue **Enregistrer une copie du package**, sélectionnez l’emplacement d’un package dans la liste **Emplacement du package**. Les options suivantes sont disponibles :  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295738"
   
 2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, pointez sur **Ajouter**, puis cliquez sur **Nouvel élément**.  
   
-3.  Dans la boîte de dialogue **Ajouter un nouvel élément -\<nom_projet>** , cliquez sur le package que vous voulez utiliser comme modèle.  
+3.  Dans la boîte de dialogue **Ajouter un nouvel élément - \<project name>** , cliquez sur le package que vous souhaitez utiliser comme modèle.  
   
      La liste de modèles inclut le modèle de package par défaut nommé Nouveau package SSIS. L'icône de package identifie les modèles pouvant être utilisés comme modèles de packages.  
   

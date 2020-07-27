@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298209"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920790"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fournir une requête de source OData au moment de l’exécution
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Vous pouvez modifier la requête de source OData au moment de l’exécution en ajoutant une *expression* à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
@@ -33,7 +33,7 @@ ms.locfileid: "71298209"
   
 1.  Cliquez avec le bouton droit sur **Tâche de flux de données** et sélectionnez l’option **Paramétrer...** .  
   
-2.  Dans la boîte de dialogue **Paramétrer**, sélectionnez **[\<<Nom du composant source OData].[Query]** pour **Propriété**.  
+2.  Dans la boîte de dialogue **Paramétrer**, sélectionnez **[\<Name of the OData Source Component>].[Query]** pour **Propriété**.  
   
 3.  Vous pouvez soit **créer un paramètre** , soit **utiliser un paramètre existant**.  
   

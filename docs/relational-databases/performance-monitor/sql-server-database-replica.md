@@ -1,5 +1,6 @@
 ---
 title: SQL Server, réplica de base de données | Microsoft Docs
+description: Découvrez l’objet de performance SQLServer:Database Replica, qui contient des compteurs de performances sur les bases de données secondaires d’un groupe de disponibilité Always On.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: db892b71ba5e86faf1b45b94cdef12b1850c22a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730841"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458333"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de données
 

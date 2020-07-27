@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b36cd33f3d9cc0b18c0454abe393e8e68e96c644
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292913"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916715"
 ---
 # <a name="destination-assistant"></a>Assistant de destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Le composant Assistant Destination permet de créer un composant de destination et un gestionnaire de connexions. Le composant se trouve dans la section **Favoris** de la boîte à outils SSIS.  
@@ -39,11 +39,11 @@ Cette rubrique indique les étapes à suivre pour ajouter une nouvelle destinati
   
 3.  Sélectionnez le type de la destination dans la liste **Types** .  
   
-4.  Sélectionnez un gestionnaire de connexions existant dans la liste **Gestionnaires de connexions** ou sélectionnez **\<Nouveau>** pour en créer un.  
+4.  Sélectionnez un gestionnaire de connexions existant dans la liste **Gestionnaires de connexions** ou sélectionnez **\<New>** pour en créer un.  
   
 5.  Si vous sélectionnez un gestionnaire de connexions existant, cliquez sur **OK** pour fermer la boîte de dialogue **Ajouter une nouvelle destination** . Vous devez constater que la destination et les gestionnaires de connexions ont été ajoutés au flux de données.  
   
-6.  Si vous cliquez sur **\<Nouveau>** pour créer un gestionnaire de connexions, vous devez voir s’afficher une boîte de dialogue **Gestionnaire de connexions** qui vous permet de spécifier les paramètres de la connexion. Une fois que vous avez fini de créer le gestionnaire de connexions, vous constatez que la destination et le gestionnaire de connexions figurent dans le concepteur SSIS. 
+6.  Si vous cliquez sur **\<New>** pour créer un gestionnaire de connexions, vous devez voir s’afficher une boîte de dialogue **Gestionnaire de connexions**, qui vous permet de spécifier les paramètres de la connexion. Une fois que vous avez fini de créer le gestionnaire de connexions, vous constatez que la destination et le gestionnaire de connexions figurent dans le concepteur SSIS. 
   
 ## <a name="add-new-destination-dialog-box"></a>Boîte de dialogue Ajouter une nouvelle destination
 Le tableau suivant répertorie les options disponibles dans la boîte de dialogue **Ajouter une nouvelle destination**.  
@@ -51,6 +51,6 @@ Le tableau suivant répertorie les options disponibles dans la boîte de dialogu
 |Option|Description|  
 |------------|-----------------|  
 |Types|Sélectionnez le type de destination auquel vous voulez vous connecter.|  
-|Gestionnaires de connexions|Sélectionnez un gestionnaire de connexions existant ou cliquez sur **\<Nouveau>** pour en créer un.|  
+|Gestionnaires de connexions|Sélectionnez un gestionnaire de connexions existant ou cliquez sur **\<New>** pour en créer un.|  
 |Afficher les éléments installés uniquement|Spécifiez s'il faut afficher uniquement les destinations installées.|  
 |OK|Cliquez pour enregistrer vos modifications et ouvrir les boîtes de dialogue suivantes permettant de configurer des options supplémentaires.|  

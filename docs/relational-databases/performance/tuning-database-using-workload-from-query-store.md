@@ -1,5 +1,6 @@
 ---
 title: Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes | Microsoft Docs
+description: L’Assistant Paramétrage du moteur de base de données prend en charge l’option permettant d’utiliser le Magasin des requêtes pour sélectionner automatiquement une charge de travail appropriée pour le paramétrage.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737130"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457577"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +36,9 @@ Dans l’interface graphique utilisateur de l’Assistant Paramétrage du moteur
 À partir de la ligne de commande (dta.exe), choisissez l’option  **-iq** pour sélectionner la charge de travail dans le magasin de requêtes. 
 
 Deux options supplémentaires, disponibles par l’intermédiaire de la ligne de commande, vous permettent de paramétrer le comportement de l’Assistant Paramétrage du moteur de base de données lors de la sélection de la charge de travail à partir du magasin de requêtes. Ces options ne sont pas disponibles par l’intermédiaire de l’interface graphique utilisateur :
-  1. **Nombre d’événements de charge de travail à paramétrer** : cette option, spécifiée à l’aide de l’argument de ligne de commande  **-n**, permet à l’utilisateur de contrôler le nombre d’événements du Magasin des requêtes qui sont paramétrés. Par défaut, l’Assistant Paramétrage du moteur de base de données utilise la valeur 1000 pour cette option. L’Assistant Paramétrage du moteur de base de données choisit toujours les événements les plus coûteux par durée totale. 
+  1. **Nombre d’événements de charge de travail à paramétrer** : cette option, spécifiée à l’aide de l’argument de ligne de commande  **-n**, permet à l’utilisateur de contrôler le nombre d’événements du magasin des requêtes qui sont paramétrés. Par défaut, l’Assistant Paramétrage du moteur de base de données utilise la valeur 1000 pour cette option. L’Assistant Paramétrage du moteur de base de données choisit toujours les événements les plus coûteux par durée totale. 
   
-  2. **Fenêtres temps des événements à paramétrer** : le Magasin des requêtes pouvant contenir des requêtes qui ont été exécutées il y a longtemps, cette option permet à l’utilisateur de spécifier une fenêtre de temps écoulé (en heures) avant laquelle une requête doit avoir été exécutée pour être prise en compte par l’Assistant Paramétrage du moteur de base de données pour le paramétrage. Cette option est spécifiée à l’aide de l’argument de ligne de commande  **-je**. 
+  2. **Fenêtres temps des événements à paramétrer** : le magasin des requêtes pouvant contenir des requêtes qui ont été exécutées il y a longtemps, cette option permet à l’utilisateur de spécifier une fenêtre de temps écoulé (en heures) avant laquelle une requête doit avoir été exécutée pour être prise en compte par l’Assistant Paramétrage du moteur de base de données pour le paramétrage. Cette option est spécifiée à l’aide de l’argument de ligne de commande  **-je**. 
 
 Pour plus d’informations, consultez [Utilitaire dta](../../tools/dta/dta-utility.md).
 
@@ -46,6 +47,6 @@ La différence entre les options Magasin de requêtes et Cache du plan est que l
 
 ## <a name="see-also"></a>Voir aussi  
 [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Didacticiel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
+[Tutoriel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [Comment le Magasin des requêtes collecte les données](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Bonnes pratiques en matière de magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)

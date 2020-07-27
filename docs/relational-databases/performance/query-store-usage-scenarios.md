@@ -1,5 +1,6 @@
 ---
 title: Scénarios d’utilisation du Magasin des requêtes | Microsoft Docs
+description: Découvrez comment utiliser le Magasin des requêtes pour suivre et garantir les performances de charge de travail prévisibles. Prenons plusieurs exemples dans SQL Server.
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a694e18dd4ade720283beea6fc57d5dd4e919d7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85989795"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457641"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85989795"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identifier et paramétrer les principales requêtes consommatrices de ressources  
  Même si votre charge de travail peut générer des milliers de requêtes, seules quelques-unes d’entre elles utilisent généralement la plupart des ressources système et, par conséquent, nécessitent une attention particulière. Parmi les principales requêtes consommatrices de ressources, vous trouvez généralement les requêtes qui ont fait l’objet d’une régression ou celles qui peuvent être améliorées avec un paramétrage supplémentaire.  
   
- La façon la plus simple de commencer l’exploration consiste à ouvrir **Principales requêtes consommatrices de ressources** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L’interface utilisateur est divisée en trois volets : un histogramme représentant les principales requêtes consommatrices de ressources (à gauche), un résumé du plan pour la requête sélectionnée (à droite) et un plan de requête visuel pour le plan sélectionné (en bas). Cliquez sur le bouton **Configurer** pour contrôler le nombre de requêtes que vous voulez analyser et l’intervalle de temps digne d’intérêt. Par ailleurs, vous pouvez choisir entre différentes dimensions de consommation de ressources (durée, processeur, mémoire, E/S, nombre d’exécutions) et la ligne de base (Moyenne, Min, Max, Total, Écart type).  
+ La façon la plus simple de commencer l’exploration consiste à ouvrir **Principales requêtes consommatrices de ressources** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L’interface utilisateur est divisée en trois volets : un histogramme représentant les principales requêtes consommatrices de ressources (à gauche), un résumé du plan pour la requête sélectionnée (à droite) et un plan de requête visuel pour le plan sélectionné (en bas). Cliquez sur le bouton **Configurer** pour contrôler le nombre de requêtes que vous voulez analyser et l’intervalle de temps digne d’intérêt. Par ailleurs, vous pouvez choisir entre différentes dimensions de consommation de ressources (durée, processeur, mémoire, E/S, nombre d’exécutions) et la ligne de base (Moyenne, Min, Max, Total, Écart type).  
   
  ![requête-magasin-utilisation-2](../../relational-databases/performance/media/query-store-usage-2.png "requête-magasin-utilisation-2")  
   

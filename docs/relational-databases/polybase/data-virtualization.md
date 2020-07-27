@@ -1,6 +1,6 @@
 ---
 title: Virtualiser des données externes
-description: Cette page détaille les étapes d’utilisation de l’Assistant Création d’une table externe pour des sources de données relationnelles.
+description: Cette page détaille les étapes d’utilisation de l’Assistant Création d’une table externe pour des sources de données ODBC.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588088"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943004"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données relationnelles
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données ODBC
 
 Un des principaux scénarios pour SQL Server 2019 est la possibilité de virtualiser des données. Ce processus permet aux données de rester à leur emplacement d’origine. Vous pouvez *virtualiser* les données dans une instance de SQL Server, ce qui vous permet de les interroger comme n’importe quelle autre table dans SQL Server. Ce processus réduit la nécessité de recourir à des processus ETL. Il est possible grâce à l’utilisation de connecteurs PolyBase. Pour plus d’informations sur la virtualisation des données, consultez [Bien démarrer avec PolyBase](polybase-guide.md).
 
@@ -33,7 +33,7 @@ Connectez-vous à l’instance principale en utilisant l’adresse IP/numéro de
 ![Assistant Virtualisation de données](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Sélectionner une source de données
 
-Si vous avez démarré l’Assistant à partir de l’une des bases de données, la zone de liste déroulante de destination est remplie automatiquement. Vous avez également la possibilité d’entrer ou de changer la base de données de destination dans cette page. Les types de sources de données externes pris en charge par l’Assistant sont SQL Server et Oracle.
+Si vous avez démarré l’Assistant à partir de l’une des bases de données, la zone de liste déroulante de destination est remplie automatiquement. Vous avez également la possibilité d’entrer ou de changer la base de données de destination dans cette page. Les types de sources de données externes pris en charge par l’Assistant sont SQL Server, Oracle, MongoDB et Teradata.
 
 > [!NOTE]
 >SQL Server est mis en surbrillance par défaut.
@@ -56,7 +56,7 @@ Lors de cette étape, vous allez créer une clé principale de base de données.
 
 Lors de cette étape, entrez votre source de données externe et les détails des informations d’identification pour créer un objet de source de données externe. Les informations d’identification permettent à l’objet de base de données de se connecter à la source de données. Entrez un nom pour la source de données externe, par exemple Test. Fournissez des détails sur la connexion SQL Server à la source de données externe. Entrez le **Nom du serveur** et le **Nom de la base de données** où vous souhaitez créer votre source de données externe.
 
-L’étape suivante consiste à configurer les informations d’identification. Entrez un nom pour les informations d’identification. Ce nom correspond aux informations d’identification incluses dans l’étendue de la base de données qui servent à stocker en toute sécurité les informations de connexion pour la source de données externe que vous créez. Il peut s’agir par exemple de TestCred. Entrez un nom d’utilisateur et un mot de passe pour la connexion à la source de données.
+L’étape suivante consiste à configurer les informations d’identification. Entrez un nom pour les informations d’identification. Ce nom correspond aux informations d’identification incluses dans l’étendue de la base de données qui servent à stocker en toute sécurité les informations de connexion pour la source de données externe que vous créez. par exemple `TestCred`. Entrez un nom d’utilisateur et un mot de passe pour la connexion à la source de données.
 
 ![Informations d’identification de la source de données externe](media/data-virtualization/data-source-credentials.png)
 

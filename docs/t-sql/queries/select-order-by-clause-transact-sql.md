@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ebb1f9b6a1d2b9651b26c8649db89c0ca89fc5fa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999769"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554754"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - Clause ORDER BY (Transact-SQL)
 
@@ -92,7 +92,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *order_by_expression*  
  Spécifie une colonne ou une expression sur laquelle trier le jeu de résultats de la requête. Une colonne de tri peut être définie comme un nom ou alias de colonne ou comme un nombre entier non négatif représentant la position de la colonne dans la liste de sélection.  
   
@@ -124,7 +126,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  Dans les plans d’exécution de requêtes, la valeur du nombre de lignes du décalage est affichée dans l’attribut **Offset** de l’opérateur de requête TOP.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Spécifie le nombre de lignes à retourner une fois la clause OFFSET traitée. La valeur peut être une constante entière ou une expression supérieure ou égale à un.  
   
 **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

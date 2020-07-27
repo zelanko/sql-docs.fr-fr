@@ -1,5 +1,6 @@
 ---
 title: Fonction classifieur de Resource Governor | Microsoft Docs
+description: Le processus de classification de SQL Server Resource Governor affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2b96e494e10bb99fa316fa417c16e2f4a7034855
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80ece7e7de3896cffc8bbf274071ceed3d53f39a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729271"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457506"
 ---
 # <a name="resource-governor-classifier-function"></a>Fonction classifieur du gouverneur de ressources
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "85729271"
 |----------------------|-----------|  
 |Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l’utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

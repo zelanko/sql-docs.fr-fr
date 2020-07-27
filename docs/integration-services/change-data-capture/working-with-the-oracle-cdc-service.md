@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc7afe35c99a12e8e92111d05e62d9d0a5dd9c9c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288233"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922796"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Cette section décrit des concepts importants du service de capture de données modifiées Oracle. Les concepts inclus dans cette section sont les suivants :  
@@ -112,7 +112,7 @@ ms.locfileid: "79288233"
 |ref_count|Cet élément compte le nombre d'ordinateurs où le même service de capture de données modifiées Oracle est installé. Il est augmenté à chaque ajout de service de capture de données modifiées Oracle portant le même nom, et il est réduit lorsque ce service est supprimé. Lorsque le compteur atteint zéro, cette ligne est supprimée.|  
 |active_service_node|Nom du nœud Windows qui gère actuellement le service de capture de données modifiées. Lorsque le service est arrêté correctement, cette colonne a la valeur Null, ce qui indique qu'il ne s'agit plus d'un service actif.|  
 |active_service_heartbeat|Cet élément suit le service de capture de données modifiées actuel pour déterminer s'il est encore actif.<br /><br /> Cet élément est mis à jour avec l'horodateur UTC de la base de données active du service de capture de données modifiées actif à intervalles réguliers. L'intervalle par défaut est de 30 secondes ; cependant, vous pouvez le configurer.<br /><br /> Lorsqu'un service de capture de données modifiées en attente détecte que la pulsation n'a pas été mise à jour après que l'intervalle configuré est passé, le service en attente tente d'assumer le rôle de service de capture de données modifiées actif.|  
-|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]** . La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> Les valeurs possibles de trace sont les suivantes :<br /><br /> **true**<br /><br /> **actif**<br /><br /> **false**<br /><br /> **inactif**<br /><br /> **\<nom_classe>[,nom_classe>]**<br /><br /> <br /><br /> La valeur par défaut est **false**.<br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
+|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]** . La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> Les valeurs possibles de trace sont les suivantes :<br /><br /> **true**<br /><br /> **actif**<br /><br /> **false**<br /><br /> **inactif**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> La valeur par défaut est **false**.<br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Procédures stockées de base de données MSXDBCDC  
@@ -161,7 +161,7 @@ ms.locfileid: "79288233"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service (svcname,sqlusr)  
  La procédure **dbo.xcbcdc_add_service** ajoute une entrée à la table **MSXDBCDC.xdbcdc_services** et ajoute un incrément de un à la colonne ref_count pour le nom du service dans la table **MSXDBCDC.xdbcdc_services** . Quand **ref_count** a la valeur 0, elle supprime la ligne.  
   
- Pour utiliser la procédure **dbo.xcbcdc_add_service\<nom_service, nom_utilisateur>** , l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données d’instanceCDC nommée ou membre du rôle serveur fixe **sysadmin** ou **serveradmin**.  
+ Pour utiliser la procédure **dbo.xcbcdc_add_service\<service name, username>** , l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données d’instance de capture des changements de données nommée ou membre du rôle serveur fixe **sysadmin** ou **serveradmin**.  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  La procédure **dbo.xdbcdc_start** envoie une demande de démarrage au service de capture de données modifiées qui gère l’instance de capture de données modifiées sélectionnée pour démarrer le traitement des modifications.  

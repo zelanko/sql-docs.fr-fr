@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft Docs
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766959"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482060"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Arguments
 
 *database_name* correspond au nom de la base de données dans laquelle la table est créée. *database_name* doit spécifier le nom d’une base de données existante. Si aucun nom n’est spécifié, *database_name* correspond par défaut à la base de données actuelle. Le nom d’accès de la connexion actuelle doit être associé à un ID d’utilisateur existant dans la base de données spécifiée par *database_name*, et cet ID d’utilisateur doit disposer des autorisations CREATE TABLE.
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES est une contrainte qui assure l’intégrité référenti
 
 **(** *ref_column* [ **,** ... *n* ] **)** est une colonne ou liste de colonnes provenant de la table référencée par la contrainte FOREIGN KEY.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } spécifie l’action qui se produit dans les lignes de la table créée, si ces lignes comportent une relation référentielle et si la ligne référencée est supprimée de la table parent. La valeur par défaut est NO ACTION.
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT } spécifie l’action qui se produit dans les lignes de la table créée, si ces lignes comportent une relation référentielle et si la ligne référencée est supprimée de la table parent. La valeur par défaut est NO ACTION.
 
 NO ACTION : le [!INCLUDE[ssDE](../../includes/ssde-md.md)] déclenche une erreur et la suppression de la ligne dans la table parent est annulée.
 
@@ -598,7 +600,7 @@ Si une instruction `DELETE` est exécutée sur une ligne de la table **Vendor** 
 
 En revanche, si la valeur `NO ACTION` est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur et annule la suppression de la ligne dans la table **Vendor** si au moins une ligne y fait référence dans la table **ProductVendor**.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } spécifie l’action qui se produit sur les lignes de la table modifiée, si chacune de ces lignes possède une relation référentielle et que la ligne référencée correspondante est mise à jour dans la table parent. La valeur par défaut est NO ACTION.
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } spécifie l’action qui se produit sur les lignes de la table modifiée, si chacune de ces lignes possède une relation référentielle et que la ligne référencée correspondante est mise à jour dans la table parent. La valeur par défaut est NO ACTION.
 
 NO ACTION : le [!INCLUDE[ssDE](../../includes/ssde-md.md)] déclenche une erreur et la mise à jour de la ligne dans la table parent est restaurée.
 

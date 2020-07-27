@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d17145c0fc275d9023446436e4c052c441e8c94
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283012"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922355"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Leçon 6-4 : Déployer le package de la leçon 6
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -38,7 +38,7 @@ Dans cette tâche, vous effectuez les opérations suivantes :
   
 1.  Sélectionnez **Démarrer** > **Tous les programmes** > **Microsoft SQL Server 2017**, puis **SQL Management Studio**.  
   
-2.  Dans la boîte de dialogue **Se connecter au serveur**, vérifiez les paramètres par défaut, puis sélectionnez **Se connecter**. Pour vous connecter, le nom du **Serveur** doit être le nom de l’ordinateur sur lequel SQL Server est installé. Si le **moteur de base de données** est une instance nommée, le nom du **Serveur** doit être le nom de l’instance au format *\<nom_ordinateur>\\\<nom_instance>* . 
+2.  Dans la boîte de dialogue **Se connecter au serveur**, vérifiez les paramètres par défaut, puis sélectionnez **Se connecter**. Pour vous connecter, le nom du **Serveur** doit être le nom de l’ordinateur sur lequel SQL Server est installé. Si le **moteur de base de données** est une instance nommée, le nom du **Serveur** doit être le nom de l’instance au format *\<computer_name>\\\<instance_name>* . 
   
 3.  Dans l’**Explorateur d’objets**, développez **Catalogues Integration Services**.  
   

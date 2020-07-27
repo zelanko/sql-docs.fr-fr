@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281937"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921976"
 ---
 # <a name="set-package-properties"></a>Définir les propriétés d'un package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Lorsque vous créez un package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide de l'interface graphique fournie par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous définissez les propriétés de l'objet de package dans la fenêtre Propriétés.  
@@ -112,7 +112,7 @@ ms.locfileid: "71281937"
 |**CreatorComputerName**|Nom de l'ordinateur sur lequel le package a été créé.|  
 |**CreatorName**|Nom de la personne qui a créé le package.|  
 |**Description**|Description des fonctionnalités du package.|  
-|**Identifiant**|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour la propriété **ID**, sélectionnez **\<Générer un nouvel ID\>** dans la liste déroulante.|  
+|**Identifiant**|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour la propriété **ID**, sélectionnez **\<Generate New ID\>** dans la liste déroulante.|  
 |**Nom**|Nom du package.|  
 |**PackageType**|Type de package. Les valeurs possibles sont **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**et **SQLReplication**. La valeur par défaut de cette propriété est **Default**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   

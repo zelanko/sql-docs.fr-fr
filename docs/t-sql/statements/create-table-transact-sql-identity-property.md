@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 48b8dbac5a4ad484103dcceedb243a52cc7e621d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834730"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943091"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propriété)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,10 @@ IDENTITY [ (seed , increment) ]
  Valeur utilisée pour la toute première ligne chargée dans la table.  
   
  *increment*  
- Valeur d'incrément ajoutée à la valeur d'identité de la ligne précédemment chargée.  
+ Valeur d'incrément ajoutée à la valeur d'identité de la ligne précédemment chargée.
+
+ > [!NOTE]
+ > Dans Azure Synapse Analytics, les valeurs d’identité ne sont pas incrémentielles en raison de l’architecture distribuée de l’entrepôt de données. Pour plus d’informations, consultez [Utiliser IDENTITY pour créer des clés de substitution dans le pool SQL Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
   
  Vous devez spécifier à la fois la valeur initiale et l'incrément, ou aucun des deux. Si vous n'en spécifiez aucun, la valeur par défaut est (1,1).  
   
@@ -62,8 +65,11 @@ IDENTITY [ (seed , increment) ]
   
  La propriété d'identité sur une colonne ne garantit pas ce qui suit :  
   
--   **Unicité de la valeur** : l’unicité doit être appliquée avec une contrainte **PRIMARY KEY** ou **UNIQUE**, ou avec un index **UNIQUE**.  
-  
+-   **Unicité de la valeur** : l’unicité doit être appliquée avec une contrainte **PRIMARY KEY** ou **UNIQUE**, ou avec un index **UNIQUE**. - 
+ 
+> [!NOTE]
+> Azure Synapse Analytics ne prend pas en charge la contrainte **PRIMARY KEY** ou **UNIQUE** ou l’index **UNIQUE**. Pour plus d’informations, consultez [Utiliser IDENTITY pour créer des clés de substitution dans le pool SQL Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
+
 -   **Valeurs consécutives dans une transaction** : il n’est pas garanti qu’une transaction insérant plusieurs lignes obtienne des valeurs consécutives pour les lignes, car d’autres insertions simultanées peuvent se produire sur la table. Si les valeurs doivent être consécutives, alors la transaction doit utiliser un verrou sur la table ou le niveau d’isolation **SERIALIZABLE**.  
   
 -   **Valeurs consécutives après le redémarrage du serveur ou d’autres échecs** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre en cache les valeurs d’identité pour des raisons de performance, et certaines valeurs affectées peuvent être perdues lors d’un échec de base de données ou du redémarrage du serveur. Cela peut entraîner des intervalles de valeur d'identité à l'insertion. Si les intervalles ne sont pas acceptables, alors l'application doit utiliser son propre mécanisme pour générer des valeurs clés. L’utilisation d’un générateur de séquence avec l’option **NOCACHE** peut limiter les intervalles pour les transactions qui ne sont jamais validées.  
@@ -76,7 +82,7 @@ IDENTITY [ (seed , increment) ]
   
  Une seule colonne d'identité peut être créée par table.  
   
- Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». Le fait de définir la valeur initiale ou l’incrément à une valeur autre que 1 provoque l’erreur suivante : L’utilisation de valeurs autres que 1 pour la valeur initiale et l’incrément n’est pas prise en charge avec les tables optimisées en mémoire.  
+ Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». L’affectation d’une valeur de départ ou d’incrément autre que 1 provoque l’erreur suivante : L’utilisation de valeurs de départ ou d’incrément autres que 1 n’est pas prise en charge avec les tables à mémoire optimisée.  
   
 ## <a name="examples"></a>Exemples  
   

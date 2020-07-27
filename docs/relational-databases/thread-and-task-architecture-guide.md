@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158917"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485574"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guide d’architecture de thread et de tâche
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > La colonne `parent_task_address` est toujours NULL pour la tâche parente. 
 
+> [!TIP]
+> Sur un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]très occupé, il est possible de voir un certain nombre de tâches actives sur la limite définie par les threads réservés. Ces tâches peuvent appartenir à une branche qui n’est plus utilisée et qui sont dans un état transitoire, en attente de nettoyage. 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] Notez qu’il y a 17 tâches actives pour les branches qui sont en cours d’exécution : 16 tâches enfants correspondant aux threads réservés, plus la tâche parente ou la tâche de coordination.
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> Sur un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]très occupé, il est possible de voir un certain nombre de tâches actives sur la limite définie par les threads réservés. Ces tâches peuvent appartenir à une branche qui n’est plus utilisée et qui sont dans un état transitoire, en attente de nettoyage. 
-
 Notez que chacune des 16 tâches enfants a un thread de travail différent affecté (vu dans la colonne `worker_address`), mais que tous les workers sont affectés au même pool de huit planificateurs (0, 5, 6, 7, 8, 9, 10, 11) et que la tâche parente est affectée à un planificateur en dehors de ce pool (3).
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ Un thread de travail ne peut rester actif dans le planificateur que pour la dur�
 > [!TIP] 
 > Pour la sortie de la vue DMV indiquée ci-dessus, toutes les tâches actives sont en état SUSPENDU. Pour plus d’informations sur les tâches en attente, vous pouvez interroger la DMV [sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
 
-En résumé, une requête parallèle engendrera de multiples tâches, où chaque tâche doit être assignée à un seul thread de travail, et chaque thread de travail doit être assigné à un seul planificateur. Par conséquent, le nombre de planificateurs en cours d’utilisation ne peut pas dépasser le nombre de tâches parallèles par branche, qui est définie sur mon MaxDOP. 
+En résumé, une demande parallèle génère plusieurs tâches. Chaque tâche doit être affectée à un seul thread de travail. Chaque thread de travail doit être affecté à un seul planificateur. Ainsi, le nombre de planificateurs en cours d’utilisation ne peut pas dépasser le nombre de tâches parallèles par branche, que définit l’indicateur de requête ou la configuration MaxDOP. Le thread de coordination ne contribue pas à la limite MaxDOP. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Allocation de threads à une UC
 Par défaut, chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence chaque thread, et le système d’exploitation répartit les threads à partir des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre les processeurs (UC) sur un ordinateur en fonction de la charge. Si l'affinité de processus a été activée au niveau du système d'exploitation, ce dernier attribue chaque thread à une UC spécifique. En revanche, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] attribue des **threads de travail** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aux **planificateurs** qui distribuent les threads de manière équitable entre les processeurs en mode tourniquet (round robin).

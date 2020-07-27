@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet Buffer Manager | Microsoft Docs
+description: Découvrez l’objet Buffer Manager, qui fournit des compteurs permettant de superviser la mémoire des pages, les E/S physiques et les extensions du pool de mémoires tampons.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 81f487db3622de86fdf041acab5acee93c68d1ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 63ecd1f64db0a3065bc513e935fc832292d5dd00
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656448"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457422"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objet Buffer Manager
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85656448"
 -   La fréquence de lecture de données à partir du disque par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Comparées aux autres opérations, comme les accès mémoire, les E/S physiques consomment beaucoup de temps. La diminution des E/S physiques permet d'améliorer les performances des requêtes.  
   
 ## <a name="buffer-manager-performance-objects"></a>Objets de performance du gestionnaire de tampons  
- Ce tableau décrit les objets de performance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de tampons**de**.  
+ Ce tableau décrit les objets de performance **Gestionnaire de tampons** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs du gestionnaire de tampons de SQL Server|Description|  
 |----------------------------------------|-----------------|  

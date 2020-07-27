@@ -31,16 +31,16 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287393"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919199"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Déploiement de packages hérités (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des outils et des assistants qui facilitent le déploiement de packages de l’ordinateur de développement au serveur de production ou à d’autres ordinateurs.  
@@ -149,7 +149,7 @@ ms.locfileid: "79287393"
 #### <a name="registry-entry"></a>Entrée de Registre  
  Si vous souhaitez utiliser une entrée de Registre pour stocker la configuration, vous pouvez utiliser une clé existante ou créer une nouvelle clé dans HKEY_CURRENT_USER. La clé de Registre que vous utilisez doit contenir une valeur nommée **Value**. Cette valeur peut être de type DWORD ou une chaîne.  
   
- Si vous sélectionnez le type de configuration **Entrée de Registre** , tapez le nom de la clé de Registre dans la zone d'entrée de Registre. Le format est \<clé de Registre>. Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Clé de Registre\clé de Registre\\...> pour identifier la clé. Par exemple, pour utiliser la clé MyPackage située dans SSISPackages, tapez **SSISPackages\MyPackage**.  
+ Si vous sélectionnez le type de configuration **Entrée de Registre** , tapez le nom de la clé de Registre dans la zone d'entrée de Registre. Le format est \<registry key>. Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Registry key\registry key\\...> pour identifier la clé. Par exemple, pour utiliser la clé MyPackage située dans SSISPackages, tapez **SSISPackages\MyPackage**.  
   
 #### <a name="sql-server"></a>SQL Server  
  Si vous sélectionnez le type de configuration **SQL Server** , vous spécifiez la connexion à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous voulez stocker les configurations. Vous pouvez enregistrer les configurations dans une table existante ou créer une nouvelle table dans la base de données spécifiée.  
@@ -360,7 +360,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Entrée de Registre**|Tapez la clé de Registre qui contient les informations de configuration. Le format est \<clé de Registre>.<br /><br /> La clé de Registre doit déjà exister dans HKEY_CURRENT_USER et porter une valeur nommée Value. Cette valeur peut être de type DWORD ou une chaîne.<br /><br /> Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Clé de Registre\clé de Registre\\...> pour identifier la clé.|  
+|**Entrée de Registre**|Tapez la clé de Registre qui contient les informations de configuration. Le format est \<registry key>.<br /><br /> La clé de Registre doit déjà exister dans HKEY_CURRENT_USER et porter une valeur nommée Value. Cette valeur peut être de type DWORD ou une chaîne.<br /><br /> Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Registry key\registry key\\...> pour identifier la clé.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
@@ -488,7 +488,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|Une valeur qui spécifie si un utilitaire de déploiement de packages est créé lorsque le projet est généré. Cette propriété doit être **True** pour créer un utilitaire de déploiement.|  
 |DeploymentOutputPath|L'emplacement, relatif au projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , de l'utilitaire de déploiement.|  
   
- Quand vous générez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un fichier manifeste, \<nom_projet>.SSISDeploymentManifest.xml et des copies des packages du projet et des dépendances de package sont créés et ajoutés dans le dossier bin\Deployment au sein du projet ou à l’emplacement spécifié dans la propriété DeploymentOutputPath. Le fichier manifeste répertorie les packages, les configurations de package et tous les divers autres fichiers du projet.  
+ Quand vous générez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un fichier manifeste, \<project name>.SSISDeploymentManifest.xml, et des copies des packages du projet et des dépendances de package sont créés et ajoutés dans le dossier bin\Deployment au sein du projet ou à l’emplacement spécifié dans la propriété DeploymentOutputPath. Le fichier manifeste répertorie les packages, les configurations de package et tous les divers autres fichiers du projet.  
   
  Le contenu du dossier de déploiement est actualisé chaque fois que vous générez le projet. Cela signifie que tout fichier enregistré dans ce dossier et qui n'est pas copié de nouveau dans le dossier par le processus de construction sera supprimé. Par exemple, les fichiers de configuration de package enregistrés dans les dossiers de déploiement seront supprimés.  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Cliquez avec le bouton droit sur le projet et cliquez sur **Propriétés**.  
   
-3.  Dans la boîte de dialogue **\<Pages de propriétés de <nom_projet**, cliquez sur **Utilitaire de déploiement**.  
+3.  Dans la boîte de dialogue **Pages de propriétés de \<project name>** , cliquez sur **Utilitaire de déploiement**.  
   
 4.  Pour mettre à jour les configurations de package quand les packages sont déployés, affectez à **AllowConfigurationChanges** la valeur **True**.  
   
@@ -517,7 +517,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Le chemin du dossier de déploiement est spécifié dans la propriété DeploymentOutputPath du projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour lequel vous avez créé l’utilitaire de déploiement. Le chemin d’accès par défaut est bin\Deployment, lié au projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Créer un utilitaire de déploiement](../../integration-services/packages/create-a-deployment-utility.md).  
   
- Vous utilisez l'Assistant Installation de package pour installer les packages. Pour lancer l'Assistant, double-cliquez sur l'utilitaire de déploiement après avoir copié le dossier de déploiement sur le serveur. Le fichier est nommé \<nom_projet>.SSISDeploymentManifest et se trouve dans le dossier de déploiement sur l’ordinateur de destination.  
+ Vous utilisez l'Assistant Installation de package pour installer les packages. Pour lancer l'Assistant, double-cliquez sur l'utilitaire de déploiement après avoir copié le dossier de déploiement sur le serveur. Le fichier se nomme \<project name>.SSISDeploymentManifest et se trouve dans le dossier de déploiement sur l’ordinateur de destination.  
   
 > [!NOTE]  
 >  En fonction de la version du package que vous déployez, une erreur risque de se produire si différentes version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées côte à côte. Cette erreur vient du fait que l'extension de nom de fichier .SSISDeploymentManifest est la même pour toutes les versions d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si vous double-cliquez sur le fichier, cela entraîne l’appel du programme d’installation (dtsinstall.exe) correspondant à la version installée en dernier d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], laquelle risque d’être différente de la version du fichier de l’utilitaire de déploiement. Pour contourner ce problème, exécutez la version appropriée de dtsinstall.exe à partir de la ligne de commande, puis indiquez le chemin d'accès du fichier de l'utilitaire de déploiement.  
@@ -540,7 +540,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  Ouvrez le dossier de déploiement sur l'ordinateur cible.  
   
-2.  Double-cliquez sur le fichier manifeste, \<nom_projet>.SSISDeploymentManifest, pour démarrer l’Assistant Installation de package.  
+2.  Double-cliquez sur le fichier manifeste, \<project name>.SSISDeploymentManifest, pour démarrer l’Assistant Installation de package.  
   
 3.  Dans la page **Déployer les packages SSIS** , sélectionnez l’option **Déploiement sur SQL Server** .  
   

@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297880"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919507"
 ---
 # <a name="script-component"></a>Composant Script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Le composant Script héberge le script et permet à un package d'inclure du code de script personnalisé et de l'exécuter. Vous pouvez utiliser le composant Script dans des packages pour :  
@@ -133,7 +133,7 @@ ms.locfileid: "71297880"
  Tapez un nom unique descriptif pour la connexion.  
   
  **Gestionnaire de connexions**  
- Effectuez une sélection dans la liste des gestionnaires de connexions disponibles ou sélectionnez **\<Nouvelle connexion>** pour ouvrir la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS**.  
+ Sélectionnez dans la liste des gestionnaires de connexions disponibles, ou sélectionnez **\<New connection>** pour ouvrir la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS**.  
   
  **Description**  
  Tapez une description pour la connexion.  

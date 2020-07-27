@@ -14,16 +14,16 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6603041f72a434895aab20b5ab22bf771c90dcac
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262781"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921245"
 ---
 # <a name="upgrade-integration-services-packages"></a>Mettre à niveau des packages Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Lorsque vous mettez à niveau une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vos packages [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] existants ne sont pas automatiquement mis à niveau vers le format de package utilisé par la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous devez choisir une méthode de mise à niveau et mettre à niveau vos packages manuellement.  
@@ -59,14 +59,14 @@ ms.locfileid: "68262781"
   
 -   DTExecUI.exe.config  
   
- Pour utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] et concevoir des packages incluant des composants personnalisés [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous devez modifier le fichier devenv.exe.config situé dans *\<lecteur>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE.  
+ Pour utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour concevoir des packages incluant des composants personnalisés [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous devez modifier le fichier devenv.exe.config situé dans *\<drive>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Pour utiliser ces packages avec les applications clientes générées avec le runtime pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluez les règles de redirection dans la section de configuration du fichier *.exe .config de l'exécutable. Les règles redirigent les assemblys du runtime vers la version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Pour plus d’informations sur la redirection des versions d’assemblys, consultez Élément [\<assemblyBinding> pour \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Pour utiliser ces packages avec les applications clientes générées avec le runtime pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluez les règles de redirection dans la section de configuration du fichier *.exe .config de l'exécutable. Les règles redirigent les assemblys du runtime vers la version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Pour plus d’informations sur la redirection des versions d’assemblys, consultez [Élément \<assemblyBinding> pour \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Recherche d'assemblys  
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour le .NET 4, situé dans *\<lecteur>* :\Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
+ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour .NET 4, situé dans *\<drive>* :\Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
   
- Comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les principaux fichiers .dll d’extensibilité [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se trouvent également dans *\<lecteur>* :\Program Files\Microsoft SQL Server\130\SDK\Assemblies.  
+ Comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les principaux fichiers .dll d’extensibilité [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se trouvent également dans *\<drive>* :\Program files\Microsoft SQL Server\130\SDK\Assemblies.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>Présentation des résultats de mise à niveau de packages SQL Server  
  Au cours de la mise à niveau de packages, la plupart des composants et fonctionnalités des packages [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sont convertis de façon transparente en leurs équivalents dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il existe toutefois certains composants et fonctionnalités pour lesquels aucune mise à niveau ne sera effectuée ou pour lesquels vous devez connaître les résultats. Le tableau suivant identifie ces composants et fonctionnalités.  

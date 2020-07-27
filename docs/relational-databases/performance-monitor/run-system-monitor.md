@@ -1,5 +1,6 @@
 ---
 title: Exécuter le Moniteur système | Microsoft Docs
+description: Le Moniteur système utilise les appels de procédures distantes pour collecter les informations de SQL Server. Tout utilisateur qui dispose des autorisations d’exécution du Moniteur système peut superviser SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: de2b4facacb6066763ff6673fd9dcb48ee81299d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6487ad070ee5c1be02f904f1f8e05c98530a2c3f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787414"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457741"
 ---
 # <a name="run-system-monitor"></a>Exécuter le Moniteur système
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

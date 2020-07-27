@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Objet Access Methods | Microsoft Docs
+description: Découvrez les compteurs Méthode d’accès qui peuvent également être utilisés pour superviser la quantité de données, d’index et d’espace libre dans une base de données au sein de SQL Server.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 485e7e4d762b415ad4a0d140a631e99b4c79983b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787404"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458449"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server - Objet Access Methods
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85787404"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Méthodes d’accès**de**.  
+ Ce tableau décrit les compteurs **Méthodes d’accès** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs méthodes d'accès de SQL Server|Description|  
 |----------------------------------------|-----------------|  

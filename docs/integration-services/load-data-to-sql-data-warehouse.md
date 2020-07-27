@@ -10,16 +10,16 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 317a17d667c9c09009c3fcbd9bab6565108110ad
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282659"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943201"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Charger des données dans Azure SQL Data Warehouse avec SSIS (SQL Server Integration Services)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -68,7 +68,7 @@ Visual Studio s’ouvre et crée un nouveau projet Integration Services (SSIS). 
 * Au milieu, l’aire de conception avec plusieurs onglets. Vous utilisez généralement au moins les onglets **Flux de contrôle** et **Flux de données**.
 * À droite, les volets **Explorateur de solutions** et **Propriétés**.
   
-    ![][01]
+    ![Capture d’écran de Visual Studio montrant le volet Boîte à outils, le volet de conception, le volet Explorateur de solutions et le volet Propriétés.][01]
 
 ## <a name="option-1---use-the-sql-dw-upload-task"></a>Option 1 : Utiliser la tâche de chargement SQL DW
 
@@ -121,23 +121,23 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
 ### <a name="create-the-basic-data-flow"></a>Créer le flux de données de base
 1. Faites glisser une tâche de flux de données de la boîte à outils jusqu’au centre de l’aire de conception (dans l’onglet **Flux de contrôle**).
    
-    ![][02]
+    ![Capture d’écran de Visual Studio montrant une tâche de flux de données déplacée sous l’onglet Flux de contrôle du volet de conception.][02]
 2. Double-cliquez sur la tâche de flux de données pour basculer vers l'onglet Flux de données.
 3. Dans la liste Autres sources, dans la boîte à outils, faites glisser une source ADO.NET jusqu’à l’aire de conception. Lorsque l’adaptateur de source est encore sélectionné, remplacez son nom par **Source SQL Server** dans le volet **Propriétés**.
 4. Dans la liste Autres destinations, dans la boîte à outils, faites glisser une destination ADO.NET jusqu’à l’aire de conception sous la source ADO.NET. Lorsque l’adaptateur de destination est encore sélectionné, remplacez son nom par **Destination SQL DW** dans le volet **Propriétés**.
    
-    ![][09]
+    ![Capture d’écran d’un adaptateur de destination déplacé vers un emplacement situé juste sous l’adaptateur source.][09]
 
 ### <a name="configure-the-source-adapter"></a>Configurer l’adaptateur de source
 1. Double-cliquez sur l’adaptateur de source pour ouvrir l’**Éditeur de source ADO.NET**.
    
-    ![][03]
+    ![Capture d’écran de l’Éditeur de source ADO.NET. L’onglet Gestionnaire de connexions est visible, et des contrôles sont disponibles pour la configuration des propriétés du flux de données.][03]
 2. Dans l’onglet **Gestionnaire de connexions** de l’**Éditeur de source ADO.NET**, cliquez sur le bouton **Nouveau** situé en regard de la liste **Gestionnaire de connexions ADO.NET** pour afficher la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** et créer des paramètres de connexion pour la base de données SQL Server à partir de laquelle ce didacticiel charge les données.
    
-    ![][04]
+    ![Capture d’écran de la boîte de dialogue Configurer le gestionnaire de connexions ADO.NET. Des contrôles sont disponibles pour la configuration des gestionnaires de connexions.][04]
 3. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**, cliquez sur le bouton **Nouveau** pour ouvrir la boîte de dialogue **Gestionnaire de connexions** et créer une nouvelle connexion de données.
    
-    ![][05]
+    ![Capture d’écran de la boîte de dialogue Gestionnaire de connexions. Des contrôles sont disponibles pour la configuration d’une connexion de données.][05]
 4. Dans la boîte de dialogue **Gestionnaire de connexions**, effectuez les actions suivantes.
    
    1. Pour **Fournisseur**, sélectionnez le fournisseur de données SqlClient.
@@ -146,16 +146,16 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
    4. Dans la section **Se connecter à une base de données**, sélectionnez l’exemple de base de données AdventureWorks.
    5. Cliquez sur **Tester la connexion**.
       
-       ![][06]
+       ![Capture d’écran d’une boîte de dialogue affichant un bouton OK et un texte indiquant que le test de la connexion a réussi.][06]
    6. Dans la boîte de dialogue indiquant les résultats du test de connexion, cliquez sur **OK** pour revenir à la boîte de dialogue **Gestionnaire de connexions**.
    7. Dans la boîte de dialogue **Gestionnaire de connexions**, cliquez sur **OK** pour revenir à la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**.
 5. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**, cliquez sur **OK** pour revenir à l’**Éditeur de source ADO.NET**.
 6. Dans l’**Éditeur de source ADO.NET**, dans la liste **Nom de la table ou de la vue**, sélectionnez la table **Sales.SalesOrderDetail**.
    
-    ![][07]
+    ![Capture d’écran de l’Éditeur de source ADO.NET. Dans la liste Nom de la table ou de la vue, la table Sales.SalesOrderDetail est sélectionnée.][07]
 7. Cliquez sur **Aperçu** pour afficher les 200 premières lignes de données dans la table source de la boîte de dialogue **Visualiser les résultats de la requête**.
    
-    ![][08]
+    ![Capture d’écran de la boîte de dialogue Visualiser les résultats de la requête. Plusieurs lignes de données de ventes de la table source sont visibles.][08]
 8. Dans la boîte de dialogue **Visualiser les résultats de la requête**, cliquez sur **Fermer** pour revenir à l’**Éditeur de source ADO.NET**.
 9. Dans l’**Éditeur de source ADO.NET**, cliquez sur **OK** pour terminer la configuration de la source de données.
 
@@ -163,14 +163,14 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
 1. Sélectionnez l’adaptateur de source dans l’aire de conception.
 2. Sélectionnez la flèche bleue qui s’étend de l’adaptateur de source et faites-la glisser vers l’éditeur de destination jusqu'à ce qu’il s’enclenche.
    
-    ![][10]
+    ![Capture d’écran montrant les adaptateurs source et de destination. Une flèche bleue pointe de l’adaptateur source vers l’adaptateur de destination.][10]
    
     Dans un package SSIS standard, vous utilisez plusieurs autres composants de la boîte à outils SSIS entre la source et la destination pour restructurer, transformer et nettoyer vos données lorsqu’elles traversent le flux de données SSIS. Pour que cet exemple reste aussi simple que possible, nous connectons directement la source à la destination.
 
 ### <a name="configure-the-destination-adapter"></a>Configurer l’adaptateur de destination
 1. Double-cliquez sur l’adaptateur de destination pour ouvrir l’**Éditeur de destination ADO.NET**.
    
-    ![][11]
+    ![Capture d’écran de l’Éditeur de destination ADO.NET. L’onglet Gestionnaire de connexions est visible et contient des contrôles pour la configuration des propriétés du flux de données.][11]
 2. Dans l’onglet **Gestionnaire de connexions** de l’**Éditeur de destination ADO.NET**, cliquez sur le bouton **Nouveau** situé en regard de la liste **Gestionnaire de connexions** pour afficher la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** et créer des paramètres de connexion pour la base de données Azure SQL Data Warehouse dans laquelle ce didacticiel charge des données.
 3. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**, cliquez sur le bouton **Nouveau** pour ouvrir la boîte de dialogue **Gestionnaire de connexions** et créer une nouvelle connexion de données.
 4. Dans la boîte de dialogue **Gestionnaire de connexions**, effectuez les actions suivantes.
@@ -184,18 +184,18 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
 5. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**, cliquez sur **OK** pour revenir à l’**Éditeur de destination ADO.NET**.
 6. Dans l’**Éditeur de destination ADO.NET**, cliquez sur **Nouveau** en regard de la liste **Utiliser une table ou une vue** pour ouvrir la boîte de dialogue **Créer une table** afin de créer une nouvelle table de destination avec une liste de colonnes qui correspond à la table source.
    
-    ![][12a]
+    ![Capture d’écran de la boîte de dialogue Créer une table. Le code SQL pour la création d’une table de destination est visible.][12a]
 7. Dans la boîte de dialogue **Créer une table**, effectuez les actions suivantes.
    
    1. Remplacez le nom de la table de destination par **SalesOrderDetail**.
    2. Supprimez la colonne **rowguid**. Le type de données **uniqueidentifier** n’est pas pris en charge dans SQL Data Warehouse.
    3. Changez le type de données de la colonne **LineTotal** en spécifiant **money**. Le type de données **decimal** n’est pas pris en charge dans SQL Data Warehouse. Pour obtenir des informations sur les types de données pris en charge, consultez [CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
       
-       ![][12b]
+       ![Capture d’écran de la boîte de dialogue Créer une table, avec le code permettant de créer une table nommée SalesOrderDetail avec LineTotal en tant que colonne de montant et aucune colonne rowguid.][12b]
    4. Cliquez sur **OK** pour créer la table et revenir à l’**Éditeur de destination ADO.NET**.
 8. Dans l’**Éditeur de destination ADO.NET**, sélectionnez l’onglet **Mappages** pour voir comment les colonnes de la source sont mappées aux colonnes de la destination.
    
-    ![][13]
+    ![Capture d’écran de l’onglet Mappages de l’Éditeur de destination ADO.NET. Les lignes connectent les colonnes dont le nom est identique dans les tables source et de destination.][13]
 9. Cliquez sur **OK** pour terminer la configuration de la destination.
 
 ## <a name="run-the-package-to-load-the-data"></a>Exécuter le package pour charger les données
@@ -205,19 +205,19 @@ Les paragraphes suivants décrivent ce que vous voyez si vous avez créé le pac
 
 Lorsque le package commence à s’exécuter, des roues dentées jaunes tournent pour indiquer l’activité et vous voyez le nombre de lignes traitées jusque là.
 
-![][14]
+![Capture d’écran montrant les adaptateurs source et de destination en jaune, des roues tournantes sur chaque adaptateur et le texte « 29916 rows » entre eux.][14]
 
 Quand le package a fini de s’exécuter, vous voyez des coches vertes qui indiquent la réussite de l’opération, ainsi que le nombre total de lignes de données chargées de la source vers la destination.
 
-![][15]
+![Capture d’écran montrant les adaptateurs source et de destination. Des coches vertes sont placées sur chaque adaptateur, et le texte « 121317 rows » figure entre eux.][15]
 
 Félicitations ! Vous avez utilisé avec succès SQL Server Integration Services pour charger des données dans Azure SQL Data Warehouse.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Découvrez comment déboguer et dépanner vos packages directement dans l’environnement de conception. Article de référence : [Outils de dépannage pour le développement des packages][Troubleshooting Tools for Package Development].
+- Découvrez comment déboguer et dépanner vos packages directement dans l’environnement de conception. Commencez ici : [Outils de résolution des problèmes pour le développement de packages][Troubleshooting Tools for Package Development].
 
-- Découvrez comment déployer vos projets SSIS et vos packages sur le serveur Integration Services ou dans un autre emplacement de stockage. Article de référence : [Déploiement de projets et de packages][Deployment of Projects and Packages].
+- Découvrez comment déployer vos projets SSIS et vos packages sur le serveur Integration Services ou dans un autre emplacement de stockage. Commencez ici : [Déploiement de projets et de packages][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

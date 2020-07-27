@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a38a6f46ca742dc280135590c2a4cece40ff13f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882487"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484622"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installer SQL Server Machine Learning Services (Python et R) sur Linux
 
@@ -276,7 +276,7 @@ sudo zypper install mssql-mlservices-packages-r
 
 La configuration supplémentaire s’effectue principalement avec [l’outil mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-1. Ajoutez le compte d’utilisateur mssql utilisé pour exécuter le service SQL Server.
+1. Une fois l’installation du package terminée, lancez mssql-conf setup et suivez les invites pour définir le mot de passe AS et choisir votre édition. Effectuez cette étape uniquement si vous n’avez pas encore configuré SQL Server sur Linux. 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -384,21 +384,21 @@ Téléchargez des packages à partir de [https://packages.microsoft.com/](https:
 
 ### <a name="rhel7-paths"></a>Chemins d’accès RHEL/7
 
-|||
+|Package|Emplacement de téléchargement|
 |--|----|
 | Packages mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | Packages microsoft-r-open | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 ### <a name="ubuntu1604-paths"></a>Chemins d’accès Ubuntu/16.04
 
-|||
+|Package|Emplacement de téléchargement|
 |--|----|
 | Packages mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | Packages microsoft-r-open | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 ### <a name="sles12-paths"></a>Chemins d’accès SLES/12
 
-|||
+|Package|Emplacement de téléchargement|
 |--|----|
 | Packages mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | Packages microsoft-r-open | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 

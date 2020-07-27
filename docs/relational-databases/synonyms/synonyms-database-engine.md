@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787253"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918065"
 ---
 # <a name="synonyms-database-engine"></a>Synonymes (Moteur de base de données)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un synonyme est un objet de base de données utilisé aux fins suivantes :  
   
 -   Il fournit un nom de remplacement pour un autre objet de base de données, appelé « objet de base », qui peut exister sur un serveur local ou distant.  
@@ -35,17 +35,37 @@ Par exemple, supposons que la table **Employee** de [!INCLUDE[ssSampleDBCoShort]
 Pour faire face à ces deux situations, vous pouvez créer un synonyme, en l’occurrence **EmpTable**, sur le serveur **Server2** pour la table **Employee** située sur le serveur **Server1**. Maintenant, l’application cliente doit seulement utiliser le nom en une seule partie **EmpTable**pour référencer la table **Employee** . De même, si l’emplacement de la table **Employee** change, vous devez modifier le synonyme **EmpTable**de manière à ce qu’il pointe vers le nouvel emplacement de la table **Employee** . Étant donné qu’il n’existe pas d’instruction ALTER SYNONYM, vous devez d’abord supprimer le synonyme **EmpTable**, puis le recréer avec le même nom, mais en le faisant pointer vers le nouvel emplacement de la table **Employee**.  
   
 Un synonyme est un objet appartenant à un schéma et, à ce titre, son nom doit être unique. Vous pouvez créer des synonymes pour les objets de base de données suivants :  
-  
-|||  
-|-|-|  
-|Procédure stockée d'un assembly (CLR)|Fonction table d'un assembly (CLR)|  
-|Fonction scalaire d'un assembly (CLR)|Fonctions d'agrégation d'un assembly (CLR)|  
-|Procédure de réplication et de filtrage|Procédure stockée étendue|  
-|Fonction scalaire SQL|Fonction table SQL|  
-|Fonction table inline SQL|Procédure stockée SQL|  
-|Affichage|Table* (définie par l’utilisateur)|  
-  
- *Comprend des tables temporaires locales et globales  
+
+:::row:::
+    :::column:::
+        Procédure stockée d'un assembly (CLR)
+
+        Fonction scalaire d'un assembly (CLR)
+
+        Procédure de réplication et de filtrage
+
+        Fonction scalaire SQL
+
+        Fonction table inline SQL
+
+        Affichage
+    :::column-end:::
+    :::column:::
+        Fonction table d'un assembly (CLR)
+
+        Fonctions d'agrégation d'un assembly (CLR)
+
+        Fonctions d'agrégation d'un assembly (CLR)
+
+        Fonction table SQL
+
+        Procédure stockée SQL
+
+        Table* (définie par l’utilisateur)
+    :::column-end:::
+:::row-end:::
+
+*Comprend des tables temporaires locales et globales  
   
 > [!NOTE]  
 > Les noms en quatre parties des objets de base de fonction ne sont pas pris en charge.  
@@ -63,23 +83,48 @@ Si vous disposez d'un schéma par défaut qui ne vous appartient pas et que vous
 Seuls les propriétaires de synonymes, les membres de **db_owner**ou ceux de **db_ddladmin** peuvent accorder une autorisation sur un synonyme.  
   
 Vous pouvez appliquer les instructions `GRANT`, `DENY` et `REVOKE` à tout ou partie des autorisations suivantes pour un synonyme :  
-  
-|||  
-|-|-|  
-|CONTROL|Suppression|  
-|Exécutez|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      Exécutez
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      Suppression
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>Utilisation de synonymes  
- Vous pouvez utiliser les synonymes à la place de leur objet de base référencé dans de nombreuses instructions SQL et leurs contextes d'expression. Le tableau suivant contient une liste de ces instructions et contextes d'expression :  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|Suppression|  
-|Exécutez|Sub-selects|  
-  
+ Vous pouvez utiliser les synonymes à la place de leur objet de base référencé dans de nombreuses instructions SQL et leurs contextes d'expression. Les colonnes suivantes contiennent une liste de ces instructions et contextes d’expression :  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        Exécutez
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        Suppression
+
+        Sub-selects
+    :::column-end:::
+:::row-end:::
+ 
  Si vous travaillez avec des synonymes dans les contextes précédemment cités, l'objet de base est affecté. Par exemple, si un synonyme référence un objet de base qui est une table et que vous insérez une ligne dans le synonyme, vous insérez en fait une ligne dans la table référencée.  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 Les instructions d'autorisation suivantes sont associées uniquement au synonyme, et pas à l'objet de base :  
-  
-|||  
-|-|-|  
-|GRANT|DENY|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        DENY
+    :::column-end:::
+:::row-end:::
+
 Les synonymes ne sont pas liés à un schéma et ne peuvent donc pas être référencés dans les contextes d'expression suivants qui sont liés à un schéma :  
-  
-|||  
-|-|-|  
-|Contraintes CHECK|Colonnes calculées|  
-|Expressions par défaut|Expressions de règle|  
-|Vues liées à un schéma|Fonctions liées à un schéma|  
+
+:::row:::
+    :::column:::
+        Contraintes CHECK
+
+        Expressions par défaut
+
+        Vues liées à un schéma
+    :::column-end:::
+    :::column:::
+        Colonnes calculées
+
+        Expressions de règle
+
+        Fonctions liées à un schéma
+    :::column-end:::
+:::row-end:::
   
 Pour plus d’informations sur les fonctions liées au schéma, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296245"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914337"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Spécifier la copie ou l'interrogation de table (Assistant Importation et Exportation SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Une fois que vous avez fourni les informations relatives à la destination de vos données et à la façon de s’y connecter, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Spécifier la copie ou l’interrogation de table**. Dans cette page, choisissez l’une des options suivantes.
@@ -56,7 +56,7 @@ Après avoir cliqué sur **Suivant**, vous fournissez une instruction SQL pour s
 Dans la mesure où vous connaissez le nom de la table à exporter, vous pouvez toujours utiliser l’option **Écrire une requête**, même si en général vous n’écrivez pas de requêtes SQL. Dans la boîte de dialogue **Fournir une requête source**, visible après avoir cliqué sur **Suivant**, entrez la requête comme suit : `SELECT * FROM <name of table>`. Si le nom de la table contient des espaces ou d’autres caractères spéciaux, placez ce nom entre crochets, comme ceci : `SELECT * FROM [<name of table>]`.
 
 ### <a name="more-info"></a>En savoir plus
- L’option **Copier les données à partir d’une ou plusieurs tables ou vues** est disponible uniquement pour les fournisseurs qui disposent d’une section ProviderDescription dans le fichier ProviderDescriptors.xml. (Par défaut, ce fichier se trouve dans \<*lecteur*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Chaque section ProviderDescription de ce fichier contient les informations nécessaires pour récupérer les métadonnées du fournisseur correspondant.    
+ L’option **Copier les données à partir d’une ou plusieurs tables ou vues** est disponible uniquement pour les fournisseurs qui disposent d’une section ProviderDescription dans le fichier ProviderDescriptors.xml. (Par défaut, ce fichier se trouve à l’emplacement suivant : \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Chaque section ProviderDescription de ce fichier contient les informations nécessaires pour récupérer les métadonnées du fournisseur correspondant.    
     
  Par défaut, le fichier ProviderDescriptors.xml contient une section ProviderDescription uniquement pour les fournisseurs figurant dans la liste suivante.    
     

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet SQL Statistics | Microsoft Docs
+description: Découvrez l’objet SQLServer:SQL Statistics, qui fournit des compteurs permettant de superviser la compilation et le type de demandes transmises à une instance de SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758944"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458123"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Objet SQLServer:SQL Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85758944"
   
  Pour plus d’informations sur le paramétrage simple et forcé, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Voici les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Statistiques SQL**de**.  
+ Voici les compteurs **Statistiques SQL** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs statistiques SQL de SQL Server|Description|  
 |----------------------------------------|-----------------|  

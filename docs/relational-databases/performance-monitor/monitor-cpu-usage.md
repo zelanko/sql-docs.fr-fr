@@ -1,5 +1,6 @@
 ---
 title: Surveiller l’utilisation de l’UC | Microsoft Docs
+description: Supervisez une instance de SQL Server pour déterminer si le processeur affiche des taux d’utilisation normaux. Utilisez le Moniteur système pour voir le temps passé par le processeur à exécuter un thread.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787464"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458555"
 ---
 # <a name="monitor-cpu-usage"></a>Surveiller l'utilisation de l'UC
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85787464"
   
      Indique en pourcentage le temps consacré par le processeur aux processus utilisateur tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Système : Longueur de la file d'attente du processeur**  
+-   **Système : Longueur de la file du processeur**  
   
      Indique le nombre de threads en attente de temps processeur. Un encombrement du processeur survient quand les threads d'un processus demandent plus de cycles processeur qu'il n'y en a de disponibles. Si de nombreux processus essaient d'utiliser le temps du processeur, vous devez peut-être installer un processeur plus rapide. Si vous avez un système multiprocesseur, vous pouvez ajouter un processeur.  
   

@@ -1,5 +1,6 @@
 ---
 title: Désactiver la compression sur une table ou un index | Microsoft Docs
+description: Découvrez comment désactiver la compression sur une table ou un index dans SQL Server en utilisant SQL Server Management Studio ou Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ddf8989e9eaa54923a11bb4b199cc55a2ca6b2e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0fd426cecf7fa74e3f45ee13e9d508c6f36a4bb7
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003924"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459041"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Désactiver la compression sur une table ou un index
 

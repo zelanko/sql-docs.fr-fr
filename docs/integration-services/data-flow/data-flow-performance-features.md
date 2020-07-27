@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec9af02a6c7259741e75eae826bc9e15afe3aa80
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73637957"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906765"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -102,7 +102,7 @@ ms.locfileid: "73637957"
  Indépendamment du composant de flux de données, deux règles générales sont à suivre pour améliorer les performances : optimiser les requêtes et éviter les chaînes inutiles.  
   
 #### <a name="optimize-queries"></a>Optimisation des requêtes  
- De nombreux composants de flux de données utilisent des requêtes, soit au cours de l'extraction de données à partir de sources, soit au cours d'opérations de recherche dans le but de créer des tables de référence. La requête par défaut utilise la syntaxe SELECT * FROM \<nom_table>. Ce type de requête retourne toutes les colonnes dans la table source. Le fait de disposer de toutes les colonnes au moment de la conception permet de choisir n'importe quelle colonne comme colonne de recherche, comme colonne SQL directe ou comme colonne source. Cependant, après avoir sélectionné les colonnes à utiliser, vous devez vérifier la requête et vous assurer qu'elle contient uniquement les colonnes utilisées. La suppression de colonnes superflues permet de créer une ligne plus petite et donc d'accroître l'efficacité du flux de données dans un package. Avec des lignes plus petites, vous pouvez faire tenir plus de lignes dans un tampon et, de ce fait, réduire la charge de travail nécessaire pour traiter toutes les lignes dans le dataset.  
+ De nombreux composants de flux de données utilisent des requêtes, soit au cours de l'extraction de données à partir de sources, soit au cours d'opérations de recherche dans le but de créer des tables de référence. La requête par défaut utilise la syntaxe SELECT * FROM \<tableName>. Ce type de requête retourne toutes les colonnes dans la table source. Le fait de disposer de toutes les colonnes au moment de la conception permet de choisir n'importe quelle colonne comme colonne de recherche, comme colonne SQL directe ou comme colonne source. Cependant, après avoir sélectionné les colonnes à utiliser, vous devez vérifier la requête et vous assurer qu'elle contient uniquement les colonnes utilisées. La suppression de colonnes superflues permet de créer une ligne plus petite et donc d'accroître l'efficacité du flux de données dans un package. Avec des lignes plus petites, vous pouvez faire tenir plus de lignes dans un tampon et, de ce fait, réduire la charge de travail nécessaire pour traiter toutes les lignes dans le dataset.  
   
  Pour construire une requête, vous pouvez taper la requête ou utiliser le générateur de requêtes.  
   

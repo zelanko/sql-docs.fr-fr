@@ -1,5 +1,6 @@
 ---
 title: Créer un pool de ressources | Microsoft Docs
+description: Découvrez comment créer un pool de ressources à l’aide de SQL Server Management Studio ou de Transact-SQL. Vous devez disposer de l’autorisation CONTROL SERVER.
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4ddcb42d6a91eab41cddf3beb53c0de6a6b25d36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc46e2e759dbfec54064975281101cb694039786
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720537"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457541"
 ---
 # <a name="create-a-resource-pool"></a>Créer un pool de ressources
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

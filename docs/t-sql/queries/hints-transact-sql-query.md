@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731297"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552945"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,9 @@ Les indicateurs de requête spécifient que les indicateurs affichés doivent ê
 }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 { HASH | ORDER } GROUP  
 Indique que les agrégations décrites par la clause GROUP BY ou DISTINCT de la requête doivent utiliser le hachage ou le tri.  
   
@@ -359,11 +361,11 @@ TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<table_hint> [ [ **,** ]…_n_ ]
   
  Si _nom\_objet\_exposé_ est spécifié sans indicateur de table, tous les index indiqués dans la requête dans le cadre d’un indicateur de table de l’objet sont ignorés. L’optimiseur de requête détermine ensuite l’utilisation de l’index. Vous pouvez utiliser cette technique pour éliminer l'effet d'un indicateur de table INDEX lorsque vous ne pouvez pas modifier la requête d'origine. Voir l'exemple J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _valeur\_index_ [ ,…_n_ ] ) | INDEX = ( _valeur\_index_ ) | FORCESEEK [ **(** _valeur\_index_ **(** _nom\_colonne\_index_ [ **,** … ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_objet_exposé* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _valeur\_index_ [ ,..._n_ ] ) \| INDEX = ( _valeur\_index_ ) \| FORCESEEK [ **(** _valeur\_index_ **(** _nom\_colonne\_index_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_objet_exposé* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Pour plus d'informations, consultez la section Notes.  
   
-> [!CAUTION] 
+> [!CAUTION]
 > Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
   
 ## <a name="remarks"></a>Notes  

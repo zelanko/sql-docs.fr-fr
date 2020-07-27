@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet Latches | Microsoft Docs
+description: Découvrez l’objet SQLServer:Latches, qui fournit des compteurs permettant de superviser les verrous des ressources internes SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e2bcb6b6eb5558a3fed212bc281ccf74a42516cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d57998b2bbc83a231cd82ceef8846ef21902eccb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775852"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458811"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server - Objet Latches
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'objet **SQLServer:Latches** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs qui permettent de surveiller les verrous des ressources internes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La surveillance des verrous internes, afin de déterminer l'activité de l'utilisateur et son exploitation des ressources, peut permettre d'identifier les goulots d'étranglement des performances.  
   
- Ce tableau décrit les compteurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verrous internes**de**.  
+ Ce tableau décrit les compteurs **Verrous internes** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Compteurs des verrous internes de SQL Server|Description|  
 |---------------------------------|-----------------|  

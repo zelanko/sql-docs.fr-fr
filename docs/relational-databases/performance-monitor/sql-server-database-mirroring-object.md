@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objet Database Mirroring | Microsoft Docs
+description: Découvrez l’objet de performance SQLServer:Database Mirroring, qui contient des compteurs de performances faisant état d’informations sur la mise en miroir de bases de données SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760550"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458011"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, objet Database Mirroring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L’objet de performance **SQLServer:Database Mirroring** contient des compteurs de performances qui font état d’informations sur la mise en miroir de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |**Octets reçus/s**|Nombre d'octets reçus par seconde.|  
 |**Octets envoyés/s**|Nombre d'octets envoyés par seconde.|  
@@ -46,9 +47,9 @@ ms.locfileid: "85760550"
 |**Réceptions/s**|Nombre de réceptions de messages de mise en miroir par seconde.|  
 |**Octets restaurés par progression/s**|Nombre d'octets du journal restaurés par progression par seconde sur la base de données miroir.|  
 |**Ko de la file d'attente de restauration par progression**|Nombre total de kilo-octets du journal renforcé qui doivent encore être appliqués à la base de données miroir pour la restaurer par progression. Envoi à la base de données principale à partir de la base de données miroir.|  
-|**Temps d'accusé de réception/envoi**|Temps en millisecondes pendant lequel les messages ont attendu l'accusé de réception du serveur partenaire au cours de la dernière seconde.<br /><br /> Ce compteur est utile pour résoudre un problème susceptible d'être provoqué par un goulot d'étranglement du réseau, tel que des basculements inexpliqués, une longue file d'attente d'envoi ou une latence élevée des transactions. Dans ce type de situation, vous pouvez analyser la valeur de ce compteur pour déterminer si le réseau est à l'origine du problème.|  
+|**Temps d'accusé de réception/envoi**|Temps en millisecondes pendant lequel les messages ont attendu l’accusé de réception du serveur partenaire au cours de la dernière seconde.<br /><br /> Ce compteur est utile pour résoudre un problème susceptible d'être provoqué par un goulot d'étranglement du réseau, tel que des basculements inexpliqués, une longue file d'attente d'envoi ou une latence élevée des transactions. Dans ce type de situation, vous pouvez analyser la valeur de ce compteur pour déterminer si le réseau est à l'origine du problème.|  
 |**Envois/s**|Nombre d'envois de messages de mise en miroir par seconde.|  
-|**Délai de transaction**|Délai d'attente d'accusé de réception non terminé.|  
+|**Délai de transaction**|Délai d’attente d’accusé de réception non terminé.|  
   
 > [!NOTE]  
 >  Sur chaque partenaire, certains des compteurs affichent une valeur de zéro en fonction du rôle que le partenaire détient actuellement.  
