@@ -15,15 +15,15 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91b5915324fc95d9199b4ec1d9aaa2ca0fee89d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653678"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111051"
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
-::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   

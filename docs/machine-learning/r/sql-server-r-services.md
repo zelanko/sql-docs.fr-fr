@@ -3,21 +3,21 @@ title: Qu’est-ce que SQL Server 2016 R Services ?
 titleSuffix: ''
 description: R Services est une fonctionnalité de SQL Server 2016 qui permet d’exécuter des scripts R avec des données relationnelles. Vous pouvez utiliser des infrastructures et des packages open source, ainsi que les packages Microsoft R, pour l’analyse prédictive et l’apprentissage automatique. Les scripts sont exécutés dans la base de données sans déplacer de données en dehors de SQL Server ou sur le réseau. Cet article présente les notions de base de SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/12/2019
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 25b21944db46a5054ad8765b83fe7e2985f8d894
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775396"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Qu’est-ce que SQL Server 2016 R Services ?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 R Services est une fonctionnalité de SQL Server 2016 qui permet d’exécuter des scripts R avec des données relationnelles. Vous pouvez utiliser des infrastructures et des packages open source, ainsi que les [packages Microsoft R](#packages), pour l’analyse prédictive et l’apprentissage automatique. Les scripts sont exécutés dans la base de données sans déplacer de données en dehors de SQL Server ou sur le réseau. Cet article présente les notions de base de SQL Server R Services.
 

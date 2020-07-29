@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257881"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895205"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -124,18 +123,22 @@ Par exemple, imaginez l'étape de travail suivante qui utilise le jeton `A-MSG` 
   
 Après l'exécution du script de mise à jour, une macro `ESCAPE_NONE` est insérée avec le jeton. Néanmoins, dans ce cas, il vous faudrait réécrire le script sans avoir recours à l'imbrication comme illustré ci-après, puis insérer la macro `ESCAPE_SQUOTE` pour interpréter correctement en tant que caractères d'échappement les délimiteurs susceptibles d'être transmis à la chaîne de remplacement des jetons :  
   
-<pre>DECLARE @msgString nvarchar(max)  
-SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))'  
-SET @msgString = QUOTENAME(@msgString,'''')  
-PRINT N'Print ' + @msgString ;</pre>  
+```sql
+DECLARE @msgString nvarchar(max);
+SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))';
+SET @msgString = QUOTENAME(@msgString,'''');
+PRINT N'Print ' + @msgString;
+```
   
 Notez également dans cet exemple que la fonction QUOTENAME définit le guillemet.  
   
 ### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. Utilisation de jetons avec la macro ESCAPE_NONE  
 L'exemple suivant s'inscrit dans un script chargé d'extraire le `job_id` dans la table `sysjobs` et utilise le jeton `JOBID` pour remplir la variable `@JobID` déclarée plus tôt dans le script en tant que type de données binaire. Notez que, du fait qu'aucun délimiteur n'est requis pour les types de données binaires, la macro `ESCAPE_NONE` est utilisée dans le jeton `JOBID` . Vous n'avez pas besoin de mettre ce travail à jour après avoir exécuté le script de mise à niveau.  
   
-<pre>SELECT * FROM msdb.dbo.sysjobs  
-WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
+```sql
+SELECT * FROM msdb.dbo.sysjobs  
+WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
+```
   
 ## <a name="see-also"></a>Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  

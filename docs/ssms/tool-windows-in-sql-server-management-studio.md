@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243893"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236805"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Fenêtres Outil dans SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] contient de nombreuses fenêtres d’outils puissantes pour toutes les phases de développement et d’administration. Certains outils peuvent être utilisés avec tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tandis que d'autres ne sont destinés qu'à certains composants. Le tableau ci-dessous présente les outils qui peuvent être utilisés avec tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|||  
-|-|-|  
-|**Outil**|**Objectif**|  
+|Outil|Objectif|  
+|-|-|   
 |[l’Explorateur d’objets](../ssms/object/object-explorer.md)|Parcourir les serveurs, créer et trouver des objets, gérer des sources de données et afficher des journaux. Cet outil est accessible à partir du menu **Affichage** .|  
 |[Explorateur de solutions](../ssms/solution/solution-explorer.md)|Stockez et organisez les scripts et les informations de connexion associées dans des projets appelés scripts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Vous pouvez stocker plusieurs scripts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant que solutions et utiliser le contrôle de code source pour les gérer au fur et à mesure de leur évolution. Cet outil est accessible à partir du menu **Affichage** .|  
 |[l’Explorateur de modèles](../ssms/template/template-explorer.md)|Créer des requêtes basées sur des modèles existants. Vous pouvez également créer des requêtes personnalisées ou modifier les modèles existants afin qu'ils correspondent à vos scénarios. Cet outil est accessible à partir du menu **Affichage** .|  

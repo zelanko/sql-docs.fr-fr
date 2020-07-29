@@ -2,18 +2,19 @@
 title: Guide pratique pour contribuer à la documentation SQL Server | Microsoft Docs
 ms.date: 08/13/2018
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286323"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247381"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Guide pratique pour contribuer à la documentation SQL Server
 
@@ -23,7 +24,7 @@ Tout le monde peut apporter sa contribution à la documentation SQL Server. C�
 
 Il existe deux flux de travail principaux que vous pouvez utiliser pour apporter votre contribution :
 
-|||
+|Workflow|Description|
 |---|---|
 | [Modifier dans votre navigateur](#githubui) | Recommandé pour les modifications mineures et rapides d’un article. |
 | [Modifier localement avec des outils](#tools) | Recommandé pour les modifications plus complexes, les modifications impliquant plusieurs articles et les contributions fréquentes à docs.microsoft.com. |
@@ -93,7 +94,7 @@ Chaque article SQL Server contient un fichier include **applies-to** après le t
 Prenons l’exemple Markdown suivant qui extrait le fichier include **appliesto-ss-asdb-asdw-pdw-md.md**.
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 Cette opération ajoute le texte suivant en haut de l’article :

@@ -1,7 +1,7 @@
 ---
-title: MSSQLSERVER_17204 | Microsoft Docs
+title: MSSQLSERVER_17207
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 48bcd9ada3da7a1e95001487045105337b298d13
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279625"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236203"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ Les informations sur l’erreur du système d’exploitation imprimées dans ces
 1. La résolution de l’erreur 17207 implique la compréhension du code d’erreur de système d’exploitation associé et le diagnostic de cette erreur. Une fois la condition d’erreur du système d’exploitation résolue, vous pouvez tenter de redémarrer la base de données (à l’aide de l’instruction ALTER DATABASE SET ONLINE, par exemple) ou de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre en ligne la base de données affectée. Dans certains cas, il se peut que vous ne puissiez pas résoudre l’erreur du système d’exploitation. Vous devez donc prendre des mesures correctives spécifiques. Nous aborderons ces actions dans cette section.
 1. Si le message d’erreur 17207 contient uniquement un code d’erreur et non une description d’erreur, vous pouvez essayer de résoudre le code d’erreur en utilisant la commande suivante à partir d’un interpréteur de commandes de système d’exploitation : net helpmsg <error code>. Si vous obtenez un code d’état à 8 chiffres comme code d’erreur, vous pouvez vous reporter aux sources d’informations comme [Comment convertir un HRESULT en code d’erreur Win32 ?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) afin de décoder les codes d’état en erreurs de système d’exploitation.
 1. Si vous recevez l’erreur de système d’exploitation ```Access is Denied``` = 5, envisagez les méthodes suivantes :
-   -  Vérifiez les autorisations définies pour le fichier en examinant les propriétés du fichier dans l’Explorateur Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des groupes Windows pour approvisionner le contrôle d’accès sur les diverses ressources de fichiers. Assurez-vous que le groupe approprié (avec des noms tels que SQLServerMSSQLUser$NomOrdinateur$MSSQLSERVER ou SQLServerMSSQLUser$NomOrdinateur$NomInstance) dispose des autorisations requises sur le fichier de base de données mentionné dans le message d’erreur. Consultez [Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md) pour plus de détails. Assurez-vous que le groupe Windows comprend réellement le compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le SID du service.
+   -  Vérifiez les autorisations définies pour le fichier en examinant les propriétés du fichier dans l’Explorateur Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des groupes Windows pour approvisionner le contrôle d’accès sur les diverses ressources de fichiers. Assurez-vous que le groupe approprié (avec des noms tels que SQLServerMSSQLUser$NomOrdinateur$MSSQLSERVER ou SQLServerMSSQLUser$NomOrdinateur$NomInstance) dispose des autorisations requises sur le fichier de base de données mentionné dans le message d’erreur. Consultez [Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014) pour plus de détails. Assurez-vous que le groupe Windows comprend réellement le compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le SID du service.
    -  Examinez le compte d’utilisateur sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution. Vous pouvez utiliser le gestionnaire des tâches de Windows pour accéder à ces informations. Recherchez la valeur « Nom d’utilisateur » pour l’exécutable « sqlservr.exe ». En outre, si vous avez récemment modifié le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sachez que la méthode prise en charge pour effectuer cette opération consiste à utiliser l’utilitaire Gestionnaire de configuration SQL Server. Pour plus d’informations à ce propos, consultez [Gestionnaire de configuration SQL Server](../sql-server-configuration-manager.md). 
    -  Selon le type d’opération (ouverture de bases de données au démarrage du serveur, attachement d’une base de données, restauration d’une base de données, etc.), le compte utilisé pour l’emprunt d’identité et l’accès au fichier de base de données peut être différent. Passez en revue la rubrique [Sécurisation des fichiers de données et des fichiers journaux](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) pour savoir quelle opération définit quelles autorisations pour quels comptes. Utilisez un outil tel que Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) pour déterminer si l’accès au fichier se produit dans le contexte de sécurité du compte de démarrage du service d’instance de SQL Server (ou du SID de service) ou d’un compte avec emprunt d’identité.
 

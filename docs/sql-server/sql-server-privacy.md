@@ -2,6 +2,7 @@
 title: Avenant à la déclaration de confidentialité de SQL Server | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -9,16 +10,16 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761803"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916905"
 ---
 # <a name="sql-server-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Cet article résume les fonctionnalités Internet qui peuvent collecter et envoyer à Microsoft des données anonymes de diagnostic et d’utilisation des fonctionnalités. SQL Server peut collecter des informations informatiques standard, et les données sur l’utilisation et les performances peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité du produit. Si vous installez SQL Server sur une machine virtuelle sur le service Microsoft Azure, des informations sur l’environnement peuvent être envoyées à Microsoft afin que Microsoft puisse inscrire votre ressource de machine virtuelle SQL Server auprès du fournisseur de ressources au sein de votre abonnement Azure, comme décrit plus en détail [ici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Dans le cadre de l’inscription de la ressource de machine virtuelle SQL Server, l’extension de l’agent IaaS SQL Server peut être installée sur votre machine virtuelle, comme décrit [ici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Cet article fait office d’addendum à la [déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) générale. La classification des données dans cet article s’applique uniquement aux versions du produit SQL Server local. Elle ne s'applique pas aux éléments suivants :
 

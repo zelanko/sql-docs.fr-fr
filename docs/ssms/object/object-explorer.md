@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257137"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245561"
 ---
 # <a name="object-explorer"></a>Explorateur d’objets
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des fonctionnalités pour gérer des objets dans des instances [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Avantages de l'Explorateur d'objets  
@@ -49,5 +49,4 @@ L'Explorateur d'objets fournit une interface utilisateur hiérarchique pour affi
 |Décrit comment connecter l'Explorateur d'objets à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)], d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Se connecter à une instance à partir de l’Explorateur d’objets](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Explique comment gérer des objets représentés en tant que nœuds dans la hiérarchie de l'Explorateur d'objets.|[Gérer les objets à l’aide de l’Explorateur d’objets](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |Décrit le volet Détails de l'Explorateur d'objets, une vue tabulaire de tous les objets se trouvant dans le serveur avec une interface utilisateur pour les gérer.|[Détails de l’Explorateur d’objets, volet](../../ssms/object/object-explorer-details-pane.md)|  
-|Décrit les méthodes pour exécuter des rapports personnalisés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|Décrit les méthodes pour exécuter des rapports personnalisés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|

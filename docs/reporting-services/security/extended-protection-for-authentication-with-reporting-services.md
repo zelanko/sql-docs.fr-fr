@@ -1,6 +1,6 @@
 ---
 title: Protection étendue de l’authentification avec Reporting Services | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e4d8347b57c7dae62dc8261c6542badfb654bde
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c881376243e1e870c5d3aa6c8477eccfb4a17ac0
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635917"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263776"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
 
@@ -153,13 +153,7 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
 |ComputerNamePhysicalDnsHostname|Nom d'hôte DNS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom d'hôte DNS de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.|  
 |ComputerNamePhysicalNetBIOS|Nom NetBIOS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom NetBIOS de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.|  
   
- Lorsque les SPN sont ajoutés, une entrée est ajoutée au journal de suivi semblable au suivant :  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`  
-  
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`  
-  
- Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) et [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) et [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## <a name="next-steps"></a>Étapes suivantes
 

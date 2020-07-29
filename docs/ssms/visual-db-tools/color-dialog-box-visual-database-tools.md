@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0a2d44934958703a0cadbf01ac975b7a60ab4da6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6bea7a1e8a660bd9f33112e1bbf8dc737621a8ef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241260"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003843"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Boîte de dialogue Couleur (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 La **boîte de dialogue Couleur** retourne la valeur RVB d'une couleur sélectionnée par l'utilisateur. L'utilisateur peut faire son choix dans un jeu de couleurs de base déterminé par le pilote d'affichage ou dans un jeu de couleurs personnalisées. Sélectionnez une couleur parmi les couleurs de base ou créez des couleurs personnalisées. Définissez les couleurs en cliquant sur la matrice des couleurs ou en renseignant les zones **Teinte**, **Sat**, **Lum**, **Rouge**, **Vert**et **Bleu** .  
   
 ## <a name="options"></a>Options  

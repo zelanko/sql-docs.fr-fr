@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df3c48dcab1ee71f8cfee1932099b034729451e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000417"
 ---
 # <a name="customize-commands-page"></a>Personnaliser (page Commandes)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Cette boîte de dialogue vous permet d'ajouter des commandes à des barres d'outils et à des menus et d'en supprimer, ainsi que de modifier les images utilisées pour représenter les boutons des barres d'outils ou les commandes des menus. Vous pouvez accéder à la page **Commandes** en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Commandes**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
 **Catégories**  
 Spécifie l’ensemble des commandes affichées dans la zone de liste **Commandes** . Les catégories de commandes sont basées sur des titres de menu fournis par les outils et les concepteurs que l'environnement prend actuellement en charge. Cette liste de titres est dynamique, afin que l'ordre des catégories et les titres de menu soient modifiés selon les outils et le concepteur, ainsi que selon toute personnalisation apportée. Il est donc possible que deux menus provenant de concepteurs différents aient le même nom. Le même titre apparaît alors à deux reprises, mais propose des ensembles de commandes différents.  
   
