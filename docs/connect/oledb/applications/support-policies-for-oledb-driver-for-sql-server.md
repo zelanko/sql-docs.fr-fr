@@ -1,7 +1,7 @@
 ---
 title: Stratégies de prise en charge d’OLE DB Driver pour SQL Server | Microsoft Docs
 description: Stratégies de prise en charge d’OLE DB Driver pour SQL Server
-ms.date: 03/18/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f48aa8c68b364db98d1cd3111c11c6635ee5335
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526824"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007047"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Stratégies de prise en charge d’OLE DB Driver pour SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,6 +30,7 @@ Le pilote OLE DB pour SQL Server a été testé et prend en charge les connexio
 
 | Version du pilote | Azure SQL Database | Azure SQL DW | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|-|-|-|-|-|-|-|-|
+|18.4|O|O|O|O|O|O|O|O|
 |18.3|O|O|O|O|O|O|O|O|
 |18.2|O|O|O|O|O|O|O|O|
 |18.1|O|O|O| |O|O|O|O|
@@ -42,6 +43,7 @@ Le tableau suivant liste les systèmes d’exploitation qui prennent en charge O
 
 | Version du pilote | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|-|-|-|-|-|-|
+|18.4|O|O|O|O|O|O|
 |18.3|O|O|O|O|O|O|
 |18.2|O|O|O|O|O|O|
 |18.1| |O|O|O|O|O|
@@ -51,9 +53,6 @@ Le tableau suivant liste les systèmes d’exploitation qui prennent en charge O
 <sup>1</sup> Pris en charge sur Windows Server 2012 avec [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Pris en charge sur Windows Server 2012 R2 avec la [mise à jour d’avril 2014](https://go.microsoft.com/fwlink/?linkid=2073785) et [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>3</sup> Pris en charge sur Windows 8.1 avec la [mise à jour d’avril 2014](https://go.microsoft.com/fwlink/?linkid=2073785) et [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
-
-> [!NOTE]  
-> L’utilisation de la page de codes UTF-8 sur Windows (« Use Unicode UTF-8 for worldwide language support ») n’est pas prise en charge.
 
 ## <a name="ado-support-policies"></a>Stratégies de prise en charge d’ADO  
 

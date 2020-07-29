@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 722c826f5b9a9dd7d1ebe7e1cf444b779f7d4e67
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: a4f4f5651d14fde272de66506aca7abed51cc7de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784321"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurer une base de données dans l’instance principale du cluster Big Data SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article explique comment restaurer une base de données existante dans l’instance principale d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. La méthode recommandée consiste à utiliser une approche de sauvegarde, de copie et de restauration.
 
@@ -36,13 +36,13 @@ Cet article explique comment restaurer la base de données AdventureWorks, mais 
 Copiez le fichier de sauvegarde vers le conteneur SQL Server dans le pod de l’instance principale du cluster Kubernetes.
 
 ```bash
-kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/var/tmp/<.bak filename> -c mssql-server -n <name of your big data cluster>
 ```
 
 Exemple :
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/var/tmp/AdventureWorks2016CTP3.bak -c mssql-server -n clustertest
 ```
 
 Ensuite, vérifiez que le fichier de sauvegarde a été copié dans le conteneur du pod.
@@ -58,6 +58,7 @@ Exemple :
 
 ```bash
 kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
+cd /var/
 ls /tmp
 exit
 ```

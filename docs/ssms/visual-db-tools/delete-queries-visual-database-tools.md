@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: de579b456cb3b7ed7ebffdd601b8f70e7bf7a6f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4573d056ac41ce3f38637ba51afb02cd825351e5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254694"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008346"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Supprimer des requêtes (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Vous pouvez supprimer une requête en l'éliminant du projet et en la supprimant définitivement du système de fichiers. Les requêtes supprimées à l'aide de la procédure suivante ne sont pas envoyées à la Corbeille et ne peuvent pas être récupérées.  
   
 ### <a name="to-permanently-delete-a-query"></a>Pour supprimer définitivement une requête  

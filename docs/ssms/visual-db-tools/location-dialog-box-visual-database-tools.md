@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2188d0ede38f7cc5afbbb7f1a918e8428e7924c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a628be0f00cd2d4a90a139ba6217a663d2780c9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224648"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011693"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Boîte de dialogue Emplacement (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Cette boîte de dialogue permet de localiser et de sélectionner le dossier contenant les fichiers qui vous intéressent. Cette boîte de dialogue renvoie le chemin du dossier sélectionné à la boîte de dialogue appelante. Vous pouvez accéder à cette boîte de dialogue en procédant comme suit :  
   
 -   choisissez **Nouveau** dans le menu **Fichier** et sélectionnez **Projet**. Lorsque la boîte de dialogue **Nouveau projet** s'affiche, choisissez **Parcourir**. La boîte de dialogue **Emplacement** s'ouvre avec le titre **Emplacement du projet**.  

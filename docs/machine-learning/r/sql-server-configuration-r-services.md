@@ -2,22 +2,22 @@
 title: Configuration pour une utilisation avec R
 description: Cet article fournit des conseils sur la configuration matérielle et réseau de l’ordinateur utilisé pour exécuter SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730899"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration de SQL Server pour une utilisation avec R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cet article est le deuxième d’une série qui décrit l’optimisation des performances pour R Services sur la base de deux études de cas.  Cet article fournit des conseils sur la configuration matérielle et réseau de l’ordinateur utilisé pour exécuter SQL Server R Services. Il contient également des informations sur les méthodes de configuration de l’instance SQL Server, de la base de données ou des tables utilisées dans une solution. Étant donné que l’utilisation de NUMA dans SQL Server atténue la séparation entre les optimisations matérielles et celles de la base de données, une troisième section décrit en détail le processus pour configurer l’affinité et gouverner les ressources du processeur.
 

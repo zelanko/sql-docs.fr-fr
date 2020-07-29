@@ -2,22 +2,22 @@
 title: Créer des requêtes MDX dans R à l’aide d’olapR
 description: Utilisez la bibliothèque de packages olapR dans SQL Server pour écrire des requêtes MDX dans le script de langage R.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 05/22/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dceaaa9848b754de65d213e570f33780c3be95bd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 501449396ee20b763047ac16d23e32b3e98aa366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722531"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Comment créer des requêtes MDX dans R à l’aide d’olapR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Le package [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) prend en charge les requêtes MDX sur les cubes hébergés dans SQL Server Analysis Services. Vous pouvez créer une requête sur un cube existant, explorer des dimensions et d’autres objets de cube, ainsi que coller des requêtes MDX existantes pour récupérer des données.
 

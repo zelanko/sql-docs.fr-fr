@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 9a5e54642e5ee6250d8c01294f7f618288236cc3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c3ee3f8f844358d4662364d3f874b126a2c1cc9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255078"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010623"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez apportées à un diagramme de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  
   
 ### <a name="to-save-selected-tables"></a>Pour enregistrer les tables sélectionnées  

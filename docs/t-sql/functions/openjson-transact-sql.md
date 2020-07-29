@@ -17,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: cd78371a838d257065eece76d69e1c3e89acc1f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738089"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112867"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -64,6 +64,8 @@ Par défaut, la fonction table **OPENJSON** retourne trois colonnes qui contienn
 ![Syntaxe pour la clause WITH dans OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "Syntaxe OPENJSON WITH")
 
 *with_clause* contient la liste des colonnes avec leurs types que **OPENJSON** doit retourner. Par défaut, **OPENJSON** fait correspondre les clés dans *jsonExpression* avec les noms de colonne dans *with_clause* (dans ce cas, les clés correspondantes impliquent un respect de la casse). Si un nom de colonne ne correspond pas à un nom de clé, vous pouvez fournir un *column_path* facultatif, qui est une [expression de chemin JSON](../../relational-databases/json/json-path-expressions-sql-server.md) qui fait référence à une clé dans *jsonExpression*. 
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Arguments
 

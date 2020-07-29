@@ -2,22 +2,22 @@
 title: Optimisation des performances pour les résultats
 description: Cet article est un résumé des méthodes, résultats et conclusions de deux études de cas ayant testé plusieurs méthodes d’optimisation.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486768"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242324"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et ressources
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cet article est le quatrième et le dernier d’une série qui décrit l’optimisation des performances pour R Services. Cet article est un résumé des méthodes, résultats et conclusions de deux études de cas ayant testé plusieurs méthodes d’optimisation.
 
@@ -337,7 +337,7 @@ Nous vous recommandons de lire l’article de blog suivant et le didacticiel qui
 
 De nombreux utilisateurs ont remarqué qu’il y avait une courte pause au moment où le runtime R (ou Python) est chargé pour la première fois. Comme nous l’avons vu dans ces tests, c’est pour cette raison que le temps de la première exécution est souvent mesuré, puis ignoré par la suite. La mise en cache qui suit peut conduire à des différences de performances notables entre la première et la seconde exécutions. Le temps d’exécution peut également être plus important lorsque les données sont déplacées entre SQL Server et le runtime externe, et plus particulièrement sir les données sont transmises sur le réseau plutôt que chargées directement à partir de SQL Server.
 
-Pour toutes ces raisons, il n’existe pas de solution unique pour réduire ce temps de chargement initial, car l’impact sur les performances varie considérablement en fonction de la tâche. Par exemple, la mise en cache est effectuée par lots pour le scoring à une seule ligne ; par conséquent, les opérations de scoring consécutives sont beaucoup plus rapides et ni le modèle, ni le runtime R ne sont pas rechargés. Vous pouvez également utiliser le [scoring natif](../sql-native-scoring.md) pour éviter le chargement complet du runtime R.
+Pour toutes ces raisons, il n’existe pas de solution unique pour réduire ce temps de chargement initial, car l’impact sur les performances varie considérablement en fonction de la tâche. Par exemple, la mise en cache est effectuée par lots pour le scoring à une seule ligne ; par conséquent, les opérations de scoring consécutives sont beaucoup plus rapides et ni le modèle, ni le runtime R ne sont pas rechargés. Vous pouvez également utiliser le [scoring natif](../predictions/native-scoring-predict-transact-sql.md) pour éviter le chargement complet du runtime R.
 
 Pour la formation de modèles volumineux ou le scoring dans des lots de grande taille, l’augmentation du temps d’exécution peut être minime par rapport aux avantages obtenus en évitant le déplacement des données ou la diffusion en continu et le traitement en parallèle. Consultez ce billet de blog pour obtenir des conseils supplémentaires en matière de performances :
 

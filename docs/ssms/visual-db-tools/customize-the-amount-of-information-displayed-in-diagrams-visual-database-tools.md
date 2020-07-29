@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2634805d9940ce43ff2ccdd3d08b49022bf3df16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51b2f7092e09043487e867aea70ef4e00438f989
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242791"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007619"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personnaliser la quantité d'informations affichées dans les schémas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Lorsque vous ajoutez une table à un diagramme de base de données, elle apparaît avec un nombre déterminé de propriétés affichées. Vous pouvez choisir dans un menu de variations la quantité d'informations qui s'affichent ou créer un jeu de propriétés personnalisé.  
   
 Les choix sont les suivants :  

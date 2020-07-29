@@ -4,21 +4,21 @@ description: Découvrez comment installer des packages R hors connexion en utili
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783512"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Créer un référentiel de packages R local à l’aide de miniCRAN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Cet article explique comment installer des packages R hors connexion en utilisant [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) pour créer un référentiel local de packages et de dépendances. **miniCRAN** identifie les packages et les dépendances, puis les télécharge dans un dossier unique que vous pouvez copier sur d’autres ordinateurs afin d’installer le package R hors connexion.
 
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 Une fois que vous disposez d’un référentiel local contenant les packages dont vous avez besoin, déplacez le référentiel de packages vers l’ordinateur SQL Server. La procédure suivante décrit comment installer les packages à l’aide des outils R.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
 > La méthode recommandée pour l’installation de packages consiste à utiliser **sqlmlutils**. Consultez [Installer de nouveaux packages R avec sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end

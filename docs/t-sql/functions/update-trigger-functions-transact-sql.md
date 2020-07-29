@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6baeb311e52588c63fc24d38143a0e5a54c96801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714526"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113262"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - Fonctions de déclencheurs (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ ms.locfileid: "85714526"
 UPDATE ( column )   
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *column*  
  Nom de la colonne à tester pour une action INSERT ou UPDATE. Étant donné que le nom de la table est spécifié dans la clause ON du déclencheur, n'incluez pas ce nom avant le nom de la colonne. La colonne peut correspondre à n’importe quel [type de données](../../t-sql/data-types/data-types-transact-sql.md) pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutefois, les colonnes calculées ne peuvent pas être utilisées dans ce contexte.  
   

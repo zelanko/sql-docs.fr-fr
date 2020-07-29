@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 9dde13a71dac042d8bf5c351cb4f9655f322acd8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6bd4471f14d662b6167c00d599eccf61b7dcced
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255125"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010639"
 ---
 # <a name="save-not-permitted-dialog-box"></a>Enregistrer (non autorisé), boîte de dialogue
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 La boîte de dialogue **Enregistrer** (non autorisé) vous prévient que l’enregistrement des modifications n’est pas autorisé car les modifications que vous avez apportées nécessitent la suppression et la recréation des tables répertoriées.  
   
 Les actions suivantes peuvent nécessiter la recréation d'une table :  

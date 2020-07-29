@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ede416b140175e853028473890881e565105582c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bcf1047008c59844630aa0391f798ddf751c4e89
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752385"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110976"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Renvoie des informations concernant les propriétés de catalogue de texte inté
 FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
   
 > [!NOTE]  
 >  Les propriétés suivantes seront supprimées dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **LogSize** et **PopulateStatus**. Évitez par conséquent d'utiliser ces propriétés dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  

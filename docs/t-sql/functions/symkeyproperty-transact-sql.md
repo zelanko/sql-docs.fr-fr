@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c67de4390b23055aaa5c62b735ae2a52bcb2188f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c7314bbddfcc7cdd86a3dc0e4000119ff7aab8a2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714731"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111818"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85714731"
 SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  *Key_ID*  
  ID d'une clé symétrique dans la base de données. Pour rechercher l'ID d'une clé dont vous connaissez uniquement le nom, utilisez SYMKEY_ID. *Key_ID* est de type **int**.  
   

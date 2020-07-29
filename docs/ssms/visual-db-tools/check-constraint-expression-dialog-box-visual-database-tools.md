@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bcde2847ecbe1fbfdd156df6e631ef4d5c382917
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255500"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003905"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Boîte de dialogue Expression de contrainte de validation (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Lorsque vous rattachez une contrainte de validation à une table ou une colonne, vous devez inclure une expression SQL. Entrez l'expression de contrainte de validation dans la zone fournie à cet effet.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
 Expression  
 Entrez l'expression  
   
@@ -50,9 +49,11 @@ NOT (payment_method = 'credit card') OR
 ## <a name="to-define-a-constraint-expression"></a>Pour définir une expression de contrainte  
 Sous l'onglet Vérifier les contraintes des pages de propriétés, tapez l'expression dans la zone Expression de contrainte en respectant la syntaxe suivante :  
   
-<pre>{constant | column_name | function | (subquery)}  
+```
+{constant | column_name | function | (subquery)}  
 [{operator | AND | OR | NOT}  
-{constant | column_name | function | (subquery)}...]</pre>  
+{constant | column_name | function | (subquery)}...]
+```
   
 La syntaxe SQL est constituée des paramètres suivants :  
   

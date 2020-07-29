@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 688031d9301710ada0ba5952ab45dba02bf46de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75720820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774534"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Déployer le nœud de nom HDFS et les services Spark partagés dans une configuration à haut niveau de disponibilité
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Outre le déploiement de l’instance maître SQL Server dans une configuration à haut niveau de disponibilité à l’aide de groupes de disponibilité, vous pouvez déployer d’autres services stratégiques dans le cluster Big Data pour garantir un niveau de fiabilité accru. Vous pouvez configurer le `HDFS name node` et les services Spark partagés regroupés sous `sparkhead` avec un réplica supplémentaire. Dans ce cas, `Zookeeper` est également déployé dans le cluster Big Data sur le serveur en tant que coordinateur de cluster et magasin de métadonnées pour les services suivants : 
 

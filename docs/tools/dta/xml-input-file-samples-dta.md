@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ee25d62dcfee23facfb8c4aecb87e5880a100d23
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: acfc7ece997debd1ca77ec8441907ab4e99d0dcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731967"
 ---
 # <a name="xml-input-file-samples-dta"></a>Exemples de fichiers d'entrée XML (Assistant Paramétrage de base de données)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette section contient des exemples de fichiers d’entrée XML que vous pouvez utiliser avec l’outil en ligne de commande **dta** . Cet outil forme l'une des interfaces utilisateur de l'Assistant Paramétrage du moteur de base de données, outil qui permet de paramétrer des bases de données en vue d'améliorer les performances des requêtes. L'Assistant Paramétrage du moteur de base de données analyse les effets d'une charge de travail dans une ou plusieurs bases de données. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécutent dans les bases de données que vous souhaitez paramétrer. Une fois que l'Assistant Paramétrage du moteur de base de données a terminé d'analyser les effets de la charge de travail, il crée une recommandation pour ajouter des index, des vues indexées et des partitions afin d'améliorer les performances des requêtes dans vos bases de données.
 
