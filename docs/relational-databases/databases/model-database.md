@@ -1,7 +1,7 @@
 ---
 title: model, base de données | Microsoft Docs
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04a328034388f5ad305b627106d178b73df040bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726424"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87108329"
 ---
 # <a name="model-database"></a>model, base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85726424"
 |Données primaires|modeldev|model.mdf|Croissance automatique de 64 Mo jusqu’à saturation du disque.|  
 |Journal|modellog|modellog.ldf|Croissance automatique de 64 Mo jusqu’à un maximum de 2 téraoctets.|  
 
-En ce qui concerne SQL Server 2014, consultez [Base de données model](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) pour connaître les valeurs de croissance de fichier par défaut.  
+En ce qui concerne SQL Server 2014, consultez [Base de données model](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014) pour connaître les valeurs de croissance de fichier par défaut.  
 
  Pour déplacer la base de données **model** ou les fichiers journaux, consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
   

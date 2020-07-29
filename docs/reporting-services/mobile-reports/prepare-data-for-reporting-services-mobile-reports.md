@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b138877b9afd07f85b90cb5ae2f7197790475c79
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448383"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942311"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
@@ -23,14 +23,15 @@ ms.locfileid: "79448383"
 ## <a name="date-and-time-formats"></a>Formats de date et d’heure 
 Lorsque vous traitez des intervalles de date et d’heure en vue d’une utilisation dans un rapport mobile, en particulier avec TimeNavigator, il est important de formater correctement la colonne date/heure afin que l’ [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] puisse l’identifier en tant que tel. Voici quelques exemples de formats d’horodatage valides :  
   
-    05/01/2009    
-    2009-05-01    
-    05/01/2009 14:57:32.8    
-    2009-05-01 14:57:32.8    
-    2009-05-01T14:57:32.8375298-04:00    
-    5/01/2008 14:57:32.80 -07:00    
-    1 May 2008 2:57:32.8 PM    
-    Fri, 15 May 2009 20:10:57 GMT    
+`05/01/2009`    
+`2009-05-01`    
+`05/01/2009 14:57:32.8`    
+`2009-05-01 14:57:32.8`    
+`2009-05-01T14:57:32.8375298-04:00`    
+`5/01/2008 14:57:32.80 -07:00`    
+`1 May 2008 2:57:32.8 PM`    
+`Fri, 15 May 2009 20:10:57 GMT`    
+
   
 La plupart du temps, les jeux de données horodatées peuvent être décrits par un ou plusieurs intervalles de temps (horaire, quotidien, mensuel, trimestriel et annuel). [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] peut combiner plusieurs tables de granularité différente et les afficher dans le même rapport mobile. Toutefois, gardez à l’esprit les intervalles appropriés au(x) jeu(x) de données d’origine, car ils permettent de décider quelles options de filtre d’horodatage afficher à l’utilisateur dans le rapport mobile final.  
 

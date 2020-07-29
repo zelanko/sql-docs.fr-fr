@@ -14,12 +14,12 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b752acb72d4dd0a02f69670e181014e9aa596006
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4281b67d44e7a1aa7404e89b07a505416f38260f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757701"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243320"
 ---
 # <a name="ddl-events"></a>Événements DDL
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,88 +31,795 @@ ms.locfileid: "85757701"
 ## <a name="ddl-statements-that-have-server-or-database-scope"></a>Instructions DDL qui ont une étendue à l'échelle du serveur ou de la base de données  
  Les déclencheurs ou les notifications d'événements DDL peuvent être créés de façon à se déclencher en réponse aux événements ci-dessous, lorsqu'ils se produisent dans la base de données dans laquelle le déclencheur ou la notification d'événement sont créés ou à un emplacement quelconque dans l'instance du serveur.  
   
-||||  
-|-|-|-|  
-|CREATE_APPLICATION_ROLE (S’applique à l’instruction CREATE APPLICATION ROLE et à **sp_addapprole**. Si un nouveau schéma est créé, cet événement déclenche également un événement CREATE_SCHEMA.)|ALTER_APPLICATION_ROLE (S’applique à l’instruction ALTER APPLICATION ROLE et à **sp_approlepassword**.)|DROP_APPLICATION_ROLE (S’applique à l’instruction DROP APPLICATION ROLE et à **sp_dropapprole**.)|  
-|CREATE_ASSEMBLY|ALTER_ASSEMBLY|DROP_ASSEMBLY|  
-|CREATE_ASYMMETRIC_KEY|ALTER_ASYMMETRIC_KEY|DROP_ASYMMETRIC_KEY|  
-|ALTER_AUTHORIZATION|ALTER_AUTHORIZATION_DATABASE (S’applique à l’instruction ALTER AUTHORIZATION quand ON DATABASE est spécifié, ainsi qu’à **sp_changedbowner**.)||  
-|CREATE_BROKER_PRIORITY|CREATE_BROKER_PRIORITY|CREATE_BROKER_PRIORITY|  
-|CREATE_CERTIFICATE|ALTER_CERTIFICATE|DROP_CERTIFICATE|  
-|CREATE_CONTRACT|DROP_CONTRACT||  
-|CREATE_CREDENTIAL|ALTER_CREDENTIAL|DROP_CREDENTIAL|  
-|GRANT_DATABASE|DENY_DATABASE|REVOKE_DATABASE|  
-|CREATE_DATABASE_AUDIT_SPEFICIATION|ALTER_DATABASE_AUDIT_SPEFICIATION|DENY_DATABASE_AUDIT_SPEFICIATION|  
-|CREATE_DATABASE_ENCRYPTION_KEY|ALTER_DATABASE_ENCRYPTION_KEY|DROP_DATABASE_ENCRYPTION_KEY|  
-|CREATE_DEFAULT|DROP_DEFAULT||  
-|BIND_DEFAULT (S’applique à **sp_bindefault**.)|UNBIND_DEFAULT (S’applique à **sp_unbindefault**.)||  
-|CREATE_EVENT_NOTIFICATION|DROP_EVENT_NOTIFICATION||  
-|CREATE_EXTENDED_PROPERTY (S’applique à **sp_addextendedproperty**.)|ALTER_EXTENDED_PROPERTY (S’applique à **sp_updateextendedproperty**.)|DROP_EXTENDED_PROPERTY (S’applique à **sp_dropextendedproperty**.)|  
-|CREATE_FULLTEXT_CATALOG (S’applique à l’instruction CREATE FULLTEXT CATALOG et à **sp_fulltextcatalog** quand *create* est spécifié.)|ALTER_FULLTEXT_CATALOG (S’applique à l’instruction ALTER FULLTEXT CATALOG, à **sp_fulltextcatalog** quand *start_incremental*, *start_full*, *Stop*ou *Rebuild* est spécifié, et à **sp_fulltext_database** quand *enable* est spécifié.)|DROP_FULLTEXT_CATALOG (S’applique à l’instruction DROP FULLTEXT CATALOG et à **sp_fulltextcatalog** quand *drop* est spécifié.)|  
-|CREATE_FULLTEXT_INDEX (S’applique à l’instruction CREATE FULLTEXT INDEX et à **sp_fulltexttable** quand *create* est spécifié.)|ALTER_FULLTEXT_INDEX (S’applique à l’instruction ALTER FULLTEXT INDEX, à **sp_fulltextcatalog** quand *start_full*, *start_incremental*ou *stop* est spécifié, à **sp_fulltext_column**et **sp_fulltext_table** quand toute action autre que *create* ou *drop* est spécifiée.)|DROP_FULLTEXT_INDEX (S’applique à l’instruction DROP FULLTEXT INDEX et à **sp_fulltexttable** quand *drop* est spécifié.)|  
-|CREATE_FULLTEXT_STOPLIST|ALTER_FULLTEXT_STOPLIST|DROP_FULLTEXT_STOPLIST|  
-|CREATE_FUNCTION|ALTER_FUNCTION|DROP_FUNCTION|  
-|CREATE_INDEX|ALTER_INDEX (S’applique à l’instruction ALTER INDEX et à **sp_indexoption**.)|DROP_INDEX|  
-|CREATE_MASTER_KEY|ALTER_MASTER_KEY|DROP_MASTER_KEY|  
-|CREATE_MESSAGE_TYPE|ALTER_MESSAGE_TYPE|DROP_MESSAGE_TYPE|  
-|CREATE_PARTITION_FUNCTION|ALTER_PARTITION_FUNCTION|DROP_PARTITION_FUNCTION|  
-|CREATE_PARTITION_SCHEME|ALTER_PARTITION_SCHEME|DROP_PARTITION_SCHEME|  
-|CREATE_PLAN_GUIDE (S’applique à **sp_create_plan_guide**.)|ALTER_PLAN_GUIDE (S’applique à **sp_control_plan_guide** quand ENABLE, ENABLE ALL, DISABLE ou DISABLE ALL est spécifié.)|DROP_PLAN_GUIDE (S’applique à **sp_control_plan_guide** quand DROP ou DROP ALL est spécifié.)|  
-|CREATE_PROCEDURE|ALTER_PROCEDURE (S’applique à l’instruction ALTER PROCEDURE et à **sp_procoption**.)|DROP_PROCEDURE|  
-|CREATE_QUEUE|ALTER_QUEUE|DROP_QUEUE|  
-|CREATE_REMOTE_SERVICE_BINDING|ALTER_REMOTE_SERVICE_BINDING|DROP_REMOTE_SERVICE_BINDING|  
-|CREATE_SPATIAL_INDEX|||  
-|RENAME (S’applique à **sp_rename**)|||  
-|CREATE_ROLE (S’applique à l’instruction CREATE ROLE, à **sp_addrole**et à **sp_addgroup**.)|ALTER_ROLE|DROP_ROLE (S’applique à l’instruction DROP ROLE, à **sp_droprole**et à **sp_dropgroup**.)|  
-|ADD_ROLE_MEMBER|DROP_ROLE_MEMBER||  
-|CREATE_ROUTE|ALTER_ROUTE|DROP_ROUTE|  
-|CREATE_RULE|DROP_RULE||  
-|BIND_RULE (S’applique à **sp_bindrule**.)|UNBIND_RULE (S’applique à **sp_unbindrule**.)||  
-|CREATE_SCHEMA (S’applique à l’instruction CREATE SCHEMA, à **sp_addrole**, à **sp_adduser**, à **sp_addgroup**et à **sp_grantdbaccess**.)|ALTER_SCHEMA (S’applique à l’instruction ALTER SCHEMA et à **sp_changeobjectowner**.)|DROP_SCHEMA|  
-|CREATE_SEARCH_PROPERTY_LIST|ALTER_SEARCH_PROPERTY_LIST|DROP_SEARCH_PROPERTY_LIST|  
-|CREATE_SEQUENCE_EVENTS|CREATE_SEQUENCE_EVENTS|CREATE_SEQUENCE_EVENTS|  
-|CREATE_SERVER_ROLE|ALTER_SERVER_ROLE|DROP_SERVER_ROLE|  
-|CREATE_SERVICE|ALTER_SERVICE|DROP_SERVICE|  
-|ALTER_SERVICE_MASTER_KEY|BACKUP_SERVICE_MASTER_KEY|RESTORE_SERVICE_MASTER_KEY|  
-|ADD_SIGNATURE (pour les opérations de signature sur les objets non compris dans l'étendue du schéma ; base de données, assembly, déclencheur)|DROP_SIGNATURE||  
-|ADD_SIGNATURE_SCHEMA_OBJECT (pour les objets compris dans l'étendue du schéma ; procédures stockées, fonctions)|DROP_SIGNATURE_SCHEMA_OBJECT||  
-|CREATE_SPATIAL_INDEX|ALTER_INDEX peut être utilisé pour les index spatiaux.|DROP_INDEX peut être utilisé pour les index spatiaux.|  
-|CREATE_STATISTICS|DROP_STATISTICS|UPDATE_STATISTICS|  
-|CREATE_SYMMETRIC_KEY|ALTER_SYMMETRIC_KEY|DROP_SYMMETRIC_KEY|  
-|CREATE_SYNONYM|DROP_SYNONYM||  
-|CREATE_TABLE|ALTER_TABLE (S’applique à l’instruction ALTER TABLE et à **sp_tableoption**.)|DROP_TABLE|  
-|CREATE_TRIGGER|ALTER_TRIGGER (S’applique à l’instruction ALTER TRIGGER et à **sp_settriggerorder**.)|DROP_TRIGGER|  
-|CREATE_TYPE (S’applique à l’instruction CREATE TYPE et à **sp_addtype**.)|DROP_TYPE (S’applique à l’instruction DROP TYPE et à **sp_droptype**.)||  
-|CREATE_USER (S’applique à l’instruction CREATE USER, à **sp_adduser**et à **sp_grantdbaccess**.)|ALTER_USER (S’applique à l’instruction ALTER USER et à **sp_change_users_login**.)|DROP_USER (S’applique à l’instruction DROP USER, à **sp_dropuser**et à **sp_revokedbaccess**.)|  
-|CREATE_VIEW|ALTER_VIEW|DROP_VIEW|  
-|CREATE_XML_INDEX|ALTER_INDEX peut être utilisé pour les index XML.|DROP_INDEX peut être utilisé pour les index XML.|  
-|CREATE_XML_SCHEMA_COLLECTION|ALTER_XML_SCHEMA_COLLECTION|DROP_XML_SCHEMA_COLLECTION|  
-  
+:::row:::
+    :::column:::
+        CREATE_APPLICATION_ROLE (S’applique à l’instruction CREATE APPLICATION ROLE et à **sp_addapprole**. Si un nouveau schéma est créé, cet événement déclenche également un événement CREATE_SCHEMA.)
+    :::column-end:::
+    :::column:::
+        ALTER_APPLICATION_ROLE (S’applique à l’instruction ALTER APPLICATION ROLE et à **sp_approlepassword**.)
+    :::column-end:::
+    :::column:::
+        DROP_APPLICATION_ROLE (S’applique à l’instruction DROP APPLICATION ROLE et à **sp_dropapprole**.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ASSEMBLY
+    :::column-end:::
+    :::column:::
+        ALTER_ASSEMBLY
+    :::column-end:::
+    :::column:::
+        DROP_ASSEMBLY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ASYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_ASYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        DROP_ASYMMETRIC_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER_AUTHORIZATION
+    :::column-end:::
+    :::column:::
+        ALTER_AUTHORIZATION_DATABASE (S’applique à l’instruction ALTER AUTHORIZATION quand ON DATABASE est spécifié, ainsi qu’à **sp_changedbowner**.)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_BROKER_PRIORITY
+    :::column-end:::
+    :::column:::
+        CREATE_BROKER_PRIORITY
+    :::column-end:::
+    :::column:::
+        CREATE_BROKER_PRIORITY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CERTIFICATE
+    :::column-end:::
+    :::column:::
+        ALTER_CERTIFICATE
+    :::column-end:::
+    :::column:::
+        DROP_CERTIFICATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CONTRACT
+    :::column-end:::
+    :::column:::
+        DROP_CONTRACT
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        ALTER_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        DROP_CREDENTIAL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GRANT_DATABASE
+    :::column-end:::
+    :::column:::
+        DENY_DATABASE
+    :::column-end:::
+    :::column:::
+        REVOKE_DATABASE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DATABASE_AUDIT_SPEFICIATION
+    :::column-end:::
+    :::column:::
+        ALTER_DATABASE_AUDIT_SPEFICIATION
+    :::column-end:::
+    :::column:::
+        DENY_DATABASE_AUDIT_SPEFICIATION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DATABASE_ENCRYPTION_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_DATABASE_ENCRYPTION_KEY
+    :::column-end:::
+    :::column:::
+        DROP_DATABASE_ENCRYPTION_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DEFAULT
+    :::column-end:::
+    :::column:::
+        DROP_DEFAULT
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BIND_DEFAULT (S’applique à **sp_bindefault**.)
+    :::column-end:::
+    :::column:::
+        UNBIND_DEFAULT (S’applique à **sp_unbindefault**.)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EVENT_NOTIFICATION
+    :::column-end:::
+    :::column:::
+        DROP_EVENT_NOTIFICATION
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EXTENDED_PROPERTY (S’applique à **sp_addextendedproperty**.)
+    :::column-end:::
+    :::column:::
+        ALTER_EXTENDED_PROPERTY (S’applique à **sp_updateextendedproperty**.)
+    :::column-end:::
+    :::column:::
+        DROP_EXTENDED_PROPERTY (S’applique à **sp_dropextendedproperty**.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FULLTEXT_CATALOG (S’applique à l’instruction CREATE FULLTEXT CATALOG et à **sp_fulltextcatalog** quand *create* est spécifié.)
+    :::column-end:::
+    :::column:::
+        ALTER_FULLTEXT_CATALOG (S’applique à l’instruction ALTER FULLTEXT CATALOG, à **sp_fulltextcatalog** quand *start_incremental*, *start_full*, *Stop*ou *Rebuild* est spécifié, et à **sp_fulltext_database** quand *enable* est spécifié.)
+    :::column-end:::
+    :::column:::
+        DROP_FULLTEXT_CATALOG (S’applique à l’instruction DROP FULLTEXT CATALOG et à **sp_fulltextcatalog** quand *drop* est spécifié.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FULLTEXT_INDEX (S’applique à l’instruction CREATE FULLTEXT INDEX et à **sp_fulltexttable** quand *create* est spécifié.)
+    :::column-end:::
+    :::column:::
+        ALTER_FULLTEXT_INDEX (S’applique à l’instruction ALTER FULLTEXT INDEX, à **sp_fulltextcatalog** quand *start_full*, *start_incremental*ou *stop* est spécifié, à **sp_fulltext_column**et **sp_fulltext_table** quand toute action autre que *create* ou *drop* est spécifiée.)
+    :::column-end:::
+    :::column:::
+        DROP_FULLTEXT_INDEX (S’applique à l’instruction DROP FULLTEXT INDEX et à **sp_fulltexttable** quand *drop* est spécifié.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FULLTEXT_STOPLIST
+    :::column-end:::
+    :::column:::
+        ALTER_FULLTEXT_STOPLIST
+    :::column-end:::
+    :::column:::
+        DROP_FULLTEXT_STOPLIST
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FUNCTION
+    :::column-end:::
+    :::column:::
+        ALTER_FUNCTION
+    :::column-end:::
+    :::column:::
+        DROP_FUNCTION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_INDEX
+    :::column-end:::
+    :::column:::
+        ALTER_INDEX (S’applique à l’instruction ALTER INDEX et à **sp_indexoption**.)
+    :::column-end:::
+    :::column:::
+        DROP_INDEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        DROP_MASTER_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_MESSAGE_TYPE
+    :::column-end:::
+    :::column:::
+        ALTER_MESSAGE_TYPE
+    :::column-end:::
+    :::column:::
+        DROP_MESSAGE_TYPE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PARTITION_FUNCTION
+    :::column-end:::
+    :::column:::
+        ALTER_PARTITION_FUNCTION
+    :::column-end:::
+    :::column:::
+        DROP_PARTITION_FUNCTION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PARTITION_SCHEME
+    :::column-end:::
+    :::column:::
+        ALTER_PARTITION_SCHEME
+    :::column-end:::
+    :::column:::
+        DROP_PARTITION_SCHEME
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PLAN_GUIDE (S’applique à **sp_create_plan_guide**.)
+    :::column-end:::
+    :::column:::
+        ALTER_PLAN_GUIDE (S’applique à **sp_control_plan_guide** quand ENABLE, ENABLE ALL, DISABLE ou DISABLE ALL est spécifié.)
+    :::column-end:::
+    :::column:::
+        DROP_PLAN_GUIDE (S’applique à **sp_control_plan_guide** quand DROP ou DROP ALL est spécifié.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PROCEDURE
+    :::column-end:::
+    :::column:::
+        ALTER_PROCEDURE (S’applique à l’instruction ALTER PROCEDURE et à **sp_procoption**.)
+    :::column-end:::
+    :::column:::
+        DROP_PROCEDURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_QUEUE
+    :::column-end:::
+    :::column:::
+        ALTER_QUEUE
+    :::column-end:::
+    :::column:::
+        DROP_QUEUE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_REMOTE_SERVICE_BINDING
+    :::column-end:::
+    :::column:::
+        ALTER_REMOTE_SERVICE_BINDING
+    :::column-end:::
+    :::column:::
+        DROP_REMOTE_SERVICE_BINDING
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SPATIAL_INDEX
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        RENAME (S’applique à **sp_rename**)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ROLE (S’applique à l’instruction CREATE ROLE, à **sp_addrole**et à **sp_addgroup**.)
+    :::column-end:::
+    :::column:::
+        ALTER_ROLE
+    :::column-end:::
+    :::column:::
+        DROP_ROLE (S’applique à l’instruction DROP ROLE, à **sp_droprole**et à **sp_dropgroup**.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+        DROP_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ROUTE
+    :::column-end:::
+    :::column:::
+        ALTER_ROUTE
+    :::column-end:::
+    :::column:::
+        DROP_ROUTE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_RULE
+    :::column-end:::
+    :::column:::
+        DROP_RULE
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BIND_RULE (S’applique à **sp_bindrule**.)
+    :::column-end:::
+    :::column:::
+        UNBIND_RULE (S’applique à **sp_unbindrule**.)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SCHEMA (S’applique à l’instruction CREATE SCHEMA, à **sp_addrole**, à **sp_adduser**, à **sp_addgroup**et à **sp_grantdbaccess**.)
+    :::column-end:::
+    :::column:::
+        ALTER_SCHEMA (S’applique à l’instruction ALTER SCHEMA et à **sp_changeobjectowner**.)
+    :::column-end:::
+    :::column:::
+        DROP_SCHEMA
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SEARCH_PROPERTY_LIST
+    :::column-end:::
+    :::column:::
+        ALTER_SEARCH_PROPERTY_LIST
+    :::column-end:::
+    :::column:::
+        DROP_SEARCH_PROPERTY_LIST
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SEQUENCE_EVENTS
+    :::column-end:::
+    :::column:::
+        CREATE_SEQUENCE_EVENTS
+    :::column-end:::
+    :::column:::
+        CREATE_SEQUENCE_EVENTS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVER_ROLE
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_ROLE
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_ROLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVICE
+    :::column-end:::
+    :::column:::
+        ALTER_SERVICE
+    :::column-end:::
+    :::column:::
+        DROP_SERVICE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER_SERVICE_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        BACKUP_SERVICE_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        RESTORE_SERVICE_MASTER_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_SIGNATURE (pour les opérations de signature sur les objets non compris dans l'étendue du schéma ; base de données, assembly, déclencheur)
+    :::column-end:::
+    :::column:::
+        DROP_SIGNATURE
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_SIGNATURE_SCHEMA_OBJECT (pour les objets compris dans l'étendue du schéma ; procédures stockées, fonctions)
+    :::column-end:::
+    :::column:::
+        DROP_SIGNATURE_SCHEMA_OBJECT
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SPATIAL_INDEX
+    :::column-end:::
+    :::column:::
+        ALTER_INDEX peut être utilisé pour les index spatiaux.
+    :::column-end:::
+    :::column:::
+        DROP_INDEX peut être utilisé pour les index spatiaux.
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_STATISTICS
+    :::column-end:::
+    :::column:::
+        DROP_STATISTICS
+    :::column-end:::
+    :::column:::
+        UPDATE_STATISTICS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_SYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        DROP_SYMMETRIC_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SYNONYM
+    :::column-end:::
+    :::column:::
+        DROP_SYNONYM
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_TABLE
+    :::column-end:::
+    :::column:::
+        ALTER_TABLE (S’applique à l’instruction ALTER TABLE et à **sp_tableoption**.)
+    :::column-end:::
+    :::column:::
+        DROP_TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_TRIGGER
+    :::column-end:::
+    :::column:::
+        ALTER_TRIGGER (S’applique à l’instruction ALTER TRIGGER et à **sp_settriggerorder**.)
+    :::column-end:::
+    :::column:::
+        DROP_TRIGGER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_TYPE (S’applique à l’instruction CREATE TYPE et à **sp_addtype**.)
+    :::column-end:::
+    :::column:::
+        DROP_TYPE (S’applique à l’instruction DROP TYPE et à **sp_droptype**.)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_USER (S’applique à l’instruction CREATE USER, à **sp_adduser**et à **sp_grantdbaccess**.)
+    :::column-end:::
+    :::column:::
+        ALTER_USER (S’applique à l’instruction ALTER USER et à **sp_change_users_login**.)
+    :::column-end:::
+    :::column:::
+        DROP_USER (S’applique à l’instruction DROP USER, à **sp_dropuser**et à **sp_revokedbaccess**.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_VIEW
+    :::column-end:::
+    :::column:::
+        ALTER_VIEW
+    :::column-end:::
+    :::column:::
+        DROP_VIEW
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_XML_INDEX
+    :::column-end:::
+    :::column:::
+        ALTER_INDEX peut être utilisé pour les index XML.
+    :::column-end:::
+    :::column:::
+        DROP_INDEX peut être utilisé pour les index XML.
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_XML_SCHEMA_COLLECTION
+    :::column-end:::
+    :::column:::
+        ALTER_XML_SCHEMA_COLLECTION
+    :::column-end:::
+    :::column:::
+        DROP_XML_SCHEMA_COLLECTION
+    :::column-end:::
+:::row-end:::
+ 
 ## <a name="ddl-statements-that-have-server-scope"></a>Instructions DDL qui ont une étendue à l'échelle du serveur  
  Les déclencheurs ou les notifications d'événements DDL peuvent être créés de façon à se déclencher en réponse aux événements suivants lorsqu'ils se produisent à un emplacement quelconque dans l'instance du serveur.  
   
-||||  
-|-|-|-|  
-|ALTER_AUTHORIZATION_SERVER|ALTER_SERVER_CONFIGURATION|ALTER_INSTANCE (S’applique à **sp_configure** et à **sp_addserver** quand une instance du serveur local est spécifiée.)|  
-|CREATE_AVAILABILITY_GROUP|ALTER_AVAILABILITY_GROUP|DROP_AVAILABILITY_GROUP|  
-|CREATE_CREDENTIAL|ALTER_CREDENTIAL|DROP_CREDENTIAL|  
-|CREATE_CRYPTOGRAPHIC_PROVIDER|ALTER_CRYPTOGRAPHIC_PROVIDER|DROP_CRYPTOGRAPHIC_PROVIDER|  
-|CREATE_DATABASE|ALTER_DATABASE (S’applique à l’instruction ALTER DATABASE et à **sp_fulltext_database**.)|DROP_DATABASE|  
-|CREATE_ENDPOINT|ALTER_ENDPOINT|DROP_ENDPOINT|  
-|CREATE_EVENT_SESSION|ALTER_EVENT_SESSION|DROP_EVENT_SESSION|  
-|CREATE_EXTENDED_PROCEDURE (S’applique à **sp_addextendedproc**.)|DROP_EXTENDED_PROCEDURE (S’applique à **sp_dropextendedproc**.)||  
-|CREATE_LINKED_SERVER (S’applique à **sp_addlinkedserver**.)|ALTER_LINKED_SERVER (S’applique à **sp_serveroption**.)|DROP_LINKED_SERVER (S’applique à **sp_dropserver** quand un serveur lié est spécifié.)|  
-|CREATE_LINKED_SERVER_LOGIN (S’applique à **sp_addlinkedsrvlogin**.)|DROP_LINKED_SERVER_LOGIN (S’applique à **sp_droplinkedsrvlogin**.)||  
-|CREATE_LOGIN (S’applique à l’instruction CREATE LOGIN, à **sp_addlogin**, à **sp_grantlogin**, à **xp_grantlogin**et à **sp_denylogin** en cas d’utilisation sur une connexion inexistante qui doit être créée de manière implicite.)|ALTER_LOGIN (S’applique à l’instruction ALTER LOGIN, à **sp_defaultdb**, à **sp_defaultlanguage**, à **sp_password**et à **sp_change_users_login** quand *Auto_Fix* est spécifié.)|DROP_LOGIN (S’applique à l’instruction DROP LOGIN, à **sp_droplogin**, à **sp_revokelogin**et à **xp_revokelogin**.)|  
-|CREATE_MESSAGE (S’applique à **sp_addmessage**.)|ALTER_MESSAGE (S’applique à **sp_altermessage**.)|DROP_MESSAGE (S’applique à **sp_dropmessage**.)|  
-|CREATE_REMOTE_SERVER (S’applique à **sp_addserver**.)|ALTER_REMOTE_SERVER (S’applique à **sp_setnetname**.)|DROP_REMOTE_SERVER (S’applique à **sp_dropserver** quand un serveur distant est spécifié.)|  
-|CREATE_RESOURCE_POOL|ALTER_RESOURCE_POOL|DROP_RESOURCE_POOL|  
-|GRANT_SERVER|DENY_SERVER|REVOKE_SERVER|  
-|ADD_SERVER_ROLE_MEMBER|DROP_SERVER_ROLE_MEMBER||  
-|CREATE_SERVER_AUDIT|ALTER_SERVER_AUDIT|DROP_SERVER_AUDIT|  
-|CREATE_SERVER_AUDIT_SPECIFICATION|ALTER_SERVER_AUDIT_SPECIFICATION|DROP_SERVER_AUDIT_SPECIFICATION|  
-|CREATE_WORKLOAD_GROUP|ALTER_WORKLOAD_GROUP|DROP_WORKLOAD_GROUP|  
-  
+:::row:::
+    :::column:::
+        ALTER_AUTHORIZATION_SERVER
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_CONFIGURATION
+    :::column-end:::
+    :::column:::
+        ALTER_INSTANCE (S’applique à **sp_configure** et à **sp_addserver** quand une instance du serveur local est spécifiée.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_AVAILABILITY_GROUP
+    :::column-end:::
+    :::column:::
+        ALTER_AVAILABILITY_GROUP
+    :::column-end:::
+    :::column:::
+        DROP_AVAILABILITY_GROUP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        ALTER_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        DROP_CREDENTIAL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CRYPTOGRAPHIC_PROVIDER
+    :::column-end:::
+    :::column:::
+        ALTER_CRYPTOGRAPHIC_PROVIDER
+    :::column-end:::
+    :::column:::
+        DROP_CRYPTOGRAPHIC_PROVIDER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DATABASE
+    :::column-end:::
+    :::column:::
+        ALTER_DATABASE (S’applique à l’instruction ALTER DATABASE et à **sp_fulltext_database**.)
+    :::column-end:::
+    :::column:::
+        DROP_DATABASE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ENDPOINT
+    :::column-end:::
+    :::column:::
+        ALTER_ENDPOINT
+    :::column-end:::
+    :::column:::
+        DROP_ENDPOINT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EVENT_SESSION
+    :::column-end:::
+    :::column:::
+        ALTER_EVENT_SESSION
+    :::column-end:::
+    :::column:::
+        DROP_EVENT_SESSION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EXTENDED_PROCEDURE (S’applique à **sp_addextendedproc**.)
+    :::column-end:::
+    :::column:::
+        DROP_EXTENDED_PROCEDURE (S’applique à **sp_dropextendedproc**.)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_LINKED_SERVER (S’applique à **sp_addlinkedserver**.)
+    :::column-end:::
+    :::column:::
+        ALTER_LINKED_SERVER (S’applique à **sp_serveroption**.)
+    :::column-end:::
+    :::column:::
+        DROP_LINKED_SERVER (S’applique à **sp_dropserver** quand un serveur lié est spécifié.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_LINKED_SERVER_LOGIN (S’applique à **sp_addlinkedsrvlogin**.)
+    :::column-end:::
+    :::column:::
+        DROP_LINKED_SERVER_LOGIN (S’applique à **sp_droplinkedsrvlogin**.)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_LOGIN (S’applique à l’instruction CREATE LOGIN, à **sp_addlogin**, à **sp_grantlogin**, à **xp_grantlogin**et à **sp_denylogin** en cas d’utilisation sur une connexion inexistante qui doit être créée de manière implicite.)
+    :::column-end:::
+    :::column:::
+        ALTER_LOGIN (S’applique à l’instruction ALTER LOGIN, à **sp_defaultdb**, à **sp_defaultlanguage**, à **sp_password**et à **sp_change_users_login** quand *Auto_Fix* est spécifié.)
+    :::column-end:::
+    :::column:::
+        DROP_LOGIN (S’applique à l’instruction DROP LOGIN, à **sp_droplogin**, à **sp_revokelogin**et à **xp_revokelogin**.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_MESSAGE (S’applique à **sp_addmessage**.)
+    :::column-end:::
+    :::column:::
+        ALTER_MESSAGE (S’applique à **sp_altermessage**.)
+    :::column-end:::
+    :::column:::
+        DROP_MESSAGE (S’applique à **sp_dropmessage**.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_REMOTE_SERVER (S’applique à **sp_addserver**.)
+    :::column-end:::
+    :::column:::
+        ALTER_REMOTE_SERVER (S’applique à **sp_setnetname**.)
+    :::column-end:::
+    :::column:::
+        DROP_REMOTE_SERVER (S’applique à **sp_dropserver** quand un serveur distant est spécifié.)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_RESOURCE_POOL
+    :::column-end:::
+    :::column:::
+        ALTER_RESOURCE_POOL
+    :::column-end:::
+    :::column:::
+        DROP_RESOURCE_POOL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GRANT_SERVER
+    :::column-end:::
+    :::column:::
+        DENY_SERVER
+    :::column-end:::
+    :::column:::
+        REVOKE_SERVER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_SERVER_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVER_AUDIT
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_AUDIT
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_AUDIT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVER_AUDIT_SPECIFICATION
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_AUDIT_SPECIFICATION
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_AUDIT_SPECIFICATION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_WORKLOAD_GROUP
+    :::column-end:::
+    :::column:::
+        ALTER_WORKLOAD_GROUP
+    :::column-end:::
+    :::column:::
+        DROP_WORKLOAD_GROUP
+    :::column-end:::
+:::row-end:::
+ 
 ## <a name="see-also"></a>Voir aussi  
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notifications d'événements](../../relational-databases/service-broker/event-notifications.md)   

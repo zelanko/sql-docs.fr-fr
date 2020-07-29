@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342876"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972127"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
 
@@ -151,7 +151,7 @@ ms.locfileid: "80342876"
 > [!IMPORTANT]  
 >  L’extension de rendu [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) est déconseillée. Pour plus d’informations, consultez [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l’installation préalable du Module de compatibilité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office pour les formats de fichiers Word, Excel et PowerPoint. Pour plus d'informations, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
+ Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l’installation préalable du Module de compatibilité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office pour les formats de fichiers Word, Excel et PowerPoint. Pour plus d'informations, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](https://www.microsoft.com/download/office.aspx).
   
  La version précédente de l'extension de rendu Word, compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est renommée Word 2003. Seule l'extension de rendu Word est disponible par défaut. Vous devez mettre à jour les fichiers de configuration Reporting Services pour rendre l'extension de rendu Word 2003 disponible. Le type de contenu des fichiers générés par le convertisseur Word 2003 est **application/vnd.ms-word** et l’extension des noms de fichiers est .doc.  
   

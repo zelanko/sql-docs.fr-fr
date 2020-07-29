@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49d427b7e07d46e604bfbc46c06022414c486c43
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718106"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248633"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Activer la gestion de sauvegarde de SQL Server sur Azure
 
@@ -100,7 +100,7 @@ La sortie contient l’URL du conteneur et/ou le jeton SAP. Par exemple :
   
 Si l’URL est incluse, séparez-la du jeton SAP au niveau du point d’interrogation (n’incluez pas le point d’interrogation). Par exemple, la sortie précédente produirait les deux valeurs suivantes.  
   
-|||  
+|Type|Output|  
 |-|-|  
 |**URL du conteneur**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
 |**Jeton SAP**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  

@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245762"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001621"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Options (Concepteurs - page Plans de maintenance)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 La boîte de dialogue **Options** vous permet de déterminer le comportement par défaut du concepteur lors de l'ajout de nouvelles formes à la surface de dessin. Dans le menu **Outils** , cliquez sur **Options**, développez **Concepteurs**, puis sélectionnez **Plans de maintenance**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
 **Connecter une nouvelle forme sur la forme sélectionnée par défaut**  
 Lorsque cette case à cocher est activée, les nouvelles formes se connectent automatiquement aux autres formes, lors de leur ajout sur la surface de dessin. Lorsque cette case à cocher est désactivée, les nouvelles formes ne sont pas connectées lors de leur ajout. L'activation de cette case à cocher active les cases à cocher ci-dessous.  
   

@@ -20,15 +20,15 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90ef549988aefd2740d10cf12b04fb5510400ab8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e302910a5a7870ed7c57a7325e6686f42a15707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77478466"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999727"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Dépanner des utilisateurs orphelins (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   L’apparition d’utilisateurs orphelins dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se produit lorsqu'un utilisateur de base de données est basé sur un utilisateur dans la base de données **MASTER** , mais que l’utilisateur n’existe plus dans le **MASTER**. Cela peut se produire lorsque l’utilisateur est supprimé, ou lorsque la base de données est déplacée vers un autre serveur sur lequel l’utilisateur n'existe pas. Cette rubrique décrit comment rechercher des utilisateurs orphelins, puis comment les remapper à des utilisateurs.  
   

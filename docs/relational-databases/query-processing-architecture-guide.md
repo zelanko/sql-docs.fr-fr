@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726151"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247613"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 Le changement de l’une des options SET suivantes pour une exécution donnée affecte la capacité à réutiliser des plans, car le [!INCLUDE[ssde_md](../includes/ssde_md.md)] effectue un [pliage de constantes](#ConstantFolding) et ces options affectent les résultats de telles expressions :
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>Mise en cache de plusieurs plans pour la même requête 
 Les requêtes et les plans d’exécution sont identifiables de manière unique dans le [!INCLUDE[ssde_md](../includes/ssde_md.md)], à l’instar d’une empreinte digitale :
@@ -671,16 +719,70 @@ La recompilation de niveau instruction améliore les performances car, dans la p
 L’événement étendu `sql_statement_recompile` (xEvent) signale les recompilations au niveau de l’instruction. Ce xEvent se produit quand une recompilation au niveau de l’instruction est requise par n’importe quel type de lot. Cela comprend les procédures stockées, les déclencheurs, les lots ad hoc et les requêtes. Les lots peuvent être envoyés par l’intermédiaire de plusieurs interfaces, notamment sp_executesql, SQL dynamique, ou des méthodes Prepare ou Execute.
 La colonne `recompile_cause` de `sql_statement_recompile` xEvent contient un code entier qui indique la raison de la recompilation. Le tableau suivant contient les raisons possibles :
 
-|||
-|----|----|  
-|Schéma modifié|Statistiques modifiées|  
-|Compilation différée|Option SET modifiée|  
-|Table temporaire modifiée|Ensemble de lignes à distance modifié|  
-|Autorisation`FOR BROWSE` modifiée|Environnement de notification de requête modifié|  
-|Vue partitionnée modifiée|Options de curseur modifiées|  
-|`OPTION (RECOMPILE)` requis|Plan paramétré vidé|  
-|Plan affectant la version de base de données modifié|Stratégie de forçage de plan de Magasin des requêtes modifiée|  
-|Échec de forçage de plan de Magasin des requêtes|Plan manquant dans le Magasin des requêtes|
+:::row:::
+    :::column:::
+        Schéma modifié
+    :::column-end:::
+    :::column:::
+        Statistiques modifiées
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Compilation différée
+    :::column-end:::
+    :::column:::
+        Option SET modifiée
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Table temporaire modifiée
+    :::column-end:::
+    :::column:::
+        Ensemble de lignes à distance modifié
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Autorisation`FOR BROWSE` modifiée
+    :::column-end:::
+    :::column:::
+        Environnement de notification de requête modifié
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Vue partitionnée modifiée
+    :::column-end:::
+    :::column:::
+        Options de curseur modifiées
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` requis
+    :::column-end:::
+    :::column:::
+        Plan paramétré vidé
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Plan affectant la version de base de données modifié
+    :::column-end:::
+    :::column:::
+        Stratégie de forçage de plan de Magasin des requêtes modifiée
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Échec de forçage de plan de Magasin des requêtes
+    :::column-end:::
+    :::column:::
+        Plan manquant dans le Magasin des requêtes
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où les événements étendus ne sont pas disponibles, l’événement de trace [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) du profileur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut être utilisé dans le même but de signaler les recompilations au niveau de l’instruction.

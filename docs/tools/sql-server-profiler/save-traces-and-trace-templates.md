@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 2660ccb2deeaf4b76090b2add2614452dd91cb60
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 084471f17aac4d9f731facaad71c2e265a2c275d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726906"
 ---
 # <a name="save-traces-and-trace-templates"></a>Enregistrer des traces et de modèles de trace
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Il est important de faire la distinction entre l'enregistrement de fichiers de trace et l'enregistrement de modèles de trace. L'enregistrement d'un fichier de trace suppose l'enregistrement des données d'événement capturées à un emplacement précis. L'enregistrement d'un modèle de trace suppose l'enregistrement de la définition de la trace, par exemple les colonnes de données, les classes d'événements ou les filtres spécifiés.  
   

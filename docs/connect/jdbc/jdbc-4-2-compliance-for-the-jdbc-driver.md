@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ff264c620123dcbb73c58373871f568ff1d249e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924635"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243400"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>Compatibilité avec JDBC 4.2 pour le pilote JDBC
 
@@ -59,14 +59,12 @@ ms.locfileid: "80924635"
   
 ## <a name="sqlserverresultset-class"></a>classe SQLServerResultSet
   
-||||  
-|-|-|-|  
 |Nouvelles méthodes|Description|Implémentation intéressante|  
+|-|-|-|  
 ||Met à jour la colonne désignée avec une valeur Object. Il existe 4 nouvelles méthodes (surchargées) pour prendre en charge la nouvelle interface SQLType.|Implémenté comme décrit dans l'interface java.sql.ResultSet. Pour plus d’informations, consultez [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html).|  
   
  La spécification de l'API Java Database Connectivity 4.2 est prise en charge par Microsoft JDBC Driver 4.2 pour SQL Server, avec les mappages de type de données suivants.  
   
-|||  
-|-|-|  
 |Nouveaux mappages de type de données|Description|  
+|-|-|  
 |**Nouvelles classes Java dans Java 8 :** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **Nouveaux types JDBC :**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR n'est pas pris en charge dans SQL Server. Le pilote lève une exception SQLFeatureNotSupportedException si ce type est utilisé. Le pilote prend en charge tous les autres nouveaux mappages de type Java et JDBC comme spécifié dans la spécification JDBC 4.2.|  
