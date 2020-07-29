@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 8aba97edb9da06a5bb6fc5a3236647b8afdd7219
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a34d754d9850e10cf852373cc7552459e171e693
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246274"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002650"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>Afficher les propriétés d'une jointure (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Vous pouvez consulter une collection de propriétés pour une vue dans la fenêtre Propriétés.  
   
 ### <a name="to-view-join-properties"></a>Pour afficher les propriétés d'une jointure  

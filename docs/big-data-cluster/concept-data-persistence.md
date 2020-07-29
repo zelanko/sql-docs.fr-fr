@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661072"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistance des données avec un cluster Big Data SQL Server sur Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Les [volumes persistants](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) fournissent un modèle de plug-in pour le stockage dans Kubernetes. Dans ce modèle, la façon dont le stockage est fourni dépend de la façon dont il est consommé. Par conséquent, vous pouvez utiliser votre propre stockage à haute disponibilité et le connecter au cluster Big Data SQL Server. Ceci vous donne un contrôle total sur le type de stockage, sur la disponibilité et sur les performances dont vous avez besoin. Kubernetes prend en charge [différents types de solutions de stockage](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), notamment les disques/fichiers Azure, NFS (Network File System) et le stockage local.
 

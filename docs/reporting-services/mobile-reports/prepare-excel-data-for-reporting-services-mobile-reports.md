@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3a760b0ae100259b8102f303f0747e0da81223e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448374"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942321"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Préparer les données Excel pour les rapports mobiles Reporting Services
   
@@ -70,11 +70,11 @@ Il n'existe aucune restriction concernant l’emplacement où vous stockez les f
   
 Les champs de date étant indispensables à de nombreux rapports mobiles, vous devez veiller à formater correctement les cellules en tant que dates dans Excel. Dans certains cas, cela signifie qu'une conversion est nécessaire. Voici des exemples de formules permettant de convertir des cellules de texte en dates dans Excel.  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 Après avoir converti les cellules, vous devez les mettre en forme en tant que dates en les sélectionnant ou en sélectionnant toute la colonne, puis menu **contextuel** > **Format de cellule** > **Date** dans la liste **Catégorie**. Vous pouvez également utiliser l’assistant Excel Convertir Texte en Colonne afin de convertir les cellules texte en dates correctement formatées.  
   

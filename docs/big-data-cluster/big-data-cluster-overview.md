@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152005"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942774"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 À compter de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] vous permettent de déployer des clusters scalables de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. Ces composants sont exécutés côte à côte pour que vous puissiez lire, écrire et traiter du Big Data à partir de Transact-SQL ou Spark, afin de pouvoir combiner et analyser facilement vos données relationnelles de grande valeur avec du Big Data volumineux.
 
@@ -85,7 +85,7 @@ Un cluster Big Data SQL Server est un cluster de conteneurs Linux orchestrés pa
 
 Kubernetes est un orchestrateur de conteneurs open source, qui peut mettre à l’échelle des déploiements de conteneurs en fonction des besoins. Le tableau suivant définit certains termes importants liés à Kubernetes :
 
-|||
+|Terme|Description|
 |:--|:--|
 | **Cluster** | Un cluster Kubernetes est un ensemble de machines, appelées nœuds. Un des nœuds, appelé nœud master, contrôle le cluster, tandis que les autres nœuds sont des nœuds Worker. Le master Kubernetes est chargé de la distribution du travail entre les Workers et de la supervision de l’intégrité du cluster. |
 | **Nœud** | Un nœud exécute des applications conteneurisées. Il peut s’agir d’une machine physique ou d’une machine virtuelle. Un cluster Kubernetes peut contenir un mélange de nœuds de machine physique et de nœuds de machine virtuelle. |

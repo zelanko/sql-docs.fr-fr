@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
+title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784506"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248509"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indique si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appartient au rôle de serveur spécifié.  
@@ -40,19 +41,23 @@ ms.locfileid: "85784506"
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
  **'** *role* **'**  
  Nom du rôle de serveur vérifié. *role* est de type **sysname**.  
   
  Les valeurs valides pour *role* sont des rôles serveur définis par l’utilisateur, et les rôles serveur fixes suivants :  
-  
-|||  
-|-|-|  
-|administrateur système|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> public|  
-|processadmin||  
+
+- administrateur système
+- serveradmin
+- dbcreator
+- setupadmin  
+- bulkadmin
+- securityadmin  
+- diskadmin
+- public  
+- processadmin
   
  **'** *login* **'**  
  Nom du compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à vérifier. *login* est de type **sysname**, avec NULL comme valeur par défaut. Si aucune valeur n’est spécifiée, le résultat est basé sur le contexte d’exécution actuel. Si le paramètre contient le mot NULL, retourne NULL.  

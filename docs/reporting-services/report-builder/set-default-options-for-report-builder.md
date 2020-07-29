@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc526ec022d139288fd057ac1cd7889653cecba5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290776"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859762"
 ---
 # <a name="set-default-options-for-report-builder"></a>Définir les options par défaut du Générateur de rapports
   Dans le Générateur de rapports, vous pouvez définir un certain nombre de paramètres par défaut utiles pour faciliter et accélérer la création des rapports.  Par exemple, si vous pouvez définir ou modifier le serveur de rapports par défaut, le Générateur de rapports enregistre vos rapports sur le même serveur de rapports automatiquement, sauf indication contraire.  
   
 -   Dans le Générateur de rapports, cliquez sur **Fichier** > **Options**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Utiliser ce serveur de rapports ou site SharePoint par défaut**  
  Il se peut que votre administrateur ait configuré ce paramètre. Sa valeur peut être une URL bien formée commençant par http:// ou https://. Ce paramètre détermine les connexions de source de données qui s'affichent par défaut dans les Assistants Tableau/Matrice et Graphique. Sachez par ailleurs que vos rapports seront traités sur ce serveur et que vous pouvez faire référence à des ressources provenant de ce serveur.  
   
