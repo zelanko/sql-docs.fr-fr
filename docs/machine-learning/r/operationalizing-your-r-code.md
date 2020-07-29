@@ -2,22 +2,22 @@
 title: Déployer du code R dans les procédures stockées
 description: Incorporez le code de langage R dans une procédure stockée SQL Server pour le rendre accessible à toute application cliente ayant accès à une base de données SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486806"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242318"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Faire fonctionner votre code R à l’aide des procédures stockées dans SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Lorsque vous utilisez les fonctionnalités R et Python dans SQL Server Machine Learning Services, l’approche la plus courante pour déplacer des solutions vers un environnement de production consiste à incorporer du code dans des procédures stockées. Cet article résume les points clés que le développeur SQL peut prendre en compte lorsqu’il fait fonctionner du code R à l’aide de SQL Server.
 
@@ -46,7 +46,7 @@ Le scoring est une tâche importante qui peut facilement être automatisée ou d
 
 + [Scoring en temps réel, optimisé pour les lots de petite taille
 + Scoring sur une ligne, pour appeler à partir d’une application
-+ [Scoring natif](../sql-native-scoring.md), pour la prédiction de lot rapide à partir de SQL Server sans appeler R
++ [Scoring natif](../predictions/native-scoring-predict-transact-sql.md), pour la prédiction de lot rapide à partir de SQL Server sans appeler R
 
 Cette procédure pas à pas fournit des exemples de scoring à l’aide d’une procédure stockée à la fois dans les modes par lot et sur une ligne :
 

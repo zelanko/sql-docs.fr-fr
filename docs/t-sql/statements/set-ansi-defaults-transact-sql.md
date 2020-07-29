@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3886e6688f6e880a736885b55e5427dc0a98b8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6d1cc88f04a85957f21cb215a19c56efa8dc7d9b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634529"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112780"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,14 +55,40 @@ Pour modifier le comportement du client, les utilisateurs doivent recourir aux m
   
 Lorsque cette option est activée (ON), elle active les paramètres ISO suivants :  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_NULL_DFLT_ON|SET IMPLICIT_TRANSACTIONS|  
-|SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
-|SET ANSI_WARNINGS||  
-|||
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
 Ensemble, ces options SET ISO définissent l'environnement de traitement des requêtes pour la durée de la session de travail de l'utilisateur, de l'exécution d'un déclencheur ou d'une procédure stockée. Toutefois, ces options SET ne contiennent pas toutes les options requises pour se conformer à la norme ISO.  
   
 Quand vous utilisez des index sur des colonnes calculées et des vues indexées, quatre options par défaut (`ANSI_NULLS`, `ANSI_PADDING`, `ANSI_WARNINGS` et `QUOTED_IDENTIFIER`) doivent être activées (valeur ON). Ces options par défaut font partie des sept options SET qui doivent avoir les valeurs requises lors de la création et de la modification des index sur des colonnes calculées et vues indexées. Les autres options SET sont `ARITHABORT` (ON), `CONCAT_NULL_YIELDS_NULL` (ON) et `NUMERIC_ROUNDABORT` (OFF). Pour plus d’informations sur les valeurs requises des options SET dans des vues indexées et des index de colonnes calculées, consultez [Remarques sur l’utilisation de l’instruction SET dans la rubrique](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
@@ -71,12 +97,31 @@ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native 
   
 Quand SET ANSI_DEFAULTS est émis, la valeur de QUOTED_IDENTIFIER est définie au moment de l’analyse, et les options suivantes sont définies au moment de l’exécution :  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET ANSI_WARNINGS|  
-|SET ANSI_NULL_DFLT_ON|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+
 ## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle **public** .  
   

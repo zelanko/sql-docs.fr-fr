@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b5c3935ebf4c42cf971c7b01dd7d79b9d2d1b5c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ae3b7c18a7f9e220767193aa570319255d9a10e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252347"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007835"
 ---
 # <a name="options-environment---help---general-page"></a>Options (Environnement - Aide - Page Général)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Utilisez la boîte de dialogue **Options** pour choisir des ensembles de documentation et déterminer si les rubriques d’aide doivent être affichées à l’intérieur de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou dans une fenêtre extérieure distincte. Pour y accéder, cliquez sur **Options** dans le menu **Outils** , développez **Aide** dans le nœud **Environnement** et cliquez sur **Général**.  
   
 > [!NOTE]  

@@ -10,16 +10,16 @@ ms.date: 2/19/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40020c76cb81b6bf374b9090e83dc7e6a06d621f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a94fb34110401c16b81bd05993e2cf85d2fdc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79542655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752113"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Informations de référence sur les fichiers de configuration de déploiement des clusters Big Data
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article fournit un fichier JSON qui explique la structure d’un fichier de configuration de déploiement d’un cluster Big Data SQL Server 2019.
 

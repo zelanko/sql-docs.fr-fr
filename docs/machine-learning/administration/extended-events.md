@@ -2,22 +2,22 @@
 title: Surveiller les scripts avec des événements étendus
 description: Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes liés à SQL Server Machine Learning Services, à SQL Server Launchpad et aux scripts externes des travaux R ou Python.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc3c95a4184cede01fb077ee232c02458c97cbf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118902"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110175"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Surveiller les scripts Python et R avec des événements étendus dans SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes liés à SQL Server Machine Learning Services, à SQL Server Launchpad et aux scripts externes des travaux R ou Python.
 
@@ -135,7 +135,7 @@ Le fichier de configuration lui-même a le format suivant :
 L’exemple suivant montre la définition d’une trace d’événements pour le service Launchpad :
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -158,7 +158,7 @@ L’exemple suivant montre la définition d’une trace d’événements pour le
 L'exemple suivant montre la définition d'une trace d'événements pour le service BXLServer.
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

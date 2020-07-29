@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1227c893dbbb3999182140e6b63a9f74206c4ec4
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 819799dbabbe28a254dbc1cbe1a069f6664a9eea
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301862"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111253"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -118,9 +118,8 @@ ON SERVER
 
 ## <a name="arguments"></a>Arguments
   
-|||  
-|-|-|  
 |Terme|Définition|  
+|-|-|
 |*event_session_name*|Nom d'une session d'événements existante.|  
 |STATE = START &#124; STOP|Démarre ou arrête la session d'événements. Cet argument est valide uniquement lorsque ALTER EVENT SESSION est appliqué à un objet de la session d'événements.|  
 |ADD EVENT \<event_specifier>|Associe l’événement identifié par \<event_specifier> à la session d’événements.|

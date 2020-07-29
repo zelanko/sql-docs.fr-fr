@@ -20,12 +20,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f854ae440a51d1f9b3b873dad9f0aa21e88f3ab5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786078"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247288"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -159,9 +159,8 @@ ms.locfileid: "85786078"
   
 ## <a name="related-tasks-required"></a>Tâches associées (obligatoires)  
   
-|||  
+|Tâche|Rubrique|  
 |-|-|  
-|**Tâche**|**Rubrique**|  
 |Fournit une vue d'ensemble de la capture de données modifiées.|[À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)|  
 |Explique comment activer et désactiver la capture de données modifiées sur une base de données ou une table.|[Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |Indique comment administrer et analyser la capture de données modifiées.|[Administrer et surveiller la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

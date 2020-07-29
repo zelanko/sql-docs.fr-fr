@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: a4edde16397c865d0bc79e280e382857afde8714
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ae545c95c1863346c96d009140eb6709b4fcc4e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198466"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008304"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Créer des diagrammes de base de données (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Outil visuel Concepteur de base de données permettant de concevoir et de visualiser une base de données à laquelle vous êtes connecté. Lors du design d'une base de données, le Concepteur de bases de données permet de créer, de modifier ou de supprimer des tables, des colonnes, des clés, des index, des relations et des contraintes. Pour visualiser une base de données, vous pouvez créer un ou plusieurs schémas illustrant toutes les tables, colonnes, clés et relations, ou quelques-unes d'entre elles.  
   
 ![Diagramme de base de données illustrant les relations entre tables](../../ssms/visual-db-tools/media/dv3w7c1.gif "Diagramme de base de données illustrant les relations entre tables")  

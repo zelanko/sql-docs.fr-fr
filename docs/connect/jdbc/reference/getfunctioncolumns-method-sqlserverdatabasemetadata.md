@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d6400652dfaac6074f19a343b9a4cf2c0ffbab8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920332"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203236"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Méthode getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |Remarques|**Chaîne**|Commentaires sur une colonne ou un paramètre.|  
 |COLUMN_DEF|**Chaîne**|Valeur par défaut de la colonne.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont propres au pilote JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Cette colonne est la même que la colonne **DATA_TYPE**, excepté pour les types de données **datetime** et **interval** ISO.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont propres au pilote JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les types de données autres que **datetime** et **interval** ISO, cette colonne prend la valeur Null.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont spécifiques au pilote JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les types de données autres que **datetime** et **interval** ISO, cette colonne prend la valeur Null.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont propres au pilote JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Longueur maximale des paramètres ou colonnes binaires et basés sur des caractères. Pour les autres types de données, il s'agit de la valeur NULL.|  
 |ORDINAL_POSITION|**int**|Pour les paramètres d'entrée et de sortie, elle représente la position commençant à 1.<br /><br /> Pour les colonnes de jeux de résultats, il s'agit de la position de la colonne dans le jeu de résultats commençant à 1.<br /><br /> Pour la valeur de retour, il s'agit de la valeur 0.|  
 |IS_NULLABLE|**Chaîne**|Détermine l'acceptation des valeurs NULL par un paramètre ou une colonne.<br /><br /> Ce peut être l’une des valeurs suivantes :<br /><br /> **YES** : Le paramètre ou la colonne peut inclure des valeurs Null.<br /><br /> **NO** : Le paramètre ou la colonne ne peut pas inclure de valeurs Null.<br /><br /> Chaîne vide ("") : Inconnu.|  

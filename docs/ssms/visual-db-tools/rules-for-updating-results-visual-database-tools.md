@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 95d22a06194bfd4121eff4ba01cb2788cf095bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b71d1e6324465df97a174134463f8d5759a2d06a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255161"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010704"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Règles relatives à la mise à jour des résultats (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Dans de nombreux cas, vous pouvez mettre à jour le jeu de résultats affiché dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md), avec quelques exceptions.  
   
 En général, pour mettre à jour des résultats, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) doit disposer de suffisamment d’informations pour identifier de façon unique la ligne de la table. C'est le cas par exemple si la requête inclut une clé primaire dans la liste de sortie. En outre, vous devez être autorisé à mettre à jour la base de données.  

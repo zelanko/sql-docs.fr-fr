@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 75346207a2f91744c78db783bf40edd679ebcbb8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fbd00cd0d6bdd06e23ec65ddb73ffbfa65649199
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258342"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009293"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Environnements multi-utilisateurs (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Dans un environnement multi-utilisateur, d'autres personnes peuvent se connecter et apporter des modifications à la base de données sur laquelle vous travaillez. Il en résulte que plusieurs personnes peuvent utiliser les mêmes objets d'une même base de données en même temps. Par conséquent, dans un environnement multi-utilisateur, vous ne devez pas oublier que d'autres utilisateurs peuvent modifier des bases de données en même temps que vous.  
   
 Les autorisations d'accès sont un problème clé des bases de données dans un environnement multi-utilisateur. Les autorisations qui vous sont accordées sur la base de données déterminent l'étendue de l'utilisation que vous pouvez en faire. Par exemple, pour apporter des modifications à des objets d'une base de données, vous devez avoir sur cette base des autorisations d'écriture appropriées. Pour plus d'informations sur les autorisations d'accès à votre base de données, consultez sa documentation. Pour plus d’informations, consultez [Autorisations et Visual Database Tools &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md).  

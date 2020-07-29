@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb479998c739a5d9bd62a5f7d6c517a3ec4b52d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737674"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246298"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Gestion de sauvegarde de SQL Server sur Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,8 @@ ms.locfileid: "85737674"
   
  Des applets de commande PowerShell sont également disponibles pour configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. SQL Server Management Studio prend en charge la restauration de sauvegardes créées par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l'aide de la tâche **Restaurer la base de données** .  
   
-|||  
-|-|-|  
 |Objet système|Description|  
+|-|-|  
 |**MSDB**|Stocke les métadonnées et l'historique de toutes les sauvegardes créées par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Active la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Configure les paramètres avancés pour la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], telles que le chiffrement.|  

@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d5355354176fed20e2a5be855d7a5362fc371dcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3782141ec728483157890264f86a45087e1d2c7d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246283"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008114"
 ---
 # <a name="verify-queries-visual-database-tools"></a>Vérifier des requêtes (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Pour éviter tout problème, vous pouvez vérifier la requête que vous avez conçue afin de vous assurer que sa syntaxe est correcte. Cette option s’avère particulièrement utile quand vous entrez des instructions dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 Tenez compte des remarques suivantes lors de la vérification de requêtes :  
