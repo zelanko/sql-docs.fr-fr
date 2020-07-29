@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555254"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122772"
 ---
 # <a name="temporal-table-security"></a>Sécurité de la table temporelle
 
@@ -58,15 +58,15 @@ Lorsque SYSTEM_VERSIONING est défini sur ON, les opérations de modification de
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>Sécurité de l’instruction CREATE Temporal TABLE
 
-||Créer une nouvelle table d’historique|Réutiliser la table d’historique existante|
-|-|------------------------------|----------------------------------|
+| Fonctionnalité | Créer une nouvelle table d’historique | Réutiliser la table d’historique existante |
+| ------- | ------------------------ | ---------------------------- |
 |Autorisations requises|Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur les schémas dans lesquels les tables en cours et d’historique sont créées|Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur le schéma dans lequel la table en cours va être créée<br /><br /> Autorisation**CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **CREATE TABLE** qui crée la table temporelle|
 |Audit|L’audit révèle que les utilisateurs ont essayé de créer deux objets. L’opération peut échouer en raison d’autorisations insuffisantes pour créer une table dans la base de données ou en raison d’autorisations insuffisantes pour modifier les schémas des tables.|L’audit indique que la table temporelle a été créée. L’opération peut échouer en raison d’autorisations insuffisantes pour créer une table dans la base de données, en raison d’autorisations insuffisantes pour modifier le schéma de la table temporelle, ou en raison d’autorisations insuffisantes sur la table d’historique.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Sécurité de l’instruction ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF)
 
-||Créer une nouvelle table d’historique|Réutiliser la table d’historique existante|
-|-|------------------------------|----------------------------------|
+| Fonctionnalité | Créer une nouvelle table d’historique | Réutiliser la table d’historique existante |
+| ------- | ------------------------ | ---------------------------- |
 |Autorisations requises|Autorisation**CONTROL** dans la base de données<br /><br /> Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur les schémas dans lesquels la table d’historique est créée|Autorisation**CONTROL** sur la table d’origine qui est modifiée<br /><br /> Autorisation**CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **ALTER TABLE**|
 |Audit|L’audit indique que la table temporelle a été modifiée et que la table d’historique a été créée en même temps. L’opération peut échouer en raison d’autorisations insuffisantes pour créer une table dans la base de données, en raison d’autorisations insuffisantes pour modifier le schéma de la table d’historique, ou en raison d’autorisations insuffisantes pour modifier la table temporelle.|L’audit indique que la table temporelle a été modifiée, mais que l’opération nécessitait l’accès à la table d’historique. L’opération peut échouer en raison d’autorisations insuffisantes sur la table d’historique ou d’autorisations insuffisantes sur la table en cours.|
 

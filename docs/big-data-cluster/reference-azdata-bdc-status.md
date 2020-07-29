@@ -5,25 +5,25 @@ description: Article de référence sur les commandes azdata bdc status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01518e62d67c27a72bf1e0d78d249b1a64276883
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 731b8c169816b365469521e2b8c952044599b68c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821001"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242375"
 ---
 # <a name="azdata-bdc-status"></a>azdata bdc status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L’article suivant fournit des références sur les commandes `bdc status` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
+L’article suivant fournit des références sur les commandes `sql` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
-|     |     |
+| Commande | Description |
 | --- | --- |
 [azdata bdc status show](#azdata-bdc-status-show) | Indique l’état du cluster Big Data.
 ## <a name="azdata-bdc-status-show"></a>azdata bdc status show
@@ -58,7 +58,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 

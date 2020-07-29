@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755697"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242960"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Fonctionnalités et tâches de l'utilitaire SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755697"
 ## <a name="related-tasks"></a>Tâches associées  
  Utilisez les rubriques ci-dessous pour démarrer avec l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|||  
+|Description|Rubrique|  
 |-|-|  
-|**Description**|**Rubrique**|  
 |Décrit des éléments à prendre en considération lors de la configuration d'un serveur pour exécuter des jeux d'éléments de collecte d'utilitaire et de non-utilitaire sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considérations sur l’exécution de jeux d’éléments de collecte de l’utilitaire et non-utilitaire sur la même instance de SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Décrit comme créer un point de contrôle d'utilitaire SQL Server.|[Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Décrit comment se connecter à un Utilitaire SQL Server.|[Se connecter à un utilitaire SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

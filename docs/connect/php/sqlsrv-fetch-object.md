@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a457fbc0f87f9ba83170f8235e7ae144f4e86648
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922796"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893177"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,6 @@ Récupère la ligne suivante de données sous la forme d’un objet PHP.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
@@ -81,17 +80,21 @@ Les règles suivantes s’appliquent lors de la spécification d’une classe av
   
 Si un champ sans nom est retourné, **sqlsrv_fetch_object** ignore la valeur du champ et émet un avertissement. Par exemple, considérez cette instruction Transact-SQL qui insère une valeur dans une table de base de données et récupère la clé primaire générée par le serveur :  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_fetch_object**, la valeur retournée par `SELECT SCOPE_IDENTITY()` est ignorée, et un avertissement est émis. Pour éviter cela, vous pouvez spécifier un nom pour le champ retourné dans l’instruction Transact-SQL. Voici un moyen de spécifier un nom de colonne dans Transact-SQL :  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’un objet PHP. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
-```  
+``` 
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -234,12 +237,16 @@ La variable **sqlsrv_fetch_object** retourne toujours des données en fonction d
   
 Si un champ sans nom est retourné, **sqlsrv_fetch_object** ignore la valeur du champ et émet un avertissement. Par exemple, considérez cette instruction Transact-SQL qui insère une valeur dans une table de base de données et récupère la clé primaire générée par le serveur :  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_fetch_object**, la valeur retournée par `SELECT SCOPE_IDENTITY()` est ignorée, et un avertissement est émis. Pour éviter cela, vous pouvez spécifier un nom pour le champ retourné dans l’instruction Transact-SQL. Voici un moyen de spécifier un nom de colonne dans Transact-SQL :  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  

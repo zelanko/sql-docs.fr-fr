@@ -2,23 +2,23 @@
 title: Générer du code pour les tâches de data wrangling
 titleSuffix: Azure Data Studio
 description: Cet article explique comment utiliser l’accélérateur de code PROSE dans Azure Data Studio pour générer automatiquement du code pour les tâches de data wrangling courantes.
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957684"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243440"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Data wrangling avec l’accélérateur de code PROSE
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 L’accélérateur de code PROSE génère du code Python lisible pour vos tâches de data wrangling. Vous pouvez mélanger le code généré avec votre code écrit manuellement de manière fluide lors de l’utilisation d’un notebook dans Azure Data Studio. Cet article fournit une vue d’ensemble de la façon dont vous pouvez utiliser l’accélérateur de code.
 
@@ -113,8 +113,8 @@ Pour plus d’informations, consultez la [documentation](https://aka.ms/prose-co
 Un autre scénario courant consiste à détecter les modèles dans une colonne de chaîne à des fins de nettoyage ou de regroupement. Par exemple, vous pouvez avoir une colonne de date avec des dates dans plusieurs formats différents. Pour normaliser les valeurs, vous souhaiterez peut-être écrire des instructions conditionnelles à l’aide d’expressions régulières.
 
 
-|   |Name                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|Ligne|Nom                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |

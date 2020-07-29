@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b74f4847964be363972c4226f124c94cce032a07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 511f8a5d8fb239da7f125231083264d798939bbb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246021"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004101"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utiliser les clauses HAVING et WHERE dans la même requête (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Il peut arriver que vous souhaitiez exclure des lignes individuelles de groupes (à l'aide d'une clause WHERE) avant d'appliquer une condition aux groupes dans leur ensemble (à l'aide d'une clause HAVING).  
   
 Une clause HAVING est similaire à une clause WHERE si ce n'est qu'elle s'applique uniquement aux groupes dans leur ensemble (c'est-à-dire aux lignes du jeu de résultats qui représentent des groupes), tandis que la clause WHERE s'applique aux lignes individuelles. Une requête peut comporter à la fois une clause WHERE et une clause HAVING. Dans ce cas :  

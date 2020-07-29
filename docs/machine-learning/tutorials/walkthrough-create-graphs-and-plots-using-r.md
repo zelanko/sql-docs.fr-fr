@@ -2,22 +2,22 @@
 title: 'Didacticiel R : Créer des graphes et des tracés'
 description: Didacticiel illustrant comment créer des graphiques et des tracés à l’aide des fonctions de langage R sur SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781819"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des tracés à l’aide de SQL et R (procédure pas à pas)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Dans cette partie de la procédure pas à pas, vous allez apprendre des techniques de génération de tracés et de cartes en utilisant R avec des données SQL Server. Vous allez d’abord créer un histogramme simple, puis développer un tracé de carte plus complexe.
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aec569600c07fb829836313972c02241f121d088
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a322d43f7ceaa388df2a143723a3db3184091560
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254554"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010927"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Ajouter un outil externe au menu Outils (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Vous pouvez lancer toute application [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows ou [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Vous pouvez ajouter des applications externes au menu **Outils** et exécutées à partir de celui-ci.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Pour ajouter un outil externe au menu Outils  

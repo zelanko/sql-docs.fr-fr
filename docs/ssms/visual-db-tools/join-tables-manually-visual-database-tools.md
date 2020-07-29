@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7bf66542a0176f991d6b7cfaf4653379af2912e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b34c28fbbf015c9de92fd8b4b0585b871e4aa364
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224630"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996891"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Joindre manuellement des tables (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Quand vous ajoutez plusieurs tables à une requête, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) tente de les joindre en fonction de données communes ou d’informations enregistrées dans la base de données sur d’éventuelles liaisons entre les tables. Pour plus d’informations, consultez [Joindre automatiquement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). Néanmoins, si le Concepteur de requêtes et de vues n'a pas joint automatiquement les tables ou si vous voulez créer d'autres conditions de jointure entre les tables, vous pouvez joindre les tables manuellement.  
   
 Vous pouvez créer des jointures basées sur des comparaisons entre deux colonnes, quelles qu'elles soient et non uniquement entre des colonnes qui contiennent les mêmes informations. Par exemple, si votre base de données contient deux tables, `titles` et `roysched`, vous pouvez comparer des valeurs de la colonne `ytd_sales` de la table `titles` à celles des colonnes `lorange` et `hirange` de la table `roysched` . La création d'une telle jointure vous permet de trouver des titres dont les ventes de l'année à ce jour figurent entre les plages inférieure et supérieure des paiements de droits d'auteur.  

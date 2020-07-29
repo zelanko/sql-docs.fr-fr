@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7be77c2ce856a1940197a7b1d52550beac011e4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3d41b6e48a9b5125b661d2bbfc5dbc6b3a7fe3b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252341"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008060"
 ---
 # <a name="options-environment---help---online-page"></a>Options (Environnement - Aide - Page En ligne)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 La boîte de dialogue **Options** vous permet de spécifier les sources d’aide à utiliser pour les recherches, notamment pour l’aide F1, dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , sélectionnez **Aide**, puis cliquez sur **En ligne**. Si la page **En ligne** n'apparaît pas dans la liste, activez la case à cocher **Afficher tous les paramètres** dans la boîte de dialogue **Options** .  
   
 **Lors du chargement du contenu d'aide**  

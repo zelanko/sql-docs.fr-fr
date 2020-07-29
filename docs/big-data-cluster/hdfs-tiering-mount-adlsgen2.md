@@ -5,16 +5,16 @@ description: Cet article explique comment configurer la hiérarchisation HDFS po
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730648"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment monter ADLS Gen2 pour la hiérarchisation HDFS dans un cluster Big Data
 
@@ -48,7 +48,7 @@ Pour pouvoir utiliser les informations d’identification OAuth pour le montage,
 1. Dans la barre de navigation de droite, sélectionnez « Inscriptions d’applications » et créez une nouvelle inscription.
 1. Créez une application web et suivez l’Assistant. **N’oubliez pas le nom de l’application que vous créez ici**. Vous devrez ajouter ce nom à votre compte ADLS en tant qu’utilisateur autorisé. Notez également l’ID du client d’application dans la vue d’ensemble lorsque vous sélectionnez l’application.
 1. Une fois l’application web créée, accédez à « Certificats & secrets », créez un **nouveau secret client**, puis sélectionnez une durée pour la clé. **Ajoutez** le secret.
-1.     Revenez à la page Inscriptions des applications et cliquez sur « Points de terminaison » en haut de la page. Notez l’URL du **Point de terminaison de jeton OAuth (v2)** .
+1. Revenez à la page Inscriptions des applications et cliquez sur « Points de terminaison » en haut de la page. Notez l’URL du **Point de terminaison de jeton OAuth (v2)** .
 1. Les éléments suivants doivent maintenant être signalés pour OAuth :
 
     - « ID du client d’application » de l’application web
@@ -71,13 +71,13 @@ Ouvrez une invite de commandes sur une machine client pouvant accéder à votre 
 
 **Notez** que vous devez supprimer les sauts de ligne et les espaces entre les virgules « , » lorsque vous fournissez les informations d’identification. La mise en forme ci-dessous a pour simple but de faciliter la lecture.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>Utiliser des clés d’accès pour le montage
 
@@ -94,10 +94,10 @@ Vous pouvez également monter à l’aide des clés d’accès que vous pouvez o
 
 **Notez** que vous devez supprimer les sauts de ligne et les espaces entre les virgules « , » lorsque vous fournissez les informations d’identification. La mise en forme ci-dessous a pour simple but de faciliter la lecture.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Monter le stockage HDFS distant
 

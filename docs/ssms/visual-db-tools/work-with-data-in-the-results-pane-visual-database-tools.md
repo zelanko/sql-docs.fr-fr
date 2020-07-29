@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 4161966534f65936bbddc8753cdb116ea5f47e33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 759aaed19c2ef313712725edaa03b91eb37afcbe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246218"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002596"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utiliser des données du volet de résultats (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Après avoir exécuté une requête ou une vue, les résultats sont affichés dans le volet Résultats. Vous pouvez ensuite travailler avec ces résultats. Par exemple, vous pouvez ajouter ou supprimer des lignes, entrer ou modifier des données, et naviguer facilement parmi les vastes ensembles de résultats.  
   
 Les informations suivantes peuvent vous aider à éviter certains problèmes et à utiliser efficacement ces résultats.  

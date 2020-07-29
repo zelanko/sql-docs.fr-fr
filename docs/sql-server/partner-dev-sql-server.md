@@ -5,19 +5,18 @@ ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
-ms.technology: ''
-ms.prod_service: database-engine
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0f2bb38923f52edd8f1dae3410d29c7d4babc95
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656754"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923055"
 ---
 # <a name="sql-server-development-partners"></a>Partenaires pour le développement avec SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Pour la prise en charge du développement de solutions de base de données SQL Server, vous pouvez choisir parmi un large éventail d’outils de pointe.  Cet article présente les sociétés partenaires de Microsoft offrant des solutions de développement pour Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Nos partenaires pour le développement

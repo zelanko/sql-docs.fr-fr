@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 93a81e3cc2dc7990c2bbf0207e72d258923eae66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 674f27ad2534f6cabb44402ee675aad844a5e26c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257537"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245531"
 ---
 # <a name="view-or-modify-jobs"></a>Afficher ou modifier les travaux
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -64,9 +63,8 @@ Les membres du rôle serveur fixe **sysadmin** peuvent afficher la définition o
   
 ## <a name="related-tasks"></a>Tâches associées  
   
-|||  
+|Description|Rubrique|  
 |-|-|  
-|**Description**|**Rubrique**|  
 |Explique comment afficher des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Afficher un travail](../../ssms/agent/view-a-job.md)|  
 |Explique comment afficher le journal d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Afficher l'historique des travaux](../../ssms/agent/view-the-job-history.md)|  
 |Explique comment supprimer le contenu du journal d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Effacer le journal d'historique des travaux](../../ssms/agent/clear-the-job-history-log.md)|  

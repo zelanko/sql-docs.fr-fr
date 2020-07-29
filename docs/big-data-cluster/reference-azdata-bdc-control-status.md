@@ -1,29 +1,29 @@
 ---
 title: Informations de référence sur azdata bdc control status
+titleSuffix: SQL Server big data clusters
 description: Article de référence sur les commandes azdata bdc control status
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a617b57e4a73db83d88573b77f7058e0aab3889
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5036e7646a847edfa38998694ace8b35d649dd5e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75233928"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942906"
 ---
 # <a name="azdata-bdc-control-status"></a>azdata bdc control status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L’article suivant fournit des références sur les commandes `bdc control` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
+L’article suivant fournit des références sur les commandes `sql` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
-|     |     |
+| Commande | Description |
 | --- | --- |
 [azdata bdc control status show](#azdata-bdc-control-status-show) | État du service de contrôle.
 ## <a name="azdata-bdc-control-status-show"></a>azdata bdc control status show
@@ -58,7 +58,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 

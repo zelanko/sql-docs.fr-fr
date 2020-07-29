@@ -1,29 +1,29 @@
 ---
 title: Informations de référence sur azdata bdc spark statement
+titleSuffix: SQL Server big data clusters
 description: Article de référence sur les commandes azdata bdc spark statement.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 38d556944db9e8c269fb8acf8f3089050fb8b1d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e43dcb6cc5bb28876179bcd2d2da25ae9ac4a2f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258612"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243485"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L’article suivant fournit des références sur les commandes `bdc spark statement` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
+L’article suivant fournit des références sur les commandes `sql` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
-|     |     |
+| Commande | Description |
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | Liste toutes les instructions d’une session Spark donnée.
 [azdata bdc spark statement create](#azdata-bdc-spark-statement-create) | Crée une nouvelle instruction Spark dans la session donnée.
@@ -33,9 +33,10 @@ L’article suivant fournit des références sur les commandes `bdc spark statem
 Liste toutes les instructions d’une session Spark donnée.
 ```bash
 azdata bdc spark statement list --session-id -i 
-              ```
-### Examples
-List all the session statements.
+                                
+```
+### <a name="examples"></a>Exemples
+Liste toutes les instructions d’une session.
 ```bash
 azdata spark statement list --session-id 0
 ```
@@ -50,7 +51,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
@@ -77,7 +78,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
@@ -104,7 +105,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
@@ -131,7 +132,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 

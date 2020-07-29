@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003662"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113355"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -47,7 +47,9 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > Les numéros de version du moteur de base de données pour SQL Server et Azure SQL Database ne sont pas comparables les uns aux autres. Il s’agit plutôt de numéros de build internes pour ces produits distincts. Le moteur de base de données pour Azure SQL Database repose sur la même base de code que le moteur de base de données SQL Server. Plus important encore, le moteur de base de données dans Azure SQL Database a toujours les bits les plus récents du moteur de base de données SQL. La version 12 d’Azure SQL Database est plus récente que la version 15 de SQL Server.
 
-## <a name="arguments"></a>Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Arguments
 
 *propertyname*  
 Expression contenant les informations de propriétés à retourner pour le serveur. *propertyname* peut avoir l’une des valeurs suivantes.  

@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773650"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Qu’est-ce que l’instance principale dans un cluster Big Data SQL Server ?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article décrit le rôle de l’*instance principale SQL Server* dans un cluster Big Data pour SQL Server 2019. L’instance principale est une instance SQL Server s’exécutant dans un cluster Big Data pour gérer la connectivité, les requêtes avec scale-out, les métadonnées et les bases de données utilisateur, et les services Machine Learning.
 

@@ -5,19 +5,19 @@ ms.date: 12/18/2019
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a774b93d60a2a44e419b362ae2efe2309bf9b2ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75776465"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112099"
 ---
 # <a name="sql-server-end-of-support-options"></a>Options de fin du support SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Cet article explique les options d’adressage des produits SQL Server qui ont atteint la fin du support.
 

@@ -2,22 +2,22 @@
 title: Créer un modèle Python - revoscalepy
 description: Écrire un script Python à l’aide de fonctions revoscalepy pour créer des modèles de science des données qui s’exécutent à distance dans SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5faa8688f3036f80b947ccc5d99c09c4612f26fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 268b8626fc3a121adfded58c1184b332da04139c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730442"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Utiliser Python avec revoscalepy pour créer un modèle qui s’exécute à distance sur SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 La bibliothèque Python [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) de Microsoft fournit des algorithmes de science des données pour l’exploration, la visualisation, les transformations et l’analyse des données. Cette bibliothèque a une importance stratégique dans les scénarios d’intégration Python dans SQL Server. Sur un serveur à plusieurs cœurs, les fonctions **revoscalepy** peuvent s’exécuter en parallèle. Dans une architecture distribuée avec un serveur central et des stations de travail clientes (des ordinateurs physiques distincts, qui ont tous la même bibliothèque **revoscalepy**), vous pouvez écrire du code Python qui démarre localement, puis déplace l’exécution vers une instance SQL Server distante où les données résident.
 
