@@ -21,15 +21,15 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cf464370c5c2ca3f5075205c6783e9332309f12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80ca5a060d464562b9b97d2931082af98f3df785
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135224"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395230"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retourne une ligne pour chaque prédicat de sécurité de la base de données.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "68135224"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   
- [sys. security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [CRÉER une stratégie de sécurité &#40;&#41;Transact-SQL](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
+ [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

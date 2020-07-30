@@ -31,15 +31,15 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e9130ac3a22da474b7ce576969e26bd9205ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d53fe144263d9e3a3b91d6f0e929076a7043b3f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917933"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395304"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Exécute une chaîne de commande ou de caractères dans un lot [!INCLUDE[tsql](../../includes/tsql-md.md)], ou l’un des modules suivants : procédure stockée système, procédure stockée définie par l’utilisateur, procédure stockée CLR, fonction scalaire définie par l’utilisateur ou procédure stockée étendue. L'instruction EXECUTE peut être utilisée pour envoyer des commandes directes à des serveurs liés. De plus, il est possible de définir explicitement le contexte dans lequel une chaîne de caractères ou une commande s'exécute. Les métadonnées pour le jeu de résultats peuvent être définies à l'aide des options WITH RESULT SETS.
   

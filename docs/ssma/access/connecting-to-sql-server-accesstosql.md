@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6266eb0596b351a7ef54baed6a7a76a7a655ac60
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293086"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395858"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connexion à SQL Server (AccessToSQL)
 Pour migrer des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez vous connecter à l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand vous vous connectez, SSMA obtient les métadonnées relatives aux bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche les métadonnées de la base de données dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -95,9 +95,8 @@ Il est autorisé à se connecter/se reconnecter à des versions ultérieures de 
   
 4.  La compatibilité de version supérieure n’est pas valide pour SQL Azure.  
   
-||||||||
+|TYPE de projet et VERSION du serveur cible|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (version : 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (version : 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (version : 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (version : 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (version : 13. x)|SQL Azure|  
 |-|-|-|-|-|-|-|
-|**TYPE de projet et VERSION du serveur cible**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (version : 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (version : 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (version : 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (version : 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (version : 13. x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Oui|Oui|Oui|Oui|Oui||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Oui|Oui|Oui|Oui||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Oui|Oui|Oui||

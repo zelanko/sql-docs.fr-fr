@@ -29,15 +29,15 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30d04f709a4caac5f3ec266f1130737264029f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8ead92fb3a4f44bee96cdf12dc8bddc164fe310
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922953"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395395"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Marque la fin d'une transaction implicite ou explicite réussie. Si @@TRANCOUNT a la valeur 1, COMMIT TRANSACTION rend permanentes toutes les modifications de données effectuées dans la base de données depuis le début de la transaction, libère les ressources détenues par la transaction et décrémente @@TRANCOUNT à 0. Si @@TRANCOUNT est supérieur à 1, COMMIT TRANSACTION décrémente @@TRANCOUNT de 1 seulement et la transaction reste active.  
   

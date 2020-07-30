@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293576"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395164"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversion de schémas Oracle (OracleToSQL)
 Après vous être connecté à Oracle, connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et définir les options de mappage de données et de projet, vous pouvez convertir des objets de base de données Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de base de données.  
@@ -34,19 +34,18 @@ Avant de convertir des objets, passez en revue les options de conversion de proj
 ## <a name="conversion-results"></a>Résultats de la conversion  
 Le tableau suivant répertorie les objets Oracle qui sont convertis et les objets qui en résultent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|||  
-|-|-|  
 |Objets Oracle|Objets SQL Server résultants|  
+|-|-|  
 |Fonctions|Si la fonction peut être convertie directement en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crée une fonction.<br /><br />Dans certains cas, la fonction doit être convertie en procédure stockée. Dans ce cas, SSMA crée une procédure stockée et une fonction qui appelle la procédure stockée.|  
 |Procédures|Si la procédure peut être convertie directement en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crée une procédure stockée.<br /><br />Dans certains cas, une procédure stockée doit être appelée dans une transaction autonome. Dans ce cas, SSMA crée deux procédures stockées : une qui implémente la procédure et une autre qui est utilisée pour appeler la procédure stockée d’implémentation.|  
-|.|SSMA crée un ensemble de procédures stockées et de fonctions unifiées par des noms d’objets similaires.|  
-|Séquences|SSMA crée des objets séquence (SQL Server 2012 ou SQL Server 2014) ou émule des séquences Oracle.|  
+|Packages|SSMA crée un ensemble de procédures stockées et de fonctions unifiées par des noms d’objets similaires.|  
+|Séquences|SSMA crée des objets séquences (SQL Server 2012 ou SQL Server 2014) ou émule des séquences Oracle.|  
 |Tables avec des objets dépendants, tels que des index et des déclencheurs|SSMA crée des tables avec des objets dépendants.|  
-|Affichage avec des objets dépendants, tels que des déclencheurs|SSMA crée des vues avec des objets dépendants.|  
-|Vues matérialisées|**SSMA crée des vues indexées sur SQL Server, à quelques exceptions près. La conversion échoue si la vue matérialisée comprend une ou plusieurs des constructions suivantes :**<br /><br />Fonction définie par l'utilisateur<br /><br />Champ/fonction/expression non déterministe dans les clauses SELECT, WHERE ou GROUP BY<br /><br />Utilisation d’une colonne de type float dans les clauses SELECT *, WHERE ou GROUP BY (cas particuliers du précédent problème)<br /><br />Type de données personnalisé (y compris les tables imbriquées)<br /><br />COUNT ( &lt; champ distinct &gt; )<br /><br />FETCH<br /><br />Jointures OUTER (LEFT, RIGHT ou FULL)<br /><br />Sous-requête, autre vue<br /><br />SUPÉRIEUR, CLASSEMENT, PROSPECT, JOURNAL<br /><br />MIN, MAX<br /><br />UNION, SIGNE MOINS, INTERSECTION<br /><br />HAVING|  
-|Déclencheur|**SSMA crée des déclencheurs en fonction des règles suivantes :**<br /><br />Les déclencheurs BEFORe sont convertis en déclencheurs INSTEAD OF.<br /><br />Les déclencheurs AFTER sont convertis en déclencheurs AFTER.<br /><br />Les déclencheurs INSTEAD OF sont convertis en déclencheurs INSTEAD OF. Plusieurs déclencheurs INSTEAD OF définis sur la même opération sont combinés en un seul déclencheur.<br /><br />Les déclencheurs de niveau ligne sont émulés à l’aide de curseurs.<br /><br />Les déclencheurs en cascade sont convertis en plusieurs déclencheurs individuels.|  
-|Synonymes|**Des synonymes sont créés pour les types d’objets suivants :**<br /><br />Tables et tables d’objets<br /><br />Vues et vues d’objets<br /><br />Procédures stockées<br /><br />Fonctions<br /><br />**Les synonymes pour les objets suivants sont résolus et remplacés par des références d’objet directes :**<br /><br />Séquences<br /><br />.<br /><br />Objets de schéma de classe Java<br /><br />Types d’objets définis par l’utilisateur<br /><br />Les synonymes d’un autre synonyme ne peuvent pas être migrés et sont marqués comme des erreurs.<br /><br />Les synonymes ne sont pas créés pour les vues matérialisées.|  
-|Types définis par l’utilisateur|**SSMA ne prend pas en charge la conversion de types définis par l’utilisateur. Les types définis par l’utilisateur, y compris son utilisation dans les programmes PL/SQL, sont signalés par des erreurs de conversion spéciales guidées par les règles suivantes :**<br /><br />La colonne de table d’un type défini par l’utilisateur est convertie en VARCHAR (8000).<br /><br />L’argument de type défini par l’utilisateur pour une procédure stockée ou une fonction est converti en VARCHAR (8000).<br /><br />La variable de type défini par l’utilisateur dans le bloc PL/SQL est convertie en VARCHAR (8000).<br /><br />La table des objets est convertie en table standard.<br /><br />La vue objet est convertie en vue standard.|  
+|Affichage avec des objets dépendants, tels que des déclencheurs|SSMA crée des affichages avec des objets dépendants.|  
+|Vues matérialisées|**SSMA crée des vues indexées sur SQL Server, à quelques exceptions près. La conversion échoue si la vue matérialisée comprend une ou plusieurs des constructions suivantes :**<br /><br />Fonction définie par l'utilisateur<br /><br />Champ/fonction/expression non déterministe dans les clauses SELECT, WHERE ou GROUP BY<br /><br />Utilisation d’une colonne de type float dans les clauses SELECT *, WHERE ou GROUP BY (cas particuliers du précédent problème)<br /><br />Type de données personnalisé (notamment les tableaux imbriqués)<br /><br />COUNT (&lt;champ&gt; distinct)<br /><br />FETCH<br /><br />Jointures OUTER (LEFT, RIGHT ou FULL)<br /><br />Sous-requête, autre affichage<br /><br />OVER, RANK, LEAD, LOG<br /><br />MIN, MAX<br /><br />UNION, MINUS, INTERSECT<br /><br />HAVING|  
+|Déclencheur|**SSMA crée des déclencheurs en fonction des règles suivantes :**<br /><br />Les déclencheurs BEFORE sont convertis en déclencheurs INSTEAD OF.<br /><br />Les déclencheurs AFTER sont convertis en déclencheurs AFTER.<br /><br />Les déclencheurs INSTEAD OF sont convertis en déclencheurs INSTEAD OF. Plusieurs déclencheurs INSTEAD OF définis sur la même opération sont combinés en un seul déclencheur.<br /><br />Les déclencheurs de niveau ligne sont émulés à l’aide de curseurs.<br /><br />Les déclencheurs en cascade sont convertis en plusieurs déclencheurs individuels.|  
+|Synonymes|**Des synonymes sont créés pour les types d’objets suivants :**<br /><br />Tables et tables d’objets<br /><br />Vues et vues d’objets<br /><br />Procédures stockées<br /><br />Fonctions<br /><br />**Les synonymes pour les objets suivants sont résolus et remplacés par des références d’objet directes :**<br /><br />Séquences<br /><br />.<br /><br />Objets de schéma de classe Java<br /><br />Types d'objets définis par l'utilisateur<br /><br />Les synonymes d’un autre synonyme ne peuvent pas être migrés et sont marqués comme des erreurs.<br /><br />Les synonymes ne sont pas créés pour les vues matérialisées.|  
+|Types définis par l’utilisateur|**SSMA ne prend pas en charge la conversion de types définis par l’utilisateur. Les types définis par l’utilisateur, y compris son utilisation dans les programmes PL/SQL, sont signalés par des erreurs de conversion spéciales guidées par les règles suivantes :**<br /><br />La colonne de table d’un type défini par l’utilisateur est convertie en VARCHAR (8000).<br /><br />L’argument de type défini par l’utilisateur pour une procédure stockée ou une fonction est converti en VARCHAR (8000).<br /><br />La variable de type défini par l’utilisateur dans le bloc PL/SQL est convertie en VARCHAR (8000).<br /><br />La table des objets est convertie en table standard.<br /><br />L’affichage des objets est converti en vue standard.|  
   
 ## <a name="converting-oracle-database-objects"></a>Conversion d’objets Oracle Database  
 Pour convertir des objets de base de données Oracle, vous devez d’abord sélectionner les objets que vous souhaitez convertir, puis demander à SSMA d’effectuer la conversion. Pour afficher les messages de sortie pendant la conversion, dans le menu **affichage** , sélectionnez **sortie**.  

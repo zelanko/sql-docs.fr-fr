@@ -20,15 +20,15 @@ ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f4aa79f2c93e1c78c895f0e3d47e3114df20a8c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a3015ae1482c695eb02bf6026c8a4fa0dc6ba47
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834446"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395968"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Affichages catalogue de schémas-sys. schemas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Contient une ligne pour chaque schéma de base de données.  
   
@@ -47,7 +47,7 @@ Les schémas de base de données jouent le rôle d’espaces de noms ou de conte
 Chaque schéma a un propriétaire. Le propriétaire est un [principal](../../relational-databases/security/authentication-access/principals-database-engine.md)de sécurité.
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** .  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)

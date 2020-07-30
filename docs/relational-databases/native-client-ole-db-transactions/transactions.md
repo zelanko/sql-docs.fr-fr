@@ -1,5 +1,5 @@
 ---
-title: Transactions | Microsoft Docs
+title: Transactions (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,14 @@ ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eca479aedc773d9bd10acce21d2bb2c59a20e404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b6f9f0f1e8cebdbfc8a586ee1192a820c141b790
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005760"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395745"
 ---
-# <a name="transactions"></a>Transactions
+# <a name="transactions-in-sql-server-native-client"></a>Transactions dans SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client implémente la prise en charge des transactions locales. Le consommateur peut utiliser des transactions distribuées ou coordonnées à l'aide de Microsoft Distributed Transaction Coordinator (MS DTC). Pour les consommateurs qui requièrent un contrôle des transactions qui s’étend sur plusieurs sessions, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client peut joindre des transactions initiées et gérées par MS DTC.  
