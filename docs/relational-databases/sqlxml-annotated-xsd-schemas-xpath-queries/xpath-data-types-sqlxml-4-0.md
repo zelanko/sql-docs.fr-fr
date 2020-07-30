@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764872"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332636"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85764872"
   
  Chaque catégorie d'opérateur convertit ses opérandes de manière distincte. Les opérateurs XPath convertissent implicitement leurs opérandes si cela est nécessaire. Les opérateurs arithmétiques convertissent leurs opérandes en **nombres**et génèrent une valeur numérique. Les opérateurs booléens convertissent leurs opérandes en **booléen**et génèrent une valeur booléenne. Les opérateurs relationnels et d'égalité génèrent une valeur booléenne. Toutefois, ils suivent des règles de conversion différentes en fonction des types de données d'origine de leurs opérandes comme le montre le tableau ci-après.  
   
-|Opérande|Opérateur relationnel|Opérateur d'égalité|  
+|Opérande|Opérateur relationnel|Opérateur d’égalité|  
 |-------------|-------------------------|-----------------------|  
 |Les deux opérandes sont des éléments node-set.|TRUE si et seulement s’il existe un nœud dans un jeu et un nœud dans le deuxième jeu, de telle sorte que la comparaison de leurs valeurs de **chaîne** est true.|Idem.|  
 |L’un est un ensemble de nœuds, l’autre une **chaîne**.|TRUE si et seulement s’il existe un nœud dans l’élément node-set de sorte que, lorsqu’il est converti en **Number**, sa comparaison avec la **chaîne** convertie en **Number** est true.|TRUE si et seulement s’il existe un nœud dans l’élément node-set de sorte que, en cas de conversion en **chaîne**, la comparaison avec la **chaîne** est true.|  
@@ -126,12 +126,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Comme le montre le tableau ci-dessous, il s'agit de la même conversion que celle appliquée à d'autres expressions XPath (telles que des littéraux ou des expressions composées).  
   
-||||||  
-|-|-|-|-|-|  
-||X est inconnu|X est une **chaîne**|X est un **nombre**|X est **booléen**|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) > 0|X != 0|-|  
+|   | X est inconnu | X est une chaîne | X est un nombre | X est booléen |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>Exemples  
   

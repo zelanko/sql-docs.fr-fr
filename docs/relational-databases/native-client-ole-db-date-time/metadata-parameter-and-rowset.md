@@ -1,5 +1,5 @@
 ---
-title: Métadonnées de paramètre et d’ensemble de lignes | Microsoft Docs
+title: Métadonnées de paramètre et d’ensemble de lignes (fournisseur OLE DB Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79bf81886795d4772a4eac08ee51912b775cc4c8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1fb12ebfb1e158ae71c2e8bbc72a7159a10a91e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005434"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245805"
 ---
-# <a name="metadata---parameter-and-rowset"></a>Métadonnées - Paramètres et ensembles de lignes
+# <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>Metadata-Parameter et rowset dans SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cette rubrique fournit des informations sur le type et les membres de type suivants en rapport avec les améliorations de date et d'heure OLE DB.  
@@ -39,10 +40,10 @@ ms.locfileid: "86005434"
   
 |Type de paramètre|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Effacer|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Effacer|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Effacer|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Définissez|  
   
@@ -84,10 +85,10 @@ ms.locfileid: "86005434"
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Effacer|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Effacer|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Effacer|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Définissez|  
   
@@ -118,10 +119,10 @@ ms.locfileid: "86005434"
   
 |Type de paramètre|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Effacer|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Effacer|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Effacer|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Définissez|  
   

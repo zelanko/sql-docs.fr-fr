@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des transactions locales | Microsoft Docs
+title: Prise en charge des transactions locales (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd6640c497226bbe2c97cbafaa9931582e9b5d6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 39de80135212acb962953c1054187e4d04e61af8
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332274"
 ---
-# <a name="supporting-local-transactions"></a>Prise en charge des transactions locales
+# <a name="supporting-local-transactions-in-sql-server-native-client"></a>Prise en charge des transactions locales dans SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Une session délimite l’étendue de la transaction pour une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction locale du fournisseur OLE DB Native Client. Quand, à la direction d’un consommateur, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client soumet une requête à une instance connectée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la demande constitue une unité de travail pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client. Les transactions locales encapsulent toujours une ou plusieurs unités de travail sur une seule [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session Native Client OLE DB fournisseur.  
@@ -128,7 +129,7 @@ if (FAILED(hr))
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mouvements](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
- [Utilisation de l’isolement de capture instantanée](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
+ [Utilisation de l’isolation d’instantané](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   

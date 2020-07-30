@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747173"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242829"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction, interface
 L’interface **ADORecordConstruction**est utilisée pour construire un objet **enregistrement** ADO à partir d’un objet OLE DB **Row** dans une application C/C++.  
@@ -29,10 +29,10 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
   
 ## <a name="properties"></a>Propriétés  
   
-|||  
+|Propriété|Description|  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|En écriture seule.<br />Définit le conteneur d’un objet OLE DB **Row** sur cet objet ADO **Record** .|  
-|[Haut](../../../ado/reference/ado-api/row-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet de **ligne** OLE DB à partir de cet objet **enregistrement** ADO.|  
+|[Ligne](../../../ado/reference/ado-api/row-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet de **ligne** OLE DB à partir de cet objet **enregistrement** ADO.|  
   
 ## <a name="methods"></a>Méthodes  
  Aucun.  
@@ -40,7 +40,7 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
 ## <a name="events"></a>Événements  
  Aucun.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À partir d’un objet **Row** OLE DB ( `pRow` ), la construction d’un objet **Record** ADO ( `adoR` ) s’élève aux trois opérations de base suivantes :  
   
 1.  Créez un objet **enregistrement** ADO :  
@@ -70,9 +70,9 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
   
  Un objet **Record** ADO peut également être construit à partir du conteneur d’un objet OLE DB **Row** .  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Version :** ADO 2,0 et versions ultérieures  
   
- **Bibliothèque :** msado15. dll  
+ **Bibliothèque :** msado15.dll  
   
  **UUID :** 00000567-0000-0010-8000-00AA006D2EA4

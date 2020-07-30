@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898363"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395735"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'**<relational_operator>**'** {maximum inférieur à | le plus grand supérieur ou égal | le plus petit supérieur à | le plus petit ou égal à | plus petit}  
+ **'**<relational_operator>**'** {la plus grande inférieure à la plus grande inférieure ou égale à la plus petite plus grande que la plus \| petite supérieure \| \| ou égale}  
  Est utilisé pour identifier une valeur LSN distincte dans la table **CDC. lsn_time_mapping** avec un **tran_end_time** associé qui satisfait la relation par rapport à la valeur de *tracking_time* .  
   
  *relational_operator* est **de type nvarchar (30)**.  
@@ -60,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>Type de retour  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour comprendre comment la **sys. fn_cdc_map_time_lsn** peut être utilisée pour mapper des plages DateTime à des plages LSN, examinez le scénario suivant. Supposez qu'un utilisateur souhaite extraire des données de modifications de façon quotidienne. Autrement dit, il ne souhaite extraire que les modifications pour un jour donné jusqu'à minuit compris. La limite inférieure de la plage temporelle se situerait à minuit, sans l'inclure, le jour précédent. La limite supérieure se situerait à minuit (compris) le jour donné. L’exemple suivant montre comment la fonction **sys. fn_cdc_map_time_to_lsn** peut être utilisée pour mapper systématiquement cette plage temporelle à la plage basée sur LSN requise par les fonctions d’énumération de capture de données modifiées pour retourner toutes les modifications au sein de cette plage.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  

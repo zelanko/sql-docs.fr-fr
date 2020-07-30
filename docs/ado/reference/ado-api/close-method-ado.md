@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748914"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242789"
 ---
 # <a name="close-method-ado"></a>Close, méthode (ADO)
 Ferme un objet ouvert et tous les objets dépendants.  
@@ -54,12 +54,18 @@ object.Close
  Si vous utilisez la méthode [clone](../../../ado/reference/ado-api/clone-method-ado.md) pour créer des copies d’un objet **Recordset** ouvert, la fermeture de l’original ou d’un clone n’a aucune incidence sur les autres copies.  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [Open et Close, exemple de méthodes (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open et Close, exemple de méthode (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   

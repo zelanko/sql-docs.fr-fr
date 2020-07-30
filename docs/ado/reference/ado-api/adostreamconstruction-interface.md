@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747056"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242809"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction, interface
 L’interface **ADOStreamConstruction** est utilisée pour construire un objet de **flux** ADO à partir d’un objet OLE DB **IStream** dans une application C/C++.  
   
 ## <a name="properties"></a>Propriétés  
   
-|||  
+|Propriété|Description|  
 |-|-|  
-|[Stream, propriété](../../../ado/reference/ado-api/stream-property.md)|Lecture/écriture. Obtient/définit un objet de **flux** OLE DB.|  
+|[Flux](../../../ado/reference/ado-api/stream-property.md)|Lecture/écriture. Obtient/définit un objet de **flux** OLE DB.|  
   
 ## <a name="methods"></a>Méthodes  
  Aucun.  
@@ -37,7 +37,7 @@ L’interface **ADOStreamConstruction** est utilisée pour construire un objet d
 ## <a name="events"></a>Événements  
  Aucun.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Étant donné un objet OLE DB **IStream** ( `pStream` ), la construction d’un objet de **flux** ADO ( `adoStr` ) se base sur les trois opérations de base suivantes :  
   
 1.  Créez un objet de **flux** ADO :  
@@ -65,10 +65,10 @@ adoStrConstruct->put_Stream(pUnk);
   
  L' `adoStr` objet résultant représente maintenant l’objet de **flux** ADO construit à partir de l’objet OLE DB **IStream** .  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Version :** ADO 2,0 ou version ultérieure  
   
- **Bibliothèque :** msado15. dll  
+ **Bibliothèque :** msado15.dll  
   
  **UUID :** 00000283-0000-0010-8000-00AA006D2EA4  
   

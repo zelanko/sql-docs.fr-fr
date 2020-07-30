@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747255"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242859"
 ---
 # <a name="ado-methods"></a>Méthodes ADO
 
-|||  
+|Méthode|Description|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crée un nouvel enregistrement pour un objet **Recordset** pouvant être mis à jour.|  
 |[Append](../../../ado/reference/ado-api/append-method-ado.md)|Ajoute un objet à une collection. Si la collection est de **champs**, un nouvel objet de **champ** peut être créé avant d’être ajouté à la collection.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82747255"
 |[Execute (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Exécute la requête, l’instruction SQL ou la procédure stockée spécifiée dans la propriété **CommandText** .|  
 |[Execute (connexion ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Exécute la requête, l’instruction SQL, la procédure stockée ou le texte spécifique au fournisseur spécifié.|  
 |[Rechercher](../../../ado/reference/ado-api/find-method-ado.md)|Recherche dans un **Recordset** la ligne qui répond aux critères spécifiés.|  
-|[Postconsommation](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu du **flux** restant dans la mémoire tampon ADO à l’objet sous-jacent auquel le **flux** est associé.|  
+|[Purge](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu du **flux** restant dans la mémoire tampon ADO à l’objet sous-jacent auquel le **flux** est associé.|  
 |[get_OLEDBCommand, méthode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retourne la commande OLEDB sous-jacente, en propageant tout d’abord les informations sur les paramètres définis sur la commande ADO à la commande OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Retourne un **jeu d’enregistrements** dont les lignes représentent les fichiers et les sous-répertoires du répertoire représenté par cet **enregistrement**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Retourne l’intégralité ou une partie du contenu d’un objet de texte ou de **champ** de données binaire volumineux.|  
@@ -63,9 +63,9 @@ ms.locfileid: "82747255"
 |[Open (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|Ouvre un objet de **flux** pour manipuler des flux de données binaires ou de texte.|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|Obtient des informations de schéma de base de données à partir du fournisseur.|  
 |[put_OLEDBCommand, méthode](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Cette méthode n’effectue aucune opération. elle retourne toujours S_OK.|  
-|[Lecture](../../../ado/reference/ado-api/read-method.md)|Lit un nombre spécifié d’octets à partir d’un objet de **flux** .|  
+|[Lire](../../../ado/reference/ado-api/read-method.md)|Lit un nombre spécifié d’octets à partir d’un objet de **flux** .|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lit un nombre spécifié de caractères à partir d’un objet de **flux** de texte.|  
-|[Actualisation](../../../ado/reference/ado-api/refresh-method-ado.md)|Met à jour les objets d’une collection pour refléter les objets disponibles et spécifiques au fournisseur.|  
+|[Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md)|Met à jour les objets d’une collection pour refléter les objets disponibles et spécifiques au fournisseur.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Met à jour les données dans un objet **Recordset** en exécutant à nouveau la requête sur laquelle l’objet est basé.|  
 |[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Actualise les données de la base de données sous-jacente de l’objet **Recordset** actuel ou de la collection **Fields** d’un objet **Record** .|  
 |[Save](../../../ado/reference/ado-api/save-method.md)|Enregistre le **Recordset** dans un objet de fichier ou de **flux** .|  
@@ -74,10 +74,10 @@ ms.locfileid: "82747255"
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Définit la position qui correspond à la fin du flux.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignore une ligne entière lors de la lecture d’un flux de texte.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Obtient des informations statistiques sur un flux ouvert.|  
-|[Permet](../../../ado/reference/ado-api/supports-method.md)|Détermine si un objet **Recordset** spécifié prend en charge un type particulier de fonctionnalité.|  
+|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Détermine si un objet **Recordset** spécifié prend en charge un type particulier de fonctionnalité.|  
 |[Mettre à jour](../../../ado/reference/ado-api/update-method.md)|Enregistre les modifications apportées à la ligne actuelle d’un objet **Recordset** ou à la collection **Fields** d’un objet **Record** .|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Écrit toutes les mises à jour par lots en attente sur le disque.|  
-|[Écriture](../../../ado/reference/ado-api/write-method.md)|Écrit des données binaires dans un objet de **flux** .|  
+|[Écrire](../../../ado/reference/ado-api/write-method.md)|Écrit des données binaires dans un objet de **flux** .|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Écrit une chaîne de texte spécifiée dans un objet de **flux** .|  
   
 ## <a name="see-also"></a>Voir aussi  

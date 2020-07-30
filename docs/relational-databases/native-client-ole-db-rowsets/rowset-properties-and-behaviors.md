@@ -1,5 +1,5 @@
 ---
-title: Propriétés et comportements des ensembles de lignes | Microsoft Docs
+title: Propriétés et comportements de l’ensemble de lignes (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013137"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246848"
 ---
-# <a name="rowset-properties-and-behaviors"></a>Propriétés et comportements de l'ensemble de lignes
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>Propriétés et comportements de l’ensemble de lignes (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il s’agit des propriétés de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes du fournisseur Native Client OLE DB.  
@@ -78,7 +79,7 @@ ms.locfileid: "86013137"
 |DBPROP_REPORTMULTIPLECHANGES|Cette propriété d’ensemble de lignes n’est pas implémentée par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client. Toute tentative de lecture ou d'écriture de la valeur de propriété génère une erreur.|  
 |DBPROP_RETURNPENDINGINSERTS|Lecture/Écriture : lecture seule<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : quand une méthode qui extrait des lignes est appelée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client ne retourne pas les lignes en attente d’insertion.|  
 |DBPROP_ROWRESTRICT|Lecture/Écriture : lecture seule<br /><br /> Valeur par défaut : VARIANT_TRUE<br /><br /> Description : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les ensembles de lignes de fournisseur OLE DB Native Client ne prennent pas en charge les droits d’accès basés sur la ligne. Si l’interface **IRowsetChange** est exposée sur un ensemble de lignes, la méthode **SetData** peut être appelée par le consommateur.|  
-|DBPROP_ROWSET_ASYNCH|R/W : Lecture/écriture<br /><br /> Valeur par défaut : 0<br /><br /> Description : permet le traitement asynchrone de l'ensemble de lignes. Cette propriété figure dans le groupe de propriétés d'ensemble de lignes et dans le jeu de propriétés DBPROPSET_ROWSET. Le type est VT_14.<br /><br /> La seule valeur dans le masque de masque pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R/W : Lecture/écriture<br /><br /> Valeur par défaut : 0<br /><br /> Description : fournit un traitement asynchrone des ensembles de lignes. Cette propriété figure dans le groupe de propriétés d'ensemble de lignes et dans le jeu de propriétés DBPROPSET_ROWSET. Le type est VT_14.<br /><br /> La seule valeur dans le masque de masque pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|Lecture/Écriture : lecture seule<br /><br /> Valeur par défaut : DBPROPVAL_RT_FREETHREAD<br /><br /> Description : le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge l’accès à ses objets à partir de plusieurs threads d’exécution d’un seul consommateur.|  
 |DBPROP_SERVERCURSOR|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : une fois la propriété définie, un curseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé pour prendre en charge l'ensemble de lignes. Pour plus d’informations, consultez [Ensembles de lignes et curseurs SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : données du serveur lors de l'insertion.<br /><br /> VARIANT_TRUE : au moment où une insertion est transmise au serveur, le fournisseur récupère les données du serveur afin de mettre à jour le cache de lignes local.<br /><br /> VARIANT_FALSE : le fournisseur ne récupère pas les valeurs du serveur pour les lignes récemment insérées.|  

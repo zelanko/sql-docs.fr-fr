@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be6d076ca121923a4b6769c7dad5269c3fd642ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301159"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246598"
 ---
 # <a name="sqldescribeparam-function"></a>Fonction SQLDescribeParam
 **Conformité**  
@@ -47,7 +47,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## <a name="argument"></a>Argument  
+## <a name="arguments"></a>Arguments  
  *StatementHandle*  
  Entrée Descripteur d’instruction.  
   
@@ -57,9 +57,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  Sortie Pointeur vers une mémoire tampon dans laquelle retourner le type de données SQL du paramètre. Cette valeur est lue à partir du champ d’enregistrement SQL_DESC_CONCISE_TYPE de l’IPD. Il s’agit de l’une des valeurs de la section [types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) de l’annexe D : types de données, ou d’un type de données SQL spécifique au pilote.  
   
- Dans ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME ou SQL_TYPE_TIMESTAMP sont retournés dans * \*DataTypePtr* pour les données de date, d’heure ou d’horodatage, respectivement ; dans ODBC 2. *x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP sont retournés. Le gestionnaire de pilotes effectue les mappages requis lorsqu’un ODBC 2. l’application *x* fonctionne avec ODBC 3. *x* ou lorsqu’un pilote ODBC 3. l’application *x* fonctionne avec ODBC 2. pilote *x* .  
+ Dans ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME ou SQL_TYPE_TIMESTAMP sont retournés dans * \* DataTypePtr* pour les données de date, d’heure ou d’horodatage, respectivement ; dans ODBC 2.* x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP sont retournés. Le gestionnaire de pilotes effectue les mappages requis lorsqu’un ODBC 2. l’application *x* fonctionne avec ODBC 3. *x* ou lorsqu’un pilote ODBC 3. l’application *x* fonctionne avec ODBC 2. pilote *x* .  
   
- Lorsque *ColumnNumber* est égal à 0 (pour une colonne de signet), SQL_BINARY est retourné dans * \*DataTypePtr* pour les signets de longueur variable. (SQL_INTEGER est renvoyé si les signets sont utilisés par ODBC 3. *x* qui fonctionne avec ODBC 2. *x* ou ODBC 2. *x* qui fonctionne avec une application ODBC 3. pilote *x* .)  
+ Lorsque *ColumnNumber* est égal à 0 (pour une colonne de signet), SQL_BINARY est retourné dans * \* DataTypePtr* pour les signets de longueur variable. (SQL_INTEGER est renvoyé si les signets sont utilisés par ODBC 3. *x* qui fonctionne avec ODBC 2. *x* ou ODBC 2. *x* qui fonctionne avec une application ODBC 3. pilote *x* .)  
   
  Pour plus d’informations, consultez [types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) dans l’annexe D : types de données. Pour plus d’informations sur les types de données SQL spécifiques au pilote, consultez la documentation du pilote.  
   
@@ -78,7 +78,7 @@ SQLRETURN SQLDescribeParam(
   
 -   SQL_NULLABLE_UNKNOWN : le pilote ne peut pas déterminer si le paramètre autorise les valeurs NULL.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
@@ -90,7 +90,7 @@ SQLRETURN SQLDescribeParam(
 |07009|Index de descripteur non valide|(DM) la valeur spécifiée pour l’argument *ParameterNumber* est inférieure à 1.<br /><br /> La valeur spécifiée pour l’argument *ParameterNumber* est supérieure au nombre de paramètres dans l’instruction SQL associée.<br /><br /> Le marqueur de paramètre faisait partie d’une instruction non DML.<br /><br /> Le marqueur de paramètre faisait partie d’une liste de **sélection** .|  
 |08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
 |21S01|La liste d’insertion de valeurs ne correspond pas à la liste de colonnes|Le nombre de paramètres dans l’instruction **Insert** ne correspondait pas au nombre de colonnes dans la table nommée dans l’instruction.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) la fonction a été appelée avant d’appeler **SQLPrepare** ou **SQLExecDirect** pour *StatementHandle*.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLDescribeParam** .<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
