@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5420d49b6e5d165168610d002424e3a3b9499748
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595814"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411055"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>Effectuer une rotation de clés activées pour les enclaves
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Dans Always Encrypted, une rotation de clé est le processus de remplacement d’une clé principale de colonne existante ou d’une clé de chiffrement de colonne par une nouvelle clé. Cet article décrit les cas d’utilisation et les considérations relatives à la rotation de clés spécifique à [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md) quand la clé initiale et/ou la (nouvelle) clé cible est une clé activée pour les enclaves. Pour obtenir des instructions générales et des processus de gestion des clés Always Encrypted, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](overview-of-key-management-for-always-encrypted.md). 
 

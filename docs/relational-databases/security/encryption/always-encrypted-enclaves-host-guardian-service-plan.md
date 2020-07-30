@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287143"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411375"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planifier l’attestation du Service Guardian hôte
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Quand vous utilisez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md), vous devez vérifier que l’application cliente communique avec une enclave digne de confiance au sein du processus [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Pour une enclave de sécurité basée sur la virtualisation (VBS), cela implique de vérifier que le code à l’intérieur de l’enclave est valide et que l’ordinateur hébergeant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] est digne de confiance. L’attestation à distance réalise cet objectif en introduisant un tiers qui peut valider l’identité (et éventuellement la configuration) de l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Avant que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] puisse utiliser une enclave pour exécuter une requête, il doit fournir des informations au service d’attestation concernant son environnement d’exploitation pour obtenir un certificat d’intégrité. Ce certificat d’intégrité est ensuite envoyé au client, qui peut vérifier son authenticité de façon indépendante auprès du service d’attestation. Une fois que le client approuve le certificat d’intégrité, il sait qu’il communique avec une enclave VBS digne de confiance et émet la requête qui va utiliser cette enclave.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7814090b688f362737e7cd045bca9edd32c34bcb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3326dab096a1b275bc06bfb0949eeb88b2d4fe30
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883628"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397163"
 ---
 # <a name="oracle-publishing-overview"></a>Présentation de la publication Oracle  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85883628"
 
 -   La publication de données sur et depuis Oracle présente les restrictions suivantes :  
 
-  |       | Version 2016 ou antérieure |Version 2017 ou ultérieure |
+  |Scénario| Version 2016 ou antérieure |Version 2017 ou ultérieure |
   |-------|-------|--------|
   |Réplication depuis Oracle |Prise en charge d’Oracle 10g ou version antérieure uniquement |Prise en charge d’Oracle 10g ou version antérieure uniquement |
   |Réplication vers Oracle |Jusqu’à Oracle 12c |Non pris en charge |

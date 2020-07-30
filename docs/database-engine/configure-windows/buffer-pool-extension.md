@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0222df74a33fabb535354403bbf7cc550898708f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759186"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362482"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,9 +98,8 @@ ms.locfileid: "85759186"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
-|||  
+|Description de la tâche|Rubrique|  
 |-|-|  
-|**Description de la tâche**|**Rubrique**|  
 |Activer et configurer l'extension du pool de mémoires tampons|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Modifier la configuration de l'extension du pool de mémoires tampons|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Afficher la configuration de l'extension du pool de mémoires tampons|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  

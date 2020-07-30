@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb2cfc1df70f22f3e0fb90cd3d9cf552e6e01d60
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680972"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362235"
 ---
 # <a name="manage-the-database-engine-services"></a>Gérer les services du moteur de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,20 +56,53 @@ ms.locfileid: "85680972"
  Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console, et non un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'apparaît pas en tant qu'application lorsque vous exécutez Windows Server 8.0. Pour ouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dans l’icône **Rechercher** , sous **Applications**, tapez **SQLServerManager12.msc** (pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), **SQLServerManager11.msc** (pour [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou **SQLServerManager10.msc** pour ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]), et appuyez sur **Entrée**.  
   
 ## <a name="in-this-section"></a>Dans cette section  
-  
-|||  
-|-|-|  
-|[Spécifications de sécurité pour la gestion des services](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|[Empêcher le démarrage automatique d’une instance de SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|[Modifier le compte de démarrage du service pour SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
-|[Exécuter SQL Server avec ou sans réseau](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|[Configurer les options de démarrage du serveur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
-|[Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)|[Modifier le mot de passe des comptes utilisés par SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)|  
-|[Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[Configurer des journaux d'erreurs SQL Server](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
-|[Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|[Modifier le mode d'authentification du serveur](../../database-engine/configure-windows/change-server-authentication-mode.md)|  
-|[Démarrer SQL Server en mode mono-utilisateur](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)|[Service SQL Writer](../../database-engine/configure-windows/sql-writer-service.md)|  
-|[Démarrage de SQL Server avec une configuration minimale](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)|[Diffuser un message d’arrêt &#40;invite de commandes&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)|  
-|[Se connecter à un autre ordinateur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)|[Se connecter à une instance de SQL Server &#40;invite de commandes&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)|  
-|[Définir le démarrage automatique d’une instance de SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Spécifications de sécurité pour la gestion des services](../../database-engine/configure-windows/security-requirements-for-managing-services.md)
+
+        [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+
+        [Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+
+        [Exécuter SQL Server avec ou sans réseau](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)
+
+        [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)
+
+        [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+
+        [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+
+        [Démarrer SQL Server en mode mono-utilisateur](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
+
+        [Démarrage de SQL Server avec une configuration minimale](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
+    :::column-end:::
+    :::column:::
+        [Se connecter à un autre ordinateur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)
+
+        [Définir le démarrage automatique d’une instance de SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)
+
+        [Empêcher le démarrage automatique d’une instance de SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)
+
+        [Modifier le compte de démarrage du service pour SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)
+
+        [Configurer les options de démarrage du serveur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+        [Modifier le mot de passe des comptes utilisés par SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)
+
+        [Configurer des journaux d'erreurs SQL Server](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
+    :::column-end:::
+    :::column:::
+        [Modifier le mode d'authentification du serveur](../../database-engine/configure-windows/change-server-authentication-mode.md)
+
+        [Service SQL Writer](../../database-engine/configure-windows/sql-writer-service.md)
+
+        [Diffuser un message d’arrêt &#40;invite de commandes&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)
+
+        [Se connecter à une instance de SQL Server &#40;invite de commandes&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>Contenu associé  
  [Configurer l'Agent SQL Server](../../ssms/agent/configure-sql-server-agent.md)  
   
