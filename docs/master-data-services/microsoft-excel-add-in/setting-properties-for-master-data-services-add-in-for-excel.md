@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21166512c691f8d50d19816afc7a0247a6c09782
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0a4778ae941b22bf362d926881b1cd3ba806059
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895275"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361749"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Définition des propriétés pour le complément Master Data Services pour Excel
 
@@ -27,9 +27,8 @@ ms.locfileid: "85895275"
   
 ## <a name="excel-add-in-settings"></a>Paramètres du complément Excel  
   
-||||  
-|-|-|-|  
 |Onglet et section|Paramètre|Description|  
+|-|-|-|  
 |Paramètres : Publication|Afficher la boîte de dialogue **Publier et annoter** lors de la publication|Sélectionnez cette option pour afficher la boîte de dialogue **Publier et annoter** lorsque vous cliquez sur **Publier**, ce qui vous permet d'entrer une seule annotation pour toutes les modifications ou d'entrer une annotation pour chaque modification.<br /><br /> Désélectionnez cette option pour indiquer que le processus de publication est initialisé sans la boîte de dialogue **Publier et annoter** . Vous n'aurez pas la possibilité d'entrer une annotation.|  
 |Paramètres : Version|Sélection de la version|Sélectionnez la version des données maîtres chargées dans le complément Excel. Valeurs possibles :<br /><br /> **Aucune** pour ne pas appliquer une valeur de version par défaut<br /><br /> **Plus ancienne** pour utiliser par défaut la version la plus ancienne **Plus récente** pour utiliser par défaut la version la plus récente.|  
 |Paramètres : Journalisation|Activer la journalisation détaillée|Activez la journalisation pour le chargement des données de référence à partir de MDS dans le complément Excel, afin que le résultat de chaque commande du service soit enregistré.|  

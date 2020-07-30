@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306180"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363423"
 ---
 # <a name="level-1-interface-conformance"></a>Conformité de l’interface - niveau 1
 Le niveau de conformité de l’interface de niveau 1 comprend la fonctionnalité de niveau de conformité de l’interface principale, ainsi que les fonctionnalités supplémentaires, telles que les transactions, qui sont généralement disponibles dans un SGBD relationnel OLTP. Un pilote conforme à l’interface de niveau 1 permet à l’application d’effectuer les opérations suivantes, en plus des fonctionnalités du niveau de conformité de l’interface principale :  
   
-|||  
+|Numéro de fonctionnalité|Description|  
 |-|-|  
 |101|Spécifiez le schéma des tables et des vues de base de données (à l’aide d’un nom en deux parties). (Pour plus d’informations, consultez la fonctionnalité de nommage en trois parties 201 dans conformité de l' [interface de niveau 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
 |102|Appelle une véritable exécution asynchrone des fonctions ODBC, où les fonctions ODBC applicables sont toutes synchrones ou asynchrones sur une connexion donnée.|  

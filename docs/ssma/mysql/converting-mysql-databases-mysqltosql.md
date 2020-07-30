@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293666"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394274"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversion de bases de données MySQL (MySQLToSQL)
 Après vous être connecté à MySQL, connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et définir les options de mappage de projet et de données, vous pouvez convertir des objets de base de données MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de base de données ou SQL Azure.  
@@ -31,9 +31,8 @@ Avant de convertir des objets, passez en revue les options de conversion de proj
 ## <a name="conversion-results"></a>Résultats de la conversion  
 Le tableau suivant répertorie les objets MySQL qui sont convertis et les objets qui en résultent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|||  
+|Objets MySQL|Objets SQL Server résultants|  
 |-|-|  
-|**Objets MySQL**|**Objets SQL Server résultants**|  
 |Tables avec objets dépendants, tels que les index|SSMA crée des tables avec des objets dépendants. La table est convertie avec tous les index et contraintes. Les index sont convertis en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets distincts.<br /><br />Le **mappage de type de données spatiales** ne peut être effectué qu’au niveau du nœud de table.<br /><br />Pour plus d’informations sur les paramètres de conversion de table, consultez [paramètres de conversion](conversion-settings-mysqltosql.md) .|  
 |Fonctions|Si la fonction peut être convertie directement en Transact-SQL, SSMA crée une fonction. Dans certains cas, la fonction doit être convertie en procédure stockée. Pour ce faire, vous pouvez utiliser la **conversion de fonction** dans les paramètres du projet. Dans ce cas, SSMA crée une procédure stockée et une fonction qui appelle la procédure stockée.<br /><br />**Choix donnés :**<br /><br />Convertir en fonction des paramètres du projet<br /><br />Convertir en fonction<br /><br />Convertir en procédure stockée<br /><br />Pour plus d’informations sur les paramètres de conversion des fonctions, consultez [paramètres de conversion](conversion-settings-mysqltosql.md)|  
 |Procédures|Si la procédure peut être convertie directement en Transact-SQL, SSMA crée une procédure stockée. Dans certains cas, une procédure stockée doit être appelée dans une transaction autonome. Dans ce cas, SSMA crée deux procédures stockées : une qui implémente la procédure et une autre qui est utilisée pour appeler la procédure stockée d’implémentation.|  

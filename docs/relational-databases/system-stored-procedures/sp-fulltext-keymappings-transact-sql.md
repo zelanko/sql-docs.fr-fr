@@ -32,7 +32,7 @@ ms.locfileid: "86977735"
 
   Retourne des mappages entre identificateurs de document (DocIds) et valeurs de clé de texte intégral. La colonne ID de colonne contient des valeurs pour un entier **bigint** mappé à une valeur de clé de texte intégral particulière dans une table indexée de texte intégral. Les valeurs de DocId qui répondent à une condition de recherche sont transmises du moteur de texte intégral au moteur de base de données, où elles sont mappées aux valeurs de clé de texte intégral de la table de base interrogée. La colonne clé de texte intégral est un index unique qui est requis sur une seule colonne de la table.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  Les exemples de cette section utilisent la table `Production.ProductReview` de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Vous pouvez créer cet index en exécutant l’exemple fourni pour la `ProductReview` table dans [CREATE FULLTEXT index &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtention de toutes les valeurs de clés et valeurs DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>R. Obtention de toutes les valeurs de clés et valeurs DocId  
  L’exemple suivant utilise une instruction [Declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) pour créer une variable locale `@table_id` et assigner l’ID de la `ProductReview` table en tant que valeur. L’exemple exécute **sp_fulltext_keymappings** en spécifiant `@table_id` pour le paramètre *table_id* .  
   
 > [!NOTE]  

@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 741a967b3fde6c5e3b5e3de87ac54a1142c93bfe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 513e376199c6f53953d49b70eae17f8da916f6bf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896978"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362963"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
 
@@ -33,9 +33,9 @@ ms.locfileid: "85896978"
 > [!NOTE]  
 >  Tout ordinateur sur lequel vous installez les composants de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] doit disposer d'une licence. Pour plus d'informations, reportez-vous au Contrat de Licence Utilisateur Final (CLUF).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### <a name="operating-system"></a>Système d'exploitation  
+### <a name="operating-system"></a>Système d’exploitation  
  Avant d’installer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], vérifiez les éléments requis suivants :    
     
 -   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
@@ -50,16 +50,45 @@ ms.locfileid: "85896978"
 > [!IMPORTANT]  
 >La**compression du contenu dynamique** est activée par défaut. Cela réduit considérablement la taille de la réponse xml et épargne des E/S réseau, mais le processeur est davantage sollicité.  Pour plus d’informations, consultez **[CTP 2.0] Performances améliorées** in [Nouveautés de Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
-||  
-|-|  
-|Services Internet (IIS)<br /><br /> Outils d’administration Web<br /><br /> Console de gestion d’IIS<br /><br /> Services World Wide Web<br /><br /> Développement d'applications<br /><br /> Extensibilité .NET 3.5<br /><br /> Extensibilité .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensions ISAPI<br /><br /> Filtres ISAPI<br /><br /> Fonctionnalités HTTP communes<br /><br /> Document par défaut<br /><br /> Exploration de répertoire<br /><br /> Erreurs HTTP<br /><br /> Contenu statique<br /><br /> [Remarque : n'installez pas la publication WebDAV]<br /><br /> Intégrité et diagnostics<br /><br /> Journalisation HTTP<br /><br /> Observateur de demandes<br /><br /> Performances<br /><br /> Compression du contenu statique<br /><br /> Sécurité<br /><br /> Filtrage des demandes<br /><br /> Authentification Windows|  
+- Services Internet (IIS)
+- Outils d’administration Web
+- Console de gestion d’IIS
+- Services World Wide Web
+- Développement d'applications
+- Extensibilité .NET 3.5
+- Extensibilité .NET 4.5
+- ASP.NET 3.5
+- ASP.NET 4.5
+- Extensions ISAPI
+- Filtres ISAPI
+- Fonctionnalités HTTP communes
+- Document par défaut
+- Exploration de répertoire
+- Erreurs HTTP
+- Contenu statique [Remarque : n’installez pas la publication WebDAV.]
+- Intégrité et diagnostics
+- Journalisation HTTP
+- Observateur de demandes
+- Performances
+- Compression du contenu statique
+- Sécurité
+- Filtrage des demandes
+- Authentification Windows
   
 ### <a name="features"></a>Fonctionnalités 
  Dans Windows Server 2012 et Windows Server 2012 R2, vous pouvez utiliser le **Gestionnaire de serveur** pour installer les fonctionnalités requises suivantes :  
   
-||  
-|-|  
-|.NET Framework 3.5 (inclut .NET 2.0 et 3.0)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> Services WCF<br /><br /> Activation HTTP [Remarque : celle-ci est obligatoire.]<br /><br /> Partage de port TCP<br /><br /> Service d’activation des processus Windows<br /><br /> Modèle de processus<br /><br /> Environnement .NET<br /><br /> API de configuration<br/><br/>compression du contenu dynamique|  
+- .NET Framework 3.5 (inclut .NET 2.0 et 3.0)
+- .NET Framework 4.5 Advanced Services
+- ASP.NET 4.5
+- Services WCF
+- Activation HTTP [Remarque : celle-ci est obligatoire.]
+- Partage de port TCP
+- Service d’activation des processus Windows
+- Modèle de processus
+- Environnement .NET
+- API de configuration
+- compression du contenu dynamique
   
  Voici un exemple de script PowerShell pour ajouter des fonctionnalités et des rôles serveur prérequis. Les fonctionnalités et rôles serveur prérequis varient en fonction de l’environnement.  
   
@@ -83,5 +112,3 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
       
  [Créer une application Web Data Manager principale &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [Page Configuration web &#40;Gestionnaire de configuration de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
-  
-  

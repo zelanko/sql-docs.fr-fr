@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f97356a810f5aa0d911e09df016c62b03ee726b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56d65221ba90b217521fa6a7563d70b7fc44f940
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304786"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363329"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messages des erreurs natives du pilote ODBC Visual FoxPro
 Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODBC Visual FoxPro.  
   
 ## <a name="001"></a>001  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |1|La fonctionnalité n’est pas disponible.|  
 |2|Échec de l’opération d’entrée/sortie.|  
@@ -36,7 +36,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="100"></a>100  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |100|Trop de fichiers ouverts.|  
 |101|Impossible d’ouvrir le fichier.|  
@@ -92,7 +92,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="200"></a>200  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |200|Erreur de syntaxe.|  
 |201|Trop de noms utilisés.|  
@@ -132,7 +132,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="300"></a>300  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |301|Incompatibilité de type d’opérateur/opérande.|  
 |302|Incompatibilité de type de données.|  
@@ -143,7 +143,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="400"></a>400  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |406|L’imprimante n’est pas prête.|  
 |407|Argument non valide utilisé avec la fonction SET.|  
@@ -160,10 +160,10 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
 |471|Format de colonne incorrect.|  
 |473|La propriété de niveau environnement n’est pas valide.|  
 |474|Appel non valide émis lors de l’exécution d’une séquence SQLEXEC ().|  
-|479|\\ *value*Valeur\\de nom de colonne de mise à jour non valide.|  
+|479|Valeur de nom de colonne de mise à jour non valide \\ *value* \\ .|  
 |489|Les champs General ne peuvent pas être utilisés dans la condition WHERE d’une instruction Update. Modifiez la propriété WhereType de la vue.|  
 |491|Aucune table de mise à jour n’est spécifiée. Utilisez la propriété tables du curseur.|  
-|492|Aucune colonne clé n’est spécifiée pour la \\ *valeur*\\de la table de mise à jour. Utilisez la propriété KeyFieldList du curseur.|  
+|492|Aucune colonne clé n’est spécifiée pour la valeur de la table de mise à jour \\ *value* \\ . Utilisez la propriété KeyFieldList du curseur.|  
 |493|Le paramètre SQL est manquant.|  
 |494|La définition de la vue a été modifiée.|  
 |495|AVERTISSEMENT : la clé définie par la propriété keyField pour la *valeur* de la table n’est pas unique.|  
@@ -172,7 +172,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="500"></a>500  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |502|Impossible d’écrire dans l’enregistrement, car il est en cours d’utilisation.|  
 |503|Impossible de verrouiller le fichier.|  
@@ -182,7 +182,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
 |523|L’exécution a été annulée par l’utilisateur.|  
 |525|La fonction n’est pas prise en charge sur les tables distantes.|  
 |526|Erreur de connectivité : *valeur.*|  
-|527|Impossible de charger la bibliothèque ODBC, ODBC32. DLL.|  
+|527|Impossible de charger la bibliothèque ODBC, ODBC32.DLL.|  
 |528|Point d’entrée ODBC manquant, *valeur*.|  
 |530|Récupération annulée ; la table distante est fermée.|  
 |532|La conversion de type n’est pas prise en charge.|  
@@ -194,7 +194,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
 |542|Les champs de la table de base ont été modifiés et ne correspondent plus aux champs de vue. Les propriétés de champ d’affichage ne peuvent pas être définies.|  
 |543|La conversion de type requise par la propriété DataType du champ'*value*'n’est pas valide.|  
 |544|La propriété DataType du champ'*value*'n’est pas valide.|  
-|545|La mémoire tampon de \\la table pour la *valeur*d’alias \ contient des modifications non validées.|  
+|545|La mémoire tampon de la table pour la \\ *valeur*d’alias \ contient des modifications non validées.|  
 |546|Impossible de fermer la table lors de l’exécution de l’expression liée à la table.|  
 |547|Impossible d’insérer une ligne vide à partir d’une vue dans sa ou ses tables de base.|  
 |548|Un ou plusieurs index non structurels sont ouverts dans la *valeur* de la table. Fermez-les et recommencez la transaction.|  
@@ -233,7 +233,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="600"></a>600  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |601|Le nom d’alias est déjà utilisé.|  
 |602|L’opération n’est pas valide pour un champ MEMO, General ou image.|  
@@ -251,7 +251,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="700"></a>700  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |700|L’enregistrement est utilisé par un autre utilisateur.|  
 |701|Le fichier doit être ouvert en mode exclusif.|  
@@ -277,7 +277,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="800"></a>800  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |802|SQL : Table introuvable.|  
 |872|Trop de colonnes.|  
@@ -290,7 +290,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
   
 ## <a name="900"></a>900  
   
-|||  
+|Code d'erreur|Message d’erreur|  
 |-|-|  
 |901|La valeur, le type ou le nombre d’arguments de la fonction ne sont pas valides.|  
 |902|Échec de l’évaluateur d’expression.|  
@@ -322,7 +322,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODB
 |945|L’objet actuel a été relâché.|  
 |947|L’expression est trop complexe.|  
 |951|Impossible de supprimer l’objet en cours d’utilisation.|  
-|955|Gagn. Le registre INI/est endommagé.|  
+|955|WIN.INI/Registry est endommagé.|  
 |957|Erreur lors de l’accès au spouleur d’impression.|  
 |959|Coordonnées non valides.|  
 |960|Redéfinition non conforme de la *valeur*de la variable.|  

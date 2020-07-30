@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944627"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395174"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Guide de référence de l’interface utilisateur (MySQLToSQL)
 Cette section contient des rubriques d’aide pour Assistant Migration SQL Server (SSMA) pour MySQL.  
@@ -22,13 +22,12 @@ Cette section contient des rubriques d’aide pour Assistant Migration SQL Serve
 ## <a name="in-this-section"></a>Dans cette section  
 Le tableau suivant répertorie les boîtes de dialogue SSMA :  
   
-|||  
+|Rubrique|Description|  
 |-|-|  
-|**Rubrique**|**Description**|  
 |[Sélection d’objet avancée &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Utilisez la boîte de dialogue **Sélectionner un objet avancé** pour rechercher des objets de base de données en utilisant des critères de filtre, puis sélectionnez ou désactivez ces objets.|  
 |[Rapport d’évaluation &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Utilisez le rapport pour afficher les résultats de la conversion d’objets MySQL en syntaxe Transact-SQL et pour estimer le temps et la complexité d’une migration vers SQL Server.|  
 |[Se connecter à MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Utilisez la boîte de dialogue **se connecter à MySQL** pour vous connecter à la base de données MySQL que vous souhaitez migrer.|  
-|[Se connecter au SQL Server](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Utilisez la boîte de dialogue **se connecter au SQL Server** pour vous connecter à l’instance de SQL Server vers laquelle vous souhaitez effectuer la migration.|  
+|[Se connecter au serveur SQL](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Utilisez la boîte de dialogue **se connecter au SQL Server** pour vous connecter à l’instance de SQL Server vers laquelle vous souhaitez effectuer la migration.|  
 |[Se connecter à Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Utilisez la boîte de dialogue **se connecter au SQL Azure** pour vous connecter à l’instance de SQL Azure vers laquelle vous souhaitez effectuer la migration.|  
 |[Paramètres de conversion (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Utilisez l’onglet **paramètres** pour définir les paramètres au niveau du nœud.|  
 |[Rapport de migration des données &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Affiche les résultats de la migration des données de MySQL vers SQL Server ou SQL Azure.|  

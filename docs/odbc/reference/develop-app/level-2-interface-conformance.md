@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306161"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363389"
 ---
 # <a name="level-2-interface-conformance"></a>Conformité de l’interface - niveau 2
 Le niveau de conformité de l’interface de niveau 2 comprend la fonctionnalité de niveau de conformité de l’interface de niveau 1, ainsi que les fonctionnalités suivantes :  
   
-|||  
+|Numéro de fonctionnalité|Description|  
 |-|-|  
 |201|Utilisez des noms en trois parties pour les vues et les tables de base de données. (Pour plus d’informations, consultez la fonctionnalité de prise en charge des noms en deux parties 101 dans conformité de l' [interface de niveau 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
 |202|Décrivez les paramètres dynamiques en appelant **SQLDescribeParam**.|  

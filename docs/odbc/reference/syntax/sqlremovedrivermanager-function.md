@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27b32c1c4e0f3f4d5359af287ba07d40b033af00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c94765dfe76bc5a1ef188328a6fe27e96671efb1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301810"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363132"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager, fonction
 **Conformité**  
  Version introduite : ODBC 3,0 : déconseillé dans Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 et les systèmes d’exploitation ultérieurs.  
   
  **Résumé**  
- **SQLRemoveDriverManager** modifie ou supprime les informations relatives aux composants ODBC Core de l’entrée Odbcinst. ini dans les informations système.  
+ **SQLRemoveDriverManager** modifie ou supprime les informations relatives aux composants ODBC Core de l’entrée Odbcinst.ini dans les informations système.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,11 +45,11 @@ BOOL SQLRemoveDriverManager(
  *pdwUsageCount*  
  Sortie Nombre d’utilisations du gestionnaire de pilotes après l’appel de cette fonction.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  La fonction retourne TRUE si elle réussit, FALSe en cas d’échec. Si aucune entrée n’existe dans les informations système lorsque cette fonction est appelée, la fonction retourne FALSe.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLRemoveDriverManager** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **SQLRemoveDriverManager** retourne false, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
@@ -77,17 +77,27 @@ BOOL SQLRemoveDriverManager(
  **SQLRemoveDriverManager** ne supprime pas réellement les fichiers. Le programme appelant est chargé de supprimer les fichiers et de conserver le nombre d’utilisations des fichiers. Toutefois, les fichiers du gestionnaire de pilotes ne doivent pas être supprimés lorsque le nombre d’utilisations des composants et le nombre d’utilisations des fichiers ont atteint zéro, car ces fichiers peuvent être utilisés par d’autres applications qui n’ont pas incrémenté le nombre d’utilisations des fichiers.  
   
  **SQLRemoveDriverManager** est appelé dans le cadre du processus de désinstallation. Les composants ODBC Core (qui incluent le gestionnaire de pilotes, la bibliothèque de curseurs, le programme d’installation, la bibliothèque de langues, l’administrateur, les fichiers de thunk, etc.) sont désinstallés dans son ensemble. Les fichiers suivants ne sont pas supprimés quand **SQLRemoveDriverManager** est appelé dans le cadre du processus de désinstallation :  
-  
-|||  
-|-|-|  
-|ODBC32DLL|Odbccp32. DLL|  
-|ODBCCR32. DLL|ODBC16GT. DLL|  
-|ODBCCU32. DLL|ODBC32GT. DLL|  
-|ODBCINT. DLL|DS16GT. DLL|  
-|ODBCTRAC. DLL|DS32GT. DLL|  
-|MSVCRT40. DLL|Odbcad32. EXÉCUTABLE|  
-|Odbccp32. PERSONNALISATION||  
-  
+
+:::row:::
+    :::column:::
+        ODBC32DLL  
+        ODBCCR32.DLL  
+        ODBCCU32.DLL  
+        ODBCINT.DLL  
+        ODBCTRAC.DLL  
+        MSVCRT40.DLL  
+        ODBCCP32.CPL  
+    :::column-end:::
+    :::column:::
+        ODBCCP32.DLL  
+        ODBC16GT.DLL  
+        ODBC32GT.DLL  
+        DS16GT.DLL  
+        DS32GT.DLL  
+        ODBCAD32.EXE  
+    :::column-end:::
+:::row-end:::
+
  **SQLRemoveDriverManager** est également appelé dans le cadre d’un processus de mise à niveau. Si une application détecte qu’elle doit effectuer une mise à niveau et qu’elle a déjà installé le pilote, le pilote doit être supprimé, puis réinstallé.  
   
  **SQLRemoveDriverManager** doit d’abord être appelé pour décrémenter le nombre d’utilisations du composant. **SQLInstallDriverEx** doit ensuite être appelé pour incrémenter le nombre d’utilisations des composants. Le programme d’installation de l’application doit remplacer les anciens fichiers du composant principal par les nouveaux fichiers. Le nombre d’utilisations de fichiers reste le même, et les autres applications qui utilisent les fichiers des composants de base de la version antérieure utilisent désormais les fichiers de version plus récents.  

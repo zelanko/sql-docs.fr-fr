@@ -13,133 +13,260 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307990"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362984"
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
 Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire SQL minimale ; Toutefois, pour garantir la compatibilité avec les pilotes qui prennent en charge la grammaire SQL de base, les applications doivent éviter d’utiliser l’un de ces mots clés. La valeur #**define** SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
-  
-|||  
-|-|-|  
-|ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
-|ADA|JOIN|  
-|ADD|KEY|  
-|ALL|LANGUAGE|  
-|ALLOCATE|LAST|  
-|ALTER|LEADING|  
-|AND|LEFT|  
-|ANY|LEVEL|  
-|ARE|LIKE|  
-|AS|LOCAL|  
-|ASC|LOWER|  
-|ASSERTION|MATCH|  
-|AT|MAX|  
-|AUTHORIZATION|MIN|  
-|AVG|MINUTE|  
-|BEGIN|MODULE|  
-|BETWEEN|MONTH|  
-|BIT|NAMES|  
-|BIT_LENGTH|NATIONAL|  
-|BOTH|NATURAL|  
-|BY|NCHAR|  
-|CASCADE|NEXT|  
-|CASCADED|Non|  
-|CASE|Aucune|  
-|CAST|NOT|  
-|CATALOG|NULL|  
-|CHAR|NULLIF|  
-|CHAR_LENGTH|NUMERIC|  
-|CHARACTER|OCTET_LENGTH|  
-|CHARACTER_LENGTH|OF|  
-|CHECK|ACTIVÉ|  
-|CLOSE|ONLY|  
-|COALESCE|OPEN|  
-|COLLATE|OPTION|  
-|COLLATION|OR|  
-|COLUMN|ORDER|  
-|COMMIT|OUTER|  
-|CONNECT|OUTPUT|  
-|CONNECTION|OVERLAPS|  
-|CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL|  
-|CONVERT|POSITION|  
-|CORRESPONDING|PRECISION|  
-|COUNT|PREPARE|  
-|CREATE|PRESERVE|  
-|CROSS|PRIMARY|  
-|CURRENT|PRIOR|  
-|CURRENT_DATE|PRIVILEGES|  
-|CURRENT_TIME|PROCEDURE|  
-|CURRENT_TIMESTAMP|PUBLIC|  
-|CURRENT_USER|READ|  
-|CURSOR|real|  
-|DATE|REFERENCES|  
-|DAY|RELATIVE|  
-|DEALLOCATE|RESTRICT|  
-|DEC|REVOKE|  
-|DECIMAL|RIGHT|  
-|DECLARE|ROLLBACK|  
-|DEFAULT|ROWS|  
-|DEFERRABLE|SCHEMA|  
-|DEFERRED|SCROLL|  
-|Suppression|SECOND|  
-|DESC|SECTION|  
-|DESCRIBE|SELECT|  
-|DESCRIPTOR|SESSION|  
-|DIAGNOSTICS|SESSION_USER|  
-|DISCONNECT|SET|  
-|DISTINCT|SIZE|  
-|DOMAIN|SMALLINT|  
-|DOUBLE|SOME|  
-|DROP|SPACE|  
-|ELSE|SQL|  
-|END|SQLCA|  
-|END-EXEC|SQLCODE|  
-|ESCAPE|SQLERROR|  
-|EXCEPT|SQLSTATE|  
-|EXCEPTION|SQLWARNING|  
-|EXEC|SUBSTRING|  
-|Exécutez|SUM|  
-|EXISTS|SYSTEM_USER|  
-|EXTERNAL|TABLE|  
-|EXTRACT|TEMPORARY|  
-|FALSE|THEN|  
-|FETCH|TEMPS|  
-|FIRST|timestamp|  
-|FLOAT|TIMEZONE_HOUR|  
-|FOR|TIMEZONE_MINUTE|  
-|FOREIGN|TO|  
-|FORTRAN|TRAILING|  
-|FOUND|TRANSACTION|  
-|FROM|TRANSLATE|  
-|FULL|TRANSLATION|  
-|GET|TRIM|  
-|GLOBAL|TRUE|  
-|GO|UNION|  
-|GOTO|UNIQUE|  
-|GRANT|UNKNOWN|  
-|GROUP|UPDATE|  
-|HAVING|UPPER|  
-|HOUR|USAGE|  
-|IDENTITY|Utilisateur|  
-|IMMEDIATE|USING|  
-|IN|VALEUR|  
-|INCLUDE|VALUES|  
-|INDEX|VARCHAR|  
-|INDICATOR|VARYING|  
-|INITIALLY|VIEW|  
-|INNER|WHEN|  
-|INPUT|WHENEVER|  
-|INSENSITIVE|WHERE|  
-|INSERT|WITH|  
-|INT|WORK|  
-|INTEGER|WRITE|  
-|INTERSECT|YEAR|  
-|INTERVAL|ZONE|  
-|INTO||
+
+:::row:::
+    :::column:::
+        ABSOLUTE  
+        ACTION  
+        ADA  
+        ADD  
+        ALL  
+        ALLOCATE  
+        ALTER  
+        AND  
+        ANY  
+        ARE  
+        AS  
+        ASC  
+        ASSERTION  
+        AT  
+        AUTHORIZATION  
+        AVG  
+        BEGIN  
+        BETWEEN  
+        BIT  
+        BIT_LENGTH  
+        BOTH  
+        BY  
+        CASCADE  
+        CASCADED  
+        CASE  
+        CAST  
+        CATALOG  
+        CHAR  
+        CHAR_LENGTH  
+        CHARACTER  
+        CHARACTER_LENGTH  
+        CHECK  
+        CLOSE  
+        COALESCE  
+        COLLATE  
+        COLLATION  
+        COLUMN  
+        COMMIT  
+        CONNECT  
+        CONNECTION  
+        CONSTRAINT  
+        CONSTRAINTS  
+        CONTINUE  
+        CONVERT  
+        CORRESPONDING  
+        COUNT  
+        CREATE  
+    :::column-end:::
+    :::column:::
+        CROSS  
+        CURRENT  
+        CURRENT_DATE  
+        CURRENT_TIME  
+        CURRENT_TIMESTAMP  
+        CURRENT_USER  
+        CURSOR  
+        DATE  
+        DAY  
+        DEALLOCATE  
+        DEC  
+        DECIMAL  
+        DECLARE  
+        DEFAULT  
+        DEFERRABLE  
+        DEFERRED  
+        Suppression  
+        DESC  
+        DESCRIBE  
+        DESCRIPTOR  
+        DIAGNOSTICS  
+        DISCONNECT  
+        DISTINCT  
+        DOMAIN  
+        DOUBLE  
+        DROP  
+        ELSE  
+        FIN  
+        END-EXEC  
+        ESCAPE  
+        EXCEPT  
+        EXCEPTION  
+        EXEC  
+        Exécutez  
+        EXISTS  
+        EXTERNAL  
+        EXTRACT  
+        FAUX  
+        FETCH  
+        FIRST  
+        FLOAT  
+        FOR  
+        FOREIGN  
+        FORTRAN  
+        FOUND  
+        FROM  
+        FULL  
+    :::column-end:::
+    :::column:::
+        GET  
+        GLOBAL  
+        GO  
+        GOTO  
+        GRANT  
+        GROUP  
+        HAVING  
+        HOUR  
+        IDENTITY  
+        IMMEDIATE  
+        IN  
+        INCLUDE  
+        INDEX  
+        INDICATOR  
+        INITIALLY  
+        INNER  
+        INPUT  
+        INSENSITIVE  
+        INSERT  
+        INT  
+        ENTIER  
+        INTERSECT  
+        INTERVAL  
+        INTO  
+        IS  
+        ISOLATION  
+        JOIN  
+        KEY  
+        LANGUAGE  
+        LAST  
+        LEADING  
+        LEFT  
+        LEVEL  
+        LIKE  
+        LOCAL  
+        LOWER  
+        MATCH  
+        MAX  
+        MIN  
+        MINUTE  
+        MODULE  
+        MONTH  
+        NAMES  
+        NATIONAL  
+        NATURAL  
+        NCHAR  
+        NEXT  
+    :::column-end:::
+    :::column:::
+        Non  
+        Aucune  
+        NOT  
+        NULL  
+        NULLIF  
+        NUMERIC  
+        OCTET_LENGTH  
+        OF  
+        ACTIVÉ  
+        ONLY  
+        OPEN  
+        OPTION  
+        OR  
+        ORDER  
+        OUTER  
+        OUTPUT  
+        OVERLAPS  
+        PAD  
+        PARTIAL  
+        PASCAL  
+        POSITION  
+        PRECISION  
+        PREPARE  
+        PRESERVE  
+        PRIMARY  
+        PRIOR  
+        PRIVILEGES  
+        PROCEDURE  
+        PUBLIC  
+        READ  
+        RÉEL  
+        REFERENCES  
+        RELATIVE  
+        RESTRICT  
+        REVOKE  
+        RIGHT  
+        ROLLBACK  
+        ROWS  
+        SCHEMA  
+        SCROLL  
+        SECOND  
+        SECTION  
+        SELECT  
+        SESSION  
+        SESSION_USER  
+        SET  
+        SIZE  
+    :::column-end:::
+    :::column:::
+        SMALLINT  
+        SOME  
+        SPACE  
+        SQL  
+        SQLCA  
+        SQLCODE  
+        SQLERROR  
+        SQLSTATE  
+        SQLWARNING  
+        SUBSTRING  
+        SUM  
+        SYSTEM_USER  
+        TABLE  
+        TEMPORARY  
+        THEN  
+        TEMPS  
+        timestamp  
+        TIMEZONE_HOUR  
+        TIMEZONE_MINUTE  
+        TO  
+        TRAILING  
+        TRANSACTION  
+        TRANSLATE  
+        TRANSLATION  
+        TRIM  
+        VRAI  
+        UNION  
+        UNIQUE  
+        UNKNOWN  
+        UPDATE  
+        UPPER  
+        USAGE  
+        Utilisateur  
+        USING  
+        VALEUR  
+        VALUES  
+        VARCHAR  
+        VARYING  
+        VIEW  
+        WHEN  
+        WHENEVER  
+        WHERE  
+        WITH  
+        WORK  
+        WRITE  
+        YEAR  
+        ZONE  
+    :::column-end:::
+:::row-end:::

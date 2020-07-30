@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898087"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363053"
 ---
 # <a name="managing-a-composite-domain"></a>Gestion d'un domaine composite
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898087"
 ## <a name="in-this-section"></a>Dans cette section  
  L'utilisation d'un domaine composite permet d'effectuer les opérations suivantes :  
   
-|||  
+|Description de l’opération|Rubrique|  
 |-|-|  
 |Créer une représentation sémantique d'un champ de données composé de plusieurs termes connexes qui ne sont pas analysés|[Créer un domaine composite](../data-quality-services/create-a-composite-domain.md)|  
 |Lorsque vous mappez les données complexes à un domaine composite, vous pouvez analyser les données selon la connaissance, en plus de l'analyse sur un séparateur. DQS essaie d'abord d'utiliser sa connaissance sur les domaines simples pour déterminer comment les parties de la chaîne complexe appartiennent aux domaines simples.|[Créer un domaine composite](../data-quality-services/create-a-composite-domain.md)|  

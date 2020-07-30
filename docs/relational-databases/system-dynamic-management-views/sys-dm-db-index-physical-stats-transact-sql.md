@@ -39,7 +39,7 @@ ms.locfileid: "87112760"
  **sys. dm_db_index_physical_stats** ne retourne pas d’informations sur les index optimisés en mémoire. Pour plus d’informations sur l’utilisation des index optimisés en mémoire, consultez [sys. dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -183,7 +183,7 @@ GO
   
  **Fragmentation logique**  
   
- Pourcentage de pages hors service dans les pages de feuilles d'un index. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l'index n'est pas la page désignée par le pointeur de pag*e* suivante dans la page feuille actuelle.  
+ Pourcentage de pages hors service dans les pages de feuilles d'un index. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l’index n’est pas la page désignée par le pointeur de pag*e* suivante dans la page feuille actuelle.  
   
  **Fragmentation de l'étendue**  
   

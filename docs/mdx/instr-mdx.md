@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105299"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363409"
 ---
 # <a name="instr-mdx"></a>InStr (MDX)
 
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  Le tableau suivant présente les résultats obtenus.  
   
-|||  
+|Champ dans les mesures|Résultats|  
 |-|-|  
-||Résultats|  
 |minuscules trouvées dans la chaîne en minuscules|16|  
 |majuscules trouvées dans la chaîne en minuscules|16|  
 |la chaîne de recherche est vide|0|  

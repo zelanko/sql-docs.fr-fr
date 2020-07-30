@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 895dcfdd5acaa580b8ee719a3edac67d7308f605
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897552"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362675"
 ---
 # <a name="building-a-knowledge-base"></a>Construction d'une base de connaissances
 
@@ -25,7 +25,7 @@ ms.locfileid: "85897552"
 ## <a name="in-this-section"></a>Dans cette section  
  Vous pouvez effectuer les opérations suivantes sur une base de connaissances :  
   
-|||  
+|Description de l’opération|Rubrique|  
 |-|-|  
 |Créer une nouvelle base de connaissances en partant de zéro, d'une base de connaissances existante ou d'un fichier de données .dqs.|[Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md)|  
 |Ouvrir une base de connaissances existante afin d'effectuer une découverte des connaissances ou une gestion des domaines, ou d'ajouter une politique de correspondance.|[Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md)|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca7b3d5fa16be44bf4c2ef8f8df8953ae081235d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a188c607c499e16652e314c67c37914f6cc9b85f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293399"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362767"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Exécution asynchrone (méthode d’interrogation)
 Avant ODBC 3,8 et le kit de développement logiciel (SDK) Windows 7, les opérations asynchrones étaient uniquement autorisées sur les fonctions d’instruction. Pour plus d’informations, consultez **exécution des opérations d’instruction de manière asynchrone**, plus loin dans cette rubrique.  
@@ -36,19 +36,43 @@ Avant ODBC 3,8 et le kit de développement logiciel (SDK) Windows 7, les opérat
   
 ## <a name="executing-statement-operations-asynchronously"></a>Exécution d’opérations d’instruction de manière asynchrone  
  Les fonctions d’instruction suivantes fonctionnent sur une source de données et peuvent s’exécuter de façon asynchrone :  
-  
-||||  
-|-|-|-|  
-|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|[SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|[SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
-|[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|[SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|  
-|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|[SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|[SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|[SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
-|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
-|[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)  
+        [SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
+        [SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
+        [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
+        [SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+        [SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
+        [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
+        [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
+        [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
+        [SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
+        [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)  
+        [SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+        [SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
+        [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
+        [SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
+        [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)  
+        [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
+        [SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+        [SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
+        [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
+        [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)  
+        [SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
+        [SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)  
+        [SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
+        [SQLTables](../../../odbc/reference/syntax/sqltables-function.md)  
+    :::column-end:::
+:::row-end:::
+
  L’exécution d’une instruction asynchrone est contrôlée soit par instruction, soit par connexion, selon la source de données. Autrement dit, l’application ne spécifie pas qu’une fonction particulière doit être exécutée de façon asynchrone, mais que toute fonction exécutée sur une instruction particulière doit être exécutée de façon asynchrone. Pour déterminer lequel est pris en charge, une application appelle [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) avec l’option SQL_ASYNC_MODE. SQL_AM_CONNECTION est retourné si l’exécution asynchrone au niveau de la connexion (pour un handle d’instruction) est prise en charge ; SQL_AM_STATEMENT si l’exécution asynchrone au niveau de l’instruction est prise en charge.  
   
  Pour spécifier que les fonctions exécutées avec une instruction particulière doivent être exécutées de façon asynchrone, l’application appelle **SQLSetStmtAttr** avec l’attribut SQL_ATTR_ASYNC_ENABLE et lui affecte la valeur SQL_ASYNC_ENABLE_ON. Si le traitement asynchrone au niveau de la connexion est pris en charge, l’attribut d’instruction SQL_ATTR_ASYNC_ENABLE est en lecture seule et sa valeur est identique à l’attribut de connexion de la connexion sur laquelle l’instruction a été allouée. Il est propre au pilote, que la valeur de l’attribut d’instruction soit définie au moment de l’allocation de l’instruction ou ultérieurement. Toute tentative de définition de cette valeur retourne SQL_ERROR et SQLSTATE HYC00 (fonctionnalité facultative non implémentée).  
@@ -156,12 +180,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 -   Des appels ODBC asynchrones efficaces et la possibilité d’annuler des opérations de connexion permettent à une application d’annuler une opération lente sans avoir à attendre des délais d’attente.  
   
  Les fonctions suivantes, qui opèrent sur des handles de connexion, peuvent maintenant être exécutées de façon asynchrone :  
-  
-||||  
-|-|-|-|  
-|[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)  
+        [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)  
+        [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)  
+        [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
+    :::column-end:::
+:::row-end:::
+
  Pour déterminer si un pilote prend en charge les opérations asynchrones sur ces fonctions, une application appelle **SQLGetInfo** avec SQL_ASYNC_DBC_FUNCTIONS. SQL_ASYNC_DBC_CAPABLE est retourné si les opérations asynchrones sont prises en charge. SQL_ASYNC_DBC_NOT_CAPABLE est retourné si les opérations asynchrones ne sont pas prises en charge.  
   
  Pour spécifier que les fonctions exécutées avec une connexion particulière doivent être exécutées de façon asynchrone, l’application appelle **SQLSetConnectAttr** et définit l’attribut SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE sur SQL_ASYNC_DBC_ENABLE_ON. La définition d’un attribut de connexion avant d’établir une connexion s’exécute toujours de façon synchrone. En outre, l’opération qui définit l’attribut de connexion SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE avec **SQLSetConnectAttr** s’exécute toujours de façon synchrone.  
