@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289677"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243495"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>Configuration et sécurité de PolyBase pour Hadoop
+# <a name="configure-polybase-hadoop-security"></a>Configurer Polybase Hadoop Security
 
 Cet article fournit une référence pour différents paramètres de configuration qui affectent la connectivité Polybase APS à Hadoop. Pour obtenir une procédure pas à pas sur ce qui est Polybase, consultez [qu’est-ce que Polybase](configure-polybase-connectivity-to-external-data.md).
 
@@ -115,7 +115,7 @@ Pour vous connecter à un cluster Hadoop sécurisé par Kerberos à l’aide de 
 4. Créez un objet d’informations d’identification limité à la base de données pour spécifier les informations d’authentification de chaque utilisateur Hadoop. Consultez [Objets T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Configuration de la zone de chiffrement Hadoop
-Si vous utilisez la zone de chiffrement Hadoop, modifiez Core-site. xml et HDFS-site. XML comme suit. Indiquez l’adresse IP où le service KMS s’exécute avec le numéro de port correspondant. Le port par défaut pour KMS sur CDH est 16000.
+Si vous utilisez la zone de chiffrement Hadoop, modifiez core-site.xml et hdfs-site.xml comme suit. Indiquez l’adresse IP où le service KMS s’exécute avec le numéro de port correspondant. Le port par défaut pour KMS sur CDH est 16000.
 
 **core-site.xml**
 ```xml

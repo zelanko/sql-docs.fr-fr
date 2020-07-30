@@ -1,5 +1,6 @@
 ---
 title: srv_getbindtoken (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_getbindtoken obtient un jeton de liaison de la transaction dans la session cliente actuelle qui appelle la procédure stockée étendue.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 254bec49759ceff269f112d65156042271471b81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60e552bda81690d6c7a2dcc387389030bd929584
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756761"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248457"
 ---
 # <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,10 +57,10 @@ bindtoken
  *bindtoken*  
  Pointeur vers une mémoire tampon où le jeton de liaison sera copié. Le jeton de liaison est représenté sous la forme d'une chaîne terminée par le caractère NULL. La mémoire tampon que vous spécifiez doit avoir une longueur minimale de 255 octets.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>Pour lier une session de procédure stockée étendue à la session cliente qui l'a appelée pour qu'elles partagent le même espace de verrouillage de transaction  
   

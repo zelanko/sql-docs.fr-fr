@@ -1,5 +1,6 @@
 ---
 title: srv_setutype (API de procédure stockée étendue) | Microsoft Docs
+description: En savoir plus sur srv_setutype. srv_setutype définit le type de données défini par l’utilisateur pour une colonne dans une ligne.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70cacca6e6694d914c4b66b7e6eb813b012cf2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ecdbaef663059146f3ca6bd4a88305e12d4f495
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755809"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248187"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,10 +61,10 @@ user_type
  *user_type*  
  Spécifie le code de type de données défini par l'utilisateur.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  SUCCEED ou FAIL. Retourne FAIL si la colonne n'existe pas.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une colonne a deux types de données : son type de données réel et son type de données défini par l'utilisateur. Le type de données défini par l’utilisateur est utilisé par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker le type de données défini par l’utilisateur réel de la colonne, le cas échéant, et les informations de description de la colonne, telles que la possibilité de valeur null et la possibilité de mise à jour, pour la colonne.  
   
  La fonction **srv_setutype** peut être appelée chaque fois que *column* a été défini avec **srv_describe** et avant que la dernière ligne n’ait été envoyée.  

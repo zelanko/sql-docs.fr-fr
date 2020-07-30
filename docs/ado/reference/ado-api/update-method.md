@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759495"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243170"
 ---
 # <a name="update-method"></a>Update, méthode
 Enregistre les modifications apportées à la ligne actuelle d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou à la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -67,11 +67,16 @@ record.Fields.Update
  Par exemple, les champs supprimés à l’aide de la méthode **Delete** sont marqués pour suppression immédiatement, mais restent dans la collection. La méthode **Update** doit être appelée pour supprimer réellement ces champs de la collection du fournisseur.  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [Update et CancelUpdate, exemple de méthodes (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update et CancelUpdate, exemple de méthodes (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

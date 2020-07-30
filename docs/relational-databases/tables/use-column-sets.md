@@ -14,15 +14,15 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326139"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396168"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Les tables qui utilisent des colonnes éparses peuvent désigner un jeu de colonnes pour retourner toutes les colonnes éparses dans la table. Un jeu de colonnes est une représentation XML non typée qui combine toutes les colonnes éparses d'une table dans une sortie structurée. Un jeu de colonnes est semblable à une colonne calculée, dans la mesure où le jeu de colonnes n'est pas stocké physiquement dans la table. Un jeu de colonnes diffère d'une colonne calculée, dans le sens où le jeu de colonnes est peut être mis à jour directement.  
   

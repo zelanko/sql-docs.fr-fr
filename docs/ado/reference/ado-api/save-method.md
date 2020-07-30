@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755868"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243200"
 ---
 # <a name="save-method"></a>Save, méthode
 Enregistre le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un objet de fichier ou de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -88,11 +88,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  Un **jeu d’enregistrements** enregistré au format XML est enregistré à l’aide du format UTF-8. Lorsqu’un fichier de ce type est chargé dans un flux ADO, l’objet Stream ne tente pas d’ouvrir un **Recordset** à partir du flux, sauf si la propriété Charset du flux est définie sur la valeur appropriée pour le format UTF-8.  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [Save et Open, exemples de méthodes (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Save et Open, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

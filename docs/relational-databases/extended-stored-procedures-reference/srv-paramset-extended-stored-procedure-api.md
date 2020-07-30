@@ -1,5 +1,6 @@
 ---
 title: srv_paramset (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_paramset dans l’API de procédure stockée étendue définit la valeur d’un paramètre de retour d’appel de procédure stockée distante.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645b87be7c1b5955975a370e9e1b49e6608272b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756685"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248372"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ len
  *Len*  
  Spécifie la longueur réelle des données à retourner. Si le type de données du paramètre est de longueur constante et qu’il n’autorise pas les valeurs NULL (par exemple, *srvbit* ou *srvint1*), *len* est ignoré.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  SUCCEED si la valeur de paramètre a été correctement définie ; sinon, FAIL. FAIL est retourné quand il n’y a pas de procédure stockée distante en cours, quand il n’y a aucun *n*ième paramètre de procédure stockée distante, quand le paramètre n’est pas un paramètre de retour et quand l’argument *len* n’est pas légal.  
   
  Si *len* a pour valeur 0, il retourne NULL. Pour retourner la valeur NULL au client, la seule façon est d’attribuer la valeur 0 à *len*.  
@@ -87,7 +88,7 @@ len
 |IG = La valeur sera ignorée.||  
 |valide = Tout pointeur valide vers des données.||  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les paramètres contiennent les données passées entre les clients et l'application avec des procédures stockées distantes. Le client peut spécifier certains paramètres en tant que paramètres de retour. Ces paramètres de retour peuvent contenir des valeurs que l'application serveur ODS (Open Data Services) repasse au client. L'utilisation de paramètres de retour est analogue au passage de paramètres par référence.  
   
  Vous ne pouvez pas définir la valeur de retour pour un paramètre qui n'a pas été appelé en tant que paramètre de retour. Vous pouvez utiliser **srv_paramstatus** pour déterminer comment le paramètre a été appelé.  

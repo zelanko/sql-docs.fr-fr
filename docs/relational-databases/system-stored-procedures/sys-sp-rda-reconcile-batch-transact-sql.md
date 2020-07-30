@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs
+description: Découvrez comment utiliser sys. sp_rda_reconcile_batch pour rapprocher l’ID de lot dans la table de SQL Server compatible Stretch avec l’ID de lot stocké dans la table Azure distante.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: aa97030851e13eac020564eec7931a00595b8884
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053129"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247088"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86053129"
  
  Pour supprimer des données qui ont déjà été migrées vers Azure, consultez les notes sur cette page.
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +50,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>Autorisations  
  Requiert db_owner autorisations.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous souhaitez supprimer des données qui ont déjà été migrées vers Azure, effectuez les opérations suivantes.  
   
 1.  Suspendre la migration des données. Pour plus d’informations, consultez [Suspension et reprise de la migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  

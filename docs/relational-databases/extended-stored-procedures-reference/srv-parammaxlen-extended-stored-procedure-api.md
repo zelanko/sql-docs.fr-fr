@@ -1,5 +1,6 @@
 ---
 title: srv_parammaxlen (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_parammaxlen retourne la longueur de données maximale d’un paramètre d’appel de procédure stockée distante.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 936dddfc9faecc48f61ac61e390aca7b82533314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0a89b5bf724bb3e1fc8afe335c5458a4ee09c4d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756699"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248408"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ n
  *n*  
  Indique le numéro du paramètre. Le premier paramètre est 1.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  Longueur maximale, en octets, des données du paramètre. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
   
  Cette fonction retourne les valeurs suivantes, si le paramètre est l’un des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données suivants.  
@@ -70,7 +71,7 @@ n
 |**NVARCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255:** 255|  
 |**Text**|**Null :** -1<br /><br /> **ZERO :** -1<br /><br /> **>= 255 :** -1<br /><br /> ** \< 255 :** -1|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque paramètre de procédure stockée distante possède une longueur de données réelle et une longueur de données maximale. Pour les types de données de longueur fixe standard qui n'autorisent pas les valeurs NULL, les longueurs réelle et maximale sont les mêmes. Pour les types de données de longueur variable, les longueurs peuvent varier. Par exemple, un paramètre déclaré en tant que **varchar(30)** peut posséder des données longues de 10 octets seulement. La longueur réelle du paramètre est 10 et sa longueur maximale est 30. La fonction **srv_parammaxlen** obtient la longueur de données maximale d’une procédure stockée distante. Pour obtenir la longueur réelle d’un paramètre, utilisez **srv_paramlen**.  
   
  Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Le gestionnaire SRV_RPC est tout de même appelé, mais il apparaît comme s’il n’y avait aucun paramètre et **srv_rpcparams** retourne 0.  

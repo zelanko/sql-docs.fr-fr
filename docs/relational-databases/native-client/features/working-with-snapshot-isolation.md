@@ -23,13 +23,14 @@ ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 196ddb0db1d988f3f81c6f34a53973a4ac0123ce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8f5c94885d9acfd436459da6033662830cd00734
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009816"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248787"
 ---
-# <a name="working-with-snapshot-isolation"></a>Utilisation de l’isolement de capture instantanée
+# <a name="working-with-snapshot-isolation-in-sql-server-native-client"></a>Utilisation de l’isolement de capture instantanée dans SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], un nouveau niveau d'isolement d'« instantané » a été introduit pour améliorer la concurrence pour les applications de traitement transactionnel en ligne (OLTP). Dans les versions antérieures à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la concurrence était uniquement basée sur le verrouillage, ce qui pouvait provoquer des problèmes de blocage pour certaines applications. Le niveau d'isolement d'instantané, qui dépend des améliorations apportées au contrôle de version de ligne, est conçu pour améliorer les performances en évitant les scénarios de blocage du lecteur/enregistreur.  
@@ -71,6 +72,6 @@ ms.locfileid: "86009816"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Propriétés et comportements de l'ensemble de lignes](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
+ [Propriétés et comportements de l’ensemble de lignes](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

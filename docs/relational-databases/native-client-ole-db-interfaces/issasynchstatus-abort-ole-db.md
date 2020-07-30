@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
+title: 'ISSAsynchStatus :: Abort (fournisseur Native Client OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb263a1b61f7da765eff38d9b10eba683e8d86d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005387"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246925"
 ---
-# <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
+# <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus :: Abort (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Annule une opération s'exécutant de manière asynchrone.  
@@ -70,7 +71,7 @@ HRESULT Abort(
   
  **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d'initialisation. L'ensemble de lignes se trouve dans un état zombie.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  L'abandon de l'initialisation d'un ensemble de lignes ou d'un objet source de données peut laisser l'ensemble de lignes ou l'objet source de données dans un état zombie, de telle sorte que toutes les méthodes autres que **IUnknown** retournent E_UNEXPECTED. Lorsque cela se produit, la seule action possible pour le consommateur est de libérer l'ensemble de lignes ou l'objet source de données.  
   
  Le fait d'appeler **ISSAsynchStatus::Abort** et de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN retourne S_OK. Cela ne signifie pas pour autant que l'opération est terminée ou annulée.  

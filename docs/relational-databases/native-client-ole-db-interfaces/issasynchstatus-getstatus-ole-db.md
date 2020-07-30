@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
+title: 'ISSAsynchStatus :: GetStatus (fournisseur Native Client OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f9a97a29b4f212523b4e494f87b2970f8c27693
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a3bda3f96cf7440599fafdc1f2a3ac914fd59c64
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246916"
 ---
-# <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
+# <a name="issasynchstatusgetstatus-native-client-ole-db-provider"></a>ISSAsynchStatus :: GetStatus (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne l'état d'une opération s'exécutant de manière asynchrone.  
@@ -107,7 +108,7 @@ HRESULT GetStatus(
  E_FAIL  
  Une erreur spécifique au fournisseur s'est produite.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  La méthode **ISSAsynchStatus::GetStatus** se comporte exactement comme la méthode **IDBAsynchStatus::GetStatus**, à la différence près que si l’initialisation d’un objet source de données est abandonnée, E_UNEXPECTED est retourné au lieu de DB_E_CANCELED (pourtant, [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
   
  Si l'ensemble de lignes est initialisé ou rempli de manière asynchrone, il doit prendre en charge cette méthode.  

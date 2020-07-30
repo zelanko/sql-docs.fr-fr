@@ -21,13 +21,14 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0648fda674a0dba83ae4560fa3744e3c1b1430dc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 13d0e51b7b06acdfbe847976d093765203b51638
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009080"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245786"
 ---
-# <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
+# <a name="changing-sql-server-native-client-passwords-programmatically"></a>Modification des mots de passe SQL Server Native Client par programmation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la gestion de l’expiration du mot de passe par programme via le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client et le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client, ainsi que par les modifications apportées aux boîtes de dialogue de **SQL Server connexion** .  

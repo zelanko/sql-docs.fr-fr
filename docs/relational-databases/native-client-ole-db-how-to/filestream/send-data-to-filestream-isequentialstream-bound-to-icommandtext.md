@@ -11,13 +11,14 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7216ae29d82f51d0788ddfd03bc259407033ff5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: efdc485c139e6b35a025b87b39c2bfd7c21caf9e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999626"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243660"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Envoyer des données à FILESTREAM - ISequentialStream lié à ICommandText
+# <a name="send-data-to-filestream-in-sql-server-native-client---isequentialstream-bound-to-icommandtext"></a>Envoyer des données à FILESTREAM dans SQL Server Native Client-ISequentialStream liée à ICommandText
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cet exemple utilise une interface ISequentialStream liée à un paramètre ICommandText pour envoyer entre 4 Mo et 4 Go de données à une colonne FILESTREAM.  

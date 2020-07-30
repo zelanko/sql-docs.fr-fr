@@ -1,5 +1,5 @@
 ---
-title: Établissement d'une connexion à une source de données | Microsoft Docs
+title: Établir la connexion à la source de données (fournisseur OLE DB Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3f0c654edce21a4ec5543d9488938b65d964f0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1dc465bfa63a0822fc4a1de7b13611c0d1121017
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005295"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248168"
 ---
-# <a name="establishing-a-connection-to-a-data-source"></a>Établissement d'une connexion à une source de données
+# <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>Établissement d’une connexion à une source de données SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Pour accéder au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, le consommateur doit d’abord créer une instance d’un objet source de données en appelant la méthode **CoCreateInstance** . Un identificateur de classe unique (CLSID) identifie chaque fournisseur OLE DB. Pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client, l’identificateur de classe est CLSID_SQLNCLI10. Vous pouvez également utiliser le symbole SQLNCLI_CLSID qui sera résolu en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB utilisé dans le sqlncli. h que vous référencez.  

@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes et curseurs SQL Server | Microsoft Docs
+title: Ensembles de lignes et curseurs de SQL Server (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fe60226cef05b8f7925a15be40b0c8cbea9d7c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1829d375ad8a870f1d2d24a40bfd26f6e790e261
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013128"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246832"
 ---
-# <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
+# <a name="rowsets-and-sql-server-cursors-native-client-ole-db-provider"></a>Ensembles de lignes et curseurs de SQL Server (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne les jeux de résultats aux consommateurs à l'aide de deux méthodes :  
@@ -143,7 +144,7 @@ ms.locfileid: "86013128"
   
  Pour un jeu particulier de propriétés d'ensemble de lignes, le modèle de curseur sélectionné est déterminé comme suit.  
   
- À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes selon la valeur de l'indicateur, requis (T, F) ou facultatif (-), de chaque propriété d'ensemble de lignes. Pour chaque modèle de curseur, commencez par la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes avec les valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
+ À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes selon la valeur de l'indicateur, requis (T, F) ou facultatif (-), de chaque propriété d'ensemble de lignes. Pour chaque modèle de curseur, commencez dans la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes aux valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
   
 ## <a name="sql-server-cursor-block-size"></a>Taille de bloc des curseurs SQL Server  
  Lorsqu’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] curseur prend en charge un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de lignes de fournisseur Native Client OLE DB, le nombre d’éléments dans le paramètre de tableau de handles de ligne des méthodes **IRowset :: GetNextRows** ou **IRowsetLocate :: GetRowsAt** définit la taille du bloc de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  

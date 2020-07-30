@@ -1,5 +1,6 @@
 ---
 title: srv_willconvert (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_willconvert détermine si une conversion de type de données spécifique est disponible dans la bibliothèque ODS.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9ba59555ce590c460854481d916e30ef942cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef515b200221a6bb439a65a02e546017046dd0e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755801"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248213"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +55,10 @@ desttype
  *desttype*  
  Indique le type de données vers lequel les données sources sont converties. Ce paramètre peut être n'importe lequel des types de données des API de procédure stockée étendue.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  TRUE si la conversion de type de données est prise en charge ; FALSE, dans le cas contraire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour obtenir une description de chaque type de données, consultez [Types de données &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
   
 > [!IMPORTANT]  

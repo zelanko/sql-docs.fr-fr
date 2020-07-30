@@ -1,5 +1,6 @@
 ---
 title: srv_got_attention (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_got_attention vérifie si la connexion ou la tâche en cours doit être abandonnée et renvoie la valeur TRUE si la connexion est arrêtée ou si le lot est abandonné.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30e546a5cd45d9c89923ab9e96670127491f1ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b5ba738ddd220d83cffe2c28b5629ee491d293f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756747"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248447"
 ---
 # <a name="srv_got_attention-extended-stored-procedure-api"></a>srv_got_attention (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,10 +48,10 @@ srvproc
  *srvproc*  
  Pointeur identifiant une connexion de base de données.  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  TRUE si la connexion est arrêtée ou le lot supprimé. FALSE si la connexion ou le lot est actif.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une procédure stockée étendue dont l’exécution est longue doit contrôler l’attention du serveur en appelant périodiquement **srv_got_attention** afin que la procédure puisse se terminer si la connexion est arrêtée ou que le lot est abandonné.  
   
 > [!IMPORTANT]  

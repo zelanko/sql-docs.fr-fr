@@ -1,5 +1,5 @@
 ---
-title: Prise en charge des types de données pour les améliorations de date et d’heure OLE DB | Microsoft Docs
+title: Prise en charge des types de données pour les améliorations de date et d’heure (fournisseur Native Client OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d414c4aaf8e316d4662448f7e19b847468bee0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005466"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245831"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
+# <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge du type de données SQL Server Native Client pour les améliorations de la date et de l’heure OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cette rubrique fournit des informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types OLE DB (Native Client) qui prennent en charge les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données date/heure.  
@@ -73,7 +74,7 @@ ms.locfileid: "86005466"
   
  Les implémentations pour les structs OLE DB existants suivants ont été modifiées afin de prendre en charge les nouveaux types de données de date et d'heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutefois, les définitions n'ont pas changé.  
   
--   DBTYPE_DATE (Ceci est un type DATE Automation. Il est représenté en interne sous la forme d’un **double**. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 et la partie fractionnaire correspond à la fraction d'un jour. Ce type a une précision de 1 seconde et a donc une échelle effective de 0.)  
+-   DBTYPE_DATE (Ceci est un type DATE Automation. Elle est représentée en interne en tant que **double**. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 et la partie fractionnaire correspond à la fraction d'un jour. Ce type a une précision de 1 seconde et a donc une échelle effective de 0.)  
   
 -   DBTYPE_DBDATE  
   
@@ -179,7 +180,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte le membre *bScale* DBCOLUMDESC pour déterminer la précision en fractions de seconde.|  
   
- Lorsqu'une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à **dateTime2** en fournissant un nom de type dans *pwszTypeName*. Si **datetime** est spécifié, *bScale* doit avoir la valeur 3. Si **smalldatetime** est spécifié, *bScale* doit avoir la valeur 0. Si *bScale* n’est pas cohérent avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
+ Lorsqu'une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à **dateTime2** en fournissant un nom de type dans *pwszTypeName*. Si **datetime** est spécifié, *bScale* doit avoir la valeur 3. Si **smalldatetime** est spécifié, *bScale* doit avoir la valeur 0. Si *bScale* n’est pas cohérent avec *wType* et *pwszTypeName*, DB_E_BADSCALE est renvoyé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

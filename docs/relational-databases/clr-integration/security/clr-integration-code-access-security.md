@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2706faaf181e609df6209758e60b2a46c87aa46
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885902"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248626"
 ---
 # <a name="clr-integration-code-access-security"></a>Sécurité d'accès du code de l'intégration du CLR
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -104,14 +104,13 @@ ms.locfileid: "85885902"
 ## <a name="permission-set-summary"></a>Synthèse des jeux d'autorisations  
  Le graphique suivant résume les restrictions et les autorisations accordées aux jeux d’autorisations **Safe**, **EXTERNAL_ACCESS**et **unsafe** .  
   
-|||||  
+|Fonctionnalités|**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|   
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
-|**Autorisations de sécurité d’accès du code**|Exécution uniquement|Exécution + accès aux ressources externes|Illimité (y compris P/Invoke)|  
-|**Restrictions du modèle de programmation**|Oui|Oui|Sans restriction|  
-|**Vérifiabilité requise**|Oui|Oui|Non|  
-|**Accès aux données locales**|Oui|Oui|Oui|  
-|**Possibilité d'appeler du code natif**|Non|Non|Oui|  
+|Autorisations de sécurité d’accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Illimité (y compris P/Invoke)|  
+|Restrictions du modèle de programmation|Oui|Oui|Sans restriction|  
+|Vérifiabilité requise|Oui|Oui|Non|  
+|Accès aux données locales|Oui|Oui|Oui|  
+|Possibilité d'appeler du code natif|Non|Non|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité de l’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

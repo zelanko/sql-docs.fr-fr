@@ -1,5 +1,5 @@
 ---
-title: Extraction de lignes | Microsoft Docs
+title: Extraction de lignes (fournisseur Native Client OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74d247ef06762d4ca5a9533e04b784aac4c477a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a200f97395336abd5425793393401ac4ab0c9346
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243622"
 ---
-# <a name="fetching-rows"></a>Extraction de lignes
+# <a name="fetching-rows-native-client-ole-db-provider"></a>Extraction de lignes (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   L’interface **IRowset** est l’interface de base des ensembles de lignes. L’interface **IRowset** fournit des méthodes pour récupérer (fetch) les lignes séquentiellement, obtenir les données de ces lignes et gérer les lignes. Les consommateurs utilisent les méthodes de l’interface **IRowset** pour toutes les opérations de base des ensembles de lignes. Ces opérations incluent l'extraction et la libération des lignes, ainsi que l'obtention des valeurs des colonnes.  

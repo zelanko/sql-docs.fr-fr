@@ -1,5 +1,6 @@
 ---
 title: srv_wsendmsg (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_wsendmsg dans l’API de procédure stockée étendue peut envoyer un message Unicode au client.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a74e343c67f83800c21d2c9227f064aa90f29d4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0256a21d4d64df710a4720797297293cbf8a9c0e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755783"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248195"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ msglen
  *Msgnum*  
  Numéro de message à 4 octets.  
   
- *Gravité*  
+ *Niveau de gravité*  
  Spécifie la gravité de l'erreur. Une gravité inférieure ou égale à 10 est considérée comme un message d'information ; sinon, il s'agit d'une erreur.  
   
  *message*  
@@ -67,10 +68,10 @@ msglen
  *msglen*  
  Spécifie la longueur, en caractères, de *message*.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez cette fonction pour envoyer des messages en Unicode. Cette fonction est semblable à **srv_sendmsg**, mais le message qu'elle envoie est une chaîne WCHAR et non une chaîne de type DBCHAR. Notez que la longueur de message est exprimée en caractères et non en octets, et que *msglen* ne sera jamais égal à SRV_NULLTERM.  
   
  Cette fonction retourne FAIL dans les conditions suivantes :  

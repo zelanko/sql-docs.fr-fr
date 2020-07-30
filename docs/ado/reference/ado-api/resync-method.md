@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756311"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243210"
 ---
 # <a name="resync-method"></a>Resync, méthode
 Actualise les données de la base de données sous-jacente de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) actuel ou de la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -65,11 +65,16 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  La **resynchronisation** ne modifiera pas les valeurs d' **État** des objets **Field** à moins qu’une erreur ne se produise lors de l’appel de **Resync** . Par exemple, si le champ n’existe plus, le fournisseur retourne une valeur d' **État** appropriée pour l’objet de **champ** , par exemple **adFieldDoesNotExist**. Les valeurs d' **État** retournées peuvent être combinées logiquement dans la valeur de la propriété **Status** .  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [Resync, exemple de méthode (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync, exemple de méthode (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6bee04f4a794a503b89b73d4ef4a6a1cef897b4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f44a01383a307ac462c0f4fcb3e9e3f67d66fa
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595594"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411505"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées avec SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Cet article explique comment utiliser SQL Server Management Studio pour émettre des requêtes qui utilisent une enclave sécurisée côté serveur pour [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md), notamment :
 - Les requêtes qui déclenchent des opérations de chiffrement sur place.

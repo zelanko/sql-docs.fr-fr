@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105336"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247133"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Arguments  
- La fonction IIf accepte trois arguments : IIF (\<condition>, \<Then Branch>, \<sinon Branch>).  
+ La fonction IIf accepte trois arguments : IIF ( \<condition> , \<then branch> , \<else branch> ).  
   
  *Logical_Expression*  
  Condition qui prend la **valeur true** (1) ou **false** (0). Ce doit être une expression logique MDX (Multidimensional Expressions) valide.  
@@ -63,7 +63,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER et STRICT s'excluent mutuellement dans l'indicateur ; ils peuvent être utilisés dans la même fonction IIF(,,) sur des expressions différentes.  
   
- Pour plus d’informations, consultez [indicateurs de requête de la fonction IIf dans SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) et [plans d’exécution et indicateurs de plan pour la fonction MDX IIF et l’instruction case](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ Pour plus d’informations, consultez [indicateurs de requête de la fonction IIf dans SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) et [plans d’exécution et indicateurs de plan pour la fonction MDX IIF et l’instruction case](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Exemples  
  La requête suivante illustre une utilisation simple de **IIf** à l’intérieur d’une mesure calculée pour retourner une des deux valeurs de chaîne différentes lorsque la mesure Internet Sales Amount est supérieure ou inférieure à $10000 :  

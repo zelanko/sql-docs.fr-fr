@@ -1,5 +1,6 @@
 ---
 title: Type de données (API de procédure stockée étendue) | Microsoft Docs
+description: En savoir plus sur la façon dont les types de données de l’API de procédure stockée étendue peuvent être développés en incluant le fichier d’en-tête SRV. h dans votre programme.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5ff9f72c7ddec8301940cd14bbfe6086cadbd54
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679051"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244017"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Type de données (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

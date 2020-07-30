@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
+title: 'IBCPSession2 :: BCPSetBulkMode (fournisseur Native Client OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12788578b865e24f390a3e49d97fa66388ecb4aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008436"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247700"
 ---
-# <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
+# <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2 :: BCPSetBulkMode (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode fournit une alternative à [IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) pour spécifier le format de colonne. Contrairement à IBCPSession::BCPColFmt, qui définit des attributs de format de colonne individuels, IBCPSession2::BCPSetBulkMode définit tous les attributs.  
@@ -53,7 +54,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  Longueur, en octets, de la valeur de marque de fin de ligne.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  IBCPSession2::BCPSetBulkMode peut retourner l’un des éléments suivants :  
   
 |||  
@@ -64,7 +65,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|L'argument n'était pas valide.|  
 |**E_OUTOFMEMORY**|Erreur de mémoire insuffisante.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  IBCPSession2::BCPSetBulkMode peut être utilisé pour créer une copie en bloc à partir d’une requête ou d’une table. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` pour spécifier l’instruction de requête.  
   
  Vous devez éviter de combiner la syntaxe d'appel RPC avec la syntaxe de requête de lot (`{rpc func};SELECT * from Tbl`, par exemple) dans un texte de commande simple.  Cela entraînera le retour par ICommandPrepare::Prepare d'une erreur et vous empêchera de récupérer des métadonnées. Utilisez la syntaxe ODBC CALL (`{call func}; SELECT * from Tbl`, par exemple) si vous devez combiner l'exécution d'une procédure stockée et une requête de lot dans un texte de commande simple.  

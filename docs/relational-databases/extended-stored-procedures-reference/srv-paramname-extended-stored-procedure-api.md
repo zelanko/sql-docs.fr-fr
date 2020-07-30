@@ -1,5 +1,6 @@
 ---
 title: srv_paramname (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_paramname dans l’API de procédure stockée étendue retourne le nom d’un paramètre d’appel de procédure stockée distante.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9905b5f148ccbf94bb4ca85f85164b5289d0dcec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df8add84e06ea06445a070cd94f5b2033fd4c7d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756693"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248414"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,10 +53,10 @@ SRV_PROC * srvproc,intn, int *len );
  *Len*  
  Fournit un pointeur vers une variable **int** qui contient la longueur, en octets, du nom de paramètre. Si *len* est NULL, la longueur du nom de paramètre de procédure stockée distante n’est pas retournée.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  Pointeur vers une chaîne de caractères terminée par le caractère NULL qui contient le nom du paramètre. La longueur du nom de paramètre est stockée dans *len*. S’il n’y a aucun *n*ième paramètre ni aucune procédure stockée distante, la valeur NULL est retournée, la valeur -1 est affectée à *len* et un message d’erreur d’information est envoyé. Si le nom de paramètre est NULL, la valeur 0 est affectée à *len* et une chaîne vide se terminant par NULL est retournée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction obtient le nom d'un paramètre d'appel de procédure stockée distante. Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Le gestionnaire SRV_RPC est tout de même appelé, mais il apparaît comme s’il n’y avait aucun paramètre et **srv_rpcparams** retourne 0.  
   
 > [!IMPORTANT]  

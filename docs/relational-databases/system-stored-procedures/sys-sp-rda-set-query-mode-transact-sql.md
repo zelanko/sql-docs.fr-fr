@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
+description: Utilisez sys. sp_rda_set_query_mode pour spécifier si les requêtes sur la base de données Stretch active et ses tables retournent des données locales et distantes, ou des données locales uniquement.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,18 +17,19 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06aa5b76b321206a936340cc5bfd8715dbf14f52
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: b2fbef46606f182e2c9833d2ce421c61fc421105
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052999"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243330"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Spécifie si les requêtes sur la base de données Stretch active et ses tables retournent à la fois les données locales et distantes (par défaut), ou les données locales uniquement.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +58,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="permissions"></a>Autorisations  
  Requiert db_owner autorisations.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les procédures stockées étendues suivantes définissent également le mode de requête pour une base de données Stretch.  
   
 -   **sp_rda_deauthorize_db**  

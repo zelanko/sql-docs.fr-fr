@@ -1,6 +1,6 @@
 ---
 title: sys. fn_PageResCracker (Transact-SQL) | Microsoft Docs
-description: Documentation relative à la fonction système sys. fn_PageResCracker.
+description: En savoir plus sur la fonction système sys. fn_PageResCracker. Voir des exemples et afficher des ressources supplémentaires disponibles.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,19 +25,19 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790431"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247578"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Retourne `db_id` , `file_id` et `page_id` pour la `page_resource` valeur donnée. 
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 ```  
@@ -56,7 +56,7 @@ Format hexadécimal sur 8 octets d’une ressource de page de base de données.
 |file_id|**int**|ID de fichier|  
 |page_id|**int**|ID de page|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 `sys.fn_PageResCracker`est utilisé pour convertir la représentation hexadécimale sur 8 octets d’une page de base de données en un ensemble de lignes qui contient l’ID de base de données, l’ID de fichier et l’ID de page de la page.   
 
 Vous pouvez obtenir une ressource de page valide à partir de la `page_resource` colonne de la vue de gestion dynamique [sys. Dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) ou des [processussys.sys&#40;vue système Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Si une ressource de page non valide est utilisée, le retour est NULL.  

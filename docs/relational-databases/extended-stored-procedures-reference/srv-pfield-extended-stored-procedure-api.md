@@ -1,5 +1,6 @@
 ---
 title: srv_pfield (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_pfield dans l’API de procédure stockée étendue retourne des informations sur une connexion de base de données.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12d985ca974f923f37db9d19de048e14af143271
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755930"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248309"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ len
  *case*  
  Spécifie des données sur la connexion à retourner.  
   
-|Valeur|Retours|  
+|Valeur|Retourne|  
 |-----------|-------------|  
 |SRV_APPLNAME|Nom d'application fourni par le client au moment d'établir la connexion.|  
 |SRV_BCPFLAG|Indicateur possédant la valeur TRUE si le client prépare une opération de copie en bloc ou la valeur FALSE dans le cas contraire.|  
@@ -82,7 +83,7 @@ len
  *Len*  
  Pointeur vers une variable **int** contenant la longueur de la valeur *field* retournée. Si *len* a la valeur NULL; la longueur de la chaîne n’est pas retournée.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  Pointeur vers une chaîne terminée par le caractère NULL contenant la valeur actuelle du champ spécifié dans la structure SRV_PROC. Si le champ est vide, un pointeur valide vers une chaîne vide est retourné et *len* contient la valeur 0. Si le champ est inconnu, la valeur NULL est retournée et *len* contient la valeur -1.  
   
 > [!IMPORTANT]  
