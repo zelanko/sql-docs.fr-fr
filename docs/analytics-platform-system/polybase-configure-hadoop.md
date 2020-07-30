@@ -9,14 +9,14 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245390"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243473"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Configurer Polybase en parallèle Data Warehouse pour accéder aux données externes dans Hadoop
 
 Cet article explique comment utiliser Polybase sur une appliance APS pour interroger des données externes dans Hadoop.
 
@@ -55,7 +55,7 @@ Pour améliorer les performances des requêtes, activez le calcul pushdown sur v
   
 1. Ouvrez une connexion Bureau à distance au nœud du contrôle PDW.
 
-2. Recherchez le fichier **Yarn-site. xml** sur le nœud de contrôle. En règle générale, le chemin d’accès est le suivant :  
+2. Recherchez le fichier **yarn-site.xml** sur le nœud de contrôle. En règle générale, le chemin d’accès est le suivant :  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ Pour améliorer les performances des requêtes, activez le calcul pushdown sur v
 
 3. Sur l’ordinateur Hadoop, recherchez le fichier analogue dans le répertoire de configuration Hadoop. Dans le fichier, recherchez et copiez la valeur de la clé de configuration yarn.application.classpath.  
   
-4. Sur le nœud de contrôle, dans le **fichier fils. site. xml,** recherchez la propriété **fils. application. classpath** . Collez la valeur de l’ordinateur Hadoop dans l’élément de valeur.  
+4. Sur le nœud de contrôle, dans le **fichieryarn.site.xml,** recherchez la propriété **fils. application. classpath** . Collez la valeur de l’ordinateur Hadoop dans l’élément de valeur.  
   
 5. Pour toutes les versions 5.X de CDH, vous devez ajouter les paramètres de configuration mapreduce.application.classpath, soit à la fin de votre fichier yarn.site.xml, soit dans le fichier mapred-site.xml. HortonWorks inclut ces configurations dans les configurations yarn.application.classpath. Consultez [Configuration PolyBase](../relational-databases/polybase/polybase-configuration.md) pour voir des exemples.
 
@@ -102,7 +102,7 @@ Yarn-site.xml avec la configuration yarn.application.classpath et mapreduce.appl
 </configuration>
 ```
 
-Si vous choisissez de rompre vos deux paramètres de configuration dans mapred-site. xml et Yarn-site. xml, les fichiers sont les suivants :
+Si vous choisissez de rompre les deux paramètres de configuration dans le mapred-site.xml et le yarn-site.xml, les fichiers sont les suivants :
 
 **yarn-site.XML**
 
@@ -284,7 +284,7 @@ PolyBase est approprié pour trois fonctions :
 
 Les requêtes suivantes fournissent un exemple avec des données fictives provenant de capteurs sur des voitures.
 
-### <a name="ad-hoc-queries"></a>Requêtes ad hoc  
+### <a name="ad-hoc-queries"></a>requêtes ad hoc ;  
 
 La requête ad hoc suivante joint les données relationnelles aux données Hadoop. Il sélectionne les clients qui ont une vitesse supérieure à 35 km, en joignant les données clientes structurées stockées dans les points d’accès avec les données de capteur de voiture stockées dans Hadoop.  
 

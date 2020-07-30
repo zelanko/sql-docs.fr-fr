@@ -17,14 +17,14 @@ ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62f1f6d0e30df7202ae85962914cc628c6455041
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 4e5dff60a0605e059c32edd3d4e8501036a42405
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977702"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241729"
 ---
-# <a name="creating-sql-server-indexes"></a>Création d'index SQL Server
+# <a name="creating-sql-server-native-client-indexes"></a>Création d’index SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client expose la fonction **IIndexDefinition :: CreateIndex** , ce qui permet aux consommateurs de définir de nouveaux index sur des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.  

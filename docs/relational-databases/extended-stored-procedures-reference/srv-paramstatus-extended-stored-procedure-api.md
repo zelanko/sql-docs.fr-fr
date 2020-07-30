@@ -1,5 +1,6 @@
 ---
 title: srv_paramstatus (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_paramstatus retourne l’état d’un paramètre d’appel de procédure stockée distante particulier.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcf1c5ea6db06072aff5075b42a1dde18ad00640
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e55986b0d781b311b050eb5695ca350f7331e25c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755963"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248345"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ n
 ## <a name="returns"></a>Retours  
  Un **int** qui contient les indicateurs d’état du paramètre. Actuellement, il existe un seul indicateur: Si le bit 0 est défini sur 1, le paramètre est un paramètre de retour. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette routine retourne les indicateurs d'état pour un paramètre d'appel d'une procédure stockée distante.  
   
  Les paramètres contiennent les données passées entre les clients et l'application avec des procédures stockées distantes. Le client peut spécifier certains paramètres en tant que paramètres de retour. Ces paramètres de retour peuvent contenir des valeurs que l'application transmet au client.  

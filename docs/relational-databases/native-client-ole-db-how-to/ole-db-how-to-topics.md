@@ -1,5 +1,5 @@
 ---
-title: Rubriques de procédures OLE DB | Microsoft Docs
+title: Rubriques de procédures (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 539ad29e5dd3be3ebc5bce165e7480cd2217bf5a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 12c76eaf2a48fcea81ecaf348e8907daecbeee08
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006474"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243998"
 ---
-# <a name="ole-db-how-to-topics"></a>Rubriques de procédures OLE DB
+# <a name="ole-db-how-to-topics-native-client-ole-db-provider"></a>Rubriques de procédures relatives à OLE DB (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Pour utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client, vous devez comprendre comment établir une connexion au serveur, exécuter la commande et traiter les résultats.  

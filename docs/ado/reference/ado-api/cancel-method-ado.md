@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd6fc7b58d49c788242e029fa004ec38534c8e38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25b6de609d286847fe7458353203dd7f4b9c7b4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763540"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242425"
 ---
 # <a name="cancel-method-ado"></a>Cancel, méthode (ADO)
 Annule l’exécution d’un appel de méthode asynchrone en attente.  
@@ -47,15 +47,24 @@ object.Cancel
 |[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|[Exécuter](../../../ado/reference/ado-api/execute-method-ado-connection.md) ou [ouvrir](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[Enregistrement](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)ou [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[STREAM](../../../ado/reference/ado-api/stream-object-ado.md)|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Flux](../../../ado/reference/ado-api/stream-object-ado.md)|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-||||  
-|-|-|-|  
-|[Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
-  
+
+:::row:::
+    :::column:::
+        [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [Cancel, exemple de méthode (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
  [Cancel, exemple de méthode (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   

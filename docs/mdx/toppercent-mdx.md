@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036596"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362649"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Pourcentage*  
+ *Percentage*  
  Expression numérique valide qui précise le pourcentage de tuples à retourner.  
   
 > [!IMPORTANT]  
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  L’expression ci-dessus génère les résultats suivants :  
   
-||Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3 508 904,84|  
 |London|$1 521 530,09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  La requête ci-dessus retourne les résultats suivants ; les lignes de la section centrale ont été supprimées pour faciliter la lisibilité.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Vélos de tourisme|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157 444,56|$163 112,57|($5 668,01)|  
 |Tourisme-2000 bleu, 46|$321 027,03|$333 021,50|($11 994,47)|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  Notez que la requête demande cent pour cent (100 %) ; ce qui signifie que toutes les lignes doivent être retournées. Toutefois, étant donné qu’il y a des valeurs négatives dans le *numeric_expression* , une seule ligne est retournée.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Vélos de tourisme|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157 444,56|$163 112,57|($5 668,01)|  
   

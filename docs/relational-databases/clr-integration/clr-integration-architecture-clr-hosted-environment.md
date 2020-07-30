@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727644"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246394"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture de l’intégration du CLR - Environnement hébergé CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "85727644"
 ###### <a name="reliability-safety"></a>Fiabilité (sécurité)  
  Le code utilisateur ne doit pas être autorisé à effectuer des opérations qui compromettent l'intégrité du processus du moteur de base de données, telles que l'affichage d'une boîte de message demandant une réponse de l'utilisateur ou la sortie du processus. Le code utilisateur ne doit pas être en mesure de remplacer les mémoires tampons ou les structures de données internes du moteur de base de données.  
   
-###### <a name="scalability"></a>Extensibilité  
+###### <a name="scalability"></a>Scalabilité  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR ont des modèles internes différents de planification et de gestion de la mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un modèle de thread coopératif et non préemptif, dans lequel les threads suspendent volontairement leur exécution périodiquement, ou lorsqu'ils attendent des verrous ou des E/S. Le CLR prend en charge un modèle de thread préemptif. Si le code utilisateur qui s'exécute au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler directement les primitives de thread du système d'exploitation, il ne s'intègre pas correctement dans le planificateur de tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peut dégrader l'évolutivité du système. Le CLR ne distingue pas la mémoire virtuelle de la mémoire physique, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère directement la mémoire physique et doit utiliser la mémoire physique dans une limite configurable.  
   
  Les modèles différents de threading, de planification et de gestion de la mémoire présentent une difficulté d'intégration pour un système de gestion de base de données relationnelle (SGBDR) qui évolue pour prendre en charge des milliers de sessions utilisateur simultanées. L'architecture doit garantir que l'évolutivité du système n'est pas compromise lorsque le code d'utilisateur appelle des interfaces de programmation d'applications (API) directement pour des primitives de thread, de mémoire et de synchronisation.  
@@ -154,9 +154,8 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>Sécurité : jeux d'autorisations  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux utilisateurs de spécifier les exigences de fiabilité et de sécurité du code déployé dans la base de données. Lorsque les assemblys sont téléchargés dans la base de données, l’auteur de l’assembly peut spécifier l’un des trois jeux d’autorisations pour cet assembly : SAFE, EXTERNAL_ACCESS et UNSAFE.  
   
-|||||  
+|Fonctionnalité|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|Jeu d'autorisations|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sécurité d'accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Non restreint|  
 |Restrictions du modèle de programmation|Oui|Oui|Sans restriction|  
 |Vérifiabilité requise|Oui|Oui|Non|  

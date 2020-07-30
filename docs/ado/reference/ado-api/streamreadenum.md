@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33cb0b24806b0b4568a1d7eabc5a55aab4a9872b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 92c599665548c36b8349290b02d197393f707fbf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759605"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243190"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Spécifie si l’intégralité du flux ou la ligne suivante doit être lue à partir d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -34,7 +34,12 @@ Spécifie si l’intégralité du flux ou la ligne suivante doit être lue à pa
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Read, méthode](../../../ado/reference/ado-api/read-method.md)|[ReadText, méthode](../../../ado/reference/ado-api/readtext-method.md)|
+
+:::row:::
+    :::column:::
+        [Read, méthode](../../../ado/reference/ado-api/read-method.md)  
+    :::column-end:::
+    :::column:::
+        [ReadText, méthode](../../../ado/reference/ado-api/readtext-method.md)  
+    :::column-end:::
+:::row-end:::

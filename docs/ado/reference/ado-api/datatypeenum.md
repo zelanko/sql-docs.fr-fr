@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757625"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242382"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/field-object.md), d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md)ou d’une [propriété](../../../ado/reference/ado-api/property-object-ado.md). L’indicateur de type de OLE DB correspondant est indiqué entre parenthèses dans la colonne Description du tableau suivant.  
@@ -115,8 +115,14 @@ Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/fiel
 |AdoEnums.DataType.WCHAR|  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type, propriété (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+        [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+        [Type, propriété (ADO)](../../../ado/reference/ado-api/type-property-ado.md)  
+    :::column-end:::
+:::row-end:::

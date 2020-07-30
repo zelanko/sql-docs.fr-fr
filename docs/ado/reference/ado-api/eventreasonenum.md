@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d923476d8abff4dfa283e58eb6394bdb3b9593
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94b36cbab5ffe7c22f4d1941e61af8fabc8b9973
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242729"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Spécifie la raison pour laquelle un événement a eu lieu.  
@@ -65,8 +65,14 @@ Spécifie la raison pour laquelle un événement a eu lieu.
 |AdoEnums.EventReason.UPDATE|  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[WillChangeRecord et RecordChangeComplete, événements (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|[WillChangeRecordset et RecordsetChangeComplete, événements (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|  
-|[WillMove et MoveComplete, événements (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)||
+
+:::row:::
+    :::column:::
+        [WillChangeRecord et RecordChangeComplete, événements (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+
+        [WillChangeRecordset et RecordsetChangeComplete, événements (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+    :::column-end:::
+    :::column:::
+        [WillMove et MoveComplete, événements (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+    :::column-end:::
+:::row-end:::

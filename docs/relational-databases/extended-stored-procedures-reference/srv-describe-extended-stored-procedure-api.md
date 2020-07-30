@@ -1,5 +1,6 @@
 ---
 title: srv_describe (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment les srv_describe dans l’API de procédure stockée étendue définissent le nom de colonne et les types de données source et de destination pour une colonne spécifique dans une ligne.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2dc77e2ff3314664b28647980b62dabdde450fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678596"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248467"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ srcdata
 ## <a name="returns"></a>Retours  
  Numéro de la colonne décrite. La première colonne est la colonne 1. Si une erreur se produit, retourne 0.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction **srv_describe** doit être appelée une fois pour chaque colonne dans la ligne avant le premier appel à **srv_sendrow**. Les colonnes d'une ligne peuvent être décrites dans n'importe quel ordre.  
   
  Pour changer l’emplacement et la longueur des données sources dans les lignes de colonnes avant d’envoyer le jeu de résultats complet, utilisez **srv_setcoldata** et **srv_setcollen**, respectivement.  

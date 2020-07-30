@@ -1,5 +1,6 @@
 ---
 title: srv_sendmsg (API de procédure stockée étendue) | Microsoft Docs
+description: En savoir plus sur les srv_sendmsg dans l’API de procédure stockée étendue et sur la manière dont elle peut envoyer un message au client.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757712cd6e390c4369cea08aa7d0e59d727b7d39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3737b6633710a3831cf8cbcb3801263582369dc7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755844"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248238"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +82,7 @@ msglen
  *msgnum*  
  Numéro de message à 4 octets.  
   
- *type*  
+ *class*  
  Spécifie la gravité de l'erreur. Une gravité inférieure ou égale à 10 est considérée comme un message d'information.  
   
  *state*  
@@ -105,7 +106,7 @@ msglen
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction envoie des messages d'erreur ou d'information au client. Elle est appelée une fois pour chaque message à envoyer.  
   
  Les messages peuvent être envoyés au client avec **srv_sendmsg** dans n’importe quel ordre avant ou après que toutes les lignes (le cas échéant) ont été envoyées avec **srv_sendrow**. Tous les messages, s’il en existe, doivent être envoyés au client avant que l’état d’achèvement soit envoyé avec **srv_senddone**.  

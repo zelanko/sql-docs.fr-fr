@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764560"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242839"
 ---
 # <a name="ado-properties"></a>Propriétés ADO
 
-|||  
+|Propriété|Description|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Indique sur quelle page se trouve l’enregistrement en cours.|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Indique la position ordinale de l’enregistrement actif d’un objet **Recordset** .|  
@@ -55,7 +55,7 @@ ms.locfileid: "82764560"
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indique si la position actuelle est à la fin du flux.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Indique un filtre pour les données d’un **jeu d’enregistrements**.|  
 |[HelpContext et HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indique le fichier d’aide et la rubrique associés à un objet d' **erreur** .<br /><br /> **HelpContextID** retourne un ID de contexte, sous la forme d’une valeur **long** , pour une rubrique dans un fichier d’aide.<br /><br /> **HelpFile** retourne une valeur de **chaîne** qui prend la valeur d’un chemin d’accès entièrement résolu d’un fichier d’aide.|  
-|[Évaluer](../../../ado/reference/ado-api/index-property.md)|Indique le nom de l’index actuellement en vigueur pour un objet **Recordset** .|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|Indique le nom de l’index actuellement en vigueur pour un objet **Recordset** .|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indique le niveau d’isolation d’un objet de **connexion** .|  
 |[Item](../../../ado/reference/ado-api/item-property-ado.md)|Indique un membre spécifique d’une collection, par nom ou numéro ordinal.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Indique le caractère binaire à utiliser comme séparateur de lignes dans les objets de **flux** de texte.|  
@@ -65,7 +65,7 @@ ms.locfileid: "82764560"
 |[Mode](../../../ado/reference/ado-api/mode-property-ado.md)|Indique les autorisations disponibles pour la modification des données dans une **connexion**, un **enregistrement**ou un objet de **flux** .|  
 |[Nom](../../../ado/reference/ado-api/name-property-ado.md)|Indique le nom d’un objet.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Indique le code d’erreur spécifique au fournisseur pour un objet d' **erreur** particulier.|  
-|[Number](../../../ado/reference/ado-api/number-property-ado.md)|Indique le nombre qui identifie de façon unique un objet d' **erreur** .|  
+|[Nombre](../../../ado/reference/ado-api/number-property-ado.md)|Indique le nombre qui identifie de façon unique un objet d' **erreur** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Indique l’échelle des valeurs numériques dans un objet de **paramètre** ou de **champ** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Indique la valeur d’un **champ** qui existait dans l’enregistrement avant toute modification.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Indique le nombre de pages de données que contient l’objet **Recordset** .|  
@@ -78,7 +78,7 @@ ms.locfileid: "82764560"
 |[Fournisseur](../../../ado/reference/ado-api/provider-property-ado.md)|Indique le nom du fournisseur pour un objet de **connexion** .|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Indique le nombre d’enregistrements dans un objet **Recordset** .|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Indique le type d’objet d' **enregistrement** .|  
-|[Haut](../../../ado/reference/ado-api/row-property-ado.md)|Obtient ou définit un objet OLE DB **ligne** à partir de/sur un objet **ADORecordConstruction** .|  
+|[Ligne](../../../ado/reference/ado-api/row-property-ado.md)|Obtient ou définit un objet OLE DB **ligne** à partir de/sur un objet **ADORecordConstruction** .|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Obtient ou définit un objet **RowPosition** OLE DB à partir de/sur un objet **ADORecordsetConstruction** .|  
 |[Ensemble de lignes](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtient ou définit un objet d' **ensemble de lignes** OLE DB à partir de/sur un objet **ADORecordsetConstruction** .|  
 |[Source (erreur ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Indique le nom de l’objet ou de l’application qui a généré à l’origine une erreur.|  

@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes | Microsoft Docs
+title: Ensembles de lignes (fournisseur OLE DB Native Client)
 description: Permet à tous les fournisseurs de données d’exposer les données du jeu de résultats sous forme de tableau. Dans OLE DB, utilisez la fonctionnalité d’ensemble de lignes, un ensemble de lignes qui contient des colonnes de données.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,13 +18,14 @@ ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0006be5acbff458e278d1719fcc5e6fe7d34ec6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2254c566e30cec9e0869e1a09c850e7013e0482a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013113"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246831"
 ---
-# <a name="rowsets"></a>Ensembles de lignes
+# <a name="rowsets-native-client-ole-db-provider"></a>Ensembles de lignes (fournisseur OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Un ensemble de lignes est un jeu de lignes contenant des colonnes de données. Les ensembles de lignes sont des objets centraux qui permettent à tous les fournisseurs de données OLE DB d'exposer les données des jeux de résultats sous forme tabulaire.  
@@ -53,7 +54,7 @@ ms.locfileid: "86013113"
   
 -   [Création d'ensembles de lignes avec ICommand::Execute](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
--   [Propriétés et comportements de l'ensemble de lignes](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
+-   [Propriétés et comportements de l’ensemble de lignes](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [Ensembles de lignes et curseurs SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898100"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363009"
 ---
 # <a name="managing-a-domain"></a>Gestion d'un domaine
 
@@ -44,7 +44,7 @@ ms.locfileid: "85898100"
 ## <a name="in-this-section"></a>Dans cette section  
  L'utilisation d'un domaine vous permet d'effectuer les opérations suivantes :  
   
-|||  
+|Description de l’opération|Rubrique|  
 |-|-|  
 |Créer une représentation sémantique d'un champ de données avec un type de données spécifique, spécifier comment le domaine est rempli et mettre en forme la sortie du domaine|[Créer un domaine](../data-quality-services/create-a-domain.md)|  
 |Lier un domaine à un autre domaine, en lui permettant de partager les mêmes paramètres et valeurs|[Créer un domaine lié](../data-quality-services/create-a-linked-domain.md)|  

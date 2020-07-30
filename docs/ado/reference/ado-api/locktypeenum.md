@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762530"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242649"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Spécifie le type de verrou placé sur les enregistrements lors de la modification.  
@@ -45,8 +45,14 @@ Spécifie le type de verrou placé sur les enregistrements lors de la modificati
 |AdoEnums.LockType.UNSPECIFIED|  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Clone, méthode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[LockType, propriété (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
-|[Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[WillExecute, événement (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+
+:::row:::
+    :::column:::
+        [Clone, méthode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
+        [LockType, propriété (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [WillExecute, événement (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+    :::column-end:::
+:::row-end:::

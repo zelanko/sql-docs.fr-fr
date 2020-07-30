@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b653bd79c6e6e27dee30a4f11385f457717364a2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765230"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242529"
 ---
 # <a name="ado-md-properties"></a>Propriétés ADO MD
 
-|||  
+|Propriété|Description|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indique à quel objet de **connexion** ADO appartient actuellement le catalogue ou l’CellSet actuel.|  
 |[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indique la légende de texte à utiliser lors de l’affichage d’un objet de **niveau** ou de **membre** .|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indique le nombre de membres pour lesquels l’objet **membre** actuel est le parent dans une hiérarchie.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Retourne une collection de **membres** dont le **membre** actuel est le parent dans la hiérarchie.|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
-|[Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indique le nombre de niveaux entre le **niveau** et la racine du niveau de la hiérarchie.|  
+|[Profondeur](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indique le nombre de niveaux entre le **niveau** et la racine du niveau de la hiérarchie.|  
 |[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Retourne une explication textuelle de l’objet actuel.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indique le nombre de dimensions sur un axe.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indique si aucun enfant ne suit immédiatement le membre sur l'axe.|  

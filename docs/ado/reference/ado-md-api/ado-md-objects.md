@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3e655647e7f485a27764280faba1adac091f0b7b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765250"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242549"
 ---
 # <a name="ado-md-objects"></a>Objets ADO MD
 
-|||  
+|Object|Description|  
 |-|-|  
 |[Axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Représente un axe positionnel ou de filtre d’un CellSet, contenant les membres sélectionnés d’une ou plusieurs dimensions.|  
 |[Catalogue](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contient des informations sur les schémas multidimensionnels (c’est-à-dire les cubes et les dimensions sous-jacentes, les hiérarchies, les niveaux et les membres) spécifiques à un fournisseur de données multidimensionnelles (MDP).|  

@@ -1,5 +1,6 @@
 ---
 title: srv_paramsetoutput (API de procédure stockée étendue)
+description: Découvrez comment srv_paramsetoutput dans l’API de procédure stockée étendue définit la valeur d’un paramètre de retour.
 ms.custom: seo-dt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b00f2fedd9c1053e332aaee8691207fbf990649
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e406d8a9f2b9bc6b2f03239dee435364f481af9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755949"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248392"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,14 +73,14 @@ fNull
  *fNull*  
  Indicateur spécifiant si la valeur du paramètre de retour est NULL. Attribuez la valeur TRUE à cet indicateur si le paramètre doit avoir la valeur NULL. La valeur par défaut est FALSE. Si *fNull* a la valeur TRUE, *cbLen* doit avoir la valeur 0, sinon la fonction échoue.  
   
-## <a name="returns"></a>Retours  
+## <a name="returns"></a>Retourne  
  Si les informations de paramètre ont été définies avec succès, la valeur SUCCEED est retournée ; sinon, la valeur FAIL est retournée. La valeur FAIL est retournée dans les cas suivants :  
   
 -   le paramètre n'est pas un paramètre de retour, ou  
   
 -   l’argument *cbLen* n’est pas valide.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763160"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242406"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate, méthode (ADO)
 Annule toutes les modifications apportées à la ligne actuelle ou nouvelle d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , ou à la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) , avant d’appeler la méthode [Update](../../../ado/reference/ado-api/update-method.md) .  
@@ -45,11 +45,16 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  La méthode **CancelUpdate** annule les insertions ou les suppressions en attente des objets [Field](../../../ado/reference/ado-api/field-object.md) , et annule les mises à jour en attente des champs existants et les restaure à leurs valeurs d’origine. La propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de tous les champs de la collection **Fields** a la valeur **adFieldOK**.  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [Update et CancelUpdate, exemple de méthodes (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update et CancelUpdate, exemple de méthodes (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

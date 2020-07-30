@@ -1,5 +1,6 @@
 ---
 title: srv_convert (API de procédure stockée étendue) | Microsoft Docs
+description: Découvrez comment srv_convert dans l’API de procédure stockée étendue modifie les données d’un type de données à un autre.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60acbb6044842c097aa222b7a831addac7cf11d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3148ecd51a44bf6c0c9f03546d3bf750c1df1c0
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678707"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332368"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procédure stockée étendue)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ destlen
 ## <a name="returns"></a>Retours  
  Longueur des données converties, en octets, si la conversion de type de données réussit. Quand **srv_convert** rencontre une demande de conversion qu’il ne prend pas en charge, il appelle le gestionnaire d’erreurs fourni par le développeur, le cas échéant, définit un numéro d’erreur global et retourne -1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction **srv_willconvert** détermine si une conversion particulière est autorisée.  
   
  La conversion vers le type de données numérique approximatif SRVFLT4 ou SRVFLT8 peut provoquer une certaine perte de précision. La conversion à partir du type de données numérique approximatif SRVFLT4 ou SRVFLT8 vers SRVCHAR ou SRVTEXT peut également provoquer une certaine perte de précision.  

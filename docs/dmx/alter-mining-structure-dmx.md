@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971834"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362219"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *arborescence*  
+ *structure*  
  Nom de la structure d'exploration de données à laquelle le modèle d'exploration de données sera ajouté.  
   
  *model*  
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  L'indicateur de modélisation NOT_NULL s'applique à la colonne de structure d'exploration de données. Pour plus d’informations, consultez [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
-|||  
-|-|-|  
 |Terme|Définition|  
+|-|-|  
 |**RÉGRESSEUR**|Indique que l'algorithme peut utiliser la colonne spécifiée dans la formule de régression des algorithmes de régression.|  
 |**MODEL_EXISTENCE_ONLY**|Indique que les valeurs de la colonne d'attribut sont moins importantes que la présence de l'attribut.|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>Clause de prédiction  
  La clause de prédiction décrit de quelle manière la colonne de prédiction est utilisée. Le tableau suivant répertorie les clauses possibles.  
   
-|||  
+|Clause|Description|  
 |-|-|  
 |**PRÉSENTATION**|Cette colonne peut être prédite par le modèle, et ses valeurs peuvent être utilisées comme entrée pour prédire la valeur d'autres colonnes prédictibles.|  
 |**PREDICT_ONLY**|Cette colonne peut être prédite par le modèle, mais ses valeurs ne peuvent pas être utilisées dans des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  

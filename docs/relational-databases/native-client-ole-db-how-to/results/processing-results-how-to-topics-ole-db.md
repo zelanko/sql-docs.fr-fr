@@ -1,5 +1,5 @@
 ---
-title: Rubriques des procédures relatives au traitement des résultats (OLE DB) | Microsoft Docs
+title: Rubriques de procédures relatives au traitement des résultats (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72707085af2cdc39b2e2ef24804613af7a68f171
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 558ff0ae2d1ad83392a1b7b94a779c1a2b099636
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006417"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246984"
 ---
-# <a name="processing-results-how-to-topics-ole-db"></a>Rubriques des procédures relatives au traitement des résultats (OLE DB)
+# <a name="processing-results-how-to-topics-native-client-ole-db-provider"></a>Rubriques de procédures relatives au traitement des résultats (fournisseur Native Client OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le traitement des résultats dans une application OLE DB implique tout d'abord la détermination des caractéristiques du jeu de résultats, puis l'extraction des données dans des variables de programme. Si la commande exécute une procédure stockée, vous devez également savoir comment traiter les codes de retour et les paramètres de sortie des procédures stockées.  

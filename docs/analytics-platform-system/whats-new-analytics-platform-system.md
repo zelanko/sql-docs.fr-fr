@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039828"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243077"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Nouveautés d’Analytics Platform System, un entrepôt de données MPP avec montée en puissance parallèle
 Découvrez les nouveautés des dernières mises à jour d’appliance pour Microsoft Analytics Platform System (APS). APS est un appareil local avec montée en puissance parallèle qui héberge les Data Warehouses MPP SQL Server parallèles. 
@@ -65,6 +65,8 @@ APS CU 7.3 améliore les performances des requêtes avec l’élimination de sou
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Connecteur Informatica APS pour Informatica 10.2.0 publié
 Nous avons publié une nouvelle version des connecteurs Informatica pour APS qui fonctionne avec Informatica version 10.2.0 et 10.2.0 Hotfix 1. Les nouveaux connecteurs peuvent être téléchargés à partir du [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).
+> [!NOTE]
+> Le connecteur Informatica APS pour Informatica 10.2.0 ou 10.2.0 Hotfix 1 ne fonctionne pas sur un protocole TLS 1.2 strict et requiert TLS 1.0 et 1,1 pour être entièrement fonctionnel.
 
 #### <a name="supported-versions"></a>Versions prises en charge
 
@@ -138,7 +140,7 @@ L’utilisation d’objets de catalogue pour les appels de métadonnées au lieu
 ### <a name="bug-fixes"></a>Résolution des bogues
 Nous avons effectué la mise à niveau vers SQL Server 2016 SP2 CU2 avec APS CU 7.1. La mise à niveau corrige certains problèmes décrits ci-dessous.
 
-| Intitulé | Description |
+| Titre | Description |
 |:---|:---|
 | **Blocage potentiel du moteur de Tuple** |La mise à niveau résout un long risque d’interblocage dans une transaction distribuée et un thread d’arrière-plan du moteur de Tuple. Après l’installation de CU 7.1, les clients qui ont utilisé TF634 pour arrêter le moteur de tuple comme SQL Server paramètre de démarrage ou l’indicateur de trace global peuvent le supprimer en toute sécurité. | 
 | **Échec de certaines requêtes de décalage/Lead** |Certaines requêtes sur les tables ICC avec des fonctions de décalage/Lead imbriquées qui génèrent des erreurs sont désormais résolues avec cette mise à niveau. | 
