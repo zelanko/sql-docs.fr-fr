@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265535"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394874"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Options de ligne de commande dans la console SSMA (AccessToSQL)
 Microsoft vous fournit un ensemble fiable d’options de ligne de commande pour exécuter et contrôler les activités SSMA. Les sections suivantes fournissent des détails supplémentaires.  
@@ -25,7 +25,7 @@ Dans les présentes, vous trouverez les options de commande de la console.
   
 Dans le cadre de cette section, le terme « option » est également appelé « commutateur ».  
   
-Les options ne respectent pas la casse et peuvent commencer par le caractère**-**« » ou**/**« ».  
+Les options ne respectent pas la casse et peuvent commencer par le **-** caractère « » ou « **/** ».  
   
 Si des options sont spécifiées, il est obligatoire de spécifier les paramètres d’option correspondants.  
   
@@ -117,16 +117,12 @@ Ce commutateur facultatif désigne le dossier des paramètres de l’environneme
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### <a name="secure-password-option--psecurepassword"></a>Option de mot de passe sécurisé :-p/SecurePassword  
 Cette option indique le mot de passe chiffré pour les connexions au serveur. Il diffère de toutes les autres options dans le cas où il n’exécute pas de script ou d’aide dans les activités liées à la migration, mais il permet de gérer le chiffrement des mots de passe pour les connexions serveur utilisées dans le projet de migration.  
   
 Vous ne pouvez pas entrer une autre option ou un autre mot de passe en tant que paramètre de ligne de commande. Dans le cas contraire, une erreur est générée. Pour plus d’informations, consultez la section [gestion des mots de passe](managing-passwords-accesstosql.md) .  
   
-Les sous-options suivantes sont prises en `-p/securepassword`charge pour :  
+Les sous-options suivantes sont prises en charge pour `-p/securepassword` :  
   
 -   Pour ajouter un mot de passe, ou mettre à jour un mot de passe existant, vers le stockage protégé pour un ID de serveur spécifié ou pour tous les ID de serveur définis dans le fichier de connexion au serveur :  
   

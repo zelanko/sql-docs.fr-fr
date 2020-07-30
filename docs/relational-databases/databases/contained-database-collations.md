@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09edac79bf52c2826436ecdfdf25b0db342f4aeb
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763629"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363560"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -126,9 +126,8 @@ END;
   
  Le comportement de différents objets dans les bases de données autonomes ou non autonomes est résumé dans ce tableau :  
   
-||||  
+|Élément|Base de données non autonome|Base de données autonome|  
 |-|-|-|  
-|**Item**|**Base de données non autonome**|**Base de données autonome**|  
 |Données utilisateur (valeur par défaut)|DATABASE_DEFAULT|DATABASE_DEFAULT|  
 |Données Temp (valeur par défaut)|Classement TempDB|DATABASE_DEFAULT|  
 |Métadonnées|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  

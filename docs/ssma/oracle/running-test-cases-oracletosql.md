@@ -10,15 +10,15 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266546"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394860"
 ---
 # <a name="running-test-cases-oracletosql"></a>Exécution de cas de test (OracleToSQL)
-Lorsque SSMA tester exécute un cas de test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance entre les objets entre Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
+Lorsque SSMA tester exécute un cas de test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance entre les objets entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
   
 La nécessité d’un test réussi est que tous les objets Oracle sont convertis et chargés dans la base de données cible. En outre, les données de la table doivent être migrées afin que le contenu des tables sur les deux plateformes soit synchronisé.  
   
@@ -41,9 +41,8 @@ Le testeur SSMA vérifie si toutes les conditions préalables sont remplies pour
   
 Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, les objets auxiliaires suivants sont créés dans Oracle.  
   
-||||  
-|-|-|-|  
 |Nom|Type|Description|  
+|-|-|-|  
 |USER_TABLE $ Trg|déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
 |USER_TABLE $ AUD|table|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
 |USER_TABLE $ AUDI|table|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
@@ -52,18 +51,16 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
 |USER_TABLE $ NEW_ID|vue|Identification des lignes insérées et modifiées.|  
 |USER_TABLE $ OLD|vue|Représentation simplifiée des lignes supprimées et remplacées.|  
   
-L’objet suivant est créé dans le schéma de la table vérifiée à l’adresse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+L’objet suivant est créé dans le schéma de la table vérifiée à l’adresse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-||||  
-|-|-|-|  
 |Nom|Type|Description|  
+|-|-|-|  
 |USER_TABLE $ Trg|déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
   
-Et les objets suivants sont créés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans la base de données ssmatesterdb.  
+Et les objets suivants sont créés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la base de données ssmatesterdb.  
   
-||||  
-|-|-|-|  
 |Nom|Type|Description|  
+|-|-|-|  
 |USER_TABLE $ AUD|table|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
 |USER_TABLE $ AudI|table|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
 |USER_TABLE|vue|Représentation simplifiée des modifications de la table.|  

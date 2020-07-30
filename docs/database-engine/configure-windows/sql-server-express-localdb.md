@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bc9a5c4ca7481d9d3d1039e0e467e35d5c2631b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771782"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363041"
 ---
 # <a name="sql-server-express-localdb"></a>Base de données locale SQL Server Express
 
@@ -116,7 +116,7 @@ REM Gather information about the instance of LocalDB
 
  La dernière ligne ci-dessus retourne des informations semblables aux suivantes.
 
-|||
+|Category|Valeur|
 |-|-|
 |Nom|`LocalDBApp1`|
 |Version|\<Current Version>|

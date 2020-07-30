@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831435"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393987"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contient des informations sur chaque plan d’exécution associé à une requête.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831435"
 |**is_forced_plan**|**bit**|Le plan est marqué comme forcé lorsque l’utilisateur exécute la procédure stockée **sys. sp_query_store_force_plan**. Le mécanisme forcé *ne garantit pas* que exactement ce plan sera utilisé pour la requête référencée par **query_id**. Le forçage de plan force la compilation de la requête et produit en général exactement le même plan ou un plan similaire au plan référencé par **plan_id**. Si le forçage du plan échoue, **force_failure_count** est incrémenté et **last_force_failure_reason** est rempli avec la raison de l’échec. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**is_natively_compiled**|**bit**|Le plan comprend des procédures optimisées en mémoire compilées en mode natif. (0 = FALSE, 1 = TRUE). <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**force_failure_count**|**bigint**|Nombre de fois où l’application forcée de ce plan a échoué. Il peut être incrémenté uniquement lorsque la requête est recompilée (*pas à chaque exécution*). Elle est réinitialisée à 0 chaque fois que **is_plan_forced** passe de **false** à **true**. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**last_force_failure_reason**|**int**|Raison pour laquelle le forçage du plan a échoué.<br /><br /> 0 : aucun échec, sinon le numéro d’erreur de l’erreur qui a provoqué l’échec de l’application<br /><br /> 8637 : ONLINE_INDEX_BUILD<br /><br /> 8683 : INVALID_STARJOIN<br /><br /> 8684 : TIME_OUT<br /><br /> 8689 : NO_DB<br /><br /> 8690 : HINT_CONFLICT<br /><br /> 8691 : SETOPT_CONFLICT<br /><br /> 8694 : DQ_NO_FORCING_SUPPORTED<br /><br /> 8698 : NO_PLAN<br /><br /> 8712 : NO_INDEX<br /><br /> 8713 : VIEW_COMPILE_FAILED<br /><br /> \<autre> de valeur : GENERAL_FAILURE <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**last_force_failure_reason**|**int**|Raison pour laquelle le forçage du plan a échoué.<br /><br /> 0 : aucun échec, sinon le numéro d’erreur de l’erreur qui a provoqué l’échec de l’application<br /><br /> 8637 : ONLINE_INDEX_BUILD<br /><br /> 8683 : INVALID_STARJOIN<br /><br /> 8684 : TIME_OUT<br /><br /> 8689 : NO_DB<br /><br /> 8690 : HINT_CONFLICT<br /><br /> 8691 : SETOPT_CONFLICT<br /><br /> 8694 : DQ_NO_FORCING_SUPPORTED<br /><br /> 8698 : NO_PLAN<br /><br /> 8712 : NO_INDEX<br /><br /> 8713 : VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Description textuelle de last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD : une requête tente de modifier des données alors que la table cible a un index en cours de création en ligne<br /><br /> INVALID_STARJOIN : le plan contient une spécification StarJoin non valide<br /><br /> TIME_OUT : l’optimiseur a dépassé le nombre d’opérations autorisées lors de la recherche du plan spécifié par le plan forcé<br /><br /> NO_DB : aucune base de données spécifiée dans le plan n’existe<br /><br /> HINT_CONFLICT : impossible de compiler la requête, car le plan est en conflit avec un indicateur de requête<br /><br /> DQ_NO_FORCING_SUPPORTED : impossible d’exécuter la requête, car le plan est en conflit avec l’utilisation de la requête distribuée ou des opérations de texte intégral.<br /><br /> NO_PLAN : le processeur de requêtes n’a pas pu générer le plan de requête car le plan forcé n’a pas pu être vérifié pour la requête<br /><br /> NO_INDEX : l’index spécifié dans le plan n’existe plus<br /><br /> VIEW_COMPILE_FAILED : impossible de forcer le plan de requête en raison d’un problème dans une vue indexée référencée dans le plan<br /><br /> GENERAL_FAILURE : erreur de forçage général (non couverte par les raisons ci-dessus) <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours *None*.|  
 |**count_compiles**|**bigint**|Planifiez les statistiques de compilation.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planifiez les statistiques de compilation.|  
@@ -94,7 +94,7 @@ Enfin, s’il y a des problèmes avec le plan lui-même :
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

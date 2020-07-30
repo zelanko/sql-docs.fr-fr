@@ -11,31 +11,30 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1741b8e638142adc7fb33398e329197bdc97220d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103009"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395374"
 ---
 # <a name="generating-reports-mysqltosql"></a>Génération de rapports (MySQLToSQL)
 Les rapports de certaines activités effectuées à l’aide de commandes sont générés dans la console SSMA au niveau de l’arborescence d’objets.  
   
 Pour générer des rapports, procédez comme suit :  
   
-1.  Spécifiez le paramètre **Write-Resume-Report-to** . Le rapport associé est stocké en tant que nom de fichier (s’il est spécifié) ou dans le dossier que vous spécifiez. Le nom de fichier est prédéfini par le système, comme indiqué dans le tableau ci- ** &lt;dessous&gt; ** , où n est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
+1.  Spécifiez le paramètre **Write-Resume-Report-to** . Le rapport associé est stocké en tant que nom de fichier (s’il est spécifié) ou dans le dossier que vous spécifiez. Le nom de fichier est prédéfini par le système, comme indiqué dans le tableau ci-dessous, où ** &lt; n &gt; ** est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
   
     Les rapports vis-à-vis sont les suivants :  
   
-    ||||  
+    |SL. Non.|Commande|Titre de rapport|  
     |-|-|-|  
-    |**SL. non.**|**Commande**|**Titre de rapport**|  
-    |1|générer un rapport d’évaluation|AssessmentReport&lt;n&gt;. LANGAGE|  
-    |2|convertir-schéma|SchemaConversionReport&lt;n&gt;. LANGAGE|  
-    |3|migrer-données|DataMigrationReport&lt;n&gt;. LANGAGE|  
-    |4|Convert-SQL-Statement|ConvertSQLReport&lt;n&gt;. LANGAGE|  
-    |5|synchroniser-cible|TargetSynchronizationReport&lt;n&gt;. LANGAGE|  
-    |6|actualisation à partir de la base de données|SourceDBRefreshReport&lt;n&gt;. LANGAGE|  
+    |1|générer un rapport d’évaluation|AssessmentReport &lt; n &gt; . LANGAGE|  
+    |2|convertir-schéma|SchemaConversionReport &lt; n &gt; . LANGAGE|  
+    |3|migrer-données|DataMigrationReport &lt; n &gt; . LANGAGE|  
+    |4|Convert-SQL-Statement|ConvertSQLReport &lt; n &gt; . LANGAGE|  
+    |5|synchroniser-cible|TargetSynchronizationReport &lt; n &gt; . LANGAGE|  
+    |6|actualisation à partir de la base de données|SourceDBRefreshReport &lt; n &gt; . LANGAGE|  
   
     > [!IMPORTANT]  
     > Un rapport de sortie est différent du rapport d’évaluation. Le premier est un rapport sur les performances d’une commande exécutée, ce dernier est un rapport XML pour la consommation de programmation.  
@@ -44,9 +43,8 @@ Pour générer des rapports, procédez comme suit :
   
 2.  Indiquez l’étendue des détails souhaités dans le rapport de sortie à l’aide des paramètres de commentaires du rapport :  
   
-    ||||  
+    |SL. Non.|Commande et paramètre|Description de la sortie|  
     |-|-|-|  
-    |**SL. non.**|**Commande et paramètre**|**Description de la sortie**|  
     |1|Verbose = "false"|Génère un rapport de synthèse de l’activité.|  
     |2|Verbose = "true"|Génère un rapport d’état résumé et détaillé pour chaque activité.|  
   
@@ -55,9 +53,8 @@ Pour générer des rapports, procédez comme suit :
   
 3.  Indiquez l’étendue des détails souhaités dans les rapports d’erreurs à l’aide des paramètres de rapport d’erreurs :  
   
-    ||||  
+    |SL. Non.|Commande et paramètre|Description de la sortie|  
     |-|-|-|  
-    |**SL. non.**|**Commande et paramètre**|**Description de la sortie**|  
     |1|rapport-Erreurs = « false »|Aucun détail sur les messages d’erreur/d’avertissement/d’informations.|  
     |2|Report-errors = "true"|Messages d’erreur/d’avertissement/d’informations détaillés.|  
   
@@ -85,7 +82,7 @@ Pour générer des rapports, procédez comme suit :
 ```  
   
 ### <a name="synchronize-target"></a>synchroniser-cible :  
-La commande **Synchronize-Target** a un paramètre **signal-Errors-to** qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par son **nom&lt;TargetSynchronizationReport&gt;n. XML** est créé à l’emplacement spécifié, où ** &lt;n&gt; ** est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
+La commande **Synchronize-Target** a un paramètre **signal-Errors-to** qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par son nom **TargetSynchronizationReport &lt; n &gt; . XML** est créé à l’emplacement spécifié, où ** &lt; n &gt; ** est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
   
 **Remarque :** Si le chemin d’accès au dossier est donné, le paramètre « Report-Errors-to » devient un attribut facultatif pour la commande « Synchronize-Target ».  
   
@@ -113,7 +110,7 @@ La commande **Synchronize-Target** a un paramètre **signal-Errors-to** qui spé
 -   échec du script  
   
 ### <a name="refresh-from-database"></a>actualisation à partir de la base de données :  
-La commande **Refresh-from-Database** a un paramètre **Report-Errors-to** qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par son **nom&lt;SourceDBRefreshReport&gt;n. XML** est créé à l’emplacement spécifié, où ** &lt;n&gt; ** est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
+La commande **Refresh-from-Database** a un paramètre **Report-Errors-to** qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par son nom **SourceDBRefreshReport &lt; n &gt; . XML** est créé à l’emplacement spécifié, où ** &lt; n &gt; ** est le numéro de fichier unique qui s’incrémente avec un chiffre à chaque exécution de la même commande.  
   
 **Remarque :** Si le chemin d’accès au dossier est donné, le paramètre « Report-Errors-to » devient un attribut facultatif pour la commande « Synchronize-Target ».  
   

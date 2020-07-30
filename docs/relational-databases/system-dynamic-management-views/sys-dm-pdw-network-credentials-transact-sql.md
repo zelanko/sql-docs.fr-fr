@@ -12,15 +12,15 @@ ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87134a4898b0eb5e314aa4c0f860755a9618b4c5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8be0dde15dea7c02cda9fb59cdc71680ec494178
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830481"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395952"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Retourne la liste de toutes les informations d’identification réseau stockées dans l' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance pour tous les serveurs cibles. Les résultats sont répertoriés pour le nœud de contrôle et tous les nœuds de calcul.  
   
