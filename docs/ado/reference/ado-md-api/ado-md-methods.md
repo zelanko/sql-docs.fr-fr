@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44cdaf1ea526a85816ddee18157a4a11052fa040
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d4aa045313cb62e3afefce4ba5b02e55718ba85
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765220"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242559"
 ---
 # <a name="ado-md-methods"></a>Méthodes ADO MD
 
-|||  
+|Méthode|Description|  
 |-|-|  
 |[Close](../../../ado/reference/ado-md-api/close-method-ado-md.md)|Ferme un CellSet ouvert.|  
 |[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|Récupère un objet de schéma ADO MD (dimension, hiérarchie, niveau ou membre) à l’aide de son nom unique.|  

@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: faad4d819939362f7e3b9c22062768bee71a0cda
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749356"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242899"
 ---
 # <a name="ado-collections"></a>Collections ADO
 Les relations entre ces collections et les objets ADO sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Chaque collection peut contenir son objet correspondant. Par exemple, un objet d' [erreur](../../../ado/reference/ado-api/error-object.md) peut être contenu dans une collection d' [Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) . Pour plus d’informations sur les objets, consultez [objets ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) ou une rubrique relative à un objet spécifique.  
   
-|||  
+|Collection|Description|  
 |-|-|  
 |[Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)|Contient tous les objets d' **erreur** créés en réponse à un échec lié à un fournisseur unique.|  
 |[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contient tous les objets **Field** d’un objet **Recordset** .|  
-|[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contient tous les objets **Parameter** d’un objet **Command** .|  
+|[Paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contient tous les objets **Parameter** d’un objet **Command** .|  
 |[Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)|Contient tous les objets de **propriété** pour une instance spécifique d’un objet.|  
   
 ## <a name="see-also"></a>Voir aussi  

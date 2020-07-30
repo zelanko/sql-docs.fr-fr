@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762938"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242459"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk, méthode (ADO)
 Ajoute des données à un [champ](../../../ado/reference/ado-api/field-object.md)de données de texte ou binaires volumineux, ou à un objet de [paramètre](../../../ado/reference/ado-api/parameter-object.md) .  
@@ -34,7 +34,7 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *objet*  
+ *object*  
  **Champ** ou objet de **paramètre** .  
   
  *Données*  
@@ -59,11 +59,16 @@ object.AppendChunk Data
  Le premier appel de **AppendChunk** sur un objet **Parameter** écrit des données dans le paramètre, en remplaçant toutes les données existantes. Les appels **AppendChunk** suivants sur un objet **Parameter** sont ajoutés aux données de paramètres existantes. Un appel de **AppendChunk** qui transmet une valeur null ignore toutes les données de paramètre.  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Objet Field](../../../ado/reference/ado-api/field-object.md)|[Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objet Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [AppendChunk et GetChunk, exemple de méthodes (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk et GetChunk, exemple de méthodes (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   

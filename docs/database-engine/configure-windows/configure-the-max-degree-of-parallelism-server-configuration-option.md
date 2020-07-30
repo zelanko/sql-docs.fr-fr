@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159727"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363297"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur max degree of parallelism
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], lors du démarrage du se
 
 Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], suivez les directives suivantes quand vous configurez la valeur de configuration de serveur **max degree of parallelism** :
 
-||||
+|Configurer le serveur|Nombre de processeurs|Assistance|
 |----------------|-----------------|-----------------|
 |Serveur avec un seul nœud NUMA|Inférieur ou égal à 8 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
 |Serveur avec un seul nœud NUMA|Supérieur à 8 processeurs logiques|Conservez MAXDOP à 8|
@@ -75,7 +75,7 @@ Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], suivez les directives 
   
 De [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], utilisez les directives suivantes quand vous configurez la valeur de configuration de serveur **max degree of parallelism** :
 
-||||
+|Configurer le serveur|Nombre de processeurs|Assistance|
 |----------------|-----------------|-----------------|
 |Serveur avec un seul nœud NUMA|Inférieur ou égal à 8 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
 |Serveur avec un seul nœud NUMA|Supérieur à 8 processeurs logiques|Conservez MAXDOP à 8|

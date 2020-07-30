@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e6b0846433b317bb1ced7de284113377e4b4528
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764150"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243110"
 ---
 # <a name="adox-collections"></a>Collections ADOX
 
-|||  
+|Collection|Description|  
 |-|-|  
 |[Colonnes](../../../ado/reference/adox-api/columns-collection-adox.md)|Contient tous les objets **Column** d’une table, d’un index ou d’une clé.|  
 |[Groupes](../../../ado/reference/adox-api/groups-collection-adox.md)|Contient tous les objets de **groupe** stockés d’un catalogue ou d’un utilisateur.|  

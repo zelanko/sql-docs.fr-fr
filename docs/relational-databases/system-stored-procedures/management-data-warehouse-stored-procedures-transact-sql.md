@@ -15,15 +15,15 @@ ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bb97d3c1d9b5f1de26365c4c5b033640f716652
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: b1dc4579216af9f47d120f19662de2908cf7f40f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977499"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394317"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>Procédures stockées de l'entrepôt de données de gestion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le collecteur de données stocke des données et des informations relatives au type du collecteur de données dans l'entrepôt de données de gestion. Les procédures stockées suivantes sont utilisées pour mettre à jour les données et modifier les tables dans l'entrepôt de données de gestion.  
 

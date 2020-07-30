@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731712"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394754"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -155,7 +155,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**Aucune**|N'utilise pas de commande.|  
 |**delete**|Supprime les données de la table de destination avant d'appliquer l'instantané. Lorsque l'article est filtré horizontalement, seules les données qui se trouvent dans les colonnes spécifiées par la clause filter sont supprimées. Non pris en charge pour les serveurs de publication Oracle lorsqu'un filtre horizontal est défini.|  
 |**Drop** (valeur par défaut)|Supprime la table de destination.|  
-|**tronquer**|Tronque la table de destination. N'est pas valide pour les abonnés ODBC ou OLE DB.|  
+|**truncate**|Tronque la table de destination. N'est pas valide pour les abonnés ODBC ou OLE DB.|  
   
 `[ @filter_clause = ] 'filter_clause'`Clause de restriction (WHERE) qui définit un filtre horizontal. Quand vous entrez la clause de restriction, omettez le mot clé WHERE. *filter_clause* est de type **ntext**, avec NULL comme valeur par défaut. Pour plus d’informations, consultez [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -289,7 +289,7 @@ sp_addarticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**Aucune**|La réplication n'explicite pas la gestion des plages d'identité. Cette option est recommandée uniquement pour la compatibilité ascendante avec des versions antérieures de SQL Server. Non autorisé pour la réplication d'homologue.|  
 |**Manuelle**|Marque la colonne d'identité en utilisant NOT FOR REPLICATION pour activer la gestion manuelle des plages d'identité.|  
-|**Auto**|Spécifie la gestion automatique des plages d'identité.|  
+|**auto**|Spécifie la gestion automatique des plages d'identité.|  
 |NULL (valeur par défaut)|La valeur par défaut est **None** lorsque la valeur de *auto_identity_range* n’est pas **true**. La valeur par défaut est **Manual** dans une topologie d’égal à égal par défaut (*auto_identity_range* est ignoré).|  
   
  Pour la compatibilité descendante, lorsque la valeur de *identityrangemanagementoption* est null, la valeur de *auto_identity_range* est vérifiée. Toutefois, lorsque la valeur de *identityrangemanagementoption* n’est pas null, la valeur de *auto_identity_range* est ignorée.  
@@ -306,7 +306,7 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addarticle** est utilisé dans la réplication d’instantané ou dans la réplication transactionnelle.  
   
  Par défaut, la réplication ne publie aucune colonne dans la table source lorsque le type de données de colonne n'est pas pris en charge par la réplication. Si vous devez publier une telle colonne, vous devez exécuter [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) pour ajouter la colonne.  
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>Options de schéma par défaut  
  Ce tableau décrit la valeur par défaut définie par la réplication si *schema_options* n’est pas spécifié par l’utilisateur, où cette valeur dépend du type de réplication (indiqué en haut) et du type d’article (dans la première colonne).  
   
-|Type de l'article|Type de réplication||  
+|Type de l'article|Réplication transactionnelle|Réplication d'instantané|  
 |------------------|----------------------|------|  
-||Transactionnelle|Instantané|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>Options de schéma valides  
  Ce tableau décrit les valeurs autorisées de *schema_option* en fonction du type de réplication (indiqué dans la partie supérieure) et du type d’article (indiqué dans la première colonne).  
   
-|Type de l'article|Type de réplication||  
+|Type de l'article|Réplication transactionnelle|Réplication d'instantané|  
 |------------------|----------------------|------|  
-||Transactionnelle|Instantané|  
 |**logbased**|Toutes les options|Toutes les options, sauf **0x02**|  
 |**logbased manualfilter**|Toutes les options|Toutes les options, sauf **0x02**|  
 |**logbased manualview**|Toutes les options|Toutes les options, sauf **0x02**|  
@@ -393,7 +391,7 @@ sp_addarticle [ @publication = ] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addarticle**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir un article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   

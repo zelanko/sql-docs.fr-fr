@@ -12,17 +12,17 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399915"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394044"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Contient une ligne pour chaque base de données physique sur un nœud de calcul. Agréger des informations sur la base de données physique pour obtenir des informations détaillées sur les bases de données. Pour combiner des informations, joignez `sys.pdw_nodes_pdw_physical_databases` le `sys.pdw_database_mappings` aux `sys.databases` tables et.  
+  Contient une ligne pour chaque base de données physique sur un nœud de calcul. Agréger des informations sur la base de données physique pour obtenir des informations détaillées sur les bases de données. Pour combiner des informations, joignez le `sys.pdw_nodes_pdw_physical_databases` aux `sys.pdw_database_mappings` `sys.databases` tables et.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -32,7 +32,7 @@ ms.locfileid: "74399915"
   
 ## <a name="examples-sspdw"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>A. Rétablissement  
+### <a name="a-returning"></a>R. Rétablissement  
  La requête suivante renvoie le nom et l’ID de chaque base de données dans Master, ainsi que le nom de la base de données correspondante sur chaque nœud de calcul.  
   
 ```  

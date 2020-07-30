@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764120"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243100"
 ---
 # <a name="adox-methods"></a>Méthodes ADOX
 
-|||  
+|Méthode|Description|  
 |-|-|  
 |[Append (colonnes)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Ajoute un nouvel objet **Column** à la collection **Columns** .|  
 |[Append (groupes)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Ajoute un nouvel objet de **groupe** à la collection de **groupes** .|  
@@ -38,7 +38,7 @@ ms.locfileid: "82764120"
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retourne le propriétaire d’un objet dans un catalogue.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retourne les autorisations pour un groupe ou un utilisateur sur un objet.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Spécifie le propriétaire d’un objet dans un catalogue.|  
-|[SetPermissions, exemples](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Spécifie les autorisations pour un groupe ou un utilisateur sur un objet.|  
+|[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Spécifie les autorisations pour un groupe ou un utilisateur sur un objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur l’API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749296"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242889"
 ---
 # <a name="ado-dynamic-properties"></a>Propriétés dynamiques ADO
 Les propriétés dynamiques peuvent être ajoutées aux collections [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) des objets [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Command](../../../ado/reference/ado-api/command-object-ado.md)ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . La source de ces propriétés est un fournisseur de données, tel que le [fournisseur de OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)ou un fournisseur de services, tel que le [service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Pour plus d’informations sur une propriété dynamique spécifique, reportez-vous à la documentation appropriée du fournisseur de données ou du fournisseur de services.  
@@ -26,7 +26,7 @@ Les propriétés dynamiques peuvent être ajoutées aux collections [Properties]
   
  Les propriétés dynamiques suivantes sont particulièrement intéressantes et sont également documentées dans les sources mentionnées précédemment. Les fonctionnalités spéciales avec ADO sont documentées dans les rubriques d’aide ADO de la liste suivante.  
   
-|||  
+|Propriété dynamique|Description|  
 |-|-|  
 |[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Spécifie si un index doit être créé sur ce champ.|  
 |[Demander](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Spécifie si le fournisseur de OLE DB doit inviter l’utilisateur à fournir des informations d’initialisation.|  

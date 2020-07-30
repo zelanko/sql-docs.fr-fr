@@ -21,23 +21,23 @@ ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4c652ee6f0634816a4bc5313c968ee2e59197b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12855ba6b035e2034bc3654249714d945ef37d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834112"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395130"
 ---
 # <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>sys. query_store_runtime_stats_interval (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contient des informations sur l’heure de début et de fin de chaque intervalle au cours desquelles les informations des statistiques d’exécution du runtime pour une requête ont été collectées.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_interval_id**|**bigint**|Clé primaire|
-|**start_time**|**datetimeoffset**|Heure de début de l’intervalle.|
-|**end_time**|**datetimeoffset**|Heure de fin de l’intervalle.|
+|**heure-début**|**datetimeoffset**|Heure de début de l’intervalle.|
+|**heure-fin**|**datetimeoffset**|Heure de fin de l’intervalle.|
 |**Commentaire**|**nvarchar(32)**|Toujours NULL.|
   
 ## <a name="permissions"></a>Autorisations  
@@ -52,7 +52,7 @@ ms.locfileid: "82834112"
  [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

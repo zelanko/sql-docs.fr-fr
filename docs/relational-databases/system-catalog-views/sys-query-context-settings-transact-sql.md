@@ -20,15 +20,15 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d39fe1b573e038459853857496c651e9ad2af83b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831467"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394004"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contient des informations sur la sémantique qui affecte les paramètres de contexte associés à une requête. Un certain nombre de paramètres de contexte sont disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui influencent la sémantique de requête (en définissant le résultat correct de la requête). Le même texte de requête compilé sous des paramètres différents peut produire des résultats différents (en fonction des données sous-jacentes).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82831467"
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Clé primaire Cette valeur est exposée dans Showplan XML pour les requêtes.|  
 |**set_options**|**varbinary (8)**|Masque de bits reflétant l’état de plusieurs options SET. Pour plus d’informations, consultez [sys. dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
-|**language_id**|**smallint**|ID de la langue. Pour plus d’informations, consultez [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|**language_id**|**smallint**|ID de la langue. Pour plus d’informations, consultez [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Format de date. Pour plus d’informations, consultez [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|Première valeur de date. Pour plus d’informations, consultez [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |**statut**|**varbinary (2)**|Champ de masque de masque qui indique le type de requête ou de contexte dans lequel la requête a été exécutée. <br />La valeur de colonne peut être une combinaison de plusieurs indicateurs (exprimée en hexadécimal) :<br /><br /> 0x0-requête régulière (aucun indicateur spécifique)<br /><br /> 0x1-requête exécutée par le biais de l’une des procédures stockées API de curseur<br /><br /> 0X2-requête de notification<br /><br /> 0x4-requête interne<br /><br /> 0x8-requête paramétrée automatiquement sans paramétrage universel<br /><br /> 0x10-requête d’actualisation de l’extraction de curseur<br /><br /> 0x20-requête en cours d’utilisation dans les demandes de mise à jour de curseur<br /><br /> 0x40-le jeu de résultats initial est retourné lorsqu’un curseur est ouvert (récupération automatique de curseur)<br /><br /> 0x80-requête chiffrée<br /><br /> 0x100-requête dans le contexte du prédicat de sécurité au niveau des lignes|  
@@ -59,8 +59,8 @@ ms.locfileid: "82831467"
  [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Magasin des requêtes des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

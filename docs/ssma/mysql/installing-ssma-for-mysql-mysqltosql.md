@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 4aedce85a63c5f931cfab0b590810d1fac36d64b
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: db29fe499889ce67af5979821d07f2eef2a91f75
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293646"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394929"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Installation de SSMA pour MySQL (MySqlToSql)
 Assistant Migration SQL Server (SSMA) pour MySQL se compose d’une application cliente que vous utilisez pour effectuer une migration de MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Il contient également un pack d’extension qui prend en charge la migration des données et l’utilisation des fonctions système MySQL dans vos bases de données migrées.  
@@ -27,11 +27,10 @@ Installez l’application cliente sur l’ordinateur à partir duquel vous allez
 ## <a name="upgrading-ssma-for-mysql"></a>Mise à niveau de SSMA pour MySQL  
 Si vous souhaitez effectuer une mise à niveau vers une version ultérieure de SSMA pour MySQL, vous devez d’abord désinstaller le client et le pack d’extension de serveur, puis installer la version plus récente.  
   
-## <a name="contents"></a>Contents  
+## <a name="contents"></a>Contenu  
   
-|||  
+|Rubrique|Description|  
 |-|-|  
-|**Rubrique**|**Description**|  
 |[Installation de SSMA pour MySQL client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Fournit des informations et des instructions sur l’installation du client SSMA.|  
 |[Installation des composants SSMA sur SQL Server (MySQL vers SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Fournit des informations et des instructions sur l’installation du pack d’extension sur les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Suppression des composants SSMA pour MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Fournit des instructions pour la désinstallation du programme client.|  

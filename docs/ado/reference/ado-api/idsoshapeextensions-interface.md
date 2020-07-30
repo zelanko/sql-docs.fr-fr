@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d49db4cb1d471d06b6e834e46218307bc25a008
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02eedbeaf8c9d85f3a896b8991661461825b2b19
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758705"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242669"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions, interface
 Obtient l’objet source de données OLE DB sous-jacent pour le fournisseur de formes.  
@@ -36,13 +36,13 @@ public:
   
 ## <a name="methods"></a>Méthodes  
   
-|||  
+|Méthode|Description|  
 |-|-|  
 |[GetDataProviderDSO, méthode](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Récupère l’objet source de données OLE DB sous-jacent à partir du fournisseur Shape.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Version :** ADO 2,0 et versions ultérieures  
   
- **Bibliothèque :** msado15. dll  
+ **Bibliothèque :** msado15.dll  
   
  **UUID :** 00000283-0000-0010-8000-00AA006D2EA4

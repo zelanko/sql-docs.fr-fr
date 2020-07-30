@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764570"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242909"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection, propriété (ADO)
 Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) la [commande](../../../ado/reference/ado-api/command-object-ado.md), le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)ou l’objet d' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) spécifiés appartiennent actuellement.  
@@ -30,7 +30,7 @@ Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-o
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **chaîne** qui contient une définition pour une connexion si la connexion est fermée ou un **Variant** contenant l’objet de **connexion** actuel si la connexion est ouverte. La valeur par défaut est une référence d’objet null. Consultez la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **ActiveConnection** pour déterminer l’objet de **connexion** sur lequel l’objet de **commande** spécifié s’exécutera ou l’objet **Recordset** spécifié sera ouvert.  
   
 ## <a name="command"></a>Commande  
@@ -68,11 +68,19 @@ Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-o
 >  Les URL utilisant le schéma http appellera automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-||||  
-|-|-|-|  
-|[Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Voir aussi  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

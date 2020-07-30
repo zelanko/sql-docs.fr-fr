@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e7465ee994a0e09cf62b80d3317948479354780b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757135"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242709"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Spécifie comment un fournisseur doit exécuter une commande.  
@@ -40,15 +40,21 @@ Spécifie comment un fournisseur doit exécuter une commande.
   
 |Constant|  
 |--------------|  
-|AdoEnums. ExecuteOption. ASYNCEXECUTE|  
+|AdoEnums.ExecuteOption. ASYNCEXECUTE|  
 |AdoEnums.ExecuteOption.ASYNCFETCH|  
-|AdoEnums. ExecuteOption. ASYNCFETCHNONBLOCKING|  
+|AdoEnums.ExecuteOption. ASYNCFETCHNONBLOCKING|  
 |AdoEnums.ExecuteOption.NORECORDS|  
 |AdoEnums.ExecuteOption.UNSPECIFIED|  
   
 ## <a name="applies-to"></a>S'applique à  
-  
-|||  
-|-|-|  
-|[Execute, méthode (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Execute, méthode (objet Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Requery, méthode](../../../ado/reference/ado-api/requery-method.md)|
+
+:::row:::
+    :::column:::
+        [Execute, méthode (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Execute, méthode (objet Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+    :::column-end:::
+    :::column:::
+        [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Requery, méthode](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

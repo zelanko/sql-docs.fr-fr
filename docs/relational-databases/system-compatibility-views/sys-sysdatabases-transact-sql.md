@@ -1,5 +1,5 @@
 ---
-title: sys. sysdatabases (Transact-SQL) | Microsoft Docs
+title: Bases de données sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c32503ffe44cf45dbff9608e0baa9127e39b1a4d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089167"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393348"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Contient une ligne pour chaque base de données dans une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé pour la première fois, **sysdatabases** contient des entrées pour les bases de données **Master**, **Model**, **msdb**et **tempdb** .  
+  Contient une ligne pour chaque base de données dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé pour la première fois, **sysdatabases** contient des entrées pour les bases de données **Master**, **Model**, **msdb**et **tempdb** .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "68089167"
 |**réservé**|**datetime**|Réservé pour un usage futur.|  
 |**category**|**int**|Contient un bitmap des informations utilisées pour la réplication :<br /><br /> 1 = Publié pour la réplication transactionnelle et d'instantané.<br /><br /> 2 = Abonné à une publication transactionnelle ou d'instantané.<br /><br /> 4 = Publié pour une réplication de fusion.<br /><br /> 8 = Abonné à une publication de fusion.<br /><br /> 16 = Base de données de distribution.|  
 |**cmptlevel**|**tinyint**|Niveau de compatibilité pour la base de données. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
-|**extension**|**nvarchar(260)**|Nom et chemin d'accès du système d'exploitation pour le fichier primaire de la base de données.<br /><br /> le **nom de fichier** est visible pour **dbcreator**, **sysadmin**, le propriétaire de la base de données avec les autorisations CREATE ANY DATABASE ou les bénéficiaires qui ont l’une des autorisations suivantes : ALTER ANY DATABASE, CREATE ANY DATABASE, View any Definition. Pour retourner le chemin d’accès et le nom de fichier, interrogez la vue de compatibilité [sys. sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) ou la vue [sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) .|  
+|**extension**|**nvarchar(260)**|Nom et chemin d'accès du système d'exploitation pour le fichier primaire de la base de données.<br /><br /> le **nom de fichier** est visible pour **dbcreator**, **sysadmin**, le propriétaire de la base de données avec les autorisations CREATE ANY DATABASE ou les bénéficiaires qui ont l’une des autorisations suivantes : ALTER ANY DATABASE, CREATE ANY DATABASE, View any Definition. Pour retourner le chemin d’accès et le nom de fichier, interrogez l’affichage de compatibilité des [fichierssys.sys](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) ou la vue [sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) .|  
 |**version**|**smallint**|Numéro de version interne du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec lequel la base de données a été créée. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>Voir aussi  
