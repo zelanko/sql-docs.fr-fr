@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e370af38481593404629fb3367deb3b9f54bb869
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fa36eeebc1f93ed0a2855627943d04dba8e3d7d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595674"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411415"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>Créer et utiliser des index sur des colonnes en utilisant Always Encrypted avec enclaves sécurisées
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Cet article explique comment créer et utiliser des index sur des colonnes chiffrées en utilisant des clés de chiffrement de colonne activées pour les enclaves avec [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md). 
 

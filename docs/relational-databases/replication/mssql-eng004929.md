@@ -13,26 +13,26 @@ ms.assetid: 1d9b1d88-1fbf-4089-b392-687d3b0220ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 83f3e25916e0e599c7b89c95fac3bfd90aa4a35b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf8adc0a3925e5344812fd86a4c3f87f7d3246bd
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721936"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363292"
 ---
 # <a name="mssql_eng004929"></a>MSSQL_ENG004929
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>Détails du message  
   
-|||  
+|Attribut|Valeur|  
 |-|-|  
 |Nom du produit|SQL Server|  
 |ID de l’événement|4929|  
 |Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
-|Texte du message|Impossible de modifier %1! '%2!' parce qu'elle est en cours d'édition pour la réplication.|  
+|Texte du message|Impossible de modifier le% S_MSG'%. * ls', car il est en cours de publication pour la réplication.|  
   
 ## <a name="explanation"></a>Explication  
  Cette erreur se produit généralement lorsque vous tentez de supprimer la contrainte de clé primaire d'une table publiée pour la réplication transactionnelle. Comme la réplication transactionnelle nécessite une clé primaire pour chaque table publiée, la contrainte ne peut pas être supprimée.  

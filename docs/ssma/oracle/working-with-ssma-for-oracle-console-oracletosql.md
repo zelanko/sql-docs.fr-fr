@@ -10,12 +10,12 @@ ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1f760d2cc97c7f54be18281c7b55a6527eb8ec2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68256652"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392082"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Utilisation de la console SSMA pour Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]La version Assistant Migration (SSMA) pour Oracle est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
@@ -24,9 +24,8 @@ Cette section décrit la procédure de migration de la base de données Oracle �
   
 Les sujets abordés dans cette section sont les suivants :  
   
-|||  
+|Rubrique|Description|  
 |-|-|  
-|**Explique**|**Description**|  
 |[Prise en main avec SSMA pour la console Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Décrit la procédure d’exécution de l’application console.|  
 |[Options de ligne de commande dans la console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Décrit les options de ligne de commande et les paramètres permettant d’utiliser l’application console SSMA.|  
 |[Création de fichiers de script &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explique comment créer un fichier de script.|  
