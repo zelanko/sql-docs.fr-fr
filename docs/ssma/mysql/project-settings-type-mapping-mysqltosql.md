@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138328"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396559"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Paramètres du projet (Mappage de type) (MySQLToSQL)
 Les paramètres de projet de mappage de type vous permettent de définir des mappages de types par défaut pour le projet SSMA.  
@@ -48,9 +48,8 @@ Cliquez pour rétablir les valeurs par défaut SSMAs de la liste mappage de type
 ## <a name="type-mappings"></a>Mappages de types  
 Le tableau suivant montre le mappage par défaut entre les types de données source et cible.  
   
-|||  
+|Type de données MySQL|Type de données de SQL Server|  
 |-|-|  
-|**Type de données MySQL**|**Type de données SQL Server**|  
 |bigint|bigint|  
 |BIGINT [*.. 255]|bigint|  
 |binary|binaire [1]|  
@@ -86,18 +85,18 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |DATETIME|datetime2 [0]|  
 |dec|Décimal|  
 |Dec [*.. 65]|Decimal [*] [0]|  
-|Dec [*.. 65] [\*.. 30|Decimal [*] [\*]|  
+|Dec [*.. 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |Décimal|Décimal|  
 |Decimal [*.. 65]|Decimal [*] [0]|  
-|Decimal [*.. 65] [\*.. 30|Decimal [*] [\*]|  
+|Decimal [*.. 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |double|float [53]|  
 |double précision|float [53]|  
-|double précision [*.. 255] [\*.. 30|Numeric [*] [\*]|  
-|double [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|double précision [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
+|double [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |fixe|numeric|  
-|correction de [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|correction de [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |float|float [24]|  
-|float [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|float [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
 |int|int|  
 |int [*.. 255]|int|  
@@ -132,13 +131,13 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |NCHAR [2.. 255]|NCHAR [*]|  
 |numeric|numeric|  
 |Numeric [*.. 65]|Numeric [*] [0]|  
-|Numeric [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|Numeric [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [0.. 1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
-|réel [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|réel [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |serial|bigint|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
@@ -156,18 +155,18 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |unsigned BIGINT [*.. 255]|bigint|  
 |non signé Dec|Décimal|  
 |non signé Dec [*.. 65]|Decimal [*] [0]|  
-|non signé Dec [*.. 65] [\*.. 30|Decimal [*] [\*]|  
+|non signé Dec [*.. 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |décimal non signé|Décimal|  
 |décimal non signé [*.. 65]|Decimal [*] [0]|  
-|décimal non signé [*.. 65] [\*.. 30|Decimal [*] [\*]|  
+|décimal non signé [*.. 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |double non signé|float [53]|  
 |double précision non signée|float [53]|  
-|double précision non signée [*.. 255] [\*.. 30|Numeric [*] [\*]|  
-|double non signé [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|double précision non signée [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
+|double non signé [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |non signé fixe|numeric|  
-|fixed non signé [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|fixed non signé [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |float non signé|float [24]|  
-|unsigned float [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|unsigned float [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |unsigned float [*.. 53]|float [53]|  
 |nombre entier non signé|bigint|  
 |unsigned int [*.. 255]|bigint|  
@@ -177,9 +176,9 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |unsigned MEDIUMINT [*.. 255]|int|  
 |valeur numérique non signée|numeric|  
 |Numeric non signé [*.. 65]|Numeric [*] [0]|  
-|Numeric non signé [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|Numeric non signé [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |réel non signé|float [53]|  
-|réel non signé [*.. 255 [[\*.. 30|Numeric [*] [\*]|  
+|réel non signé [*.. 255 [[ \* .. 30|Numeric [*] [ \* ]|  
 |unsigned smallint|int|  
 |unsigned smallint [*.. 255]|int|  
 |unsigned tinyint|TINYINT|  

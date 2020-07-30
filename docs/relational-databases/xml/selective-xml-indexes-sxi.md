@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec99528c375126e06bc48ac7b241df98f62952a4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757496"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331926"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Index XML sélectifs (SXI)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -194,9 +194,8 @@ FOR
   
 ##  <a name="related-tasks"></a><a name="reltasks"></a> Tâches associées  
   
-|||  
-|-|-|  
-|**Tâche**|**Rubrique**|  
+| Tâche | Rubrique |
+| ---- | ----- |
 |Spécifiez les chemins d'accès du nœud que vous souhaitez indexer et les indicateurs facultatifs d'optimisation lorsque vous créez ou modifiez un index XML sélectif.|[Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Créez, modifiez ou supprimez un index XML sélectif.|[Créer, modifier ou supprimer des index XML sélectifs](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Créez, modifiez ou supprimez un index XML secondaire sélectif.|[Créer, modifier ou supprimer des index XML secondaires sélectifs](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
