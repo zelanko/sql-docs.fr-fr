@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293636"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396398"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des jeux de caractères MySQL et SQL Server (MySQLToSQL)
 Le jeu de caractères (CharSet) peut être spécifié pour les types de données de caractères MySQL, les expressions et les littéraux.  
@@ -77,9 +77,8 @@ Le mappage de jeu de caractères varie selon les différents niveaux de nœud, �
   
     Le mappage de jeu de caractères entre la base de données MySQL et la base de données cible sur le nœud de métadonnées racine est indiqué ci-dessous :  
   
-    ||||  
+    |Nom du jeu de caractères|Description du jeu de caractères|Type de jeu de caractères cible (par défaut)|  
     |-|-|-|  
-    |**Nom du jeu de caractères**|**Description du jeu de caractères**|**Type de jeu de caractères cible (par défaut)**|  
     |Big5|Chinois traditionnel BIG5|NCHAR/NVARCHAR (par défaut)|  
     |dec8|DEC West Europe|CHAR/VARCHAR (valeur par défaut)|  
     |cp850|DOS ouest des États-européens|CHAR/VARCHAR (valeur par défaut)|  

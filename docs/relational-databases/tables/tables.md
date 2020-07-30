@@ -14,15 +14,15 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdb7bb3ef617d244e1e58f7c74cece3d47b87b72
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287743"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396878"
 ---
 # <a name="tables"></a>Tables
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 Les tables sont des objets de base de données qui contiennent toutes les données d'une base de données. Dans les tables, les données sont logiquement organisées en lignes et en colonnes, à la manière d'un tableur. Chaque ligne représente un enregistrement unique et chaque colonne représente un champ dans l'enregistrement. Par exemple, une table qui contient les données relatives aux employés d'une société peut contenir une ligne pour chaque employé et des colonnes représentant des informations sur l'employé, telles que son numéro, son nom, son adresse, son poste et son numéro de téléphone privé. 
 

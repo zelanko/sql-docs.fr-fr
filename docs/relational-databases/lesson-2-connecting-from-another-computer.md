@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922859"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396498"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Si vous prévoyez de vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] 
     > [!NOTE]  
     > Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console et non pas un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’apparaît pas en tant qu’application dans les versions plus récentes de Windows. Le nom de fichier contient un nombre représentant le numéro de version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour ouvrir le Gestionnaire de configuration à partir de la commande Exécuter, voici les chemins des quatre dernières versions quand Windows est installé sur le lecteur C.  
   
-    |||  
+    |Version|Path|  
     |-|-|
     |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
     |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
@@ -126,7 +126,7 @@ Lorsque le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browse
 3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:** _<nom_ordinateur>_ . Dans notre exemple d’instance nommée, tapez **tcp:** _<nom_ordinateur>_ **,49172**.  
   
     > [!NOTE]  
-    > Si vous omettez **tcp:** dans la zone **Nom du serveur** , le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
+    > Si vous omettez **tcp:** dans la zone **Nom du serveur** , le client essaiera tous les protocoles activés, dans l'ordre spécifié dans sa configuration.  
   
 4.  Dans la zone **Authentification** , confirmez **Authentification Windows**, puis cliquez sur **Se connecter**.  
   

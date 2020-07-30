@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833954"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396668"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Contient une ligne pour chaque dépendance par nom sur une entité définie par l'utilisateur dans la base de données actuelle. Cela comprend les dépendances entre les fonctions scalaires définies par l’utilisateur compilées en mode natif et d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modules. Une dépendance entre deux entités est créée lorsqu’une entité, appelée *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité, appelée *entité de référence*. Par exemple, lorsqu'une table est référencée dans la définition d'une vue, la vue, comme entité de référence, dépend de la table, l'entité référencée. Si la table est supprimée, la vue est inutilisable.  
   
@@ -72,18 +72,18 @@ ms.locfileid: "82833954"
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table|Oui*|Yes|  
-|Affichage|Yes|Yes|  
-|Index filtré|Oui**|No|  
-|Statistiques filtrées|Oui**|No|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Yes|Yes|  
+|Table|Oui*|Oui|  
+|Affichage|Oui|Oui|  
+|Index filtré|Oui**|Non|  
+|Statistiques filtrées|Oui**|Non|  
+|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Oui|Oui|  
 |Procédure stockée CLR|Non|Oui|  
-|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Yes|Yes|  
+|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
 |Fonction CLR définie par l'utilisateur|Non|Oui|  
 |Déclencheur CLR (DML et DDL)|Non|Non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
+|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Procédures stockées étendues|Non|Oui|  
 |File d'attente|Non|Oui|  
 |Synonyme|Non|Oui|  

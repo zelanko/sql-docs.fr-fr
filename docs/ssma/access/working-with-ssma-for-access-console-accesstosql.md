@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259783"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396898"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Utilisation de SSMA pour accéder à la console (AccessToSQL)
 Assistant Migration Microsoft SQL Server (SSMA) pour l’accès est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
@@ -24,9 +24,8 @@ Cette section décrit la procédure de migration d’une base de données Access
   
 Les sujets abordés dans cette section sont les suivants :  
   
-|||  
+|Rubrique|Description|  
 |-|-|  
-|**Explique**|**Description**|  
 |[Prise en main avec SSMA pour la console Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|Décrit la procédure d’exécution de l’application console.|  
 |[Options de ligne de commande dans la console SSMA &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|Décrit les options de ligne de commande et les paramètres permettant d’utiliser l’application console SSMA.|  
 |[Création de fichiers de script &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)|Explique comment créer un fichier de script.|  
