@@ -1,5 +1,5 @@
 ---
-title: sys. syscolumns (Transact-SQL) | Microsoft Docs
+title: Colonnes sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8dcf0f88fed4ef48cc90a6057a757a205d9e56b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089239"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396073"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Retourne une ligne pour chaque colonne des tables et des vues, et une ligne pour chaque paramètre des procédures stockées de la base de données.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68089239"
 |**réservé**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Identificateur de la valeur par défaut pour cette colonne|  
-|**domaine**|**int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne|  
+|**Domain**|**int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne|  
 |**number**|**smallint**|Numéro de sous-procédure pour les procédures groupées.<br /><br /> 0 = entrées qui ne décrivent pas une procédure|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -65,8 +65,8 @@ ms.locfileid: "68089239"
 |**prec**|**smallint**|Niveau de précision de cette colonne<br /><br /> -1 = **XML** ou type de valeur élevée.|  
 |**scale**|**int**|Échelle de cette colonne<br /><br /> NULL = le type de données est non numérique.|  
 |**IsComputed**|**int**|Indicateur signalant si la colonne est calculée :<br /><br /> 0 = Non calculée<br /><br /> 1 = Calculée|  
-|**isoutparam**|**int**|Indique si le paramètre de la procédure est un paramètre de sortie ou non :<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**IsNullable**|**int**|Indique si les colonnes autorisent les valeurs NULL :<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**isoutparam**|**int**|Indique si le paramètre de la procédure est un paramètre de sortie ou non :<br /><br /> 1 = Vrai<br /><br /> 0 = Faux|  
+|**IsNullable**|**int**|Indique si les colonnes autorisent les valeurs NULL :<br /><br /> 1 = Vrai<br /><br /> 0 = Faux|  
 |**classement**|**sysname**|Nom du classement de la colonne. NULL s'il ne s'agit pas d'une colonne de type caractère.|  
   
 ## <a name="see-also"></a>Voir aussi  

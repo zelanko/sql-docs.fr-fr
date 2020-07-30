@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 268844335920f88469119df5cc84a145369da1e1
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197238"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332426"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -256,7 +256,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Types de données représentant des valeurs numériques exactes qui utilisent des entiers. Le stockage est présenté dans le tableau suivant.  
   
 | Type de données | Taille de stockage (octets) |  
@@ -519,18 +519,18 @@ WITH
  Dans cet exemple, les données seront triées dans les partitions suivantes :  
   
 - Partition 1 : col <= 10
-- Partition 2 : 10 < col <= 20
-- Partition 3 : 20 < col <= 30
-- Partition 4 : 30 < col <= 40
-- Partition 5 : 40 < col  
+- Partition 2 : 10 < col <= 20
+- Partition 3 : 20 < col <= 30
+- Partition 4 : 30 < col <= 40
+- Partition 5 : 40 < col  
   
  Si cette même table était partitionnée avec RANGE RIGHT au lieu de RANGE LEFT (par défaut), les données seraient triées dans les partitions suivantes :  
   
 - Partition 1 : col < 10  
-- Partition 2 : 10 <= col < 20
-- Partition 3 : 20 <= col < 30
-- Partition 4 : 30 <= col < 40
-- Partition 5 : 40 <= col  
+- Partition 2 : 10 <= col < 20
+- Partition 3 : 20 <= col < 30
+- Partition 4 : 30 <= col < 40
+- Partition 5 : 40 <= col  
   
 ### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. Créer une table partitionnée à une partition
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68112872"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396785"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Utilisation de la console SSMA pour Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA), version pour Sybase Adaptive Server Enterprise (ASE), est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
@@ -23,9 +23,8 @@ Cette section décrit la procédure de migration de la base de données ASE à l
   
 Les sujets abordés dans cette section sont les suivants :  
   
-|||  
+|Rubrique|Description|  
 |-|-|  
-|**Explique**|**Description**|  
 |[Prise en main avec SSMA pour la console Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Décrit la procédure d’exécution de l’application console.|  
 |[Options de ligne de commande dans la console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Décrit les options de ligne de commande et les paramètres permettant d’utiliser l’application console SSMA.|  
 |[Création de fichiers de script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Explique comment créer un fichier de script.|  
