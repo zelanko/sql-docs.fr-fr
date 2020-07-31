@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112760"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472200"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *database_id* | NULL | 0 | VALEURS  
+ *database_id* \| Valeur NULL \| 0 \| par défaut  
  ID de la base de données. *database_id* est de type **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez NULL pour *database_id*, vous devez également spécifier null pour *object_id*, *index_id*et *partition_number*.  
   
  Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Si vous utilisez DB_ID sans spécifier de nom de base de données, le niveau de compatibilité de la base de données active doit être égal à 90 ou plus.  
   
- *object_id* | NULL | 0 | VALEURS  
+ *object_id* \| Valeur NULL \| 0 \| par défaut  
  ID d’objet de la table ou de la vue sur laquelle l’index est activé. *l’object_id* est **int**.  
   
  Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , les entrées valides incluent également le nom de la file d’attente Service Broker ou le nom de la table interne de la file d’attente. Lorsque les paramètres par défaut sont appliqués (c’est-à-dire tous les objets, tous les index, etc.), les informations de fragmentation de toutes les files d’attente sont incluses dans le jeu de résultats.  
   
  Spécifiez la valeur NULL pour retourner des informations sur toutes les tables et les vues de la base de données spécifiée. Si vous spécifiez NULL pour *object_id*, vous devez également spécifier null pour *index_id* et *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | VALEURS  
+ *index_id* \| 0 valeur \| null \| -1 \| par défaut  
  Identificateur de l’index. *index_id* est de **type int**. Les entrées valides sont le numéro d’ID d’un index, 0 si *object_id* est un segment de mémoire, NULL,-1 ou default. La valeur par défaut est -1. NULL,-1 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez la valeur NULL pour retourner des informations sur tous les index d'une table de base ou d'une vue. Si vous spécifiez NULL pour *index_id*, vous devez également spécifier null pour *partition_number*.  
   
- *partition_number* | NULL | 0 | VALEURS  
+ *partition_number* \| Valeur NULL \| 0 \| par défaut  
  Numéro de partition dans l'objet. *partition_number* est de **type int**. Les entrées valides sont le *partion_number* d’un index ou d’un segment de mémoire, NULL, 0 ou default. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations sur toutes les partitions de l'objet propriétaire.  
   
  *partition_number* est de base 1. Un index ou un segment de mémoire non partitionné a *partition_number* défini sur 1.  
   
- *mode* | NULL | VALEURS  
+ *mode* \| valeur \| par défaut null  
  Nom du mode. *mode* spécifie le niveau d’analyse utilisé pour obtenir des statistiques. *mode* est de **type sysname**. Les entrées autorisées sont DEFAULT, NULL, LIMITED, SAMPLED ou DETAILED. La valeur par défaut (NULL) est LIMITED.  
   
 ## <a name="table-returned"></a>Table retournée  
@@ -120,7 +120,7 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Nombre d’enregistrements de version conservés en dehors de la ligne de données d’origine. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Nombre d’enregistrements de version considérés à long terme. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction de gestion dynamique sys.dm_db_index_physical_stats remplace l'instruction DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modes d'analyse  

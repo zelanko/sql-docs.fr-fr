@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfdfbe678e5b91d72e19a0300f9f1feec77c9d75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814504"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442448"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Lie la base de données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] spécifiée au pool de ressources spécifié. La base de données et le pool de ressources doivent exister avant l'exécution de `sys.sp_xtp_bind_db_resource_pool`.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82814504"
   
  Si une liaison est déjà en place pour une base de données particulière, la procédure retourne une erreur.  En aucun cas, une base de données ne peut avoir plusieurs liaisons actives.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   
 ## <a name="syntax"></a>Syntaxe  
@@ -145,7 +145,7 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 -   La base de données spécifiée par `database_name`, ainsi que le pool de ressources spécifié par `resource_pool_name`, doivent exister avant de pouvoir procéder à leur liaison.  
   

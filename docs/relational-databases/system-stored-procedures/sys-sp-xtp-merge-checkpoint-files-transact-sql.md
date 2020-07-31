@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d439edc04b13092c2dc95bbf3e45c62739f43a4c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 60f180eabadcbd4605b958ed3b631a5b4f38b838
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829932"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442648"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   **sys. sp_xtp_merge_checkpoint_files** fusionne tous les fichiers de données et delta dans la plage de transactions spécifiée.  
   
  Pour plus d’informations, consultez [création et gestion du stockage pour les objets optimisés en mémoire](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ||  
 |-|  
@@ -56,7 +56,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  Limite supérieure (bigint) des transactions pour un fichier de données, comme indiqué dans [sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Une erreur est générée pour une valeur transactionId non valide.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
  None  
@@ -64,11 +64,11 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
 ## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin et au rôle de base de données fixe db_owner.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Fusionne tous les fichiers de données et delta dans la plage valide pour générer un seul fichier de données et delta. Cette procédure ne respecte pas la stratégie de fusion.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

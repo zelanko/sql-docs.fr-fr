@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820904"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442923"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les propriétés de statistiques incrémentielles de l’objet de base de données spécifié (table) dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] active. L’utilisation de `sys.dm_db_incremental_stats_properties` (qui contient un numéro de partition) est similaire à celle de `sys.dm_db_stats_properties` qui est utilisé pour les statistiques non incrémentielles. 
   
@@ -59,7 +59,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|Nombre total de lignes dans la table avant l'application de l'expression de filtre (pour les statistiques filtrées). Si les statistiques ne sont pas filtrées, unfiltered_rows est égal à la valeur retournée dans la colonne rows.|  
 |modification_counter|**bigint**|Nombre total de modifications de la première colonne de statistiques (la colonne sur laquelle l'histogramme est construit) depuis la dernière mise à jour des statistiques.<br /><br /> Cette colonne ne contient pas d'informations pour les tables mémoire optimisées.|  
   
-## <a name="remarks"></a>Notes concernant <a name="Remarks"></a>  
+## <a name="remarks"></a><a name="Remarks"></a> Notes  
  `sys.dm_db_incremental_stats_properties` retourne un ensemble de lignes vide sous chacune des conditions suivantes :  
   
 -   `object_id` ou `stats_id` est NULL.   
@@ -87,7 +87,7 @@ Pour des suggestions d’utilisation supplémentaires, consultez  [sys.dm_db_sta
   
 ## <a name="see-also"></a>Voir aussi  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys. stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Fonctions et vues de gestion dynamique liées aux objets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   

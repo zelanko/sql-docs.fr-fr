@@ -1,6 +1,6 @@
 ---
 title: Bonnes pratiques pour Data Migration Assistant
-description: Découvrez les meilleures pratiques pour la migration de bases de données SQL Server avec Assistant Migration de données
+description: Découvrez les meilleures pratiques pour la migration de bases de données SQL Server avec Assistant Migration de données, y compris des informations sur l’installation, l’évaluation et la migration.
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886046"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472365"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Meilleures pratiques pour l’exécution de l’assistant Migration de données
+# <a name="best-practices-for-running-data-migration-assistant"></a>Bonnes pratiques pour l’exécution de l’Assistant Migration de données
 Cet article fournit des informations sur les meilleures pratiques pour l’installation, l’évaluation et la migration.
 
 ## <a name="installation"></a>Installation

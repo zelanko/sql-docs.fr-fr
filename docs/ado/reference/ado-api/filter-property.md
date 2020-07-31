@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762540"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242689"
 ---
 # <a name="filter-property"></a>Filter, propriété
 Indique un filtre pour les données d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +35,7 @@ Définit ou retourne une valeur de **type Variant** , qui peut contenir l’un d
   
 -   Valeur [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Utilisez la propriété **Filter pour filtrer** de manière sélective les enregistrements d’un objet **Recordset** . Le **Recordset** filtré devient le curseur actuel. Les autres propriétés qui retournent des valeurs basées sur le **curseur** actuel sont affectées, telles que [ABSOLUTEPOSITION Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)et [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). La définition de la propriété **Filter** sur une nouvelle valeur spécifique déplace l’enregistrement actif vers le premier enregistrement qui satisfait la nouvelle valeur.
   
@@ -43,7 +43,7 @@ La chaîne de critères est composée de clauses au format *fieldName-Operator-v
 
 -   *FieldName* doit être un nom de champ valide du **Recordset**. Si le nom du champ contient des espaces, vous devez placer le nom entre crochets.  
   
--   L’opérateur doit être l’un des suivants : \< , >, \< =, >=,  <>, = ou **Like**.  
+-   L’opérateur doit être l’un des suivants : \<, > , \<=, > =,  <>, = ou **Like**.  
   
 -   La valeur est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, « Smith », #8/24/95 #, 12,345 ou $50,00). Utilisez des guillemets simples avec des chaînes et des signes dièse (#) avec des dates. Pour les nombres, vous pouvez utiliser des points décimaux, des signes dollar et une notation scientifique. Si l’opérateur est **comme**, la valeur peut utiliser des caractères génériques. Uniquement l’astérisque (*) et le signe de pourcentage (%) les caractères génériques sont autorisés et doivent être le dernier caractère de la chaîne. Value cannot be null.  
   
@@ -90,7 +90,7 @@ Seuls les filtres sous la forme de chaînes de critères affectent le contenu d�
   
 Le tableau suivant récapitule les effets de **adFilterPendingRecords** dans différentes combinaisons de filtrage et de modifications. La colonne de gauche affiche les modifications possibles. Des modifications peuvent être apportées sur l’un des champs non-clés, sur le champ clé d’une table à clé unique ou sur n’importe quel champ clé dans une table à clé multiple. La ligne du haut affiche le critère de filtrage. Le filtrage peut être basé sur n’importe quel champ non indexé, sur le champ clé d’une table à clé unique ou sur l’un des champs clés d’une table à clé multiple. Les cellules qui se croisent affichent les résultats. Un **+** signe plus signifie que l’application de **adFilterPendingRecords** produit un **jeu d’enregistrements**non vide. Un **-** signe moins signifie un **jeu d’enregistrements**vide.  
   
-||Non-clés|Clé unique|Clés multiples|
+|Combinaisons|Non-clés|Clé unique|Clés multiples|
 |-|--------------|----------------|-------------------|
 |**Non-clés**|+|+|+|
 |**Clé unique**|+|-|N/A|

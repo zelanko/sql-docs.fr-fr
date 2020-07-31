@@ -20,15 +20,15 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812026"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442553"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Contrôle la progression en temps réel lorsqu'une requête est en cours d'exécution. Par exemple, utilisez cette vue de gestion dynamique pour déterminer la partie de la requête qui est lente. Joignez cette vue de gestion dynamique à d'autres vues de gestion dynamique système identifiées dans le champ de description. Ou bien, joignez cette vue de gestion dynamique à d'autres compteurs de performances (tels que l'analyseur de performances, xperf) à l'aide de colonnes timestamp.  
   
@@ -41,7 +41,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |request_id|**int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Référence dm_exec_query_stats.sql_handle.|  
 |plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Référence dm_exec_query_stats. plan_handle.|  
-|physical_operator_name|**nvarchar(256)**|Nom de l'opérateur physique.|  
+|physical_operator_name|**nvarchar (256)**|Nom de l'opérateur physique.|  
 |node_id|**int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
 |thread_id|**int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
 |task_address|**varbinary (8)**|Identifie la tâche SQLOS utilisée par ce thread. Référence dm_os_tasks.task_address.|  
@@ -83,7 +83,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
   
 -   En cas d'analyse parallèle, cette vue de gestion dynamique indique des compteurs pour chaque threads parallèles de l'analyse.
  
-À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastructure de profilage des statistiques d’exécution de requête standard* existe côte à côte avec une infrastructure de *profilage des statistiques d’exécution de requête légère*. `SET STATISTICS XML ON`et `SET STATISTICS PROFILE ON` utilisent toujours l' *infrastructure de profilage des statistiques d’exécution de requête standard*. Pour `sys.dm_exec_query_profiles` que soit rempli, l’une des infrastructures de profilage de requête doit être activée. Pour plus d’informations, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).    
+À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastructure de profilage des statistiques d’exécution de requête standard* existe côte à côte avec une infrastructure de *profilage des statistiques d’exécution de requête légère*. `SET STATISTICS XML ON`et `SET STATISTICS PROFILE ON` utilisent toujours l' *infrastructure de profilage des statistiques d’exécution de requête standard*. Pour `sys.dm_exec_query_profiles` que soit rempli, l’une des infrastructures de profilage de requête doit être activée. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > La requête en cours d’investigation doit démarrer **après** l’activation de l’infrastructure de profilage de la requête. l’activation de la requête après le démarrage de la requête ne produira pas de résultats dans `sys.dm_exec_query_profiles` . Pour plus d’informations sur la façon d’activer les infrastructures de profilage de requête, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).
@@ -124,6 +124,6 @@ ORDER BY node_id;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

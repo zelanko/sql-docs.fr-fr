@@ -1,6 +1,6 @@
 ---
 title: Migrer des connexions SQL Server avec Assistant Migration de données
-description: Découvrez comment migrer des connexions SQL Server avec Assistant Migration de données
+description: Migrez les connexions SQL Server avec Assistant Migration de données, y compris les mises à niveau SQL Server vers les versions ultérieures du produit local ou vers SQL Server sur les machines virtuelles Azure.
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 802df8e3bf6817bfd8da5608aa28c0612601a2cd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885786"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472351"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrer des connexions SQL Server avec Assistant Migration de données
 

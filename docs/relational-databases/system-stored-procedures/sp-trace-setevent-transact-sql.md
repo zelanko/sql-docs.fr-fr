@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892589"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472665"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85892589"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des événements étendus.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -257,15 +257,15 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|**Durée**|Quantité de temps écoulé (en microsecondes) pris par l’événement. Cette colonne de données n'est pas remplie par l'événement Hash Warning.|  
 |14|**StartTime**|Heure à laquelle a débuté l'événement, si disponible.|  
 |15|**EndTime**|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme **SQL:BatchStarting** ou **SP:Starting**. Elle n’est pas non plus remplie par l’événement **hash Warning** .|  
-|16|**Lectures**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement. Cette colonne n’est pas remplie par l’événement **Lock : Released** .|  
-|17|**Écritures**|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|  
+|16|**Reads**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement. Cette colonne n’est pas remplie par l’événement **Lock : Released** .|  
+|17|**Writes**|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|  
 |18|**UC**|Temps processeur (en millisecondes) utilisé par l'événement.|  
 |19|**autorisations**|Représente l'image bitmap des autorisations ; utilisé par l'audit de sécurité.|  
-|20|**Gravité**|Niveau de gravité d'une exception.|  
+|20|**Niveau de gravité**|Niveau de gravité d'une exception.|  
 |21|**EventSubClass**|Type de sous-classe d'événements. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
-|22|**Arguments**|ID affecté à l'objet par le système.|  
-|23|**Opération réussie**|Succès de la tentative d'utilisation des autorisations ; utilisé pour l'audit.<br /><br /> **1** = succès**0** = échec|  
-|24|**IndexID contient**|ID de l'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|  
+|22|**ObjectID**|ID affecté à l'objet par le système.|  
+|23|**Success**|Succès de la tentative d'utilisation des autorisations ; utilisé pour l'audit.<br /><br /> **1** = succès**0** = échec|  
+|24|**IndexID**|ID de l'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|  
 |25|**IntegerData**|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
 |26|**ServerName**|Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *ServerName* ou *NomServeur\NomInstance*, suivi.|  
 |27|**EventClass**|Type de classe d'événement actuellement enregistrée.|  
@@ -290,7 +290,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |46|**ProviderName**|Nom du fournisseur OLE DB.|  
 |47|**MethodName**|Nom de la méthode OLE DB.|  
 |48|**RowCounts**|Nombre de lignes dans le traitement.|  
-|49|**Identifi**|ID de la demande contenant l'instruction.|  
+|49|**RequestID**|ID de la demande contenant l'instruction.|  
 |50|**XactSequence**|Jeton servant à décrire la transaction en cours.|  
 |51|**EventSequence**|Numéro de séquence de cet événement.|  
 |52|**BigintData1**|valeur **bigint** qui dépend de la classe d’événements capturée dans la trace.|  
@@ -316,7 +316,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Le tableau suivant illustre l’interaction entre ** \@ on** et ** \@ ColumnID**.  
   
-|@on|@columnid|Résultats|  
+|\@sur|\@columnid|Résultat|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Événement activé (ON).<br /><br /> Toutes les colonnes sont effacées.|  
 ||NOT NULL|La colonne est activée (ON) pour l'événement spécifié.|  

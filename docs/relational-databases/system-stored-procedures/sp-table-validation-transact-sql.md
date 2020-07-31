@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834210"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442418"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur le nombre de lignes ou sur la somme de contrôle d'une table ou d'une vue indexée, ou bien compare ces informations avec la table ou la vue indexée spécifiée. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication et sur la base de données d'abonnement de l'Abonné. *Non pris en charge pour les serveurs de publication Oracle*.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,7 +80,7 @@ sp_table_validation [ @table = ] 'table'
   
  Si vous effectuez une validation du nombre de lignes et que le nombre de lignes attendu est égal au nombre de la table, **sp_table_validation** retourne un message indiquant que la table a réussi la validation du nombre de lignes. Sinon, elle retourne un message indiquant que la table peut ne plus être synchronisée et indique la différence entre le nombre de lignes attendu et le nombre réel.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_table_validation** est utilisé dans tous les types de réplications. **sp_table_validation** n’est pas pris en charge pour les serveurs de publication Oracle.  
   
  La somme de contrôle calcule une vérification de redondance cyclique de 32 bits (CRC) sur l'image de la ligne entière de la page. La somme de contrôle ne vérifie pas les colonnes de manière sélective et ne peut pas s'exécuter sur une vue ou une partition verticale de la table. En outre, la somme de contrôle ignore le contenu des colonnes de **texte** et d' **image** (par conception).  

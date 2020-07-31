@@ -21,15 +21,15 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29e08f4fd023717a186a900f288e47f864af218e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72af811bb5c3f9f5b3fdded8589bec4ef34806fb
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677441"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442837"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Retourne des statistiques sur les opérations de point de contrôle de l'OLTP en mémoire dans la base de données active. Si la base de données n'a pas d'objets OLTP en mémoire, retourne un ensemble de résultats vide.  
   

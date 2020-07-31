@@ -20,15 +20,15 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb38baa9671366f7291828e662afed30ad999f8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91afcf9bc654c73b6dad416bf9c5d114ca1edee5
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830820"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442688"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contient les statistiques collectées depuis le dernier redémarrage de la base de données.  
   
@@ -44,17 +44,17 @@ ms.locfileid: "82830820"
 |scans_retries|**bigint**|Nombre d'analyses d'index qui doivent être retentées.|  
 |rows_returned|**bigint**|Nombre cumulatif de lignes retournées depuis la création de la table ou le démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |rows_touched|**bigint**|Nombre cumulatif de lignes auxquelles il a été possible d'accéder depuis la création de la table ou le démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|rows_expiring|**bigint**|À usage interne uniquement|  
-|rows_expired|**bigint**|À usage interne uniquement|  
-|rows_expired_removed|**bigint**|À usage interne uniquement|  
-|phantom_scans_started|**bigint**|À usage interne uniquement|  
-|phatom_scans_retries|**bigint**|À usage interne uniquement|  
-|phantom_rows_touched|**bigint**|À usage interne uniquement|  
-|phantom_expiring_rows_encountered|**bigint**|À usage interne uniquement|  
-|phantom_expired_rows_encountered|**bigint**|À usage interne uniquement|  
-|phantom_expired_removed_rows_encountered|**bigint**|À usage interne uniquement|  
-|phantom_expired_rows_removed|**bigint**|À usage interne uniquement|  
-|object_address|**varbinary (8)**|À usage interne uniquement|  
+|rows_expiring|**bigint**|Usage interne uniquement.|  
+|rows_expired|**bigint**|Usage interne uniquement.|  
+|rows_expired_removed|**bigint**|Usage interne uniquement.|  
+|phantom_scans_started|**bigint**|Usage interne uniquement.|  
+|phatom_scans_retries|**bigint**|Usage interne uniquement.|  
+|phantom_rows_touched|**bigint**|Usage interne uniquement.|  
+|phantom_expiring_rows_encountered|**bigint**|Usage interne uniquement.|  
+|phantom_expired_rows_encountered|**bigint**|Usage interne uniquement.|  
+|phantom_expired_removed_rows_encountered|**bigint**|Usage interne uniquement.|  
+|phantom_expired_rows_removed|**bigint**|Usage interne uniquement.|  
+|object_address|**varbinary (8)**|Usage interne uniquement.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur la base de données active.  

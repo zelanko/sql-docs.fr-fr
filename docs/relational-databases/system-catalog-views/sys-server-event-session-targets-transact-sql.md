@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1053382a7236794cadd6637d6e19091cf7508496
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b99adfbd57d8062cec0b3cc493095312f06020f8
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908567"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442440"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne pour chaque cible d'événement d'une session d'événements.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "86908567"
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette vue a les cardinalités de relation suivantes.  
   
 | À partir | À | Relation |

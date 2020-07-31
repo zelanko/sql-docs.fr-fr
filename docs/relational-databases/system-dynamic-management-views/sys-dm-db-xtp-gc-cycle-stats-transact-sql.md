@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830809"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442573"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Retourne l'état actuel des transactions validées qui ont supprimé une ou plusieurs lignes. Le thread garbage collection inactif s'exécute toutes les minutes, ou lorsque le nombre de transactions DML validées dépasse un seuil interne depuis le dernier cycle de garbage collection. Pendant le cycle de garbage collection, il déplace les transactions validées dans une ou plusieurs files d'attente associées aux générations. Les transactions qui ont généré des versions obsolètes sont regroupées en une unité de 16 transactions pouvant appartenir à 16 générations, comme suit :  
   

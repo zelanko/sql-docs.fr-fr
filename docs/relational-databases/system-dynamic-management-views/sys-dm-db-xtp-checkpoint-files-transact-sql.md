@@ -21,15 +21,15 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677520"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442589"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Affiche des informations sur les fichiers de point de contrôle, y compris la taille de fichier, l'emplacement physique et l'ID de la transaction.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "85677520"
 |container_id|**int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys. database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID du conteneur auquel appartient la racine, le fichier de données ou le fichier delta. Jointures avec file_guid dans la table sys. database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID du fichier de point de contrôle.|  
-|relative_file_path|**nvarchar(256)**|Chemin d’accès du fichier par rapport au conteneur auquel il est mappé.|  
+|relative_file_path|**nvarchar (256)**|Chemin d’accès du fichier par rapport au conteneur auquel il est mappé.|  
 |file_type|**smallint**|-1 gratuitement<br /><br /> 0 pour le fichier de données.<br /><br /> 1 pour le fichier DELTA.<br /><br /> 2 pour le fichier racine<br /><br /> 3 pour un fichier de données volumineux|  
 |file_type_desc|**nvarchar(60)**|GRATUIT : tous les fichiers gérés gratuitement peuvent être alloués. La taille des fichiers gratuits peut varier en fonction des besoins prévus du système. La taille maximale est de 1 Go.<br /><br /> Les fichiers de données contiennent des lignes qui ont été insérées dans des tables optimisées en mémoire.<br /><br /> Les fichiers Delta-Delta contiennent des références à des lignes de fichiers de données qui ont été supprimées.<br /><br /> Les fichiers racine racine contiennent les métadonnées système pour les objets optimisés en mémoire et compilés en mode natif.<br /><br /> DONNÉES VOLUMINEUSEs : les fichiers de données volumineux contiennent des valeurs insérées dans les colonnes (n) varchar (max) et varbinary (max), ainsi que les segments de colonne qui font partie des index ColumnStore sur les tables optimisées en mémoire.|  
 |internal_storage_slot|**int**|Index du fichier dans le tableau de stockage interne. NULL pour la racine ou pour l’État autre que 1.|  
@@ -75,7 +75,7 @@ ms.locfileid: "85677520"
 |container_id|**int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys. database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID du conteneur dont les données ou le fichier delta font partie.|  
 |checkpoint_file_id|**GUID**|ID du fichier de données ou delta.|  
-|relative_file_path|**nvarchar(256)**|Chemin d'accès au fichier de données ou delta, relatif à l'emplacement du conteneur.|  
+|relative_file_path|**nvarchar (256)**|Chemin d'accès au fichier de données ou delta, relatif à l'emplacement du conteneur.|  
 |file_type|**tinyint**|0 pour le fichier de données.<br /><br /> 1 pour le fichier delta.<br /><br /> NULL si la colonne d'état a la valeur 7.|  
 |file_type_desc|**nvarchar(60)**|Type de fichier : DATA_FILE, DELTA_FILE ou NULL si la colonne d’État a la valeur 7.|  
 |internal_storage_slot|**int**|Index du fichier dans le tableau de stockage interne. NULL si la colonne d'état n'a pas la valeur 2 ni 3.|  
@@ -98,7 +98,7 @@ ms.locfileid: "85677520"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW DATABASE STATE` sur le serveur.  
   
-## <a name="use-cases"></a>Cas d’usage  
+## <a name="use-cases"></a>Cas d'utilisation  
  Vous pouvez estimer le stockage utilisé par l’OLTP en mémoire comme suit :  
   
 ```  
