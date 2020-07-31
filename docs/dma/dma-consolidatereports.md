@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868378"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435148"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation à l’aide de DMA
 
@@ -36,8 +36,8 @@ Les instructions pas à pas suivantes vous aident à utiliser le Assistant Migra
   - [Power bi Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Modules Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Télécharger et extraire :
-  - Les [rapports DMA Power bi modèle](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-  - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - Les [rapports DMA Power bi modèle](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Chargement des modules PowerShell
 
@@ -46,7 +46,7 @@ L’enregistrement des modules PowerShell dans le répertoire des modules PowerS
 Pour charger les modules, procédez comme suit :
 
 1. Accédez à C:\Program Files\WindowsPowerShell\Modules, puis créez un dossier nommé **DataMigrationAssistant**.
-2. Ouvrez [PowerShell-modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip), puis enregistrez-les dans le dossier que vous avez créé.
+2. Ouvrez [PowerShell-modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip), puis enregistrez-les dans le dossier que vous avez créé.
 
       ![Modules PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -80,7 +80,6 @@ Cet inventaire peut être de l’une des deux formes suivantes :
 >
 > Pour les instances par défaut, définissez le nom de l’instance sur MSSQLServer.
 
-
 Lorsque vous utilisez un fichier CSV pour importer les données, assurez-vous qu’il n’y a que deux colonnes de **nom d’instance** de données et **de nom de base de**données, et que les colonnes n’ont pas de lignes d’en-tête.
 
  ![contenu du fichier CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -97,7 +96,7 @@ Créez une base de données appelée **EstateInventory** et une table appelée *
 - nom_base_de_données
 - AssessmentFlag
 
-![Contenu de la table SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![Contenu de la table SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Si cette base de données ne se trouve pas sur l’ordinateur des outils, assurez-vous que l’ordinateur des outils dispose d’une connectivité réseau avec cette instance de SQL Server.
 
@@ -105,10 +104,21 @@ L’avantage de l’utilisation d’une table SQL Server sur un fichier CSV est 
 
 Gardez à l’esprit que, en fonction du nombre d’objets et de leur complexité, une évaluation peut prendre beaucoup de temps (heures +), il est donc prudent de séparer l’évaluation en segments gérables.
 
+### <a name="if-using-an-instance-inventory"></a>Si vous utilisez un inventaire d’instances
+
+Créez une base de données appelée **EstateInventory** et une table appelée **InstanceInventory**. La table contenant ces données d’inventaire peut comporter un nombre quelconque de colonnes, tant que les quatre colonnes suivantes existent :
+
+- ServerName
+- InstanceName
+- Port
+- AssessmentFlag
+
+![Contenu de la table SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## <a name="running-a-scaled-assessment"></a>Exécution d’une évaluation avec montée en charge
 
 Après avoir chargé les modules PowerShell dans le répertoire Modules et créé un inventaire, vous devez exécuter une évaluation mise à l’échelle en ouvrant PowerShell et en exécutant la fonction dmaDataCollector.
- 
+
   ![listes de fonctions dmaDataCollector](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 Les paramètres associés à la fonction dmaDataCollector sont décrits dans le tableau suivant.
@@ -119,19 +129,20 @@ Les paramètres associés à la fonction dmaDataCollector sont décrits dans le 
 |**csvPath** | Chemin d’accès à votre fichier d’inventaire CSV.  Utilisé uniquement lorsque **getServerListFrom** a la valeur **CSV**. |
 |**Nom du serveur** | Nom de l’instance de SQL Server de l’inventaire lors de l’utilisation de **SqlServer** dans le paramètre **getServerListFrom** . |
 |**databaseName** | Base de données hébergeant la table d’inventaire. |
+|**useInstancesOnly** | Indicateur binaire pour spécifier s’il faut utiliser une liste d’instances à des fins d’évaluation.  Si la valeur est 0, la table DatabaseInventory sera utilisée pour générer la liste des cibles d’évaluation. |
 |**AssessmentName** | Nom de l’évaluation DMA. |
-|**TargetPlatform** | Type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**et **ManagedSqlServer**. |
+|**TargetPlatform** | Type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**et **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | La méthode d’authentification pour la connexion aux cibles de SQL Server que vous souhaitez évaluer. Les valeurs possibles **SQLAuth** sont SQLAuth **et l'** interversion. |
 |**OutputLocation** | Répertoire dans lequel stocker le fichier de sortie de l’évaluation JSON. En fonction du nombre de bases de données en cours d’évaluation et du nombre d’objets dans les bases de données, les évaluations peuvent prendre beaucoup de temps. Le fichier sera écrit une fois toutes les évaluations terminées. |
 
 S’il y a une erreur inattendue, la fenêtre de commande qui est lancée par ce processus va être arrêtée.  Examinez le journal des erreurs pour déterminer la raison de l’échec.
- 
+
   ![Emplacement du journal des erreurs](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## <a name="consuming-the-assessment-json-file"></a>Consommation du fichier JSON d’évaluation
 
 Une fois votre évaluation terminée, vous êtes maintenant prêt à importer les données dans SQL Server pour l’analyse. Pour utiliser le fichier JSON d’évaluation, ouvrez PowerShell et exécutez la fonction dmaProcessor.
- 
+
   ![liste de fonctions dmaProcessor](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 Les paramètres associés à la fonction dmaProcessor sont décrits dans le tableau suivant.
@@ -157,8 +168,8 @@ Une fois que le dmaProcessor a terminé le traitement des fichiers d’évaluati
     Le script extrait les données de la table ReportData dans la base de données DMAReporting et les charge dans l’entrepôt.  Si des erreurs se produisent pendant ce processus de chargement, elles sont probablement le résultat d’entrées manquantes dans les tables de dimension.
 
 2. Chargez l’entrepôt de données.
- 
-      ![Contenu LoadWarehouse chargé](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![Contenu LoadWarehouse chargé](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>Définir les propriétaires de votre base de données
 
@@ -166,7 +177,7 @@ Bien qu’il ne soit pas obligatoire, pour tirer le meilleur parti des rapports,
 
 Vous pouvez également utiliser le script LoadWarehouse pour fournir les instructions TSQL de base pour vous permettre de définir les propriétaires de base de données.
 
-  ![Propriétaires de paramètres LoadWarehouse](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![Propriétaires de paramètres LoadWarehouse](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## <a name="dma-reports"></a>Rapports DMA
 
@@ -250,7 +261,7 @@ Cet visuel illustre la répartition des bases de données par les compartiments 
 - NON PRÊT
 
 ### <a name="issues-word-cloud"></a>Problèmes liés au Cloud
- 
+
   ![Problèmes DMA WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 Cet élément visuel indique les problèmes qui se produisent actuellement dans le contexte de sélection (tout, instance, base de données [multiple de]). Plus le mot s’affiche à l’écran, plus le nombre de problèmes dans cette catégorie est élevé. Placez le pointeur de la souris sur un mot pour afficher le nombre de problèmes survenant dans cette catégorie.
@@ -263,7 +274,7 @@ Cette section est la partie principale du rapport, qui indique la disponibilité
 
 - InstanceDatabase
 - ChangeCategory
-- Intitulé
+- Titre
 - ObjectType
 - ImpactedObjectName
 
@@ -280,7 +291,7 @@ Cette tâche filtre le rapport de plan de correction au niveau de la hiérarchie
   ![Rapport du plan de correction DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 Vous pouvez également utiliser le rapport de plan de correction en soi pour créer un plan de correction personnalisé à l’aide des filtres du panneau **filtres de visualisation** .
- 
+
   ![Options de filtre de rapport du plan de correction DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>Exclusion de scripts
