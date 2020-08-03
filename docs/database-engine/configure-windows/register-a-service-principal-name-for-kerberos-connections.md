@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4618c69eb24901580118a6fc6b4119689f1e9663
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651751"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362659"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > Le nouveau format SPN ne requiert pas de numéro de port. Cela signifie qu'un serveur à port multiple ou un protocole qui n'utilise pas de numéro de port peut utiliser l'authentification Kerberos.  
    
-|||  
+|Format de SPN|Description|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé. \<port> est un numéro de port TCP.|  
+|MSSQLSvc/\<FQDN>:\<port>|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé. \<port> est un numéro de port TCP.|  
 |MSSQLSvc/\<FQDN>|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé. \<FQDN> est un nom de domaine complet.|  
 |MSSQLSvc/\<FQDN>:\<instancename>|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé. \<instancename> est le nom d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 

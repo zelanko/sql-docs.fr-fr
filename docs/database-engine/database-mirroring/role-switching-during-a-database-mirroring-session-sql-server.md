@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3aefc181c1dc42e939579dcdce274a27086dd1ed
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735157"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362230"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85735157"
   
  Le tableau ci-dessous résume les types de basculement pris en charge dans chaque mode de fonctionnement.  
   
-||Hautes performances|Mode haute performance sans témoin|Mode haute performance avec témoin|  
+|Forme de basculement|Hautes performances|Mode haute performance sans témoin|Mode haute performance avec témoin|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |Basculement automatique|Non|Non|Oui|  
 |Basculement manuel|Non|Oui|Oui|  

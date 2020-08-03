@@ -1,5 +1,6 @@
 ---
 title: Recompiler une procédure stockée | Microsoft Docs
+description: Découvrez comment recompiler une procédure stockée dans SQL Server 2019 (15.x) à l’aide de Transact-SQL.
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df92be946b13a4643f6ddca870ea98ff64b3d9d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec11628388263463bbb7ca3f00f8611768380fd3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002739"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332554"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

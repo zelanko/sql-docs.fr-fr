@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636200"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397075"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clause FROM plus JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 Dans Transact-SQL, la clause FROM est disponible sur les instructions suivantes :
 
@@ -177,7 +177,7 @@ FROM { <table_source> [ ,...n ] }
  Spécifie une table, une vue, une variable de table ou une source de table dérivée, avec ou sans alias, à utiliser dans l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez utiliser jusqu'à 256 sources de table dans une instruction, bien que cette limite varie en fonction de la mémoire disponible et de la complexité des autres expressions constituant la requête. Les requêtes individuelles peuvent ne pas prendre en charge 256 sources de table.  
   
 > [!NOTE]  
->  Les performances des requêtes risquent de baisser si le nombre des tables référencées dans une requête est élevé. Les durées de compilation et d'optimisation sont également affectées par d'autres facteurs. Parmi ceux-ci figurent les index et les vues indexées sur chaque \<table_source>, ainsi que la taille de \<select_list> dans l’instruction SELECT.  
+>  Les performances des requêtes risquent de baisser si le nombre des tables référencées dans une requête est élevé. Les durées de compilation et d'optimisation sont également affectées par d'autres facteurs. Parmi ceux-ci figurent les index et les vues indexées de chaque \<table_source>, ainsi que la taille de \<select_list> dans l’instruction SELECT.  
   
  L'ordre des sources de table après le mot clé FROM n'a aucune incidence sur le jeu de résultats retourné. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des erreurs lorsque des noms dupliqués apparaissent dans la clause FROM.  
   
@@ -383,20 +383,20 @@ ON (p.ProductID = v.ProductID);
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Renvoie une table avec un seul enregistrement par ligne contenant les valeurs qui étaient réelles (actuelles) au moment dans le passé spécifié. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés pour retourner les valeurs de la ligne qui était valide au moment spécifié par le paramètre *\<date_time>* . La valeur d’une ligne est considérée comme valide si *system_start_time_column_name* a une valeur inférieure ou égale à celle du paramètre *\<date_time>* et si *system_end_time_column_name* a une valeur supérieure à celle du paramètre *\<date_time>* .   
+ Renvoie une table avec un seul enregistrement par ligne contenant les valeurs qui étaient réelles (actuelles) au moment dans le passé spécifié. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés de manière à retourner les valeurs de la ligne qui étaient valides au moment spécifié par le paramètre *\<date_time>* . La valeur d’une ligne est considérée comme valide si *system_start_time_column_name* a une valeur inférieure ou égale à celle du paramètre *\<date_time>* , et si *system_end_time_column_name* a une valeur supérieure à celle du paramètre *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
- Retourne une table avec les valeurs de toutes les versions d’enregistrement qui étaient actives pendant l’intervalle de temps spécifié, sans tenir compte du fait qu’elles sont devenues actives avant la valeur du paramètre *\<start_date_time>* pour l’argument FROM ou qu’elles ont cessé d’être actives après la valeur du paramètre *\<end_date_time>* pour l’argument TO. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés de manière à renvoyer les valeurs de toutes les versions de ligne qui étaient actives à tout moment de l’intervalle spécifié. Les lignes qui sont devenues actives exactement sur la limite inférieure définie par le point de terminaison FROM sont incluses. Celles qui sont devenus actives exactement sur la limite supérieure définie par le point de terminaison TO ne sont pas incluses.  
+ Retourne une table avec les valeurs de toutes les versions d’enregistrement qui étaient actives pendant l’intervalle de temps spécifié, sans tenir compte du fait qu’elles soient devenues actives avant la valeur du paramètre *\<start_date_time>* pour l’argument FROM ou qu’elles aient cessé d’être actives après la valeur du paramètre *\<end_date_time>* pour l’argument TO. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés de manière à renvoyer les valeurs de toutes les versions de ligne qui étaient actives à tout moment de l’intervalle spécifié. Les lignes qui sont devenues actives exactement sur la limite inférieure définie par le point de terminaison FROM sont incluses. Celles qui sont devenus actives exactement sur la limite supérieure définie par le point de terminaison TO ne sont pas incluses.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Identique à la description de **FROM \<start_date_time> TO \<end_date_time>** ci-dessus, sauf que les lignes qui sont devenues actives sur la limite supérieure définie par le point de terminaison \<end_date_time> sont incluses.  
+ Identique à la description de **FROM \<start_date_time> TO \<end_date_time>** ci-dessus, sauf que les lignes qui sont devenues actives au niveau de la limite supérieure définie par le point de terminaison \<end_date_time> sont incluses.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 

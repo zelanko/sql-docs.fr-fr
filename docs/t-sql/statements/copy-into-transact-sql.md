@@ -18,16 +18,16 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091673"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395996"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Cet article explique comment utiliser l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes. L’instruction COPY offre une souplesse maximale pour l’ingestion de données à débit élevé dans SQL Data Warehouse. Utilisez COPY pour les fonctionnalités suivantes :
 
@@ -217,7 +217,7 @@ Si ERRORFILE a le chemin complet du compte de stockage défini, ERRORFILE_CREDEN
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* spécifie le nombre maximal de lignes rejetées autorisées dans la charge avant l’annulation de l’opération COPY. Chaque ligne qui ne peut pas être importée par l’opération COPY est ignorée et est comptabilisée comme une erreur. Si max_errors n’est pas spécifié, la valeur par défaut est 0.
 
-*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*</br>
+*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
 *COMPRESSION* est facultatif et spécifie la méthode de compression appliquée aux données externes.
 
 - CSV prend en charge GZIP
@@ -250,7 +250,7 @@ Les caractères ASCII étendus et à plusieurs octets ne sont pas pris en charge
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* s’applique au format CSV et spécifie le numéro de ligne qui est lu en premier dans tous les fichiers par la commande COPY. Les valeurs commencent à 1, la valeur par défaut. Si la valeur est définie sur 2, la première ligne de chaque fichier (ligne d’en-tête) est ignorée lorsque les données sont chargées. Les lignes sont ignorées en présence de marques de fin de ligne.
 
-*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
+*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT s’applique uniquement au format CSV et spécifie le format de date pour le mappage des dates avec les formats de date SQL Server. Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure Transact-SQL, consultez [Types de données et fonctions de date et d’heure (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). Dans la commande COPY, DATEFORMAT a une précédence supérieure au [DATEFORMAT configuré au niveau de la session](set-dateformat-transact-sql.md?view=sql-server-ver15).
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>

@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552774"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332508"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -65,10 +65,17 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ **,** ...*n* ] Indique que le jeu d'[unités de sauvegarde
 
 Spécifie l'unité de sauvegarde logique ou physique à utiliser pour l'opération de sauvegarde.
 
-{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **S’applique à :** SQL Server Spécifie le nom logique de l’unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (@_logical\_device\_name\_var_ **=** logical backup device name) ou d’une variable de type chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **S’applique à :** SQL Server Spécifie le nom logique de l’unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (@_logical\_device\_name\_var_ **=** logical backup device name) ou d’une variable de type chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
-{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **S’applique à :** DISK, TAPE et URL s’appliquent à SQL Server.
+{ DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **S’applique à :** DISK, TAPE et URL s’appliquent à SQL Server.
 Spécifie un fichier sur disque ou support à bandes, ou un service de stockage Blob Microsoft Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Microsoft Azure. Pour plus d’informations et d’exemples, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour suivre un tutoriel, consultez [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 
 > [!NOTE]
@@ -664,7 +671,7 @@ Ce tableau décrit les interactions entre les options { **NOINIT** | INIT } et {
 > [!NOTE]
 > Si le support de bande est vide ou que le fichier de sauvegarde sur disque n'existe pas, toutes ces interactions écrivent un en-tête de support, puis se poursuivent. Si le support n'est pas vide et qu'il ne contient pas d'en-tête de support valide, ces opérations signalent qu'il ne s'agit pas d'un support MTF valide et mettent fin à l'opération de sauvegarde.
 
-||NOINIT|INIT|
+|Option Skip|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|Si le volume contient un en-tête de support valide, vérifie que le nom du support correspond à la valeur de `MEDIANAME`, si elle est spécifiée. Si les deux noms correspondent, ajoute le jeu de sauvegarde en gardant ceux qui existent déjà.<br /> Si le volume ne contient pas d'en-tête de support valide, une erreur se produit.|Si le volume contient un en-tête de support valide, effectue les vérifications suivantes :<br /><ul><li>Si `MEDIANAME` a été spécifié, vérifie que le nom indiqué correspond à celui qui est mentionné dans l’en-tête du support.<sup>1</sup></li><li>Vérifie qu'il n'y a pas déjà sur le support des jeux de sauvegardes qui ne seraient pas encore arrivés à expiration. S'il y en a, met fin à la sauvegarde.</li></ul><br />Si toutes ces vérifications sont validées, écrase tous les jeux de sauvegardes présents sur le support en ne conservant que l'en-tête de support.<br /> Si le volume ne contient pas d’en-tête de support valide, en génère un en utilisant les valeurs de `MEDIANAME` et `MEDIADESCRIPTION`, si elles sont spécifiées.|
 |SKIP|Si le volume contient un en-tête de support valide, ajoute le jeu de sauvegarde, en gardant ceux qui existent déjà.|Si le volume contient un en-tête de support valide<sup>2</sup>, écrase tous les jeux de sauvegardes présents sur le support en ne gardant que l’en-tête.<br /> Si le support est vide, génère un en-tête de support en utilisant les valeurs de `MEDIANAME` et `MEDIADESCRIPTION`, si elles sont spécifiées.|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instance managée<br />SQL Database \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* Instance managée<br />SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

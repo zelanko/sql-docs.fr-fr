@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13dd1cb62f139a672e53b0945e94fc3ba25abc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883143"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332248"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85883143"
      Pour plus d’informations, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    SQL Server Broker ne prend pas en charge plusieurs sous-réseaux. Veillez à définir « registerallprovidersip » avec la valeur 0 et vérifiez que vous n’utilisez pas d’adresses IP statiques sur DNS donnant l’autorisation requise au cluster sur DNS, comme décrit dans https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. Broker peut retarder le message avec l’état « CONVERSING » tentant d’utiliser une adresse IP désactivée.
+    SQL Server Service Broker ne peut pas prendre en charge plusieurs sous-réseaux. Configurez `RegisterAllProvidersIP` sur 0, puis vérifiez que le cluster dispose des autorisations nécessaires dans le DNS pour utiliser des adresses IP statiques. Pour plus d’informations, consultez [Configurer un écouteur de groupe de disponibilité](create-or-configure-an-availability-group-listener-sql-server.md). Service Broker peut retarder le message avec l’état « CONVERSING » en tentant d’utiliser une adresse IP désactivée.
 
 3.  **Accordez l'autorisation CONNECT sur le point de terminaison.**  
   

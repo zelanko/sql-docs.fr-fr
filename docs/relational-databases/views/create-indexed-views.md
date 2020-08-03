@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727066"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363433"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
 
@@ -107,10 +107,14 @@ Outre les options SET et les conditions requises pour les fonctions déterminist
 
 - La vue doit être créée avec l’option `WITH SCHEMABINDING`.
 - La vue doit référencer seulement des tables de base qui sont dans la même base de données que la vue. La vue ne peut pas faire référence à d'autres vues.
+
+- Si la clause `GROUP BY` est présente, la définition VIEW doit contenir `COUNT_BIG(*)`, mais pas `HAVING`. Ces restrictions de `GROUP BY` sont applicables seulement à la définition de la vue indexée. Une requête peut utiliser une vue indexée dans son plan d’exécution, même si elle ne répond pas à ces restrictions de `GROUP BY`.
+- Si la définition de la vue contient une clause `GROUP BY`, la clé de l’index cluster unique peut référencer seulement les colonnes définies dans la clause `GROUP BY`.
+
 - L'instruction SELECT de la définition de la vue ne doit pas contenir les éléments Transact-SQL suivants :
 
-   ||||
-   |-|-|-|
+   | Éléments Transact-SQL | (suite) | (suite) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|Fonctions de ROWSET (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` ET `OPENXML`)|Jointures `OUTER` (`LEFT`, `RIGHT` ou `FULL`)|
    |Table dérivée (définie en spécifiant une instruction `SELECT` dans la clause `FROM`)|Jointures réflexives|Spécification de colonnes avec `SELECT *` ou `SELECT <table_name>.*`|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` ou`AVG`|Expression de table commune (CTE)|
@@ -121,15 +125,11 @@ Outre les options SET et les conditions requises pour les fonctions déterminist
    |Variables de table|`OUTER APPLY` ou `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Jeux de colonnes éparses|Fonctions table incluse ou fonctions table à instructions multiples|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> La vue indexée peut contenir des colonnes **float**, mais ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.
 
-- Si la clause `GROUP BY` est présente, la définition VIEW doit contenir `COUNT_BIG(*)`, mais pas `HAVING`. Ces restrictions de `GROUP BY` sont applicables seulement à la définition de la vue indexée. Une requête peut utiliser une vue indexée dans son plan d’exécution, même si elle ne répond pas à ces restrictions de `GROUP BY`.
-- Si la définition de la vue contient une clause `GROUP BY`, la clé de l’index cluster unique peut référencer seulement les colonnes définies dans la clause `GROUP BY`.
+   <sup>1</sup> La vue indexée peut contenir des colonnes **float**, mais ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.
 
-> [!IMPORTANT]
-> Les vues indexées ne sont pas prises en charge en plus des requêtes temporelles (qui utilisent la clause `FOR SYSTEM_TIME`).
+   > [!IMPORTANT]
+   > Les vues indexées ne sont pas prises en charge en plus des requêtes temporelles (qui utilisent la clause `FOR SYSTEM_TIME`).
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> Recommandations
 

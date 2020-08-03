@@ -10,16 +10,16 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138237"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395154"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Retourne le plan de requête pour une instruction [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sans exécuter l’instruction. Utilisez EXPLAIN pour afficher un aperçu des opérations qui nécessiteront un déplacement de données et afficher les coûts estimés des opérations de requête. `WITH RECOMMENDATIONS` s’applique à Azure SQL Data Warehouse (préversion).
   
@@ -73,7 +73,7 @@ Retourner le plan de requête avec des suggestions pour optimiser les performanc
 |\<params>|Cette balise n’est pas utilisée pour l’instant.|
 |\<materialized_view_candidates> (préversion)|Contient l’instruction CREATE de l’affichage matérialisé recommandé pour améliorer les performances de l’instruction SQL.| 
 |\<dsql_operations>|Récapitule et contient les étapes de la requête, et inclut des informations sur le coût de la requête. Contient également tous les blocs `<dsql_operation>`. Cette balise contient des informations d’inventaire pour l’intégralité de la requête :<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* est la durée totale estimée de l’exécution de la requête, en millisecondes.<br /><br /> *total_number_operations* est le nombre total d’opérations de la requête. Une opération qui va être exécutée en parallèle sur plusieurs nœuds est comptée comme une seule opération.|  
-|\<dsql_operation>|Décrit une opération unique dans le plan de requête. La balise \<dsql_operation> spécifie le type d’opération comme attribut :<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* est l’une des valeurs trouvées dans [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> Le contenu du bloc `\<dsql_operation>` varie en fonction du type d’opération.<br /><br /> Consultez le tableau ci-dessous.|  
+|\<dsql_operation>|Décrit une opération unique dans le plan de requête. La balise \<dsql_operation> spécifie le type d’opération comme un attribut :<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* est l’une des valeurs trouvées dans [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> Le contenu du bloc `\<dsql_operation>` varie en fonction du type d’opération.<br /><br /> Consultez le tableau ci-dessous.|  
   
 |Type d’opération|Contenu|Exemple|  
 |--------------------|-------------|-------------|  

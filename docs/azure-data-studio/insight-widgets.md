@@ -1,6 +1,6 @@
 ---
 title: Utiliser les widgets d’insight pour superviser les serveurs et les bases de données
-description: En savoir plus sur les widgets d’insight dans Azure Data Studio
+description: Découvrez comment utiliser les widgets d’insights Azure Data Studio pour transformer les requêtes qui supervisent les serveurs et les bases de données en visualisations riches en insights.
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3307093404ddc09b6db085f1cc275273280913d3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774600"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411105"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Gérer les serveurs et les bases de données avec les widgets d’insight dans Azure Data Studio
 

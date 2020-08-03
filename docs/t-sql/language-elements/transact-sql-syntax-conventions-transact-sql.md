@@ -28,15 +28,15 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981901"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392662"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Conventions de la syntaxe Transact-SQL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Le tableau suivant répertorie et décrit les conventions utilisées dans les diagrammes de syntaxe du Guide de référence [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -52,7 +52,7 @@ Le tableau suivant répertorie et décrit les conventions utilisées dans les di
 |[ **,** ..._n_]|Indique que l’élément précédent peut se répéter _n_ fois. Les occurrences sont séparées par des virgules.|  
 |[..._n_]|Indique que l’élément précédent peut se répéter _n_ fois. Les occurrences sont séparées par des espaces.|  
 |;|Terminateur d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Bien que le point-virgule ne soit pas requis pour la plupart des instructions dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il sera requis dans une version à venir.|  
-|\<étiquette> ::=|Nom d'un bloc de syntaxe. Utilisez cette convention pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe que vous pouvez utiliser à plusieurs emplacements au sein d'une instruction. Tous les emplacements dans lesquels le bloc de syntaxe peut être utilisé sont signalés par une étiquette encadrée de chevrons : \<étiquette>.<br /><br /> Un jeu est une collection d’expressions, par exemple un \<jeu de regroupement>, et une liste est une collection de jeux, par exemple une \<liste d’éléments composites>.|  
+|\<label> ::=|Nom d'un bloc de syntaxe. Utilisez cette convention pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe que vous pouvez utiliser à plusieurs emplacements au sein d'une instruction. Tous les emplacements dans lesquels le bloc de syntaxe peut être utilisé sont signalés par une étiquette encadrée de chevrons : \<label>.<br /><br /> Un jeu est une collection d’expressions, par exemple \<grouping set>, tandis qu’une liste est une collection de jeux, par exemple \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Noms à plusieurs composantes  
 Sauf indication contraire, toutes les références [!INCLUDE[tsql](../../includes/tsql-md.md)] au nom d'un objet de base de données peuvent prendre la forme d'un nom à quatre composantes, comme suit :  

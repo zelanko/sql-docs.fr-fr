@@ -1,5 +1,6 @@
 ---
 title: Renommer une procédure stockée | Microsoft Docs
+description: Découvrez comment renommer une procédure stockée dans SQL Server 2019 (15.x) à l’aide de SQL Server Management Studio ou de Transact-SQL.
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d0fefec2a0b0ba867b7c96a0d8b852884e08d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767498"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332528"
 ---
 # <a name="rename-a-stored-procedure"></a>Renommer une procédure stockée
 
@@ -56,7 +57,7 @@ Cette rubrique explique comment renommer une procédure stockée dans [!INCLUDE[
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  CREATE PROCEDURE  
- Nécessite l’autorisation CREATE PROCEDURE dans la base de données et l’autorisation ALTER sur le schéma dans lequel la procédure est créée, ou nécessite l’appartenance au rôle de base de données fixe **db_ddladmin** .  
+ Nécessite l’autorisation CREATE PROCEDURE dans la base de données et l’autorisation ALTER sur le schéma dans lequel la procédure est créée, ou nécessite l’appartenance au rôle de base de données fixe **db_ddladmin**.  
   
  ALTER PROCEDURE  
  Requiert l’autorisation ALTER sur la procédure ou l’appartenance au rôle de base de données fixe **db_ddladmin** .  

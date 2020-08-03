@@ -1,5 +1,6 @@
 ---
 title: Objets OLE Automation dans Transact-SQL | Microsoft Docs
+description: Découvrez comment les objets OLE Automation qui sont exécutés par le biais de procédures stockées s’exécutent dans l’espace d’adressage d’une instance du Moteur de base de données SQL Server.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35da4f74722ab7677541a09c6292c81983aaa162
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3c144b9e26ca8f6471bc5b07c7abfcc1f2ed41cc
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000964"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332576"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Objets OLE Automation dans Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

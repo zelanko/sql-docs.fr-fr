@@ -1,5 +1,6 @@
 ---
 title: Codes de retour OLE Automation et informations sur les erreurs| Microsoft Docs
+description: Découvrez les codes de retour OLE Automation, et découvrez comment utiliser une procédure stockée volumineuse en vue d’afficher les informations d’erreur OLE Automation.
 ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 544d38f39e8ff27eeba474c6c9d54cb48576f049
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a810d032a2668e217d6776bb3fbab7fe40b79e91
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000944"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332568"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codes de retour OLE Automation et informations sur les erreurs
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

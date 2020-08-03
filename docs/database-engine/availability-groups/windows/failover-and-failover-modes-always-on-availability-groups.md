@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98681c7ba908a43f2f4cc3e792f7f62b8a8ba2b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897498"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395054"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -79,8 +79,8 @@ ms.locfileid: "85897498"
 ##  <a name="overview-of-failover"></a><a name="Overview"></a> Présentation du basculement  
  Le tableau ci-dessous résume les formes de basculement prises en charge dans différents modes de disponibilité et de basculement. Pour chaque couplage, le mode de disponibilité et le mode de basculement les plus efficaces sont déterminés par l'intersection des modes du réplica principal et des modes d'un ou plusieurs réplicas secondaires.  
   
-||Mode de validation asynchrone|Mode de validation synchrone avec mode de basculement manuel|Mode de validation synchrone avec mode de basculement automatique|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Formulaire de basculement|Mode de validation asynchrone|Mode de validation synchrone avec mode de basculement manuel|Mode de validation synchrone avec mode de basculement automatique|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Basculement automatique|Non|Non|Oui|  
 |Basculement manuel planifié|Non|Oui|Oui|  
 |basculement forcé|Oui|Oui|Oui **&#42;**|  

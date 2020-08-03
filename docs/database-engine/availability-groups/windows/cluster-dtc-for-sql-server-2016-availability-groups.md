@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 51c42730e083990b3df7987645239dea9830090c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244390"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362610"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Mettre en cluster le service DTC pour un groupe de disponibilité Always On
 
@@ -26,30 +26,30 @@ Cette rubrique décrit les exigences et les étapes liées au clustering du serv
 
  ## <a name="checklist-preliminary-requirements"></a>Liste de vérification : spécifications préliminaires
 
-||Tâche|Informations de référence|  
-|------|-----------------|----------|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Assurez-vous que tous les nœuds, les services et le groupe de disponibilité ont été configurés correctement.|[Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que les exigences relatives au groupe de disponibilité DTC sont remplies.|[Transactions entre bases de données et transactions distribuées pour des groupes de disponibilité Always On et la mise en miroir de bases de données (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+|Tâche|Informations de référence|  
+|-----------------|----------|  
+|Assurez-vous que tous les nœuds, les services et le groupe de disponibilité ont été configurés correctement.|[Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
+|Vérifiez que les exigences relatives au groupe de disponibilité DTC sont remplies.|[Transactions entre bases de données et transactions distribuées pour des groupes de disponibilité Always On et la mise en miroir de bases de données (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
-## <a name="checklist-clustered-dtc-resource-dependencies"></a>Liste de vérification : dépendances de la ressource DTC en cluster
+## <a name="checklist-clustered-dtc-resource-dependencies"></a>Liste de vérification : Dépendances de la ressource DTC en cluster
 
-||Tâche|Informations de référence|  
-|------|-----------------|----------|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Un lecteur de stockage partagé.|[Configuration du lecteur de stockage partagé](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Envisagez d’utiliser la lettre de lecteur **M**.|
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Une ressource de nom réseau DTC unique.  Le nom sera enregistré comme un objet Ordinateur en cluster dans Active Directory.<br /><br />Assurez-vous qu’une des conditions suivantes est remplie :<br /><br />• L’utilisateur qui crée la ressource de nom de réseau DTC est autorisé à créer des objets Ordinateur sur l’unité d’organisation ou le conteneur dans lequel se trouve la ressource de nom de réseau DTC.<br /><br />• Si l’utilisateur n’est pas autorisé à créer d’objets Ordinateur, demandez à un administrateur de domaine de préconfigurer un objet Ordinateur en cluster pour la ressource de nom de réseau DTC.|[Préconfigurer des objets Ordinateur en Cluster dans les services de domaine Active Directory](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Une adresse IP statique disponible valide et le masque de sous-réseau approprié pour cette adresse IP.||
+|Tâche|Informations de référence|  
+|-----------------|----------|  
+|Un lecteur de stockage partagé.|[Configuration du lecteur de stockage partagé](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Envisagez d’utiliser la lettre de lecteur **M**.|
+|Une ressource de nom réseau DTC unique.  Le nom sera enregistré comme un objet Ordinateur en cluster dans Active Directory.<br /><br />Assurez-vous qu’une des conditions suivantes est remplie :<br /><br />• L’utilisateur qui crée la ressource de nom de réseau DTC est autorisé à créer des objets Ordinateur sur l’unité d’organisation ou le conteneur dans lequel se trouve la ressource de nom de réseau DTC.<br /><br />• Si l’utilisateur n’est pas autorisé à créer d’objets Ordinateur, demandez à un administrateur de domaine de préconfigurer un objet Ordinateur en cluster pour la ressource de nom de réseau DTC.|[Préconfigurer des objets Ordinateur en Cluster dans les services de domaine Active Directory](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
+|Une adresse IP statique disponible valide et le masque de sous-réseau approprié pour cette adresse IP.||
 
 ## <a name="cluster-the-dtc-resource"></a>Mettre en cluster la ressource DTC
 Une fois que vous avez créé votre ressource de groupe de disponibilité, créez une ressource DTC en cluster et ajoutez-la au groupe de disponibilité.  Pour voir un exemple de script, consultez [Créer un DTC en cluster pour un groupe de disponibilité Always On](../../../database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md).
 
 
-## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Liste de vérification : Configurations de la ressource DTC mise en cluster consécutives
+## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Liste de vérification : Configurations de la ressource DTC après sa mise en cluster
 
-||Tâche|Informations de référence|  
-|------|-----------------|----------|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Activer l’accès réseau sécurisé pour la ressource DTC mise en cluster.|[Activer l’accès réseau sécurisé pour MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Arrêter et désactiver le service DTC local.|[Configurer le démarrage d’un service](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Parcourez tour à tour le service SQL Server pour chaque instance du groupe de disponibilité.  Basculer le groupe de disponibilité en fonction des besoins.|[Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
+|Tâche|Informations de référence|  
+|-----------------|----------|  
+|Activer l’accès réseau sécurisé pour la ressource DTC mise en cluster.|[Activer l’accès réseau sécurisé pour MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
+|Arrêter et désactiver le service DTC local.|[Configurer le démarrage d’un service](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
+|Parcourez tour à tour le service SQL Server pour chaque instance du groupe de disponibilité.  Basculer le groupe de disponibilité en fonction des besoins.|[Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - Si le serveur est Windows Server 2012 R2, l’article [3030373 de la Base de connaissances](https://support.microsoft.com/kb/3090973) doit être appliqué au système d’exploitation.
 
@@ -69,4 +69,4 @@ Une fois que vous avez créé votre ressource de groupe de disponibilité, crée
 
 [Prise en charge de SQL Server 2016 DTC dans les groupes de disponibilité](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[Lien externe : Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (Configurer DTC pour une instance en cluster de SQL Server avec Windows Server 2008 R2)
+[Lien externe : Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (Configurer DTC pour une instance en cluster de SQL Server avec Windows Server 2008 R2)

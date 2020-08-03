@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b4786490fdf680125915fc69513290c3a8a4921
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bc0c2453f8b9a2331a31ab917539bddeb1d31fa9
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914638"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411015"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Didacticiel : signature de procédures stockées à l'aide d'un certificat
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 Ce didacticiel explique comment signer des procédures stockées à l'aide d'un certificat généré par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -154,7 +155,7 @@ EXECUTE TestCreditRatingSP;
 GO  
 ```  
   
-Exécutez le code suivant pour utiliser l'instruction `EXECUTE AS` en tant que compte `TestCreditRatingUser` et exécutez la procédure stockée. Cette fois, le contexte utilisateur apparaît défini sur le contexte USER MAPPED TO CERTIFICATE.  
+Exécutez le code suivant pour utiliser l'instruction `EXECUTE AS` en tant que compte `TestCreditRatingUser` et exécutez la procédure stockée. Cette fois, le contexte utilisateur apparaît défini sur le contexte USER MAPPED TO CERTIFICATE. Notez que cette option n’est pas prise en charge par les bases de données autonomes, Azure SQL Database et Azure Synapse Analytics.
   
 ```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  

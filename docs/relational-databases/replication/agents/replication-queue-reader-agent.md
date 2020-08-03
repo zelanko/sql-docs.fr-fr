@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2474ed82498dae30b96178f0fcf962f3b1f0767
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 84872a5acaacf6c969e4dea367f0e64a2588d26a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897874"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394995"
 ---
 # <a name="replication-queue-reader-agent"></a>Agent de lecture de la file d'attente de réplication
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -75,10 +75,10 @@ qrdrsvc [-?]
  **-DistributorPassword** _distributor_password_  
  Mot de passe du serveur de distribution.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Spécifie le mode de sécurité du serveur de distribution. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Niveau du chiffrement TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), utilisé par l'Agent de lecture de la file d’attente lors de l'établissement de connexions.  
   
 |Valeur EncryptionLevel|Description|  
@@ -92,7 +92,7 @@ qrdrsvc [-?]
   
  Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**\| **3**]  
  Spécifie la quantité d'informations d'historique journalisées pendant une opération de lecture de la file d'attente. Vous pouvez réduire l'effet de la journalisation d'historique sur les performances en sélectionnant **1**.  
   
 |Valeur HistoryVerboseLevel|Description|  
@@ -108,7 +108,7 @@ qrdrsvc [-?]
  **-Output** _output_path_and_file_name_  
  Chemin d'accès du fichier de sortie de l'agent. Si le nom du fichier n'est pas spécifié, la sortie est envoyée à la console. Si le nom de fichier spécifié existe, la sortie est ajoutée au fichier.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2**]  
  Spécifie si la sortie doit être en clair. Si le niveau de détail est **0**, seuls les messages d'erreur sont imprimés. Si le niveau de détail est **1**, tous les messages du rapport de progression sont imprimés. Si le niveau de détail est **2** (valeur par défaut), tous les messages d'erreur et tous les messages du rapport de progression sont imprimés, ce qui peut s'avérer utile lors du débogage.  
   
  **-PollingInterval** _polling_interval_  
@@ -123,7 +123,7 @@ qrdrsvc [-?]
  **-QueryTimeOut** _query_time_out_seconds_  
  Nombre de secondes avant l'expiration de la requête. La valeur par défaut est 1800 secondes.  
   
- **-ResolverState** [ **1**| **2**| **3**]  
+ **-ResolverState** [ **1**\| **2**\| **3**]  
  Spécifie comment les conflits de mise à jour en attente sont résolus. La valeur **1** indique que le serveur de publication remporte le conflit. Dans ce cas, la transaction en file d'attente actuellement en conflit est restaurée sur le serveur de publication et sur l'Abonné de mise à jour d'origine ; le traitement des transactions en file d'attente suivantes continue. La valeur **2** indique que l'Abonné remporte le conflit, et la transaction en file d'attente remplace les valeurs sur le serveur de publication. La valeur **3** indique que tout conflit provoquera la réinitialisation de l'Abonné ; le serveur de publication remporte le conflit, le traitement des transactions en file d'attente suivantes est terminé, et l'abonnement est réinitialisé. Le paramètre par défaut est **1** pour les publications transactionnelles et **3** pour les publications d'instantané.  
   
 ## <a name="remarks"></a>Notes  

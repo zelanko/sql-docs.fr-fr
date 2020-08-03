@@ -20,15 +20,15 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f7233d92e3b6a568d64f0b23817838d65dcbc74
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000450"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396278"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 GUID sur 16 octets.
   
@@ -37,7 +37,7 @@ Il existe deux manières d’affecter une valeur initiale à une colonne ou à u
 -   en utilisant les fonctions [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) ;    
 -   en convertissant à partir d’une constante de chaîne de la forme *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, où chaque *x* est un chiffre hexadécimal compris dans la plage 0-9 ou a-f. Par exemple, 6F9619FF-8B86-D011-B42D-00C04FC964FF est une valeur **uniqueidentifier** valide.  
   
-Des opérateurs de comparaison peuvent être utilisés avec des valeurs **uniqueidentifier**. Toutefois, le classement n'est pas effectué par la comparaison des configurations binaires des deux valeurs. Les seules opérations que vous êtes autorisé à effectuer sur une valeur **uniqueidentifier** sont les comparaisons (=, <>, \<, >, \<=, >=) et la recherche de valeurs Null (IS NULL et IS NOT NULL). Aucun autre opérateur arithmétique n'est admis. Toutes les propriétés et contraintes de colonnes, à l’exception de la propriété IDENTITY, sont autorisées dans le type de données **uniqueidentifier**.
+Des opérateurs de comparaison peuvent être utilisés avec des valeurs **uniqueidentifier**. Toutefois, le classement n'est pas effectué par la comparaison des configurations binaires des deux valeurs. Les seules opérations que vous êtes autorisé à effectuer sur une valeur **uniqueidentifier** sont les comparaisons (=, <>, \<, >, \<=, >=) et la recherche de valeurs Null (IS NULL et IS NOT NULL). Aucun autre opérateur arithmétique n'est admis. Toutes les propriétés et contraintes de colonnes, à l’exception de la propriété IDENTITY, sont autorisées dans le type de données **uniqueidentifier**.
   
 Les réplications de fusion et les réplications transactionnelles possédant des abonnements mis à jour utilisent des colonnes **uniqueidentifier** afin de garantir que les lignes sont identifiées de manière unique au sein des nombreuses copies de la table.
   

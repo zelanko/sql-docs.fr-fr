@@ -106,8 +106,8 @@ Après avoir installé SQL Server sur Linux, consultez les meilleures pratiques 
 
 En plus de **sqlcmd**, vous pouvez utiliser les outils multiplateformes suivants pour gérer SQL Server :
 
-|||
-|---|---|
+| Outil | Description |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | Un utilitaire de gestion de base de données GUI multiplateforme. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Éditeur de code GUI multiplateforme qui exécute des instructions Transact-SQL avec l’extension mssql. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Outil d’automatisation et de configuration multiplateforme basé sur de cmdlets. |
@@ -129,12 +129,10 @@ Pour d’autres outils qui s’exécutent sur Windows, mais se connectent à SQL
 
 Pour connaître les autres scénarios d’installation, consultez les ressources suivantes :
 
-|||
-|---|---|
-| [Mettre à niveau](../linux/sql-server-linux-setup.md#upgrade) | Apprenez à mettre à niveau une installation existante de SQL Server sur Linux |
-| [Désinstaller](../linux/sql-server-linux-setup.md#uninstall) | Désinstallez SQL Server sous Linux |
-| [Installation sans assistance](../linux/sql-server-linux-setup.md#unattended) | Apprenez à créer un script d’installation sans invites |
-| [Installation hors connexion](../linux/sql-server-linux-setup.md#offline) | Apprenez à télécharger manuellement les packages d’installation hors connexion |
+* [Mise à niveau](../linux/sql-server-linux-setup.md#upgrade) : Apprenez à mettre à niveau une installation existante de SQL Server sur Linux
+* [Désinstaller](../linux/sql-server-linux-setup.md#uninstall) : Désinstallez SQL Server sous Linux
+* [Installation sans assistance](../linux/sql-server-linux-setup.md#unattended) : Apprenez à créer un script d’installation sans invites
+* [Installation hors connexion](../linux/sql-server-linux-setup.md#offline) : Apprenez à télécharger manuellement les packages d’installation hors connexion
 
 > [!TIP]
 > Pour obtenir des réponses aux questions fréquemment posées, consultez la [FAQ de SQL Server sur Linux](../linux/sql-server-linux-faq.md).

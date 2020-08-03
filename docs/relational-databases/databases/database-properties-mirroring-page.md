@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630989"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361340"
 ---
 # <a name="database-properties-mirroring-page"></a>Propriétés de la base de données (page Mise en miroir)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630989"
   
  Si l'Assistant est exécuté avec succès, l'action entreprise dépend du fait que la mise en miroir a déjà commencé ou non, comme suit :  
   
-|||  
+|état de la mise en miroir|Action entreprise|  
 |-|-|  
 |Si la mise en miroir n'a pas commencé.|La page de propriétés met en cache ces informations de connexion, ainsi qu'une valeur indiquant si la propriété de partenaire de la base de données miroir est définie.<br /><br /> À la fin de l'Assistant, vous êtes invité à démarrer la mise en miroir de bases de données en utilisant les adresses réseau et le mode d'opération du serveur par défaut. Si vous souhaitez modifier les adresses ou le mode d’opération, cliquez sur **Ne pas démarrer la mise en miroir**.|  
 |Si la mise en miroir a commencé.|Si le serveur témoin a été modifié dans l'Assistant, il est défini en conséquence.|  

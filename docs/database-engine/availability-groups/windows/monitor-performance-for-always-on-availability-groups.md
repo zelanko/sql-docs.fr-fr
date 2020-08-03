@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897342"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362674"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Superviser les performances des groupes de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,8 @@ ms.locfileid: "85897342"
   
  ![Synchronisation des données du groupe de disponibilité](media/always-onag-datasynchronization.gif "Synchronisation des données du groupe de disponibilité")  
   
-|||||  
+|Séquence|Description de l’étape|Commentaires|Mesures utiles|  
 |-|-|-|-|  
-|**Séquence**|**Description de l’étape**|**Commentaires**|**Métriques utiles**|  
 |1|Génération du journal|Les données de journal sont vidées sur le disque. Ce journal doit être répliqué sur les réplicas secondaires. Les enregistrements de journal entrent dans la file d’attente d’envoi.|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capture|Les journaux de chaque base de données sont capturés et envoyés à la file d’attente du partenaire correspondant (un par paire base de données-réplica). Ce processus de capture s’exécute en continu tant que le réplica de disponibilité est connecté et que le déplacement des données n’est pas suspendu pour une raison quelconque. La paire base de données-réplica indique Synchronisation ou Synchronisé. Si le processus de capture ne peut pas analyser et empiler les messages suffisamment vite, la file d’attente d’envoi du journal augmente.|[Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), qui est une agrégation de la somme de tous les messages de base de données en file d’attente pour ce réplica de disponibilité.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (Ko) et [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (Ko/s) sur le réplica principal.|  
 |3|Envoyer|Les messages dans la file d’attente de chaque base de données-réplica sont dépilés et envoyés sur le réseau au réplica secondaire respectif.|[SQL Server : réplica de disponibilité > octets envoyés au transport/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -41,13 +40,12 @@ ms.locfileid: "85897342"
   
  Une fois les journaux capturés sur le réplica principal, ils sont soumis à deux niveaux de contrôles de flux, comme indiqué dans le tableau suivant.  
   
-|||||  
+|Level|Nombre de portes|Nombre de messages|Mesures utiles|  
 |-|-|-|-|  
-|**Niveau**|**Nombre de portes**|**Nombre de messages**|**Métriques utiles**|  
 |Transport|1 par réplica de disponibilité|8 192|Événement étendu **database_transport_flow_control_action**|  
 |Base de données|1 par base de données de disponibilité|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Événement étendu **hadron_database_flow_control_action**|  
   
- Une fois le seuil de messages atteint sur l’une des portes, les messages de journal ne sont plus envoyés à un réplica spécifique ou pour une base de données spécifique. Les messages peuvent être envoyés après l’obtention des accusés de réception pour les messages envoyés afin de faire passer le nombre de messages envoyés sous le seuil.  
+ Une fois le seuil de messages atteint sur l’une des portes, les messages de journal ne sont plus envoyés à un réplica spécifique ou pour une base de données spécifique. Les messages peuvent être envoyés après l’obtention des accusés de réception des messages envoyés afin de faire passer le nombre de messages envoyés sous le seuil.  
   
  Outre les portes de contrôle de flux, un autre facteur peut empêcher l’envoi des messages de journal. La synchronisation des réplicas garantit que les messages sont envoyés et appliqués dans l’ordre des LSN (numéros séquentiels dans le journal). Avant l’envoi d’un message de journal, son LSN fait également l’objet d’un contrôle par rapport au LSN avec l’accusé de réception le plus bas pour vérifier qu’il est inférieur à l’un des seuils (selon le type de message). Si l’intervalle entre les deux LSN est supérieur au seuil, les messages ne sont pas envoyés. Quand l’intervalle est à nouveau sous le seuil, les messages sont envoyés.  
   

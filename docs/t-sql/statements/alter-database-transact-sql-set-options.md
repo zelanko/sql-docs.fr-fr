@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 4d03eef91636b454b03f20d40c7a602ea8dc3fc5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111260"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331989"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -524,7 +524,7 @@ La valeur actuelle de cette option peut être déterminée en examinant la colon
 **\<db_encryption_option> ::=**      
 Contrôle l'état de chiffrement de la base de données.
 
-ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
+ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
 ACTIVÉ     
 Indique que la base de données doit être chiffrée.
 
@@ -797,7 +797,7 @@ Le nettoyage basé sur la taille n’est pas activé automatiquement.
 
 SIZE_BASED_CLEANUP_MODE est de type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Désigne le mode de capture de requête actif actuellement. Chaque mode définit des stratégies de capture de requête spécifiques.
 
 > [!NOTE]
@@ -924,7 +924,7 @@ Vous pouvez déterminer la valeur actuelle de cette option en consultant la colo
 
 Active ou désactive Stretch Database pour la base de données. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ACTIVÉ     
 Active Stretch Database pour la base de données. Pour plus d’informations, notamment sur les prérequis supplémentaires, consultez [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
@@ -1914,7 +1914,7 @@ Le nettoyage basé sur la taille est activé automatiquement quand la taille sur
 
 SIZE_BASED_CLEANUP_MODE est de type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Désigne le mode de capture de requête actif actuellement. Chaque mode définit des stratégies de capture de requête spécifiques.   
 
 > [!NOTE]
@@ -2093,7 +2093,7 @@ Un message d’avertissement s’affiche quand l’une de ces erreurs se produit
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `is_arithabort_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsArithmeticAbortEnabled` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 Pour plus d’informations, voir [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2740,7 +2740,7 @@ Le nettoyage basé sur la taille est activé automatiquement quand la taille sur
 
 SIZE_BASED_CLEANUP_MODE est de type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Désigne le mode de capture de requête actif actuellement.
 
 ALL     
@@ -2914,7 +2914,7 @@ Un message d’avertissement s’affiche quand l’une de ces erreurs se produit
 
   Vous pouvez déterminer l’état de cette option en consultant la colonne `is_arithabort_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsArithmeticAbortEnabled` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 Pour plus d’informations, voir [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     

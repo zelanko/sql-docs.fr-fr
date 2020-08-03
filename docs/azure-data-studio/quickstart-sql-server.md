@@ -1,6 +1,6 @@
 ---
 title: 'Démarrage rapide : Se connecter à et interroger SQL Server'
-description: Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à SQL Server et exécuter une requête
+description: Suivez un guide de démarrage rapide dans lequel vous utiliserez Azure Data Studio pour vous connecter à SQL Server, puis utiliserez des instructions Transact-SQL (T-SQL) pour créer une base de données.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: quickstart
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: d5fc104e5c4a848c24c6bc45ab09419dc10d1818
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764110"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411285"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Démarrage rapide : Utilisez Azure Data Studio pour vous connecter et interroger SQL Server
 

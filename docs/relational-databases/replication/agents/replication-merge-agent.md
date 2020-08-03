@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897895"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394984"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  Mot de passe du serveur de distribution.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Spécifie le mode de sécurité du serveur de distribution. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -165,7 +165,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Emplacement des fichiers d'instantanés de données filtrées lorsque la publication utilise des filtres de lignes paramétrables.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Niveau du chiffrement TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), utilisé par l'Agent de fusion lors de l'établissement de connexions.  
   
 |Valeur EncryptionLevel|Description|  
@@ -179,7 +179,7 @@ replmerg [-?]
 
  Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Afin de limiter le chargement, utilisez les **\@subscriber_upload_options** de **sp_addmergearticle** à la place.  
   
@@ -195,13 +195,13 @@ replmerg [-?]
   
  Si vous utilisez **ExchangeType** pour séparer la phase de téléchargement (upload et download) de la réplication de fusion en sessions distinctes, vous devez exécuter l'agent de fusion avec **ExchangeType** défini à 1, puis réexécuter l'agent de fusion avec la valeur 2. Si vous n'arrivez pas à exécuter l'agent de fusion avec les deux paramètres, les métadonnées seront supprimées et vous devrez réinitialiser l'abonnement (sans téléchargement).  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  Spécifie le type de méthode de calcul du nombre de lignes à utiliser pour la validation du nombre de lignes. La valeur **1** (valeur par défaut) indique la méthode rapide. La valeur **0** indique la méthode complète de calcul du nombre de lignes.  
   
- **-FileTransferType** [**0**|**1**]  
+ **-FileTransferType** [**0**\|**1**]  
  Spécifie le type de transfert de fichier. La valeur **0** indique la convention d'affectation des noms (UNC), tandis que la valeur **1** indique le protocole de transfert de fichiers (FTP).  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**\|**1**\|**2** ( **Publisher**\| **Subscriber**\| **Both**)]  
  Spécifie le niveau de convergence que l'Agent de fusion doit utiliser. Il peut prendre l'une des valeurs suivantes :  
   
 |Valeur ForceConvergenceLevel|Description|  
@@ -222,7 +222,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  Nom d'utilisateur utilisé pour la connexion au service FTP. S'il n'est pas spécifié, anonymous est utilisé.  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  Spécifie la quantité d'informations d'historique journalisées pendant une opération de fusion. Vous pouvez réduire l'effet de la journalisation d'historique sur les performances en sélectionnant **1**.  
   
 |Valeur HistoryVerboseLevel|Description|  
@@ -235,7 +235,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  Nom de réseau de l'ordinateur local. La valeur par défaut est le nom de l'ordinateur local.  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  Spécifie si la résolution de conflit interactive est utilisée lorsqu'un conflit se produit pendant la synchronisation. La valeur par défaut est **0**, indiquant que la résolution de conflit interactive n'est pas utilisée.  
   
  **-InternetLogin** _internet_login_  
@@ -253,7 +253,7 @@ replmerg [-?]
  **-InternetProxyServer**  *internet_proxy_server*  
  Spécifie le serveur proxy à utiliser lors de l'accès à la ressource HTTP spécifiée dans *internet_url*.  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  Spécifie le mode de sécurité IIS utilisé lors de la connexion au serveur Web pendant la synchronisation Web. La valeur **0** indique l'authentification de base, tandis que la valeur **1** indique l'authentification intégrée Windows (par défaut).  
   
  **-InternetTimeout** _internet_timeout_  
@@ -282,16 +282,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées de l'Abonné au serveur de publication. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  Spécifie si des métadonnées sont supprimées de [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)et de [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) en fonction de la période de rétention de publication. La valeur par défaut est **1**, indiquant que le nettoyage doit se produire. La valeur **0** indique que le nettoyage ne doit pas avoir lieu automatiquement.  
   
  **-Output** _output_path_and_file_name_  
  Chemin d'accès du fichier de sortie de l'agent. Si le nom du fichier n'est pas spécifié, la sortie est envoyée à la console. Si le nom de fichier spécifié existe, la sortie est ajoutée au fichier.  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
  Spécifie si la sortie doit être en clair. Si le niveau de détail est **0**, seuls les messages d'erreur sont imprimés. Si le niveau de détail est **1**, tous les messages du rapport de progression sont imprimés. Si le niveau de détail est **2** (valeur par défaut), tous les messages d'erreur et tous les messages du rapport de progression sont imprimés, ce qui peut s'avérer utile lors du débogage.  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  Spécifie si l'Agent de fusion doit traiter en parallèle les modifications téléchargées vers le serveur de publication et celles téléchargées vers l'Abonné, ce qui peut s'avérer utile dans les environnements de grands volumes avec une bande passante réseau élevée. Si **ParallelUploadDownload** a la valeur **1**, le traitement parallèle est activé.  
   
  **-PacketSize**  
@@ -312,7 +312,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  Mot de passe du serveur de publication. Si **PublisherSecurityMode** a la valeur **0** (pour l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), ce paramètre doit être spécifié.  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  Spécifie le mode de sécurité du serveur de publication. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -327,7 +327,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Chemin d'accès à la base de données Jet (fichier .mdb) si **SubscriberType** a la valeur **2** (autorise une connexion à une base de données Jet sans nom de la source de données ODBC).  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ **-SubscriberDBAddOption** [**0**\| **1**\| **2**\| **3**]  
  Indique si une base de données de l'Abonné existe.  
   
 |Valeur SubscriberDBAddOption|Description|  
@@ -346,22 +346,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  Mot de passe de l'Abonné. Si **SubscriberSecurityMode** a la valeur **0** (pour l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), ce paramètre doit être spécifié.  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ **-SubscriberSecurityMode** [ **0**\| **1**]  
  Spécifie le mode de sécurité de l'Abonné. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ **-SubscriberConflictClean** [ **0**\| **1**]  
  Indique si les tables en conflit sont nettoyées au niveau de l'Abonné pendant le processus de synchronisation. La valeur **1** indique que les tables en conflit au niveau de l'Abonné sont nettoyées. Ce paramètre est utilisé uniquement pour les abonnements aux publications avec une journalisation des conflits décentralisée.  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**\| **1**\| **3**\| **4**\| **5**\| **6**\| **7**\| **8**]  
  Spécifie le type de connexion d'Abonné utilisé par l'Agent de fusion. Seule la valeur par défaut **0** est prise en charge pour ce paramètre.  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ **-SubscriptionType**[ **0**\| **1**\| **2**]  
  Spécifie le type d'abonnement pour la distribution. La valeur **0** indique un abonnement par émission de données (valeur par défaut), la valeur **1** un abonnement par extraction et la valeur **2** un abonnement anonyme.  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** [ **0\|1**]  
  Spécifie si l'Agent de fusion se synchronise avec un Abonné ou un autre serveur de publication. La valeur **1** indique qu'il s'agit d'un autre serveur de publication. La valeur par défaut est **0**.  
  
- **-T** [**101|102**]  
+ **-T** [**101\|102**]  
  Indicateurs de trace qui activent des fonctionnalités supplémentaires pour l’agent de fusion. La valeur **101** permet d’obtenir des informations de journalisation détaillées supplémentaires pour vous aider à déterminer le temps pris par chaque étape du processus de synchronisation de la réplication de fusion. La valeur **102** écrit les mêmes statistiques que l’indicateur de trace **101**, mais dans la table <Distribution server>..msmerge_history. Activez la journalisation de l’agent de fusion quand vous utilisez l’indicateur de trace 101 avec les paramètres `-output` et `-outputverboselevel`.  Par exemple, ajoutez les paramètres suivants à l’agent de fusion, puis redémarrez l’agent : `-T 101, -output, -outputverboselevel`. 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  Améliore les performances de l'instantané initial en forçant l'Agent de fusion à utiliser la commande BULK INSERT lors de l'application des fichiers d'instantanés à l'Abonné. Ce paramètre est déconseillé parce qu'il n'est pas compatible avec le type de données XML. Si vous ne répliquez pas de données XML, ce paramètre peut être utilisé. Ce paramètre ne peut pas être utilisé avec les instantanés en mode caractère. Si vous utilisez ce paramètre, le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] au niveau de l'Abonné doit posséder des autorisations en lecture sur le répertoire où se trouvent les fichiers de données .bcp d'instantané. Lorsque ce paramètre n'est pas utilisé, le pilote ODBC chargé par l'agent lit les fichiers. Le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'est donc pas utilisé.  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  Spécifie si la validation doit être réalisée à la fin de la session de fusion et, le cas échéant, le type de validation à utiliser. La valeur **3** est recommandée.  
   
 |Valeur Validate|Description|  

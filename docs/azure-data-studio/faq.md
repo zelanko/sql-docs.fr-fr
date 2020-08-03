@@ -1,6 +1,6 @@
 ---
 title: FAQ sur Azure Data Studio
-description: Forum aux questions (FAQ) sur Azure Data Studio.
+description: Obtenez des réponses aux questions fréquemment posées sur Azure Data Studio, comme ses fonctionnalités, son coût ou à qui il s’adresse.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774613"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411095"
 ---
 # <a name="azure-data-studio-faq"></a>FAQ sur Azure Data Studio
 
