@@ -18,16 +18,16 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f53ae6f4a35cb539da1d5689ad2ba1086dd4c1b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822255"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522931"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de basculement et groupes de disponibilité Always On (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la solution haute disponibilité et de récupération d'urgence introduite dans [!INCLUDE[sssql11](../../../includes/sssql11-md.md)], requiert le Clustering de basculement Windows Server (WSFC). En outre, bien que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne dépende pas du Clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez utiliser une instance de clustering de basculement pour héberger un réplica de disponibilité pour un groupe de disponibilité. Il est important de connaître le rôle de chaque technologie de clustering, ainsi que les observations nécessaires lorsque vous concevez votre environnement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   

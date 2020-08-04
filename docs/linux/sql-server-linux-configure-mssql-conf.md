@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901546"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472185"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l'outil mssql-conf
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901546"
 
 **mssql-conf** est un script de configuration qui s’installe avec SQL Server 2017 pour Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu. Il modifie le [**fichier mssql.conf**](#mssql-conf-format) dans lequel les valeurs de configuration sont stockées. Vous pouvez utiliser l’utilitaire **mssql-conf** pour définir les paramètres suivants :
 
-|||
+|Paramètre|Description|
 |---|---|
 | [Agent](#agent) | Activer l’agent SQL Server. |
 | [Classement](#collation) | Définir un nouveau classement pour SQL Server sur Linux. |
@@ -52,7 +52,7 @@ ms.locfileid: "85901546"
 
 **mssql-conf** est un script de configuration qui s’installe avec [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] pour Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu. Vous pouvez utiliser cet utilitaire pour définir les paramètres suivants :
 
-|||
+|Paramètre|Description|
 |---|---|
 | [Agent](#agent) | Activer SQL Server Agent |
 | [Classement](#collation) | Définir un nouveau classement pour SQL Server sur Linux. |

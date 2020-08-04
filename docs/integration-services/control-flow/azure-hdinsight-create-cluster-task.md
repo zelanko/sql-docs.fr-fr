@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b44b5d7e8c83f1ee47462e8cfd297a77e836cf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918905"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472410"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tâche de création d’un cluster Azure HDInsight
 
@@ -37,9 +37,8 @@ Pour ajouter une **tâche de création de cluster Azure HDInsight**, faites-la g
   
 Le tableau suivant décrit les champs de cette boîte de dialogue.  
   
-|||  
+|Champ|Description|  
 |-|-|  
-|**Champ**|**Description**|  
 |AzureResourceManagerConnection|Sélectionnez un gestionnaire de connexions Azure Resource Manager existant ou créez-en un qui sera utilisé pour créer le cluster HDInsight.|  
 |AzureStorageConnection|Sélectionnez un gestionnaire de connexions Azure Storage existant ou créez-en un nouveau qui fait référence à un compte Azure Storage qui sera associé au cluster HDInsight.|
 |SubscriptionId|Spécifiez l’ID de l’abonnement dans lequel le cluster HDInsight sera créé.|

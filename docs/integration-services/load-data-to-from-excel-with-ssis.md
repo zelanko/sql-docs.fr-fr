@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922733"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435433"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)
 
@@ -253,8 +253,6 @@ Quand vous spécifiez une plage comme destination, une erreur se produit si la p
 Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**.
 
 -   Si une table de destination existante contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d’une valeur dépassant 255 caractères dans la colonne mémo.
-
--   Si une table de destination est créée pendant la conception du package ou au moment de l’exécution, ou par l’Assistant Importation et Exportation, l’instruction `CREATE TABLE` doit utiliser LONGTEXT (ou un de ses synonymes) comme type de données de la colonne mémo de destination. Dans l’Assistant, vérifiez l’instruction `CREATE TABLE` et corrigez-la, si nécessaire, en cliquant sur **Modifier SQL** à côté de l’option **Créer une table de destination** dans la page **Mappage de colonnes**.
 
 ## <a name="related-content"></a>Contenu connexe
 

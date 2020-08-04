@@ -12,16 +12,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e520363adc8fb8bff12688aa8c99b879bb510dd
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892897"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522433"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Un groupe de disponibilité Always On est une collection prédéfinie de bases de données relationnelles SQL Server qui basculent ensemble quand les conditions déclenchent un basculement dans l’une des bases de données, redirigeant les requêtes vers une base de données mise en miroir sur une autre instance dans le même groupe de disponibilité. Si vous utilisez des groupes de disponibilité pour votre solution haute disponibilité, vous pouvez utiliser une base de données de ce groupe comme source de données dans une solution Analysis Services tabulaire ou multidimensionnelle. Toutes les opérations d'Analysis Services s'exécutent comme prévu lorsque vous utilisez une base de données de disponibilité : le traitement ou l'importation des données, l'interrogation directe des données relationnelles (à l'aide du stockage ROLAP ou du mode DirectQuery) et l'écriture différée.  
   

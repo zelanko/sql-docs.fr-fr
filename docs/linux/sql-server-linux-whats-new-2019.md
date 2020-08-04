@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6c2280bacb7947b202d9291637ef294ba391e947
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897191"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442901"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Nouveautés de SQL Server 2019 sur Linux
 
@@ -41,7 +41,7 @@ Les mises à jour ont été effectuées dans SQL Server 2019 sur Linux :
 |Améliorations `tempdb` | Par défaut, une nouvelle installation de SQL Server sur Linux crée plusieurs fichiers de données `tempdb` en fonction du nombre de cœurs logiques (avec jusqu’à 8 fichiers de données). Cela ne s’applique pas aux mises à niveau de versions mineures ou majeures sur place. Chaque fichier `tempdb` fait 8 Mo avec une croissance automatique de 64 Mo. Ce comportement est similaire à l’installation de SQL Server par défaut sur Windows. |
 | PolyBase sur Linux | [Installer PolyBase](../relational-databases/polybase/polybase-linux-setup.md) sur Linux pour les connecteurs non-Hadoop.<br/><br/>[Mappage de type PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Prise en charge de la capture des changements de données (CDC) | La capture des changements de données (CDC) est désormais prise en charge sur Linux pour SQL Server 2019. |
-| Registre de conteneurs Microsoft | Le [registre de conteneurs Microsoft](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) remplace désormais Docker Hub pour les nouvelles images conteneur Microsoft officielles, notamment [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Registre de conteneurs Microsoft | Le [registre de conteneurs Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) remplace désormais Docker Hub pour les nouvelles images conteneur Microsoft officielles, notamment [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Conteneurs non racines | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit la possibilité de créer des conteneurs plus sûrs en démarrant le processus [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] en tant qu’utilisateur non racine par défaut. Pour plus d’informations, consultez [Générer et exécuter des conteneurs SQL Server en tant qu’utilisateur non racine](sql-server-linux-configure-docker.md#buildnonrootcontainer). |
 
 ## <a name="next-steps"></a>Étapes suivantes
