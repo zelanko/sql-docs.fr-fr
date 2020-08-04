@@ -1,5 +1,5 @@
 ---
-title: Haute disponibilité et récupération d’urgence
+title: Haute disponibilité et reprise d’activité après sinistre
 description: Installez et configurez les Master Data Services SQL sur un groupe de disponibilité Always On pour améliorer la haute disponibilité et la récupération d’urgence des données principales.
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901720"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522003"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -390,7 +390,7 @@ Dans le cadre de cet article, cette solution nécessite uniquement que la base d
 
 Dans ce livre blanc, nous avons vu comment installer et configurer la base de données backend Master Data Services dans le cadre d’un groupe de disponibilité. Cette configuration offre la haute disponibilité et la récupération d’urgence sur la base de données principale Master Data Services. Pour implémenter cette configuration, vous devez installer et configurer le cluster de basculement Windows Server, AG et Master Data Services.
 
-## <a name="feedback"></a>Commentaires
+## <a name="feedback-comments"></a>Commentaires sur les commentaires
 
 Ce document vous a-t-il été utile ? Envoyez-nous vos commentaires en cliquant sur **Commentaires** en haut de l’article. 
 

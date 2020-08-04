@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831168"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522543"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Retourne un jeu de résultats qui contient des métadonnées sur les paramètres non déclarés dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. Considère chaque paramètre utilisé dans le lot ** \@ tsql** , mais non déclaré dans les ** \@ paramètres**. Le jeu de résultats retourné contient une ligne pour chaque paramètre de ce genre, avec les informations de type déduites pour ce paramètre. La procédure retourne un jeu de résultats vide si le lot d’entrée ** \@ tsql** n’a pas de paramètres, à l’exception de ceux déclarés dans ** \@ params**.  
   
@@ -87,7 +87,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|À usage interne uniquement.|  
 |**suggested_tds_length**|**int NOT NULL**|À usage interne uniquement.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_describe_undeclared_parameters** retourne toujours le statut de retour égal à zéro.  
   
  Le cas d'utilisation le plus courant est celui d'une application qui reçoit une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] pouvant contenir des paramètres et devant les traiter d'une certaine façon. Il peut s'agir, par exemple, d'une interface utilisateur (telle qu'ODBCTest ou RowsetViewer) où l'utilisateur fournit une requête avec une syntaxe de paramètre ODBC. L'application doit découvrir dynamiquement le nombre de paramètres et inviter l'utilisateur à fournir chacun d'eux.  
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Le type de données pour \@ P1, \@ P2 et \@ P3 sera le type de données C1, le type de données de retour de dbo. tbl et le type de données de paramètre pour dbo. tbl respectivement.  
   
-     Dans un cas particulier, si \@ p est un argument pour un \< opérateur, >, \< = ou >=, les règles de déduction simples ne s’appliquent pas. L'algorithme de la déduction du type utilisera les règles de déduction générales expliquées dans la section suivante. Par exemple, si c1 est une colonne de type de données char(30), considérez les deux requêtes suivantes :  
+     Dans un cas particulier, si \@ p est un argument d’un \<, > \<=, or > opérateur, =, les règles de déduction simples ne s’appliquent pas. L'algorithme de la déduction du type utilisera les règles de déduction générales expliquées dans la section suivante. Par exemple, si c1 est une colonne de type de données char(30), considérez les deux requêtes suivantes :  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Dans ce cas, E ( \@ p) est Col_Int + \@ p et TT ( \@ p) est de **type int**. **int** est choisi pour \@ p, car il ne produit pas de conversions implicites. Tout autre choix de type de données produit au moins une conversion implicite.  
   
-2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Par exemple :  
+2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Par exemple  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
