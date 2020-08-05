@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff9734eea7e81d9c5e2ad8acbecf1fc9a60f09de
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151585"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918350"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (utilitaire)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   L’utilitaire**sqlmaint** exécute un ensemble spécifique d’opérations de maintenance sur une ou plusieurs bases de données. Utilisez **sqlmaint** pour exécuter des vérifications DBCC, sauvegarder une base de données et son journal des transactions, mettre à jour des statistiques et reconstruire des index. Toutes les activités de maintenance de base de données produisent un rapport qui peut être envoyé vers un fichier texte, un fichier HTML ou un compte de messagerie déterminé. **sqlmaint** exécute les plans de maintenance de base de données créés avec des versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour exécuter des plans de maintenance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de l’invite de commandes, utilisez [l’utilitaire dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
@@ -131,7 +131,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Le nom de fichier complet UNC est requis pour *html_file* lorsque **sqlmaint** accède à un serveur distant.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Spécifie que tous les rapports HTML du répertoire des rapports doivent être supprimés si l’intervalle de temps écoulé depuis la création du fichier de rapport excède la valeur spécifiée par \<*time_period*>. **-DelHtmlRpt** recherche les fichiers dont les noms correspondent au modèle créé à partir du paramètre *html_file*. Si *html_file* est c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** provoque la suppression par **sqlmaint** de tous les fichiers dont le nom correspond au modèle C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm et qui sont antérieurs à la date/heure spécifiée par \<*time_period*>.  
+ Spécifie que tous les rapports HTML du répertoire des rapports doivent être supprimés si l'intervalle de temps écoulé depuis la création du fichier de rapport excède la valeur \<*time_period*>. **-DelHtmlRpt** recherche les fichiers dont les noms correspondent au modèle créé à partir du paramètre *html_file*. Si *html_file* est c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** provoque la suppression par **sqlmaint** de tous les fichiers dont le nom correspond au modèle C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm et qui sont antérieurs à \<*time_period*>.  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Spécifie que l’espace inutilisé est retiré de la base de données spécifiée dans **-D**. Cette option est uniquement utile pour les bases de données dont la configuration prévoit une croissance automatique. *Threshold_percent* indique, en Mo, la taille qu’une base de données doit atteindre pour que **sqlmaint** tente d’en supprimer l’espace de données inutilisé. Si la base de données est plus petite que *threshold_percent*, aucune action n’est exécutée. *Free_percent* spécifie l’espace qui doit rester libre dans la base de données, exprimé sous la forme d’un pourcentage de la taille finale de celle-ci. Prenons l’exemple d’une base de données de 200 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données a pour taille finale 110 Mo. La base de données n’est pas étendue si elle est inférieure à la valeur de *free_percent* augmentée de la quantité de données contenue dans la base de données. Prenons l’exemple d’une base de données de 108 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données ne passera pas à 110 Mo, mais conserve sa taille de 108 Mo.  
@@ -201,7 +201,7 @@ dbname_log_yyyymmddhhmm.BAK
  Spécifie que le support de sauvegarde est un disque.  
   
  **-DelBkUps**< *time_period* >  
- Pour les sauvegardes sur disque, spécifie que tous les fichiers de sauvegarde du répertoire de sauvegarde doivent être supprimés si l’intervalle de temps écoulé depuis la création de la sauvegarde excède la valeur indiquée dans \<*time_period*>.  
+ Pour les sauvegardes sur disque, spécifie que tous les fichiers de sauvegarde du répertoire de sauvegarde doivent être supprimés si l'intervalle de temps écoulé depuis la création de la sauvegarde excède la valeur indiquée dans \<*time_period*>.  
   
  **-CrBkSubDir**  
  Pour les sauvegardes sur disque, spécifie qu’un sous-répertoire doit être créé dans le répertoire [*backup_path*] ou dans le répertoire de sauvegarde par défaut si **-UseDefDir** est également spécifié. Le nom du sous-répertoire est généré à partir du nom de base de données spécifié dans **-D**. **-CrBkSubDir** offre un moyen aisé de placer toutes les sauvegardes de différentes bases de données dans des sous-répertoires séparés sans devoir modifier le paramètre *backup_path* .  

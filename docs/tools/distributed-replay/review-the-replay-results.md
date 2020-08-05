@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e36130f4901b0f5bcbdba7ab82b512c0075e25b1
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6452f60083c166ab86633655b0cfb3b92da88da6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732197"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l’activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay** . Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   

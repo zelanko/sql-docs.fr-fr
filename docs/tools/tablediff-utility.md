@@ -20,15 +20,15 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b7f8a136c5aa17b1d7ed32cdc8024cdc44db0d25
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: fc5868edc1456f2588d450f60a23a4de36afaa07
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150520"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006262"
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   L’utilitaire **tablediff** sert à comparer les données dans deux tables et à identifier une non-convergence. Il est particulièrement utile pour résoudre des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
   
 -   Une comparaison ligne par ligne entre une table source dans une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agissant comme serveur de publication de réplication et la table de destination dans une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agissant comme abonnés de réplication.  

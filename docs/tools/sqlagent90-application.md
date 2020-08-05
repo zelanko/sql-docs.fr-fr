@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9012e40eacdb1bd2b242021a0855f3ed36a5a4b1
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 42008bdc7c78a587abcc67bd9fe18e305e188960
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151637"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86905592"
 ---
 # <a name="sqlagent90-application"></a>application sqlagent90
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   L’application **sqlagent90** démarre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent à partir de l’invite de commandes. En règle générale, l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit être exécuté à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou en utilisant des méthodes SQL-SMO dans une application. N’exécutez **sqlagent90** à partir de l’invite de commandes que si vous effectuez un diagnostic de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, ou lorsque vous y êtes invité par votre fournisseur de support principal.  
   
 ## <a name="syntax"></a>Syntaxe  

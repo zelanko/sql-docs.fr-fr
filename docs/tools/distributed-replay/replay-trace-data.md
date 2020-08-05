@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d03afc892fcdadbdaa346366096bec184707e70b
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1f642b375e4e3331bbac0e49fb878ceecd02cf5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786022"
 ---
 # <a name="replay-trace-data"></a>Relire les données de trace
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vous pouvez démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay après avoir préparé les données de trace d’entrée. Pour plus d’informations, consultez [préparer les données de Trace d’entrée](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
   
  Utilisez l’option de **relecture** de l’outil d’administration pour initialiser l’étape de relecture d’événements de la relecture distribuée. Cette étape consiste en deux parties : la répartition des données de trace et le démarrage et la synchronisation de la relecture distribuée.  

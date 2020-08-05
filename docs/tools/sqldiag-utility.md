@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdeeb1b5d16612415b1661df257f0530d8749df5
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 122aa921cb742d05c46e2d32430c857f4a723dee
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151643"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920895"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (utilitaire)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   L’utilitaire **SQLdiag** est un utilitaire de collecte de données de diagnostic, conçu pour un usage général. Il est possible de l’exécuter en tant qu’application console ou service. Vous pouvez utiliser **SQLdiag** pour collecter des fichiers journaux et des fichiers de données à partir de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et depuis d’autres types de serveurs, mais aussi analyser vos serveurs au fil des jours ou trouver des solutions à des problèmes spécifiques les concernant. **SQLdiag** a été conçu pour accélérer et simplifier la collecte d’informations de diagnostic pour les services d’assistance de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 > [!NOTE]  

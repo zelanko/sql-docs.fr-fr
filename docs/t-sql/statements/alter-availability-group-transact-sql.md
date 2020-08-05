@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d9a3f6e52547b40adefd2b94ab320ae4784837aa
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 23df9963bccefaa5a637c7b93196f37e722ac3e4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301998"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332013"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  *group_name*  
  Spécifie le nom du nouveau groupe de disponibilité. *group_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit être unique parmi tous les groupes de disponibilité du cluster WSFC.  
   
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  Spécifie une préférence sur la manière dont un travail de sauvegarde doit évaluer le réplica principal lorsqu'on choisit où effectuer des sauvegardes. Vous pouvez écrire un travail de sauvegarde donné pour prendre en compte la préférence de sauvegarde automatisée. Il est important de comprendre que la préférence n’est pas appliquée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle n’a donc aucune incidence sur les sauvegardes ad hoc.  
   
  Pris en charge uniquement sur le réplica principal.  
@@ -191,7 +191,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Pour voir la préférence de sauvegarde automatisée d’un groupe de disponibilité existant, sélectionnez la colonne **automated_backup_preference** ou **automated_backup_preference_desc** de la vue de catalogue [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). De plus, vous pouvez utiliser [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) pour déterminer le réplica de sauvegarde par défaut.  Cette fonction renverra toujours 1 pour au moins l'un des réplicas, même avec `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  Spécifie les conditions d'échec qui déclencheront un basculement automatique pour ce groupe de disponibilité. FAILURE_CONDITION_LEVEL est défini au niveau du groupe, mais s’applique uniquement aux réplicas de disponibilité configurés pour le mode de disponibilité de validation synchrone (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). En outre, les conditions d’échec ne peuvent déclencher un basculement automatique que si les réplicas principaux et secondaires sont configurés pour le mode de basculement automatique (FAILOVER_MODE **=** AUTOMATIC), et si le réplica secondaire est actuellement synchronisé avec le réplica principal.  
   
  Pris en charge uniquement sur le réplica principal.  
