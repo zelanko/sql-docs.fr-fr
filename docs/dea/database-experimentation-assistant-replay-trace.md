@@ -1,6 +1,6 @@
 ---
 title: Relire une trace pour les mises à niveau de SQL Server
-description: Relire une trace avec Assistant Expérimentation de base de données pour les mises à niveau SQL Server
+description: Découvrez comment relire une trace capturée avec Assistant Expérimentation de base de données pour les mises à niveau SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289147"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565498"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Relire une trace dans Assistant Expérimentation de base de données
 
@@ -118,7 +118,7 @@ SQL Server est un système de gestion de base de données relationnelle avec ét
 
 **Q : Comment puis-je examiner les événements de trace qui ont été collectés lors de la relecture ?**
 
-Ouvrez un fichier de trace cible et affichez-le dans le générateur de profils SQL. Ou, si vous souhaitez apporter des modifications à la capture de relecture, tous les scripts de SQL Server sont disponibles dans\\C : Program Files (\\x86)\\Microsoft\\Corporation\\Assistant expérimentation de base de données scripts StartReplayCapture. Sql.
+Ouvrez un fichier de trace cible et affichez-le dans le générateur de profils SQL. Ou, si vous souhaitez apporter des modifications à la capture de relecture, tous les scripts de SQL Server sont disponibles dans C : \\ Program Files (x86) \\ Microsoft Corporation \\ Assistant expérimentation de base de données \\ scripts \\ StartReplayCapture. Sql.
 
 **Q : quels événements de trace sont collectés par la DEA pendant la relecture ?**
 
@@ -133,11 +133,11 @@ La DEA capture les événements de trace qui contiennent des informations relati
 - Confirmez que l’utilisateur dispose des droits d’utilisateur requis.
 - Vérifiez que le compte de service du client Distributed Replay a accès à l’ordinateur exécutant SQL Server.
 
-Vous pouvez obtenir plus de détails dans les journaux de% temp\\% DEA. Si le problème persiste, contactez l’équipe du produit.
+Vous pouvez obtenir plus de détails dans les journaux de% temp% \\ DEA. Si le problème persiste, contactez l’équipe du produit.
 
 **Q : pourquoi ne puis-je pas me connecter au contrôleur Distributed Replay ?**
 
-- Vérifiez que le service du contrôleur de Distributed Replay est en cours d’exécution sur l’ordinateur contrôleur. Pour vérifier, utilisez les outils de gestion Distributed Replay (exécutez la `dreplay.exe status -f 1`commande).
+- Vérifiez que le service du contrôleur de Distributed Replay est en cours d’exécution sur l’ordinateur contrôleur. Pour vérifier, utilisez les outils de gestion Distributed Replay (exécutez la commande `dreplay.exe status -f 1` ).
 - Si la relecture est démarrée à distance :
   - Vérifiez que l’ordinateur qui exécute la DEA peut effectuer un test ping sur le contrôleur. Vérifiez que les paramètres du pare-feu autorisent les connexions en suivant les instructions de la page **configurer l’environnement de relecture** . Pour plus d’informations, consultez l’article [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
   - Assurez-vous que le lancement à distance DCOM et l’activation à distance sont autorisés pour l’utilisateur du contrôleur de Distributed Replay.

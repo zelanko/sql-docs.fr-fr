@@ -16,15 +16,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e6ee5d0f6a2b26dc10c901297097b99338ba9091
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627582"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544372"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 Retourne l’édition (niveau de service), l’objectif de service (niveau tarifaire) et le nom du pool élastique, le cas échéant, pour une base de données SQL Azure ou un Azure SQL Data Warehouse. Si vous êtes connecté à la base de données MASTER d’un serveur Azure SQL Database, retourne les informations sur toutes les bases de données. Pour Azure SQL Data Warehouse, vous devez être connecté à la base de données MASTER.  
   
@@ -40,7 +40,7 @@ Retourne l’édition (niveau de service), l’objectif de service (niveau tarif
 |database_id|int|ID de la base de données, unique au sein d’une instance de Azure SQL Database Server. Rejoignable avec [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Niveau de service de la base de données ou de l’entrepôt de données : de **base**, **standard**, **Premium** ou **Data Warehouse**.|  
 |service_objective|sysname|Niveau tarifaire de la base de données. Si la base de données se trouve dans un pool élastique, retourne **ElasticPool**.<br /><br /> Sur le niveau de **base** , retourne de **base**.<br /><br /> **Une seule base de données dans un niveau de service standard** retourne l’un des éléments suivants : S0, S1, S2, S3, S4, S6, S7, S9 ou S12.<br /><br /> **Une seule base de données dans un niveau Premium** retourne les éléments suivants : P1, P2, P4, P6, P11 ou P15.<br /><br /> **SQL Data Warehouse** retourne DW100 via DW30000c.<br /><br /> Pour plus d’informations, consultez [bases de données uniques](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [Pools élastiques](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [entrepôts de données](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) .|  
-|elastic_pool_name|sysname|Nom du [pool élastique](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) auquel appartient la base de données. Retourne **null** si la base de données est une base de données unique ou un warehoue de données.|  
+|elastic_pool_name|sysname|Nom du [pool élastique](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) auquel appartient la base de données. Retourne la **valeur null** si la base de données est une base de données unique ou un entrepôt de données.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **dbManager** sur la base de données Master.  Au niveau de la base de données, l’utilisateur doit être le créateur ou le propriétaire.  

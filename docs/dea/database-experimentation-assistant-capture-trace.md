@@ -1,6 +1,6 @@
 ---
 title: Capturer une trace pour les mises à niveau de SQL Server
-description: Capturer une trace dans Assistant Expérimentation de base de données pour les mises à niveau SQL Server
+description: Utilisez Assistant Expérimentation de base de données (DEA) pour créer un fichier de trace contenant un journal des événements de serveur capturés.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289827"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565591"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturer une trace dans Assistant Expérimentation de base de données
 
@@ -134,7 +134,7 @@ Si une erreur s’affiche lorsque vous exécutez une capture de trace, vérifiez
 - Le nom de l’ordinateur exécutant SQL Server est valide. Pour confirmer, essayez de vous connecter à l’ordinateur qui exécute SQL Server à l’aide de SQL Server Management Studio (SSMS).
 - La configuration de votre pare-feu ne bloque pas les connexions à l’ordinateur exécutant SQL Server.
 - L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
-- Le nom de la trace ne suit pas la Convention de\_substitution standard (capture 1). Essayez plutôt les noms de trace comme\_capture 1a ou Capture1.
+- Le nom de la trace ne suit pas la Convention de substitution standard (capture \_ 1). Essayez plutôt les noms de trace comme capture \_ 1a ou Capture1.
 
 Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :
 

@@ -1,6 +1,6 @@
 ---
 title: Afficher les rapports d’analyse pour les mises à niveau de SQL Server
-description: Afficher les rapports d’analyse dans Assistant Expérimentation de base de données
+description: Découvrez comment afficher et comprendre les rapports d’analyse pour obtenir des informations sur les performances dans Assistant Expérimentation de base de données (DEA).
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977576"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565488"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Afficher les rapports d’analyse dans Assistant Expérimentation de base de données
 

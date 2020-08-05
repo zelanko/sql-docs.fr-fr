@@ -1,6 +1,6 @@
 ---
 title: Vue d’ensemble de l’Assistant Expérimentation de base de données
-description: Vue d’ensemble de l’Assistant Expérimentation de base de données
+description: Découvrez plus d’informations sur les Assistant Expérimentation de base de données (DEA), par exemple comment évaluer une version ciblée de SQL Server pour une charge de travail spécifique.
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,14 +11,14 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759155"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565549"
 ---
-# <a name="overview-of-database-experimentation-assistant"></a>Vue d’ensemble de l’Assistant Expérimentation de base de données
+# <a name="overview-of-database-experimentation-assistant"></a>Vue d’ensemble de Assistant Expérimentation de base de données
 
 Assistant Expérimentation de base de données (DEA) est une solution d’expérimentation pour les mises à niveau SQL Server. La DEA peut vous aider à évaluer une version ciblée de SQL Server pour une charge de travail spécifique. Les clients effectuant une mise à niveau à partir de versions antérieures de SQL Server (à partir de 2005) vers des versions plus récentes de SQL Server peuvent utiliser les métriques d’analyse fournies par l’outil.
 
@@ -32,7 +32,7 @@ Les données de comparaison peuvent entraîner une plus grande confiance et gara
 
 ## <a name="get-dea"></a>Bénéficier de DEA
 
-Pour installer la DEA, [Téléchargez](https://www.microsoft.com/download/details.aspx?id=54090) la dernière version de l’outil. Exécutez ensuite le fichier **DatabaseExperimentationAssistant. exe** .
+Pour installer la DEA, [Téléchargez](https://www.microsoft.com/download/details.aspx?id=54090) la dernière version de l’outil. Ensuite, exécutez le fichier **DatabaseExperimentationAssistant.exe** .
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>Architecture de la solution pour la comparaison des charges de travail
 
@@ -105,7 +105,7 @@ Les données de télémétrie peuvent être collectées sur quatre types d’év
 La collecte et l’envoi de données de télémétrie sont facultatifs. Pour spécifier les événements qui sont collectés et si les événements collectés sont envoyés à Microsoft, procédez comme suit :
 
 1. Accédez à l’emplacement dans lequel la DEA est installée (par exemple, C : \\ Program Files (x86) \\ Microsoft Corporation \\ Assistant expérimentation de base de données).
-2. Ouvrez et modifiez les fichiers. config de **DEA. exe. config** (pour l’application) et **DEACmd. exe. config** (pour l’interface CLI) afin de résoudre votre scénario en fonction des besoins :
+2. Ouvrez et modifiez les fichiers. config **DEA.exe.config** (pour l’application) et **DEACmd.exe.config** (pour l’interface CLI) pour traiter votre scénario comme il convient :
     - Pour arrêter la collecte d’un type d’événement, définissez la valeur de l' *événement* (par exemple, **TraceEvent**) sur **false**. Pour recommencer la collecte de l’événement, définissez la valeur sur **true**.
     - Pour arrêter l’enregistrement des copies locales des événements, affectez la valeur **false**à **TraceLoggerEnabled** . Pour recommencer à enregistrer les copies locales, définissez la valeur sur **true**.
     - Pour arrêter l’envoi d’événements à Microsoft, affectez la valeur **false**à **AppInsightsLoggerEnabled** . Pour commencer à envoyer des événements à Microsoft, définissez la valeur sur **true**.

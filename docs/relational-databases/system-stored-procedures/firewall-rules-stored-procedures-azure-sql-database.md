@@ -17,15 +17,15 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d06646127c59dca8e72f061b049cabb42f8073ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bace837ef11fc106632b84fe01ed5c8bc1448ffa
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246688"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544346"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Procédures stockées de règles de pare-feu (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   Cette section contient les procédures stockées suivantes qui définissent ou suppriment les règles de pare-feu. [!INCLUDE[tsql_md](../../includes/tsql-md.md)]les règles de pare-feu peuvent être utilisées avec [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Pour plus d’informations, consultez [configurer des règles de pare-feu Azure SQL Database-Overview](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
 

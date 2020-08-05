@@ -1,6 +1,6 @@
 ---
 title: Exécuter Assistant Expérimentation de base de données à partir d’une invite de commandes
-description: Exécuter Assistant Expérimentation de base de données à partir d’une invite de commandes
+description: Découvrez comment capturer une trace dans Assistant Expérimentation de base de données (DEA), puis analyser les résultats, le tout à partir d’une invite de commandes.
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215486"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565528"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Exécuter Assistant Expérimentation de base de données à partir d’une invite de commandes
 
