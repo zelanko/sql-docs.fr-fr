@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 7/17/2020
-ms.openlocfilehash: a5f16cc15fc44a1b07b11159ac0accc6a47afc60
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c0b701bb23b5ada0f3a4a58d23064bd79acd80ad
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411175"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442388"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Télécharger et installer Azure Data Studio
 
@@ -172,7 +172,9 @@ Azure Data Studio s’exécute sur Windows, macOS et Linux et est pris en charge
 
 ## <a name="check-for-updates"></a>Rechercher les mises à jour
 
-Pour rechercher les dernières mises à jour, cliquez sur l’icône d’engrenage dans le coin inférieur gauche de la fenêtre et cliquez sur **Rechercher les mises à jour**
+Pour rechercher les dernières mises à jour, cliquez sur l’icône d’engrenage située en bas à gauche de la fenêtre et cliquez sur **Rechercher les mises à jour**.
+
+Dans un environnement hors connexion, les mises à jour peuvent être appliquées en [installant directement la dernière version](#download-and-install-azure-data-studio) sur une version déjà installée.  Il n’est pas nécessaire de désinstaller les versions antérieures d’Azure Data Studio, car le programme d’installation met à jour une application installée, le cas échéant.
 
 ## <a name="supported-sql-offerings"></a>Produits SQL pris en charge
 

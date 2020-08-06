@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196889"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522951"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurer la réplication avec les groupes de disponibilité Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   La configuration de la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des groupes de disponibilité Always On implique sept étapes. Chaque étape est décrite plus en détail dans les sections qui suivent.  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Configurez les publications et les abonnements de la base de données.  
  **Configurer le serveur de distribution**  
   
- La base de données de distribution ne peut pas être placée dans un groupe de disponibilité avec SQL Server 2012 et SQL Server 2014. Le placement de la base de données de distribution dans un groupe de disponibilité est pris en charge avec SQL 2016 et les versions supérieures. Pour plus d’informations, consultez [Configurer une base de données de distribution dans un groupe de disponibilité](../../../relational-databases/replication/configure-distribution-availability-group.md).
+ La base de données de distribution ne peut pas être placée dans un groupe de disponibilité avec SQL Server 2012 et SQL Server 2014. Il est possible de placer la base de données de distribution dans un groupe de disponibilité avec SQL 2016 et les versions ultérieures, sauf si elle est utilisée dans une topologie de réplication de fusion, de réplication bidirectionnelle ou de réplication d’égal à égal. Pour plus d’informations, consultez [Configurer une base de données de distribution dans un groupe de disponibilité](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Configurez la distribution sur le serveur de distribution. Si des procédures stockées sont utilisées pour la configuration, exécutez **sp_adddistributor**. Utilisez le paramètre *\@password* pour identifier le mot de passe qui est utilisé lorsqu'un serveur de publication distant se connecte au serveur de distribution. Le mot de passe est également nécessaire sur chaque serveur de publication distant lorsque le serveur de distribution distant est configuré.  
   

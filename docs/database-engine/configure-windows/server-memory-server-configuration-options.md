@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751904"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442813"
 ---
 # <a name="server-memory-configuration-options"></a>Options de configuration de la mémoire du serveur
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ Pour définir une quantité fixe de mémoire :
   
 2.  Cliquez sur le nœud **Mémoire** .  
   
-3.  Sous **Options mémoire du serveur**, entrez la même quantité pour **Mémoire minimale du serveur** et **Mémoire maximale du serveur**.  
+3.  Sous **Options mémoire du serveur**, entrez les quantités souhaitées pour **Mémoire minimale du serveur** et **Mémoire maximale du serveur**.  
   
      Utilisez les paramètres par défaut pour autoriser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à modifier ses besoins de mémoire de façon dynamique en fonction des ressources système disponibles. Il est recommandé de définir un paramètre **max server memory**, comme [indiqué ci-dessus](#max_server_memory). 
+
+La capture d’écran suivante illustre les trois étapes : 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Configuration de la mémoire dans SSMS":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>Verrouiller les pages en mémoire (LPIM) 
 Cette stratégie Windows détermine quels comptes peuvent utiliser un processus destiné à conserver les données en mémoire physique pour éviter leur pagination en mémoire virtuelle sur le disque. Le verrouillage des pages en mémoire peut permettre de conserver sa réactivité au serveur lors de la pagination de la mémoire sur disque. L’option **Verrouiller les pages en mémoire** a la valeur ON dans les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditions Standard et supérieures quand le compte avec les privilèges nécessaires pour exécuter sqlservr.exe dispose du droit d’utilisateur Windows *Verrouiller les pages en mémoire* (LPIM).  

@@ -1,6 +1,6 @@
 ---
 title: Extension d’importation SQL Server
-description: Installer et utiliser l’extension d’importation SQL Server (préversion) pour Azure Data Studio
+description: Découvrez comment installer et utiliser l’extension SQL Server Import (préversion) pour Azure Data Studio, un Assistant qui convertit des fichiers .txt et .csv en une table SQL.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758344"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522453"
 ---
 # <a name="sql-server-import-extension-preview"></a>Extension d’importation SQL Server (préversion)
 

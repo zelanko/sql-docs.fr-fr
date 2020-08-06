@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895338"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477351"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Forum aux questions pour SQL Server sur Linux
 
@@ -163,5 +163,9 @@ Les sections suivantes fournissent des questions et des réponses courantes sur 
 1. **Puis-je modifier la propriété des fichiers et répertoires SQL Server à partir du compte mssql et du groupe installés ?**
 
    Nous ne prenons pas en charge la modification de la propriété du répertoire et des fichiers de SQL Server à partir de l’installation par défaut. Le compte mssql et le groupe sont utilisés spécifiquement pour SQL Server et ne disposent d’aucun accès à une connexion interactive.
-
+   
+ 1. **Les liens symboliques sont-ils pris en charge pour les répertoires de données et de journaux SQL Server ?** 
+    
+    Non, les liens symboliques ne sont pas pris en charge pour les répertoires de données et de journaux SQL Server. Pour modifier les répertoires de données et de journaux par défaut, consultez [Modification de l’emplacement des répertoires de données ou de journaux par défaut](sql-server-linux-configure-mssql-conf.md#datadir).
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

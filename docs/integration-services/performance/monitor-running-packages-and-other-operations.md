@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506f95337319d0b4a8fa4f63c99a182360cfa2b
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918320"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472490"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
 
@@ -73,7 +73,7 @@ ms.locfileid: "86918320"
  **Type**  
  Spécifie le type d'opération. Voici les valeurs possibles pour le champ **Type** et les valeurs correspondantes dans la colonne operations_type de la vue **catalog.operations** de Transact-SQL.  
   
-|||  
+|Description du champ de type|Valeur operations_type|  
 |-|-|  
 |Initialisation d'Integration Services|1|  
 |Nettoyage des opérations (travail de l'Agent SQL)|2|  

@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892249"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472409"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations des groupes de disponibilité
 
@@ -59,7 +59,7 @@ Cette configuration se compose de trois réplicas synchrones. Par défaut, il of
 
 Un groupe de disponibilité avec trois réplicas synchrones peut fournir une mise à l’échelle en lecture, une haute disponibilité et une protection des données. Le tableau suivant décrit le comportement de disponibilité. 
 
-| |échelle lecture|Haute disponibilité et </br> protection de données | Protection de données|
+|Comportement de disponibilité |échelle lecture|Haute disponibilité et </br> protection de données | Protection de données|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Indisponibilité du réplica principal |Basculement automatique. Le nouveau principal est en lecture/écriture. |Basculement automatique. Le nouveau principal est en lecture/écriture. |Basculement automatique. Le nouveau principal n’est pas disponible pour les transactions utilisateur jusqu’à la récupération du principal précédent puis se joint au groupe de disponibilité comme réplica secondaire. |
@@ -77,7 +77,7 @@ Cette configuration permet la protection des données. À l’instar des autres 
 
 Un groupe de disponibilité avec deux réplicas synchrones offre une mise à l’échelle en lecture et une protection des données. Le tableau suivant décrit le comportement de disponibilité. 
 
-| |échelle lecture |Protection de données|
+|Comportement de disponibilité |échelle lecture |Protection de données|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Le nouveau principal est en lecture/écriture.| Basculement automatique. Le nouveau principal n’est pas disponible pour les transactions utilisateur jusqu’à la récupération du principal précédent puis se joint au groupe de disponibilité comme réplica secondaire.|
@@ -103,7 +103,7 @@ Dans le diagramme des groupes de disponibilité, un réplica principal envoie (p
 
 La valeur par défaut pour `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le tableau suivant décrit le comportement de disponibilité. 
 
-| |Haute disponibilité et </br> protection de données | Protection de données|
+|Comportement de disponibilité |Haute disponibilité et </br> protection de données | Protection de données|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Indisponibilité du réplica principal | Basculement automatique. Le nouveau principal est en lecture/écriture. | Basculement automatique. Le nouveau principal n’est pas disponible pour les transactions utilisateur. |
