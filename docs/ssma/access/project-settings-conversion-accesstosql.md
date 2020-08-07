@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929457"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937792"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Paramètres du projet (conversion) (AccessToSQL)
-Les paramètres du projet de conversion vous permettent de configurer la façon dont les objets sont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertis à partir des objets de base de données Access vers ou SQL Azure objets de base de données.  
+Les paramètres du projet de conversion vous permettent de configurer la façon dont les objets sont convertis à partir des objets de base de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database objets.  
   
 Le volet conversion est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** .  
   
@@ -83,7 +83,7 @@ Spécifie le type de message (avertissement, erreur ou rien) que SSMA affiche da
   
 -   **Mode complet**: erreur  
   
-**Avertir quand une requête complexe utilise un caractère\&générique (#42 ;)**  
+**Avertir quand une requête complexe utilise un caractère générique ( \& #42 ;)**  
 Affiche un avertissement dans le volet de sortie et Liste d’erreurs lorsqu’un nom de colonne dans une instruction SELECT est un caractère générique (*).  
   
 -   **Mode par défaut**: true  

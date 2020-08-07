@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822516"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938909"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>Connexion à Azure SQL Database (AccessToSQL)
 Pour migrer des bases de données Access vers SQL Azure, vous devez vous connecter à l’instance cible de SQL Azure. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de SQL Azure et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées SQL Azure. SSMA stocke des informations sur l’instance de SQL Azure à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -72,7 +72,7 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
 S’il n’existe aucune base de données dans le compte SQL Azure, vous pouvez créer la première base de données à l’aide de l’option **créer une base de données Azure** qui apparaît sur le bouton **Parcourir** .  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Synchronisation des métadonnées de SQL Azure  
-Les métadonnées relatives aux bases de données SQL Azure ne sont pas automatiquement mises à jour. Les métadonnées dans SQL Azure Explorateur de métadonnées sont un instantané des métadonnées lorsque vous vous êtes connecté pour la première fois à SQL Azure, ou la dernière fois que vous avez mis à jour manuellement les métadonnées. Vous pouvez mettre à jour manuellement les métadonnées de toutes les bases de données ou d’une base de données ou d’un objet de base de données unique.  
+Les métadonnées relatives aux bases de données dans Azure SQL Database ne sont pas automatiquement mises à jour. Les métadonnées dans SQL Azure Explorateur de métadonnées sont un instantané des métadonnées lorsque vous vous êtes connecté pour la première fois à SQL Azure, ou la dernière fois que vous avez mis à jour manuellement les métadonnées. Vous pouvez mettre à jour manuellement les métadonnées de toutes les bases de données ou d’une base de données ou d’un objet de base de données unique.  
   
 **Pour synchroniser les métadonnées**  
   
@@ -96,10 +96,10 @@ Votre connexion à SQL Azure reste active jusqu’à ce que vous fermiez le proj
   
 La procédure de reconnexion à SQL Azure est identique à celle de la procédure d’établissement d’une connexion.  
   
-## <a name="next-step"></a>étape suivante  
+## <a name="next-steps"></a>Étapes suivantes  
 L’étape suivante de la migration dépend des besoins de votre projet :  
   
--   Pour personnaliser le mappage entre les schémas d’accès et SQL Azure bases de données et les schémas, consultez [mappage de bases de données Access à des schémas de SQL Server](mapping-source-and-target-databases-accesstosql.md).  
+-   Pour personnaliser le mappage entre les schémas d’accès et les Azure SQL Database, consultez [mappage de bases de données Access à des schémas de SQL Server](mapping-source-and-target-databases-accesstosql.md).  
   
 -   Pour personnaliser les options de configuration des projets, consultez [définition des options du projet](setting-conversion-and-migration-options-accesstosql.md).  
   

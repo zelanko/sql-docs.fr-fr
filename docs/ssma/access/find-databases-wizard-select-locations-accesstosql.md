@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68024755"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938660"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistant Rechercher des bases de données (sélectionner des emplacements) (AccessToSQL)
 Dans la page Sélectionner des emplacements de l’Assistant Rechercher des bases de données, vous entrez les paramètres de recherche pour la recherche des bases de données Access.  
@@ -55,7 +55,7 @@ Pour rechercher les bases de données qui ont été mises à jour pour la derni�
 Pour rechercher des bases de données qui correspondent à des critères de taille, sélectionnez un caractère de comparaison dans la première zone, entrez un nombre pour la taille, puis sélectionnez octets, kilo-octets ou mégaoctets dans la troisième zone.  
   
 **Propriétaire**  
-Entrez le nom d’utilisateur Windows complet du propriétaire. Celui-ci peut être formaté en tant qu'*utilisateur*de *domaine*\\.  
+Entrez le nom d’utilisateur Windows complet du propriétaire. Celui-ci peut être formaté en tant qu’utilisateur de *domaine* \\ *user*.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Ajout et suppression de fichiers de base de données Access](adding-and-removing-access-database-files-accesstosql.md)  

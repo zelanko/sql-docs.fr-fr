@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 89c22a7151a7c7aa94c76d5278edd5911b9f2b6d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910222"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937712"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nouvelles fonctionnalités de l’interface utilisateur graphique dans SSMA pour l’accès à SQL
 Ce chapitre décrit les nouvelles fonctionnalités de l’interface utilisateur SSMA  
@@ -54,14 +54,14 @@ Vous pouvez définir/supprimer un signet des manières suivantes :
   
 -   Cliquez sur la zone grise à gauche de la fenêtre SQL.  
   
--   Utilisez CTRL + MAJ +&lt;0.. 9&gt; pour définir le signet numéroté  
+-   Utilisez CTRL + MAJ + &lt; 0.. 9 &gt; pour définir le signet numéroté  
   
 ### <a name="bookmark-navigation"></a>Navigation de signet  
 Vous pouvez parcourir les signets de l’une des manières suivantes :  
   
 -   Utilisez les boutons signet suivant, signet précédent en haut de la fenêtre SQL  
   
--   Utilisez Ctrl +&lt;0.. 9&gt; pour rechercher le signet numéroté  
+-   Utilisez Ctrl + &lt; 0.. 9 &gt; pour rechercher le signet numéroté  
   
 -   Utilisez les boutons atteindre ou afficher la source dans la boîte de dialogue gérer les signets  
   

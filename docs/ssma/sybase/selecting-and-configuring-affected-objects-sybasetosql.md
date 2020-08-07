@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020989"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930430"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Sélection et configuration des objets affectés (SybaseToSQL)
 Sur cette page, vous pouvez sélectionner des tables et des clés étrangères, les modifications dans lesquelles doivent être comparées lorsque SSMA vérifie les résultats de l’exécution pour les objets choisis à l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -26,14 +26,14 @@ Dans l’arborescence d’objets Sybase située sur le côté gauche de la fenê
   
 Si SSMA tester ne peut pas vérifier l’un de ces objets, le lien étiqueté **certains objets sélectionnés contient des erreurs** sous l’arborescence objets. Cliquez sur ce lien pour afficher les raisons pour lesquelles ces objets ne peuvent pas être comparés et pour effacer la sélection d’objets incorrects.  
   
-## <a name="table"></a>Table de charge de travail  
+## <a name="table"></a>Table  
 L’onglet table contient la vue de grille de la table sélectionnée. La grille contient les informations suivantes sur la table sélectionnée :  
   
 -   Nom de la colonne  
   
 -   Type de données  
   
--   Precision  
+-   Précision  
   
 -   Scale  
   
@@ -110,7 +110,7 @@ Contrôle le respect de la casse de la comparaison.
 -   Si vous choisissez la **valeur false**, la comparaison prendra en compte la casse.  
   
 ## <a name="comparing-sql"></a>Comparaison de SQL  
-Vous pouvez afficher les instructions SELECT générées par SSMA tester sur la page **comparer SQL** . Le testeur compare les jeux de résultats de ces instructions ligne par ligne. Chaque ligne suivante d’un jeu de résultats Sybase doit être égale à la ligne suivante du jeu de résultats produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans.  
+Vous pouvez afficher les instructions SELECT générées par SSMA tester sur la page **comparer SQL** . Le testeur compare les jeux de résultats de ces instructions ligne par ligne. Chaque ligne suivante d’un jeu de résultats Sybase doit être égale à la ligne suivante du jeu de résultats produit dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Vous pouvez modifier ces instructions SELECT pour fournir une vérification personnalisée. Pour enregistrer les modifications dans Sybase et dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les instructions, utilisez les boutons **appliquer** sous le SQL source et cible, en conséquence.  
   

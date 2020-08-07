@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8413487d4b367426c22795f7e82e58ec029706c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083592"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937987"
 ---
 # <a name="migration-wizard-accesstosql"></a>Assistant Migration (AccessToSQL)
-L’Assistant Migration vous guide tout au long de la migration d’une ou plusieurs bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données d’accès à ou SQL Azure. À l’aide de l’Assistant, vous allez créer un projet, ajouter des bases de données au projet, sélectionner les objets à migrer, puis vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous allez également convertir, charger et migrer les schémas d’accès et les données. Si vous le souhaitez, vous pouvez lier des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables d’accès à des tables ou SQL Azure.  
+L’Assistant Migration vous guide tout au long de la migration d’une ou plusieurs bases de données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. À l’aide de l’Assistant, vous allez créer un projet, ajouter des bases de données au projet, sélectionner les objets à migrer, puis vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous allez également convertir, charger et migrer les schémas d’accès et les données. Si vous le souhaitez, vous pouvez lier des tables d’accès à des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables ou SQL Azure.  
   
 La plupart des pages de l’Assistant Migration contiennent les mêmes options que les boîtes de dialogue SSMA existantes. Par conséquent, les pages de l’Assistant sont décrites ici, puis des liens sont fournis afin que vous puissiez en savoir plus sur les différentes options. Si une page contient des options uniques, elles sont documentées ici.  
   
@@ -75,7 +75,7 @@ Si vous avez de nombreux objets, vous souhaiterez peut-être utiliser les option
 Pour plus d’informations sur le filtrage, consultez la section Options de la [Sélection avancée d’objets (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Page se connecter à SQL Server  
-Sur la page se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connecter à, vous spécifiez les propriétés de connexion, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]puis vous vous connectez à. Pour plus d’informations, consultez [se connecter à SQL Server](connect-to-sql-server-accesstosql.md).
+Sur la page se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous spécifiez les propriétés de connexion, puis vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [se connecter à SQL Server](connect-to-sql-server-accesstosql.md).
   
 > [!IMPORTANT]  
 > Dès que la connexion est établie, la page lier les **tables** s’affiche, dans laquelle vous pouvez lier les tables. Cliquez sur **suivant** pour démarrer la migration.  
@@ -87,13 +87,13 @@ Sur la page se connecter à SQL Azure, vous spécifiez les propriétés de conne
 > Dès que la connexion est établie, la page lier les **tables** s’affiche, dans laquelle vous pouvez lier les tables. Cliquez sur le bouton **suivant** dans la page Liens pour démarrer la migration.  
   
 ## <a name="link-tables-page"></a>Page lier les tables  
-La page lier les tables vous permet de lier vos tables Access d’origine aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables migrées ou SQL Azure. La liaison de tables modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les données de la base de données ou SQL Azure au lieu des données de votre base de données Access.  
+La page lier les tables vous permet de lier vos tables Access d’origine aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables migrées ou SQL Azure. La liaison de tables modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent les données de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database ou au lieu des données de votre base de données Access.  
   
 **Lier les tables**  
-Activez la case à cocher **lier les tables** pour lier les tables d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accès aux tables migrées ou SQL Azure. Pour démarrer la migration, vous devez cliquer sur le bouton **suivant** .  
+Activez la case à cocher **lier les tables** pour lier les tables d’accès aux tables migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Pour démarrer la migration, vous devez cliquer sur le bouton **suivant** .  
   
 ## <a name="migration-status-page"></a>Page État de la migration  
-La page État de la migration affiche la progression de la conversion des schémas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’accès vers ou SQL Azure schémas, le chargement des schémas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertis dans ou SQL Azure, puis la migration des données.  
+La page État de la migration affiche la progression de la conversion des schémas d’accès vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure schémas, le chargement des schémas convertis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, puis la migration des données.  
   
 Pour plus d’informations sur cette page, consultez [convertir, charger et migrer](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Project Settings dialog box, SQL Azure
 - SQL Azure settings
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 67d80ae6457a4b02e4520d634acfb5f06aa747ec
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823928"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937578"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a>Paramètres du projet (Azure SQL Database) (AccessToSQL)
-Les paramètres du projet SQL Azure vous permettent de configurer l’ajout du suffixe de base de données SQL Azure dans la boîte de dialogue de connexion et d’autoriser également l’implémentation d’un mécanisme de pulsation dans SQL Azure connexion.  
+Les paramètres du projet SQL Azure vous permettent de configurer l’ajout du suffixe Azure SQL Database dans la boîte de dialogue de connexion et d’autoriser également l’implémentation d’un mécanisme de pulsation dans SQL Azure connexion.  
   
 Le volet SQL Azure est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** .  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864916"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950974"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécuter Assistant Migration de données à partir de la ligne de commande
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Évaluation de base de données unique pour la plateforme cible SQL Azure base de données, enregistrer les résultats dans un fichier. JSON et. csv**
+**Évaluation de base de données unique pour la plateforme cible Azure SQL Database, enregistrer les résultats dans un fichier. JSON et. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Évaluation de base de données unique pour la plateforme cible SQL Azure base de données, enregistrer les résultats dans un fichier. JSON et. csv**
+**Évaluation de base de données unique pour la plateforme cible Azure SQL Database, enregistrer les résultats dans un fichier. JSON et. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ Ces commandes prennent en charge des recommandations pour Azure SQL Database bas
 |`/SkuRecommendationSubscriptionId` | L'ID de l'abonnement. | O <br> (Pour les prix les plus récents)
 |`/SkuRecommendationDatabasesToRecommend` | Liste des bases de données à recommander, séparées par des espaces (par exemple « Database1 », « Database2 » « Database3 »). Les noms respectent la casse et doivent être placés entre guillemets doubles. En cas d’omission, des recommandations sont fournies pour toutes les bases de données. | N
 |`/AzureAuthenticationTenantId` | Locataire d’authentification. | O <br> (Pour les prix les plus récents)
-|`/AzureAuthenticationClientId` | ID client de l’application AAD utilisée pour l’authentification. | O <br> (Pour les prix les plus récents)
+|`/AzureAuthenticationClientId` | ID client de l’application de Azure AD utilisée pour l’authentification. | O <br> (Pour les prix les plus récents)
 |`/AzureAuthenticationInteractiveAuthentication` | Affectez la valeur true pour afficher la fenêtre. | O <br> (Pour les prix les plus récents) <br>(Choisissez l’une des 3 options d’authentification-option 1)
 |`/AzureAuthenticationCertificateStoreLocation` | Définissez sur l’emplacement du magasin de certificats (par exemple, « CurrentUser »). | O <br>(Pour les prix les plus récents) <br> (Choisissez l’une des 3 options d’authentification-option 2)
 |`/AzureAuthenticationCertificateThumbprint` | Définissez sur l’empreinte numérique du certificat. | O <br> (Pour les prix les plus récents) <br>(Choisissez l’une des 3 options d’authentification-option 2)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929396"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937750"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Paramètres du projet (migration) (AccessToSQL)
-Les paramètres du projet de migration vous permettent de configurer la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les données sont migrées vers ou SQL Azure.  
+Les paramètres du projet de migration vous permettent de configurer la façon dont les données sont migrées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 Le volet migration est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** .  
   
@@ -39,7 +39,7 @@ Spécifie si SSMA doit vérifier les contraintes lorsqu’il ajoute des données
 -   **Mode complet**: false  
   
 **Exécuter les déclencheurs**  
-Spécifie si SSMA doit déclencher les déclencheurs d’insertion lorsqu’il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute des données aux tables.  
+Spécifie si SSMA doit déclencher les déclencheurs d’insertion lorsqu’il ajoute des données aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.  
   
 -   **Mode par défaut**: false  
   
@@ -48,7 +48,7 @@ Spécifie si SSMA doit déclencher les déclencheurs d’insertion lorsqu’il [
 -   **Mode complet**: false  
   
 **Conserver l'identité**  
-Spécifie si SSMA conserve les valeurs d’identité d’accès lorsqu’il ajoute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des données à. Si cette valeur est false [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , assigne des valeurs d’identité.  
+Spécifie si SSMA conserve les valeurs d’identité d’accès lorsqu’il ajoute des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si cette valeur est false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigne des valeurs d’identité.  
   
 -   **Mode par défaut**: true  
   
@@ -57,7 +57,7 @@ Spécifie si SSMA conserve les valeurs d’identité d’accès lorsqu’il ajou
 -   **Mode complet**: false  
   
 **Conserver les valeurs NULL**  
-Spécifie si SSMA conserve les valeurs NULL dans les données sources lorsqu’il ajoute des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à, quelles que soient les valeurs par défaut spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Spécifie si SSMA conserve les valeurs NULL dans les données sources lorsqu’il ajoute des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quelles que soient les valeurs par défaut spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Mode par défaut**: true  
   
@@ -75,7 +75,7 @@ Spécifie si SSMA verrouille des tables lorsqu’il ajoute des données aux tabl
 -   **Mode complet**: true  
   
 **Remplacer les dates non prises en charge**  
-Spécifie si SSMA doit corriger les dates d’accès antérieures à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date du DateTime la plus ancienne (01 janvier 1753).  
+Spécifie si SSMA doit corriger les dates d’accès antérieures à la date du DateTime la plus ancienne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (01 janvier 1753).  
   
 -   Pour conserver les valeurs de date actuelles, sélectionnez **ne rien faire**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]n’accepte pas les dates antérieures au 1er janvier 1753 dans une colonne DateTime. Si vous utilisez des dates antérieures, vous devez convertir les valeurs DateTime en valeurs de caractères.  
   

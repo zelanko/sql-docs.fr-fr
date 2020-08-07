@@ -20,14 +20,14 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 612921c1640b97135c96a5f81c3099722bf5bb4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395858"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939113"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connexion à SQL Server (AccessToSQL)
 Pour migrer des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez vous connecter à l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand vous vous connectez, SSMA obtient les métadonnées relatives aux bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche les métadonnées de la base de données dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -101,8 +101,8 @@ Il est autorisé à se connecter/se reconnecter à des versions ultérieures de 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Oui|Oui|Oui|Oui||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Oui|Oui|Oui||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Oui|Oui||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Oui||
-|SQL Azure||||||Oui|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Yes||
+|SQL Azure||||||Yes|
   
 > [!IMPORTANT]  
 > La conversion des objets de base de données est effectuée en fonction du type de projet, mais pas de la version de la SQL Server connectée. Dans le cas d’SQL Server projet 2005, la conversion est effectuée en fonction du SQL Server 2005, même si vous êtes connecté à une version plus récente de SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: b27d773bc8fd928e7db2e29c7a01492fb97df78f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823946"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938788"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Prise en main de Assistant Migration SQL Server pour Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour Access vous permet de convertir rapidement des objets de base de données Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou Azure SQL Database, de charger les objets résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database, et de migrer des données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. Si nécessaire, vous pouvez également lier des tables d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des tables ou Azure SQL Database pour pouvoir continuer à utiliser vos applications frontales Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.  

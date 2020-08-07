@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823844"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938401"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Liaison d’applications Access à des Azure SQL Database SQL Server (AccessToSQL)
-Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez lier vos tables Access d’origine aux tables migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La liaison modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent les données de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou SQL Azure au lieu des données de votre base de données Access.  
+Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez lier vos tables Access d’origine aux tables migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La liaison modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent les données de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database ou au lieu des données de votre base de données Access.  
   
 > [!NOTE]  
 > Les tables Access restent dans Access, mais elles ne sont pas mises à jour avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure mises à jour. Après avoir lié les tables et vérifié les fonctionnalités, vous souhaiterez peut-être supprimer vos tables Access.  

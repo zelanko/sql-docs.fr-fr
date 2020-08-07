@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938339"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937418"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Évaluation des schémas DB2 pour la conversion (DB2ToSQL)
-Avant de charger des objets et de migrer des données vers, vous devez déterminer le niveau de complexité de la migration et le temps nécessaire à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la migration. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets qui seront convertis avec succès. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  
+Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez déterminer le niveau de complexité de la migration et le temps nécessaire à la migration. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets qui seront convertis avec succès. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  
   
 ## <a name="creating-assessment-reports"></a>Création de rapports d’évaluation  
-Lorsqu’il crée ce rapport d’évaluation, SSMA convertit les objets de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données DB2 sélectionnés en syntaxe, puis affiche les résultats.  
+Lorsqu’il crée ce rapport d’évaluation, SSMA convertit les objets de base de données DB2 sélectionnés en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe, puis affiche les résultats.  
   
 **Pour créer un rapport d’évaluation**  
   
@@ -74,7 +74,7 @@ Le volet statistiques de conversion affiche les statistiques de conversion. Si l
   
     -   Dans DB2, vous pouvez modifier l’objet DB2 pour supprimer ou réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à la base de données DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
-    -   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Explorateur de métadonnées et l’Explorateur de métadonnées DB2, désactivez la case à cocher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en regard de l’élément avant de charger les objets dans et de migrer les données à partir de DB2.  
+    -   Vous pouvez exclure l’objet de la migration. Dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées et l’Explorateur de métadonnées DB2, désactivez la case à cocher en regard de l’élément avant de charger les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de migrer les données à partir de DB2.  
   
 ## <a name="next-step"></a>étape suivante  
 [Conversion de schémas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  

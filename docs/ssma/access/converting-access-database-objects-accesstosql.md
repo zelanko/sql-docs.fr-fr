@@ -28,17 +28,17 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302804"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939099"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversion d’objets de base de données Access (AccessToSQL)
-Une fois que vous avez ajouté des bases de données Access et que vous vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, SSMA affiche des métadonnées pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de base de données Access et ou SQL Azure. Vous pouvez maintenant sélectionner accéder aux objets de base de données, puis convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure schémas.  
+Une fois que vous avez ajouté des bases de données Access et que vous vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, SSMA affiche les métadonnées des objets Access et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database. Vous pouvez maintenant sélectionner accéder aux objets de base de données, puis convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure schémas.  
   
 ## <a name="the-conversion-process"></a>Processus de conversion  
 La conversion d’objets de base de données prend les définitions d’objet des métadonnées d’accès, les convertit en syntaxe équivalente [!INCLUDE[tsql](../../includes/tsql-md.md)] , puis charge ces informations dans le projet. Vous pouvez ensuite afficher les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure et leurs propriétés à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure Explorateur de métadonnées.  
@@ -62,7 +62,7 @@ Le tableau suivant répertorie les objets Access qui sont convertis et les [!INC
 |clé étrangère|clé étrangère|  
 |query|vue<br /><br />La plupart des requêtes SELECT sont converties en vues. Les autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrées.<br /><br />Les requêtes SELECT qui acceptent des paramètres ne sont pas converties, et ne sont pas des requêtes à onglets croisées.|  
 |rapport|non converti|  
-|formulaire|non converti|  
+|form|non converti|  
 |macro|non converti|  
 |module|non converti|  
 |valeur par défaut|valeur par défaut|  
@@ -88,7 +88,7 @@ Pour convertir des objets de base de données Access, vous devez d’abord séle
   
     -   Pour convertir ou omettre des tables individuelles, développez la base de données, développez **tables**, puis activez ou désactivez la case à cocher en regard de la table.  
   
-3.  Effectuez l’une des opérations suivantes :  
+3.  Effectuez l’une des actions suivantes :  
   
     -   Pour convertir des schémas, cliquez avec le bouton droit sur **bases de données** , puis sélectionnez **convertir le schéma**.  
   
@@ -115,7 +115,7 @@ Après avoir converti les métadonnées d’accès vers [!INCLUDE[ssNoVersion](.
   
 Vous pouvez maintenant afficher les modifications dans le code sous l’onglet **SQL** .  
   
-## <a name="next-step"></a>étape suivante  
+## <a name="next-steps"></a>Étapes suivantes  
 L’étape suivante du processus de migration consiste [à charger des objets de base de données convertis en SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  

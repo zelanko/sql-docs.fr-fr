@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021021"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930498"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Exécution de cas de test (SybaseToSQL)
-Lorsque SSMA tester exécute un cas de test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance entre les objets entre Sybase [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
+Lorsque SSMA tester exécute un cas de test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance entre les objets entre Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
   
 La nécessité d’un test réussi est que tous les objets Sybase sont convertis et chargés dans la base de données cible. En outre, les données de la table doivent être migrées afin que le contenu des tables sur les deux plateformes soit synchronisé.  
   
@@ -38,23 +38,23 @@ Une fois le test terminé, le rapport de cas de test est créé. Cliquez sur le 
 Le testeur SSMA vérifie si toutes les conditions préalables sont remplies pour l’exécution des tests avant le démarrage du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
   
 ### <a name="initialization"></a>Initialisation  
-À cette étape, SSMA tester crée des objets auxiliaires (tables, déclencheurs et vues) à la fois sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sybase et. Elles autorisent le suivi des modifications apportées aux tables affectées choisies pour la vérification si le mode Comparaison de tables est **modifié uniquement**.  
+À cette étape, SSMA tester crée des objets auxiliaires (tables, déclencheurs et vues) à la fois sur Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elles autorisent le suivi des modifications apportées aux tables affectées choisies pour la vérification si le mode Comparaison de tables est **modifié uniquement**.  
   
 Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, les objets auxiliaires suivants sont créés dans Sybase.  
   
-Les objets suivants sont créés sur Sybase dans la base de données SSMATESTER2005db ou SSMATESTER2008db [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans la base de données ssmatesterdb_syb.  
+Les objets suivants sont créés sur Sybase dans la base de données SSMATESTER2005db ou SSMATESTER2008db et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la base de données ssmatesterdb_syb.  
   
 |Nom|Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|Déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
-|USER_TABLE $ AUD|Table de charge de travail|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
-|USER_TABLE $ AudI|Table de charge de travail|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
+|USER_TABLE $ AUD|Table|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
+|USER_TABLE $ AudI|Table|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
 |USER_TABLE|Affichage|Représentation simplifiée des modifications de la table.|  
 |USER_TABLE $ nouveau|Affichage|Représentation simplifiée des lignes insérées et remplacées.|  
 |USER_TABLE $ new_id|Affichage|Identification des lignes insérées et modifiées.|  
 |USER_TABLE $ Old|Affichage|Représentation simplifiée des lignes supprimées et remplacées.|  
   
-L’objet suivant est créé dans la base de données de la table vérifiée sur Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+L’objet suivant est créé dans la base de données de la table vérifiée sur Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Nom|Type|Description|  
 |--------|--------|---------------|  

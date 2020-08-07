@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: de675e479217170a465126d8fe242d01c778abf0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910686"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939077"
 ---
 # <a name="assessment-report-accesstosql"></a>Rapport d’évaluation (AccessToSQL)
-La fenêtre rapport d’évaluation affiche les résultats de la conversion des objets de [!INCLUDE[tsql](../../includes/tsql-md.md)] base de données en syntaxe et peut également vous aider à estimer la complexité et le coût de vos projets de migration.  
+La fenêtre rapport d’évaluation affiche les résultats de la conversion des objets de base de données en [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe et peut également vous aider à estimer la complexité et le coût de vos projets de migration.  
   
 Pour créer un rapport d’évaluation, sélectionnez les objets à convertir dans l’Explorateur de métadonnées source, cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **créer un rapport**. Vous pouvez également afficher ce rapport automatiquement après la conversion de schémas. Toutefois, le nom du rapport sera un rapport de conversion. Pour plus d’informations, consultez [paramètres du projet (GUI) (SSMA commun)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   

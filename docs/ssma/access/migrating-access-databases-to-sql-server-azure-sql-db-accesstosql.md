@@ -14,18 +14,18 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c8c0fbd289aea92c78d97a4d41a93255c9e196bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823547"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938028"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>Migration de bases de données Access vers des Azure SQL Database SQL Server (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) est un outil qui fournit un environnement complet qui vous permet de migrer rapidement des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. En utilisant SSMA, vous pouvez passer en revue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les objets de base de données Access et ou SQL Azure, évaluer la base de données Access pour la migration, convertir les objets de base de données Access, les charger dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, puis migrer les données.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) est un outil qui fournit un environnement complet qui vous permet de migrer rapidement des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. En utilisant SSMA, vous pouvez passer en revue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les objets Access et ou Azure SQL Database, évaluer la base de données Access pour la migration, convertir les objets de base de données Access, les charger dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, puis migrer les données.  
   
 ## <a name="recommended-migration-process"></a>Processus de migration recommandé  
 Pour migrer des objets et des données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, procédez comme suit :  

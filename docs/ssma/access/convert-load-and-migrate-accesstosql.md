@@ -11,27 +11,30 @@ helpviewer_keywords:
 - migrating databases, one-click
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b4c161ef3abdb67351a16840336ef290ff57effd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006633"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938802"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Convertir, charger et migrer (AccessToSQL)
+
 La boîte de dialogue **convertir, charger et migrer** signale l’état de la migration lorsque vous utilisez le bouton convertir, charger et migrer ou l’Assistant Migration.  
   
-Une fois la migration terminée, vous pouvez afficher des messages d’information, d’avertissement et d’erreur en cliquant sur le lien dans chaque section. Le lien affiche le nombre de messages d’erreur, d’avertissement et d’information disponibles, tels que « Erreurs 0, 4 avertissements ».  
+Une fois la migration terminée, vous pouvez afficher des messages d’information, d’avertissement et d’erreur en sélectionnant le lien dans chaque section. Les détails de chaque lien affichent les messages d’erreur, d’avertissement et d’information disponibles, tels que « Erreurs 0, 4 avertissements ».  
   
-La section **migrer des données pour les objets sélectionnés** de la page contient également un bouton **rapport** . Vous pouvez cliquer sur ce bouton pour afficher un rapport de migration de données.  
+La section **migrer des données pour les objets sélectionnés** de la page contient également un bouton **rapport** . Vous pouvez sélectionner ce bouton pour afficher un rapport de migration des données.  
   
-## <a name="options"></a>Options  
-**Rapport**  
+## <a name="options"></a>Options
+
+**Report**  
 Affiche le rapport de conversion ou de migration associé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
+
 [Référence de l’interface utilisateur (accès)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [Assistant Migration](migration-wizard-accesstosql.md)  
   
