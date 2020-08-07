@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 288b6458fc8429077472ba3ba7ad49e6d6fd7565
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5907a7cc5b93594beef8f7bd54f27f20b93fbb99
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411167"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864856"
 ---
 # <a name="installing-ssma-for-sap-ase-client-sybasetosql"></a>Installation de SSMA pour le client SAP ASE (SybaseToSQL)
 
@@ -33,7 +33,7 @@ Avant d’installer SSMA, assurez-vous que l’ordinateur remplit les conditions
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou une version ultérieure.
 - La [!INCLUDE[msCoName](../../includes/msconame_md.md)] version de .NET Framework 4.7.2 ou une version ultérieure. Vous pouvez l’obtenir à partir du [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Le fournisseur Sybase OLE DB/ADO.Net/ODBC et la connectivité au serveur de base de données SAP ASE qui contient les bases de données que vous souhaitez migrer. Vous pouvez installer des fournisseurs à partir du support produit SAP ASE. Pour plus d’informations sur la connectivité, consultez [connexion à Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).
-- Accès et autorisations suffisantes sur l’ordinateur qui héberge l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou sur [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] lequel vous allez migrer des objets et des données de base de données. Pour plus d’informations, consultez [connexion à SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [connexion à Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).
+- Accès et autorisations suffisantes sur l’ordinateur qui héberge l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou sur [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] lequel vous allez migrer des objets et des données de base de données. Pour plus d’informations, consultez [connexion à SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [connexion à Azure SQL Database &#40;SybaseToSQL ](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)&#41;.
 - 4 Go de RAM recommandés.
 
 ## <a name="installing-the-ssma-for-sybase-client"></a>Installation du client SSMA pour Sybase
@@ -61,4 +61,4 @@ En plus des fichiers programme SSMA, vous devez également installer SSMA pour l
 ## <a name="see-also"></a>Voir aussi
 
 - [Installation des composants SSMA sur SQL Server](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-- [Migration de bases de données Sybase ASE vers SQL Server-Azure SQL DB](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Migration de bases de données Sybase ASE vers SQL Server Azure SQL Database](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754156"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865277"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,9 +52,9 @@ Un objet de traitement est une construction Windows qui implémente la gouvernan
 |process_physical_affinity|**nvarchar (3072)**|Masques de bits décrivant les processeurs logiques que le processus de SQL Server peut utiliser dans chaque groupe de processeurs. La valeur de cette colonne est formée d’une ou plusieurs paires de valeurs, chacune placée entre accolades. Dans chaque paire, la première valeur est le numéro de groupe de processeurs, et la deuxième valeur est le masque de bits d’affinité pour ce groupe de processeurs. Par exemple, la valeur `{{0,a}{1,2}}` signifie que le masque d’affinité pour le groupe de processeurs `0` est `a` ( `1010` en binaire, indiquant que les processeurs 2 et 4 sont utilisés) et que le masque d’affinité pour le groupe de processeurs `1` est `2` ( `10` en binaire, indiquant que le processeur 2 est utilisé).|
   
 ## <a name="permissions"></a>Autorisations  
-Sur SQL Database Managed Instance, requiert l' `VIEW SERVER STATE` autorisation. Sur SQL Database, requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.  
+Sur SQL Managed Instance, requiert l' `VIEW SERVER STATE` autorisation. Sur SQL Database, requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.  
  
 ## <a name="see-also"></a>Voir aussi  
 
-Pour plus d’informations sur les instances gérées, consultez [SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Pour plus d’informations sur les instances gérées, consultez [SQL Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

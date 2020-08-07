@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477371"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863799"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Nouveautés de SSMA for Access (AccessToSQL)
 
@@ -114,9 +114,9 @@ La version 8.1 de SSMA pour l’accès a été améliorée avec des correctifs c
 
 La version 8.0 de SSMA pour Access a été améliorée avec des correctifs ciblés conçus pour améliorer les mesures de qualité et de conversion. Cette version offre également les nouvelles fonctionnalités suivantes :
 
-* Prise en charge de **Azure SQL Database Managed instance** en tant que cible. Vous pouvez maintenant créer des projets ciblant Azure SQL Database Managed Instance :
+* Prise en charge d' **Azure SQL Managed instance** en tant que cible. Vous pouvez maintenant créer des projets ciblant Azure SQL Managed Instance :
 
-  ![Projet SQL DB MI](../media/ssma-newproject-sqldbmi.png)
+  ![Projet MI SQL](../media/ssma-newproject-sqldbmi.png)
 
 * **Conseiller de réparation**après conversion. En savoir plus à ce sujet [ici](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
@@ -231,8 +231,8 @@ La version de maintenance de SSMA pour l’accès de janvier 2016 contient les m
 
 La version 2014 de SSMA pour Access contient les modifications suivantes :
 
-* Conversion améliorée du code Azure SQL DB.
-* Migration de la fonctionnalité Pack d’extension vers le schéma pour la prise en charge d’Azure SQL DB.
+* Amélioration de la conversion du code Azure SQL Database.
+* La fonctionnalité du pack d’extension a été déplacée vers le schéma pour prendre en charge Azure SQL Database.
 * Amélioration des performances testées pour les bases de données avec plus de 10 000 objets.
 * Ajout d’améliorations de l’interface utilisateur pour le traitement d’un grand nombre d’objets.
 * Ajout de la prise en charge de la mise en surbrillance des schémas LOB « bien connus » (afin qu’ils puissent être ignorés lors de la conversion).

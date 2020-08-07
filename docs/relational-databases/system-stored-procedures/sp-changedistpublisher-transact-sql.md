@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717407"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864996"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @value = ] 'value'`Valeur de la propriété donnée. la *valeur* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`Est requis pour SQL Database Managed instance, doit correspondre à la clé d’accès du volume de stockage Azure SQL Database. 
+`[ @storage_connection_string = ] 'storage_connection_string'`Est requis pour SQL Managed Instance, doit correspondre à la clé d’accès du volume de stockage Azure SQL Database. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -64,19 +64,19 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour un non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de *publication.*|  
 |**working_directory**||Répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication.|  
 |NULL (par défaut)||Toutes les options de *propriété* disponibles sont imprimées.| 
-|**storage_connection_string**| Clé d’accès | La clé d’accès pour le répertoire de travail lorsque la base de données est Azure SQL Database Managed Instance. 
+|**storage_connection_string**| Clé d’accès | La clé d’accès pour le répertoire de travail lorsque la base de données est Azure SQL Managed Instance. 
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_changedistpublisher** est utilisé dans tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   

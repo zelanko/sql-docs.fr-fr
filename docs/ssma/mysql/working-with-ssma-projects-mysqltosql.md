@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904902"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862440"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Utilisation de projets SSMA (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Server ou SQL Azure, vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -57,7 +57,7 @@ SSMA contient plusieurs paramètres pour la conversion et le chargement de la ba
   
 -   Pour plus d’informations sur les paramètres de mappage de type de données, consultez [Project settings &#40;type mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
--   Pour plus d’informations sur les paramètres de SQL Azure, consultez [paramètres du projet &#40;base de données SQL Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   Pour plus d’informations sur les paramètres de SQL Azure, consultez [paramètres du projet &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
   
 > [!NOTE]  
 > Les paramètres de SQL Azure s’affichent uniquement lorsque vous sélectionnez **migration vers SQL Azure lors de** la création d’un projet.  
@@ -73,7 +73,7 @@ Pour migrer des données de bases de données MySQL vers SQL Server ou SQL Azure
   
 3.  Dans la zone **emplacement** , entrez ou sélectionnez un dossier pour le projet.  
   
-4.  Dans la liste déroulante **migration vers** , sélectionnez la version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la cible utilisée pour la migration. Voici les options disponibles :  
+4.  Dans la liste déroulante **migration vers** , sélectionnez la version de la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour la migration. Voici les options disponibles :  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -83,7 +83,7 @@ Pour migrer des données de bases de données MySQL vers SQL Server ou SQL Azure
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 Puis cliquez sur **OK** .  
   
@@ -105,7 +105,7 @@ Si les bases de données dans le projet ont été modifiées ou n’ont pas ét�
   
 1.  Pour chaque base de données qui affiche l’état des **métadonnées manquantes**, activez la case à cocher en regard du nom de la base de données. L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées à ce stade, n’activez pas les cases à cocher.  
   
-2.  Cliquez sur **Save**.  
+2.  Cliquez sur **Enregistrer**.  
   
 SSMA analyse les schémas MySQL et enregistre les métadonnées dans le fichier projet.  
   
@@ -133,7 +133,7 @@ L’étape suivante du processus de migration consiste [à se connecter à MySQL
   
 ## <a name="see-also"></a>Voir aussi  
 [Connexion à MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[Migration de bases de données MySQL vers SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migration de bases de données MySQL vers SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Connexion à SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Connexion à Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[Connexion à Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

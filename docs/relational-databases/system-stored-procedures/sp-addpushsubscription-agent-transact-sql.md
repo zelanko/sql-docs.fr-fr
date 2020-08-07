@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9ff6619109e198a50d15c21aecbe958a6183d2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42dffc53fbce2350314d773ce4cd376fae84256a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716458"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864986"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +90,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort. Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @job_login = ] 'job_login'`Nom de connexion du compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance utilisez un compte SQL Server. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions de l'Agent au serveur de distribution et pour les connexions à l'abonné utilisant l'authentification intégrée de Windows.  
+`[ @job_login = ] 'job_login'`Nom de connexion du compte sous lequel l’agent s’exécute. Sur Azure SQL Managed Instance utilisez un compte SQL Server. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions de l'Agent au serveur de distribution et pour les connexions à l'abonné utilisant l'authentification intégrée de Windows.  
   
 `[ @job_password = ] 'job_password'`Mot de passe du compte sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut.  
   
@@ -121,9 +121,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**1** (par défaut)|Premier|  
+|**1** (par défaut)|First|  
 |**2**|Seconde|  
-|**4**|Troisième|  
+|**4**|Third|  
 |**8**|Quatrième|  
 |**16**|Dernier|  
   
@@ -176,7 +176,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addpushsubscription_agent** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
 ## <a name="example"></a>Exemple  
@@ -186,7 +186,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addpushsubscription_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un abonnement par émission de notification](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565498"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823364"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Relire une trace dans Assistant Expérimentation de base de données
 
@@ -48,7 +48,7 @@ Tout d’abord, vous devez effectuer une relecture de trace sur la cible 1, qui 
     - **Emplacement de la trace de relecture**: spécifiez le chemin d’accès pour stocker les fichiers de trace/XEvents associés à la relecture de la trace.
 
         > [!NOTE]
-        > Pour une Azure SQL Database ou une instance gérée Azure SQL Database, vous devez fournir l’URI SAS du compte de stockage d’objets BLOB Azure.
+        > Pour une Azure SQL Database ou un Managed Instance SQL Azure, vous devez fournir l’URI SAS du compte de stockage d’objets BLOB Azure.
 
 3. Vérifiez que vous avez restauré la ou les bases de données en activant la case à cocher **Oui, j’ai restauré manuellement la ou les bases de données** .
 

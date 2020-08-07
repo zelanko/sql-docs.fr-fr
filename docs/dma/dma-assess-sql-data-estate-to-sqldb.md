@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054270"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864936"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Évaluer la préparation d’un SQL Server de données qui migrent vers Azure SQL Database à l’aide de la Assistant Migration de données
 
@@ -59,7 +59,7 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
     | **Zone géographique**  | **Région de l’emplacement de stockage** |
     | ------------- | ------------- |
-    | Asie | Asie Sud-Est ou Asie Est |
+    | Asia | Asie Sud-Est ou Asie Est |
     | Europe | Europe Sud ou Europe Ouest |
     | Royaume-Uni | Royaume-Uni Sud ou Royaume-Uni Ouest |
     | États-Unis | USA Centre ou USA Ouest 2 |
@@ -99,7 +99,7 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
 1. Sur la gauche, sélectionnez l' **+** icône, puis sélectionnez le type de **projet** évaluation.
 2. Spécifiez le nom du projet, puis sélectionnez les types serveur source et serveur cible.
 
-    Si vous effectuez la mise à niveau de votre instance locale de SQL Server vers une version ultérieure de SQL Server ou vers SQL Server hébergé sur une machine virtuelle Azure, définissez le type de serveur source et cible sur **SQL Server**. Définissez le type de serveur cible sur **Azure SQL Database Managed instance** pour une évaluation de la disponibilité cible du Azure SQL Database (PaaS).
+    Si vous effectuez la mise à niveau de votre instance locale de SQL Server vers une version ultérieure de SQL Server ou vers SQL Server hébergé sur une machine virtuelle Azure, définissez le type de serveur source et cible sur **SQL Server**. Définissez le type de serveur cible sur **Azure SQL Managed instance** pour une évaluation de la disponibilité cible du Azure SQL Database (PaaS).
 
 3. Sélectionnez **Create** (Créer).
 
@@ -159,7 +159,7 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
    ![Azure Migrate-vérifier les résultats de la préparation](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
     **Instances de base de données évaluées**: nombre d’instances de SQL Server évaluées jusqu’à présent.
-    **Bases de données évaluées**: nombre total de bases de données évaluées sur une ou plusieurs instances SQL Server **les bases de données prêtes pour**la base de données SQL : nombre de bases de données prêtes à migrer vers Azure SQL Database (PaaS).
+    **Bases de données évaluées**: nombre total de bases de données évaluées sur une ou plusieurs instances SQL Server **les bases de données préparées pour SQL Database**: nombre de bases de données prêtes à migrer vers Azure SQL Database (PaaS).
     **Bases de données prêtes pour la machine virtuelle SQL Azure**: le nombre de bases de données est constitué d’un ou de plusieurs bloqueurs de migration vers Azure SQL Database (PaaS), mais prêt à migrer vers des machines virtuelles Azure SQL Server.
 
 3. Sélectionnez **instances de base de données évaluées** pour accéder à SQL Server affichage au niveau de l’instance.

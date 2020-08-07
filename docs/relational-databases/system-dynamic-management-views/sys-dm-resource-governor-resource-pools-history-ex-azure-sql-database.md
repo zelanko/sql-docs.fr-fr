@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 30c024fb1d1298e0ba2f2e4e49b2acf04d9b7619
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627307"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823894"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -94,7 +94,7 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |**avg_data_io_percent**|décimal (5, 2)|Utilisation moyenne des E/S en pourcentage de la limite du pool.|
 |**avg_log_write_percent**|décimal (5, 2)|Utilisation moyenne des ressources d’écriture en pourcentage de la limite du pool.|
 |**avg_storage_percent**|décimal (5, 2)|Utilisation moyenne du stockage en pourcentage de la limite de stockage du pool.|
-|**avg_allocated_storage_percent**|décimal (5, 2)|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique. Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique. Pour plus d’informations, consultez Gestion de l’espace de fichiers dans la base de données SQL.|
+|**avg_allocated_storage_percent**|décimal (5, 2)|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique. Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique. Pour plus d’informations, consultez Gestion de l’espace de fichiers dans SQL Database|
 |**max_worker_percent**|décimal (5, 2)|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite du pool.|
 |**max_session_percent**|décimal (5, 2)|Nombre maximal de sessions simultanées en pourcentage de la limite du pool.|
 |||

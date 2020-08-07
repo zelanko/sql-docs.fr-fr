@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fce303bf12158014dd2dfc28da19b900f2cd46f3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 401fd85dec1370f81845b77de6e078ea18269891
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877806"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823327"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -81,7 +81,7 @@ ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la sourc
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le tableau suivant présente les façons dont un serveur lié peut être configuré pour des sources de données accessibles via OLE DB. Un serveur lié peut être configuré au moyen de plusieurs méthodes pour une même source de données ; il peut y avoir plusieurs lignes pour un type de source de données. Ce tableau indique également les valeurs de paramètres de **sp_addlinkedserver** à utiliser pour configurer le serveur lié.  
   
 |Source de données OLE DB distante|Fournisseur OLE DB|product_name|provider_name|data_source|location|provider_string|catalogue|  
@@ -295,7 +295,7 @@ EXEC sp_addlinkedserver
   
 ```sql  
 -- Configure the linked server  
--- Add one Azure SQL DB as Linked Server  
+-- Add one Azure SQL Database as Linked Server  
 EXEC sp_addlinkedserver  
   @server='myLinkedServer', -- here you can specify the name of the linked server  
   @srvproduct='',       

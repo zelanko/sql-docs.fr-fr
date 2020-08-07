@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cbc8606354f6f5ebdcb19c3f14f1717d29ff878
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395174"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863475"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Guide de référence de l’interface utilisateur (MySQLToSQL)
 Cette section contient des rubriques d’aide pour Assistant Migration SQL Server (SSMA) pour MySQL.  
@@ -28,7 +28,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 |[Rapport d’évaluation &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Utilisez le rapport pour afficher les résultats de la conversion d’objets MySQL en syntaxe Transact-SQL et pour estimer le temps et la complexité d’une migration vers SQL Server.|  
 |[Se connecter à MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Utilisez la boîte de dialogue **se connecter à MySQL** pour vous connecter à la base de données MySQL que vous souhaitez migrer.|  
 |[Se connecter au serveur SQL](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Utilisez la boîte de dialogue **se connecter au SQL Server** pour vous connecter à l’instance de SQL Server vers laquelle vous souhaitez effectuer la migration.|  
-|[Se connecter à Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Utilisez la boîte de dialogue **se connecter au SQL Azure** pour vous connecter à l’instance de SQL Azure vers laquelle vous souhaitez effectuer la migration.|  
+|[Se connecter à Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Utilisez la boîte de dialogue **se connecter au SQL Azure** pour vous connecter à l’instance de SQL Azure vers laquelle vous souhaitez effectuer la migration.|  
 |[Paramètres de conversion (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Utilisez l’onglet **paramètres** pour définir les paramètres au niveau du nœud.|  
 |[Rapport de migration des données &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Affiche les résultats de la migration des données de MySQL vers SQL Server ou SQL Azure.|  
 |[Paramètres de migration de données](data-migration-settings-mysqltosql.md)|Utilisez l’onglet **paramètres de migration de données étendue** pour écrire des requêtes personnalisées pour la migration des données.|  
@@ -42,12 +42,12 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 |[Paramètres du projet &#40;GUI&#41;  &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-gui-mysqltosql.md)|Utilisez la page GUI de la boîte de dialogue **paramètres du projet** pour spécifier la quantité de données qui s’affiche sous l’onglet **données** .|  
 |[Paramètres du projet &#40;synchronisation&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)|Utilisez la page migration de la boîte de dialogue **paramètres du projet** pour personnaliser la façon dont SSMA pour MySQL migre les données de mysql vers SQL Server.|  
 |[Paramètres du projet &#40;&#41; &#40;de migration MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)|Utilisez la page synchronisation de la boîte de dialogue **paramètres du projet** pour personnaliser la façon dont SSMA pour MySQL crée ou modifie les objets de base de données migrés dans SQL Server.|  
-|[Paramètres du projet &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|Utilisez la page SQL Azure de la boîte de dialogue **paramètres du projet** pour personnaliser les paramètres de connectivité afin de migrer les données de MySQL vers SQL Azure.|  
+|[Paramètres du projet &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|Utilisez la page SQL Azure de la boîte de dialogue **paramètres du projet** pour personnaliser les paramètres de connectivité afin de migrer les données de MySQL vers SQL Azure.|  
 |[Paramètres du projet &#40;le mappage de type&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)|Utilisez la page mappage de type de la boîte de dialogue **paramètres du projet** pour spécifier les mappages de types par défaut pour toutes les bases de données et les objets de base de données dans le projet SSMA pour MySQL.|  
 |[Actualiser à partir de la base de données &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Utilisez la boîte **de dialogue actualiser à partir de la base de données** pour sélectionner les objets à actualiser à partir de la base de données MySQL.|  
 |[Enregistrer les métadonnées &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|La boîte de dialogue **enregistrer les métadonnées** s’affiche lorsque vous enregistrez un projet qui ne contient pas de métadonnées.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Prise en main avec SSMA pour MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
-[Migration de bases de données MySQL vers SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migration de bases de données MySQL vers SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

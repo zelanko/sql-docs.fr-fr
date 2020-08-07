@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477361"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863465"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 
@@ -114,9 +114,9 @@ La version 8.1 de SSMA pour MySQL a été améliorée avec des correctifs ciblé
 
 La version v 8.0 de SSMA pour MySQL est améliorée avec des correctifs ciblés conçus pour améliorer les mesures de qualité et de conversion. Cette version offre également les nouvelles fonctionnalités suivantes :
 
-* Prise en charge de **Azure SQL Database Managed instance** en tant que cible. Vous pouvez maintenant créer des projets ciblant Azure SQL Database Managed Instance :
+* Prise en charge d' **Azure SQL Managed instance** en tant que cible. Vous pouvez maintenant créer des projets ciblant Azure SQL Managed Instance :
 
-  ![Projet SQL DB MI](../media/ssma-newproject-sqldbmi.png)
+  ![Projet MI SQL](../media/ssma-newproject-sqldbmi.png)
 
 * **Conseiller de réparation**après conversion. En savoir plus à ce sujet [ici](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -238,8 +238,8 @@ La version de maintenance de SSMA pour MySQL de janvier 2016 contient les modifi
 
 La version de juillet 2014 de SSMA pour MySQL contient les modifications suivantes :
   
-* Conversion améliorée du code Azure SQL DB.
-* Fonctionnalités du pack d’extension déplacées vers le schéma pour la prise en charge d’Azure SQL DB.
+* Amélioration de la conversion du code Azure SQL Database.
+* Fonctionnalités du pack d’extension déplacées vers le schéma pour prendre en charge Azure SQL Database.
 * Améliorations des performances testées pour les bases de données avec plus de 10 000 objets.
 * Améliorations de l’interface utilisateur pour le traitement d’un grand nombre d’objets.
 * Mise en surbrillance des schémas LOB bien connus (afin qu’ils puissent être ignorés lors de la conversion).

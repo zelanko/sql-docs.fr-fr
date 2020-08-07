@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028868"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865327"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mappage de schémas Sybase ASE à des schémas SQL Server (SybaseToSQL)
-Dans Sybase Adaptive Server Enterprise (ASE), chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’une base de données et d’un schéma vers la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] même base de données et le même schéma dans ou SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure bases de données et schémas.  
+Dans Sybase Adaptive Server Enterprise (ASE), chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’une base de données et d’un schéma vers la même base de données et le même schéma dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure bases de données et schémas.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>Schémas ASE et SQL Server ou SQL Azure  
 ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure spécifient tous deux des bases de données et leurs schémas en utilisant la notation en deux parties comme *Database. Schema*. Par exemple, dans une base de données de **démonstration** ASE, il peut y avoir un schéma **dbo** . Cette paire base de données et schéma est spécifiée en tant que **Demo. dbo**. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure a les mêmes base de données et schéma, la paire est également spécifiée en tant que **Demo. dbo**.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modification de la base de données et du schéma cibles  
-Dans SSMA, vous pouvez mapper un schéma ASE à n’importe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quel schéma disponible ou SQL Azure.  
+Dans SSMA, vous pouvez mapper un schéma ASE à n’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma disponible ou SQL Azure.  
   
 **Pour modifier la base de données et le schéma**  
   
@@ -47,14 +47,14 @@ Dans SSMA, vous pouvez mapper un schéma ASE à n’importe [!INCLUDE[ssNoVersio
   
 -   Mappage à SQL Server  
   
-Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappée à la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’est pas existante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur, vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
+Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est mappée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’est pas existante sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
   
 -   Mappage à SQL Azure  
   
 Vous pouvez mapper la base de données source à la cible connectée SQL Azure base de données ou à n’importe quel schéma dans la base de données cible SQL Azure connectée. Si vous mappez le schéma source à un schéma non existant dans une base de données cible connectée, vous êtes invité à entrer un message **«le schéma n’existe pas dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ? «** Cliquez sur Oui.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Rétablissement de la base de données et du schéma par défaut  
-Si vous personnalisez le mappage entre un schéma ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un schéma ou SQL Azure, vous pouvez rétablir les valeurs par défaut du mappage.  
+Si vous personnalisez le mappage entre un schéma ASE et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma ou SQL Azure, vous pouvez rétablir les valeurs par défaut du mappage.  
   
 **Pour rétablir la base de données et le schéma par défaut**  
   
@@ -64,5 +64,5 @@ Si vous personnalisez le mappage entre un schéma ASE et [!INCLUDE[ssNoVersion](
 Si vous souhaitez analyser la conversion d’objets Sybase ASE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure, vous pouvez [créer un rapport de conversion](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md). Dans le cas contraire, vous pouvez [convertir les définitions d’objet de base de données ASE](converting-sybase-ase-database-objects-sybasetosql.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure définitions d’objets.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration de bases de données Sybase ASE vers SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migration de bases de données Sybase ASE vers SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

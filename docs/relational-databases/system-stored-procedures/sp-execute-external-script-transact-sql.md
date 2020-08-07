@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790404"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877957"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 > [!IMPORTANT]
 > L’arborescence de requêtes est contrôlée par SQL Machine Learning et les utilisateurs ne peuvent pas effectuer d’opérations arbitraires sur la requête.
@@ -177,7 +177,7 @@ Les deux paramètres sont **input_data_1_partition_by_columns** et **input_data_
 Vous pouvez exécuter le script en parallèle en spécifiant `@parallel=1` . Si la requête d’entrée peut être parallélisée, vous devez définir dans le `@parallel=1` cadre de vos arguments sur `sp_execute_external_script` . Par défaut, l’optimiseur de requête fonctionne sous `@parallel=1` sur des tables contenant plus de 256 lignes, mais si vous souhaitez gérer cela explicitement, ce script comprend le paramètre comme une démonstration.
 
 > [!Tip]
-> Pour les charges de travail d’entraînement, vous pouvez utiliser `@parallel` avec n’importe quel script d’entraînement arbitraire, même ceux qui utilisent des algorithmes non-Microsoft-rx. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe rx) offrent un parallélisme dans les scénarios d’entraînement dans SQL Server. Mais avec les nouveaux paramètres dans SQL Server vNext, vous pouvez paralléliser un script qui appelle des fonctions qui ne sont pas spécifiquement conçues avec cette fonctionnalité.
+> Pour les charges de travail d’entraînement, vous pouvez utiliser `@parallel` avec n’importe quel script d’entraînement arbitraire, même ceux qui utilisent des algorithmes non-Microsoft-rx. En règle générale, seuls les algorithmes RevoScaleR (avec le préfixe rx) offrent un parallélisme dans les scénarios d’entraînement dans SQL Server. Toutefois, avec les nouveaux paramètres de SQL Server 2019 et versions ultérieures, vous pouvez paralléliser un script qui appelle des fonctions qui ne sont pas spécifiquement conçues avec cette fonctionnalité.
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Exécution de la diffusion en continu pour les scripts Python et R  
@@ -229,7 +229,7 @@ Requiert **l’autorisation exécuter une** base de données de script externe.
 
 Cette section contient des exemples de la façon dont cette procédure stockée peut être utilisée pour exécuter des scripts R ou python à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Retourne un jeu de données R SQL Server  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>R. Retourne un jeu de données R SQL Server  
 
 L’exemple suivant crée une procédure stockée qui utilise **sp_execute_external_script** pour retourner le jeu de données Iris inclus avec R.  
 

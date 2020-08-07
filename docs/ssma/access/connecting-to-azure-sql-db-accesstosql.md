@@ -1,5 +1,5 @@
 ---
-title: Connexion à Azure SQL DB (AccessToSQL) | Microsoft Docs
+title: Connexion à Azure SQL Database (AccessToSQL) | Microsoft Docs
 description: Découvrez comment vous connecter à une instance cible de Azure SQL Database pour migrer des bases de données Access. SSMA obtient des métadonnées sur les bases de données dans Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293126"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822516"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Connexion à Azure SQL DB (AccessToSQL)
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>Connexion à Azure SQL Database (AccessToSQL)
 Pour migrer des bases de données Access vers SQL Azure, vous devez vous connecter à l’instance cible de SQL Azure. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de SQL Azure et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées SQL Azure. SSMA stocke des informations sur l’instance de SQL Azure à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
   
 Votre connexion à SQL Azure reste active jusqu’à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter à SQL Azure si vous souhaitez une connexion active au serveur. Vous pouvez travailler hors connexion jusqu’à ce que vous chargeant des objets de base de données dans SQL Azure et migriez les données.  
@@ -56,7 +56,7 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
   
 2.  Dans la boîte de dialogue connexion, entrez ou sélectionnez le nom du serveur de SQL Azure.  
   
-3.  Entrez, sélectionnez ou **recherchez** le nom de la base de données.  
+3.  Entrez, sélectionnez ou **Parcourez** le nom de la base de données.  
   
 4.  Entrez ou sélectionnez **nom d’utilisateur**.  
   

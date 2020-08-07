@@ -1,6 +1,6 @@
 ---
 title: Héberger une base de données sur une instance gérée
-description: Cet article explique comment configurer une base de données MDS (Master Data Service) sur une instance gérée.
+description: Découvrez comment créer et configurer une base de données Master Data Services (MDS) et l’héberger sur un Managed Instance Azure SQL.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812915"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878940"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Héberger une base de données MDS sur une instance gérée
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812915"
   
 ## <a name="preparation"></a>Préparation
 
-Pour vous préparer, vous devez créer et configurer une Azure SQL Database instance gérée et configurer votre ordinateur d’application Web.
+Pour vous préparer, vous devez créer et configurer un Managed Instance SQL Azure et configurer votre ordinateur d’application Web.
 
 ### <a name="create-and-configure-the-database"></a>Créer et configurer la base de données
 
-1. Créer une Azure SQL Database instance gérée avec un réseau virtuel. Pour plus d’informations, consultez [démarrage rapide : créer une instance managée Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
+1. Créer une instance gérée avec un réseau virtuel. Pour plus d’informations, consultez [démarrage rapide : créer un Managed instance SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
 
 1. Configurez une connexion de point à site. Pour obtenir des instructions, consultez [configurer une connexion de point à site à un réseau virtuel à l’aide de l’authentification par certificat Azure Native : portail Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
-1. Configurez l’authentification Azure Active Directory avec SQL Database Managed instance. Pour plus d’informations [, consultez configurer et gérer l’authentification Azure Active Directory avec SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
+1. Configurez Azure Active Directory l’authentification avec SQL Managed Instance. Pour plus d’informations [, consultez configurer et gérer l’authentification Azure Active Directory avec SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
 
 ### <a name="configure-web-application-machine"></a>Configurer un ordinateur d’application Web
 
-1. Installez un certificat de connexion de point à site et un VPN pour vous assurer que l’ordinateur peut accéder à l’instance gérée SQL Database. Pour obtenir des instructions, consultez [configurer une connexion de point à site à un réseau virtuel à l’aide de l’authentification par certificat Azure Native : portail Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Installez un certificat de connexion de point à site et un VPN pour vous assurer que l’ordinateur peut accéder à l’instance gérée. Pour obtenir des instructions, consultez [configurer une connexion de point à site à un réseau virtuel à l’aide de l’authentification par certificat Azure Native : portail Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Installez les rôles et fonctionnalités suivants :
    - Rôles :

@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d74cb91c6e0cb9bc9a1c8dce53f8e93d355df5d2
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885796"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823601"
 ---
-# <a name="overview-of-data-migration-assistant"></a>Vue d’ensemble de Assistant Migration de données
+# <a name="overview-of-data-migration-assistant"></a>Vue d’ensemble de l’Assistant Migration de données
 
 Le Assistant Migration de données (DMA) vous aide à effectuer une mise à niveau vers une plateforme de données moderne en détectant les problèmes de compatibilité qui peuvent avoir un impact sur les fonctionnalités de base de données dans votre nouvelle version de SQL Server ou Azure SQL Database. DMA recommande des améliorations en matière de fiabilité et de niveau de performance pour votre environnement cible et vous permet de déplacer votre schéma, vos données et vos objets sans contenant de votre serveur source vers votre serveur cible.
 
@@ -30,9 +30,9 @@ Le Assistant Migration de données (DMA) vous aide à effectuer une mise à nive
   
 ## <a name="get-data-migration-assistant"></a>Obtenir Data Migration Assistant
 
-Pour installer DMA, téléchargez la dernière version de l’outil à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53595), puis exécutez le fichier **DataMigrationAssistant. msi** .
+Pour installer DMA, téléchargez la dernière version de l’outil à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53595), puis exécutez le fichier **DataMigrationAssistant.msi** .
 
-## <a name="capabilities"></a>Fonctionnalités
+## <a name="capabilities"></a>Fonctions
 
 - Évaluer la ou les instances de SQL Server locales qui migrent vers la ou les bases de données SQL Azure.Le flux de travail d’évaluation vous aide à détecter les problèmes suivants qui peuvent affecter la migration d’Azure SQL Database et fournit des conseils détaillés sur la façon de les résoudre.
 
@@ -56,12 +56,12 @@ Pour installer DMA, téléchargez la dernière version de l’outil à partir du
 
   - Schéma de bases de données
   - Données et utilisateurs
-  - Rôles serveur
+  - Rôles du serveur
   - Connexions SQL Server et Windows
 
 - Après une migration réussie, les applications peuvent se connecter aux bases de données SQL Server cible en toute transparence.
 
-- Évaluer les packages de SQL Server Integration Services (SSIS) locaux qui migrent vers Azure SQL Database ou Azure SQL Database Managed instance. L’évaluation permet de détecter les problèmes susceptibles d’affecter la migration. Celles-ci sont décrites comme des problèmes de compatibilité et sont organisées dans les catégories suivantes :
+- Évaluer les packages SSIS (local SQL Server Integration Services) migrant vers Azure SQL Database ou Azure SQL Managed Instance. L’évaluation permet de détecter les problèmes susceptibles d’affecter la migration. Celles-ci sont décrites comme des problèmes de compatibilité et sont organisées dans les catégories suivantes :
 
   - Bloqueurs de migration : détecte les problèmes de compatibilité qui bloquent la migration du ou des packages source vers Azure. DMA fournit des recommandations pour vous aider à résoudre ces problèmes.
 
@@ -71,7 +71,7 @@ Pour installer DMA, téléchargez la dernière version de l’outil à partir du
 
 Pour exécuter une évaluation, vous devez être membre du rôle **sysadmin** SQL Server.
 
-## <a name="supported-source-and-target-versions"></a>Versions source et cible prises en charge
+## <a name="supported-source-and-target-versions"></a>Versions sources et cibles prises en charge
 
 DMA remplace toutes les versions précédentes de SQL Server conseiller de mise à niveau et doit être utilisé pour les mises à niveau pour la plupart des versions SQL Server. Versions source et cible prises en charge :
 
@@ -83,7 +83,7 @@ DMA remplace toutes les versions précédentes de SQL Server conseiller de mise 
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
--  SQL Server 2017 sur Windows
+- SQL Server 2017 sur Windows
 
 **Cibles**
 
@@ -93,7 +93,7 @@ DMA remplace toutes les versions précédentes de SQL Server conseiller de mise 
 - SQL Server 2017 sur Windows et Linux
 - SQL Server 2019
 - Base de données unique Azure SQL Database
-- Azure SQL Database Managed Instance
+- Azure SQL Managed Instance
 - SQL Server s’exécutant sur une machine virtuelle Azure
 
 ## <a name="see-also"></a>Voir aussi

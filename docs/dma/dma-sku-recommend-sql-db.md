@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885827"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864906"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifier la référence SKU Azure SQL Database/Managed Instance appropriée pour votre base de données locale
 
 La migration des bases de données vers le Cloud peut être compliquée, en particulier lors de la tentative de sélection de la meilleure cible de base de données Azure et de la référence SKU de votre base de données. L’objectif de la Assistant Migration de base de données (DMA) est de vous aider à répondre à ces questions et à faciliter la migration de votre base de données en fournissant ces recommandations SKU dans une sortie conviviale.
 
-Cet article se concentre sur la fonctionnalité de recommandation Azure SQL Database SKU de DMA. Azure SQL Database propose plusieurs options de déploiement, notamment :
+Cet article se concentre sur la fonctionnalité de recommandation Azure SQL Database SKU de DMA. Azure SQL Database et Azure SQL Managed Instance disposent de plusieurs options de déploiement, notamment :
 
 - Base de données unique
 - Pools élastiques
 - Instance gérée
 
-La fonctionnalité recommandations SKU vous permet d’identifier la référence minimale recommandée Azure SQL Database base de données unique ou d’instance gérée en fonction des compteurs de performances collectés sur le ou les ordinateurs hébergeant vos bases de données. Cette fonctionnalité fournit des recommandations relatives au niveau tarifaire, au niveau de calcul et à la taille maximale des données, ainsi qu’au coût estimé par mois. Il offre également la possibilité d’approvisionner en bloc des bases de données uniques et des instances gérées dans Azure pour toutes les bases de données recommandées.
+La fonctionnalité recommandations SKU vous permet d’identifier la version minimale recommandée Azure SQL Database base de données unique ou la référence SKU Azure SQL Managed Instance en fonction des compteurs de performances collectés sur le ou les ordinateurs hébergeant vos bases de données. Cette fonctionnalité fournit des recommandations relatives au niveau tarifaire, au niveau de calcul et à la taille maximale des données, ainsi qu’au coût estimé par mois. Il offre également la possibilité d’approvisionner en bloc des bases de données uniques et des instances gérées pour toutes les bases de données recommandées.
 
 > [!NOTE]
 > Cette fonctionnalité n’est actuellement disponible qu’à l’aide de l’interface de ligne de commande (CLI).
 
-Voici des instructions pour vous aider à déterminer les recommandations de Azure SQL Database SKU et à approvisionner une ou plusieurs bases de données uniques dans Azure à l’aide de DMA.
+Voici des instructions pour vous aider à déterminer les recommandations relatives aux références SKU et à approvisionner des bases de données uniques ou des instances gérées dans Azure à l’aide de DMA.
 
 ## <a name="prerequisites"></a>Prérequis
 
 - Téléchargez et installez la dernière version de [DMA](https://aka.ms/get-dma). Si vous disposez déjà d’une version antérieure de l’outil, ouvrez-la et vous serez invité à mettre à niveau DMA.
 - Assurez-vous que votre ordinateur dispose de [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou ultérieure, ce qui est nécessaire pour exécuter tous les scripts. Pour plus d’informations sur la façon de déterminer quelle version de PowerShell est installée sur votre ordinateur, consultez l’article [Télécharger et installer Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Assurez-vous que le module Azure PowerShell est installé sur votre ordinateur. Pour plus d’informations, consultez l’article [installer le module Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
-- Vérifiez que le fichier PowerShell **SkuRecommendationDataCollectionScript. ps1**, qui est requis pour collecter les compteurs de performances, est installé dans le dossier DMA.
+- Vérifiez que le fichier PowerShell **SkuRecommendationDataCollectionScript.ps1**, qui est requis pour collecter les compteurs de performances, est installé dans le dossier DMA.
 - Assurez-vous que l’ordinateur sur lequel vous allez effectuer ce processus dispose des autorisations d’administrateur sur l’ordinateur qui héberge vos bases de données.
 
 ## <a name="collect-performance-counters"></a>Collecter les compteurs de performances
@@ -52,7 +52,7 @@ La première étape du processus consiste à collecter les compteurs de performa
 
 Vous n’avez pas besoin d’effectuer cette tâche pour chaque base de données individuellement. Les compteurs de performance collectés à partir d’un ordinateur peuvent être utilisés pour recommander la référence SKU pour toutes les bases de données hébergées sur l’ordinateur.
 
-1. Dans le dossier DMA, localisez le fichier PowerShell SkuRecommendationDataCollectionScript. ps1. Ce fichier est nécessaire pour collecter les compteurs de performances.
+1. Dans le dossier DMA, localisez le fichier PowerShell SkuRecommendationDataCollectionScript.ps1. Ce fichier est nécessaire pour collecter les compteurs de performances.
 
     ![Fichier PowerShell affiché dans le dossier DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
@@ -80,9 +80,9 @@ Utilisez le fichier de sortie des compteurs de performances que vous avez créé
 
 Pour l’option de base de données unique, DMA fournit des recommandations pour la Azure SQL Database niveau tarifaire de base de données unique, le niveau de calcul et la taille de données maximale pour chaque base de données sur votre ordinateur. Si vous disposez de plusieurs bases de données sur votre ordinateur, vous pouvez également spécifier les bases de données pour lesquelles vous souhaitez obtenir des recommandations. DMA vous fournira également le coût mensuel estimé pour chaque base de données.
 
-Pour Managed instance, les recommandations prennent en charge un scénario d’élévation et de décalage. En conséquence, DMA vous fournira des recommandations pour le niveau tarifaire de l’instance gérée Azure SQL Database, le niveau de calcul et la taille de données maximale pour l’ensemble des bases de données sur votre ordinateur. Là encore, si vous avez plusieurs bases de données sur votre ordinateur, vous pouvez également spécifier les bases de données pour lesquelles vous souhaitez obtenir des recommandations. DMA vous fournira également le coût mensuel estimé pour Managed instance.
+Pour Managed instance, les recommandations prennent en charge un scénario d’élévation et de décalage. En conséquence, DMA vous fournit des recommandations pour le niveau tarifaire d’Azure SQL Managed Instance, le niveau de calcul et la taille de données maximale pour l’ensemble des bases de données sur votre ordinateur. Là encore, si vous avez plusieurs bases de données sur votre ordinateur, vous pouvez également spécifier les bases de données pour lesquelles vous souhaitez obtenir des recommandations. DMA vous fournira également le coût mensuel estimé pour Managed instance.
 
-Pour utiliser l’interface de ligne de commande DMA afin d’accéder aux recommandations relatives aux références SKU, à l’invite de commandes, exécutez dmacmd. exe avec les arguments suivants :
+Pour utiliser l’interface de ligne de commande DMA afin d’accéder aux recommandations relatives aux références SKU, à l’invite de commandes, exécutez dmacmd.exe avec les arguments suivants :
 
 - **/Action = SkuRecommendation**: entrez cet argument pour exécuter des évaluations de références SKU.
 - **/SkuRecommendationInputDataFilePath**: chemin d’accès au fichier de compteur collecté dans la section précédente.
@@ -176,15 +176,15 @@ Pour les recommandations sur les instances gérées, le fichier de sortie TSV se
 Une description de chaque colonne dans le fichier de sortie est illustrée ci-dessous.
 
 - **DatabaseName** : nom de votre base de données.
-- **MetricType** -recommandé Azure SQL Database niveau de base de données/instance gérée unique.
-- **MetricValue** -recommandé Azure SQL Database référence de base de données unique/d’instance gérée.
+- Niveau de performance **MetricType** -recommandé.
+- **MetricValue** -SKU recommandée.
 - **PricePerMonth** : prix estimé par mois pour la référence SKU correspondante.
 - **RegionName** : nom de la région pour la référence (SKU) correspondante. 
 - **IsTierRecommended** : nous faisons une recommandation de référence SKU minimale pour chaque niveau. Nous appliquons ensuite des heuristiques pour déterminer le niveau approprié pour votre base de données. Cela reflète le niveau recommandé pour la base de données. 
 - **ExclusionReasons** : cette valeur est vide si un niveau est recommandé. Pour chaque niveau qui n’est pas recommandé, nous fournissons les raisons pour lesquelles il n’a pas été choisi.
 - **AppliedRules** : notation abrégée des règles qui ont été appliquées.
 
-Le niveau final recommandé (par exemple, **MetricType**) et la valeur ( **MetricValue**)-trouvé où la colonne **IsTierRecommended** est vraie-reflètent la référence SKU minimale requise pour que vos requêtes s’exécutent dans Azure avec un taux de réussite similaire à celui de vos bases de données locales. Pour Managed instance, DMA prend actuellement en charge les recommandations pour les références (SKU) 8vcore à 40vcore les plus couramment utilisées. Par exemple, si la référence SKU minimale recommandée est S4 pour le niveau standard, le fait de choisir S3 ou une version antérieure entraîne l’expiration ou l’échec de l’exécution des requêtes.
+Le niveau final recommandé (par exemple, **MetricType**) et la valeur ( **MetricValue**)-trouvé où la colonne **IsTierRecommended** est vraie-reflètent la référence SKU minimale requise pour que vos requêtes s’exécutent dans Azure avec un taux de réussite similaire à celui de vos bases de données locales. Pour Azure SQL Managed Instance, DMA prend actuellement en charge les recommandations pour les références (SKU) 8vcore à 40vcore les plus couramment utilisées. Par exemple, si la référence SKU minimale recommandée est S4 pour le niveau standard, le fait de choisir S3 ou une version antérieure entraîne l’expiration ou l’échec de l’exécution des requêtes.
 
 Le fichier HTML contient ces informations dans un format graphique. Il fournit un moyen convivial d’afficher la recommandation finale et d’approvisionner la partie suivante du processus. Pour plus d’informations sur la sortie HTML, reportez-vous à la section suivante.
 
@@ -198,7 +198,7 @@ Pour entrer les informations de configuration et apporter des modifications aux 
 
 **Pour les recommandations relatives à une base de données unique**
 
-![Écran de recommandations de référence SKU Azure SQL DB](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL Database écran de recommandations SKU](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. Ouvrez le fichier HTML et entrez les informations suivantes :
     - **ID d’abonnement** : ID d’abonnement de l’abonnement Azure auquel vous souhaitez approvisionner les bases de données.
@@ -214,7 +214,7 @@ Pour entrer les informations de configuration et apporter des modifications aux 
 
     Ce processus doit créer toutes les bases de données que vous avez sélectionnées dans la page HTML.
 
-**Pour obtenir des recommandations sur les instances gérées**
+**Pour obtenir des recommandations sur Azure SQL Managed Instance**
 
 ![Écran recommandations relatives aux références SKU SQL Azure MI](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

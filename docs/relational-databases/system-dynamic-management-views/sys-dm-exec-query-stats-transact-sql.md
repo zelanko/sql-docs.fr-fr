@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734703"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865317"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,10 +116,10 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 |**min_spills**|**bigint**|Nombre minimal de pages que cette requête a déjà débordées lors d’une seule exécution.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Nombre maximal de pages que cette requête a déjà débordées lors d’une seule exécution.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Identificateur du nœud sur lequel cette distribution se trouve.<br /><br /> **S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|Nombre total de lectures du serveur de pages distantes effectuées par les exécutions de ce plan depuis sa compilation.<br /><br /> **S’applique à :** Hyperéchelle Azure SQL DB |  
-|**last_page_server_reads**|**bigint**|Nombre de lectures du serveur de pages distantes effectuées lors de la dernière exécution du plan.<br /><br /> **S’applique à :** Hyperéchelle Azure SQL DB |  
-|**min_page_server_reads**|**bigint**|Nombre minimal de lectures du serveur de pages distantes effectuées par ce plan lors d’une seule exécution.<br /><br /> **S’applique à :** Hyperéchelle Azure SQL DB |  
-|**max_page_server_reads**|**bigint**|Nombre maximal de lectures du serveur de pages distantes effectuées par ce plan lors d’une seule exécution.<br /><br /> **S’applique à :** Hyperéchelle Azure SQL DB |  
+|**total_page_server_reads**|**bigint**|Nombre total de lectures du serveur de pages distantes effectuées par les exécutions de ce plan depuis sa compilation.<br /><br /> **S’applique à :** Azure SQL Database hyperscale |  
+|**last_page_server_reads**|**bigint**|Nombre de lectures du serveur de pages distantes effectuées lors de la dernière exécution du plan.<br /><br /> **S’applique à :** Azure SQL Database hyperscale |  
+|**min_page_server_reads**|**bigint**|Nombre minimal de lectures du serveur de pages distantes effectuées par ce plan lors d’une seule exécution.<br /><br /> **S’applique à :** Azure SQL Database hyperscale |  
+|**max_page_server_reads**|**bigint**|Nombre maximal de lectures du serveur de pages distantes effectuées par ce plan lors d’une seule exécution.<br /><br /> **S’applique à :** Azure SQL Database hyperscale |  
 > [!NOTE]
 > <sup>1</sup> pour les procédures stockées compilées en mode natif lorsque la collecte de statistiques est activée, le temps de travail est collecté en millisecondes. Si la requête s’exécute en moins d’une milliseconde, la valeur sera 0.  
   
@@ -128,7 +128,7 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
    
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les statistiques de la vue sont actualisées lorsqu'une requête est terminée.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: Se connecter à Azure SQL DB (AccessToSQL) | Microsoft Docs
+title: Se connecter à Azure SQL Database (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b26ddaef1373544e0df2fd9186cdf56fdafd801
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34e25824ee95745bd5069a6ed601318d47a96e81
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68040628"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865247"
 ---
-# <a name="connect-to-azure-sql-db-accesstosql"></a>Se connecter à Azure SQL DB (AccessToSQL)
+# <a name="connect-to-azure-sql-database-accesstosql"></a>Se connecter à Azure SQL Database (AccessToSQL)
 Utilisez la boîte de dialogue se connecter au SQL Azure pour vous connecter à la base de données SQL Azure que vous souhaitez migrer.  
   
 Pour accéder à cette boîte de dialogue, dans le menu **fichier** , sélectionnez **se connecter à SQL Azure**. Si vous vous êtes connecté précédemment, la commande se **reconnecte à SQL Azure.**  
   
 ## <a name="options"></a>Options  
-**Nom du serveur**  
+**Nom de serveur**  
   
 Sélectionnez ou entrez le nom du serveur pour la connexion à SQL Azure.  
   
@@ -46,8 +46,8 @@ Entrez le mot de passe correspondant au nom d'utilisateur indiqué.
   
 SSMA recommande la connexion chiffrée à SQL Azure.  
   
-## <a name="create-azure-database"></a>Créer une base de données Azure  
-Pour créer une nouvelle base de données Azure, procédez comme suit :  
+## <a name="create-database"></a>Créer une base de données  
+Pour créer une base de données, procédez comme suit :  
   
 1.  Cliquez sur le bouton Parcourir qui est présent dans la boîte de dialogue se connecter à SQL Azure  
   
@@ -55,7 +55,7 @@ Pour créer une nouvelle base de données Azure, procédez comme suit :
   
     1.  **(aucune base de données trouvée)** qui est désactivée et grisée tout le temps  
   
-    2.  **Créez une nouvelle base de données** qui est toujours activée, ce qui permet à l’utilisateur de créer une base de données azure sur SQL Azure compte. Lorsque vous cliquez sur cet élément de menu, la boîte de dialogue créer une base de données Azure est présente avec le nom et la taille de la base de données.  
+    2.  **Créer une nouvelle base de données** qui est toujours activée, ce qui permet à l’utilisateur de créer une base de données. En cliquant sur cet élément de menu, la boîte de dialogue créer une base de données est présente avec le nom et la taille de la base de données.  
   
 3.  Au moment de la création de la base de données, ces deux paramètres sont fournis comme entrée.  
   

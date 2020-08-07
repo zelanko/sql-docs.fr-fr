@@ -11,22 +11,22 @@ ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: b97da15fb97c348afa694eb399d2a0c9a2f08928
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 3938d01e98bfb2a57057d9573ee7199f0b12fc14
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292900"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864846"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Installation de SSMA pour Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour Oracle se compose d’une application cliente que vous utilisez pour effectuer une migration d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Azure SQL db. Il contient également un pack d’extension qui prend en charge la migration des données et l’utilisation des fonctions système Oracle dans vos bases de données migrées.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour Oracle se compose d’une application cliente que vous utilisez pour effectuer une migration d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Azure SQL Database. Il contient également un pack d’extension qui prend en charge la migration des données et l’utilisation des fonctions système Oracle dans vos bases de données migrées.  
   
 Vous installez l’application cliente sur l’ordinateur à partir duquel vous allez effectuer les étapes de migration. Vous devez installer les fichiers du pack d’extension sur l’ordinateur sur lequel les bases de données migrées seront hébergées. Cet ordinateur doit exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="upgrading-ssma-for-oracle"></a>Mise à niveau de SSMA pour Oracle  
 Si vous souhaitez effectuer une mise à niveau vers une version ultérieure de SSMA pour Oracle, vous devez d’abord désinstaller le client et le pack d’extension de serveur, puis installer la version plus récente.  
   
-## <a name="contents"></a>Contents  
+## <a name="contents"></a>Contenu  
   
 |Rubrique|Description|  
 |---------|---------------|  

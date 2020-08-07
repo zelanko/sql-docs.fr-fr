@@ -18,17 +18,17 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718737"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823314"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières minutes (128 recs au total) des statistiques des pools de ressources pour un Azure SQL Database.
+Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières minutes (128 secondes au total) des statistiques des pools de ressources pour un Azure SQL Database.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -79,7 +79,7 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 
 Cette vue nécessite l’autorisation VIEW SERVER STATE.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les utilisateurs peuvent accéder à cette vue de gestion dynamique pour surveiller la consommation des ressources en temps quasi réel pour le pool de charges de travail utilisateur, ainsi que pour les pools internes du système de Azure SQL Database instance.
 

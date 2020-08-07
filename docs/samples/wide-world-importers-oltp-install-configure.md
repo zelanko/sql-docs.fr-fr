@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942371"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824064"
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Manag
 
 ### <a name="full-text-indexing"></a>Indexation de texte intégral
 
-L’exemple de base de données peut utiliser l’indexation de texte intégral. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server, vous devez la sélectionner lors de l’installation de SQL Server (elle est activée par défaut dans Azure SQL DB). Par conséquent, une étape consécutive à l’installation est requise.
+L’exemple de base de données peut utiliser l’indexation de texte intégral. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server, vous devez la sélectionner lors de l’installation de SQL Server (elle est activée par défaut dans Azure SQL Database). Par conséquent, une étape consécutive à l’installation est requise.
 
 1. Dans SQL Server Management Studio, connectez-vous à la base de données WideWorldImporters et ouvrez une nouvelle fenêtre de requête.
 2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexation de texte intégral dans la base de données :`EXECUTE Application.Configuration_ApplyFullTextIndexing`

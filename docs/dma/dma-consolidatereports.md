@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435148"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823241"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation à l’aide de DMA
 
@@ -197,7 +197,7 @@ Vous pouvez également utiliser le script LoadWarehouse pour fournir les instruc
 
 Pour utiliser des rapports DMA, utilisez des signets et des segments pour filtrer par :
 
-- Types d’évaluation (Azure SQL DB, Azure SQL MI, SQL en local) 
+- Types d’évaluation (Azure SQL Database, Managed Instance SQL Azure, SQL Server) 
 - Nom de l’instance
 - Nom de la base de données
 - Nom de l'équipe
@@ -212,8 +212,8 @@ La sélection du signet Filters active le panneau suivant :
 
 Vous pouvez utiliser des signets pour basculer le contexte de création de rapports entre :
 
-- Évaluations Cloud d’Azure SQL DB
-- Évaluations du Cloud Azure SQL MI
+- Évaluations du Cloud Azure SQL Database
+- Évaluations du Cloud Azure SQL Managed Instance
 - Évaluations locales
 
 ![Signets de vue de rapport DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
@@ -274,7 +274,7 @@ Cette section est la partie principale du rapport, qui indique la disponibilité
 
 - InstanceDatabase
 - ChangeCategory
-- Titre
+- Intitulé
 - ObjectType
 - ImpactedObjectName
 

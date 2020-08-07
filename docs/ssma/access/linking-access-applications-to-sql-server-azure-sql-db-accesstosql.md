@@ -1,5 +1,5 @@
 ---
-title: Lier des applications d’accès à SQL Server-Azure SQL DB | Microsoft Docs
+title: Lier des applications d’accès à SQL Server Azure SQL Database | Microsoft Docs
 description: Découvrez comment lier vos tables Access aux tables migrées afin de pouvoir utiliser vos applications Access existantes avec SQL Server ou Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293766"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823844"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Liaison d’applications Access à SQL Server-Azure SQL DB (AccessToSQL)
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Liaison d’applications Access à des Azure SQL Database SQL Server (AccessToSQL)
 Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez lier vos tables Access d’origine aux tables migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La liaison modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent les données de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou SQL Azure au lieu des données de votre base de données Access.  
   
 > [!NOTE]  

@@ -20,40 +20,40 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e49e55c31e346671f7f66a42e23c39e7a64e3808
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: b27d773bc8fd928e7db2e29c7a01492fb97df78f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293946"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823946"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Prise en main de Assistant Migration SQL Server pour Access (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour Access vous permet de convertir rapidement des objets de base de données Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou Azure SQL dB, de charger les objets résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL dB, puis de migrer des données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à Azure SQL db. Si nécessaire, vous pouvez également lier des tables d’accès à des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables ou à Azure SQL DB afin de pouvoir continuer à utiliser vos applications frontales Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL db.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour Access vous permet de convertir rapidement des objets de base de données Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou Azure SQL Database, de charger les objets résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database, et de migrer des données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. Si nécessaire, vous pouvez également lier des tables d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des tables ou Azure SQL Database pour pouvoir continuer à utiliser vos applications frontales Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.  
   
 Cette rubrique présente le processus d’installation et vous aide à vous familiariser avec l’interface utilisateur SSMA.  
   
 ## <a name="installing-ssma"></a>Installation de SSMA  
-Pour utiliser SSMA, vous devez d’abord installer le programme client SSMA sur un ordinateur qui peut accéder aux bases de données que vous souhaitez migrer et à l’instance cible de ou à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure. Pour obtenir des instructions d’installation, consultez [installation de Assistant Migration SQL Server pour Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
+Pour utiliser SSMA, vous devez d’abord installer le programme client SSMA sur un ordinateur qui peut accéder aux bases de données que vous souhaitez migrer et à l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. Pour obtenir des instructions d’installation, consultez [installation de Assistant Migration SQL Server pour Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
   
 Pour démarrer SSMA, cliquez sur **Démarrer**, pointez sur **tous les programmes**, sur **Assistant Migration SQL Server pour accès**, puis sélectionnez **Assistant Migration SQL Server pour l’accès**.  
   
 ## <a name="using-ssma"></a>Utilisation de SSMA  
-Après l’installation de SSMA, vous pouvez vous familiariser avec l’interface utilisateur SSMA avant d’utiliser l’outil pour migrer des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL db. L’interface utilisateur SSMA, y compris les explorateurs de métadonnées, les métadonnées, les barres d’outils, le volet de sortie et le volet Liste d’erreurs, sont affichées dans le diagramme suivant :  
+Après l’installation de SSMA, vous pouvez vous familiariser avec l’interface utilisateur SSMA avant d’utiliser l’outil pour migrer des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. L’interface utilisateur SSMA, y compris les explorateurs de métadonnées, les métadonnées, les barres d’outils, le volet de sortie et le volet Liste d’erreurs, sont affichées dans le diagramme suivant :  
   
 ![SSMA pour l'interface d'utilisateur d'accès graphique](../../ssma/access/media/ssmaforaccessgui.gif "SSMA pour l'interface d'utilisateur d'accès graphique")  
   
 Pour démarrer une migration, créez un projet, puis ajoutez des bases de données Access pour accéder à l’Explorateur de métadonnées. Vous pouvez ensuite cliquer avec le bouton droit sur objets dans l’Explorateur de métadonnées Access pour effectuer des tâches telles que :
-- Exportation d’un inventaire des objets de base de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL db.
-- Création de rapports qui évaluent les conversions vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL db.
-- Conversion de schémas d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de schémas Azure SQL db.
+- Exportation d’un inventaire des objets de base de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.
+- Création de rapports qui évaluent les conversions vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.
+- Conversion de schémas d’accès à des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas ou Azure SQL Database.
 
 Vous pouvez également effectuer ces tâches à l’aide des barres d’outils et des menus.  
   
 Vous devez également vous connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Une fois la connexion établie, une hiérarchie de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données s’affiche dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. Après avoir converti les schémas d’accès en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, vous pouvez sélectionner ces schémas convertis dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, puis charger les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Si vous avez sélectionné base de donnée SQL Azure dans la boîte de dialogue migrer vers la liste déroulante dans le nouveau projet, vous devez vous connecter à Azure SQL DB. Une fois la connexion établie, une hiérarchie de bases de données Azure SQL DB s’affiche dans l’Explorateur de métadonnées Azure SQL DB. Après avoir converti les schémas d’accès en schémas Azure SQL DB, vous pouvez sélectionner ces schémas convertis dans l’Explorateur de métadonnées Azure SQL DB, puis charger les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Si vous avez sélectionné Azure SQL Database dans la boîte de dialogue migrer vers la liste déroulante dans le nouveau projet, vous devez vous connecter à Azure SQL Database. Une fois la connexion établie, une hiérarchie de Azure SQL Database bases de données apparaît dans Azure SQL Database Explorateur de métadonnées. Après avoir converti les schémas d’accès en Azure SQL Database schémas, vous pouvez sélectionner les schémas convertis dans Azure SQL Database Explorateur de métadonnées, puis charger les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Une fois que vous avez chargé les schémas convertis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL dB, vous pouvez revenir à l’Explorateur de métadonnées Access et migrer les données à partir des bases de données Access vers ou vers des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données Azure SQL db. Si nécessaire, vous pouvez également lier des tables d’accès à des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables ou à des tables Azure SQL db.  
+Une fois que vous avez chargé les schémas convertis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database, vous pouvez revenir à l’Explorateur de métadonnées Access et migrer les données à partir des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database bases de données. Si nécessaire, vous pouvez également lier des tables d’accès à des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables ou Azure SQL Database.  
   
 Pour plus d’informations sur ces tâches et leur exécution, consultez les rubriques suivantes :  
   
@@ -66,7 +66,7 @@ Pour plus d’informations sur ces tâches et leur exécution, consultez les rub
 Les sections suivantes décrivent les fonctionnalités de l’interface utilisateur SSMA.  
   
 ### <a name="metadata-explorers"></a>Explorateurs de métadonnées  
-SSMA contient deux explorateurs de métadonnées que vous pouvez utiliser pour parcourir et effectuer des actions sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données Access et Azure SQL db.  
+SSMA contient deux explorateurs de métadonnées que vous pouvez utiliser pour parcourir et effectuer des actions sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données Access et Azure SQL Database.  
   
 #### <a name="access-metadata-explorer"></a>Accéder à l'explorateur de métadonnées  
 L’Explorateur de métadonnées Access affiche des informations sur les bases de données Access qui ont été ajoutées au projet. Lorsque vous ajoutez une base de données Access, SSMA récupère les métadonnées de cette base de données, qui sont les métadonnées qui sont disponibles dans l’Explorateur de métadonnées Access.  
@@ -81,10 +81,10 @@ Vous pouvez utiliser l’Explorateur de métadonnées Access pour effectuer les 
   
 -   Liez et dissociez l’accès et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.  
   
-#### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server ou l’Explorateur de métadonnées Azure SQL DB  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou l’Explorateur de métadonnées de base de données SQL Azure affiche des informations sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL db. Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à Azure SQL dB, SSMA récupère les métadonnées relatives à cette instance et les stocke dans le fichier projet.  
+#### <a name="sql-server-or-azure-sql-database-metadata-explorer"></a>SQL Server ou Azure SQL Database l’Explorateur de métadonnées  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou Azure SQL Database Explorateur de métadonnées affiche des informations sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. Quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database, SSMA récupère les métadonnées relatives à cette instance et les stocke dans le fichier projet.  
   
-Vous pouvez utiliser la SQL Server ou l’Explorateur de métadonnées Azure SQL DB pour sélectionner les objets de base de données Access convertis et charger (synchroniser) ces objets dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans Azure SQL db.  
+Vous pouvez utiliser la SQL Server ou Azure SQL Database Explorateur de métadonnées pour sélectionner les objets de base de données Access convertis et charger (synchroniser) ces objets dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.  
   
 Pour plus d’informations, consultez [chargement d’objets de base de données convertis dans SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
@@ -101,27 +101,27 @@ La plupart des paramètres de métadonnées sont en lecture seule. Toutefois, vo
 SSMA comporte deux barres d’outils : une barre d’outils de projet et une barre d’outils de migration.  
   
 #### <a name="the-project-toolbar"></a>Barre d’outils du projet  
-La barre d’outils projet contient des boutons permettant d’utiliser des projets, d’ajouter des fichiers de base de données Access et de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à Azure SQL db. Ces boutons sont semblables aux commandes du menu **fichier** .  
+La barre d’outils projet contient des boutons permettant d’utiliser des projets, d’ajouter des fichiers de base de données Access et de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. Ces boutons sont semblables aux commandes du menu **fichier** .  
   
 #### <a name="the-migration-toolbar"></a>Barre d’outils de migration  
 La barre d’outils de migration contient les commandes suivantes :  
   
 |Bouton|Fonction|  
 |----------|------------|  
-|**Convertir, charger et migrer**|Convertit les bases de données Access, charge les objets convertis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL DB et migre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les données vers ou Azure SQL dB, en une seule étape.|  
-|**Créer un rapport**|Convertit le schéma d’accès sélectionné vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la syntaxe Azure SQL dB, puis crée un rapport qui indique la réussite de la conversion.<br /><br />Cette commande est disponible uniquement lorsque des objets sont sélectionnés dans l’Explorateur de métadonnées Access.|  
-|**Convertir le schéma**|Convertit le schéma d’accès sélectionné en schémas de base de donnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL ou Azure.<br /><br />Cette commande est disponible uniquement lorsque des objets sont sélectionnés dans l’Explorateur de métadonnées Access.|  
-|**Migrer des données**|Migre les données de la base de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL db. Avant d’exécuter cette commande, vous devez convertir les schémas d’accès dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les schémas Azure SQL dB, puis charger les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL db.<br /><br />Cette commande est disponible uniquement lorsque des objets sont sélectionnés dans l’Explorateur de métadonnées Access.|  
-|**Stop**|Arrête le processus en cours, par exemple la conversion d’objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la syntaxe Azure SQL db.|  
+|**Convertir, charger et migrer**|Convertit les bases de données Access, charge les objets convertis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database et migre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les données vers ou Azure SQL Database, le tout en une seule étape.|  
+|**Créer un rapport**|Convertit le schéma d’accès sélectionné en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database syntaxe, puis crée un rapport qui indique la réussite de la conversion.<br /><br />Cette commande est disponible uniquement lorsque des objets sont sélectionnés dans l’Explorateur de métadonnées Access.|  
+|**Convertir le schéma**|Convertit le schéma d’accès sélectionné en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database schémas.<br /><br />Cette commande est disponible uniquement lorsque des objets sont sélectionnés dans l’Explorateur de métadonnées Access.|  
+|**Migrer des données**|Migre les données de la base de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. Avant d’exécuter cette commande, vous devez convertir les schémas d’accès en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database schémas, puis charger les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.<br /><br />Cette commande est disponible uniquement lorsque des objets sont sélectionnés dans l’Explorateur de métadonnées Access.|  
+|**Stop**|Arrête le processus en cours, par exemple la conversion d’objets en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database syntaxe.|  
   
 ### <a name="menus"></a>Menus  
 SSMA contient les menus suivants :  
   
 |Menu|Description|  
 |--------|---------------|  
-|**File**|Contient des commandes pour l’Assistant Migration, l’utilisation de projets, l’ajout et la suppression de fichiers de base de données Access, et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à Azure SQL db.|  
+|**File**|Contient des commandes pour l’Assistant Migration, l’utilisation de projets, l’ajout et la suppression de fichiers de base de données Access, et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.|  
 |**Modifier**|Contient des commandes pour rechercher et utiliser du texte dans les pages de détails, telles que [!INCLUDE[tsql](../../includes/tsql-md.md)] la copie à partir du volet d’informations SQL. Pour ouvrir la boîte de dialogue **gérer les signets** , dans le menu modifier, cliquez sur gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Afficher**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées d’accès et l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées Azure SQL db. Contient également des commandes permettant d’afficher et de masquer les volets **sortie** et **liste d’erreurs** , ainsi que les **mises en page** d’options à gérer avec les dispositions.|  
+|**Visualiser**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées d’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database l’Explorateur de métadonnées. Contient également des commandes permettant d’afficher et de masquer les volets **sortie** et **liste d’erreurs** , ainsi que les **mises en page** d’options à gérer avec les dispositions.|  
 |**outils**|Contient des commandes permettant de créer des rapports, d’exporter des données, de migrer des objets et des données, de lier des tables et d’accéder aux boîtes de dialogue des paramètres globaux et des projets.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et à la boîte de dialogue **à propos** de.|  
   

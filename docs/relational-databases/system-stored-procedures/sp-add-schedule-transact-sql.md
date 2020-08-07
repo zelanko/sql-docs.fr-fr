@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878287"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865307"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +68,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Mensuelle|  
 |**32**|Tous les mois, par rapport à *freq_interval*|  
 |**64**|Exécuter au démarrage du service de l’agent SQL|  
-|**128**|Exécuter lorsque l’ordinateur est inactif (non pris en charge dans [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Exécuter lorsque l’ordinateur est inactif (non pris en charge dans [Azure SQL Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval`Jours d’exécution d’un travail. *freq_interval* est de **type int**, avec **1**comme valeur par défaut et dépend de la valeur de *freq_type*.  
   
@@ -97,9 +97,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 |Valeur|Description (unité)|  
 |-----------|--------------------------|  
-|**1**|Premier|  
+|**1**|First|  
 |**2**|Seconde|  
-|**4**|Troisième|  
+|**4**|Third|  
 |**8**|Quatrième|  
 |**16**|Dernier|  
   

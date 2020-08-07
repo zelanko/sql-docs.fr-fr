@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925353"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864916"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécuter Assistant Migration de données à partir de la ligne de commande
 
-Avec la version 2,1 et versions ultérieures, lorsque vous installez Assistant Migration de données, il installe également dmacmd. exe dans *% ProgramFiles% \\ Assistant Migration de données Microsoft \\ *. Utilisez dmacmd. exe pour évaluer vos bases de données en mode sans assistance et générer le résultat dans un fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou de bases de données volumineuses. 
+Avec la version 2,1 et versions ultérieures, lorsque vous installez Assistant Migration de données, il installe également dmacmd.exe dans *% ProgramFiles% \\ Assistant Migration de données Microsoft \\ *. Utilisez dmacmd.exe pour évaluer vos bases de données en mode sans assistance et pour générer le résultat dans un fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou de bases de données volumineuses. 
 
 > [!NOTE]
-> Dmacmd. exe prend en charge l’exécution des évaluations uniquement. Les migrations ne sont pas prises en charge pour le moment.
+> Dmacmd.exe prend en charge l’exécution des évaluations uniquement. Les migrations ne sont pas prises en charge pour le moment.
 
 ## <a name="assessments-using-the-command-line-interface-cli"></a>Évaluations à l’aide de l’interface de ligne de commande (CLI)
 
@@ -42,7 +42,7 @@ DmaCmd.exe /AssessmentName="string"
 
 |Argument  |Description  | Obligatoire (o/N)
 |---------|---------|---------------|
-| `/help or /?`     | Comment utiliser le texte d’aide de dmacmd. exe        | N
+| `/help or /?`     | Comment utiliser dmacmd.exe texte d’aide        | N
 |`/AssessmentName`     |   Nom du projet d’évaluation   | O
 |`/AssessmentDatabases`     | Liste de chaînes de connexion délimitée par des espaces. Le nom de la base de données (catalogue initial) respecte la casse. | O
 |`/AssessmentSourcePlatform`     | Plateforme source pour l’évaluation : <br>Valeurs prises en charge pour l’évaluation : SqlOnPrem, RdsSqlServer (valeur par défaut) <br>Valeurs prises en charge pour l’évaluation de la disponibilité cible : SqlOnPrem, RdsSqlServer (par défaut), Cassandra (version préliminaire)   | N
@@ -70,7 +70,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Exemples d’évaluations à l’aide de l’interface CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -269,7 +269,7 @@ DmaCmd.exe
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -277,9 +277,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Recommandations relatives aux références SKU d’instance gérée/Azure SQL Database à l’aide de l’interface CLI
+## <a name="azure-sql-database--azure-sql-managed-instance-sku-recommendations-using-the-cli"></a>Azure SQL Database/Azure SQL Managed Instance recommandations SKU à l’aide de l’interface CLI
 
-Ces commandes prennent en charge des recommandations pour les deux Azure SQL Database options de déploiement de base de données unique et d’instance gérée.
+Ces commandes prennent en charge des recommandations pour Azure SQL Database base de données unique et les options de déploiement d’Azure SQL Managed Instance.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -312,11 +312,11 @@ Ces commandes prennent en charge des recommandations pour les deux Azure SQL Dat
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Exemples d’évaluations de références SKU à l’aide de l’interface CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Recommandation de la référence SKU d’Azure SQL DB/MI avec actualisation du prix (Obtient les prix les plus récents)-authentification interactive** 
+**Azure SQL Database/Azure SQL Managed Instance recommandation SKU avec actualisation des prix (procurez-vous les prix les plus récents)-authentification interactive** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -333,7 +333,7 @@ Ces commandes prennent en charge des recommandations pour les deux Azure SQL Dat
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Recommandation de la référence SKU d’Azure SQL DB/MI avec actualisation du prix (récupération des derniers prix)-authentification par certificat**
+**Azure SQL Database/Azure SQL Managed Instance recommandation SKU avec actualisation des prix (récupération des prix les plus récents)-authentification par certificat**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -351,7 +351,7 @@ Ces commandes prennent en charge des recommandations pour les deux Azure SQL Dat
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Recommandation de référence SKU/MI d’Azure SQL DB avec actualisation des prix (récupération des derniers prix)-authentification par jeton et spécification des bases de données à recommander**
+**Azure SQL Database/Azure SQL Managed Instance recommandation avec actualisation des prix (Obtient les prix les plus récents)-authentification par jeton et spécifier les bases de données à recommander**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -369,7 +369,7 @@ Ces commandes prennent en charge des recommandations pour les deux Azure SQL Dat
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Recommandation de référence SKU Azure SQL DB/MI sans actualisation du prix (utiliser des prix statiques)** 
+**Azure SQL Database/Azure SQL Managed Instance recommandation SKU sans actualisation tarifaire (utiliser des prix statiques)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

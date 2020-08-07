@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006616"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823851"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Création et gestion de projets (AccessToSQL)
-Pour migrer des bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données Access vers ou SQL Azure, vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient des métadonnées sur les bases de données Access que vous souhaitez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrer vers ou SQL Azure, des métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’instance cible de ou SQL Azure qui recevront les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrés et les données, les informations de connexion et les paramètres du projet.  
+Pour migrer des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient des métadonnées sur les bases de données Access que vous souhaitez migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, des métadonnées sur l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure qui recevront les objets migrés et les données, les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations de connexion et les paramètres du projet.  
   
 ## <a name="reviewing-default-project-settings"></a>Vérification des paramètres de projet par défaut  
 SSMA contient plusieurs options pour la conversion et la synchronisation des objets de base de données et pour la conversion de données. Le paramètre par défaut pour ces options est approprié pour de nombreux utilisateurs. Toutefois, avant de créer un nouveau projet SSMA, vous devez passer en revue les options et, si vous le souhaitez, modifier les paramètres par défaut qui seront utilisés pour tous vos nouveaux projets.  
@@ -55,9 +55,9 @@ SSMA contient plusieurs options pour la conversion et la synchronisation des obj
 **Remarque** Les paramètres de SQL Azure ne sont disponibles que lorsque vous sélectionnez migration vers SQL Azure lors de la création d’un projet.  
   
 ## <a name="creating-new-projects"></a>Création de projets  
-SSMA démarre sans charger de projet par défaut. Pour migrer des données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données Access vers ou SQL Azure, vous devez créer un projet.  
+SSMA démarre sans charger de projet par défaut. Pour migrer des données à partir de bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez créer un projet.  
   
-**Pour créer un projet**  
+**Pour créer un nouveau projet**  
   
 1.  Dans le menu **Fichier**, sélectionnez **Nouveau projet**.  
   
@@ -67,7 +67,7 @@ SSMA démarre sans charger de projet par défaut. Pour migrer des données à pa
   
 3.  Dans la zone **emplacement** , entrez ou sélectionnez un dossier pour le projet.  
   
-4.  Dans la liste déroulante migration vers, sélectionnez l’une des SQL Server 2005/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016/Azure SQL DB, puis cliquez sur **OK**.  
+4.  Dans la liste déroulante migration vers, sélectionnez l’une des SQL Server 2005/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016/Azure SQL Database, puis cliquez sur **OK**.  
   
 SSMA crée le fichier projet. Vous pouvez maintenant effectuer l’étape suivante pour [Ajouter une ou plusieurs bases de données Access](adding-and-removing-access-database-files-accesstosql.md).  
   
@@ -89,12 +89,12 @@ Lorsque vous enregistrez un projet, SSMA conserve les paramètres du projet et �
   
         L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées à ce stade, n’activez pas les cases à cocher.  
   
-    2.  Cliquez sur **Save**.  
+    2.  Cliquez sur **Enregistrer**.  
   
         SSMA analyse les schémas d’accès et enregistre les métadonnées dans le fichier projet.  
   
 ## <a name="opening-projects"></a>Ouverture de projets  
-Lorsque vous ouvrez un projet, il est déconnecté de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Cela vous permet de travailler hors connexion. Pour mettre à jour les métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , chargez des objets de base de données dans ou SQL Azure. Pour migrer des données, vous devez vous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconnecter à ou SQL Azure.  
+Lorsque vous ouvrez un projet, il est déconnecté de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Cela vous permet de travailler hors connexion. Pour mettre à jour les métadonnées, chargez des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Pour migrer des données, vous devez vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 **Pour ouvrir un projet**  
   
@@ -104,7 +104,7 @@ Lorsque vous ouvrez un projet, il est déconnecté de [!INCLUDE[ssNoVersion](../
   
     -   Dans le menu **fichier** , sélectionnez **ouvrir un projet**, recherchez le fichier projet. a2ssproj, sélectionnez le fichier, puis cliquez sur **ouvrir**.  
   
-2.  Pour vous reconnecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à, dans le menu **fichier** , sélectionnez **se reconnecter à SQL Server**.  
+2.  Pour vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dans le menu **fichier** , sélectionnez **se reconnecter à SQL Server**.  
   
 3.  Pour vous reconnecter à SQL Azure, dans le menu **fichier** , sélectionnez **se reconnecter à SQL Azure.**  
   

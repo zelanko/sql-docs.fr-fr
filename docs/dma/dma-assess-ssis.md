@@ -1,6 +1,6 @@
 ---
 title: Créer une évaluation de la migration SSIS avec la Assistant Migration de données
-description: Découvrez comment utiliser Assistant Migration de données pour évaluer un service SSIS (SQL Server Integration Service) local avant de migrer vers Azure SQL Database ou Azure SQL Database Managed instance
+description: Découvrez comment utiliser Assistant Migration de données pour évaluer un service SSIS (SQL Server Integration Service) local avant de migrer vers Azure SQL Database ou Azure SQL Managed Instance
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74687159"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822194"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de la migration du service d’intégration SQL Server avec Assistant Migration de données
 
@@ -34,7 +34,7 @@ DMA doit s’exécuter avec un accès **administrateur** pour évaluer les packa
 
 ## <a name="performance-assessments"></a>Évaluations des performances
 
-Les instructions pas à pas suivantes vous aident à effectuer la première évaluation de la migration de packages SQL Server Integration Service (SSIS) vers Azure SQL Database ou Azure SQL Database instance gérée, à l’aide de Assistant Migration de données.
+Les instructions pas à pas suivantes vous aident à effectuer la première évaluation de la migration de packages SQL Server Integration Service (SSIS) vers Azure SQL Database ou Azure SQL Managed Instance, à l’aide de Assistant Migration de données.
 
 ## <a name="create-an-assessment"></a>Créer une évaluation
 
@@ -42,7 +42,7 @@ Les instructions pas à pas suivantes vous aident à effectuer la première éva
 
 1. Définissez le type de serveur source et cible.
 
-    Sélectionnez la source en tant que **SQL Server**, puis définissez le type de serveur cible sur **Azure SQL Database** ou **Azure SQL Database Managed instance**.
+    Sélectionnez la source en tant que **SQL Server**et définissez le type de serveur cible sur **Azure SQL Database** ou sur **Azure SQL Managed instance**.
 
 1. Cliquez sur **Créer**.
 
@@ -74,5 +74,5 @@ La catégorie de problèmes de compatibilité fournit des fonctionnalités parti
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Vue d’ensemble de la migration des charges de travail SSIS locales vers SSIS dans ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrer les packages SQL Server Integration Services vers une instance managée Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrer les packages SQL Server Integration Services vers une instance managée Azure SQL Managed Instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Redéployer des packages SQL Server Integration Services vers Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

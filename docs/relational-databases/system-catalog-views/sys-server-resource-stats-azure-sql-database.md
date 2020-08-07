@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772982"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864490"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Retourne l’utilisation de l’UC, les e/s et les données de stockage pour un Managed Instance Azure SQL. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Une ligne est créée pour chaque rapport de 15 secondes. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation des E/S et la référence SKU de l’instance managée. Les données historiques sont conservées pendant environ 14 jours.
+Retourne les données d’utilisation de l’UC, d’e/s et de stockage pour Azure SQL Managed Instance. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Une ligne est créée pour chaque rapport de 15 secondes. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation des e/s et la référence SKU. Les données historiques sont conservées pendant environ 14 jours.
 
-La vue **sys. server_resource_stats** a des définitions différentes selon la version de l’instance Azure SQL gérée à laquelle la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.
+La vue **sys. server_resource_stats** a des définitions différentes selon la version du Managed instance Azure SQL à laquelle la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.
  
   
  Le tableau suivant décrit les colonnes disponibles dans un serveur v12 :  
@@ -47,7 +47,7 @@ La vue **sys. server_resource_stats** a des définitions différentes selon la v
 |virtual_core_count|int|Représente le nombre de cœurs virtuels par instance (8, 16 ou 24 en préversion publique)|
 |avg_cpu_percent|décimal (5, 2)|Utilisation moyenne du calcul en pourcentage de la limite du niveau de service Managed Instance utilisé par l’instance. Elle est calculée en fonction de la somme du temps processeur de tous les pools de ressources pour toutes les bases de données de l’instance et divisée par le temps processeur disponible pour ce niveau dans l’intervalle donné.|
 |reserved_storage_mb|bigint|Stockage réservé par instance (quantité d’espace de stockage que le client a achetée pour l’instance gérée)|
-|storage_space_used_mb|décimal (18, 2)|Stockage utilisé par tous les fichiers des bases de données d’instance managée (y compris les bases de données utilisateur et système)|
+|storage_space_used_mb|décimal (18, 2)|Stockage utilisé par tous les fichiers de base de données dans une instance gérée (y compris les bases de données utilisateur et système)|
 |io_request|bigint|Nombre total d’opérations physiques d’e/s au cours de l’intervalle|
 |io_bytes_read|bigint|Nombre d’octets physiques lus dans l’intervalle|
 |io_bytes_written|bigint|Nombre d’octets physiques écrits dans l’intervalle|
@@ -59,7 +59,7 @@ La vue **sys. server_resource_stats** a des définitions différentes selon la v
 ## <a name="permissions"></a>Autorisations  
  Cette vue est disponible pour tous les rôles d’utilisateur disposant d’autorisations pour se connecter à la base de données **Master** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les données retournées par **sys. server_resource_stats** sont exprimées sous la forme du total utilisé en octets ou en mégaoctets (exprimés dans les noms de colonnes) autres que avg_cpu, exprimé sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.  
  
 ## <a name="examples"></a>Exemples  

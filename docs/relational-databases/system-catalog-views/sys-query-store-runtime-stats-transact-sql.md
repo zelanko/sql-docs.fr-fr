@@ -21,12 +21,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395144"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823724"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -98,11 +98,11 @@ ms.locfileid: "87395144"
 |**min_tempdb_space_used**|**bigint**|Nombre minimal de lectures de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**max_tempdb_space_used**|**bigint**|Nombre maximal de lectures de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**stdev_tempdb_space_used**|**float**|Nombre d’écarts standard de lectures de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**avg_page_server_io_reads**|**float**|Nombre moyen de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL DB, MI (non hyperscale) retourne toujours la valeur zéro (0).|
-|**last_page_server_io_reads**|**bigint**|Nombre de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL DB, MI (non hyperscale) retourne toujours la valeur zéro (0).|
-|**min_page_server_io_reads**|**bigint**|Nombre minimal de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL DB, MI (non hyperscale) retourne toujours la valeur zéro (0).|
-|**max_page_server_io_reads**|**bigint**|Nombre maximal de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL DB, MI (non hyperscale) retourne toujours la valeur zéro (0).|
-|**stdev_page_server_io_reads**|**float**|Nombre de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL DB, MI (non hyperscale) retourne toujours la valeur zéro (0).|
+|**avg_page_server_io_reads**|**float**|Nombre moyen de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL Database, Managed Instance SQL Azure (non hyperscale) retourne toujours la valeur zéro (0).|
+|**last_page_server_io_reads**|**bigint**|Nombre de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL Database, Managed Instance SQL Azure (non hyperscale) retourne toujours la valeur zéro (0).|
+|**min_page_server_io_reads**|**bigint**|Nombre minimal de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL Database, Managed Instance SQL Azure (non hyperscale) retourne toujours la valeur zéro (0).|
+|**max_page_server_io_reads**|**bigint**|Nombre maximal de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL Database, Managed Instance SQL Azure (non hyperscale) retourne toujours la valeur zéro (0).|
+|**stdev_page_server_io_reads**|**float**|Nombre de lectures d’e/s de serveur de pages pour le plan de requête dans l’intervalle d’agrégation. (exprimé sous la forme d’un nombre de pages de 8 Ko lues).<br><br/>**S’applique à :** Azure SQL Database hyperscale</br>**Remarque :** Azure SQL Data Warehouse, Azure SQL Database, Managed Instance SQL Azure (non hyperscale) retourne toujours la valeur zéro (0).|
   
 ## <a name="permissions"></a>Autorisations  
 Nécessite l’autorisation `VIEW DATABASE STATE`.  

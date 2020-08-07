@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944689"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863520"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Définition des options du projet (MySQLToSQL)
 Pour chaque projet SSMA, vous pouvez définir des options au niveau du projet. Ces options spécifient la façon dont les objets sont convertis, la façon dont les données sont migrées et la manière dont les types de données sources sont mappés aux types de données cibles.  Avant de convertir des objets en SQL Server ou SQL Azure ou de migrer des données vers SQL Server ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -38,13 +38,13 @@ SSMA comporte cinq jeux de paramètres de projet :
   
 Les paramètres du projet peuvent être configurés de quatre façons :  
   
--   Par défaut  
+-   Default  
   
 -   Optimistic  
   
 -   Complète  
   
--   Personnalisé  
+-   Custom  
   
 Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste conserve la syntaxe MySQL actuelle et est plus facile à lire. Toutefois, il se peut que la conservation de la syntaxe actuelle ne soit pas exacte. Si la syntaxe MySQL doit être convertie en SQL Server ou SQL Azure syntaxe équivalente, le mode complet effectue la conversion la plus complète. Toutefois, le code résultant peut être plus difficile à lire. Dans le mode personnalisé, vous pouvez définir les options.  
   
@@ -60,7 +60,7 @@ Pour plus d’informations sur les paramètres et sur la façon dont les paramè
   
 -   [Paramètres du projet &#40;synchronisation&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Paramètres du projet &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Paramètres du projet &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>Définition des options du projet  
 Dans SSMA, vous pouvez configurer des paramètres par défaut pour tous les projets. Ces paramètres sont enregistrés dans le fichier de configuration SSMA et appliqués à tous les nouveaux projets que vous créez.  

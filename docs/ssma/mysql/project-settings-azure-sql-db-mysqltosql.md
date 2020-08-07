@@ -1,5 +1,5 @@
 ---
-title: Paramètres du projet (Azure SQL DB) (MySQLToSQL) | Microsoft Docs
+title: Paramètres du projet (Azure SQL Database) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4125f73ec34418261d0308221c448cae1fb06298
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908820"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862310"
 ---
-# <a name="project-settings-azure-sql-db-mysqltosql"></a>Paramètres du projet (Azure SQL DB) (MySQLToSQL)
+# <a name="project-settings-azure-sql-database-mysqltosql"></a>Paramètres du projet (Azure SQL Database) (MySQLToSQL)
 Les paramètres du projet SQL Azure vous permettent de configurer l’ajout du suffixe de base de données SQL Azure dans la boîte de dialogue de connexion et d’autoriser également l’implémentation d’un mécanisme de pulsation dans SQL Azure connexion.  
   
 Le volet SQL Azure est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** .  

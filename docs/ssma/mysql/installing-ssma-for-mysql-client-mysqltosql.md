@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7dc2cb4216386e13c57d31f121809a604e91b67d
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: d6bda2cad0761dbb53fcc4bb66d29829841f249d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411607"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824033"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Installation de SSMA pour MySQL client (MySQLToSQL)
 
@@ -42,7 +42,7 @@ Avant d’installer SSMA, assurez-vous que l’ordinateur remplit les conditions
 - La [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.7.2 ou une version ultérieure. Vous pouvez l’obtenir à partir du [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Pilote ODBC 5,1 MySQL et connectivité avec les bases de données MySQL que vous souhaitez migrer. Vous pouvez installer MySQL à partir du site Web MySQL. Pour plus d’informations sur la connectivité, consultez [connexion à MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).
 - Accès à et autorisations suffisantes sur l’ordinateur qui héberge l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où vous allez migrer des objets et des données de base de données. Pour plus d’informations, consultez [connexion à SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md).
-- Dans le cas de [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] projets, accès à et autorisations suffisantes sur l’instance de [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] où vous allez migrer des données et des objets de base de données. Pour plus d’informations, consultez [connexion à la base de données SQL Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md).
+- Dans le cas de [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] projets, accès à et autorisations suffisantes sur l’instance de [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] où vous allez migrer des données et des objets de base de données. Pour plus d’informations, consultez [connexion à Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md).
 - 4 Go de RAM recommandés.
 
 ## <a name="installing-ssma-for-mysql-client"></a>Installation de SSMA pour MySQL client
@@ -67,4 +67,4 @@ L’emplacement d’installation par défaut est `C:\Program Files\Microsoft SQL
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Migration de bases de données MySQL vers SQL Server-Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+- [Migration de bases de données MySQL vers SQL Server Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477321"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864706"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Nouveautés de SSMA pour SAP ASE (SybaseToSQL)
 
@@ -114,9 +114,9 @@ La version 8.1 de SSMA pour SAP ASE a été améliorée avec des correctifs cibl
 
 La version v 8.0 de SSMA pour SAP ASE a été améliorée avec des correctifs ciblés conçus pour améliorer les mesures de qualité et de conversion. En outre, cette version offre les nouvelles fonctionnalités suivantes :
 
-* Prise en charge de **Azure SQL Database Managed instance** en tant que cible. Vous pouvez maintenant créer des projets ciblant Azure SQL Database Managed Instance :
+* Prise en charge d' **Azure SQL Managed instance** en tant que cible. Vous pouvez maintenant créer des projets ciblant Azure SQL Managed Instance :
 
-  ![Projet SQL DB MI](../media/ssma-newproject-sqldbmi.png)
+  ![Projet SQL Database MI](../media/ssma-newproject-sqldbmi.png)
 
 * **Conseiller de réparation**après conversion. En savoir plus à ce sujet [ici](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -236,8 +236,8 @@ La version de maintenance de SSMA pour Sybase de janvier 2016 contient les modif
 
 La version du 2014 juillet de SSMA pour Sybase contient les modifications suivantes :
 
-* Conversion améliorée du code Azure SQL DB.
-* Migration de la fonctionnalité Pack d’extension vers le schéma pour la prise en charge d’Azure SQL DB.
+* Amélioration de la conversion du code Azure SQL Database.
+* La fonctionnalité du pack d’extension a été déplacée vers le schéma pour prendre en charge Azure SQL Database.
 * Améliorations des performances améliorées testées pour les bases de données avec plus de 10 000 objets.
 * Ajout d’améliorations de l’interface utilisateur pour le traitement d’un grand nombre d’objets.
 * Ajout de la possibilité de mettre en évidence les schémas métier connus (afin qu’ils puissent être ignorés lors de la conversion).

@@ -1,5 +1,5 @@
 ---
-title: Connexion à Azure SQL DB (MySQLToSQL) | Microsoft Docs
+title: Connexion à Azure SQL Database (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103195"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822558"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Connexion à Azure SQL DB (MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>Connexion à Azure SQL Database (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Azure, vous devez vous connecter à l’instance cible de SQL Azure. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de SQL Azure et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées SQL Azure. SSMA stocke les informations de l’instance de SQL Azure à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
   
 Votre connexion à SQL Azure reste active jusqu’à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter à SQL Azure si vous souhaitez une connexion active au serveur. Vous pouvez travailler hors connexion jusqu’à ce que vous chargeant des objets de base de données dans SQL Azure et migriez les données.  
@@ -29,7 +29,7 @@ Les métadonnées relatives à l’instance de SQL Azure ne sont pas synchronis�
 ## <a name="required-sql-azure-permissions"></a>Autorisations de SQL Azure requises  
 Le compte utilisé pour se connecter à SQL Azure nécessite des autorisations différentes en fonction des actions effectuées par le compte :  
   
--   Pour convertir des objets MySQL [!INCLUDE[tsql](../../includes/tsql-md.md)] en syntaxe, pour mettre à jour des métadonnées à partir de SQL Azure, ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de SQL Azure.  
+-   Pour convertir des objets MySQL en [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe, pour mettre à jour des métadonnées à partir de SQL Azure, ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de SQL Azure.  
   
 -   Pour charger des objets de base de données dans SQL Azure, l’exigence d’autorisation minimale est l’appartenance au rôle de base de données **db_owner** dans la base de données cible.  
   
@@ -87,5 +87,5 @@ L’étape suivante de la migration dépend des besoins de votre projet :
 -   Si vous n’avez pas besoin d’effectuer ces tâches, vous pouvez convertir les définitions d’objet de base de données MySQL en SQL Azure définitions d’objets. Pour plus d’informations, consultez [conversion de bases de données MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration de bases de données MySQL vers SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migration de bases de données MySQL vers SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
