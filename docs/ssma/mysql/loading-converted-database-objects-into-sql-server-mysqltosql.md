@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fb68a40da645046d94dcd5e8b14ac90f0c53d8bc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935503"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Chargement d’objets de base de données convertis dans SQL Server (MySQLToSQL)
-Après avoir converti les bases de données MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous pouvez charger les objets de base de données résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez faire en sorte que SSMA crée les objets, ou vous pouvez générer un script pour les objets et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour les métadonnées cibles avec le contenu réel de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure base de données.  
+Après avoir converti les bases de données MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous pouvez charger les objets de base de données résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez faire en sorte que SSMA crée les objets, ou vous pouvez générer un script pour les objets et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour les métadonnées cibles avec le contenu réel de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Choix entre la synchronisation et les scripts  
 Si vous souhaitez charger les objets de base de données convertis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure sans modification, vous pouvez demander à SSMA de créer ou de recréer directement les objets de base de données. Cette méthode est rapide et facile, mais elle n’autorise pas la personnalisation du code Transact-SQL qui définit les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure.  
@@ -25,10 +25,10 @@ Si vous souhaitez charger les objets de base de données convertis dans [!INCLUD
 Si vous souhaitez modifier le Transact-SQL utilisé pour créer des objets, ou si vous souhaitez davantage de contrôle sur la création d’objets, utilisez SSMA pour créer des scripts. Vous pouvez ensuite modifier ces scripts, créer chaque objet individuellement et même utiliser SQL Server Agent pour planifier la création de ces objets.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Utilisation de SSMA pour synchroniser des objets avec SQL Server  
-Pour utiliser SSMA pour créer des SQL Server ou SQL Azure des objets de base de données, sélectionnez les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure l’Explorateur de métadonnées, puis synchronisez les objets avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, comme indiqué dans la procédure suivante. Par défaut, si les objets existent déjà dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, et si les métadonnées SSMA comportent des modifications locales ou des mises à jour de la définition de ces objets, SSMA modifie les définitions d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez modifier le comportement par défaut en modifiant les **paramètres du projet**.  
+Pour utiliser SSMA pour créer des objets SQL Server ou Azure SQL Database, vous sélectionnez les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure l’Explorateur de métadonnées, puis vous synchronisez les objets avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, comme indiqué dans la procédure suivante. Par défaut, si les objets existent déjà dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, et si les métadonnées SSMA comportent des modifications locales ou des mises à jour de la définition de ces objets, SSMA modifie les définitions d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez modifier le comportement par défaut en modifiant les **paramètres du projet**.  
   
 > [!NOTE]  
-> Vous pouvez sélectionner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des objets de base de données existants ou SQL Azure qui n’ont pas été convertis à partir des bases de données MySQL. Toutefois, ces objets ne seront pas recréés ou modifiés par SSMA.  
+> Vous pouvez sélectionner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des objets existants ou Azure SQL Database qui n’ont pas été convertis à partir des bases de données MySQL. Toutefois, ces objets ne seront pas recréés ou modifiés par SSMA.  
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>Pour synchroniser des objets avec SQL Server ou SQL Azure  
   

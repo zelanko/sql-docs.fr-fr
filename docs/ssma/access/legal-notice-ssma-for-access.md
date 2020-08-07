@@ -11,14 +11,14 @@ helpviewer_keywords:
 - disclaimer
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947516"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938222"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Mention légale (SSMA pour accès)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  

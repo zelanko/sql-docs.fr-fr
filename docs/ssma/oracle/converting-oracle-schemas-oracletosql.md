@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 907c04d8acd0859b71d1b31d2839c23d5e4b85e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395164"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935060"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversion de schémas Oracle (OracleToSQL)
 Après vous être connecté à Oracle, connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et définir les options de mappage de données et de projet, vous pouvez convertir des objets de base de données Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de base de données.  
@@ -38,7 +38,7 @@ Le tableau suivant répertorie les objets Oracle qui sont convertis et les objet
 |-|-|  
 |Fonctions|Si la fonction peut être convertie directement en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crée une fonction.<br /><br />Dans certains cas, la fonction doit être convertie en procédure stockée. Dans ce cas, SSMA crée une procédure stockée et une fonction qui appelle la procédure stockée.|  
 |Procédures|Si la procédure peut être convertie directement en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crée une procédure stockée.<br /><br />Dans certains cas, une procédure stockée doit être appelée dans une transaction autonome. Dans ce cas, SSMA crée deux procédures stockées : une qui implémente la procédure et une autre qui est utilisée pour appeler la procédure stockée d’implémentation.|  
-|Packages|SSMA crée un ensemble de procédures stockées et de fonctions unifiées par des noms d’objets similaires.|  
+|.|SSMA crée un ensemble de procédures stockées et de fonctions unifiées par des noms d’objets similaires.|  
 |Séquences|SSMA crée des objets séquences (SQL Server 2012 ou SQL Server 2014) ou émule des séquences Oracle.|  
 |Tables avec des objets dépendants, tels que des index et des déclencheurs|SSMA crée des tables avec des objets dépendants.|  
 |Affichage avec des objets dépendants, tels que des déclencheurs|SSMA crée des affichages avec des objets dépendants.|  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - reference, user interface
 - user interface
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0366c4549c557d2e5f90733f5dadba61cecdc22c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266964"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937753"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Informations de référence sur l’interface utilisateur (AccessToSQL)
-Cette section contient des rubriques d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aide pour Assistant Migration (SSMA) pour l’accès.  
+Cette section contient des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Migration (SSMA) pour l’accès.  
   
 ## <a name="in-this-section"></a>Contenu de cette section  
   
@@ -29,7 +29,7 @@ Cette section contient des rubriques d' [!INCLUDE[ssNoVersion](../../includes/ss
 |---------|---------------|  
 |[Sélection d’objet avancée &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Utilisez la boîte de dialogue **Sélectionner un objet avancé** pour rechercher des objets de base de données en utilisant des critères de filtre, puis sélectionnez ou désactivez ces objets.|  
 |[Rapport d’évaluation &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Utilisez la boîte de dialogue **rapport d’évaluation** pour analyser la conversion des objets de base de données Access et estimer le temps nécessaire à la migration.|  
-|[Se connecter à SQL Server](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Utilisez la boîte de dialogue **se connecter au SQL Server** pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’instance de vers laquelle vous souhaitez effectuer la migration.|  
+|[Se connecter à SQL Server](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Utilisez la boîte de dialogue **se connecter au SQL Server** pour vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers laquelle vous souhaitez effectuer la migration.|  
 |[Se connecter à SQL Azure](connect-to-azure-sql-db-accesstosql.md)|Utilisez la boîte de dialogue **se connecter au SQL Azure** pour vous connecter à l’instance de SQL Azure vers laquelle vous souhaitez effectuer la migration.|  
 |[Convertir, charger et migrer](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|La boîte de dialogue **convertir, charger et migrer** fait partie de l’Assistant Migration et s’affiche également lorsque vous utilisez la commande **convertir, charger et migrer** .|  
 |[Rapport de migration des données &#40;AccessToSQL&#41;](../../ssma/access/data-migration-report-accesstosql.md)|S’affiche après la migration des données et signale les réussites et les échecs de migration pour chaque table.|  
@@ -45,7 +45,7 @@ Cette section contient des rubriques d' [!INCLUDE[ssNoVersion](../../includes/ss
 |[Nouveau projet (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)|Utilisez la boîte de dialogue **nouveau projet** pour créer un nouveau projet SSMA.|  
 |[Paramètres du projet (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Utilisez la page **conversion** de la boîte de dialogue **paramètres du projet** pour spécifier la manière dont SSMA convertit les colonnes de mémo indexées, les clés primaires, les contraintes de clé étrangère, les horodateurs et les tables sans index.|  
 |[Paramètres du projet &#40;GUI&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-gui-accesstosql.md)|Utilisez la page GUI de la boîte de dialogue **paramètres du projet** pour spécifier la quantité de données qui s’affiche sous l’onglet **données** .|  
-|[Paramètres du projet (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilisez la page migration de la boîte de dialogue **paramètres du projet** pour spécifier la taille de lot de migration, le verrouillage de table, la vérification des contraintes, le déclenchement du déclencheur d’insertion, l’identité et la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestion des valeurs NULL, et comment gérer les dates qui se trouvent en dehors de la plage.|  
+|[Paramètres du projet (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilisez la page migration de la boîte de dialogue **paramètres du projet** pour spécifier la taille de lot de migration, le verrouillage de table, la vérification des contraintes, le déclenchement du déclencheur d’insertion, l’identité et la gestion des valeurs NULL, et comment gérer les dates qui se trouvent en dehors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plage.|  
 |[Paramètres du projet (Mappage de type)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Utilisez la page mappage de type de la boîte de dialogue **paramètres du projet** pour spécifier les mappages de types par défaut pour toutes les bases de données et les objets de base de données dans le projet SSMA.|  
 |[Paramètres du projet (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Utilisez la page SQL Azure de la boîte de dialogue **paramètres du projet** pour spécifier le suffixe de la base de données et l’intervalle de délai d’attente des pulsations.|  
 |[Enregistrer les métadonnées &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|La boîte de dialogue **enregistrer les métadonnées** s’affiche lorsque vous enregistrez un projet qui ne contient pas de métadonnées.|  

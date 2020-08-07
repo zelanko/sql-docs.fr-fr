@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping Sybase ASE Schemas to SQL Server Schemas
 - Type Mapping Settings
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 174f16b2b5a901b06f292f5bf53391fb7685eef1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865357"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931120"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mappage des types de données Sybase ASE et SQL Server (SybaseToSQL)
-Les types de bases de données Sybase Adaptive Server Enterprise (ASE) diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données ou SQL Azure. Lorsque vous convertissez des objets de base de données ASE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure, vous devez spécifier comment mapper les types de données de ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
+Les types de bases de données Sybase Adaptive Server Enterprise (ASE) diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de Azure SQL Database ou. Lorsque vous convertissez des objets de base de données ASE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure, vous devez spécifier comment mapper les types de données de ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
 SSMA possède un ensemble de mappages de types de données par défaut. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet &#40;mappage de Type&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  

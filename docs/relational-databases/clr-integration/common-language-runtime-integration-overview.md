@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2982f3c078e23529eff2c8cb050ea66628d49da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864520"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934358"
 ---
 # <a name="common-language-runtime-integration"></a>Intégration du Common Language Runtime
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ Vous pouvez également regarder cette vidéo de 6 minutes qui vous montre commen
 
 ## <a name="when-to-use-clr-modules"></a>Quand utiliser les modules CLR ?
 
-L’intégration du CLR vous permet d’implémenter des fonctionnalités complexes disponibles dans .NET Framework, telles que des expressions régulières, du code pour accéder à des ressources externes (serveurs, services Web, bases de données), un chiffrement personnalisé, etc. Voici quelques-uns des avantages de l’intégration du CLR côté serveur :
+L’intégration du CLR vous permet d’implémenter des fonctionnalités complexes disponibles dans .NET Framework telles que les expressions régulières, le code pour l’accès aux ressources externes (serveurs, services Web, bases de données), le chiffrement personnalisé, etc. Voici quelques-uns des avantages de l’intégration du CLR côté serveur :
   
 -   **Un meilleur modèle de programmation.** Les langages .NET Framework sont à bien des égards plus riches que Transact-SQL, en proposant des constructions et des fonctions qui n'étaient pas jusque-là accessibles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les développeurs peuvent aussi tirer parti de la puissance de la bibliothèque du .NET Framework, qui propose un ensemble complet de classes pour résoudre rapidement et efficacement les problèmes de programmation.  
   
 -   **Sécurité améliorée.** Le code managé s'exécute dans un environnement CLR, hébergé par le moteur de base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met celui-ci à profit pour fournir une alternative plus sûre et plus sécurisée aux procédures stockées étendues disponibles dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Possibilité de définir des types de données et des fonctions d'agrégation.** Les types et les agrégats définis par l'utilisateur sont deux nouveaux objets de base de données managés qui étendent les fonctions de stockage et d'interrogation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Possibilité de définir des types de données et des fonctions d'agrégation.** Les types définis par l’utilisateur et les agrégats définis par l’utilisateur sont deux nouveaux objets de base de données managés qui étendent les fonctionnalités de stockage et d’interrogation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Développement simplifié via un environnement standardisé.** Le développement de bases de données est intégré aux prochaines versions de l'environnement de développement  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET. Les développeurs se servent des mêmes outils pour développer et déboguer les objets de base de données et les scripts que ceux qu'ils utilisent pour écrire des composants et services .NET Framework de couche intermédiaire ou client.  
   

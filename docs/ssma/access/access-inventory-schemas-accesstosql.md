@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068954"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934150"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Accéder aux schémas d’inventaire (AccessToSQL)
-Les sections suivantes décrivent les tables créées par SSMA lorsque vous exportez des schémas d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]accès vers.  
+Les sections suivantes décrivent les tables créées par SSMA lorsque vous exportez des schémas d’accès vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="databases"></a>Bases de données  
 Les métadonnées de base de données sont exportées vers la table **SSMA_Access_InventoryDatabases** . Ce tableau contient les colonnes suivantes :  
@@ -54,7 +54,7 @@ Les métadonnées de base de données sont exportées vers la table **SSMA_Acces
 |**DatabaseId**|**uniqueidentifier**|GUID qui identifie de façon unique chaque base de données. Cette colonne est également la clé primaire de la table.|  
 |**DatabaseName**|**nvarchar(4000)**|Nom de la base de données Access.|  
 |**ExportTime**|**datetime**|Date et heure auxquelles ces métadonnées ont été créées par SSMA.|  
-|**FilePath**|**nvarchar(4000)**|Chemin d’accès complet et nom de fichier de la base de données Access.|  
+|**Cheminfichier**|**nvarchar(4000)**|Chemin d’accès complet et nom de fichier de la base de données Access.|  
 |**Taille**|**bigint**|Taille de la base de données Access, en Ko.|  
 |**FileOwner**|**nvarchar(4000)**|Compte Windows qui est spécifié en tant que propriétaire de la base de données Access.|  
 |**DateCreated**|**datetime**|Date et heure de création de la base de données Access.|  
@@ -79,7 +79,7 @@ Les métadonnées de table sont exportées vers la table **SSMA_Access_Inventory
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient cette table.|  
 |**TableId**|**uniqueidentifier**|GUID qui identifie de façon unique la table. Cette colonne est également la clé primaire de la table.|  
 |**TableName**|**nvarchar(4000)**|Nom de la table.|  
-|**RowsCount**|**int**|Nombre de lignes dans la table.|  
+|**RowsCount**|**int**|Nombre de lignes du tableau.|  
 |**ValideSi**|**nvarchar(4000)**|Règle définissant une entrée valide pour la table. Si aucune règle de validation n’existe, le champ contient une chaîne vide.|  
 |**LinkedTable**|**nvarchar(4000)**|Une autre table, le cas échéant, qui est liée à la table. La liaison de tables permet d’effectuer des ajouts, des suppressions et des mises à jour de l’autre table à l’aide de cette table.|  
 |**ExternalSource**|**nvarchar(4000)**|La source de données, le cas échéant, qui est associée à la table. Si une table est liée, elle possède une source de données externe spécifiée dans ce champ.|  
@@ -96,7 +96,7 @@ Les métadonnées de colonne sont exportées vers la table **SSMA_Access_Invento
 |**IsNullable**|**bit**|Spécifie si la colonne peut contenir des valeurs NULL. Si la valeur est 1, la colonne peut contenir des valeurs NULL. Si la valeur est égale à 0, la colonne ne peut pas contenir de valeurs NULL. Notez que la règle de validation peut également être utilisée pour empêcher les valeurs NULL.|  
 |**DataType**|**nvarchar(4000)**|Type de données Access de la colonne, tel que **Text** ou **long**.|  
 |**IsAutoIncrement**|**bit**|Spécifie si la colonne incrémente automatiquement les valeurs entières. Si la valeur est 1, les entiers s’incrémentent automatiquement.|  
-|**Formations**|**smallint**|Ordre de la colonne dans la table, en commençant à zéro.|  
+|**Ordinal**|**smallint**|Ordre de la colonne dans la table, en commençant à zéro.|  
 |**DefaultValue**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
 |**ValideSi**|**nvarchar(4000)**|Règle utilisée pour valider les données ajoutées ou mises à jour dans la colonne.|  
   

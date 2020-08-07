@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f6d6860f1f30c970148555d81a158a7ec98a72f3
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 194d33d0b5318ca66494b838c7f59dfde5c72b88
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863490"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933440"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>Migration de bases de données Oracle vers SQL Server (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour Oracle est un environnement complet qui vous aide à migrer rapidement des bases de données Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database ou Azure SQL Data Warehouse. En utilisant SSMA pour Oracle, vous pouvez examiner les données et les objets de base de données, évaluer les bases de données pour la migration, migrer des objets de base de données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database ou Azure SQL Data Warehouse, puis migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database ou Azure SQL Data Warehouse. Notez que vous ne pouvez pas migrer les schémas SYS et Oracle SYSTEM.

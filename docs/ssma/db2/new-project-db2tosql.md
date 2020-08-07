@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4a670a9766388d4ba1d1908a71ef7a32147f60fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 987e66832ac994e47b313ba82d4a24c4a37d6c52
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824031"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933750"
 ---
 # <a name="new-project-db2tosql"></a>Nouveau projet (DB2ToSQL)
 Utilisez la boîte de dialogue **nouveau projet** pour créer un nouveau projet SSMA. Pour accéder à la boîte de dialogue **nouveau projet** , dans le menu **fichier** , cliquez sur **nouveau projet**.  
@@ -23,7 +23,7 @@ Utilisez la boîte de dialogue **nouveau projet** pour créer un nouveau projet 
 **Nom**  
 Entrez le nom du projet. SSMA va ajouter l’extension de fichier.  
   
-**Lieu**  
+**Emplacement**  
 Entrez ou accédez au dossier ou à l’emplacement réseau pour enregistrer le projet.  
   
 **Migrer vers**  

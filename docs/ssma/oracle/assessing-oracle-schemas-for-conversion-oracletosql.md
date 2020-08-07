@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264553"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935063"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Évaluation des schémas Oracle pour la conversion (OracleToSQL)
-Avant de charger des objets et de migrer des données vers, vous devez déterminer le niveau de complexité de la migration et le temps nécessaire à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la migration. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets qui seront convertis avec succès. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  
+Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez déterminer le niveau de complexité de la migration et le temps nécessaire à la migration. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets qui seront convertis avec succès. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  
   
 ## <a name="creating-assessment-reports"></a>Création de rapports d’évaluation  
-Lorsqu’il crée ce rapport d’évaluation, SSMA convertit les objets de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données Oracle sélectionnés en syntaxe, puis affiche les résultats.  
+Lorsqu’il crée ce rapport d’évaluation, SSMA convertit les objets de base de données Oracle sélectionnés en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe, puis affiche les résultats.  
   
 **Pour créer un rapport d’évaluation**  
   
@@ -77,7 +77,7 @@ Le volet statistiques de conversion affiche les statistiques de conversion. Si l
   
     -   Dans Oracle, vous pouvez modifier l’objet Oracle pour supprimer ou réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
-    -   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Explorateur de métadonnées et l’Explorateur de métadonnées Oracle, désactivez la case à cocher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en regard de l’élément avant de charger les objets dans et de migrer les données à partir d’Oracle.  
+    -   Vous pouvez exclure l’objet de la migration. Dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées et l’Explorateur de métadonnées Oracle, désactivez la case à cocher en regard de l’élément avant de charger les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de migrer les données à partir d’Oracle.  
   
 ## <a name="next-step"></a>étape suivante  
 [Conversion de schémas Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bb652a1d3a0d9c5ee08a936e24e521948d264fa8
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d3835e8988a04082d0f4666e0564029de3f767a9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823300"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933510"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilisation de projets SSMA (DB2ToSQL)
 Pour migrer des bases de données DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  

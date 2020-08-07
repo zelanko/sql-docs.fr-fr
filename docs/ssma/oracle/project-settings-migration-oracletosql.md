@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b2e6e8b0f74194383afd3adc26a0f5b9c7d13007
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933240"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Paramètres du projet (Migration) (OracleToSQL)
-La page migration de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migre les données d’Oracle vers.  
+La page migration de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA migre les données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Le volet migration est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** .  
   
@@ -48,7 +48,7 @@ Le volet migration est disponible dans les boîtes de dialogue **paramètres du 
 |**Conserver les valeurs NULL**|Spécifie si SSMA conserve les valeurs NULL dans les données sources lorsqu’il ajoute des données à SQL Server, quelles que soient les valeurs par défaut spécifiées dans SQL Server.<br /><br />**Mode par défaut**: true<br /><br />**Mode optimiste**: true<br /><br />**Mode complet**: true|  
 |**Marquer l’opération de suppression de chaîne avec une erreur**|Si la taille de la colonne cible est inférieure à la longueur de la chaîne source, la valeur sera tronquée et marquée comme une erreur.<br /><br />**Mode par défaut**: Oui<br /><br />**Mode optimiste**: Oui<br /><br />**Mode complet**: Oui|  
 |**En cas d’erreur**|Arrête la migration des données lorsqu’une erreur se produit. Trois options s’imposent :<br /><br />**Arrêter la migration :** Arrête l’opération de migration des données<br /><br />**Passer au tableau suivant :** Arrête la migration des données vers la table actuelle et passe à la suivante<br /><br />**Passer au traitement suivant :** Arrête la migration des données vers le lot actuel et passe à la suivante<br /><br />**Mode par défaut**: passer au traitement suivant<br /><br />**Mode optimiste**: passer au lot suivant<br /><br />**Mode complet**: passer au lot suivant|  
-|**Remplacer les dates non prises en charge**|Spécifie si SSMA doit corriger les dates antérieures à la date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du **DateTime** la plus ancienne (01 janvier 1753).<br /><br />Pour conserver les valeurs de date actuelles, sélectionnez **ne rien faire**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]n’accepte pas les dates antérieures au 1er janvier 1753 dans une colonne DateTime. Si vous utilisez des dates antérieures, vous devez convertir les valeurs DateTime en valeurs de caractères.<br /><br />Pour convertir les dates antérieures au 1er janvier 1753 en NULL, sélectionnez **remplacer par null**.<br /><br />Pour remplacer les dates antérieures au 1er janvier 1753 par une Date prise en charge, sélectionnez **remplacer par la date de prise en charge la plus proche**.<br /><br />**Mode par défaut**: ne rien faire<br /><br />**Mode optimiste**: ne rien faire<br /><br />**Mode complet**: remplacez par la date de prise en charge la plus proche|  
+|**Remplacer les dates non prises en charge**|Spécifie si SSMA doit corriger les dates antérieures à la date du DateTime la plus ancienne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** (01 janvier 1753).<br /><br />Pour conserver les valeurs de date actuelles, sélectionnez **ne rien faire**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]n’accepte pas les dates antérieures au 1er janvier 1753 dans une colonne DateTime. Si vous utilisez des dates antérieures, vous devez convertir les valeurs DateTime en valeurs de caractères.<br /><br />Pour convertir les dates antérieures au 1er janvier 1753 en NULL, sélectionnez **remplacer par null**.<br /><br />Pour remplacer les dates antérieures au 1er janvier 1753 par une Date prise en charge, sélectionnez **remplacer par la date de prise en charge la plus proche**.<br /><br />**Mode par défaut**: ne rien faire<br /><br />**Mode optimiste**: ne rien faire<br /><br />**Mode complet**: remplacez par la date de prise en charge la plus proche|  
 |**Verrou de table**|Spécifie si SSMA verrouille des tables lorsqu’il ajoute des données aux tables pendant la migration des données. Obtient un verrou de mise à jour en bloc pour la durée de l’opération de copie en bloc. Si la valeur est false, un verrou est défini au niveau de la ligne.<br /><br />**Mode par défaut**: true<br /><br />**Mode optimiste**: true<br /><br />**Mode complet**: true|  
   
 ## <a name="parallel-data-migration"></a>Migration de données parallèles  

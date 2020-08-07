@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264512"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934988"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Options de ligne de commande dans la console SSMA (OracleToSQL)
 Microsoft vous fournit des options de ligne de commande Set robustes pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes sections.  
@@ -30,7 +30,7 @@ Dans les présentes, vous trouverez les options de commande de la console.
   
 Dans le cadre de cette section, le terme « option » est également appelé « commutateur ».  
   
--   Les options ne respectent pas la casse et peuvent commencer par un**-** caractère « » ou**/**« ».  
+-   Les options ne respectent pas la casse et peuvent commencer par un caractère « » ou « » **-** **/** .  
   
 -   Si des options sont spécifiées, il devient obligatoire de spécifier les paramètres d’option correspondants.  
   
@@ -127,7 +127,7 @@ Cette option indique le mot de passe chiffré pour les connexions au serveur. El
   
 Vous ne pouvez pas entrer une autre option ou un autre mot de passe en tant que paramètre de ligne de commande. Dans le cas contraire, une erreur est générée. Pour plus d’informations, reportez-vous à la section [gestion des mots de passe](managing-passwords-oracletosql.md) .  
   
-Les sous-options suivantes sont prises en `-p/securepassword`charge pour :  
+Les sous-options suivantes sont prises en charge pour `-p/securepassword` :  
   
 -   Pour ajouter un mot de passe au stockage protégé pour un ID de serveur spécifié ou pour tous les ID de serveur définis dans le fichier de connexion au serveur. L’option-overwrite, ci-dessous, met à jour le mot de passe s’il existe déjà :  
   

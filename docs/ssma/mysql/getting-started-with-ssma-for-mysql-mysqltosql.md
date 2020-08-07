@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c1cc8f5ddbe1efc1a1038bf2e9d6595e31ff3102
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823649"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935495"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Bien démarrer avec SSMA pour MySQL (MySQLToSQL)
 Assistant Migration SQL Server (SSMA) pour MySQL vous permet de convertir rapidement les schémas de base de données MySQL en SQL Server ou Azure SQL Database schémas, de charger les schémas résultants dans SQL Server ou Azure SQL Database, et de migrer les données de MySQL vers SQL Server ou Azure SQL Database.  

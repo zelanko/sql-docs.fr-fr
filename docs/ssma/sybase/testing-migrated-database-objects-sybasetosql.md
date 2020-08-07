@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 360325063258b2bc208115f91357f341c68b7150
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020914"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934598"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Test des objets de base de données migrés (SybaseToSQL)
 Assistant Migration Microsoft SQL Server pour Sybase tester (testeur SSMA) teste automatiquement la conversion de l’objet de base de données et la migration des données effectuée par SSMA. Une fois toutes les étapes de migration de SSMA terminées, utilisez le testeur SSMA pour vérifier que les objets convertis fonctionnent de la même façon et que toutes les données ont été correctement transférées.  
@@ -43,20 +43,20 @@ SSMA tester exécute les objets sélectionnés pour le test sur Sybase et leurs 
 -   Les jeux de résultats sont-ils identiques ?  
   
 > [!NOTE]  
-> Prise! N’utilisez jamais le testeur SSMA sur les systèmes de production. Au cours de l’exécution du testeur, le schéma source et les données sont modifiés. Pendant ce temps, la restauration complète de l’état d’origine peut être impossible pour certains types de code testé.  
+> Attention ! N’utilisez jamais le testeur SSMA sur les systèmes de production. Au cours de l’exécution du testeur, le schéma source et les données sont modifiés. Pendant ce temps, la restauration complète de l’état d’origine peut être impossible pour certains types de code testé.  
   
 ## <a name="prerequisites"></a>Prérequis  
 Si vous souhaitez utiliser SSMA tester, installez SSMA Sybase extension Pack avec l’option **installer la base de données du testeur** activée.  
   
 En outre, vérifiez les éléments suivants :  
   
--   Le fournisseur Sybase OLE DB est installé sur l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où s’exécute.  
+-   Le fournisseur Sybase OLE DB est installé sur l’ordinateur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  
   
--   L’intégration du Common Language Runtime (CLR) a été activée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le moteur de base de données.  
+-   L’intégration du Common Language Runtime (CLR) a été activée sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données.  
   
 Notez que la version actuelle de SSMA tester ne prend pas en charge l’exécution parallèle de différents utilisateurs sur le même serveur source ou cible.  
   
-## <a name="getting-started"></a>Mise en route  
+## <a name="getting-started"></a>Prise en main  
 [Création de cas de test &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  

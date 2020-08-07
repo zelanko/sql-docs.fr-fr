@@ -27,14 +27,14 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293686"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934130"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Ajout et suppression de fichiers de base de données Access (AccessToSQL)
 Pour migrer des données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez ajouter une ou plusieurs bases de données Access au projet SSMA. Ces bases de données doivent être Access 97 ou versions ultérieures. Si vous avez des bases de données d’une version antérieure d’Access, vous devez convertir les bases de données vers une version plus récente. Pour ce faire, vous devez ouvrir et enregistrer les bases de données dans Access 97 ou une version ultérieure avant de les ajouter à SSMA.  
@@ -85,7 +85,7 @@ Si vous souhaitez ajouter plusieurs bases de données Access de différents doss
   
     Vous pouvez utiliser les boutons **Sélectionner tout** et **Effacer tout** en haut de la liste pour sélectionner ou effacer toutes les bases de données. Vous pouvez maintenir la touche CTRL enfoncée pour sélectionner plusieurs bases de données, ou maintenir la touche Maj enfoncée pour sélectionner une plage de bases de données.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquez sur **Next**.  
   
 8.  Dans la page vérifier, cliquez sur **Terminer**.  
   

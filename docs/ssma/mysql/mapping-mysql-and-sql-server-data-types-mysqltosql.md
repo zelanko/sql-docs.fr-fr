@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823464"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935354"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mappage des types de données MySQL et SQL Server (MySQLToSQL)
-Les types de base de données MySQL diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données ou SQL Azure. Lorsque vous convertissez des objets de base de données MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure, vous devez spécifier comment mapper les types de données de MySQL à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  
+Les types de base de données MySQL diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de Azure SQL Database ou. Lorsque vous convertissez des objets de base de données MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure, vous devez spécifier comment mapper les types de données de MySQL à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
 SSMA possède un ensemble de mappages de types de données par défaut. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet &#40;mappage de Type&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -68,9 +68,9 @@ Lorsque vous affichez l’onglet **mappage de type** dans SSMA, l’arrière-pla
   
     Cela vous permet de personnaliser le mappage des données pour les valeurs plus petites et plus grandes du même type de données. Sous **type de cible**, sélectionnez le SQL Server cible ou le type de données SQL Azure.  
   
-    1.  Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur des données dans la zone **remplacer par** , puis cliquez sur **OK**.  
+    -  Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur des données dans la zone **remplacer par** , puis cliquez sur **OK**.  
   
-    2.  Certains types nécessitent une **précision** et une **échelle** de type de données cible. Si nécessaire, entrez la nouvelle précision et l’échelle dans la zone **remplacer par** , puis cliquez sur **OK** .  
+    -  Certains types nécessitent une **précision** et une **échelle**de type de données cible. Si nécessaire, entrez la nouvelle précision et l’échelle dans la zone **remplacer par** , puis cliquez sur **OK**.  
   
 -   **Pour supprimer un mappage de type de données, procédez comme suit :**  
   

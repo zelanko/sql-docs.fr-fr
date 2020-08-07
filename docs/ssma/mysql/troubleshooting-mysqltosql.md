@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a531208e03c38af7edfa8baf071f855ecd89024d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a1430b3b26f3cde59160a353bf922e8ce480a33f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944643"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935088"
 ---
 # <a name="troubleshooting-mysqltosql"></a>Résolution des problèmes (MySQLToSQL)
 Il n’est pas rare de rencontrer des problèmes de migration à mi-chemin pour exécuter les commandes ou les scripts de la console.  

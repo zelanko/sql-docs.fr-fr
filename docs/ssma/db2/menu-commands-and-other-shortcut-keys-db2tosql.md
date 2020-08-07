@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074150"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933720"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Commandes de menu et autres touches de raccourci (DB2ToSQL)
 Les sections suivantes décrivent les raccourcis clavier permettant d’accéder aux commandes de menu et autres touches de raccourci utilisées dans les différentes boîtes de dialogue de l’application SSMA pour DB2.  
@@ -79,7 +79,7 @@ Pour accéder au menu Outils, le raccourci clavier utilisé est ALT + T. Le tabl
 |Créer un rapport.|ALT + T + C|  
 |Convertissez le schéma.|ALT + T + N ou CTRL + R|  
 |Actualisation à partir de la base de données DB2.|ALT + T + R|  
-|Synchronisez avec SQL Server ou SQL Azure base de données.|ALT + T + S|  
+|Synchroniser avec SQL Server ou Azure SQL Database.|ALT + T + S|  
 |Enregistrer en tant que script.|ALT + T + A|  
 |Migrez les données.|ALT + T + M|  
 |Arrêter l’opération en cours.|ALT + T + O|  

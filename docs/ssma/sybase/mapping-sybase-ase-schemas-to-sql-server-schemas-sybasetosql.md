@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865327"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931224"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mappage de schémas Sybase ASE à des schémas SQL Server (SybaseToSQL)
-Dans Sybase Adaptive Server Enterprise (ASE), chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’une base de données et d’un schéma vers la même base de données et le même schéma dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure bases de données et schémas.  
+Dans Sybase Adaptive Server Enterprise (ASE), chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’une base de données et d’un schéma vers la même base de données et le même schéma dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>Schémas ASE et SQL Server ou SQL Azure  
 ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure spécifient tous deux des bases de données et leurs schémas en utilisant la notation en deux parties comme *Database. Schema*. Par exemple, dans une base de données de **démonstration** ASE, il peut y avoir un schéma **dbo** . Cette paire base de données et schéma est spécifiée en tant que **Demo. dbo**. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure a les mêmes base de données et schéma, la paire est également spécifiée en tant que **Demo. dbo**.  
@@ -51,7 +51,7 @@ Vous pouvez mapper une base de données source à une base de données cible. Pa
   
 -   Mappage à SQL Azure  
   
-Vous pouvez mapper la base de données source à la cible connectée SQL Azure base de données ou à n’importe quel schéma dans la base de données cible SQL Azure connectée. Si vous mappez le schéma source à un schéma non existant dans une base de données cible connectée, vous êtes invité à entrer un message **«le schéma n’existe pas dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ? «** Cliquez sur Oui.  
+Vous pouvez mapper la base de données source au Azure SQL Database cible connecté ou à n’importe quel schéma du Azure SQL Database cible connecté. Si vous mappez le schéma source à un schéma non existant dans une base de données cible connectée, vous êtes invité à entrer un message **«le schéma n’existe pas dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ? «** Cliquez sur Oui.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Rétablissement de la base de données et du schéma par défaut  
 Si vous personnalisez le mappage entre un schéma ASE et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma ou SQL Azure, vous pouvez rétablir les valeurs par défaut du mappage.  

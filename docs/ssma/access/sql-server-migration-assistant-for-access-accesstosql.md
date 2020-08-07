@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: 2e4ce80a111efcf978da55cab280205b08acdd1f
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292940"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933995"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>Assistant Migration SQL Server pour l’accès (AccessToSQL)
 
@@ -24,7 +24,7 @@ ms.locfileid: "84292940"
   
 Cette documentation vous présente les SSMA pour l’accès et fournit des instructions pas à pas pour migrer des bases de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database et des informations sur les problèmes qui peuvent se produire après la migration.  
   
-## <a name="contents"></a>Contents  
+## <a name="contents"></a>Contenu  
   
 |Section|Description|
 |-----------|---------------|
