@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f89fa45ce0ca73d3406a87c7739ce6e7d777918
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aedd4461b08c1d3c61eb3d96f8ce78fdf5a401d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887826"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943057"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Accès aux données à partir d'objets de base de données CLR
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "85887826"
  [Intégration et transactions du CLR](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  Explique comment la nouvelle infrastructure de transaction fournie dans l'espace de noms System.Transactions s'intègre à ADO.NET et décrit l'intégration du CLR de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Sérialisation XML à partir d'objets de base de données CLR](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [Sérialisation XML à partir d'objets de base de données CLR](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization)  
  Explique comment activer les scénarios de sérialisation XML des objets de base de données CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
   

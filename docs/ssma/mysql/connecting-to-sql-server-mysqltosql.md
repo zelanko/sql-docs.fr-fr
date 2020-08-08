@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f79784b6498f080b15f1ef370e8a3f31be81a871
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 548433b02590ccacf164e9479690f1adadbbc3c4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823294"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936222"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Connexion à SQL Server (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Server, vous devez vous connecter à l’instance cible de SQL Server. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de SQL Server et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées SQL Server. SSMA stocke les informations de l’instance de SQL Server à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -84,8 +84,8 @@ Il est autorisé à se connecter/se reconnecter à des versions ultérieures de 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Oui|Oui|Oui|Oui||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Oui|Oui|Oui||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Oui|Oui||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Oui||  
-|SQL Azure||||||Oui|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Yes||  
+|SQL Azure||||||Yes|  
   
 > [!IMPORTANT]  
 > La conversion des objets de base de données est effectuée en fonction du type de projet, mais pas de celui de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connectée à. Dans le cas d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un projet 2005, la conversion est effectuée en fonction du nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, même si vous êtes connecté à une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  

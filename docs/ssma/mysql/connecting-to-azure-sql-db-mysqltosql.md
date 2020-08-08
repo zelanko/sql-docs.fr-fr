@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822558"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935938"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>Connexion à Azure SQL Database (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Azure, vous devez vous connecter à l’instance cible de SQL Azure. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de SQL Azure et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées SQL Azure. SSMA stocke les informations de l’instance de SQL Azure à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -63,7 +63,7 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
 > SSMA pour MySQL ne prend pas en charge la connexion à la base de données **Master** dans SQL Azure.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Synchronisation des métadonnées de SQL Azure  
-Les métadonnées relatives aux bases de données SQL Azure ne sont pas automatiquement mises à jour. Les métadonnées dans SQL Azure Explorateur de métadonnées sont un instantané des métadonnées lorsque vous vous êtes connecté pour la première fois à SQL Azure, ou la dernière fois que vous avez mis à jour manuellement les métadonnées. Vous pouvez mettre à jour manuellement les métadonnées de toutes les bases de données ou d’une base de données ou d’un objet de base de données unique.  
+Les métadonnées relatives aux bases de données dans Azure SQL Database ne sont pas automatiquement mises à jour. Les métadonnées dans SQL Azure Explorateur de métadonnées sont un instantané des métadonnées lorsque vous vous êtes connecté pour la première fois à SQL Azure, ou la dernière fois que vous avez mis à jour manuellement les métadonnées. Vous pouvez mettre à jour manuellement les métadonnées de toutes les bases de données ou d’une base de données ou d’un objet de base de données unique.  
   
 **Pour synchroniser les métadonnées**  
   
@@ -78,7 +78,7 @@ Les métadonnées relatives aux bases de données SQL Azure ne sont pas automati
 ## <a name="next-step"></a>étape suivante  
 L’étape suivante de la migration dépend des besoins de votre projet :  
   
--   Pour personnaliser le mappage entre les schémas MySQL et les bases de données SQL Azure et les schémas, consultez [mappage de bases de données MySQL à des schémas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   Pour personnaliser le mappage entre les schémas MySQL et les Azure SQL Database, consultez [mappage de bases de données MySQL à des schémas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 -   Pour personnaliser les options de configuration des projets, consultez [définition des options de projet &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   

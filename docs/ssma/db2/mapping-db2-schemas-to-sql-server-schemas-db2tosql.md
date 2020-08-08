@@ -7,27 +7,27 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 50845a9bdf3c3185d7b69bb86a75b2a3d332ef6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ed1535a9e8af398b9cac7742ab955822cb6034d0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074172"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936844"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mappage de schémas DB2 à des schémas de SQL Server (DB2ToSQL)
-Dans DB2, chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’un schéma DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une base de données nommée pour le schéma. Toutefois, vous pouvez personnaliser le mappage entre les schémas DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les bases de données.  
+Dans DB2, chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’un schéma DB2 vers une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données nommée pour le schéma. Toutefois, vous pouvez personnaliser le mappage entre les schémas DB2 et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
   
 ## <a name="db2-and-sql-server-schemas"></a>Schémas DB2 et SQL Server  
 Une base de données DB2 contient des schémas. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient plusieurs bases de données, chacune pouvant avoir plusieurs schémas.  
   
-Le concept DB2 d’un schéma est mappé au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept d’une base de données et à l’un de ses schémas. Par exemple, DB2 peut avoir un schéma nommé **HR**. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut avoir une base de données nommée **HR**et au sein de cette base de données sont des schémas. Un schéma est le schéma **dbo** (ou propriétaire de la base de données). Par défaut, le schéma DB2 **HR** est mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et au schéma **hr. dbo**. SSMA fait référence à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la combinaison base de données et schéma en tant que schéma.  
+Le concept DB2 d’un schéma est mappé au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept d’une base de données et à l’un de ses schémas. Par exemple, DB2 peut avoir un schéma nommé **HR**. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut avoir une base de données nommée **HR**et au sein de cette base de données sont des schémas. Un schéma est le schéma **dbo** (ou propriétaire de la base de données). Par défaut, le schéma DB2 **HR** est mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et au schéma **hr. dbo**. SSMA fait référence à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinaison base de données et schéma en tant que schéma.  
   
-Vous pouvez modifier le mappage entre DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les schémas.  
+Vous pouvez modifier le mappage entre DB2 et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modification de la base de données et du schéma cibles  
-Dans SSMA, vous pouvez mapper un schéma DB2 à n’importe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quel schéma disponible.  
+Dans SSMA, vous pouvez mapper un schéma DB2 à n’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma disponible.  
   
 **Pour modifier la base de données et le schéma**  
   
@@ -49,17 +49,17 @@ Dans SSMA, vous pouvez mapper un schéma DB2 à n’importe [!INCLUDE[ssNoVersio
   
 -   Mappage à SQL Server  
   
-Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappée à la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’est pas existante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur, vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
+Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est mappée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’est pas existante sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Rétablissement de la base de données et du schéma par défaut  
-Si vous personnalisez le mappage entre un schéma DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un schéma, vous pouvez rétablir les valeurs par défaut du mappage.  
+Si vous personnalisez le mappage entre un schéma DB2 et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma, vous pouvez rétablir les valeurs par défaut du mappage.  
   
 **Pour rétablir la base de données et le schéma par défaut**  
   
 1.  Sous l’onglet Mappage de schéma, sélectionnez n’importe quelle ligne et cliquez sur **rétablir les valeurs par défaut** pour rétablir la base de données et le schéma par défaut.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Si vous souhaitez analyser la conversion d’objets DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous pouvez effectuer un rapport de migration des [données (SSMA commun)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
+Si vous souhaitez analyser la conversion d’objets DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous pouvez effectuer un [rapport de migration des données (SSMA commun)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Connexion à SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

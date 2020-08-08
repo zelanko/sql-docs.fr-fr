@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141008"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936886"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mappage des types de données DB2 et SQL Server (DB2ToSQL)
-Les types de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données DB2 diffèrent des types de base de données. Lorsque vous convertissez des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données DB2 en objets, vous devez spécifier comment mapper les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]types de données de DB2 à. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
+Les types de base de données DB2 diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier comment mapper les types de données de DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
 SSMA possède un ensemble de mappages de types de données par défaut. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet &#40;mappage de Type&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
@@ -48,7 +48,7 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
 2.  Pour ajouter un nouveau mappage, procédez comme suit :  
   
-    1.  Cliquez sur **Ajouter**.  
+    1.  Cliquez sur **Add**.  
   
     2.  Sous **type de source**, sélectionnez le type de données DB2 à mapper.  
   

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060030"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936608"
 ---
 # <a name="setting-project-options-db2tosql"></a>Définition des options du projet (DB2ToSQL)
-Pour chaque projet SSMA, vous pouvez définir des options au niveau du projet. Ces options spécifient la conversion d’objet, le chargement d’objet, l’interface utilisateur et les paramètres de migration de données. Avant de convertir des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers ou de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  
+Pour chaque projet SSMA, vous pouvez définir des options au niveau du projet. Ces options spécifient la conversion d’objet, le chargement d’objet, l’interface utilisateur et les paramètres de migration de données. Avant de convertir des objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vérifiez que les options de configuration sont appropriées pour le projet.  
   
 SSMA vous permet de configurer les options par défaut pour tous les projets. Ces options sont appliquées à tous les nouveaux projets que vous créez. Vous pouvez ensuite personnaliser les options pour chaque projet.  
   
@@ -42,9 +42,9 @@ Il comporte également quatre modes de configuration de ces paramètres :
   
 -   Complète  
   
--   Personnalisé  
+-   Custom  
   
-Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste conserve la syntaxe DB2 actuelle et est plus facile à lire. Toutefois, il se peut que la conservation de la syntaxe actuelle ne soit pas exacte. Si la syntaxe DB2 doit être convertie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en syntaxe équivalente, le mode complet effectue la conversion la plus complète, mais le code obtenu peut être plus difficile à lire. Dans le mode personnalisé, vous définissez les options.  
+Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste conserve la syntaxe DB2 actuelle et est plus facile à lire. Toutefois, il se peut que la conservation de la syntaxe actuelle ne soit pas exacte. Si la syntaxe DB2 doit être convertie en syntaxe équivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le mode complet effectue la conversion la plus complète, mais le code obtenu peut être plus difficile à lire. Dans le mode personnalisé, vous définissez les options.  
   
 Pour plus d’informations sur les paramètres et sur la façon dont les paramètres sont appliqués dans chaque mode, consultez les rubriques suivantes :  
   
@@ -94,7 +94,7 @@ L’étape suivante de la migration dépend des besoins de votre projet :
   
 -   Pour personnaliser le mappage des types de données sources et cibles, consultez [mappage des types de données DB2 et SQL Server &#40;les&#41;DB2ToSQL ](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
--   Dans le cas contraire, vous pouvez convertir les définitions d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de base de données DB2 en définitions d’objets. Pour plus d’informations, consultez [conversion de schémas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   Dans le cas contraire, vous pouvez convertir les définitions d’objet de base de données DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définitions d’objets. Pour plus d’informations, consultez [conversion de schémas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Mappage des types de données DB2 et SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  

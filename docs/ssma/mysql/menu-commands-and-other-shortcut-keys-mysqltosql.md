@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293600"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935268"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Commandes de menu et autres touches de raccourci (MySQLToSQL)
 Les sections suivantes décrivent les raccourcis clavier permettant d’accéder aux commandes de menu et autres touches de raccourci utilisées dans les différentes boîtes de dialogue de l’application SSMA pour MySQL.  
@@ -80,7 +80,7 @@ Pour accéder au menu Outils, le raccourci clavier utilisé est ALT + T. Le tabl
 |Créer un rapport.|ALT + T + C|  
 |Convertissez le schéma.|ALT + T + N ou CTRL + R|  
 |Actualisez à partir de la base de données MySQL.|ALT + T + R|  
-|Synchronisez avec SQL Server ou SQL Azure base de données.|ALT + T + S|  
+|Synchroniser avec SQL Server ou Azure SQL Database.|ALT + T + S|  
 |Enregistrer en tant que script.|ALT + T + A|  
 |Migrez les données.|ALT + T + M|  
 |Arrêter l’opération en cours.|ALT + T + O|  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363519"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943100"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -67,7 +67,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Type de retour  
  \<*table expression*>  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) ne prend pas en charge la prédiction historique lorsque vous utilisez l'instruction PREDICTION JOIN pour ajouter de nouvelles données.  
   
  Dans une instruction PREDICTION JOIN, le processus de prédiction commence toujours à l'étape venant immédiatement après la fin de la série d'apprentissage d'origine. Cela est vrai même si vous ajoutez de nouvelles données. Par conséquent, le paramètre *n* et les valeurs de paramètre *n-Start* doivent être un entier supérieur à 0.  
@@ -193,7 +193,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Retourne de nouvelles prédictions pour les trois tranches de temps restantes selon le modèle nouvellement développé.  
   
- Le tableau suivant répertorie les résultats de la requête de l'exemple 2. Remarquez que les deux premières valeurs retournées pour M200 Europe sont exactement les mêmes que les nouvelles valeurs que vous avez fournies. Ce comportement est inhérent à la conception ; si vous souhaitez démarrer des prédictions après la fin des nouvelles données, vous devez spécifier des étapes de début et de fin. Pour obtenir un exemple de la procédure à suivre, consultez [leçon 5 : extension du modèle de série chronologique](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Le tableau suivant répertorie les résultats de la requête de l'exemple 2. Remarquez que les deux premières valeurs retournées pour M200 Europe sont exactement les mêmes que les nouvelles valeurs que vous avez fournies. Ce comportement est inhérent à la conception ; si vous souhaitez démarrer des prédictions après la fin des nouvelles données, vous devez spécifier des étapes de début et de fin.  
   
  Notez également que vous n'avez pas fourni de nouvelles données pour la région Pacifique. Par conséquent, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retourne de nouvelles prédictions pour les cinq tranches de temps.  
   
