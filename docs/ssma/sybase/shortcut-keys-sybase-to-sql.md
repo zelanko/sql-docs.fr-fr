@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2dd0d404-383d-4e7e-a492-3eab5ab501d6
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 933563a35d86e51afc34ae19bdd356e43b472227
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e908db2b229dc35d636ef0f61974d7088d0ec971
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944612"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934590"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>Touches de raccourci (SybaseToSQL)
-Vous pouvez utiliser les raccourcis clavier pour naviguer dans l’application SSMA. Pour plus d’informations, voir les rubriques suivantes :  
+Vous pouvez utiliser les raccourcis clavier pour naviguer dans l’application SSMA. Pour plus d'informations, consultez les rubriques ci-dessous.  
   
 -   [Commandes de menu et autres touches de raccourci &#40;Sybase vers SQL&#41;](../../ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md)  
   

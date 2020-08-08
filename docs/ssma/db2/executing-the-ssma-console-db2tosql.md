@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7b3f7e776268eed28beed4e4349c1ae8909789d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989681"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933810"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Exécution de la console SSMA (DB2ToSQL)
 Microsoft vous fournit un ensemble robuste de commandes de fichier de script pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes sections. L’application console utilise certaines commandes de fichier de script standard comme énuméré dans cette section.  
@@ -38,7 +38,7 @@ Crée un nouveau projet SSMA.
   
 -   `project-type:`Attribut facultatif. Indique le type de projet, par exemple « SQL-Server-2005 » ou « projet SQL-Server-2008 » ou « projet SQL-Server-2012 » ou « projet SQL-Server-2014 » ou « SQL-Azure ». La valeur par défaut est « SQL-Server-2014 ».  
   
-**Exemple :**  
+**Exemple :**  
   
 ```xml  
 <create-new-project  
@@ -158,7 +158,7 @@ Nécessite un ou plusieurs nœuds de la métabase comme paramètre de ligne de c
   
   metabase="<source/target>"/>  
 ```  
-or  
+ou  
   
 ```xml  
 <force-load>  
@@ -242,7 +242,7 @@ générer un rapport d’évaluation
   
 -   `write-summary-report-to:`Spécifie le chemin d’accès où le rapport de synthèse sera généré.  
   
-    Si seul le chemin d’accès au dossier est mentionné, nommez-le **&lt;AssessmentReport n&gt;. XML** créé. (attribut facultatif)  
+    Si seul le chemin d’accès au dossier est mentionné, nommez-le **AssessmentReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
@@ -271,7 +271,7 @@ générer un rapport d’évaluation
   
 />  
 ```  
-or  
+ou  
   
 ```xml  
 <generate-assessment-report  
@@ -314,7 +314,7 @@ convertir-schéma
   
 -   `write-summary-report-to:`Spécifie le chemin d’accès où le rapport de synthèse sera généré.  
   
-    Si seul le chemin d’accès au dossier est mentionné, nommez-le **&lt;SchemaConversionReport n&gt;. XML** créé. (attribut facultatif)  
+    Si seul le chemin d’accès au dossier est mentionné, nommez-le **SchemaConversionReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
@@ -343,7 +343,7 @@ convertir-schéma
   
 />  
 ```  
-or  
+ou  
   
 ```xml  
 <convert-schema  
@@ -376,7 +376,7 @@ Migrate-Data : migre les données sources vers la cible.
   
 -   `write-summary-report-to:`Spécifie le chemin d’accès où le rapport de synthèse sera généré.  
   
-    Si seul le chemin d’accès au dossier est mentionné, nommez-le **&lt;DataMigrationReport n&gt;. XML** créé. (attribut facultatif)  
+    Si seul le chemin d’accès au dossier est mentionné, nommez-le **DataMigrationReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
@@ -409,7 +409,7 @@ Migrate-Data : migre les données sources vers la cible.
   
 </migrate-data>  
 ```  
-or  
+ou  
   
 ```xml  
 <migrate-data  
@@ -500,7 +500,7 @@ synchroniser-cible
   
     -   échec du script  
   
--   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès au dossier est donné, puis le fichier par nom **TargetSynchronizationReport. xml** est créé.  
+-   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès au dossier est donné, puis le fichier par nom **TargetSynchronizationReport.XML** est créé.  
   
 **Exemple de syntaxe :**  
   
@@ -565,7 +565,7 @@ Nécessite un ou plusieurs nœuds de la métabase comme paramètre de ligne de c
   
     -   échec du script  
   
--   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif) si seul le chemin d’accès au dossier est donné, puis le fichier par nom **SourceDBRefreshReport. xml** est créé.  
+-   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif) si seul le chemin d’accès au dossier est donné, puis le fichier par nom **SourceDBRefreshReport.XML** est créé.  
   
 **Exemple de syntaxe :**  
   
@@ -643,7 +643,7 @@ Nécessite un ou plusieurs nœuds de la métabase comme paramètre de ligne de c
   
 />  
 ```  
-or  
+ou  
   
 ```xml  
 <save-as-script  
@@ -674,13 +674,13 @@ Convert-SQL-Statement
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
--   `write-converted-sql-to`Spécifie le chemin d’accès au dossier (ou) du fichier dans lequel le T-SQL converti doit être stocké. Quand un chemin d’accès au dossier est spécifié `sql-files` avec l’attribut, chaque fichier source a un fichier T-SQL cible correspondant créé dans le dossier spécifié. Quand un chemin d’accès au dossier est spécifié `sql` avec l’attribut, le T-SQL converti est écrit dans un fichier nommé **result. out** dans le dossier spécifié.  
+-   `write-converted-sql-to`Spécifie le chemin d’accès au dossier (ou) du fichier dans lequel le T-SQL converti doit être stocké. Quand un chemin d’accès au dossier est spécifié avec l' `sql-files` attribut, chaque fichier source a un fichier T-SQL cible correspondant créé dans le dossier spécifié. Quand un chemin d’accès au dossier est spécifié avec l' `sql` attribut, le T-SQL converti est écrit dans un fichier nommé **result. out** dans le dossier spécifié.  
   
 -   `sql`spécifie les instructions SQL DB2 à convertir, une ou plusieurs instructions peuvent être séparées à l’aide d’un « ; »  
   
 -   `sql-files`Spécifie le chemin d’accès des fichiers SQL qui doivent être convertis en code T-SQL.  
   
--   `write-summary-report-to`Spécifie le chemin d’accès où le rapport sera généré. Si seul le chemin d’accès au dossier est mentionné, le fichier est créé par son nom **ConvertSQLReport. xml** . (attribut facultatif)  
+-   `write-summary-report-to`Spécifie le chemin d’accès où le rapport sera généré. Si seul le chemin d’accès au dossier est mentionné, le fichier par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
   
     La création de rapports a 2 sous-catégories supplémentaires, à savoir :  
   

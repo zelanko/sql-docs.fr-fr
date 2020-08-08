@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 26e24bc55df7eef0af34f9cd23215f27ba314700
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 10a0b901a8e3681e4d74eccbe31e74119ad1ad6e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029052"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931614"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Paramètres globaux (Journalisation) (SybaseToSQL)
 Utilisez la boîte de dialogue **paramètres globaux** pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous pouvez modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -29,14 +29,14 @@ Les options suivantes sont disponibles sous **niveau des messages**:
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
 |**Collecteur**|Collecte les métadonnées relatives au schéma source et les enregistre dans le projet.|  
-|**Converter**|Convertit les structures des objets de base de données sources, tels que les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les procédures stockées, en structures correspondantes.|  
-|**Data Migrator**|Migre les données de la base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données source vers.|  
+|**Converter**|Convertit les structures des objets de base de données sources, tels que les tables et les procédures stockées, en structures correspondantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Data Migrator**|Migre les données de la base de données source vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Formateur**|Sous-composant du convertisseur qui génère des scripts pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma.|  
 |**Interface utilisateur graphique**|Messages qui s’affichent lorsque vous utilisez l’outil SSMA.|  
 |**Éditeur de liens**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
 |**Autres**|Tous les messages qui ne se trouvent pas dans une autre catégorie.|  
 |**Analyseur**|Analyse le schéma source.|  
-|**Synchronisateur**|Charge les objets de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de données source dans.|  
+|**Synchronisateur**|Charge les objets de base de données source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TreeConverter**|Convertit des objets dans les métadonnées sources en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées.|  
   
 Pour chaque option sous **niveau de messages**, configurez l’un des niveaux de journalisation suivants pour SSMA :  
@@ -47,7 +47,7 @@ Pour chaque option sous **niveau de messages**, configurez l’un des niveaux de
 |**Error**|Erreur d’écriture et messages d’erreur irrécupérable dans le journal.|  
 |**Avertissement**|Écrire les messages d’avertissement, d’erreur et d’erreur irrécupérable dans le journal.|  
 |**Info**|Écrire les messages d’information, d’avertissement, d’erreur et d’erreur irrécupérable dans le journal.|  
-|**Débogage**|Écrit tous les messages, y compris les messages de débogage, dans le journal.|  
+|**Déboguer**|Écrit tous les messages, y compris les messages de débogage, dans le journal.|  
   
 **Chemin du fichier journal**  
 Chemin d’accès et nom de fichier des fichiers journaux SSMA. Pour spécifier un autre nom, cliquez sur le chemin d’accès actuel, puis cliquez sur le bouton de navigation (**...**).  

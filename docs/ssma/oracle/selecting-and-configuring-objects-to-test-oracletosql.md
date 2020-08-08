@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: fd5a65e50889d461b0922fa255680a76863ca0a4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264639"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932760"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Sélection et configuration des objets à tester (OracleToSQL)
 À cette étape, vous sélectionnez les objets à tester, puis vous configurez les paramètres de comparaison des paramètres de sortie des procédures et des fonctions, ainsi que des valeurs de retour des fonctions.  

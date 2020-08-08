@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 9d7df0fe0917a684f1050197e6706ba5b5414f6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e5abea3995ae8b2515c142812ee47498c37497f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948475"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931997"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Création de fichiers de script (SybaseToSQL)
 La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire, à créer le fichier de valeur de variable et le fichier de connexion au serveur.  
@@ -49,7 +49,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   supprimer-messages : supprime les messages sur la console. Il s’agit de la valeur par défaut « false ».  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -92,7 +92,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   cible-use-Last-Used = "true" (valeur par défaut) ou target-Server = "target_servername"  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -127,7 +127,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Le mode par défaut est **Error**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -158,7 +158,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Le mode par défaut est **Generate-a-Error**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -206,7 +206,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   Ask-User : invite l’utilisateur à entrer une valeur (« oui »/« non »)  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -227,7 +227,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
 6.  **Fournisseur de composants requis en échec :** Cela permet à l’utilisateur de gérer les composants requis pour le traitement d’une commande. Par défaut, le mode strict est « false ». Si la valeur est « true », une exception est générée pour ne pas satisfaire aux conditions préalables.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -255,7 +255,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   toutes les 20%  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -301,7 +301,7 @@ Les options configurables par l’utilisateur sont les suivantes :
     > [!NOTE]  
     > Les messages obligatoires sont journalisés à n’importe quel niveau.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -324,11 +324,11 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Ici, deux cas se produisent :  
   
-    1.  Si l’option de remplacement a la **valeur false**, l’ordre de recherche est&gt;protégé fichier de&gt;script de stockage-&gt; fichier de connexion au serveur-utilisateur d’invite.  
+    1.  Si l’option de remplacement a la **valeur false**, l’ordre de recherche est protégé fichier de script de stockage-fichier de &gt; connexion au serveur-utilisateur d' &gt; &gt; invite.  
   
-    2.  Si l’option de remplacement a la **valeur true**, l’ordre de recherche sera fichier&gt;de script-fichier&gt;de connexion du serveur-inviter l’utilisateur.  
+    2.  Si l’option de remplacement a la **valeur true**, l’ordre de recherche sera fichier de script-fichier de &gt; connexion du serveur- &gt; inviter l’utilisateur.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -348,11 +348,11 @@ Les paramètres de connexion au serveur peuvent être définis dans le fichier d
 ## <a name="script-commands"></a>Commandes de script  
 Le fichier de script contient une séquence de commandes de flux de travail de migration au format XML. L’application console SSMA traite la migration dans l’ordre des commandes figurant dans le fichier de script.  
   
-Par exemple, une migration de données classique d’une table spécifique dans une base de données Sybase suit la hiérarchie de&gt;: Database&gt;-Schema-Table.  
+Par exemple, une migration de données classique d’une table spécifique dans une base de données Sybase suit la hiérarchie de : Database- &gt; Schema- &gt; table.  
   
 Lorsque toutes les commandes du fichier de script sont exécutées avec succès, l’application de console SSMA s’arrête et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations variables contenues dans des [fichiers de valeurs de variables](creating-variable-value-files-sybasetosql.md) ou dans une section distincte du fichier de script pour les valeurs de variables.  
   
-**Exemple :**  
+**Exemple :**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -379,15 +379,15 @@ Lorsque toutes les commandes du fichier de script sont exécutées avec succès,
 ```  
 Les modèles constitués de 3 fichiers de script (pour l’exécution de différents scénarios), d’un fichier de valeurs de variable et d’un fichier de connexion au serveur sont fournis dans le dossier exemple de scripts de console du répertoire du produit :  
   
--   AssessmentReportGenerationSample. Xml  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. Xml  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample. Xml  
+-   SqlStatementConversionSample.xml  
   
--   VariableValueFileSample. Xml  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. Xml  
+-   ServersConnectionFileSample.xml  
   
 Vous pouvez exécuter les modèles (fichiers) après avoir modifié les paramètres affichés ici pour des critères de pertinence.  
   

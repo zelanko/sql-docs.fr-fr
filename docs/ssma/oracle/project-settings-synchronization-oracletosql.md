@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 743ed010107c9557c84b1683f7a81b369ca7cf3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266586"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933203"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Paramètres du projet (Synchronisation) (OracleToSQL)
-La page synchronisation de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA charge et actualise les objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tels que les tables et les procédures stockées, dans.  
+La page synchronisation de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA charge et actualise les objets de base de données, tels que les tables et les procédures stockées, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Les options actions par défaut spécifient les paramètres par défaut pour l’actualisation des objets de la base de données Oracle et pour la synchronisation des objets avec la base de données SQL Server. Pour plus d’informations, consultez [Actualiser à partir d’une base de données-Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md).  
   
@@ -30,7 +30,7 @@ Vous pouvez accéder à deux pages de synchronisation différentes qui contienne
   
 ## <a name="miscellaneous-options"></a>Options diverses  
 **Essayer**  
-Spécifie le nombre de tentatives que SSMA doit effectuer lors du chargement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des objets dans. Les objets qui ne sont pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chargés dans la tentative actuelle seront tentés à nouveau jusqu’à ce que SSMA atteigne le nombre maximal de tentatives dans le processus de synchronisation en cours. L’ensemble de valeurs par défaut est **2**  
+Spécifie le nombre de tentatives que SSMA doit effectuer lors du chargement des objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les objets qui ne sont pas chargés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la tentative actuelle seront tentés à nouveau jusqu’à ce que SSMA atteigne le nombre maximal de tentatives dans le processus de synchronisation en cours. L’ensemble de valeurs par défaut est **2**  
   
 ## <a name="synchronization-for-oracle-options"></a>Synchronisation pour les options Oracle  
 **Action sur la modification de l’objet local et distant**  

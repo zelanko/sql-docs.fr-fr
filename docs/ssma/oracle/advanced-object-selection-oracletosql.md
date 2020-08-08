@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0dd1d8f5f5006760145d132a11db1df60dedddd7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264540"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935021"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>Sélection d’objet avancée (OracleToSQL)
 La boîte de dialogue **section d’objets avancés** vous permet de filtrer des objets de base de données en utilisant des chaînes et des sous-chaînes dans le nom de l’objet, puis de sélectionner ou désélectionner ces objets. SSMA effectue des opérations de conversion et de migration sur les objets sélectionnés.  

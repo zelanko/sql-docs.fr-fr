@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006596"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933968"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Création de fichiers de valeurs de variables (AccessToSQL)
 Un fichier de valeurs de variable est un fichier XML comprenant les valeurs de paramètres des commandes (telles que le nom du serveur source ou de destination) qui changent fréquemment au sein des migrations du serveur. Quand un grand nombre de migrations de base de données se produisent, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source sont créés et référencés dans un fichier de script principal avec le commutateur **-v** à la ligne de commande. Ce comportement permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  
   
 > [!NOTE]  
 > -  Les noms de variables sont préfixés et suffixés par un symbole $ (dollar). Si aucune valeur n’est affectée à une variable dans le fichier de valeurs de variable, une erreur se produit lors de l’analyse du fichier de script, provoquant la blocage du processus d’exécution de la console.  
-> -  Le caractère d’échappement **$** pour **$$** est. Si la valeur d’une variable ou d’une valeur statique d’un paramètre **$** contient un symbole (dollar) **$$** , doit être spécifié pour le traiter en tant que caractère au lieu d’une variable.  
-> -  À des fins de maintenabilité, les variables peuvent `'variable-group'` être déclarées à l’intérieur d’éléments pour la séparation logique des variables définies par l’utilisateur.  L’utilisation de cet élément n’est pas obligatoire.  
+> -  Le caractère d’échappement pour **$** est **$$** . Si la valeur d’une variable ou d’une valeur statique d’un paramètre contient un **$** symbole (dollar), **$$** doit être spécifié pour le traiter en tant que caractère au lieu d’une variable.  
+> -  À des fins de maintenabilité, les variables peuvent être déclarées à l’intérieur d' `'variable-group'` éléments pour la séparation logique des variables définies par l’utilisateur.  L’utilisation de cet élément n’est pas obligatoire.  
   
 **Exemples :**  
   

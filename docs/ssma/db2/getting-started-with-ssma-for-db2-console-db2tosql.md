@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 17798a2ccc0099210874a4bebb4fd05074c43639
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989661"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933850"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Prise en main avec SSMA pour la console DB2 (DB2ToSQL)
 Cette section décrit la procédure de lancement et de prise en main de l’application de console DB2. Les conventions utilisées dans une fenêtre de sortie de console SSMA standard sont également répertoriées.  
@@ -24,9 +24,9 @@ Pour démarrer l’application de console SSMA, procédez comme suit :
   
 1.  Accédez à **Démarrer** et pointez sur **tous les programmes**.  
   
-2.  Cliquez sur le ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raccourci d’invite de commandes Assistant Migration pour DB2** .  
+2.  Cliquez sur le raccourci ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’invite de commandes Assistant Migration pour DB2** .  
   
-    Elle affiche le menu de l’utilisation de `(/? Help)`la console SSMA et, pour vous aider à prendre en main l’application console.  
+    Elle affiche le menu de l’utilisation de la console SSMA et `(/? Help)` , pour vous aider à prendre en main l’application console.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Procédure d’utilisation de la console SSMA  
 Une fois que la console est correctement lancée sur votre système Windows, vous pouvez utiliser les étapes suivantes pour y travailler :  

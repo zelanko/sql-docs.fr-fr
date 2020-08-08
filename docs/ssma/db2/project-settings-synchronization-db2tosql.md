@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 38b3da74ce30799a01f28f3961a4fa0461d7543f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060175"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933600"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Paramètres du projet (synchronisation) (DB2ToSQL)
-La page synchronisation de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA charge et actualise les objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tels que les tables et les procédures stockées, dans.  
+La page synchronisation de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA charge et actualise les objets de base de données, tels que les tables et les procédures stockées, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Les options actions par défaut spécifient les paramètres par défaut pour l’actualisation des objets de la base de données DB2 et pour la synchronisation des objets avec la base de données SQL Server. Pour plus d’informations, consultez [Actualiser à partir de la base de données &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md).  
   
@@ -29,7 +29,7 @@ Vous pouvez accéder à deux pages de synchronisation différentes qui contienne
   
 ## <a name="miscellaneous-options"></a>Options diverses  
 **Essayer**  
-Spécifie le nombre de tentatives que SSMA doit effectuer lors du chargement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des objets dans. Les objets qui ne sont pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chargés dans la tentative actuelle seront tentés à nouveau jusqu’à ce que SSMA atteigne le nombre maximal de tentatives dans le processus de synchronisation en cours. L’ensemble de valeurs par défaut est **2**  
+Spécifie le nombre de tentatives que SSMA doit effectuer lors du chargement des objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les objets qui ne sont pas chargés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la tentative actuelle seront tentés à nouveau jusqu’à ce que SSMA atteigne le nombre maximal de tentatives dans le processus de synchronisation en cours. L’ensemble de valeurs par défaut est **2**  
   
 ## <a name="synchronization-for-db2-options"></a>Synchronisation pour les options DB2  
 **Action sur la modification de l’objet local et distant**  

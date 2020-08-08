@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266584"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933180"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Paramètres du projet (Mappage de type) (OracleToSQL)
-La page mappage de type de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA convertit les types de données Oracle en types de données.  
+La page mappage de type de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA convertit les types de données Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
   
 La page mappage de type est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** .  
   
@@ -35,7 +35,7 @@ Le tableau suivant présente les options de l’onglet **mappage de type** :
 Type de données Oracle mappé.  
   
 **Type de cible**  
-Type de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données cible pour le type de données Oracle spécifié.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Type de données cible pour le type de données Oracle spécifié.  
   
 Consultez les tableaux de la section suivante pour les mappages de type SSMA pour Oracle par défaut.  
   
@@ -57,7 +57,7 @@ Dans SSMA pour Oracle, vous pouvez définir des mappages de types personnalisés
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Type d’argument par défaut et mappage de type de valeur de retour  
 Le tableau suivant contient le mappage de type de données par défaut pour les arguments et les valeurs de retour.  
   
-|Type de données Oracle|Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données par défaut|  
+|Type de données Oracle|Type de données par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -79,8 +79,8 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |entier|int|  
 |long|varchar(max)|  
 |long RAW|varbinary(max)|  
-|long RAW [\*.. 8000]<sup>*</sup>|varbinary [*]|  
-|long RAW [8001..\*]<sup>*</sup>|varbinary(max)|  
+|long RAW [ \* .. 8000]<sup>*</sup>|varbinary [*]|  
+|long RAW [8001.. \* ]<sup>*</sup>|varbinary(max)|  
 |caractère national|nvarchar(max)|  
 |caractère national variable|nvarchar(max)|  
 |caractère national|nvarchar(max)|  
@@ -113,26 +113,26 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 ### <a name="default-column-type-mapping"></a>Mappage de type de colonne par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les colonnes.  
   
-|Type de données Oracle|Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données par défaut|  
+|Type de données Oracle|Type de données par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |objet BLOB|varbinary(max)|  
 |char|char|  
-|char varying [*.. \*]|VARCHAR [*]|  
-|Char [*.. \*]|Char [*]|  
+|char varying [*.. \* ]|VARCHAR [*]|  
+|Char [*.. \* ]|Char [*]|  
 |caractère|char|  
-|caractère variable [*.. \*]|VARCHAR [*]|  
-|caractère [*.. \*]|Char [*]|  
+|caractère variable [*.. \* ]|VARCHAR [*]|  
+|caractère [*.. \* ]|Char [*]|  
 |CLOB|varchar(max)|  
 |Date|datetime2 [0]|  
 |dec|Dec [38] [0]|  
-|Dec [*.. \*]|Dec [*] [0]|  
-|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Dec [*.. \* ]|Dec [*] [0]|  
+|Dec [*.. \* ] [\*..\*]|Dec [*] [ \* ]|  
 |Décimal|décimal [38] [0]|  
-|Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
+|Decimal [*.. \* ]|Decimal [*] [0]|  
+|Decimal [*.. \* ] [\*..\*]|Decimal [*] [ \* ]|  
 |double précision|float [53]|  
 |float|float [53]|  
 |float [*.. 53]|float [*]|  
@@ -147,47 +147,47 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |long [*.. 8000]|VARCHAR [*]|  
 |long [8001.. *]|varchar(max)|  
 |caractère national|NCHAR|  
-|caractère national variable [*.. \*]|nvarchar [*]|  
-|caractère national [*.. \*]|NCHAR [*]|  
+|caractère national variable [*.. \* ]|nvarchar [*]|  
+|caractère national [*.. \* ]|NCHAR [*]|  
 |caractère national|NCHAR|  
-|caractère national variable [*.. \*]|nvarchar [*]|  
-|caractère national [*.. \*]|NCHAR [*]|  
+|caractère national variable [*.. \* ]|nvarchar [*]|  
+|caractère national [*.. \* ]|NCHAR [*]|  
 |NCHAR|NCHAR|  
 |NCHAR [*]|NCHAR [*]|  
 |NCLOB|nvarchar(max)|  
 |nombre|float [53]|  
-|nombre [*.. \*]|Numeric [*]|  
-|nombre [*.. \*][\*.. \*]|Numeric [*] [\*]|  
+|nombre [*.. \* ]|Numeric [*]|  
+|nombre [*.. \* ] [\*..\*]|Numeric [*] [ \* ]|  
 |numeric|numeric|  
-|Numeric [*.. \*]|Numeric [*]|  
-|Numeric [*.. \*][\*.. \*]|Numeric [*] [\*]|  
-|nvarchar2[*.. \*]|nvarchar [*]|  
-|RAW [*.. \*]|varbinary [*]|  
+|numérique [*.. \* ]|Numeric [*]|  
+|numérique [*.. \* ] [\*..\*]|Numeric [*] [ \* ]|  
+|NVARCHAR2 [*.. \* ]|nvarchar [*]|  
+|RAW [*.. \* ]|varbinary [*]|  
 |real|float [53]|  
 |ID|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
-|horodateur avec fuseau horaire local [*.. \*]|DateTimeOffset [*]|  
+|horodateur avec fuseau horaire local [*.. \* ]|DateTimeOffset [*]|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|horodateur avec fuseau horaire [*.. \*]|DateTimeOffset [*]|  
-|horodateur [*.. \*]|datetime2 [*]|  
+|horodateur avec fuseau horaire [*.. \* ]|DateTimeOffset [*]|  
+|horodateur [*.. \* ]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
-|VARCHAR [*.. \*]|VARCHAR [*]|  
-|VARCHAR2 [*.. \*]|VARCHAR [*]|  
+|UROWID [*.. \* ]|UNIQUEIDENTIFIER|  
+|VARCHAR [*.. \* ]|VARCHAR [*]|  
+|VARCHAR2 [*.. \* ]|VARCHAR [*]|  
 |XmlType|Xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mappage de type de variable locale par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les variables locales.  
   
-|Type de données Oracle|Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données par défaut|  
+|Type de données Oracle|Type de données par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_interger|int|  
-|Objet blob|varbinary(max)|  
+|Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
 |char varying [*.. 8000]|VARCHAR [*]|  
@@ -202,18 +202,18 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |CLOB|varchar(max)|  
 |Date|datetime2 [0]|  
 |dec|Dec [38] [0]|  
-|Dec [*.. \*]|Dec [*] [0]|  
-|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Dec [*.. \* ]|Dec [*] [0]|  
+|Dec [*.. \* ] [\*..\*]|Dec [*] [ \* ]|  
 |Décimal|décimal [38] [0]|  
-|Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
+|Decimal [*.. \* ]|Decimal [*] [0]|  
+|Decimal [*.. \* ] [\*..\*]|Decimal [*] [ \* ]|  
 |double précision|float [53]|  
 |Float|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54.. *]|float [53]|  
 |Int|int|  
 |Integer|int|  
-|entier [*.. \*]|Numeric [*] [0]|  
+|entier [*.. \* ]|Numeric [*] [0]|  
 |Long|varchar(max)|  
 |long RAW|varbinary(max)|  
 |long RAW [*.. 8000]|varbinary [*]|  
@@ -235,11 +235,11 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |NCHAR varying [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |Number|float [53]|  
-|nombre [*.. \*]|Numeric [*]|  
-|nombre [*.. \*][\*.. \*]|Numeric [*] [\*]|  
+|nombre [*.. \* ]|Numeric [*]|  
+|nombre [*.. \* ] [\*..\*]|Numeric [*] [ \* ]|  
 |Numérique|numérique [38] [0]|  
-|Numeric [*.. \*]|Numeric [*]|  
-|Numeric [*.. \*][\*.. \*]|Numeric [*] [\*]|  
+|numérique [*.. \* ]|Numeric [*]|  
+|numérique [*.. \* ] [\*..\*]|Numeric [*] [ \* ]|  
 |nvarchar2[*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
 |pls_integer|int|  
@@ -254,11 +254,11 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |timestamp|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|horodateur avec fuseau horaire local [*.. \*]|DateTimeOffset [*]|  
-|horodateur avec fuseau horaire [*.. \*]|DateTimeOffset [*]|  
-|horodateur [*.. \*]|datetime2 [*]|  
+|horodateur avec fuseau horaire local [*.. \* ]|DateTimeOffset [*]|  
+|horodateur avec fuseau horaire [*.. \* ]|DateTimeOffset [*]|  
+|horodateur [*.. \* ]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
+|UROWID [*.. \* ]|UNIQUEIDENTIFIER|  
 |VARCHAR [*.. 8000]|VARCHAR [*]|  
 |VARCHAR [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|VARCHAR [*]|  

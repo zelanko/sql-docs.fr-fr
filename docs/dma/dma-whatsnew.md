@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864896"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988499"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
 
@@ -154,8 +154,8 @@ La version de Assistant Migration de données v 3.2 comprend les ajouts suivants
 
 La version v 3.1 de Assistant Migration de données comprend les ajouts suivants :
 
-- Recommandations d’évaluation améliorées pour les bases de données SQL Azure en termes de classements de bases de données, d’utilisation de procédures stockées système non prises en charge et d’objets CLR.
-- Guide d’évaluation des niveaux de compatibilité 130, 120, 110 et 100 lors de la migration vers des bases de données SQL Azure.
+- Recommandations d’évaluation améliorées pour les Azure SQL Database en termes de classements de bases de données, d’utilisation de procédures stockées système non prises en charge et d’objets CLR.
+- Guide d’évaluation des niveaux de compatibilité 130, 120, 110 et 100 lors de la migration vers Azure SQL Database.
 
 ## <a name="data-migration-assistant-v30"></a>Assistant Migration de données v 3.0
 
@@ -181,7 +181,7 @@ La version v 2.0 de Assistant Migration de données comprend des recommandations
 La version v 1.0 de Assistant Migration de données est la version initiale, et elle fournit pour :
 
 - Détection des problèmes qui peuvent affecter une mise à niveau vers une version locale de SQL Server. Toutes les découvertes sont décrites comme des problèmes de compatibilité et sont classées dans les domaines suivants :
-  - Modifications avec rupture
+  - Changements cassants
   - Changements de comportement
   - Fonctionnalités dépréciées
 - Découverte de nouvelles fonctionnalités de la plateforme de SQL Server cible dont la base de données peut bénéficier après une mise à niveau. Toutes les découvertes sont décrites comme des recommandations relatives aux fonctionnalités et sont classées dans les domaines suivants :

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246394"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934375"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture de l’intégration du CLR - Environnement hébergé CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "87246394"
 ###### <a name="reliability-safety"></a>Fiabilité (sécurité)  
  Le code utilisateur ne doit pas être autorisé à effectuer des opérations qui compromettent l'intégrité du processus du moteur de base de données, telles que l'affichage d'une boîte de message demandant une réponse de l'utilisateur ou la sortie du processus. Le code utilisateur ne doit pas être en mesure de remplacer les mémoires tampons ou les structures de données internes du moteur de base de données.  
   
-###### <a name="scalability"></a>Scalabilité  
+###### <a name="scalability"></a>Extensibilité  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR ont des modèles internes différents de planification et de gestion de la mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un modèle de thread coopératif et non préemptif, dans lequel les threads suspendent volontairement leur exécution périodiquement, ou lorsqu'ils attendent des verrous ou des E/S. Le CLR prend en charge un modèle de thread préemptif. Si le code utilisateur qui s'exécute au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler directement les primitives de thread du système d'exploitation, il ne s'intègre pas correctement dans le planificateur de tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peut dégrader l'évolutivité du système. Le CLR ne distingue pas la mémoire virtuelle de la mémoire physique, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère directement la mémoire physique et doit utiliser la mémoire physique dans une limite configurable.  
   
  Les modèles différents de threading, de planification et de gestion de la mémoire présentent une difficulté d'intégration pour un système de gestion de base de données relationnelle (SGBDR) qui évolue pour prendre en charge des milliers de sessions utilisateur simultanées. L'architecture doit garantir que l'évolutivité du système n'est pas compromise lorsque le code d'utilisateur appelle des interfaces de programmation d'applications (API) directement pour des primitives de thread, de mémoire et de synchronisation.  
@@ -78,7 +78,7 @@ ms.locfileid: "87246394"
  Un code de type sécurisé est un code qui accède aux structures de mémoire uniquement de façons bien définies. Prenons par exemple une référence d'objet valide, le code de type sécurisé peut accéder à la mémoire à des offsets fixes correspondant aux membres de champ réels. Cependant, si le code accède à la mémoire à des offsets arbitraires dans ou hors de la plage de mémoire qui appartient à l'objet, il n'est pas de type sécurisé. Lorsque des assemblys sont chargés dans le CLR, avant que le langage MSIL soit compilé à l'aide de la compilation juste-à-temps (JIT), le runtime effectue une phase de vérification qui examine le code pour déterminer s'il est de type sécurisé. Le code qui réussit cette vérification est appelé code de type sécurisé vérifié.  
   
 ###### <a name="application-domains"></a>Domaines d'application  
- Le CLR prend en charge la notion de domaines d'application comme des zones d'exécution au sein d'un processus hôte dans lesquelles des assemblys de code managé peuvent être chargés et exécutés. La limite du domaine d'application assure l'isolement entre les assemblys. Les assemblys sont isolés quant à la visibilité des variables statiques et des membres de données et à la capacité d'appeler dynamiquement le code. Les domaines d'application correspondent également au mécanisme de chargement et de déchargement du code. Le code peut être déchargé à partir de la mémoire seulement en déchargeant le domaine d'application. Pour plus d’informations, consultez [domaines d’application et sécurité de l’intégration du CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ Le CLR prend en charge la notion de domaines d'application comme des zones d'exécution au sein d'un processus hôte dans lesquelles des assemblys de code managé peuvent être chargés et exécutés. La limite du domaine d'application assure l'isolement entre les assemblys. Les assemblys sont isolés quant à la visibilité des variables statiques et des membres de données et à la capacité d'appeler dynamiquement le code. Les domaines d'application correspondent également au mécanisme de chargement et de déchargement du code. Le code peut être déchargé à partir de la mémoire seulement en déchargeant le domaine d'application. Pour plus d’informations, consultez [domaines d’application et sécurité de l’intégration du CLR](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
   
 ###### <a name="code-access-security-cas"></a>Sécurité d'accès du code  
  Le système de sécurité du CLR offre un moyen pour à contrôler quels types d'opérations le code managé peut effectuer en assignant des autorisations au code. Les autorisations d'accès au code sont assignées en fonction de l'identité du code (par exemple, la signature de l'assembly ou l'origine du code).  
@@ -154,7 +154,7 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>Sécurité : jeux d'autorisations  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux utilisateurs de spécifier les exigences de fiabilité et de sécurité du code déployé dans la base de données. Lorsque les assemblys sont téléchargés dans la base de données, l’auteur de l’assembly peut spécifier l’un des trois jeux d’autorisations pour cet assembly : SAFE, EXTERNAL_ACCESS et UNSAFE.  
   
-|Fonctionnalité|SAFE|EXTERNAL_ACCESS|UNSAFE|  
+|Fonctionnalités|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
 |Sécurité d'accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Non restreint|  
 |Restrictions du modèle de programmation|Oui|Oui|Sans restriction|  

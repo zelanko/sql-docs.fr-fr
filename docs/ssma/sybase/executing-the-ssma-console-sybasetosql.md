@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029156"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931675"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Exécution de la console SSMA (SybaseToSQL)
 Microsoft vous fournit un ensemble robuste de commandes de fichier de script pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes sections.  
@@ -201,7 +201,7 @@ L’échec de la connexion au serveur de base de données source lors de l’ex�
   
 -   `write-summary-report-to:`Spécifie le chemin d’accès auquel le rapport sera généré.  
   
-    Si seul le chemin d’accès au dossier est mentionné, nommez-le **&lt;AssessmentReport n&gt;. XML** créé. (attribut facultatif)  
+    Si seul le chemin d’accès au dossier est mentionné, nommez-le **AssessmentReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
@@ -230,7 +230,7 @@ L’échec de la connexion au serveur de base de données source lors de l’ex�
   
 />  
 ```  
-or  
+ou  
   
 ```xml  
 <generate-assessment-report  
@@ -267,7 +267,7 @@ Si la connexion à la base de données source ou cible n’est pas exécutée av
   
 -   `write-summary-report-to:`Spécifie le chemin d’accès auquel le rapport de synthèse sera généré.  
   
-    Si seul le chemin d’accès au dossier est mentionné, nommez-le **&lt;SchemaConversionReport n&gt;. XML** créé. (attribut facultatif)  
+    Si seul le chemin d’accès au dossier est mentionné, nommez-le **SchemaConversionReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
@@ -295,7 +295,7 @@ Si la connexion à la base de données source ou cible n’est pas exécutée av
   
 />  
 ```  
-or  
+ou  
   
 ```xml  
 <convert-schema  
@@ -320,7 +320,7 @@ Cette commande migre les données sources vers la cible.
   
 -   `write-summary-report-to:`Spécifie le chemin d’accès auquel le rapport sera généré.  
   
-    Si seul le chemin d’accès au dossier est mentionné, nommez-le **&lt;DataMigrationReport n&gt;. XML** créé. (attribut facultatif)  
+    Si seul le chemin d’accès au dossier est mentionné, nommez-le **DataMigrationReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
@@ -351,7 +351,7 @@ Cette commande migre les données sources vers la cible.
   
 </migrate-data>  
 ```  
-or  
+ou  
   
 ```xml  
 <migrate-data  
@@ -411,7 +411,7 @@ Si la connexion à la base de données cible n’est pas exécutée avant l’ex
   
     -   échec du script  
   
--   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier est créé par son nom **TargetSynchronizationReport. xml** .  
+-   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier par nom **TargetSynchronizationReport.XML** est créé.  
   
 **Exemple de syntaxe :**  
   
@@ -472,7 +472,7 @@ Cette commande requiert un ou plusieurs nœuds de la métabase comme paramètre 
   
     -   échec du script  
   
--   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier est créé par son nom **SourceDBRefreshReport. xml** .  
+-   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier par nom **SourceDBRefreshReport.XML** est créé.  
   
 **Exemple de syntaxe :**  
   
@@ -545,7 +545,7 @@ Cette commande requiert un ou plusieurs nœuds de la métabase comme paramètre 
   
 />  
 ```  
-or  
+ou  
   
 ```xml  
 <save-as-script  
@@ -576,13 +576,13 @@ Cette commande convertit l’instruction SQL.
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
--   `write-converted-sql-to`Spécifie le chemin d’accès au dossier (ou) du fichier dans lequel le T-SQL converti doit être stocké. Quand un chemin d’accès au dossier est spécifié `sql-files` avec l’attribut, chaque fichier source a un fichier T-SQL cible correspondant créé dans le dossier spécifié. Quand un chemin d’accès au dossier est spécifié `sql` avec l’attribut, le T-SQL converti est écrit dans un fichier nommé result. out dans le dossier spécifié.  
+-   `write-converted-sql-to`Spécifie le chemin d’accès au dossier (ou) du fichier dans lequel le T-SQL converti doit être stocké. Quand un chemin d’accès au dossier est spécifié avec l' `sql-files` attribut, chaque fichier source a un fichier T-SQL cible correspondant créé dans le dossier spécifié. Quand un chemin d’accès au dossier est spécifié avec l' `sql` attribut, le T-SQL converti est écrit dans un fichier nommé result. out dans le dossier spécifié.  
   
 -   `sql`spécifie les instructions SQL Sybase à convertir, une ou plusieurs instructions peuvent être séparées à l’aide d’un « ; »  
   
 -   `sql-files`Spécifie le chemin d’accès des fichiers SQL qui doivent être convertis en code T-SQL.  
   
--   `write-summary-report-to`Spécifie le chemin d’accès où le rapport de synthèse sera généré. Si seul le chemin d’accès au dossier est mentionné, le fichier est créé par son nom **ConvertSQLReport. xml** . (attribut facultatif)  
+-   `write-summary-report-to`Spécifie le chemin d’accès où le rapport de synthèse sera généré. Si seul le chemin d’accès au dossier est mentionné, le fichier par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
   
     La création d’un rapport de synthèse a deux sous-catégories supplémentaires, à savoir :  
   

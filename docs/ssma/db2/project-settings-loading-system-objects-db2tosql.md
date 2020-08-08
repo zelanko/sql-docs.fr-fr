@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 188634d6e4efcfb72aaa6fd890bc180a499bf5b9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060190"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933680"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Paramètres du projet (chargement des objets système) (DB2ToSQL)
-La page chargement des objets système de la boîte de dialogue **paramètres du projet** vous permet de spécifier les objets système DB2 que SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]convertit et charge dans.  
+La page chargement des objets système de la boîte de dialogue **paramètres du projet** vous permet de spécifier les objets système DB2 que SSMA convertit et charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Le volet chargement des objets système est disponible dans les boîtes de dialogue **paramètres du projet** et **paramètres du projet par défaut** :  
   

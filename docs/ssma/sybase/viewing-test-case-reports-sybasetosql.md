@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 99bad46468ff0138c07f531c9e32cdecc4fda5be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944608"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934523"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Affichage des rapports de cas de test (SybaseToSQL)
 Le rapport cas de test affiche les résultats de la vérification de test et les informations de test générales. En cas d’échec d’un test, des informations sur les données incompatibles dans les objets vérifiés s’affichent également.  
@@ -35,7 +35,7 @@ Le reste du rapport affiche des informations dans quatre catégories :
 **Erreurs de configuration requise**  
 Affiche toutes les erreurs qui se sont produites à l’étape **conditions préalables** . Normalement, elle est ignorée.  
   
-**Initialisation**  
+**D’initialisation**  
 Affiche l’état de **réussite** ou d' **échec**de l’exécution.  
   
 **Résultat des objets de test**  

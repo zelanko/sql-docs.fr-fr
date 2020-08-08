@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8a5406bd58e62e34bfaaa6046bd2feb9f58f73a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006573"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934044"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Modifier le mappage de type (AccessToSQL)
 La boîte de dialogue **modifier le mappage de type** vous permet de spécifier la manière dont les types sont mappés entre les objets de base de données source et de destination.  
@@ -29,7 +29,7 @@ Les mappages de types spécifiques aux tables remplacent les mappages de type de
   
 ## <a name="options"></a>Options  
 **Type de source**  
-Sélectionnez le type de données source à mapper à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un type de données.  
+Sélectionnez le type de données source à mapper à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
   
 Si le type de données est de longueur variable, les champs suivants s’affichent sous le **type de source**:  
   
@@ -40,7 +40,7 @@ Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le type de do
 Spécifiez la longueur maximale pour ce mappage. Par exemple, pour le type de données **Text** , vous pouvez entrer 20 pour spécifier que ce mappage s’adresse à une plage se terminant au **texte (20)**.  
   
 **Type de cible**  
-Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données auquel le type de données source est mappé. Lorsque SSMA crée la table ou la procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le type de données source passe à ce type de données.  
+Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données auquel le type de données source est mappé. Lorsque SSMA crée la table ou la procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le type de données source passe à ce type de données.  
   
 Si le type de données est de longueur variable, le champ suivant s’affiche sous **type de cible**:  
   

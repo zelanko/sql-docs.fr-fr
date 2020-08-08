@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b81892edd4605960a50c63aa61ed65d1522d42ec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259835"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933999"
 ---
 # <a name="creating-script-files-accesstosql"></a>Création de fichiers de script (AccessToSQL)
 La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire, à créer le fichier de valeur de variable et le fichier de connexion au serveur.  
@@ -45,7 +45,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   supprimer-messages : supprime les messages sur la console. Il s’agit de la valeur par défaut « false ».  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -88,7 +88,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     - cible-use-Last-Used = "true" (valeur par défaut) ou target-Server = "target_servername"  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -123,7 +123,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Le mode par défaut est **Error**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -154,7 +154,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Le mode par défaut est **Generate-a-Error**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -202,7 +202,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   Ask-User : invite l’utilisateur à entrer une valeur (« oui »/« non »)  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -223,7 +223,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
 6.  **Fournisseur de composants requis en échec :** Cela permet à l’utilisateur de gérer les composants requis pour le traitement d’une commande. Par défaut, le mode strict est « false ». Si la valeur est « true », une exception est générée pour ne pas satisfaire aux conditions préalables.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -251,7 +251,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   toutes les 20%  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -297,7 +297,7 @@ Les options configurables par l’utilisateur sont les suivantes :
     > [!NOTE]  
     > Les messages obligatoires sont journalisés à n’importe quel niveau.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -320,11 +320,11 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Ici, deux cas se produisent :  
   
-    1.  Si l’option de remplacement a la **valeur false**, l’ordre de recherche est&gt;protégé fichier de&gt;script de stockage-&gt; fichier de connexion au serveur-utilisateur d’invite.  
+    1.  Si l’option de remplacement a la **valeur false**, l’ordre de recherche est protégé fichier de script de stockage-fichier de &gt; connexion au serveur-utilisateur d' &gt; &gt; invite.  
   
-    2.  Si l’option de remplacement a la **valeur true**, l’ordre de recherche sera fichier&gt;de script-fichier&gt;de connexion du serveur-inviter l’utilisateur.  
+    2.  Si l’option de remplacement a la **valeur true**, l’ordre de recherche sera fichier de script-fichier de &gt; connexion du serveur- &gt; inviter l’utilisateur.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -344,11 +344,11 @@ Les paramètres de connexion au serveur peuvent être définis dans le fichier d
 ## <a name="script-commands"></a>Commandes de script  
 Le fichier de script contient une séquence de commandes de flux de travail de migration au format XML. L’application console SSMA traite la migration dans l’ordre des commandes figurant dans le fichier de script.  
   
-Par exemple, une migration de données classique d’une table spécifique dans une base de données Access suit la hiérarchie de&gt; : table de base de données.  
+Par exemple, une migration de données classique d’une table spécifique dans une base de données Access suit la hiérarchie de : table de base de données &gt; .  
   
 Lorsque toutes les commandes du fichier de script sont exécutées avec succès, l’application de console SSMA s’arrête et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations variables contenues dans des [fichiers de valeurs de variables](creating-variable-value-files-accesstosql.md) ou dans une section distincte du fichier de script pour les valeurs de variables.  
   
-**Exemple :**  
+**Exemple :**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -375,13 +375,13 @@ Lorsque toutes les commandes du fichier de script sont exécutées avec succès,
 ```  
 Les modèles constitués de 3 fichiers de script (pour l’exécution de différents scénarios), d’un fichier de valeurs de variable et d’un fichier de connexion au serveur sont fournis dans le dossier exemple de scripts de console du répertoire du produit :  
   
--   AssessmentReportGenerationSample. Xml  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. Xml  
+-   ConversionAndDataMigrationSample.xml  
   
--   VariableValueFileSample. Xml  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. Xml  
+-   ServersConnectionFileSample.xml  
   
 Vous pouvez exécuter les modèles (fichiers) après avoir modifié les paramètres affichés ici pour des critères de pertinence.  
   

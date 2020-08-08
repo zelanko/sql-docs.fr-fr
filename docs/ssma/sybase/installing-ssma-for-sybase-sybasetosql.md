@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 302225b3339f779bbcf138ce0c6ee2e3ee24adf8
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fa1205a2511eb2c49c5be616caefad0ee0102105
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292901"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931603"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Installation de SSMA pour SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour SAP Adaptive Server Enterprise (ASE) se compose d’une application cliente que vous utilisez pour effectuer une migration de SAP ASE vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. Il contient également un pack d’extension qui prend en charge la migration des données et l’utilisation des fonctions système ASE dans vos bases de données migrées.  
@@ -27,7 +27,7 @@ Si vous souhaitez effectuer une mise à niveau vers une version ultérieure de S
   
 Si vous ouvrez un projet à partir d’une version antérieure de SSMA pour SAP ASE, SSMA vous demande si vous souhaitez convertir le projet vers la version la plus récente. Cliquez sur **Oui** pour travailler avec le projet dans la version plus récente de SSMA.  
   
-## <a name="contents"></a>Contents  
+## <a name="contents"></a>Contenu  
   
 |Article|Description|  
 |---------|---------------|  

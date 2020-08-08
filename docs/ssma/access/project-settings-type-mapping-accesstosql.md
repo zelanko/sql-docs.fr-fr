@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066657"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933992"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de type) (AccessToSQL)
 Les paramètres de projet de mappage de type vous permettent de définir des mappages de types par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour des objets de base de données individuels. Pour plus d’informations, consultez [mappage des types de données source et cible](mapping-source-and-target-data-types-accesstosql.md).  
@@ -37,13 +37,13 @@ Le mappage de type est disponible dans les boîtes de dialogue **paramètres du 
 Type de données Access à mapper.  
   
 **Type de cible**  
-Type de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données cible ou SQL Azure pour le type de données Access spécifié.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Type de données cible ou SQL Azure pour le type de données Access spécifié.  
   
 Le tableau suivant montre le mappage par défaut entre les types de données source et cible.  
   
 |Type de données Access|Type de données de SQL Server|  
 |--------------------|------------------------|  
-|**binaire [\*.. \*]**|**varbinary [\*]**|  
+|**binaire [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**accès**|**money**|  
@@ -51,14 +51,14 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
-|**entier**|**smallint**|  
+|**integer**|**smallint**|  
 |**long**|**int**|  
 |**autorise**|**varbinary(max)**|  
 |**mémo**|**nvarchar(max)**|  
 |**MEMO** -pour Access 97|**varchar(max)**|  
 |**single**|**real**|  
-|**texte [\*.. \*]**|**nvarchar [\*]**|  
-|**texte [\*.. ] \*** -pour Access 97|**VARCHAR [\*]**|  
+|**texte [ \* .. \* ]**|**nvarchar [ \* ]**|  
+|**texte [ \* .. \* ]** -pour Access 97|**VARCHAR [ \* ]**|  
   
 **Ajouter**  
 Cliquez pour ajouter un type de données à la liste de mappage.  
