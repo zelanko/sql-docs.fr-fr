@@ -20,16 +20,16 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 35f9272b3b11e5c29fe0e2f9068ad458bd5becfa
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196411"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046877"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Retourne l’histogramme des statistiques pour l’objet de base de données spécifié (table ou vue indexée) dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données actuelle. Semblable à `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
@@ -62,7 +62,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Nombre estimé de lignes ayant une valeur de colonne distincte dans une étape d'histogramme, à l'exception de la limite supérieure. |
 |average_range_rows |**real** |Nombre moyen de lignes avec des valeurs de colonnes dupliquées dans une étape d’histogramme, à l’exception de la limite supérieure ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` pour `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Notes  
+ ## <a name="remarks"></a>Remarques  
  
  Le ResultSet pour `sys.dm_db_stats_histogram` retourne des informations semblables à `DBCC SHOW_STATISTICS WITH HISTOGRAM` et comprend également `object_id` , `stats_id` et `step_number` .
 
@@ -84,7 +84,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   La zone pleine située à gauche de *range_high_key* représente la plage de valeurs de colonnes et le nombre moyen d’occurrences de chacune des valeurs de colonnes (*average_range_rows*). Pour la première étape de l’histogramme, la valeur de *average_range_rows* est toujours égale à 0.  
   
--   Les traits en pointillés représentent les valeurs échantillonnées utilisées pour estimer le nombre total de valeurs distinctes dans la plage (*DISTINCT_RANGE_ROWS*) et le nombre total de valeurs dans la plage (*RANGE_ROWS*). L’optimiseur de requête utilise *range_rows* et *distinct_range_rows* pour calculer *average_range_rows*, et ne stocke pas les valeurs échantillonnées.  
+-   Les lignes pointillées représentent les valeurs échantillonnées utilisées pour estimer le nombre total de valeurs distinctes dans la plage (*distinct_range_rows*) et le nombre total de valeurs dans la plage (*range_rows*). L’optimiseur de requête utilise *range_rows* et *distinct_range_rows* pour calculer *average_range_rows*, et ne stocke pas les valeurs échantillonnées.  
   
  L'optimiseur de requête définit les étapes d'histogramme en fonction de leur importance statistique. Il utilise un algorithme de nombre maximal de différences pour réduire le nombre d'étapes dans l'histogramme tout en augmentant la différence entre les valeurs limites. Le nombre maximal d'étapes est 200. Le nombre d'étapes d'histogramme peut être inférieur au nombre de valeurs distinctes, même pour les colonnes comportant moins de 200 points de limite. Par exemple, une colonne avec 100 valeurs distinctes peut avoir un histogramme comportant moins de 100 points de limite.  
   
