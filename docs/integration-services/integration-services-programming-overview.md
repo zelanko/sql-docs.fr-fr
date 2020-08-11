@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ab3c2cdbb0e7c4628b757ab25f75d848e0a62887
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917563"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952436"
 ---
 # <a name="integration-services-programming-overview"></a>Vue d'ensemble de la programmation Integration Services
 
@@ -54,7 +54,7 @@ ms.locfileid: "86917563"
  Vous pouvez programmer des packages, des tâches personnalisées et des composants [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou dans un autre code ou éditeur de texte. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre de nombreux outils et fonctionnalités au développeur pour simplifier et accélérer les cycles itératifs du codage, du débogage et du test. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] facilite également le déploiement. Toutefois, vous n'avez pas besoin de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour compiler et générer des projets de code [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le Kit de développement [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK inclut les compilateurs et les outils connexes [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] et [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
 > [!IMPORTANT]  
->  Le [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] est installé par défaut avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais pas le Kit de développement [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Les liens vers les rubriques relatives au Kit de développement figurant dans cette section ne fonctionnent que si le Kit de développement est installé sur l'ordinateur et que la documentation qui lui est propre figure dans la documentation en ligne. Après avoir installé le SDK [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], vous pouvez ajouter la documentation le concernant à la documentation en ligne et à la table des matières en suivant les instructions figurant dans [Ajouter ou supprimer la documentation du produit SQL Server](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
+>  Le [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] est installé par défaut avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais pas le Kit de développement [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Les liens vers les rubriques relatives au Kit de développement figurant dans cette section ne fonctionnent que si le Kit de développement est installé sur l'ordinateur et que la documentation qui lui est propre figure dans la documentation en ligne. Après avoir installé le SDK [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], vous pouvez ajouter la documentation le concernant à la documentation en ligne et à la table des matières en suivant les instructions figurant dans [Ajouter ou supprimer la documentation du produit SQL Server](https://www.microsoft.com/download/details.aspx?id=42557).  
   
  La tâche de script et le composant Script [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilisent [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement de script incorporé. VSTA prend en charge [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic et [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

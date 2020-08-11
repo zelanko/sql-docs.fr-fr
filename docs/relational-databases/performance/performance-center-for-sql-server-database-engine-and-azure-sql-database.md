@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6d578ee456d2ddd9531af307e2106f4a12dbbece
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 81d876df75fd096b897f13322bb76f90fffa5cad
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411345"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947493"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "87411345"
  [Guide d’architecture des pages et des étendues](../../relational-databases/pages-and-extents-architecture-guide.md)  
  [Guide de validation et d’optimisation post-migration](../../relational-databases/post-migration-validation-and-optimization-guide.md)  
  [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)  
- [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598)  
+ [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)  
  [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
  [Guide d’architecture de thread et de tâche](../../relational-databases/thread-and-task-architecture-guide.md) 
   

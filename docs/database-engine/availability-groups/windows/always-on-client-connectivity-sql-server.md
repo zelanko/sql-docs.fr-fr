@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 691195b4a44065a95cf97d073d5bf52d2caa19f8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3fa77d1c6796220937a6966a5e4202c7f029ddd8
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395064"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790322"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Prise en charge des pilotes et de la connectivité cliente pour les groupes de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "87395064"
   
  ** Télécharger le correctif logiciel de connectivité pour ADO.NET avec .NET Framework 3.5 SP1 : [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- *Téléchargez le nouveau pilote Microsoft OLE DB Driver pour SQL Server : [https://www.microsoft.com/download/details.aspx?id=56730](https://www.microsoft.com/download/details.aspx?id=56730).  
+ *Téléchargez le nouveau pilote Microsoft OLE DB Driver pour SQL Server : [https://aka.ms/downloadmsoledbsql](https://aka.ms/downloadmsoledbsql).  
 
 > [!IMPORTANT]  
 >  Pour se connecter à un écouteur de groupe de disponibilité, un client doit utiliser une chaîne de connexion TCP.  

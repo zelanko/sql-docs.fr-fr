@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: d84f7a508d9ae6d46ba529d8139ecc8c0deaf3e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66e354a23b88c2f6843b6180eabbff5b5a19f038
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894035"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928640"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2019 sur Linux
 
@@ -246,7 +246,6 @@ Les fonctionnalités et services suivants ne sont pas disponibles pour SQL Serve
  [Fonctionnalités prises en charge par les éditions de SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016 – Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Fonctionnalités prises en charge par les éditions de SQL Server 2014 – Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Spécifications de produit pour SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
 

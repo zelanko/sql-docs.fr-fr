@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247613"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934373"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 - Expressions arithmétiques telles que 1+1, 5/3*2, ne contenant que des constantes.
 - Expressions logiques telles que 1=1 et 1>2 AND 3>4, ne contenant que des constantes.
 - Fonctions intégrées considérées comme pouvant être assemblées par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y compris `CAST` et `CONVERT`. En général, une fonction intrinsèque peut être assemblée si elle est fonction de ses données d'entrée uniquement, à l'exclusion de toute information contextuelle (options SET, paramètres de langue, options de base de données et clés de chiffrement). Les fonctions non déterministes ne peuvent pas être assemblées. Les fonctions intégrées déterministes peuvent être assemblées, à quelques exceptions près.
-- Méthodes déterministes de types CLR définis par l’utilisateur et fonctions CLR définies par l’utilisateur avec valeur scalaire déterministe (à partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Pour plus d’informations, consultez [Assemblage de constantes pour les fonctions et les méthodes CLR définies par l’utilisateur](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Méthodes déterministes de types CLR définis par l’utilisateur et fonctions CLR définies par l’utilisateur avec valeur scalaire déterministe (à partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Pour plus d’informations, consultez [Assemblage de constantes pour les fonctions et les méthodes CLR définies par l’utilisateur](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
 
 > [!NOTE] 
 > Les objets volumineux constituent une exception. Si le type de résultat du processus d’assemblage est un type d’objet volumineux (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) ou XML), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’assemble pas l’expression.

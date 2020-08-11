@@ -20,12 +20,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715514"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807512"
 ---
 # <a name="shrink-a-database"></a>Réduire une base de données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,7 @@ ms.locfileid: "85715514"
   
 -   La base de données ne peut pas être réduite à une taille inférieure à la taille minimale de la base de données. La taille minimale d'une base de données correspond à la taille spécifiée lors de sa création ou lors de la dernière définition de taille explicite lors d'une opération de modification de taille, notamment au moyen de DBCC SHRINKFILE. Par exemple, la plus petite taille que pourrait avoir une base de données de 10 Mo initialement et de 100 Mo avant réduction, même si toutes les données qu'elle contient ont été supprimées, est de 10 Mo après réduction.  
   
--   Vous ne pouvez pas réduire la taille d'une base de données en cours de sauvegarde. Inversement, vous ne pouvez pas sauvegarder une base de données alors qu'elle fait l'objet d'une opération de réduction.  
-  
--   DBCC SHRINKDATABASE échoue lorsqu'il rencontre un index columnstore optimisé en mémoire xVelocity. Le travail effectué avant de rencontrer l'index columnstore réussit, de sorte que la base de données peut être plus petite. Pour exécuter DBCC SHRINKDATABASE, désactivez tous les index columnstore avant d'exécuter DBCC SHRINKDATABASE, puis reconstruisez les index.  
+-   Vous ne pouvez pas réduire la taille d'une base de données en cours de sauvegarde. Inversement, vous ne pouvez pas sauvegarder une base de données alors qu'elle fait l'objet d'une opération de réduction.
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
