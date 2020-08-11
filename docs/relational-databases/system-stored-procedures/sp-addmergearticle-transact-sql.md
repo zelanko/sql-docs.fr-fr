@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786279"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051118"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -106,7 +106,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**Aucune**|Si la table existe déjà côté abonné, aucune action n'est effectuée.|  
 |**delete**|Entraîne une suppression basée sur la clause WHERE dans le filtre de sous-ensemble.|  
 |**Drop** (valeur par défaut)|Supprime la table avant de la recréer. Requis pour prendre en charge les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés.|  
-|**tronquer**|Tronque la table de destination.|  
+|**truncate**|Tronque la table de destination.|  
   
 `[ @creation_script = ] 'creation_script'`Chemin d’accès et nom d’un script de schéma d’article facultatif utilisé pour créer l’article dans la base de données d’abonnement. *creation_script* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** indique que la signature sera vérifiée pour déterminer si elle provient d’une source approuvée.  
   
-`[ @destination_object = ] 'destination_object'`Nom de l’objet dans la base de données d’abonnement. *destination_object* est de **type sysname**, avec la valeur par défaut qui se trouve dans ** \@ source_object**. Ce paramètre ne peut être spécifié que si l'article est un article de schéma exclusivement, tel que le sont les procédures stockées, vues et fonctions définies par l'utilisateur. Si l’article spécifié est un article de table, la valeur de *@source_object* remplace la valeur dans *destination_object*.  
+`[ @destination_object = ] 'destination_object'`Nom de l’objet dans la base de données d’abonnement. *destination_object* est de **type sysname**, avec la valeur par défaut qui se trouve dans ** \@ source_object**. Ce paramètre ne peut être spécifié que si l'article est un article de schéma exclusivement, tel que le sont les procédures stockées, vues et fonctions définies par l'utilisateur. Si l’article spécifié est un article de table, la valeur de * \@ source_object* remplace la valeur de *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Active ou désactive l’utilisation du programme de résolution interactif sur un article. *allow_interactive_resolver* est de type **nvarchar (5)**, avec false comme valeur par défaut. la **valeur true** active l’utilisation du programme de résolution interactif sur l’article. **false** le désactive.  
   
@@ -355,10 +355,10 @@ sp_addmergearticle [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .  
+ Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir un article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Répliquer les colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
