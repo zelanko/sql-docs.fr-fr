@@ -1,5 +1,6 @@
 ---
 title: Insérer ou supprimer une colonne (Générateur de rapports) | Microsoft Docs
+description: Ajoutez ou supprimez des colonnes dans une région de données de tableau matriciel dans un rapport paginé. Dans le Générateur de rapports, cette région peut être une table, une matrice ou une liste.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243b6ea1838e3e6d8666114172ca9c51684878b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b625462a1f4898bae7388842e5825c915eaf93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061741"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Insérer ou supprimer une colonne (Générateur de rapports et SSRS)
   Vous pouvez ajouter ou supprimer des colonnes dans une région de données de tableau matriciel dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cette région peut être une table, une matrice ou une liste. Les procédures suivantes ne s'appliquent pas aux régions de données de graphique ou de jauge.  

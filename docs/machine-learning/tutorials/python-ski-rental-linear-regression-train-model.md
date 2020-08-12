@@ -4,27 +4,30 @@ titleSuffix: SQL machine learning
 description: Dans la troisième partie de cette série de didacticiels en quatre parties, vous allez former un modèle de régression en Python afin de prédire les locations de ski avec l’apprentissage automatique SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 827c79e39cd646b81b5ee79d440a8bc48574210c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730469"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Tutoriel Python : Effectuer l’apprentissage d’un modèle de régression linéaire avec l’apprentissage automatique SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez effectuer l’apprentissage d’un modèle de régression linéaire dans Python. Dans la partie suivante de cette série, vous déploierez ce modèle dans une base de données SQL Server avec Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez effectuer l’apprentissage d’un modèle de régression linéaire dans Python. Dans la partie suivante de cette série, vous déploierez ce modèle dans une base de données SQL Server avec Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez effectuer l’apprentissage d’un modèle de régression linéaire dans Python. Dans la partie suivante de cette série, vous déploierez ce modèle dans une base de données Azure SQL Managed Instance avec Machine Learning Services.
 ::: moniker-end
 
 Dans cet article, vous allez apprendre à :

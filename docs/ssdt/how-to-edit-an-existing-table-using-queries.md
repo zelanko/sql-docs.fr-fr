@@ -1,23 +1,23 @@
 ---
 title: Modifier une table existante à l’aide de requêtes
+description: Découvrez comment utiliser une requête Transact-SQL pour modifier une définition ou des données de table. Affichez des exemples de modification d’une définition de table et d’insertion de lignes dans une table.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241412"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518809"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Procédure : modifier une table existante à l'aide de requêtes
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Procédure : Modifier une table existante à l’aide de requêtes
 
 Vous pouvez modifier la définition d'une table ou de ses données en écrivant une requête Transact\-SQL. Pour consulter ou entrer des données dans une table visuellement, utilisez l'Éditeur de données comme décrit dans [Développement d’une base de données connectée](../ssdt/connected-database-development.md).  
   
@@ -32,7 +32,7 @@ Vous pouvez modifier la définition d'une table ou de ses données en écrivant 
   
 3.  Activez la case à cocher **Autoriser les valeurs NULL** correspondant à la colonne **Adresse**. Notez que le code correspondant dans le volet de script est changé en `NULL` immédiatement.  
   
-4.  Mettez la base de données à jour en suivant les étapes de la rubrique [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+4.  Mettez à jour la base de données en suivant les étapes de la rubrique [ Mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Pour remplir de nouvelles tables de données à l'aide d'une requête Transact\-SQL  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262128"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353096"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notes de version de SqlPackage.exe
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
+
+|Plateforme|Téléchargement|Date de publication|Version|Build
+|:---|:---|:---|:---|:---|
+| Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2134206)|24 juin 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2134312)|24 juin 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2134311)|24 juin 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2134310)|24 juin 2020| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>Correctifs
+| Fonctionnalité | Détails |
+| :------ | :------ |
+| Déploiement | Correction d’une régression introduite dans la version 18.5, provoquant une erreur « Syntaxe incorrecte près de 'type' » lors du déploiement d’un dacpac ou de l’importation d’un bacpac avec un utilisateur disposant d’une connexion externe vers local | 
+
 ## <a name="185-sqlpackage"></a>18.5 sqlpackage
 
 |Plateforme|Téléchargement|Date de publication|Version|Build
@@ -51,7 +66,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Déploiement | Ajout de la prise en charge de l’index columnstore en cluster ordonné dans SQL Data Warehouse |
 | Déploiement | Ajout de la prise en charge de la source de données externe (pour Oracle, Teradata, MongoDB/CosmosDB, ODBC, cluster Big Data) et de la table externe pour le cluster Big Data SQL Server 2019 |
 | Déploiement | Ajout de SQL Database Edge comme édition prise en charge |
-| Déploiement | Prise en charge des noms de serveur Managed Instance au format « \<serveur>.\<zonedns>.database.windows.net » |
+| Déploiement | Prise en charge des noms de serveur Managed Instance au format '\<server>.\<dnszone>.database.windows.net' |
 | Déploiement | Ajout de la prise en charge de la commande copy dans Azure SQL Data Warehouse |
 | Déploiement | Ajout de l’option de déploiement « IgnoreTablePartitionOptions » durant la publication pour éviter la recréation de la table en cas de modification de la fonction de partition sur la table pour Azure SQL Data Warehouse |
 | .NET Core | Ajout de la prise en charge de Microsoft.Data.SqlClient dans la version .NET Core de sqlpackage |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correctifs
 | Fix | Détails |
 | :-- | :------ |
-| Déploiement | Correction de la publication du package DAC d’une base de données contenant un utilisateur externe qui générait une erreur « La référence d’objet n’a pas la valeur d’une instance d’un objet ». |
 | Déploiement | Correction de l’analyse du chemin JSON en tant qu’expression |
 | Déploiement | Correction de la génération d’instructions GRANT pour les autorisations AlterAnyDatabaseScopedConfiguration et AlterAnySensitivityClassification |
 | Déploiement | Correction d’un problème entraînant la non-reconnaissance d’une autorisation de script externe |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | Correction d’un bogue dans ScriptDom entraînant la non-reconnaissance des contraintes inline définies après un index inline |
 | ScriptDom | Correction dans ScriptDom d’une parenthèse fermante manquante SYSTEM_TIME dans une instruction de traitement par lots |
 | Always Encrypted | Correction de l’échec de la suppression de la table #tmpErrors lorsque sqlpackage se reconnecte et que la table temporaire est déjà supprimée (la table temporaire disparaissant quand la connexion est perdue) |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problèmes connus
+| Fonctionnalité | Détails |
+| :------ | :------ |
+| Déploiement |  Une régression a été introduite dans la version 18.5, provoquant une erreur « Syntaxe incorrecte près de 'type' » lors du déploiement d’un dacpac ou de l’importation d’un bacpac avec un utilisateur disposant d’une connexion externe vers local. Contournez ce problème en utilisant sqlpackage 18.4. Ce sera corrigé dans la prochaine version de sqlpackage. | 
+| .NET Core | L’importation de bacpacs avec Sensitivity Classification échoue avec le message « Erreur irrécupérable de connexion interne » en raison de ce [problème connu](https://github.com/dotnet/SqlClient/issues/559) dans Microsoft.Data.SqlClient. Ce problème sera résolu dans la prochaine version de sqlpackage. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1

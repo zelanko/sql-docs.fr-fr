@@ -1,21 +1,21 @@
 ---
 title: Comparer et synchroniser des données de tables avec des données d'une base de données de référence
+description: Découvrez comment comparer des données de deux bases de données différentes. Découvrez comment synchroniser les données et comment afficher le script utilisé pour le processus de synchronisation.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/27/2020
-ms.openlocfilehash: 097a024622dd7550ec3dabac1c1fac2a35dfe4b3
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: eb0ca79c68227bbc52b69da71eba191ec795ca2f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402624"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519079"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence
 

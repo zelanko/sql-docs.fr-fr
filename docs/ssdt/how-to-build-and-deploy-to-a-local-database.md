@@ -1,23 +1,23 @@
 ---
 title: Générer et déployer dans une base de données locale
+description: En savoir plus sur l’instance de serveur local fournie par SQL Server 2012. Découvrez comment utiliser cette instance pour générer, tester et déboguer des projets de développement.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241606"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518919"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procédure : générer et déployer dans une base de données locale
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procédure : Générer et déployer dans une base de données locale
 
 Microsoft SQL Server 2012 fournit une instance de serveur local à la demande, appelée SQL Server Express Local Database Runtime, qui est activée lorsque vous déboguez un projet de base de données SQL Server. Cette instance de serveur local peut être utilisée en tant que sandbox pour la création, le test et le débogage de votre projet. Elle est indépendante des instances SQL Server installées et n'est pas accessible en dehors de SQL Server Data Tools (SSDT). Cette organisation convient pour les développeurs qui ont un accès limité ou aucun accès aux bases de données de production, mais souhaiteraient tester les projets localement avant de les remettre au personnel autorisé qui les déploiera en production. En outre, lorsque vous développez une solution de base de données pour SQL Azure, vous pouvez utiliser les fonctionnalités fournies par ce serveur local pour développer et tester votre projet de base de données localement, avant de le déployer dans le nuage.  
   

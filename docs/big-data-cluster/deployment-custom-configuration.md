@@ -5,20 +5,20 @@ description: Découvrez comment personnaliser un déploiement de cluster Big Dat
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728017"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurer les paramètres de déploiement de services et ressources de cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En commençant avec un ensemble prédéfini de profils de configuration intégrés à l’outil de gestion `azdata`, vous pouvez facilement modifier les paramètres par défaut pour mieux répondre à vos exigences de charge de travail BDC. La structure des fichiers de configuration vous permet de mettre à jour précisément les paramètres de chaque service de la ressource.
 
@@ -665,6 +665,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > Nous vous recommandons de mettre à jour manuellement le paramètre `max_map_count` sur chaque hôte dans le cluster Kubernetes, conformément aux instructions de [cet article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
+
+## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>Activer/désactiver la collecte de métriques sur les pods et les nœuds
+
+SQL Server 2019 CU5 a activé deux commutateurs de fonctionnalités pour contrôler la collecte de métriques sur les pods et les nœuds. Si vous utilisez d’autres solutions pour superviser votre infrastructure Kubernetes, vous pouvez désactiver la collecte de métriques intégrée pour les pods et les nœuds hôtes en définissant *allowNodeMetricsCollection* et *allowPodMetricsCollection* sur *false* dans le fichier de configuration de déploiement *control.json*. Pour les environnements OpenShift, ces paramètres sont définis sur *false* par défaut dans les profils de déploiement intégrés, puisque la collecte des métriques sur les pods et les nœuds requiert des fonctionnalités privilégiées.
+Exécutez cette commande pour mettre à jour les valeurs de ces paramètres dans votre fichier de configuration personnalisé à l’aide de l’interface CLI *azdata* :
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## <a name="next-steps"></a>Étapes suivantes
 

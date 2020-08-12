@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728033"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Déboguer et diagnostiquer les applications Spark sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans le serveur d’historique Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article fournit des conseils sur l’utilisation du serveur d’historique Spark étendu pour déboguer et diagnostiquer les applications Spark dans un cluster Big Data SQL Server. Ces fonctionnalités de débogage et de diagnostic sont intégrées au serveur d’historique Spark et reposent sur la technologie Microsoft. L’extension comprend les onglets Data (Données), Graph (Graphique) et Diagnosis (Diagnostic). Sous l’onglet Data, les utilisateurs peuvent vérifier les données d’entrée et de sortie du travail Spark. Sous l’onglet Graph, les utilisateurs peuvent vérifier le dataflow et relire le graphique du travail. Sous l’onglet Diagnosis, l’utilisateur peut consulter l’asymétrie des données, l’asymétrie temporelle et l’analyse de l’utilisation des exécuteurs.
 
@@ -28,7 +28,7 @@ Cet article fournit des conseils sur l’utilisation du serveur d’historique S
 L’expérience utilisateur du serveur d’historique Spark, à l’origine open source, est enrichie d’informations, notamment les données spécifiques au travail et la visualisation interactive du graphique du travail et des dataflows pour le cluster Big Data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Ouvrir l’interface utilisateur web du serveur d’historique Spark au moyen d’une URL
-Ouvrez le serveur d’historique Spark en accédant à l’URL suivante, en remplaçant `<Ipaddress>` et `<Port>` par les informations spécifiques du cluster Big Data. Notez que dans une configuration de cluster Big Data avec authentification de base (nom d’utilisateur/mot de passe), vous devez spécifier l’utilisateur **root** quand vous êtes invité à vous connecter aux points de terminaison de la passerelle (Knox). Pour plus d’informations, consultez : [Déployer un cluster Big Data SQL Server](quickstart-big-data-cluster-deploy.md)
+Ouvrez le serveur d’historique Spark en accédant à l’URL suivante, en remplaçant `<Ipaddress>` et `<Port>` par les informations spécifiques du cluster Big Data. Sur des clusters déployés avant SQL Server 2019 CU 5, avec une configuration de cluster Big Data d’authentification de base (nom d’utilisateur/mot de passe), vous devez spécifier l’utilisateur **racine** quand vous êtes invité à vous connecter aux points de terminaison de la passerelle (Knox). Consultez [Déployer un cluster Big Data SQL Server](quickstart-big-data-cluster-deploy.md). [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ Le graphique de l’utilisation des exécuteurs permet de visualiser l’allocat
 + Cliquez sur une icône de couleur pour sélectionner ou désélectionner le contenu correspondant dans toutes les ébauches.
 
     ![Sélectionner un graphique](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Journaux Spark/Yarn
+En plus du serveur d’historique Spark, vous pouvez trouver les journaux pour Spark et Yarn, respectivement :
+* Journaux des événements Spark : hdfs:///system/spark-events
+* Journaux Yarn : hdfs:///tmp/logs/root/logs-tfile
 
+Remarque : Ces deux journaux ont une période de rétention par défaut de 7 jours. Si vous souhaitez modifier la période de rétention, consultez la page [Configurer Apache Spark et Apache Hadoop](configure-spark-hdfs.md). Il est **impossible** de modifier l’emplacement.
 
 ## <a name="known-issues"></a>Problèmes connus
 Le serveur d’historique Spark présente les problèmes connus suivants :

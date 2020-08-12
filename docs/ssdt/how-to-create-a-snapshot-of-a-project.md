@@ -1,5 +1,6 @@
 ---
 title: Créer une capture instantanée d’un projet
+description: Familiarisez-vous avec les fichiers d’application de la couche Données ou les instantanés et découvrez comment les utiliser. Découvrez comment créer ou importer des instantanés et comment les comparer.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c381b920a527ab2320f6e83d6dbc057b675a4754
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241532"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518839"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : créer une capture instantanée d'un projet
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : Créer une capture instantanée d’un projet
 
 Chaque fichier d'**application de la couche Données** vous fournit une représentation en lecture seule du schéma de la base de données au moment de la création de l'instantané. Il est essentiellement traité comme un schéma de base de données à partir duquel vous pouvez réimporter les objets de schéma vers un projet. Vous pouvez aussi le comparer au schéma d'une base de données ou d'un projet, et mettre à jour la base de données ou le projet pour refléter le schéma défini dans l'instantané.  
   
@@ -31,7 +31,7 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
   
 ### <a name="to-create-a-snapshot"></a>Pour créer un instantané  
   
-1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...**.  
+1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...** .  
   
 2.  SSDT tentera de générer le projet en premier. Si aucune erreur de build n'est détectée, un dossier **Instantané** est créé dans l'**Explorateur de solutions**. Dans ce dossier, SSDT crée un fichier .dacpac au format de nom « <Project Name>_YYYYMMDD_HH-MM-SS.dacpac ».  
   
@@ -65,5 +65,5 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
     Vous pouvez facilement rechercher le delta d'autres instantanés à l'aide de Comparaison de schémas. Dans ce cas, vous pouvez découvrir comment votre projet évolue au cours du processus de développement.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

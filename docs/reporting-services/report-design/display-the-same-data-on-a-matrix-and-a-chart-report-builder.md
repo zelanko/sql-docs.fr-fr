@@ -1,5 +1,6 @@
 ---
 title: Afficher les mêmes données dans une matrice et sur un graphique (Générateur de rapports) | Microsoft Docs
+description: Affichez les mêmes données dans une matrice et sur un graphique dans le Générateur de rapports. Définissez les propriétés sur ces régions de données pour inclure les caractéristiques.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b444cd40a8141ca3b9398181944aef3a6e61915c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056544"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Afficher les mêmes données dans une matrice et sur un graphique (Générateur de rapports)
   Pour afficher les mêmes données dans une matrice et sur un graphique, vous devez définir des propriétés sur ces deux régions de données afin de spécifier le même dataset, ainsi que les mêmes expressions pour les filtres, les groupes, les tris et les données.  
@@ -67,7 +68,7 @@ ms.locfileid: "65578839"
   
 14. Cliquez sur **Tri**.  
   
-15. Cliquez sur **Ajouter**. Une nouvelle ligne apparaît dans la grille d'expressions de tri.  
+15. Cliquez sur **Add**. Une nouvelle ligne apparaît dans la grille d'expressions de tri.  
   
 16. Dans **Trier par**, dans la liste déroulante, sélectionnez le champ de dataset selon lequel vous avez choisi d’effectuer le regroupement à l’étape 9.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "65578839"
   
 21. Cliquez sur **Tri**.  
   
-22. Cliquez sur **Ajouter**. Une nouvelle ligne apparaît dans la grille d'expressions de tri.  
+22. Cliquez sur **Add**. Une nouvelle ligne apparaît dans la grille d'expressions de tri.  
   
 23. Dans **Trier par**, dans la liste déroulante, sélectionnez le champ de dataset selon lequel vous avez choisi d’effectuer le regroupement à l’étape 16.  
   

@@ -1,5 +1,6 @@
 ---
 title: Fonction Count (Générateur de rapports) | Microsoft Docs
+description: Découvrez la fonction Count, qui retourne le nombre de valeurs non Null spécifiées par une expression, qui est évaluée dans le contexte d’une étendue spécifiée.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044094"
 ---
 # <a name="report-builder-functions---count-function"></a>Fonctions du Générateur de rapports - Count
   Retourne le nombre de valeurs non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.  

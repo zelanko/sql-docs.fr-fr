@@ -1,5 +1,6 @@
 ---
 title: Images, zones de texte, rectangles et lignes (Générateur de rapports) | Microsoft Docs
+description: Ajoutez un intérêt visuel, mettez en évidence les informations clés ou fournissez des informations connexes dans le Générateur de rapports. Ajoutez des images, des zones de texte, des rectangles et des lignes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18afd1d921969d84f0015b6e982b634feb46b097
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061026"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Images, zones de texte, rectangles et lignes (Générateur de rapports et SSRS)
   Outre les régions de données telles que les tableaux, les matrices et les graphiques, les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent d’autres éléments de rapport, comme des images, des zones de texte ou des rectangles, pour ajouter un attrait visuel, mettre en évidence des informations clés ou fournir des informations connexes. Vous pouvez modifier la mise en forme d'un élément de rapport. Par exemple, vous pouvez ajouter une bordure ou une marge intérieure, modifier la visibilité initiale ou la direction, ou encore spécifier la taille et l'emplacement exacts de l'élément.  

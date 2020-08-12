@@ -1,23 +1,23 @@
 ---
 title: Créer de nouveaux objets de base de données à l’aide de requêtes
+description: Familiarisez-vous avec l’Éditeur Transact-SQL. Découvrez comment ouvrir cet éditeur et afficher des exemples qui montrent comment l’utiliser pour créer une nouvelle table, une nouvelle fonction ou une nouvelle vue.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df5dc9a0af721e8582ec7f9095efe73d03af2710
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241491"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518769"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Procédure : créer de nouveaux objets de base de données à l'aide de requêtes
+# <a name="how-to-create-new-database-objects-using-queries"></a>Procédure : Créer de nouveaux objets de base de données à l’aide de requêtes
 
 Si vous préférez utiliser des scripts pour créer ou modifier des affichages, des procédures stockées, des fonctions, des déclencheurs ou des types définis par l'utilisateur, vous pouvez utiliser l'Éditeur Transact\-SQL. L'Éditeur Transact\-SQL offre la prise en charge d'IntelliSense et d'autres langages. Pour plus d’informations, consultez [Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   

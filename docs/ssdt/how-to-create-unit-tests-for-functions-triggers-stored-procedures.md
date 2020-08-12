@@ -1,23 +1,23 @@
 ---
 title: Créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées
+description: Découvrez comment utiliser l’Explorateur d’objets SQL Server pour créer un test unitaire SQL Server à partir d’une fonction de base de données, d’un déclencheur ou d’une procédure stockée.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c7218f035ca907bf9052865408b3a7311e8f75b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ab41a162ca31542f87ba545af35e3bf49f007
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241473"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518709"
 ---
-# <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées
+# <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>Procédure : Créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées
 
 Écrivez des tests unitaires qui évaluent les modifications apportées à un objet de base de données. Toutefois, SQL Server Data Tools inclut la prise en charge supplémentaire de la création des tests de fonctions de base de données, des déclencheurs et des procédures stockées à partir d'un nœud de projet de base de données dans l'Explorateur d'objets SQL Server. Les stubs de code Transact\-SQL peuvent être générés automatiquement pour que vous puissiez les personnaliser.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "75241473"
   
 1.  Consultez [Procédure pas à pas : création et exécution d'un test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md) pour obtenir un exemple d'ajout de test unitaire pour une procédure stockée, dans la section « Pour créer un test unitaire SQL Server pour les procédures stockées ».  
   
-    La condition de test Non concluant est la condition par défaut qui est ajoutée à chaque test. Cette condition de test est incluse pour indiquer que la vérification du test n'a pas été implémentée. Supprimez cette condition de test de votre test après avoir ajouté d'autres conditions de test. Pour plus d'informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+    La condition de test Non concluant est la condition par défaut qui est ajoutée à chaque test. Cette condition de test est incluse pour indiquer que la vérification du test n'a pas été implémentée. Supprimez cette condition de test de votre test après avoir ajouté d'autres conditions de test. Pour plus d’informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

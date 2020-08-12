@@ -1,5 +1,6 @@
 ---
 title: Exploration de la souplesse d’une région de données de tableau matriciel (Générateur de rapports) | Microsoft Docs
+description: Découvrez la flexibilité d’un rapport paginé dans le Générateur de rapports lorsque vous ajoutez une région de données de table, de matrice ou de liste.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aaddc6f5671ceb2727ca950459e60dc24402bb9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f87c4ddc6b678675d5bcad06d06a3c466ecd929
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082115"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999548"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Exploration de la souplesse d'une région de données de tableau matriciel (Générateur de rapports et SSRS)
 Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , quand vous ajoutez une région de données de table, de matrice ou de liste à partir de l’onglet Insérer sur le ruban, vous démarrez avec un modèle initial de région de données de tableau matriciel. Toutefois, vous n’êtes pas limité par ce modèle. Vous pouvez continuer à développer vos affichages de données en ajoutant ou en supprimant des fonctionnalités de région de données de tableau matriciel (groupes, lignes et colonnes, par exemple).  

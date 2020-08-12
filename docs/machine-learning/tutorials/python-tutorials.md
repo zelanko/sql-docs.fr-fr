@@ -4,20 +4,20 @@ titleSuffix: SQL machine learning
 description: Cet article décrit les tutoriels Python pour l’apprentissage automatique SQL. Découvrez comment exécuter des scripts et générer des modèles de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7127be209c9637eb0c1cc701d16f0d157f90be54
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: f93fc25139a69f80afa15840d254c33d2195b335
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83605791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730452"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>Tutoriels Python pour l’apprentissage automatique SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Cet article décrit les tutoriels et les démarrages rapides Python pour [Machine Learning Services sur SQL Serveur](../sql-server-machine-learning-services.md) et les [clusters Big Data](../../big-data-cluster/machine-learning-services.md).
@@ -25,17 +25,28 @@ Cet article décrit les tutoriels et les démarrages rapides Python pour [Machin
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Cet article décrit les tutoriels et les démarrages rapides Python pour [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Cet article décrit les tutoriels et les démarrages rapides Python pour [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
 <a name="bkmk_pythontutorials"></a>
 
 ## <a name="python-tutorials"></a>Tutoriels sur Python
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 | Didacticiel | Description |
 |-|-|
 | [Prédire les locations de skis avec la régression linéaire](python-ski-rental-linear-regression.md) | Utilisez Python et la régression linéaire pour prédire le nombre de skis qui seront loués. Utilisez des notebooks dans Azure Data Studio pour préparer les données et entraîner le modèle, et T-SQL pour le déploiement du modèle. |
 | [Classement des clients par catégorie à l’aide du clustering k-moyennes](python-clustering-model.md) | Utilisez Python pour développer et déployer un modèle de clustering K-moyennes en vue de classer les clients par catégorie. Utilisez des notebooks dans Azure Data Studio pour préparer les données et entraîner le modèle, et T-SQL pour le déploiement du modèle. |
 | [Créer un modèle à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md) | Montre comment exécuter du code à partir d’un client Python distant avec SQL Server comme contexte de calcul. Le tutoriel crée un modèle en utilisant **rxLinMod** de la bibliothèque **revoscalepy**. |
 | [Analytique données Python pour développeurs SQL](sqldev-in-database-python-for-sql-developers.md) | Cette procédure pas à pas détaille l’ensemble du processus de création d’une solution Python complète en utilisant T-SQL. |
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+| Didacticiel | Description |
+|-|-|
+| [Prédire les locations de skis avec la régression linéaire](python-ski-rental-linear-regression.md) | Utilisez Python et la régression linéaire pour prédire le nombre de skis qui seront loués. Utilisez des notebooks dans Azure Data Studio pour préparer les données et entraîner le modèle, et T-SQL pour le déploiement du modèle. |
+| [Classement des clients par catégorie à l’aide du clustering k-moyennes](python-clustering-model.md) | Utilisez Python pour développer et déployer un modèle de clustering K-moyennes en vue de classer les clients par catégorie. Utilisez des notebooks dans Azure Data Studio pour préparer les données et entraîner le modèle, et T-SQL pour le déploiement du modèle. |
+::: moniker-end
 
 ## <a name="python-quickstarts"></a>Démarrages rapides Python
 

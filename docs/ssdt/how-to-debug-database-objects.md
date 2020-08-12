@@ -1,21 +1,21 @@
 ---
 title: Déboguer des objets de base de données
+description: Découvrez comment déboguer des procédures stockées, des fonctions et des déclencheurs. Consultez comment activer le débogage, définir des points d’arrêt et exécuter un test unitaire SQL Server en mode débogage.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241464"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518759"
 ---
 # <a name="how-to--debug-database-objects"></a>Procédure :  Déboguer des objets de base de données
 
@@ -23,7 +23,7 @@ Un test unitaire SQL Server inclut les éléments suivants :
   
 -   Code de test unitaire écrit en Visual C\# ou en Visual Basic. Ce code, généré par le Concepteur de test unitaire SQL Server, est chargé d'envoyer le script Transact\-SQL qui forme le corps du test.  
   
--   Une ou plusieurs conditions de test, écrites en Visual C\# ou en Visual Basic. Pour connaître les conditions de test de débogage, suivez la procédure pour déboguer un test unitaire décrite dans [Procédure : Débogage pendant l’exécution d’un Test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) ou [Procédure : Débogage pendant l’exécution d’un Test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
+-   Une ou plusieurs conditions de test, écrites en Visual C\# ou en Visual Basic. Pour déboguer les conditions de test, suivez la procédure de débogage d'un test unitaire, tel que le décrit dans [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) ou [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Un ou plusieurs scripts Transact\-SQL qui s'exécutent sur des objets de la base de données que vous testez. Vous ne pouvez pas déboguer ces scripts Transact\-SQL.  
   

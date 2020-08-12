@@ -9,35 +9,35 @@ ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 34e7ae0ab570ea7a9480b2051aadb6140bb1c2ea
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220144"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334575"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>Configurer Apache Spark et Apache Hadoop dans les clusters Big Data
 
 Pour configurer Apache Spark et Apache Hadoop dans des clusters Big Data, vous devez modifier le profil des clusters au moment du déploiement.
 
-## <a name="supported-configurations"></a>Configurations prises en charge
+Un cluster Big Data comporte quatre catégories de configuration : 
 
-Il y a actuellement quatre catégories de configuration : 
 - `sql` 
 - `hdfs` 
 - `spark` 
 - `gateway` 
 
-Dans les clusters Big Data, nous définissons ces trois services : `hdfs`, `spark` et `sql`. Chaque service est mappé à la catégorie de configuration du même nom. Toutes les configurations de passerelle sont affectées à la catégorie `gateway`. 
+`sql`, `hdfs`, `spark` et `sql` sont des services. À chacun d’eux est associée une catégorie de configuration du même nom. Toutes les configurations de passerelle sont affectées à la catégorie `gateway`. 
 
-Par exemple, toutes les configurations dans le service `hdfs` appartiennent à la catégorie `hdfs`. Notez que toutes les configurations Hadoop (core-site), HDFS et Zookeeper appartiennent à la catégorie `hdfs` et que toutes les configurations de metastore Livy/Spark/Yarn/Hive appartiennent à la catégorie « spark ». 
+Par exemple, toutes les configurations dans le service `hdfs` appartiennent à la catégorie `hdfs`. Notez que toutes les configurations Hadoop (core-site), HDFS et ZooKeeper appartiennent à la catégorie `hdfs`, et toutes les configurations Livy, Spark, YARN, Hive et Metastore à la catégorie `spark`. 
 
 Vous trouverez toutes les configurations possibles pour chacune sur le site de documentation Apache correspondant :
+
 - Apache Spark : https://spark.apache.org/docs/latest/configuration.html
 - Apache Hadoop :
-   * HDFS (hdfs-site) : https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
-   * HDFS (core-site) : https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml  
-   * Yarn : https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
+  - HDFS (hdfs-site) : https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
+  - HDFS (core-site) : https://hadoop.apache.org/docs/r2.8.0/hadoop-project-dist/hadoop-common/core-default.xml  
+  - Yarn : https://hadoop.apache.org/docs/r3.1.1/hadoop-yarn/hadoop-yarn-site/ResourceModel.html
 - Hive : https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy : https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Passerelle Apache Knox : https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
@@ -46,13 +46,119 @@ Outre ces configurations, vous pouvez également autoriser ou non l’exécution
 
 Cette valeur booléenne, `includeSpark`, se trouve dans le fichier de configuration `bdc.json` à l’emplacement `spec.resources.storage-0.spec.settings.spark`.
 
-## <a name="unsupported-configurations"></a>Configurations non prises en charge
+## <a name="supported-configurations"></a>Configurations prises en charge
 
-Les configurations suivantes ne sont pas prises en charge et ne peuvent pas être modifiées dans le contexte du cluster Big Data.
+L’exemple suivant présente tous les paramètres par défaut des éléments configurables pris en charge.
+
+```json
+{
+  "hdfs": {
+    "hdfs-site.dfs.replication": "2",
+    "hdfs-site.dfs.ls.limit": "500",
+    "hdfs-site.dfs.namenode.provided.enabled": "true",
+    "hdfs-site.dfs.datanode.provided.enabled": "true",
+    "hdfs-site.dfs.datanode.provided.volume.lazy.load": "true",
+    "hdfs-site.dfs.provided.aliasmap.inmemory.enabled": "true",
+    "hdfs-site.dfs.provided.aliasmap.class": "org.apache.hadoop.hdfs.server.common.blockaliasmap.impl.InMemoryLevelDBAliasMapClient",
+    "hdfs-site.dfs.namenode.provided.aliasmap.class": "org.apache.hadoop.hdfs.server.common.blockaliasmap.impl.NamenodeInMemoryAliasMapClient",
+    "hdfs-site.dfs.provided.aliasmap.load.retries": "10",
+    "hdfs-site.dfs.provided.aliasmap.inmemory.batch-size": "1000",
+    "hdfs-site.dfs.datanode.provided.volume.readthrough": "true",
+    "hdfs-site.dfs.provided.overreplication.factor": "1",
+    "hdfs-site.dfs.provided.cache.capacity.fraction": "0.01",
+    "hdfs-site.dfs.provided.cache.capacity.mount": "true",
+
+    "hdfs-env.HDFS_NAMENODE_OPTS": "-Dhadoop.security.logger=INFO,RFAS -Xmx2g",
+    "hdfs-env.HDFS_DATANODE_OPTS": "-Dhadoop.security.logger=ERROR,RFAS -Xmx2g",
+    "hdfs-env.HDFS_ZKFC_OPTS": "-Xmx1g",
+    "hdfs-env.HDFS_JOURNALNODE_OPTS": "-Xmx2g",
+    "hdfs-env.HDFS_AUDIT_LOGGER": "INFO,RFAAUDIT",
+
+    "core-site.hadoop.security.group.mapping.ldap.search.group.hierarchy.levels": "10",
+    "core-site.fs.permissions.umask-mode": "077",
+    "core-site.hadoop.security.kms.client.failover.max.retries": "20",
+
+    "kms-site.hadoop.security.kms.encrypted.key.cache.size": "500",
+
+    "zoo-cfg.tickTime": "2000",
+    "zoo-cfg.initLimit": "10",
+    "zoo-cfg.syncLimit": "5",
+    "zoo-cfg.maxClientCnxns": "60",
+    "zoo-cfg.minSessionTimeout": "4000",
+    "zoo-cfg.maxSessionTimeout": "40000",
+    "zoo-cfg.autopurge.snapRetainCount": "3",
+    "zoo-cfg.autopurge.purgeInterval": "0",
+
+    "zookeeper-java-env.JVMFLAGS": "-Xmx1G -Xms1G",
+    
+    "zookeeper-log4j-properties.zookeeper.console.threshold": "INFO"
+  },
+  "spark": {
+    "capacity-scheduler.yarn.scheduler.capacity.maximum-applications": "10000",
+    "capacity-scheduler.yarn.scheduler.capacity.resource-calculator": "org.apache.hadoop.yarn.util.resource.DominantResourceCalculator",
+    "capacity-scheduler.yarn.scheduler.capacity.root.queues": "default",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.capacity": "100",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.user-limit-factor": "1",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.maximum-capacity": "100",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.state": "RUNNING",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.maximum-application-lifetime": "-1",
+    "capacity-scheduler.yarn.scheduler.capacity.root.default.default-application-lifetime": "-1",
+    "capacity-scheduler.yarn.scheduler.capacity.node-locality-delay": "40",
+    "capacity-scheduler.yarn.scheduler.capacity.rack-locality-additional-delay": "-1",
+
+    "hadoop-env.HADOOP_HEAPSIZE_MAX": "2048",
+
+    "yarn-env.YARN_RESOURCEMANAGER_HEAPSIZE": "2048",
+    "yarn-env.YARN_NODEMANAGER_HEAPSIZE": "2048",
+
+    "mapred-env.HADOOP_JOB_HISTORYSERVER_HEAPSIZE": "2048",
+
+    "hive-env.HADOOP_HEAPSIZE": "2048",
+
+    "livy-conf.livy.server.session.timeout-check": "true",
+    "livy-conf.livy.server.session.timeout-check.skip-busy": "true",
+    "livy-conf.livy.server.session.timeout": "2h",
+    "livy-conf.livy.server.yarn.poll-interval": "500ms",
+    "livy-conf.livy.rsc.jars": "local:/opt/livy/rsc-jars/livy-api.jar,local:/opt/livy/rsc-jars/livy-rsc.jar,local:/opt/livy/rsc-jars/netty-all.jar",
+    "livy-conf.livy.repl.jars": "local:/opt/livy/repl_2.11-jars/livy-core.jar,local:/opt/livy/repl_2.11-jars/livy-repl.jar,local:/opt/livy/repl_2.11-jars/commons-codec.jar",
+    "livy-conf.livy.rsc.sparkr.package": "hdfs:///system/livy/sparkr.zip",
+
+    "livy-env.LIVY_SERVER_JAVA_OPTS": "-Xmx2g",
+
+    "spark-defaults-conf.spark.r.backendConnectionTimeout": "86400",
+    "spark-defaults-conf.spark.pyspark.python": "python3",
+    "spark-defaults-conf.spark.yarn.jars": "local:/opt/spark/jars/*",
+
+    "spark-history-server-conf.spark.history.fs.cleaner.maxAge": "7d",
+    "spark-history-server-conf.spark.history.fs.cleaner.interval": "12h",
+
+    "spark-env.SPARK_DAEMON_MEMORY": "2g",
+    "spark-env.PYSPARK_ARCHIVES_PATH": "local:/opt/spark/python/lib/pyspark.zip,local:/opt/spark/python/lib/py4j-0.10.7-src.zip",
+
+    "yarn-site.yarn.log-aggregation.retain-seconds": "604800",
+    "yarn-site.yarn.nodemanager.log-aggregation.compression-type": "gz",
+    "yarn-site.yarn.nodemanager.log-aggregation.roll-monitoring-interval-seconds": "3600",
+    "yarn-site.yarn.scheduler.minimum-allocation-mb": "512",
+    "yarn-site.yarn.scheduler.minimum-allocation-vcores": "1",
+    "yarn-site.yarn.nm.liveness-monitor.expiry-interval-ms": "180000",
+    "yarn-site.yarn.nodemanager.container-executor.class": "org.apache.hadoop.yarn.server.nodemanager.LinuxContainerExecutor"
+  },
+  "gateway": {
+    "gateway-site.gateway.httpclient.socketTimeout": "90s",
+    "gateway-site.sun.security.krb5.debug": "false",
+    "knox-env.KNOX_GATEWAY_MEM_OPTS": "-Xmx2g"
+  }
+}
+```
+
+Dans les sections suivantes sont répertoriées les configurations non prises en charge.
+
+## <a name="unsupported-spark-configurations"></a>Configurations `spark` non prises en charge
+
+Les configurations `spark` suivantes ne sont ni prises en charge ni modifiables dans le contexte du cluster Big Data.
 
 | Category  | Sous-catégorie               | Fichier                       | Configurations non prises en charge                                              |
 |-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
-| spark     |                            |                            |                                                                         |
 |           | yarn-site                  | yarn-site.xml              | yarn.log-aggregation-enable                                             |
 |           |                            |                            | yarn.log.server.url                                                     |
 |           |                            |                            | yarn.nodemanager.pmem-check-enabled                                     |
@@ -82,11 +188,9 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |           |                            |                            | yarn.resourcemanager.zk-address                                         |
 |           |                            |                            | yarn.resourcemanager.ha.rm-ids                                          |
 |           |                            |                            | yarn.resourcemanager.hostname.*                                         |
-|           |                            |                            | |
 |           | capacity-scheduler         | capacity-scheduler.xml     | yarn.scheduler.capacity.root.acl_submit_applications                    |
 |           |                            |                            | yarn.scheduler.capacity.root.acl_administer_queue                       |
 |           |                            |                            | yarn.scheduler.capacity.root.default.acl_application_max_priority       |
-|           |                            |                            | |
 |           | yarn-env                   | yarn-env.sh                |                                                                         |
 |           | spark-defaults-conf        | spark-defaults.conf        | spark.yarn.archive                                                      |
 |           |                            |                            | spark.yarn.historyServer.address                                        |
@@ -102,11 +206,9 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |           |                            |                            | spark.network.crypto.enabled                                            |
 |           |                            |                            | spark.ssl.keyStore                                                      |
 |           |                            |                            | spark.ssl.keyStorePassword  
-|           |                            |                            | |                                            |
 |           |                            |                            | spark.ui.enabled                                                        |
 |           | spark-env                  | spark-env.sh               | SPARK_NO_DAEMONIZE                                                      |
 |           |                            |                            | SPARK_DIST_CLASSPATH                                                    |
-|           |                            |                            | |
 |           | spark-history-server-conf  | spark-history-server.conf  | spark.history.fs.logDirectory                                           |
 |           |                            |                            | spark.ui.proxyBase                                                      |
 |           |                            |                            | spark.history.fs.cleaner.enabled                                        |
@@ -123,7 +225,6 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |           |                            |                            | spark.history.ui.acls.enable                                            |
 |           |                            |                            | spark.history.ui.admin.acls                                             |
 |           |                            |                            | spark.history.ui.admin.acls.groups                                      |
-|           |                            |                            | |
 |           | livy-conf                  | livy.conf                  | livy.keystore                                                           |
 |           |                            |                            | livy.keystore.password                                                  |
 |           |                            |                            | livy.spark.master                                                       |
@@ -142,7 +243,6 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |           |                            |                            | livy.impersonation.enabled                                              |
 |           |                            |                            | livy.server.access-control.enabled                                      |
 |           |                            |                            | livy.server.access-control.*                                            |
-|           |                            |                            | |
 |           | livy-env                   | livy-env.sh                | LIVY_SERVER_JAVA_OPTS                                                   |
 |           | hive-site                  | hive-site.xml              | javax.jdo.option.ConnectionURL                                          |
 |           |                            |                            | javax.jdo.option.ConnectionDriverName                                   |
@@ -163,10 +263,14 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |           |                            |                            | hive.metastore.sasl.enabled                                             |
 |           |                            |                            | hive.metastore.execute.setugi                                           |
 |           |                            |                            | hive.cluster.delegation.token.store.class                               |
-|           |                            |                            | |
-|           | hive-env                   | hive-env.sh                |                                                                         |
-|          |                             |                               |                                                       |
-| hdfs     |                             |                               |                                                       |
+|           | hive-env                   | hive-env.sh                
+
+## <a name="unsupported-hdfs-configurations"></a>Configurations `hdfs` non prises en charge
+
+Les configurations `hdfs` suivantes ne sont ni prises en charge ni modifiables dans le contexte du cluster Big Data.
+
+| Category  | Sous-catégorie               | Fichier                       | Configurations non prises en charge                                              |
+|-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
 |          | core-site                   | core-site.xml                 | fs.defaultFS                                          |
 |          |                             |                               | ha.zookeeper.quorum                                   |
 |          |                             |                               | hadoop.tmp.dir                                        |
@@ -180,10 +284,8 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
 |          |                             |                               | hadoop.http.filter.initializers                       |
 |          |                             |                               | hadoop.security.group.mapping.*                       |
-|           |                            |                            | |
 |          | hadoop-env                  | hadoop-env.sh                 | JAVA_HOME                                             |
 |          |                             |                               | HADOOP_CLASSPATH                                      |
-|           |                            |                            | |
 |          | mapred-env                  | mapred-env.sh                 |                                                       |
 |          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
 |          |                             |                               | dfs.datanode.data.dir                                 |
@@ -224,22 +326,23 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |          |                             |                               | dfs.web.authentication.kerberos.principal             |
 |          |                             |                               | dfs.webhdfs.enabled                                   |
 |          |                             |                               | dfs.permissions.superusergroup                        |
-|          |                             |                               |                                                       |
 |          | hdfs-env                    | hdfs-env.sh                   | HADOOP_HEAPSIZE_MAX                                   |
-|           |                            |                            | |
 |          | zoo-cfg                     | zoo.cfg                       | secureClientPort                                      |
 |          |                             |                               | clientPort                                            |
 |          |                             |                               | dataDir                                               |
 |          |                             |                               | dataLogDir                                            |
 |          |                             |                               | 4lw.commands.whitelist                                |
-|           |                            |                            | |
 |          | zookeeper-java-env          | java.env                      | ZK_LOG_DIR                                            |
 |          |                             |                               | SERVER_JVMFLAGS                                       |
-|           |                            |                            | |
 |          | zookeeper-log4j-properties  | log4j.properties (zookeeper)  | log4j.rootLogger                                      |
 |          |                             |                               | log4j.appender.CONSOLE.*                              |
-|          |                             |                               |                                                       |
-| passerelle  |                             |                               |                                                       |
+
+## <a name="unsupported-gateway-configurations"></a>Configurations `gateway` non prises en charge
+
+Les configurations `gateway` suivantes ne sont ni prises en charge ni modifiables dans le contexte du cluster Big Data.
+
+| Category  | Sous-catégorie               | Fichier                       | Configurations non prises en charge                                              |
+|-----------|----------------------------|----------------------------|-------------------------------------------------------------------------|
 |          | gateway-site                | gateway-site.xml              | gateway.port                                          |
 |          |                             |                               | gateway.path                                          |
 |          |                             |                               | gateway.gateway.conf.dir                              |
@@ -250,9 +353,8 @@ Les configurations suivantes ne sont pas prises en charge et ne peuvent pas êtr
 |          |                             |                               | gateway.scope.cookies.feature.enabled                 |
 |          |                             |                               | ssl.exclude.protocols                                 |
 |          |                             |                               | ssl.include.ciphers                                   |
-|          |                             |                               |                                                       |
 
-## <a name="configurations-via-cluster-profile"></a>Configurations avec le profil du cluster
+## <a name="configurations-via-cluster-profile"></a>Configurations par profil de cluster
 
 Le profil du cluster comporte des ressources et des services. Au moment du déploiement, nous pouvons spécifier les configurations de deux manières : 
 

@@ -1,5 +1,6 @@
 ---
 title: Ajouter des paramètres en cascade à un rapport (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment utiliser les paramètres en cascade dans vos rapports dans le Générateur de rapports pour gérer de grandes quantités de données de rapport.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cba07f738c9a7a6b87f656687f545b64fd14cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035036"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
   Les paramètres en cascade permettent de gérer d'importantes quantités de données de rapport. Vous pouvez définir un ensemble de paramètres associés, de telle sorte que la liste des valeurs d'un paramètre dépende de la valeur choisie dans un autre paramètre. Par exemple, le premier paramètre est indépendant et peut présenter une liste de catégories de produits. Lorsque l'utilisateur sélectionne une catégorie, le deuxième paramètre dépend de la valeur du premier paramètre. Ses valeurs sont mises à jour avec une liste de sous-catégories au sein de la catégorie choisie. Lorsque l'utilisateur affiche le rapport, les valeurs des paramètres de catégorie et de sous-catégorie permettent de filtrer les données du rapport.  
@@ -113,7 +114,7 @@ ms.locfileid: "77080618"
     WHERE (Category = @Category)  
     ```  
   
-     Dans la clause WHERE, Category correspond au nom d’un champ de la \<table> et @Category à un paramètre de requête. Cette instruction génère la liste des sous-catégories de la catégorie spécifiée dans @Category. Au moment de l'exécution, cette valeur est remplie avec la valeur que l'utilisateur choisit pour le paramètre de rapport qui porte le même nom.  
+     Dans la clause WHERE, Category correspond au nom d’un champ de \<table> et @Category à un paramètre de requête. Cette instruction génère la liste des sous-catégories de la catégorie spécifiée dans @Category. Au moment de l'exécution, cette valeur est remplie avec la valeur que l'utilisateur choisit pour le paramètre de rapport qui porte le même nom.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -154,7 +155,7 @@ ms.locfileid: "77080618"
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

@@ -1,5 +1,6 @@
 ---
 title: Comparer et synchroniser les données de deux bases de données
+description: Découvrez comment comparer et synchroniser les données de deux bases de données. Découvrez comment configurer la comparaison, afficher les différences et mettre à jour la cible.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,16 +11,15 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241581"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519039"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procédure : Comparer et synchroniser les données de deux bases de données
 
@@ -39,7 +39,7 @@ Une fois la comparaison terminée, vous pouvez effectuer d'autres actions :
 Pour plus d'informations, consultez [Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> Vous pouvez également comparer le *schéma* de deux bases de données ou de deux versions de la même base de données. Pour plus d'informations, consultez [Procédure : utiliser la comparaison de schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> Vous pouvez également comparer le *schéma* de deux bases de données ou de deux versions de la même base de données. Pour plus d’informations, consultez [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Comparaison des données d'une base de données  
   

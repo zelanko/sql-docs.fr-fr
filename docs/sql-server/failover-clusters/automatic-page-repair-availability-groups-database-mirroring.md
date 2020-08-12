@@ -1,6 +1,6 @@
 ---
 title: Réparation de page automatique pour les groupes de disponibilité et la mise en miroir de bases de données
-description: 'Réparez automatiquement certains types de corruption de page lorsqu’une base de données participe à un groupe de disponibilité Always On ou à une relation de mise en miroir de bases de données. Cette rubrique fournit des informations sur les types d’erreurs et leurs résolutions possibles. '
+description: Découvrez comment résoudre automatiquement certains cas de corruption de page lorsqu’une base de données participe à un groupe de disponibilité AlwaysOn ou à une mise en miroir de bases de données.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729128"
 ---
-# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Réparation de page automatique (groupes de disponibilité : mise en miroir de bases de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Réparation de page automatique (Groupes de disponibilité : Mise en miroir de bases de données)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La réparation de page automatique est prise en charge par la mise en miroir de bases de données et par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Lorsque certains types d'erreurs endommagent une page et la rendent illisible, un serveur partenaire de mise en miroir de bases de données (principal ou miroir) ou un réplica de disponibilité (principal ou secondaire) tente de récupérer automatiquement la page. Le serveur partenaire/réplica qui ne peut pas lire la page demande une nouvelle copie de la page auprès de son serveur partenaire ou d'un autre réplica. Si cette demande réussit, la page illisible est remplacée par la copie lisible, ce qui permet généralement de résoudre l'erreur.  
   
  En règle générale, la mise en miroir de bases de données et [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] gèrent les erreurs d'E/S de manières équivalentes. Les quelques différences sont présentées ici de manière explicite.  
@@ -63,7 +63,7 @@ ms.locfileid: "74822645"
   
 -   Page 9 (page de démarrage de la base de données).  
   
--   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
+-   Pages d’allocation : pages Global Allocation Map (GAM), pages Shared Global Allocation Map (SGAM) et pages Page Free Space (PFS).  
   
  
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> Gestion des erreurs d’e/s sur la base de données principale/primaire  
@@ -96,7 +96,7 @@ ms.locfileid: "74822645"
  Une réparation de page automatique est un processus asynchrone qui s'exécute en arrière-plan. Par conséquent, une opération de base de données qui demande une page illisible échoue et renvoie le code d'erreur correspondant à la condition ayant provoqué l'échec. Lorsque vous développez une application pour une base de données mise en miroir ou une base de données de disponibilité, vous devez intercepter les exceptions pour les opérations ayant échoué. Si le code d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est 823, 824 ou 829, vous devez retenter l'opération ultérieurement.  
   
 
-##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> Procédure : Consulter les tentatives de réparation de page automatique  
  Les vues de gestion dynamique suivantes retournent les lignes correspondant aux dernières tentatives de réparation de page automatique sur une base de données de disponibilité ou une base de données mise en miroir spécifique, avec un maximum de 100 lignes par base de données.  
   
 -   **Groupes de disponibilité Always On :**  

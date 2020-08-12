@@ -1,6 +1,6 @@
 ---
 title: Pagination dans les rapports (Générateur de rapports et SSRS) | Microsoft Docs
-description: La pagination fait référence au nombre de pages au sein d'un rapport paginé et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans Reporting Services dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport.
+description: Découvrez le nombre de pages au sein d’un rapport paginé et la façon dont les éléments d’un rapport sont disposés sur ces pages dans le Générateur de rapports.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b308503f2aafb1fcbfd88b3e7509906cafad8a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006159"
 ---
 # <a name="pagination-in-reports-report-builder--and-ssrs"></a>Pagination dans les rapports (Générateur de rapports et SSRS)
   La pagination fait référence au nombre de pages au sein d'un rapport paginé et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport. Lorsque vous exécutez un rapport sur le serveur de rapports, le rapport utilise le convertisseur HTML. HTML suit un ensemble spécifique de règles de pagination. Par exemple, si vous exportez le même rapport en PDF, le convertisseur PDF est utilisé et un ensemble différent de règles est appliqué ; par conséquent, le rapport est paginé différemment. Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

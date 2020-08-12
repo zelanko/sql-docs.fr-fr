@@ -1,5 +1,6 @@
 ---
 title: Masquer un en-tête ou un pied de page sur la première ou la dernière page (Générateur de rapports et SSRS) | Microsoft Docs
+description: Voulez-vous un en-tête ou un pied de page sur la première ou la dernière page de votre rapport ? Si ce n’est pas le cas, découvrez comment désactiver l’affichage de l’en-tête ou du pied de page dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cdadc94bea1f3e303c89653cb9272cac244aeba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77621a062b53e2433d9890975771a7208bd04a71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056520"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Masquer un en-tête ou un pied de page sur la première ou la dernière page (Générateur de rapports et SSRS)
   Un rapport peut contenir un en-tête et un pied de page qui s'affichent dans la partie supérieure ou inférieure de chaque page. Après avoir ajouté un en-tête ou un pied de page, vous pouvez le masquer de manière sélective sur la première et la dernière page d'un rapport.  

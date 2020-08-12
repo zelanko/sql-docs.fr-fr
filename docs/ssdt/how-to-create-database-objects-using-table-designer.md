@@ -1,5 +1,6 @@
 ---
 title: Créer des objets de base de données avec le Concepteur de tables
+description: Découvrez comment créer une nouvelle base de données dans l’Explorateur d’objets SQL Server. Consultez comment créer des tables, des contraintes et des références de clé étrangère nouvelles dans le Concepteur de tables.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241502"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518779"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Procédure : créer des objets de base de données à l'aide du Concepteur de tables
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procédure : Créer des objets de base de données avec le Concepteur de tables
 
 Non seulement le nouveau nœud **SQL Server** de l'**Explorateur d'objets SQL Server** est très similaire à SSMS visuellement, mais vous pouvez aussi créer de nouveaux objets à l'aide de menus contextuels dont le fonctionnement est semblable à celui de leurs homologues SSMS.  
   
@@ -61,17 +61,17 @@ Par exemple, vous pouvez créer une nouvelle base de données sous le nœud **Ba
   
 6.  Répétez les étapes précédentes pour créer une autre table nommée **Customer**. Cette fois-ci, ajoutez les colonnes suivantes à la table Customer à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Customer]`.  
   
-    |Name|Type de données|**Null autorisé**|  
+    |Nom|Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  
     |Id|int|non cochée|  
-    |Name|nvarchar (128)|non cochée|  
+    |Nom|nvarchar (128)|non cochée|  
   
 7.  Créez une autre table nommée **Products**. Ajoutez les colonnes suivantes à la table Products à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Products]`.  
   
-    |Name|Type de données|**Null autorisé**|  
+    |Nom|Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  
     |Id|int|non cochée|  
-    |Name|nvarchar (128)|non cochée|  
+    |Nom|nvarchar (128)|non cochée|  
     |ShelfLife|int|cochée|  
     |SupplierId|int|cochée|  
     |CustomerId|int|cochée|  

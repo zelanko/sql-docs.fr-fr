@@ -2,20 +2,20 @@
 title: Présentation du déploiement d’application
 titleSuffix: SQL Server Big Data Clusters
 description: Cet article décrit le déploiement d’application sur un cluster Big Data pour SQL Server 2019.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831569"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215448"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Présentation du déploiement d’application sur un cluster Big Data
 
@@ -52,6 +52,28 @@ Ces paramètres ont un impact sur la quantité de demandes que le déploiement p
 Une fois le ReplicaSet créé et les pods démarrés, un travail cron est créé si un `schedule` a été défini dans le fichier `spec.yaml`. Enfin, le service Kubernetes créé peut être utilisé pour gérer et exécuter l’application (voir ci-dessous).
 
 Quand une application est exécutée, le service Kubernetes pour l’application transmet par proxy les demandes à un réplica et retourne les résultats.
+
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> Considérations sur la sécurité pour le déploiement d'applications sur OpenShift
+
+SQL Server 2019 CU5 prend en charge le déploiement de clusters Big Data sur Red Hat OpenShift, ainsi qu’un modèle de sécurité mis à jour pour BDC, si bien que les conteneurs privilégiés ne sont plus nécessaires. Outre les utilisateurs sans privilège, les conteneurs s’exécutent en tant qu’utilisateur non racine par défaut pour tous les nouveaux déploiements avec SQL Server 2019 CU5.
+
+À l’heure où CU5 est publié, l’étape de configuration des applications déployées avec les interfaces de [déploiement d’application](concept-application-deployment.md) s’exécute toujours comme utilisateur *racine*. En effet, c’est à ce moment-là que sont installés les packages supplémentaires utilisés par l’application. Le reste du code utilisateur déployé dans le cadre de l’application s’exécute en tant qu’utilisateur à faibles privilèges. 
+
+En outre, **CAP_AUDIT_WRITE** est une fonctionnalité facultative permettant la planification d’applications SSIS à l’aide de travaux cron. Lorsque le fichier de spécification yaml de l’application indique une planification, l’application est déclenchée par le biais d’un travail cron, qui nécessite une fonctionnalité supplémentaire.  L’application peut également être déclenchée à la demande avec *azdata app run* via un appel de service web, qui ne nécessite pas la fonctionnalité CAP_AUDIT_WRITE. 
+
+> [!NOTE]
+> La contrainte de contexte de sécurité (SCC) personnalisée de l’[article sur le déploiement OpenShift](deploy-openshift.md) n’inclut pas cette fonctionnalité, car elle n’est pas requise par le déploiement par défaut d’un cluster Big Data. Pour activer cette fonctionnalité, vous devez d’abord mettre à jour le fichier yaml du SCC personnalisé pour inclure CAP_AUDIT_WRITE 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
 
 ## <a name="how-to-work-with-application-deployment"></a>Comment utiliser le déploiement d’application
 

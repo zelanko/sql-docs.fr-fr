@@ -1,5 +1,6 @@
 ---
 title: Assistant Carte et Assistant Couche (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment automatiser la création d’une carte, l’ajout d’une couche ou la modification des options de couche à l’aide de l’Assistant Carte ou de l’Assistant Couche du Générateur de rapports.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048329"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
  Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , l’Assistant Carte et l’Assistant Couche automatisent la tâche de création d’une carte, d’ajout d’une couche ou de modification des options de couche sur une couche existante.  
@@ -44,7 +45,7 @@ ms.locfileid: "77078569"
   
  Cliquez sur le titre de la page de l'Assistant pour consulter l'aide correspondante. Les pages qui s'affichent varient en fonction de vos choix pour le type de carte, la source de données spatiales et la source de données analytiques.  
   
-1.  [Choisir une source de données spatiales](#SpatialDataSource). Les données spatiales peuvent provenir de la bibliothèque de cartes, Environmental Systems Research Institute, Inc. d'un fichier de forme ESRI ou des données spatiales d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  [Choisir une source de données spatiales](#SpatialDataSource). Les données spatiales peuvent provenir de la bibliothèque de cartes, d'un fichier de forme ESRI ou des données spatiales d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   [Que sont les données spatiales ?](#SpatialData)  
   
@@ -119,7 +120,7 @@ ms.locfileid: "77078569"
  Pour étendre la bibliothèque de cartes, vous pouvez ajouter ou supprimer des rapports du répertoire de la bibliothèque de cartes et ajouter des dossiers pour organiser les cartes. Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
- Un fichier de forme ESRI est un ensemble de fichiers contenant des données conformes au format de données spatiales de l'ESRI . Le jeu de fichiers inclut en général le fichier *\<nom_fichier>* .shp qui contient les données spatiales, ainsi qu’un fichier de support, *\<nom_fichier>* .dbf.  
+ Un fichier de forme ESRI est un ensemble de fichiers contenant des données conformes au format de données spatiales de l'ESRI . Le jeu de fichiers inclut en général le fichier *\<filename>* .shp qui contient les données spatiales, ainsi qu’un fichier de support, *\<filename>* .dbf.  
   
  Lorsque vous spécifiez un fichier de forme en tant que source de données spatiales et que ce fichier se trouve sur votre ordinateur local, les données spatiales sont incorporées automatiquement dans le rapport. Pour utiliser dynamiquement des données spatiales d'un fichier ESRI, vous devez effectuer les opérations suivantes :  
   

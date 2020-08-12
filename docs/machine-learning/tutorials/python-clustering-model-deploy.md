@@ -1,32 +1,35 @@
 ---
 title: 'Tutoriel Python : Déployer un modèle de cluster'
+titleSuffix: SQL machine learning
 description: Dans la quatrième partie de cette série de tutoriels qui en contient 4, vous allez déployer un modèle de clustering dans Python avec l’apprentissage automatique SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730518"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutoriel Python : Déployer un modèle pour classer les clients par catégorie avec l’apprentissage automatique SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering développé dans Python dans une base de données SQL Server à l’aide de SQL Server Machine Learning Services ou sur des clusters Big Data.
+Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en Python, dans une base de données à l’aide de SQL Server Machine Learning Services ou sur Clusters Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering développé dans Python dans une base de données SQL Server à l’aide de SQL Server Machine Learning Services.
+Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en Python, dans une base de données à l’aide de SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en Python, dans une base de données à l’aide d’Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 Pour effectuer régulièrement le clustering, à mesure que de nouveaux clients s’inscrivent, vous devez être en mesure d’appeler le script Python à partir de n’importe quelle application. Pour ce faire, vous pouvez déployer le script Python dans une base de données en le plaçant à l’intérieur d’une procédure stockée SQL. Étant donné que votre modèle s’exécute dans la base de données, son apprentissage peut facilement être effectué en fonction des données stockées dans la base de données.
@@ -42,7 +45,7 @@ Dans cet article, vous allez apprendre à :
 
 Dans la [première partie](python-clustering-model.md), vous avez installé les prérequis et restauré l’exemple de base de données.
 
-Dans la [deuxième partie](python-clustering-model-prepare-data.md), vous avez préparé les données d’une base de données SQL pour effectuer le clustering.
+Dans la [deuxième partie](python-clustering-model-prepare-data.md), vous avez appris à préparer les données d’une base de données pour effectuer le clustering.
 
 Dans la [troisième partie](python-clustering-model-build.md), vous avez appris à créer et à effectuer l’apprentissage d’un modèle de clustering dans Python.
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Effectuer le clustering dans SQL Database
+## <a name="perform-clustering"></a>Effectuer le clustering
 
 Maintenant que vous avez créé la procédure stockée, exécutez le script suivant pour effectuer le clustering à l’aide de la procédure.
 

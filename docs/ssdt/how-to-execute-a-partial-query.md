@@ -1,23 +1,23 @@
 ---
 title: Exécuter une requête partielle
+description: Obtenez de l’aide pour le débogage d’une section d’une requête complexe. Utilisez L'éditeur Transact-SQL pour mettre en surbrillance un segment spécifique du script et l'exécuter en tant que requête unique.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5786127626a655e47e2f6eb4ba96f0a16b740258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f9aaa7712726b37d03c7d7de0994bb8abe01a7d9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241415"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518799"
 ---
-# <a name="how-to-execute-a-partial-query"></a>Procédure : exécuter une requête partielle
+# <a name="how-to-execute-a-partial-query"></a>Procédure : Exécuter une requête partielle
 
 L'éditeur Transact\-SQL permet de mettre en surbrillance un segment spécifique du script et de l'exécuter en tant que requête unique. Ainsi, il est plus facile pour vous de déboguer des sections de requêtes complexes.  
   

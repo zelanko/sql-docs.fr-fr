@@ -1,23 +1,23 @@
 ---
 title: Installer et gérer des extensions de fonctionnalités
+description: Découvrez comment installer des extensions de fonctionnalités afin de pouvoir augmenter les fonctionnalités de SQL Server Data Tools. Consultez l’emplacement d’installation de différents types d’extensions.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241388"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518979"
 ---
-# <a name="how-to-install-and-manage-feature-extensions"></a>Comment : installer et gérer des extensions de fonctionnalités
+# <a name="how-to-install-and-manage-feature-extensions"></a>Procédure : Installer et gérer des extensions de fonctionnalités
 
 Il est possible d’ajouter des règles d’analyse du code de la base de données, des conditions pour les tests unitaires de base de données et des contributeurs Build and Deployment pour améliorer les fonctionnalités offertes par les différentes éditions de Visual Studio, y compris SQL Server Data Tools. Cependant, vous devrez tout d’abord installer l’extension de fonctionnalité pour pouvoir l’utiliser, qu’elle ait été créée par vous ou par quelqu’un d’autre.  
   
@@ -37,7 +37,7 @@ Les extensions peuvent être exécutées dans le cadre de nos services de ligne 
 |Type d'extension|Service de ligne de commande|Dossier d'installation|  
 |------------------|------------------------|------------------|  
 |Condition de test personnalisée pour les tests unitaires SQL Server|MSBuild/MSTest peut être utilisé pour exécuter des tests unitaires dans l’Invite de commandes développeur de Visual Studio 2013 et avec des outils en ligne de commande similaires.|Le même qu’en cas d’exécution dans Visual Studio.|  
-|Collaborateurs de build<br /><br />Collaborateurs de déploiement|[SqlPackage.exe](../tools/sqlpackage.md), ou à l’aide de cibles de déploiement ou de publication MSBuild lors de la génération d’un projet de base de données.|MSBuild : le même qu’en cas d’exécution dans Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md) : s’il se trouve dans le répertoire Visual Studio, le même qu’avant.<br /><br />Si SqlPackage.exe et d’autres DLL DacFx se trouvent en dehors de ce répertoire, les extensions doivent être placées dans le même répertoire ou dans C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
+|Collaborateurs de build<br /><br />Collaborateurs de déploiement|[SqlPackage.exe](../tools/sqlpackage.md), ou à l’aide de cibles de déploiement ou de publication MSBuild lors de la génération d’un projet de base de données.|MSBuild : Le même qu’en cas d’exécution dans Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md) : s’il se trouve dans le répertoire Visual Studio, le même qu’avant.<br /><br />Si SqlPackage.exe et d’autres DLL DacFx se trouvent en dehors de ce répertoire, les extensions doivent être placées dans le même répertoire ou dans C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
 |Règles d'analyse statique du code|Vous pouvez utiliser MSBuild pour générer le projet et exécuter l'analyse statique du code.<br /><br />Vous pouvez de plus exécuter l’analyse du code avec une API CodeAnalysisService dans vos propres applications. Dans ce cas, les règles de recherche d'extension fonctionnent comme lors de l'utilisation de SqlPackage.exe.|Le même que pour les collaborateurs de déploiement et de génération.|  
   
 > [!NOTE]  

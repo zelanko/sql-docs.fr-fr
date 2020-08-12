@@ -1,5 +1,6 @@
 ---
 title: Créer un test unitaire SQL Server vide
+description: Découvrez comment créer des tests unitaires SQL Server. Découvrez comment utiliser les mêmes scripts TestInitialize et TestCleanup que les autres tests et comment utiliser des scripts différents.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,22 +9,21 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5684735fc0bf2aaaa35183933145006d6efe188e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241510"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518819"
 ---
-# <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procédure : créer un test unitaire SQL Server vide
+# <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procédure : Créer un test unitaire SQL Server vide
 
-Incluez des tests unitaires dans votre projet de base de données pour vérifier que les modifications que vous apportez aux objets de base de données n'empêchent pas les fonctionnalités existantes. Les procédures suivantes expliquent comment créer des tests unitaires SQL Server pour n'importe quel objet de base de données. SQL Server Data Tools offre une prise en charge supplémentaire pour des fonctions de base de données, des déclencheurs et des procédures stockées. Pour plus d’informations, consultez [Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
+Incluez des tests unitaires dans votre projet de base de données pour vérifier que les modifications que vous apportez aux objets de base de données n'empêchent pas les fonctionnalités existantes. Les procédures suivantes expliquent comment créer des tests unitaires SQL Server pour n'importe quel objet de base de données. SQL Server Data Tools offre une prise en charge supplémentaire pour des fonctions de base de données, des déclencheurs et des procédures stockées. Pour plus d’informations, consultez [Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
-Lorsque vous créez un test unitaire SQL Server à l'aide de la première procédure, un projet de test est automatiquement créé s'il n'en existe aucun. S'il existe déjà des projets de test, vous avez la possibilité d'ajouter le nouveau test dans un de ces projets ou de créer un projet de test. Pour plus d’informations sur les projets de test, consultez [Procédure : créer un projet de test pour un test unitaire de base de données SQL Server](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
+Lorsque vous créez un test unitaire SQL Server à l'aide de la première procédure, un projet de test est automatiquement créé s'il n'en existe aucun. S'il existe déjà des projets de test, vous avez la possibilité d'ajouter le nouveau test dans un de ces projets ou de créer un projet de test. Pour plus d’informations sur les projets de test, consultez [Procédure : créer un projet de test pour un test unitaire de base de données SQL Server](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
   
 Vous avez deux options pour créer un test unitaire SQL Server :  
   
@@ -59,7 +59,7 @@ Vous avez deux options pour créer un test unitaire SQL Server :
   
     -   Le déploiement automatique du projet de base de données et les modifications de schéma associées apportées à une configuration de projet donnée avant exécution des tests unitaires.  
   
-    Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+    Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
 6.  Spécifiez les informations de configuration du projet et cliquez sur **OK**.  
   
@@ -96,7 +96,7 @@ Après avoir configuré le projet de test et créé le test unitaire, voici les 
 -   Ajoutez des conditions de test ou une autre instruction d'assertion pour vérifier les résultats du script.  
   
 > [!NOTE]  
-> La condition de test Non concluant est la condition par défaut ajoutée à chaque test. Cette condition de test est incluse pour indiquer que la vérification du test n'a pas été implémentée. Supprimez cette condition de test de votre test après avoir ajouté d'autres conditions de test. Pour plus d'informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires de base de données](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condition de test Non concluant est la condition par défaut ajoutée à chaque test. Cette condition de test est incluse pour indiquer que la vérification du test n'a pas été implémentée. Supprimez cette condition de test de votre test après avoir ajouté d'autres conditions de test. Pour plus d’informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Procédure : exécuter des tests unitaires SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  

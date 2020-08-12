@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: Dans la deuxième partie de cette série de quatre tutoriels, vous utiliserez Python pour préparer des données afin de prédire les locations de skis avec le Machine Learning SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 424d61e24e9cd1163854d86961a34770eee36260
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730484"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Tutoriel Python : Préparer des données pour effectuer l’apprentissage d’un modèle de régression linéaire avec le Machine Learning SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer des données à partir d’une base de données à l’aide de Python. Plus loin dans cette série, vous utiliserez ces données pour effectuer l’apprentissage et le déploiement d’un modèle de régression linéaire dans Python avec SQL Server Machine Learning Services ou sur des clusters Big Data.
@@ -26,11 +26,14 @@ Dans la deuxième partie de cette série de quatre tutoriels, vous allez prépar
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer des données à partir d’une base de données à l’aide de Python. Plus loin dans cette série, vous utiliserez ces données pour effectuer l’apprentissage et le déploiement d’un modèle de régression linéaire dans Python avec SQL Server Machine Learning Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer des données à partir d’une base de données à l’aide de Python. Dans la suite de cette série, vous utiliserez ces données pour entraîner et déployer un modèle de régression linéaire en Python avec Azure SQL Managed Instance Machine Learning Services.
+::: moniker-end
 
 Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
-> * Charger les données issues de la base de données SQL Server dans une trame de données **pandas**
+> * Charger les données à partir de la base de données dans une trame de données **pandas**
 > * Préparer les données dans Python en supprimant des colonnes
 
 Dans la [première partie](python-ski-rental-linear-regression.md), vous avez appris à restaurer l’exemple de base de données.
@@ -47,7 +50,7 @@ Dans la [quatrième partie](python-ski-rental-linear-regression-deploy-model.md)
 
 Pour utiliser les données dans Python, vous allez charger les données à partir de la base de données dans une trame de données pandas.
 
-Créez un nouveau notebook Python dans Azure Data Studio et exécutez le script ci-dessous. Remplacez `<SQL Server>` par le nom de votre propre serveur SQL Server.
+Créez un nouveau notebook Python dans Azure Data Studio et exécutez le script ci-dessous. 
 
 Le script Python ci-dessous importe le jeu de données à partir de la table **dbo. rental_data** de votre base de données vers une trame de données pandas **df**.
 
@@ -60,7 +63,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 

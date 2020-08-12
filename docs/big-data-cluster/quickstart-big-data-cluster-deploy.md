@@ -5,20 +5,20 @@ description: Découvrez comment utiliser un script de déploiement pour déploye
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77608383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85699829"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Utiliser un script Python pour déployer un cluster Big Data SQL Server sur Azure Kubernetes Service (AKS)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Dans ce tutoriel, vous utilisez un exemple de script de déploiement Python pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] sur AKS (Azure Kubernetes Service).
 
@@ -85,7 +85,8 @@ Procédez comme suit pour exécuter le script de déploiement dans une invite ba
    > La taille de machine **Standard_L8s** par défaut peut ne pas être disponible dans toutes les régions Azure. Si vous sélectionnez une autre taille de machine, veillez à ce que le nombre total de disques pouvant être attachés sur les nœuds du cluster soit supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, le cluster Big Data nécessite 24 revendications de volumes persistants. Par exemple, la taille de machine [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) prend en charge 32 disques attachés : vous pouvez donc évaluer les clusters Big Data avec un seul nœud de cette taille de machine.
 
    > [!NOTE]
-   > Le compte SQL Server `sa` est désactivé durant le déploiement de clusters Big Data. Un nouveau compte de connexion d’administrateur système est provisionné dans l’instance maître de SQL Server avec le même nom que celui spécifié pour l’entrée du **Nom d’utilisateur** et le mot de passe correspondant à l’entrée du **Mot de passe**. Les mêmes valeurs correspondant à **Nom d’utilisateur** et **Mot de passe** sont utilisées pour provisionner un utilisateur administrateur de contrôleur. Le seul utilisateur pris en charge pour la passerelle (Knox) est **root**, et le mot de passe est le même que ci-dessus.
+   > Le compte SQL Server `sa` est désactivé durant le déploiement de clusters Big Data. Un nouveau compte de connexion d’administrateur système est provisionné dans l’instance maître de SQL Server avec le même nom que celui spécifié pour l’entrée du **Nom d’utilisateur** et le mot de passe correspondant à l’entrée du **Mot de passe**. Les mêmes valeurs correspondant à **Nom d’utilisateur** et **Mot de passe** sont utilisées pour provisionner un utilisateur administrateur de contrôleur. Le seul utilisateur pris en charge pour la passerelle (Knox) sur des clusters déployés avant SQL Server 2019 CU5 est **racine** et le mot de passe est le même que ci-dessus.
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. Le script commence par créer un cluster AKS avec les paramètres que vous avez spécifiés. Cette étape prend plusieurs minutes.
 

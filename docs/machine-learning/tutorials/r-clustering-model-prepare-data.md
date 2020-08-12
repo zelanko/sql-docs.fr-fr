@@ -1,48 +1,50 @@
 ---
 title: 'Tutoriel : Préparer des données pour effectuer un clustering en R'
 titleSuffix: SQL machine learning
-description: Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données à partir d’une base de données SQL pour effectuer un clustering en R avec le Machine Learning SQL.
+description: Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec le Machine Learning SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728551"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Tutoriel : Préparer des données pour effectuer le clustering dans R avec le Machine Learning SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données à partir d’une base de données SQL pour effectuer un clustering en R avec SQL Database Machine Learning Services ou sur des clusters Big Data.
+Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec SQL Server Machine Learning Services ou sur Clusters Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données à partir d’une base de données SQL pour effectuer un clustering en R avec SQL Database Machine Learning Services.
+Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données à partir d’une base de données SQL pour effectuer un clustering en R avec SQL Database R Services.
+Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec SQL Server 2016 R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Séparer les clients selon différentes dimensions à l’aide de R
-> * Charger les données à partir de la base de données SQL dans une trame de données R
+> * Charger les données de la base de données dans une trame de données R
 
 Dans la [première partie](r-clustering-model-introduction.md), vous avez installé les prérequis et restauré l’exemple de base de données.
 
 Dans la [troisième partie](r-clustering-model-build.md), vous apprendrez à créer et à effectuer l’apprentissage d’un modèle de clustering k-moyennes dans R.
 
-Dans la [quatrième partie](r-clustering-model-deploy.md), vous allez créer une procédure stockée dans une base de données SQL capable d’effectuer un clustering en R en fonction de nouvelles données.
+Dans la [quatrième partie](r-clustering-model-deploy.md), vous apprendrez à créer une procédure stockée dans une base de données permettant d’effectuer un clustering en R en fonction de nouvelles données.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -63,9 +65,9 @@ Dans la fonction **connStr**, remplacez **ServerName** par vos propres informati
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>Charger les données dans une trame de données
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 Maintenant, utilisez le script suivant pour retourner les résultats de la requête vers une trame de données R.
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ Si vous ne poursuivez pas ce tutoriel, supprimez la base de données tpcxbb_1gb.
 Dans la deuxième partie de cette série de tutoriels, vous avez appris à effectuer les tâches suivantes :
 
 * Séparer les clients selon différentes dimensions à l’aide de R
-* Charger les données à partir de la base de données SQL dans une trame de données R
+* Charger les données de la base de données dans une trame de données R
 
 Pour effectuer l’apprentissage d’un modèle de Machine Learning qui utilise ces données client, suivez la troisième partie de cette série de tutoriels :
 

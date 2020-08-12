@@ -1,23 +1,23 @@
 ---
 title: Ajouter des conditions de test à des tests unitaires SQL Server
+description: Découvrez comment ajouter des conditions de test à une unité SQL Server. Consultez comment utiliser le concepteur de test unitaire SQL Server pour cette tâche.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e78a045c3dd7127df8c692120ff140892594fb0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241627"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518929"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procédure : ajouter des conditions de test à des tests unitaires SQL Server
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procédure : Ajouter des conditions de test à des tests unitaires SQL Server
 
 Ajoutez d'autres conditions de test à un test unitaire SQL Server à l'aide du **Concepteur de test unitaire SQL Server**. Lorsque vous enregistrez la classe de test, les conditions de test sont automatiquement enregistrées dans votre projet de test en tant que code Visual C\# ou Visual Basic dans le fichier de code source contenant la classe de test. Après avoir enregistré une condition de test, modifiez-la dans le **Concepteur de test unitaire SQL Server** ou dans son fichier de code source.  
   
