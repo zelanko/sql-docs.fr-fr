@@ -1,21 +1,21 @@
 ---
 title: Dépannage des problèmes liés aux tests unitaires de base de données SQL Server
+description: Affichez des conseils de résolution des problèmes que vous pouvez rencontrer avec les tests unitaires SQL Server, tels que les échecs de délai d’attente et le déploiement de bases de données sur des cibles inattendues.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9f8c0c87922a54df0bcd3d2ee4fa730ecfaff7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256306"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883410"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Dépannage des problèmes liés aux tests unitaires de base de données SQL Server
 
@@ -50,5 +50,5 @@ Si les tests unitaire de base de données échouent en raison d'un délai d'atte
   
 ## <a name="see-also"></a>Voir aussi  
 [Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[Procédure : configurer l'exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

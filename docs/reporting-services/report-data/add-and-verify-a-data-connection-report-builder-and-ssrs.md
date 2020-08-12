@@ -1,5 +1,6 @@
 ---
 title: Ajouter et vérifier une connexion de données (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment utiliser le Générateur de rapports pour ajouter et vérifier une connexion de données afin de vérifier que les informations d’identification spécifiées sont suffisantes.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812144"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Ajouter et vérifier une connexion de données (Générateur de rapports et SSRS)
 
@@ -54,7 +55,7 @@ La source de données apparaît dans le volet des données de rapport.
 
 3. Si la connexion a abouti, le message suivant apparaît : « La connexion a été correctement créée ». [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. Si la connexion n'a pas abouti, le message suivant s'affiche : « Impossible de se connecter à la source de données ».  
+4. Si la connexion n’a pas abouti, le message suivant apparaît : « Impossible de se connecter à la source de données. »  
 
 5. Cliquez sur **Détails**et utilisez les informations pour corriger le problème.
 

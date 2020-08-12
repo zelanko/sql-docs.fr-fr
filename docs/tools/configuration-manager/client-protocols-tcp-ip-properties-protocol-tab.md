@@ -1,5 +1,6 @@
 ---
 title: Protocoles clients – Propriétés TCP/IP (onglet Protocole)
+description: Découvrez comment spécifier des options TCP/IP dans le Gestionnaire de configuration SQL Server, telles que le paramètre Keep Alive et le numéro de port par défaut.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad15bb228002645c929f1ff2d4c049e94f3ae004
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 637ebfc8b031ed5b8b49ac634718c56786a9b813
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306516"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892042"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>Protocoles clients – Propriétés TCP/IP (onglet Protocole)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Dans le Gestionnaire de connexions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez l’onglet **Protocole** de la boîte de dialogue **Propriétés TCP/IP** pour afficher ou spécifier les options suivantes. Pour vous connecter à un autre port, tapez le numéro du port dans la zone **Port par défaut** . Pour plus d’informations sur les chaînes de connexion, consultez [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
 ## <a name="options"></a>Options  

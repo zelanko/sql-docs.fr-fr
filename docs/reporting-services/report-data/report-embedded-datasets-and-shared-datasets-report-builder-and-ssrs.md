@@ -1,5 +1,6 @@
 ---
 title: Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports) | Microsoft Docs
+description: Découvrez les jeux de données incorporés dans les rapports et les jeux de données partagés afin de pouvoir créer des expressions qui correspondent aux données effectives lors de l’exécution du rapport.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1347086db055ab0bb13f337d8125b3f9795157dc
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812250"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports et SSRS)
   Un dataset spécifie les données que vous souhaitez utiliser à partir d'une connexion de données. Un dataset est basé sur une connexion de données enregistrée dans le rapport en tant que source de données incorporée ou référence à une source de données partagée sur un serveur de rapports. Le dataset inclut une requête qui spécifie un ensemble de champs. Lorsque vous faites glisser ces champs vers l'aire de conception, vous créez des expressions qui correspondent aux données effectives lorsque le rapport s'exécute.  

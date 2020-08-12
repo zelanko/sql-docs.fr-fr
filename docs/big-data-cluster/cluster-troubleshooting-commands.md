@@ -5,20 +5,20 @@ description: Cet article fournit des commandes utiles pour la supervision et la 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773675"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Résoudre les problèmes liés à [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article décrit plusieurs commandes Kubernetes utiles que vous pouvez utiliser pour superviser et dépanner un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Il montre comment visualiser les informations détaillées d’un pod ou d’autres artefacts Kubernetes situés dans le cluster Big Data. Cet article traite également de tâches courantes, comme la copie de fichiers vers ou depuis un conteneur exécutant un des services du cluster Big Data SQL Server.
 
@@ -118,8 +118,10 @@ Les services suivants prennent en charge les connexions externes au cluster Big 
 |---|---|
 | **master-svc-external** | Fournit l’accès à l’instance principale.<br/>(**EXTERNAL-IP,31433** et l’utilisateur **SA**) |
 | **controller-svc-external** | Prend en charge les outils et les clients qui gèrent le cluster. |
-| **gateway-svc-external** | Fournit l’accès à la passerelle HDFS/Spark.<br/>(**EXTERNAL-IP** et l’utilisateur **root**) |
+| **gateway-svc-external** | Fournit l’accès à la passerelle HDFS/Spark.<br/>(**EXTERNAL-IP** et l’utilisateur `<AZDATA_USERNAME>`)<sup>1</sup>|
 | **appproxy-svc-external** | Prend en charge les scénarios de déploiement d’applications. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > Il s’agit d’un moyen de voir les services avec **kubectl**, mais il est également possible d’utiliser la commande `azdata bdc endpoint list` pour voir ces points de terminaison. Pour plus d’informations, consultez [Obtenir les points de terminaison d’un cluster Big Data](deployment-guidance.md#endpoints).

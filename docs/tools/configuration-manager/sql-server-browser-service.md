@@ -1,5 +1,6 @@
 ---
 title: SQL Server Browser Service
+description: Découvrez comment utiliser SQL Server Browser, un service qui écoute les demandes ayant trait aux ressources SQL Server et fournit des informations sur les instances SQL installées.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba9a8f2af9b703b64ffadb597d9eda2edb28a0b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0730304b986cee8475afb0f331f99c6c823ae541
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307080"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894053"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser s’exécute en tant que service Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l’écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l’ordinateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contribue aux actions suivantes :  
   
 -   Affichage de la liste des serveurs disponibles  
@@ -130,7 +131,7 @@ ms.locfileid: "75307080"
  Les instances masquées sont des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prennent en charge que les connexions de mémoire partagée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définissez l'indicateur `HideInstance` pour indiquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne doit pas répondre par des informations sur cette instance de serveur.  
   
 ### <a name="using-a-firewall"></a>Utilisation d'un pare-feu  
- Pour communiquer avec le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sur un serveur situé derrière un pare-feu, ouvrez le port UDP 1434 en plus du port TCP utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par ex., le port 1433). Pour plus d'informations sur l'utilisation d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Pour communiquer avec le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sur un serveur situé derrière un pare-feu, ouvrez le port UDP 1434 en plus du port TCP utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par ex., le port 1433). Pour plus d’informations sur l’utilisation d’un pare-feu, consultez « Guide pratique pour configurer un pare-feu pour accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Protocoles réseau et bibliothèques réseau](../../sql-server/install/network-protocols-and-network-libraries.md)  

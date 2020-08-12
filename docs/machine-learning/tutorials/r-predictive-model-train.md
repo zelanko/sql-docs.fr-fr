@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748502"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutoriel : Créer un modèle prédictif dans R avec le Machine Learning SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans la troisième partie de cette série de quatre tutoriels, vous allez effectuer l’apprentissage d’un modèle prédictif en R. Dans la partie suivante de cette série, vous allez déployer ce modèle dans une base de données SQL Server avec Machine Learning Services ou sur des clusters Big Data.
@@ -29,7 +28,10 @@ Dans la troisième partie de cette série de quatre tutoriels, vous allez effect
 Dans la troisième partie de cette série de quatre tutoriels, vous allez effectuer l’apprentissage d’un modèle prédictif en R. Dans la partie suivante de cette série, vous allez déployer ce modèle dans une base de données SQL Server avec Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Dans la troisième partie de cette série de quatre tutoriels, vous allez effectuer l’apprentissage d’un modèle prédictif en R. Dans la partie suivante de cette série, vous allez déployer ce modèle dans une base de données SQL Server avec SQL Server R Services.
+Dans la troisième partie de cette série de quatre tutoriels, vous allez entraîner un modèle prédictif en R. Dans la partie suivante de cette série, vous allez déployer ce modèle dans une base de données avec SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans la troisième partie de cette série de quatre tutoriels, vous allez entraîner un modèle prédictif en R. Dans la partie suivante de cette série, vous allez déployer ce modèle dans une base de données Azure SQL Managed Instance avec Machine Learning Services.
 ::: moniker-end
 
 Dans cet article, vous allez apprendre à :
@@ -41,7 +43,7 @@ Dans cet article, vous allez apprendre à :
 
 Dans la [première partie](r-predictive-model-introduction.md), vous avez appris à restaurer l’exemple de base de données.
 
-Dans la [deuxième partie](r-predictive-model-prepare-data.md), vous avez appris à charger les données à partir d’une base de données dans une trame de données Python et à préparer les données dans R.
+Dans la [deuxième partie](r-predictive-model-prepare-data.md), vous avez appris à charger les données d’une base de données dans une trame de données Python et à préparer les données en R.
 
 Dans la [quatrième partie](r-predictive-model-deploy.md), vous allez apprendre à stocker le modèle dans une base de données, puis à créer des procédures stockées à partir des scripts Python que vous avez développés dans les parties 2 et 3. Les procédures stockées sont exécutées sur le serveur pour effectuer des prédictions en fonction de nouvelles données.
 
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

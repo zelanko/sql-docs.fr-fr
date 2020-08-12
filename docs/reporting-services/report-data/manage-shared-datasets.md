@@ -1,5 +1,6 @@
 ---
 title: Gérer des datasets partagés | Microsoft Docs
+description: Découvrez comment gérer des jeux de données partagés dans Reporting Services afin de pouvoir partager une requête pour fournir un jeu cohérent de données pour plusieurs rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808439"
 ---
 # <a name="manage-shared-datasets"></a>Gérer des datasets partagés
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les datasets partagés récupèrent des données de sources de données partagées qui se connectent à des sources de données externes. Un dataset partagé offre un moyen de partager une requête pour fournir un jeu cohérent de données pour plusieurs rapports. La requête de dataset peut inclure des paramètres de dataset. Vous pouvez configurer un dataset partagé pour mettre en cache les résultats de la requête pour des combinaisons de paramètres spécifiques lors de la première utilisation ou en spécifiant une planification. Vous pouvez utiliser la mise en cache de datasets partagés en association avec la mise en cache de rapports et les sources de données de rapports pour mieux gérer l'accès à une source de données.  
@@ -41,8 +42,8 @@ ms.locfileid: "67220587"
 ### <a name="manage-shared-dataset-item-properties"></a>Gérer des propriétés d'élément de dataset partagé  
  Le tableau suivant répertorie les propriétés d'élément que vous pouvez modifier pour un élément de dataset partagé.  
   
-|||  
-|-|-|  
+|Propriété|Description|  
+|--------|-----------|  
 |Modifier le nom|Modifiez le nom du dataset partagé. Toutes les références d'éléments dépendants continueront de fonctionner.|  
 |Modifier la description|Modifiez la description du dataset partagé.|  
 |Modifier le délai d'attente d'exécution de la requête|Définissez le délai d'attente d'exécution de la requête en secondes. Zéro (0) seconde signifie aucun délai d'attente. Détermine le nombre de secondes avant l'expiration de la requête du dataset. Pour ne spécifier aucune valeur de délai d'attente, utilisez 0. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  

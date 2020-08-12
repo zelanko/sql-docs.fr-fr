@@ -1,5 +1,6 @@
 ---
 title: Propriétés de TCP/IP (onglet Protocoles)
+description: Utilisez les options de l’onglet Protocoles de la boîte de dialogue Propriétés TCP/IP pour configurer l’intervalle de maintien de l’activité, l’indicateur activé et d’autres propriétés.
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32054dfc368a358370abe4b3a5213305fe815afb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e9bf22b501a097e59af3bef953ffcbaa26780c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307587"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880293"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>Propriétés de TCP/IP (onglet Protocoles)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   La boîte de dialogue **Propriétés de TCP/IP** permet de configurer les options du protocole TCP/IP. Cliquez sur **TCP/IP** dans le volet gauche pour afficher les configurations de chaque adresse IP dans le volet d’informations.  
   
  Pour appliquer les modifications, redémarrez Microsoft SQL Servermust.  

@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772312"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>Tutoriel : Déployer un modèle de clustering dans R avec le Machine Learning SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering développé dans R dans une base de données SQL à l’aide de SQL Server Machine Learning Services ou sur des clusters Big Data.
+Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide de SQL Server Machine Learning Services ou sur Clusters Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering développé dans R dans une base de données SQL à l’aide de SQL Server Machine Learning Services.
+Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide de SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering développé dans R dans une base de données SQL à l’aide de SQL Server R Services.
+Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide de SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide d’Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 Pour effectuer régulièrement le clustering, à mesure que de nouveaux clients s’inscrivent, vous devez être en mesure d’appeler le script R à partir de n’importe quelle application. Pour ce faire, vous pouvez déployer le script R dans une base de données en le plaçant à l’intérieur d’une procédure stockée SQL. Étant donné que votre modèle s’exécute dans la base de données, son apprentissage peut facilement être effectué en fonction des données stockées dans la base de données.
@@ -38,7 +40,7 @@ Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Créer une procédure stockée qui génère le modèle
-> * Effectuer le clustering dans SQL Database
+> * Effectuer le clustering
 > * Utiliser les informations de clustering
 
 Dans la [première partie](r-clustering-model-introduction.md), vous avez installé les prérequis et restauré l’exemple de base de données.
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Effectuer le clustering dans une base de données SQL
+## <a name="perform-clustering"></a>Effectuer le clustering
 
 Maintenant que vous avez créé la procédure stockée, exécutez le script suivant pour effectuer le clustering.
 
@@ -237,7 +240,7 @@ Une fois ce tutoriel terminé, supprimez la base de données tpcxbb_1gb.
 Dans la quatrième partie de cette série de tutoriels, vous avez appris à effectuer les tâches suivantes :
 
 * Créer une procédure stockée qui génère le modèle
-* Effectuer le clustering dans SQL Server
+* Effectuer un clustering avec le Machine Learning SQL
 * Utiliser les informations de clustering
 
 Pour en savoir plus sur l’utilisation de R dans Machine Learning Services, consultez :

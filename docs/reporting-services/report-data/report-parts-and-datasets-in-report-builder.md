@@ -1,5 +1,6 @@
 ---
 title: Parties de rapports et datasets dans le Générateur de rapports | Microsoft Docs
+description: Découvrez les parties de rapport que vous pouvez ajouter à la bibliothèque de parties de rapports du Générateur de rapports. Découvrez les jeux de données dont dépendent les rapports.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80d075cc85f3784459fa7302e601e95a1f11970b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808369"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parties de rapports et datasets dans le Générateur de rapports
   Dans le Générateur de rapports, la façon la plus simple d'inclure des données dans un rapport est d'ajouter des parties de rapports à partir de la bibliothèque de parties de rapports. Les parties de rapports contiennent les datasets desquels elles dépendent, appelés *datasets dépendants*. Les datasets dépendants sont basés sur les sources de données partagées et peuvent être des datasets incorporés ou partagés. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

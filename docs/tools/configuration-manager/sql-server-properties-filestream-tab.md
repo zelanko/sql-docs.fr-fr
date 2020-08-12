@@ -1,5 +1,6 @@
 ---
 title: Propriétés de SQL Server (onglet FILESTREAM)
+description: Découvrez comment utiliser l’onglet FILESTREAM de la boîte de dialogue Propriétés de SQL Server pour activer FILESTREAM pour une installation de SQL Server 2019.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b6606424a2e3f8e2d0191b012a81b7af430657a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3af7955cb439a32789436faa8883425f7a17570
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893319"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>Propriétés de SQL Server (onglet FILESTREAM)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Utilisez cette page pour activer FILESTREAM pour cette installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Activer FILESTREAM pour l'accès Transact-SQL**  
  Sélectionnez cette option pour activer FILESTREAM pour l'accès [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce contrôle doit être activé pour que les autres options de contrôle soient disponibles.  
   

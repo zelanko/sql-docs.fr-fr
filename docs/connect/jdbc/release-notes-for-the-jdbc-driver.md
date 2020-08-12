@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793286"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Notes de publication du pilote Microsoft JDBC pour SQL Server
 
@@ -51,7 +51,7 @@ Microsoft JDBC Driver 8.2 pour SQL Server est désormais compatible avec le JDK
 | Changement concernant Always Encrypted | Détails |
 | :--------- | :------ |
 | Le pilote Microsoft JDBC 8.2 pour SQL Server prend désormais en charge Always Encrypted avec enclaves sécurisées. Vous trouverez les détails ici : Always Encrypted avec enclaves sécurisées. |
-| Détails et exemples de code supplémentaires. | Consultez [Always Encrypted avec enclaves sécurisées](always-encrypted-with-secure-enclaves.md). |
+| Détails et exemples de code supplémentaires. | Consultez [Always Encrypted avec enclaves sécurisées](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>Amélioration des performances lors de la récupération de types de données temporels à partir de SQL Server <sup>1</sup>
@@ -64,11 +64,11 @@ Microsoft JDBC Driver 8.2 pour SQL Server est désormais compatible avec le JDK
 
 <sup>1</sup> En raison du mode de traitement différent des fuseaux horaires par java.util.Calendar ou l’API java.time.LocalDateTime, cette amélioration ne concerne pas les types de données temporels qui sont associés à un objet java.util.Calendar fourni par l’utilisateur, ni les types de données microsoft.sql.DateTimeOffset.
 
-### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Déploiement de mssql-jdbc_auth-\<version>-\<arch>.dll (précédemment sqljdbc_auth.dll) sur le référentiel Maven
+### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Déploiement de mssql-jdbc_auth-\<version>-\<arch>.dll (précédemment sqljdbc_auth.dll) sur le Référentiel Maven
 
 | Changement concernant sqljdbc_auth.dll | Détails |
 | :------------------- | :------ |
-| À compter de la version 8.2, le pilote Microsoft JDBC pour SQL Server s’appuie sur mssql-jdbc_auth-\<version>-\<arch>.dll au lieu de sqljdbc_auth.dll pour utiliser la fonctionnalité d’authentification d’Azure Active Directory. | &nbsp; |
+| À compter de la version JDBC Driver 8.2 pour SQL Server, le pilote s’appuie sur mssql-jdbc_auth-\<version>-\<arch>.dll au lieu de sqljdbc_auth.dll pour utiliser la fonctionnalité d’authentification d’Azure Active Directory. | &nbsp; |
 | La DLL a également été chargée dans le référentiel Maven pour faciliter son accès. | Consultez [cette page](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 

@@ -1,6 +1,6 @@
 ---
 title: Configurer HealthCheckTimeout pour le groupe de disponibilité
-description: Configurez HealthCheckTimeout pour un groupe de disponibilité Always On, qui est utilisé pour spécifier le délai d’attente de la DLL de ressource SQL Server avant de signaler une absence de réponse.
+description: Configurez HealthCheckTimeout pour un groupe de disponibilité AlwaysOn, afin de spécifier le temps que peut attendre une DLL de ressource SQL Server avant de signaler une absence de réponse.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882947"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurer les paramètres de propriété HealthCheckTimeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Le paramètre HealthCheckTimeout est utilisé pour spécifier le temps, en millisecondes, pendant lequel la DLL de ressource SQL Server doit attendre les informations retournées par la procédure stockée [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) avant de déclarer l’instance de cluster de basculement Always On comme sans réponse. Les modifications apportées aux paramètres de délai d'attente entrent immédiatement en vigueur et ne requièrent pas de redémarrage de la ressource SQL Server.  
   
 -   **Avant de commencer :**  [Limitations et restrictions](#Limits), [sécurité](#Security)  

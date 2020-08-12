@@ -1,21 +1,21 @@
 ---
 title: Étendre le déploiement du projet de base de données pour modifier le plan de déploiement
+description: Créez un contributeur de déploiement de type DeploymentPlanModifier qui programme la réexécution des lots de script de déploiement si des erreurs se produisent pendant l’exécution.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242672"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882912"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement
 
@@ -29,7 +29,7 @@ Au cours de cette procédure pas à pas, vous allez effectuer les tâches princi
   
 -   [Exécuter ou tester votre contributeur de déploiement](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Vous devez disposer des éléments suivants pour exécuter cette procédure pas à pas :  
   
 -   Vous devez avoir installé une version de Visual Studio qui inclut SQL Server Data Tools et qui prend en charge le développement en C# ou VB.  
@@ -181,7 +181,7 @@ Commencez ensuite à ajouter le code à la classe.
   
     ```  
   
-    Dans ce code, nous définissons quelques variables locales, et nous configurons la boucle qui gère le traitement de toutes les étapes du plan de déploiement. Une fois que la boucle est terminée, nous devrons effectuer des opérations post-traitement, puis nous supprimerons la table temporaire que nous avons créée lors du déploiement pour suivre la progression à mesure que le plan s'exécutait. Les types de clés sont ici : [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) et [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). AddAfter est une méthode de clé.  
+    Dans ce code, nous définissons quelques variables locales, et nous configurons la boucle qui gère le traitement de toutes les étapes du plan de déploiement. Une fois que la boucle est terminée, nous devrons effectuer des opérations post-traitement, puis nous supprimerons la table temporaire que nous avons créée lors du déploiement pour suivre la progression à mesure que le plan s'exécutait. Les types de clés sont ici : [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) et [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). AddAfter est une méthode de clé.  
   
 3.  Ajoutez à présent l'étape de traitement supplémentaire, en remplacement du commentaire qui indique « Add additional step processing here » :  
   
@@ -366,7 +366,7 @@ Commencez ensuite à ajouter le code à la classe.
     |CreateExecuteSQL|Définit la méthode CreateExecuteSQL qui va entourer une instruction fournie avec une instruction EXEC sp_executesql. Les types de clés, les méthodes et les propriétés sont les suivantes : [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx), [ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx), [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx), [ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) et [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx).|  
     |CreateCompletedBatchesName|Définit la méthode CreateCompletedBatchesName. Cette méthode crée le nom qui sera inséré dans la table temporaire d'un lot. Les types de clés, les méthodes et les propriétés sont les suivantes : [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx).|  
     |IsStatementEscaped|Définit la méthode IsStatementEscaped. Cette méthode détermine si le type d'élément de modèle requiert l'instruction à inclure dans une instruction EXEC sp_executesql avant son placement dans une instruction IF. Les méthodes, les propriétés et les types de clés sont les suivants : TSqlObject.ObjectType, ModelTypeClass et la propriété TypeClass pour les types de modèles suivants : Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
-    |CreateBatchCompleteInsert|Définit la méthode CreateBatchCompleteInsert. Cette méthode crée l'instruction INSERT qui sera ajoutée au script de déploiement pour assurer le suivi de l'exécution du script. Les méthodes, les propriétés et les types de clés sont les suivants : InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource et RowValue.|  
+    |CreateBatchCompleteInsert|Définit la méthode CreateBatchCompleteInsert. Cette méthode crée l'instruction INSERT qui sera ajoutée au script de déploiement pour assurer le suivi de l'exécution du script. Les types de clés, méthodes et propriétés sont les suivants : InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource, et RowValue.|  
     |CreateIfNotExecutedStatement|Définit la méthode CreateIfNotExecutedStatement. Cette méthode génère une instruction IF qui vérifie si la table d'exécution des lots temporaires indique que ce lot a déjà été exécuté. Les méthodes, les propriétés et les types de clés sont les suivants : IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression et BooleanNotExpression.|  
     |GetStepInfo|Définit la méthode GetStepInfo. Cette méthode extrait les informations sur l’élément de modèle utilisé pour créer le script de l’étape, en plus du nom de l’étape. Les types et méthodes dignes d'intérêt sont les suivants : [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) et [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
     |GetElementName|Crée un nom mis en forme pour un TSqlObject.|  
@@ -687,7 +687,7 @@ Vous devez toujours mettre à jour le fichier de projet SQL pour spécifier l'ID
   
         ```  
   
-    4.  Dans le fichier .sqlproj d'un projet dont vous souhaitez exécuter des collaborateurs, importez le fichier de cibles en ajoutant l'instruction suivante au fichier .sqlproj fichier après le nœud \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> dans le fichier :  
+    4.  Dans le fichier .sqlproj d’un projet pour lequel vous souhaitez exécuter des contributeurs, importez le fichier de cibles en ajoutant l’instruction suivante au fichier .sqlproj après le nœud \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> dans le fichier :  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -792,5 +792,5 @@ Vous pouvez essayer d'apporter d'autres types de modifications aux plans de dép
 ## <a name="see-also"></a>Voir aussi  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
-[Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Procédure pas à pas : étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Travailler avec des objets de base de données CLR
+description: Découvrez comment utiliser les langages .NET Framework pour récupérer et mettre à jour des données. Consultez comment créer et utiliser un objet de base de données CLR (Common Language Run) dans un projet.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f8aa504554cc973e5babbfe3c8512f59932fa147
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226729"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893855"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procédure : Travailler avec des objets de base de données CLR
 
@@ -97,7 +97,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
   
 3.  Cliquez avec le bouton droit sur la table Suppliers et sélectionnez **Afficher les données**.  
   
-4.  Entrez **5** pour le champ **id**, **Contoso** pour **nom**, laissez le champ**Adresse** vide et entrez **425 3122 1222** pour le champ **téléphone**. Accédez par tabulation à un champ autre que le champ **téléphone`INSERT` et notez qu'un message s'affiche, indiquant que l'instruction**  est en conflit avec votre contrainte de validation existante, qui valide l'entrée du champ **téléphone** à l'aide d'un modèle de numéro de téléphone prédéfini.  
+4.  Entrez **5** pour le champ **id**, **Contoso** pour **nom**, laissez le champ**Adresse** vide et entrez **425 3122 1222** pour le champ **téléphone**. Accédez par tabulation à un champ autre que le champ **téléphone`INSERT` et notez qu'un message s'affiche, indiquant que l'instruction ** est en conflit avec votre contrainte de validation existante, qui valide l'entrée du champ **téléphone** à l'aide d'un modèle de numéro de téléphone prédéfini.  
   
 5.  Remplacez l'entrée par **425 312 1222** et accédez par tabulation à un autre champ. Notez que cette fois-ci, l'entrée est acceptée.  
   

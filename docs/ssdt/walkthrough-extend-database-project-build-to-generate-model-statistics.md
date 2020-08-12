@@ -1,23 +1,23 @@
 ---
 title: Étendre la génération du projet de base de données à la génération de statistiques de modèle
+description: Découvrez comment créer, installer et tester un collaborateur du build qui génère des statistiques du modème de base de données SQL lorsque vous générez un projet de base de données.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242688"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894024"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : Étendre la génération du projet de base de données à la génération de statistiques de modèle
 
 Vous pouvez créer un contributeur de génération pour effectuer des actions personnalisées lorsque vous générez un projet de base de données. Dans cette procédure pas à pas, vous allez créer un contributeur de génération nommé ModelStatistics qui génère des statistiques de base de données SQL lorsque vous créez un projet de base de données. Ce contributeur de génération acceptant des paramètres lorsque vous effectuez la génération, quelques étapes supplémentaires sont nécessaires.  
   
@@ -29,7 +29,7 @@ Au cours de cette procédure pas à pas, vous allez effectuer les tâches princi
   
 -   [Tester votre contributeur de génération](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Vous devez disposer des éléments suivants pour exécuter cette procédure pas à pas :  
   
 -   Vous devez avoir installé une version de Visual Studio qui inclut SQL Server Data Tools (SSDT) et qui prend en charge le développement en C# ou VB.  
@@ -508,7 +508,7 @@ Vous pouvez le faire de deux façons :
         </Project>  
         ```  
   
-    4.  Dans le fichier .sqlproj d'un projet dont vous souhaitez exécuter des collaborateurs, importez le fichier de cibles en ajoutant l'instruction suivante au fichier .sqlproj fichier après le nœud \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> dans le fichier :  
+    4.  Dans le fichier .sqlproj, pour n’importe quel projet, vous souhaitez exécuter des collaborateurs, importez le fichier de cibles en ajoutant la déclaration suivante au fichier .sqlproj après le nœud \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> dans le fichier :  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -525,7 +525,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
   
 1.  Dans Visual Studio, cliquez avec le bouton droit sur le projet et sélectionnez « Regénérer ». Cela reconstruit le projet, puis les statistiques du modèle sont générées, et la sortie comprise dans la sortie de la génération et enregistrée dans ModelStatistics.xml. Notez que vous pouvez être amené à sélectionner « Afficher tous les fichiers » dans l’Explorateur de solutions pour visualiser le fichier XML.  
   
-2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>** , cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)** .  
+2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>**, cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)**.  
   
 3.  À l'invite de commandes, accédez au dossier qui contient votre projet SQL.  
   
@@ -593,5 +593,5 @@ Vous pouvez créer des outils supplémentaires pour effectuer le traitement du f
   
 ## <a name="see-also"></a>Voir aussi  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Procédure pas à pas : étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

@@ -2,22 +2,22 @@
 title: Données de démonstration Taxis de New York pour les didacticiels
 description: Créez une base de données contenant les exemples de données des taxis de la ville de New York. Ce jeu de données est utilisé dans les didacticiels R et Python pour SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814059"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration Taxis de New York pour les didacticiels SQL Server Python et R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cet article explique comment configurer une base de données exemple qui se compose de données publiques issues de la [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Ces données sont utilisées dans plusieurs didacticiels R et Python pour l’analytique en base de données sur SQL Server. Pour accélérer l’exécution de l’exemple de code, nous avons créé un échantillon représentatif de 1 % des données. Sur votre système, le fichier de sauvegarde de la base de données fait légèrement plus de 90 Mo, ce qui donne 1,7 million de lignes dans la table de données principale.
 
@@ -33,6 +33,11 @@ Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données�
 La base de données exemple est un fichier SQL Server 2016 BAK hébergé par Microsoft. Vous pouvez le restaurer sur SQL Server 2016 et les versions ultérieures. Le téléchargement des fichiers démarre immédiatement lorsque vous cliquez sur le lien. 
 
 La taille du fichier est d’environ 90 Mo.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>Pour restaurer l’exemple de base de données sur [Clusters Big Data SQL Server](../../big-data-cluster/big-data-cluster-overview.md), téléchargez [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) et suivez les instructions [Restauration d’une base de données dans l’instance maître Clusters Big Data SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
 
 1. Cliquez sur [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) pour télécharger le fichier de sauvegarde de la base de données.
 

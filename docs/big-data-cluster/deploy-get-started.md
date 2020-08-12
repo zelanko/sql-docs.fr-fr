@@ -5,20 +5,20 @@ description: Découvrez les étapes et les ressources nécessaires au déploieme
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4caaacd2d71d00d874a793129eef2f4144f03190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784295"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>Bien démarrer avec le déploiement de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article présente une vue d’ensemble de la façon de déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. L’article présente les concepts et fournit un cadre pour vous aider à comprendre les scénarios de déploiement. Les étapes de déploiement varient selon la plateforme choisie pour le client et le serveur. Pour une présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
@@ -41,16 +41,7 @@ Regardez cette vidéo de 9 minutes pour obtenir une vue d’ensemble de la faço
 
 ## <a name="client-tools"></a><a id="tools"></a> Outils clients
 
-Les clusters Big Data nécessitent un ensemble spécifique d’outils clients. Avant de déployer un cluster Big Data sur Kubernetes, vous devez installer les outils suivants :
-
-| Outil | Description |
-|---|---|
-| **azdata** | Déploie et gère des clusters Big Data. |
-| **kubectl** | Crée et gère le cluster Kubernetes sous-jacent. |
-| **Azure Data Studio** | Interface graphique pour l’utilisation du cluster Big Data. |
-| **Extension SQL Server 2019** | Extension Azure Data Studio qui permet d’utiliser les fonctionnalités des clusters Big Data. |
-
-D’autres outils sont nécessaires pour divers scénarios. Chaque article doit expliquer les outils prérequis permettant d’effectuer différentes tâches. Pour obtenir la liste complète des outils et des liens d’installation, consultez [Installer les outils de Big Data SQL Server 2019](deploy-big-data-tools.md).
+Les clusters Big Data nécessitent un ensemble spécifique d’outils clients. Avant de déployer un cluster Big Data sur Kubernetes, vous devez installer les outils nécessaires à votre déploiement. Des outils spécifiques sont requis pour divers scénarios. Chaque article doit expliquer les outils prérequis permettant d’effectuer différentes tâches. Pour obtenir la liste complète des outils et des liens d’installation, consultez [Installer les outils de Big Data SQL Server 2019](deploy-big-data-tools.md).
 
 ## <a name="kubernetes"></a>Kubernetes
 
@@ -58,7 +49,11 @@ Les clusters Big Data sont déployés sous la forme d’une série de conteneurs
 
 - **Azure Kubernetes Service (AKS)**  : AKS vous permet de déployer un cluster Kubernetes géré dans Azure. Vous gérez uniquement les nœuds de l’agent. Avec AKS, vous n’avez pas besoin de provisionner votre matériel pour le cluster. Il est aussi facile d’utiliser un [script Python](quickstart-big-data-cluster-deploy.md) ou un [notebook de déploiement](notebooks-deploy.md) pour créer le cluster AKS et déployer le cluster Big Data en une seule étape. Pour plus d’informations sur la configuration d’AKS en vue d’un déploiement de cluster Big Data, consultez [Configurer Azure Kubernetes Service pour le déploiement de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-on-aks.md).
 
+- **Azure Red Hat OpenShift (ARO)**  : ARO vous permet de déployer un cluster Red Hat OpenShift géré dans Azure. Vous gérez uniquement les nœuds de l’agent. Avec ARO, vous n’avez pas besoin de provisionner votre matériel pour le cluster. Il est aussi facile d’utiliser un [script Python](quickstart-big-data-cluster-deploy-aro.md) pour créer le cluster ARO et déployer le cluster Big Data en une seule étape. Ce modèle de déploiement est introduit dans SQL Server 2019 CU5. 
+
 - **Plusieurs machines** : Vous pouvez également déployer Kubernetes sur plusieurs machines Linux, qui peuvent être des serveurs physiques ou des machines virtuelles. L’outil [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) peut être utilisé pour créer le cluster Kubernetes. Vous pouvez utiliser un [script bash](deployment-script-single-node-kubeadm.md) pour automatiser ce type de déploiement. Cette méthode fonctionne bien si vous disposez déjà d’une infrastructure existante que vous souhaitez utiliser pour votre cluster Big Data. Pour plus d’informations sur l’utilisation de déploiements **kubeadm** avec des clusters Big Data, consultez [Configurer Kubernetes sur plusieurs machines pour le déploiement de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-with-kubeadm.md).
+
+- **Red Hat OpenShift** : Déploiement sur votre propre cluster Red Hat OpenShift. Pour plus d’informations, voir [Déploiement de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur OpenShift en local et sur Azure Red Hat OpenShift](deploy-openshift.md). Ce modèle de déploiement est introduit dans SQL Server 2019 CU5.
 
 ## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster Big Data
 

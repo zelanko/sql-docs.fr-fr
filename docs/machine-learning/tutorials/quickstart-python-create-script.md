@@ -1,24 +1,25 @@
 ---
 title: 'Démarrage rapide : Exécuter des scripts Python'
-description: Exécuter un jeu de scripts Python simples avec SQL Server Machine Learning Services. Découvrez comment utiliser la procédure stockée sp_execute_external_script pour exécuter ce script dans une instance SQL Server.
+titleSuffix: SQL machine learning
+description: Exécutez un jeu de scripts Python simples avec le Machine Learning SQL. Découvrez comment utiliser la procédure stockée sp_execute_external_script pour exécuter le script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/17/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b15423d82a13485d343dc797bdf6e6efe25088f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784119"
 ---
-# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Démarrage rapide : Exécuter des scripts Python simples avec SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Démarrage rapide : Exécution de scripts Python simples avec le Machine Learning SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts Python simples en utilisant [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md). Vous allez découvrir comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter ce script dans une instance SQL Server.
@@ -26,26 +27,31 @@ Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts Python si
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts Python simples en utilisant [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Vous allez découvrir comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter ce script dans une instance SQL Server.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts Python simples avec [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Vous découvrirez comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter le script dans une base de données.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prérequis
 
+Pour effectuer ce démarrage rapide, vous avez besoin de ce qui suit.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. Pour savoir comment installer Machine Learning Services, consultez le [Guide d’installation Windows](../install/sql-machine-learning-services-windows-install.md) ou le [Guide d’installation Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Vous pouvez également [activer Machine Learning Services sur des clusters Big Data SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. Pour savoir comment installer Machine Learning Services, consultez le [Guide d’installation Windows](../install/sql-machine-learning-services-windows-install.md) ou le [Guide d’installation Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Vous pouvez également [activer Machine Learning Services sur des clusters Big Data SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Pour savoir comment installer Machine Learning Services, consultez le [Guide d’installation Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. Pour savoir comment vous inscrire, consultez [Vue d’ensemble d’Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-- Vous avez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts Python. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce guide de démarrage rapide utilise [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)).
+- Un outil permettant d’exécuter des requêtes SQL qui contiennent des scripts Python. Ce guide de démarrage rapide utilise [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="run-a-simple-script"></a>Exécuter un script simple
 
-Pour exécuter un script Python, vous devez le transmettre sous forme d’argument à la procédure stockée système, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-Cette procédure stockée système démarre le runtime Python dans le contexte de SQL Server, transmet les données à Python, gère les sessions utilisateur Python de manière sécurisée et retourne les résultats au client.
+Pour exécuter un script Python, vous devez le transmettre sous forme d’argument à la procédure stockée système, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Cette procédure stockée système démarre le runtime Python dans le contexte du Machine Learning SQL, transmet les données à Python, gère les sessions utilisateur Python de manière sécurisée et retourne les résultats au client.
 
-Dans les étapes suivantes, vous allez exécuter cet exemple de script Python dans votre instance SQL Server :
+Au cours des étapes suivantes, vous allez exécuter cet exemple de script Python dans votre base de données :
 
 ```python
 a = 1
@@ -55,7 +61,7 @@ d = a*b
 print(c, d)
 ```
 
-1. Ouvrez une nouvelle fenêtre de requête connectée à votre instance SQL Server dans **Azure Data Studio**.
+1. Ouvrez une nouvelle fenêtre Requête connectée à votre instance SQL dans **Azure Data Studio**.
 
 1. Transmettez le script Python complet à la procédure stockée `sp_execute_external_script`.
 
@@ -100,10 +106,9 @@ Les entrées de la procédure stockée `sp_execute_external_script` sont les sui
 | | |
 |-|-|
 | @language | définit l’extension de langage à appeler (dans le cas présent, Python) |
-| @script | définit les commandes transmises au runtime Python<br>L’intégralité de votre script Python doit être placé dans cet argument en tant que texte Unicode. Vous pouvez aussi ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable |
+| @script | Cette entrée définit les commandes transmises au runtime Python. L’intégralité de votre script Python doit être placé dans cet argument en tant que texte Unicode. Vous pouvez aussi ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable |
 | @input_data_1 | données retournées par la requête, transmises au runtime Python, qui retourne les données sous forme de trame de données |
-|WITH RESULT SETS | la clause définit le schéma de la table de données retournée pour SQL Server, ajoutant « Hello World » comme nom de colonne, **int** pour le type de données |
-
+| WITH RESULT SETS | Cette clause définit le schéma de la table de données retournée pour le Machine Learning SQL, en ajoutant « Hello World » comme nom de colonne et **int** comme type de données. |
 
 La commande génère le texte suivant :
 
@@ -170,45 +175,45 @@ Pour le moment, utilisons les variables d’entrée et de sortie par défaut de 
 
     Notez que Python respecte la casse. Les variables d’entrée et de sortie utilisées dans le script Python (**SQL_out**, **SQL_in**) doivent correspondre aux noms définis avec `@input_data_1_name` et `@output_data_1_name`, y compris la casse.
 
-   > [!TIP]
-   > Un seul jeu de données d’entrée peut être passé en tant que paramètre, et un seul jeu de données peut être renvoyé. Toutefois, vous pouvez appeler d’autres jeux de données à partir de votre code Python et retourner des sorties d’autres types en plus du jeu de données. Vous pouvez également ajouter le mot clé OUTPUT à n’importe quel paramètre pour qu’il soit retourné avec les résultats.
+    > [!TIP]
+    > Un seul jeu de données d’entrée peut être passé en tant que paramètre, et un seul jeu de données peut être renvoyé. Toutefois, vous pouvez appeler d’autres jeux de données à partir de votre code Python et retourner des sorties d’autres types en plus du jeu de données. Vous pouvez également ajouter le mot clé OUTPUT à n’importe quel paramètre pour qu’il soit retourné avec les résultats.
 
 1. Vous pouvez aussi générer des valeurs en utilisant simplement le script Python sans données d’entrée (`@input_data_1` est vide).
 
-   Le script suivant génère le texte « hello » et « world ».
+    Le script suivant génère le texte « hello » et « world ».
 
-   ```sql
-   EXECUTE sp_execute_external_script @language = N'Python'
-       , @script = N'
-   import pandas as pd
-   mytextvariable = pandas.Series(["hello", " ", "world"]);
-   OutputDataSet = pd.DataFrame(mytextvariable);
-   '
-       , @input_data_1 = N''
-   WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
-   ```
+    ```sql
+    EXECUTE sp_execute_external_script @language = N'Python'
+        , @script = N'
+    import pandas as pd
+    mytextvariable = pandas.Series(["hello", " ", "world"]);
+    OutputDataSet = pd.DataFrame(mytextvariable);
+    '
+        , @input_data_1 = N''
+    WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+    ```
 
-   **Résultats**
+    **Résultats**
 
-   ![Résultats de la requête en utilisant @script comme entrée](./media/python-data-generated-output.png)
+    ![Résultats de la requête en utilisant @script comme entrée](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python utilise des espaces à gauche pour regrouper les instructions. Ainsi, lorsque le script Python incorporé s’étend sur plusieurs lignes (comme dans le script précédent), n’essayez pas de mettre en retrait les commandes Python afin de les aligner sur les commandes SQL. Par exemple, ce script génère une erreur :
-
-  ```text
-  EXECUTE sp_execute_external_script @language = N'Python'
-      , @script = N'
-      import pandas as pd
-      mytextvariable = pandas.Series(["hello", " ", "world"]);
-      OutputDataSet = pd.DataFrame(mytextvariable);
-      '
-      , @input_data_1 = N''
-  WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
-  ```
+>
+> ```sql
+> EXECUTE sp_execute_external_script @language = N'Python'
+>       , @script = N'
+>       import pandas as pd
+>       mytextvariable = pandas.Series(["hello", " ", "world"]);
+>       OutputDataSet = pd.DataFrame(mytextvariable);
+>       '
+>       , @input_data_1 = N''
+> WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+> ```
 
 ## <a name="check-python-version"></a>Vérifier la version de Python
 
-Si vous voulez connaître la version de Python qui est installée dans votre instance SQL Server, exécutez le script suivant.
+Si vous voulez savoir quelle version de Python est installée sur votre serveur, exécutez le script suivant.
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Python'
@@ -224,13 +229,13 @@ La fonction Python `print` retourne la version dans la fenêtre **Messages**. Da
 **Résultats**
 
 ```text
-STDOUT message(s) from external script: 
+STDOUT message(s) from external script:
 3.5.2 |Continuum Analytics, Inc.| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
 ```
 
 ## <a name="list-python-packages"></a>Répertorier les packages Python
 
-Microsoft fournit un certain nombre de packages Python préinstallés avec SQL Server Machine Learning Services dans votre instance SQL Server.
+Microsoft fournit un certain nombre de packages Python préinstallés avec Machine Learning Services.
 
 Pour afficher la liste des packages Python installés avec leur version, exécutez le script suivant.
 
@@ -257,5 +262,4 @@ La liste provient de `pkg_resources.working_set` dans Python et est renvoyée à
 Pour savoir comment utiliser des structures de données quand Python est utilisé pour l’apprentissage automatique SQL, suivez ce guide de démarrage rapide :
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Structures de données et objets en utilisant Python dans SQL Server Machine Learning Services](quickstart-python-data-structures.md)
-
+> [Démarrage rapide : Structures de données et objets en Python](quickstart-python-data-structures.md)

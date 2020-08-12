@@ -5,20 +5,20 @@ description: Résolvez les problèmes de déploiement d’un cluster Big Data SQ
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772882"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Résoudre les problèmes d’intégration Active Directory d’un cluster Big Data SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article explique comment résoudre les problèmes de déploiement d’un cluster Big Data SQL Server en mode Active Directory.
 
@@ -123,9 +123,9 @@ Pour déterminer la raison de l’arrêt du déploiement sans que les pods compu
 
 ## <a name="cause"></a>Cause
 
-Dans l’exemple ci-dessus, le déploiement ne parvient pas à créer de compte de connexion pour l’utilisateur du domaine, car l’étendue du groupe de domaine est définie comme étant de type domaine local. Utilisez des groupes dont l’étendue est de type domaine global ou domaine universel. [Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory](deploy-active-directory.md) explique les exigences d’étendue des groupes Active Directory.
+Dans l’exemple ci-dessus, le déploiement ne parvient pas à créer de compte de connexion pour l’utilisateur du domaine, car l’étendue du groupe de domaine est définie comme étant de type domaine local. Utilisez des groupes de portée globale ou universelle. [Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory](deploy-active-directory.md) explique les exigences d’étendue des groupes Active Directory.
 
-## <a name="resolution"></a>Résolution
+## <a name="verify"></a>Vérifier
 
 Vérifiez l’étendue du groupe de domaine (<`domain-group`>). Utilisez [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

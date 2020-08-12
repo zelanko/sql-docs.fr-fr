@@ -1,5 +1,6 @@
 ---
 title: Configuration de SQL Server Native Client 11.0
+description: En savoir plus sur les paramètres configurés dans les boîtes de dialogue Configuration SQL Server Native Client du Gestionnaire de configuration SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08b2107b77acecebeb990e6a071963af964f61ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306728"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885968"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuration de SQL Server Native Client 11.0
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Cette section contient les rubriques d'aide accessibles au moyen de la touche F1, relatives aux boîtes de dialogue de **Configuration de SQL Server Native Client** du Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est la bibliothèque réseau que les ordinateurs clients utilisent pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à compter de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les paramètres définis dans la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont utilisés sur l'ordinateur exécutant le programme client. Lorsqu'ils sont configurés sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ils n'affectent que les programmes clients en cours d'exécution sur le serveur.  

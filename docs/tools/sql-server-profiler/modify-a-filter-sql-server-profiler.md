@@ -1,6 +1,7 @@
 ---
 title: Modifier un filtre
 titleSuffix: SQL Server Profiler
+description: Découvrez comment modifier un filtre de trace dans SQL Server Profiler afin de pouvoir rassembler les informations dont vous avez besoin. Découvrez comment les filtres de trace affectent les performances de la base de données.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4953da977f5172b8e861069616ff96e792dac8ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5231ec1526b1f019355f659ac58233c1f31005f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789965"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>Modifier un filtre (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Vous ajoutez des filtres pour tracer des modèles, qui contiennent les définitions de trace, afin de limiter le nombre d'événements recueillis par une trace. La limitation du nombre d'événements recueillis peut atténuer les effets du traçage sur les performances. Si vous définissez des filtres pour un modèle de trace et remarquez que la trace ne recueille pas le type d'informations dont vous avez besoin, vous pouvez modifier le filtre.  
   

@@ -1,31 +1,32 @@
 ---
 title: Jeu de données de démonstration Iris pour les tutoriels
-Description: Créez une base de données contenant le jeu de données Iris et des modèles prédictifs. Ce jeu de données est utilisé dans les didacticiels R et Python pour SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+Description: Créez une base de données contenant le jeu de données Iris et des modèles prédictifs. Ce jeu de données est utilisé dans les tutoriels R et Python avec le Machine Learning SQL.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.technology: machine-learning-services
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1d3aee4034124f61d88ccdf5e35f86b13b60158
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737842"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Données de démonstration Iris pour les tutoriels Python et R dans SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Données de démonstration Iris pour les tutoriels Python et R dans le Machine Learning SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Dans cet exercice, vous allez créer une base de données SQL Server pour stocker les données du [jeu de données des fleurs Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) et des modèles basés sur les mêmes données. Les données Iris sont incluses dans les distributions R et Python installées par SQL Server, et sont utilisées dans les tutoriels de Machine Learning pour SQL Server. 
+Dans cet exercice, vous allez créer une base de données pour stocker les données du [jeu de données des fleurs Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) et des modèles basés sur les mêmes données. Les données Iris, incluses dans les distributions R et Python, sont utilisées dans les tutoriels de Machine Learning pour le Machine Learning SQL.
 
-Pour effectuer cet exercice, vous devez avoir [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou un autre outil capable d’exécuter des requêtes T-SQL.
+Pour effectuer cet exercice, vous devez avoir [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) ou un autre outil capable d’exécuter des requêtes T-SQL.
 
 Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données :
 
-+  [Démarrage rapide : Créer, entraîner et utiliser un modèle Python avec des procédures stockées dans SQL Server](quickstart-python-train-score-model.md)
++ [Démarrage rapide : Création et scoring d’un modèle prédictif en Python](quickstart-python-train-score-model.md)
 
 ## <a name="create-the-database"></a>Création de la base de données
 
@@ -39,9 +40,6 @@ Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données�
     USE irissql
     GO
     ```
-
-    > [!TIP] 
-    > Si vous débutez avec SQL Server ou que vous travaillez sur un serveur qui vous appartient, l’erreur serait de vous connecter et de commencer à travailler sans faire attention que vous êtes dans la base de données **MASTER**. Pour vérifiez que vous utilisez la bonne base de données, précisez toujours le contexte à l’aide de l’instruction `USE <database name>` (par exemple, `use irissql`).
 
 3. Ajoutez des tables vides : une pour stocker les données et une autre pour stocker les modèles entraînés. La table **iris_models** sert à stocker les modèles sérialisés générés dans les autres exercices.
 
@@ -58,15 +56,12 @@ Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données�
     );
     ```
 
-    > [!TIP] 
-    > Si vous débutez avec T-SQL, vous avez tout intérêt à mémoriser l’instruction `DROP...IF`. Quand vous essayez de créer une table et qu’il en existe déjà une, SQL Server retourne une erreur : « Il existe déjà un objet nommé « iris_data » dans la base de données. » Pour éviter de telles erreurs, vous pouvez supprimer des tables ou d’autres objets existants dans votre code.
-
-4. Exécutez le code suivant pour créer la table qui va stocker le modèle entraîné. Pour enregistrer des modèles Python (ou R) dans SQL Server, ils doivent être sérialisés et stockés dans une colonne de type **varbinary(max)** . 
+4. Exécutez le code suivant pour créer la table qui va stocker le modèle entraîné. Pour enregistrer des modèles Python (ou R) dans SQL Server, ils doivent être sérialisés et stockés dans une colonne de type **varbinary(max)** .
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
     GO
-    
+
     CREATE TABLE iris_models (
       model_name VARCHAR(50) NOT NULL DEFAULT('default model') PRIMARY KEY,
       model VARBINARY(MAX) NOT NULL
@@ -78,7 +73,7 @@ Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données�
 
 ## <a name="populate-the-table"></a>Remplir la table
 
-Vous pouvez obtenir les données Iris intégrées à partir de R ou de Python. Vous pouvez utiliser Python ou R pour charger les données dans une trame de données, puis insérer celle-ci dans une table de la base de données. Le déplacement de données d’entraînement d’une session externe vers une table SQL Server est un processus multiétape :
+Vous pouvez obtenir les données Iris intégrées à partir de R ou de Python. Vous pouvez utiliser Python ou R pour charger les données dans une trame de données, puis insérer celle-ci dans une table de la base de données. Le processus de déplacement de données d’apprentissage d’une session externe dans une table comporte plusieurs étapes :
 
 + Concevez une procédure stockée qui obtient les données qui vous intéressent.
 + Exécutez la procédure stockée pour récupérer réellement les données.
@@ -136,10 +131,6 @@ Vous pouvez obtenir les données Iris intégrées à partir de R ou de Python. V
 
     Si vous débutez avec T-SQL, sachez que l’instruction INSERT ajoute uniquement de nouvelles données ; elle ne recherche pas de données existantes ni ne supprime et regénère la table. Pour éviter d’avoir plusieurs copies des mêmes données dans une table, vous pouvez d’abord exécuter cette l’instruction : `TRUNCATE TABLE iris_data`. L’instruction T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) supprime les données existantes, mais conserve la structure de la table intacte.
 
-    > [!TIP]
-    > Si, par la suite, vous devez modifier la procédure stockée, vous n’avez pas besoin de la supprimer et de la recréer. Utilisez l’instruction [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql). 
-
-
 ## <a name="query-the-data"></a>Interroger les données
 
 En guise d’étape de validation, exécutez une requête pour confirmer que les données ont été chargées.
@@ -157,4 +148,4 @@ En guise d’étape de validation, exécutez une requête pour confirmer que les
 
 Dans le démarrage rapide suivant, vous allez créer un modèle de Machine Learning et l’enregistrer dans une table. Vous vous en servirez ensuite pour générer des résultats prédits.
 
-+ [Démarrage rapide : Créer, entraîner et utiliser un modèle Python avec des procédures stockées dans SQL Server](quickstart-python-train-score-model.md)
++ [Démarrage rapide : Création et scoring d’un modèle prédictif en Python](quickstart-python-train-score-model.md)

@@ -1,30 +1,34 @@
 ---
 title: 'Démarrage rapide : Effectuer l’apprentissage d’un modèle avec Python'
-description: Dans ce guide de démarrage rapide, vous allez créer et former un modèle prédictif à l’aide de Python. Vous allez enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: Dans ce guide de démarrage rapide, vous allez créer et former un modèle prédictif à l’aide de Python. Vous l’enregistrerez dans une table de votre base de données, puis l’utiliserez pour prédire des valeurs à partir de nouvelles données avec le Machine Learning SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7fe03849217dfe6e8ad7acedc39d891c5168f9c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772376"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Démarrage rapide : Créer et évaluer un modèle prédictif en Python avec SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Démarrage rapide : Création et scoring d’un modèle prédictif en Python avec le Machine Learning SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans ce guide de démarrage rapide, vous allez créer et former un modèle prédictif à l’aide de Python. Vous allez enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données à l’aide de [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Dans ce guide de démarrage rapide, vous allez créer et former un modèle prédictif à l’aide de Python. Vous allez enregistrer le modèle dans une table de votre instance de SQL Server, puis utiliser le modèle pour prédire des valeurs à partir de nouvelles données avec [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans ce guide de démarrage rapide, vous allez créer et former un modèle prédictif à l’aide de Python. Vous l’enregistrerez dans une table de votre base de données, puis l’utiliserez pour prédire des valeurs à partir de nouvelles données avec [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Vous allez créer et exécuter deux procédures stockées qui s’exécutent dans SQL. La première utilise le jeu de données classique des iris et génère un modèle bayésien naïf pour prédire une espèce d’iris en fonction des caractéristiques de la fleur. La deuxième procédure concerne le scoring : elle appelle le modèle généré dans la première procédure pour générer un ensemble de prédictions basées sur de nouvelles données. En plaçant le code Python dans une procédure stockée SQL, les opérations sont contenues dans SQL et sont réutilisables. Elles peuvent alors être appelées par d’autres procédures stockées et applications clientes.
@@ -38,15 +42,19 @@ En suivant ce guide de démarrage rapide, vous apprendrez :
 
 ## <a name="prerequisites"></a>Prérequis
 
+Pour effectuer ce démarrage rapide, vous avez besoin de ce qui suit.
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. Pour savoir comment installer Machine Learning Services, consultez le [Guide d’installation Windows](../install/sql-machine-learning-services-windows-install.md) ou le [Guide d’installation Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Vous pouvez également [activer Machine Learning Services sur des clusters Big Data SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. Pour savoir comment installer Machine Learning Services, consultez le [Guide d’installation Windows](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. Pour savoir comment vous inscrire, consultez [Vue d’ensemble d’Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
-- Un outil pour exécuter les requêtes SQL qui contiennent des scripts R. Ce guide de démarrage rapide utilise [Azure Data Studio](../../azure-data-studio/what-is.md).
-
+- Un outil permettant d’exécuter des requêtes SQL qui contiennent des scripts Python. Ce guide de démarrage rapide utilise [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 - L’échantillon de données utilisé dans cet exercice est l’échantillon Iris. Suivez les instructions de la page [Données de démonstration Iris](demo-data-iris-in-sql.md) pour créer la base de données exemple **irissql**.
 
@@ -54,7 +62,7 @@ En suivant ce guide de démarrage rapide, vous apprendrez :
 
 À cette étape, vous allez créer une procédure stockée qui génère un modèle pour prédire les résultats.
 
-1. Ouvrez Azure Data Studio, connectez-vous à votre instance de SQL Server et ouvrez une nouvelle fenêtre de requête.
+1. Ouvrez Azure Data Studio, connectez-vous à votre instance SQL et ouvrez une nouvelle fenêtre Requête.
 
 1. Connectez-vous à la base de données irissql.
 
@@ -66,11 +74,11 @@ En suivant ce guide de démarrage rapide, vous apprendrez :
 1. Copiez-y le code suivant pour créer une nouvelle procédure stockée.
 
    Lorsqu’elle est exécutée, cette procédure appelle [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour démarrer une session Python. 
-   
-   Les entrées nécessaires à votre code Python sont transmises en tant que paramètres d’entrée sur cette procédure stockée. La sortie sera un modèle entraîné, basé sur la bibliothèque Python **scikit-learn** pour l’algorithme de Machine Learning. 
+
+   Les entrées nécessaires à votre code Python sont transmises en tant que paramètres d’entrée sur cette procédure stockée. La sortie sera un modèle entraîné, basé sur la bibliothèque Python **scikit-learn** pour l’algorithme de Machine Learning.
 
    Ce code utilise [**pickle**](https://docs.python.org/2/library/pickle.html) pour sérialiser le modèle. L’apprentissage du modèle se fera à l’aide des données des colonnes 0 à 4 de la table **iris_data**. 
-   
+
    Les paramètres que vous voyez dans la deuxième partie de la procédure articulent les entrées de données et les sorties du modèle. Ce qui vous intéresse, c’est d’avoir le code Python qui s’exécute dans une procédure stockée avec des entrées et des sorties bien définies qui correspondent aux entrées des procédures stockées et aux sorties transmises au moment de l’exécution.
 
     ```sql
@@ -100,7 +108,7 @@ En suivant ce guide de démarrage rapide, vous apprendrez :
 
 À cette étape, vous allez exécuter la procédure pour exécuter le code incorporé, en créant un modèle formé et sérialisé en tant que sortie. 
 
-Les modèles qui sont stockés pour être réutilisés dans SQL Server sont sérialisés en tant que flux d’octets et stockés dans une colonne VARBINARY (MAX) dans une table de base de données. Une fois que le modèle est créé, entraîné, sérialisé et enregistré dans une base de données, il peut être appelé par d’autres procédures ou par la fonction [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) dans les charges de travail de scoring.
+Les modèles destinés à être réutilisés dans la base de données sont sérialisés en tant que flux d’octets et stockés dans la colonne VARBINARY (MAX) d’une table de base de données. Une fois que le modèle est créé, entraîné, sérialisé et enregistré dans une base de données, il peut être appelé par d’autres procédures ou par la fonction [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) dans les charges de travail de scoring.
 
 1. Exécutez le script suivant pour exécuter la procédure. L’instruction spécifique pour exécuter une procédure stockée est `EXECUTE` sur la quatrième ligne.
 
@@ -183,13 +191,11 @@ Maintenant que vous avez créé, entraîné et enregistré un modèle, passez à
 
 ## <a name="conclusion"></a>Conclusion
 
-Dans cet exercice, vous avez appris à créer des procédures stockées dédiées à différentes tâches, où chaque procédure stockée a utilisé la procédure stockée du système `sp_execute_external_script` pour démarrer un processus Python. Les entrées du processus Python sont transmises à `sp_execute_external` en tant que paramètres. Le script Python lui-même ainsi que les variables de données d’une base de données SQL Server sont transmis en tant qu’entrées.
+Dans cet exercice, vous avez appris à créer des procédures stockées dédiées à différentes tâches, où chaque procédure stockée a utilisé la procédure stockée du système `sp_execute_external_script` pour démarrer un processus Python. Les entrées du processus Python sont transmises à `sp_execute_external` en tant que paramètres. Le script Python proprement dit ainsi que les variables de données d’une base de données sont transmis en entrée.
 
 Il est recommandé de n’utiliser Azure Data Studio qu’avec un code Python optimisé, ou un code Python simple qui retourne une sortie sous forme de lignes. En tant qu’outil, Azure Data Studio prend en charge les langages de requête comme T-SQL et retourne des ensembles de lignes aplatis. Si votre code génère une sortie graphique comme un nuage de points ou un histogramme, vous devez utiliser un outil ou une application d’utilisateur final distincts pour restituer l’image en dehors de la procédure stockée.
 
 Pour certains développeurs Python qui sont habitués à écrire des scripts de gestion complets qui gèrent une plage d’opérations, l’organisation des tâches dans des procédures distinctes peut sembler inutile. Mais l’apprentissage et le scoring ont des cas d’usage différents. En les séparant, vous pouvez placer chaque tâche sur une planification différente et octroyer des autorisations différentes à chaque opération.
-
-De même, vous pouvez également exploiter les fonctionnalités d’allocation des ressources de SQL Server, comme le traitement parallèle, la gouvernance des ressources, ou écrire votre script de manière à utiliser des algorithmes dans [microsoftml](../python/ref-py-microsoftml.md) qui prend en charge la diffusion en continu et l’exécution en parallèle. En séparant l’apprentissage et le scoring, vous pouvez optimiser certaines charges de travail spécifiques.
 
 Au final, l’un des avantages est que les processus peuvent être modifiés à l’aide de paramètres. Dans cet exercice, le code Python qui a créé le modèle (nommé « Naive Bayes » dans cet exemple) a été transmis comme entrée à une deuxième procédure stockée qui appelle le modèle dans un processus de scoring. Cet exercice n’utilise qu’un seul modèle, mais il n’est pas difficile d’imaginer comment le paramétrage de ce modèle dans une tâche de scoring pourrait rendre ce script plus utile.
 

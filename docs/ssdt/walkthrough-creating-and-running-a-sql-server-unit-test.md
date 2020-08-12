@@ -1,21 +1,21 @@
 ---
 title: création et exécution d’un test unitaire SQL Server
+description: Découvrez comment créer un test unitaire SQL Server. Suivez les étapes de la configuration d’un test qui détecte une erreur dans une procédure stockée.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087506"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882924"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d’un test unitaire SQL Server
 
@@ -181,7 +181,7 @@ Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous c
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -274,7 +274,7 @@ Par défaut, lorsque vous appuyez sur F5, vous déployez (ou publiez) la base de
   
 2.  Cliquez avec le bouton droit sur les procédures stockées, puis cliquez sur **Créer des tests unitaires** pour afficher la boîte de dialogue **Créer des tests unitaires**.  
   
-3.  Cochez les cases des cinq procédures stockées : **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** et **Sales.uspShowOrderDetails**.  
+3.  Cochez les cases des cinq procédures stockées : **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**et **Sales.uspShowOrderDetails**.  
   
 4.  Dans la liste déroulante **Projet**, sélectionnez **Créer un nouveau projet de test Visual C#** .  
   

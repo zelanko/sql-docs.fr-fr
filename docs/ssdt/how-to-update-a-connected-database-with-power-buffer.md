@@ -1,5 +1,6 @@
 ---
 title: Mettre à jour une base de données connectée avec Power Buffer
+description: Découvrez comment utiliser le tampon Power pour mettre à jour une base de données. Consultez comment vérifier les modifications avant de les appliquer et comment enregistrer les modifications apportées à un script en vue d’un déploiement ultérieur.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3954ae84a201209e49b65dc421ab41b93126fb65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244261"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893870"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procédure : mettre à jour une base de données connectée avec Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procédure : Mettre à jour une base de données connectée avec Power Buffer
 
 La technologie SQL Server Data Tools Power Buffer facilite l'application de modifications à votre base de données connectée en stockant toutes vos modifications dans la session active. Les erreurs dues à la modification dans la fenêtre Power Buffer (dans l'Éditeur Transact\-SQL ou le Concepteur de tables) s'affichent immédiatement dans le volet **Liste d'erreurs**, ce qui vous permet de suivre les erreurs identifiées pour la résolution. Vous pouvez vérifier vos modifications en attente jusqu'à ce que vous soyez prêt à les appliquer dans votre base de données. Au cours du processus de mise à jour, SSDT crée automatiquement un script ALTER basé sur vos modifications, et vous avertit de tout problème potentiel. Vous pouvez ensuite appliquer toutes les modifications accumulées dans les fenêtres Power Buffer ouvertes à la même base de données, ou enregistrer le script ALTER à déployer ultérieurement.  
   
@@ -63,5 +63,5 @@ Les procédures suivantes utilisent les entités créées dans les procédures p
 5.  Cliquez avec le bouton droit sur **Table_1**, puis sélectionnez **Supprimer**. Dans la boîte de dialogue **Aperçu des mises à jour de la base de données**, cliquez sur **Mettre à jour la base de données**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : résoudre les erreurs](../ssdt/how-to-fix-errors.md)  
+[Procédure : corriger les erreurs](../ssdt/how-to-fix-errors.md)  
   

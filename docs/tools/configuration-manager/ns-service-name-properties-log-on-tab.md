@@ -1,5 +1,6 @@
 ---
 title: Propriétés de NS$&lt;service name&gt; (onglet Ouvrir une session)
+description: En savoir plus sur l’onglet Ouvrir une session de la boîte de dialogue Propriétés de Notification Services dans SQL Server. Découvrez comment spécifier un compte et démarrer ou arrêter le service.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dfe2dcbb79a53b97c9dfc1a96a5bb7d1372804d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7dbd0bca6e392b6a3037cef2ab05975829d5972b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883184"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Propriétés de NS$&lt;service name&gt; (onglet Ouvrir une session)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   L'onglet **Ouvrir une session** de la boîte de dialogue **Propriétés de Notification Services** permet de spécifier le compte utilisé par le service [!INCLUDE[ssNS](../../includes/ssns-md.md)] , ainsi que de démarrer et d'arrêter ce service.  
   
 ## <a name="options"></a>Options  

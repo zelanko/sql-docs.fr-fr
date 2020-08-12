@@ -1,5 +1,6 @@
 ---
 title: Configurer les propriétés de la source de données d’un rapport paginé - SSRS | Microsoft Docs
+description: Apprenez à configurer les propriétés de la source de données dans Reporting Services pour un rapport paginé. Définissez également les propriétés pour faire varier les informations de connexion à la source de données.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b4d8ce66078d49f7bf70e226de762a7c8a63325
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811368"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Configurer les propriétés de la source de données d’un rapport paginé
   Quand vous exécutez un rapport paginé, le serveur de rapports récupère les informations de propriété pour déterminer le mode de connexion à une source de données. Le type de source de données, la chaîne de connexion et les informations d'identification sont spécifiés dans les pages de propriétés de la source de données du rapport publié. Vous pouvez définir les propriétés de manière à changer les informations de connexion à la source de données par rapport aux valeurs d'origine spécifiées lors de la création du rapport.  

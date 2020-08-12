@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: Exécutez un ensemble de scripts R simples avec le Machine Learning SQL. Découvrez comment utiliser la procédure stockée sp_execute_external_script pour exécuter le script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2327b6644725c77949b49c661bc7d02d13c4e47d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772356"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>Démarrage rapide : Exécuter des scripts R simples avec le Machine Learning SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts R simples en utilisant [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md). Vous allez découvrir comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter ce script dans une instance SQL Server.
@@ -29,6 +29,9 @@ Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts R simples
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts R simples en utilisant [SQL Server R Services](../r/sql-server-r-services.md). Vous allez découvrir comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter ce script dans une instance SQL Server.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts R simples avec [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Vous découvrirez comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter le script dans votre base de données.
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Prérequis
@@ -43,6 +46,9 @@ Pour effectuer ce démarrage rapide, vous avez besoin de ce qui suit.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Pour plus d’informations sur l’installation de R Services, consultez le [Guide d’installation Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. Pour savoir comment vous inscrire, consultez [Vue d’ensemble d’Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Un outil pour exécuter les requêtes SQL qui contiennent des scripts R. Ce guide de démarrage rapide utilise [Azure Data Studio](../../azure-data-studio/what-is.md).
@@ -198,12 +204,7 @@ Pour le moment, utilisons les variables d’entrée et de sortie par défaut de 
 
 ## <a name="check-r-version"></a>Vérifier la version de R
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Si vous voulez connaître la version de R qui est installée avec SQL Server Machine Learning Services, exécutez le script suivant.
-::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Si vous voulez connaître la version de R qui est installée avec SQL Server 2016 R Services, exécutez le script suivant.
-::: moniker-end
+Si vous souhaitez savoir quelle version de R est installée, exécutez le script suivant.
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'

@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: Découvrez comment appeler des classes Java depuis des procédures stockées SQL Server en utilisant l’extension de langage SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735117"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Guide pratique pour appeler le runtime Java dans les extensions de langage SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Les [extensions de langage SQL Server](../language-extensions-overview.md) utilisent la procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) en tant qu’interface pour appeler le runtime Java. 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 Pour plus d’informations, consultez [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## <a name="loopback-connection-to-sql-server"></a>Connexion de bouclage à SQL Server
+
+Utilisez une connexion de bouclage pour vous reconnecter à SQL Server sur JDBC afin de lire ou d’écrire des données à partir de code Java exécuté dans `sp_execute_external_script`. Vous pouvez l’utiliser lorsque vous n’êtes pas en mesure d’utiliser les arguments **InputDataSet** et **OutputDataSet** de `sp_execute_external_script`.
+Pour établir une connexion de bouclage sur Windows, utilisez l’exemple suivant :
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+Pour établir une connexion de bouclage sur Linux, il est nécessaire de définir trois propriétés de connexion dans le certificat suivant pour le pilote JDBC :
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

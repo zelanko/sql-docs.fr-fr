@@ -1,5 +1,6 @@
 ---
 title: Propriétés de SQL Server (onglet Avancé)
+description: En savoir plus sur les options de l’onglet Avancé de la boîte de dialogue Propriétés de SQL Server, tels que le chemin d'accès aux données, l’ID de l’instance et les propriétés personnalisées.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cabf817c5b2a1be512b93235e274d76abba7f69b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306834"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893344"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propriétés de SQL Server (onglet Avancé)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Les propriétés suivantes figurent par défaut dans l'onglet **Avancé** . Si des propriétés personnalisées sont définies, elles apparaissent également sous cet onglet, avec les valeurs correspondantes.  
   
 ## <a name="options"></a>Options  
@@ -36,7 +37,7 @@ ms.locfileid: "75306834"
  Affiche l'emplacement où sont placés les vidages de mémoire en cas d'erreur.  
   
  **Rapport d'erreurs**  
- Quand cette option a pour valeur **Oui**, le programme Dr Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ». Pour modifier cette valeur, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , cliquez avec le bouton droit sur votre serveur, cliquez sur **Propriétés**, puis sur la page **Paramètres divers du serveur** . Les options figurent dans la zone **Rapport d’information** .  
+ Quand cette option a pour valeur **Oui**, le programme Dr. Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ». Pour modifier cette valeur, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur votre serveur, cliquez sur **Propriétés**, puis sur la page **Paramètres divers du serveur**. Les options figurent dans la zone **Rapport d’information** .  
   
  **Version de fichier**  
  Affiche la version de l'exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

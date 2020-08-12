@@ -1,5 +1,6 @@
 ---
 title: Configurer un ordinateur multirésident pour l’accès
+description: Découvrez comment configurer SQL Server et le Pare-feu Windows pour fournir des connexions réseau à une instance de SQL Server dans un environnement multirésident.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244463"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894899"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Lorsqu'un serveur doit fournir une connexion à plusieurs réseaux ou sous-réseaux, le scénario classique consiste à utiliser un ordinateur multirésident. Bien souvent, cet ordinateur se trouve dans un réseau de périmètre (également appelé sous-réseau filtré). Cet article explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75244463"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration**.  
   
-2.  Dans le volet de la console du **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration**, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration du réseau** et **Protocoles pour \<nom d’instance>** , puis double-cliquez sur **TCP/IP**.  
+2.  Dans **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, dans le volet de la console, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration réseau**, développez **Protocoles pour \<instance name>** puis, double-cliquez sur**TCP/IP**.  
   
 3.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses IP apparaissent pour chaque adresse IP configurée sur l'ordinateur.  
   

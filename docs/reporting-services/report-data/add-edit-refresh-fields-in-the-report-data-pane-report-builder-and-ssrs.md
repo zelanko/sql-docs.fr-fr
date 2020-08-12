@@ -1,5 +1,6 @@
 ---
 title: Ajouter, modifier ou actualiser des champs dans le volet Données du rapport (Générateur de rapports) | Microsoft Docs
+description: Découvrez les jeux de données, ainsi que l’ajout, la modification et l’actualisation des champs dans le volet des données de rapport dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6bc3c94923c3ebdb6e2897c4d3aaedbc58621c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 419e4fa24e6c22dd60eed70dd2b2e3871447f061
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813140"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports et SSRS)
   Les champs de dataset sont la collection intégrée de noms de champs qui représentent les données qui sont retournées lorsqu'une requête de dataset s'exécute sur une source de données externe.  

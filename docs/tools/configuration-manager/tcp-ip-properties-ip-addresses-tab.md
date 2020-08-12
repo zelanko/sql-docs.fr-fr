@@ -1,5 +1,6 @@
 ---
 title: Propriétés TCP/IP (onglet Adresses IP)
+description: Découvrez comment utiliser l’onglet Adresses IP de la boîte de dialogue Propriétés TCP/IP pour configurer les options de protocole TCP/IP pour une adresse IP spécifique dans SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307566"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880304"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriétés TCP/IP (onglet Adresses IP)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   La boîte de dialogue **Propriétés TCP/IP (onglet Adresses IP)** permet de configurer les options du protocole TCP/IP pour une adresse IP spécifique. Seules les options **Ports TCP dynamiques** et **Port TCP** peuvent être configurées pour toutes les adresses en une seule fois en sélectionnant **IPAll**.  
   
  Les modifications prennent effet lors du redémarrage de SQL Server. Pour obtenir des informations sur le démarrage et l’arrêt du service SQL Server Browser, consultez [Démarrer et arrêter le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
@@ -52,7 +53,7 @@ ms.locfileid: "75307566"
   
  Le moteur de base de données peut être à l’écoute sur plusieurs ports sur la même adresse IP et répertorie les ports, séparés par des virgules, au format 1433,1500,1501. Ce champ est limité à 2 047 caractères.  
   
- Pour configurer une seule adresse IP pour l’écoute sur plusieurs ports, le paramètre **Écouter tout** doit également avoir la valeur **Non**, sous l’onglet **Protocoles** de la boîte de dialogue **Propriétés de TCP/IP** . Pour plus d’informations, consultez « Procédure : configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP » dans la documentation en ligne de SQL Server.  
+ Pour configurer une seule adresse IP pour l’écoute sur plusieurs ports, le paramètre **Écouter tout** doit également avoir la valeur **Non**, sous l’onglet **Protocoles** de la boîte de dialogue **Propriétés de TCP/IP** . Pour plus d’informations, consultez « Procédure : Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP » dans la documentation en ligne de SQL Server.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Ajout ou suppression d'adresses IP  
  Le Gestionnaire de configuration SQL Server affiche les adresses IP qui étaient disponibles au moment de l’installation de SQL Server. Les adresses IP disponibles peuvent changer lorsque : des cartes réseau sont ajoutées ou supprimées, une adresse IP affectée dynamiquement arrive à expiration, une structure de réseau est reconfigurée ou un ordinateur est déplacé physiquement, par exemple si un ordinateur portable est connecté au réseau d'un autre bâtiment. Pour changer une adresse IP, modifiez la zone **Adresse IP** , puis redémarrez SQL Server.  

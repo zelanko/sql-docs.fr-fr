@@ -2,22 +2,22 @@
 title: Activer ou désactiver la gestion des packages R distants
 description: Activer la gestion des packages distants sur SQL Server 2016 R Services ou Machine Learning Services SQL Server (dans la base de données)
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757147"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Activer ou désactiver la gestion des packages distants pour SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cet article explique comment activer la gestion à distance des packages R à partir d’une station de travail cliente ou d’un autre Machine Learning Server. Une fois la fonctionnalité de gestion des packages activée sur SQL Server, vous pouvez utiliser les commandes RevoScaleR sur un client pour installer des packages sur SQL Server.
 
@@ -41,7 +41,7 @@ Pour activer ou désactiver la gestion des packages sur SQL Server, utilisez l�
 
     Cette commande crée sur l’ordinateur SQL Server des objets au niveau de l’instance qui sont nécessaires pour la gestion des packages. Elle permet également de redémarrer Launchpad pour l’instance.
 
-    Si vous ne spécifiez pas d’instance, l’instance par défaut est utilisée. Si vous ne spécifiez pas d’utilisateur, le contexte de sécurité actuel est utilisé. Par exemple, la commande suivante active la gestion des packages sur l’instance dans le chemin d’accès de RegisterRExt.exe, à l’aide des informations d’identification de l’utilisateur qui a ouvert l’invite de commandes :
+    Si vous ne spécifiez pas d’instance, l’instance par défaut est utilisée. Si vous ne spécifiez pas d’utilisateur, le contexte de sécurité actuel est utilisé. Par exemple, la commande suivante active la gestion des packages sur l’instance par défaut, à l’aide des informations d’identification de l’utilisateur qui a ouvert l’invite de commandes :
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ Pour activer ou désactiver la gestion des packages sur SQL Server, utilisez l�
    
     Cette commande crée certains artefacts de base de données, notamment les rôles de base de données suivants nécessaires pour le contrôle des autorisations d’utilisateur : `rpkgs-users`, `rpkgs-private` et `rpkgs-shared`.
 
-    Par exemple, la commande suivante active la gestion des packages sur la base de données, sur l’instance où RegisterRExt est exécuté. Si vous ne spécifiez pas d’utilisateur, le contexte de sécurité actuel est utilisé.
+    Par exemple, la commande suivante active la gestion des packages sur la base de données, sur l’instance par défaut. Si vous ne spécifiez pas d’utilisateur, le contexte de sécurité actuel est utilisé.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

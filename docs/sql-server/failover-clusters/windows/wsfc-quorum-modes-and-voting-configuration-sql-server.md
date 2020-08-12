@@ -1,6 +1,6 @@
 ---
 title: Modes de quorum WSFC et configuration de vote
-descriptoin: 'A description of the quroum modes and voting configuration used by the Windows Server Failover Cluster with a SQL Server failover cluster instance, or an Always On availability group. '
+description: Découvrez les modes de quorum et les votes de quorum qui sont utilisés par le cluster de basculement Windows Server avec une instance de cluster de basculement SQL Server ou un groupe de disponibilité AlwaysOn.
 ms.custom: seo-lt-2019
 ms.date: 10/03/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822178"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895144"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modes de quorum WSFC et configuration de vote (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Tant les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que les instances de cluster de basculement Always On tirent parti du clustering de basculement Windows Server (WSFC) en tant que technologie de plateforme.  WSFC utilise une approche basée sur le quorum pour la surveillance de l'intégrité globale du cluster et l'optimisation de la tolérance aux pannes au niveau du nœud. Il est très important de disposer d’une connaissance de base de la configuration du vote des nœuds et des modes de quorum WSFC pour concevoir, administrer et dépanner votre solution de récupération d’urgence haute disponibilité Always On.  
   
   
@@ -36,7 +36,7 @@ ms.locfileid: "74822178"
 > [!IMPORTANT]  
 >  Si un cluster WSFC passe hors connexion suite à l'échec du quorum, une intervention manuelle est nécessaire pour le remettre en ligne.  
 >   
->  Pour plus d’informations, consultez [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)périodique.  
+>  Pour plus d'informations, consultez les pages suivantes : [Reprise d’activité après sinistre WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="quorum-modes"></a><a name="QuorumModes"></a> Modes de quorum  
  Un *mode de quorum* est configuré au niveau du cluster WSFC afin de dicter la méthodologie utilisée pour le vote du quorum.  L'utilitaire Gestionnaire du cluster de basculement recommande un mode de quorum en fonction du nombre de nœuds du cluster.  
@@ -75,7 +75,7 @@ ms.locfileid: "74822178"
 > [!IMPORTANT]  
 >  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036) : un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> Réglages recommandés pour le vote du quorum  
  Lorsque vous activez ou désactivez le vote d’un nœud WSFC donné, respectez les instructions suivantes :  
@@ -116,9 +116,9 @@ ms.locfileid: "74822178"
   
 -   [Quorum vote configuration check in Always On Availability Group Wizards (Vérification de la configuration du vote du quorum dans l’Assistant Groupe de disponibilité Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Technologies de Windows Server : clusters de basculement](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Technologies Windows Server :  Clusters de basculement](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Guide pas à pas de configuration d'un cluster de basculement : configuration du quorum dans un cluster de basculement](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Guide pas à pas des clusters de basculement : Configuration du quorum dans un cluster de basculement](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

@@ -1,6 +1,7 @@
 ---
 title: Créer un script Transact-SQL pour exécuter une trace
 titleSuffix: SQL Server Profiler
+description: Découvrez comment créer un script Transact-SQL à partir d’un fichier ou d’une table de trace dans SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3324980dd331ed8211c2480415e430ee1fcd0821
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9f34472358f0d0cde586a25374c0de90ab708539
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774855"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Créer un script Transact-SQL pour exécuter une trace (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment créer un script Transact-SQL à partir d'une table ou d'un fichier de trace existant à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>Pour créer un script Transact-SQL afin d'exécuter une trace  

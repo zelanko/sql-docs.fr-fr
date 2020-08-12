@@ -1,23 +1,23 @@
 ---
 title: Mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure
+description: Découvrez comment mettre à niveau une condition de test personnalisée Visual Studio 2010 pour l’utiliser dans SQL Server Data Tools. Consultez les modifications à apporter et la procédure d’installation de la condition.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2b211250acb2e2594601236a379023a8479243c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251072"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893363"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procédure : mettre à niveau une condition de test personnalisée Visual Studio 2010 d'une version antérieure vers SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procédure : Mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure vers SQL Server Data Tools
 
 Pour utiliser une condition de test créée dans une version antérieure à SQL Server Data Tools, vous devez la mettre à niveau :  
   
@@ -50,7 +50,7 @@ Pour mettre à jour les références de projet :
   
 8.  Dans le menu **Projet**, cliquez sur **Décharger le projet**.  
   
-9. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le **Projet**, puis sélectionnez **Modifier**`project_name`**.csproj**.  
+9. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le **Projet**, puis sélectionnez **Modifier**`project_name` **.csproj**.  
   
 10. Ajoutez l'instruction Import suivante après l'importation de élément `Microsoft.CSharp.targets` :  
   

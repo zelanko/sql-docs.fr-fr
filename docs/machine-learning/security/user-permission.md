@@ -1,25 +1,25 @@
 ---
-title: Accorder des autorisations pour des scripts
-description: Décrit comment accorder des autorisations d’utilisateur de base de données pour l’exécution de scripts R et Python sur SQL Server Machine Learning Services.
+title: Octroi d’autorisations d’exécution de scripts Python et R
+description: Découvrez comment autoriser les utilisateurs à exécuter des scripts Python et R externes dans SQL Server Machine Learning Services et accorder des autorisations de lecture, d’écriture ou de langage de définition de données (DDL) sur les bases de données.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/17/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 06/03/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55a76b070a5f54562957f138d55896b49dbb15f1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: da601b8c83e6e226da0329ec8d8c732d9877656a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775364"
 ---
-# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Accorder des autorisations utilisateur sur SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>Octroi d’autorisations d’exécution de scripts Python et R aux utilisateurs avec SQL Server Machine Learning Services
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Cet article explique comment autoriser les utilisateurs à exécuter des scripts externes dans SQL Server Machine Learning Services et comment accorder des autorisations de lecture, d’écriture ou de langage de définition de données (DDL) sur les bases de données.
+Découvrez comment autoriser les utilisateurs à exécuter des scripts Python et R externes dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) et accorder des autorisations de lecture, d’écriture ou de langage de définition de données (DDL) sur les bases de données.
 
 Pour plus d’informations, consultez la section Autorisations dans la [vue d’ensemble de la sécurité du framework d’extensibilité](../../machine-learning/concepts/security.md#permissions).
 
@@ -27,9 +27,9 @@ Pour plus d’informations, consultez la section Autorisations dans la [vue d’
 
 ## <a name="permission-to-run-scripts"></a>Autorisation d’exécuter des scripts
 
-Si vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous-même et que vous exécutez des scripts R ou Python dans votre propre instance, vous exécutez généralement des scripts en tant qu’administrateur. Vous disposez ainsi d’autorisations implicites sur diverses opérations et sur toutes les données de la base de données.
+Vous devez autoriser chaque utilisateur qui exécute des scripts Python ou R avec SQL Server Machine Learning Services sans être administrateur à exécuter des scripts externes dans toutes les bases de données où le langage est utilisé.
 
-Toutefois, la plupart des utilisateurs ne bénéficient pas de ces autorisations élevées. Par exemple, les utilisateurs d’une organisation qui utilisent des connexions SQL pour accéder à la base de données n’ont généralement pas d’autorisations élevées. Par conséquent, pour chaque utilisateur utilisant R ou Python, vous devez autoriser les utilisateurs de Machine Learning Services à exécuter des scripts externes dans chaque base de données où le langage est utilisé. Voici comment faire :
+Pour accorder l’autorisation d’exécuter un script externe, exécutez le script suivant :
 
 ```sql
 USE <database_name>
@@ -38,15 +38,19 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> Les autorisations ne sont pas spécifiques au langage de script pris en charge. En d’autres termes, il n’existe pas de niveaux d’autorisation distincts pour les scripts R et Python. Si vous souhaitez maintenir des autorisations distinctes pour ces langages, installez R et Python sur des instances distinctes.
+> Les autorisations ne sont pas spécifiques au langage de script pris en charge. En d’autres termes, il n’existe pas de niveaux d’autorisation distincts pour les scripts R et Python.
 
-<a name="permissions-db"></a> 
+<a name="permissions-db"></a>
 
 ## <a name="grant-databases-permissions"></a>Accorder des autorisations sur les bases de données
 
 Quand un utilisateur exécute des scripts, il peut avoir besoin de lire les données d’autres bases de données. Il peut également être amené à créer des tables pour stocker les résultats et à écrire des données dans des tables.
 
-Vérifiez que chaque compte d’utilisateur Windows ou connexion SQL exécutant des scripts R ou Python dispose des autorisations appropriées sur la base de données spécifique : `db_datareader` pour lire des données, `db_datawriter` pour enregistrer des objets dans la base de données ou `db_ddladmin` pour créer des objets tels que des procédures stockées ou des tables contenant des données entraînées et sérialisées.
+Vérifiez que chaque compte d’utilisateur Windows ou connexion SQL qui exécute des scripts R ou Python dispose des autorisations appropriées sur la base de données en question : 
+
++ `db_datareader` pour lire des données.
++ `db_datawriter` pour enregistrer des objets dans la base de données.
++ `db_ddladmin` pour créer des objets comme des procédures stockées ou des tables contenant des données entraînées et sérialisées.
 
 Par exemple, l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante donne à la connexion SQL *MySQLLogin* les droits nécessaires pour exécuter des requêtes T-SQL dans la base de données *ML_Samples*. Pour exécuter cette instruction, la connexion SQL doit déjà exister dans le contexte de sécurité du serveur.
 

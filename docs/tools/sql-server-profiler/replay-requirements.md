@@ -1,6 +1,7 @@
 ---
 title: Conditions préalables à la relecture
 titleSuffix: SQL Server Profiler
+description: Découvrez les classes d’événements et les colonnes de données à capturer dans une trace afin de pouvoir relire les données de trace avec SQL Server Profiler ou l’utilitaire Distributed Replay.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5fa4964a2ffb0d62777c25aa0d0c6ef205ee94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789928"
 ---
 # <a name="replay-requirements"></a>Conditions préalables à la relecture
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Pour relire les données de trace avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Distributed Replay Utility, un jeu spécifique de classes et de colonnes d'événements doit être capturé dans la trace. Ces paramètres sont activés par défaut si le modèle de trace **TSQL_Replay** est utilisé pour configurer une trace utilisée ultérieurement pour la relecture. Cette rubrique décrit ces paramètres et d’autres configurations préalables à la relecture.  
   

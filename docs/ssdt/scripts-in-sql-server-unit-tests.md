@@ -1,21 +1,21 @@
 ---
 title: Scripts des tests unitaires SQL Server
+description: Familiarisez-vous avec les scripts de tests unitaires SQL Server. En savoir plus sur les scripts pré-test, de test et post-test ainsi que les scripts communs TestInitialize et TestCleanup.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1cc9bde70e716ba19f17f8d146719ccb191580b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256971"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883454"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts des tests unitaires SQL Server
 
@@ -49,7 +49,7 @@ Il est important de comprendre l'ordre dans lequel chaque script s'exécute. Bie
 ![Tests de deux unités de base de données](../ssdt/media/twodatabaseunittests.png "Tests de deux unités de base de données")  
   
 > [!NOTE]  
-> Si un déploiement de projet de base de données SQL Server a été configuré, il a lieu au début de la série de tests, sous la chaîne de connexion de contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+> Si un déploiement de projet de base de données SQL Server a été configuré, il a lieu au début de la série de tests, sous la chaîne de connexion de contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
 ## <a name="initialization-and-cleanup-scripts"></a>Scripts d'initialisation et de nettoyage  
 Dans le Concepteur de test unitaire SQL Server, les scripts TestInitialize et TestCleanup sont appelés scripts courants. L'exemple précédent suppose que les deux tests unitaires font partie de la même classe de test. Par conséquent, ils partagent les mêmes scripts TestInitialize et TestCleanup. Pour tous les tests unitaires d'une classe unique de test, cela est toujours le cas. Toutefois, si votre série de tests contient des tests unitaires de différentes classes de test, les scripts courants de la classe de test associée seront exécutés avant et après l'exécution des tests unitaires.  

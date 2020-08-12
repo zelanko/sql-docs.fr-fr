@@ -1,6 +1,7 @@
 ---
 title: Relire un seul événement à la fois
 titleSuffix: (SQL Server Profiler
+description: Découvrez comment relire un événement de trace à la fois dans SQL Server Profiler en exécutant pas à pas un fichier ou une table de trace de relecture.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e8f217e2117e22edbd5f763b71c51cb078d49301
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 151c562d5448d94743ba13a49954cd2e7a5c0547
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774723"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>Relire un seul événement à la fois (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette rubrique décrit comment relire un événement à la fois dans un fichier ou une table de trace au moyen du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

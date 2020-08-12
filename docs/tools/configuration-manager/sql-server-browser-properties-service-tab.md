@@ -1,5 +1,6 @@
 ---
 title: Propriétés de SQL Server Browser (onglet Service)
+description: En savoir plus sur les options de l’onglet Service de la boîte de dialogue Propriétés de SQL Server Browser, tels que le chemin d’accès binaire, le nom d’hôte et le mode de démarrage.
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c9e5cb32206a2a2b81970a43308058dc2ad1c52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fa05db685f2597d92c6314f5b42a7e1976db4fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307097"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894263"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Propriétés de SQL Server Browser (onglet Service)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser s'exécute sur le serveur en tant que service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l’écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l’ordinateur.  
   
  L'onglet **Service** de la boîte de dialogue **Propriétés de SQL Server Browser** vous permet d'afficher les options suivantes. Toutes les propriétés, à l’exception de **Mode de démarrage** , sont accessibles en lecture seule.  
@@ -49,11 +50,11 @@ ms.locfileid: "75307097"
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuel : ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuel : ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : ce service ne peut pas être démarré.  
+-   Désactivé : impossible de démarrer ce service.  
   
  **State**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé. « **…** » indique qu’un changement d’état est en attente.  

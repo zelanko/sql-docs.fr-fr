@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8dc0267821ff4833bd33a1431f004336668063d0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5d83270e473f3135cfcdc3676d97675d7f658bb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772329"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>Tutoriel : Créer un modèle de clustering dans R avec le Machine Learning SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans la troisième partie de cette série de quatre tutoriels, vous allez créer un modèle K-moyennes dans R pour effectuer le clustering. Dans la prochaine partie de cette série, vous déploierez ce modèle dans une base de données avec SQL Server Machine Learning Services ou sur des clusters Big Data.
@@ -30,6 +29,9 @@ Dans la troisième partie de cette série de quatre tutoriels, vous allez créer
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Dans la troisième partie de cette série de quatre tutoriels, vous allez créer un modèle K-moyennes dans R pour effectuer le clustering. Dans la prochaine partie de cette série, vous déploierez ce modèle dans une base de données avec SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Dans la troisième partie de cette série de quatre tutoriels, vous allez créer un modèle K-moyennes dans R pour effectuer le clustering. Dans la partie suivante de cette série, vous déploierez ce modèle dans une base de données avec Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
 Dans cet article, vous allez apprendre à :
@@ -78,9 +80,8 @@ Dans le script R suivant, vous allez utiliser la fonction **kmeans** pour effect
 
 ```r
 # Output table to hold the customer group mappings.
-# Generate clusters using Kmeans and output key / cluster to a table in SQL database
+# Generate clusters using Kmeans and output key / cluster to a table
 # called return_cluster
-sqlDrop(ch, "return_cluster")
 
 ## create clustering model
 clust <- kmeans(customer_data[,2:5],4)

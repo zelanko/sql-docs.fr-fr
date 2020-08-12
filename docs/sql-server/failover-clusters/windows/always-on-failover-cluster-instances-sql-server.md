@@ -1,6 +1,6 @@
 ---
 title: Instances de cluster de basculement Always On
-description: Description de l’instance de cluster de basculement Always On pour SQL Server.
+description: Découvrez comment les instances de cluster de basculement AlwaysOn fournissent une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur dans SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 727bc6c3725315a012cff268b180ecc28a5a3631
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882971"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instances de cluster de basculement Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Dans le cadre de l’offre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, les instances de cluster de basculement AlwaysOn exploitent la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
   

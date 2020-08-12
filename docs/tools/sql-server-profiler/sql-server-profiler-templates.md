@@ -1,6 +1,7 @@
 ---
 title: Modèles
 titleSuffix: SQl Server Profiler
+description: En savoir plus sur les modèles prédéfinis fournis par SQL Server Profiler et leur utilisation. Découvrez comment créer des modèles définis par l’utilisateur et modifier le modèle par défaut.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d278cd7b25dd4a9879f2c3a498bf2288e582beb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748644"
 ---
 # <a name="sql-server-profiler-templates"></a>Modèles du Générateur de profils SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Vous pouvez utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour créer des modèles qui définissent les classes d'événements et les colonnes de données à inclure dans les traces. Après avoir défini et enregistré le modèle, vous pouvez exécuter une trace qui enregistre les données de chaque classe d'événements sélectionnée. Vous pouvez utiliser un modèle sur de nombreuses traces ; le modèle lui-même n'est pas exécuté.  
 
@@ -37,7 +38,7 @@ Vous pouvez utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md
 |Nom du modèle|Fonction|Classes d’événements|  
 |-------------------|----------------------|-------------------|  
 |SP_Counts|Capture le comportement de l'exécution des procédures stockées dans le temps.|**SP:Starting**|  
-|standard|Point de départ générique de création d'une trace. Capture toutes les procédures stockées et tous les traitements [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutés. Permet de surveiller l'activité générale du serveur de base de données.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
+|Standard|Point de départ générique de création d'une trace. Capture toutes les procédures stockées et tous les traitements [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutés. Permet de surveiller l'activité générale du serveur de base de données.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL|Capture toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] soumises à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par les clients, ainsi que l'heure de leur émission. Permet de déboguer les applications clientes.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Duration|Capture toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] soumises à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par les clients, leur délai d'exécution (en millisecondes) et les regroupe en fonction de leur durée. Permet d'identifier les requêtes lentes.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
 |TSQL_Grouped|Capture toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] soumises à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’heure à laquelle elles ont été émises. Regroupe les informations en fonction du client ou de l'utilisateur qui a émis l'instruction. Permet d'analyser les requêtes d'un client ou d'un utilisateur.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  

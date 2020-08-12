@@ -1,5 +1,6 @@
 ---
 title: Propriétés de protocoles clients (onglet Ordre)
+description: Découvrez comment activer ou désactiver des protocoles client. Découvrez comment réorganiser l’ordre dans lequel des protocoles sont utilisés lorsque les clients essaient de se connecter à SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59ffc1332b52d95221541a45ba90fe3e22a89caa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 841c923899900ecac354356c9599d5aad61d8cfd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306526"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892058"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propriétés de protocoles clients (onglet Ordre)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   La page **Ordre** de la boîte de dialogue **Propriétés de protocoles clients** vous permet d’afficher et d’activer les protocoles clients.  
   
  Cliquez sur un protocole, puis sur **Activer** ou **Désactiver** pour déplacer le protocole sélectionné vers la liste **Protocoles désactivés** ou **Protocoles activés** .  

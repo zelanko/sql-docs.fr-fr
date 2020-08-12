@@ -1,5 +1,6 @@
 ---
 title: Créer, modifier et supprimer des sources de données partagées | Microsoft Docs
+description: Découvrez comment gérer des sources de données pouvant être référencées par plusieurs rapports, modèles et abonnements pilotés par les données qui s’exécutent sur un serveur de rapports Reporting Services.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 027ff3184e38b1d1848c6a42d2387cd9a8677dc3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812284"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Créer, modifier, puis supprimer des sources de données partagées (SSRS)
   Une source de données partagée est un ensemble de propriétés de connexion à la source de données pouvant être référencées par plusieurs rapports, modèles et abonnements pilotés par les données qui s’exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Les sources de données partagées permettent de gérer facilement des propriétés de source de données qui changent souvent dans le temps. Si le compte ou le mot de passe d'un utilisateur change ou bien si vous déplacez la base de données sur un serveur différent, vous pouvez mettre à jour les informations de connexion à un seul endroit.  
@@ -32,7 +33,7 @@ ms.locfileid: "77081817"
   
 |Élément|Description|  
 |----------|-----------------|  
-|Name|Nom qui identifie l'élément au sein de la hiérarchie des dossiers du serveur de rapports.|  
+|Nom|Nom qui identifie l'élément au sein de la hiérarchie des dossiers du serveur de rapports.|  
 |Description|Description qui apparaît avec l’élément dans le portail web quand vous consultez le contenu du dossier.|  
 |Type de connexion|Extension pour le traitement des données utilisée avec la source de données. Vous ne pouvez utiliser que les extensions pour le traitement des données qui sont déployées sur le serveur de rapports. Pour plus d’informations sur les extensions pour le traitement des données incluses dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Chaîne de connexion|Chaîne de connexion pour la base de données. Pour plus d’informations et pour consulter des exemples de chaînes de connexion aux sources de données fréquemment utilisées, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  

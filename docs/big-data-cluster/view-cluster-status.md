@@ -5,20 +5,20 @@ description: Cet article explique comment afficher l’état d’un cluster Big 
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772820"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Guide pratique pour afficher l’état d’un cluster Big Data 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Cet article explique comment accéder aux points de terminaison de service et afficher l’état des composants d’un cluster Big Data SQL Server. Il présente les deux techniques disponibles : Azure Data Studio et **azdata**.
 
@@ -53,7 +53,9 @@ La table des points de terminaison de service expose également plusieurs tablea
 - Spark Job Monitoring (Supervision des travaux Spark)
 - Spark Resource Management (Gestion des ressources Spark)
 
-Vous pouvez cliquer directement sur ces liens. Vous serez invité à vous authentifier lors de l’accès à ces tableaux de bord. Pour les tableaux de bord des métriques et des journaux, fournissez les informations d’identification d’administrateur du contrôleur que vous avez définies au moment du déploiement à l’aide des variables d’environnement **AZDATA_USERNAME** et **AZDATA_PASSWORD**. Les tableaux de bord Spark utilisent des informations d’identification de passerelle (Knox) : l’identité Active Directory dans un cluster intégré à AD ou l’utilisateur **racine** et **AZDATA_PASSWORD** si l’authentification de base est utilisée dans votre cluster. 
+Vous pouvez cliquer directement sur ces liens. Vous serez invité à vous authentifier lors de l’accès à ces tableaux de bord. Pour les tableaux de bord des métriques et des journaux, fournissez les informations d’identification d’administrateur du contrôleur que vous avez définies au moment du déploiement à l’aide des variables d’environnement **AZDATA_USERNAME** et **AZDATA_PASSWORD**. Les tableaux de bord Spark utilisent des informations d’identification de passerelle (Knox) : l’identité Active Directory dans un cluster intégré à AD ou **AZDATA_USERNAME** et **AZDATA_PASSWORD** si l’authentification de base est utilisée dans votre cluster.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook Cluster Status
 
