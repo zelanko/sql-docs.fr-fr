@@ -1,21 +1,21 @@
 ---
 title: Chaînes de connexion et autorisations
+description: En savoir plus sur les chaînes de connexion, les comptes et les autorisations dont vous avez besoin pour exécuter des tests unitaires SQL Server. Consultez comment configurer les chaînes de connexion.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243759"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901100"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Vue d'ensemble des chaînes de connexion et des autorisations
 
@@ -27,7 +27,7 @@ Dans la boîte de dialogue **Configuration de test SQL Server**, vous pouvez sp�
 > [!NOTE]  
 > Le contexte d’exécution et le contexte privilégié ne diffèrent que si l’authentification SQL Server est utilisée. Si vous utilisez l'authentification Windows, les mêmes informations d'identification sont utilisées pour les deux chaînes de connexion.  
   
--   Contexte d'exécution (obligatoire) : compte d'utilisateur utilisé pour exécuter le script de test. Cette chaîne de connexion doit avoir les mêmes informations d'identification que celles que doivent avoir les utilisateurs. Ceci est important, car cela garantit que les autorisations appropriées ont été appliquées à la base de données. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+-   Contexte d'exécution (obligatoire) : compte d'utilisateur utilisé pour exécuter le script de test. Cette chaîne de connexion doit avoir les mêmes informations d'identification que celles que doivent avoir les utilisateurs. Ceci est important, car cela garantit que les autorisations appropriées ont été appliquées à la base de données. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
     Dans le fichier app.config de votre projet de test, il s'agit de l'élément `ExecutionContext`.  
   

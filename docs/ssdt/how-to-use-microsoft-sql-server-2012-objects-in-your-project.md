@@ -1,27 +1,27 @@
 ---
 title: Objets SQL Server 2012 dans votre projet
+description: Familiarisez-vous avec les séquences SQL Server 2012. Découvrez comment ajouter ces objets aux projets de base de données et les utiliser dans des requêtes.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244252"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895841"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procédure : utiliser des objets Microsoft SQL Server 2012 dans votre projet
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procédure : Utiliser des objets Microsoft SQL Server 2012 dans un projet
 
 Dans cet exemple, vous ajouterez un objet séquence à un projet de base de données ciblant Microsoft SQL Server 2012.  
   
-Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande.  Pour plus d'informations sur les objets séquence, consultez [Numéros de séquence](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Pour plus d’informations sur les nouveautés concernant Microsoft SQL Server 2012, consultez [Nouveautés de SQL Server 2012 ](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
+Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande.  Pour plus d'informations sur les objets séquence, consultez [Numéros de séquence](../relational-databases/sequence-numbers/sequence-numbers.md). Pour plus d’informations sur les nouveautés concernant Microsoft SQL Server 2012, consultez [Nouveautés de SQL Server 2012 ](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
   
 > [!WARNING]  
 > Les procédures suivantes utilisent les entités créées dans les procédures précédentes des sections [Développement de base de données connectée](../ssdt/connected-database-development.md) et [Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md).  
@@ -44,7 +44,7 @@ Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence es
     CACHE 10  
     ```  
   
-4.  Si la plateforme cible de votre projet n’est pas définie sur Microsoft SQL Server 2012, la **Liste d’erreurs** affichera une erreur de syntaxe pour l’instruction `CREATE SEQUENCE`. Pour remédier à ce problème, consultez la rubrique [Procédure : modifier la plateforme cible et publier un projet de base de données](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) pour modifier la plateforme cible en conséquence.  
+4.  Si la plateforme cible de votre projet n’est pas définie sur Microsoft SQL Server 2012, la **Liste d’erreurs** affichera une erreur de syntaxe pour l’instruction `CREATE SEQUENCE`. Pour remédier à ce problème, consultez la rubrique [Procédure : modifier la plateforme cible et publier un projet de base de données](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) pour modifier la plateforme cible en conséquence.  
   
 5.  Consultez la rubrique [Procédure : modifier la plateforme cible et publier un projet de base de données](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) pour publier le projet dans une base de données de votre serveur Microsoft SQL Server 2012 connecté.  
   

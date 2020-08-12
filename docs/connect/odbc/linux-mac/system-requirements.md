@@ -1,5 +1,6 @@
 ---
-title: Configuration requise (ODBC Driver for SQL Server) | Microsoft Docs
+title: Configuration requise (ODBC Driver pour SQL Server)
+description: Cette rubrique répertorie la configuration requise pour ODBC Driver pour SQL Server sur Linux et les systèmes d’exploitation macOS.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921177"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391752"
 ---
-# <a name="system-requirements"></a>Configuration requise
+# <a name="system-requirements-linux-and-macos"></a>Configuration requise (Linux et macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -33,7 +34,7 @@ La compatibilité des versions SQL avec les pilotes Linux et macOS est identique
 
 ## <a name="operating-system-support"></a>Prise en charge du système d’exploitation
 
-Les versions 17, 13.1 et 13 des pilotes Linux et macOS sont prises en charge sur les versions 64 bits des systèmes d’exploitation suivants :
+Les versions 17, 13.1 et 13 des pilotes Linux et macOS sont prises en charge sur l’architecture 64 bits des systèmes d’exploitation suivants :
 
 |Systèmes d’exploitation pris en charge     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|
@@ -66,7 +67,7 @@ Les packages d’installation de [!INCLUDE[msCoName](../../../includes/msconame_
   
 * Gestionnaire de pilotes UnixODBC 2.3.0 64 bits, conçu pour SQLLEN/SQLULEN 64 bits. Les versions ultérieures du Gestionnaire de pilotes UnixODBC 64 bits ne sont pas prises en charge avec le pilote ODBC sur Linux. Consultez la rubrique [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) (éventuellement en anglais) pour plus d'informations.  
   
-* Les packages suivants sont nécessaires pour le pilote ODBC pour **Red Hat Enterprise Linux 5 (64 bits)** , téléchargeable suivant le lien [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321) :  
+* Le pilote ODBC pour **Red Hat Enterprise Linux 5 (64 bits)** requiert les packages suivants que vous pouvez télécharger ici : [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -74,7 +75,7 @@ Les packages d’installation de [!INCLUDE[msCoName](../../../includes/msconame_
   * `krb5-libs`  
   * `openssl`  
   
-* Les packages suivants sont nécessaires pour le pilote ODBC pour **Red Hat Enterprise Linux 6 (64 bits)** , téléchargeable suivant le lien [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321) :  
+* Le pilote ODBC pour **Red Hat Enterprise Linux 6 (64 bits)** requiert les packages suivants que vous pouvez télécharger ici : [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -82,7 +83,7 @@ Les packages d’installation de [!INCLUDE[msCoName](../../../includes/msconame_
   * `krb5-libs`  
   * `openssl`  
   
-* Les packages suivants sont nécessaires pour le pilote ODBC pour **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)** , téléchargeable suivant le lien [Microsoft ODBC Driver 11 Preview for SQL Server – SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916) :  
+* Le pilote ODBC pour **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)** requiert les packages suivants que vous pouvez télécharger ici : [Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

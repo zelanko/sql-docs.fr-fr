@@ -1,6 +1,6 @@
 ---
 title: Reprise d’activité par le quorum forcé
-description: Une intervention manuelle est nécessaire pour la récupération d'une défaillance de quorum. Cet article explique comment forcer le quorum en cas de sinistre d’une instance de cluster de basculement SQL Server (FCI).
+description: Une intervention manuelle est nécessaire pour la récupération d'une défaillance de quorum. Découvrez comment forcer le quorum en cas d’incident avec une instance de cluster de basculement SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20beee1d78975cdb4da4338ca85eff14a32b8153
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821984"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896693"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Récupération d'urgence WSFC par le quorum forcé (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   L'échec du quorum est généralement dû à un problème systémique grave, à un échec de communication persistant ou à une mauvaise configuration impliquant plusieurs nœuds dans le cluster WSFC.  Une intervention manuelle est nécessaire pour la récupération d'une défaillance de quorum.  
   
 -   **Avant de commencer :**  [Prérequis](#Prerequisites), [Sécurité](#Security)  

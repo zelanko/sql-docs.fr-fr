@@ -1,5 +1,6 @@
 ---
 title: Naviguer entre des scripts
+description: Découvrez comment naviguer entre les scripts dans l’éditeur Transact-SQL. Affichez des exemples qui montrent comment utiliser des outils comme Atteindre la définition et Rechercher toutes les références.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 910011609e928efe9180a3aa4f041aa063adbab4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0b21634e2655d67812d9c6096c9d63633130c7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896619"
 ---
-# <a name="how-to-navigate-between-scripts"></a>Procédure : naviguer entre des scripts
+# <a name="how-to-navigate-between-scripts"></a>Procédure : Naviguer entre des scripts
 
 L'Éditeur Transact\-SQL pour le développement hors connexion fournit deux outils de navigation utiles qui sont familiers aux utilisateurs de Visual Studio : Atteindre la définition et Rechercher toutes les références. Vous pouvez, par exemple, cliquer avec le bouton droit sur un nom de la table et utiliser « Rechercher toutes les références » pour répertorier toutes les références à la table dans le projet. Vous pouvez double-cliquer sur le résultat d'une recherche pour accéder à un fichier de code spécifique. Dans ce fichier, vous pouvez recliquer avec le bouton droit sur le nom de la table et utiliser « Atteindre la définition » pour revenir à la définition de la table.  
   

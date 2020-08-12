@@ -1,5 +1,6 @@
 ---
 title: Propriétés de SQL Server (onglet Ouvrir une session)
+description: En savoir plus sur l’onglet Ouvrir une session de la boîte de dialogue Propriétés SQL Server. Utilisez cet onglet pour spécifier le compte utilisé par SQL Server et pour démarrer ou arrêter le service.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 042a0bcf0b0a078b87219a4371d7cb890b4abab6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ac7122b1ec746fa3f73dab8fc104d91851b7569a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898937"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Propriétés de SQL Server (onglet Ouvrir une session)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   L'onglet **Ouvrir une session** de la boîte de dialogue **Propriétés de SQL Server** permet de spécifier le compte utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , de modifier le mot de passe d'un compte, ainsi que de démarrer et d'arrêter ce service. La modification du mot de passe d'un compte prend effet immédiatement.  
   
 > [!NOTE]  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
+ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082626"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86291146"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Qu’est-ce que SQL Server Reporting Services (SSRS) ?
 
@@ -94,7 +94,7 @@ Le contenu sur le portail web est organisé par type :
 * datasets partagés
 * sources de données partagées
 
-Vous pouvez les stocker et les gérer ici en toute sécurité, dans la hiérarchie de dossiers classique. Balisez vos rapports favoris pour y accéder rapidement. Ceux disposant des autorisations appropriées peuvent gérer et administrer le contenu SSRS.
+Vous pouvez les stocker et les gérer ici en toute sécurité, dans la hiérarchie de dossiers classique. Balisez vos rapports favoris pour y accéder rapidement. Ceux disposant des autorisations appropriées peuvent gérer et administrer le contenu SSRS.
 
 Et vous pouvez toujours planifier le traitement des rapports, accéder aux rapports à la demande et vous abonner à des rapports publiés dans le nouveau portail web.
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 46f7de1e57686a0f54368407580d90236152d147
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3cb73bb9ea3685793de692ae9cff1508e8a7656c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989048"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006904"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Fonctionnalités OLE DB Driver pour SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -100,6 +100,9 @@ Présente les nouvelles méthodes d’authentification introduites dans OLE DB D
   
  [Prise en charge de la base de données locale par OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Présente la prise en charge d’OLE DB Driver pour SQL Server pour la fonctionnalité LocalDB.  
+  
+ [Utilisation de la résolution d’adresses IP réseau transparente](../../oledb/features/using-transparent-network-ip-resolution.md)  
+ Explique comment OLE DB Driver pour SQL Server prend en charge la résolution d’adresses IP réseau transparente dans un cluster de basculement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      

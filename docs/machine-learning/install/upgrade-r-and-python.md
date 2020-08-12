@@ -2,21 +2,21 @@
 title: Mettre à niveau les composants Python et R
 description: Mettez à niveau Python et R dans SQL Server Machine Learning Services ou SQL Server R Services à l’aide de sqlbindr.exe pour établir une liaison avec Machine Learning Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487365"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900075"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Mettre à niveau les composants Machine Learning (Python et R) dans les instances SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 L’intégration de Python et R dans SQL Server comprend des packages open source et des packages propriétaires Microsoft.
                                                                                
@@ -263,9 +263,9 @@ Vous aviez peut-être ajouté d’autres packages tiers ou open source à votre 
 
 |Nom|Description|
 |------|------|
-|*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
-|*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|
-|*unbind*|Désinstalle la version la plus récente de R Server de l’instance de base de données SQL spécifiée, et empêche les mises à niveau ultérieures de R Server d’affecter l’instance|
+|*list*| Affiche la liste complète des ID d’instances SQL Server de l’ordinateur actuel|
+|*bind*| Met à niveau l’instance SQL Server spécifiée vers la dernière version de R Server et fait en sorte qu’elle reçoive automatiquement les mises à niveau ultérieures de R Server|
+|*unbind*|Désinstalle la dernière version de R Server de l’instance SQL Server spécifiée et empêche les mises à niveau ultérieures de R Server de s’appliquer à l’instance|
 
 <a name="sqlbindr-error-codes"><a/>
 

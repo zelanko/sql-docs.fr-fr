@@ -1,10 +1,11 @@
 ---
 title: Avant l’installation du clustering de basculement | Microsoft Docs
+description: Cet article aborde la préparation de l’installation d’un cluster de basculement SQL Server, y compris le matériel, le système d’exploitation et la configuration.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517943"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900518"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Avant d’installer un cluster de basculement SQL Server, vous devez sélectionner le matériel et le système d’exploitation que SQL Server utilisera. Vous devez aussi configurer le clustering de basculement Windows Server (WSFC) et examiner le réseau, la sécurité ainsi que les points importants à prendre en compte pour les autres logiciels qui seront exécutés sur votre cluster de basculement.  
   
  Si un cluster Windows dispose d'un lecteur de disque local et que la même lettre de lecteur est aussi utilisée sur un ou plusieurs nœuds de cluster en tant que lecteur partagé, vous ne pouvez pas installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce lecteur. Cette restriction s’applique à la fois aux instances de cluster de basculement SQL Server et aux instances autonomes sur un serveur qui fait partie d’une instance de cluster de basculement Windows.
@@ -39,7 +40,7 @@ ms.locfileid: "72517943"
   
 ##  <a name="best-practices"></a><a name="BestPractices"></a> Bonnes pratiques  
   
--   Passez en revue les [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Notes de publication[ de ](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Passez en revue les [Notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445) de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
   
 -   Installez les logiciels requis. Avant d'exécuter l'installation ou la mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], installez les composants requis suivants pour réduire la durée d'installation. Vous pouvez installer les logiciels requis sur chaque nœud de cluster de basculement, puis redémarrer les nœuds une fois avant d'exécuter le programme d'installation.  
   
@@ -47,9 +48,9 @@ ms.locfileid: "72517943"
   
     -   Le .NET Framework 3.5 SP1 n'est plus installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il peut être requis lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des systèmes d'exploitation Windows plus anciens. Pour plus d’informations, consultez les [notes de publication](https://go.microsoft.com/fwlink/?LinkId=296445) de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] :** pour éviter le redémarrage de l'ordinateur suite à l'installation de .NET Framework 4 pendant l'installation, le programme d'installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiert l'installation de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update sur l'ordinateur.  Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, cette mise à jour est incluse. Si vous installez sur un système d'exploitation Windows plus ancien, vous pouvez la télécharger à partir de la [Mise à niveau Microsoft pour le .NET Framework 4.0 sur Windows Vista et Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **Mise à jour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update :** Pour éviter le redémarrage de l'ordinateur suite à l'installation de .NET Framework 4 pendant l'installation, le programme d'installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiert l'installation de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sur l'ordinateur.  Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, cette mise à jour est incluse. Si vous installez sur un système d'exploitation Windows plus ancien, vous pouvez la télécharger à partir de la [Mise à niveau Microsoft pour le .NET Framework 4.0 sur Windows Vista et Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
-    -   Le programme d'installation de .NET Framework 4.0 installe le .NET Framework 4 sur un système d'exploitation en cluster. Pour réduire le temps d'installation, vous pouvez envisager d'installer le .NET Framework 4 avant d'exécuter le programme d'installation.  
+    -   .NET Framework 4 : Le programme d'installation installe le .NET Framework 4 sur un système d'exploitation en cluster. Pour réduire le temps d'installation, vous pouvez envisager d'installer le .NET Framework 4 avant d'exécuter le programme d'installation.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez installer ces fichiers en exécutant SqlSupport.msi qui se trouve sur le support d'installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   

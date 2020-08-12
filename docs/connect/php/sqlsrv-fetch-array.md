@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft Docs
+title: sqlsrv_fetch_array
+description: Référence d’API pour la fonction sqlsrv_fetch_array dans le Pilote pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0055ed89d217a664d201d93d2c13c8e078d2a38
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927806"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391804"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,9 +38,9 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$stmt*: ressource d’instruction correspondant à une instruction exécutée.  
+*$stmt* : ressource d’instruction correspondant à une instruction exécutée.  
   
-*$fetchType* [FACULTATIF] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
+*$fetchType* [FACULTATIF] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
   
 |Valeur|Description|  
 |---------|---------------|  
@@ -47,7 +48,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 |SQLSRV_FETCH_ASSOC|La ligne de données suivante est retournée sous forme de tableau associatif. Les clés de tableau sont les noms des colonnes dans le jeu de résultats.|  
 |SQLSRV_FETCH_BOTH|La ligne de données suivante est retournée à la fois comme tableau numérique et comme tableau associatif. Il s’agit de la valeur par défaut.|  
   
-*row* [FACULTATIF] : ajouté dans la version 1.1. L’une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur permettant le défilement. (quand vous spécifiez *row*, vous devez spécifier *fetchtype* de manière explicite, même si vous spécifiez la valeur par défaut).  
+*ligne* [FACULTATIF] : Ajoutée dans la version 1.1. L’une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur permettant le défilement. (quand vous spécifiez *row*, vous devez spécifier *fetchtype* de manière explicite, même si vous spécifiez la valeur par défaut).  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -58,7 +59,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md). La prise en charge du curseur permettant le défilement a été ajoutée dans la version 1.1 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-*offset* [FACULTATIF] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
+*décaler* [FACULTATIF] : Utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
   
 ## <a name="return-value"></a>Valeur de retour  
 Si une ligne de données est récupérée, un **tableau** est retourné. S’il n’y a plus aucune ligne à récupérer, la valeur **null** est retournée. Si une erreur se produit, la valeur **false** est retournée.  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Si le jeu de résultats retourné par la partie `SELECT SCOPE_IDENTITY()` de cette instruction est récupéré sous forme de tableau associatif, la clé de la valeur retournée est une chaîne vide (""), car la colonne retournée n’a pas de nom. Pour éviter ce problème, vous pouvez récupérer le résultat sous forme de tableau numérique, ou spécifier un nom pour la colonne retournée dans l’instruction Transact-SQL. Voici un moyen de spécifier un nom de colonne dans Transact-SQL :  
+Si le jeu de résultats retourné par la partie `SELECT SCOPE_IDENTITY()` de cette instruction est récupéré sous forme de tableau associatif, la clé de la valeur retournée est une chaîne vide (""), car la colonne retournée n’a pas de nom. Pour éviter ce problème, vous pouvez récupérer le résultat sous forme de tableau numérique, ou spécifier un nom pour la colonne retournée dans l’instruction Transact-SQL. La déclaration suivante constitue un moyen pour spécifier un nom de colonne dans Transact-SQL :  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -125,7 +126,7 @@ L’exemple suivant récupère chaque ligne d’un jeu de résultats sous forme 
   
 L’exemple récupère, à partir de la table *Purchasing.PurchaseOrderDetail* de la base de données AdventureWorks, les informations sur les produits qui ont une date spécifique, et dont la quantité en stock (*StockQty*) est inférieure à la valeur spécifiée.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -176,7 +177,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-La fonction **sqlsrv_fetch_array** retourne toujours des données en fonction des [Default PHP Data Types](../../connect/php/default-php-data-types.md). Pour plus d’informations sur la façon de spécifier le type de données PHP, consultez [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+La fonction **sqlsrv_fetch_array** retourne toujours des données en fonction des [Default PHP Data Types](../../connect/php/default-php-data-types.md). Pour plus d’informations sur la façon de spécifier le type de données PHP, consultez [Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Si un champ sans nom est récupéré, la clé associative de l’élément de tableau est une chaîne vide (""). Pour plus d’informations, consultez [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   

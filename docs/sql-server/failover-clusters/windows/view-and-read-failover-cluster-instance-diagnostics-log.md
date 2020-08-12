@@ -1,6 +1,6 @@
 ---
 title: Afficher et lire le journal de diagnostic de l’instance de cluster de basculement
-description: Découvrez comment afficher et lire le journal de diagnostic généré par l’instance de cluster de basculement SQL Server.
+description: Découvrez comment afficher et lire le journal de diagnostic généré par une instance de cluster de basculement SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e2f84b38751b57e1fe9ebba525e636da45a59954
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242883"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896671"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Afficher et lire le journal de diagnostic de l'instance de cluster de basculement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Toutes les erreurs et tous les événements d'avertissements critiques pour la DLL de ressource SQL Server sont écrits dans le journal des événements Windows. Un journal en cours des informations de diagnostic spécifiques de SQL Server est capturé par la procédure stockée système [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ; il est écrit dans les fichiers journaux de diagnostics du cluster de basculement de SQL Server (également appelés journaux *SQLDIAG*).  
   
 -   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
@@ -30,7 +30,7 @@ ms.locfileid: "75242883"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
- Par défaut, les journaux SQLDIAG sont stockés dans un dossier LOG local du répertoire d’instance SQL Server, par exemple, « C\Program Files\Microsoft SQL Server\MSSQL13.\<Nom_Instance>\MSSQL\LOG » du nœud propriétaire de l’instance de cluster de basculement (FCI) Always On. La taille de chaque fichier journal SQLDIAG est fixée à 100 Mo. Dix fichiers journaux de ce type sont stockés sur l'ordinateur avant qu'ils ne soient recyclés pour les nouveaux journaux.  
+ Par défaut, les journaux SQLDIAG sont stockés dans un dossier LOG local du répertoire d’instance SQL Server, par exemple, « C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG » du nœud propriétaire de l’instance de cluster de basculement (FCI) AlwaysOn. La taille de chaque fichier journal SQLDIAG est fixée à 100 Mo. Dix fichiers journaux de ce type sont stockés sur l'ordinateur avant qu'ils ne soient recyclés pour les nouveaux journaux.  
   
  Les journaux utilisent le format de fichier d'événements étendus. La fonction système **sys.fn_xe_file_target_read_file** peut être utilisée pour lire les fichiers créés par les événements étendus. Au format XML, un événement par ligne est retourné. Interrogez la vue système pour analyser les données XML définies comme ensemble de résultats. Pour plus d’informations, consultez [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   

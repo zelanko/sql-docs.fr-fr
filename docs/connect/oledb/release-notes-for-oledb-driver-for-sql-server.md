@@ -1,23 +1,23 @@
 ---
 title: Notes de publication pour le pilote OLE DB
 description: Cet article de notes de publication décrit les changements de chaque version du pilote Microsoft OLE DB pour SQL Server.
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727966"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011913"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notes de publication de Microsoft OLE DB Driver pour SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Cette page décrit ce qui a été ajouté dans chaque version de Microsoft OLE DB Driver pour SQL Server.
 
@@ -27,6 +27,37 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1840"></a>18.4.0
+![Télécharger](../../ssms/media/download-icon.png) [Télécharger le programme d’installation x64](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![Télécharger](../../ssms/media/download-icon.png) [Télécharger le programme d’installation x86](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+Publication : Mai 2020
+
+Si vous avez besoin de télécharger le programme d’installation dans une langue autre que celle détectée pour vous, vous pouvez utiliser ces liens directs.  
+Pour le pilote x64 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### <a name="features-added"></a>Ajout de fonctionnalités
+
+| Fonctionnalité ajoutée | Détails |
+| :------------ | :------ |
+| Support de la résolution d’adresses IP réseau transparente (TNIR) |[Résolution d’adresses IP réseau transparente (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| Support de l’encodage client UTF-8 | [Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### <a name="bugs-fixed"></a>Bogues corrigés
+
+| Bogue corrigé | Détails |
+| :-------- | :------ |
+| Correction de divers bogues dans l’interface [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) | Quelques bogues affectant les pages de codes multioctets ont entraîné le signalement prématuré de la fin du flux par l’interface pendant l’opération de lecture.|
+| Correction d’une fuite de mémoire dans l’interface [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) | Correction d’une fuite de mémoire dans l’interface [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) lorsque la priorité `SSPROP_IRowsetFastLoad` a été activée. |
+| Correction d’un bogue dans des scénario impliquant un type de données `sql_variant` et des chaînes non ASCII. | L’exécution de certains scénarios impliquant un type de données `sql_variant` et des chaînes non ASCII peut entraîner une altération des données. Pour plus d’informations, consultez : [Problèmes connus](ole-db-data-types/ssvariant-structure.md#known-issues). |
+| Correction des problèmes avec le bouton *Tester la connexion* dans la [boîte de dialogue Configuration UDL](help-topics/data-link-pages.md) | Le bouton *Tester la connexion* dans la [boîte de dialogue Configuration UDL](help-topics/data-link-pages.md) honore désormais les propriétés d’initialisation définies sous l’onglet *Tous*. |
+| Correction de la gestion de la valeur par défaut de la propriété `SSPROP_INIT_PACKETSIZE` | Correction d’une erreur inattendue lorsque la propriété `SSPROP_INIT_PACKETSIZE` est définie sur sa valeur par défaut de `0`. Pour plus de détails sur cette propriété, consultez [Propriétés d’initialisation et d’autorisation](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Correction des problèmes de dépassement de mémoire tampon dans [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Correction des problèmes de dépassement de mémoire tampon lors de l’utilisation de fichiers de données incorrects. |
+| Correction de problèmes d'accessibilité | Correction des problèmes d’accessibilité dans l’interface utilisateur du programme d’installation et de la [boîte de dialogue Connexion SQL Server](help-topics/sql-server-login-dialog.md) (lecture du contenu, taquets de tabulation). |
+
+## <a name="previous-releases"></a>Versions précédentes
 
 ## <a name="1830"></a>18.3.0
 
@@ -53,8 +84,6 @@ Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?li
 | :-------- | :------ |
 | Correction de la logique de suppression d’index dans [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Les versions précédentes du pilote OLE DB ne peuvent pas supprimer un index de clé primaire lorsque l’ID de schéma et l’ID d’utilisateur du propriétaire de l’index ne sont pas égaux. |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>Versions précédentes
 
 Téléchargez les versions précédentes du pilote OLE DB en cliquant sur les liens de téléchargement dans les sections suivantes :
 

@@ -1,5 +1,6 @@
 ---
 title: Utiliser Comparer les schémas pour comparer différentes définitions de base de données
+description: Découvrez comment comparer les schémas les définitions de base de données avec Comparer les schémas. Consultez comment exclure des différences spécifiques et mettre à jour la cible ou créer un script de mise à jour.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2347297adfbc9d4df88c7df32fffefa4990010d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895824"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procédure : Utiliser Comparer les schémas pour comparer différentes définitions de base de données
 
@@ -41,7 +41,7 @@ Dans la procédure suivante, vous comparez le schéma d'un projet de base de don
   
 ### <a name="to-compare-database-definitions"></a>Pour comparer des définitions de base de données  
   
-1.  Dans le menu **SQL**, sélectionnez **Comparaison de schémas**, puis cliquez sur **Nouvelle comparaison de schémas**.  
+1.  Dans le menu **Outils**, sélectionnez **SQL Server**, puis cliquez sur **Nouvelle comparaison de schémas**.  
   
     Dans l'**Explorateur de solutions** vous pouvez aussi cliquer avec le bouton droit sur le projet **TradeDev**, puis sélectionner **Comparaison de schémas**.  
   

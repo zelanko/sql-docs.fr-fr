@@ -1,5 +1,6 @@
 ---
 title: Configurer la collecte de données d’utilisation et de diagnostic pour les outils SQL Server (CEIP) | Microsoft Docs
+description: En savoir plus sur les informations que le Programme d'amélioration de l'expérience utilisateur (CEIP) collecte auprès des utilisateurs pour améliorer les produits. Découvrez comment rejoindre ou quitter le programme dans SQL Server Data Tools (SSDT).
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091813"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000426"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurer les données d’utilisation et de diagnostic pour les outils SQL Server (CEIP)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Découvrez comment le Programme d’amélioration du produit (CEIP) aide Microsoft à identifier les méthodes permettant d’améliorer nos logiciels.  Vous pouvez configurer les outils afin de vous abonner ou d’annuler l’abonnement au programme à tout moment.  
   
@@ -71,7 +72,7 @@ Valeur = (DWORD)
 
   
 > [!CAUTION]  
->  Une modification incorrecte du Registre peut sérieusement endommager votre système. Avant d'apporter des modifications au Registre, il convient de sauvegarder les données importantes qui se trouvent sur l'ordinateur. Vous pouvez également utiliser l'option de démarrage Dernière configuration valide connue si vous rencontrez des problèmes après l'application de modifications manuelles.  
+>  Une modification incorrecte du Registre peut endommager gravement votre système. Avant toute modification du registre, il est conseillé de sauvegarder toutes les données importantes de votre ordinateur. Vous pouvez également utiliser l'option de démarrage Dernière configuration valide connue si vous rencontrez des problèmes après l'application de modifications manuelles.  
   
  Pour en savoir plus sur les informations recueillies, traitées ou transmises par le Programme d’amélioration du produit, consultez la [déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkID=868444).  
  
@@ -113,7 +114,7 @@ Valeur = (DWORD)
 -   1 pour s'abonner  
   
 > [!CAUTION]  
->  Une modification incorrecte du Registre peut sérieusement endommager votre système. Avant d'apporter des modifications au Registre, il convient de sauvegarder les données importantes qui se trouvent sur l'ordinateur. Vous pouvez également utiliser l'option de démarrage Dernière configuration valide connue si vous rencontrez des problèmes après l'application de modifications manuelles.  
+>  Une modification incorrecte du Registre peut endommager gravement votre système. Avant toute modification du registre, il est conseillé de sauvegarder toutes les données importantes de votre ordinateur. Vous pouvez également utiliser l'option de démarrage Dernière configuration valide connue si vous rencontrez des problèmes après l'application de modifications manuelles.  
   
  Pour en savoir plus sur les informations recueillies, traitées ou transmises par le Programme d’amélioration du produit, consultez la [déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkID=868444).  
   

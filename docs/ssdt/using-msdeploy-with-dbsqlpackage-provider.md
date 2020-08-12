@@ -1,33 +1,33 @@
 ---
 title: Utilisation de MSDeploy avec le fournisseur dbSqlPackage
+description: En savoir plus sur le fournisseur MSDeploy obsolète DbSqlPackage. Affichez des paramètres, des exemples et d’autres outils de publication de bases de données SQL Server et SQL Azure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899740"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 
 **DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/SQL Azure. **DbSqlPackage** prend en charge les actions suivantes :  
   
--   **Extraire** : crée un fichier d'instantané de base de données (.dacpac) à partir de bases de données SQL Server ou SQL Azure actives.  
+-   **Extraire** : crée un fichier d’instantané de base de données (.dacpac) à partir de bases de données SQL Server ou SQL Azure actives.  
   
--   **Publier** : met à jour de manière incrémentielle un schéma de base de données pour qu'il corresponde au schéma d'un fichier .dacpac source.  
+-   **Publier** : met à jour de manière incrémentielle un schéma de base de données pour qu’il corresponde au schéma d’un fichier .dacpac source.  
   
 -   **DeployReport** (déployer un rapport) : crée un rapport XML sur les modifications devant être apportées par une action de publication.  
   
--   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l'action Publier.  
+-   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l’action Publier.  
   
 Pour plus d’informations concernant DACFx, consultez la documentation sur l’API gérée par DACFx sous [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (outil en ligne de commande DACFx).  
   
@@ -48,7 +48,7 @@ Vous devez spécifier les verbes MS-Deploy à l’aide du commutateur **-verb** 
 |Verbe|Description|  
 |--------|---------------|  
 |dump|Fournit les informations (y compris le nom, le numéro de version et la description) relatives à une base de données source contenue dans un fichier .dacpac. Spécifiez la base de données source depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
-|sync|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
+|synchronisation|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
   
 ## <a name="dbsqlpackage-source"></a>Source dbSqlPackage  
 Le fournisseur **dbSqlPackage** accepte une entrée qui correspond à une chaîne de connexion SQL Server/SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.  La syntaxe de spécification de la source d'entrée pour le fournisseur est la suivante :  

@@ -1,5 +1,6 @@
 ---
-title: Informations de référence sur l’API du pilote JDBC | Microsoft Docs
+title: Référence de l'API du pilote JDBC
+description: Informations de référence sur l’API technique pour les classes JDBC dans JDBC Driver pour SQL Server.
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 901eb239b09e44b3e1ed6524284ead9b8a38f3b3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e96f8eb6ff2e3f20a5d6804ba3083e668c0f3a7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923110"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391791"
 ---
 # <a name="jdbc-driver-api-reference"></a>Référence de l'API du pilote JDBC
 

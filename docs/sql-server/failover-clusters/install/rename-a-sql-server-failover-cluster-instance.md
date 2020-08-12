@@ -1,10 +1,11 @@
 ---
 title: Renommer une instance de cluster de basculement
+description: Cet article explique comment renommer une instance SQL Server qui fait partie d’un cluster de basculement. Le processus n’est pas le même que pour le renommage des instances autonomes.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca8faa59c304f145eb2ac1dc46bab46d368d163b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230721"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897648"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fait partie d'un cluster de basculement, le processus permettant de renommer un serveur virtuel diffère du processus permettant de renommer une instance autonome. Pour plus d’informations, consultez [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
   
  Le nom du serveur virtuel est toujours identique au nom réseau SQL (le nom réseau du serveur virtuel SQL). Bien que vous puissiez modifier le nom du serveur virtuel, vous ne pouvez pas modifier le nom de l'instance. Par exemple, vous pouvez attribuer un autre nom à un serveur virtuel nommé VS1\instance1, tel que SQL35\instance1, mais la partie instance du nom (instance1) restera inchangée.  
@@ -63,7 +64,7 @@ ms.locfileid: "75230721"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Éléments supplémentaires à prendre en considération après une opération Renommer  
  Après avoir renommé le nom réseau d'un cluster de basculement, nous devons vérifier et suivre les instructions suivantes pour que tous les scénarios dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]soient opérationnels.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :** Effectuez des vérifications et les actions supplémentaires suivantes pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :  
+ **Service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :** Effectuez des vérifications et les actions supplémentaires suivantes pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent :  
   
 -   Corrigez les paramètres de registre si l'Agent SQL est configuré pour le transfert d'événements. Pour plus d’informations, consultez [Désigner un serveur de transfert d’événements &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   

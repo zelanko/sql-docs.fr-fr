@@ -1,21 +1,21 @@
 ---
 title: Création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server
+description: Découvrez comment créer des règles de Code Analysis SQL Server. Configurez une règle pour éviter des instructions WAITFOR dans des procédures stockées, des déclencheurs et des fonctions.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257027"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896246"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procédure pas à pas : création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server
 
@@ -33,7 +33,7 @@ Lors de cette procédure pas à pas, vous allez créer une règle personnalisée
   
 5. Vérifier que la nouvelle règle d'analyse du code est en place.  
   
-**Prérequis**
+**Composants requis**
   
 Vous devez disposer des éléments suivants pour exécuter cette procédure pas à pas :  
   
@@ -252,7 +252,7 @@ Ensuite, vous ajoutez un fichier de ressources qui définit le nom de la règle,
   
 6. Définissez quatre chaînes de ressources comme suit :  
   
-    |Name|Valeur|  
+    |Nom|Valeur|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|L'instruction WAITFOR DELAY a été trouvée dans {0}.|  
     |AvoidWaitForDelay_RuleName|Évitez d'utiliser des instructions WaitFor Delay dans des procédures stockées, des fonctions et des déclencheurs.|  
@@ -544,7 +544,7 @@ Enfin, la nouvelle règle s’affiche dans le projet SQL Server. Pour afficher l
   
 3. Cliquez sur **Analyse du code**. Vous devez voir une nouvelle catégorie nommée RuleSamples.CategorySamples.  
   
-4. Développez RuleSamples.CategorySamples. Vous devez voir SR1004 : Évitez d'utiliser des instructions WaitFor Delay dans des procédures stockées, des fonctions et des déclencheurs.  
+4. Développez RuleSamples.CategorySamples. Vous devez voir SR1004 : éviter d’utiliser des instructions WAITFOR DELAY dans des procédures stockées, des fonctions et des déclencheurs.  
   
 ## <a name="see-also"></a>Voir aussi
 

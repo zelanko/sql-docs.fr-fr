@@ -1,5 +1,6 @@
 ---
 title: Propriétés de l'Agent SQL Server (onglet Avancé)
+description: En savoir plus sur les options de l’onglet Avancé de la boîte de dialogue Propriétés de SQL Server Agent, tels que le répertoire d’images mémoires et l’ID de l’instance.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb8af410d7be3def6f5ddcad84f80d33147ebe4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dff90c068883bc1bdb8af47febe85c53e46528f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306701"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900753"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Propriétés de l'Agent SQL Server (onglet Avancé)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Cinq propriétés figurent par défaut dans l'onglet **Avancé** . Si des propriétés personnalisées sont définies, elles apparaissent également sous cet onglet, avec les valeurs correspondantes.  
   
 ## <a name="options"></a>Options  
@@ -33,7 +34,7 @@ ms.locfileid: "75306701"
  Affiche l'emplacement où sont placés les vidages de mémoire en cas d'erreur.  
   
  **Rapport d'erreurs**  
- Quand cette option a pour valeur **Oui**, le programme Dr Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ».  
+ Quand cette option a pour valeur **Oui**, le programme Dr. Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ».  
   
  **ID de l'instance**  
  Indique l'instance qui utilise ce service.  

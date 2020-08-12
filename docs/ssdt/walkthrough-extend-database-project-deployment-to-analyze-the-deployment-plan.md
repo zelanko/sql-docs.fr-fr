@@ -1,21 +1,21 @@
 ---
 title: Étendre le déploiement du projet de base de données pour analyser le plan de déploiement
+description: Créer un contributeur de déploiement DeploymentPlanExecutor. Configurez un collaborateur qui conserve un enregistrement des événements qui se produisent lorsque vous déployez un projet de base de données.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242684"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897469"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement
 
@@ -29,7 +29,7 @@ Au cours de cette procédure pas à pas, vous allez effectuer les tâches princi
   
 -   [Tester votre contributeur de déploiement](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Vous devez disposer des éléments suivants pour exécuter cette procédure pas à pas :  
   
 -   Vous devez avoir installé une version de Visual Studio qui inclut SQL Server Data Tools (SSDT) et qui prend en charge le développement en C# ou VB.  
@@ -251,7 +251,7 @@ Pour créer un contributeur de déploiement, vous devez effectuer les tâches su
   
     La méthode OnExecute se voit transmettre un objet [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) qui permet d'accéder à tous les arguments spécifiés, au modèle de base de données source et cible, aux propriétés de génération et aux fichiers d'extension. Dans cet exemple, nous obtenons le modèle, puis appelons les fonctions d'assistance pour obtenir des informations sur le modèle. Nous utilisons la méthode d'assistance PublishMessage dans la classe de base pour signaler des erreurs qui se produisent.  
   
-    Les types et méthodes supplémentaires dignes d'intérêt sont les suivantes : [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) et [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Les types et méthodes supplémentaires dignes d’intérêt sont les suivants : [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) et [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     Vous définissez ensuite la classe d'assistance qui entre dans les détails du plan de déploiement.  
   
@@ -601,7 +601,7 @@ La deuxième méthode consiste à créer un fichier de cibles qui contient les a
     </Project>  
     ```  
   
-4.  Dans le fichier .sqlproj d'un projet dont vous souhaitez exécuter des collaborateurs, importez le fichier de cibles en ajoutant l'instruction suivante au fichier .sqlproj fichier après le nœud \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> dans le fichier :  
+4.  Dans le fichier .sqlproj d’un projet pour lequel vous souhaitez exécuter des contributeurs, importez le fichier de cibles en ajoutant l’instruction suivante au fichier .sqlproj après le nœud \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> dans le fichier :  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -742,6 +742,6 @@ Vous pouvez créer des outils supplémentaires pour effectuer le traitement des 
   
 ## <a name="see-also"></a>Voir aussi  
 [Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Procédure pas à pas : étendre le déploiement du projet de base de données pour modifier le plan de déploiement](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

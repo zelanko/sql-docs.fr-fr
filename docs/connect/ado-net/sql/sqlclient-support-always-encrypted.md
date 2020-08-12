@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’Always Encrypted avec SqlClient
 description: Découvrez comment développer des applications avec Microsoft.Data.SqlClient et Always Encrypted pour garantir la sécurité de vos données.
-ms.date: 05/06/2020
+ms.date: 07/09/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886466"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217767"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Utilisation d’Always Encrypted avec le Fournisseur de données Microsoft .NET pour SQL Server
 
@@ -74,6 +74,9 @@ Pour configurer votre application :
 3. Fournissez le protocole d’attestation à utiliser en définissant le mot clé `Attestation Protocol` dans la chaîne de connexion. La valeur de ce mot clé doit être définie sur « SGH ».
 
 Pour obtenir un tutoriel pas à pas, consultez [Tutoriel : Développer une application .NET en utilisant Always Encrypted avec enclaves sécurisées](tutorial-always-encrypted-enclaves-develop-net-apps.md).
+
+> [!NOTE]
+> Always Encrypted avec enclaves sécurisés n’est disponible que sur Windows.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
@@ -288,13 +291,13 @@ Le processus pour obtenir une clé de chiffrement de colonne est le suivant :
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>Utilisation des fournisseurs de magasin de clés principales de colonne intégrés
 
-Le **Fournisseur de données Microsoft .NET pour SQL Server** est fourni avec les fournisseurs de magasin de clés principales de colonne intégrés suivants, qui sont pré-inscrits avec des noms de fournisseurs spécifiques (utilisés pour leur recherche).
+Le **Fournisseur de données Microsoft .NET pour SQL Server** est fourni avec les fournisseurs de magasin de clés principales de colonne intégrés suivants, qui sont pré-inscrits avec des noms de fournisseurs spécifiques (utilisés pour leur recherche). Ces fournisseurs de magasins de clés intégrés ne sont pris en charge que sur Windows.
 
-| Classe | Description | Nom de fournisseur (pour la recherche) |
-|:---|:---|:---|
-|[Classe SqlColumnEncryptionCertificateStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Fournisseur du magasin de certificats Windows. | MSSQL_CERTIFICATE_STORE |
-|[Classe SqlColumnEncryptionCngProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Fournisseur de magasin de clés pour l’ [API de chiffrement Microsoft : API de la prochaine génération (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-portal). En général, ce type de magasin est un module de sécurité matériel, c’est-à-dire un périphérique physique qui protège et gère les clés numériques et fournit un traitement du chiffrement. | MSSQL_CNG_STORE |
-| [Classe SqlColumnEncryptionCspProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Fournisseur de magasin de clés pour l’ [API de chiffrement Microsoft (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). En général, ce type de magasin est un module de sécurité matériel, c’est-à-dire un périphérique physique qui protège et gère les clés numériques et fournit un traitement du chiffrement. | MSSQL_CSP_PROVIDER |
+| Classe | Description | Nom de fournisseur (pour la recherche) | Plateforme |
+|:---|:---|:---|:---|
+|[Classe SqlColumnEncryptionCertificateStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Fournisseur du magasin de certificats Windows. | MSSQL_CERTIFICATE_STORE | Windows |
+|[Classe SqlColumnEncryptionCngProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Fournisseur de magasin de clés pour l’ [API de chiffrement Microsoft : API de la prochaine génération (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-portal). En général, ce type de magasin est un module de sécurité matériel, c’est-à-dire un périphérique physique qui protège et gère les clés numériques et fournit un traitement du chiffrement. | MSSQL_CNG_STORE | Windows |
+| [Classe SqlColumnEncryptionCspProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Fournisseur de magasin de clés pour l’ [API de chiffrement Microsoft (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). En général, ce type de magasin est un module de sécurité matériel, c’est-à-dire un périphérique physique qui protège et gère les clés numériques et fournit un traitement du chiffrement. | MSSQL_CSP_PROVIDER | Windows |
 
 Vous n’avez pas besoin d’apporter des modifications au code de l’application pour utiliser ces fournisseurs, toutefois, notez cependant les points suivants :
 
@@ -303,7 +306,11 @@ Vous n’avez pas besoin d’apporter des modifications au code de l’applicati
 
 ### <a name="using-the-azure-key-vault-provider"></a>Utilisation du fournisseur Azure Key Vault
 
-Azure Key Vault est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. Le **Fournisseur de données Microsoft .NET pour SQL Server** ne comprend pas de fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Toutefois, celui-ci est disponible sous la forme d’un package NuGet que vous pouvez facilement intégrer à votre application. Pour plus d’informations, consultez [Always Encrypted - Protéger les données sensibles de la base de données SQL à l’aide du chiffrement de base de données et stocker vos clés de chiffrement dans Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+Azure Key Vault est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. Le **fournisseur de données Microsoft .NET pour SQL Server** ne comprend pas de fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Toutefois, celui-ci est disponible sous la forme d’un package NuGet ([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider)) que vous pouvez facilement intégrer à votre application. Pour plus d’informations, consultez [Always Encrypted - Protéger les données sensibles de la base de données SQL à l’aide du chiffrement de base de données et stocker vos clés de chiffrement dans Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+
+| Classe | Description | Nom de fournisseur (pour la recherche) | Plateforme |
+|:---|:---|:---|:---|
+|[Classe SqlColumnEncryptionAzureKeyVaultProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Fournisseur pour Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 Pour obtenir des exemples illustrant l’exécution du chiffrement/déchiffrement avec Azure Key Vault, consultez [Azure Key Vault fonctionnant avec Always Encrypted](azure-key-vault-example.md) et [Azure Key Vault fonctionnant avec Always Encrypted avec des enclaves sécurisées](azure-key-vault-enclave-example.md).
 
@@ -508,7 +515,8 @@ Grâce à SqlBulkCopy, les données qui sont déjà chiffrées et stockées dans
 - Configurez les deux connexions de base de données, c’est-à-dire celle vers la table source et celle vers la table cible, sans activer Always Encrypted.
 - Définissez l’option `AllowEncryptedValueModifications` (consultez [SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)).
 
-Remarque : Spécifiez `AllowEncryptedValueModifications` avec précaution, car cela risque d’endommager la base de données, étant donné que le **Fournisseur de données Microsoft .NET pour SQL Server** ne vérifie pas si les données sont chiffrées ou pas ou si elles sont correctement chiffrées à l’aide du même type de chiffrement, du même algorithme et de la même clé que la colonne cible.
+> [!NOTE]
+> Spécifiez `AllowEncryptedValueModifications` avec précaution, car cela risque d’endommager la base de données, étant donné que le **Fournisseur de données Microsoft .NET pour SQL Server** ne vérifie pas si les données sont chiffrées ou pas ou si elles sont correctement chiffrées à l’aide du même type de chiffrement, du même algorithme et de la même clé que la colonne cible.
 
 Voici un exemple qui copie les données d’une table à une autre. Les colonnes SSN et BirthDate sont censées être chiffrées.
 

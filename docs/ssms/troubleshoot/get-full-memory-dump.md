@@ -1,6 +1,6 @@
 ---
 title: Obtenir une image mémoire complète pour résoudre les problèmes de SSMS
-Description: Résolution des problèmes d’un blocage ou incident SSMS en collectant une image mémoire complète
+Description: Dépannage d’un SSMS qui cesse de répondre ou se bloque en collectant une image mémoire complète
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247172"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091245"
 ---
 # <a name="get-full-memory-dump"></a>Obtenir l’image mémoire complète
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Dans cet article, vous allez apprendre à capturer des informations de diagnostic pour résoudre un incident ou un blocage rencontré à partir de SQL Server Management Studio (SSMS).
+Dans cet article, vous allez apprendre à capturer des informations de diagnostic pour dépanner un système qui cesse de répondre ou se bloque lorsque vous utilisez SQL Server Management Studio (SSMS).
 
 Pour capturer des informations de diagnostic pour résoudre les problèmes, suivez les étapes ci-dessous.
 

@@ -1,6 +1,6 @@
 ---
 title: Récupérer à partir d’une défaillance de cluster de basculement
-description: Décrit comment récupérer à partir d’une défaillance d’une instance de cluster de basculement SQL Server.
+description: Découvrez comment effectuer une récupération après le basculement d’une instance de cluster de basculement à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement dans SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44f178d5433a1d3de1670b762b6e1d7e60bad033
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821994"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901201"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Récupérer à partir d’une défaillance de cluster de basculement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment récupérer des échecs de cluster à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement après un basculement dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
 -   [Récupérer en cas d'erreur irréparable](#Scenario1)  

@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153222"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091803"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
@@ -51,8 +51,8 @@ Cette page contient la liste des bogues résolus dans chaque version, à partir 
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>Correctifs de bogues dans le pilote [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17.4 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Correction du blocage intermittent lorsque MARS (Multiple Active Result Sets) est activé
-- Correction du blocage de résilience de connexion lorsque la notification asynchrone est activée
+- Correctif du problème intermittent lorsque MARS (Multiple Active Result Sets) est activé là où le pilote cesse de répondre
+- Corriger le problème de résilience de la connexion lorsque la notification asynchrone est activée là où le pilote cesse de répondre
 - Résolution d’un plantage lors de la récupération des enregistrements de diagnostic pour les tentatives de connexion multithread
 - Correction du chiffrement non pris en charge lors de la reconnexion après avoir appelé SQLGetInfo() avec SQL_USER_NAME et SQL_DATA_SOURCE_READ_ONLY
 - Correction de l’erreur d’initialisation COM lors de l’authentification interactive à Azure Active Directory
@@ -94,7 +94,7 @@ Cette page contient la liste des bogues résolus dans chaque version, à partir 
 
 - Correction d’un bogue qui, lors de l’utilisation de l’authentification Kerberos, faisait échouer l’insertion en bloc avec l’erreur « Accès refusé »
 - Suppression de la solution de contournement pour un bogue unixODBC présent dans les versions antérieures à 2.3.1 (le pilote doublait la taille de certaines mémoires tampons transmises à unixODBC)
-- Correction de la résilience des connexions (reconnexion) bloquée lors de l’utilisation de ColumnEncryption=enabled
+- Correction de la résilience des connexions (reconnexion) qui cesse de répondre lors de l’utilisation de ColumnEncryption=enabled
 - Correction du bogue de création d’un nom de source de données, où l’option « Authentification interactive Active Directory » pouvait cesser de répondre (Windows)
 - Correction d’un incident rare pendant l’arrêt de ODBC lorsque l’exécution asynchrone est activée (se produisait lors de l’effacement du descripteur de connexion)
 - Résolution d’un problème où le pilote SQL provoquait une consommation élevée du processeur lors de l’exécution de procédures stockées longues

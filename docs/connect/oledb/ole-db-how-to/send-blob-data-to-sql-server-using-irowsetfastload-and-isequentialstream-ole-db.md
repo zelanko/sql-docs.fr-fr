@@ -2,7 +2,7 @@
 title: Envoyer des données BLOB vers SQL Server en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM | Microsoft Docs
 description: Envoyer des données BLOB vers SQL Server en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2add5bbc762709122a6cf7c7292fd139c42cd39f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015538"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001483"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -26,32 +26,34 @@ ms.locfileid: "68015538"
   
  Par défaut, cet exemple indique comment utiliser IRowsetFastLoad pour envoyer des données BLOB de longueur variable par ligne à l'aide de liaisons incluses. Les données BLOB incluses doivent s'ajuster dans la mémoire disponible. Cette méthode est optimale lorsque les données BLOB représentent moins de quelques mégaoctets, car il n'y a pas de temps de traitement de flux supplémentaire. Pour les données dont la taille est supérieure à quelques mégaoctets, en particulier les données qui ne sont pas disponibles dans un bloc, la diffusion en continu fournit de meilleures performances.  
   
- Dans le code source, lorsque vous annulez les marques de commentaire #define USE_ISEQSTREAM, l'exemple utilise ISequentialStream. L’implémentation du flux est définie dans l’exemple et peut envoyer des données BLOB de n’importe quelle taille simplement en modifiant MAX_BLOB. Il n'est pas nécessaire que les données de flux soient ajustées dans la mémoire ou disponibles dans un bloc. Vous appelez ce fournisseur en utilisant IRowsetFastLoad::InsertRow. Passez un pointeur à l'aide d'IRowsetFastLoad::InsertRow vers l'implémentation du flux dans le tampon de données (décalage rgBinding.obValue) avec la quantité de données disponibles à lire dans le flux. Certains fournisseurs peuvent ne pas connaître la longueur des données lorsque la liaison a lieu. Dans ce cas, la longueur peut être omise de la liaison.  
+ Dans le code source, lorsque vous supprimez les marques de commentaire `#define USE_ISEQSTREAM`, l'exemple utilise ISequentialStream. L’implémentation du flux est définie dans l’exemple et peut envoyer des données BLOB de n’importe quelle taille simplement en modifiant MAX_BLOB. Il n'est pas nécessaire que les données de flux soient ajustées dans la mémoire ou disponibles dans un bloc. Vous appelez ce fournisseur en utilisant IRowsetFastLoad::InsertRow. Passez un pointeur à l'aide d'IRowsetFastLoad::InsertRow vers l'implémentation du flux dans le tampon de données (décalage rgBinding.obValue) avec la quantité de données disponibles à lire dans le flux. Certains fournisseurs peuvent ne pas connaître la longueur des données lorsque la liaison a lieu. Dans ce cas, la longueur peut être omise de la liaison.  
   
- L'exemple n'utilise pas l'interface de flux du fournisseur pour écrire des données dans le fournisseur. À la place, l'exemple passe un pointeur vers l'objet de flux que le fournisseur utilise pour lire les données. En général, les fournisseurs Microsoft (SQLOLEDB, SQLNCLI et MSOLEDBSQL) lisent les données de l’objet par blocs de 1024 octets jusqu’à ce que toutes les données aient été traitées. SQLOLEDB, SQLNCLI et MSOLEDBSQL n’ont pas implémentations complètes pour permettre au consommateur d’écrire des données dans l’objet de flux du fournisseur. Seules les données de longueur nulle peuvent être envoyées par le biais de l'objet de flux du fournisseur.  
+ L'exemple n'utilise pas l'interface de flux du fournisseur pour écrire des données dans le fournisseur. À la place, l'exemple passe un pointeur vers l'objet de flux que le fournisseur utilise pour lire les données. En général, les fournisseurs Microsoft (SQLOLEDB, SQLNCLI et MSOLEDBSQL) lisent les données dans les blocs de 1 024 octets. Les fournisseurs lisent à partir de l’objet jusqu’à ce que toutes les données aient été traitées. SQLOLEDB, SQLNCLI et MSOLEDBSQL n’ont pas d’implémentations complètes pour permettre au consommateur d’écrire des données dans l’objet de flux du fournisseur. Seules les données de longueur nulle peuvent être envoyées par le biais de l'objet de flux du fournisseur.  
   
- L'objet ISequentialStream implémenté par l'utilisateur peut être utilisé avec des données d'un ensemble de lignes (IRowsetChange::InsertRow, IRowsetChange::SetData) et avec des paramètres en liant un paramètre en tant que DBTYPE_IUNKNOWN.  
+ L'objet ISequentialStream implémenté par le contrôle serveur consommateur peut être utilisé avec des données d'un ensemble de lignes (IRowsetChange::InsertRow, IRowsetChange::SetData). En outre, il peut être utilisé avec des paramètres en liant un paramètre en tant que DBTYPE_IUNKNOWN.  
   
- Étant donné que DBTYPE_IUNKNOWN est spécifié comme type de données dans la liaison, il doit correspondre au type de la colonne ou du paramètre cible. Les conversions ne sont pas possibles lors de l'envoi de données par le biais d'ISequentialStream à partir d'interfaces d'ensemble de lignes. Pour les paramètres, vous devez éviter d'utiliser ICommandWithParameters::SetParameterInfo et de spécifier un type différent pour forcer une conversion ; cela demande au fournisseur de mettre en cache toutes les données BLOB en local et de les convertir avant l'envoi vers SQL Server. La mise en cache d'un objet BLOB volumineux et sa conversion en local n'offrent pas des performances satisfaisantes.  
-  
- Pour plus d’informations, consultez [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Étant donné que DBTYPE_IUNKNOWN est spécifié comme type de données dans la liaison, il doit correspondre au type de la colonne ou du paramètre cible. Les conversions ne sont pas possibles lors de l'envoi de données par le biais d'ISequentialStream à partir d'interfaces d'ensemble de lignes <a href="#conversion_note"><sup>**1**</sup></a>. Pour les paramètres, vous devez éviter d’utiliser ICommandWithParameters::SetParameterInfo et spécifier un type différent pour forcer une conversion. Cette action nécessiterait que le fournisseur mette en cache toutes les données BLOB localement, pour le convertir avant l’envoi à SQL Server. La mise en cache d'un BLOB volumineux et sa conversion en local n'offrent pas des performances satisfaisantes.  
+
+ Pour plus d’informations, consultez [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).
+
+ <b id="conversion_note">[1] :</b> Bien que les conversions ne soient pas possibles, les traductions entre UTF-8 et la page de codes de classement de bases de données peuvent toujours se produire si le serveur ne prend pas en charge UTF-8. Pour plus d’informations, consultez [Support UFT-8 dans OLE DB Driver pour SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Exemple  
- Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer la table utilisée par l'application.  
+ Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion L« (local) » par L« (local)\\\nom », où le nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer la table utilisée par l'application.  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -479,7 +481,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

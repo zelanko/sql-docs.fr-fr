@@ -1,5 +1,6 @@
 ---
 title: Propriétés de Alias (onglet Alias)
+description: Utilisez l’onglet Alias de la boîte de dialogue Propriétés pour configurer un alias afin de pouvoir utiliser un autre nom lors de la connexion à une instance de SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +12,18 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 53bb19934209ee501c76317e102e5b1fcae28c4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 098da595a57c82e4d0ff68713880f38fe6acb6d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306608"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902187"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Propriétés de &lt;Alias&gt; (onglet Alias)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-Un alias est un nom de remplacement permettant d'établir une connexion. L'alias encapsule les éléments requis d'une chaîne de connexion, puis les expose sous un nom choisi par l'utilisateur. Utilisez la page **Alias** de la boîte de dialogue **Propriétés de \<** nom_alias **>** pour afficher ou spécifier les éléments de chaîne de connexion d’un alias.
+Un alias est un nom de remplacement permettant d'établir une connexion. L'alias encapsule les éléments requis d'une chaîne de connexion, puis les expose sous un nom choisi par l'utilisateur. Utilisez la page **Alias** de la boîte de dialogue **Propriétés de \<**Alias name**>** pour afficher ou spécifier les éléments de chaîne de connexion d’un Alias.
 
 ## <a name="options"></a>Options
 

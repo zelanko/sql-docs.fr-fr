@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5b94759131082e2ce60e8a09dde728cadb4a94cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50f3bc0bdfaf804acc563bd6450541f0e364e825
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255143"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010665"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Enregistrer des diagrammes de base de données (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Lorsque vous enregistrez un diagramme de base de données, vous pouvez enregistrer toutes les modifications que vous y avez apportées, y compris les modifications effectuées dans les tables, les colonnes et les autres objets de base de données.  
   
 ### <a name="to-save-the-database-diagram"></a>Pour enregistrer le diagramme de base de données  
   
-1.  Dans le menu **Fichier** , choisissez **Enregistrer \<** _nom de la table_ **>** .  
+1.  Dans le menu **Fichier**, choisissez **Enregistrer \<**_tablename_**>** .  
   
 2.  S’il s’agit d’un nouveau schéma que vous n’avez encore jamais enregistré, la boîte de dialogue **Enregistrer sous** apparaît. Tapez le nom que vous voulez attribuer au schéma.  
   

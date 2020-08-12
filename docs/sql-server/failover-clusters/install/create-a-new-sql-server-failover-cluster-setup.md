@@ -1,10 +1,11 @@
 ---
 title: Créer un cluster de basculement
+description: Cet article explique comment utiliser le programme d’installation pour installer ou mettre à niveau un cluster de basculement SQL Server ou ajouter un nœud à un cluster existant.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8425df35905f08b49750a2d265a260438bbbf2ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230479"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897727"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Pour installer ou mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez exécuter le programme d'installation sur chaque nœud du cluster de basculement. Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'exécutez pas le programme d'installation sur le nœud actif pour gérer les autres nœuds.  
   
  Selon la façon dont les nœuds sont mis en cluster, le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré des façons suivantes :  
@@ -35,7 +36,7 @@ ms.locfileid: "75230479"
   
  Les options suivantes sont disponibles pour l'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Option 1 : installation Integration avec ajout de nœud**  
+ **Option 1 : Installation Intégration avec ajout de nœud**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation intégrée de cluster de basculement comprend les étapes suivantes :  
   
@@ -45,7 +46,7 @@ ms.locfileid: "75230479"
   
     -   Si le nœud que vous ajoutez a des sous-réseaux supplémentaires ou différents, le programme d'installation vous permet de spécifier des adresses IP supplémentaires. Si le nœud que vous ajoutez se trouve sur un sous-réseau différent, vous devez également confirmer la modification de dépendance de ressource d'adresse IP sur OR. Pour plus d’informations sur les différents scénarios possibles pendant les opérations d’ajout de nœuds, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Option 2 : installation avancée/entreprise**  
+ **Option n°2 : Installation avancée/entreprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise de cluster de basculement comprend les étapes suivantes :  
   
@@ -68,7 +69,7 @@ ms.locfileid: "75230479"
   
  Pour plus d’informations sur l’installation d’ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans un cluster de basculement Windows, consultez [Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Avant de commencer, consultez les rubriques suivantes dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Planification d'une installation SQL Server](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -229,7 +230,7 @@ ms.locfileid: "75230479"
   
 ##  <a name="prepare"></a><a name="prepare"></a> Préparation  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Installation avancée/entreprise de cluster de basculement Étape 1 : Préparer  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Étape 1 de l’installation avancée/entreprise sur un cluster de basculement : Préparation  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). Il se peut que vous deviez installer les composants requis si ceux-ci ne sont pas déjà présents sur l'ordinateur.  
   
@@ -321,7 +322,7 @@ ms.locfileid: "75230479"
   
 ## <a name="complete"></a>Terminé  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Installation avancée/entreprise de cluster de basculement Étape 2 : Finaliser  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Étape 2 de l’installation avancée/entreprise sur un cluster de basculement : Terminé  
   
 1.  Une fois tous les nœuds préparés de la façon décrite dans [l’étape de préparation](#prepare), lancez le programme d’installation sur l’un des nœuds préparés, de préférence sur le nœud propriétaire du disque partagé. Dans la page **Avancé** du Centre d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Création de cluster avancée**.  
   

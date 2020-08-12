@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286043"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279459"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Déployer un cluster Big Data SQL Server avec une haute disponibilité
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Étant donné que les clusters Big Data SQL Server se trouvent sur Kubernetes en tant qu’applications conteneurisées et qu’ils utilisent des fonctionnalités telles que des ensembles avec état et un stockage persistant, cette infrastructure intègre le contrôle d’intégrité, la détection des défaillances et les mécanismes de basculement que les composants de cluster exploitent pour maintenir l’intégrité du service. Pour une fiabilité accrue, vous pouvez également configurer l’instance principale SQL Server ou le nœud de nom HDFS et les services partagés Spark à déployer avec des réplicas supplémentaires dans une configuration à haute disponibilité. La supervision, la détection des défaillances et le basculement automatique sont gérés par un service de gestion de cluster Big Data, à savoir le service de contrôle. Ce service assure toutes les opérations, sans intervention de l’utilisateur, de la configuration du groupe de disponibilité jusqu’à l’ajout de bases de données au groupe de disponibilité et à la coordination du basculement et des mises à niveau, en passant par la configuration des points de terminaison de mise en miroir de bases de données. 
 

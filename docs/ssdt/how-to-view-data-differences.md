@@ -1,5 +1,6 @@
 ---
 title: Afficher les différences entre les données
+description: Découvrez comment comparer deux bases de données et comment leurs objets de base de données diffèrent. Consultez comment afficher des enregistrements dans des objets et comment filtrer la vue.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 750909ea5344d5972ffdc8a2db418d8c482231f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895761"
 ---
-# <a name="how-to-view-data-differences"></a>Guide pratique : Voir les différences entre les données
+# <a name="how-to-view-data-differences"></a>Procédure : Afficher les différences entre les données
 
 Après avoir comparé les données de deux bases de données, vous pourrez voir chacun des *objets de base de données* que vous avez comparés ainsi que son état. Vous pouvez également afficher les résultats des enregistrements dans chaque objet, regroupés par état.  
   
@@ -36,5 +36,5 @@ Après avoir affiché les différences, vous pourrez mettre à jour la *cible* d
     -   Pour afficher les résultats des enregistrements d’un objet en particulier, cliquez sur cet objet dans le volet de résultats principal, puis sur un onglet du volet Vue des enregistrements. Chaque onglet affiche tous les enregistrements de cet objet qui ont un état particulier : différent, uniquement dans la source, uniquement dans la cible et en double. Les données s'affichent par enregistrement et colonne.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: 'Tutoriel : Développer une application .NET en utilisant Always Encrypted avec enclaves sécurisées | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4af6f82c310393871434010480f0bb57bfca670f
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244051"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217747"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>Tutoriel : Développer une application .NET en utilisant Always Encrypted avec enclaves sécurisées
 
@@ -24,6 +24,9 @@ ms.locfileid: "75244051"
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
 Ce tutoriel vous apprend à développer une application simple qui émet des requêtes de base de données utilisant une enclave sécurisée côté serveur pour [Always Encrypted avec enclaves sécurisées](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+> [!NOTE]
+> Always Encrypted avec enclaves sécurisés n’est disponible que sur Windows.
 
 ## <a name="prerequisites"></a>Prérequis
 

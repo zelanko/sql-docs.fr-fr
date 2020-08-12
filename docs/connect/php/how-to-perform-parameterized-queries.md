@@ -1,5 +1,6 @@
 ---
-title: 'Procédure : Exécuter des requêtes paramétrables | Microsoft Docs'
+title: 'Procédure : Exécuter des requêtes paramétrables'
+description: Découvrez comment utiliser des requêtes paramétrables en quelques étapes à l’aide des pilotes pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53669aad61234676bb4b051f577e3a52e5432d61
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916175"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392807"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procédure : Exécuter des requêtes paramétrables
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +50,7 @@ L’exemple suivant met à jour la quantité d’un ID de produit spécifié dan
   
 L’exemple interroge ensuite la base de données pour vérifier que la quantité a été correctement mise à jour. L’ID de produit est un paramètre dans la requête SELECT.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
