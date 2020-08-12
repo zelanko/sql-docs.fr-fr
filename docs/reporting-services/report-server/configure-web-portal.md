@@ -1,5 +1,6 @@
 ---
 title: Configurer le portail web | Microsoft Docs
+description: Découvrez comment configurer l’application de portail web, utilisée pour afficher des rapports, gérer le contenu d’un serveur de rapports et accorder aux utilisateurs l’accès à un serveur de rapports en mode natif.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308403"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548051"
 ---
 # <a name="configure-the-web-portal"></a>Configurer le portail web
 
 Le portail web est une application web frontale utilisée pour afficher des rapports, gérer le contenu d’un serveur de rapports et accorder aux utilisateurs l’accès à un serveur de rapports en mode natif. Le portail web est installé avec le service web Report Server dans la même instance du serveur de rapports et est configuré si vous sélectionnez l’option **Installer la configuration par défaut en mode Natif** dans le programme d’installation. Vous pouvez également configurer le portail web après son installation. Cette rubrique fournit des informations sur les scénarios de configuration suivants du portail web :
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour utiliser le portail web, vous devez satisfaire aux prérequis suivants :
 
@@ -60,7 +61,7 @@ Lorsque vous configurez des URL dans l’outil de configuration de [!INCLUDE[ssR
 
 #### <a name="to-configure-a-static-report-server-url"></a>Pour configurer une URL de serveur de rapports statique
 
-1. Ouvrez le fichier **RSReportServer.config** dans un éditeur de texte. Par défaut, celui-ci se trouve dans le dossier \Program Files\Microsoft SQL Server\MSRS12.\<*nom_instance*>\Reporting Services\ReportServer.  
+1. Ouvrez le fichier **RSReportServer.config** dans un éditeur de texte. Par défaut, celui-ci se trouve dans le dossier \Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer.  
 
 2. Recherchez **ReportServerURL**.
 
@@ -80,7 +81,7 @@ Vous pouvez créer un package de marque personnalisé pour modifier les couleurs
 
 2. Ouvrez Internet Explorer.
 
-3. Configurez l’URL du portail web. Par défaut, il s’agit de https://\<**nom_de_votre_serveur**>/reports, mais si vous avez installé Reporting Services sous la forme d’une instance nommée, l’URL par défaut sera https://\<**nom_de_votre_serveur**>/reports\< **_nominstance**>.
+3. Configurez l’URL du portail web. Par défaut, il s’agit de https://\<**your-server-name**>/reports, mais si vous avez installé Reporting Services sous la forme d’une instance nommée, l’URL par défaut sera https://\<**your-server-name**>/reports\<**_instancename**>.
 
 4. Sélectionnez **Paramètres du site**.
 

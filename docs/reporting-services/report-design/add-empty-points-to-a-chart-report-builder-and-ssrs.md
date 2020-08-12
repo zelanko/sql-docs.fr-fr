@@ -1,5 +1,6 @@
 ---
 title: Ajouter des points vides à un graphique (Générateur de rapports) | Microsoft Docs
+description: Spécifiez des points vides sur un graphique. Ces points sont calculés dans le Générateur de rapports en faisant la moyenne des points de données précédent et suivant qui contiennent une valeur.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65b97d3f50eec05574a9f7463678ca7da09e2492
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afdcb8a6d464484fb6f294cb4d7943659e32e7f1
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081648"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255662"
 ---
 # <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Ajouter des points vides au graphique (Générateur de rapports et SSRS)
 Les valeurs Null sont affichées sur un graphique sous la forme d'espaces ou d'intervalles vides entre les points de données d'une série. Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les points vides sont des points de données qui peuvent être insérés dans l’espace vide créé par des valeurs Null.  

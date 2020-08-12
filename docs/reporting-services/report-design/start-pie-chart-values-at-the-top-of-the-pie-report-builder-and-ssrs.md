@@ -1,5 +1,6 @@
 ---
 title: Démarrer des valeurs de graphique à secteurs en haut du graphique à secteurs (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment démarrer des valeurs de graphique à secteurs en haut du graphique au lieu de les faire démarrer à 90 degrés à partir du haut par défaut.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f23163da5fc4b23a364646be607167e663187fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080900"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689436"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Démarrer des valeurs de graphique à secteurs en haut du graphique à secteurs (Générateur de rapports et SSRS)
 Par défaut, dans les graphiques à secteurs des rapports paginés de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la première valeur du dataset démarre à 90 degrés du haut du graphique à secteurs. 

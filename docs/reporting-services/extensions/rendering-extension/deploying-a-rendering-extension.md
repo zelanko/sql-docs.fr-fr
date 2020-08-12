@@ -1,5 +1,6 @@
 ---
 title: Déploiement d’une extension de rendu | Microsoft Docs
+description: Découvrez comment déployer des extensions de génération de rapport. Consultez les entrées de fichiers config à ajouter pour que le serveur de rapports et le concepteur de rapports localise l’extension.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193697"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529465"
 ---
 # <a name="deploying-a-rendering-extension"></a>Déploiement d'une extension de rendu
   Après avoir écrit et compilé votre extension de génération de rapport [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la rendre détectable par le serveur de rapports et par le Concepteur de rapports. Pour cela, copiez l'extension dans le répertoire approprié et ajoutez des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Élément Extension de rendu de fichier de configuration  
- Une fois qu'une extension de rendu est compilée dans une .DLL, vous devez ajouter une entrée dans le fichier rsreportserver.config. Par défaut, celui-ci se trouve dans le dossier %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<nom_instance>\Reporting Services\ReportServer. L’élément parent est \<Render>. Sous l'élément Render se trouve un élément Extension pour chaque extension de rendu. L'élément **Extension** contient deux attributs, Name et Type.  
+ Une fois qu'une extension de rendu est compilée dans une .DLL, vous devez ajouter une entrée dans le fichier rsreportserver.config. Par défaut, celui-ci se trouve dans le dossier %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. L’élément parent est \<Render>. Sous l'élément Render se trouve un élément Extension pour chaque extension de rendu. L'élément **Extension** contient deux attributs, Name et Type.  
   
  La table suivante décrit les attributs de l'élément **Extension** pour les extensions de rendu.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "63193697"
   
 ### <a name="to-deploy-the-assembly"></a>Pour déployer l'assembly  
   
-1.  Copiez votre assembly depuis votre emplacement dans le répertoire bin du serveur de rapports sur lequel l'extension de rendu doit être utilisée. L’emplacement par défaut du répertoire Bin du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<nom_instance>\Reporting Services\ReportServer\Bin.  
+1.  Copiez votre assembly depuis votre emplacement dans le répertoire bin du serveur de rapports sur lequel l'extension de rendu doit être utilisée. L'emplacement par défaut du répertoire de Classes du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin.  
   
 2.  Une fois le fichier d'assembly copié, ouvrez le fichier rsreportserver.config. Ce fichier se trouve aussi dans le répertoire bin du serveur de rapports. Vous devez créer une entrée dans le fichier de configuration pour votre fichier d'assembly d'extension. Vous pouvez ouvrir le fichier avec [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou un éditeur de texte simple.  
   

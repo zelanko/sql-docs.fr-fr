@@ -1,5 +1,6 @@
 ---
 title: Composant WebPart Visionneuse de rapports sur un site SharePoint - SSRS | Microsoft Docs
+description: Utilisez le composant WebPart personnalisé de la visionneuse de rapports pour afficher, parcourir, imprimer et exporter des rapports SQL Server Reporting Services sur un site SharePoint.
 ms.date: 02/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ec6a87467f2ec69164827e0a1ce76ad95180377
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86e6b09b6bfefaff1d7e15205e4cc5897d3a6ad5
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256805"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764919"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Composant WebPart Visionneuse de rapports sur un site SharePoint - Reporting Services
 
@@ -26,7 +27,7 @@ Le composant WebPart Visionneuse de rapports le plus récent peut également fou
 
 Le composant WebPart Visionneuse de rapports était disponible dans le complément Reporting Services pour les produits SharePoint. Il était spécifique aux serveurs de rapports en mode intégré SharePoint. Le mode intégré SharePoint a été déprécié après SQL Server 2016.
 
-Depuis SQL Server 2017, il n’existe qu’un seul mode d’installation pour Reporting Services : le **mode natif**. Vous pouvez incorporer tous les types de rapports à l’aide d’un composant WebPart Visionneuse de pages en indiquant le paramètre d’URL *rs:Embed=true*. L’incorporation de rapports dans les pages SharePoint est un scénario d’intégration demandé par les clients et le composant WebPart Visionneuse de rapports mis à jour permet ce scénario pour les rapports paginés.
+Depuis SQL Server 2017, il n’existe qu’un seul mode d’installation pour Reporting Services : **Mode natif**. Vous pouvez incorporer tous les types de rapports à l’aide d’un composant WebPart Visionneuse de pages en indiquant le paramètre d’URL *rs:Embed=true*. L’incorporation de rapports dans les pages SharePoint est un scénario d’intégration demandé par les clients et le composant WebPart Visionneuse de rapports mis à jour permet ce scénario pour les rapports paginés.
 
 Même si le composant WebPart Visionneuse de pages suffit à incorporer un rapport paginé dans une page SharePoint, le composant WebPart Visionneuse de rapports mis à jour offre des fonctionnalités supplémentaires.
 

@@ -1,5 +1,6 @@
 ---
 title: Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint | Microsoft Docs
+description: Pour SQL Server Reporting Services, vous pouvez ajouter manuellement le composant WebPart personnalisé de la visionneuse de rapports à un produit SharePoint.
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256682"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767027"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 

@@ -1,5 +1,6 @@
 ---
 title: Modifier un type de graphique (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment modifier le type de graphique à tout moment lors de la conception de rapport. Améliorez l’interprétation avec des caractéristiques appropriées pour vos données dans le Générateur de rapports.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de9785121ebd5703abda6c1a52dfb02e180a42cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24c1c3d05650f3524697e6bfc7fca11afbe60c0b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081876"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681258"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modifier un type de graphique (Générateur de rapports version et SSRS)
 Quand vous insérez pour la première fois un graphique dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la boîte de dialogue **Sélectionner un type de graphique** apparaît. Si vous annulez cette boîte de dialogue, un type d'histogramme est ajouté par défaut.  

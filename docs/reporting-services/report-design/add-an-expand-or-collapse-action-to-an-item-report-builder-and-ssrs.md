@@ -1,6 +1,6 @@
 ---
 title: Ajouter une action Développer ou Réduire (Générateur de rapports et SSRS) | Microsoft Docs
-description: Vous pouvez permettre à un utilisateur de développer ou de réduire interactivement des éléments dans un rapport paginé ou de développer ou de réduire des lignes et des colonnes associées à un groupe dans une table ou une matrice.
+description: Permettez à un utilisateur de développer ou de réduire des éléments, des lignes et des colonnes associés à un groupe pour une table ou une matrice dans un rapport du Générateur de rapports.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78d67f7d34bd2e146f7f625c1fd8ddb538b3b3eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242549"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681298"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Ajouter une action de développement ou de réduction à un élément (Générateur de rapports et SSRS)
   Vous pouvez permettre à un utilisateur de développer ou de réduire interactivement des éléments dans un rapport paginé ou de développer ou de réduire des lignes et des colonnes associées à un groupe dans une table ou une matrice. Pour autoriser les utilisateurs à développer ou réduire un élément, définissez les propriétés de visibilité de cet élément. La définition de la visibilité s'effectue dans une Visionneuse de rapports HTML et porte parfois le nom d'action d' *exploration* .  
@@ -49,7 +49,7 @@ ms.locfileid: "75242549"
   
     -   Sélectionnez **True** pour masquer l'élément de rapport.  
   
-    -   Sélectionnez **\<Expression>** pour ouvrir la boîte de dialogue **Expression** et créer une expression qui est évaluée au moment de l’exécution pour déterminer la visibilité.  
+    -   Sélectionnez **\<Expression>** pour ouvrir la boîte de dialogue **Expression** et créer une expression évaluée au moment de l’exécution pour déterminer la visibilité.  
   
 5.  Dans **ToggleItem**, sélectionnez dans la liste déroulante le nom d’une zone de texte à laquelle ajouter l’image bascule.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75242549"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Pour ajouter une action Développer/Réduire à un élément de rapport  
   
-1.  En mode création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur *\<élément_de_rapport>* **Propriétés**. La boîte de dialogue *\<élément de rapport>* **Propriétés** correspondant à l’élément de rapport s’ouvre.  
+1.  En mode création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur **Propriétés** *\<report item>* . La boîte de dialogue **Propriétés** *\<report item>* correspondant à cet élément de rapport s’affiche.  
   
 2.  Cliquez sur **Visibilité**.  
   

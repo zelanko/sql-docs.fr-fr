@@ -1,5 +1,6 @@
 ---
 title: Rendu des éléments de rapport (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment les éléments de rapport, tels que le nombre, la taille et les emplacements, affectent le rendu de pagination dans le Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32bd51cd5dc4419465fac494559dc4d116f796c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8256d74c8ed34bee0c94f4b68363c9b87a338a9
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077023"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462403"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendu des éléments de rapport (Générateur de rapports et SSRS)
   Le nombre, la taille et l'emplacement des éléments de rapport affectent la façon dont les convertisseurs mettent en page le corps du rapport. Vous trouverez ci-dessous une description de la façon dont les éléments de rapport sont rendus.  

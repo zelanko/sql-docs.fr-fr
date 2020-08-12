@@ -1,5 +1,6 @@
 ---
 title: Gérer un serveur de rapports Reporting Services (SSRS) en mode natif | Microsoft Docs
+description: Reportez-vous aux articles suivants lors de la configuration d’un serveur de rapports en mode natif ou d’un serveur de rapports pour qu’il s’exécute en mode intégré SharePoint.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499593"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547954"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gérer un serveur de rapports Reporting Services (SSRS) en mode natif
   Cette section contient des procédures qui indiquent comment configurer une instance de serveur de rapports en mode natif à l'aide du Gestionnaire de configuration de Reporting Services.  

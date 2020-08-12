@@ -1,5 +1,6 @@
 ---
 title: Inclure des indicateurs et des jauges dans un panneau de jauge (Générateur de rapports) | Microsoft Docs
+description: Découvrez l’utilisation des jauges et des indicateurs dans le panneau de jauge, conteneur de niveau supérieur, dans vos rapports dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d9f5cf2619ea26c56f6511b829b5da524776602
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0aa88dd2643d4dca8f32fdf9903855bed416eaa2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881554"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Inclure des indicateurs et des jauges dans un panneau de jauge (Générateur de rapports et SSRS)
   Le panneau de jauge est le conteneur de niveau supérieur qui contient un ou plusieurs jauges et indicateurs. Les indicateurs peuvent être incorporés dans les jauges ou placés en regard de celles-ci dans le panneau de jauge.  

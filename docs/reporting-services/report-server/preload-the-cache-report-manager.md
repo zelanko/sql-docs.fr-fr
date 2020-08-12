@@ -1,5 +1,6 @@
 ---
 title: Précharger le Cache (SSRS) | Microsoft Docs
+description: Découvrez comment précharger le cache pour un jeu de données partagé en créant un plan d’actualisation du cache pour le jeu de données partagé dans un serveur de rapports Reporting Services.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5401d324be7bb59d5be21afa72acebc0a7ab6487
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66174993"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548041"
 ---
 # <a name="preload-the-cache"></a>Précharger le cache  
   Vous pouvez précharger le cache pour un dataset partagé en créant un plan d'actualisation du cache pour le dataset partagé.  
@@ -48,7 +49,7 @@ ms.locfileid: "66174993"
 5. Pour activer la mise en cache pour un jeu de données, sélectionnez la case d’option **Mettre en cache des copies de ce jeu de données et les utiliser en cas de disponibilité**. La section **Expiration du cache** apparaît alors sous celui-ci. Sélectionnez l'une des cases d'option suivantes :
 
     - **Le cache expire au bout de x minutes** (entrez le nombre de minutes pour x souhaité).
-    - **Le cache expire selon une planification**.  Reporting Services fournit des planifications partagées et des planifications spécifiques aux rapports pour vous aider à contrôler le traitement, un contenu cohérent et les performances de la distribution des rapports. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Vous disposez de plusieurs options sur la façon de créer une planification, dans ce cas pour l’expiration du cache : Sélectionnez une des deux options de planification ci-dessous :  
+    - **Le cache expire selon une planification**.  Reporting Services fournit des planifications partagées et des planifications spécifiques aux rapports pour vous aider à contrôler le traitement, un contenu cohérent et les performances de la distribution des rapports. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Vous disposez de plusieurs options sur la façon de créer une planification, dans ce cas pour l’expiration du cache : sélectionnez une des deux options de planification ci-dessous :  
       - Case d'option **Planification partagée**, puis sélectionnez une planification à partir de la zone de texte déroulante **Sélectionner une planification partagée**. Pour plus d'informations, consultez [Schedules](../../reporting-services/subscriptions/schedules.md "Planifications").  
       - Case d'option **Planification spécifique aux rapports**, puis sélectionnez le lien **Modifier la planification** si nécessaire pour afficher la page *Détails de la planification*.  
 

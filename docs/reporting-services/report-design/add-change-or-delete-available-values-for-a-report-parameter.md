@@ -1,5 +1,6 @@
 ---
 title: Ajouter, modifier ou supprimer les valeurs disponibles d’un paramètre de rapport | Microsoft Docs
+description: Personnalisez la liste des choix qu’un utilisateur peut effectuer pour un paramètre dans le Générateur de rapports en spécifiant une liste de valeurs disponibles à afficher à l’utilisateur.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9d826682f2bcb742ab4ba7ae9e2b6fba33600c0
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582048"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681328"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Ajouter, modifier ou supprimer les valeurs disponibles d'un paramètre de rapport
   Après avoir créé un paramètre de rapport, vous pouvez spécifier une liste de valeurs disponibles visibles par l'utilisateur. Une liste de valeurs disponibles limite les choix qu'un utilisateur peut faire aux valeurs valides pour le paramètre.  
@@ -79,7 +80,7 @@ ms.locfileid: "65582048"
  [Ajouter des paramètres en cascade à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Ajouter, modifier ou supprimer les valeurs par défaut d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Références à la collection Parameters&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Report Server Service Trace Log
+description: Apprenez-en davantage sur les journaux de suivi du serveur de rapports dans Reporting Services, qui contiennent des informations détaillées sur les opérations du service Report Server.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 294639b3fed68acf0bb8b07ea0430a890e97910e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68254868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541501"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
 
@@ -65,8 +66,8 @@ Le comportement du journal des traces est géré dans le fichier de configuratio
 |**Préfixe**|Spécifie une valeur générée qui distingue une instance de journal d’une autre.|Par défaut, des valeurs d'horodatage sont ajoutées aux noms des journaux de trace. Cette valeur est définie sur « appdomain, tid, time ». Ne modifiez pas ce paramètre.|  
 |**TraceListeners**|Spécifie une cible de sortie du contenu du journal de trace. Vous pouvez spécifier plusieurs cibles ; dans ce cas, utilisez la virgule comme séparateur.|Les valeurs autorisées sont :<br /><br /> <br /><br /> DebugWindow<br /><br /> File (par défaut)<br /><br /> StdOut|  
 |**TraceFileMode**|Spécifie si les journaux de trace contiennent des données pour une période de 24 heures. Un seul journal de trace doit exister par composant et par jour.|Cette valeur est définie sur « Unique » (par défaut). Ne modifiez pas cette valeur.|  
-|**Catégorie de composant**|Spécifie les composants pour lesquels les informations du journal des traces sont générées, ainsi que le niveau des traces, dans le format suivant :<br /><br /> \<catégorie de composant>:\<tracelevel><br /><br /> Vous pouvez spécifier l’ensemble ou une partie des composants (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si vous ne voulez pas générer les informations relatives à un composant spécifique, désactivez les traces de ce composant (par exemple, « SemanticModelGenerator:0 »). Ne désactivez pas le suivi pour le composant **all**.<br /><br /> Vous pouvez définir « SemanticQueryEngine:4 » si vous voulez afficher les instructions Transact-SQL qui sont générées pour chaque requête sémantique. Les instructions Transact-SQL sont enregistrées dans le journal des traces. L'exemple suivant illustre le paramètre de configuration qui ajoute les instructions Transact-SQL au journal :<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Catégories de composants pouvant être définies :<br /><br /> <br /><br /> Le composant**All** est utilisé pour effectuer le suivi de l’activité générale du serveur de rapports pour tous les processus qui ne se retrouvent pas dans les catégories spécifiques.<br /><br /> Le composant**RunningJobs** sert à effectuer le suivi d’une opération de rapport ou d’abonnement en cours.<br /><br /> Le composant**SemanticQueryEngine** sert à effectuer le suivi d’une requête sémantique qui est traitée quand un utilisateur effectue une exploration de données ad hoc dans un rapport basé sur un modèle.<br /><br /> Le composant**SemanticModelGenerator** est utilisé pour effectuer le suivi de la génération de modèle.<br /><br /> Le composant**http** sert à activer le fichier journal HTTP Report Server. Pour plus d'informations, consultez [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
-|Valeur **trace level** pour les catégories de composants|\<catégorie de composant>:\<tracelevel><br /><br /> <br /><br /> Si vous n’ajoutez pas de niveau de suivi au composant, la valeur spécifiée pour **DefaultTraceSwitch** est utilisée. Par exemple, si vous spécifiez « all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator », tous les composants utilisent le niveau des traces par défaut.|Valeurs valides pour le niveau de trace :<br /><br /> <br /><br /> 0= Trace désactivée<br /><br /> 1= Exceptions et redémarrages<br /><br /> 2= Exceptions, redémarrages, avertissements<br /><br /> 3= Exceptions, redémarrages, avertissements, messages d'état (par défaut)<br /><br /> 4= Mode commenté<br /><br /> La valeur par défaut pour Report Server est : « all:3 ».|  
+|**Catégorie de composant**|Spécifie les composants pour lesquels les informations du journal des traces sont générées, ainsi que le niveau des traces, dans le format suivant :<br /><br /> \<component category>:\<tracelevel><br /><br /> Vous pouvez spécifier l’ensemble ou une partie des composants (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si vous ne voulez pas générer les informations relatives à un composant spécifique, désactivez les traces de ce composant (par exemple, « SemanticModelGenerator:0 »). Ne désactivez pas le suivi pour le composant **all**.<br /><br /> Vous pouvez définir « SemanticQueryEngine:4 » si vous voulez afficher les instructions Transact-SQL qui sont générées pour chaque requête sémantique. Les instructions Transact-SQL sont enregistrées dans le journal des traces. L'exemple suivant illustre le paramètre de configuration qui ajoute les instructions Transact-SQL au journal :<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Catégories de composants pouvant être définies :<br /><br /> <br /><br /> Le composant**All** est utilisé pour effectuer le suivi de l’activité générale du serveur de rapports pour tous les processus qui ne se retrouvent pas dans les catégories spécifiques.<br /><br /> Le composant**RunningJobs** sert à effectuer le suivi d’une opération de rapport ou d’abonnement en cours.<br /><br /> Le composant**SemanticQueryEngine** sert à effectuer le suivi d’une requête sémantique qui est traitée quand un utilisateur effectue une exploration de données ad hoc dans un rapport basé sur un modèle.<br /><br /> Le composant**SemanticModelGenerator** est utilisé pour effectuer le suivi de la génération de modèle.<br /><br /> Le composant**http** sert à activer le fichier journal HTTP Report Server. Pour plus d'informations, consultez [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
+|Valeur **trace level** pour les catégories de composants|\<component category>:\<tracelevel><br /><br /> <br /><br /> Si vous n’ajoutez pas de niveau de suivi au composant, la valeur spécifiée pour **DefaultTraceSwitch** est utilisée. Par exemple, si vous spécifiez « all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator », tous les composants utilisent le niveau des traces par défaut.|Valeurs valides pour le niveau de trace :<br /><br /> <br /><br /> 0= Trace désactivée<br /><br /> 1= Exceptions et redémarrages<br /><br /> 2= Exceptions, redémarrages, avertissements<br /><br /> 3= Exceptions, redémarrages, avertissements, messages d'état (par défaut)<br /><br /> 4= Mode commenté<br /><br /> La valeur par défaut pour Report Server est : « all:3 ».|  
   
 ## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> Ajout d'un paramètre de configuration personnalisé destiné à spécifier l'emplacement des fichiers de vidage  
 Vous pouvez ajouter un paramètre personnalisé visant à définir l'emplacement que l’outil Dr Watson pour Windows utilise pour stocker les fichiers de vidage. Le paramètre personnalisé est **Directory**. L’exemple suivant illustre l’utilisation de ce paramètre de configuration dans la section **RStrace** :  
@@ -102,7 +103,7 @@ Un journal des traces contient les champs suivants :
 Dans les versions antérieures de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], il existait plusieurs fichiers journaux des traces, un pour chaque application. Les fichiers suivants sont obsolètes et ne sont plus créés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures :
 + ReportServerWebApp_ *\<timestamp>* .log
 + ReportServer_ *\<timestamp>* .log
-+ ReportServerService_main_ *\<timestamp >* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>Voir aussi
 

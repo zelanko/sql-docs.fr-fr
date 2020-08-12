@@ -1,5 +1,6 @@
 ---
 title: Masquer des éléments de légende dans le graphique (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment choisir les éléments qui apparaissent dans la légende pour afficher les données essentielles dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 784258433329832bbff3f8737086ef906eecfd64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f745b3eb2c862f4105bcdd872a8915845341942
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081326"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681418"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>Légende de graphique - Masquer des éléments (Générateur de rapports)
 Par défaut, toute série ajoutée à un graphique dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui n’est pas à base de formes est ajoutée en tant qu’élément à la légende. Pour les graphiques à secteurs, en anneau, en entonnoir et en pyramide, toute série ajoutée au graphique ajoutera des points de données individuels à la légende.  

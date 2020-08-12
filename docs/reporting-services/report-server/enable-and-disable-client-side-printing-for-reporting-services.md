@@ -1,5 +1,6 @@
 ---
 title: Activer et désactiver l’impression côté client pour Reporting Services | Microsoft Docs
+description: Découvrez comment activer ou désactiver l’impression côté client pour les rapports Reporting Services affichés dans un navigateur. L’impression côté client utilise le format PDF et est activée par défaut.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580344"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547471"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
 

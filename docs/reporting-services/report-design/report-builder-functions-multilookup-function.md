@@ -1,5 +1,6 @@
 ---
 title: Fonction Multilookup (Générateur de rapports) | Microsoft Docs
+description: La fonction Multilookup retourne le jeu de valeurs de première correspondance pour le jeu de noms spécifié d’un dataset contenant des paires nom/valeur dans le Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081190"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462383"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Fonctions du Générateur de rapports - Multilookup
   Retourne le jeu de valeurs de première correspondance pour le jeu de noms spécifié d'un dataset contenant des paires nom/valeur.  
@@ -88,7 +89,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Le dataset CategoryNames contient l'identificateur et le nom de catégorie, comme indiqué dans le tableau ci-dessous.  
   
-|id|Name|  
+|id|Nom|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  

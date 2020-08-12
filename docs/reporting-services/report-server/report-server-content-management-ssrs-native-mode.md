@@ -1,5 +1,6 @@
 ---
 title: Gestion du contenu du serveur de rapports (mode natif) | Microsoft Docs
+description: Apprenez-en davantage sur le portail web et la nouvelle expérience du portail web pour la gestion de contenu Reporting Services. Gérez les éléments via des propriétés et des paramètres de sécurité.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286383"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547245"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
 Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu. À compter de SQL Server 2016 Reporting Services ou version ultérieure (SSRS) CTP 3.2, le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est disponible. Cet article détaille le portail web et l’utilisation du nouveau portail web.  
@@ -42,7 +43,7 @@ Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion d
   
 -   Équilibrage des demandes de traitement de rapports adressées au serveur en planifiant le traitement des rapports, et en indiquant ceux qui peuvent être exécutés à la demande et ceux qui sont chargés à partir du cache.  
   
--   Octroi d’autorisations d’effectuer des tâches de gestion via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués.  
+-   Octroi d’autorisations pour effectuer des tâches de gestion via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués.  
   
 Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et le portail web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le portail web permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports. Le portail web est un site mis à jour qui autorise la plupart des fonctionnalités du Gestionnaire de rapports (aujourd’hui déconseillé). Pour plus d’informations, consultez [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
@@ -75,7 +76,7 @@ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManSt
   
 -   Sources de données partagées  
   
--   Datasets partagés  
+-   Jeux de données partagés  
   
 -   Parties de rapports  
   

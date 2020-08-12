@@ -1,5 +1,6 @@
 ---
 title: Afficher des info-bulles dans une série (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment ajouter une info-bulle à chaque point de données sur la série d’un graphique pour afficher des informations connexes dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69804b41ccfafe3edf7be7aba719088d7212c2ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f89c94b8a9b457ff312acfd97d84632f037de82a
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080978"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681478"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Afficher des info-bulles dans une série (Générateur de rapports et SSRS)
   Vous pouvez ajouter une info-bulle à chaque point de données sur la série d’un graphique pour afficher des informations en rapport avec le point de données, par exemple le nom du groupe, la valeur du point de données ou le pourcentage du point de données par rapport au total de la série. Quand les utilisateurs placent le pointeur sur le point de données dans un rapport paginé rendu, ils voient ces informations.  

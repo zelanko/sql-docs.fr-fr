@@ -1,5 +1,6 @@
 ---
 title: Étendue des expressions pour les totaux, les agrégats et les collections intégrées | Microsoft Docs
+description: Découvrez la variété des significations de l’étendue dans les expressions pour les totaux, les agrégats et les collections intégrées dans les rapports du Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 453d5d9e960ead988e4c7f57adc48e2de69b25a1
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579812"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681308"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Étendue des expressions pour les totaux, les agrégats et les collections intégrées
   En écrivant des expressions, vous constaterez que le terme *étendue* est utilisé dans plusieurs contextes. L'étendue peut spécifier les données à utiliser pour l'évaluation d'une expression, le jeu de zones de texte dans une page rendue, le jeu des éléments de rapport qui peuvent être affichés ou masqués selon un élément de bascule. Vous verrez le terme *étendue* dans les rubriques relatives à une évaluation d'expression, une syntaxe de fonction d'agrégation, une visibilité conditionnelle et également dans les messages d'erreur liés à ces domaines. Utilisez les descriptions suivantes pour mieux différencier les significations du terme *étendue* qui s'appliquent :  
@@ -148,7 +149,7 @@ ms.locfileid: "65579812"
   
   
 ##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Spécification d'une expression de tri pour synchroniser l'ordre de tri  
- Lorsque vous ajoutez un bouton de tri interactif à une colonne de table, vous pouvez synchroniser le tri pour plusieurs éléments qui ont une étendue contenante commune. Par exemple, vous pouvez ajouter un bouton de tri à un en-tête de colonne dans une matrice et spécifier l'étendue contenante comme nom du dataset lié à la matrice. Lorsqu'un utilisateur clique sur le bouton de tri, non seulement les lignes de la matrice sont triées, mais les groupes de séries des graphiques liés au même dataset le sont également. De cette façon, toutes les régions de données qui dépendent de ce dataset peuvent être synchronisées pour afficher le même ordre de tri.  
+ Lorsque vous ajoutez un bouton de tri interactif à une colonne de table, vous pouvez synchroniser le tri pour plusieurs éléments qui ont une étendue contenante commune. Par exemple, vous pouvez ajouter un bouton de tri à un en-tête de colonne dans une matrice et spécifier l'étendue contenante comme nom du dataset lié à la matrice. Quand un utilisateur clique sur le bouton de tri, non seulement les lignes de la matrice sont triées, mais les groupes de séries des graphiques liés au même jeu de données le sont également. De cette façon, toutes les régions de données qui dépendent de ce dataset peuvent être synchronisées pour afficher le même ordre de tri.  
   
  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   

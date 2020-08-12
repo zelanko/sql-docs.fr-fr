@@ -1,5 +1,6 @@
 ---
 title: Fonction Last (Générateur de rapports) | Microsoft Docs
+description: La fonction Last retourne la valeur finale d’un jeu de données après que l’étendue spécifiée a été correctement triée et filtrée dans le Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1856df527f071c5366be84c8260d16ea92bf087
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68f4341c6f747ae58f11ce0c210a7ef4fac78997
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081252"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012617"
 ---
 # <a name="report-builder-functions---last-function"></a>Fonctions du Générateur de rapports - Last
   Retourne la dernière valeur dans l'étendue donnée de l'expression spécifiée.  

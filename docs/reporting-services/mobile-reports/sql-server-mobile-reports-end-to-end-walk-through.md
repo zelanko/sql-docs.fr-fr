@@ -1,6 +1,6 @@
 ---
 title: 'Rapports mobiles SQL Server : procédure pas à pas de bout en bout'
-description: Découvrez une procédure pas à pas permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec l’Éditeur de rapports mobiles Microsoft SQL Server sur le portail web Reporting Services et de les afficher dans les applications mobiles Power BI.
+description: Découvrez comment créer des rapports mobiles dans l’Éditeur de rapports mobiles SQL Server, enregistrer des rapports sur le portail web Reporting Services et afficher des rapports dans les applications mobiles Power BI.
 ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028892"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462353"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.

@@ -1,5 +1,6 @@
 ---
 title: Changer les icônes d’indicateur et les jeux d’indicateurs (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment modifier les icônes d’indicateur et les jeux d’indicateurs de façon à inclure plus, moins ou d’autres icônes d’indicateur vous permettant de représenter mieux les données dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b93ba65ddda79ef44585c748ee2c465c1b9a25f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3c0df0ae9ee9e67697d4f3ec321ab323cfd188e
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881767"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Modifier les icônes d'indicateur et jeux d'indicateurs (Générateur de rapports et SSRS)
   Les jeux d’indicateurs préconfigurés que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit pour les rapports paginés peuvent ne pas toujours représenter efficacement vos données ni fonctionner correctement dans le rapport remis. Cette rubrique fournit des procédures permettant de modifier l'apparence des icônes d'indicateur et les jeux d'indicateurs pour inclure plus ou moins d'icônes d'indicateur, ou d'autres icônes d'indicateur.  
@@ -72,7 +73,7 @@ ms.locfileid: "77081860"
   
 2.  Cliquez sur **Valeur et états** dans le volet gauche.  
   
-3.  Cliquez sur **Ajouter**. Un indicateur est ajouté, à l’aide de l’icône par défaut et de l’option **Aucune couleur** .  
+3.  Cliquez sur **Add**. Un indicateur est ajouté, à l’aide de l’icône par défaut et de l’option **Aucune couleur** .  
   
      Configurez l'indicateur pour utiliser l'icône et la couleur souhaitées. Les procédures plus haut dans cette rubrique décrivent les étapes de cette opération.  
   

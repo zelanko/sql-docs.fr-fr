@@ -1,7 +1,7 @@
 ---
 title: Référence sur les paramètres d’accès URL | Microsoft Docs
 description: Utilisez les paramètres de cet article dans une URL pour configurer l’apparence de vos rapports Reporting Services.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147384"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859027"
 ---
 # <a name="url-access-parameter-reference"></a>Référence sur les paramètres d’accès URL
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147384"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString** : Rechercher dans un rapport un texte spécifique.
+-   **FindString** : Recherche du texte dans un rapport et le met en surbrillance.
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* ne fonctionnera pas si vous n’incluez pas *rc:Toolbar*=**false** dans la chaîne d’accès URL.
   
      Par exemple, en mode natif :
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      Par exemple, en mode SharePoint :
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind** : Spécifie la dernière section à explorer. La valeur par défaut de ce paramètre est la dernière page du rapport.  
@@ -260,7 +263,7 @@ ms.locfileid: "77147384"
   
 -   **ClearSession**: La valeur **true** indique au serveur de rapports de supprimer un rapport d’une session de rapport. Toutes les instances de rapport associées à un utilisateur authentifié sont supprimées de la session de rapport. (Par définition, une instance de rapport est un même rapport exécuté plusieurs fois avec des valeurs de paramètre de rapport différentes.) La valeur par défaut est **false**.
   
--   **ResetSession**: La valeur **true** indique au serveur de rapports de réinitialiser la session de rapport en supprimant l’association de la session de rapport à tous les instantanés de rapport. La valeur par défaut est **false**.
+-   **ResetSession**: une valeur de **true** dirige le serveur de rapports de manière à réinitialiser la session de rapport en supprimant l’association entre la session de rapport et tous les instantanés de rapport. La valeur par défaut est **false**.
   
 -   **ShowHideToggle**: Bascule de l'état afficher à masquer d'une section du rapport. Spécifiez un entier positif pour représenter la section à basculer.
   

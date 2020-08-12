@@ -1,5 +1,6 @@
 ---
 title: Utilisation d’un jeu de données externe avec Reporting Services | Microsoft Docs
+description: Créez des extensions pour le traitement des données personnalisées dans Reporting Services afin de pouvoir intégrer des objets de jeux de données personnalisés créés par des applications externes.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c3b4ad599864bc2ddb752982ed61bf73684c2f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30bb74d7da5ef5e68c4e6229cfd307760d03711c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193865"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84530010"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilisation d'un dataset externe avec Reporting Services
   L’objet **DataSet** joue un rôle essentiel dans la prise en charge de scénarios de données déconnectés et distribués avec [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L’objet **DataSet** est une représentation résidant en mémoire de données qui fournit un modèle de programmation relationnel cohérent indépendamment de la source de données. Il peut être utilisé avec plusieurs sources de données différentes, avec des données XML ou pour gérer des données locales à l'application. L’objet **DataSet** représente un jeu complet de données, y compris des tables associées, des contraintes et des relations entre les tables. En raison de la polyvalence de l’objet **DataSet** concernant le stockage et l’exposition des données, il est probable que vos données soient traitées et transformées en objet **DataSet** avant toute création de rapport sur ces données.  

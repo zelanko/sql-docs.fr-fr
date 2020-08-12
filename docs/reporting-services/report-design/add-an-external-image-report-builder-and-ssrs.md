@@ -1,5 +1,6 @@
 ---
 title: Ajouter une image externe (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment ajouter une image à votre rapport à partir d’une source externe avec la vérification et les autorisations appropriées dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 37c8cd4ae726484c36d1ec31b94312d9ff36dfa4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 707ce1a26dd2ec64f2f7335bd0a4528339d36e84
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080645"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681368"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Ajouter une image externe (Générateur de rapports et SSRS)
   Les images externes peuvent se trouver sur un serveur de rapports en mode natif ou en mode intégré SharePoint, ou sur un autre site Web. Lorsque vous incluez des images externes dans votre rapport, vous devez vous assurer que l'image existe et que le lecteur du rapport a les autorisations nécessaires pour y accéder. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -35,7 +36,7 @@ ms.locfileid: "77080645"
   
      Pour une image située sur un serveur de rapports en mode natif, tapez le chemin relatif de l’image dans la zone **Utiliser cette image**, par exemple ../images/image1.jpg.  
   
-     Pour une image située sur un serveur de rapports en mode intégré SharePoint, ou sur un autre site web, tapez une URL complète pointant vers l’image dans la zone **Utiliser cette image**, par exemple https://\<nom_serveur_SharePoint>/\<site>/Documents/images/image1.jpg.  
+     Pour une image située sur un serveur de rapports en mode intégré SharePoint, ou sur un autre site web, tapez une URL complète pointant vers l’image dans la zone **Utiliser cette image**, par exemple https://\<SharePointservername>/\<site>/Documents/images/image1.jpg.  
   
      Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

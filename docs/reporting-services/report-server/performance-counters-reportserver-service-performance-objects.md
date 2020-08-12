@@ -1,5 +1,6 @@
 ---
 title: Compteurs de performances - Service ReportServer, objets de performance | Microsoft Docs
+description: Apprenez-en davantage sur les compteurs de performance pour les objets de performance ReportServer:Service et ReportServerSharePoint:Service, qui font partie d’un déploiement SQL Server 2012.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893441"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545521"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Compteurs de performances - Service ReportServer, objets de performance
   Cette rubrique décrit les compteurs de performance pour les objets de performance **ReportServer:Service** et **ReportServerSharePoint:Service** qui font partie d’un déploiement de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -37,7 +38,7 @@ ms.locfileid: "68893441"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:compteurs de performance de service (serveur de rapports en mode natif)  
- L’objet de performance **ReportServer:Service** inclut une collection de compteurs utilisée pour suivre les événements liés au protocole HTTP et les événements relatifs à la mémoire pour une instance du serveur de rapports. Cet objet de performance apparaît une fois pour chaque instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'ordinateur, et vous pouvez ajouter ou supprimer des compteurs de l'objet de performance pour chaque instance. Les compteurs pour l’instance par défaut s’affichent au format **ReportServer:Service**. Les compteurs pour les instances nommées s’affichent au format **ReportServer$\<***nom_instance***>:Service**.  
+ L’objet de performance **ReportServer:Service** inclut une collection de compteurs utilisée pour suivre les événements liés au protocole HTTP et les événements relatifs à la mémoire pour une instance du serveur de rapports. Cet objet de performance apparaît une fois pour chaque instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'ordinateur, et vous pouvez ajouter ou supprimer des compteurs de l'objet de performance pour chaque instance. Les compteurs pour l’instance par défaut s’affichent au format **ReportServer:Service**. Les compteurs pour les instances nommées s’affichent au format **ReportServer$\<***instance_name***>:Service**.  
   
  L’objet de performance **ReportServer:Service** constitue une nouveauté dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il fournit un sous-ensemble des compteurs qui étaient inclus dans les services Internet (IIS) et [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] dans les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ces nouveaux compteurs sont spécifiques à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], et ils suivent les événements liés à HTTP pour le serveur de rapports, comme les requêtes, les connexions et les tentatives d'ouverture de session. En outre, cet objet de performance inclut des compteurs pour suivre les événements de gestion de la mémoire.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68893441"
 |**Tentatives d’ouverture de session/s**|Taux de tentatives d'ouverture de session.|  
 |**Total d’ouvertures de session réussies**|Nombre d'ouvertures de session réussies pour les types d'authentification RSWindows. Les types d'authentification RSWindows incluent RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos et RSWindowsBasic. La valeur zéro (0) représente l'authentification personnalisée.|  
 |**Ouvertures de session réussies/s**|Taux d'ouvertures de session réussies.|  
-|**État de sollicitation de la mémoire**|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3 : Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
+|**État de sollicitation de la mémoire**|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3 : Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
 |**Nombre de réductions de mémoire**|Nombre d'octets demandés par le serveur pour réduire la mémoire utilisée.|  
 |**Notifications de réduction de mémoire/s**|Nombre de notifications émises par le serveur au cours de la dernière seconde pour réduire la mémoire utilisée. Cette valeur indique la fréquence à laquelle le serveur se trouve en situation de sollicitation de la mémoire.|  
 |**Requêtes déconnectées**|Nombre de requêtes qui sont déconnectées en raison d'un échec de communication.|  

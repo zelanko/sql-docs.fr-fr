@@ -1,5 +1,6 @@
 ---
 title: Utilisation de la classe RenderedOutputFile pour une extension de remise | Microsoft Docs
+description: Découvrez comment les extensions de remise peuvent utiliser la classe RenderedOutputFile, qui stocke un rapport rendu ou des ressources de rapport.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 152a60911157b261ed95f7a68364e59470110637
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f743227a2927ad97c5a0bcc76c3634726969caef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193661"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529105"
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>Utilisation de la classe RenderedOutputFile pour une extension de remise
   La classe <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> représente un flux de données et des informations relatives aux propriétés associées du flux de données. La propriété **Data** de la classe <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> est utilisée pour représenter un rapport rendu ou signaler une ressource en tant qu’objet **Stream**.  

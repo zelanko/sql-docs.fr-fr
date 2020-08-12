@@ -1,5 +1,6 @@
 ---
 title: Configurer un serveur de rapports en mode natif pour l’administration locale | Microsoft Docs
+description: Découvrez comment configurer le serveur de rapports pour l’administration locale, si vous installez un serveur de rapports Reporting Services dans certains environnements.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07a5040138bb19bd456a11ad9dcc15dc4cf06e4d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080894"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545611"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
   Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -91,7 +92,7 @@ ms.locfileid: "77080894"
   
 10. Décochez la case **Nécessite la certification du serveur (https:) pour tous les sites dans cette zone** si vous n’utilisez pas HTTPS pour le site par défaut.  
   
-11. Cliquez sur **Ajouter**.  
+11. Cliquez sur **Add**.  
   
 12. Sélectionnez **OK**.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "77080894"
   
     ![icône Engrenage](../media/ssrsgearmenu.png).
     >[!TIP]  
-    >**Remarque :** si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au portail web avec des privilèges d’administrateur.  
+    >**Remarque :** Si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au portail web avec des privilèges d’administrateur.  
   
 3.  Dans la page Paramètres du Site, sélectionnez **Sécurité**, puis sélectionnez **Ajouter un groupe ou utilisateur**.  
   

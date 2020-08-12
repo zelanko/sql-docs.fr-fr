@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/09/2020
+ms.openlocfilehash: f1c17f3a3f3accdbc9fcefa4872100d6a4ee2889
+ms.sourcegitcommit: 60900cdd520ec723102b54ccd27b102bf6c91d25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866022"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84638283"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
 
@@ -52,7 +52,7 @@ ms.locfileid: "74866022"
   
 2. Dans la page Compte de service, sélectionnez l'option qui décrit le type de compte que vous souhaitez utiliser.  
   
-3. Si vous avez sélectionné un compte d'utilisateur Windows, spécifiez le nouveau compte et le nouveau mot de passe. La longueur du nom du compte ne peut pas dépasser 20 caractères.  
+3. Si vous avez sélectionné un compte d'utilisateur Windows, spécifiez le nouveau compte et le nouveau mot de passe. Le nom du compte ne peut pas comporter plus de 20 caractères ni les caractères spéciaux " / \ [ ] : ; | = , + * ? < > ' conformément aux règles de nommage des comptes d’utilisateur Windows.  
   
      Si le serveur de rapports est déployé dans un réseau qui prend en charge l’authentification Kerberos, vous devez inscrire le nom de principal du service du serveur de rapports avec le compte d’utilisateur de domaine que vous avez spécifié. Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
@@ -72,7 +72,8 @@ ms.locfileid: "74866022"
   
 |Compte|Explication|  
 |-------------|-----------------|  
-|Comptes d'utilisateurs de domaine|Si vous avez un compte d'utilisateur de domaine Windows qui possède les autorisations minimales requises pour les opérations de serveur de rapports, vous devez l'utiliser.<br /><br /> Un compte d'utilisateur de domaine est recommandé car il isole le service Report Server des autres applications. L'exécution de plusieurs applications sous un compte partagé, tel que Service réseau, accroît le risque qu'un utilisateur malveillant prenne le contrôle du serveur de rapports car une violation de la sécurité pour l'une des applications peut facilement s'étendre à toutes les applications qui s'exécutent sous le même compte.<br /><br /> Si vous utilisez un compte d’utilisateur de domaine, vous devez changer régulièrement le mot de passe si votre organisation impose une stratégie d’expiration des mots de passe. Vous devrez peut-être également inscrire le service avec le compte d'utilisateur. Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Évitez d'utiliser un compte d'utilisateur Windows local. En général, les comptes locaux ne disposent pas des autorisations suffisantes pour accéder aux ressources sur d’autres ordinateurs. Pour plus d’informations sur la manière dont l’utilisation d’un compte local limite la fonctionnalité du serveur de rapports, consultez [Considérations relatives à l’utilisation des comptes locaux](#localaccounts) dans cette rubrique.|  
+|Comptes d'utilisateurs de domaine|Si vous avez un compte d'utilisateur de domaine Windows qui possède les autorisations minimales requises pour les opérations de serveur de rapports, vous devez l'utiliser.<br /><br /> Un compte d'utilisateur de domaine est recommandé car il isole le service Report Server des autres applications. L'exécution de plusieurs applications sous un compte partagé, tel que Service réseau, accroît le risque qu'un utilisateur malveillant prenne le contrôle du serveur de rapports car une violation de la sécurité pour l'une des applications peut facilement s'étendre à toutes les applications qui s'exécutent sous le même compte.<br /><br /> Si vous utilisez un compte d’utilisateur de domaine, vous devez changer régulièrement le mot de passe si votre organisation impose une stratégie d’expiration des mots de passe. Vous devrez peut-être également inscrire le service avec le compte d'utilisateur. Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Évitez d'utiliser un compte d'utilisateur Windows local. En général, les comptes locaux ne disposent pas des autorisations suffisantes pour accéder aux ressources sur d’autres ordinateurs. Pour plus d’informations sur la manière dont l’utilisation d’un compte local limite la fonctionnalité du serveur de rapports, consultez [Considérations relatives à l’utilisation des comptes locaux](#localaccounts) dans cette rubrique.| 
+| **Compte de service administré du groupe (gMSA)** | Les comptes de service administrés autonomes ont été introduits dans Windows Server 2008 R2 et Windows 7. Ce sont des comptes de domaine administrés qui fournissent une gestion automatique des mots de passe et une gestion simplifiée du nom de principal du service ainsi que la délégation de la gestion à d’autres administrateurs. Le **compte de service administré de groupe** fournit les mêmes fonctionnalités dans le domaine, mais les étend également sur plusieurs serveurs. |
 |**Compte de service virtuel**|**Compte de service virtuel** représente le service Windows. Il s’agit d’un compte intégré doté des privilèges minimaux, qui a les autorisations d’ouverture de session sur le réseau. Ce compte est recommandé si vous n’avez pas de compte d’utilisateur de domaine disponible ou si vous voulez éviter toute interruption de service à cause des stratégies d’expiration de mot de passe.|  
 |**Service réseau**|**Service réseau** est un compte intégré doté des privilèges minimaux, qui a les autorisations d’ouverture de session sur le réseau. <br /><br /> Si vous sélectionnez **Service réseau**, essayez de réduire le nombre d’autres services qui s’exécutent sous le même compte. Une violation de la sécurité pour une des applications compromet la sécurité de toutes les autres applications qui s’exécutent sous le même compte.|  
 |**Service local**|**Service local** est un compte prédéfini qui s’apparente à un compte d’utilisateur Windows local authentifié. Les services qui s’exécutent au moyen du compte **Service local** accèdent aux ressources réseau dans le cadre d’une session nulle, sans informations d’identification. Ce compte ne convient pas aux scénarios de déploiement intranet où le serveur de rapports doit se connecter à une base de données de serveur de rapports distante ou à un contrôleur de domaine réseau afin d'authentifier un utilisateur avant d'ouvrir un rapport ou de traiter un abonnement.|  

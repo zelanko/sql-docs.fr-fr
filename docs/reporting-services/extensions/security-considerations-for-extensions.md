@@ -1,5 +1,6 @@
 ---
 title: Considérations sur la sécurité pour les extensions | Microsoft Docs
+description: En savoir plus sur les stratégies, les conditions et les exigences de sécurité qui déterminent comment les serveurs de rapports accordent des autorisations aux extensions Reporting Services.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fb6a43fba085319b8be4ff374fea7d089e8a529a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193367"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529933"
 ---
 # <a name="security-considerations-for-extensions"></a>Considérations sur la sécurité pour les extensions
   Toute application qui cible le CLR (Common Language Runtime) doit interagir avec le système de sécurité du CLR. Lorsqu'une application de ce type est exécutée, elle est automatiquement évaluée et reçoit un jeu d'autorisations de la part du CLR. En fonction des autorisations reçues par l'application, elle continue de s'exécuter ou génère une exception de sécurité. Les paramètres et stratégies de sécurité locale définis dans les fichiers de configuration de stratégie de sécurité pour un serveur de rapports particulier définissent les autorisations de code reçues par un assembly.  

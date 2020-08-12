@@ -1,5 +1,6 @@
 ---
 title: Mise en forme des éléments de rapport (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment la mise en forme améliore la lisibilité et rend vos rapports plus attrayants dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079638"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779421"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
   La mise en forme des éléments du rapport rend celui-ci plus attrayant et améliore sa lisibilité. Vous pouvez mettre en forme les zones de texte et des éléments individuels dans les zones de texte, les images, les expressions et les données en mode création de rapport.  
@@ -30,7 +31,7 @@ ms.locfileid: "77079638"
   
  Vous pouvez modifier les options de mise en forme en sélectionnant l'élément à mettre en forme, puis en ouvrant la boîte de dialogue Propriétés de l'élément. Par exemple, si vous souhaitez mettre en forme le contenu de l’intégralité d’une zone de texte ou un mot sélectionné dans la zone de texte, cliquez avec le bouton droit sur l’élément et sélectionnez **Propriétés de la zone de texte**. Vous pouvez ensuite appliquer les styles de mise en forme souhaités.  
   
- Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

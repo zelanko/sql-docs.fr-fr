@@ -1,5 +1,6 @@
 ---
 title: Spécification de chemins vers des éléments externes (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment spécifier des chemins d’accès dans les propriétés d’éléments de rapport pour référencer des éléments externes au fichier de définition de rapport dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6ec449fd6b57c81e25e2a05e1702748dd88197d3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080907"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681468"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Spécification de chemins d'accès à des éléments externes (Générateur de rapports et SSRS)
   Vous pouvez spécifier des chemins d'accès dans les propriétés d'éléments de rapport pour faire référence à des éléments externes au fichier de définition de rapport et qui sont stockés sur un serveur de rapports. Il peut s'agir notamment de rapports d'extraction, de sous-rapports et de fichiers image.  
@@ -37,7 +38,7 @@ ms.locfileid: "77080907"
   
 -   **Un chemin d'accès complet à l'élément.**  
   
-    -   **Sur un serveur de rapports :** le chemin d’accès commence par **/** , le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
+    -   **Sur un serveur de rapports :** Le chemin d'accès démarre à partir de **/** , le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
   
     -   **Sur un site SharePoint :** vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple : `="https://server/site/library/folder/Report1.rdl"`.  
   

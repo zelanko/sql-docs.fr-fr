@@ -1,5 +1,6 @@
 ---
 title: Ajouter le composant WebPart Visionneuse de rapports à une page web | Microsoft Docs
+description: Vous pouvez utiliser le composant WebPart de la visionneuse de rapports pour afficher les rapports qui s’exécutent sur SQL Server Reporting Services en mode intégré SharePoint.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579400"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767110"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Ajouter le composant WebPart Visionneuse de rapports à une page web
 
@@ -39,7 +40,7 @@ Pour ajouter un composant WebPart à une page web, vous devez disposer de l’au
   
 4.  Dans la liste de catégories WebPart, sélectionnez la catégorie **Divers** , puis **Visionneuse de rapports SQL Server Reporting Services**.  
   
-5.  Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone. Vous pouvez le faire glisser vers un autre emplacement de la zone.  
+5.  Cliquez sur **Add**. Le composant WebPart est ajouté en haut de la zone. Vous pouvez le faire glisser vers un autre emplacement de la zone.  
   
 6.  Dans la visionneuse, cliquez sur **Cliquez ici pour ouvrir le volet d’outils**.  
   

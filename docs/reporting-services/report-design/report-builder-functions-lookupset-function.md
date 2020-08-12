@@ -1,5 +1,6 @@
 ---
 title: Fonction LookupSet (Générateur de rapports) | Microsoft Docs
+description: Découvrez la fonction LookupSet, qui retourne le jeu de valeurs correspondantes pour un nom spécifié à partir d’un dataset contenant des paires de noms ou valeurs.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081219"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255582"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Fonctions du Générateur de rapports - LookupSet
   Retourne le jeu de valeurs correspondantes pour le nom spécifié d'un dataset contenant des paires nom/valeur.  

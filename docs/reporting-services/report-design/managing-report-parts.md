@@ -1,5 +1,6 @@
 ---
 title: Gestion des parties de rapports | Documents Microsoft
+description: Organisez des parties de rapports pour plusieurs utilisateurs et rapports, avec des options flexibles pour la publication, les autorisations et la sécurité.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580102"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689675"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
   Les parties de rapports peuvent être réutilisées dans les rapports paginés par plusieurs utilisateurs et dans plusieurs rapports. Les utilisateurs peuvent rechercher des parties de rapports sur le serveur et les ajouter à un rapport.  Les utilisateurs peuvent également être informés des mises à jour apportées à la partie de rapport sur le serveur et republier de nouvelles versions d'une partie de rapport. Ces actions de création du rapport peuvent être affectées et contrôlées par les autorisations de sécurité de Reporting Services.  Cette rubrique passe en revue les propriétés et le comportement des parties de rapports une fois que celles-ci sont sur le serveur.  
@@ -49,7 +50,7 @@ ms.locfileid: "65580102"
   
 |Propriété|Description|Partie de rapport<br /><br /> Critères de recherche de bibliothèque|  
 |--------------|-----------------|---------------------------------------------|  
-|Name|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
+|Nom|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
 |Description|Vous pouvez organiser les noms des parties de rapports de manière à simplifier les recherches des utilisateurs dans la bibliothèque. Par exemple, vous pouvez rechercher la description qui commence par « Ventes>> » pour trouver toutes les parties de rapports impliquant une présentation et des données associées aux ventes.|Oui|  
 |CreatedBy|ID de l'utilisateur qui a ajouté la partie de rapport à la base de données du serveur de rapports. Le format exact dépend de la méthode d'authentification. Par exemple, certaines méthodes d'authentification provoquent l'affichage complet du domaine\nom_utilisateur dans les champs CreatedBy et ModifiedBy.|Oui|  
 |CreationDate|Date à laquelle la partie de rapport a été créée à l'origine.<br /><br /> Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  

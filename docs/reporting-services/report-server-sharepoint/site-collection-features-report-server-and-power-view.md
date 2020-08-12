@@ -1,5 +1,6 @@
 ---
 title: Activer les fonctionnalités d’intégration du serveur de rapports et de Power View dans SharePoint | Microsoft Docs
+description: Les fonctionnalités du complément SQL Server Reporting Services pour SharePoint sont généralement activées automatiquement. Utilisez ces instructions si vous devez les activer manuellement.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580504"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764800"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activer les fonctionnalités d’intégration du serveur de rapports et de Power View dans SharePoint
 
@@ -26,7 +27,7 @@ ms.locfileid: "65580504"
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
- Si vous installez le complément Reporting Services pour les produits SharePoint 2010 après l’installation du produit SharePoint, la fonctionnalité d’intégration du serveur de rapports et la fonctionnalité d’intégration de Power View sont uniquement activées pour les collections de sites racines. Pour les autres collections de sites, vous devez activer manuellement ces fonctionnalités. Par exemple, si vous avez une collection de sites **https://[nom de mon serveur]/sites/[nom de collection de sites]** , vous devez activer manuellement les fonctionnalités de collection de sites de Reporting Services.  
+ Si vous installez le complément Reporting Services pour les produits SharePoint 2010 après l’installation du produit SharePoint, la fonctionnalité d’intégration du serveur de rapports et la fonctionnalité d’intégration de Power View sont uniquement activées pour les collections de sites racines. Pour les autres collections de sites, vous devez activer manuellement ces fonctionnalités. Par exemple, si vous avez une collection de sites **https://[nom de mon serveur]/sites/[nom de collection de sites]**, vous devez activer manuellement les fonctionnalités de collection de sites de Reporting Services.  
   
  S’il n’y a pas de collection de sites racine, le complément Reporting Services journalise un message semblable au suivant.  
   

@@ -1,5 +1,6 @@
 ---
 title: Mise en œuvre d’une extension de rendu | Microsoft Docs
+description: Découvrez comment transformer les données et les informations de layout de Reporting Services en formats spécifiques à l’appareil en implémentant des extensions de rendu.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a72144df0f560feb6da0b954cbd7053832d46c87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d61af9bd987256a2ad293f7f9566fd1a2bcd041e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193704"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529085"
 ---
 # <a name="implementing-a-rendering-extension"></a>Implémentation d'une extension de rendu
-  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. SQL Server Reporting Services incluent six extensions de rendu : HTML, Excel, Word, CSV ou Texte, XML, Image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
+  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. SQL Server Reporting Services comprend six extensions de rendu : HTML, Excel, Word, CSV ou Texte, XML, Image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
   
 > [!NOTE]  
 >  Pour déterminer quelles extensions de rendu sont disponibles, vous pouvez consulter la liste des extensions installées dans le fichier RSReportServer.config.  

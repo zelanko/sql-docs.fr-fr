@@ -1,5 +1,6 @@
 ---
 title: Démarrer et arrêter le service Report Server | Microsoft Docs
+description: Découvrez comment démarrer et arrêter le service Windows qui contient le service web Report Server, le portail web et une application de traitement en arrière-plan.
 ms.date: 05/21/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6463dc7e4b17992138a61e6a37277149fccfda68
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b10a0445ab89934be7da2b3da2af9b14cc7d20ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270202"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547891"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Démarrer et arrêter le service du serveur de rapports
 

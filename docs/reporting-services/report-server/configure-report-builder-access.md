@@ -1,5 +1,6 @@
 ---
 title: Configurer l’accès au Générateur de rapports | Microsoft Docs
+description: Configurez le Générateur de rapports, un outil de création de rapports installé avec un serveur de rapports SQL Server Reporting Services. Il utilise le mode d’intégration natif ou SharePoint.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
-ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 168e8897743e113ae1a40df5ad8d35c66289fde0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68255170"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548081"
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
 Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -25,7 +26,7 @@ L'accès au Générateur de rapports dépend des facteurs suivants :
 
 - Paramètres d'authentification qui déterminent si les informations d'identification de l'utilisateur peuvent être transmises au serveur de rapports ou si l'accès anonyme est configuré sur les fichiers d'application.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
@@ -101,7 +102,7 @@ Une fois les attributions de rôles créées, les utilisateurs seront autorisés
 
     4. Dans Description, entrez une description du rôle afin que les utilisateurs du portail web connaissent la fonction du rôle.  
 
-    5. Ajoutez les tâches suivantes : **Lire les rapports**, **Afficher les rapports**, **Afficher les modèles**, **Afficher les ressources**, **Afficher les dossiers**et **Gérer les abonnements individuels**.  
+    5. Ajoutez les tâches suivantes : **Lire les rapports**, **Afficher les rapports**, **Afficher les modèles**, **Afficher les ressources**, **Afficher les dossiers**et **Gérer les abonnements individuels**.  
 
     6. Cliquez sur **OK** pour enregistrer le rôle.  
 
@@ -115,7 +116,7 @@ Une fois les attributions de rôles créées, les utilisateurs seront autorisés
 3. Cliquez sur **Sécurité**.  
 
 4. Si une attribution de rôle existe déjà pour l’utilisateur ou le groupe pour lequel vous voulez configurer l’accès au Générateur de rapports, cliquez sur **Modifier**.  
-Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans Groupe ou utilisateur, entrez un compte d’utilisateur ou de groupe d’un domaine Windows au format suivant : \<domaine>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
+Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans Groupe ou utilisateur, entrez un compte de groupe ou d’utilisateur de domaine Windows au format \<domain>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
 
 5. Sélectionnez **Utilisateur système**, puis cliquez sur **OK**.  
 
@@ -127,7 +128,7 @@ Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans Groupe ou utilisateur
 
 9. Si une attribution de rôle existe déjà pour l’utilisateur ou le groupe pour lequel vous voulez configurer l’accès au Générateur de rapports, cliquez sur **Modifier**.  
 
-    Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans Groupe ou utilisateur, entrez un compte d’utilisateur ou de groupe d’un domaine Windows au format suivant : \<domaine>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
+    Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans Groupe ou utilisateur, entrez un compte de groupe ou d’utilisateur de domaine Windows au format \<domain>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
 
 10. Sélectionnez **Générateur de rapports**, puis cliquez sur **Appliquer**.  
 

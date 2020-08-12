@@ -1,5 +1,6 @@
 ---
 title: Graphiques de compartimentage et en rayons de soleil dans SQL Server Reporting Services | Microsoft Docs
+description: Découvrez comment représenter visuellement des données hiérarchiques à l’aide d’un graphique de compartimentage ou d’un graphique en rayons de soleil dans le Générateur de rapports.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259362"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255432"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services 
 
@@ -41,11 +42,11 @@ Par exemple, dans l’exemple de graphique de compartimentage suivant, le territ
   
 3. Ajoutez les champs suivants à partir de l’échantillon de données :  
   
-    * **Values** (Valeurs) : LineTotal (Total de la ligne)
+    * **Valeurs** : LineTotal
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
-    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
+    * **Groupes de séries** : TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -86,12 +87,12 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
 3. Ajoutez les champs suivants à partir de l’échantillon de données :  
 
-    * **Values** (Valeurs) : LineTotal (Total de la ligne)
+    * **Valeurs** : LineTotal
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
         3. SalesReasonName (Nom du motif de vente)
-    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
+    * **Groupes de séries** : TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -115,7 +116,7 @@ La requête retourne des données de détail des ventes d’AdventureWorks par s
   
 1. **Obtenez les données**.  
   
-     La requête de cette section porte sur la base de données AdventureWorks disponible en téléchargement sur GitHub :[Adventure Works 2016 Full Database Backup](https://github.com/Microsoft/sql-server-samples/releases).  
+     La requête de cette section porte sur la base de données AdventureWorks disponible au téléchargement sur GitHub : [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Créez une source de données**.  
   
@@ -178,6 +179,6 @@ La requête retourne des données de détail des ventes d’AdventureWorks par s
 
 * [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [Didacticiel : graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Tutoriel : Graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Graphique de compartimentage : Applications de visualisation des données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

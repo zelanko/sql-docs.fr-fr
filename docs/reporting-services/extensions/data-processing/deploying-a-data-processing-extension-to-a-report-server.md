@@ -1,5 +1,6 @@
 ---
 title: 'Procédure : déployer une extension pour le traitement des données sur un serveur de rapports | Microsoft Docs'
+description: Découvrez comment déployer une extension pour le traitement des données sur un serveur de rapports en apprenant quelles entrées ajouter à quels fichiers config.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194121"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529581"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Déploiement d’une extension pour le traitement des données sur un serveur de rapports
   Les serveurs de rapports utilisent les extensions de traitement des données pour extraire, puis traiter les données qui figurent dans les rapports rendus. Vous devez déployer l'assembly d'extension utilisé pour le traitement des données sur un serveur de rapports, et ce sous la forme d'un assembly privé. Vous devez également créer une entrée dans le fichier de configuration du serveur de rapports, à savoir dans le fichier dénommé RSReportServer.config.  
@@ -25,7 +26,7 @@ ms.locfileid: "63194121"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Pour déployer un assembly d'extension pour le traitement des données  
   
-1.  Copiez l'assembly en question depuis son emplacement vers le répertoire bin du serveur de rapports sur lequel l'extension pour le traitement des données doit être utilisée. L’emplacement par défaut du répertoire bin du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*nom_instance*>\Reporting Services\ReportServer\bin.  
+1.  Copiez l'assembly en question depuis son emplacement vers le répertoire bin du serveur de rapports sur lequel l'extension pour le traitement des données doit être utilisée. L'emplacement par défaut du répertoire de classes du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Cette étape permet d'éviter la mise à niveau vers une instance de SQL Server plus récente. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -50,7 +51,7 @@ ms.locfileid: "63194121"
   
      La valeur **Name** doit correspondre au nom unique de l’extension utilisée pour le traitement des données. La valeur **Type** est une liste séparée par des virgules comportant une entrée dans laquelle doit figurer l’espace de noms complet de la classe qui implémente les interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> et <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, suivi du nom de votre assembly (l’extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions utilisées pour le traitement des données sont visibles par les utilisateurs finaux. Pour les masquer des interfaces utilisateur, comme le Gestionnaires de rapports, ajoutez un attribut **Visible** à l'élément **Extension** , et affectez-lui la valeur **false**.  
   
-5.  Vous devez définir un groupe de codes pour votre assembly personnalisé octroyant l’autorisation **FullTrust** à votre extension. Pour ce faire, vous devez ajouter le groupe de codes au fichier rssrvpolicy.config qui se trouve par défaut dans le répertoire suivant : %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*nom_instance*>\Reporting Services\ReportServer. Ce groupe de codes peut se présenter comme suit :  
+5.  Vous devez définir un groupe de codes pour votre assembly personnalisé octroyant l’autorisation **FullTrust** à votre extension. Pour ce faire, vous devez ajouter le groupe de codes au fichier rssrvpolicy.config qui se trouve par défaut dans le répertoire suivant : %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer. Ce groupe de codes peut se présenter comme suit :  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

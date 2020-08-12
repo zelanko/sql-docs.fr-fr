@@ -1,5 +1,6 @@
 ---
 title: Comparaison des serveurs de rapports Reporting Services natifs et SharePoint | Microsoft Docs
+description: Apprenez-en davantage sur la pièce centrale d’une installation SQL Server Reporting Services, qui consiste en un moteur de traitement et des extensions pour ajouter des fonctionnalités.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038016"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764798"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Comparaison des serveurs de rapports Reporting Services natifs et SharePoint
 
@@ -27,7 +28,7 @@ Découvrez la pièce centrale d’une installation [!INCLUDE[ssNoVersion](../../
 
 Un serveur de rapports Reporting Services s’exécute dans l’un des deux modes de déploiement : le mode natif ou le mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#feature-comparison-of-sharepoint-and-native-mode) pour obtenir une comparaison des fonctionnalités.  
   
- **Installation :** pour plus d’informations sur l’installation de Reporting Services, consultez [Installer SQL Server Reporting Services](../install-windows/install-reporting-services.md).
+ **Installation :** Pour plus d’informations sur l’installation de Reporting Services, consultez [Installer SQL Server Reporting Services](../install-windows/install-reporting-services.md).
 
 ## <a name="overview-of-report-server-modes"></a>Présentation des modes du serveur de rapports
 
@@ -122,7 +123,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
   
 |Type|Default|  
 |----------|-------------|  
-|Authentication|Une instance de serveur de rapports par défaut prend en charge l'authentification Windows, y compris l'emprunt d'identité et les fonctionnalités de délégation si elles sont activées dans votre domaine.|  
+|Authentification|Une instance de serveur de rapports par défaut prend en charge l'authentification Windows, y compris l'emprunt d'identité et les fonctionnalités de délégation si elles sont activées dans votre domaine.|  
 |Traitement des données|Une instance de serveur de rapports par défaut contient des extensions pour le traitement des données pour les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse et ODBC.|  
 |Rendu|Une instance de serveur de rapports par défaut contient des extensions de rendu pour les formats HTML, Excel, CSV, XML, Image, Word, liste SharePoint et PDF.|  
 |Livraison|Une instance de serveur de rapports par défaut contient une extension de remise par messagerie et une extension de remise par partage de fichiers. Si le serveur de rapports est configuré pour l'intégration SharePoint, vous pouvez utiliser une extension de remise qui enregistre des rapports dans une bibliothèque SharePoint.|  

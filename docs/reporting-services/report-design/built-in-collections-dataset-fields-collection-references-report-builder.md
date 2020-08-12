@@ -1,5 +1,6 @@
 ---
 title: Références à la collection Fields d’un dataset (Générateur de rapports) | Microsoft Docs
+description: Créez un jeu de données pour l’affichage de valeurs individuelles ou résumées dans le volet des données de rapport du Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b2466036918d6c66db980a7a66259cef63fe20d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081897"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688855"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Collections intégrées - Références à la collection Fields d’un dataset (Générateur de rapports)
   Chaque dataset d’un rapport contient une collection Fields. La collection Fields comprend l’ensemble de champs spécifiés par la requête de dataset, ainsi que tous les champs calculés supplémentaires que vous créez. Après avoir créé un dataset, la collection de champs apparaît dans le volet **Données du rapport** .  
@@ -38,7 +39,7 @@ ms.locfileid: "77081897"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Détection de champs manquants pour les requêtes dynamiques au moment de l'exécution  
- Par défaut, les éléments de la collection Fields disposent de deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie en fonction d’un paramètre d’entrée, ou votre requête peut être `SELECT * FROM` *\<table>* où la définition de table a changé.  
+ Par défaut, les éléments de la collection Champs disposent de deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie en fonction d’un paramètre d’entrée, ou votre requête peut être `SELECT * FROM` *\<table>* où la définition de table a changé.  
   
 > [!NOTE]  
 >  IsMissing détecte les modifications du schéma de dataset entre le moment de la conception et celui de l’exécution pour tout type de source de données. IsMissing ne peut pas être utilisé pour détecter des membres vides dans un cube multidimensionnel et n’est pas lié aux concepts de langage de requête MDX **EMPTY** et **NON EMPTY**.  

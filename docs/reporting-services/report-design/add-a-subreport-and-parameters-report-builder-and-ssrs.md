@@ -1,5 +1,6 @@
 ---
 title: Ajouter un sous-rapport et des paramètres (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment ajouter un sous-rapport. Utilisez des sous-rapports quand vous souhaitez créer un rapport principal comme conteneur pour plusieurs rapports connexes dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9131d15b8374df4b3db22946583d3349f0386e91
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080670"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462303"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS)
   Ajoutez des sous-rapports à un rapport pour créer un rapport principal servant de conteneur à plusieurs rapports connexes. Un sous-rapport est une référence à un autre rapport. Pour connecter les rapports par des valeurs de données (par exemple, pour que plusieurs rapports indiquent des données pour le même client), vous devez désigner un rapport paramétrable (par exemple, un rapport qui affiche les renseignements concernant un client spécifique) en tant que sous-rapport. Lorsque vous ajoutez un sous-rapport au rapport principal, vous pouvez spécifier des paramètres à passer au sous-rapport.  
@@ -50,7 +51,7 @@ ms.locfileid: "77080670"
   
 2.  Dans la boîte de dialogue **Propriétés du sous-rapport** , cliquez sur **Paramètres**.  
   
-3.  Cliquez sur **Ajouter**. Une nouvelle ligne est ajoutée à la grille des paramètres.  
+3.  Cliquez sur **Add**. Une nouvelle ligne est ajoutée à la grille des paramètres.  
   
 4.  Dans la zone **Nom** , tapez le nom d’un paramètre du sous-rapport ou choisissez-le dans la zone de liste. Ce nom doit correspondre au nom d'un paramètre de rapport, pas d'un paramètre de requête, dans le sous-rapport.  
   

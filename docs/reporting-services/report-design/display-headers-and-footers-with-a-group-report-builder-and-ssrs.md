@@ -1,5 +1,6 @@
 ---
 title: Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment définir des propriétés pour afficher des en-têtes et des pieds de page avec des lignes dynamiques associées à un groupe dans une région de données de tableau matriciel.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecc2cb9b0b2e425627f73ae87aa3a9e8f5a289b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54afbcc4f95fdd0c626b6559437e08c454cd2dd4
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080476"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689253"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports et SSRS)
   Vous pouvez mieux contrôler si une ligne statique, telle qu'un en-tête ou un pied de page de groupe, est rendue avec des lignes dynamiques qui sont associées à un groupe dans une région de données de tableau matriciel.  

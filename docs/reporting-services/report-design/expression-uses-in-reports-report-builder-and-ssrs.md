@@ -1,5 +1,6 @@
 ---
 title: Utilisation d’expressions dans les rapports (Générateur de rapports) | Microsoft Docs
+description: Spécifiez ou calculez des valeurs avec des expressions pour les paramètres, les requêtes, les filtres et les propriétés de zone de texte dans le Générateur de rapports.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b12b393e2b749c34abdd98c7f6363829800c5d06
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080270"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462213"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les expressions sont utilisées dans la définition des rapports pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d’éléments de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d’en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>** .  
@@ -57,7 +58,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 |Mettre en forme des données dans une zone de texte selon la valeur.|Propriété Color d’un espace réservé à l’intérieur d’une zone de texte sur la ligne Détails d’un tableau matriciel. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Police**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calculer une valeur une fois pour s'y reporter dans tout le rapport.|Propriété Value d’une variable de rapport. Utilisez la **boîte de dialogue Propriétés du rapport, Variables**.|`=Variables!MyCalculation.Value`|  
 |Inclure des valeurs spécifiques pour plusieurs champs d'un dataset.|Équation de filtre pour un groupe dans un tableau matriciel. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Filtres**.|Pour le type de données, sélectionnez **Booléen**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Masquer une zone de texte sur l'aire de conception, qui peut être activée ou désactivée par l'utilisateur à l'aide d'un paramètre booléen nommé *Show*.|Propriété masquée dans une zone de texte. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Visibilité**.|`=Not Parameters!` *Afficher\<paramètre booléen>* `.Value`|  
+|Masquer une zone de texte sur l'aire de conception, qui peut être activée ou désactivée par l'utilisateur à l'aide d'un paramètre booléen nommé *Show*.|Propriété masquée dans une zone de texte. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Visibilité**.|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
 |Spécifier un contenu dynamique de l'en-tête de page ou du pied de page.|Valeur d’un espace réservé à l’intérieur d’une zone de texte placée dans l’en-tête ou le pied de page.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Spécifier une source de données de façon dynamique à l'aide d'un paramètre.|Chaîne de connexion sur la source de données. Utilisez la **boîte de dialogue Propriétés de la source de données, Général**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifier toutes les valeurs pour un paramètre à valeurs multiples choisi par l'utilisateur.|Valeur d’un espace réservé à l’intérieur d’une zone de texte. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Filtres**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

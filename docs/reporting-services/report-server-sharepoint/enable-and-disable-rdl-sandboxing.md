@@ -1,5 +1,6 @@
 ---
 title: Activer et désactiver le sandboxing RDL pour Reporting Services en mode intégré SharePoint | Microsoft Docs
+description: Avec le sandboxing RDL, vous pouvez détecter et restreindre l’utilisation des types de ressources par les locataires où plusieurs locataires utilisent une batterie de serveurs web unique de serveurs de rapports.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d86cf9bbf284ad76c7423900c10a74f7ca26faa
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577771"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767016"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Activer et désactiver le sandboxing RDL pour Reporting Services en mode intégré SharePoint
 
@@ -67,10 +68,10 @@ La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de d�
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Quantité maximale de caractères autorisés dans les expressions RDL.<br /><br /> Valeur par défaut : 1000|  
-|**MaxResourceSize**|Quantité maximale de Ko autorisés pour une ressource externe.<br /><br /> Valeur par défaut : 100|  
-|**MaxStringResultLength**|Quantité maximale de caractères autorisés dans une valeur de retour pour une expression RDL.<br /><br /> Valeur par défaut : 1000|  
-|**MaxArrayResultLength**|Quantité maximale d'éléments autorisés dans un tableau de valeurs retourné pour une expression RDL.<br /><br /> Valeur par défaut : 100|  
+|**MaxExpressionLength**|Quantité maximale de caractères autorisés dans les expressions RDL.<br /><br /> Valeur par défaut : 1 000|  
+|**MaxResourceSize**|Quantité maximale de Ko autorisés pour une ressource externe.<br /><br /> Valeur par défaut : 100|  
+|**MaxStringResultLength**|Quantité maximale de caractères autorisés dans une valeur de retour pour une expression RDL.<br /><br /> Valeur par défaut : 1 000|  
+|**MaxArrayResultLength**|Quantité maximale d'éléments autorisés dans un tableau de valeurs retourné pour une expression RDL.<br /><br /> Valeur par défaut : 100|  
 |**Types**|Liste des membres à autoriser dans les expressions RDL.|  
 |**Autoriser**|Type ou jeu de types à autoriser dans les expressions RDL.|  
 |**Espace de noms**|Attribut pour **Allow** qui est l’espace de noms contenant un ou plusieurs types qui s’appliquent à Valeur. Cette propriété n'est pas sensible à la casse.|  

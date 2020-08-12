@@ -1,5 +1,6 @@
 ---
 title: Concepts de paramètres de rapport (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment ajouter des paramètres pour lier des rapports associés, pour contrôler l’apparence d’un rapport, pour filtrer des données de rapport ou pour limiter l’étendue dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5e7cafdce773969f9e6914a47534f88eb238a4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e6419e43991ff2dfe28ea0e3f6b2033693b9c3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081069"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681598"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Concepts de paramètres de rapport (Générateur de rapports et SSRS)
   Vous pouvez ajouter des paramètres à un rapport pour lier des rapports connexes, pour contrôler l'apparence d'un rapport, pour filtrer les données du rapport, ou pour limiter l'étendue d'un rapport à des utilisateurs ou des emplacements spécifiques.  
@@ -43,6 +44,6 @@ ms.locfileid: "77081069"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md) [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutoriel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

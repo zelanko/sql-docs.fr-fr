@@ -1,5 +1,6 @@
 ---
 title: Guide pratique pour installer des extensions de sécurité personnalisées | Microsoft Docs
+description: Découvrez le nouveau portail web que Reporting Services 2016 a introduit. Découvrez comment les modifications résultantes affectent l’implémentation des extensions de sécurité personnalisées.
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223228"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529065"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Guide pratique pour installer des extensions de sécurité personnalisées
 
@@ -51,7 +52,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Déploiement et configuration
 
-Les configurations de base nécessaires pour l’extension de sécurité personnalisée sont les mêmes que les versions précédentes. Des modifications sont nécessaires pour web.config et rsreportserver.config ; pour plus d’informations, consultez [Configurer l’authentification personnalisée ou par formulaire sur le serveur de rapports](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+Les configurations de base nécessaires pour l’extension de sécurité personnalisée sont les mêmes que les versions précédentes. Des modifications sont nécessaires pour web.config et rsreportServer.config : Pour plus d’informations, consultez [Configurer l’authentification personnalisée ou des formulaires sur le serveur de rapports](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Il n’existe plus de web.config distinct pour le Gestionnaire de rapports : le portail hérite les mêmes paramètres que le point de terminaison du serveur de rapports.
 

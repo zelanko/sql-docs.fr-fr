@@ -1,5 +1,6 @@
 ---
 title: Journal d’exécution du serveur de rapports et vue ExecutionLog3 | Microsoft Docs
+description: Apprenez-en davantage sur le journal d’exécution du serveur de rapports dans Reporting Services, qui contient des informations sur les rapports sur les serveurs en mode natif ou dans une batterie de serveurs SharePoint.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15e8b648603952226af45d485d5678f5d0d3bbd6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548011"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
@@ -112,7 +113,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|Chemin de stockage d'un rapport ou d'un élément de rapport|  
 |UserName|Identificateur de l'utilisateur.|  
 |ExecutionID|Identificateur interne associé à une requête. Les requêtes sur les mêmes sessions utilisateur partagent le même ID d'exécution.|  
-|RequestType|Valeurs possibles :<br /><br /> Interactive<br /><br /> Subscription<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
+|RequestType|Valeurs possibles :<br /><br /> Interactive<br /><br /> Abonnement<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
 |ItemAction|Valeurs possibles :<br /><br /> Rendu<br /><br /> Trier<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
@@ -121,7 +122,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes passées pour la récupération des données.|  
 |TimeProcessing|Nombre de millisecondes passées pour le traitement du rapport.|  
 |TimeRendering|Nombre de millisecondes passées pour le rendu du rapport.|  
-|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> En direct<br /><br /> Cache : indique une exécution mise en cache ; par exemple, les requêtes de jeu de données ne sont pas exécutées en direct.<br /><br /> Instantané<br /><br /> Historique<br /><br /> AdHoc : indique soit un rapport d’extraction basé sur un modèle généré dynamiquement, soit un rapport du Générateur de rapports affiché en aperçu dans un client utilisant le serveur de rapports pour le traitement et le rendu.<br /><br /> Session : indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> Rdce : indique une extension RDCE (Report Definition Customization Extension). Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
+|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> En direct<br /><br /> Cache : indique une exécution mise en cache ; par exemple, les requêtes de jeu de données ne sont pas exécutées en direct.<br /><br /> Instantané<br /><br /> Historique<br /><br /> AdHoc : indique soit un rapport d’extraction basé sur un modèle généré dynamiquement, soit un rapport du Générateur de rapports affiché en aperçu dans un client utilisant le serveur de rapports pour le traitement et le rendu.<br /><br /> Session : indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> Rdce :  indique une extension RDCE (Report Definition Customization Extension). Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
 |Statut|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
@@ -326,7 +327,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RequestType|Type de demande (utilisateur ou système).|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
-|ReportAction|Valeurs possibles : Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
+|ReportAction|Valeurs possibles : Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|Heures de début et de fin qui indiquent la durée d'un traitement de rapport.|  
 |TimeEnd||  
 |TimeDataRetrieval|Nombre de millisecondes consacré à la récupération des données, au traitement du rapport et au rendu du rapport.|  
@@ -362,7 +363,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes consacré à la récupération des données, au traitement du rapport et au rendu du rapport.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Source d'exécution du rapport. Valeurs possibles : (1=Actif, 2=Cache, 3=Instantané, 4=Historique, 5=Adhoc, 6=Session, 7=RDCE).|  
+|Source|Source d'exécution du rapport. Valeurs possibles : (1=Actif, 2=Cache, 3=Instantané, 4=Historique, 5=Adhoc, 6=Session, 7=RDCE).|  
 |Statut|Valeurs possibles : rsSuccess, rsProcessingAborted, ou un code d'erreur. Si plusieurs erreurs se produisent, seule la première erreur est enregistrée.|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  

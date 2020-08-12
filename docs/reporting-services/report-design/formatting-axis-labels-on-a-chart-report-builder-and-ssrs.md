@@ -1,5 +1,6 @@
 ---
 title: Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment mettre en forme les étiquettes des axes sur un graphique à l’aide d’une boîte de dialogue ou en utilisant le volet Propriétés pour catégoriser et afficher les relations dans le Générateur de rapports.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079911"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880283"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  
@@ -75,7 +76,7 @@ ms.locfileid: "77079911"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Exemple de calcul d'étiquettes d'axe par le graphique  
  Le tableau présenté ici contient des exemples de données de vente à tracer sur un histogramme. Le champ Name est ajouté à la zone Groupes d'abscisses et le champ Quantity est ajouté à la zone Valeurs.  
   
-|Name|Quantité|  
+|Nom|Quantité|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

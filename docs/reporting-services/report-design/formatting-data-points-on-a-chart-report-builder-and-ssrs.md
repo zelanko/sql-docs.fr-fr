@@ -1,5 +1,6 @@
 ---
 title: Mise en forme des points de données sur un graphique (Générateur de rapports) | Microsoft Docs
+description: Découvrez différents types de mise en forme des points de données des graphiques de vos rapports dans le Générateur de rapports.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b2dc1633af5b4f6ff8ff981d11766c67510786d
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079926"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778947"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
 Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un point de données est la plus petite entité individuelle sur un graphique. Sur les graphiques qui ne sont pas à base de formes, les points de données sont représentés selon le type de graphique. Par exemple, une série à base de lignes comprend un ou plusieurs points de données reliés. Sur les graphiques à base de formes, les points de données sont représentés par des coupes ou segments individuels qui s'ajoutent à l'ensemble du graphique. Par exemple, sur un graphique à secteurs, chaque secteur est un point de données. Pour plus d’informations, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -41,7 +42,7 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Positionnement d'étiquettes de points de données sur un graphique  
  Pour tous les types de graphiques, vous pouvez afficher des étiquettes de points de données quand vous cliquez avec le bouton droit sur le graphique, puis que vous sélectionnez **Afficher les étiquettes de données**. La position des étiquettes de points de données est spécifiée selon le type de graphique :  
   
--   Sur un graphique à barres, vous pouvez repositionner l'étiquette de point de données à l'aide de l'attribut personnalisé **BarLabelStyle** . Il existe quatre positions possibles : Extérieur, Gauche, Centre et Droite. Lorsque le style de l'étiquette de la barre est défini sur Extérieur, les étiquettes sont positionnées en dehors de la barre, dans la mesure où elles tiennent dans la zone du graphique. Si l'étiquette ne peut pas être placée en dehors de la barre et dans la zone du graphique, elle est placée à l'intérieur de la barre.  
+-   Sur un graphique à barres, vous pouvez repositionner l'étiquette de point de données à l'aide de l'attribut personnalisé **BarLabelStyle** . Il existe quatre positions possibles : Extérieur, Gauche, Centre et Droite. Lorsque le style de l'étiquette de la barre est défini sur Extérieur, les étiquettes sont positionnées en dehors de la barre, dans la mesure où elles tiennent dans la zone du graphique. Si l'étiquette ne peut pas être placée en dehors de la barre et dans la zone du graphique, elle est placée à l'intérieur de la barre.  
   
 -   Sur un graphique à secteurs, vous pouvez repositionner l'étiquette de point de données à l'aide de l'attribut personnalisé **PieLabelStyle** . Il y a de nombreux facteurs à prendre en compte pour le positionnement des étiquettes de points de données autour d'un graphique à secteurs, y compris la taille du graphique à secteurs, l'espace disponible entre le graphique à secteurs et sa légende, et la taille des étiquettes. Pour plus d’informations, consultez [Afficher des étiquettes de points de données à l’extérieur d’un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -98,7 +99,7 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutoriel : Ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

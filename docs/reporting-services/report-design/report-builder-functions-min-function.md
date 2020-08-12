@@ -1,5 +1,6 @@
 ---
 title: Fonction Min (Générateur de rapports) | Microsoft Docs
+description: Découvrez la fonction Min, qui retourne la valeur minimale de toutes les valeurs numériques non Null spécifiées par une expression dans le Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f1cff64290206526103c848de693c2a95735d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ea5098d06e66813fb91d27ca9d56c31732080a2
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081203"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255572"
 ---
 # <a name="report-builder-functions---min-function"></a>Fonctions du Générateur de rapports - Min
   Retourne la valeur minimale de toutes les valeurs numériques non Null spécifiées par l'expression, dans le contexte de l'étendue donnée.  

@@ -1,6 +1,6 @@
 ---
 title: Définitions de rôles - Rôles prédéfinis | Microsoft Docs
-ms.date: 05/24/2019
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67500195"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716736"
 ---
 # <a name="role-definitions---predefined-roles"></a>Définitions de rôles - Rôles prédéfinis
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé avec des rôles prédéfinis que vous pouvez utiliser pour accorder l'accès aux opérations du serveur de rapports. Chaque rôle prédéfini décrit une collection de tâches associées. Vous pouvez assigner des groupes et des comptes d'utilisateurs à des rôles prédéfinis pour fournir l'accès immédiat aux opérations du serveur de rapports.  
@@ -59,11 +59,11 @@ ms.locfileid: "67500195"
 |----------|-----------------|  
 |Lire les rapports|Lire les définitions de rapport.|  
 |Créer des rapports liés|Créer des rapports liés qui sont basés sur un rapport non lié.|  
-|Gérer tous les abonnements|Afficher, modifier et supprimer un abonnement à un rapport, lié ou non, quel que soit le propriétaire de l'abonnement. Cette tâche prend également en charge la création d'abonnements pilotés par les données.|  
+|Gérer tous les abonnements|Afficher, modifier et supprimer un abonnement à un rapport, lié ou non, quel que soit le propriétaire de l'abonnement. Cette tâche prend en charge la création d’abonnements pilotés par les données. Elle prend également en charge la modification et l’exécution de l’[actualisation planifiée pour les fichiers Power BI (.pbix) dans Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Gérer les sources de données|Créer et supprimer les éléments de source de données partagée, afficher et modifier les propriétés et le contenu des sources de données.|  
 |Gérer les dossiers|Créer, afficher et supprimer des dossiers. Afficher et modifier des propriétés de dossier.|  
 |Gérer les modèles|Créer, afficher et supprimer des modèles. Afficher et modifier des propriétés du modèle.|  
-|Gérer les abonnements individuels|Créer, afficher, modifier et supprimer des abonnements - appartenant à des utilisateurs - à des rapports, liés ou non.|  
+|Gérer les abonnements individuels|Créer, afficher, modifier et supprimer des abonnements - appartenant à des utilisateurs - à des rapports, liés ou non. Cette tâche prend également en charge la modification et l’exécution de l’[actualisation planifiée pour les fichiers Power BI (.pbix) dans Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Gérer l'historique de rapport|Créer, afficher et supprimer l'historique de rapport, afficher les propriétés de l'historique de rapport. Afficher et modifier les paramètres qui déterminent les limites de l'historique des instantanés ainsi que le fonctionnement de la mise en cache.|  
 |Gérer les rapports|Ajouter et supprimer des rapports, modifier des paramètres de rapport, afficher et modifier des propriétés de rapport, afficher et modifier des sources de données qui fournissent du contenu au rapport, afficher et modifier des définitions de rapports et définir des stratégies au niveau du rapport.|  
 |Gestion des ressources|Créer, modifier et supprimer des ressources. Afficher et modifier des propriétés de ressource.|  

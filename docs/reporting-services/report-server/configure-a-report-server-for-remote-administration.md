@@ -1,5 +1,6 @@
 ---
 title: Configurer un serveur de rapports pour l’administration à distance | Microsoft Docs
+description: Découvrez comment configurer des instances du service Report Server Reporting Services pour une configuration locale ou distante à l’aide de l’outil de configuration ou de l’écriture de code personnalisé.
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580414"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545588"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez configurer des instances de serveur de rapports localement ou à distance. Pour configurer une instance de serveur de rapports à distance, vous pouvez faire appel à l’outil de configuration de Reporting Services ou bien écrire un code personnalisé qui utilise le fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'outil de configuration de Reporting Services offre une interface graphique avec le fournisseur WMI pour vous permettre de configurer un serveur de rapports sans avoir à écrire du code. Lorsque vous démarrez l'outil, vous pouvez spécifier un serveur distant auquel vous connecter.  
@@ -32,7 +33,7 @@ ms.locfileid: "65580414"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour cela, vous devez ouvrir une session localement et être membre du groupe Administrateurs local. Vous ne pouvez pas modifier les paramètres du pare-feu Windows d'un ordinateur distant sur une connexion distante.  
   
  Si vous souhaitez activer l'administration à distance pour un utilisateur non-administrateur, vous devez accorder des autorisations d'activation à distance DCOM (Distributed Component Object Model) au compte. Les instructions de configuration du serveur pour un accès non-administrateur sont fournies dans cette rubrique.  
@@ -108,7 +109,7 @@ ms.locfileid: "65580414"
   
 9. Tapez le nom de votre compte d'utilisateur, puis cliquez sur **OK**.  
   
-10. Dans la zone **Autorisations pour \<Utilisateur ou groupe>** , dans la colonne **Autoriser**, sélectionnez **Exécution à distance** et **Activation à distance**, puis cliquez sur **OK**.  
+10. Dans la zone **Autorisation pour \<User or Group>** , dans la colonne **Autoriser**, sélectionnez **Exécution à distance** et **Activation à distance**, puis cliquez sur **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Pour définir les autorisations sur l'espace de noms WMI du rapport de serveurs pour les non-administrateurs  
   

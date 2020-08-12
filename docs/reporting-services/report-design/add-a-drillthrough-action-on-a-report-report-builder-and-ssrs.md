@@ -1,5 +1,6 @@
 ---
 title: Ajouter une action d’extraction à un rapport (Générateur de rapports) | Microsoft Docs
+description: Améliorez les performances des requêtes en ajoutant un lien d’action d’extraction dans une zone de texte, une image ou des points de données sur un graphique.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f2737d0d67851fdcce06a926d8ceb71849aea2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8540ade9e1c13dac159c20ffade0d5b0c1652071
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080743"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689520"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Ajouter une action d'extraction à un rapport (Générateur de rapports et SSRS)
   Le rapport qui s’ouvre quand vous cliquez sur le lien dans le rapport principal est appelé *rapport d’extraction*. Ce lien d'extraction autorise une action d'extraction.  

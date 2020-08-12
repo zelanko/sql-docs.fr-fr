@@ -1,5 +1,6 @@
 ---
 title: Créer un groupe de hiérarchies récursives (Générateur de rapports) | Microsoft Docs
+description: Découvrez l’organisation des données dans un rapport paginé, à partir d’un jeu de données de rapport unique qui comprend des niveaux hiérarchiques, à l’aide d’un groupe de hiérarchies récursives.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d72c85df464893a4f7e7d6ba1f183a3702aee87
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080548"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681528"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un groupe de hiérarchies récursives organise les données d’un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques, tels que la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d’organisation.  

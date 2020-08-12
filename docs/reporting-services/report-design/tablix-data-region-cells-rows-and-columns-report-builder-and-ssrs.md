@@ -1,6 +1,6 @@
 ---
 title: Cellules, lignes et colonnes dans un tableau matriciel | Microsoft Docs
-description: Pour contrôler la façon dont les lignes et les colonnes d’une région de données de tableau matriciel présentent les données dans un rapport paginé SQL Server Reporting Services, vous devez comprendre comment les lignes et les colonnes sont spécifiées pour les données de détail, les données de groupe, les étiquettes et les totaux.
+description: Apprenez à spécifier des lignes et des colonnes pour les données, les étiquettes et les totaux, ce qui vous permet de contrôler l’affichage dans un rapport SQL Server.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252399"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689450"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Cellules, lignes et colonnes d’une région de données dans un tableau matriciel (Générateur de rapports et SSRS)
 

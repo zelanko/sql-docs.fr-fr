@@ -1,5 +1,6 @@
 ---
 title: Mise en page et rendu (Générateur de rapports) | Microsoft Docs
+description: Concevez ou améliorez vos rapports paginés avec des extensions de rendu pour la mise en page, les sauts de pages et le format de papier dans le Générateur de rapports.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d28282a1fd787585f401e3b532f104cba5e2c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082448"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012697"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
 Découvrez les extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les rapports paginés, grâce auxquelles vous pouvez donner à votre rapport l’aspect souhaité, notamment en ce qui concerne la mise en page, les sauts de page et le format de papier. 
 
  Quand vous affichez des rapports dans le serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou dans le volet de visualisation du Générateur de rapports ou du Concepteur de rapports, le rapport est tout d’abord restitué par le convertisseur HTML. Vous pouvez ensuite exporter le rapport vers différents formats tels qu’Excel ou des fichiers délimités par des virgules (CSV). Le rapport exporté peut alors être utilisé pour une analyse supplémentaire dans Excel ou comme source de données pour des applications prenant en charge l’importation et l’utilisation de fichiers CSV.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut un ensemble de convertisseurs pour exporter des rapports dans différents formats. Chaque convertisseur applique des règles lors du rendu des rapports. Lorsque vous exportez un rapport vers un format de fichier différent, particulièrement dans le cas de convertisseurs tels que le convertisseur PDF d'Adobe Acrobat, qui effectue la pagination en fonction de la taille de la page physique, vous devrez peut-être modifier la mise en page du rapport pour que le rapport exporté ait l'apparence souhaitée et s'imprime correctement une fois les règles de rendu appliquées.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut un ensemble de convertisseurs pour exporter des rapports dans différents formats. Chaque renderer applique des règles lors du rendu des rapports. Lorsque vous exportez un rapport vers un format de fichier différent, particulièrement dans le cas de convertisseurs tels que le convertisseur PDF d'Adobe Acrobat, qui effectue la pagination en fonction de la taille de la page physique, vous devrez peut-être modifier la mise en page du rapport pour que le rapport exporté ait l'apparence souhaitée et s'imprime correctement une fois les règles de rendu appliquées.  
   
  Pour obtenir les meilleurs résultats pour un rapport exporté, vous devez fréquemment employer un processus itératif dans lequel vous créez et affichez un aperçu du rapport dans le Générateur de rapports ou le Concepteur de rapports, puis exportez le rapport vers le format par défaut, examinez le rapport exporté, et enfin vous lui apportez les modifications souhaitées.  
     

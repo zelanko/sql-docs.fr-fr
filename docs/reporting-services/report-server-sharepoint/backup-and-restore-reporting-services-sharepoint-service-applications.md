@@ -1,5 +1,6 @@
 ---
 title: Sauvegarder et restaurer des applications de service Reporting Services SharePoint | Microsoft Docs
+description: Découvrez comment sauvegarder et restaurer des applications de service SQL Server Reporting Services à l’aide de l’Administration centrale de SharePoint ou de PowerShell.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574346"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767100"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Sauvegarder et restaurer des applications de service Reporting Services SharePoint
 
@@ -77,7 +78,7 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Vérifier le compte d’exécution et l’authentification de la base de données
 
- **Compte d'exécution :** pour vérifier si votre application de service utilise un compte d'exécution :  
+ **Compte d’exécution :** Pour vérifier si votre application de service utilise un compte d'exécution :  
   
 1.  Dans l’Administration centrale de SharePoint, dans le groupe **Gestion des applications**, sélectionnez **Gérer les applications de service**.  
   
@@ -87,7 +88,7 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
 4.  Si un compte d'exécution est configuré, vous devez connaître les informations d'identification lorsqu'il est temps de restaurer la sauvegarde de l'application de service. N'effectuez pas la procédure de sauvegarde et restauration avant de connaître les informations d'identification correctes.  
   
- **Authentification de base de données :** pour vérifier si votre application de service utilise l'authentification Windows pour l'authentification de base de données :  
+ **Authentification de base de données :** Pour vérifier si votre application de service utilise l'authentification Windows pour l'authentification de base de données :  
   
 1.  Dans l’Administration centrale de SharePoint, dans le groupe **Gestion des applications**, sélectionnez **Gérer les applications de service**.  
   
@@ -135,7 +136,7 @@ Pour sauvegarder l'application de service, procédez comme suit :
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurer le compte d’exécution et l’authentification de base de données
 
- **Compte d'exécution :** si votre application de service utilisait un compte d'exécution, procédez comme suit pour le configurer :  
+ **Compte d’exécution :** Si votre application de service utilisait un compte d'exécution, procédez comme suit pour le configurer :  
   
 1.  Dans l’Administration centrale de SharePoint, dans le groupe **Gestion des applications**, sélectionnez **Gérer les applications de service**.  
   
@@ -147,7 +148,7 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
 5.  Sélectionnez **OK**.  
   
- **Authentification de base de données :** si votre application de service utilisait l'authentification Windows pour l'authentification de base de données procédez comme suit :  
+ **Authentification de base de données :** Si votre application de service utilisait l'authentification Windows pour l'authentification de base de données procédez comme suit :  
   
 1.  Dans l’Administration centrale de SharePoint, dans le groupe **Gestion des applications**, sélectionnez **Gérer les applications de service**.  
   

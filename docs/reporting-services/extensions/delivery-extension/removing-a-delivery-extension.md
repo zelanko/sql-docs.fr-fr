@@ -1,5 +1,6 @@
 ---
 title: Suppression d’une extension de remise | Microsoft Docs
+description: Découvrez comment supprimer une extension de remise de Reporting Services afin que le serveur de rapports ne la répertorie pas comme étant disponible et désactive les abonnements qui l’utilisent.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49b36598d643bd88496117655f23f642e663d04c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f4f23d58836dbadb9393be49dd34425c89a15c3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193726"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529485"
 ---
 # <a name="removing-a-delivery-extension"></a>Suppression d'une extension de remise
   Pour supprimer une extension de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], supprimez simplement l’élément **Extension** de votre extension de remise du fichier de configuration. Une fois les informations de configuration supprimées, l'extension de remise n'est plus disponible pour le serveur de rapports.  

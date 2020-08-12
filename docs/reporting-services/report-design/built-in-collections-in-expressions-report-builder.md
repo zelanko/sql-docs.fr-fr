@@ -1,6 +1,7 @@
 ---
 title: Collections intégrées dans les expressions (Générateur de rapports) | Microsoft Docs
-ms.date: 03/14/2017
+description: Découvrez l’utilisation de collections intégrées dans les expressions pour référencer des collections telles que des paramètres, des champs et des jeux de données dans vos rapports dans le Générateur de rapports.
+ms.date: 3/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5dbc7cf2683f78118087d18b2dd51865bf52f3d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880264"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Collections intégrées dans les expressions (Générateur de rapports)
-  Dans une expression d'un rapport, vous avez la possibilité d'inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables, ainsi que des champs prédéfinis pour les informations globales telles que le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
+  Dans une expression d'un rapport, vous avez la possibilité d'inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables, ainsi que des champs prédéfinis pour les informations globales telles que le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l’ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
   
  Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -31,7 +32,7 @@ ms.locfileid: "77082198"
 |**Globals**|Champs prédéfinis|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Représente les variables globales utilisables pour des rapports, par exemple le nom du rapport ou le numéro de page. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Utilisateur**|Champs prédéfinis|`=User.UserID`<br /><br /> - ou -<br /><br /> `=User.Language`|Représente une collection de données sur l'utilisateur exécutant le rapport, par exemple le paramètre de langue ou l'ID utilisateur. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Paramètres**|Paramètres|`=Parameters("ReportMonth").Value`<br /><br /> - ou -<br /><br /> `=Parameters!ReportYear.Value`|Représente la collection des paramètres de rapport, chacun pouvant correspondre à une valeur unique ou à plusieurs valeurs. Non disponible tant que l'initialisation du traitement n'est pas terminée. Pour plus d’informations, consultez [Informations de référence sur la collection de paramètres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).|  
-|**Champs (** *\<Dataset>* **)**|Champs|`=Fields!Sales.Value`|Représente la collection des champs du dataset qui sont disponibles pour le rapport. Disponibles après extraction des données d'une source de données dans un dataset. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
+|**Fields(** *\<Dataset>* **)**|Champs|`=Fields!Sales.Value`|Représente la collection des champs du dataset qui sont disponibles pour le rapport. Disponibles après extraction des données d'une source de données dans un dataset. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
 |**DataSets**|Non affichée|`=DataSets("TopEmployees").CommandText`|Représente la collection de sources de données référencées à partir du corps d'une définition de rapport. N'inclut pas les sources de données utilisées uniquement dans les en-têtes ou les pieds de page. Non disponible dans l'aperçu local. Pour plus d’informations, consultez [Références à des collections DataSources et DataSets &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**DataSources**|Non affichée|`=DataSources("AdventureWorks2012").Type`|Représente la collection des sources de données référencées à partir du corps d'un rapport. N'inclut pas les sources de données utilisées uniquement dans les en-têtes ou les pieds de page. Non disponible dans l'aperçu local. Pour plus d’informations, consultez [Références à des collections DataSources et DataSets &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**Variables**|`Variables`|`=Variables!CustomTimeStamp.Value`|Représente la collection des variables de rapport et de groupe. Pour plus d’informations, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  

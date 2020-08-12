@@ -1,5 +1,6 @@
 ---
 title: Déploiement d’une extension de remise | Microsoft Docs
+description: Découvrez comment déployer une extension de remise sur un serveur de rapports. Consultez les entrées à ajouter aux fichiers config pour que le serveur de rapports localise l’extension.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f358ebb3cc58a9f10c117d24bce8c04d849fd2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529115"
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
   Les extensions de remise fournissent leurs informations de configuration sous la forme d'un fichier de configuration XML. Le fichier XML est conforme au schéma XML défini pour les extensions de remise. Les extensions de remise fournissent l'infrastructure nécessaire pour définir et modifier le fichier de configuration.  
@@ -44,12 +45,12 @@ ms.locfileid: "63193765"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Pour déployer un assembly d'extension de remise sur un serveur de rapports  
   
-1.  Copiez l'assembly depuis son emplacement vers le répertoire bin du serveur de rapports sur lequel l'extension de remise doit être utilisée. L’emplacement par défaut du répertoire Bin du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS13.\<nom_instance>\Reporting Services\ReportServer\bin.  
+1.  Copiez l'assembly depuis son emplacement vers le répertoire bin du serveur de rapports sur lequel l'extension de remise doit être utilisée. L'emplacement par défaut du répertoire de classes du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin.  
   
     > [!IMPORTANT]  
     >  Si vous essayez de remplacer un assembly d'extension de remise existant, vous devez commencer par arrêter le service Report Server avant de copier l'assembly mis à jour. Redémarrez le service une fois l'assembly copié.  
   
-2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer.config est situé dans le répertoire %ProgramFiles%\Microsoft SQL Server\MSRS13.\<nom_instance>\Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration à l’aide de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou à l’aide d’un simple éditeur de texte, tel que le Bloc-notes.  
+2.  Une fois le fichier correspondant à l'assembly copié, ouvrez le fichier RSReportServer.config. Le fichier RSReportServer.config est situé dans le répertoire %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. Vous devez créer une entrée pour le fichier d'assembly d'extension de remise dans le fichier de configuration. Vous pouvez ouvrir le fichier de configuration à l’aide de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou à l’aide d’un simple éditeur de texte, tel que le Bloc-notes.  
   
 3.  Localisez l’élément **Delivery** dans le fichier RSReportServer.config. Une entrée correspondant à votre nouvelle extension de remise doit être créée à l'emplacement suivant :  
   
@@ -69,7 +70,7 @@ ms.locfileid: "63193765"
   
      La valeur définie pour **Name** correspond au nom unique de l’extension de remise. La valeur définie pour **Type** est une liste séparée par des virgules comportant une entrée pour l’espace de noms complet de la classe qui implémente l’interface <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>, suivie du nom de votre assembly (sans l’extension de fichier .dll). Par défaut, les extensions de remise sont visibles. Pour les masquer des interfaces utilisateur, comme le portail web, ajoutez un attribut **Visible** à l’élément **Extension**, et affectez-lui la valeur **false**.  
   
-5.  Enfin, vous devez définir un groupe de codes pour votre assembly personnalisé octroyant l’autorisation **FullTrust** à votre extension de remise. Pour ce faire, vous devez ajouter le groupe de codes au fichier rssrvpolicy.config qui se trouve par défaut dans le répertoire suivant : %ProgramFiles%\Microsoft SQL Server\MSRS13.\<nom_instance>\Reporting Services\ReportServer. Ce groupe de codes peut se présenter comme suit :  
+5.  Enfin, vous devez définir un groupe de codes pour votre assembly personnalisé octroyant l’autorisation **FullTrust** à votre extension de remise. Pour ce faire, vous devez ajouter le groupe de codes au fichier rssrvpolicy.config qui se trouve par défaut dans le répertoire suivant : %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. Ce groupe de codes peut se présenter comme suit :  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

@@ -1,5 +1,6 @@
 ---
 title: Cartes (Générateur de rapports) | Microsoft Docs
+description: Familiarisez-vous avec la procédure d’ajout d’une carte à votre rapport paginé, qui présente des données métier sur un arrière-plan géographique dans votre rapport paginé dans le Générateur de rapports.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881916"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
   Pour visualiser des données métier sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Le type de carte que vous sélectionnez dépend des informations que vous souhaitez communiquer dans votre rapport. Vous pouvez ajouter une carte qui affiche uniquement des emplacements géographiques, ou une carte à bulles dans laquelle la taille des bulles varie en fonction du nombre de ménages habitant dans une zone, ou une carte à marqueurs faisant varier le style de marqueur en fonction du produit ayant le plus gros chiffre d'affaires pour chaque magasin, ou encore une carte linéaire pour afficher des itinéraires entre des magasins.  
@@ -70,7 +71,7 @@ ms.locfileid: "77082608"
 #### <a name="sources-of-spatial-data"></a>Sources de données spatiales  
  Les sources de données spatiales suivantes sont prises en charge :  
   
--   **Rapports de la bibliothèque de cartes.** Les données spatiales sont incorporées dans les rapports situés dans la bibliothèque de cartes. Par défaut, la bibliothèque de cartes est située dans *\<lecteur>* :\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
+-   **Rapports de la bibliothèque de cartes.** Les données spatiales sont incorporées dans les rapports situés dans la bibliothèque de cartes. Par défaut, la bibliothèque de cartes est située dans le dossier *\<drive>* :\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
   
     > [!NOTE]  
     >  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([https://www.census.gov/](https://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Les fichiers de forme TIGER/Line sont mis à disposition gratuitement par le Bureau de recensement des États-Unis. Pour obtenir plus d’informations sur les fichiers de forme TIGER/Line allez à [Fichiers de forme TIGER/Line et documentation technique des fichiers TIGER/Line](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  

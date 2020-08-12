@@ -1,7 +1,7 @@
 ---
 title: Microsoft ODBC Driver for SQL Server sur Windows | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3aa47d41f347867a0db98b59e0cf5ab9b47c2da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: bb53e8e44d0f6b9e9f293f6afa5a470e91103a0c
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886316"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681188"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Pilote Microsoft ODBC pour SQL Server sur Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Les pilotes Microsoft ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont des pilotes ODBC autonomes qui fournissent une interface de programmation d’applications (API) implémentant les interfaces ODBC standard dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-Microsoft ODBC Driver for SQL Server peut servir à créer des applications. Vous pouvez également mettre à niveau vos anciennes applications qui utilisent actuellement un pilote ODBC plus ancien. ODBC Driver for SQL Server prend en charge les connexions à Azure SQL Database, Azure SQL Data Warehouse, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 et SQL Server 2005.  
+Microsoft ODBC Driver for SQL Server peut servir à créer des applications. Vous pouvez également mettre à niveau vos anciennes applications qui utilisent actuellement un pilote ODBC plus ancien. ODBC Driver for SQL Server prend en charge les connexions à Azure SQL Database, Azure SQL Data Warehouse et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ## <a name="summary"></a>Résumé
 

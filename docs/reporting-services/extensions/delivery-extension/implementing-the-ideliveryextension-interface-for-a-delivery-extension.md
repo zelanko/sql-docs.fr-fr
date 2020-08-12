@@ -1,5 +1,6 @@
 ---
 title: Mise en œuvre de l’interface IDeliveryExtension pour une extension de remise | Microsoft Docs
+description: Découvrez comment implémenter l’interface IDeliveryExtension dans une extension de remise afin que les clients puissent valider les données utilisateur et récupérer des paramètres de remise.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 229d08da8be91a462b243fbb5580395fd03867ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba66d4f375e30edf37594230ddb44c1bd18d99b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193627"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529528"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implémentation de l'interface IDeliveryExtension pour une extension de remise
   Votre classe d'extension de remise sert à remettre des notifications de rapport aux utilisateurs selon le contenu des notifications. La classe d'extension de remise fournit également l'infrastructure pour valider des paramètres utilisateurs passés à l'extension de remise. De plus, votre classe d'extension de remise doit contenir des propriétés spécifiques que les clients peuvent utiliser pour obtenir des informations sur le nom de l'extension, les paramètres pris en charge par l'extension, et les formats de rendu disponibles pour l'extension de remise.  

@@ -1,5 +1,6 @@
 ---
 title: Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports | Microsoft Docs
+description: Découvrez comment ajouter des références à du code personnalisé incorporé dans un rapport. Générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports dans le Générateur de rapports.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880764"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
   Vous pouvez ajouter des références à du code personnalisé incorporé dans un rapport ou à des assemblys personnalisés que vous générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports. L'incorporation de code convient dans le cas de constantes personnalisées, de fonctions complexes ou de fonctions utilisées plusieurs fois dans un même rapport. Quant aux assemblys personnalisés, il est préférable de les utiliser si vous voulez centraliser du code en un emplacement unique et le partager en vue de son utilisation par plusieurs rapports. Le code personnalisé peut inclure de nouvelles constantes personnalisées, variables, fonctions ou sous-routines. Vous pouvez inclure des références en lecture seule à des collections intégrées, telles que la collection de paramètres. Cependant, les fonctions personnalisées ne peuvent pas recevoir des ensembles de valeurs de données de rapport : les agrégations personnalisées ne sont notamment pas prises en charge.  
@@ -182,9 +183,9 @@ End Function
   
 -   **Espace de noms :** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
--   **Assembly (rapport local) :** Microsoft.ReportingServices.ProcessingObjectModel.dll  
+-   **Assembly (rapport local) :** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
--   **Assembly (rapport du serveur) :** Microsoft.ReportViewer.ProcessingObjectModel.dll  
+-   **Assembly (rapport de serveur) :** Microsoft.ReportViewer.ProcessingObjectModel.dll  
   
  Comme le contenu des collections *Fields* et *ReportItems* peut changer dynamiquement pendant l’exécution, vous ne devriez pas les conserver entre les appels à l’assembly personnalisé (par exemple, dans une variable membre). La même recommandation s'applique généralement à toutes les collections intégrées.  
   

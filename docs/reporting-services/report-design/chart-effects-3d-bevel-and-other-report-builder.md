@@ -1,5 +1,6 @@
 ---
 title: 3D, biseau et autres effets dans un graphique (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment les effets 3D peuvent être utilisés pour donner de la profondeur et augmenter l’impact visuel des graphiques dans Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a1c6dd7adfd9450ae56b9cc7718d454f5d68426
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9875133b3d3a07d26313f5e4c375e2233d10677
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082410"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255332"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effets de graphique - 3D, biseau et autres (Générateur de rapports)
   Des effets 3D (en trois dimensions) peuvent être utilisés pour donner de la profondeur et augmenter l’impact visuel des graphiques de vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, si vous voulez insister sur un secteur particulier d'un graphique à secteurs éclatés, vous pouvez faire pivoter le graphique et changer sa perspective pour que les lecteurs remarquent ce secteur en premier. Lorsque des effets 3D sont appliqués à votre graphique, les couleurs de dégradé et les styles de hachurage sont désactivés.  

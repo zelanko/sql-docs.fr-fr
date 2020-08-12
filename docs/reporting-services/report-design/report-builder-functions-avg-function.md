@@ -1,5 +1,6 @@
 ---
 title: Fonction Avg (Générateur de rapports) | Microsoft Docs
+description: Découvrez la fonction Avg dans les rapports paginés, qui retourne la moyenne de toutes les valeurs numériques non Null spécifiées par l’expression dans le Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c29c03ea3942f9fd89fd7e148d65a3fe4c8b9f33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 983d0158582b7ead50ece81eb7f3d67bbe5777ad
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081311"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462393"
 ---
 # <a name="report-builder-functions---avg-function"></a>Fonctions du Générateur de rapports - Avg
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , retourne la moyenne de toutes les valeurs numériques non Null spécifiées par l’expression, évaluée dans l’étendue donnée.  

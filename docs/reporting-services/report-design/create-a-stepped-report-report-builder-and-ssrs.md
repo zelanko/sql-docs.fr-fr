@@ -1,5 +1,6 @@
 ---
 title: Créer un rapport en escalier (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment afficher des lignes de détails ou des groupes enfants mis en retrait sous un groupe parent dans la même colonne d’un rapport paginé du Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03deafdc14c527caef5cfaeb0517b1aa16f92f9e
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080610"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681538"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Créer un rapport en escalier (Générateur de rapports et SSRS)
 Un rapport en escalier est un type de rapport paginé  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui affiche des lignes de détails ou des groupes enfants mis en retrait sous un groupe parent dans la même colonne, comme l’illustre l’exemple ci-dessous :  

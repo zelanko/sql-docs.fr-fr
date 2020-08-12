@@ -1,5 +1,6 @@
 ---
 title: Régions de données imbriquées (Générateur de rapports) | Microsoft Docs
+description: Découvrez comment imbriquer une région de données à l’intérieur d’une autre région de données dans le Générateur de rapports. Affichez des synthèses de données dans une matrice ou un tableau concis.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d58cdcf55429a76766e3e1810c1d6599aa360e6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4822f668b78332a7a62aeab7ca4959eb328fcc0d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885083"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Régions de données imbriquées (Générateur de rapports et SSRS)
   En règle générale, vous pouvez imbriquer une région de données (par exemple un graphique) dans une autre région de données (par exemple une matrice) pour afficher des synthèses de données de façon concise ou pour proposer une représentation visuelle, ainsi qu'un tableau ou une matrice.  
@@ -87,7 +88,7 @@ ms.locfileid: "77082603"
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutoriel : Ajouter un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

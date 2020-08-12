@@ -1,5 +1,6 @@
 ---
 title: Affichage d’une série avec plusieurs plages de données sur un graphique (Générateur de rapports version 3.0) | Microsoft Docs
+description: Découvrez comment améliorer la lisibilité de vos graphiques en utilisant des séparateurs d’échelle et des filtres, et en séparant les plages de données dans le Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578831"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681518"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Affichage d'une série avec plusieurs plages de données sur un graphique
 

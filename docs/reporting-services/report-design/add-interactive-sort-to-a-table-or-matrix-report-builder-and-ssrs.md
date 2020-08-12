@@ -1,5 +1,6 @@
 ---
 title: Ajouter un tri interactif à un tableau ou à une matrice (Générateur de rapports) | Microsoft Docs
+description: Autorisez les utilisateurs à changer l’ordre de tri des lignes et des colonnes dans les tables et les matrices à l’aide de boutons de tri interactif dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081618"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255512"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Ajouter un tri interactif à un tableau ou une matrice (Générateur de rapports et SSRS)
   Ajoutez des boutons de tri interactif pour permettre aux utilisateurs de modifier l'ordre de tri des lignes et des colonnes dans les tables et les matrices. Cette fonctionnalité est prise en charge uniquement dans les formats de rendu qui prennent en charge les interactions avec l'utilisateur, tels que le format HTML.  
@@ -191,7 +192,7 @@ ms.locfileid: "77081618"
   
 8.  Cliquez sur **Tri**.  
   
-9. Cliquez sur **Ajouter**. Une nouvelle ligne de tri est ajoutée à la grille d'options de tri.  
+9. Cliquez sur **Add**. Une nouvelle ligne de tri est ajoutée à la grille d'options de tri.  
   
 10. Dans Trier par, dans la liste déroulante, sélectionnez le même champ que celui choisi à l'étape 6 pour effectuer le regroupement.  
   

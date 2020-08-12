@@ -1,5 +1,6 @@
 ---
 title: Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau | Microsoft Docs
+description: Découvrez comment configurer le scale-out d’un serveur de rapports pour qu’il s’exécute sur un équilibrage de la charge réseau. Implémentez une solution de cluster avec équilibrage de la charge réseau pour prendre en charge un déploiement scale-out Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545571"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau
 
@@ -30,7 +31,7 @@ ms.locfileid: "75244399"
 
  Appuyez-vous sur les indications suivantes pour installer et configurer votre déploiement :  
   
-|Étape|Description|Informations complémentaires|  
+|Étape|Description|Plus d’informations|  
 |----------|-----------------|----------------------|  
 |1|Avant d'installer Reporting Services sur les nœuds de serveurs d'un cluster avec équilibrage de la charge réseau, vérifiez les spécifications du déploiement avec montée en puissance parallèle.|[Configurer un déploiement scale-out de serveurs de rapports en mode natif](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|Configurez le cluster avec équilibrage de la charge réseau et vérifiez son bon fonctionnement.<br /><br /> Veillez à mapper un nom d'en-tête de l'hôte à l'adresse IP du serveur virtuel du cluster avec équilibrage de la charge réseau. Le nom d'en-tête de l'hôte est utilisé dans l'URL du serveur de rapports et présente l'avantage d'être plus facile à retenir et à taper qu'une adresse IP.|Pour plus d'informations, consultez la documentation Windows Server correspondant à la version du système d'exploitation Windows que vous exécutez.|  
@@ -76,7 +77,7 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-1. Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une seule entrée \<**MachineKey**> que vous pouvez coller dans le fichier RSReportServer.config pour chaque instance du serveur de rapports dans le déploiement avec montée en puissance parallèle.
+1. Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une seule entrée \<**MachineKey**> que vous pouvez coller dans le fichier RSReportServer.config pour chaque instance du serveur de rapports dans le déploiement scale-out.
 
     L'exemple suivant illustre la valeur que vous devez obtenir. Ne copiez pas cet exemple dans vos fichiers de configuration ; les valeurs de clé ne sont pas valides. La casse correcte doit être utilisée pour le serveur de rapports.
 
@@ -88,7 +89,7 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
 
 3. Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
 
-4. Vérifiez que tous les fichiers RSReportServer.config des dossiers\Reporting Services\Report Manager contiennent des éléments \<**MachineKey**> identiques.
+4. Vérifiez que tous les fichiers RSReportServer.config des dossiers \Reporting Services\Report Server contiennent des éléments \<**MachineKey**> identiques.
 
 ::: moniker-end
 
@@ -114,7 +115,7 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3. Recherchez **UrlRoot**. L’élément n’est pas spécifié dans le fichier de configuration, mais la valeur par défaut utilisée est une URL au format https:// ou `https://<computername>/<reportserver>`, où \<*serveur de rapports*> est le nom du répertoire virtuel du service Web Report Server.  
+3. Recherchez **UrlRoot**. L’élément n’est pas spécifié dans le fichier de configuration, mais la valeur par défaut utilisée est une URL au format https:// ou `https://<computername>/<reportserver>`, où \<*reportserver*> est le nom du répertoire virtuel du service web Report Server.  
   
 4. Tapez une valeur pour **UrlRoot** qui inclut le nom virtuel du cluster au format https:// ou `https://<virtual_server>/<reportserver>`.  
   
@@ -136,9 +137,9 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
   
 1. Ouvrez le fichier RSReportServer.config dans un éditeur de texte.  
   
-2. Recherchez \<**Hostname**>,\<**ReportServerUrl**> et \<**UrlRoot**>, et vérifiez le nom d’hôte pour chaque paramètre. Si la valeur n'est pas le nom d'hôte attendu, remplacez-le par le nom d'hôte approprié.  
+2. Recherchez \<**Hostname**>, \<**ReportServerUrl**> et \<**UrlRoot**>, et vérifiez le nom d’hôte pour chaque paramètre. Si la valeur n'est pas le nom d'hôte attendu, remplacez-le par le nom d'hôte approprié.  
   
- Si vous démarrez l’outil de configuration de Reporting Services après avoir effectué ces modifications, l’outil peut remplacer les paramètres \<**ReportServerUrl**> par la valeur par défaut. Conservez toujours une copie de sauvegarde des fichiers de configuration au cas où vous auriez besoin de les remplacer par la version qui contient les paramètres à utiliser.  
+ Si vous démarrez l’outil de configuration Reporting Services après avoir effectué ces modifications, l’outil peut remplacer les paramètres \<**ReportServerUrl**> par la valeur par défaut. Conservez toujours une copie de sauvegarde des fichiers de configuration au cas où vous auriez besoin de les remplacer par la version qui contient les paramètres à utiliser.  
   
 ## <a name="see-also"></a>Voir aussi
 

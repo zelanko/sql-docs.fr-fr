@@ -1,5 +1,6 @@
 ---
 title: Enregistrer un nom de principal du service (SPN) pour un serveur de rapports | Microsoft Docs
+description: Découvrez comment créer un nom de principal du service pour le service Report Server s’il s’exécute en tant qu’utilisateur de domaine et si votre réseau utilise Kerberos pour l’authentification.
 ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256422"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544501"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Inscrire un nom de principal du service (SPN) pour un serveur de rapports
   Si vous déployez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un réseau qui utilise le protocole Kerberos pour l'authentification mutuelle, vous devez créer un nom de principal du service (SPN) pour le service Report Server, si vous le configurez pour s'exécuter en tant que compte d'utilisateur de domaine.  
@@ -41,7 +42,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
   
  **HTTP** est la classe de service. Le service Web Report Server s'exécute dans HTTP.SYS. L'une des conséquences de la création d'un nom principal de service pour HTTP est que des tickets seront accordés à toutes les applications Web sur le même ordinateur qui s'exécutent dans HTTP.SYS (y compris les applications hébergées dans les services Internet (IIS)) en fonction du compte d'utilisateur de domaine. Si ces services s'exécutent sous un compte différent, les demandes d'authentification échouent. Pour éviter ce problème, assurez-vous de configurer toutes les applications HTTP pour qu'elles s'exécutent sous le même compte ou envisagez la création d'en-têtes d'hôtes pour chaque application puis la création de noms principaux de service distincts pour chaque en-tête d'hôte. Lorsque vous configurez des en-tête de l'hôte, les modifications de DNS sont requises indépendamment de la configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Les valeurs que vous spécifiez pour \<*nom_ordinateur*> et \<*nom_domaine*> identifient l’adresse réseau unique de l’ordinateur qui héberge le serveur de rapports. Ce peut être un nom d'hôte local ou un nom de domaine complet (FQDN). Si vous n’avez qu’un seul domaine, vous n’avez pas besoin de spécifier valeurs \<*nom_domaine*> dans votre ligne de commande. <\<*compte-d’utilisateur-de-domaine*> est le compte d’utilisateur sous lequel le service Report Server s’exécute et pour lequel le SPN doit être inscrit.  
+ Les valeurs que vous spécifiez pour \<*computername*> et \<*domainname*> identifient l’adresse réseau unique de l’ordinateur qui héberge le serveur de rapports. Ce peut être un nom d'hôte local ou un nom de domaine complet (FQDN). Si vous n’avez qu’un seul domaine, vous n’avez pas besoin de spécifier \<*domainname*> dans votre ligne de commande. \<*domain-user-account*> est le compte d’utilisateur sous lequel le service Report Server s’exécute et pour lequel le nom de principal du service doit être inscrit.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Inscrire un SPN pour un compte d'utilisateur de domaine  
   

@@ -1,5 +1,6 @@
 ---
 title: Authentification dans Reporting Services | Microsoft Docs
+description: Découvrez comment étendre des schémas d’authentification dans Reporting Services à l’aide de l’authentification par formulaires ou de l’interface IAuthenticationExtension2.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 64d22ded480b62a8d963127e32cf35b5e53df9ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488585"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529075"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentification dans Reporting Services
   L'authentification est le processus d'établissement du droit d'un utilisateur à une identité. De nombreuses techniques vous permettent d'authentifier un utilisateur. La façon la plus courante consiste à utiliser des mots de passe. Par exemple, lorsque vous implémentez l'authentification par formulaire, vous voulez une implémentation qui interroge les utilisateurs au sujet de leurs informations d'identification (généralement par le biais d'une interface qui demande un nom de connexion et un mot de passe), puis valide les utilisateurs par rapport à une banque de données, telle qu'une table de base de données ou un fichier de configuration. Si les informations d'identification ne peuvent pas être validées, le processus d'authentification échoue et l'utilisateur assume une identité anonyme.  

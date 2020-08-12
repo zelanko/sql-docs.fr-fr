@@ -1,5 +1,6 @@
 ---
 title: Ajouter et modifier une ligne (Générateur de rapports) | Microsoft Docs
+description: Personnalisez l’apparence des rapports en ajoutant un élément graphique à des sections distinctes ou en modifiant les propriétés des lignes pour changer la couleur ou le style dans le Générateur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e188a075237c7cea2c05bb8bc0a5dd6f1496f39e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f6260fc76e72d648f20806cf7286b2132efb6c9
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080627"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012674"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Ajouter et modifier une ligne (Générateur de rapports et SSRS)
   Vous pouvez ajouter une ligne à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quand vous souhaitez qu’un élément graphique sépare des sections du rapport. Vous pouvez personnaliser l'apparence de la ligne en modifiant des propriétés telles que la couleur ou le style. Par exemple, vous pouvez incorporer les couleurs de la société dans le rapport.    

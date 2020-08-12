@@ -1,5 +1,6 @@
 ---
 title: Implémentation de l’interface IRenderingExtension | Microsoft Docs
+description: Découvrez comment implémenter l’interface IRenderingExtension, qui transforme les données de rapport en formats de sortie utilisés par les visionneuses, les imprimantes et les autres cibles.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8e53f229aff5a0093a38d4d785994514aeb1e971
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193583"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529445"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implémentation de l'interface IRenderingExtension
   L'extension de rendu prend les résultats d'une définition de rapport qui est combinée aux données réelles et restitue les données résultantes dans un format utilisable. La transformation de la combinaison des données et de la mise en forme s'effectue par le biais d'une classe CLR (Common Language Runtime) qui implémente <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Cela transforme le modèle objet en un format de sortie qui est consommable par une visionneuse, une imprimante ou une autre cible de sortie.  
@@ -47,7 +48,7 @@ ms.locfileid: "63193583"
 -   La fonction *createAndRegisterStream* est une fonction de délégué à appeler pour obtenir un flux de données de rendu.  
   
 ### <a name="deviceinfo-parameter"></a>Paramètre deviceInfo  
- Le paramètre *deviceInfo* contient des paramètres de rendu, pas des paramètres de rapport. Ces paramètres de rendu sont passés à l'extension de rendu. Les valeurs *deviceInfo* sont converties en un objet <xref:System.Collections.Specialized.NameValueCollection> par le serveur de rapports. Les éléments dans le paramètre *deviceInfo* sont traités comme des valeurs non sensibles à la casse. Si la demande de rendu résulte d’un accès URL, les paramètres d’URL de type `rc:key=value` sont convertis en paires clé/valeur dans l’objet dictionnaire *deviceInfo*. Le code de détection du navigateur fournit également les éléments suivants dans le dictionnaire *clientCapabilities* : EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type et AcceptLanguage. Toute paire nom/valeur dans *deviceInfo* qui n’est pas interprétée par l’extension de rendu est ignorée. L'exemple de code suivant montre un exemple de méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> qui extrait des icônes :  
+ Le paramètre *deviceInfo* contient des paramètres de rendu, pas des paramètres de rapport. Ces paramètres de rendu sont passés à l'extension de rendu. Les valeurs *deviceInfo* sont converties en un objet <xref:System.Collections.Specialized.NameValueCollection> par le serveur de rapports. Les éléments dans le paramètre *deviceInfo* sont traités comme des valeurs non sensibles à la casse. Si la demande de rendu résulte d’un accès URL, les paramètres d’URL de type `rc:key=value` sont convertis en paires clé/valeur dans l’objet dictionnaire *deviceInfo*. Le code de détection du navigateur fournit également les éléments suivants dans le dictionnaire *clientCapabilities* : EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type et AcceptLanguage. Toute paire nom/valeur dans *deviceInfo* qui n’est pas interprétée par l’extension de rendu est ignorée. L'exemple de code suivant montre un exemple de méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> qui extrait des icônes :  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

@@ -1,5 +1,6 @@
 ---
 title: Activer des événements Reporting Services pour le journal des traces SharePoint (ULS) | Microsoft Docs
+description: Découvrez comment activer l’écriture d’événements Reporting Services dans le journal de suivi ULS SharePoint pour les serveurs Reporting Services en mode SharePoint.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893241"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547861"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
 
@@ -85,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **Produit : SQL Server Reporting Services**  
   
-2.  **Catégorie :** les noms d’événements associés au serveur sont précédés de « Report Server ». Par exemple les événements « Report Server Alerting Runtime » sont aussi enregistrés dans les fichiers journaux du serveur de rapports.  
+2.  **Catégorie :** Les événements associés au serveur ont les caractères « Report Server », au début du nom. Par exemple les événements « Report Server Alerting Runtime » sont aussi enregistrés dans les fichiers journaux du serveur de rapports.  
   
-3.  **Catégorie :** les événements liés à ou communiqués à partir d’un composant front-end web ne contiennent pas « Report Server ». Par exemple « Service Application Proxy Report Server Alerting Runtime ». Les entrées WFE contiennent un CorrelationID contrairement aux entrées de serveur.  
+3.  **Catégorie :** Les événements liés à ou communiqués à partir d'un composant web front-end ne contiennent pas « Report Server ». Par exemple « Service Application Proxy Report Server Alerting Runtime ». Les entrées WFE contiennent un CorrelationID contrairement aux entrées de serveur.  
   
 ##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> Liste des événements SQL Server Reporting Services  
  Le tableau suivant contient la liste des événements de la catégorie SQL Server Reporting Services :  
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |Fournisseur du serveurs de rapports||  
 |Rendu service Web Report Server||  
 |Aperçu des rapports service Web Report Server||  
-|Utilitaire des ressources service Web Report Server|Entrées témoin :<br /><br /> Référence SKU de démarrage des services MediumReporting : évaluation<br /><br /> Copie de MediumEvaluation : 180 jours restants|  
+|Utilitaire des ressources service Web Report Server|Entrées témoin :<br /><br /> Référence SKU de démarrage des services MediumReporting : Évaluation<br /><br /> Copie de MediumEvaluation : 180 jours restants|  
 |Travaux d'exécution service Web Report Server||  
 |Demandes d'exécution service Web Report Server||  
 |Planification service Web Report Server||  

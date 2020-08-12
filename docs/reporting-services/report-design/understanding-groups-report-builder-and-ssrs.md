@@ -1,5 +1,6 @@
 ---
 title: Fonctionnement des groupes (Générateur de rapports) | Microsoft Docs
+description: Familiarisez-vous avec la manière dont un groupe organise une vue d’un dataset de rapport dans un rapport paginé dans le Générateur de rapports.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 498604b377638981d767e353518b70fe3398c597
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880305"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Fonctionnement des groupes (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , un groupe est un jeu de données nommé provenant du dataset du rapport qui est lié à une région de données. En principe, un groupe organise une vue d'un dataset du rapport. Tous les groupes d'une région de données spécifient des vues différentes du même dataset de rapport.  
@@ -61,7 +62,7 @@ ms.locfileid: "77080855"
 > [!NOTE]  
 >  Bien que les groupes aient des noms différents dans les différentes régions de données, les principes qui sous-tendent la création et l'utilisation de ces groupes sont identiques. Lorsque vous créez un groupe pour une région de données, vous spécifiez une méthode pour organiser les données de détail du dataset qui est lié à la région de données. Chaque région de données prend en charge une structure de groupe sur laquelle afficher des données groupées.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Groupes dans une région de données de tableau matriciel : groupes de détails, de lignes et de colonnes  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Groupes dans une région de données de tableau matriciel : Groupes Détails, Ligne et Colonne  
  Comme indiqué précédemment dans cette rubrique, une région de données de tableau matriciel vous permet d'organiser des données en groupes par lignes ou par colonnes. Toutefois, les groupes de lignes et de colonnes ne sont pas les seuls groupes disponibles dans une région de données de tableau matriciel. Cette région de données peut comporter les types de groupes suivants :  
   
 -   **Groupe Détails** : le groupe Détails se compose de toutes les données extraites d’un dataset de rapport après que le Générateur de rapports et le Concepteur de rapports ont appliqué les filtres de datasets et de régions de données. Le groupe de détails est donc le seul groupe qui ne comporte aucune expression de groupe.  

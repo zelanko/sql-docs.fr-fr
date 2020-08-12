@@ -1,5 +1,6 @@
 ---
 title: Serveur de rapports Reporting Services (mode SharePoint) | Microsoft Docs
+description: Un serveur de rapports Reporting Services avec le mode SharePoint peut s’exécuter dans SharePoint afin d’utiliser les fonctionnalités de collaboration et de gestion pour les types de contenu Reporting Services.
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262354"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764905"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Serveur de rapports Reporting Services (mode SharePoint)
 
@@ -64,9 +65,9 @@ ms.locfileid: "68262354"
 
  La version SQL Server 2008 R2 a introduit un nouveau *mode local* pour consulter des rapports d’un serveur SharePoint 2010 qui inclut le complément Microsoft SQL Server 2008 R2 Reporting Services (ou version ultérieure) pour les produits SharePoint 2010 installés.  
   
--   *Mode local* : ce mode permet un rendu local des rapports à partir de la bibliothèque de documents SharePoint sans intégration avec un serveur de rapports Reporting Services. Le complément Reporting Services pour les produits SharePoint est requis, mais un serveur de rapports Reporting Services ne l’est pas. Le complément peut être installé de différentes façons, notamment avec l'Outil de préparation des produits SharePoint 2010. Pour plus d’informations sur le mode local, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) et [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Mode local* : Ce mode permet un rendu local des rapports à partir de la bibliothèque de documents SharePoint sans intégration avec un serveur de rapports Reporting Services. Le complément Reporting Services pour les produits SharePoint est requis, mais un serveur de rapports Reporting Services ne l’est pas. Le complément peut être installé de différentes façons, notamment avec l'Outil de préparation des produits SharePoint 2010. Pour plus d’informations sur le mode local, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) et [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Mode connecté* : ce mode est pris en charge en intégrant un serveur de rapports Reporting Services dans la batterie de serveurs SharePoint à l’aide de l’Administration centrale de SharePoint. L'intégration à un serveur de rapports permet la création de rapports complète de bout en bout, l'utilisation des fonctionnalités de collaboration de SharePoint 2010 et des fonctionnalités de serveur d'un serveur de rapports notamment : abonnements, instantanés et traitement par le serveur.  
+-   *Mode connecté* : Ce mode est pris en charge en intégrant un serveur de rapports Reporting Services dans la batterie de serveurs SharePoint à l’aide de l’Administration centrale de SharePoint. L'intégration à un serveur de rapports permet la création de rapports complète de bout en bout, l'utilisation des fonctionnalités de collaboration de SharePoint 2010 et des fonctionnalités de serveur d'un serveur de rapports notamment : abonnements, instantanés et traitement par le serveur.  
   
 ## <a name="unsupported-sharepoint-features"></a>Fonctionnalités SharePoint non prises en charge
 

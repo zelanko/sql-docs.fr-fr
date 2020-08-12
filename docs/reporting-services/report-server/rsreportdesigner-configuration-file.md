@@ -1,5 +1,6 @@
 ---
 title: Fichier de configuration RSReportDesigner | Microsoft Docs
+description: Apprenez-en davantage sur le fichier de configuration qui stocke les paramètres relatifs aux extensions de rendu et de traitement de données accessibles au Concepteur de rapports.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 831f59e2ded764215856ad04179691185ad9760e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581341"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535081"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>fichier de configuration RSReportDesigner
   Le fichier RSReportDesigner.config stocke les paramètres relatifs aux extensions de rendu et de traitement de données accessibles au Concepteur de rapports. Les informations d’extension pour le traitement des données sont stockées dans l’élément **Data** . Les informations d’extension de rendu sont stockées dans l’élément **Render** . L’élément **Designer** énumère les générateurs de requêtes utilisés dans le Concepteur de rapports.  
