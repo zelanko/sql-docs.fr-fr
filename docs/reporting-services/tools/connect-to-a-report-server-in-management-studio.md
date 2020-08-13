@@ -1,5 +1,6 @@
 ---
 title: Se connecter à un serveur de rapports dans Management Studio | Microsoft Docs
+description: Découvrez comment vous connecter à n’importe quel serveur de la famille SQL Server, et comment parcourir graphiquement son contenu à l’aide de l’Explorateur d’objets dans SQL Server Management Studio.
 ms.date: 05/07/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574108"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918415"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Se connecter à un serveur de rapports dans Management Studio
 
@@ -49,7 +50,7 @@ ms.locfileid: "65574108"
 
 2. Sélectionnez **Se connecter** pour afficher la liste des types de serveurs, puis sélectionnez **Reporting Services**.
 
-3. Dans la boîte de dialogue **Se connecter au serveur** , entrez le nom de l’instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<nom_serveur>[\\<nom_instance\>]* .
+3. Dans la boîte de dialogue **Se connecter au serveur** , entrez le nom de l’instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<servername>[\\<nom_instance\>]* .
 
 4. Sélectionnez le **Type d’authentification**. Si vous utilisez l’authentification Windows, vous vous connectez à l’aide de vos informations d’identification. Si vous sélectionnez l'authentification de base ou l'authentification par formulaire, tapez les informations relatives au compte et au mot de passe.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "65574108"
 
 4. Dans la zone **Nom du serveur**, entrez une valeur. Vous spécifiez la valeur en fonction du mode du serveur :
 
-    - Pour un serveur de rapports en mode natif, tapez le nom de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<nom_serveur>[\\<nom_instance\>]* .
+    - Pour un serveur de rapports en mode natif, tapez le nom de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<servername>[\\<nom_instance\>]* .
 
     - Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, le serveur de connexion est le site SharePoint auquel le serveur de rapports est connecté. Connectez-vous au site SharePoint afin de pouvoir voir les niveaux d’autorisation. Les autorisations contrôlent l’accès au contenu du serveur de rapports et aux opérations. Vous pouvez spécifier n'importe quel site dans la collection de sites. L’exemple suivant illustre la syntaxe : `https://mysharepointsite`.
 
@@ -104,10 +105,10 @@ ms.locfileid: "65574108"
 
 |Se connecter à|   Tâches   |   Autorisations   |
 |----------|-----------|-----------------|  
-|Serveur de rapports en mode natif, connecté en tant qu’instance par défaut ou nommée :<br /><br /> \<nom du serveur>\<_instance><br /><br /> La connexion au serveur de rapports est établie à travers le fournisseur WMI de Report Server.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
+|Serveur de rapports en mode natif, connecté en tant qu’instance par défaut ou nommée :<br /><br /> \<server name>\<_instance><br /><br /> La connexion au serveur de rapports est établie à travers le fournisseur WMI de Report Server.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
 |Serveur de rapports en mode natif, connecté en tant qu’instance par défaut ou nommée, par le biais du point de terminaison au service web Report Server :<br /><br /> `https://<servername>/reportserver`<br /><br /> La spécification de l'URL du serveur de rapports offre un autre moyen de se connecter au serveur de rapports.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
 |Serveur de rapports en mode intégré SharePoint, connecté via le site SharePoint :<br /><br /> `https://<webserver>/<SharePointSite>`|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez des planifications partagées définies pour le site auquel vous êtes connecté.<br /><br /> Consultez les niveaux d’autorisation définis pour le site auquel vous êtes connecté.|Niveau d’autorisation Contrôle total pour le site SharePoint auquel vous êtes connecté.|
-|Serveur de rapports en mode intégré SharePoint, connecté via le nom de l'instance du serveur de rapports :<br /><br /> \<nom du serveur>\<_instance>|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.|Niveau d'autorisation Contrôle total pour le site SharePoint intégré au serveur de rapports.<br /><br /> Notez que quand vous vous connectez au serveur de rapports plutôt qu’au site SharePoint, le nombre des tâches que vous pouvez effectuer est réduit. En effet, le serveur de rapports peut retourner uniquement les données d’application stockées ou gérées dans la base de données du serveur de rapports, et non dans les bases de données de contenu et de configuration SharePoint.|
+|Serveur de rapports en mode intégré SharePoint, connecté via le nom de l'instance du serveur de rapports :<br /><br /> \<server name>\<_instance>|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.|Niveau d'autorisation Contrôle total pour le site SharePoint intégré au serveur de rapports.<br /><br /> Notez que quand vous vous connectez au serveur de rapports plutôt qu’au site SharePoint, le nombre des tâches que vous pouvez effectuer est réduit. En effet, le serveur de rapports peut retourner uniquement les données d’application stockées ou gérées dans la base de données du serveur de rapports, et non dans les bases de données de contenu et de configuration SharePoint.|
 
 ## <a name="see-also"></a>Voir aussi
 

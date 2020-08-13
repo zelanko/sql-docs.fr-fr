@@ -1,5 +1,6 @@
 ---
 title: Fenêtres Résultats de la recherche
+description: Il existe deux fenêtres Résultats de la recherche contenant les correspondances trouvées par les opérations Rechercher dans les fichiers et Remplacer dans les fichiers. Découvrez comment afficher ces fenêtres ainsi que le fichier de code et la ligne correspondants.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2063c8d9c5d4645ad96826400e14e9d2eea870
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253840"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122910"
 ---
 # <a name="find-results-windows"></a>Fenêtres Résultats de la recherche
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Les deux fenêtres Résultats de la recherche affichent les correspondances trouvées par une recherche effectuée à l'aide des onglets **Rechercher dans les fichiers** ou **Remplacer dans les fichiers** de la boîte de dialogue **Rechercher et remplacer** . La commande **Options de résultat** pour **Rechercher dans les fichiers** et **Remplacer dans les fichiers** vous permet de choisir la fenêtre Résultats de la recherche dans laquelle seront répertoriées, le cas échéant, les occurrences trouvées.  
   
  La fenêtre Résultats de la recherche sélectionnée s'ouvre automatiquement dès qu'une correspondance est trouvée. Pour afficher manuellement une fenêtre Résultats de la recherche, cliquez sur **Autres fenêtres** dans le menu **Affichage** , puis cliquez sur **Résultats de la recherche 1** ou **Résultats de la recherche 2**.  

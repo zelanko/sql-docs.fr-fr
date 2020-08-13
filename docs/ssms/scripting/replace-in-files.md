@@ -1,5 +1,6 @@
 ---
 title: Remplacer dans les fichiers
+description: Découvrez comment utiliser la fonctionnalité Remplacer dans les fichiers de la fenêtre Rechercher et remplacer pour rechercher le texte d’un ensemble de fichiers pour une chaîne ou expression, et comment modifier l’ensemble ou une partie du texte trouvé.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b14b359a71de345a245e874cca0c191296c823f7
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261678"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122520"
 ---
 # <a name="replace-in-files"></a>Remplacer dans les fichiers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   L’onglet **Remplacer dans les fichiers** de la fenêtre Rechercher et remplacer vous permet de rechercher une chaîne ou une expression dans le code d’un ensemble de fichiers spécifié, et de modifier l’ensemble ou une partie des correspondances trouvées. Les concordances trouvées et les actions exécutées sont répertoriées dans la fenêtre Résultats de la recherche, sélectionnée dans **Options de résultat**.  
   
  Vous pouvez également ouvrir la boîte de dialogue **Rechercher et remplacer** à l’aide de boutons de la barre d’outils et de touches de raccourci.  
@@ -88,7 +89,7 @@ ms.locfileid: "78261678"
  Indique que les sous-dossiers du dossier spécifié dans **Regarder dans** doivent être inclus dans la recherche. Cette option requiert un ensemble de répertoires personnalisé.  
   
  **Parcourir (...)**  
- Cliquez sur ce bouton pour afficher la boîte de dialogue **Choisir des dossiers de recherche** , qui vous permet d’assembler, de modifier, d’enregistrer et de sélectionner des ensembles nommés de répertoires à entrer dans la zone **Regarder dans** .  
+ Cliquez sur ce bouton pour afficher la boîte de dialogue **Choisir des dossiers de recherche** qui vous permet d'assembler, de modifier, d'enregistrer et de sélectionner des ensembles nommés de répertoires à entrer dans la zone **Regarder dans**.  
   
 ## <a name="find-options"></a>Options de recherche  
  Vous pouvez développer ou réduire la section **Options de recherche** . Les options ci-après peuvent être activées ou désactivées.  

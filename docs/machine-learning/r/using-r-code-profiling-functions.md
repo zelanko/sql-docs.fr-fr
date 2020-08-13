@@ -1,22 +1,22 @@
 ---
-title: Utiliser les fonctions de profilage de code R
-description: Améliorez les performances et bénéficiez de résultats de calculs R plus rapides sur SQL Server grâce aux fonctions de profilage R pour recueillir des informations sur les appels de fonction internes.
+title: Amélioration des performances avec la fonction de profilage de code R
+description: Recueillez des informations utiles pour améliorer les performances et bénéficier de résultats de calcul R plus rapides sur SQL Server avec des fonctions de profilage R. La fonction *rprof* collecte et retourne des informations sur les appels de fonction internes.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 12/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 16a1ed8df29de58450f87118068e43646c46fd90
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117192"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484633"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Utiliser les fonctions de profilage de code R pour améliorer les performances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En plus des ressources et des outils SQL Server permettant de surveiller l’exécution de script R, vous pouvez utiliser les outils de performances fournis par d’autres packages R pour obtenir des informations complémentaires sur les appels de fonctions internes. 
 

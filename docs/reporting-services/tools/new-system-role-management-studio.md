@@ -1,5 +1,6 @@
 ---
 title: Nouveau rôle système (Management Studio) | Microsoft Docs
+description: Découvrez la page Nouveau rôle système de Management Studio, dans laquelle vous pouvez créer une définition de rôle au niveau du système qui spécifie un ensemble de tâches devant s’appliquer à l’intégralité d’un serveur de rapports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4bb010a6f3b9c21661cfa840e6975cec51f90c84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 22c3442e16503fd58f8fcb099018b88ab6bfbf92
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582185"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915537"
 ---
 # <a name="new-system-role-management-studio"></a>Nouveau rôle système (Management Studio)
   Utilisez cette page pour créer une définition de rôle au niveau système. Une définition de rôle système spécifie un ensemble de tâches au niveau système qui s'appliquent à l'ensemble du serveur de rapports.  

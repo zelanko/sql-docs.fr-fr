@@ -1,41 +1,41 @@
 ---
 title: Fonctions d’assistance sqlrutils
-description: Utilisez la bibliothèque de fonctions sqlrutils dans SQL Server 2016 R Services et SQL Server Machine Learning Services avec R pour générer des procédures stockées contenant un script R.
+description: sqlrutils est un package R de Microsoft qui offre aux utilisateurs de R un mécanisme permettant de placer leurs scripts R dans une procédure stockée T-SQL, d’inscrire cette procédure auprès d’une base de données et de l’exécuter à partir d’un environnement de développement R. Il est inclus dans SQL Server Machine Learning Services et dans SQL Server 2016 R Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/15/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7c989ad848324536122c042e2b5a823b16b72657
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117392"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406142"
 ---
-# <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (bibliothèque R dans SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (package R de SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Le package **sqlrutils** fournit un mécanisme permettant aux utilisateurs de R de placer leurs scripts R dans une procédure stockée T-SQL, d’inscrire cette procédure auprès d’une base de données, et d’exécuter la procédure stockée à partir d’un environnement de développement R. 
+**sqlrutils** est un package R de Microsoft qui offre aux utilisateurs de R un mécanisme permettant de placer leurs scripts R dans une procédure stockée T-SQL, d’inscrire cette procédure auprès d’une base de données et de l’exécuter à partir d’un environnement de développement R. Il est inclus dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) et dans [SQL Server 2016 R Services](sql-server-r-services.md).
 
 En convertissant votre code R pour qu’il s’exécute dans une seule procédure stockée, vous pouvez utiliser plus efficacement SQL Server R Services, qui exige que le script R soit incorporé en tant que paramètre dans [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Le package **sqlrutils** vous permet de créer ce script R incorporé et de définir correctement les paramètres connexes.
 
 Le package **sqlrutils** effectue ces tâches :
 
 - Il enregistre le script T-SQL généré sous forme de chaîne à l’intérieur d’une structure de données R.
-- Si vous le souhaitez, il génère un fichier .sql pour le script T-SQL, que vous pouvez modifier ou exécuter pour créer une procédure stockée.
+- Il peut éventuellement générer un fichier .sql pour le script T-SQL, que vous pouvez modifier ou exécuter pour créer une procédure stockée.
 - Il inscrit la procédure stockée créée auprès de l’instance de SQL Server à partir de votre environnement de développement R.
 
 Vous pouvez également exécuter la procédure stockée à partir d’un environnement R, en transmettant des paramètres bien formés et en traitant les résultats. Vous pouvez aussi utiliser la procédure stockée à partir de SQL Server pour prendre en charge des scénarios d’intégration de base de données courants comme ETL, l’apprentissage de modèle et les notations volumineuses.
 
-  > [!NOTE]
-  > Si vous envisagez d’exécuter la procédure stockée à partir d’un environnement R en appelant la fonction *executeStoredProcedure* , vous devez utiliser un fournisseur ODBC 3.8, tel que le pilote ODBC 13 pour SQL Server.  
+> [!NOTE]
+> Si vous envisagez d’exécuter la procédure stockée à partir d’un environnement R en appelant la fonction *executeStoredProcedure* , vous devez utiliser un fournisseur ODBC 3.8, tel que le pilote ODBC 13 pour SQL Server.  
   
 ## <a name="full-reference-documentation"></a>Documentation de référence complète
 
-La bibliothèque **sqlrutils** est distribuée dans plusieurs produits Microsoft, mais l’utilisation est la même que vous obteniez la bibliothèque dans SQL Server ou un autre produit. Étant donné que les fonctions sont les mêmes, la [documentation de chaque fonction sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) est publiée au même endroit sous la [référence R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) pour Microsoft Machine Learning Server. Si des comportements spécifiques à un produit existent, les différences seront signalées dans la page d’aide de la fonction.
+Le package **sqlrutils** est distribué dans plusieurs produits Microsoft, mais l’utilisation est la même quelle que soit sa provenance (SQL Server ou un autre produit). Étant donné que les fonctions sont les mêmes, la [documentation de chaque fonction sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) est publiée au même endroit sous la [référence R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) pour Microsoft Machine Learning Server. Si des comportements spécifiques à un produit existent, les différences seront signalées dans la page d’aide de la fonction.
 
 ## <a name="functions-list"></a>Liste des fonctions
 
@@ -57,7 +57,7 @@ La section suivante fournit une vue d’ensemble des fonctions que vous pouvez a
 
 ## <a name="how-to-use-sqlrutils"></a>Utilisation de sqlrutils
 
-Les fonctions de la bibliothèque **sqlrutils** doivent s’exécuter sur un ordinateur disposant de SQL Server Machine Learning avec R. Si vous travaillez sur une station de travail cliente, définissez un contexte de calcul distant pour déplacer l’exécution vers SQL Server. Le workflow pour l’utilisation de ce package comprend les étapes suivantes :
+Les fonctions du package **sqlrutils** doivent s’exécuter sur un ordinateur équipé de SQL Server Machine Learning avec R. Si vous travaillez sur une station de travail cliente, définissez un contexte de calcul distant pour déplacer l’exécution vers SQL Server. Le workflow pour l’utilisation de ce package comprend les étapes suivantes :
 
 + Définir des paramètres de procédure stockée (entrées, sorties ou les deux) 
 + Générer et inscrire la procédure stockée    
@@ -66,7 +66,7 @@ Les fonctions de la bibliothèque **sqlrutils** doivent s’exécuter sur un ord
 Dans une session R, chargez **sqlrutils** à partir de la ligne de commande en tapant `library(sqlrutils)`.
 
 > [!Note]
-> Vous pouvez charger cette bibliothèque sur un ordinateur qui ne dispose pas de SQL Server (par exemple, sur une instance de client R) à condition de remplacer le contexte de calcul par SQL Server et d’exécuter le code dans ce contexte de calcul.
+> Vous pouvez charger ce package sur un ordinateur non équipé de SQL Server (par exemple, sur une instance de client R) à condition de remplacer le contexte de calcul par SQL Server et d’exécuter le code dans ce contexte de calcul.
 
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>Définir des entrées et des paramètres de procédure stockée

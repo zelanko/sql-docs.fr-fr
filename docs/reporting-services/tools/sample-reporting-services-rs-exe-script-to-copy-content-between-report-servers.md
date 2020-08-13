@@ -1,5 +1,6 @@
 ---
 title: Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports | Microsoft Docs
+description: Découvrez comment copier des éléments de contenu et des paramètres d’un serveur de rapports SQL Server Reporting Services à l’autre à l’aide de l’utilitaire RS.exe pour exécuter un script RSS Reporting Services.
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f56cd8793d75776335769b22195abb27b1818dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70176286"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916913"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports
 
@@ -310,11 +311,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 ##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> Dépannage  
  Utilisez l’indicateur de trace **-t** pour recevoir plus d’informations. Par exemple, si vous exécutez le script et voyez un message similaire au suivant  
   
--   Impossible de se connecter au serveur : https://\<nom_serveur>/ReportServer/ReportService2010.asmx  
+-   Impossible de se connecter au serveur : https://\<servername>/ReportServer/ReportService2010.asmx  
   
  Réexécutez le script avec l’indicateur **-t** pour voir un message de ce type :  
   
--   System.Exception : Impossible de se connecter au serveur : https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException : **La demande a échoué avec l'état HTTP 401 : Non autorisé**.   à System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) à System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) à Microsoft.SqlServer.reportingservices2010.reportingservice2010.issslrequired () à Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) à Microsoft.ReportingServices.scripthost.scripthost.determineserverurlsecurity ()---fin de la trace de pile d’exception interne---  
+-   System.Exception : Impossible de se connecter au serveur : https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException : **La demande a échoué avec l'état HTTP 401 : Non autorisé**.   à System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) à System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object [] parameters) à Microsoft.SqlServer.reportingservices2010.reportingservice2010.issslrequired () à Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) à Microsoft.ReportingServices.scripthost.scripthost.determineserverurlsecurity ()---fin de la trace de pile d’exception interne---  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

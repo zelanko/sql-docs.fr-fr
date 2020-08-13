@@ -1,5 +1,6 @@
 ---
 title: Rechercher du texte avec des expressions régulières
+description: Découvrez comment utiliser une expression régulière dans le champ « Rechercher » d’une boîte de dialogue Rechercher et remplacer pour spécifier un modèle à mettre en correspondance.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44c9350ef8134382a413018bcfde1d36351f808d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253677"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122776"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Rechercher et remplacer**de**.  
+Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue **Rechercher et remplacer** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-using-regular-expressions"></a>Pour effectuer une recherche à l’aide d’expressions régulières  
   
@@ -108,7 +109,7 @@ Les expressions régulières sont une notation souple et concise pour rechercher
 |Marqueur sans espace|:Mn|Représente des marqueurs sans espace.|  
 |Marque d'association|:Mc|Représente des marques d'association.|  
 |Marque de délimitation|:Me|Représente des marques de délimitation.|  
-|Symbole mathématique|:Sm|Représente les symboles +, =, ~, &#124;, \< et >.|  
+|Symbole mathématique|:Sm|Représente +, =, ~, &#124;, \<, and >.|  
 |Symbole monétaire|:Sc|Représente le symbole $ et autres symboles monétaires.|  
 |Symbole modificatif|:Sk|Représente des symboles modificateurs tels que l'accent circonflexe, l'accent grave et le trait supérieur.|  
 |Autre symbole|:So|Représente d'autres symboles tels que les signes du copyright, du paragraphe et du degré.|  

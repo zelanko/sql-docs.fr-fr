@@ -1,5 +1,6 @@
 ---
 title: Reporting Services pour SQL Server Management Studio | Microsoft Docs
+description: Consultez des informations sur l’exécution des tâches de création de rapports, et sur la façon de créer et de gérer des planifications partagées dans le portail web à l’aide de SQL Server Management Studio.
 ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a975ad6d6aecfd701bf4893d5d91b26f998297d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 99a5cd92ee141195a56b1c85239afe8535a3949c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082164"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915643"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services pour SQL Server Management Studio (SSRS)
   Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour :  

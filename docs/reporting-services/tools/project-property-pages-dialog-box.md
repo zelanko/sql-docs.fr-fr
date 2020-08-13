@@ -1,5 +1,6 @@
 ---
 title: Pages de propriétés du projet, boîte de dialogue | Microsoft Docs
+description: Découvrez les options de la boîte de dialogue Pages de propriétés du projet qui permettent de configurer les propriétés de déploiement d’un projet Report Server.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a3be836ba4df9bcb4ef6f8b6ca24caa5c7a67bf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578237"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86909999"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
 
-  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur _\<Nom du projet de rapport>_ **Propriétés**.  
+  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur _\<Report Project Name>_ **Propriétés**.  
   
  Après avoir défini les propriétés de configuration, sélectionnez une configuration dans la liste déroulante **Configurations de solutions** de la barre d’outils.  
 
@@ -29,7 +30,7 @@ ms.locfileid: "65578237"
   
 ## <a name="options"></a>Options  
  **Configuration**  
- Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Debug**, **DebugLocal**et **Release**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)** .  
+ Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Debug**, **DebugLocal** et **Release**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)** .  
   
  Pour consulter simultanément les propriétés de plusieurs configurations, sélectionnez **Toutes les configurations** ou **Configurations multiples**.  
   
@@ -76,7 +77,7 @@ ms.locfileid: "65578237"
  Lors de la publication sur un serveur de rapports s’exécutant en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports. Par exemple : `http:\\<server>\reportserver`. Il s'agit du répertoire virtuel du serveur de rapports et non du Gestionnaire de rapports. Par défaut, le serveur de rapports est installé dans un répertoire virtuel nommé « reportserver ».  
   
  Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez aucun site, le site de premier niveau par défaut est utilisé. Par exemple : 
-+ `http:\\<servername>` 
++ `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`.  
 

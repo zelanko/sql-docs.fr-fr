@@ -1,8 +1,8 @@
 ---
 title: Connexion de bouclage SQL
-description: Découvrez comment utiliser une connexion de bouclage pour vous reconnecter à SQL Server sur ODBC afin de lire ou d’écrire des données à partir d’un script Python ou R exécuté à partir de sp_execute_external_script. Vous pouvez utiliser ce mécanisme lorsque vous n’êtes pas en mesure d’utiliser les arguments InputDataSet et OutputDataSet de sp_execute_external_script.
+description: Découvrez comment utiliser une connexion de bouclage pour vous reconnecter à SQL Server sur ODBC afin de lire ou d’écrire des données dans un script Python ou R exécuté à partir de sp_execute_external_script.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/21/2019
 ms.topic: conceptual
 author: Aniruddh25
@@ -10,15 +10,15 @@ ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118642"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482590"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Connexion de bouclage à SQL Server à partir d’un script Python ou R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Découvrez comment utiliser une connexion de bouclage pour vous reconnecter à SQL Server sur [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) afin de lire ou d’écrire des données à partir d’un script Python ou R exécuté à partir de `sp_execute_external_script`. Vous pouvez l’utiliser lorsque vous n’êtes pas en mesure d’utiliser les arguments **InputDataSet** et **OutputDataSet** de `sp_execute_external_script`.
 

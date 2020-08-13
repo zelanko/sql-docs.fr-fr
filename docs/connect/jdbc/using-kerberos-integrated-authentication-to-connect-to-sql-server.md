@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922310"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916235"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l'authentification intégrée Kerberos pour se connecter à SQL Server
 
@@ -37,7 +37,7 @@ Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] permet de défi
 
 ## <a name="remarks"></a>Notes
 
-Avant [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications pouvaient spécifier l’authentification intégrée (avec Kerberos ou NTLM, selon les disponibilités) en utilisant la propriété de connexion **integratedSecurity** et en référençant **mssql-jdbc_auth-\<version>-\<arch>.dll**, comme décrit dans [Création de l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).
+Avant [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications pouvaient spécifier l'authentification intégrée (à l'aide de Kerberos ou de NTLM, selon les disponibilités) en utilisant la propriété de connexion **integratedSecurity** et en référençant **mssql-jdbc_auth-\<version>-\<arch>.dll**, comme décrit dans [Génération de l'URL de connexion](../../connect/jdbc/building-the-connection-url.md).
 
 À compter de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications peuvent utiliser la propriété de connexion **authenticationScheme** pour indiquer qu’elles souhaitent se connecter à une base de données à l’aide de l’authentification intégrée Kerberos et de l’implémentation pure Kerberos Java :
 
@@ -71,7 +71,7 @@ Par exemple, votre SPN peut ressembler à ce qui suit : "MSSQLSvc/some-server.z
 
 Pour plus d'informations sur les noms des principaux du service (SPN), consultez :
 
-- [Guide pratique pour utiliser l’authentification Kerberos avec SQL Server](https://support.microsoft.com/kb/319723)
+- [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [Utilisation de Kerberos avec SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

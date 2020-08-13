@@ -1,5 +1,6 @@
 ---
 title: Modifier la plateforme cible et publier un projet de base de données
+description: Découvrez comment modifier la plateforme d’un projet de base de données SQL Server Data Tools en une instance prise en charge de SQL Server. Découvrez comment publier un projet de base de données.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241599"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942465"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procédure : Modifier la plateforme cible et publier un projet de base de données
 
@@ -41,7 +41,7 @@ SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et 
   
 2.  Ajoutez `ON [PRIMARY]` à la fin de l'instruction `CREATE TABLE` .  
   
-3.  Notez que l’erreur suivante s’affiche dans le volet **Liste d’erreurs** :  SQL70015 : « Référence de groupe de fichiers et schéma de partitionnement » n’est pas pris en charge dans SQL Azure.  
+3.  L’erreur suivante s’affiche dans le volet **Liste d’erreurs** : SQL70015 : Le « schéma de partition et de référence du groupe de fichiers » n’est pas pris en charge dans SQL Azure.  
   
     SSDT valide automatiquement votre script en fonction de la plateforme cible. Dans ce cas, étant donné que le groupe de fichiers n'est pas pris en charge dans SQL Azure, SSDT retourne une erreur. Pour connaître la liste des instructions Transact\-SQL non prises en charge dans SQL Azure, voir [Instructions Transact-SQL partiellement prises en charge (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx).  
   
@@ -67,5 +67,5 @@ SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et 
   
 **Un projet qui spécifie Microsoft SQL Server 2012 comme plateforme cible risque de rencontrer des problèmes de compatibilité avec SQL Server 2008.** S’il contient des entités (par exemple, un objet Séquence) introduites dans Microsoft SQL Server 2012, l’opération de publication échouera.  
   
-    The deployment will fail if object predicates use **CONTAINS** or **FREETEXT** over a newly created full-text index and transactional scripts are used. If the option to include transactional scripts is enabled during deployment, then procedures and views are defined inside a transaction while a full-text index is defined outside of a transaction at the end of the deploy script. Because of this ordering in the script, procedures or views using CONTAINS or FREETEXT will not be resolved against the full-text index, resulting in a deployment error.  
+Le déploiement échoue si les prédicats d'objet utilisent **CONTAINS** OU **FREETEXT** sur un index de recherche en texte intégral nouvellement créé et que des scripts transactionnels sont utilisés. Si l'option consistant à inclure des scripts transactionnels est activée au cours du déploiement, les procédures et vues sont définies au sein d'une transaction, alors qu'un index de texte intégral est défini à l'extérieur d'une transaction à la fin du script de déploiement. En raison de cette organisation dans le script, les procédures ou les vues utilisant CONTAINS ou FREETEXT ne sont pas résolues par rapport à l'index de texte intégral dans une erreur de déploiement.  
   

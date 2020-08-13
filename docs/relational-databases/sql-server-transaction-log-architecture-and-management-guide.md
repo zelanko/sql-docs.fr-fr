@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000528"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122643"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ Pour plus d’informations sur les arguments `FILEGROWTH` et `SIZE` de `ALTER DA
   
  Le journal des transactions est un fichier cumulatif. Considérons, par exemple, une base de données possédant un fichier journal physique divisé en quatre fichiers journaux virtuels. Lors de la création de la base de données, le fichier journal logique commence au début du fichier journal physique. Les nouveaux enregistrements du journal sont ajoutés à la fin du journal logique, qui s'étend vers la fin du journal physique. Le fait de tronquer le journal permet de libérer tous les journaux virtuels dont les enregistrements précèdent tous le MinLSN (numéro séquentiel dans le journal minimum). Le *MinLSN* est le numéro séquentiel dans le journal du plus ancien enregistrement du journal requis pour une opération de restauration réussie de l’ensemble de la base de données. Le journal des transactions de la base de données exemple ressemblerait à celui de l'illustration suivante :  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![Illustre la façon dont un fichier journal physique est divisé en journaux virtuels](../relational-databases/media/tranlog3.png)  
   
  Lorsque la fin du journal logique atteint la fin du fichier journal physique, le nouvel enregistrement du journal revient au début du fichier journal physique.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![Illustre la façon dont un journal des transactions logique est enveloppé dans son fichier journal physique](../relational-databases/media/tranlog4.png)   
   
  Le cycle se répète indéfiniment tant que la fin du journal logique n'a pas atteint le début du journal logique. Si les anciens enregistrements du journal sont tronqués suffisamment souvent pour laisser de la place à tous les nouveaux enregistrements créées jusqu'au point de contrôle suivant, le journal ne se remplit jamais. Si la fin du journal logique atteint le début du journal logique, l'une ou l'autre des situations suivantes se produit :  
   
@@ -117,11 +117,11 @@ Pour plus d’informations sur les arguments `FILEGROWTH` et `SIZE` de `ALTER DA
   
  Les illustrations suivantes montrent un journal des transactions avant et après une troncation. La première illustration montre un journal des transactions qui n'a jamais été tronqué. Actuellement, quatre fichiers journaux virtuels sont utilisés par le journal logique. Le journal logique commence avant le premier fichier journal virtuel et se termine au journal virtuel 4. L'enregistrement NSEmin se trouve dans le journal virtuel 3. Les journaux virtuels 1 et 2 contiennent uniquement des enregistrements de journal inactifs. Ces enregistrements peuvent être tronqués. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![Illustre la façon dont un journal des transactions s’affiche avant qu’il ne soit tronqué](../relational-databases/media/tranlog2.png)  
   
  La deuxième illustration montre le journal après sa troncation. Les journaux virtuels 1 et 2 ont été libérés en vue de leur réutilisation. Le journal logique commence désormais au début du journal virtuel 3. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![Illustre la façon dont un journal des transactions s’affiche après avoir été tronqué](../relational-databases/media/tranlog3.png)  
   
  La troncation du journal se produit automatiquement après les événements suivants, à moins qu'elle ne soit retardée pour une raison quelconque :  
   
@@ -228,7 +228,7 @@ La section du fichier journal comprise entre le MinLSN et le dernier enregistrem
 
 L'illustration ci-dessous présente une version simplifiée de la fin d'un journal de transactions comportant deux transactions actives. Les enregistrements du point de contrôle ont été compactés en un enregistrement unique.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![Illustre un journal de fin de transaction avec deux transactions actives et un enregistrement de point de contrôle compacté](../relational-databases/media/active-log.png) 
 
 LSN 148 est le dernier enregistrement du journal des transactions. Au moment où le point de contrôle enregistré au numéro LSN 147 était traité, Tran 1 avait été validée et Tran 2 était la seule transaction active. Ainsi, le premier enregistrement de Tran 2 est l'enregistrement de journal le plus ancien pour une transaction active au moment du dernier point de contrôle. Par ailleurs, le numéro LSN 142 est l'enregistrement du début de la transaction pour Tran 2, la valeur MinLSN.
 

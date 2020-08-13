@@ -1,5 +1,6 @@
 ---
 title: Correspondance automatique des paires de syntaxe
+description: En savoir plus sur la correspondance automatique des paires de syntaxes dans l’éditeur de requête (correspondance des séparateurs), l’éditeur de requête XMLA (correspondance d’accolade) et MDX et DMX (correspondance de parenthèses).
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,15 +12,15 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d23610ed602133b7c9c218a1da1a678c84954a93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834238"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920945"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondance automatique des paires de syntaxe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La correspondance automatique des paires de syntaxe vous informe immédiatement si les éléments syntaxiques qui doivent être codés par paire sont correctement assortis. Cette correspondance est connue comme correspondance des séparateurs dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondance des accolades dans l’éditeur de requête XMLA Analysis Services et correspondance des parenthèses dans les éditeurs MDX et DMX.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Correspondance des séparateurs dans l'éditeur de requête du moteur de base de données  
@@ -55,7 +56,7 @@ ms.locfileid: "74834238"
   
 -   Correspondance des balises de début et de fin.  
   
--   Toute paire de signes « inférieur à » (« \< ») et « supérieur à » (« > »).  
+-   Toute paire de crochets pointus « \<" and "> ».  
   
 -   Début et fin des commentaires.  
   

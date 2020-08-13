@@ -1,5 +1,6 @@
 ---
 title: Écrire des scripts pour les tâches d’administration et de déploiement | Microsoft Docs
+description: Découvrez les outils, les technologies et les stratégies permettant d’automatiser l’installation, le déploiement et les tâches administratives de routine pour un serveur de rapports.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 694a2c4c14564a1d3d57322e1300beddd8bfab98
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1716581451737a20951cf941bb57b81c8d14e5e4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500569"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918425"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Écrire des scripts pour les tâches d'administration et de déploiement
 

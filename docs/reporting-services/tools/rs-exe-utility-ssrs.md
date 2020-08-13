@@ -1,5 +1,6 @@
 ---
 title: Utilitaire RS.exe | Microsoft Docs
+description: Découvrez les commandes et la syntaxe de l’utilitaire rs.exe qui traite les scripts qui sont utilisés pour automatiser les tâches de déploiement et d’administration du serveur de rapports.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081688"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914977"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilitaire RS.exe (SSRS)
   L'utilitaire rs.exe traite le script que vous fournissez dans un fichier d'entrée. Utilisez cet utilitaire pour automatiser les tâches de déploiement et d'administration du serveur de rapports.  
@@ -90,7 +91,7 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Les variables globales sont créées avec les noms donnés et prennent les valeurs fournies. Par exemple, **-v a=** "**1**" **-v b=** "**2**" a pour résultat une variable nommée **a** avec une valeur "**1**" et une variable **b** avec une valeur "**2**".  
+ Les variables globales sont créées avec les noms donnés et prennent les valeurs fournies. Par exemple, **-v a=**"**1**" **-v b=**"**2**" a pour résultat une variable nommée **a** avec une valeur "**1**" et une variable **b** avec une valeur "**2**".  
   
  Les variables globales sont accessibles à n'importe quelle fonction du script. Une barre oblique inverse suivie d’un guillemet ( **\\"** ) est interprétée comme un guillemet double. Les guillemets sont obligatoires uniquement si la chaîne contient un espace. Les noms de variables doivent être valides pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ; ils doivent commencer par un caractère alphabétique ou un trait de soulignement et ne contenir que des lettres, des nombres ou des traits de soulignement. Les mots réservés ne peuvent pas être utilisés en tant que noms de variables. Pour plus d’informations sur l’utilisation de variables globales, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

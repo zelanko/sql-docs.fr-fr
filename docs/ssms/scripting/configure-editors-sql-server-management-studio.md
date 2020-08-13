@@ -1,5 +1,6 @@
 ---
 title: Configurer des éditeurs (SQL Server Management Studio)
+description: Découvrez comment personnaliser le fonctionnement des éditeurs SQL Server Management Studio en définissant des options dans la boîte de dialogue Options.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fe8cc40b18678e080e97285f5566a3a0de7a73b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253962"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122870"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurer des éditeurs (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Vous pouvez personnaliser le fonctionnement des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en configurant les options pour chaque éditeur.  
   
-## <a name="settng-editor-options"></a>Définition des options d'éditeur  
+## <a name="setting-editor-options"></a>Définition des options d'éditeur  
  La plupart des options d’éditeur peuvent être définies dans le menu **Outils**, en sélectionnant **Options...** pour afficher la boîte de dialogue **Options**. Dans la boîte de dialogue **Options** , ouvrez le nœud **Éditeur de texte** dans le volet gauche pour définir les options d'édition de code et de texte. Les nœuds sous Éditeur de texte s'appliquent à des éditeurs spécifiques :  
   
 1.  **Tous les langages** : les options définies à l’aide de ce nœud s’appliquent à tous les éditeurs [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous pouvez remplacer ces paramètres en utilisant les autres nœuds pour définir différentes options pour un éditeur spécifique.  

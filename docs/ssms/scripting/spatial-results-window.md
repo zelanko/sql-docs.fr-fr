@@ -1,5 +1,6 @@
 ---
 title: Fenêtre Résultats spatiaux
+description: Découvrez comment utiliser la fenêtre Résultats spatiaux qui fournit des outils de mappage visuel pour l’affichage des données spatiales. Pour afficher des résultats spatiaux, vos résultats de requête doivent inclure une colonne spatiale avec des données géométriques ou géographiques.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 523cd3ffd5b72c08106e7d128e74138001619fdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f6d173343b91f1434ab107c62c6b460b6961b1e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253610"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122537"
 ---
 # <a name="spatial-results-window"></a>Fenêtre Résultats spatiaux
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La fenêtre **Résultats spatiaux** propose des outils de mappage visuel permettant d'afficher des données spatiales. Pour afficher des résultats spatiaux, vos résultats de requête doivent inclure une colonne spatiale avec des données géométriques ou géographiques.  
   
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "75253610"
  Cette option n'est pas disponible lorsque des instances de point seulement sont retournées dans une requête.  
   
  **Sélectionner la projection**  
- Affichez les données géographiques selon l'une des quatre projections proposées : équirectangulaire, de Mercator, de Robinson ou de Bonne.  
+ Affichez les données géographiques dans un des quatre projections : Équirectangulaire, de Mercator, de Robinson ou de Bonne.  
   
  Cette option n'est pas disponible pour les données géométriques.  
   

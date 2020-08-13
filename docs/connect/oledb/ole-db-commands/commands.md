@@ -1,5 +1,5 @@
 ---
-title: Commandes | Microsoft Docs
+title: Commandes (pilote OLE DB) | Microsoft Docs
 description: Commandes dans le pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: f6919c8355660ee2c1e27f2c0896ca189497b50d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: da86675b244ac3424c6ffaf04df6c42bc133c4d7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68016020"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943059"
 ---
 # <a name="commands"></a>Commandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

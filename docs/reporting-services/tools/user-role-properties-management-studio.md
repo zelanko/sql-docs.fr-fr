@@ -1,5 +1,6 @@
 ---
 title: Propriétés de rôle d’utilisateur (Management Studio) | Microsoft Docs
+description: Découvrez la page Propriétés du rôle d’utilisateur de SQL Server Management Studio, dans laquelle vous pouvez afficher des tâches de définition de rôle au niveau élément, modifier la liste des tâches ou modifier une description de rôle.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15e72e12f36753c86010a487e33ba4170c4d91c5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575775"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918925"
 ---
 # <a name="user-role-properties-management-studio"></a>Propriétés de rôle d'utilisateur (Management Studio)
   Utilisez cette page pour afficher les tâches qui figurent dans une définition de rôle au niveau élément. Vous pouvez également utiliser cette page pour modifier la liste des tâches ou la description d'un rôle.  

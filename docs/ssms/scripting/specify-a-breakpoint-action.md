@@ -1,5 +1,6 @@
 ---
 title: Spécifier une action de point d'arrêt
+description: 'Apprenez maintenant à spécifier une action Accès : tâche personnalisée que le débogueur Transact-SQL doit effectuer lorsqu’un point d’arrêt est atteint et que certaines autres conditions sont satisfaites.'
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253649"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122721"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.
 
@@ -41,7 +42,7 @@ Le message à afficher est indiqué dans l’option **Afficher un message** et s
   
     1.  $ADDRESS retourne le nom de la procédure stockée ou de la fonction définie par l'utilisateur dans laquelle le point d'arrêt est défini. Si le point d'arrêt est défini dans la fenêtre de l'éditeur, $ADDRESS retourne le nom du fichier de script modifié. $ADDRESS et $FUNCTION retournent les mêmes informations dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER retourne le nom de l'unité de code [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a appelé une procédure stockée ou une fonction. Si le point d’arrêt se trouve dans la fenêtre de l’éditeur, $CALLER retourne \<Aucun appelant disponible>. Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir du code dans la fenêtre de l'éditeur, $CALLER retourne le nom du fichier modifié. Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir d'une autre procédure stockée ou fonction, $CALLER retourne le nom de la procédure ou fonction appelante.  
+    2.  $CALLER retourne le nom de l'unité de code [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a appelé une procédure stockée ou une fonction. Si le point d’arrêt se trouve dans la fenêtre de l’éditeur, $CALLER retourne \<No caller available>. Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir du code dans la fenêtre de l'éditeur, $CALLER retourne le nom du fichier modifié. Si le point d'arrêt se trouve dans une procédure stockée ou une fonction définie par l'utilisateur appelée à partir d'une autre procédure stockée ou fonction, $CALLER retourne le nom de la procédure ou fonction appelante.  
   
     3.  $CALLSTACK retourne la pile des appels des fonctions dans la chaîne qui a appelé la procédure stockée ou la fonction définie par l'utilisateur en cours. Si le point d'arrêt se trouve dans la fenêtre de l'éditeur, $CALLSTACK retourne le nom du fichier de script modifié.  
   

@@ -1,5 +1,6 @@
 ---
 title: Type de connexion XML | Microsoft Docs
+description: Découvrez le type de connexion XML permettant de vous connecter et de récupérer des données à partir de documents XML, de services web ou de données XML incorporées dans la requête.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081681"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458496"
 ---
 # <a name="xml-connection-type-ssrs"></a>Type de connexion XML (SSRS)
   Pour inclure les données d'une source de données XML dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type XML. Ce type de source de données intégré est basé sur l'extension de données XML. Ce type de source de données vous permet de vous connecter et de récupérer des données à partir de documents XML, de services Web ou de données XML incorporées dans la requête.  
@@ -93,7 +94,7 @@ ms.locfileid: "77081681"
   
     -   **La source de données XML est un document XML**  
   
-         Éléments XML obligatoires : aucun  
+         Éléments XML obligatoires : None  
   
          Éléments XML facultatifs :  
   
@@ -115,12 +116,12 @@ ms.locfileid: "77081681"
   
  Pour plus d’informations sur la syntaxe de requête, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Pour obtenir des exemples, consultez [Reporting Services : utilisation de sources de données XML et de service web](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Pour obtenir des exemples, consultez [Reporting Services : Utilisation de sources de données de services web et XML](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Configuration requise pour la récupération de données d'un service Web XML  
  L'extension pour le traitement des données XML ne détecte pas le schéma automatiquement. Vous devez donc disposer d'un moyen d'identifier quelles méthodes SOAP permettent d'extraire les données de votre choix. Vous devez également comprendre le schéma d'adressage ou l'espace de noms que le service Web utilise pour ses données.  
   
- Pour un service web, vous pouvez fournir un élément \<**Query**> qui spécifie une méthode à appeler ou une action SOAP. Vous pouvez laisser la requête vide et adopter la requête par défaut si la source de données XML dispose d'une structure hiérarchique produisant les données que vous souhaitez utiliser dans votre rapport. Les valeurs de nœud d'élément XML et les attributs récupérés lors de l'exécution de la requête correspondent aux champs de dataset que vous utilisez dans votre rapport.  
+ Pour un service web, vous pouvez fournir un élément \<**Query**> qui spécifie une méthode à appeler ou une action SOAP. Vous pouvez laisser la requête vide et adopter la requête par défaut si la source de données XML dispose d'une structure hiérarchique produisant les données que vous souhaitez utiliser dans votre rapport. Les valeurs de nœud d'élément XML et les attributs récupérés lors de l'exécution de la requête correspondent aux champs de dataset que vous utilisez dans votre rapport.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Conditions requises pour la récupération de données de documents XML  
  À l'aide du protocole HTTP, le serveur doit retourner les données XML ou ces dernières doivent être incorporées dans l'élément **Query** XML. Si vous faites directement référence à un document XML à l'aide du protocole HTTP, l'extension employée doit être l'extension .xml.  

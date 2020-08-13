@@ -2,21 +2,21 @@
 title: Notes de publication de SQL Server 2014 | Microsoft Docs
 description: Ce document Notes de publication décrit les problèmes connus dont vous devez prendre connaissance avant d’installer ou de dépanner les versions de Microsoft SQL Server 2014 (12.x).
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001139"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111120"
 ---
 # <a name="sql-server-2014-release-notes"></a>Notes de publication de SQL Server 2014
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Cette action n’est pas prise en charge.
 **Solution de contournement :** Il n’existe pas de solution de contournement pour le passage à une version antérieure. Nous vous recommandons de sauvegarder la base de données avant d’effectuer une mise à niveau vers SQL Server 2014 RTM.  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Version incorrecte du client StreamInsight sur le média/ISO/CAB SQL Server 2014  
-La version incorrecte de StreamInsight.msi et StreamInsightClient.msi se trouve dans le chemin suivant du média SQL Server/ISO/CAB (StreamInsight\\\<Architecture\>\\\<ID de langue\>).  
+La version incorrecte de StreamInsight.msi et StreamInsightClient.msi se trouve dans le chemin d'accès suivant sur le média/ISO/CAB SQL Server (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
 **Solution de contournement :** Téléchargez et installez la version correcte à partir de la [page de téléchargement de SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
@@ -287,7 +287,7 @@ Si vous avez déjà le problème avec des valeurs d’instance_id non correspond
 5.  Identifiez les lignes qui doivent correspondre à l’instance que vous résolvez. 
 6.  Mettez à jour la valeur sysdac_history_internal.instance_id avec la valeur que vous avez notée à l'étape 3 (dans la table sysdac_instances_internal) :  
   
-    `update` sysdac_history_internal `set` instance_id = '\<valeur de l’étape 3\>' `where` \<expression correspondant aux lignes que vous voulez mettre à jour\>  
+    `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
 ### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   

@@ -1,5 +1,6 @@
 ---
 title: Mise en relief du code
+description: Découvrez comment utiliser la fonctionnalité mode plan du code dans les éditeurs de requête SQL Server Management Studio pour masquer le code de manière sélective.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 366928df4dfe2b4b3c7c2749201d1d3980937f01
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8ed89c3801cb4177e2f9114e1404154848478ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254032"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920912"
 ---
 # <a name="code-outlining"></a>Mise en relief du code
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Vous pouvez utiliser la fonctionnalité mode Plan dans les éditeurs de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour masquer le code de manière sélective lorsque vous modifiez des requêtes. Cela permet d'afficher plus facilement le code sur lequel vous travaillez, surtout dans les fichiers de requête volumineux.  
   
 ## <a name="outlining-overview"></a>Vue d'ensemble du mode Plan  
@@ -38,7 +39,7 @@ ms.locfileid: "75254032"
   
  ![Code XML montrant le plan](../../ssms/scripting/media/editoutlinexmlfull.gif "Code XML montrant le plan")  
   
- Quand vous cliquez sur le signe moins sur la ligne \<InnerTag>, seule cette ligne est réduite, comme affiché dans l’illustration suivante.  
+ Quand vous cliquez sur le signe moins sur la ligne \<InnerTag>, seul InnerTag est réduit, comme affiché dans l’illustration suivante.  
   
  ![Code XML avec nœud interne masqué](../../ssms/scripting/media/editoutlinexmlinnercol.gif "Code XML avec nœud interne masqué")  
   

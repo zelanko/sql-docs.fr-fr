@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286173"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941281"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installer le premier serveur de rapports en mode SharePoint
 
@@ -92,13 +92,17 @@ ms.locfileid: "79286173"
     > [!NOTE]
     > Veillez à spécifier le nom correct du serveur SharePoint.
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. Vous devez obtenir une réponse indiquant qu’un travail du minuteur a été planifié. Vous devez attendre que le travail s’exécute.
 
 5. Utilisez la commande suivante pour vérifier le rôle qui a été affecté au serveur.
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. Le **rôle** indiqué doit être **Personnalisé**.
  
@@ -209,7 +213,9 @@ ms.locfileid: "79286173"
     > [!IMPORTANT]
     > Si un message d'erreur semblable au suivant s'affiche :  
     >   
-    >     Install-SPRSService : le terme « Install-SPRSService » **n’est pas reconnu** comme nom d’une applet de commande, d’une fonction, d’un fichier de script ou d’un programme exécutable. Vérifiez l’orthographe du nom ou, si un chemin d’accès a été inclus, vérifiez que le chemin d’accès est correct et réessayez.  
+    ```powershell
+    >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > Soit vous êtes dans Windows Powershell au lieu de SharePoint Management Shell, soit le mode SharePoint de Reporting Services n’est pas installé. Pour plus d’informations sur Reporting Services et PowerShell, consultez [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -224,7 +230,7 @@ ms.locfileid: "79286173"
     > [!NOTE]  
     >  Si le service Reporting Services reste à l’état **Démarrage** et ne passe pas à **Démarré**, vérifiez que le service « Administration SharePoint 2013 » est démarré dans le Gestionnaire de serveur Windows.  
   
-##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Étape 3 : créer une application de service Reporting Services  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Étape 3 : Créer une application de service Reporting Services  
  Cette section fournit les étapes pour créer une application de service et une description des propriétés, si vous consultez une application de service existante.  
   
 1.  Dans l’Administration centrale de SharePoint, dans le groupe **Gestion des applications** , sélectionnez **Gérer les applications de service**.  
@@ -240,7 +246,7 @@ ms.locfileid: "79286173"
   
 5.  Dans la section **Pool d’applications** , créez un pool d’applications pour l’application (recommandé). Si vous utilisez le même nom pour le pool d'applications et l'application de service, cela peut simplifier l'administration actuelle. Ceci peut aussi être affecté par le nombre d'applications de service que vous allez créer et si vous devez en utiliser plusieurs dans un même pool d'applications. Consultez la documentation de SharePoint Server pour obtenir des recommandations et les meilleures pratiques pour la gestion du pool d'applications.  
   
-     Sélectionnez ou créez un compte de sécurité pour le pool d'applications. Veillez à spécifier un compte d'utilisateur de domaine. Un compte d'utilisateur de domaine autorise l'utilisation de la fonctionnalité Compte géré de SharePoint, qui vous permet de mettre à jour des mots de passe et des informations sur le compte dans un seul emplacement. Des comptes de domaine sont requis si vous prévoyez d’effectuer un scale-out du déploiement incluant des instances de service supplémentaires qui s'exécuteront sous la même identité.  
+     Sélectionnez ou créez un compte de sécurité pour le pool d'applications. Veillez à spécifier un compte d'utilisateur de domaine. Un compte d'utilisateur de domaine autorise l'utilisation de la fonctionnalité Compte géré de SharePoint, qui vous permet de mettre à jour des mots de passe et des informations sur le compte dans un seul emplacement. Des comptes de domaine sont requis si vous prévoyez une montée en puissance parallèle du déploiement incluant des instances de service supplémentaires qui s'exécuteront sous la même identité.  
   
 6.  Dans le **Serveur de base de données**, utilisez le serveur actuel ou choisissez un autre serveur SQL Server.  
   
@@ -260,7 +266,7 @@ ms.locfileid: "79286173"
   
 -   Rubrique [Pour créer une application de service Reporting Services à l’aide de PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Étape 4 : activer la fonctionnalité de collection de sites Power View
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Étape 4 : Activez la fonctionnalité de collection de sites Power View.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], fonctionnalité du complément SQL Server 2016 Reporting Services pour les produits [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, est une fonctionnalité de collection de sites. Elle est activée automatiquement pour les collections de sites racine et les collections de sites créées après l’installation du complément Reporting Services. Si vous envisagez d'utiliser [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous devez vérifier que la fonctionnalité est activée.  
   
@@ -270,7 +276,7 @@ ms.locfileid: "79286173"
   
 1.  Les étapes suivantes considèrent que votre site SharePoint est configuré pour la **version d’affichage**2013, pour SharePoint 2013.  
   
-     Ouvrez votre navigateur sur le site SharePoint souhaité. Par exemple, https://\<nom_serveur>/sites/bi  
+     Ouvrez votre navigateur sur le site SharePoint souhaité. Par exemple, https://\<servername>/sites/bi  
   
 2.  Sélectionnez **Paramètres**![Paramètres SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint").  
   

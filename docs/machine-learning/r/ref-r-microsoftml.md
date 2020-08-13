@@ -1,34 +1,32 @@
 ---
-title: Bibliothèque de fonctions R MicrosoftML
-description: Présentation de la bibliothèque de fonctions MicrosoftML dans SQL Server 2016 R Services et SQL Server Machine Learning Services avec R.
+title: Package R MicrosoftML
+description: MicrosoftML est un package R de Microsoft qui fournit des algorithmes de Machine Learning hautes performances. Il comprend des fonctions d’apprentissage et de transformation, de scoring, d’analyse de texte et d’image, ainsi que d’extraction de caractéristiques pour dériver des valeurs à partir de données existantes. Le package, inclus dans SQL Server Machine Learning Services et SQL Server 2016 R Services, prend en charge les opérations hautes performances sur le Big Data, l’utilisation du traitement multicœur et le streaming de données rapide. MicrosoftML comprend également de nombreuses transformations pour le traitement du texte et de l’image.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117442"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406172"
 ---
-# <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (bibliothèque R dans SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML (package R de SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**MicrosoftML** est une bibliothèque de fonctions R de Microsoft qui fournit des algorithmes de Machine Learning hautes performances. Il comprend des fonctions d’apprentissage et de transformation, de scoring, d’analyse de texte et d’image, ainsi que d’extraction de caractéristiques pour dériver des valeurs à partir de données existantes.
-
-Les API de Machine Learning ont été développées par Microsoft pour les applications de Machine Learning internes et ont été affinées au fil des années pour fournir des performances élevées sur les Big Data, à l’aide du traitement multicœur et de la diffusion rapide des données. MicrosoftML comprend également de nombreuses transformations pour le traitement du texte et de l’image.
+**MicrosoftML** est un package R de Microsoft qui fournit des algorithmes de Machine Learning hautes performances. Il comprend des fonctions d’apprentissage et de transformation, de scoring, d’analyse de texte et d’image, ainsi que d’extraction de caractéristiques pour dériver des valeurs à partir de données existantes. Le package, inclus dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) et [SQL Server 2016 R Services](sql-server-r-services.md), prend en charge les opérations hautes performances sur le Big Data, l’utilisation du traitement multicœur et le streaming de données rapide. MicrosoftML comprend également de nombreuses transformations pour le traitement du texte et de l’image.
 
 ## <a name="full-reference-documentation"></a>Documentation de référence complète
 
-La bibliothèque **MicrosoftML** est distribuée dans plusieurs produits Microsoft, mais l’utilisation est la même que vous obteniez la bibliothèque dans SQL Server ou un autre produit. Étant donné que les fonctions sont les mêmes, la [documentation de chaque fonction RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) est publiée au même endroit sous la [référence R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) pour Microsoft Machine Learning Server. Si des comportements spécifiques à un produit existent, les différences seront signalées dans la page d’aide de la fonction.
+Le package **MicrosoftML** est distribué dans plusieurs produits Microsoft, mais l’utilisation est la même quelle que soit sa provenance (SQL Server ou un autre produit). Étant donné que les fonctions sont les mêmes, la [documentation de chaque fonction RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) est publiée au même endroit sous la [référence R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) pour Microsoft Machine Learning Server. Si des comportements spécifiques à un produit existent, les différences seront signalées dans la page d’aide de la fonction.
 
 ## <a name="versions-and-platforms"></a>Versions et plateformes
 
-La bibliothèque **MicrosoftML** est basée sur R 3.4.3 et n’est disponible que lorsque vous installez l’un des produits ou téléchargements Microsoft suivants :
+Le package **MicrosoftML** s’appuie sur R 3.4.3 et n’est disponible que si l’un des produits ou téléchargements Microsoft suivants est installé :
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [Services de Machine Learning SQL Server](../install/sql-machine-learning-services-windows-install.md)
@@ -43,7 +41,7 @@ La bibliothèque **MicrosoftML** est basée sur R 3.4.3 et n’est disponible qu
 Les algorithmes dans **MicrosoftML** dépendent de [RevoScaleR](ref-r-revoscaler.md) pour :
 
 + Les objets sources de données. Les données consommées par les fonctions **MicrosoftML** sont créées à l’aide des fonctions **RevoScaleR**.
-+ Le calcul à distance (le passage de l’exécution des fonctions vers une instance SQL Server distante). La bibliothèque **RevoScaleR** fournit des fonctions permettant de créer et d’activer un contexte de calcul distant pour SQL Server.
++ Le calcul à distance (le passage de l’exécution des fonctions vers une instance SQL Server distante). Le package **RevoScaleR** fournit des fonctions permettant de créer et d’activer un contexte de calcul distant pour SQL Server.
 
 Dans la plupart des cas, vous devez charger les packages ensemble chaque fois que vous utilisez **MicrosoftML**.
 
@@ -74,7 +72,7 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Transformation permettant de créer une seule colonne à valeurs vectorielles à partir de plusieurs colonnes.  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Crée un vecteur d’indicateur à l’aide d’une transformation catégorielle avec un dictionnaire.  |
 |[categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalhash) | Convertit la valeur catégorielle en tableau d’indicateurs par hachage. |
-|[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Génère un ensemble de nombres de séquences de mots consécutifs (appelées n-grams) à partir d’un corpus de texte donné. Il permet de détecter la langue, de créer des jetons, de supprimer les mots vides, de normaliser du texte et de générer des fonctionnalités.  |
+|[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Génère un ensemble de nombres de séquences de mots consécutifs (appelées n-grams) à partir d’un corpus de texte donné. Il offre des fonctions de détection de la langue, de segmentation du texte en unités lexicales, de suppression des mots vides, de normalisation du texte et de génération de caractéristiques.  |
 |[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | Génère un score pour du texte en langage naturel et crée une colonne comprenant les probabilités que les sentiments du texte soient positifs.|
 |[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | Permet de définir des arguments pour les extractions de fonctionnalités basées sur le nombre et le hachage.|
 |[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Sélectionne un ensemble de colonnes à entraîner à nouveau et supprime toutes les autres. |

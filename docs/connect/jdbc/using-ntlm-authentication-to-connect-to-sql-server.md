@@ -1,5 +1,6 @@
 ---
-title: Utilisation de l'authentification NTLM pour se connecter à SQL Server | Microsoft Docs
+title: Utilisation de l'authentification NTLM pour se connecter à SQL Server
+description: Découvrez comment établir une connexion à la base de données SQL à l’aide de l’authentification NTLM avec le pilote JDBC.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026103"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393147"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Utilisation de l'authentification NTLM pour se connecter à SQL Server
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Le nom de principal du service (SPN) est le nom par lequel un client identifie de manière unique l'instance d'un service.
 
-Vous pouvez spécifier le SPN à l’aide de la propriété de connexion **serverSpn**, ou laisser le pilote le créer pour vous (par défaut). Cette propriété est sous la forme suivante : « MSSQLSvc/fqdn:port\@REALM », où fqdn désigne le nom de domaine complet, port désigne le numéro de port et REALM désigne le domaine du serveur SQL Server en majuscules. La partie REALM de cette propriété est facultative, car le domaine par défaut est le même que le domaine du serveur.
+Vous pouvez spécifier le SPN à l’aide de la propriété de connexion **serverSpn**, ou laisser le pilote le créer pour vous (par défaut). Cette propriété a le format suivant : « MSSQLSvc/fqdn:port\@REALM », où fqdn désigne le nom de domaine complet, port désigne le numéro de port et REALM désigne le domaine du serveur SQL Server en majuscules. La partie REALM de cette propriété est facultative, car le domaine par défaut est le même que le domaine du serveur.
 
 Par exemple, votre SPN peut ressembler à ce qui suit : « MSSQLSvc/some-server.zzz.corp.contoso.com:1433 »
 

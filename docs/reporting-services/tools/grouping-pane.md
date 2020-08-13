@@ -1,5 +1,6 @@
 ---
 title: Volet de regroupement | Microsoft Docs
+description: Découvrez le volet Regroupement du menu Rapport dans Reporting Services, qui affiche les groupes de lignes et les groupes de colonnes pour la région de données de tableau matriciel actuellement sélectionnée.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d52ef6b9d9ac23afee2f6c9187da0da22ef4dd0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892555"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915685"
 ---
 # <a name="grouping-pane"></a>Volet de regroupement
 Quand vous concevez des rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , le volet de regroupement affiche les groupes de lignes et les groupes de colonnes de la région de données de tableau matriciel sélectionnée. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge. Le volet de regroupement se compose d’un volet Groupes de lignes et d’un volet Groupes de colonnes. Le volet de regroupement comporte deux modes : par défaut et avancé. Le mode par défaut affiche une vue hiérarchique des membres dynamiques pour les groupes de lignes et de colonnes. Le mode avancé affiche à la fois les membres statiques et dynamiques pour les groupes de lignes et de colonnes. Un groupe est un jeu de données nommé extrait d'un dataset de rapport qui est affiché sur une région de données. Les groupes sont organisés en hiérarchies qui incluent des membres statiques et dynamiques. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

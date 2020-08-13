@@ -1,5 +1,6 @@
 ---
 title: Générer des scripts
+description: Découvrez comment utiliser l’Assistant Générer et publier des scripts pour créer des scripts Transact-SQL pour plusieurs objets et comment utiliser le script en tant que menu dans l'Explorateur d'objets pour générer des scripts pour des objets individuels ou multiples.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151877"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123125"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit deux mécanismes pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez créer des scripts pour plusieurs objets à l’aide de **l’Assistant Générer et publier des scripts**. Vous pouvez également générer un script pour des objets individuels ou plusieurs objets à l'aide du menu **Script en tant que** dans l' **Explorateur d'objets**.
 
@@ -48,7 +49,7 @@ Vous pouvez utiliser le menu **« Script en tant que » de l’Explorateur d’o
 
 3. Développez la catégorie de l'objet. Par exemple, développez le nœud **Tables** ou **Vues** .
 
-4. Cliquez avec le bouton droit sur l’objet et pointez sur **Générer un script de \<type d’objet> en tant que**. Par exemple, pointez sur **Générer un script de la table en tant que**.
+4. Cliquez avec le bouton de droite sur le l’objet, pointez la souris sur **Script \<object type> en tant que**, par exemple, pointez la souris sur **Générer un script de la table en tant que**.
 
 5. Pointez sur le type de script, tel que **Create to** ou **Alter to**.
 
@@ -72,6 +73,6 @@ Vous pouvez utiliser le volet **Détails de l’Explorateur d’objets** afin de
 
 6. Appuyez sur Crtl + clic gauche sur le deuxième objet pour lequel vous voulez générer un script.
 
-7. Cliquez avec le bouton droit sur l’un des objets sélectionnés et sélectionnez **Générer un script de \<type d’objet> en tant que**.
+7. Cliquez avec le bouton de droite sur l'un des objets sélectionnés et sélectionnez **Script \<object type> en tant que**.
 
     ![Explorateur d’objets](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

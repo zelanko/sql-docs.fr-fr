@@ -1,5 +1,6 @@
 ---
 title: Gérer des sources de données de rapports | Microsoft Docs
+description: Découvrez la gestion des sources de données de rapport, notamment la connexion à des sources de données externes qui sont référencées dans un rapport.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190817"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458256"
 ---
 # <a name="manage-report-data-sources"></a>Gérer des sources de données de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les rapports, les modèles de rapports et les abonnements pilotés par les données récupèrent les données qui proviennent de sources de données externes. Pour se connecter à une source de données externe, un serveur de rapports utilise les informations de connexion de la source de données qui sont définies dans le rapport, le modèle ou l'abonnement, ou qui sont référencées à partir de ceux-ci. Les propriétés de connexion à la source de données sont toujours définies avec le rapport ou le modèle que vous créez, mais vous pouvez les gérer de manière indépendante après avoir publié le rapport ou le modèle sur un serveur de rapports.  
@@ -37,7 +38,7 @@ ms.locfileid: "74190817"
   
  Remarquez que la modification des requêtes ne fait pas partie de la gestion de la connexion à la source de données. Pour modifier une requête pour un rapport ou un modèle, vous devez utiliser un outil de création et apporter vos modifications dans la définition du rapport ou du modèle.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propriétés gérées : type de source de données, chaînes de connexion et informations d'identification  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propriétés managées : Type de source de données, chaînes de connexion et informations d'identification  
  Les propriétés de la source de données que vous pouvez gérer sur un serveur de rapports sont les suivantes :  
   
 |Propriété|Description|Comment gérer|  

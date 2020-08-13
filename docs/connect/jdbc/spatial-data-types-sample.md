@@ -1,5 +1,6 @@
 ---
-title: Exemple de types de données spatiales pour le pilote JDBC MSSQL | Microsoft Docs
+title: Exemple de types de données spatiales pour le JDBC Driver
+description: Cet exemple d’application de JDBC Driver pour SQL Server montre comment créer, insérer et récupérer des types de données spatiales de géométrie et de géographie.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -9,32 +10,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07f05ee878f1f818e7bf500d053ef5a306477d27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a04840e69f5fd8557d3c6f42f9a339710c9ebe3a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909395"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921015"
 ---
 # <a name="spatial-data-types-sample"></a>Exemple de types de données spatiales
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Cet exemple d’application [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment créer, insérer et récupérer des types de données spatiales (Geometry et Geography).
-  
-Le fichier de code de cet exemple, SpatialDataTypes.java, se trouve à l’emplacement suivant :  
+
+Le fichier de code de cet exemple, SpatialDataTypes.java, se trouve à l’emplacement suivant :
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
 ```
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Spécifications
 
-Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](using-the-jdbc-driver.md).
 
-> [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
+> [!NOTE]
+> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](system-requirements-for-the-jdbc-driver.md).
+
 ## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, le code crée une table nommée SpatialDataTypesTable_JDBC_Sample qui contient les colonnes « Geometry » et « Geography ».
@@ -95,7 +96,6 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
 
-[Utilisation des types de données JDBC](../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+[Utilisation des types de données JDBC](working-with-data-types-jdbc.md)

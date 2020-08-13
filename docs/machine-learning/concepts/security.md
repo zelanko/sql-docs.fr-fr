@@ -2,26 +2,26 @@
 title: Vue d’ensemble de la sécurité pour l’extensibilité
 description: Vue d’ensemble de la sécurité de l’infrastructure d’extensibilité dans SQL Server Machine Learning Services. Sécurité pour les comptes de connexion et d’utilisateur, le service SQL Server launchpad, les comptes de travail, l’exécution de plusieurs scripts et les autorisations de fichiers.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 03/11/2020
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 562cc28d09b7c1341b58c45bfcc517db553bff16
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118542"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406222"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Vue d’ensemble de la sécurité de l’infrastructure d’extensibilité dans SQL Server Machine Learning Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Cet article décrit l’architecture de sécurité globale utilisée pour intégrer le moteur de base de données SQL Server et les composants associés à l’infrastructure d’extensibilité. Il examine les éléments sécurisables, les services, l’identité du processus et les autorisations. Pour plus d’informations sur les principaux concepts et composants de l’extensibilité dans SQL Server, consultez [Architecture d’extensibilité dans SQL Server Machine Learning Services](extensibility-framework.md).
+Cet article décrit l’architecture de sécurité globale utilisée pour intégrer le moteur de base de données SQL Server et les composants associés au framework d’extensibilité de [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Il examine les éléments sécurisables, les services, l’identité du processus et les autorisations. Pour plus d’informations sur les principaux concepts et composants de l’extensibilité dans SQL Server, consultez [Architecture d’extensibilité dans SQL Server Machine Learning Services](extensibility-framework.md).
 
 ## <a name="securables-for-external-script"></a>Éléments sécurisables pour script externe
 

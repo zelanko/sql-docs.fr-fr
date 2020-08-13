@@ -2,7 +2,7 @@
 title: Connexion avec sqlcmd
 description: Découvrez comment utiliser l’utilitaire sqlcmd avec Microsoft ODBC Driver for SQL Server sur Linux et macOS.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632819"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465306"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connexion avec sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ L’utilitaire [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) est disp
   
 Les commandes suivantes montrent respectivement comment utiliser l’authentification Windows (Kerberos) l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -170,22 +170,30 @@ Dans la version actuelle, les options suivantes ne sont pas disponibles :
   
 Vous pouvez utiliser la méthode alternative suivante : Placez les paramètres dans un même fichier, que vous pouvez ensuite ajouter à un autre fichier. Cela vous aidera à utiliser un fichier de paramètres pour remplacer les valeurs. Par exemple, créer un fichier nommé `a.sql` (le fichier de paramètres) avec le contenu suivant :
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 Ensuite, créer un fichier nommé `b.sql` avec les paramètres de remplacement :  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 En ligne de commande, combinez `a.sql` et `b.sql` en `c.sql` avec les commandes suivantes :  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 Exécutez `sqlcmd` et utilisez `c.sql` comme fichier d’entrée :  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z *mot_de_passe* Modifier le mot de passe.  
   
@@ -203,24 +211,12 @@ Dans la version actuelle, les commandes suivantes ne sont pas disponibles :
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>Prise en charge du nom de source de données dans sqlcmd et bcp
 
-Vous pouvez indiquer un nom de source de données (DSN) plutôt qu’un nom de serveur dans l’option **sqlcmd** ou **bcp** `-S` (ou la commande **sqlcmd** :Connect) si vous spécifiez -D. Si vous utilisez -D, **sqlcmd** ou **bcp** se connectera au serveur spécifié dans le nom de source de données par l’option -S.  
+Vous pouvez indiquer un nom de source de données (DSN) plutôt qu’un nom de serveur dans l’option **sqlcmd** ou **bcp** `-S` (ou la commande **sqlcmd** :Connect) si vous spécifiez `-D`. `-D` provoque **sqlcmd** ou **bcp** pour se connecter au serveur spécifié dans le DSN dans l’option `-S`.  
   
 Les noms de sources de données système sont stockés dans le fichier `odbc.ini` du répertoire ODBC SysConfigDir (`/etc/odbc.ini` sur les installations standard). Les noms de sources de données utilisateur sont stockés dans `.odbc.ini` dans le répertoire de base de l’utilisateur (`~/.odbc.ini`).
-  
-Les entrées suivantes sont prises en charge dans un nom de source de données sur Linux ou macOS :
 
--   **ApplicationIntent=ReadOnly**  
+Consultez [Mots clés et attributs de chaîne de connexion et DSN](../dsn-connection-string-attribute.md) pour la liste des entrées prises en charge par le pilote.
 
--   **Database=** _nom\_base_de_données_  
-  
--   **Driver=ODBC Driver 11 for SQL Server** ou **Driver=ODBC Driver 13 for SQL Server**
-  
--   **MultiSubnetFailover=Yes**  
-  
--   **Server=** _server\_name\_or\_IP\_address_  
-  
--   **Trusted_Connection=yes**|**no**  
-  
 Dans un nom de source de données, seule l’entrée DRIVER est nécessaire, mais pour établir une connexion à un serveur, `sqlcmd` ou `bcp` a besoin de la valeur de l’entrée SERVER.  
 
 Si vous spécifiez la même option dans le nom de source de données et sur la ligne de commande `sqlcmd` ou `bcp`, l’option de ligne de commande remplace la valeur utilisée dans le nom de source de données. Par exemple, si le nom de source de données comporte une entrée DATABASE et que la ligne de commande `sqlcmd` inclut **-d**, la valeur passée à **-d** est utilisée. Si vous spécifiez **Trusted_Connection=yes** dans le nom de source de données, l’authentification Kerberos est utilisée et le nom d’utilisateur ( **-U**) et le mot de passe ( **-P**), s’ils sont fournis, sont ignorés.
