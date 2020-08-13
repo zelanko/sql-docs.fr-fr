@@ -1,5 +1,6 @@
 ---
 title: 'Leçon 1 : création d’un exemple de base de données de l’abonné | Microsoft Docs'
+description: Découvrez comment créer une petite base de données d’« abonnés » afin de stocker des données d’abonnement qui seront utilisées par un abonnement piloté par les données.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513161"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243270"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d'un exemple de base de données de l'abonné
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d’un exemple de base de données d’abonnés
 
 Dans cette leçon de didacticiel [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous allez créer une petite base de données d’« abonnés » pour stocker des données d’abonnement qui seront utilisées par un abonnement piloté par les données. Quand l’abonnement est traité, le serveur de rapports extrait ces données et les utilise pour personnaliser le résultat du rapport. Par exemple, les lignes de données incluent des numéros de commande spécifiques à utiliser pour les filtres, ainsi que le format de fichier des rapports générés.  
   
@@ -55,14 +56,14 @@ Cette leçon part du principe que vous utilisez [!INCLUDE[ssManStudioFull_md](..
     GO  
     ```  
   
-7.  Cliquez sur **! Exécuter** dans la barre d’outils.  
+7.  Cliquez sur  **! Exécuter** dans la barre d’outils.  
   
 8.  Utilisez une instruction SELECT pour vérifier que votre table comporte bien trois lignes de données. Par exemple : `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Étapes suivantes  
 + Vous avez créé les données d'abonnement sur lesquelles seront basées la distribution des rapports et en fonction desquelles les résultats des rapports varieront pour chaque abonné. 
 + Ensuite, vous allez modifier les propriétés de la source de données du rapport pour utiliser des informations d’identification stockées. 
-+ Vous allez également modifier la conception du rapport afin d'inclure un paramètre que l'abonnement utilisera avec les données d'abonné. [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
++ Vous allez également modifier la conception du rapport afin d'inclure un paramètre que l'abonnement utilisera avec les données d'abonné. [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

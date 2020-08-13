@@ -5,25 +5,25 @@ description: Article de référence sur les commandes azdata bdc hdfs.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 74af88306288adaa584e26c943bd8c6c743fa315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d9f128f354156f6e9f9413f491bba3a30d1a0c9d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821417"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243027"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L’article suivant fournit des références sur les commandes `bdc hdfs` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
+L’article suivant fournit des références sur les commandes `sql` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
-|     |     |
+| Commande | Description |
 | --- | --- |
 [azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Commandes d’état du service HDFS.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | L’interpréteur de commandes HDFS est un interpréteur de commandes interactif simple pour le système de fichiers HDFS.
@@ -57,18 +57,19 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
 Répertoriez l’état du fichier ou du répertoire donné.
 ```bash
 azdata bdc hdfs ls --path -p 
- ```
+                   
+```
 ### <a name="examples"></a>Exemples
 Répertorier les états
 ```bash
-azdata bdc hdfs ls --path '/tmp'
+azdata bdc hdfs ls --path tmp/
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -81,18 +82,19 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
 Déterminez si un fichier ou un répertoire existe.  Retourne True s’il existe, sinon False.
 ```bash
 azdata bdc hdfs exists --path -p 
-     ```
-### Examples
-Check for file or directory existance.
+                       
+```
+### <a name="examples"></a>Exemples
+Vérifiez l’existence d’un fichier ou d’un répertoire.
 ```bash
-azdata bdc hdfs exists --path '/tmp'
+azdata bdc hdfs exists --path tmp/
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -105,18 +107,19 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
 Créez un répertoire au niveau du chemin d’accès spécifié.
 ```bash
 azdata bdc hdfs mkdir --path -p 
-    ```
-### Examples
-Make directory.
+                      
+```
+### <a name="examples"></a>Exemples
+Créez un répertoire.
 ```bash
-azdata bdc hdfs mkdir --path '/tmp'
+azdata bdc hdfs mkdir --path tmp/
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -129,7 +132,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
@@ -141,7 +144,7 @@ azdata bdc hdfs mv --source-path -s
 ### <a name="examples"></a>Exemples
 Déplacez le fichier ou le répertoire.
 ```bash
-azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
+azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--source-path -s`
@@ -156,7 +159,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
@@ -168,7 +171,7 @@ azdata bdc hdfs create --path -p
 ### <a name="examples"></a>Exemples
 Créez un fichier.
 ```bash
-azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
+azdata bdc hdfs create --path "tmp/test.txt" --data "This is a test."
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -183,7 +186,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
@@ -191,12 +194,13 @@ Lisez le contenu d’un fichier.  Le décalage et la longueur en octets sont des
 ```bash
 azdata bdc hdfs cat --path -p 
                     --offset  
-                    --length -l
+                    
+--length -l
 ```
 ### <a name="examples"></a>Exemples
 Lisez le fichier.
 ```bash
-azdata bdc hdfs cat --path '/tmp/test.txt'
+azdata bdc hdfs cat --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -213,18 +217,19 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
 Supprimez un fichier ou un répertoire.
 ```bash
 azdata bdc hdfs rm --path -p 
- ```
+                   
+```
 ### <a name="examples"></a>Exemples
 Supprimez un fichier ou un répertoire.
 ```bash
-azdata bdc hdfs rm --path '/tmp'
+azdata bdc hdfs rm --path tmp/
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -237,18 +242,19 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
 Supprimez de manière récursive un fichier ou un répertoire.
 ```bash
 azdata bdc hdfs rmr --path -p 
-  ```
+                    
+```
 ### <a name="examples"></a>Exemples
 Suppression récursive du répertoire.
 ```bash
-azdata bdc hdfs rmr --path '/tmp'
+azdata bdc hdfs rmr --path tmp/
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -261,7 +267,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
@@ -273,7 +279,7 @@ azdata bdc hdfs chmod --path -p
 ### <a name="examples"></a>Exemples
 Modifiez l’autorisation du fichier ou du répertoire.
 ```bash
-azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
+azdata bdc hdfs chmod --permission 775 --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -288,7 +294,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
@@ -296,12 +302,13 @@ Modifiez le propriétaire ou le groupe du fichier spécifié.
 ```bash
 azdata bdc hdfs chown --path -p 
                       --owner  
-                      --group -g
+                      
+--group -g
 ```
 ### <a name="examples"></a>Exemples
 Modifiez le propriétaire et le groupe.
 ```bash
-azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
+azdata bdc hdfs chown --owner hdfs --group superusergroup --path "tmp/test.txt"
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--path -p`
@@ -318,7 +325,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-hdfs-cp"></a>azdata bdc hdfs cp
@@ -330,7 +337,7 @@ azdata bdc hdfs cp --from-path -f
 ### <a name="examples"></a>Exemples
 Copiez un fichier ou un répertoire entre l’ordinateur local et HDFS.
 ```bash
-azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
+azdata bdc hdfs cp --from_path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--from-path -f`
@@ -345,7 +352,7 @@ Affichez ce message d’aide et quittez.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par défaut : json.
 #### `--query -q`
-Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
+Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 

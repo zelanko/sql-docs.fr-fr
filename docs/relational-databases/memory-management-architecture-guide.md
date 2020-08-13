@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012145"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243691"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 
@@ -55,7 +55,7 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 > [!NOTE]
 > Le tableau suivant comprend une colonne pour les versions 32 bits qui ne sont plus disponibles.
 
-| |32 bits <sup>1</sup> |64 bits|
+|Stratégie de mémoire|32 bits <sup>1</sup> |64 bits|
 |-------|-------|-------| 
 |Mémoire conventionnelle |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 2 Go<br>- 3 Go avec le paramètre d’amorçage /3 gb <sup>2</sup> <br>- 4 Go sur WOW64 <sup>3</sup> |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 7 To avec l’architecture IA64 (IA64 non pris en charge dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et les versions ultérieures)<br>- Maximum du système d’exploitation avec architecture x64 <sup>4</sup>
 |Mécanisme AWE (Permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d'aller au-delà de la limite d'espace d'adressage virtuel de processus sur une plateforme 32 bits.) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] éditions Standard, Entreprise et Développeur : le pool de mémoires tampons peut accéder à 64 Go de mémoire maximum.|Non applicable <sup>5</sup> |
@@ -94,7 +94,7 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire est
 |Allocation de page unique|Oui|Oui, regroupées dans des allocations de pages de « toute taille »|
 |Allocation de plusieurs pages|Non|Oui, regroupées dans des allocations de pages de « toute taille »|
 |Allocation du CLR|Non|Oui|
-|Mémoire de piles de threads|Non|Non|
+|Mémoire de piles de threads|Non|Non |
 |Allocations directes de Windows|Non|Non|
 
 À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer plus de mémoire que la valeur spécifiée dans le paramètre max server memory. Ce comportement peut se produire quand la valeur de **_Mémoire totale du serveur (Ko)_** a déjà atteint le paramètre **_Mémoire du serveur cible (Ko)_** (comme spécifié par la mémoire maximum du serveur). Si la mémoire libre contiguë est insuffisante pour répondre aux demandes de mémoire de plusieurs pages (plus de 8 Ko) en raison de la fragmentation de la mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut procéder à une surallocation au lieu de rejeter la demande de mémoire. 

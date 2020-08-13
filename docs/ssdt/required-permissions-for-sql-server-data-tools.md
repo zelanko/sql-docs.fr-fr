@@ -1,5 +1,6 @@
 ---
 title: Autorisations requises
+description: En savoir plus sur les autorisations dont vous avez besoin pour les différentes tâches de SQL Server Data Tools, telles que la création d’une base de données, l’exécution de tests unitaires et la comparaison de schémas.
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
@@ -8,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
-ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256993"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243720"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Autorisations nécessaires pour SQL Server Data Tools
 
@@ -38,9 +38,8 @@ Avant d'exécuter une action sur une base de données dans Visual Studio, vous d
 ## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Autorisations nécessaires pour créer ou déployer une base de données  
 Vous devez disposer des autorisations suivantes pour créer ou déployer une base de données.  
   
-|||  
-|-|-|  
 |Actions|Autorisations requises|  
+|-|-|  
 |Importer les objets et paramètres de base de données|Vous devez pouvoir vous connecter à la base de données source.<br /><br />Si la base de données source est basée sur SQL Server 2005, vous devez également être propriétaire ou disposer de l’autorisation **VIEW DEFINITION** sur chaque objet.<br /><br />Si la base de données source est basée sur SQL Server 2008 ou sur une version ultérieure, vous devez également être propriétaire ou disposer de l’autorisation **VIEW DEFINITION** sur chaque objet. Votre connexion doit disposer de l’autorisation **VIEW SERVER STATE** (pour les clés de chiffrement de la base de données).|  
 |Importer les objets et paramètres de serveur|Vous devez pouvoir vous connecter à la base de données master sur le serveur spécifié.<br /><br />Si le serveur exécute SQL Server 2005, vous devez disposer de l’autorisation **VIEW ANY DEFINITION** sur le serveur.<br /><br />Si la base de données source est basée sur SQL 2008 ou version ultérieure, vous devez disposer de l’autorisation **VIEW ANY DEFINITION** sur le serveur. Votre connexion doit disposer de l’autorisation **VIEW SERVER STATE** (pour les clés de chiffrement de la base de données).|  
 |Créer ou mettre à jour un projet de base de données|Aucune autorisation n'est nécessaire pour créer ou modifier un projet de base de données.|  
@@ -57,14 +56,13 @@ La *refactorisation de base de données* se produit uniquement dans le projet de
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Autorisations nécessaires pour exécuter des tests unitaires sur une base de données SQL Server  
 Vous devez disposer des autorisations suivantes pour exécuter des tests unitaires sur une base de données.  
   
-|||  
-|-|-|  
 |Actions|Autorisations requises|  
+|-|-|   
 |Exécuter une action de test|Vous devez utiliser la connexion de base de données dans le contexte d'exécution. Pour plus d’informations, consultez [Vue d’ensemble des chaînes de connexion et des autorisations](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Exécuter une action de prétest ou de post-test|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Cette connexion de base de données dispose de davantage d'autorisations par rapport à celles du contexte d'exécution.|  
 |Exécuter les scripts TestInitialize et TestCleanup|Vous devez utiliser la connexion de base de données dans le contexte privilégié.|  
-|Déployer les modifications de la base de données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
-|Générer des données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Déployer les modifications de la base de données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Générer des données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
 ## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Autorisations nécessaires pour générer des données  
 Vous devez disposer des autorisations **INSERT** et **SELECT** sur les objets de la base de données cible pour générer les données de test en utilisant le générateur de données. Si vous supprimez des données avant de générer des données, vous devez également disposer des autorisations **DELETE** sur les objets de la base de données cible. Pour réinitialiser la colonne **IDENTITY** dans une table, vous devez être propriétaire de la table ou être membre du rôle db_owner ou db_ddladmin.  
@@ -72,9 +70,8 @@ Vous devez disposer des autorisations **INSERT** et **SELECT** sur les objets de
 ## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Autorisations nécessaires pour comparer les schémas et les données  
 Vous devez disposer des autorisations suivantes pour comparer des schémas ou des données.  
   
-|||  
-|-|-|  
 |Actions|Autorisations requises|  
+|-|-|   
 |Comparer les schémas de deux bases de données|Vous devez disposer des autorisations nécessaires pour importer des objets et des paramètres des bases de données, tel que le décrit la section [Autorisations nécessaires pour créer ou déployer une base de données](#DatabaseCreationAndDeploymentPermissions).|  
 |Comparer les schémas d'une base de données et d'un projet de base de données|Vous devez disposer des autorisations nécessaires pour importer des objets et des paramètres de la base de données, tel que le décrit la section [Autorisations nécessaires pour créer ou déployer une base de données](#DatabaseCreationAndDeploymentPermissions). Le projet de base de données doit également être ouvert dans Visual Studio.|  
 |Écrire des mises à jour dans une base de données cible|Vous devez disposer des autorisations nécessaires pour déployer des mises à jour dans la base de données cible, tel que le décrit la section [Autorisations nécessaires pour créer ou déployer une base de données](#DatabaseCreationAndDeploymentPermissions).|  

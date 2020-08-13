@@ -1,5 +1,6 @@
 ---
 title: Utilisation des rapports paginés (portail web) | Microsoft Docs
+description: Découvrez comment afficher et gérer les propriétés d’un rapport paginé dans le portail web. De plus, apprenez à utiliser le Générateur de rapports pour créer ou modifier des rapports paginés.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222629"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243572"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilisation des rapports paginés (portail web)
 
@@ -77,7 +78,7 @@ Spécifiez une extension pour le traitement des données utilisée pour traiter 
   
 Spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. Le type de connexion détermine la syntaxe à utiliser. Par exemple, une chaîne de connexion pour une extension pour le traitement des données XML est une URL vers un document XML. Dans la plupart des cas, une chaîne de connexion type spécifie le serveur de bases de données et un fichier de données. L’exemple suivant montre une chaîne de connexion utilisée pour se connecter à une base de données SQL Server nommée MyData :  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 Une chaîne de connexion peut être configurée sous la forme d'une expression pour vous permettre de spécifier la source de données lors de l'exécution. Les expressions de sources de données sont définies dans le rapport du Concepteur de rapports. Les expressions de sources de données ne peuvent pas être définies, visualisées ou modifiées dans le portail web. Vous pouvez cependant remplacer une expression de source de données en cliquant sur **Remplacer l’option par défaut** pour entrer une chaîne de connexion statique. Pour revenir à l’expression, cliquez sur **Revenir à l’option par défaut**. Le serveur de rapports enregistre la chaîne de connexion initiale au cas où vous devriez la restaurer. Pour utiliser les expressions de sources de données, vous devez employer les informations de connexion à la source de données publiées à l'origine dans le rapport. Les sources de données partagées ne prennent pas en charge l'utilisation d'expressions dans la chaîne de connexion.  
   

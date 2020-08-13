@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités dépréciées du moteur de base de données | Microsoft Docs
+title: Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: Découvrez les fonctionnalités du moteur de base de données dépréciées qui sont toujours disponibles dans SQL Server 2017 (14.x), mais qui ne doivent pas être utilisées dans les nouvelles applications.
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759133"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244076"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
 
@@ -38,7 +38,7 @@ Quand une fonctionnalité est marquée comme étant dépréciée, cela signifie 
 
 Vous pouvez surveiller l'utilisation de fonctionnalités déconseillées à l'aide du compteur de performance Objet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Fonctionnalités déconseillées et des événements de suivi. Pour plus d’informations, consultez [Utiliser des objets SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-La valeur de ces compteurs est également disponible en exécutant l’instruction suivante :  
+Vous pouvez également obtenir les valeurs de ces compteurs en exécutant l’instruction suivante :  
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters

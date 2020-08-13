@@ -1,5 +1,6 @@
 ---
 title: 'Leçon 7 : ajouter une action d’extraction dans le rapport parent | Microsoft Docs'
+description: Découvrez comment ajouter une action d’extraction dans le rapport parent après avoir ajouté un contrôle ReportViewer à l’application de site web.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6a6e588cb79ffbc97450a4ad0a627957dc73b75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651265"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243250"
 ---
-# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Leçon 7 : ajouter l'action d'extraction dans le rapport parent
+# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Leçon 7 : Ajouter une action d’extraction dans le rapport parent
 Après avoir ajouté un contrôle ReportViewer à l'application de site Web, l'étape suivante consiste à ajouter une action d'extraction dans le rapport parent.  
   
 ### <a name="to-add-drillthrough-action-on-the-parent-report"></a>Pour ajouter une action d'extraction au rapport parent  
@@ -40,7 +41,7 @@ Après avoir ajouté un contrôle ReportViewer à l'application de site Web, l'�
 8.  Sélectionnez **OK** pour terminer.  
   
 ## <a name="next-task"></a>Tâche suivante  
-Vous venez d'ajouter une action d'extraction dans le rapport parent. Vous allez à présent créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Consultez la [Leçon 8 : Créer un filtre de données](../reporting-services/lesson-8-create-a-data-filter.md).  
+Vous venez d'ajouter une action d'extraction dans le rapport parent. Vous allez à présent créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Voir [Leçon 8 : Créer un filtre de données](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

@@ -1,5 +1,6 @@
 ---
 title: Rechercher un rapport à l’aide de l’accès URL | Microsoft Docs
+description: Découvrez comment rechercher un rapport à l’aide de l’accès URL. Par exemple, configurez le paramètre rc:FindString sur l’URL qui correspond au texte à rechercher.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7d5ba7b312bb89942fd899f4c769179a0c97bab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570888"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238431"
 ---
 # <a name="search-a-report-using-url-access"></a>Rechercher un rapport à l'aide de l'accès URL
   L'accès URL vous permet de lancer des recherches sur des rapports ou sur du texte spécifique. Pour effectuer une recherche dans un rapport, affectez au paramètre *rc:FindString* de l’URL le texte à rechercher. Vous povuez aussi utilisez les paramètres *rc:StartFind* et *rc:EndFind* pour limiter votre recherche à certaines pages du rapport.  

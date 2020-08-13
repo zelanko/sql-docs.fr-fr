@@ -1,35 +1,34 @@
 ---
 title: Créer un projet de test pour un test unitaire de base de données SQL Server
+description: Découvrez comment créer des projets de test pour un test unitaire de base de données SQL Server. Affichez les différentes façons d’ajouter des projets de test aux solutions qui contiennent des projets de base de données.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241517"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243530"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procédure : créer un projet de test pour un test unitaire de base de données SQL Server
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procédure : Créer un projet de test pour un test unitaire de base de données SQL Server
 
 Avant de commencer à écrire des tests unitaires qui évaluent les objets de base de données, vous devez d'abord créer un projet de test. Ce projet contient des tests unitaires SQL Server, mais il pourrait en comporter d’autres types.  
   
 Vous pouvez placer tous vos tests unitaires SQL Server pour un projet de base de données donné dans un seul projet de test. Toutefois, vous pouvez créer des projets de test supplémentaires selon les réponses que vous donnez aux questions suivantes :  
   
-|||  
-|-|-|  
-|**Question**|**Décision**|  
+|Question|Décision|  
+|-|-|   
 |Les différents tests unitaires SQL Server doivent-ils accéder à différentes connexions de base de données pour l’exécution ou la validation des tests ?|Dans l'affirmative, vous avez besoin de plusieurs projets de test. Vous ne pouvez pas spécifier plus d'une connexion de base de données pour l'exécution des tests. Toutefois, vous pouvez spécifier une connexion de base de données différente pour la validation des tests.|  
 |Voulez-vous déployer des projets de base de données distincts pour les différents tests unitaires ?|Dans l'affirmative, vous avez besoin de plusieurs projets de test. Un projet de test ne peut déployer qu'un seul projet de base de données.|  
   
-Pour plus d’informations sur chacune de ces questions, voir [Guide pratique : Configurer l’exécution des tests unitaires SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Au lieu de créer plusieurs projets de test, vous pouvez également fournir votre propre implémentation Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx).  
+Pour plus d’informations sur chacune de ces questions, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Au lieu de créer plusieurs projets de test, vous pouvez également fournir votre propre implémentation Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx).  
   
 Trois options sont à votre disposition pour ajouter un projet de test à une solution contenant un projet de base de données :  
   

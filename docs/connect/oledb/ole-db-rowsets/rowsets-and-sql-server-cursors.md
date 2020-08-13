@@ -1,5 +1,5 @@
 ---
-title: Ensembles de lignes et curseurs SQL Server | Microsoft Docs
+title: Ensembles de lignes et curseurs SQL Server (pilote OLE DB)
 description: Ensembles de lignes et curseurs SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994176"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244151"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -77,7 +77,7 @@ ms.locfileid: "67994176"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut inclure une clause ORDER BY s'il existe un index sur les colonnes référencées.<br /><br /> DBPROP_IMMOBILEROWS est disponible uniquement dans les ensembles de lignes qui peuvent afficher des lignes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insérées par des commandes sur d'autres sessions ou par d'autres utilisateurs. Toute tentative d'ouverture d'un ensemble de lignes avec la propriété définie à VARIANT_FALSE sur tout ensemble de lignes pour lequel DBPROP_OTHERINSERT ne peut pas être VARIANT_TRUE provoque une erreur.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY, sauf en cas de contrainte par une autre propriété.|  
   
- Un ensemble de lignes du pilote OLE DB pour SQL Server pris en charge par un curseur côté serveur peut être créé facilement sur une vue ou une table de base [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de la méthode **IOpenRowset::OpenRowset**. Spécifiez la table ou la vue par nom, et passez les jeux de propriétés d’ensemble de lignes nécessaires dans le paramètre *rgPropertySets*.  
+ Un ensemble de lignes OLE DB Driver pour SQL Server pris en charge par un curseur côté serveur peut être créé facilement sur une vue ou une table de base [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de la méthode **IOpenRowset::OpenRowset**. Spécifiez la table ou la vue par nom, et passez les jeux de propriétés d’ensemble de lignes nécessaires dans le paramètre *rgPropertySets*.  
   
  Le texte de la commande qui crée un ensemble de lignes est restreint lorsque le consommateur requiert que l'ensemble de lignes soit pris en charge par un curseur côté serveur. Plus spécifiquement, le texte de la commande est restreint à une instruction SELECT unique qui retourne un résultat d'ensemble de lignes unique ou à une procédure stockée qui implémente une instruction SELECT unique qui retourne un résultat d'ensemble de lignes unique.  
   
@@ -145,10 +145,10 @@ ms.locfileid: "67994176"
   
  Pour un jeu particulier de propriétés d'ensemble de lignes, le modèle de curseur sélectionné est déterminé comme suit.  
   
- À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes selon la valeur de l'indicateur, requis (T, F) ou facultatif (-), de chaque propriété d'ensemble de lignes. Pour chaque modèle de curseur, commencez par la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes avec les valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
+ À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes selon la valeur de l'indicateur, requis (T, F) ou facultatif (-), de chaque propriété d'ensemble de lignes. Pour chaque modèle de curseur, commencez dans la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes avec les valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
   
 ## <a name="sql-server-cursor-block-size"></a>Taille de bloc des curseurs SQL Server  
- Lorsqu’un curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge un ensemble de lignes du pilote OLE DB pour SQL Server, le nombre d’éléments dans le paramètre de tableau de descripteur de ligne des méthodes **IRowset::GetNextRows** ou **IRowsetLocate::GetRowsAt** définit la taille des blocs de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  
+ Lorsqu’un curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge un ensemble de lignes OLE DB Driver pour SQL Server, le nombre d’éléments dans le paramètre de tableau du descripteur de lignes des méthodes **IRowset::GetNextRows** ou **IRowsetLocate::GetRowsAt** définit la taille des blocs de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  
   
  Pour les ensembles de lignes qui prennent en charge les signets, les descripteurs de ligne récupérés à l’aide de la méthode **IRowsetLocate::GetRowsByBookmark** définissent les membres du bloc de curseur.  
   

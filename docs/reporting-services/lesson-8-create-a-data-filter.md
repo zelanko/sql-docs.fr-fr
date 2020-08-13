@@ -1,5 +1,6 @@
 ---
 title: 'Leçon 8 : créer un filtre de données | Microsoft Docs'
+description: Découvrez comment créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Créez un filtre de table ou un filtre de requête pour le rapport d’extraction.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512391"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243240"
 ---
-# <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : créer un filtre de données
+# <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : Créer un filtre de données
 Après avoir ajouté une action d'extraction dans le rapport parent, l'étape suivante consiste à créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant.  
   
 Vous pouvez créer un filtre de table **ou** un filtre de requête pour le rapport d’extraction. Cette leçon contient des instructions pour ces deux options.  
@@ -41,7 +42,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.
   
 5.  Sélectionnez l’opérateur égal ( **=** ) dans la liste déroulante **Opérateur** .  
   
-6.  Sélectionnez le bouton d’expression situé en regard du champ **Valeur** , sélectionnez **Paramètres** dans la zone **Catégorie** , puis double-cliquez sur **productid** dans la zone **Valeurs** . Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
+6.  Sélectionnez le bouton d’expression situé en regard du champ **Valeur** , sélectionnez **Paramètres** dans la zone **Catégorie** , puis double-cliquez sur **productid** dans la zone **Valeurs** . Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
   
 7.  Sélectionnez **OK** , puis à nouveau **OK** dans la boîte de dialogue **Propriétés du tableau matriciel** .  
   
@@ -165,7 +166,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de requê
   
     1.  Crée une instance du dataset, **DataSet2**, qui a été créé à l’étape 2 de la [Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Créez une connexion à la base de données SqlServer pour exécuter la requête définie dans la **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
+    2.  Créez une connexion à la base de données SqlServer pour exécuter la requête définie dans **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
   
     3.  La requête inclut un paramètre, **productid**, pour vérifier que les données retournées sont filtrées en fonction de l’élément **ProductID** sélectionné dans le rapport parent.  
   
@@ -287,7 +288,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de requê
 6.  Enregistrez le fichier .  
   
 ## <a name="next-task"></a>Tâche suivante  
-Vous venez de créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Vous allez à présent générer et exécuter l'application de site Web. Consultez [Leçon 9 : Générer et exécuter l’application](../reporting-services/lesson-9-build-and-run-the-application.md).  
+Vous venez de créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Vous allez à présent générer et exécuter l'application de site Web. Voir [Leçon 9 : Générer et exécuter l’application](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   

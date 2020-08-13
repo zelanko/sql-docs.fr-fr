@@ -1,5 +1,6 @@
 ---
 title: Informations du débogueur Transact-SQL
+description: Découvrez comment afficher le résultat du débogueur Transact-SQL, incluant des informations telles que les piles d’appels, les threads, les points d’arrêt, le code, les variables et les commandes.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -18,16 +19,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 853c11d1cf08a24168d21f0d20cedc74c2ea4004
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253043"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243745"
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l'état d'exécution actuel. 
 

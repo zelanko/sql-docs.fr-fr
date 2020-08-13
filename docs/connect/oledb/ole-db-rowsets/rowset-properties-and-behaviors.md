@@ -1,5 +1,5 @@
 ---
-title: Propriétés et comportements des ensembles de lignes | Microsoft Docs
+title: Propriétés et comportements des ensembles de lignes (pilote OLE DB)
 description: Propriétés et comportements des ensembles de lignes dans OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015353"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244174"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriétés et comportements de l'ensemble de lignes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "68015353"
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/W : Lecture seule<br /><br /> Valeur par défaut : VARIANT_TRUE<br /><br /> Description : Les objets de stockage OLE DB Driver pour SQL Server bloquent l’utilisation d’autres méthodes d’ensemble de lignes.|  
 |DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Le pilote OLE DB pour SQL Server prend en charge les signets pour l’identification des lignes de l’ensemble de lignes lorsque DBPROP_BOOKMARKS ou DBPROP_LITERALBOOKMARKS a la valeur VARIANT_TRUE.<br /><br /> L'affectation de la valeur VARIANT_TRUE à l'une ou l'autre des propriétés ne permet pas le positionnement dans l'ensemble de lignes à partir d'un signet. Affectez VARIANT_TRUE à DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll pour créer un ensemble de lignes prenant en charge le positionnement dans l'ensemble de lignes à partir d'un signet.<br /><br /> Le fournisseur OLE DB Driver pour SQL Server utilise un curseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour prendre en charge un ensemble de lignes qui contient des signets. Pour plus d’informations, consultez [Ensembles de lignes et curseurs SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Remarque : Tout conflit de ces propriétés avec d’autres propriétés de définition de curseur du pilote OLE DB pour SQL Server provoque une erreur. Par exemple, si DBPROP_BOOKMARKS a la valeur VARIANT_TRUE alors que DBPROP_OTHERINSERT a également la valeur VARIANT_TRUE, une erreur est générée lorsque le consommateur essaie d'ouvrir un ensemble de lignes.|  
 |DBPROP_BOOKMARKSKIPPED|R/W : Lecture seule<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Le pilote OLE DB pour SQL Server retourne DB_E_BADBOOKMARK si le consommateur indique un signet non valide lors du positionnement ou d’une recherche dans un ensemble de lignes contenant un signet.|  
-|DBPROP_BOOKMARKTYPE|R/W : Lecture seule<br /><br /> Valeur par défaut : DBPROPVAL_BMK_NUMERIC<br /><br /> Description : OLE DB Driver pour SQL Server implémente uniquement les signets numériques. Un signet de fournisseur OLE DB Driver pour SQL Server est un entier non signé 32 bits de type DBTYPE_UI4.|  
+|DBPROP_BOOKMARKTYPE|R/W : Lecture seule<br /><br /> Valeur par défaut : DBPROPVAL_BMK_NUMERIC<br /><br /> Description : OLE DB Driver pour SQL Server implémente uniquement les signets numériques. Un signet OLE DB Driver pour SQL Server est un entier non signé de 32 bits de type DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Cette propriété d’ensemble de lignes n’est pas implémentée par OLE DB Driver pour SQL Server. Toute tentative de lecture ou d'écriture de la valeur de propriété génère une erreur.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : OLE DB Driver pour SQL Server prend en charge l'extraction et le défilement vers l'arrière dans les ensembles de lignes non séquentiels. Le pilote OLE DB pour SQL Server crée un ensemble de lignes pris en charge par le curseur lorsque DBPROP_CANFETCHBACKWARDS ou DBPROP_CANSCROLLBACKWARDS a la valeur VARIANT_TRUE. Pour plus d’informations, consultez [Ensembles de lignes et curseurs SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_CANHOLDROWS|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Par défaut, le pilote OLE DB pour SQL Server retourne DB_E_ROWSNOTRELEASED si le consommateur essaie d’obtenir davantage de lignes pour un ensemble de lignes alors que des modifications sont en attente pour les lignes de cet ensemble. Ce comportement peut être modifié.<br /><br /> L'affectation de la valeur VARIANT_TRUE à DBPROP_CANHOLDROWS et DBPROP_IRowsetChange implique un ensemble de lignes contenant un signet. Si les deux propriétés ont la valeur VARIANT_TRUE, l’interface **IRowsetLocate** est disponible sur l’ensemble de lignes. Par ailleurs, DBPROP_BOOKMARKS et DBPROP_LITERALBOOKMARKS ont tous les deux la valeur VARIANT_TRUE.<br /><br /> Les ensembles de lignes du fournisseur OLE DB Driver pour SQL Server qui contiennent des signets sont pris en charge par les curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  

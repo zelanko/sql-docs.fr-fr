@@ -1,5 +1,6 @@
 ---
 title: Concepteur d’alertes de données | Microsoft Docs
+description: Découvrez les définitions d’alerte de données, et apprenez à les créer et à les modifier dans le Concepteur d’alertes de données.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571594"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243297"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
 
@@ -170,7 +171,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ### <a name="email-settings"></a>Paramètres de messagerie  
  Utilisez l’option **Destinataire(s)** pour spécifier les adresses e-mail des destinataires à qui envoyer les messages d’alerte de données par e-mail. Séparez les adresses de messagerie par des points-virgules, comme vous le feriez dans un courrier électronique Microsoft Office Outlook. Vous pouvez également spécifier des groupes de distribution comme destinataires, pour simplifier et accélérer la gestion de la liste des destinataires. Si SharePoint peut déterminer votre adresse de messagerie lorsque vous créez une définition d'alerte, celle-ci est ajoutée automatiquement aux destinataires répertoriés ; sinon, vous devez vous ajouter explicitement comme destinataire.  
   
- L’objet par défaut de l’e-mail est **Alerte de données pour \<nom_alerte>** . Vous pouvez changer l'objet selon vos besoins.  
+ L’objet par défaut de l’e-mail est **Alerte de données pour \<alert name>** . Vous pouvez changer l'objet selon vos besoins.  
   
  Vous pouvez aussi fournir une description à l’aide de l’option **Description** . Cette description sera incluse dans le message d’alerte de données. En incluant une description, surtout si vous avez créé des alertes de données similaires, vous aidera à différencier rapidement les messages d'alerte et à mieux les comprendre. En plus du message d'alerte envoyé lorsque les données du rapport suivent les règles spécifiées, un message d'alerte est envoyé à tous les destinataires lorsqu'une erreur se produit. Pour plus d’informations, consultez [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   

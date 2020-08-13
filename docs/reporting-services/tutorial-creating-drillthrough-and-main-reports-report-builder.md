@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
+description: 'Ce tutoriel explique comment créer deux types de rapports paginés Reporting Services : les rapports d’extraction et les rapports principaux.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637986"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238392"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutoriel : Création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports)
 Ce didacticiel vous apprend comment créer deux types de rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un rapport d’extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. 
 
 L’illustration suivante montre les rapports que vous allez créer et comment la valeur de champ, Games and Toys, du rapport principal s’affiche dans le titre du rapport d’extraction. Les données du rapport d’extraction se rapportent à la catégorie de produit Games and Toys.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+Durée estimée pour effectuer ce tutoriel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Ce didacticiel nécessite l’accès au cube Contoso Sales pour le rapport d’extraction et le rapport principal. Ce dataset se compose de l’entrepôt de données ContosoDW et de la base de données de traitement analytique en ligne (OLAP) Contoso_Retail. Les rapports que vous allez créer dans ce didacticiel récupèrent des données du cube Contoso Sales. Vous pouvez télécharger la base de données OLAP Contoso_Retail à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=18279). Il vous suffit de télécharger le fichier ContosoBIdemoABF.exe. Il contient la base de données OLAP.  
@@ -120,7 +121,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 5.  Dans la liste d’expression de filtre, développez **All Channel**, cliquez sur **Online**, sur **Reseller**, puis sur **OK**.  
   
-    La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
+    La requête comporte maintenant un filtre permettant de n’inclure que les canaux suivants : Online et Reseller.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -208,7 +209,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
 3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
-## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Mettre en forme les données de devise  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Mettre en forme les données en tant que devises  
 Appliquez une mise en forme de devise aux champs de montant des ventes dans le rapport d'extraction.  
   
 #### <a name="to-format-data-as-currency"></a>Pour mettre en forme les données en tant que devise  
@@ -411,7 +412,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 5.  Dans la liste Expression de filtre, développez **All Channel**, cliquez sur **Online** et **Reseller**, puis sur **OK**.  
   
-    La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
+    La requête comporte maintenant un filtre permettant de n’inclure que les canaux suivants : Online et Reseller.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
