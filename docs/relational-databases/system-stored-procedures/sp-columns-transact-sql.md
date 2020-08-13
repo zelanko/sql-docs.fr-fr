@@ -18,11 +18,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999903"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180278"
 ---
 # <a name="sp_columns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85999903"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_columns [ @table_name = ] object  
@@ -70,10 +71,10 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **table_name** retournée. Ce champ retourne toujours une valeur.|  
 |**DATA_TYPE**|**smallint**|Code d’entier pour le type de données ODBC. S’il s’agit d’un type de données qui ne peut pas être mappé à un type ODBC, il a la valeur NULL. Le nom du type de données natif est retourné dans la colonne **type_name** .|  
 |**TYPE_NAME**|**sysname**|Chaîne représentant un type de données. Le SGBD sous-jacent dispose de ce nom de type de données.|  
-|**PRÉCISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
+|**PRECISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
 |**LENGTH**|**int**|Taille de transfert des données. <sup>1</sup>|  
 |**ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
-|**DICAUX**|**smallint**|Base pour les types de données numériques.|  
+|**RADIX**|**smallint**|Base pour les types de données numériques.|  
 |**NULLABLE**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  
 |**NOTES**|**varchar (254)**|Ce champ renvoie toujours la valeur NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
@@ -89,13 +90,13 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Autorisations  
  Requiert des autorisations SELECT et VIEW DEFINITION sur le schéma.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  **sp_columns** suit la configuration requise pour les identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne les informations de colonne pour une table spécifique.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_columns @table_name = N'Department',  
@@ -105,7 +106,7 @@ EXEC sp_columns @table_name = N'Department',
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant retourne les informations de colonne pour une table spécifique.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_columns @table_name = N'DimEmployee',  

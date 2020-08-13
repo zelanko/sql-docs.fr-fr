@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859091"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248158"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Guide du processus de nettoyage des enregistrements fantômes
 
@@ -46,7 +46,7 @@ La requête ci-dessous identifie le nombre d’enregistrements fantômes dans un
 
 ## <a name="disable-the-ghost-cleanup"></a>Désactiver le nettoyage des éléments fantômes
 
-Sur les systèmes à charge élevée avec de nombreuses suppressions, le processus de nettoyage des éléments fantômes peut entraîner des problèmes de performances issus de la conservation des pages dans le pool de mémoires tampons et de la génération d’E/S. Il est donc possible de désactiver ce processus à l’aide de l’indicateur de trace 661. Pour plus d’informations à ce sujet, consultez [Options de paramétrage pour SQL Server lors de l’exécution de charges de travail hautes performances](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). Toutefois, la désactivation du processus a des implications au niveau des performances.
+Sur les systèmes à charge élevée avec de nombreuses suppressions, le processus de nettoyage des éléments fantômes peut entraîner des problèmes de performances issus de la conservation des pages dans le pool de mémoires tampons et de la génération d’E/S. Il est donc possible de désactiver ce processus à l’aide de l’[indicateur de trace 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Toutefois, la désactivation du processus a des implications au niveau des performances.
 
 La désactivation du processus de nettoyage des éléments fantômes peut se traduire par une augmentation inutile de la taille votre base de données et entraîner des problèmes de performances. Si vous désactivez le processus de nettoyage des éléments fantômes, les enregistrements marqués comme tels dans la page ne sont plus supprimés, empêchant ainsi SQL Server de réutiliser cet espace. SQL Server est alors obligé d’ajouter des données dans de nouvelles pages, d’où des fichiers de base de données ballonnés susceptibles de provoquer des [fractionnements de pages](indexes/specify-fill-factor-for-an-index.md). Ces derniers donnent lieu à des problèmes de performances lors de la création de plans d’exécution et lors des opérations d’analyse. 
 

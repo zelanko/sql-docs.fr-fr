@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : introduction aux expressions | Microsoft Docs'
+description: Découvrez comment utiliser des expressions avec des fonctions et des opérateurs courants pour créer des rapports paginés Reporting Services puissants et flexibles.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248538"
 ---
-# <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
+# <a name="tutorial-introducing-expressions"></a>Tutoriel : Introduction aux expressions
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
 
 Vous allez écrire des expressions qui concatènent des valeurs de noms, qui recherchent des valeurs dans un autre dataset, qui affichent différentes couleurs en fonction des valeurs de champ, etc.  
@@ -26,7 +27,7 @@ Cette illustration montre un rapport similaire à celui que vous allez créer.
   
 ![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+Durée estimée pour effectuer ce tutoriel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +90,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
     ```  
 
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). Le jeu de résultats affiche 23 lignes de données dans les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). Le jeu de résultats affiche 23 lignes de données avec les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase et LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Afficher la première initiale et le nom de famille  
-Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur **Concaténer** ( **&** ) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression** .   
+Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur **Concaténer** (**&**) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression** .   
   
 1.  Cliquez avec le bouton droit sur la colonne **StateProvince** , pointez sur **Insérer une colonne**et cliquez sur **Gauche**.  
   
@@ -357,7 +358,7 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Pour rechercher des valeurs dans le dataset CountryRegion  
   
-1.  Cliquez sur l’en-tête de colonne **Country Region ID** , puis supprimez **ID**pour que le nom de l’en-tête devienne **Country Region**.  
+1.  Cliquez sur l’en-tête de la colonne **Country Region ID** et supprimez le texte : **ID**, afin de lire **Country Region**.  
   
 2.  Cliquez avec le bouton droit sur la cellule de données pour la colonne **Country Region** et cliquez sur **Expression**.  
   
@@ -533,25 +534,25 @@ Créez un paramètre pour que les lecteurs du rapport puissent spécifier la cou
   
 5.  Dans la page **Valeurs disponibles** , sélectionnez **Spécifier les valeurs**.  
   
-7.  Cliquez sur **Ajouter**.  
+7.  Cliquez sur **Add**.  
   
 8.  Dans la zone **Étiquette** , tapez **Yellow**.  
   
 9. Dans la zone **Valeur** , tapez **Yellow**.  
   
-10. Cliquez sur **Ajouter**.  
+10. Cliquez sur **Add**.  
   
 11. Dans la zone **Étiquette** , tapez **Green**.  
   
 12. Dans la zone **Valeur** , tapez **PaleGreen**.  
   
-13. Cliquez sur **Ajouter**.  
+13. Cliquez sur **Add**.  
   
 14. Dans la zone **Étiquette** , tapez **Blue**.  
   
 15. Dans la zone **Valeur** , tapez **LightBlue**.  
   
-16. Cliquez sur **Ajouter**.  
+16. Cliquez sur **Add**.  
   
 17. Dans la zone **Étiquette** , tapez **Pink**.  
   

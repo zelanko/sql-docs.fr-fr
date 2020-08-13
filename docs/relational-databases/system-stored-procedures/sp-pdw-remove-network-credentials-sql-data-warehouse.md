@@ -14,23 +14,23 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: be447109a1432fdf8c3f3ae4a44f34a2eed1fd46
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 200a473843e27d7096b71e675c140120da803bd2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196776"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173174"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Cela supprime les informations d’identification réseau stockées dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] pour accéder à un partage de fichiers réseau. Par exemple, utilisez cette procédure stockée pour supprimer l’autorisation d' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] effectuer des opérations de sauvegarde et de restauration sur un serveur qui réside dans votre propre réseau.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
@@ -64,7 +64,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ### <a name="a-remove-credentials-for-performing-a-database-backup"></a>R. Supprimer les informations d’identification pour effectuer une sauvegarde de base de données  
  L’exemple suivant supprime les informations d’identification du nom d’utilisateur et du mot de passe pour accéder au serveur cible dont l’adresse IP est 10.192.147.63.  
   
-```  
+```sql  
 EXEC sp_pdw_remove_network_credentials '10.192.147.63';  
 ```  
   

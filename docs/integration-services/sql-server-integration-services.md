@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 781b58bfa0d2afa3ee981fd591909719e8d1051a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4a512b91bbac1a84004643de2738468f21ee984
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921955"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248662"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "86921955"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est une plateforme qui permet de créer des solutions de transformation de données et d’intégration de données au niveau de l’entreprise. Utilisez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour résoudre des problèmes métier complexes en copiant ou en téléchargeant des fichiers, en chargeant des entrepôts de données, en nettoyant et en explorant des données et en gérant des données et des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est une plateforme qui permet de générer des solutions de transformation et d’intégration de données au niveau de l’entreprise. Utilisez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour résoudre des problèmes métier complexes en copiant ou en téléchargeant des fichiers, en chargeant des entrepôts de données, en nettoyant et en explorant des données et en gérant des données et des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] peut extraire et transformer des données provenant d’une grande variété de sources, par exemple des fichiers de données XML, des fichiers plats et des sources de données relationnelles, puis charger les données dans une ou plusieurs destinations.
 

@@ -18,11 +18,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85984805"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173092"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85984805"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
@@ -75,7 +76,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|Table, table système ou vue.|  
 |**NOTES**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les critères spéciaux SQL standard de SQL-92 (caractères génériques % et _).  
   
  Les informations de privilège concernant l'accès en lecture/écriture de l'utilisateur actuel à une table spécifique ne sont pas toujours vérifiées. Par conséquent, l'accès n'est pas garanti. Ce jeu de résultats ne comprend pas uniquement des tables et des vues, mais également des synonymes et des noms d'alias, dans le cas des passerelles vers les SGBD qui gèrent ces types. Si l’attribut de serveur **ACCESSIBLE_TABLES** est Y dans le jeu de résultats pour **sp_server_info**, seules les tables accessibles par l’utilisateur actuel sont retournées.  
@@ -90,14 +91,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 ### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>R. Retour d'une liste d'objets pouvant être sollicités dans l'environnement actuel  
  L’exemple suivant retourne une liste d’objets qui peuvent être des requêtes dans l’environnement actuel.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. Retour d'informations sur les tables dans un schéma spécifié  
  L'exemple suivant retourne des informations sur les tables appartenant au schéma `Person` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tables   
@@ -111,14 +112,14 @@ EXEC sp_tables
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Retour d'une liste d'objets pouvant être sollicités dans l'environnement actuel  
  L’exemple suivant retourne une liste d’objets qui peuvent être des requêtes dans l’environnement actuel.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Retour d'informations sur les tables dans un schéma spécifié  
  L’exemple suivant retourne des informations sur les tables de dimension de la `AdventureWorksPDW201` base de données.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_tables   

@@ -1,5 +1,6 @@
 ---
 title: Nouveautés de Reporting Services | Microsoft Docs
+description: Découvrez les nouveautés des différentes versions de SQL Server Reporting Services, y compris les modifications apportées aux principaux ensembles de fonctionnalités.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079609"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248549"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Nouveautés de SQL Server Reporting Services (SSRS)
 
@@ -36,21 +37,21 @@ Pour plus d’informations sur Power BI Report Server, consultez [Qu’est-ce qu
 
 Vous pouvez maintenant héberger un catalogue de bases de données utilisé pour SQL Server Reporting Services (SSRS) dans une instance managée (MI) Azure SQL hébergée sur une machine virtuelle ou votre centre de données. La prise en charge est limitée à l’utilisation des informations d’identification de base de données pour la connexion à SQL MI.
 
-### <a name="power-bi-premium-dataset-support"></a>Prise en charge des datasets Power BI Premium
+### <a name="power-bi-premium-dataset-support"></a>Prise en charge des jeux de données Power BI Premium
 
-Vous pouvez vous connecter à des datasets Power BI à l’aide du Générateur de rapports Microsoft ou de SQL Server Data Tools (SSDT). Vous pouvez ensuite publier ces rapports dans SSRS 2019 à l’aide de la connectivité SQL Server Analysis Services. Les utilisateurs doivent utiliser un nom d’utilisateur et un mot de passe Windows stockés pour activer le scénario.
+Vous pouvez vous connecter à des jeux de données Power BI à l’aide du Générateur de rapports Microsoft ou de SQL Server Data Tools (SSDT). Vous pouvez ensuite publier ces rapports dans SSRS 2019 à l’aide de la connectivité SQL Server Analysis Services. Les utilisateurs doivent utiliser un nom d’utilisateur et un mot de passe Windows stockés pour rendre possible le scénario.
 
-### <a name="alttext-alternative-text-support-for-report-elements"></a>Prise en charge d’AltText (texte de remplacement) pour les éléments de rapport
+### <a name="alttext-alternative-text-support-for-report-elements"></a>Prise en charge d’AltText (texte de remplacement) pour les éléments de rapports
 
-Lors de la création de rapports, vous pouvez utiliser des info-bulles afin de spécifier du texte pour chaque élément du rapport. La technologie des lecteurs d’écran identifie ces info-bulles correctement.
+Lors de la création de rapports, vous pouvez vous servir des info-bulles afin de spécifier du texte pour chacun des éléments du rapport. La technologie des lecteurs d’écran identifie ces info-bulles correctement.
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Prise en charge du proxy d'application Azure Active Directory
 
-Avec le proxy d’application Azure Active Directory, vous n’avez plus besoin de gérer votre propre proxy d’application web pour permettre un accès sécurisé via le web ou des applications mobiles.
+Avec le Proxy d’application Azure Active Directory, vous n’avez plus besoin de gérer votre propre proxy d’application web pour permettre un accès sécurisé via le web ou des applications mobiles.
 
 ### <a name="custom-headers"></a>En-têtes personnalisés
 
-Définit des valeurs d’en-tête pour toutes les URL correspondant au modèle d’expression régulière spécifié. Les utilisateurs peuvent mettre à jour la valeur de l’en-tête personnalisé avec du code XML valide pour définir les valeurs d’en-tête des URL de demande sélectionnées. Les administrateurs peuvent ajouter n’importe quel nombre d’en-têtes dans le code XML. Pour plus d’informations, consultez [En-têtes personnalisés](tools/server-properties-advanced-page-reporting-services.md#customheaders) dans l’article **Page Avancé des propriétés du serveur**.
+Définit des valeurs d’en-tête pour toutes les URL correspondant au modèle regex spécifié. Les utilisateurs peuvent mettre à jour la valeur d’en-tête personnalisé avec du code XML valide pour les URL de demande sélectionnées. Les administrateurs peuvent ajouter autant d’en-têtes qu’ils le souhaitent dans le code XML. Pour plus d’informations, consultez [En-têtes personnalisés](tools/server-properties-advanced-page-reporting-services.md#customheaders) dans l’article **Page Avancé des propriétés du serveur**.
 
 ### <a name="transparent-database-encryption"></a>Chiffrement transparent de base de données
 
@@ -58,7 +59,7 @@ SQL Server 2019 prend désormais en charge Transparent Database Encryption pour 
 
 ### <a name="microsoft-report-builder-update"></a>Mise à jour du générateur de rapports Microsoft
 
-La nouvelle version du Générateur de rapports est entièrement compatible avec les versions 2016, 2017 et 2019 de Reporting Services. Elle est également compatible avec toutes les versions publiées et prises en charge du serveur de rapports Power BI.
+La nouvelle version de Générateur de rapports est entièrement compatible avec les versions 2016, 2017 et 2019 de Reporting Services, ainsi qu’avec toutes les versions publiées et prises en charge de Power BI Report Server.
 
 ::: moniker-end
 
@@ -175,15 +176,15 @@ Pour plus d'informations, consultez les pages suivantes :
 
 ### <a name="report-improvements"></a>Améliorations apportées aux rapports
 
-**Moteur de rendu HTML 5 :** nouveau moteur de rendu HTML5 qui cible le mode standard web moderne « complet » et les navigateurs modernes.  Le nouveau moteur de rendu n’utilise plus le mode excentrique utilisé par certains navigateurs plus anciens.
+**Moteur de rendu HTML 5 :** Un nouveau moteur de rendu HTML5 qui cible le mode standard web moderne « complet » et les navigateurs modernes.  Le nouveau moteur de rendu n’utilise plus le mode excentrique utilisé par certains navigateurs plus anciens.
 
 Pour plus d’informations sur la prise en charge des navigateurs, consultez [Prise en charge des navigateurs pour Reporting Services et Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Rapports paginés modernes :** concevez de magnifiques rapports paginés modernes avec de nouveaux styles modernes pour les graphiques, jauges, cartes et autres visualisations de données.
+**Rapports paginés modernes :** Concevez de beaux rapports paginés modernes avec les nouveaux styles modernes pour les graphiques, jauges, cartes et autres visualisations de données.
 
-**Graphiques en arborescence et en rayons de soleil :** améliorez vos rapports avec une arborescence ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") et en rayons de soleil ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), très utiles pour afficher des données hiérarchiques. Pour plus d’informations, consultez [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Graphiques Arborescence et Rayons :** Améliorez vos rapports avec les graphiques Arborescence ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") et Rayons ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), très utiles pour afficher des données hiérarchiques. Pour plus d’informations, consultez [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Incorporation des rapports :** vous pouvez désormais incorporer des rapports mobiles et paginés dans d’autres pages web et applications en utilisant un iframe avec les paramètres d’URL.  
+**Incorporation de rapport :** Vous pouvez désormais incorporer des rapports mobiles et paginés dans d’autres pages web et des applications, en utilisant un iframe avec des paramètres d’URL.  
 
 **Épingler des éléments de rapport à un tableau de bord Power BI :** quand vous affichez un rapport dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], vous pouvez sélectionner des éléments de rapport et les épingler à un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Vous pouvez épingler les éléments suivants : graphiques, jauges, cartes et images. Vous pouvez :
 
@@ -197,7 +198,7 @@ Pour plus d’informations sur la prise en charge des navigateurs, consultez [Pr
 
 Pour plus d’informations, consultez [Intégration de Power BI Report Server BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) et [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**Exportation et rendu PowerPoint :** e format Microsoft PowerPoint (PPTX) est une nouvelle extension de rendu [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Vous pouvez exporter des rapports au format PPTX à partir des applications habituelles : le Générateur de rapports, le Concepteur de rapports (dans SSDT) et le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. À titre d’exemple, l’illustration suivante montre le menu d’exportation du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**Exportation et rendu PowerPoint :** Le format Microsoft PowerPoint (PPTX) est une nouvelle extension de rendu [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous pouvez exporter des rapports au format PPTX à partir des applications habituelles : le Générateur de rapports, le Concepteur de rapports (dans SSDT) et le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. À titre d’exemple, l’illustration suivante montre le menu d’exportation du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +210,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Pour plus d’informations, consultez [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).
 
-**Le format PDF remplace ActiveX pour l’impression à distance :** la barre d’outils de la visionneuse de rapports imprime désormais via PDF au lieu des contrôles ActiveX. La nouvelle visionneuse de rapports est prise en charge par la plupart des navigateurs modernes, y compris Microsoft Edge. Il n’est plus nécessaire de télécharger des contrôles ActiveX Selon le navigateur que vous utilisez et les applications et services d’affichage PDF que vous avez installés, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ouvre une boîte de dialogue d’impression pour imprimer votre rapport ou vous invite à télécharger le fichier .PDF associé. En tant qu’administrateur, vous pouvez toujours désactiver l’impression côté client à partir de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**Le format PDF remplace ActiveX pour l’impression à distance :** La barre d’outils de la visionneuse de rapports imprime désormais via PDF au lieu des contrôles ActiveX. La nouvelle visionneuse de rapports est prise en charge par la plupart des navigateurs modernes, y compris Microsoft Edge. Il n’est plus nécessaire de télécharger des contrôles ActiveX Selon le navigateur que vous utilisez et les applications et services d’affichage PDF que vous avez installés, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ouvre une boîte de dialogue d’impression pour imprimer votre rapport ou vous invite à télécharger le fichier .PDF associé. En tant qu’administrateur, vous pouvez toujours désactiver l’impression côté client à partir de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 Pour plus d’informations, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -226,18 +227,18 @@ Pour plus d’informations, consultez [Activer et désactiver l’impression cô
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-La nouvelle version de SSDT inclut les modèles de projet pour [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistant Projet Report Server et Projet Report Server. Pour plus d’informations sur le téléchargement de SSDT, consultez [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+La nouvelle version de SSDT inclut les modèles de projet pour [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] : Assistant Projet Report Server et Projet Report Server. Pour plus d’informations sur le téléchargement de SSDT, consultez [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Améliorations du Générateur de rapports
 
-**Nouvelle interface utilisateur du Générateur de rapports :** la principale interface utilisateur du [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] a maintenant une apparence moderne avec des éléments simplifiés.  
+**Nouvelle interface utilisateur du Générateur de rapports :** L’interface utilisateur principale de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] a maintenant une apparence moderne avec des éléments d’interface utilisateur simplifiés.  
 
 |||  
 |-|-|  
 |Nouveau|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Volet Paramètres personnalisé :** vous pouvez maintenant personnaliser le volet Paramètres. Vous pouvez utiliser l’aire de conception du Générateur de rapports pour faire glisser un paramètre vers une colonne et une ligne spécifiques du volet Paramètres. Vous pouvez ajouter et supprimer des colonnes pour modifier la disposition du volet. Pour plus d’informations, consultez [Personnaliser le volet Paramètres dans un rapport &#40;Générateur de rapports&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Volet Paramètres personnalisé :** Vous pouvez désormais personnaliser le volet Paramètres. Vous pouvez utiliser l’aire de conception du Générateur de rapports pour faire glisser un paramètre vers une colonne et une ligne spécifiques du volet Paramètres. Vous pouvez ajouter et supprimer des colonnes pour modifier la disposition du volet. Pour plus d’informations, consultez [Personnaliser le volet Paramètres dans un rapport &#40;Générateur de rapports&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 ![Liste de paramètres dans le volet Données du rapport et dans le volet Paramètres](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Liste de paramètres dans le volet Données du rapport et dans le volet Paramètres")  
 

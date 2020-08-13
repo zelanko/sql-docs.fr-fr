@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891196"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88172898"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 `[ @pollinginterval ] = polling\_interval_`Nombre de secondes entre les cycles d’analyse du journal. *polling_interval* est de type **bigint** avec 5 comme valeur par défaut.  
   
- *polling_interval* est valide uniquement pour les travaux de capture quand *Continuous* a la valeur 1. Si elle est spécifiée, la valeur ne peut pas être négative et ne peut pas dépasser 24 heures. Si une valeur de 0 est spécifiée, il n'y a aucune attente entre les analyses de journal.  
+ *polling_interval* est valide uniquement pour les travaux de capture quand *Continuous* a la valeur 1. S’il est spécifié, la valeur doit être supérieure ou égale à 0 et inférieure à 24 heures (max : 86399 secondes). Si une valeur de 0 est spécifiée, il n'y a aucune attente entre les analyses de journal.  
   
 `[ @retention ] = retention_`Nombre de minutes pendant lesquelles les lignes de données modifiées doivent être conservées dans les tables de modifications. la *rétention* est de type **bigint** et sa valeur par défaut est 4320 (72 heures). La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
   

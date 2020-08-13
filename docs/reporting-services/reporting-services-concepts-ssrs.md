@@ -1,5 +1,6 @@
 ---
 title: Concepts de Reporting Services | Microsoft Docs
+description: Découvrez les concepts relatifs à SQL Server Reporting Services (SSRS), notamment la planification des rapports, les rôles et les autorisations, ainsi que les abonnements aux rapports et la remise des rapports.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb4d1592b2541c16a34c96820a27942ef8bc08e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078183"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248585"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -21,7 +22,7 @@ ms.locfileid: "77078183"
  **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint   
   
 ##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Concepts du serveur de rapports  
- Un serveur de rapports est un ordinateur sur lequel une instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installée. Un serveur de rapports stocke en interne des éléments tels que des rapports paginés et mobiles, des éléments liés aux rapports et des ressources, des planifications et des abonnements. Un serveur de rapports peut être configuré en tant qu'unique serveur autonome ou comme batterie scale-out, ou il peut être intégré au serveur SharePoint. Vous interagissez avec des éléments de serveur de rapports par le service Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le fournisseur WMI, l'accès URL ou par programmation via des scripts. La façon dont vous interagissez avec un serveur de rapports dépend de la topologie de déploiement et de la configuration.  
+ Un serveur de rapports est un ordinateur sur lequel une instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installée. Un serveur de rapports stocke en interne des éléments tels que des rapports paginés et mobiles, des éléments liés aux rapports et des ressources, des planifications et des abonnements. Un serveur de rapports peut être configuré en tant qu'unique serveur autonome ou comme batterie évolutive, ou il peut être intégré au serveur SharePoint. Vous interagissez avec des éléments de serveur de rapports par le service Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le fournisseur WMI, l'accès URL ou par programmation via des scripts. La façon dont vous interagissez avec un serveur de rapports dépend de la topologie de déploiement et de la configuration.  
   
 ### <a name="native-mode-report-servers"></a>Serveurs de rapports en mode natif
  Un serveur de rapports configuré en mode natif est un ordinateur qui a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installé et configuré comme serveur autonome. Vous interagissez avec le serveur de rapports, les rapports et les éléments liés aux rapports à l’aide d’un navigateur avec le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ou les commandes d’accès URL, SQL Server Management Studio ou par programmation via des scripts. Pour plus d’informations, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
