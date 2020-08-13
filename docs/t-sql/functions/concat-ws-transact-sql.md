@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e5524c0d2359f3edcbe003be366618df00217b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b952b51c6171bf22590403452e7b17899459de0
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112085"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87564929"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
@@ -38,11 +38,9 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Arguments
-separator  
-Expression de tout type de caractère (`char`, `nchar`, `nvarchar` ou `varchar`).
+*separator* Expression de tout type de caractère (`char`, `nchar`, `nvarchar` ou `varchar`).
 
-argument1, argument2, argument*N*  
-Expression de tout type.
+*argument1, argument2, argumentN* Expression de tout type. La fonction `CONCAT_WS` nécessite au moins deux arguments et pas plus de 254 arguments.
 
 ## <a name="return-types"></a>Types de retour
 Valeur de chaîne dont la longueur et le type dépendent de l’entrée.

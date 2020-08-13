@@ -16,12 +16,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 877dc8524c1d87cb83dfa194020454f2d0841d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66f58a7526684384e4533290ee42c4cc75dea1a2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756126"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864886"
 ---
 # <a name="system-databases"></a>Bases de données système
 
@@ -37,7 +37,7 @@ ms.locfileid: "85756126"
 |[Base de données tempdb](../../relational-databases/databases/tempdb-database.md)|Espace de travail destiné à accueillir les objets temporaires ou les ensembles de résultats intermédiaires.|  
 
 > [!IMPORTANT]
-> Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et tempdb s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Pour en savoir plus sur tempdb dans le contexte d’Azure SQL Database, consultez [Base de données tempdb dans Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). Pour SQL Database Managed Instance, toutes les bases de données système s’appliquent. Pour plus d’informations sur les instances gérées dans Azure SQL Database, voir [Présentation des instances gérées](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+> Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et tempdb s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Pour en savoir plus sur tempdb dans le contexte d’Azure SQL Database, consultez [Base de données tempdb dans Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). Pour Azure SQL Managed Instance, toutes les bases de données système s’appliquent. Pour plus d’informations sur les instances gérées dans Azure SQL Database, voir [Présentation des instances gérées](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
 ## <a name="modifying-system-data"></a>modification de données système  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne permet pas aux utilisateurs de mettre directement à jour les informations contenues dans les objets système, tels que les tables système, les procédures stockées système et les vues de catalogue. En revanche, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un jeu complet d'outils d'administration qui permettent aux utilisateurs d'administrer complètement leur système et de gérer tous les utilisateurs et objets d'une base de données. Ces options en question sont les suivantes :  

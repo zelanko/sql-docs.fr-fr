@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392827"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046594"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ Nécessite l’autorisation **ALTER ANY CREDENTIAL**.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-basic-example"></a>R. Exemple de base
+### <a name="a-creating-a-credential-for-windows-identity"></a>R. Création d’informations d’identification pour l’identité Windows
 
 L'exemple ci-dessous crée des informations d'identification nommées `AlterEgo`. Les informations d'identification contiennent l'utilisateur Windows `Mary5` et un mot de passe.
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Création d’informations d’identification à l’aide d’un jeton SAP
 
-**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658) et aux instances managées dans Azure SQL Database.
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658) et Azure SQL Managed Instance.
 
 L’exemple suivant crée des informations d’identification avec signature d’accès partagé à l’aide d’un jeton SAP. Pour un tutoriel montrant comment créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure, puis créer des informations d’identification à l’aide de la signature d’accès partagé, consultez [Tutoriel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. Création d’informations d’identification pour l’identité managée
+
+L’exemple suivant crée les informations d’identification qui représentent l’identité managée du service SQL Azure ou Azure Synapse. Le mot de passe et le secret ne sont pas applicables dans ce cas.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

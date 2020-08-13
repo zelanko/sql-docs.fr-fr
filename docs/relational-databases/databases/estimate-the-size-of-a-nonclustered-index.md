@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743334"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864500"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743334"
   
 4.  Calculez la taille des données de longueur variable :  
   
-     En présence de colonnes de longueur variable dans la clé d'index, notamment les colonnes clés de cluster nécessaires comme décrit précédemment dans l'étape 2.2, déterminez l'espace utilisé pour le stockage des colonnes dans la ligne d'index :  
+     En présence de colonnes de longueur variable (colonnes clés ou incluses), notamment les colonnes clés de clustering nécessaires comme décrit précédemment dans l’étape 2.2, déterminez l’espace utilisé pour le stockage des colonnes dans la ligne d’index :  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      Les octets ajoutés à ***Max_Var_Key_Size*** servent à assurer le suivi de chaque colonne variable. Cette formule suppose que toutes les colonnes de longueur variable sont entièrement remplies. Si vous estimez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez multiplier la valeur ***Max_Var_Leaf_Size*** par ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
-     En l’absence de colonnes de longueur variable, attribuez à ***Variable_Leaf_Size*** la valeur 0.  
+     En l’absence de colonnes de longueur variable (colonnes clés ou incluses), attribuez à ***Variable_Leaf_Size*** la valeur 0.  
   
 5.  Calculez la taille de la ligne d'index :  
   

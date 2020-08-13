@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e4a00b8bff85625cf48f8ba1f5abf3fb14ce94a8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a2874fa0cd20ed8ff80f7815b0725ce14dd800b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113245"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864430"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)
 
@@ -66,7 +66,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -687,17 +687,17 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Instance managée<br />SQL Database \*_**<br />&nbsp;
+        **_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
-Utilisez cette instruction sur une base de données dans l’instance managée Azure SQL Database.
+Utilisez cette instruction sur une base de données dans Azure SQL Managed Instance.
 
-## <a name="syntax-for-databases-in-a-managed-instance"></a>Syntaxe des bases de données dans une instance managée
+## <a name="syntax-for-azure-sql-managed-instance"></a>Syntaxe d’Azure SQL Managed Instance
 
 ```syntaxsql
 ALTER DATABASE database_name

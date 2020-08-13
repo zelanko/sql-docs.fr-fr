@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d39a7b7149f6ac75873389c1ac90c6daca8a90
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 73b805149ca1061c73572d742875fa11d9d81b23
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483920"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931754"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Si l’option READ_COMMITTED_SNAPSHOT a la valeur OFF (valeur par défaut sur SQL Server), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise des verrous partagés pour empêcher d’autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Le type du verrou partagé détermine quand il sera levé. Les verrous de ligne sont levés avant que la ligne suivante ne soit traitée. Les verrous de page sont levés quand la page suivante est lue et les verrous de table sont levés quand l’exécution de l’instruction se termine.  
   
--   Si READ_COMMITTED_SNAPSHOT a la valeur ON (valeur par défaut sur SQL Azure Database), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu’elles étaient au début de l’instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions.
+-   Si READ_COMMITTED_SNAPSHOT a la valeur ON (valeur par défaut sur Azure SQL Database), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la gestion de versions de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu’elles étaient au début de l’instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions.
 
 > [!IMPORTANT]  
 > Le choix d'un niveau d'isolation n'a aucune influence sur les verrous acquis pour protéger les modifications de données. Une transaction acquiert toujours un verrou exclusif sur les données qu'elle modifie et garde celui-ci jusqu'à ce qu'elle ait terminé son travail, indépendamment du niveau d'isolation défini pour elle. De plus, une mise à jour effectuée au niveau d’isolation READ_COMMITTED utilise des verrous de mise à jour sur les lignes de données sélectionnées, tandis qu’une mise à jour apportée au niveau d’isolation SNAPSHOT utilise des versions de ligne pour sélectionner les lignes à mettre à jour. Dans le cas des opérations de lecture, le niveau d'isolation d'une transaction définit principalement son niveau de protection contre les effets des modifications apportées par les autres transactions. Pour plus d’informations, consultez [Guide du verrouillage des transactions et de la gestion de versions de ligne](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).

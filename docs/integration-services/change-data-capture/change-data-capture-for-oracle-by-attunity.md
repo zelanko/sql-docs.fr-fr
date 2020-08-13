@@ -10,23 +10,28 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a78ef76f0b8a1c133d09747e460837e1d68dd318
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2afa40749326b5b7a69179001787e5fa9469bee6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918665"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952214"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture pour Oracle d’Attunity
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Le téléchargement Change Data Capture pour Oracle d’Attunity inclut les deux composants suivants.
+Le téléchargement Capture de données modifiées pour Oracle par Attunity inclut les deux composants suivants.
 
 -   [Concepteur de capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)
 
 -   [Service CDC pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)   
 
 ## <a name="get-the-change-data-capture-for-oracle-by-attunity-download"></a>Obtenir le téléchargement Change Data Capture pour Oracle d’Attunity
-Le service et le concepteur de capture des changements de données Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 font partie du Feature Pack de SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+
+Téléchargez le concepteur et le service de capture de données modifiées Microsoft pour Oracle par Attunity pour obtenir la version de SQL Server correspondante à partir des liens ci-dessous :
+
+- [Feature Pack Microsoft SQL Server 2016 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Feature Pack Microsoft SQL Server 2017 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Feature Pack Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303)

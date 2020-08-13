@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0505a5e6c715558b34d2f1a86e88a0b7b938e7d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52a669c7a624b2bb88b9f392cf4ecc71be7d681a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781702"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823972"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85781702"
 ###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L’exportation d’une DAC requiert au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.
  
-Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autorisation VIEW DEFINITION et SELECT sur toutes les tables ou sur des tables spécifiques
+Sur Azure SQL Database, vous devez accorder **pour chaque base de données** l’autorisation VIEW DEFINITION et SELECT sur toutes les tables ou sur des tables spécifiques
 
   
 ##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> Utilisation de l'Assistant Exporter l'application de la couche Données  

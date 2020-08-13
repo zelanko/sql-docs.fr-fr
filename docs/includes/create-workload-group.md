@@ -41,7 +41,7 @@ Le paramètre IMPORTANCE est local par rapport au pool de ressources : les grou
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 Spécifie la quantité de mémoire maximale qu'une requête unique peut prendre du pool. *value* est un pourcentage relatif à la taille du pool de ressources spécifiée par MAX_MEMORY_PERCENT.
 
-*value* est un entier jusqu’à [!INCLUDE[ssSQL17](sssql17-md.md)], et une valeur flottante à compter de [!INCLUDE[sql-server-2019](sssqlv15-md.md)] et dans [!INCLUDE[ssSDSfull](sssdsfull-md.md)] Managed Instance. La valeur par défaut est 25. La plage autorisée pour *value* est comprise entre 1 et 100.
+*value* est un entier jusqu’à [!INCLUDE[ssSQL17](sssql17-md.md)], et une valeur flottante à compter de [!INCLUDE[sql-server-2019](sssqlv15-md.md)] et dans Azure SQL Managed Instance. La valeur par défaut est 25. La plage autorisée pour *value* est comprise entre 1 et 100.
 
 > [!IMPORTANT]  
 > La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781735"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988777"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781735"
   
     -   Possibilité d’utiliser SQL Server Management Studio pour extraire un DACPAC d’une base de données existante et d’exécuter également d’autres opérations DAC.  
   
-    -   En outre, l'administrateur d'une [!INCLUDE[ssSDS](../../includes/sssds-md.md)] peut utiliser le portail de gestion pour SQL Azure pour les opérations DAC.  
+    -   De plus, le DBA d’un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] peut utiliser le portail Azure pour les opérations DAC.  
   
 -   Éditeurs de logiciels :  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781735"
   
 -   **EXTRACT** : l’utilisateur peut extraire une base de données dans un DACPAC.  
   
--   **DEPLOY** : l’utilisateur peut déployer un DACPAC sur un serveur hôte. Une fois le déploiement terminé à partir d'un outil de gestion comme SQL Server Management Studio ou du portail de gestion de SQL Azure, la base de données obtenue sur le serveur hôte est implicitement inscrite en tant qu'application de la couche Données.  
+-   **DEPLOY** : l’utilisateur peut déployer un DACPAC sur un serveur hôte. Quand le déploiement est effectué à partir d’un outil de gestion comme SQL Server Management Studio ou du portail Azure, la base de données obtenue sur le serveur hôte est implicitement inscrite en tant qu’application de la couche Données.  
   
 -   **REGISTER** : l’utilisateur peut inscrire une base de données en tant qu’application de la couche Données.  
   

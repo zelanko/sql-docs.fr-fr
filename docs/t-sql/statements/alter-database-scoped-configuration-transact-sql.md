@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279495"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864480"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 Permet de définir la fonctionnalité de suppression automatique pour les [tables temporaires globales](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). La valeur par défaut est ON, ce qui signifie que les tables temporaires globales sont automatiquement supprimées lorsqu’elles ne sont pas utilisées dans une session. Lorsqu’elles sont définies sur OFF, les tables temporaires globales doivent être supprimées explicitement à l’aide d’une instruction DROP TABLE ou sont automatiquement supprimées au redémarrage du serveur.
 
 - Avec les bases de données uniques/pools élastiques [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette option peut être définie dans les bases de données utilisateur individuelles du serveur SQL Database.
-- Dans l’instance managée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette option est définie dans `TempDB`, et le paramètre des bases de données utilisateur individuelles n’a aucun effet.
+- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Azure SQL Managed Instance, cette option est définie dans `TempDB` et le paramètre des bases de données utilisateur individuelles n’a aucun effet.
 
 <a name="lqp"></a>
 

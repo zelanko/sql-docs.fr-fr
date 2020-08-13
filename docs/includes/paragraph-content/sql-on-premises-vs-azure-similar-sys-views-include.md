@@ -8,7 +8,7 @@
 Certains exemples de code Transact-SQL écrits pour une instance locale de SQL Server ont besoin de changements mineurs pour s’exécuter sur le service Azure SQL Database dans le cloud. Une catégorie de ces exemples de code implique des vues système dont les préfixes de noms diffèrent légèrement entre les deux systèmes de base de données :
 
 - **server\_** &nbsp; - &nbsp; _préfixe pour l’instance locale_
-- **database\_** &nbsp; - &nbsp; _préfixe pour le service Azure SQL DB dans le cloud_
+- **database\_** &nbsp; - &nbsp; _préfixe pour Azure SQL Database_
 
 À titre d’illustration, le tableau suivant liste et compare deux sous-ensembles de vues système. Par souci de concision, les sous-ensembles sont limités aux noms de vues qui contiennent également la chaîne `_event`. Les sous-ensembles ont des préfixes de noms différents parce qu’ils proviennent de deux systèmes de bases de données différents.
 

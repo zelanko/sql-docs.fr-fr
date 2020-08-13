@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411041"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987961"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,7 +51,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Pool élastique/base de données unique<br />Azure SQL Database\*_**
+        **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Pool élastique/base de données unique Azure SQL Database
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Azure SQL<br />Managed Instance \*_**
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="syntax"></a>Syntaxe
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -451,7 +451,7 @@ SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement au
 - Une nouvelle syntaxe est introduite pour la création de principaux au niveau du serveur mappés à des comptes Azure AD (**FROM EXTERNAL PROVIDER**)
 - Quand **FROM EXTERNAL PROVIDER** est spécifié :
 
-  - login_name doit représenter un compte Azure AD existant (utilisateur, groupe ou application) qui est accessible dans Azure AD par l’instance managée Azure SQL active. Pour les principaux Azure AD, la syntaxe CREATE LOGIN exige les éléments suivants :
+  - login_name doit représenter un compte Azure AD existant (utilisateur, groupe ou application) qui est accessible dans Azure AD par l’instance Azure SQL Managed Instance active. Pour les principaux Azure AD, la syntaxe CREATE LOGIN exige les éléments suivants :
     - UserPrincipalName de l’objet Azure AD pour les utilisateurs Azure AD.
     - DisplayName de l’objet Azure AD pour les groupes Azure AD et les applications Azure AD.
   - Vous ne pouvez pas utiliser l’option **PASSWORD**.
@@ -469,18 +469,18 @@ Seule la connexion principale au niveau du serveur (créée par le processus de 
 
 Par défaut, les autorisations standard accordées à une connexion Azure AD nouvellement créée dans master sont : **CONNECT SQL** et **VIEW ANY DATABASE**.
 
-### <a name="sql-database-managed-instance-logins"></a>Connexions à l’instance managée SQL Database
+### <a name="sql-managed-instance-logins"></a>Connexions SQL Managed Instance
 
 - Doit avoir l’autorisation **ALTER ANY LOGIN** sur le serveur ou l’appartenance au rôle serveur fixe `securityadmin` ou `sysadmin`. Seul un compte Azure Active Directory (Azure AD) avec l’autorisation **ALTER ANY LOGIN** sur le serveur ou l’appartenance à l’un de ces rôles peut exécuter la commande create.
 - Si la connexion est un principal SQL, seules les connexions faisant partie du rôle `sysadmin` peuvent utiliser la commande create afin de créer des connexions pour un compte Azure AD.
-- Doit être un membre d’Azure AD dans le même répertoire que celui utilisé pour l’instance managée Azure SQL.
+- Doit être un membre d’Azure AD dans le même répertoire que celui utilisé pour Azure SQL Managed Instance.
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
 > [!NOTE]
-> L’administrateur Azure AD de la fonctionnalité d’instance qui a été gérée après la création a changé. Pour plus d’informations, consultez [Nouvelle fonctionnalité d’administration Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> La fonctionnalité d’administration Azure AD pour Azure SQL Managed Instance a changé après la création. Pour plus d’informations, consultez [Nouvelle fonctionnalité d’administration Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-Après la création d’une connexion, celle-ci peut se connecter à une instance managée SQL Database, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
+Après la création d’une connexion, celle-ci peut se connecter à une instance managée, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour créer un utilisateur Azure AD à partir d’une connexion Azure AD, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)

@@ -1,6 +1,6 @@
 ---
-title: Extension Azure SQL Database Managed Instance
-description: Utiliser Azure Data Studio avec Azure SQL Database Managed Instance
+title: Extension d’Azure SQL Managed Instance
+description: Utiliser Azure Data Studio avec Azure SQL Managed Instance
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774705"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988601"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Tableau de bord Azure SQL Database Managed Instance pour Azure Data Studio (préversion)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Tableau de bord Azure SQL Managed Instance pour Azure Data Studio (préversion)
 
-L’extension Azure SQL Database Managed Instance fournit un tableau de bord permettant de travailler avec une [instance managée Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Cette extension fournit les fonctionnalités suivantes :
+L’extension Azure SQL Managed Instance fournit un tableau de bord permettant d’utiliser une [instance Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Cette extension fournit les fonctionnalités suivantes :
 
-- Affiche les propriétés de l’instance managée, notamment les vCores et le stockage utilisé
+- Affiche les propriétés de SQL Managed Instance, notamment les vCores et le stockage utilisé
 - Supervise l’utilisation du processeur et du stockage au cours des deux heures précédentes
 - Affiche des avertissements de configuration et des recommandations de paramétrage
 - Affiche l’état des réplicas de base de données
@@ -30,7 +30,7 @@ L’extension Azure SQL Database Managed Instance fournit un tableau de bord per
 ## <a name="install"></a>Installer
 
 Vous pouvez installer la version officielle de cette extension. Suivez pour cela les étapes décrites dans la documentation sur [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-Dans le volet **Extensions**, recherchez « managed instance » et installez l’extension. Une fois l’installation terminée, vous recevrez automatiquement une notification à chaque mise à jour de l’extension.
+Dans le volet **Extensions**, recherchez « Managed Instance » et installez-la à cet emplacement. Une fois l’installation terminée, vous recevrez automatiquement une notification à chaque mise à jour de l’extension.
 
 Quand l’extension est installée, un onglet **Instance managée** apparaît dans Azure Data Studio. Vous trouverez ici des informations spécifiques à votre instance managée.
 
@@ -62,7 +62,7 @@ Parmi les recommandations affichées, vous pouvez voir les suivantes :
 - **Limites des fichiers de données**. Si vos fichiers de données s’approchent des [limites d’E/S de fichier au niveau de service universel](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille des fichiers pour améliorer les performances. Ce problème peut entraîner une sollicitation de la mémoire et ralentir les sauvegardes.
 - **Problèmes de disponibilité**. Un nombre élevé de fichiers journaux virtuels peut affecter les performances. En cas de défaillance d’un processus, ces problèmes peuvent entraîner un allongement de la récupération de la base de données au niveau de service universel.
 
-Examinez régulièrement ces recommandations, étudiez les causes racines et prenez les mesures nécessaires pour corriger les problèmes. L’extension Azure SQL Database Managed Instance fournit les scripts que vous pouvez exécuter pour atténuer certains des problèmes signalés.
+Examinez régulièrement ces recommandations, étudiez les causes racines et prenez les mesures nécessaires pour corriger les problèmes. L’extension SQL Managed Instance fournit des scripts que vous pouvez exécuter pour atténuer certains des problèmes signalés.
 
 ## <a name="replicas"></a>Réplicas
 
@@ -80,11 +80,11 @@ Le quatrième volet de l’onglet **Instance managée** affiche les entrées du 
 
 Bien que votre instance managée génère un grand nombre d’entrées de journal, la plupart d’entre elles sont des informations internes/système. Par ailleurs, certaines entrées du journal montrent des noms de bases de données physiques (valeurs `GUID`) au lieu de noms de bases de données logiques réelles.
 
-L’extension Azure SQL Database Managed Instance filtre les entrées de journal inutiles selon la méthode [Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). L’extension affiche également les noms des fichiers logiques réels au lieu des noms physiques.
+L’extension SQL Managed Instance filtre les entrées de journal inutiles selon la [méthode Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). L’extension affiche également les noms des fichiers logiques réels au lieu des noms physiques.
 
 ## <a name="reporting-problems"></a>Signalement des problèmes
 
-Si vous rencontrez des problèmes avec l’extension Azure SQL Database Managed Instance, accédez au [projet Extension GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) pour les signaler.
+Si vous rencontrez des problèmes avec l’extension SQL Managed Instance, accédez au [projet Extension GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) pour les signaler.
 
 ## <a name="code-of-conduct"></a>Code de conduite
 

@@ -1,6 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
-description: Découvrez Service Broker. Découvrez comment il fournit une prise en charge native de la messagerie dans Moteur de base de données SQL Server et Azure SQL Database Managed Instance.
+description: Découvrez Service Broker. Découvrez comment il fournit une prise en charge native de la messagerie dans le moteur de base de données SQL Server et Azure SQL Managed Instance.
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764051"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863398"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit la prise en charge native de la messagerie et des files d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Les développeurs peuvent créer plus facilement des applications perfectionnées qui utilisent les composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates, et créer des applications fiables et distribuées.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit une prise en charge native de la messagerie et de la mise en file d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Les développeurs peuvent créer plus facilement des applications perfectionnées qui utilisent les composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates, et créer des applications fiables et distribuées.  
   
 ## <a name="when-to-use-service-broker"></a>Quand utiliser Service Broker ?
 
@@ -103,7 +103,7 @@ FROM ExpenseQueue;
 ## <a name="whats-new-in-service-broker"></a>Nouveautés dans Service Broker  
  Aucune modification importante n'a été introduite dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  Les modifications suivantes ont été introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
-### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker et Azure SQL Database Managed Instance
+### <a name="service-broker-and-azure-sql-managed-instance"></a>Service Broker et Azure SQL Managed Instance
 
 - Service Broker entre instances n’est pas pris en charge. 
  - `sys.routes` – Prérequis : sélectionnez l’adresse à partir de sys.routes. L’adresse doit être LOCAL sur tous les itinéraires. Voir [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).

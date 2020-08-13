@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d66be3ee4f5d4a5eb7237dbec55160b4d263d626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21fe129f15022532e9e7c8613159cfc7617fd6e4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767616"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864866"
 ---
 # <a name="snapshot-folder"></a>Dossier d'instantanés
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,14 +27,14 @@ La page **Dossier d'instantanés** figure dans l'Assistant Configuration de la d
   
 Le dossier d'instantanés correspond à un simple répertoire que vous définissez sous la forme d'un partage ; les agents qui lisent et écrivent dans le dossier doivent disposer des autorisations suffisantes pour pouvoir y accéder. Pour plus d’informations sur une sécurisation appropriée du dossier, consultez [Sécuriser le dossier d’instantanés](../../relational-databases/replication/security/secure-the-snapshot-folder.md). Avant d'implémenter la réplication, vérifiez que les agents de réplication peuvent se connecter au dossier d'instantanés. Connectez-vous sous le compte qu'utilisera chaque agent et essayez ensuite d'accéder au dossier d'instantanés.  
 
-Pour une instance managée Azure SQL Database, le dossier d’instantanés doit être un partage de fichiers Azure. 
+Pour Azure SQL Managed Instance, le dossier d’instantanés doit être un partage de fichiers Azure. 
   
 ## <a name="options"></a>Options  
  **Dossier d'instantanés**  
  Entrez le chemin d'accès au dossier où vous souhaitez stocker les fichiers d'instantanés.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un partage réseau comme emplacement pour le dossier d'instantanés. Les chemins locaux (ceux qui commencent par une lettre de lecteur, tel que C:\\) ne sont pas accessibles aux agents sur les autres ordinateurs.  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un partage réseau comme emplacement pour le dossier d'instantanés. Les chemins locaux (ceux qui commencent par une lettre de lecteur, tel que C:\\) ne sont pas accessibles aux agents sur les autres ordinateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modifier les options d’instantané](../../relational-databases/replication/snapshot-options.md)   

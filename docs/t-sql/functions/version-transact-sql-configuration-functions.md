@@ -21,12 +21,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 272bfdacbf11207539f75c2c51045eff4e8c5c90
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3a92f830f4880278afacf10f59072b29dede6026
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112194"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863407"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Fonctions de configuration Transact SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87112194"
 > [!NOTE]  
 > Nous savons que la version du produit signalée par @@VERSION pour Azure SQL Database est incorrecte. La version du moteur de base de données SQL Server exécutée par Azure SQL Database est toujours ultérieure à la version locale de SQL Server, et inclut les derniers correctifs de sécurité. Cela signifie que le niveau du correctif est toujours égal ou supérieur à celui de la version locale de SQL Server, et que les dernières fonctionnalités disponibles dans SQL Server sont disponibles dans Azure SQL Database.
 >
-> Pour déterminer l’édition du moteur par programmation, utilisez SELECT SERVERPROPERTY('EngineEdition'). Cette requête retourne « 5 » pour les bases de données uniques/pools élastiques et « 8 » pour les instances managées dans Azure SQL Database. 
+> Pour déterminer l’édition du moteur par programmation, utilisez SELECT SERVERPROPERTY('EngineEdition'). Cette requête retourne « 5 » pour Azure SQL Database et « 8 » pour Azure SQL Managed Instance.
 >
 > Nous mettrons à jour la documentation lorsque ce problème aura été résolu.
 

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781692"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988766"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Déployer une base de données à l'aide d'une DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Utilisez l’Assistant **Déploiement de base de données dans SQL Azure** pour déployer une base de données entre une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et un serveur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] , ou entre deux serveurs [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  Utilisez l’Assistant **Déployer une base de données sur Microsoft Azure SQL Database** pour déployer une base de données entre une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et un serveur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], ou entre deux serveurs [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Avant de commencer  
  L'Assistant utilise un fichier d'archive d'application de la couche Données (DAC) BACPAC pour déployer les données et les définitions des objets de base de données. Il effectue une opération d'exportation DAC de la base de données source, et une importation DAC vers la destination.  
@@ -68,7 +68,7 @@ ms.locfileid: "85781692"
   
 3.  Développez le nœud **Bases de données** .  
   
-4.  Cliquez avec le bouton droit sur la base de données que vous voulez déployer, sélectionnez **Tâches**, puis sélectionnez **Déployer la base de données dans SQL Azure...** .  
+4.  Cliquez avec le bouton droit sur la base de données à déployer, sélectionnez **Tâches**, puis **Déployer une base de données sur Microsoft Azure SQL Database**  
   
 5.  Renseignez les boîtes de dialogue de l'Assistant :  
   

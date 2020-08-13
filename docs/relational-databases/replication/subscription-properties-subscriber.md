@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 718c095fb544c2c0b9436a3cfa70040fcf31d71c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111732"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988817"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés de l’abonnement 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'aff
   
 > [!NOTE]  
 >  - Si un Agent de distribution ou un Agent de fusion n'est pas encore créé pour l'abonnement, de nombreuses propriétés ne sont pas affichées. Pour créer un travail d’agent pour un abonnement par extraction, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication transactionnelle ou d’instantané) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (pour un abonnement destiné à une publication de fusion).  
-> - Une instance managée Azure SQL Database peut être un serveur de publication, un serveur de distribution et un Abonné pour la réplication transactionnelle et d’instantané. Les bases de données uniques et mises en pool d’Azure SQL Database peuvent uniquement être des Abonnés de type push pour la réplication transactionnelle et d’instantané. Pour plus d’informations, consultez [Réplication transactionnelle avec Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+> - Les bases de données Azure SQL Managed Instance peuvent être un serveur de publication, un serveur de distribution et un abonné pour la réplication transactionnelle et d’instantané. Les bases de données dans Azure SQL Database peuvent uniquement être des abonnés de type push pour la réplication transactionnelle et d’instantané. Pour plus d’informations, consultez [Réplication transactionnelle avec Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Options du serveur de publication pour tous les abonnements  
  **Sécurité**  

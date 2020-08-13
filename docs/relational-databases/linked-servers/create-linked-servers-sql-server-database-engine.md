@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1bb0bc0ec1b16af3882880ac1d528a8c7907994
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719040"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823741"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "85719040"
      Utilisez l’utilisateur distant pour mapper les utilisateurs qui ne sont pas définis dans **Connexion locale**. L' **Utilisateur distant** doit être une connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur distant.  
 
     > [!WARNING]
-    > Seul un utilisateur SQL Server peut être utilisé comme « Utilisateur distant » dans un déploiement d’instance managée Azure SQL Database.  
+    > Seul un utilisateur SQL Server peut être utilisé comme « Utilisateur distant » dans un déploiement d’instance managée.  
 
      **Mot de passe distant**  
      Spécifie le mot de passe de l'utilisateur distant.  

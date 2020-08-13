@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3322ef185178ab2254066281d9f6f6a6c85611da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111051"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862955"
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
@@ -161,7 +161,7 @@ Persist Security Info=False;Connection Pooling=True;
  La plupart des options de cette chaîne sont spécifiques du serveur DB2 que vous configurez, mais vous devez attribuer à l'option **Traiter les données binaires comme des caractères** la valeur **False**. Une valeur est exigée de façon que l'option **Catalogue initial** identifie la base de données d'abonnement. Pour plus d’informations, voir [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication transactionnelle avec Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Configurer la réplication pour une instance managée](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [Réplication transactionnelle avec Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Configurer la réplication pour Azure SQL Managed Instance](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

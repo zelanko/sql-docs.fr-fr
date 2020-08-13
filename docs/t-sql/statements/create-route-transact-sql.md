@@ -27,12 +27,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c57c5a76818eabcc956a197b52b275a289576173
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006503"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823511"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -43,7 +43,7 @@ ms.locfileid: "68006503"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
   
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
@@ -84,13 +84,13 @@ WHERE database_id = DB_ID()
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, *route_lifetime* est NULL et l’itinéraire n’expire jamais.  
   
  ADDRESS **='** _next\_hop\_address_ **'**  
-Pour l’instance managée SQL Database, `ADDRESS` doit être local. 
+Pour SQL Managed Instance, `ADDRESS` doit être local. 
 
 Spécifie l'adresse réseau pour cet itinéraire. *next_hop_address* spécifie une adresse TCP/IP au format suivant :  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
- Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance de [!INCLUDE[ssSB](../../includes/sssb-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
+ Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
 ```  
 SELECT tcpe.port  
@@ -111,7 +111,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance de [!INCLUDE[ssSB](../../includes/sssb-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
+ Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
 ```  
 SELECT tcpe.port  

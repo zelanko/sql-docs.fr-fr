@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112558"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988216"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,10 +61,10 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -867,10 +867,10 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Pool élastique/base de données unique<br />SQL Database \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Pool élastique/base de données unique Azure SQL Database
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Dans le pool élastique/la base de données unique [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette instruction est utilisable avec un serveur SQL Azure pour créer une base de données unique ou une base de données dans un pool élastique. Elle implique de spécifier le nom, le classement, la taille maximale, l’édition, l’objectif de service et, le cas échéant, le pool élastique de la nouvelle base de données. Elle permet également créer la base de données dans un pool élastique et de créer une copie de la base de données sur un autre serveur SQL Database.
+Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette instruction est utilisable avec un serveur SQL Azure pour créer une base de données unique ou une base de données dans un pool élastique. Elle implique de spécifier le nom, le classement, la taille maximale, l’édition, l’objectif de service et, le cas échéant, le pool élastique de la nouvelle base de données. Elle permet également créer la base de données dans un pool élastique et de créer une copie de la base de données sur un autre serveur SQL Database.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION : spécifie le classement par défaut du catalogue de métado
 
 EDITION : spécifie la couche de service de la base de données.
 
-Bases de données uniques et regroupées sur un pool élastique/une base de données unique. Les valeurs disponibles sont : 'Basic', 'Standard', 'Premium', 'GeneralPurpose', 'BusinessCritical' et 'Hyperscale'.
+Bases de données uniques et mises en pool. Les valeurs disponibles sont : 'Basic', 'Standard', 'Premium', 'GeneralPurpose', 'BusinessCritical' et 'Hyperscale'.
 
 MAXSIZE : spécifie la taille maximale de la base de données. MAXSIZE doit être valide pour l'EDITION (niveau de service) spécifiée. Voici les valeurs de MAXSIZE prises en charge et les valeurs par défaut (D) des niveaux de service.
 
@@ -1273,10 +1273,10 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Instance managée<br />SQL Database \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Dans Azure SQL Database Managed Instance, cette instruction permet de créer une base de données. La création d’une base de données sur une instance managée implique de spécifier son nom et son classement.
+Dans Azure SQL Managed Instance, cette instruction permet de créer une base de données. La création d’une base de données sur une instance managée implique de spécifier son nom et son classement.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -1357,10 +1357,10 @@ Voir [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1482,10 +1482,10 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)

@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332508"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864410"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -941,7 +941,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\* Instance managée<br />SQL Database \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
-Sauvegarde une base de données SQL placée/hébergée dans Azure SQL Database Managed Instance. [L’instance managée](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) SQL Database dispose de sauvegardes automatiques et permet aux utilisateurs de créer des sauvegardes `COPY_ONLY` de base de données complètes. Les sauvegardes différentielles, de journaux et d’instantanés de fichiers ne sont pas prises en charge.
+Sauvegarde une base de données SQL placée/hébergée dans Azure SQL Managed Instance. SQL [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) dispose de sauvegardes automatiques et permet aux utilisateurs de créer des sauvegardes complètes `COPY_ONLY` des bases de données. Les sauvegardes différentielles, de journaux et d’instantanés de fichiers ne sont pas prises en charge.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>Arguments
 
-DATABASE Spécifie une sauvegarde complète de la base de données. Au cours d’une sauvegarde de base de données, l’instance gérée sauvegarde une portion suffisante du journal des transactions afin d’assurer la cohérence de la base de données lors de la restauration de la sauvegarde.
+DATABASE Spécifie une sauvegarde complète de la base de données. Au cours d’une sauvegarde de base de données, Azure SQL Managed Instance sauvegarde une portion suffisante du journal des transactions afin d’assurer la cohérence de la base de données lors de la restauration de la sauvegarde.
 
 > [!IMPORTANT]
-> Une sauvegarde de base de données créée sur une instance gérée ne peut être restaurée que sur une autre instance managée. Elle ne peut pas être restaurée sur une instance locale de SQL Server (de même qu’une sauvegarde d’une base de données SQL Server 2016 ne peut pas être restaurée sur une instance de SQL Server 2012).
+> Une sauvegarde de base de données créée sur une instance managée ne peut être restaurée que sur une autre instance Azure SQL Managed Instance. Elle ne peut pas être restaurée sur une instance locale de SQL Server (de même qu’une sauvegarde d’une base de données SQL Server 2016 ne peut pas être restaurée sur une instance de SQL Server 2012).
 
-Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données*), l’ensemble de la sauvegarde est restauré. Pour effectuer une restauration à partir de sauvegardes automatiques d’instance managée Azure SQL Database, consultez [Restauration de base de données sur une instance gérée](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données*), l’ensemble de la sauvegarde est restauré. Pour effectuer une restauration à partir de sauvegardes automatiques SQL Managed Instance, consultez [Restaurer une base de données sur une instance managée](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } Spécifie la base de données à partir de laquelle la base de données complète est sauvegardée. S’il est fourni comme variable ( **@** _database\_name\_var_), ce nom peut être spécifié comme constante de chaîne ( **@** _database\_name\_var_ **=** _database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ] Affiche un message chaque fois qu’un autre élém
 
 L'option STATS signale le pourcentage terminé comme seuil de rapport de l'intervalle suivant. C'est-à-dire approximativement le pourcentage spécifié ; par exemple, si STATS=10, et si le pourcentage terminé est 40 pour cent, l'option peut afficher 43 pour cent. Pour les jeux de sauvegardes volumineux, cela n'est pas un problème car le pourcentage terminé varie très lentement entre les appels d'E/S terminés.
 
-## <a name="limitations-for-sql-database-managed-instance"></a>Limitations pour l’instance managée SQL Database
+## <a name="limitations-for-sql-managed-instance"></a>Limitations pour SQL Managed Instance
 
 La taille maximale d’une bande de sauvegarde est de 195 Go (taille maximale de l’objet blob). Augmentez le nombre de bandes défini dans la commande de sauvegarde pour réduire la taille de chaque bande et ainsi ne pas dépasser cette limite.
 
@@ -1131,7 +1131,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;

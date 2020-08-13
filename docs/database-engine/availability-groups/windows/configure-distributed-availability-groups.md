@@ -1,6 +1,6 @@
 ---
 title: Configurer un groupe de disponibilité distribué
-description: 'Décrit comment créer et configurer un groupe de disponibilité distribué Always On. '
+description: Découvrez comment configurer un groupe de disponibilité distribué à l’aide d’un exemple Transact-SQL. Découvrez également où trouver des informations sur les groupes de disponibilité distribués.
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896131"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565269"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,7 @@ Pour créer un groupe de disponibilité distribué, vous devez créer deux group
 
 Pour obtenir une présentation technique des groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](distributed-availability-groups.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Définir les écouteurs de point de terminaison pour écouter toutes les adresses IP
 

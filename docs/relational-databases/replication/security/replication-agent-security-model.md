@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882067"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823924"
 ---
 # <a name="replication-agent-security-model"></a>Modèle de sécurité de l'Agent de réplication
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Le modèle de sécurité de l’agent de réplication permet un contrôle fin des comptes sous lesquels les agents de réplication s’exécutent et établissent des connexions : un compte distinct peut être spécifié pour chaque agent. Pour plus d’informations sur la manière de spécifier des comptes, consultez [Identité et contrôle d’accès pour la réplication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
-Le modèle de sécurité de l’agent de réplication est un peu différent pour les instances managées Azure SQL Database, car il n’y a aucun compte Windows sous lequel les agents s’exécuteront. Au lieu de cela, tout doit être effectué par le biais de l’authentification SQL Server. 
+Le modèle de sécurité de l’agent de réplication est un peu différent pour Azure SQL Managed Instance, car il n’y a aucun compte Windows sous lequel les agents s’exécuteront. Au lieu de cela, tout doit être effectué par le biais de l’authentification SQL Server. 
   
 > [!IMPORTANT]  
 >  Lorsqu'un membre du rôle serveur fixe **sysadmin** configure la réplication, les agents de réplication peuvent être configurés pour emprunter l'identité du compte de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il suffit de ne pas spécifier de nom de connexion et de mot de passe pour un Agent de réplication ; toutefois, cette méthode n'est pas recommandée. Pour des raisons de sécurité, il est plutôt recommandé de spécifier un compte pour chaque agent, disposant des autorisations minimales décrites dans la section « Autorisations requises par les agents » plus loin dans cette rubrique.  

@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b0236522bbdbf174338f9a711e5d636c4c297d66
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 0c45877355d5cb47b8c9ba4ee86784c17d30a816
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331957"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988293"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,10 +50,10 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -290,10 +290,10 @@ GO
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Pool élastique/base de données unique<br /> SQL Database \*_** &nbsp;
+        **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -305,9 +305,9 @@ GO
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Présentation : Pool élastique/base de données unique Azure SQL Database
+## <a name="overview-sql-database"></a>Présentation : SQL Database
 
-Dans Azure SQL Database, utilisez cette instruction pour modifier une base de données sur une base de données unique/un pool élastique. modifier son nom, son édition et son objectif de service, la joindre à un pool élastique ou l’en supprimer, définir ses options, l’ajouter ou la supprimer comme base de données secondaire dans une relation de géoréplication et définir son niveau de compatibilité.
+Dans Azure SQL Database, utilisez cette instruction pour modifier une base de données. modifier son nom, son édition et son objectif de service, la joindre à un pool élastique ou l’en supprimer, définir ses options, l’ajouter ou la supprimer comme base de données secondaire dans une relation de géoréplication et définir son niveau de compatibilité.
 
 En raison de sa longueur, la syntaxe d’ALTER DATABASE est divisée en plusieurs articles.
 
@@ -741,10 +741,10 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Instance managée<br />SQL Database \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -758,9 +758,9 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-managed-instance"></a>Présentation : Azure SQL Database Managed Instance
+## <a name="overview-azure-sql-managed-instance"></a>Présentation : Azure SQL Managed Instance
 
-Dans l’instance managée Azure SQL Database, utilisez cette instruction pour définir des options de base de données.
+Dans Azure SQL Managed Instance, utilisez cette instruction pour définir des options de base de données.
 
 En raison de sa longueur, la syntaxe d’ALTER DATABASE est divisée en plusieurs articles.
 
@@ -877,10 +877,10 @@ ALTER DATABASE WideWorldImporters
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -1014,10 +1014,10 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [Base de données SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13248409cca973de00f0ee04f6fcb22e020f64fd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2e12c6d57b9505bfefaae5c7fae87e03375c4e9d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918588"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864666"
 ---
 # <a name="adonet-connection-manager"></a>Gestionnaire de connexions ADO.NET
 
@@ -85,10 +85,10 @@ Permet de créer une connexion de données ADO.NET via la boîte de dialogue **G
 Sélectionnez une connexion, puis supprimez-la en sélectionnant **Supprimer**.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Identités managées pour l’authentification des ressources Azure
-Lors de l’exécution de packages SSIS sur le [runtime d’intégration Azure-SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), vous pouvez utiliser l’[identité managée](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associée à votre fabrique de données pour l’authentification Azure SQL Database (ou de l’instance gérée). La fabrique en question peut accéder à votre base de données et copier des données depuis ou vers celle-ci à l’aide de cette identité.
+Lors de l’exécution de packages SSIS sur le [runtime d’intégration Azure-SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), vous pouvez utiliser l’[identité managée](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associée à votre fabrique de données pour l’authentification Azure SQL Database ou Azure SQL Managed Instance. La fabrique en question peut accéder à votre base de données et copier des données depuis ou vers celle-ci à l’aide de cette identité.
 
 > [!NOTE]
->  Quand vous utilisez l’authentification Azure Active Directory (Azure AD), y compris l’authentification d’identité managée, pour vous connecter à Azure SQL Database (ou à l’instance managée), vous pouvez rencontrer un problème lié à un échec d’exécution de package ou à un changement de comportement inattendu. Pour plus d’informations, consultez [Fonctionnalités et limitations d’Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Quand vous utilisez l’authentification Azure Active Directory (Azure AD), avec l’authentification d’identité managée, pour vous connecter à Azure SQL Database ou Azure SQL Managed Instance, vous pouvez rencontrer un problème lié à un échec d’exécution de package ou à un changement de comportement inattendu. Pour plus d’informations, consultez [Fonctionnalités et limitations d’Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Pour utiliser l’authentification d’identité managée pour Azure SQL Database, suivez ces étapes afin de configurer votre base de données :
 
@@ -106,7 +106,7 @@ Pour utiliser l’authentification d’identité managée pour Azure SQL Databas
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-Pour utiliser l’authentification d’identité managée pour l’instance managée Azure SQL Database, effectuez les étapes suivantes afin de configurer votre base de données :
+Pour utiliser l’authentification d’identité managée pour Azure SQL Managed Instance, effectuez les étapes suivantes afin de configurer votre base de données :
     
 1. [Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) pour votre instance managée sur le portail Azure, si ce n’est pas déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 2 à 4. L’administrateur a un accès complet à la base de données.
 

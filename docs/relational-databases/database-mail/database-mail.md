@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 27556251ca186661928de29b8a1f6dd4ac0e9fb0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc3af385e52e998aa8bab2d84fc117987f522ebf
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694958"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864530"
 ---
 # <a name="database-mail"></a>Messagerie de base de données
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Database Mail est une solution d’entreprise qui permet l’envoi d’e-mails à partir du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou d’[Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Grâce à la messagerie de base de données, vos applications de bases de données peuvent envoyer des messages électroniques aux utilisateurs. Ces messages peuvent contenir les résultats d'une requête, voire des fichiers de n'importe quelle ressource de votre réseau.  
+  Database Mail est une solution d’entreprise qui permet l’envoi d’e-mails à partir du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou d’[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Grâce à la messagerie de base de données, vos applications de bases de données peuvent envoyer des messages électroniques aux utilisateurs. Ces messages peuvent contenir les résultats d'une requête, voire des fichiers de n'importe quelle ressource de votre réseau.  
   
 > [!NOTE] 
-> Database Mail est disponible dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), mais pas dans les pools Azure SQL Database Singleton et élastiques. 
+> Database Mail est disponible dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), mais pas dans les pools élastiques ni singleton Azure SQL Database. 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Avantages liés à l’utilisation de la messagerie de base de données  
  La messagerie de base de données est fiable, évolutive, sûre et facilement prise en charge.  

@@ -1,6 +1,6 @@
 ---
 title: Configurer la réplication avec les groupes de disponibilité
-description: Configurez la réplication avec votre groupe de disponibilité Always On.
+description: Découvrez le processus détaillé requis pour configurer la réplication SQL Server avec votre groupe de disponibilité Always On.
 ms.custom: seodec18
 ms.date: 01/25/2019
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 08718e9da3d0c053b9ab28ac53d0cb69fc78adf3
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522951"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565290"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurer la réplication avec les groupes de disponibilité Always On
 

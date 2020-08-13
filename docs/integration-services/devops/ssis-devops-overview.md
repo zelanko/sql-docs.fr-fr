@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472475"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823481"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps Tools
 
@@ -95,7 +95,7 @@ Type de la destination. Actuellement, la tâche de déploiement SSIS prend en ch
 
 #### <a name="destination-server"></a>Serveur de destination
 
-Nom du serveur SQL Server de destination. Il peut s’agir du nom d’une instance SQL Server locale, d’une instance Azure SQL Database ou d’une instance managée Azure SQL Database. Cette propriété est visible uniquement si le type de destination est SSISDB.
+Nom du serveur SQL Server de destination. Il peut s’agir du nom d’une instance SQL Server locale, Azure SQL Database ou Azure SQL Managed Instance. Cette propriété est visible uniquement si le type de destination est SSISDB.
 
 #### <a name="destination-path"></a>Chemin de destination
 
@@ -184,7 +184,7 @@ Détermine si la configuration effectuée par cette tâche doit être annulée e
 
 #### <a name="target-server"></a>Serveur cible
 
-Nom du serveur SQL Server cible. Il peut s’agir du nom d’une instance SQL Server locale, d’une instance Azure SQL Database ou d’une instance managée Azure SQL Database.
+Nom du serveur SQL Server cible. Il peut s’agir du nom d’une instance SQL Server locale, Azure SQL Database ou Azure SQL Managed Instance.
 
 #### <a name="authentication-type"></a>Type d'authentification
 

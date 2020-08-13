@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 194ad3581252d5baaca6d5bfaf4c8c2272efc610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915300"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864606"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Planifier l’exécution de packages SSIS déployés dans Azure avec SQL Server Management Studio (SSMS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "86915300"
 
 
 
-Vous pouvez utiliser SQL Server Management Studio (SSMS) pour planifier le déploiement de packages SSIS dans Azure SQL Database. SQL Server local et SQL Database Managed Instance ont respectivement SQL Server Agent et Managed Instance Agent comme planificateur performant des travaux SSIS. De son côté, SQL Database n’intègre pas de planificateur de travaux SSIS de première classe. La fonctionnalité SSMS décrite dans cet article présente une interface utilisateur bien connue qui s’apparente à celle de SQL Server Agent pour la planification des packages déployés dans SQL Database.
+Vous pouvez utiliser SQL Server Management Studio (SSMS) pour planifier le déploiement de packages SSIS dans Azure SQL Database. SQL Server local et SQL Managed Instance ont respectivement SQL Server Agent et l’agent Managed Instance comme planificateur de travaux SSIS de première classe. De son côté, SQL Database n’intègre pas de planificateur de travaux SSIS de première classe. La fonctionnalité SSMS décrite dans cet article présente une interface utilisateur bien connue qui s’apparente à celle de SQL Server Agent pour la planification des packages déployés dans SQL Database.
 
 Si vous utilisez SQL Database pour héberger le catalogue SSIS, `SSISDB`, vous pouvez utiliser cette fonctionnalité de SSMS pour générer les pipelines, les activités et les déclencheurs Data Factory nécessaires à la planification de packages SSIS. Vous pouvez ensuite si vous le souhaitez modifier et étendre ces objets dans Data Factory.
 

@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4bf57fb080c7f634256364e9ce1ac0d601ad589
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756830"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863356"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 
@@ -156,7 +156,7 @@ La cible **event_file** écrit la sortie de session d’événements à partir d
 > [!NOTE]
 > Azure SQL Database ne prend en charge le stockage de fichiers `xel` que dans le Stockage Blob Azure. 
 >
-> Pour obtenir un exemple de code **event_file** utilisable avec SQL Database (et avec SQL Database Managed Instance), consultez [Code de la cible de fichier d’événements pour les événements étendus dans SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> Pour obtenir un exemple de code **event_file** utilisable avec SQL Database (et avec SQL Managed Instance), consultez [Code cible du fichier d’événements pour les événements étendus dans SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 

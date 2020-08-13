@@ -1,6 +1,6 @@
 ---
 title: Utiliser des bases de données autonomes avec les groupes de disponibilité
-description: Découvrez comment utiliser des bases de données autonomes avec un groupe de disponibilité Always On
+description: Apprenez-en davantage sur l’utilisation d’une base de données autonome avec des groupes de disponibilité Always On dans SQL Server 2019 (15.x).
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 58bbe0be8b2e139327605e674c580b7520b32af9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26518e529c02018c43a08d4e0597aa7fe7507359
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893190"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565266"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>Utiliser des bases de données autonomes avec les groupes de disponibilité Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332478"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864876"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 
@@ -39,8 +39,8 @@ La base de données système `tempdb` est une ressource globale à la dispositio
   > [!NOTE]
   > Chaque objet interne utilise un minimum de neuf pages, une page IAM et une étendue de huit pages. Pour plus d’informations sur les pages et les extensions, consultez [Pages et étendues](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
   > [!IMPORTANT]
-  > Les pools élastiques et les bases de données uniques Azure SQL Database prennent en charge les tables temporaires globales et les procédures stockées temporaires globales qui sont stockées dans `tempdb` et dont l’étendue est limitée à la base de données. Les tables temporaires globales et les procédures stockées temporaires globales sont partagées pour toutes les sessions utilisateur exécutées dans la même instance Azure SQL Database. Les sessions utilisateur d’autres instances Azure SQL Database n’ont pas accès aux tables temporaires globales. Pour plus d’informations, consultez [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) prend en charge les mêmes objets temporaires que SQL Server.
-  > Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et `tempdb` s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Pour une présentation de `tempdb` dans le contexte des bases de données uniques et des pools élastiques Azure SQL Database, consultez [Base de données tempdb dans les bases de données uniques et les pools élastiques Azure SQL Database](#tempdb-database-in-sql-database). Pour SQL Database Managed Instance, toutes les bases de données système s’appliquent.
+  > Les pools élastiques et les bases de données uniques Azure SQL Database prennent en charge les tables temporaires globales et les procédures stockées temporaires globales qui sont stockées dans `tempdb` et dont l’étendue est limitée à la base de données. Les tables temporaires globales et les procédures stockées temporaires globales sont partagées pour toutes les sessions utilisateur exécutées dans la même instance Azure SQL Database. Les sessions utilisateur d’autres instances Azure SQL Database n’ont pas accès aux tables temporaires globales. Pour plus d’informations, consultez [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) prend en charge les mêmes objets temporaires que SQL Server.
+  > Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et `tempdb` s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Pour une présentation de `tempdb` dans le contexte des bases de données uniques et des pools élastiques Azure SQL Database, consultez [Base de données tempdb dans les bases de données uniques et les pools élastiques Azure SQL Database](#tempdb-database-in-sql-database). Pour Azure SQL Managed Instance, toutes les bases de données système s’appliquent.
 
 - Des **banques de versions**, qui sont un ensemble de pages de données contenant les lignes de données requises pour prendre en charge les fonctionnalités qui utilisent le contrôle de version de ligne. Il existe deux banques de versions : une banque de versions commune et une banque de versions de construction d'index en ligne. Les banques de versions contiennent les éléments suivants :
   - Les versions de ligne générées par les transactions de modification de données dans une base de données qui utilise l'isolement basé sur le contrôle de version de ligne read committed ou les transactions d'isolement d'instantané.  

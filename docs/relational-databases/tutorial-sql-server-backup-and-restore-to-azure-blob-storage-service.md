@@ -11,24 +11,24 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458041"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864956"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Démarrage rapide : Sauvegarde et restauration de SQL Server avec le service de stockage Blob Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Ce guide de démarrage rapide vous aide à comprendre comment écrire des sauvegardes et les restaurer à partir du service Stockage Blob Azure.  L’article explique comment créer un conteneur d’objets blob Azure, écrire une sauvegarde dans le service blob, puis effectuer une restauration.
   
 ## <a name="prerequisites"></a>Prérequis  
-Pour suivre ce guide de démarrage rapide, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL.  Vous avez besoin d’un compte de stockage Azure, de SQL Server Management Studio (SSMS) et d’un accès à un serveur qui exécute SQL Server ou à une instance gérée Azure SQL Database. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
+Pour suivre ce guide de démarrage rapide, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL.  Vous avez besoin d’un compte de stockage Azure, de SQL Server Management Studio (SSMS) et d’un accès à un serveur qui exécute SQL Server ou Azure SQL Managed Instance. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
 
 - Obtenir gratuitement un [compte Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
 - Créez un [compte de stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Installez [l’édition SQL Server 2017 Developer](https://www.microsoft.com/sql-server/sql-server-downloads) ou bien déployez une [instance gérée](/azure/sql-database/sql-database-managed-instance-get-started) avec une connectivité établie via une [machine virtuelle Azure SQL](/azure/sql-database/sql-database-managed-instance-configure-vm) ou via [point à site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
+- Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) ou déployez [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) avec une connectivité établie via une [machine virtuelle SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) ou une connexion [point à site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Affectez le compte utilisateur au rôle de [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) et autorisez [modifier les informations d’identification](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
 ## <a name="create-azure-blob-container"></a>Créer un conteneur d’objets blob Azure
@@ -53,7 +53,7 @@ Pour créer un conteneur, suivez ces étapes :
 
 1. Lancez [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) et connectez-vous à votre instance de SQL Server.
 1. Ouvrez une fenêtre **Nouvelle requête**. 
-1. Exécutez le code Transact-SQL (T-SQL) suivant pour créer votre base de données de test. Actualisez le nœud **Bases de données** dans l’**Explorateur d’objets** pour voir votre nouvelle base de données. La TDE est automatiquement activée sur les bases de données nouvellement créées sur une instance gérée Azure SQL Database. Vous devez donc la désactiver pour continuer. 
+1. Exécutez le code Transact-SQL (T-SQL) suivant pour créer votre base de données de test. Actualisez le nœud **Bases de données** dans l’**Explorateur d’objets** pour voir votre nouvelle base de données. Comme le chiffrement TDE est automatiquement activé sur les bases de données nouvellement créées sur SQL Managed Instance, vous devez le désactiver pour continuer. 
 
 ```sql
 USE [master]
@@ -87,7 +87,7 @@ GO
 SELECT * FROM SQLTest
 GO
 
--- Disable TDE for newly-created databases on a managed instance 
+-- Disable TDE for newly-created databases on SQL Managed Instance 
 USE [SQLTestDB];
 GO
 ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;

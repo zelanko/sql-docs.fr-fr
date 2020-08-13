@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31a3cba341ee6d7ec8aada3bf620ab23ab55bf9f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920970"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790352"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données SQL Server (Assistant Importation et Exportation SQL Server)
 
@@ -67,7 +67,7 @@ Après avoir sélectionné le **Fournisseur de données .NET Framework pour SQL 
 Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
 
 > [!TIP]
-> **Récupérer le pilote le plus récent**. Téléchargez [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).
+> **Récupérer le pilote le plus récent**. Téléchargez [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql).
 
 Voici l’écran générique que vous voyez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
 

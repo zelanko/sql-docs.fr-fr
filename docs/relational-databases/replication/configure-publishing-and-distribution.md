@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774004"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863349"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurer la publication et la distribution
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ La publication et la distribution de réplication peuvent être configurées par
 
 2. Sur le serveur de distribution, qui est également le serveur de publication, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) en spécifiant le partage UNC qui sera utilisé comme dossier d’instantanés par défaut pour `@working_directory`.
 
-   Pour un serveur de distribution sur SQL Database Managed Instance, utilisez un compte de stockage Azure pour `@working_directory` et la clé d’accès de stockage pour `@storage_connection_string`. 
+   Pour un serveur de distribution sur SQL Managed Instance, utilisez un compte de stockage Azure pour `@working_directory` et la clé d’accès de stockage pour `@storage_connection_string`. 
 
 3. Sur le serveur de publication, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Spécifiez la base de données publiée pour `@dbname`, le type de réplication pour `@optname` et la valeur `true` pour `@value`.
 
@@ -80,7 +80,7 @@ La publication et la distribution de réplication peuvent être configurées par
 
 2. Sur le serveur de distribution, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) en spécifiant le partage UNC qui sera utilisé comme dossier d’instantanés par défaut pour `@working_directory`. Si le serveur de distribution doit utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, spécifiez également la valeur `0` pour `@security_mode` et les informations de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour `@login` et `@password`.
 
-   Pour un serveur de distribution sur SQL Database Managed Instance, utilisez un compte de stockage Azure pour `@working_directory` et la clé d’accès de stockage pour `@storage_connection_string`. 
+   Pour un serveur de distribution sur SQL Managed Instance, utilisez un compte de stockage Azure pour `@working_directory` et la clé d’accès de stockage pour `@storage_connection_string`. 
 
 3. Sur le serveur de publication, sur la base de données MASTER, exécutez [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md). Spécifiez le mot de passe fort utilisé à l'étape 1 pour `@password`. Ce mot de passe sera utilisé par le serveur de publication lors de la connexion au serveur de distribution.
 

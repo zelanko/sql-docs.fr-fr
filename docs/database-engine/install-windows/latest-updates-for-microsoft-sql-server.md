@@ -4,7 +4,7 @@ TOCTitle: Latest updates for Microsoft SQL Server
 ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
 ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
 ms:contentKeyID: 31804705
-ms.date: 06/22/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 616612742861ceb9ef6a99d0cdc955df3b3f9f6a
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 86865b7ee037c379ea36b7d4cfddbdd0b4ce0e6e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834820"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934320"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Dernières mises à jour pour Microsoft SQL Server
 
@@ -35,15 +35,15 @@ Chacun des liens suivants fournit des informations sur tous les produits et tech
 
 |Versions du produit   | Dernier Service Pack |  Dernier correctif logiciel grand public | Dernière mise à jour cumulative | Date de mise en production de la mise à jour cumulative | Conseils d’ordre général  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[Article 4517790 de la base de connaissances](https://support.microsoft.com/help/4517790)|CU 5 [(Article 4552255 de la base de connaissances)](https://support.microsoft.com/help/4552255)|22/06/2020|[Installation de SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2019|N/A|[Article 4517790 de la base de connaissances](https://support.microsoft.com/help/4517790)|CU 6 [(Article 4563110 de la base de connaissances)](https://support.microsoft.com/help/4563110)|4/8/2020|[Installation de SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2017|N/A|[Article 4505224 de la base de connaissances](https://support.microsoft.com/help/4505224)|CU 21 [(Article 4557397 de la base de connaissances)](https://support.microsoft.com/help/4557397)|1/07/2020|[Installation de SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[Article 4532097 de la base de connaissances](https://support.microsoft.com/help/4532097)|CU 13 [(Article 4549825 de la base de connaissances)](https://support.microsoft.com/kb/4549825)|28/05/2020|[Installation de SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
+|SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[Article 4532097 de la base de connaissances](https://support.microsoft.com/help/4532097)|CU 14 [(Article 4564903 de la base de connaissances)](https://support.microsoft.com/kb/4564903)|6/8/2020|[Installation de SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(article 3182545 de la base de connaissances)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|Mise à jour cumulative 15 + correctif logiciel grand public [(KB 4505221)](https://support.microsoft.com/help/4505221)|9/7/2019|[Installation de SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|N/A|[KB 4058560](https://support.microsoft.com/help/4058560)|Mise à jour cumulative 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|22/11/2017|[Installation de SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
-|SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[Article 4532095 de la base de connaissances](https://support.microsoft.com/help/4532095)|Mise à jour cumulative 4 [(article 4535288 de la base de connaissances)](https://support.microsoft.com/kb/4535288)|11/02/2020|[Installation de SQL Server 2014](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
-|SQL Server 2014|SP2 [(KB 3171021)](https://support.microsoft.com/kb/3171021)|[Article 4505217 de la base de connaissances](https://support.microsoft.com/help/4505217)|Mise à jour cumulative 18 [(KB 4500180)](https://support.microsoft.com/kb/4500180)|29/7/2019|[Installation de SQL Server 2014](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
-|SQL Server 2014|SP1 [(KB 3058865)](https://support.microsoft.com/kb/3058865)|[KB 4032542](https://support.microsoft.com/help/4032542/description-of-the-security-update-for-sql-server-2014-service-pack-1) |Mise à jour cumulative 13 [(KB 4019099)](https://support.microsoft.com/help/4019099)|8/8/2017|[Installation de SQL Server 2014](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
-|SQL Server 2014|N/A|[MS 15-058](https://technet.microsoft.com/library/security/ms15-058.aspx)|Mise à jour cumulative 14 [(KB 3158271)](https://support.microsoft.com/kb/3158271)|20/6/2016|[Installation de SQL Server 2014](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
+|SQL Server 2014|SP3 [(KB 4022619)](https://support.microsoft.com/kb/4022619)|[Article 4532095 de la base de connaissances](https://support.microsoft.com/help/4532095)|Mise à jour cumulative 4 [(article 4535288 de la base de connaissances)](https://support.microsoft.com/kb/4535288)|11/02/2020|[Installation de SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42299)|
+|SQL Server 2014|SP2 [(KB 3171021)](https://support.microsoft.com/kb/3171021)|[Article 4505217 de la base de connaissances](https://support.microsoft.com/help/4505217)|Mise à jour cumulative 18 [(KB 4500180)](https://support.microsoft.com/kb/4500180)|29/7/2019|[Installation de SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42299)|
+|SQL Server 2014|SP1 [(KB 3058865)](https://support.microsoft.com/kb/3058865)|[KB 4032542](https://support.microsoft.com/help/4032542/description-of-the-security-update-for-sql-server-2014-service-pack-1) |Mise à jour cumulative 13 [(KB 4019099)](https://support.microsoft.com/help/4019099)|8/8/2017|[Installation de SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42299)|
+|SQL Server 2014|N/A|[MS 15-058](https://technet.microsoft.com/library/security/ms15-058.aspx)|Mise à jour cumulative 14 [(KB 3158271)](https://support.microsoft.com/kb/3158271)|20/6/2016|[Installation de SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42299)|
 |SQL Server 2012|SP4 [(article 4018073 de la base de connaissances)](https://support.microsoft.com/help/4018073/sql-server-2012-service-pack-4-release-information)  |[Article 4532098 de la base de connaissances](https://support.microsoft.com/help/4532098)|N/A|N/A|[Installation de SQL Server 2012](https://technet.microsoft.com/library/cc281837(v=sql.110).aspx)|
 |SQL Server 2012|SP3 [(KB 3072779)](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)  |[KB 4057115](https://support.microsoft.com/help/4057115)|Mise à jour cumulative 10 [(KB 4057121)](https://support.microsoft.com/help/4057121)|8/8/2017|[Installation de SQL Server 2012](https://technet.microsoft.com/library/cc281837(v=sql.110).aspx)|
 |SQL Server 2012|SP2 [(KB 2958429)](https://support.microsoft.com/kb/2958429)|[MS 16-136](https://technet.microsoft.com/library/security/ms16-136.aspx)|Mise à jour cumulative 16 [(KB 3205054)](https://support.microsoft.com/help/3205054/cumulative-update-16-for-sql-server-2012-sp2) |18/1/2017|[Installation de SQL Server 2012](https://technet.microsoft.com/library/cc281837(v=sql.110).aspx)|

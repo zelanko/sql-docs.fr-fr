@@ -1,6 +1,6 @@
 ---
 title: Créer un groupe de disponibilité avec T-SQL (Transact-SQL)
-description: 'Étapes à suivre pour créer un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL). '
+description: Utilisez Transact-SQL pour créer et configurer un groupe de disponibilité sur des instances de SQL Server 2019 (15.x) sur lesquelles la fonctionnalité de groupes de disponibilité Always On est activée.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e3ea99dc2cd41e6bd818a50c32944b07bc4996
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6ca67706406b74d9579dd234cee6df15959d5b8
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901025"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565267"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Créer un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

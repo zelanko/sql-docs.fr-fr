@@ -1,6 +1,6 @@
 ---
 title: Tableau de bord Performances | Microsoft Docs
-description: Découvrez le tableau de bord Performances de SQL Server Management Studio, qui fournit un insight rapide de SQL Server et d’Azure SQL Database Managed Instance.
+description: Découvrez le tableau de bord Performances de SQL Server Management Studio, qui fournit un insight rapide de SQL Server et d’Azure SQL Managed Instance.
 ms.custom: ''
 ms.date: 12/14/2019
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 78fa35daa043d698cd8205a4d698c3855e853fcb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458376"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863369"
 ---
 # <a name="performance-dashboard"></a>Tableau de bord Performances
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

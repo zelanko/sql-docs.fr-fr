@@ -2,7 +2,7 @@
 title: Incorporation des fonctions scalaires définies par l’utilisateur dans Microsoft SQL Server | Microsoft Docs
 description: Fonctionnalité d’incorporation des fonctions scalaires définies par l’utilisateur pour améliorer les performances des requêtes qui appellent des fonctions scalaires définies par l’utilisateur dans SQL Server (à partir de SQL Server 2019).
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435583"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790302"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -164,6 +164,9 @@ Selon la complexité de la logique dans la fonction UDF, le plan de requête obt
 - La fonction UDF ne contient pas plusieurs instructions RETURN <sup>6</sup>.
 - La fonction UDF n’est pas appelée à partir d’une instruction RETURN <sup>6</sup>.
 - La fonction UDF ne référence pas la fonction `STRING_AGG` <sup>6</sup>. 
+- La fonction UDF ne référence pas les tables distantes <sup>7</sup>.
+- La requête d’appel à UDF n’utilise pas `GROUPING SETS`, `CUBE` ni `ROLLUP` <sup>7</sup>.
+- La requête d’appel à UDF ne contient pas de variable utilisée comme paramètre UDF pour l’affectation (par exemple, `SELECT @y = 2`, `@x = UDF(@y)`)<sup>7</sup>.
 
 <sup>1</sup> `SELECT` avec une accumulation/agrégation de variable n’est pas pris en charge pour l’inlining (par exemple, `SELECT @val += col1 FROM table1`).
 
@@ -176,6 +179,8 @@ Selon la complexité de la logique dans la fonction UDF, le plan de requête obt
 <sup>5</sup> Restriction ajoutée dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
 
 <sup>6</sup> Restriction ajoutée dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
+<sup>7</sup> Restriction ajoutée dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
 
 > [!NOTE]
 > Pour plus d’informations sur les derniers correctifs d’incorporation des fonctions UDF scalaires T-SQL et les dernières modifications apportées aux scénarios d’éligibilité d’incorporation, consultez l’article de la base de connaissances : [CORRECTIF : Problèmes d’incorporation de FDU scalaires dans SQL Server 2019](https://support.microsoft.com/help/4538581).
