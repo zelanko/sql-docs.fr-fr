@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs
+title: CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2020
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3cadc9cd33fd1cdabb96cf450ad09253fdd435d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beaa58fddd6889b4ebbbce620d98277468dd67a2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684623"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988847"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "85684623"
 Cette fonction retourne l’ID du fuseau horaire observé par un serveur ou une instance. Pour Azure SQL Managed Instance, la valeur de retour est basée sur le fuseau horaire de l'instance proprement dite attribué lors de la création de l'instance, et non sur le fuseau horaire du système d'exploitation sous-jacent.
   
 > [!NOTE]  
-> Pour les bases de données SQL uniques et en pool, le fuseau horaire est toujours défini sur UTC et `CURRENT_TIMEZONE_ID` retourne l’ID du fuseau horaire UTC.
+> Pour SQL Database, le fuseau horaire est toujours défini sur UTC et `CURRENT_TIMEZONE_ID` retourne l’ID du fuseau horaire UTC.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,6 +71,6 @@ W. Europe Standard Time
   
 ## <a name="see-also"></a>Voir aussi
 
-[Fuseau horaire de SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[Fuseau horaire de SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)

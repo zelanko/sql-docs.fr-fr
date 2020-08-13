@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b5f8da43f32319c45c94a8a6f82b012c4460e8e1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e313c18ef81f298a7ebd802bcf2b2cc0f69a09dc
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246384"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863335"
 ---
 # <a name="master-database"></a>Base de données master
 
@@ -26,11 +26,11 @@ ms.locfileid: "87246384"
   La base de données **master** contient l’intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela inclut les métadonnées relatives à l'instance, dont les comptes d'ouverture de session, les points de terminaison, les serveurs liés et les paramètres de configuration du système. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets système ne sont plus stockés dans la base de données **master** , mais dans la [base de données des ressources](../../relational-databases/databases/resource-database.md). La base de données **master** enregistre également l'existence de toutes les bases de données et l'emplacement de leurs fichiers, et contient les informations d'initialisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas démarrer si la base de données **master** n'est pas disponible.  
 
 > [!IMPORTANT]
-> Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et tempdb s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Pour en savoir plus sur tempdb dans le contexte d’Azure SQL Database, consultez [Base de données tempdb dans Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). Pour SQL Database Managed Instance, toutes les bases de données système s’appliquent. Pour plus d’informations sur les instances gérées dans Azure SQL Database, voir [Présentation des instances gérées](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+> Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et tempdb s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Pour en savoir plus sur tempdb dans le contexte d’Azure SQL Database, consultez [Base de données tempdb dans Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). Pour Azure SQL Managed Instance, toutes les bases de données système s’appliquent. Pour plus d’informations sur les instances gérées dans Azure SQL Database, voir [Présentation des instances gérées](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
 ## <a name="physical-properties-of-master"></a>Propriétés physiques de la base de données master
 
-Le tableau suivant énumère les valeurs de configuration initiales des données **de référence** et des fichiers journaux pour SQL Server et Azure SQL Database Managed Instance. La taille de ces fichiers peut varier légèrement en fonction des éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Le tableau suivant énumère les valeurs de configuration initiales des données **de référence** et des fichiers journaux pour SQL Server et Azure SQL Managed Instance. La taille de ces fichiers peut varier légèrement en fonction des éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Fichier|Nom logique|Nom physique|Croissance du fichier|  
 |----------|------------------|-------------------|-----------------|  
@@ -44,7 +44,7 @@ Pour plus d’informations sur la manière de déplacer les données et les fich
   
 ### <a name="database-options"></a>Options de base de données
 
-Le tableau suivant indique la valeur par défaut de chaque option de la base de données **MASTER** pour SQL Server et Azure SQL Database Managed Instance, et si cette option peut être modifiée. Pour afficher les valeurs actuelles de ces options, utilisez l'affichage catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
+Le tableau suivant indique la valeur par défaut de chaque option de la base de données **MASTER** pour SQL Server et Azure SQL Managed Instance, et si cette option peut être modifiée. Pour afficher les valeurs actuelles de ces options, utilisez l'affichage catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 > [!IMPORTANT]
 > Pour les bases de données uniques/pools élastiques Azure SQL Database, l’utilisateur n’a aucun contrôle sur ces options de la base de données.

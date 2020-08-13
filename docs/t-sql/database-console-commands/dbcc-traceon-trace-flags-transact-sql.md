@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 248377fa1c4d498d6ffeb5b72518b2baf322362a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248521"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877802"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Indicateurs de trace (Transact-SQL)
 
@@ -54,7 +54,7 @@ Utilisez la commande `DBCC TRACESTATUS` afin de déterminer quels indicateurs de
 Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Azure SQL Database Managed Instance prend en charge les indicateurs de trace globaux suivants : 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 et 11024. Les indicateurs de trace de session ne sont pas encore pris en charge dans Managed Instance.
+> Azure SQL Managed Instance prend en charge les indicateurs de trace globaux suivants : 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 et 11024. Les indicateurs de trace de session ne sont pas encore pris en charge dans Managed Instance.
  
 > [!NOTE]
 > Certains indicateurs de trace ont été introduits dans des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiques. Pour plus d’informations sur la version applicable, consultez l’article du support technique Microsoft associé à un indicateur de trace spécifique.
