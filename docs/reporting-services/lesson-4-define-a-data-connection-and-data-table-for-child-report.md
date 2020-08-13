@@ -1,5 +1,6 @@
 ---
 title: 'Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant | Microsoft Docs'
+description: Découvrez comment utiliser Reporting Services pour créer une connexion de données et une table de données pour le rapport enfant.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651359"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245118"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant
 Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données doit s’établir avec la base de données AdventureWorks2014.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Pour définir une connexion de données et un objet DataTable en ajoutant un DataSet (pour le rapport enfant)  
@@ -68,6 +69,6 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
 12. Pour afficher un aperçu des données, sélectionnez **Aperçu des données** dans le menu **Données** , puis sélectionnez **Aperçu**.  
   
 ## <a name="next-task"></a>Tâche suivante  
-Vous venez de créer une connexion de données et une table de données pour le rapport enfant. Vous allez à présent concevoir le rapport enfant à l'aide de l'Assistant Rapport. Consultez [Leçon 5 : Concevoir le rapport enfant à l’aide de l’Assistant Rapport](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
+Vous venez de créer une connexion de données et une table de données pour le rapport enfant. Vous allez à présent concevoir le rapport enfant à l'aide de l'Assistant Rapport. Voir [Leçon 5 : Concevoir le rapport enfant à l’aide de l’Assistant Rapport](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
 

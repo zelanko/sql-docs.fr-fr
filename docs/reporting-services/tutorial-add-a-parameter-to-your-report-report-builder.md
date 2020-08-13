@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : ajouter un paramètre à votre rapport (Générateur de rapports) | Microsoft Docs'
+description: Découvrez comment ajouter un paramètre à un rapport paginé Reporting Services pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72252140"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245676"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutoriel : Ajouter un paramètre à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -25,7 +26,7 @@ Les paramètres de rapport sont créés automatiquement pour chaque paramètre d
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer le didacticiel : 25 minutes.  
+Durée estimée pour effectuer ce tutoriel : 25 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -308,7 +309,7 @@ Un dataset peut contenir à la fois l'identificateur et le champ Nom corresponda
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    L’en-tête de colonne de magasin contient le texte affiché pour une expression complexe : **Expr**.  
+    L'en-tête de colonne du magasin contient le texte d’affichage d’une expression complexe : **Expr**.  
   
 8.  Affichez l'aperçu du rapport.  
   

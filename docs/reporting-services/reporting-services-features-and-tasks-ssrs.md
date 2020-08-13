@@ -1,5 +1,6 @@
 ---
 title: Fonctionnalités et tâches Reporting Services | Microsoft Docs
+description: Découvrez comment le contenu de base de Reporting Services est organisé en fonction des rapports et des fonctionnalités de rapport, des fonctionnalités du serveur de rapports et des fonctionnalités produit de Reporting Services.
 ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 764eda3b356a42272b5f26790574746f842768ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d10c723351b6c32738a02cfadc1a3715896ca03e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081853"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246645"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Fonctionnalités et tâches Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est organisé par les rapports et les fonctionnalités de rapport, les fonctionnalités du serveur de rapports, et les fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

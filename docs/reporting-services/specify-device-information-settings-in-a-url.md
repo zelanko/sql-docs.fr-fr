@@ -1,5 +1,6 @@
 ---
 title: Spécifier les paramètres d’informations des périphériques dans une URL | Microsoft Docs
+description: Découvrez comment spécifier les paramètres d’informations de périphérique dans une URL, en particulier avec l’élément XML DeviceInfo.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906a21de49d562d788f9a1384b31e080616c67c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2d2ef7937d228cc4feeff2c788c1ae3aa3f0b59
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578439"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246623"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>Spécifier les paramètres d'informations de périphérique dans une URL
   Les paramètres d'informations de périphérique sont des paramètres qui sont transmis à une extension de rendu. Si vous utilisez les méthodes du service Web Report Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour effectuer le rendu d’un rapport, un élément XML **DeviceInfo** est transmis en tant que paramètre d’entrée. Les éléments enfants de l’élément **DeviceInfo** sont spécifiques aux paramètres d’informations de périphérique de différentes extensions de rendu. Vous pouvez inclure des paramètres d’informations de périphérique dans une URL en utilisant la chaîne de paramètre *rc:tag=value* , où *tag* est le nom de l’élément des paramètres d’informations de périphérique en cours d’accès. Pour plus d’informations sur les paramètres d’informations de périphérique dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Transmission de paramètres d’informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  

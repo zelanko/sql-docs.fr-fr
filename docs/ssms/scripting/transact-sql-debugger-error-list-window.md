@@ -1,5 +1,6 @@
 ---
 title: Fenêtre Liste d'erreurs
+description: Découvrez comment utiliser la liste d’erreurs pour afficher les erreurs et les avertissements générés par IntelliSense lorsque vous modifiez des scripts Transact-SQL.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -16,18 +17,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243394"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247345"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Débogueur Transact-SQL - Fenêtre Liste d’erreurs
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-La [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Liste d’erreurs**de** répertorie les erreurs syntaxiques et sémantiques générées par le code IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+La **Liste d’erreurs** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] répertorie les erreurs syntaxiques et sémantiques générées par le code IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -74,7 +75,7 @@ La **Liste d'erreurs** fournit les fonctionnalités suivantes :
 > [!NOTE]  
 >  La **Liste d’erreurs** affiche uniquement les erreurs de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; elle n’affiche pas les erreurs des éditeurs MDX, DMX ni XML/A. Toutes les erreurs MDX, DMX et XML/A sont affichées sous l’onglet **Messages** de ces éditeurs.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  Lorsque la **Liste d'erreurs** est ouverte, les informations sont affichées dans les colonnes suivantes :  
   
  **Ordre par défaut**  

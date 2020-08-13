@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports) | Microsoft Docs'
+description: Découvrez comment créer un rapport paginé Reporting Services avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041317"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245686"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un histogramme à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie. 
 
 Les histogrammes sont utiles pour :  
@@ -30,7 +31,7 @@ L'illustration suivante montre l'histogramme que vous allez créer, avec une moy
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+Durée estimée pour effectuer ce tutoriel : 15 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

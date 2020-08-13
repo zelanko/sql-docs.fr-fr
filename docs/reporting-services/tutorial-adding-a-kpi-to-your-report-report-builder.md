@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : ajout d’un indicateur de performance clé à un rapport (Générateur de rapports) | Microsoft Docs'
+description: Découvrez comment ajouter un indicateur de performance clé (KPI) à un rapport Reporting Services paginé dans le Générateur de rapports.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041799"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245646"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutoriel : Ajouter un indicateur de performance clé à un rapport (Générateur de rapports)
 Dans ce tutoriel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Les indicateurs de performance clés sont des valeurs mesurables qui revêtent une importance significative pour l’entreprise. Dans ce scénario, le récapitulatif des ventes par sous-catégories de produits est l'indicateur de performance clé. L’état actuel de l’indicateur de performance clé est indiqué avec des couleurs, des jauges et des indicateurs.
@@ -27,7 +28,7 @@ L’illustration suivante est similaire au rapport que vous allez créer.
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+Durée estimée pour effectuer ce tutoriel : 15 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -51,7 +52,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -136,7 +137,7 @@ L’Assistant Tableau ou matrice propose une conception initiale pour l’affich
   
 11. Cliquez sur **Terminer**.  
   
-      Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset. Le volet Groupes de colonnes est vide.  
+      Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset. Le volet Groupes de colonnes est vide.  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   

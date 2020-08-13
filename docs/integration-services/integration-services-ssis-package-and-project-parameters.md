@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917527"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248035"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paramètres de projet et de package Integration Services (SSIS)
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917527"
  La procédure stockée et les vues Transact-SQL suivantes peuvent être utilisées pour afficher et définir des valeurs de paramètre.  
   
  [catalog.execution_parameter_values &#40;base de données SSISDB&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) (vue)  
- Affiche les valeurs de paramètre effectives qui seront utilisées par une exécution spécifique  
+ Affiche les valeurs de paramètre effectives dans une exécution spécifique.
   
  [catalog.get_parameter_values &#40;base de données SSISDB&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (procédure stockée)  
- Résout et affiche les valeurs effectives du package et de la référence environnementale spécifiés  
+ Résout et affiche les valeurs effectives du package et de la référence environnementale spécifiés.
   
  [catalog.object_parameters &#40;base de données SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (vue)  
  Affiche les paramètres et les propriétés de tous les packages et les projets dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , y compris les valeurs de conception par défaut et les valeurs de serveur par défaut.  

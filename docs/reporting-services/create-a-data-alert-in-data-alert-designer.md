@@ -1,5 +1,6 @@
 ---
 title: Créer une alerte de données dans le Concepteur d’alertes de données | Microsoft Docs
+description: Découvrez comment créer les définitions d’alerte de données dans le Concepteur d’alertes de données. En outre, découvrez comment modifier les alertes et enregistrer les modifications une fois que vous avez terminé.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571576"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247560"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
 
@@ -69,7 +70,7 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
      Selon le type de données de la colonne sélectionnée, des opérateurs de comparaison différents apparaissent. Si la colonne a un type de données « date », l'icône du calendrier s'affiche en regard de la valeur de seuil pour la règle. Vous pouvez entrer des données en cliquant sur une date dans le calendrier ou en tapant la date.  
   
-     Le Concepteur d’alertes de données fournit deux modes de comparaison : **Mode de saisie de valeur** et **Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
+     Le concepteur d’alertes de données offre deux modes de comparaison : **Mode de saisie de valeur** et **Mode de sélection de champ**. Le mode par défaut est **Mode de saisie de valeur**. Vous pouvez ajouter des clauses OR uniquement quand vous travaillez en **Mode de saisie de valeur** et vous utilisez la comparaison **is** .  
   
 9. Pour ajouter une clause OR, cliquez sur la flèche vers le bas, puis sur **Mode de saisie de valeur**.  
   
@@ -114,7 +115,7 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
 20. Éventuellement, dans la zone de texte **Objet** , mettez à jour la ligne Objet du message d’alerte.  
   
-     L’objet par défaut est **Alerte de données pour \<nom de l’alerte de données>** .  
+     L’objet par défaut est **Alerte de données pour \<data alert name>** .  
   
 21. Éventuellement, dans la zone de texte **Description** , tapez une description pour le message d’alerte.  
   

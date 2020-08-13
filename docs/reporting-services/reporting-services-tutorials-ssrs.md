@@ -1,5 +1,6 @@
 ---
 title: Tutoriels sur Reporting Services | Microsoft Docs
+description: Découvrez les fonctionnalités de SQL Server 2016 Reporting Services ou version ultérieure (SSRS), de SQL Server Data Tools (SSDT) et du Générateur de rapports avec des exemples de données.
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1b1a5d1e888c2038895415b5fdbf9eb05b3f224
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7c942dc04762be846837bf124da480b36c4b69c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79486537"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246629"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Didacticiels sur Reporting Services (SSRS)
 
@@ -43,4 +44,4 @@ Ces didacticiels présentent les différents types de visualisations que vous po
 
 * [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases)
 * [Exemples Reporting Services sur le Wiki TechNet](https://go.microsoft.com/fwlink/?LinkId=198283)
-* [TechNet Wiki : exemples SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)
+* [TechNet Wiki : Exemples de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)

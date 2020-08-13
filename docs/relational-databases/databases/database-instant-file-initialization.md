@@ -2,7 +2,7 @@
 title: Initialisation instantanée des fichiers de base de données
 description: En savoir plus sur l’initialisation instantanée de fichiers et sur la manière de l’activer sur votre base de données SQL Server.
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756257"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246572"
 ---
 # <a name="database-instant-file-initialization"></a>Initialisation instantanée des fichiers de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ Par défaut, les fichiers de données et les fichiers journaux sont initialisés
 - Restaurer une base de données ou un groupe de fichiers.  
 
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’initialisation instantanée des fichiers (IFI) permet une exécution plus rapide des opérations de fichier mentionnées précédemment, car elle libère de l’espace disque utilisé sans remplir cet espace avec des zéros. À la place, le contenu du disque est remplacé à mesure que de nouvelles données sont écrites dans les fichiers. Les fichiers journaux ne peuvent pas être initialisés instantanément.
+
 
 ## <a name="enable-instant-file-initialization"></a>Activer l’initialisation instantanée de fichiers
 
@@ -99,5 +100,29 @@ Si le risque de divulgation du contenu supprimé constitue un problème, effectu
     > [!NOTE]
     > La désactivation augmentera les durées d’allocation des fichiers de données et n'affecte que les fichiers créés ou dont la taille a augmenté après la révocation du droit de l'utilisateur.
   
+### <a name="se_manage_volume_name-user-right"></a>Droit d’utilisateur SE_MANAGE_VOLUME_NAME
+
+Le privilège utilisateur *SE_MANAGE_VOLUME_NAME* peut être attribué dans l’applet **Outils d’administration Windows**, **Stratégie de sécurité locale**. Sous **Stratégies locales**, sélectionnez **Attribution des droits utilisateur** et modifiez la propriété **Effectuer des tâches de maintenance de volume**.
+
+## <a name="performance-considerations"></a>Considérations relatives aux performances
+
+Le processus d’initialisation du fichier de base de données écrit des zéros dans les nouvelles régions du fichier sous l’initialisation. La durée de ce processus dépend de la taille de la partie de fichier initialisée et du temps de réponse et de la capacité du système de stockage. Si l’initialisation prend beaucoup de temps, les messages suivants enregistrés dans le journal des erreurs SQL Server et dans le journal des applications s’affichent.
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+Une longue croissance automatique d’une base de données et/ou d’un fichier journal des transactions peut entraîner des problèmes de performances des requêtes. Cela est dû au fait qu’une opération qui requiert la croissance automatique d’un fichier contiendra des ressources telles que des verrous ou des verrous internes pendant la durée de l’opération de croissance du fichier. Vous pouvez constater des attentes de longue durée sur les verrous pour les pages d’allocation. L’opération qui requiert la croissance automatique longue affichera un type d’attente de PREEMPTIVE_OS_WRITEFILEGATHER.
+
+
+
+
+
 ## <a name="see-also"></a>Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

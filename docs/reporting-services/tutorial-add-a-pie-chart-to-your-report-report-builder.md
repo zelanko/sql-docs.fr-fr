@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports) | Microsoft Docs'
+description: Découvrez comment créer un graphique à secteurs dans un rapport paginé Reporting Services, comment ajouter des pourcentages et comment combiner de petits secteurs en un seul secteur.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041239"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245666"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique en secteurs à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous créez un graphique à secteurs dans un rapport paginé Reporting Services. Vous ajoutez des pourcentages et combinez de petits secteurs en un seul secteur.
 
 Les graphiques à secteurs et en anneau affichent des données sous la forme d’une proportion de la totalité. Ils n’ont pas d’axe. Quand vous ajoutez un champ numérique à un graphique à secteurs, le graphique calcule le pourcentage de chaque valeur par rapport au total.  
@@ -29,7 +30,7 @@ Lorsqu'un graphique à secteurs comporte trop de points de données, vos étique
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, l’ajout d’une source de données et l’ajout d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer le didacticiel : 10 minutes.  
+Durée estimée pour effectuer ce tutoriel : 10 minutes  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

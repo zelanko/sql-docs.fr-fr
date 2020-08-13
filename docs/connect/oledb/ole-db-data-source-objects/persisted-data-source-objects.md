@@ -1,5 +1,5 @@
 ---
-title: Objets source de données persistants | Microsoft Docs
+title: Objets source de données persistants (pilote OLE DB)
 description: Objets de source de données persistants
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - persisted data source objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b8b939d0f82905971ee1656bf03b1212a5179d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015943"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244929"
 ---
 # <a name="persisted-data-source-objects"></a>Objets source de données persistants
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

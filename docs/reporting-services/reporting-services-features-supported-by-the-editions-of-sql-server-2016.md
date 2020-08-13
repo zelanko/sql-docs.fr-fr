@@ -1,6 +1,6 @@
 ---
 title: Fonctionnalités prises en charge par différentes éditions - SQL Server Reporting Services | Microsoft Docs
-description: Cette rubrique explique les fonctionnalités SQL Server Reporting Services (SSRS) prises en charge par les différentes éditions de SQL Server. La version d’évaluation de SQL Server est disponible pendant une période d’évaluation de 180 jours.
+description: Découvrez les fonctionnalités SQL Server Reporting Services (SSRS) qui sont prises en charge par les différentes éditions de SQL Server.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76516600"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246658"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Fonctionnalités SQL Server Reporting Services prises en charge par les éditions
 
@@ -31,7 +31,7 @@ Cette rubrique explique les fonctionnalités SQL Server Reporting Services (SSRS
 
 Pour connaître les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez la colonne SQL Server Enterprise dans le tableau suivant.
 
-|Nom de la fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Développeur|  
+|Nom de la fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Développeur|  
 |------|---------|---------------|-----------|-------|---------|  
 | Rapports Power BI et classeurs Excel | Oui, avec Software Assurance | | | | Oui |
 |Rapports mobiles et analyse|Oui||||Oui|  
@@ -78,7 +78,7 @@ Pour connaître les fonctionnalités prises en charge par les éditions Evaluati
 |Pour cette édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services,|utilisez cette édition de l'instance du moteur de base de données pour héberger la base de données.|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Entreprise|Éditions Standard ou Enterprise (locales ou distantes)|  
-|standard|Éditions Standard ou Enterprise (locales ou distantes)|  
+|Standard|Éditions Standard ou Enterprise (locales ou distantes)|  
 |Web|Web Edition (locale uniquement)|  
 |Express with Advanced Services|Express with Advanced Services (local uniquement)|  
 |Évaluation|Évaluation|  
@@ -86,7 +86,7 @@ Pour connaître les fonctionnalités prises en charge par les éditions Evaluati
 ##  <a name="business-intelligence-clients"></a><a name="BIC"></a> Clients Business Intelligence  
 Les applications logicielles clientes suivantes sont disponibles dans le Centre de téléchargement Microsoft. Elles vous aident à créer des documents Business Intelligence qui s’exécutent sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous hébergez ces documents dans un environnement serveur, utilisez une édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui prend en charge ce type de document. Le tableau suivant identifie quelle édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient les fonctionnalités de serveur obligatoires pour héberger les documents créés dans ces applications clientes.  
   
-|Nom de l’outil|Entreprise|standard|Web|Express with Advanced Services|Développeur|  
+|Nom de l’outil|Entreprise|Standard|Web|Express with Advanced Services|Développeur|  
 |---------------|----------------|--------------|------------------------|-------------|---------------| 
 | Power BI Desktop optimisé pour le serveur de rapports Power BI, **.pbix** | Oui, avec Software Assurance | | | | Oui |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** et **.rds**|Oui|Oui|Oui|Oui|Oui|  

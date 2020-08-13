@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668880"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247074"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  Les procédures stockées compilées en mode natif sont compilées lors de la création, tandis que les procédures stockées interprétées sont compilées lors de la première exécution. (Une partie de la compilation, notamment l'analyse et l'algébrisation, a lieu au moment de la création. Toutefois, pour les procédures stockées interprétées, l'optimisation des plans de requête a lieu à la première exécution.) La logique de recompilation est similaire. Les procédures stockées compilées en mode natif sont recompilées lors de leur première exécution si le serveur est redémarré. Les procédures stockées interprétées sont recompilées si le plan n'est plus dans le cache du plan. Le tableau suivant résume les scénarios de compilation et de recompilation pour les procédures stockées compilées en mode natif et les procédures stockées interprétées :  
   
-||Compilé en mode natif|Accès en|  
+|Type de compilation|Compilé en mode natif|Accès en|  
 |-|-----------------------|-----------------|  
 |Compilation initiale|À la création.|À la première exécution.|  
 |Recompilation automatique|À la première exécution de la procédure après le redémarrage de la base de données ou du serveur.|Au redémarrage du serveur. Ou suppression du cache du plan, généralement en fonction des modifications du schéma ou des statistiques, ou de la sollicitation de la mémoire.|  

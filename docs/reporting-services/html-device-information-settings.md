@@ -1,5 +1,6 @@
 ---
 title: Paramètres d’informations de périphérique HTML | Microsoft Docs
+description: Découvrez les paramètres d’informations de périphérique qui sont disponibles pour le rendu au format HTML.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6d86394f22eabb73c055329b2ad583f589b45ea8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503099"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247188"
 ---
 # <a name="html-device-information-settings"></a>Paramètres d'informations de périphérique HTML
 Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu du rapport au format HTML.  
@@ -44,7 +45,7 @@ Le tableau suivant répertorie les paramètres d'informations de périphérique 
 |**ReplacementRoot(\*)**|Chaîne à ajouter à tous les liens d'extraction, de bascule et de signet dans le rapport lors du rendu hors du contrôle ReportViewer. Par exemple, ce paramètre est utilisé pour rediriger le clic d’un utilisateur vers une page personnalisée.|  
 |**ResourceStreamRoot(\*)**|Chaîne à ajouter à l'URL pour toutes les ressources d'image, telles que les images bascule ou de tri.|  
 |**Section**|Numéro de page du rapport dont le rendu est effectué. La valeur **0** indique que toutes les sections du rapport sont rendues. La valeur par défaut est **1**.|  
-|**StreamRoot (\*)**|Chemin d'accès utilisé pour préfixer la valeur de l'attribut **src** de l'élément IMG dans le rapport HTML retourné par le serveur de rapports. Par défaut, le serveur de rapports fournit le chemin d'accès. Vous pouvez utiliser ce paramètre pour spécifier un chemin racine pour les images contenues dans un rapport (par exemple, **https://\<nom_serveur>/resources/companyimages**).|  
+|**StreamRoot (\*)**|Chemin d'accès utilisé pour préfixer la valeur de l'attribut **src** de l'élément IMG dans le rapport HTML retourné par le serveur de rapports. Par défaut, le serveur de rapports fournit le chemin d'accès. Vous pouvez utiliser ce paramètre pour spécifier un chemin racine pour les images contenues dans un rapport (par exemple, **https://\<servername>/resources/companyimages**).|  
 |**StyleStream**|Indique si les styles et les scripts sont créés en tant que flux distinct plutôt que dans le document. La valeur par défaut est **false**.|  
 |**Barre d’outils**|Indique s'il faut afficher ou masquer la barre d'outils. La valeur par défaut de ce paramètre est **true**. Si la valeur de ce paramètre est **false**, toutes les options restantes (sauf le plan du document) sont ignorées. Si vous omettez ce paramètre, la barre d'outils s'affiche automatiquement pour les formats de rendu assurant sa prise en charge.<br /><br /> Le rendu de la barre d'outils de la Visionneuse de rapports est effectué lorsque vous utilisez l'accès URL pour effectuer le rendu d'un rapport. Le rendu de la barre d'outils ne s'effectue pas via l'API SOAP. Toutefois, le paramètre d'informations de périphérique **Toolbar** affecte la façon dont le rapport s'affiche lors de l'utilisation de la méthode SOAP **Render** . Si la valeur de ce paramètre est **true** lorsque vous utilisez SOAP pour effectuer un rendu au format HTML, seule la première section du rapport est rendue. Si la valeur est **false**, le rendu du rapport HTML entier est effectué sous la forme d'une page HTML unique.|  
 |**UserAgent**|Chaîne **user-agent** du navigateur qui effectue la demande, qui figure dans la requête HTTP.|  

@@ -1,5 +1,6 @@
 ---
 title: Extraits de code Transact-SQL
+description: Vous pouvez utiliser des extraits de code Transact-SQL pour faciliter l’écriture du code. Vous trouverez ici la liste des tâches d’extrait de code, avec des liens pointant vers des articles décrivant ces tâches.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,16 +11,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed4261773b7a7b6e539a60000d1b0748aca2602
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b2986e68cf58afaab0d0254f29ca6b0124af126
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243357"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246218"
 ---
 # <a name="transact-sql-code-snippets"></a>Extraits de code Transact-SQL
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)]est un modèle contenant la structure de base d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un bloc. Vous pouvez utiliser les extraits de code comme point de départ lors de l'ajout d'instructions dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez insérer les extraits de code prédéfinis fournis avec SQL Server ou créer vos propres extraits de code.  
 

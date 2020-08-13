@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196167"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247298"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
 
@@ -69,7 +69,7 @@ PolyBase comprend les fichiers XML de configuration suivants contenant les propr
 
 Ces fichiers se trouvent sous :
 
-`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
+`\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
 Par exemple, la valeur par défaut pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] est `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
@@ -97,7 +97,7 @@ Les autres fichiers XML devront également être mis à jour par la suite si des
 Comme l’outil s’exécute indépendamment de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il n’a pas à être en cours d’exécution ni redémarré si des mises à jour sont apportées aux fichiers XML de configuration. Pour exécuter l’outil, exécutez les commandes suivantes sur l’hôte avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installé :
 
 ```cmd
-> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -105,7 +105,7 @@ Comme l’outil s’exécute indépendamment de [!INCLUDE[ssNoVersion](../../inc
 
 | Argument | Description|
 | --- | --- |
-| *Name Node Address* | Adresse IP ou nom de domaine complet du nœud de nom. Fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE.|
+| *Name Node Address* | Adresse IP ou nom de domaine complet du nœud de nom. Fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE. Remarque : La version SQL Server 2019 de l’outil nécessite *hdfs :\/\/* pour précéder l’adresse IP ou le nom de domaine complet.|
 | *Name Node Port* | Port du nœud de nom. Fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE. Par exemple, 8020. |
 | *Principal du service* | Principal du service d’administration pour votre centre KDC. Correspond à l’argument « IDENTITY » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`.|
 | *Service Password* | Au lieu de taper votre mot de passe sur la console, stockez-le dans un fichier et indiquez le chemin du fichier ici. Le contenu du fichier doit correspondre à ce que vous utilisez comme argument « SECRET » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`. |

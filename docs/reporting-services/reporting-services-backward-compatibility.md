@@ -1,5 +1,6 @@
 ---
 title: Compatibilité descendante | Reporting Services | Microsoft Docs
+description: Découvrez les changements de comportement de SQL Server Reporting Services, ainsi que les fonctionnalités qui ne sont plus disponibles ou dont la suppression est prévue dans une prochaine version.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b16398915b774454895ee39ad80fa008d22a8a75
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b6618f89ab0bdf31ef71e779a3d69fe675d5e2d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571456"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245726"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilité descendante de Reporting Services
 En savoir plus sur les changements de comportement de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette rubrique traite des fonctionnalités qui ne sont plus disponibles ou destinées à être supprimées dans les versions futures.

@@ -1,5 +1,6 @@
 ---
 title: Utilisation des indicateurs de performance clés dans Reporting Services | Microsoft Docs
+description: Découvrez comment vous pouvez facilement mesurer l’état et les performances à l’aide des indicateurs de performance clés dans SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329365"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247438"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
@@ -35,7 +36,7 @@ En utilisant les indicateurs de performance clés dans SQL Server Reporting Serv
 
 Un indicateur de performance clé utilise uniquement la première ligne de données issue d’un dataset partagé. Assurez-vous que les données que vous souhaitez utiliser se trouvent sur cette première ligne. Pour créer un dataset partagé, vous pouvez utiliser le Générateur de rapports ou SQL Server Data Tools.  
   
-> **Remarque**: le dataset ne doit pas nécessairement être dans le même dossier que l’indicateur de performance clé.  
+> **Remarque** : Le dataset ne doit pas nécessairement être dans le même dossier que l’indicateur de performance clé.  
   
 ## <a name="placement-of-kpis"></a>Positionnement des indicateurs de performance clés  
   
@@ -63,7 +64,7 @@ Vous pouvez assigner des valeurs statiques ou utiliser les données issues d’u
   
 > **Avertissement**: bien que vous pouvez utiliser la valeur texte pour le champ **État** au moment de la conception, vous devez utiliser la valeur numérique en cas d’actualisation d’un dataset. Si vous actualisez un dataset avec la valeur texte, au lieu de la valeur numérique, cela peut endommager les indicateurs de performance clés sur votre serveur.  
 >
-> **Remarque** : les champs **Valeur**, **Objectif** et **État** peuvent uniquement choisir une valeur à partir de la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
+> **Remarque** : La valeur des champs **Valeur**, **Objectif** et **État** peut être choisie seulement dans la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
   
 Vous pouvez procéder comme suit pour utiliser les données d’un jeu de données partagé.
   

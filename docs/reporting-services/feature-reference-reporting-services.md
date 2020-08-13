@@ -1,5 +1,6 @@
 ---
 title: Informations de référence sur les fonctionnalités (Reporting Services) | Microsoft Docs
+description: Découvrez les outils et les applications SQL Server Reporting Services qui permettent de créer, de gérer et d’afficher des rapports.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503086"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247236"
 ---
 # <a name="feature-reference-reporting-services"></a>Références relatives aux fonctionnalités (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des rapports. Cette section répertorie les rubriques spécifiques qui décrivent les boîtes de dialogue, les pages Web et les Assistants de ces outils et applications.  
   
- Pour accéder à une rubrique de l’interface utilisateur pendant l’exécution de l’outil ou de l’application, appuyez sur F1 ou cliquez sur **Aide** lorsque la boîte de dialogue, la page web ou l’Assistant est ouvert. Pour plus d’informations sur le démarrage des outils [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Didacticiel : comment localiser et démarrer les outils Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Pour accéder à une rubrique de l’interface utilisateur pendant l’exécution de l’outil ou de l’application, appuyez sur F1 ou cliquez sur **Aide** lorsque la boîte de dialogue, la page web ou l’Assistant est ouvert. Pour plus d'informations sur le démarrage des outils [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Tutoriel : Comment localiser et démarrer les outils Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Aide sur le concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  

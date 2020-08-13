@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
+description: Découvrez comment utiliser le Générateur de rapports pour créer une table de base avec un graphique sparkline dans un rapport paginé Reporting Services.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043104"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245656"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports)
 
 Dans ce didacticiel du [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vous créez une table de base avec un graphique sparkline dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
@@ -23,7 +24,7 @@ Les graphiques sparkline et les barres de données sont des graphiques simples d
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+Durée estimée pour effectuer ce tutoriel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -154,7 +155,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 14. Le tableau est ajouté à l'aire de conception. Il comporte trois colonnes et trois lignes.  
   
-    Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+    Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

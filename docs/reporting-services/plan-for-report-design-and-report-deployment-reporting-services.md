@@ -1,5 +1,6 @@
 ---
 title: Planifier la conception de rapports et le déploiement de rapports | Reporting Services | Microsoft Docs
+description: Découvrez comment planifier une création de rapports et un environnement de serveur de rapports qui fonctionnent ensemble avec Reporting Services.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581247"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247538"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour créer et déployer des rapports paginés. Découvrez comment planifier un outil de création de rapports et un environnement de serveur de rapports qui fonctionnent ensemble.
@@ -46,19 +47,19 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Prise en charge du serveur de rapports et du schéma RDL  
  Un fichier de définition de rapport peut être déployé sur un serveur de rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] des manières suivantes :  
   
--   **Concepteur de rapports :** déployez un rapport du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Concepteur de rapports :** Déployez un rapport à partir du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Générateur de rapports :** enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
+-   **Générateur de rapports :** Enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
   
--   **Portail web :** téléchargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+-   **Portail web :** Chargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint :** téléchargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
+-   **SharePoint :** Chargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
 
 ::: moniker-end
   
--   **Par programmation :** publiez par programmation un rapport à l'aide des interfaces SOAP API vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Programmatiquement :** Publiez programmatiquement un rapport à l'aide des interfaces API SOAP vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Le tableau suivant indique version par version le schéma RDL pris en charge pour le serveur de rapports.  
   

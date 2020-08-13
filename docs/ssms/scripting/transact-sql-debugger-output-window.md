@@ -1,5 +1,6 @@
 ---
 title: Fenêtre Sortie
+description: Découvrez comment utiliser la fenêtre Sortie pour afficher les messages d’état et autres sorties du débogueur SQL Server Management Studio ainsi que d’autres outils.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d446b3b7af6ce4606d656a6a1232016dbb90ea5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93cf1e703e7a8610ecf2bc8de841c00b7b2b3397
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253026"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247330"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Débogueur Transact-SQL - Fenêtre Sortie
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette fenêtre contient les messages d'état de plusieurs fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La sortie est acheminée vers des volets spéciaux de la fenêtre **Sortie** du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] , des fonctionnalités d’outils externes ou les commandes exécutées dans la **Fenêtre Commande**du débogueur. La sortie généralement affichée dans la fenêtre d'invite de commande des outils externes (notamment les fichiers .bat ou .com) est également disponible.
 

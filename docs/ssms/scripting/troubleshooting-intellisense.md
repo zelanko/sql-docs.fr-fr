@@ -1,6 +1,6 @@
 ---
 title: Identifier les problèmes liés à IntelliSense (SSMS)
-description: Découvrez comment dépanner et identifier les problèmes liés à IntelliSense avec SQL Server Management Studio (SSMS).
+description: Découvrez les cas où IntelliSense dans SQL Server Management Studio (SSMS) ne fonctionne pas comme prévu.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de4491bdeecdc635d12dca7cb0a51426524bdd67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be138fabbbca3523ae7a3da1233f15741db7ef3f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558672"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247335"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identifier les problèmes avec IntelliSense - SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Dans certains cas, les options IntelliSense ne fonctionneront peut-être pas comme vous l'attendez. Ces cas sont les suivants :  
   
 ## <a name="conditions-that-affect-intellisense"></a>Conditions qui affectent IntelliSense  

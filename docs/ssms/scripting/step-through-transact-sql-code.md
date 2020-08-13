@@ -1,5 +1,6 @@
 ---
 title: Exécuter pas à pas du code Transact-SQL
+description: Découvrez comment utiliser le débogueur Transact-SQL pour contrôler les instructions Transact-SQL exécutées dans une fenêtre de l’éditeur de requête du moteur de base de données.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243442"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246180"
 ---
 # <a name="step-through-transact-sql-code"></a>Exécuter pas à pas du code Transact-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permet de contrôler les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées dans une fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez suspendre le débogueur au niveau d'instructions individuelles, puis afficher l'état des éléments de code à ce stade.  
 

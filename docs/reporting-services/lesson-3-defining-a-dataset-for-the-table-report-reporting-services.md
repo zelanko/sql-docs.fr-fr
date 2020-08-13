@@ -1,6 +1,6 @@
 ---
 title: 'Leçon 3 : Définir un dataset pour le rapport Table | Microsoft Docs'
-description: Après avoir défini une source de données pour le rapport paginé, vous devez spécifier un dataset. Dans SQL Server Reporting Services, les données utilisées par les rapports sont contenues dans des datasets.
+description: Dans cette leçon, vous allez voir comment définir un jeu de données pour le rapport Table dans SQL Server Reporting Services (SSRS).
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 272787e124616593c90483735afec702f5d4fb18
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244305"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247548"
 ---
 # <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Leçon 3 : Définir un dataset pour le rapport Table - SQL Server Reporting Services
 

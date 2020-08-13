@@ -1,5 +1,6 @@
 ---
-title: 'Leçon 1 : créer un site web | Microsoft Docs'
+title: 'Leçon 1 : Créer un site web | Microsoft Docs'
+description: Découvrez comment créer un projet de site web en utilisant le modèle de site web ASP.NET pour Visual C#.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac670743ba36e3e1d880f152317956115ccf8c78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d44bb92cccea8067abcfd249d592b44661544eb4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651564"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247158"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Leçon 1 : créer un nouveau site Web
+# <a name="lesson-1-create-a-new-website"></a>Leçon 1 : Créer un site web
 Dans cette leçon, vous allez apprendre à créer un projet de site web en utilisant le modèle de site web ASP.NET pour Visual C#.  
   
 ## <a name="to-create-a-new-website"></a>Pour créer un nouveau site Web  

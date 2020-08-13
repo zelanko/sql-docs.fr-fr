@@ -1,5 +1,6 @@
 ---
 title: Planification pour Reporting Services | Microsoft Docs
+description: Découvrez comment installer et configurer l’environnement SQL Server Reporting Services (SSRS) pour mieux répondre à vos besoins.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891762"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247518"
 ---
 # <a name="planning-for-reporting-services"></a>Planification pour Reporting Services
   Utilisez ces rubriques pour mieux comprendre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Apprenez comment installer et configurer l’environnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour mieux répondre à vos besoins.  
@@ -28,7 +29,7 @@ ms.locfileid: "68891762"
  ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Reporting Services**  
  [Serveur de rapports Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Liste de vérification du déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [Liste de vérification de déploiement : installer Reporting Services dans une batterie de serveurs SharePoint existante](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
  [Topologies de déploiement pour les fonctionnalités SQL Server BI dans SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   

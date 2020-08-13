@@ -1,5 +1,6 @@
 ---
 title: Utilisation des instantanés (portail web) | Microsoft Docs
+description: Créez un instantané du cache afin d’accélérer le chargement de certaines propriétés d’exécution. Vous pouvez également utiliser des instantanés d’historique pour capturer des points dans le temps.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222575"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247418"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Utilisation des instantanés (portail web)
 

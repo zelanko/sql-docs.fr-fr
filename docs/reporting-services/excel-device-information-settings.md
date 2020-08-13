@@ -1,5 +1,6 @@
 ---
 title: Paramètres d’informations de périphérique Excel | Microsoft Docs
+description: Découvrez les différents paramètres d’informations de périphérique concernant le rendu au format Microsoft Excel.
 ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4d84c98923a3cee94f64fed863e621821bd7a39
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761823"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245128"
 ---
 # <a name="excel-device-information-settings"></a>Paramètres d'informations de périphérique Excel
   Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu au format [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  

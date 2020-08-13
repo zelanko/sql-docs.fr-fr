@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : création d’un rapport de matrice (Générateur de rapports) | Microsoft Docs'
+description: Découvrez comment créer un rapport paginé Reporting Services avec une matrice d’exemples de données de ventes dans des groupes de lignes et de colonnes imbriqués.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294648"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247448"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutoriel : Création d'un rapport de matrice (Générateur de rapports)
 Ce didacticiel vous montre comment créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec une matrice d’exemples de données de ventes dans des groupes de lignes et de colonnes imbriqués. 
 
 Vous créez également un groupe de colonnes adjacentes, vous mettez en forme les colonnes et vous faites pivoter du texte. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-Durée estimée pour effectuer le didacticiel : 20 minutes.  
+Durée estimée pour effectuer ce tutoriel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
@@ -49,7 +50,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d'informations sur la création d'une source de données incorporée, consultez [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -133,7 +134,7 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
   
 13. Cliquez sur **Terminer**.  
   
-    La matrice est ajoutée à l'aire de conception. Le volet Groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet Groupes de colonnes affiche deux groupes de colonnes : Subcategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+    La matrice est ajoutée à l'aire de conception. Le volet Groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet Groupes de colonnes affiche deux groupes de colonnes : Subcategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -324,7 +325,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 4.  Cliquez sur **Enregistrer**.  
   
-## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
 Un rapport avec des matrices peut s'étendre horizontalement et verticalement lorsqu'il s'exécute. En faisant pivoter les zones de texte verticalement, ou de 270 degrés, vous pouvez gagner de l'espace horizontal. Le rapport rendu sera alors plus étroit, et s'il est exporté dans un format tel que Microsoft Word, il rentrera plus facilement sur une page imprimée.  
   
 Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
@@ -335,7 +336,7 @@ Une zone de texte peut également afficher du texte horizontal dans le sens vert
   
 2.  Sélectionnez la cellule qui contient `[Territory].` 
 
-    >**Remarque**: Sélectionnez la cellule, et non pas le texte. La propriété WritingMode est disponible seulement pour la cellule.
+    >**Remarque** : Sélectionnez la cellule, et non pas le texte. La propriété WritingMode est disponible seulement pour la cellule.
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   

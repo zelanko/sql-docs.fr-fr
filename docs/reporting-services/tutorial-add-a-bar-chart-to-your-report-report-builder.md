@@ -1,5 +1,6 @@
 ---
 title: 'Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports) | Microsoft Docs'
+description: Découvrez comment créer un rapport paginé Reporting Services avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041179"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245696"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)
 Dans ce tutoriel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
 
 Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
@@ -32,7 +33,7 @@ L’illustration suivante montre le graphique à barres que vous allez créer, a
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, la création d’un dataset et le choix d’une source de données, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+Durée estimée pour effectuer ce tutoriel : 15 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -93,7 +94,7 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
   
 2.  Cliquez sur **Barre**, puis sur **Suivant**.  
   
-    Dans la page **Organiser les champs du graphique** , il y a quatre champs dans le volet **Champs disponibles** : FirstName, LastName, SalesYear2015 et SalesYear2014.  
+    Dans la page **Organiser les champs du graphique**, quatre champs se trouvent dans le volet **Champs disponibles** : FirstName, LastName, SalesYear2015 et SalesYear2014.  
   
 3.  Faites glisser LastName vers le volet Catégories.  
   
@@ -199,7 +200,7 @@ Pour améliorer la lisibilité des valeurs du graphique, vous pouvez déplacer l
   
 1.  Basculez en mode création de rapport.  
   
-2.  Sélectionnez les mots **Titre du graphique** en haut du graphique, puis tapez **Ventes pour 2014 et 2015**.  
+2.  Sélectionnez les mots **Titre du graphique** en haut du graphique, puis tapez : **Ventes pour 2014 et 2015**.  
   
 3.  Dans le volet Propriétés, le titre étant sélectionné, affectez la valeur **Noir** au paramètre **Couleur** et la valeur **12 pt** au paramètre **Police**. 
   
@@ -226,7 +227,7 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 7.  Dans la zone **Titre de l’axe** , tapez **Ventes en milliers** et appuyez sur Entrée.  
 
-    >**Remarque :** Pendant que vous tapez, la zone Titre de l’axe apparaît sur l’axe vertical. Quand vous appuyez sur Entrée, elle passe sur l’axe horizontal.
+    >**Remarque :** Pendant que vous tapez, la zone Titre de l’axe apparaît sur l’axe vertical. Quand vous appuyez sur Entrée, elle passe sur l’axe horizontal.
   
 9. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -243,7 +244,7 @@ Vous pouvez ajouter un filtre au graphique pour spécifier les données du datas
   
 4.  Cliquez sur **Filtres**. La page **Modifiez les filtres** peut afficher une liste d’expressions de filtre. Par défaut, cette liste est vide.  
   
-5.  Cliquez sur **Ajouter**. Un nouveau filtre vide apparaît.  
+5.  Cliquez sur **Add**. Un nouveau filtre vide apparaît.  
   
 6.  Dans **Expression**, tapez **[Sum(SalesYear2015)]** . Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2015.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx** .  
   
