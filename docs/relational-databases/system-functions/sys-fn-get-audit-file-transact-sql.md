@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_audit_file (Transact-SQL)
 title: sys. fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
@@ -21,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321795"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -51,7 +52,7 @@ fn_get_audit_file ( file_pattern,
     
     Cet argument doit inclure à la fois un chemin d'accès (lettre de lecteur ou partage réseau) et un nom de fichier qui peut inclure un caractère générique. Un seul astérisque (*) peut être utilisé pour collecter plusieurs fichiers à partir d’un jeu de fichiers d’audit. Par exemple :  
   
-    -   **\<path>\\\***-Collecter tous les fichiers d’audit à l’emplacement spécifié.  
+    -   **\<path>\\\*** -Collecter tous les fichiers d’audit à l’emplacement spécifié.  
   
     -   ** \<path> \ LOGINSAUDIT_ {GUID}***-collecter tous les fichiers d’audit qui ont le nom et la paire GUID spécifiés.  
   
@@ -61,7 +62,7 @@ fn_get_audit_file ( file_pattern,
  
     Cet argument est utilisé pour spécifier une URL d’objet BLOB (y compris le point de terminaison de stockage et le conteneur). Bien qu’il ne prenne pas en charge un caractère générique astérisque, vous pouvez utiliser un préfixe de nom de fichier partiel (au lieu du nom complet de l’objet BLOB) pour collecter plusieurs fichiers (objets BLOB) qui commencent par ce préfixe. Par exemple :
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-collecte tous les fichiers d’audit (objets BLOB) pour la base de données spécifique.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -collecte tous les fichiers d’audit (objets BLOB) pour la base de données spécifique.    
       
       - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . Xel** -collecte un fichier d’audit spécifique (objet BLOB).
   
@@ -102,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | Date et heure auxquelles l'action pouvant être auditée est déclenchée. N'accepte pas la valeur NULL. |  
 | file_name | **varchar(260)** | Chemin d'accès et nom du fichier journal d'audit d'où provenait l'enregistrement. N'accepte pas la valeur NULL. |
 | is_column_permission | **bit** | Indicateur précisant s’il s’agit d’une autorisation au niveau de la colonne. N'accepte pas la valeur NULL. Retourne 0 lorsque le permission_bitmask = 0.<br /> 1 = vrai<br /> 0 = faux |
-| object_id | **int** | ID de l’entité sur laquelle l’audit s’est produit. Notamment :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> N'accepte pas la valeur NULL. Retourne 0 si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |  
-| object_name | **sysname** | Nom de l’entité sur laquelle l’audit s’est produit. Notamment :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> Autorise la valeur NULL. Retourne NULL si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |
+| object_id | **int** | ID de l’entité sur laquelle l’audit s’est produit. Ce dernier est détaillé ci-après :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> N'accepte pas la valeur NULL. Retourne 0 si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |  
+| object_name | **sysname** | Nom de l’entité sur laquelle l’audit s’est produit. Ce dernier est détaillé ci-après :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> Autorise la valeur NULL. Retourne NULL si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |
 | permission_bitmask | **varbinary(16)** | Dans certaines actions, il s'agit des autorisations qui ont été accordées, refusées ou révoquées. |
 | response_rows | **bigint** | **S’applique à**: Azure SQL Database et SQL Managed instance<br /><br /> Nombre de lignes retournées dans le jeu de résultats. |  
 | schema_name | **sysname** | Contexte du schéma dans lequel l’action s’est produite. Autorise la valeur NULL. Retourne NULL pour les audits qui se produisent en dehors d’un schéma. |  
@@ -127,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, Azure SQL Database et SQL Managed instance<br /><br /> Utilisé pour enregistrer les informations supplémentaires que l’utilisateur souhaite enregistrer dans le journal d’audit à l’aide de la procédure stockée **sp_audit_write** . |  
 
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si l’argument *file_pattern* passé à **fn_get_audit_file** fait référence à un chemin d’accès ou à un fichier qui n’existe pas, ou si le fichier n’est pas un fichier d’audit, le message d’erreur **MSG_INVALID_AUDIT_FILE** est retourné.  
   
 ## <a name="permissions"></a>Autorisations
@@ -179,7 +180,7 @@ Pour obtenir un exemple complet de création d’audit, consultez [SQL Server 
 Pour plus d’informations sur la configuration de l’audit de Azure SQL Database, consultez [prise en main de l’audit de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER un AUDIT de serveur &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CRÉER un AUDIT de serveur &#40;&#41;Transact-SQL ](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

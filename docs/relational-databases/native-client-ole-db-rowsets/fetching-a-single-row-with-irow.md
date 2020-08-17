@@ -1,4 +1,5 @@
 ---
+description: Extraction d’une seule ligne avec IRow (Native Client OLE DB Provider)
 title: Extraire une seule ligne avec IRow (Native Client OLE DB Provider) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 453bc37d3cbe763cfa379339de01d523fa63307b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e89b550533363e6526b0ce9a2affd02d1d8bc71c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327825"
 ---
 # <a name="fetching-a-single-row-with-irow-native-client-ole-db-provider"></a>Extraction d’une seule ligne avec IRow (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "87247608"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Utilisation d'IRow::GetColumns](../../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md)  
+-   [Utilisation d’IRow::GetColumns](../../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md)  
   
--   [Extraction de données BLOB à l'aide d'IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+-   [Extraction de données Blob à l’aide d’IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

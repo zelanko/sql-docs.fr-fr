@@ -1,4 +1,5 @@
 ---
+description: Utilisation d'expressions de dimension
 title: Utilisation d’expressions de dimension | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8fb367f0e4ab1cc99a1a84ed51e3cca3cab75ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341115"
 ---
 # <a name="using-dimension-expressions"></a>Utilisation d'expressions de dimension
 
 
   Vous utilisez généralement des expressions de dimension et de hiérarchie lorsque vous passez des paramètres à des fonctions dans MDX (Multidimensional Expressions) pour retourner des membres, des jeux ou des tuples à partir d'une hiérarchie.  
   
- Les expressions de dimension peuvent être uniquement des expressions simples car elles sont des identificateurs d'objet. Pour une explication des expressions simples et complexes, consultez [expressions &#40;&#41;MDX](../mdx/expressions-mdx.md) .  
+ Les expressions de dimension peuvent être uniquement des expressions simples car elles sont des identificateurs d'objet. Pour une explication des expressions simples et complexes, consultez [expressions &#40;&#41;MDX ](../mdx/expressions-mdx.md) .  
   
 ## <a name="dimension-expressions"></a>Expressions de dimension  
  Une expression de dimension contient un identificateur de dimension ou une fonction de dimension.  

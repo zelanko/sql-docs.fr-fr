@@ -1,4 +1,5 @@
 ---
+description: Évaluation des schémas Oracle pour la conversion (OracleToSQL)
 title: Évaluation des schémas Oracle pour la conversion (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 641d97868dcd308dbe487d43b7eba84a8b772371
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320735"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Évaluation des schémas Oracle pour la conversion (OracleToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez déterminer le niveau de complexité de la migration et le temps nécessaire à la migration. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets qui seront convertis avec succès. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  

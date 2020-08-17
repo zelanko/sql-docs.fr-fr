@@ -1,4 +1,5 @@
 ---
+description: Utilisation d'expressions de cube et de sous-cube
 title: Utilisation d’expressions de cube et de sous-cube | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341125"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Utilisation d'expressions de cube et de sous-cube
 
@@ -69,7 +70,7 @@ ms.locfileid: "68893529"
  Un identificateur de sous-cube apparaît comme *Subcube_Name*. dans les descriptions de notation BNF des instructions MDX.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requête MDX de base &#40;&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Requête MDX de base &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
  [Création de sous-cubes dans MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [Instruction CREATe SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   

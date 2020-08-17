@@ -1,4 +1,5 @@
 ---
+description: Vues de gestion dynamique (Transact-SQL)
 title: Vues de gestion dynamique (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
@@ -24,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbeef1cf93e9ea2c9556a7f68b550fc2da0c9508
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a1644a542a7f7c70b3f2293fbd340ddda9474721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322685"
 ---
 # <a name="system-dynamic-management-views"></a>Vues de gestion dynamique système
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +77,7 @@ FROM sys.dm_os_wait_stats;
 
         [Vues de gestion dynamique liées à la mise en miroir de bases de données &#40;Transact-SQL&#41;](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)
 
-        [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)
+        [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)
 
         [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 
@@ -97,9 +98,9 @@ FROM sys.dm_os_wait_stats;
 
         [Fonctions et vues de gestion dynamique relatives à l’objet &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)
 
-        [Vues de gestion dynamique liées aux notifications de requête &#40;&#41;Transact-SQL](query-notifications-sys-dm-qn-subscriptions.md)
+        [Vues de gestion dynamique liées aux notifications de requête &#40;&#41;Transact-SQL ](query-notifications-sys-dm-qn-subscriptions.md)
 
-        [Vues de gestion dynamique liées à la réplication &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)
+        [Vues de gestion dynamique liées à la réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)
 
         [Vues de gestion dynamique relatives au gouverneur de ressources &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
@@ -124,6 +125,6 @@ FROM sys.dm_os_wait_stats;
 ## <a name="see-also"></a>Voir aussi  
  [ACCORDER des autorisations de serveur &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT - Octroyer des autorisations sur une base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Vues système &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

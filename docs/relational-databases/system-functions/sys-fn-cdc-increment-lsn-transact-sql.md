@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_increment_lsn (Transact-SQL)
 title: sys. fn_cdc_increment_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6907b5df12a655d6444981afa4a84a2753d22f53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ad4595995bc6768c4b0b5e297155530316a9d04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321565"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne le numéro séquentiel dans le journal suivant dans la séquence basée sur le numéro séquentiel dans le journal spécifié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +49,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Type de retour  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La valeur LSN retournée par la fonction est toujours supérieure à la valeur spécifiée, et aucune valeur LSN n'existe entre les deux valeurs.  
   
  Pour interroger systématiquement un flux de données de modification dans le temps, vous pouvez répéter périodiquement l'appel de fonction de requête, en spécifiant chaque fois un nouvel intervalle de requête pour délimiter les modifications retournées dans la requête. Pour aider à s'assurer de ne perdre aucune donnée, la limite supérieure de la requête précédente est souvent utilisée pour générer la limite inférieure de la requête suivante. Étant donné que l'intervalle de requête est un intervalle fermé, la nouvelle limite inférieure doit être plus grande que la limite supérieure précédente, mais assez petite pour garantir qu'aucune modification ne comporte de valeur LSN qui se trouve entre cette valeur et l'ancienne limite supérieure. La fonction sys.fn_cdc_increment_lsn est utilisée pour obtenir cette valeur.  

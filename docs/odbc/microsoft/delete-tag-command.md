@@ -1,4 +1,5 @@
 ---
+description: DELETE TAG, commande
 title: SUPPRIMER la BALIse, commande | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97ca5abca7e70f5dffdae9bf14ce64429fd203d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16eeedd8d9995cf636791688179ba21002411aea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340885"
 ---
 # <a name="delete-tag-command"></a>DELETE TAG, commande
 Supprime une balise ou des balises d’un fichier d’index composé (. CDX).  

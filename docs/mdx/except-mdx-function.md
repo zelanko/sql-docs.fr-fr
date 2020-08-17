@@ -1,4 +1,5 @@
 ---
+description: Fonction Except (MDX)
 title: Except (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e4cd8dcf3a8c3100a064e8ba5888060477de979
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341505"
 ---
 # <a name="except-mdx-function"></a>Fonction Except (MDX)
 
@@ -57,7 +58,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [-&#40;sauf&#41; &#40;&#41;MDX](../mdx/except-mdx-operator.md)   
+ [-&#40;sauf&#41; &#40;&#41;MDX ](../mdx/except-mdx-operator.md)   
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

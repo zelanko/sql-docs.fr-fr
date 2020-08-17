@@ -1,4 +1,5 @@
 ---
+description: Mention légale (SSMA pour accès)
 title: Mention légale (SSMA pour accès) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e03216bca40411181135d42c6228591f99758346
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372885"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Mention légale (SSMA pour accès)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  

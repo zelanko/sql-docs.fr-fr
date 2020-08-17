@@ -1,4 +1,5 @@
 ---
+description: Types CLR volumineux définis par l’utilisateur dans SQL Server Native Client (OLE DB)
 title: Types CLR volumineux définis par l'utilisateur (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328285"
 ---
 # <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Types CLR volumineux définis par l’utilisateur dans SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -173,7 +174,7 @@ ms.locfileid: "87243872"
  Quand **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) est défini sur 80, les types UDT volumineux apparaissent aux clients de la même façon que pour les clients de bas niveau.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR volumineux définis par l'utilisateur](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
+ [Types CLR volumineux définis par l’utilisateur](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   
 

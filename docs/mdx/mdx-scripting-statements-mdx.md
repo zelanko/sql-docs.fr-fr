@@ -1,4 +1,5 @@
 ---
+description: Instructions de script MDX (MDX)
 title: MDX (MDX Scripting instructions) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341466"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Instructions de script MDX (MDX)
 
@@ -32,9 +33,9 @@ ms.locfileid: "68893337"
 |[Instruction SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)|Limite l'étendue des instructions MDX spécifiées à un sous-cube spécifié.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des instructions MDX &#40;&#41;MDX](../mdx/mdx-statement-reference-mdx.md)   
- [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instructions de manipulation de données MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Référence des instructions MDX &#40;&#41;MDX ](../mdx/mdx-statement-reference-mdx.md)   
+ [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instructions de manipulation de données MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Principes de base des scripts MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   
   

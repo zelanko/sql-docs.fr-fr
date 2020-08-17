@@ -1,4 +1,5 @@
 ---
+description: Configuration d’ODBC pour Visual FoxPro, boîte de dialogue
 title: Boîte de dialogue installation de ODBC pour Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef7ac702a69342833c6dfffa0ffc9cdd0ac2857e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340705"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Configuration d’ODBC pour Visual FoxPro, boîte de dialogue
 La boîte de dialogue **installation de ODBC Visual FoxPro** vous permet d’ajouter ou de modifier une source de données Visual FoxPro.  
@@ -55,7 +56,7 @@ La boîte de dialogue **installation de ODBC Visual FoxPro** vous permet d’ajo
  **Séquence de classement**  
  Séquence dans laquelle les champs sont triés. Les séquences par défaut reflètent les séquences prises en charge par votre version linguistique du système d’exploitation. Pour obtenir la liste des séquences de classement prises en charge, consultez [Set COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
- **Exclusive**  
+ **Exclusif**  
  Lorsque cette case à cocher est activée, le pilote ouvre la base de données Visual FoxPro exclusivement lorsque vous accédez aux données à l’aide de la source de données. Les autres utilisateurs ne peuvent pas accéder à la base de données ou aux tables de la base de données pendant que la base de données est ouverte en mode exclusif. Les tables de la base de données exclusivement ouverte sont ouvertes en tant que données PARTAGÉes. Pour ouvrir une table en mode exclusif, utilisez la commande [Set exclusive](../../odbc/microsoft/set-exclusive-command.md) . Cette case à cocher est désactivée lorsque le **type de base de données** est défini sur **Répertoire de table libre**.  
   
  **Null**  
@@ -66,7 +67,7 @@ strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Deleted**  
+ **Supprimé**  
  Détermine si les lignes marquées comme supprimées sont retournées. Vous pouvez également contrôler cette option via une chaîne de connexion passée, comme dans le code suivant :  
   
 ```  

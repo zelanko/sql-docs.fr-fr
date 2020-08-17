@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_get_min_lsn (Transact-SQL)
 title: sys. fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 642a4e846e6da836ff296f8d271d21603ff84865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321685"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la valeur de colonne start_lsn pour l’instance de capture spécifiée à partir de la table système [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Cette valeur représente le point de terminaison inférieur de l'intervalle de validité pour l'instance de capture.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +49,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="return-types"></a>Types de retour  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Retourne 0x00000000000000000000 lorsque l'instance de capture n'existe pas ou que l'appelant n'est pas autorisé à accéder aux données de modification associées à l'instance de capture.  
   
  Cette fonction est utilisée en général pour identifier le point de terminaison inférieur de la chronologie de capture des données modifiées associé à une instance de capture. Vous pouvez également utiliser cette fonction pour valider que les points de terminaison d'une plage de requêtes se situent dans la chronologie de l'instance de capture avant de demander les données de modification. Il est important d'effectuer de tels contrôles, car le point de terminaison inférieur d'une instance de capture change lorsque le nettoyage est effectué sur les tables de modifications. Si l'intervalle entre les demandes de données de modification est significatif, même un point de terminaison inférieur qui a pour valeur le point de terminaison supérieur de la demande de données de modification précédente peut se trouver à l'extérieur de la chronologie actuelle.  

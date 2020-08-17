@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (GUI) (MySQLToSQL)
 title: Paramètres du projet (GUI) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8da37a73c0a251b5ae11b59b12c688e061e3a0cd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aa798c425733282b50b4baeb3140173719fc0bb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320565"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Paramètres du projet (GUI) (MySQLToSQL)
 Les paramètres de projet d’interface utilisateur graphique vous permettent de configurer la façon dont les données s’affichent sous l’onglet **données** et d’inclure les rapports de données avec les rapports d’évaluation.  

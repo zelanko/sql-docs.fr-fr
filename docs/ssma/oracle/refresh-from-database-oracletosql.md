@@ -1,4 +1,5 @@
 ---
+description: Actualiser à partir de la base de données (OracleToSQL)
 title: Actualiser à partir de la base de données (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320175"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Actualiser à partir de la base de données (OracleToSQL)
 La boîte **de dialogue actualiser à partir de la base de données** vous permet de sélectionner les objets à actualiser à partir de la base de données Oracle. Les lignes de la boîte de dialogue sont codées par couleur en fonction de l’état des métadonnées :  

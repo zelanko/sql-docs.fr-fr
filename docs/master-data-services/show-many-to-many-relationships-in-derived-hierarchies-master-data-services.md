@@ -1,4 +1,5 @@
 ---
+description: Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
 title: Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c8f0a7536605af05457de13ebcd2011083386010
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9a6c606cf05189d7845db6615add2365efb90c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342425"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
 
@@ -99,7 +100,7 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
   
 -   Une hiérarchie dérivée avec un niveau plusieurs à plusieurs (un enfant peut être mappé de nombreux parents).  
   
-## <a name="collections"></a>Collections  
+## <a name="collections"></a>Regroupements  
  Les Hiérarchies explicites et collections sont déconseillées. La procédure stockée de conversion (udpConvertCollectionAndConsolidatedMembersToLeaf) convertit des membres de la collection en membres feuille, et crée des hiérarchies dérivées plusieurs à plusieurs pour capturer les informations d’appartenance.  
   
 ## <a name="see-also"></a>Voir aussi  

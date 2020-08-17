@@ -1,4 +1,5 @@
 ---
+description: Compatibilité des pilotes pour les bases de données de poste de travail
 title: Compatibilité des pilotes de base de données Bureau | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b15ec35a01b61eef401f217733917a80bbe32b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340775"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilité des pilotes pour les bases de données de poste de travail
 Unicode est une méthode d’encodage de caractères logiciels qui traite tous les caractères comme ayant une largeur fixe de deux octets. Cette méthode est utilisée comme alternative à l’encodage de caractères ANSI Windows, car elle représente les caractères d’un octet, est limitée à 256 caractères. Étant donné que le format Unicode peut représenter plus de 65 000 caractères, il prend en charge de nombreux langages dont les caractères ne sont pas représentés dans l’encodage ANSI.  

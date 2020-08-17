@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (Mappage de type) (OracleToSQL)
 title: Paramètres du projet (mappage de type) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320445"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Paramètres du projet (Mappage de type) (OracleToSQL)
 La page mappage de type de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA convertit les types de données Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
@@ -106,9 +107,9 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |VARCHAR2|varchar(max)|  
 |XmlType|Xml|  
   
-<sup>*</sup>S’applique uniquement au mappage de type de valeur de retour.  
+<sup>*</sup> S’applique uniquement au mappage de type de valeur de retour.  
   
-<sup>**</sup>S’applique uniquement au mappage de type d’argument.  
+<sup>**</sup> S’applique uniquement au mappage de type d’argument.  
   
 ### <a name="default-column-type-mapping"></a>Mappage de type de colonne par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les colonnes.  
@@ -187,8 +188,8 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_interger|int|  
-|Blob|varbinary(max)|  
-|Boolean|bit|  
+|Objet blob|varbinary(max)|  
+|Booléen|bit|  
 |Char|char|  
 |char varying [*.. 8000]|VARCHAR [*]|  
 |char varying [8001.. *]|varchar(max)|  

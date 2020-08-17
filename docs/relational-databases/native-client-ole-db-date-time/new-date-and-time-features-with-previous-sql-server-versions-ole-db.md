@@ -1,4 +1,5 @@
 ---
+description: Nouvelles fonctionnalités de date et d’heure avec les versions précédentes de SQL Server (OLE DB)
 title: Fonctionnalités de date et d’heure OLE DB avec les versions SQL Server antérieures
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,11 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70cfdccd5ba5c51e0ecdbb1106397364daf70aa4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b58fe4128d8df7b01d30b0a5ad11ce41881973ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327885"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nouvelles fonctionnalités de date et d’heure avec les versions précédentes de SQL Server (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,19 +33,19 @@ ms.locfileid: "86010582"
   
 |Type du client OLE DB|Type SQL Server 2005|SQL Server 2008 (ou versions ultérieures)|Conversion de résultat (serveur vers client)|Conversion de paramètre (client vers serveur)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
+|DBTYPE_DBDATE|Datetime|Date|Ok|Ok|  
 |DBTYPE_DBTIMESTAMP|||Champs d'heure définis à zéro.|IRowsetChange échoue en raison de la troncation de chaîne si le champ d’heure est différent de zéro.|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|Ok|Ok|  
 |DBTYPE_DBTIMESTAMP|||Champs de date définis à la date actuelle.|IRowsetChange échoue en raison de la troncation de chaîne si les fractions de seconde ne sont pas égales à zéro.<br /><br /> La date est ignorée.|  
-|DBTYPE_DBTIME||Time(7)|Échec : littéral d’heure non valide.|OK|  
-|DBTYPE_DBTIMESTAMP|||Échec : littéral d’heure non valide.|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
+|DBTYPE_DBTIME||Time(7)|Échec : littéral d’heure non valide.|Ok|  
+|DBTYPE_DBTIMESTAMP|||Échec : littéral d’heure non valide.|Ok|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|Ok|Ok|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|Ok|Ok|  
+|DBTYPE_DBDATE|Smalldatetime|Date|Ok|Ok|  
 |DBTYPE_DBTIMESTAMP|||Champs d'heure définis à zéro.|IRowsetChange échoue en raison de la troncation de chaîne si le champ d’heure est différent de zéro.|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|Ok|Ok|  
 |DBTYPE_DBTIMESTAMP|||Champs de date définis à la date actuelle.|IRowsetChange échoue en raison de la troncation de chaîne si les fractions de seconde ne sont pas égales à zéro.<br /><br /> La date est ignorée.|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|Ok|Ok|  
   
  OK signifie que si cela a fonctionné avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cela doit continuer à fonctionner avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure).  
   
@@ -138,7 +140,7 @@ ms.locfileid: "86010582"
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
+|POSSIBILITÉ DE RECHERCHE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

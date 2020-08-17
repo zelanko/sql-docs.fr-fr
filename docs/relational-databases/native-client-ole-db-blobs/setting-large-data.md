@@ -1,4 +1,5 @@
 ---
+description: Définition de données volumineuses dans SQL Server Native Client
 title: Définition de données volumineuses (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e0e20b410ddf2300779923ed317a897a74862d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ab0fb692b2d50dc99276a55ab4773962d757b2c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328325"
 ---
 # <a name="setting-large-data-in-sql-server-native-client"></a>Définition de données volumineuses dans SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87332174"
 ## <a name="how-to-set-large-data"></a>Définir des données volumineuses  
  Pour transmettre un pointeur à son propre objet de stockage, le consommateur crée un accesseur qui lie la valeur de la colonne BLOB, puis appelle les méthodes **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Pour définir des données BLOB :  
   
-1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définissez l’élément *dwFlag* de la structure DBOBJECT sur STGM_READ et définissez l’élément *IID* sur IID_ISequentialStream (l’interface à exposer).  
+1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définissez l’élément *dwFlag* de la structure DBOBJECT sur STGM_READ, puis définissez l’élément *iid* sur IID_ISequentialStream (l’interface à exposer).  
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   

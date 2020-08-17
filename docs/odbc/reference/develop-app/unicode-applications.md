@@ -1,4 +1,5 @@
 ---
+description: Applications Unicode
 title: Applications Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94bd5211c878904453624adb2acd0fe435ebc812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee2db77c569876b008d21149c500aa0f1f009b7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339155"
 ---
 # <a name="unicode-applications"></a>Applications Unicode
 Vous pouvez recompiler une application en tant qu’application Unicode de l’une des deux manières suivantes :  

@@ -1,4 +1,5 @@
 ---
+description: État En lecture seule (pilote Excel)
 title: État en lecture seule (pilote Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb585d4712b6cac5e09b65ee8e13604763cd0164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04a0c5d0cb2c9932d30c0edb900169d8c5e5f82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340385"
 ---
 # <a name="read-only-status-excel-driver"></a>État En lecture seule (pilote Excel)
 Lorsque le pilote Microsoft Excel est utilisé, les tables de source de données sont ouvertes en lecture seule par défaut, et ne peuvent être ouvertes que par un seul utilisateur à la fois. Bien que les tables aient un État en lecture seule, toutefois, les applications peuvent effectuer des insertions et des mises à jour pour les tables Microsoft Excel.  

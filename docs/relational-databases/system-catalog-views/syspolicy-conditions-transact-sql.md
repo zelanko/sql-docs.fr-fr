@@ -1,4 +1,5 @@
 ---
+description: syspolicy_conditions (Transact-SQL)
 title: syspolicy_conditions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45fea43b9d7d35fd674a566982d67b4043403d06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 598c25263761041693d99a2c72526a2333c50e1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374925"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85900603"
 |modified_by|**sysname**|Connexion qui a récemment modifié la condition. Est NULL si jamais modifiée.|  
 |date_modified|**datetime**|Date et heure de création de la condition. Est NULL si jamais modifiée.|  
 |is_name_condition|**smallint**|Spécifie si la condition est une condition d'affectation de noms.<br /><br /> 0 = l'expression de condition ne contient pas la variable @Name.<br /><br /> 1 = l'expression de condition contient la variable @Name.|  
-|facette|**nvarchar(max)**|Nom de la facette sur laquelle est basée la condition.|  
+|facet|**nvarchar(max)**|Nom de la facette sur laquelle est basée la condition.|  
 |Expression|**nvarchar(max)**|Expression des états de la facette.|  
 |obj_name|**sysname**|Nom d'objet affecté à @Name si l'expression de condition contient cette variable.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque vous dépannez la Gestion basée sur des stratégies, interrogez la vue syspolicy_conditions pour déterminer qui a créé ou modifié en dernier la condition.  
   
 ## <a name="permissions"></a>Autorisations  
