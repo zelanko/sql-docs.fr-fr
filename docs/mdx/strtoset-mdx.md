@@ -1,4 +1,5 @@
 ---
+description: StrToSet (MDX)
 title: StrToSet (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 882ab646af51d4b1edbe0a1240eaaed7cbfa5422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386775"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
@@ -34,7 +35,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>Notes  
  La fonction **StrToSet** retourne le jeu spécifié dans l’expression de chaîne. La fonction **StrToSet** est généralement utilisée avec des fonctions définies par l’utilisateur pour renvoyer une spécification Set d’une fonction externe vers une instruction MDX, ou lorsqu’une requête MDX est paramétrable.  
   
--   Lorsque l’indicateur constressed est utilisé, la spécification set doit contenir des noms de membres qualifiés ou non qualifiés ou un ensemble de tuples contenant des noms de membres qualifiés ou non qualifiés {}, placés entre accolades. Cet indicateur est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une chaîne qui ne peut être directement résolue à des noms de membres qualifiés ou non qualifiés est fournie, l'erreur suivante s'affiche : restrictions imposées par l'indicateur CONSTRAINED dans la fonction STRTOSET n'ont pas été respectées. »  
+-   Lorsque l’indicateur constressed est utilisé, la spécification set doit contenir des noms de membres qualifiés ou non qualifiés ou un ensemble de tuples contenant des noms de membres qualifiés ou non qualifiés, placés entre accolades {} . Cet indicateur est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une chaîne qui ne peut être directement résolue à des noms de membres qualifiés ou non qualifiés est fournie, l'erreur suivante s'affiche : restrictions imposées par l'indicateur CONSTRAINED dans la fonction STRTOSET n'ont pas été respectées. »  
   
 -   Si l'indicateur CONSTRAINED n'est pas utilisé, vous pouvez résoudre le jeu spécifié à une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   

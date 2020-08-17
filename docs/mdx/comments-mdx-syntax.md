@@ -1,4 +1,5 @@
 ---
+description: Commentaires (syntaxe MDX)
 title: Commentaires (syntaxe MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fa1312e361bf0ef673254c0eb804ed7b8b7ca7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387674"
 ---
 # <a name="comments-mdx-syntax"></a>Commentaires (syntaxe MDX)
 
@@ -34,8 +35,8 @@ ms.locfileid: "68001528"
  -- (doubles tirets)  
  Ces caractères de commentaire peuvent être utilisés directement dans une ligne de code ou en début de ligne. Tout ce qui se trouve entre les doubles tirets et la fin de ligne fait partie du commentaire. Pour un commentaire de plusieurs lignes, les doubles tirets doivent apparaître au début de chaque ligne. Pour plus d’informations, consultez [--&#40;Comment&#41; &#40;&#41;MDX ](../mdx/comment-mdx-operator-reference.md).  
   
- /* ... \*/(paires de caractères barre oblique-astérisque)  
- Ces caractères de commentaire peuvent être utilisés directement dans une ligne de code devant être exécuté, en début de ligne ou même dans du code exécutable. Tout, de la paire de commentaires ouverte\*(/) à la paire de\*commentaires de fermeture (/), est considéré comme faisant partie du commentaire. Pour un commentaire de plusieurs lignes, la paire de caractères de commentaire ouvert (\*/) doit démarrer le commentaire, et la paire de caractères de fermeture\*de commentaire (/) doit terminer le commentaire. Aucun autre caractère de commentaire ne peut apparaître dans les lignes de commentaire. Pour plus d’informations, consultez [/*... / \*(Commentaire)](../mdx/comment-mdx.md).  
+ /* ... \* /(paires de caractères barre oblique-astérisque)  
+ Ces caractères de commentaire peuvent être utilisés directement dans une ligne de code devant être exécuté, en début de ligne ou même dans du code exécutable. Tout, de la paire de commentaires ouverte (/ \* ) à la paire de commentaires de fermeture ( \* /), est considéré comme faisant partie du commentaire. Pour un commentaire de plusieurs lignes, la paire de caractères de commentaire ouvert (/ \* ) doit démarrer le commentaire, et la paire de caractères de fermeture de commentaire ( \* /) doit terminer le commentaire. Aucun autre caractère de commentaire ne peut apparaître dans les lignes de commentaire. Pour plus d’informations, consultez [/*. \* .. /(Commentaire)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>Exemple  
  La requête suivante offre des exemples des trois types de commentaire :  

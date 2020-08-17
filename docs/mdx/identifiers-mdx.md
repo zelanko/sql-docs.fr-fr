@@ -1,4 +1,5 @@
 ---
+description: Identificateurs (MDX)
 title: Identificateurs (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe8494558f7026355cb25e1415f9269fbeb1bed3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387495"
 ---
 # <a name="identifiers-mdx"></a>Identificateurs (MDX)
 
@@ -79,11 +80,11 @@ ms.locfileid: "68891221"
   
 -   Lorsque le nom d'un objet ou une partie du nom utilise des mots réservés.  
   
-     Il est conseillé de ne pas utiliser les mots clés réservés comme noms d'objets. Les bases de données mises à niveau à partir [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de versions antérieures de peuvent contenir des identificateurs qui incluent des mots non réservés dans la version antérieure, mais qui sont maintenant réservés. Aussi longtemps que vous ne modifiez pas l'identificateur de l'objet, vous pouvez faire référence à l'objet à l'aide d'un identificateur délimité.  
+     Il est conseillé de ne pas utiliser les mots clés réservés comme noms d'objets. Les bases de données mises à niveau à partir de versions antérieures de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent contenir des identificateurs qui incluent des mots non réservés dans la version antérieure, mais qui sont maintenant réservés. Aussi longtemps que vous ne modifiez pas l'identificateur de l'objet, vous pouvez faire référence à l'objet à l'aide d'un identificateur délimité.  
   
 -   Lorsque le nom d'un objet utilise des caractères non répertoriés comme identificateurs qualifiés.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]permet à un identificateur délimité d’utiliser n’importe quel caractère de la page de codes actuelle. Un manque de discernement dans l'utilisation de caractères spéciaux dans un nom d'objet peut rendre difficiles la lecture et la maintenance des instructions et scripts MDX.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet à un identificateur délimité d’utiliser n’importe quel caractère de la page de codes actuelle. Un manque de discernement dans l'utilisation de caractères spéciaux dans un nom d'objet peut rendre difficiles la lecture et la maintenance des instructions et scripts MDX.  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>Règles de mise en forme des identificateurs délimités  
  Le corps d'un identificateur délimité peut contenir n'importe quelle combinaison de caractères dans la page de codes actuelle, notamment les caractères de délimitation proprement dits. Si le corps de l'identificateur délimité contient des caractères de délimitation, un traitement particulier est nécessaire :  
@@ -123,7 +124,7 @@ ms.locfileid: "68891221"
  En outre, l'identificateur Measures de l'exemple précédent a été délimité pour illustrer la délimitation de plusieurs identificateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
+ [Référence du langage MDX &#40;&#41;MDX ](../mdx/mdx-language-reference-mdx.md)   
  [Notions de base des requêtes MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [Éléments de la syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   

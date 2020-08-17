@@ -1,4 +1,5 @@
 ---
+description: Se connecter à SQL Server (SybaseToSQL)
 title: Se connecter à SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 78007a3d788c7387cd59c2fa1b9f3cf52466c525
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 115b5ca1eadac2e8042abcc6fae7add920889155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372485"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Se connecter à SQL Server (SybaseToSQL)
 Utilisez la boîte de dialogue **se connecter au SQL Server** pour vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle vous souhaitez effectuer la migration. Pour accéder à la boîte de dialogue **se connecter à SQL Server** , dans le menu **fichier** , cliquez sur **se connecter à SQL Server**.  
@@ -38,7 +39,7 @@ Spécifiez la base de données vers laquelle migrer les objets et les données. 
 **Authentification**  
 Sélectionnez la méthode d’authentification utilisée pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour utiliser votre compte Windows actuel, sélectionnez authentification Windows. Pour spécifier une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion et un mot de passe, sélectionnez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.  
   
-**Nom d'utilisateur**  
+**Nom d’utilisateur**  
 Si vous utilisez l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification, entrez la connexion de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez l’authentification Windows, cette option n’est pas disponible.  
   
 **Mot de passe**  

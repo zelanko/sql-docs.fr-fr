@@ -1,4 +1,5 @@
 ---
+description: Fonctions et vues de gestion dynamique liées aux E/S (Transact-SQL)
 title: Fonctions et vues de gestion dynamique liées aux e/s (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7423c9ad9966615dfef788a0926ea810d320e53c
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91117be71d309d8b6a8530eea3e6a16e5fe9e79b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374525"
 ---
 # <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>Fonctions et vues de gestion dynamique liées aux E/S (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,6 +45,6 @@ ms.locfileid: "86942691"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Vues système &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

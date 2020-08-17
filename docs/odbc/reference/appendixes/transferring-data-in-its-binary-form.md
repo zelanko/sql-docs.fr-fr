@@ -1,4 +1,5 @@
 ---
+description: Transfert de données dans leur forme binaire
 title: Transfert de données sous sa forme binaire | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53531ff4a3b2e1441fabf22ec7a3ce12b15540eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec858729e76c1e360ec0933eca3a29ab17542f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386325"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Transfert de données dans leur forme binaire
 Une application peut transférer en toute sécurité des données (dans le format interne utilisé par un SGBD spécifié) entre deux sources de données qui utilisent le même SGBD et la même plateforme matérielle. Pour un élément de données donné, les types de données SQL doivent être identiques dans les sources de données source et cible. Le type de données C est SQL_C_BINARY.  

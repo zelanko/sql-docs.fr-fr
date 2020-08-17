@@ -1,4 +1,5 @@
 ---
+description: Filter (MDX)
 title: Filtre (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 026e4720803d828ae9ba96a4d3df7f5a72d59e8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387505"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -37,7 +38,7 @@ Filter(Set_Expression, Logical_Expression )
 ## <a name="remarks"></a>Notes  
  La fonction **Filter** évalue l’expression logique spécifiée par rapport à chaque tuple dans le jeu spécifié. La fonction retourne un jeu qui se compose de chaque tuple dans le jeu spécifié, où l’expression logique prend la **valeur true**. Si aucun tuple ne prend la **valeur true**, un jeu vide est retourné.  
   
- La fonction **Filter** fonctionne de manière similaire à celle de la fonction [IIf](../mdx/iif-mdx.md) . La fonction **IIf** retourne une seule des deux options en fonction de l’évaluation d’une expression logique MDX, tandis que la fonction **Filter** retourne un jeu de tuples qui répondent à la condition de recherche spécifiée. En effet, la fonction de **filtre** s' `IIf(Logical_Expression, Set_Expression.Current, NULL)` exécute sur chaque tuple du jeu et retourne le jeu résultant.  
+ La fonction **Filter** fonctionne de manière similaire à celle de la fonction [IIf](../mdx/iif-mdx.md) . La fonction **IIf** retourne une seule des deux options en fonction de l’évaluation d’une expression logique MDX, tandis que la fonction **Filter** retourne un jeu de tuples qui répondent à la condition de recherche spécifiée. En effet, la fonction de **filtre** s’exécute `IIf(Logical_Expression, Set_Expression.Current, NULL)` sur chaque tuple du jeu et retourne le jeu résultant.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre l'utilisation de la fonction Filter sur l'axe des lignes d'une requête afin de retourner uniquement les dates où le Montant des ventes sur Internet est supérieur à $10 000 :  

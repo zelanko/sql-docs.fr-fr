@@ -1,4 +1,5 @@
 ---
+description: Définition de données MDX - UPDATE MEMBER
 title: Instruction UPDATE MEMBER (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b1333a8784ea5427dec3ed7223a3c7c1a09120d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387063"
 ---
 # <a name="mdx-data-definition---update-member"></a>Définition de données MDX - UPDATE MEMBER
 
@@ -64,12 +65,12 @@ UPDATE MEMBER Cube_Name.Member_Name
 |VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Les membres calculés visibles peuvent être ajoutés à un ensemble à l’aide de la fonction [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *visible*.<br /><br /> Les membres calculés qui ne sont pas visibles sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
 |NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé par MDX pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.|  
 |CAPTION|Valeur de chaîne qui spécifie la légende que l'application cliente utilise pour afficher le membre.|  
-|DISPLAY_FOLDER|Valeur de chaîne qui spécifie le chemin d'accès au dossier d'affichage dans lequel l'application cliente doit afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique\\inverse () est le séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
+|DISPLAY_FOLDER|Valeur de chaîne qui spécifie le chemin d'accès au dossier d'affichage dans lequel l'application cliente doit afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barre oblique inverse () est le \\ séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
 |ASSOCIATED_MEASURE_GROUP|Nom du groupe de mesures auquel ce membre est associé.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Instruction CREATe MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
- [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

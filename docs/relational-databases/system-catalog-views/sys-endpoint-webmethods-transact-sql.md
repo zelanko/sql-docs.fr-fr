@@ -1,4 +1,5 @@
 ---
+description: sys.endpoint_webmethods (Transact-SQL)
 title: sys. endpoint_webmethods (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5221cee27953e91015ca0b50075392c4314403f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dba0b1984351c0197b55cc7c318bd8b6065e947
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377855"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,19 +39,19 @@ ms.locfileid: "85893273"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|ID du point de terminaison sur lequel la méthode Web est définie.|  
-|espace de noms|**nvarchar(384**|Espace de noms de la méthode Web.|  
+|namespace|**nvarchar(384**|Espace de noms de la méthode Web.|  
 |method_alias|**nvarchar (64)**|Alias de la méthode.<br /><br /> Remarque : les [!INCLUDE[tsql](../../includes/tsql-md.md)] identificateurs autorisent les caractères qui ne sont pas autorisés dans les noms de méthodes WSDL.<br /><br /> L'alias permet de mapper le nom exposé dans la description WSDL du point de terminaison avec l'objet exécutable [!INCLUDE[tsql](../../includes/tsql-md.md)] sous-jacent réel qui est appelé lorsque la méthode Web est invoquée.|  
 |object_name|**nvarchar(776**|Nom d'objet vers lequel la méthode Web est redirigée, tel que spécifié dans l'option NAME =. Les parties du nom sont séparées par un point (.) et délimitées à l’aide de crochets, `[``]` .<br /><br /> Le nom d'objet doit être composé de trois parties, tel que spécifié dans l'option WSDL.|  
 |result_schema|**tinyint**|Option qui détermine le schéma XSD éventuellement retourné avec une réponse.<br /><br /> 0 = Aucun(e)<br /><br /> 1 = standard<br /><br /> 2 = par défaut|  
-|result_schema_desc|**nvarchar(60)**|Description de l'option qui détermine le schéma XSD éventuellement retourné avec une réponse.<br /><br /> NONE<br /><br /> STANDARD<br /><br /> DEFAULT|  
+|result_schema_desc|**nvarchar(60)**|Description de l'option qui détermine le schéma XSD éventuellement retourné avec une réponse.<br /><br /> Aucune<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|Option qui détermine la mise en forme des résultats dans la réponse.<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  
-|result_format_desc|**nvarchar(60)**|Description de l'option qui détermine la mise en forme des résultats dans la réponse.<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> NONE|  
+|result_format_desc|**nvarchar(60)**|Description de l'option qui détermine la mise en forme des résultats dans la réponse.<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> Aucune|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue des points de terminaison &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [Vues de catalogue des points de terminaison &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

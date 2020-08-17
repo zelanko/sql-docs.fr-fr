@@ -1,4 +1,5 @@
 ---
+description: Surveiller les activités DQS
 title: Surveiller les activités DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea7afe223bdbeb1d6e85347fe34f7d103a39621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353565"
 ---
 # <a name="monitor-dqs-activities"></a>Surveiller les activités DQS
 
@@ -116,7 +117,7 @@ ms.locfileid: "85897484"
 2.  Cliquez sur l'icône d' **Actualiser la liste des activités** pour appliquer le filtrage, et afficher les activités filtrées DQS uniquement.  
   
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> Afficher les détails des activités DQS  
- Vous pouvez afficher les informations détaillées d'une activité DQS, telles que les étapes d'activité et des informations du Générateur de profils, dans l'écran d'analyse d'activité. Pour ce faire :  
+ Vous pouvez afficher les informations détaillées d'une activité DQS, telles que les étapes d'activité et des informations du Générateur de profils, dans l'écran d'analyse d'activité. Pour cela :  
   
 1.  Sélectionnez une activité DQS dans la grille des activités (dans le volet supérieur).  
   
@@ -127,7 +128,7 @@ ms.locfileid: "85897484"
     -   **Générateur de profils**: affiche les informations de profilage des activités en cours et historiques. Pour les activités courantes, les informations sont partielles mais cohérentes. Les informations de profilage d'une activité sont exportées vers un fichier Excel lorsque vous exportez les détails d'activité correspondants dans un fichier Excel. Les informations sont disponibles dans les feuilles **Profiler-source** et **profileur-champs** du fichier Excel exporté.  
   
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> Exporter les détails des activités DQS  
- Vous pouvez exporter les propriétés d'activité, les processus d'activité, et les informations de profilage d'une activité de l'écran d'analyse vers un fichier Excel. Pour ce faire :  
+ Vous pouvez exporter les propriétés d'activité, les processus d'activité, et les informations de profilage d'une activité de l'écran d'analyse vers un fichier Excel. Pour cela :  
   
 1.  Sélectionnez une activité dans la grille des activités (dans le volet supérieur).  
   

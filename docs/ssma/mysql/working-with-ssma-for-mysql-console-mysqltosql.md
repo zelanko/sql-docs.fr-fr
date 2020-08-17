@@ -1,4 +1,5 @@
 ---
+description: Utilisation de la console SSMA pour MySQL (MySQLToSQL)
 title: Utilisation de SSMA pour la console MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 757bcd943b1af7c428d666fecacdaf6db7afcae3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 540f09b2fe8de23b9912dc695e0cf1c9c1d69b86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372775"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Utilisation de la console SSMA pour MySQL (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour MySQL est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Migration (SSMA) pour MySQL est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
   
 Cette section décrit la procédure de migration de la base de données MySQL à l’aide de l’application de console SSMA.  
   
@@ -33,7 +34,7 @@ Les sujets abordés dans cette section sont les suivants :
 |[Exécution de la console SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|Décrit les commandes du fichier de script pour exécuter l’application console SSMA.|  
 |[Utilisation des exemples de fichiers de script de console &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|Décrit la façon de personnaliser facilement les scripts qui ont été fournis dans les exemples de fichiers en même temps que le produit.|  
 |[Gestion des mots de passe &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Décrit le chiffrement et le déchiffrement de mot de passe, ainsi que l’importation/exportation d’informations de mot de passe.|  
-|[Génération de rapports &#40;&#41;MySQLToSQL](../../ssma/mysql/generating-reports-mysqltosql.md)|Répertorie les commandes permettant de générer des rapports.|  
+|[Génération de rapports &#40;&#41;MySQLToSQL ](../../ssma/mysql/generating-reports-mysqltosql.md)|Répertorie les commandes permettant de générer des rapports.|  
 |[Résolution des problèmes &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Fournit de brèves informations sur la résolution des problèmes de migration.|  
   
 ## <a name="see-also"></a>Voir aussi  

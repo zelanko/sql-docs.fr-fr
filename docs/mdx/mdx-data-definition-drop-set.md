@@ -1,4 +1,5 @@
 ---
+description: Définition de données MDX - DROP SET
 title: DROP SET, instruction (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4e31a687597e454b9afe38d6c6dd1c15af486d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0992df0c7180c8a572fb1f8c34b99059ab118ea4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387235"
 ---
 # <a name="mdx-data-definition---drop-set"></a>Définition de données MDX - DROP SET
 
@@ -43,6 +44,6 @@ DROP [SESSION] SET
  Pour plus d’informations sur les jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

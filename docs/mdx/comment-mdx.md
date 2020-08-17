@@ -1,4 +1,5 @@
 ---
+description: Commentaire (MDX)
 title: Commentaire (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a06660c0e542f789caa4f4df353559cced4537f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387685"
 ---
 # <a name="comment-mdx"></a>Commentaire (MDX)
 
@@ -32,7 +33,7 @@ ms.locfileid: "68006274"
  Chaîne contenant le texte du commentaire.  
   
 ## <a name="remarks"></a>Notes  
- Le serveur n’évalue pas le texte entre les caractères de commentaire,/ \** et/. Il est possible d'insérer des commentaires sur une ligne distincte ou à l'intérieur d'une instruction MDX. Les commentaires sur plusieurs lignes doivent être indiqués par\* / \*et/.  
+ Le serveur n’évalue pas le texte entre les caractères de commentaire,/* et \* /. Il est possible d'insérer des commentaires sur une ligne distincte ou à l'intérieur d'une instruction MDX. Les commentaires sur plusieurs lignes doivent être indiqués par/ \* et \* /.  
   
  Il n'y a pas de longueur maximale pour les commentaires. Les commentaires peuvent être imbriqués ; par exemple, `/* Test /*Comment*/ Text*/` est un commentaire imbriqué.  
   
@@ -53,8 +54,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commentaire&#40;&#41; &#40;&#41;MDX](../mdx/comment-mdx-double-slash.md)   
- [--&#40;comment&#41; &#40;&#41;MDX](../mdx/comment-mdx-operator-reference.md)   
- [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [ Commentaire&#40;&#41; &#40;&#41;MDX ](../mdx/comment-mdx-double-slash.md)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

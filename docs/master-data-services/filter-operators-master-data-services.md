@@ -1,4 +1,5 @@
 ---
+description: Opérateurs de filtre (Master Data Services)
 title: Opérateurs de filtre
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dd6e35ba450bd96111b112232878b608787440b0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9a24e793783fb69b83a9f2ff774871664f24b011
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388805"
 ---
 # <a name="filter-operators-master-data-services"></a>Opérateurs de filtre (Master Data Services)
 
@@ -38,7 +39,7 @@ ms.locfileid: "85811784"
 |**Est inférieur à**|Retourne des valeurs d'attribut qui sont inférieures aux critères spécifiés. Par exemple, pour retourner des valeurs d’attribut qui commencent par une lettre inférieure à **F**, tapez **F**.|  
 |**Est supérieur ou égal à**|Retourne des valeurs d'attribut qui sont supérieures ou égales aux critères spécifiés. Par exemple, pour retourner des valeurs d’attribut qui démarrent par le chiffre **3** ou un chiffre supérieur, tapez **3**.|  
 |**Est inférieur ou égal à**|Retourne des valeurs d'attribut qui sont inférieures ou égales aux critères spécifiés. Par exemple, pour retourner des valeurs d’attribut qui démarrent par le chiffre **3** ou un chiffre inférieur, tapez **3**.|  
-|**Correspond à**|Utilise un index de recherche floue pour filtrer les résultats.<br /><br /> Utilisez le champ **Niveau de similarité** pour spécifier dans quelle mesure les valeurs d’attribut doivent correspondre aux critères de filtre spécifiés (avec une valeur par défaut de 30 %).<br /><br /> Sélectionnez une des valeurs suivantes dans la liste déroulante **Algorithme** :<br /><br /> **Levenshtein**: distance basée sur le nombre de modifications (par exemple, ajouts ou suppressions) nécessaires pour qu’une chaîne corresponde à une autre. Il s'agit de la valeur par défaut. Ne requiert aucun paramètre supplémentaire.<br /><br /> **Jaccard**: index qui fonctionne de manière optimale lorsque vous essayez de mettre plusieurs chaînes en correspondance. Cette recherche prend en charge un paramètre supplémentaire de relation contenant-contenu (voir ci-dessous).<br /><br /> **Jaro-Winkler**: distance qui convient le mieux pour rechercher des noms de personnes en double. Cette méthode retourne plus de résultats que toute autre méthode. Ne prend pas en charge la relation contenant-contenu.<br /><br /> Sous- **séquence commune**la plus longue : fonctionne en fonction d’une sous-séquence dans laquelle les lettres d’un modèle s’affichent dans l’ordre, même si elles peuvent être séparées (par exemple, « MSR » est une sous-séquence de « MaSteR »). Cette recherche prend en charge un paramètre supplémentaire de relation contenant-contenu (voir ci-dessous).<br /><br /> <br /><br /> Remarque : pour les algorithmes **Jaccard** ou **Sous-séquence commune la plus longue** , ajoutez une **Valeur de relation contenant-contenu**. Il s'agit d'un seuil de longueur fourni sous forme de pourcentage décimal compris entre 0 et 1, avec une valeur par défaut de 0,62. Un seuil inférieur augmente le nombre de correspondances possibles retournées.|  
+|**Correspond à**|Utilise un index de recherche floue pour filtrer les résultats.<br /><br /> Utilisez le champ **Niveau de similarité** pour spécifier dans quelle mesure les valeurs d’attribut doivent correspondre aux critères de filtre spécifiés (avec une valeur par défaut de 30 %).<br /><br /> Sélectionnez une des valeurs suivantes dans la liste déroulante **Algorithme** :<br /><br /> **Levenshtein**: distance basée sur le nombre de modifications (par exemple, ajouts ou suppressions) nécessaires pour qu’une chaîne corresponde à une autre. Il s’agit de la valeur par défaut. Ne requiert aucun paramètre supplémentaire.<br /><br /> **Jaccard**: index qui fonctionne de manière optimale lorsque vous essayez de mettre plusieurs chaînes en correspondance. Cette recherche prend en charge un paramètre supplémentaire de relation contenant-contenu (voir ci-dessous).<br /><br /> **Jaro-Winkler**: distance qui convient le mieux pour rechercher des noms de personnes en double. Cette méthode retourne plus de résultats que toute autre méthode. Ne prend pas en charge la relation contenant-contenu.<br /><br /> Sous- **séquence commune**la plus longue : fonctionne en fonction d’une sous-séquence dans laquelle les lettres d’un modèle s’affichent dans l’ordre, même si elles peuvent être séparées (par exemple, « MSR » est une sous-séquence de « MaSteR »). Cette recherche prend en charge un paramètre supplémentaire de relation contenant-contenu (voir ci-dessous).<br /><br /> <br /><br /> Remarque : pour les algorithmes **Jaccard** ou **Sous-séquence commune la plus longue** , ajoutez une **Valeur de relation contenant-contenu**. Il s'agit d'un seuil de longueur fourni sous forme de pourcentage décimal compris entre 0 et 1, avec une valeur par défaut de 0,62. Un seuil inférieur augmente le nombre de correspondances possibles retournées.|  
 |**Ne correspond pas à**|Utilise un index de recherche floue pour filtrer les résultats. Utilisez le champ **Niveau de similarité** pour spécifier le niveau de précision de non correspondance des valeurs d’attribut par rapport aux critères de filtre spécifiés.|  
 |**Contient le modèle**|Utilise des expressions régulières .NET Framework pour filtrer les résultats selon un modèle spécifié. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
 |**Ne contient pas le modèle**|Utilise les expressions régulières .NET Framework pour filtrer des résultats qui ne correspondent pas à un modèle spécifié. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  

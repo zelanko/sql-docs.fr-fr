@@ -1,4 +1,5 @@
 ---
+description: + (Concaténation de chaînes) MDX
 title: + (Concaténation de chaînes) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4d5f2316e3af5ce3c925ef71e1da5baf5bab868d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e92751cb709a93d3d5d8d05ac76361c22bee5fa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386865"
 ---
 # <a name="-string-concatenation-mdx"></a>+ (Concaténation de chaînes) (MDX)
 
@@ -38,6 +39,6 @@ String_Expression + String_Expression
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si une expression s'évalue à NULL, l'opérateur retourne le résultat de l'autre expression.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

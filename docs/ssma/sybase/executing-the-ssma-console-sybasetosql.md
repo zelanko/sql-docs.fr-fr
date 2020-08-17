@@ -1,4 +1,5 @@
 ---
+description: Exécution de la console SSMA (SybaseToSQL)
 title: Exécution de la console SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fee973fdcb79105d5fe7c412c10bdda2cd1bbec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372235"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Exécution de la console SSMA (SybaseToSQL)
 Microsoft vous fournit un ensemble robuste de commandes de fichier de script pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes sections.  
@@ -37,9 +38,9 @@ Les commandes de projet gèrent la création de projets, l’ouverture, l’enre
 ### <a name="create-new-project"></a>create-new-project  
 Cette commande crée un nouveau projet SSMA.  
   
--   `project-folder`indique le dossier du projet qui est créé.  
+-   `project-folder` indique le dossier du projet qui est créé.  
   
--   `project-name`indique le nom du projet. {string}  
+-   `project-name` indique le nom du projet. {string}  
   
 -   `overwrite-if-exists`Attribut facultatif indique si un projet existant doit être remplacé. expression  
   
@@ -66,9 +67,9 @@ L’attribut « Project-type » est **SQL-Server-2008** par défaut.
 ### <a name="open-project"></a>ouvrir un projet  
 Cette commande ouvre le projet.
 
--   `project-folder`indique le dossier du projet qui est créé. La commande échoue si le dossier spécifié n’existe pas.  {string}  
+-   `project-folder` indique le dossier du projet qui est créé. La commande échoue si le dossier spécifié n’existe pas.  {string}  
   
--   `project-name`indique le nom du projet. La commande échoue si le projet spécifié n’existe pas.  {string}  
+-   `project-name` indique le nom du projet. La commande échoue si le projet spécifié n’existe pas.  {string}  
   
 **Exemple de syntaxe :**  
   
@@ -189,25 +190,25 @@ Si la connexion à la base de données source n’est pas exécutée avant l’e
   
 L’échec de la connexion au serveur de base de données source lors de l’exécution de la commande entraîne l’arrêt de l’application console.  
   
--   `conversion-report-folder:`Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
+-   `conversion-report-folder:` Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
   
--   `object-name:`Spécifie le ou les objets pris en compte pour la génération de rapports d’évaluation (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
+-   `object-name:` Spécifie le ou les objets pris en compte pour la génération de rapports d’évaluation (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
   
--   `object-type:`Spécifie le type de l’objet appelé dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
+-   `object-type:` Spécifie le type de l’objet appelé dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
   
--   `conversion-report-overwrite:`Spécifie si le dossier de rapport d’évaluation doit être remplacé s’il existe déjà.  
+-   `conversion-report-overwrite:` Spécifie si le dossier de rapport d’évaluation doit être remplacé s’il existe déjà.  
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
--   `write-summary-report-to:`Spécifie le chemin d’accès auquel le rapport sera généré.  
+-   `write-summary-report-to:` Spécifie le chemin d’accès auquel le rapport sera généré.  
   
     Si seul le chemin d’accès au dossier est mentionné, nommez-le **AssessmentReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
-    -   `report-errors`(= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
+    -   `report-errors` (= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
   
-    -   `verbose`(= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
+    -   `verbose` (= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
   
 **Exemple de syntaxe :**  
   
@@ -230,7 +231,7 @@ L’échec de la connexion au serveur de base de données source lors de l’ex�
   
 />  
 ```  
-ou  
+or  
   
 ```xml  
 <generate-assessment-report  
@@ -255,25 +256,25 @@ Cette commande effectue une conversion de schéma de la source vers le schéma c
   
 Si la connexion à la base de données source ou cible n’est pas exécutée avant l’exécution de cette commande ou si la connexion au serveur de base de données source ou cible échoue lors de l’exécution de la commande, une erreur est générée et l’application console se ferme.  
   
--   `conversion-report-folder:`Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
+-   `conversion-report-folder:` Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
   
--   `object-name:`Spécifie le ou les objets sources pris en compte pour la conversion du schéma (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
+-   `object-name:` Spécifie le ou les objets sources pris en compte pour la conversion du schéma (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
   
--   `object-type:`Spécifie le type de l’objet appelé dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
+-   `object-type:` Spécifie le type de l’objet appelé dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
   
--   `conversion-report-overwrite:`Spécifie si le dossier de rapport d’évaluation doit être remplacé s’il existe déjà.  
+-   `conversion-report-overwrite:` Spécifie si le dossier de rapport d’évaluation doit être remplacé s’il existe déjà.  
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
--   `write-summary-report-to:`Spécifie le chemin d’accès auquel le rapport de synthèse sera généré.  
+-   `write-summary-report-to:` Spécifie le chemin d’accès auquel le rapport de synthèse sera généré.  
   
     Si seul le chemin d’accès au dossier est mentionné, nommez-le **SchemaConversionReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
-    -   `report-errors`(= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
+    -   `report-errors` (= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
   
-    -   `verbose`(= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
+    -   `verbose` (= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
   
 **Exemple de syntaxe :**  
   
@@ -295,7 +296,7 @@ Si la connexion à la base de données source ou cible n’est pas exécutée av
   
 />  
 ```  
-ou  
+or  
   
 ```xml  
 <convert-schema  
@@ -314,19 +315,19 @@ ou
 ### <a name="migrate-data"></a>migrer-données  
 Cette commande migre les données sources vers la cible.  
   
--   `object-name:`Spécifie le ou les objets source pris en compte pour la migration des données (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
+-   `object-name:` Spécifie le ou les objets source pris en compte pour la migration des données (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
   
--   `object-type:`Spécifie le type de l’objet appelé dans l’attribut nom-objet (si la catégorie d’objet est spécifiée, le type d’objet est « catégorie »).  
+-   `object-type:` Spécifie le type de l’objet appelé dans l’attribut nom-objet (si la catégorie d’objet est spécifiée, le type d’objet est « catégorie »).  
   
--   `write-summary-report-to:`Spécifie le chemin d’accès auquel le rapport sera généré.  
+-   `write-summary-report-to:` Spécifie le chemin d’accès auquel le rapport sera généré.  
   
     Si seul le chemin d’accès au dossier est mentionné, nommez-le **DataMigrationReport &lt; n &gt; . XML** créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
-    -   `report-errors`(= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
+    -   `report-errors` (= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
   
-    -   `verbose`(= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
+    -   `verbose` (= "true/false", avec la valeur par défaut "false" (attributs facultatifs))  
   
 **Exemple de syntaxe :**  
   
@@ -351,7 +352,7 @@ Cette commande migre les données sources vers la cible.
   
 </migrate-data>  
 ```  
-ou  
+or  
   
 ```xml  
 <migrate-data  
@@ -374,9 +375,9 @@ La commande de préparation de la migration lance le mappage de schéma entre le
 ### <a name="map-schema"></a>mappage-schéma  
 Cette commande fournit le mappage de schéma de la base de données source au schéma cible.  
   
--   `source-schema`Spécifie le schéma source à migrer.  
+-   `source-schema` Spécifie le schéma source à migrer.  
   
--   `sql-server-schema`Spécifie le schéma cible vers lequel le schéma source sera migré.  
+-   `sql-server-schema` Spécifie le schéma cible vers lequel le schéma source sera migré.  
   
 **Exemple de syntaxe :**  
   
@@ -399,11 +400,11 @@ Si cette commande est exécutée sur la base de données source, une erreur est 
   
 Si la connexion à la base de données cible n’est pas exécutée avant l’exécution de cette commande ou si la connexion au serveur de base de données cible échoue au cours de l’exécution de la commande, une erreur est générée et l’application console se ferme.  
   
--   `object-name:`Spécifie le ou les objets cibles pris en compte pour la synchronisation avec la base de données cible (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
+-   `object-name:` Spécifie le ou les objets cibles pris en compte pour la synchronisation avec la base de données cible (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
   
--   `object-type:`Spécifie le type de l’objet appelé dans l’attribut nom-objet (si la catégorie d’objet est spécifiée, le type d’objet est « catégorie »).  
+-   `object-type:` Spécifie le type de l’objet appelé dans l’attribut nom-objet (si la catégorie d’objet est spécifiée, le type d’objet est « catégorie »).  
   
--   `on-error:`Spécifie si les erreurs de synchronisation doivent être spécifiées en tant qu’avertissements ou erreurs. Options disponibles pour on-Error :  
+-   `on-error:` Spécifie si les erreurs de synchronisation doivent être spécifiées en tant qu’avertissements ou erreurs. Options disponibles pour on-Error :  
   
     -   Rapport-total-AVERTISSEMENT  
   
@@ -411,7 +412,7 @@ Si la connexion à la base de données cible n’est pas exécutée avant l’ex
   
     -   échec du script  
   
--   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier par nom **TargetSynchronizationReport.XML** est créé.  
+-   `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier par nom **TargetSynchronizationReport.XML** est créé.  
   
 **Exemple de syntaxe :**  
   
@@ -460,11 +461,11 @@ Si cette commande est exécutée sur la base de données cible, une erreur est g
   
 Cette commande requiert un ou plusieurs nœuds de la métabase comme paramètre de ligne de commande.  
   
--   `object-name:`Spécifie le ou les objets source pris en compte pour l’actualisation à partir de la base de données source (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
+-   `object-name:` Spécifie le ou les objets source pris en compte pour l’actualisation à partir de la base de données source (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
   
--   `object-type:`Spécifie le type de l’objet spécifié dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
+-   `object-type:` Spécifie le type de l’objet spécifié dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
   
--   `on-error:`Spécifie s’il faut appeler des erreurs d’actualisation comme des avertissements ou des erreurs. Options disponibles pour on-Error :  
+-   `on-error:` Spécifie s’il faut appeler des erreurs d’actualisation comme des avertissements ou des erreurs. Options disponibles pour on-Error :  
   
     -   Rapport-total-AVERTISSEMENT  
   
@@ -472,7 +473,7 @@ Cette commande requiert un ou plusieurs nœuds de la métabase comme paramètre 
   
     -   échec du script  
   
--   `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier par nom **SourceDBRefreshReport.XML** est créé.  
+-   `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif). Si seul le chemin d’accès au dossier est spécifié, le fichier par nom **SourceDBRefreshReport.XML** est créé.  
   
 **Exemple de syntaxe :**  
   
@@ -518,15 +519,15 @@ Cette commande permet d’enregistrer les scripts des objets dans un fichier men
   
 Cette commande requiert un ou plusieurs nœuds de la métabase comme paramètre de ligne de commande.  
   
--   `object-name:`Spécifie le ou les objets dont les scripts doivent être enregistrés (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
+-   `object-name:` Spécifie le ou les objets dont les scripts doivent être enregistrés (prend en charge les noms d’objets individuels ou un nom d’objet de groupe).  
   
--   `object-type:`Spécifie le type de l’objet appelé dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
+-   `object-type:` Spécifie le type de l’objet appelé dans l’attribut Object-Name (si la catégorie Object est spécifiée, le type d’objet est « Category »).  
   
--   `metabase:`Spécifie s’il s’agit de la métabase source ou cible.  
+-   `metabase:` Spécifie s’il s’agit de la métabase source ou cible.  
   
--   `destination:`Spécifie le chemin d’accès ou le dossier dans lequel le script doit être enregistré. Si le nom de fichier n’est pas donné, un nom de fichier au format (object_name valeur d’attribut). out sera fourni.
+-   `destination:` Spécifie le chemin d’accès ou le dossier dans lequel le script doit être enregistré. Si le nom de fichier n’est pas donné, un nom de fichier au format (object_name valeur d’attribut). out sera fourni.
   
--   `overwrite:`Si la valeur est true, elle remplace le même nom de fichier, le cas échéant. Il peut avoir les valeurs (true/false).  
+-   `overwrite:` Si la valeur est true, elle remplace le même nom de fichier, le cas échéant. Il peut avoir les valeurs (true/false).  
   
 **Exemple de syntaxe :**  
   
@@ -545,7 +546,7 @@ Cette commande requiert un ou plusieurs nœuds de la métabase comme paramètre 
   
 />  
 ```  
-ou  
+or  
   
 ```xml  
 <save-as-script  
@@ -564,25 +565,25 @@ ou
 ### <a name="convert-sql-statement"></a>Convert-SQL-Statement
 Cette commande convertit l’instruction SQL.  
   
--   `context`Spécifie le nom du schéma.  
+-   `context` Spécifie le nom du schéma.  
   
--   `destination`Spécifie si la sortie doit être stockée dans un fichier.  
+-   `destination` Spécifie si la sortie doit être stockée dans un fichier.  
   
     Si cet attribut n’est pas spécifié, l’instruction T-SQL convertie est affichée sur la console. (attribut facultatif)  
   
--   `conversion-report-folder`Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
+-   `conversion-report-folder` Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
   
--   `conversion-report-overwrite`Spécifie si le dossier de rapport d’évaluation doit être remplacé s’il existe déjà.  
+-   `conversion-report-overwrite` Spécifie si le dossier de rapport d’évaluation doit être remplacé s’il existe déjà.  
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
--   `write-converted-sql-to`Spécifie le chemin d’accès au dossier (ou) du fichier dans lequel le T-SQL converti doit être stocké. Quand un chemin d’accès au dossier est spécifié avec l' `sql-files` attribut, chaque fichier source a un fichier T-SQL cible correspondant créé dans le dossier spécifié. Quand un chemin d’accès au dossier est spécifié avec l' `sql` attribut, le T-SQL converti est écrit dans un fichier nommé result. out dans le dossier spécifié.  
+-   `write-converted-sql-to` Spécifie le chemin d’accès au dossier (ou) du fichier dans lequel le T-SQL converti doit être stocké. Quand un chemin d’accès au dossier est spécifié avec l' `sql-files` attribut, chaque fichier source a un fichier T-SQL cible correspondant créé dans le dossier spécifié. Quand un chemin d’accès au dossier est spécifié avec l' `sql` attribut, le T-SQL converti est écrit dans un fichier nommé result. out dans le dossier spécifié.  
   
--   `sql`spécifie les instructions SQL Sybase à convertir, une ou plusieurs instructions peuvent être séparées à l’aide d’un « ; »  
+-   `sql` spécifie les instructions SQL Sybase à convertir, une ou plusieurs instructions peuvent être séparées à l’aide d’un « ; »  
   
--   `sql-files`Spécifie le chemin d’accès des fichiers SQL qui doivent être convertis en code T-SQL.  
+-   `sql-files` Spécifie le chemin d’accès des fichiers SQL qui doivent être convertis en code T-SQL.  
   
--   `write-summary-report-to`Spécifie le chemin d’accès où le rapport de synthèse sera généré. Si seul le chemin d’accès au dossier est mentionné, le fichier par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
+-   `write-summary-report-to` Spécifie le chemin d’accès où le rapport de synthèse sera généré. Si seul le chemin d’accès au dossier est mentionné, le fichier par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
   
     La création d’un rapport de synthèse a deux sous-catégories supplémentaires, à savoir :  
   

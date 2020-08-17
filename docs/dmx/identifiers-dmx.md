@@ -1,4 +1,5 @@
 ---
+description: Identificateurs (DMX)
 title: Identificateurs (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352885"
 ---
 # <a name="identifiers-dmx"></a>Identificateurs (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86969803"
   
  L'identificateur d'un objet se crée lorsque vous définissez l'objet. Vous utilisez ensuite l’identificateur pour référencer l’objet. Les identificateurs doivent avoir un maximum de 100 caractères.  
   
-##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Identificateurs réguliers  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a> Identificateurs réguliers  
  Les identificateurs réguliers dans DMX respectent les règles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] relatives au format des identificateurs. Ils ne nécessitent pas de délimiteurs. Voici un exemple d’instruction DMX qui utilise un identificateur normal, non délimité :  
   
 ```  
@@ -58,7 +59,7 @@ SELECT * FROM Clustering.CONTENT;
   
  Vous devez placer entre crochets les identificateurs qui ne respectent pas ces règles lorsque vous les utilisez dans des instructions DMX.  
   
-##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Identificateurs délimités  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a> Identificateurs délimités  
  Les identificateurs délimités sont placés entre crochets ([ ]).  Voici l'exemple d'une instruction DMX avec un identificateur délimité qui respecte ces règles.  
   
 ```  
@@ -102,7 +103,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [Informations de référence sur l’opérateur de&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

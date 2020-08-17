@@ -1,4 +1,5 @@
 ---
+description: Transitions de connexion
 title: Transitions de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339445"
 ---
 # <a name="connection-transitions"></a>Transitions de connexion
 Les connexions ODBC ont les États suivants.  
@@ -53,7 +54,7 @@ Les connexions ODBC ont les États suivants.
   
  [4] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_DESC.  
   
- [5] l’appel de **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce handle sans tenir compte du contenu précédent ofthat handle et peut entraîner des problèmes pour les pilotes ODBC. Il s’agit d’une programmation d’application ODBC incorrecte pour appeler **SQLAllocHandle** deux fois avec la même variable d’application définie pour * \*OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le descripteur avant de le réallouer. Le remplacement des handles ODBC de telle manière peut entraîner des erreurs ou des comportements incohérents dans la partie des pilotes ODBC.  
+ [5] l’appel de **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce handle sans tenir compte du contenu précédent ofthat handle et peut entraîner des problèmes pour les pilotes ODBC. Il s’agit d’une programmation d’application ODBC incorrecte pour appeler **SQLAllocHandle** deux fois avec la même variable d’application définie pour * \* OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le descripteur avant de le réallouer. Le remplacement des handles ODBC de telle manière peut entraîner des erreurs ou des comportements incohérents dans la partie des pilotes ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

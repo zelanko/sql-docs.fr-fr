@@ -1,4 +1,5 @@
 ---
+description: IMPORT (DMX)
 title: IMPORTATION (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bddae4cf71b30a2a1365d0d5748170c0d5bac53
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 5da00163792b18bfd62ed0db4be0945f358115e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352685"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,7 +48,7 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
- [EXPORTER &#40;&#41;DMX](../dmx/export-dmx.md)   
+ [EXPORTER &#40;&#41;DMX ](../dmx/export-dmx.md)   
  [Exporter et importer des objets d'exploration de données](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Fonctions d'heure, de date et d'intervalle
 title: Fonctions d’heure, de date et d’intervalle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aec3d6b23383edcc9659ff884e8cd71b0595dae1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcbdf9f40a9cd1f1296920e3d2ea71fcb5ce6b39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386375"
 ---
 # <a name="time-date-and-interval-functions"></a>Fonctions d'heure, de date et d'intervalle
 Le tableau suivant répertorie les fonctions d’heure et de date incluses dans l’ensemble de fonctions scalaires ODBC. Une application peut déterminer les fonctions de date et d’heure prises en charge par un pilote en appelant **SQLGetInfo** avec un *type d’informations* SQL_TIMEDATE_FUNCTIONS.  

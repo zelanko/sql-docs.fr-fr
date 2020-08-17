@@ -1,4 +1,5 @@
 ---
+description: Fonctions de prédiction générales (DMX)
 title: Fonctions de prédiction générales (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6db4adccfa0786e2acb1ce45725758d6b302b51f
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8023287277edafb2d054cafe7ae5ab09512f93ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352995"
 ---
 # <a name="general-prediction-functions-dmx"></a>Fonctions de prédiction générales (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Vous pouvez utiliser l’instruction **Select** dans les extensions DMX (Data Mining Extensions) pour créer différents types de requêtes. Une requête peut être utilisée pour retourner des informations sur le modèle d'exploration de données lui-même, afin de faire de nouvelles prédictions ou encore modifier le modèle en effectuant un apprentissage avec de nouvelles données. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]fournit diverses fonctions spécialisées qui contrôlent le type d’informations retournées dans une requête. En ajoutant ces fonctions à une requête DMX, vous pouvez récupérer des statistiques ou des colonnes de données supplémentaires. Toutefois, pour chaque type de requête et chaque type de modèle, seules certaines fonctions sont prises en charge.  
+  Vous pouvez utiliser l’instruction **Select** dans les extensions DMX (Data Mining Extensions) pour créer différents types de requêtes. Une requête peut être utilisée pour retourner des informations sur le modèle d'exploration de données lui-même, afin de faire de nouvelles prédictions ou encore modifier le modèle en effectuant un apprentissage avec de nouvelles données. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit diverses fonctions spécialisées qui contrôlent le type d’informations retournées dans une requête. En ajoutant ces fonctions à une requête DMX, vous pouvez récupérer des statistiques ou des colonnes de données supplémentaires. Toutefois, pour chaque type de requête et chaque type de modèle, seules certaines fonctions sont prises en charge.  
   
 ## <a name="common-functions"></a>Fonctions communes  
  Vous pouvez utiliser des fonctions pour étendre les résultats retournés par un modèle d'exploration de données. Vous pouvez utiliser les fonctions suivantes pour toute instruction **Select** qui retourne une expression de table :  
@@ -35,7 +36,7 @@ ms.locfileid: "87363019"
         [RangeMin&#41;DMX &#40;](../dmx/rangemin-dmx.md)  
         [&#40;DMX&#41;](../dmx/topcount-dmx.md)  
         [&#41;DMX &#40;](../dmx/toppercent-dmx.md)  
-        [&#41;DMX &#40;DMX](../dmx/topsum-dmx.md)  
+        [&#41;DMX &#40;DMX ](../dmx/topsum-dmx.md)  
     :::column-end:::
 :::row-end:::
 
@@ -74,7 +75,7 @@ ms.locfileid: "87363019"
 |[SELECT FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Dans ce contexte, la fonction IsInNode retourne un cas qui appartient à un ensemble de cas d’exemple idéaux.|  
 |Sélectionnez à partir de \<model> . PMML|Non applicable. Utilisez plutôt des fonctions de requête XML.|Les représentations PMML ne sont prises en charge que pour les types de modèles suivants :<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
 |[SELECT FROM \<model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
-|[SÉLECTIONNER DANS\<model>](../dmx/select-from-model-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
+|[SÉLECTIONNER DANS \<model>](../dmx/select-from-model-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   

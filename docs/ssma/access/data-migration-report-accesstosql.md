@@ -1,4 +1,5 @@
 ---
+description: Rapport de migration des données (AccessToSQL)
 title: Rapport de migration des données (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0544ba7d4c0a1d2b896cc7667c4386effc070824
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d7d81b695aaf09fd601b47e67c187676b82f7349
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321005"
 ---
 # <a name="data-migration-report-accesstosql"></a>Rapport de migration des données (AccessToSQL)
 La boîte de dialogue **rapport de migration des données** s’affiche après la migration des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +36,7 @@ Nombre de lignes de données dans la table source.
 **Nombre de lignes migrées avec succès**  
 Nombre de lignes de données migrées avec succès vers la table cible.  
   
-**Proportions**  
+**Ratio**  
 Pourcentage de lignes correctement migrées.  
   
 **Détails**  

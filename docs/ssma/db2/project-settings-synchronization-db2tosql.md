@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (synchronisation) (DB2ToSQL)
 title: Paramètres du projet (synchronisation) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6b4aef228ca1631bb550437ff0f66ff20555cb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321065"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Paramètres du projet (synchronisation) (DB2ToSQL)
 La page synchronisation de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA charge et actualise les objets de base de données, tels que les tables et les procédures stockées, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

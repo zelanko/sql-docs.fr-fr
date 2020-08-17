@@ -1,4 +1,5 @@
 ---
+description: Objets de source de données persistants dans SQL Server Native Client
 title: Objets de source de données persistants (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 482762127b8daa9d3fad3e4a3fd79a6ad9d179ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381475"
 ---
 # <a name="persisted-data-source-objects-in-sql-server-native-client"></a>Objets de source de données persistants dans SQL Server Native Client 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87242089"
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge les objets de source de données persistants avec l’interface **IPersistFile** .  
   
 ## <a name="examples"></a>Exemples  
- **A. Rendre persistante l'initialisation de la source de données :**  
+ **A. Rendre persistante l’initialisation d’une source de données :**  
   
  Cet exemple illustre une fonction qui rend persistantes les propriétés d'initialisation de la source de données définissant un serveur, une base de données et l'utilisation du mode d'authentification Windows pour la connexion. Le nom du serveur et de la base de données sont reçus dans les paramètres *pLocation* et *pDatasource* de la fonction.  
   
@@ -140,7 +141,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Utiliser l'initialisation persistante de la source de données :**  
+ **B. Utiliser l’initialisation persistante de la source de données :**  
   
  Cet exemple utilise un objet source de données persistant avec des propriétés d'initialisation supplémentaires qui fournissent un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

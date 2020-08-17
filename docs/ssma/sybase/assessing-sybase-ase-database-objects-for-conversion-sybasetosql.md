@@ -1,4 +1,5 @@
 ---
+description: Évaluation des objets de base de données SAP ASE pour la conversion (SybaseToSQL)
 title: Évaluation des objets de base de données SAP ASE pour la conversion (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fba4692780b9f9f2c556634bf1676bc00bbba169
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6e8bd25b8529f09896cbec2ec31578375a015f2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372626"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Évaluation des objets de base de données SAP ASE pour la conversion (SybaseToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL, vous devez déterminer la complexité de la migration et le temps nécessaire. SSMA peut créer un rapport d’évaluation qui indique le pourcentage d’objets et de procédures qui seront correctement convertis en [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA vous permet également de consulter les problèmes spécifiques qui peuvent provoquer des échecs de conversion.  

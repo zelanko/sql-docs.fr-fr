@@ -1,4 +1,5 @@
 ---
+description: Termes du Glossaire ADO
 title: Termes du Glossaire ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76940436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355455"
 ---
 # <a name="ado-glossary-terms"></a>Termes du Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.
@@ -40,7 +41,7 @@ Cette rubrique définit les termes pertinents pour ADO.
 ## <a name="b"></a>B
  entrée de liaison mappage entre un champ d’une table et une variable. Dans les extensions de Visual C++ ADO, les champs du **Recordset** sont mappés à des variables C/C++.
 
- masque de bits une valeur numérique destinée à une comparaison de valeurs bit par bit avec d’autres valeurs numériques, en général pour marquer des options dans des valeurs de paramètre ou de retour. En général, cette comparaison est effectuée à l’aide d’opérateurs logiques au niveau du bit **&** , tels que **and** et **or** dans Visual Basic, et **&#124;** en C++.
+ masque de bits une valeur numérique destinée à une comparaison de valeurs bit par bit avec d’autres valeurs numériques, en général pour marquer des options dans des valeurs de paramètre ou de retour. En général, cette comparaison est effectuée à l’aide d’opérateurs logiques au niveau du bit, tels que **and** et **or** dans Visual Basic, **&** et **&#124;** en C++.
 
  Par exemple, les valeurs ADO **FieldAttributeEnum** peuvent être utilisées comme masques de masques pour déterminer les attributs d’un champ. Supposons que vous souhaitiez déterminer si un champ était modifiable. Vous pouvez le tester avec l’expression suivante dans Visual Basic :`Field.Attributes AND adFldUpdatable`
 
@@ -77,7 +78,7 @@ Cette rubrique définit les termes pertinents pour ADO.
 
  opérateur de comparaison opérateur qui compare deux expressions et retourne une valeur booléenne.
 
- Paramètre de critère qui peut être exprimé sous la forme « > » (supérieur à)\<, « » (inférieur à), «= » (égal à), « >= » (supérieur ou égal à), « <= » (inférieur ou égal à), « <> » (différent de) ou « like » (critères spéciaux).
+ Paramètre de critère qui peut être exprimé sous la forme « > » (supérieur à), « \<" (less than), "=" (equal), "> = » (supérieur ou égal à), « <= » (inférieur ou égal à), « <> » (différent de) ou « like » (critères spéciaux).
 
  composant objet qui encapsule les données et le code, et fournit un ensemble bien spécifié de services disponibles publiquement.
 
@@ -119,7 +120,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  propriété dynamique propriété spécifique à un fournisseur de données ou au service de curseur. La collection Properties d’un objet est remplie automatiquement avec ces **Propriétés** (« dynamiquement »). Un objet n’a pas de propriétés dynamiques tant qu’il n’est pas connecté à une source de données par le biais d’un fournisseur de données particulier. Voir aussi fournisseur de données, curseur.
 
 ## <a name="e"></a>E
- Énumération d’une liste de constantes nommées. Les valeurs énumérées ne doivent pas être uniques. Toutefois, le nom de chaque valeur doit être unique dans l’étendue où l’énumération est définie. Dans ADO, les énumérations sont utilisées pour les paramètres numériques et les valeurs de retour, afin d’ajouter une signification au code ADO et de protéger le développeur des valeurs numériques (qui peuvent changer d’une version à l’autres). Par exemple, pour ouvrir un **jeu d’enregistrements**statique, utilisez la valeur énumérée **adOpenStatic** :`Recordset.Open ,,adOpenStatic`
+ Énumération d’une liste de constantes nommées. Les valeurs énumérées ne doivent pas être uniques. Toutefois, le nom de chaque valeur doit être unique dans l’étendue où l’énumération est définie. Dans ADO, les énumérations sont utilisées pour les paramètres numériques et les valeurs de retour, afin d’ajouter une signification au code ADO et de protéger le développeur des valeurs numériques (qui peuvent changer d’une version à l’autres). Par exemple, pour ouvrir un **jeu d’enregistrements**statique, utilisez la valeur énumérée **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
 
  Également appelée *constante énumérée*. Voir aussi *constante*.
 

@@ -1,4 +1,5 @@
 ---
+description: Longueur en octets du transfert
 title: Longueur de l’octet de transfert | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4204b47816747506a5672241eeeef736eca54856
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386345"
 ---
 # <a name="transfer-octet-length"></a>Longueur en octets du transfert
 La longueur d’octet de transfert d’une colonne est le nombre maximal d’octets renvoyés à l’application lorsque les données sont transférées à son type de données C par défaut. Pour les données de type caractère, la longueur de l’octet de transfert n’inclut pas d’espace pour le caractère de fin null. La longueur d’octet de transfert d’une colonne peut être différente du nombre d’octets requis pour stocker les données sur la source de données.  

@@ -1,4 +1,5 @@
 ---
+description: Ce que fait le gestionnaire de pilotes
 title: Ce que fait le gestionnaire de pilotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ab0784e6f6ad4487a02a179a5fa3be2617c930
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399dec39e18c9e31ce4a93172d0597c333fb40cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386165"
 ---
 # <a name="what-the-driver-manager-does"></a>Ce que fait le gestionnaire de pilotes
 Le tableau suivant résume la façon dont le gestionnaire de pilotes ODBC *3. x* mappe les appels aux pilotes ODBC *2. x* et ODBC *3. x* .  

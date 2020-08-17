@@ -1,4 +1,5 @@
 ---
+description: Création de fichiers de valeurs de variables (AccessToSQL)
 title: Création de fichiers de valeurs de variables (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320875"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Création de fichiers de valeurs de variables (AccessToSQL)
 Un fichier de valeurs de variable est un fichier XML comprenant les valeurs de paramètres des commandes (telles que le nom du serveur source ou de destination) qui changent fréquemment au sein des migrations du serveur. Quand un grand nombre de migrations de base de données se produisent, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source sont créés et référencés dans un fichier de script principal avec le commutateur **-v** à la ligne de commande. Ce comportement permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  

@@ -1,4 +1,5 @@
 ---
+description: Tableau produits et technologies
 title: Table des technologies ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a524139113cffeaf437b91a41b4f10b4468d5fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355245"
 ---
 # <a name="products-and-technologies-table"></a>Tableau produits et technologies
 Le tableau suivant répertorie les produits, outils et technologies Microsoft présentés dans le Guide du programmeur ADO. Il fournit des liens, dans la mesure du possible, vers des rubriques pertinentes dans le guide.
 
-|Produits ou technologies Microsoft|Références|
+|Produits ou technologies Microsoft|References|
 |-------------------------------------|----------------|
 |Access/Jet|[Utilisation des recordsets](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [Concepts de base d’ADOX](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Fournisseur Microsoft OLE DB pour Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Interfaces de service Active Directory (ADSI)|[Fournisseur Microsoft OLE DB pour le service Microsoft Active Directory](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
@@ -41,5 +42,5 @@ Le tableau suivant répertorie les produits, outils et technologies Microsoft pr
 |Visual Basic|[Erreurs](../../ado/guide/data/errors-ado.md)<br /><br /> [Erreurs ADO](../../ado/guide/data/ado-errors.md)<br /><br /> [Instanciation des événements ADO par langage](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Fonctions Visual Basic pour Applications](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [Tutoriel RDS](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [Utilisation d’ADO avec Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [Exemples de code ADO dans Microsoft Visual Basic](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|
 |Visual C++|[Gestion des erreurs dans d’autres langues](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Instanciation des événements ADO par langage](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Utilisation d’ADO avec Microsoft Visual C++](../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)<br /><br /> [Exemples de code ADO en Microsoft Visual C++](../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)|
 |Visual Studio|[Annexe D : Exemples ADO](../../ado/guide/appendixes/appendix-d-ado-samples.md)|
-|Windows 2000|[Configuration système exigée pour l’application Carnet d’adresses](../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [Octroi de privilèges d’invité à un serveur web](../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [Inscription d’un objet métier personnalisé](../../ado/guide/remote-data-service/registering-a-custom-business-object.md)<br /><br /> [Sécurisation des applications RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [Configuration de RDS sur Windows 2000](../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)|
+|Windows 2000|[Configuration système exigée pour l’application Carnet d’adresses](../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [Octroi de privilèges d’invité à un serveur web](../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [Inscription d’un objet métier personnalisé](../../ado/guide/remote-data-service/registering-a-custom-business-object.md)<br /><br /> [Sécurisation des applications RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [Configuration de RDS sur Windows 2000](../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)|
 |XML|[Persistance des enregistrements au format XML](../../ado/guide/data/persisting-records-in-xml-format.md)<br /><br /> [Enregistrements et flux](../../ado/guide/data/records-and-streams.md)<br /><br /> [Flux de commandes](../../ado/guide/data/command-streams.md)<br /><br /> [Récupération de jeux de résultats dans les flux](../../ado/guide/data/retrieving-resultsets-into-streams.md)|

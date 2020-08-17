@@ -1,4 +1,5 @@
 ---
+description: Connexion à Azure SQL Database (SybaseToSQL)
 title: Connexion à Azure SQL Database (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12e090ef0b2c97fe57d27a61842dd7fe2cb99866
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: eacdca6cf260557171f5adf63f8590842de77fcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372345"
 ---
 # <a name="connecting-to-azure-sql-database-sybasetosql"></a>Connexion à Azure SQL Database (SybaseToSQL)
 Pour migrer des bases de données Sybase vers Azure SQL Database, vous devez vous connecter à l’instance cible de Azure SQL Database. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de Azure SQL Database et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées Azure SQL Database. SSMA stocke les informations de l’instance de Azure SQL Database à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -28,7 +29,7 @@ Le compte utilisé pour se connecter à Azure SQL Database nécessite des autori
   
 1.  Pour convertir des objets Sybase en [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe, pour mettre à jour des métadonnées à partir de Azure SQL Database, ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de Azure SQL Database.  
   
-2.  Pour charger des objets de base de données dans Azure SQL Database, l’exigence d’autorisation minimale est l’appartenance au rôle de base de données **db_owner** dans la base de données cible.  
+2.  Pour charger des objets de base de données dans Azure SQL Database, l’exigence d’autorisation minimale est l’appartenance au rôle de base de données  **db_owner** dans la base de données cible.  
   
 ## <a name="establishing-an-azure-sql-database-connection"></a>Établissement d’une connexion Azure SQL Database  
 Avant de convertir des objets de base de données Sybase en Azure SQL Database syntaxe, vous devez établir une connexion à l’instance de Azure SQL Database dans laquelle vous souhaitez migrer la ou les bases de données Sybase.  

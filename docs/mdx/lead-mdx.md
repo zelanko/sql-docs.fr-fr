@@ -1,4 +1,5 @@
 ---
+description: Lead (MDX)
 title: Lead (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca78bdeca6103758d5d102ed8b85eb00b3138e18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387325"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 
@@ -41,7 +42,7 @@ Member_Expression.Lead( Index )
   
  Si le prospect spécifié est négatif, la fonction **Lead** retourne un membre antérieur.  
   
- `Lead(1)`équivaut à la fonction [NextMember](../mdx/nextmember-mdx.md) . `Lead(-1)`équivaut à la fonction [PrevMember](../mdx/prevmember-mdx.md) .  
+ `Lead(1)` équivaut à la fonction [NextMember](../mdx/nextmember-mdx.md) . `Lead(-1)` équivaut à la fonction [PrevMember](../mdx/prevmember-mdx.md) .  
   
  La fonction **Lead** est similaire à la fonction [lag](../mdx/lag-mdx.md) , sauf que la fonction **lag** regarde dans la direction opposée à la fonction **Lead** . Ce qui signifie que `Lead(n)` est équivalent à `Lag(-n)`.  
   

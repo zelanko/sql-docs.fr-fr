@@ -1,4 +1,5 @@
 ---
+description: Autorisations de collection (services de données de référence)
 title: Autorisations de collection
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 04ffb34b92aa43c521a9a454a8068e74cf4fd615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390285"
 ---
 # <a name="collection-permissions-master-data-services"></a>Autorisations de collection (services de données de référence)
 
@@ -31,9 +32,9 @@ ms.locfileid: "85811614"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
+|**Lire**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
 |**Créer**|L’utilisateur peut créer des membres de collection et affecter des valeurs d’attribut.|  
-|**Update**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
+|**Mettre à jour**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
 |**Supprimer**|L’utilisateur peut supprimer les membres de collection.|  
 |**Deny**|Tous les accès aux membres de collection sont refusés.|  
   

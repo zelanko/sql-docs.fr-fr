@@ -1,4 +1,5 @@
 ---
+description: INSERT INTO (DMX)
 title: INSÉRER DANS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eedff3b14960fae68ad4e3a9ac54a0034c1a9300
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352915"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificateur du modèle  
   
- *arborescence*  
+ *structure*  
  Identificateur de la structure  
   
  *colonnes de modèle mappées*  
@@ -64,7 +65,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La structure d'exploration de données n'est pas traitée.|Le modèle et la structure d'exploration de données sont traités.|  
 ||La structure d'exploration de données contient des modèles d'exploration de données supplémentaires.|Échec du traitement. Vous devez retraiter la structure et les modèles d'exploration de données associés.|  
 |INSÉRER DANS UNE STRUCTURE D’EXPLORATION DE DONNÉES*\<structure>*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
-|INSÉRER dans le modèle *\<model>* d’exploration de données qui contient une requête source<br /><br /> ou<br /><br /> INSÉRER dans une STRUCTURE *\<structure>* d’exploration de données qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez effacer les objets avant d’effectuer cette opération en utilisant [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSÉRER dans le modèle *\<model>* d’exploration de données qui contient une requête source<br /><br /> or<br /><br /> INSÉRER dans une STRUCTURE *\<structure>* d’exploration de données qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez effacer les objets avant d’effectuer cette opération en utilisant [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Mapped Model Columns  
  À l’aide de l' \<mapped model columns> élément, vous pouvez mapper les colonnes de la source de données aux colonnes de votre modèle d’exploration de données. L' \<mapped model columns> élément se présente sous la forme suivante :  

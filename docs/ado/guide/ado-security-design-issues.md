@@ -1,4 +1,5 @@
 ---
+description: Fonctionnalités de conception de la sécurité ADO
 title: Problèmes de conception de la sécurité ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc525a10d6211ee5f15517618f2cc5b99c8abee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355395"
 ---
 # <a name="ado-security-design-features"></a>Fonctionnalités de conception de la sécurité ADO
 Les sections suivantes décrivent les fonctionnalités de conception de sécurité de ActiveX Data Objects (ADO) 2,8 et versions ultérieures. Ces modifications ont été apportées dans ADO 2,8 pour améliorer la sécurité. ADO 6,0, qui est inclus dans Windows DAC 6,0 dans Windows Vista, est fonctionnellement équivalent à ADO 2,8, qui était inclus dans MDAC 2,8 dans Windows XP et Windows Server 2003. Cette rubrique fournit des informations sur la façon de sécuriser au mieux vos applications dans ADO 2,8 ou une version ultérieure.
@@ -107,7 +108,7 @@ This Website is using your identity to access a data source. If you trust this W
  Si vous utilisez des fournisseurs tiers (autrement dit, non-Microsoft) OLE DB des fournisseurs avec votre code d’application ADO, vous pouvez vérifier comment la propriété **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** est implémentée pour déterminer si l’inclusion d’informations de mot de passe avec des chaînes de connexion ADO est autorisée.
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>Recherche de périphériques non-fichiers lors du chargement et de l’enregistrement des jeux d’enregistrements ou des flux
- Pour ADO 2,7 et versions antérieures, les opérations d’entrée/sortie de fichier telles que [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) et [Save](../../ado/reference/ado-api/save-method.md) qui étaient utilisées pour lire et écrire des données basées sur des fichiers pouvaient, dans certains cas, permettre l’utilisation d’une URL ou d’un nom de fichier qui spécifiait un type de fichier qui n’est pas basé sur le disque. Par exemple, LPT1, COM2, PRN. TXT, les peuvent être utilisés comme alias pour l’entrée/sortie entre les imprimantes et les périphériques auxiliaires sur le système en utilisant certains
+ Pour ADO 2,7 et versions antérieures, les opérations d’entrée/sortie de fichier telles que [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) et [Save](../../ado/reference/ado-api/save-method.md) qui étaient utilisées pour lire et écrire des données basées sur des fichiers pouvaient, dans certains cas, permettre l’utilisation d’une URL ou d’un nom de fichier qui spécifiait un type de fichier qui n’est pas basé sur le disque. Par exemple, LPT1, COM2, PRN.TXT, aux peuvent être utilisés comme alias pour l’entrée/sortie entre les imprimantes et les périphériques auxiliaires sur le système en utilisant certains
 
  Pour ADO 2,8 et versions ultérieures, cette fonctionnalité a été mise à jour. Pour ouvrir et enregistrer des objets **Recordset** et **Stream** , ADO effectue désormais un contrôle de type de fichier pour s’assurer que l’appareil d’entrée ou de sortie spécifié dans une URL ou un nom de fichier est un fichier réel.
 

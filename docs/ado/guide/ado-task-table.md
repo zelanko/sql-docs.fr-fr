@@ -1,4 +1,5 @@
 ---
+description: Table des tâches de programmation ADO
 title: Table des tâches ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2793674d8952af09856d37400a2d0c34c97aa720
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355385"
 ---
 # <a name="ado-programming-task-table"></a>Table des tâches de programmation ADO
 Le tableau suivant répertorie les tâches de programmation contenues dans le *Guide du programmeur ADO* et fournit des références pour chaque tâche. Ces références peuvent être des descriptions textuelles ou des exemples de code dans lesquels vous pouvez trouver des informations sur la fonctionnalité ADO qui effectue la tâche.
 
-|Tâche ADO|Références|
+|Tâche ADO|References|
 |--------------|----------------|
 |Connexion à un fournisseur de données|[Se connecter à des sources de données](../../ado/guide/data/connecting-to-data-sources.md)|
 |Exécution de commandes ou appel de procédures stockées|[Commandes Prepare et Execute](../../ado/guide/data/preparing-and-executing-commands.md)|

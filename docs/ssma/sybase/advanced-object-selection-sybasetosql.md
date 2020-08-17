@@ -1,4 +1,5 @@
 ---
+description: Sélection d’objet avancée (SybaseToSQL)
 title: Sélection d’objet avancée (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 13c76ce76b5096d136df0b38b5526e80093f76cd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e7b04682474876f0697df97f772a4c6458582caa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372555"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>Sélection d’objet avancée (SybaseToSQL)
 La boîte de dialogue **section d’objets avancés** vous permet de filtrer des objets de base de données en utilisant des chaînes et des sous-chaînes dans le nom de l’objet, puis de sélectionner ou désélectionner ces objets. SSMA effectue des opérations de conversion et de migration sur les objets sélectionnés.  

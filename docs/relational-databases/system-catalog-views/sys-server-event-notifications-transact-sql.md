@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_notifications (Transact-SQL)
 title: sys. server_event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee534061f95a9b33ff3febcea758326662599556
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6e6a8decda6dd98ad4c6bda353c70884d0f0c84c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377215"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85896472"
 |**parent_id**|**int**|A toujours la valeur 0.|  
 |**create_date**|**datetime**|Date de création.|  
 |**modify_date**|**datetime**|Date de la dernière modification de l'objet à l'aide d'une instruction ALTER.|  
-|**service_name**|**nvarchar(256)**|Nom du service cible auquel la notification est envoyée.|  
+|**service_name**|**nvarchar (256)**|Nom du service cible auquel la notification est envoyée.|  
 |**broker_instance**|**nvarchar(128)**|Service Broker sur lequel le service cible nommé est défini.|  
 |**creator_sid**|**varbinary (85)**|ID de sécurité de la connexion exécutant l'instruction qui crée la notification d'événement. La valeur est NULL si WITH FAN_IN n'est pas spécifié dans la définition de la notification d'événement.|  
 |**principal_id**|**int**|ID du principal de serveur propriétaire.|  
@@ -49,7 +50,7 @@ ms.locfileid: "85896472"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

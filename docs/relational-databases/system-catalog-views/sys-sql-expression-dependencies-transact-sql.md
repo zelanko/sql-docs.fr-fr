@@ -1,4 +1,5 @@
 ---
+description: sys.sql_expression_dependencies (Transact-SQL)
 title: sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 742b366a871a929463b044b53a822a71fd7e073d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376015"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -72,8 +73,8 @@ ms.locfileid: "87396668"
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table|Oui*|Oui|  
-|Affichage|Oui|Oui|  
+|Table de charge de travail|Oui*|Oui|  
+|Vue|Oui|Oui|  
 |Index filtré|Oui**|Non|  
 |Statistiques filtrées|Oui**|Non|  
 |Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Oui|Oui|  
@@ -91,7 +92,7 @@ ms.locfileid: "87396668"
 |Collection de schémas XML|Non|Oui|  
 |Fonction de partition|Non|Oui|  
   
- \*Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
+ \* Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
   
  ** Chaque colonne utilisée dans le prédicat de filtre est suivie en tant qu'entité de référence.  
   

@@ -1,4 +1,5 @@
 ---
+description: Opérateurs de comparaison
 title: Opérateurs de comparaison | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4e3aa00334d98af02521005679174feb3b28c55f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f1dcb77c15e540a740ac9956dc4c547c5ca61c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387666"
 ---
 # <a name="comparison-operators"></a>Opérateurs de comparaison
 
@@ -36,7 +37,7 @@ ms.locfileid: "68001512"
 |[<= (inférieur ou égal à)](../mdx/less-than-or-equal-to-mdx.md)|Pour les arguments non NULL, retourne la valeur TRUE si l'argument de gauche possède une valeur inférieure ou égale à celle de l'argument de droite ; sinon, FALSE.<br /><br /> Si un de ces arguments ou les deux donnent comme résultat une valeur NULL, l'opérateur retourne une valeur NULL.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Opérateurs &#40;syntaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

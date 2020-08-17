@@ -1,4 +1,5 @@
 ---
+description: Fonctionnalités ADO pour chaque version
 title: Historique ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 726487d366450f003ca745624a916d400990723b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d97e81eca94867ad00317667d08ef6bdf4c6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355425"
 ---
 # <a name="ado-features-for-each-release"></a>Fonctionnalités ADO pour chaque version
 
@@ -55,7 +56,7 @@ Une commande SHAPE imbriquée retourne à présent un maximum de 512 **recordset
 
  Dialecte de la_propriété_ **dialecte** [est une](../../ado/reference/ado-api/dialect-property.md) nouvelle propriété qui définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.  
 
- **Command. Execute**, méthode la [méthode Execute](../../ado/reference/ado-api/execute-method-ado-command.md) _de l’objet_ **Command** ADO a été améliorée pour utiliser des flux pour l’entrée et la sortie.  
+ **Command.Exe**  _méthode_ , la [méthode Execute](../../ado/reference/ado-api/execute-method-ado-command.md) de l’objet **Command** ADO a été améliorée pour utiliser des flux pour l’entrée et la sortie.
 
  *Champ statusvalues* Si l’utilisateur rencontre une erreur DB_E_ERRORSOCCURRED lors de la modification d’un **champ** d’un **jeu d’enregistrements**, ADO remplit à présent la propriété **Field. Status** avec les informations d’État appropriées afin que l’utilisateur ait plus d’informations sur ce qui s’est produit. Consultez [Status, propriété (champ ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
