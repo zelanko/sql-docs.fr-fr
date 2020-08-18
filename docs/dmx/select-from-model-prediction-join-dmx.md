@@ -1,4 +1,5 @@
 ---
+description: SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
 title: SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 033b610da29267cd07076c01157744441c4450d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413295"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *sélectionner la liste d’expressions*  
  Liste séparée par des virgules des identificateurs de colonnes et expressions dérivées du modèle d'exploration de données.  
@@ -48,13 +49,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Requête source  
   
  *liste de mappage de jointure*  
- Optionnel. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
+ facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
   
  *expression de condition*  
- Optionnel. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Optionnel. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes du \<*join mapping list*> sont liées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
@@ -186,7 +187,7 @@ NATURAL PREDICTION JOIN
  La colonne contenant l'attribut prédictible `[v Assoc Seq Line Items]` étant une colonne de table, la requête retourne une colonne unique qui contient une table imbriquée. Par défaut, la colonne de table imbriquée est appelée `Expression`. Si votre fournisseur ne prend pas en charge les ensembles de lignes hiérarchiques, vous pouvez utiliser le mot clé **aplati** comme indiqué dans cet exemple pour faciliter l’affichage des résultats.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
+ [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

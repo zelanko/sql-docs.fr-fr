@@ -1,4 +1,5 @@
 ---
+description: Guide de référence des instructions DMX (Data Mining Extensions)
 title: Référence des instructions DMX (Data Mining Extensions) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ce95adec18bd17dce45fdc988b6db92d66383c74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414095"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instructions DMX (Data Mining Extensions)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

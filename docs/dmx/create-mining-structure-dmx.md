@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING STRUCTURE (DMX)
 title: CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414025"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *arborescence*  
+ *structure*  
  Nom unique de la structure.  
   
  *liste de définitions de colonnes*  
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Vous pouvez définir plusieurs valeurs d'indicateur de modélisation pour une colonne. Toutefois, vous ne pouvez avoir qu'un seul type de contenu et qu'un seul type de données pour une colonne.  
   
 ### <a name="column-relationships"></a>Relations de colonnes  
- Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge l’utilisation de la \<column relationship> clause suivante.  
+ Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge l’utilisation de la \<column relationship> clause suivante.  
   
  **EN RAPPORT AVEC**  
  Indique une hiérarchie de valeur. La cible d'une colonne RELATED TO peut être une colonne clé dans une table imbriquée, une colonne de valeurs discrètes dans la ligne de cas ou une autre colonne RELATED TO qui indique une hiérarchie plus profonde.  

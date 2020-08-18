@@ -1,4 +1,5 @@
 ---
+description: Gestion des sources de données
 title: Gestion des sources de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5069ac9a5babc3071c52d73d5b56b21729a5d8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 506a7b6fbbf93b8fb4b28f66824778b2266f6cbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412859"
 ---
 # <a name="managing-data-sources"></a>Gestion des sources de données
 Une fois que vous avez installé un pilote ODBC à partir du programme d’installation du pilote, vous pouvez définir une ou plusieurs sources de données pour celui-ci. Le nom de la source de données (DSN) doit fournir une description unique des données ; par exemple, *paie* ou *comptes fournisseurs*. Les sources de données utilisateur et système définies pour tous les pilotes actuellement installés sont répertoriées dans les onglets **DSN utilisateur** ou **DSN système** de la boîte de dialogue **administrateur de sources de données ODBC** . Les sources de données de fichier dans un répertoire donné sont répertoriées sous l’onglet **fichier DSN** . le répertoire à afficher est entré dans la zone **regarder dans** de l’onglet **DSN de fichier** .  
@@ -29,13 +30,13 @@ Une fois que vous avez installé un pilote ODBC à partir du programme d’insta
 > [!NOTE]  
 >  Pour gérer une source de données qui se connecte à un pilote 32 bits sous la plateforme 64 bits, utilisez c:\windows\sysWOW64\odbcad32.exe. Pour gérer une source de données qui se connecte à un pilote 64 bits, utilisez c:\windows\system32\odbcad32.exe. Dans les **Outils d’administration** sur un système d’exploitation Windows 8 64 bits, il existe des icônes pour la boîte de dialogue administrateur de la **source de données ODBC** 32 bits et 64 bits.  
   
- Si vous utilisez l’odbcad32. exe 64 bits pour configurer ou supprimer un nom de source de fichier qui se connecte à un pilote 32 bits, par exemple, le **pilote fait Microsoft Access (\*. mdb)**, le message d’erreur suivant s’affiche :  
+ Si vous utilisez l' odbcad32.exe 64 bits pour configurer ou supprimer un nom de source de nom qui se connecte à un pilote 32 bits, par exemple, le **pilote fait Microsoft Access ( \* . mdb)**, le message d’erreur suivant s’affiche :  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  
 ```  
   
- Pour résoudre cette erreur, utilisez le fichier odbcad32. exe 32 bits pour configurer ou supprimer le DSN.  
+ Pour résoudre cette erreur, utilisez l' odbcad32.exe 32 bits pour configurer ou supprimer le DSN.  
   
  Une source de données associe un pilote ODBC particulier aux données auxquelles vous souhaitez accéder par le biais de ce pilote. Par exemple, vous pouvez créer une source de données pour utiliser le pilote ODBC dBASE pour accéder à un ou plusieurs fichiers dBASE trouvés dans un répertoire spécifique sur votre disque dur ou sur un lecteur réseau. À l’aide de l’administrateur de la source de données ODBC, vous pouvez ajouter, modifier et supprimer des sources de données, comme décrit dans le tableau suivant.  
   

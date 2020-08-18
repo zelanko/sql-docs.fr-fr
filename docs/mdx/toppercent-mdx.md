@@ -1,4 +1,5 @@
 ---
+description: TopPercent (MDX)
 title: Pourcentage (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412858"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -44,7 +45,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  La fonction Coen- **pourcentage** calcule la somme de l’expression numérique spécifiée évaluée sur le jeu spécifié, en triant le jeu dans l’ordre décroissant. Elle retourne ensuite les éléments dotés des valeurs les plus élevées et dont le pourcentage cumulé du total de la valeur additionnée correspond au moins au pourcentage indiqué. Enfin, elle retourne le plus petit sous-ensemble d'un jeu dont le total cumulé est égal au moins au pourcentage précisé. Les éléments retournés sont triés du plus grand au plus petit.  
   
 > [!WARNING]  
->  Si *numeric_expression* retourne une valeur négative, le **pourcentage** de valeur de la colonne ne retourne qu’une (1) ligne.  
+>  Si *numeric_expression*  retourne une valeur négative, le **pourcentage** de valeur de la colonne ne retourne qu’une (1) ligne.  
 >   
 >  Consultez le deuxième exemple pour une présentation détaillée de ce comportement.  
   

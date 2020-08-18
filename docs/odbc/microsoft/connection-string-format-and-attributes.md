@@ -1,4 +1,5 @@
 ---
+description: Format et attributs de la chaîne de connexion
 title: Attributs et format de la chaîne de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d95866976d2e83c058f83b3a0ae5e9a4e8888ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53efb4dd010913029185f0cbf27f0991f34815fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412931"
 ---
 # <a name="connection-string-format-and-attributes"></a>Format et attributs de la chaîne de connexion
 > [!IMPORTANT]  
@@ -31,9 +32,9 @@ ms.locfileid: "81281149"
 ```  
   
 > [!NOTE]  
->  Le pilote Microsoft ODBC pour Oracle prend en charge le format de chaîne de connexion de la première version du pilote `CONNECTSTRING`, qui utilisait = au lieu de `SERVER=`.  
+>  Le pilote Microsoft ODBC pour Oracle prend en charge le format de chaîne de connexion de la première version du pilote, qui utilisait `CONNECTSTRING` = au lieu de `SERVER=` .  
   
- Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification `Trusted_Connection=yes` Windows, vous devez spécifier à la place de l’ID d’utilisateur et des informations de mot de passe dans la chaîne de connexion.  
+ Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier à `Trusted_Connection=yes` la place de l’ID d’utilisateur et des informations de mot de passe dans la chaîne de connexion.  
   
  Vous devez spécifier le nom de la source de données si vous ne spécifiez pas les attributs UID, PWD, SERVER (ou CONNECTSTRING) et DRIVER. Toutefois, tous les autres attributs sont facultatifs. Si vous ne spécifiez pas d’attribut, cet attribut est défini par défaut sur celui spécifié sous l’onglet DSN correspondant de la boîte de dialogue **administrateur de sources de données ODBC** . La valeur de l’attribut peut être sensible à la casse.  
   

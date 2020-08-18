@@ -1,4 +1,5 @@
 ---
+description: Fonctions DMX (Data Mining Extensions)
 title: Référence des fonctions DMX (Data Mining Extensions) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3066c971a434f1fab0dd2963003d53e37585983a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414145"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Fonctions DMX (Data Mining Extensions)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "86971803"
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)|Répertorie les fonctions qui peuvent être utilisées avec tous les types de modèles et fournit des liens vers des informations supplémentaires sur l'interrogation de types spécifiques de modèles d'exploration de données.|  
+|[Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)|Répertorie les fonctions qui peuvent être utilisées avec tous les types de modèles et fournit des liens vers des informations supplémentaires sur l'interrogation de types spécifiques de modèles d'exploration de données.|  
 |[Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Fournit une vue d'ensemble de la création d'une requête de prédiction à l'aide de DMX.|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|Retourne une table qui contient un nombre spécifié de lignes à partir du niveau inférieur d'un jeu, triée en ordre croissant d'après une expression de classement.|  
   
@@ -59,14 +60,14 @@ ms.locfileid: "86971803"
 |[StructureColumn&#41;DMX &#40;](../dmx/structurecolumn-dmx.md)|Retourne la valeur de la colonne de structure d'exploration de données de la table spécifiée.|  
 |[&#40;DMX&#41;](../dmx/topcount-dmx.md)|Retourne une table qui contient un nombre spécifié de lignes à partir du niveau supérieur d'un jeu, classée par ordre décroissant d'après une expression de classement.|  
 |[&#41;DMX &#40;](../dmx/toppercent-dmx.md)|Retourne une table qui contient le plus petit nombre de lignes de niveau supérieur qui représentent un pourcentage spécifié, triée en ordre décroissant d'après une expression de classement.|  
-|[&#41;DMX &#40;DMX](../dmx/topsum-dmx.md)|Retourne une table qui contient le plus petit nombre de lignes de niveau supérieur qui représentent une somme spécifiée, triée en ordre décroissant d'après une expression de classement.|  
+|[&#41;DMX &#40;DMX ](../dmx/topsum-dmx.md)|Retourne une table qui contient le plus petit nombre de lignes de niveau supérieur qui représentent une somme spécifiée, triée en ordre décroissant d'après une expression de classement.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur l’opérateur de&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

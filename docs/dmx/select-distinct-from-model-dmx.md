@@ -1,4 +1,5 @@
 ---
+description: SELECT DISTINCT FROM &lt; Model &gt; (DMX)
 title: SELECT DISTINCT FROM &lt; Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413265"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; Model &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,7 +31,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Optionnel. Entier spécifiant le nombre de lignes à retourner.  
+ facultatif. Entier spécifiant le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste séparée par des virgules des identificateurs des colonnes associées (dérivées du modèle) ou expressions.  
@@ -42,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Optionnel. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  L’instruction **Select distinct from** ne fonctionne qu’avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
@@ -55,7 +56,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  Les résultats de l’instruction **Select distinct \<model> from** varient en fonction du type de colonne. Le tableau ci-dessous décrit les types de colonnes pris en charge et le résultat de l'instruction.  
   
-|Type de colonne|Sortie|  
+|Type de colonne|Output|  
 |-----------------|------------|  
 |Discret|Valeurs uniques de la colonne|  
 |Discrétisé|Point milieu de chaque compartiment discrétisé de la colonne.|  
@@ -134,7 +135,7 @@ FROM [TM Decision Tree]
 >  La valeur minimale du compartiment minimal et la valeur maximale du compartiment maximal correspondent aux valeurs observées la plus élevée et la moins élevée. Les valeurs hors de cette plage observée sont supposées appartenir aux compartiments minimaux et maximaux.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
+ [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
