@@ -1,4 +1,5 @@
 ---
+description: Taille de colonne
 title: Taille de la colonne | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07b6151c723cb5e05189791100338e9e343c28aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53d7934f3ac4669545e3cc24752e4a9e0f4fb589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411115"
 ---
 # <a name="column-size"></a>Taille de colonne
 La taille de la colonne (ou du paramètre) des types de données numériques est définie comme étant le nombre maximal de chiffres utilisé par le type de données de la colonne ou du paramètre, ou la précision des données. Pour les types de caractères, il s’agit de la longueur en caractères des données ; pour les types de données binaires, la taille de colonne est définie comme la longueur en octets des données. Pour l’heure, l’horodatage et tous les types de données d’intervalle, il s’agit du nombre de caractères dans la représentation de caractères de ces données. La taille de colonne définie pour chaque type de données SQL concis est indiquée dans le tableau suivant.  
@@ -41,17 +42,17 @@ La taille de la colonne (ou du paramètre) des types de données numériques est
 |SQL_TYPE_DATE (c)|10 (nombre de caractères au format *aaaa-mm-jj* ).|  
 |SQL_TYPE_TIME (c)|8 (le nombre de caractères au format *hh-mm-ss* ), ou 9 + *s* (le nombre de caractères au format *hh : mm : SS*[. fff...], où *s* est la précision en secondes).|  
 |SQL_TYPE_TIMESTAMP|16 (le nombre de caractères au format *aaaa-mm-jj hh : mm* )<br /><br /> 19 (nombre de caractères au format *aaaa-mm-jj* *hh : mm : SS* )<br /><br /> or<br /><br /> 20 + *s* (nombre de caractères au format *aaaa-mm-jj hh : mm : SS*[. fff...], où *s* est la précision en secondes).|  
-|SQL_INTERVAL_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, *p* (si *s*= 0) ou *p*+*s*+ 1 (si *s*>0). e|  
-|SQL_INTERVAL_DAY_TO_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, 9 +*p* (si *s*= 0) ou 10 +*p*+*s* (si *s*>0). e|  
-|SQL_INTERVAL_HOUR_TO_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, 6 +*p* (si *s*= 0) ou 7 +*p*+*s* (si *s*>0). e|  
-|SQL_INTERVAL_MINUTE_TO_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, 3 +*p* (si *s*= 0) ou 4 +*p*+*s* (si *s*>0). e|  
+|SQL_INTERVAL_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, *p* (si *s*= 0) ou *p* + *s*+ 1 (si *s*>0). [ e|  
+|SQL_INTERVAL_DAY_TO_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, 9 +*p* (si *s*= 0) ou 10 +*p* + *s* (si *s*>0). [ e|  
+|SQL_INTERVAL_HOUR_TO_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, 6 +*p* (si *s*= 0) ou 7 +*p* + *s* (si *s*>0). [ e|  
+|SQL_INTERVAL_MINUTE_TO_SECOND|Où *p* est la précision de l’intervalle et *s* est la précision en secondes, 3 +*p* (si *s*= 0) ou 4 +*p* + *s* (si *s*>0). [ e|  
 |SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, où *p* est la précision de début de l’intervalle. e|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, où *p* est la précision de début de l’intervalle. e|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, où *p* est la précision de début de l’intervalle. e|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, où *p* est la précision de début de l’intervalle. e|  
 |SQL_GUID|36 (nombre de caractères au format *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* )|  
   
- [a] pour une application ODBC 1,0 qui appelle **SQLSetParam,** dans un pilote ODBC 2,0, et pour une application ODBC 2,0 qui appelle **SQLBindParameter** dans un pilote ODBC 1,0 \*, lorsque *StrLen_or_IndPtr* est SQL_DATA_AT_EXEC pour un type SQL_LONGVARCHAR ou SQL_LONGVARBINARY, *Column* doit être défini sur la longueur totale des données à envoyer, et non sur la précision définie dans ce tableau.  
+ [a] pour une application ODBC 1,0 qui appelle **SQLSetParam,** dans un pilote ODBC 2,0, et pour une application ODBC 2,0 qui appelle **SQLBindParameter** dans un pilote odbc 1,0, lorsque \* *StrLen_or_IndPtr* est SQL_DATA_AT_EXEC pour un type SQL_LONGVARCHAR ou SQL_LONGVARBINARY, *Column* doit être défini sur la longueur totale des données à envoyer, et non sur la précision définie dans ce tableau.  
   
  [b] si le pilote ne peut pas déterminer la longueur de la colonne ou du paramètre pour un type de variable, il retourne SQL_NO_TOTAL.  
   

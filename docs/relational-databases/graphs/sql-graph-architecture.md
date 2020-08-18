@@ -1,4 +1,5 @@
 ---
+description: Architecture du graphique SQL
 title: Architecture SQL Graph | Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2018
@@ -14,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9484b4cb6f4b42dc8b496eff52b954938be9cc6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d676d32426678720f76de1ff04c355a54998dd1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408735"
 ---
 # <a name="sql-graph-architecture"></a>Architecture du graphique SQL  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -45,7 +46,7 @@ Une table Edge représente une relation dans un graphique. Les bords sont toujou
 
 |Nom de la colonne    |Description  |
 |---   |---  |
-|`$edge_id`   |Identifie de façon unique une arête donnée dans la base de données. Il s’agit d’une colonne générée et la valeur est une combinaison de object_id de la table Edge et d’une valeur bigint générée en interne. Toutefois, lorsque la `$edge_id` colonne est sélectionnée, une valeur calculée sous la forme d’une chaîne JSON s’affiche. `$edge_id`est une pseudo-colonne qui est mappée à un nom interne avec une chaîne hexadécimale. Lorsque vous sélectionnez `$edge_id` dans la table, le nom de la colonne s’affiche sous la forme `$edge_id_\<hex_string>` . L’utilisation de noms de pseudo-colonnes dans les requêtes est la méthode recommandée pour interroger la `$edge_id` colonne interne et l’utilisation d’un nom interne avec une chaîne hexadécimale doit être évitée. |
+|`$edge_id`   |Identifie de façon unique une arête donnée dans la base de données. Il s’agit d’une colonne générée et la valeur est une combinaison de object_id de la table Edge et d’une valeur bigint générée en interne. Toutefois, lorsque la `$edge_id` colonne est sélectionnée, une valeur calculée sous la forme d’une chaîne JSON s’affiche. `$edge_id` est une pseudo-colonne qui est mappée à un nom interne avec une chaîne hexadécimale. Lorsque vous sélectionnez `$edge_id` dans la table, le nom de la colonne s’affiche sous la forme `$edge_id_\<hex_string>` . L’utilisation de noms de pseudo-colonnes dans les requêtes est la méthode recommandée pour interroger la `$edge_id` colonne interne et l’utilisation d’un nom interne avec une chaîne hexadécimale doit être évitée. |
 |`$from_id`   |Stocke le `$node_id` du nœud à partir duquel le bord provient.  |
 |`$to_id`   |Stocke le `$node_id` du nœud, à partir duquel le bord s’arrête. |
 
@@ -94,7 +95,7 @@ Le tableau suivant répertorie les valeurs valides pour la `graph_type` colonne
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`stocke également des informations sur les colonnes implicites créées dans des tables de nœuds ou d’arêtes. Les informations suivantes peuvent être récupérées à partir de sys. Columns, mais les utilisateurs ne peuvent pas sélectionner ces colonnes dans une table de nœuds ou d’arêtes. 
+`sys.columns` stocke également des informations sur les colonnes implicites créées dans des tables de nœuds ou d’arêtes. Les informations suivantes peuvent être récupérées à partir de sys. Columns, mais les utilisateurs ne peuvent pas sélectionner ces colonnes dans une table de nœuds ou d’arêtes. 
 
 Colonnes implicites dans une table de nœuds
 
@@ -109,23 +110,23 @@ Colonnes implicites dans une table Edge
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |`graph_id`colonne interne  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |`edge_id`colonne externe  |
-|from_obj_id_\<hex_string>  |INT    |1  |interne à partir du nœud`object_id`  |
-|from_id_\<hex_string>  |bigint |1  |Interne à partir du nœud`graph_id`  |
-|$from _id_\<hex_string> |NVARCHAR   |0  |externe à partir du nœud`node_id`  |
-|to_obj_id_\<hex_string>    |INT    |1  |interne au nœud`object_id`  |
-|to_id_\<hex_string>    |bigint |1  |Interne au nœud`graph_id`  |
-|$to _id_\<hex_string>   |NVARCHAR   |0  |externe au nœud`node_id`  |
+|from_obj_id_\<hex_string>  |INT    |1  |interne à partir du nœud `object_id`  |
+|from_id_\<hex_string>  |bigint |1  |Interne à partir du nœud `graph_id`  |
+|$from _id_\<hex_string> |NVARCHAR   |0  |externe à partir du nœud `node_id`  |
+|to_obj_id_\<hex_string>    |INT    |1  |interne au nœud `object_id`  |
+|to_id_\<hex_string>    |bigint |1  |Interne au nœud `graph_id`  |
+|$to _id_\<hex_string>   |NVARCHAR   |0  |externe au nœud `node_id`  |
  
 ### <a name="system-functions"></a>Fonctions système
 Les fonctions intégrées suivantes sont ajoutées. Celles-ci permettent aux utilisateurs d’extraire des informations à partir des colonnes générées. Notez que ces méthodes ne valident pas l’entrée de l’utilisateur. Si l’utilisateur spécifie un non valide `sys.node_id` , la méthode extrait le composant approprié et le retourne. Par exemple, OBJECT_ID_FROM_NODE_ID prend `$node_id` comme entrée et retourne la object_id de la table, ce nœud appartient à. 
  
 |Intégré   |Description  |
 |---  |---  |
-|OBJECT_ID_FROM_NODE_ID |Extraire le object_id à partir d’un`node_id`  |
-|GRAPH_ID_FROM_NODE_ID  |Extraire le graph_id à partir d’un`node_id`  |
-|NODE_ID_FROM_PARTS |Construit un node_id à partir d’un `object_id` et d’un`graph_id`  |
-|OBJECT_ID_FROM_EDGE_ID |Extraire `object_id` à partir de`edge_id`  |
-|GRAPH_ID_FROM_EDGE_ID  |Extraire l’identité de`edge_id`  |
+|OBJECT_ID_FROM_NODE_ID |Extraire le object_id à partir d’un `node_id`  |
+|GRAPH_ID_FROM_NODE_ID  |Extraire le graph_id à partir d’un `node_id`  |
+|NODE_ID_FROM_PARTS |Construit un node_id à partir d’un `object_id` et d’un `graph_id`  |
+|OBJECT_ID_FROM_EDGE_ID |Extraire `object_id` à partir de `edge_id`  |
+|GRAPH_ID_FROM_EDGE_ID  |Extraire l’identité de `edge_id`  |
 |EDGE_ID_FROM_PARTS |Construire `edge_id` à partir de `object_id` et Identity  |
 
 
@@ -137,10 +138,10 @@ Découvrez les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdu
 
 |Tâche   |Article connexe  |Notes
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE`est maintenant étendu pour prendre en charge la création d’une table en tant que nœud ou EDGE. Notez qu’une table Edge peut ou non avoir des attributs définis par l’utilisateur.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` est maintenant étendu pour prendre en charge la création d’une table en tant que nœud ou EDGE. Notez qu’une table Edge peut ou non avoir des attributs définis par l’utilisateur.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Les tables de nœuds et de périphérie peuvent être modifiées de la même façon qu’une table relationnelle, à l’aide de `ALTER TABLE` . Les utilisateurs peuvent ajouter ou modifier des colonnes, des index ou des contraintes définis par l’utilisateur. Toutefois, la modification de colonnes graphiques internes, comme `$node_id` ou `$edge_id` , génère une erreur.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Les utilisateurs peuvent créer des index sur des pseudo-colonnes et des colonnes définies par l’utilisateur dans des tables de nœuds et de périphérie. Tous les types d’index sont pris en charge, y compris les index ColumnStore cluster et non cluster.  |
-|CRÉER DES CONTRAINTES DE PÉRIPHÉRIE    |[CONTRAINTES EDGE &#40;&#41;Transact-SQL](../../relational-databases/tables/graph-edge-constraints.md)  |Les utilisateurs peuvent désormais créer des contraintes Edge sur les tables Edge pour appliquer une sémantique spécifique et maintenir l’intégrité des données.  |
+|CRÉER DES CONTRAINTES DE PÉRIPHÉRIE    |[CONTRAINTES EDGE &#40;&#41;Transact-SQL ](../../relational-databases/tables/graph-edge-constraints.md)  |Les utilisateurs peuvent désormais créer des contraintes Edge sur les tables Edge pour appliquer une sémantique spécifique et maintenir l’intégrité des données.  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Les tables de nœuds et de périphérie peuvent être supprimées de la même façon qu’une table relationnelle, à l’aide de `DROP TABLE` . Toutefois, dans cette version, il n’existe aucune contrainte pour garantir qu’aucun bord ne pointe vers un nœud supprimé et que la suppression en cascade des bords n’est pas prise en charge lors de la suppression d’une table de nœuds ou de nœuds. Si une table de nœuds est supprimée, les utilisateurs déposent manuellement les bords connectés aux nœuds de cette table de nœuds afin de préserver l’intégrité du graphique.  |
 
 
@@ -148,10 +149,10 @@ Découvrez les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdu
 
 |Tâche   |Article connexe  |Notes
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|L’insertion dans une table de nœuds n’est pas différente de l’insertion dans une table relationnelle. Les valeurs de la `$node_id` colonne sont générées automatiquement. Toute tentative d’insertion d’une valeur dans `$node_id` ou de `$edge_id` colonne génère une erreur. Les utilisateurs doivent fournir des valeurs pour les `$from_id` `$to_id` colonnes et lors de l’insertion dans une table Edge. `$from_id`et `$to_id` sont les `$node_id` valeurs des nœuds auxquels se connecte un bord donné.  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|L’insertion dans une table de nœuds n’est pas différente de l’insertion dans une table relationnelle. Les valeurs de la `$node_id` colonne sont générées automatiquement. Toute tentative d’insertion d’une valeur dans `$node_id` ou de `$edge_id` colonne génère une erreur. Les utilisateurs doivent fournir des valeurs pour les `$from_id` `$to_id` colonnes et lors de l’insertion dans une table Edge. `$from_id` et `$to_id` sont les `$node_id` valeurs des nœuds auxquels se connecte un bord donné.  |
 |Suppression | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Les données des tables de nœuds ou d’arêtes peuvent être supprimées de la même façon qu’elles sont supprimées des tables relationnelles. Toutefois, dans cette version, il n’existe aucune contrainte pour garantir qu’aucun bord ne pointe vers un nœud supprimé et que la suppression en cascade des bords n’est pas prise en charge lors de la suppression d’un nœud. Quand un nœud est supprimé, tous les bords de connexion à ce nœud sont également supprimés, afin de préserver l’intégrité du graphique.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Les valeurs des colonnes définies par l’utilisateur peuvent être mises à jour à l’aide de l’instruction UPDATE. La mise à jour des colonnes graphiques internes, `$node_id` , `$edge_id` `$from_id` et `$to_id` n’est pas autorisée.  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`l’instruction est prise en charge sur une table de nœuds ou d’arêtes.  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` l’instruction est prise en charge sur une table de nœuds ou d’arêtes.  |
 
 
 ### <a name="query-statements"></a>Instructions de requête
@@ -159,7 +160,7 @@ Découvrez les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdu
 |Tâche   |Article connexe  |Notes
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Les nœuds et les bords sont stockés en interne en tant que tables. par conséquent, la plupart des opérations prises en charge sur une table dans SQL Server ou Azure SQL Database sont prises en charge sur les tables de nœuds et de périphérie  |
-|MATCH  | [Faire correspondre &#40;&#41;Transact-SQL](../../t-sql/queries/match-sql-graph.md)|La fonction intégrée de correspondance est introduite pour prendre en charge les critères spéciaux et traverser le graphique.  |
+|MATCH  | [Faire correspondre &#40;&#41;Transact-SQL ](../../t-sql/queries/match-sql-graph.md)|La fonction intégrée de correspondance est introduite pour prendre en charge les critères spéciaux et traverser le graphique.  |
 
 
 

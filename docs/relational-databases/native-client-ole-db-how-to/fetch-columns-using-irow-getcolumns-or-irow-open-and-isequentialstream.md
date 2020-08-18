@@ -1,4 +1,5 @@
 ---
+description: Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
 title: 'Fetch, IRow :: GetColumns et ISequentialStream'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,11 +16,12 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b778ba143c2157278df2d8c0d8c7cbcbf3fd8bda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7c84ce463eabda4abb641059dc62d6c767e754be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407985"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +29,7 @@ ms.locfileid: "86011198"
   Des données volumineuses peuvent être liées ou extraites avec l’interface **ISequentialStream**. Pour les colonnes liées, l'indicateur d'état DBSTATUS_S_TRUNCATED indique que les données sont tronquées.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Pour extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream  
   
@@ -35,7 +37,7 @@ ms.locfileid: "86011198"
   
 2.  Exécutez la commande (dans cet exemple, **ICommandExecute::Execute()** est appelée avec IID_IRow).  
   
-3.  Récupérez les données de colonne avec **IRow::Open()** ou **IRow::GetColumns()**.  
+3.  Récupérez les données de colonne avec **IRow::Open()** ou **IRow::GetColumns()** .  
   
     -   **IRow::Open()** peut être utilisé pour ouvrir un **ISequentialStream** sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (vous pouvez ensuite utiliser **IStream** ou **ISequentialStream** pour lire les données de la colonne).  
   

@@ -1,4 +1,5 @@
 ---
+description: Changements de comportement et pilotes ODBC 3.x
 title: Changements de comportement et pilotes ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8343573261d74a6a0c652cf425b12da91f7cb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f64aa4b627130308ea920918c2de6d98116020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411335"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Changements de comportement et pilotes ODBC 3.x
 L’attribut d’environnement SQL_ATTR_ODBC_VERSION indique au pilote s’il doit présenter un comportement ODBC *2. x* ou un comportement ODBC *3. x* . La façon dont l’attribut d’environnement SQL_ATTR_ODBC_VERSION est défini dépend de l’application. Les applications ODBC *3. x* doivent appeler **SQLSetEnvAttr** pour définir cet attribut après avoir appelé **SQLAllocHandle** pour allouer un handle d’environnement et avant d’appeler **SQLAllocHandle** pour allouer un handle de connexion. Si ce n’est pas le cas, le gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction) sur le dernier appel à **SQLAllocHandle**.  

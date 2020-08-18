@@ -1,4 +1,5 @@
 ---
+description: 'Annexe C : Grammaire SQL'
 title: 'Annexe C : grammaire SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f783cd4cf65011d80a631eff191d246e1c83c569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b91f946354659d93ae9609fbf7425ac20eb4278f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411515"
 ---
 # <a name="appendix-c-sql-grammar"></a>Annexe C : Grammaire SQL
 Cette annexe contient les rubriques suivantes.  
