@@ -1,4 +1,5 @@
 ---
+description: DELETE (DMX)
 title: SUPPRIMER (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ce350c4d99fec986d8df06c364e6f6adac94324
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c6050a387af893e984b95c036181b7f16a269dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491539"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +33,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *model*  
  Identificateur du modèle  
   
- *arborescence*  
+ *structure*  
  Identificateur de la structure  
   
 ## <a name="remarks"></a>Notes  
@@ -42,9 +43,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |.|Résultats|  
 |---------------|------------|  
-|SUPPRIMER DE LA STRUCTURE D’EXPLORATION DE DONNÉES*\<structure>*<br /><br /> ou<br /><br /> SUPPRIMER de la STRUCTURE d’exploration de données *\<structure>* . HUMIDITÉ|Exécute ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
+|SUPPRIMER DE LA STRUCTURE D’EXPLORATION DE DONNÉES*\<structure>*<br /><br /> or<br /><br /> SUPPRIMER de la STRUCTURE d’exploration de données *\<structure>* . HUMIDITÉ|Exécute ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
 |SUPPRIMER de la STRUCTURE d’exploration de données *\<structure>* . PARFOIS|Exécute ProcessClearStructureOnly sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données, en laissant ses modèles d'exploration de données associés intacts. Une fois la structure d'exploration de données supprimée, l'extraction dans les modèles d'exploration de données associés échoue.|  
-|SUPPRIMER DU MODÈLE D’EXPLORATION DE DONNÉES*\<model>*<br /><br /> ou<br /><br /> SUPPRIMER du modèle d’exploration de données *\<model>* . HUMIDITÉ|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’État intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
+|SUPPRIMER DU MODÈLE D’EXPLORATION DE DONNÉES*\<model>*<br /><br /> or<br /><br /> SUPPRIMER du modèle d’exploration de données *\<model>* . HUMIDITÉ|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’État intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
   
  Pour plus d’informations sur les types de traitement, consultez [élément Type &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
   

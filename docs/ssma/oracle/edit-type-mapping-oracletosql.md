@@ -1,4 +1,5 @@
 ---
+description: Modifier le mappage de type (OracleToSQL)
 title: Modifier le mappage de type (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1df40b843064513f6b2c135355b26f745c336011
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7b90da225116a2221d5a2492e1b7e5bfdc33ab91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492382"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Modifier le mappage de type (OracleToSQL)
 La boîte de dialogue **modifier le mappage de type** vous permet de spécifier la manière dont les types sont mappés entre les objets de base de données source et de destination.  
@@ -45,6 +46,6 @@ Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type 
   
 Si le type de données est de longueur variable, le champ suivant s’affiche sous **type de cible**:  
   
-**Remplacer par**  
+**Replace with**  
 Spécifiez la longueur cible pour ce mappage. Par exemple, pour le type de données **nvarchar** , vous pouvez entrer 20 pour spécifier que le type de données source spécifié doit être mappé à **nvarchar (20)**.  
   

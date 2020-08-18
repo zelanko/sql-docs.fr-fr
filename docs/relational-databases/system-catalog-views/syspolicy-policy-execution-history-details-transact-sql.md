@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policy_execution_history_details (Transact-SQL)
 title: syspolicy_policy_execution_history_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b761d0e056037c134a3be837be04cba9395d9273
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ecb084ff03931bc82a7a07e19f66949d8a834343
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423393"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85900034"
 |exception_message|**nvarchar(max)**|Message généré par l'exception si celle-ci se produit.|  
 |exception|**nvarchar(max)**|Description de l'exception si celle-ci se produit.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque vous dépannez la Gestion basée sur des stratégies, interrogez la vue syspolicy_policy_execution_history_details pour déterminer quelles combinaisons de cible et d'expression de condition ont échoué, quand elles ont échoué, et passez en revue les erreurs associées.  
   
  La requête suivante combine la vue `syspolicy_policy_execution_history_details` avec les vues `syspolicy_policy_execution_history_details` et `syspolicy_policies` pour afficher le nom de la stratégie, le nom de la condition et les détails se rapportant aux échecs.  

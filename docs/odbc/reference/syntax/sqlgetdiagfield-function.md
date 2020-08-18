@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLGetDiagField
 title: SQLGetDiagField, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a26319868a4b94b895da73d39b284f612fe35889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92043f5deb505d60ebe168a9c219c4d37a304ed5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461024"
 ---
 # <a name="sqlgetdiagfield-function"></a>Fonction SQLGetDiagField
 
@@ -79,7 +80,7 @@ SQLRETURN SQLGetDiagField(
  Si *DiagInfoPtr* a la valeur null, *StringLengthPtr* retourne toujours le nombre total d’octets (à l’exception du caractère de fin null pour les données de type caractère) disponibles pour retourner dans la mémoire tampon vers laquelle pointe *DiagInfoPtr*.  
   
  *BufferLength*  
- Entrée Si *DiagIdentifier* est un diagnostic défini par ODBC et que *DiagInfoPtr* pointe vers une chaîne de caractères ou une mémoire tampon binaire, cet argument doit être \*la longueur de *DiagInfoPtr*. Si *DiagIdentifier* est un champ défini par ODBC et \* *DiagInfoPtr* est un entier, *BufferLength* est ignoré. Si la valeur de * \*DiagInfoPtr* est une chaîne Unicode (lors de l’appel de **SQLGetDiagFieldW**), l’argument *BufferLength* doit être un nombre pair.  
+ Entrée Si *DiagIdentifier* est un diagnostic défini par ODBC et que *DiagInfoPtr* pointe vers une chaîne de caractères ou une mémoire tampon binaire, cet argument doit être la longueur de \* *DiagInfoPtr*. Si *DiagIdentifier* est un champ défini par ODBC et \* *DiagInfoPtr* est un entier, *BufferLength* est ignoré. Si la valeur de * \* DiagInfoPtr* est une chaîne Unicode (lors de l’appel de **SQLGetDiagFieldW**), l’argument *BufferLength* doit être un nombre pair.  
   
  Si *DiagIdentifier* est un champ défini par le pilote, l’application indique la nature du champ au gestionnaire de pilotes en définissant l’argument *BufferLength* . *BufferLength* peut avoir les valeurs suivantes :  
   
@@ -89,10 +90,10 @@ SQLRETURN SQLGetDiagField(
   
 -   Si *DiagInfoPtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou une chaîne binaire, *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
   
--   Si * \*DiagInfoPtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, selon le cas.  
+-   Si * \* DiagInfoPtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, selon le cas.  
   
  *StringLengthPtr*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total d’octets (à l’exception du nombre d’octets requis pour le caractère de fin null) disponibles pour \*retourner dans *DiagInfoPtr*, pour les données de type caractère. Si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength*, le texte de \* *DiagInfoPtr* est tronqué à *BufferLength* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total d’octets (à l’exception du nombre d’octets requis pour le caractère de fin null) disponibles pour retourner dans \* *DiagInfoPtr*, pour les données de type caractère. Si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength*, le texte de \* *DiagInfoPtr* est tronqué à *BufferLength* moins la longueur d’un caractère de fin null.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_NO_DATA.  

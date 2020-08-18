@@ -1,4 +1,5 @@
 ---
+description: 'Annexe F : Bibliothèque de curseurs ODBC'
 title: 'Annexe F : bibliothèque de curseurs ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 325c7cdc5d2fb185ef3dbd2500a20230d90193bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411425"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Annexe F : Bibliothèque de curseurs ODBC
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans de nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande l’utilisation de la fonctionnalité de curseur du pilote.  
   
- La bibliothèque de curseurs ODBC (odbccr32. dll) prend en charge les curseurs de blocage de bloc pour tout pilote conforme au niveau de conformité de l’API de niveau 1 et peut être redistribué par les développeurs avec leurs applications ou pilotes. La bibliothèque de curseurs prend également en charge les instructions Update et DELETE positionnées pour les jeux de résultats générés par les instructions **Select** . Bien qu’il prenne en charge uniquement les curseurs statiques et les curseurs avant uniquement, la bibliothèque de curseurs répond aux besoins de nombreuses applications. En outre, elle peut fournir de bonnes performances, en particulier pour les jeux de résultats de petite taille et de taille moyenne, et pour les applications qui n’ont pas une bonne prise en charge de curseur.  
+ La bibliothèque de curseurs ODBC (Odbccr32.dll) prend en charge les curseurs avec défilement de bloc pour tout pilote conforme au niveau de conformité de l’API de niveau 1 et peut être redistribué par les développeurs avec leurs applications ou pilotes. La bibliothèque de curseurs prend également en charge les instructions Update et DELETE positionnées pour les jeux de résultats générés par les instructions **Select** . Bien qu’il prenne en charge uniquement les curseurs statiques et les curseurs avant uniquement, la bibliothèque de curseurs répond aux besoins de nombreuses applications. En outre, elle peut fournir de bonnes performances, en particulier pour les jeux de résultats de petite taille et de taille moyenne, et pour les applications qui n’ont pas une bonne prise en charge de curseur.  
   
  La bibliothèque de curseurs est une bibliothèque de liens dynamiques (DLL) qui se trouve entre le gestionnaire de pilotes et le pilote. Quand une application appelle une fonction, le gestionnaire de pilotes appelle la fonction dans la bibliothèque de curseurs, qui exécute la fonction ou l’appelle dans le pilote spécifié. Pour une connexion donnée, une application spécifie si la bibliothèque de curseurs est toujours utilisée, utilisée si le pilote ne prend pas en charge les curseurs de défilement ou n’est jamais utilisée.  
   

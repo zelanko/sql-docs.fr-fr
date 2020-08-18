@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_cleanup_change_table (Transact-SQL)
 title: sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac10ff9accd4cac39caef8139406319701026e79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe0e83a4a74be15c405da6b9a95456b71b46e2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492863"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime des lignes de la table de modifications dans la base de données actuelle en fonction de la valeur de *low_water_mark* spécifiée. Cette procédure stockée est fournie aux utilisateurs qui souhaitent gérer le processus du nettoyage de la table de modifications directement. Toutefois, soyez vigilant, car la procédure affecte tous les consommateurs des données de la table de modifications.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

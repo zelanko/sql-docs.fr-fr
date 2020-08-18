@@ -1,4 +1,5 @@
 ---
+description: sys.syscacheobjects (Transact-SQL)
 title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d065ba57ab90e1bb035a6ef92100d351d93603
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25160eb8e7a25e2a4ec6d2f8b318fc78e7af61ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399675"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85899945"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|ID du compartiment. La valeur est comprise entre 0 et (taille du répertoire -1). La taille du répertoire est la taille de la table de hachage.|  
 |**cacheobjtype**|**nvarchar(17)**|Type de l'objet dans le cache :<br /><br /> Plan compilé<br /><br /> Plan exécutable<br /><br /> Arborescence d'analyse<br /><br /> Curseur<br /><br /> Procédure stockée étendue|  
-|**déclaré**|**nvarchar(8)**|Type d’objet :<br /><br /> Procédure stockée<br /><br /> Instruction préparée<br /><br /> Requête ad hoc ( [!INCLUDE[tsql](../../includes/tsql-md.md)] soumise en tant qu’événements de langage à partir des utilitaires **sqlcmd** ou **osql** , au lieu d’appels de procédure distante)<br /><br /> ReplProc (procédure de réplication)<br /><br /> Déclencheur<br /><br /> Affichage<br /><br /> Valeur par défaut<br /><br /> Table utilisateur<br /><br /> Table système<br /><br /> Vérification<br /><br /> Règle|  
+|**déclaré**|**nvarchar(8)**|Type d’objet :<br /><br /> Procédure stockée<br /><br /> Instruction préparée<br /><br /> Requête ad hoc ( [!INCLUDE[tsql](../../includes/tsql-md.md)] soumise en tant qu’événements de langage à partir des utilitaires **sqlcmd** ou **osql** , au lieu d’appels de procédure distante)<br /><br /> ReplProc (procédure de réplication)<br /><br /> Déclencheur<br /><br /> Vue<br /><br /> Default<br /><br /> Table utilisateur<br /><br /> Table système<br /><br /> Vérification<br /><br /> Règle|  
 |**objid**|**int**|Une des clés principales servant à rechercher un objet dans le cache. Il s’agit de l’ID d’objet stocké dans **sysobjects** pour les objets de base de données (procédures, vues, déclencheurs, etc.). Pour les objets de cache tels que le SQL ad hoc ou préparé, **objID** est une valeur générée en interne.|  
 |**dbid**|**smallint**|ID de la base de données dans laquelle a été compilé l'objet contenu dans le cache|  
 |**dbidexec**|**smallint**|ID de la base de données à partir de laquelle la requête est exécutée.<br /><br /> Pour la plupart des objets, **dbidexec** a la même valeur que **dbid**.<br /><br /> Pour les vues système, **dbidexec** est l’ID de base de données à partir duquel la requête est exécutée.<br /><br /> Pour les requêtes ad hoc, **dbidexec** est égal à 0. Cela signifie que **dbidexec** a la même valeur que **dbid**.|  
-|**uid**|**smallint**|Indique le créateur du plan pour les plans de requête ad hoc et les plans préparés.<br /><br /> –2 = le traitement soumis ne dépend pas de la résolution implicite des noms et peut être partagé entre différents utilisateurs. Ceci est la méthode privilégiée. Toute autre valeur représente l'ID de l'utilisateur soumettant la requête dans la base de données.<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
+|**codé**|**smallint**|Indique le créateur du plan pour les plans de requête ad hoc et les plans préparés.<br /><br /> –2 = le traitement soumis ne dépend pas de la résolution implicite des noms et peut être partagé entre différents utilisateurs. Ceci est la méthode privilégiée. Toute autre valeur représente l'ID de l'utilisateur soumettant la requête dans la base de données.<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |**refcounts**|**int**|Nombre d'autres objets dans le cache faisant référence à cet objet. Un nombre de 1 est la base.|  
 |**usecounts**|**int**|Nombre d'utilisations de l'objet dans le cache depuis le début|  
 |**pagesused**|**int**|Nombre de pages consommées par l'objet dans le cache.|  

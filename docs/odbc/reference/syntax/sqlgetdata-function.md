@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLGetData
 title: Fonction SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac11505b8e47dae8df53af27c64a7ee6372b3f28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a659e1bb5ad7765dbfcbcb01dbc16744de7cfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461077"
 ---
 # <a name="sqlgetdata-function"></a>Fonction SQLGetData
 **Conformité**  
@@ -70,7 +71,7 @@ SQLRETURN SQLGetData(
  *BufferLength*  
  Entrée Longueur de la mémoire tampon **TargetValuePtr* en octets.  
   
- Le pilote utilise *BufferLength* pour éviter d’écrire au-delà de \*la fin de la mémoire tampon *TargetValuePtr* lors du retour de données de longueur variable, telles que des données de type caractère ou binaire. Notez que le pilote compte le caractère de fin null lorsqu’il retourne des données \*de type caractère à *TargetValuePtr*. **TargetValuePtr* doit donc contenir de l’espace pour le caractère de fin null ou le pilote va tronquer les données.  
+ Le pilote utilise *BufferLength* pour éviter d’écrire au-delà de la fin de la \* mémoire tampon *TargetValuePtr* lors du retour de données de longueur variable, telles que des données de type caractère ou binaire. Notez que le pilote compte le caractère de fin null lorsqu’il retourne des données de type caractère à \* *TargetValuePtr*. **TargetValuePtr* doit donc contenir de l’espace pour le caractère de fin null ou le pilote va tronquer les données.  
   
  Lorsque le pilote retourne des données de longueur fixe, telles qu’un entier ou une structure de date, le pilote ignore *BufferLength* et suppose que la mémoire tampon est suffisamment grande pour contenir les données. Il est donc important pour l’application d’allouer une mémoire tampon suffisamment importante pour les données de longueur fixe ou le pilote écrira au-delà de la fin de la mémoire tampon.  
   
@@ -153,7 +154,7 @@ SQLRETURN SQLGetData(
  Si l’argument *TargetType* est un type de données Interval, la précision de l’intervalle par défaut (2) et la précision de l’intervalle par défaut (6), telles que définies dans les champs SQL_DESC_DATETIME_INTERVAL_PRECISION et SQL_DESC_PRECISION de l’ARD, respectivement, sont utilisées pour les données. Si l’argument *TargetType* est un type de données SQL_C_NUMERIC, la précision par défaut (définie par le pilote) et l’échelle par défaut (0), telles que définies dans les champs SQL_DESC_PRECISION et SQL_DESC_SCALE de ARD, sont utilisées pour les données. Si une précision ou une échelle par défaut n’est pas appropriée, l’application doit définir explicitement le champ de descripteur approprié à l’aide d’un appel à **SQLSetDescField** ou **SQLSetDescRec**. Elle peut définir le champ SQL_DESC_CONCISE_TYPE sur SQL_C_NUMERIC et appeler **SQLGetData** avec un argument *TargetType* de SQL_ARD_TYPE, ce qui entraîne l’utilisation des valeurs de précision et d’échelle dans les champs de descripteur.  
   
 > [!NOTE]
->  Dans ODBC 2 *. x*, les applications définissent *TargetType* à SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP pour \*indiquer que *TargetValuePtr* est une structure de date, d’heure ou d’horodatage. Dans ODBC 3 *. x*, les applications définissent *TargetType* sur SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. Le gestionnaire de pilotes effectue les mappages appropriés, si nécessaire, en fonction de la version de l’application et du pilote.  
+>  Dans ODBC 2 *. x*, les applications définissent *TargetType* à SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP pour indiquer que \* *TargetValuePtr* est une structure de date, d’heure ou d’horodatage. Dans ODBC 3 *. x*, les applications définissent *TargetType* sur SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. Le gestionnaire de pilotes effectue les mappages appropriés, si nécessaire, en fonction de la version de l’application et du pilote.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Récupération de données de longueur variable dans des parties  
  **SQLGetData** peut être utilisé pour extraire des données d’une colonne qui contient des données de longueur variable en parties, c’est-à-dire lorsque l’identificateur du type de données SQL de la colonne est SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou un identificateur spécifique au pilote pour un type de longueur variable.  
@@ -189,11 +190,11 @@ SQLRETURN SQLGetData(
   
      **SQLGetData** ne tronque jamais les données converties en types de données de longueur fixe ; elle suppose toujours que la longueur de **TargetValuePtr* est la taille du type de données.  
   
-6.  Place les données converties (et éventuellement tronquées \*) dans *TargetValuePtr*. Notez que **SQLGetData** ne peut pas retourner de données hors ligne.  
+6.  Place les données converties (et éventuellement tronquées) dans \* *TargetValuePtr*. Notez que **SQLGetData** ne peut pas retourner de données hors ligne.  
   
 7.  Place la longueur des données dans \* *StrLen_or_IndPtr*. Si *StrLen_or_IndPtr* était un pointeur null, **SQLGetData** ne retourne pas la longueur.  
   
-    -   Pour les données de type caractère ou binaire, il s’agit de la longueur des données après la conversion et avant la troncation en raison de *BufferLength*. Si le pilote ne peut pas déterminer la longueur des données après la conversion, comme c’est parfois le cas avec des données longues, il retourne SQL_SUCCESS_WITH_INFO et définit la longueur sur SQL_NO_TOTAL. (Le dernier appel à **SQLGetData** doit toujours retourner la longueur des données, et non zéro ou SQL_NO_TOTAL.) Si les données ont été tronquées en raison de l’attribut d’instruction SQL_ATTR_MAX_LENGTH, la valeur de cet attribut, par opposition à la longueur réelle \*, est placée dans *StrLen_or_IndPtr*. Cela est dû au fait que cet attribut est conçu pour tronquer les données sur le serveur avant la conversion, de sorte que le pilote n’a aucun moyen de déterminer la longueur réelle. Lorsque **SQLGetData** est appelé plusieurs fois de suite pour la même colonne, il s’agit de la longueur des données disponibles au début de l’appel en cours. autrement dit, la longueur diminue avec chaque appel suivant.  
+    -   Pour les données de type caractère ou binaire, il s’agit de la longueur des données après la conversion et avant la troncation en raison de *BufferLength*. Si le pilote ne peut pas déterminer la longueur des données après la conversion, comme c’est parfois le cas avec des données longues, il retourne SQL_SUCCESS_WITH_INFO et définit la longueur sur SQL_NO_TOTAL. (Le dernier appel à **SQLGetData** doit toujours retourner la longueur des données, et non zéro ou SQL_NO_TOTAL.) Si les données ont été tronquées en raison de l’attribut d’instruction SQL_ATTR_MAX_LENGTH, la valeur de cet attribut, par opposition à la longueur réelle, est placée dans \* *StrLen_or_IndPtr*. Cela est dû au fait que cet attribut est conçu pour tronquer les données sur le serveur avant la conversion, de sorte que le pilote n’a aucun moyen de déterminer la longueur réelle. Lorsque **SQLGetData** est appelé plusieurs fois de suite pour la même colonne, il s’agit de la longueur des données disponibles au début de l’appel en cours. autrement dit, la longueur diminue avec chaque appel suivant.  
   
     -   Pour tous les autres types de données, il s’agit de la longueur des données après la conversion ; autrement dit, il s’agit de la taille du type vers lequel les données ont été converties.  
   

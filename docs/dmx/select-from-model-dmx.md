@@ -1,4 +1,5 @@
 ---
+description: SÉLECTIONNER à partir du &lt; modèle &gt; (DMX)
 title: SÉLECTIONNER à partir du &lt; modèle &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6244581b4d9a383c2d09af351c5fbe3149207ebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471976"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SÉLECTIONNER à partir du &lt; modèle &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,16 +35,16 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Liste séparée par des virgules des expressions, ou des colonnes de type Predict ou Predict only.   
   
  *n*  
- Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *model*  
  Identificateur du modèle  
   
  *liste de conditions*  
- Optionnel. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Optionnel. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Les colonnes de la *liste d’expressions* doivent être définies comme prédiction ou prédire uniquement ou associées à une colonne prévisible.  
@@ -64,7 +65,7 @@ FROM Forecasting
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
+ [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

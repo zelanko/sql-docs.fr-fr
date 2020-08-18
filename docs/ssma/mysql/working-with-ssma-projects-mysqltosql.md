@@ -1,4 +1,5 @@
 ---
+description: Utilisation de projets SSMA (MySQLToSQL)
 title: Utilisation de projets SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492418"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Utilisation de projets SSMA (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Server ou SQL Azure, vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -45,7 +46,7 @@ SSMA contient plusieurs paramètres pour la conversion et le chargement de la ba
   
 3.  Dans le volet gauche, cliquez sur **conversion**.  
   
-4.  Dans le volet droit, examinez et modifiez les paramètres selon vos besoins. Pour plus d’informations sur ces paramètres, consultez [paramètres du projet &#40;Conversion&#41; &#40;&#41;MySQLToSQL](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
+4.  Dans le volet droit, examinez et modifiez les paramètres selon vos besoins. Pour plus d’informations sur ces paramètres, consultez [paramètres du projet &#40;Conversion&#41; &#40;&#41;MySQLToSQL ](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
   
 5.  Répétez les étapes 1-3 pour la migration, la synchronisation, les SQL Azure, l’interface utilisateur graphique et les pages de mappage de type.  
   
@@ -81,7 +82,7 @@ Pour migrer des données de bases de données MySQL vers SQL Server ou SQL Azure
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   Azure SQL Database  
   

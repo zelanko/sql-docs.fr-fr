@@ -1,4 +1,5 @@
 ---
+description: Modifier le mappage de type (SybaseToSQL)
 title: Modifier le mappage de type (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 043eb1a2eaf9325d8a252598b26317017d92fa94
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3f9f5e0f498dbe6a8fe45a9c80cbf3c512f04bac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492277"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Modifier le mappage de type (SybaseToSQL)
 La boîte de dialogue **modifier le mappage de type** vous permet de spécifier la manière dont les types sont mappés entre les objets de base de données source et de destination.  
@@ -44,6 +45,6 @@ Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type 
   
 Si le type de données est de longueur variable, le champ suivant s’affiche sous **type de cible**:  
   
-**Remplacer par**  
+**Replace with**  
 Spécifiez la longueur cible pour ce mappage. Par exemple, pour le type de données **nvarchar** , vous pouvez entrer 20 pour spécifier que le type de données source spécifié doit être mappé à **nvarchar (20)**.  
   

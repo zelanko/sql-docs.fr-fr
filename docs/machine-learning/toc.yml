@@ -37,6 +37,8 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: Mettre à niveau Python et R
       href: ../machine-learning/install/upgrade-r-and-python.md
+    - name: Changer la version de langage par défaut
+      href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: Notebooks Azure Data Studio
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
     - name: Configurer un client Python
@@ -100,15 +102,15 @@
         - name: Python pour les développeurs SQL
           items:
             - name: 1 - Introduction
-              href: ../machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md
+              href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
             - name: 2 - Exploration des données
-              href: ../machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+              href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
             - name: 3 - Ingénierie des caractéristiques
-              href: ../machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
             - name: 4 - Entraîner et déployer
-              href: ../machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
             - name: 5 - Prédictions
-              href: ../machine-learning/tutorials/sqldev-py6-operationalize-the-model.md
+              href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
     - name: R
       items:
         - name: Tutoriels sur R
@@ -135,18 +137,18 @@
               href: ../machine-learning/tutorials/r-clustering-model-deploy.md
         - name: Créer des modèles basés sur une partition
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: Utiliser R dans T-SQL
+        - name: R pour les développeurs SQL
           items:
             - name: 1. Introduction
-              href: ../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md
+              href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
             - name: 2. Exploration des données
-              href: ../machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md
+              href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
             - name: 3. Ingénierie des caractéristiques
-              href: ../machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
             - name: 4. Entraîner et déployer
-              href: ../machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
             - name: 5. Prévisions
-              href: ../machine-learning/tutorials/sqldev-operationalize-the-model.md
+              href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
         - name: Utiliser SQL ML dans les outils R
           items:
             - name: 1. Introduction
@@ -229,6 +231,14 @@
               href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
     - name: Exploration et modélisation des données
       items:
+        - name: Python
+          items:
+            - name: Tracer un histogramme en Python
+              href: ../machine-learning/data-exploration/python-plot-histogram.md
+            - name: Importer des données dans un dataframe pandas
+              href: ../machine-learning/data-exploration/python-dataframe-pandas.md
+            - name: Insérer un dataframe dans SQL
+              href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
         - name: R
           items:
             - name: Charger des objets R avec ODBC
@@ -255,12 +265,10 @@
           href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
     - name: Prévisions
       items:
-        - name: Guide pratique pour générer des prédictions
-          href: ../machine-learning/r/how-to-do-realtime-scoring.md
-        - name: Scoring en temps réel avec sp_rxPredict
-          href: ../machine-learning/real-time-scoring.md
         - name: Scoring natif avec PREDICT T-SQL
-          href: ../machine-learning/sql-native-scoring.md
+          href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
+        - name: Scoring en temps réel avec sp_rxPredict
+          href: ../machine-learning/predictions/real-time-scoring.md
     - name: Gestion des packages
       items:
         - name: Installer de nouveaux packages Python
@@ -359,19 +367,23 @@
           href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: Ressources
   items:
-    - name: Notes de publication >
+    - name: "Notes de publication\_2019 >"
+      href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+    - name: "Notes de publication\_2017 >"
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+    - name: "Notes de publication\_2016 >"
+      href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+    - name: "Notes de publication\_2014 >"
+      href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
     - name: Dépannage
       items:
         - name: Vue d’ensemble de la résolution des problèmes
-          href: ../machine-learning/machine-learning-troubleshooting-faq.md
+          href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
         - name: Problèmes connus
-          href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
-        - name: Collecte de données
-          href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-        - name: Erreurs d’installation et de mise à niveau
-          href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
-        - name: Erreurs de Launchpad et d’exécution de script externe
-          href: ../machine-learning/common-issues-external-script-execution.md
-        - name: Erreurs de scripts R
-          href: ../machine-learning/r-script-execution-errors.md
+          href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
+        - name: Collecter des données pour résoudre les problèmes
+          href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
+        - name: Erreurs de Launchpad et de script externe
+          href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
+        - name: Erreurs courantes de script R
+          href: ../machine-learning/troubleshooting/r-script-execution-errors.md

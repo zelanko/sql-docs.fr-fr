@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (Synchronisation) (MySQLToSQL)
 title: Paramètres du projet (synchronisation) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cbf4252f9d9fb71fe98755dfbba748ca15ca5657
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492381"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Paramètres du projet (Synchronisation) (MySQLToSQL)
 Les **paramètres du projet** de synchronisation vous permettent de configurer le mode de synchronisation des objets de base de données MySQL avec SQL Server objets de base de données.  

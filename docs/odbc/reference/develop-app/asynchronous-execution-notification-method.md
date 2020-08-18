@@ -1,4 +1,5 @@
 ---
+description: Exécution asynchrone (méthode de notification)
 title: Exécution asynchrone (méthode de notification) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c201d71d42c40277ad67cef25922e55e97de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483122"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Exécution asynchrone (méthode de notification)
 ODBC permet l’exécution asynchrone d’opérations de connexion et d’instruction. Un thread d’application peut appeler une fonction ODBC en mode asynchrone et la fonction peut retourner avant que l’opération ne soit terminée, ce qui permet au thread d’application d’effectuer d’autres tâches. Dans le kit de développement logiciel (SDK) Windows 7, pour les opérations de connexion ou d’instruction asynchrones, une application a déterminé que l’opération asynchrone a été effectuée à l’aide de la méthode d’interrogation. Pour plus d’informations, consultez [exécution asynchrone (méthode d’interrogation)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). À compter du kit de développement logiciel (SDK) Windows 8, vous pouvez déterminer qu’une opération asynchrone est terminée à l’aide de la méthode de notification.  
@@ -47,7 +48,7 @@ ODBC permet l’exécution asynchrone d’opérations de connexion et d’instru
   
  Une application doit vérifier la version du gestionnaire de pilotes avant d’utiliser cette fonctionnalité. Dans le cas contraire, si un pilote mal écrit ne s’affiche pas et que la version du gestionnaire de pilotes est antérieure à ODBC 3,81, le comportement n’est pas défini.  
   
-## <a name="use-cases"></a>Cas d'utilisation  
+## <a name="use-cases"></a>Cas d’usage  
  Cette section présente les cas d’utilisation pour l’exécution asynchrone et le mécanisme d’interrogation.  
   
 ### <a name="integrate-data-from-multiple-odbc-sources"></a>Intégrer des données de plusieurs sources ODBC  
@@ -330,7 +331,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Activer|non null|Notification asynchrone|  
 |Activer|null|Interrogation asynchrone|  
-|Disable|n'importe laquelle|Synchrone|  
+|Désactiver|n'importe laquelle|Synchrone|  
   
  Une application peut désactiver temporellement le mode d’opération asynchrone. ODBC ignore les valeurs de SQL_ATTR_ASYNC_DBC_EVENT si l’opération asynchrone au niveau de la connexion est désactivée. ODBC ignore les valeurs de SQL_ATTR_ASYNC_STMT_EVENT si l’opération asynchrone au niveau de l’instruction est désactivée.  
   

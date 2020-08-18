@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption (pilote Access)
 title: SQLSetConnectOption (pilote Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e5f15575d34031d9886219af5677b4fc5f1d5aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a007693a59c190a29bf9895446e916d5c232bb9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483312"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (pilote Access)
 > [!NOTE]  
 >  Cette rubrique fournit des informations spécifiques au pilote d’accès. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Comment|  
+|fOption|Commentaire|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être défini sur SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le pilote n’empêche pas les mises à jour si SQL_ACCESS_MODE est défini sur SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Lorsque le pilote Microsoft Access est utilisé, l’option SQL_AUTOCOMMIT peut avoir la valeur SQL_AUTOCOMMIT_ON ou SQL_AUTOCOMMIT_OFF, car le pilote Microsoft Access prend en charge les transactions [1].|  

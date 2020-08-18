@@ -1,4 +1,5 @@
 ---
+description: sys.tables (Transact-SQL)
 title: sys. tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -20,11 +21,12 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13e37cd873b3158fcde41f0e3b5836a27d370f6e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83362a976690875df7d45a8ba6a186441bd10283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460577"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +58,7 @@ ms.locfileid: "86002705"
 |temporal_type|**tinyint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Valeur numérique représentant le type de table :<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |temporal_type_desc|**nvarchar(60)**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Description textuelle du type de table :<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Lorsque temporal_type dans (2, 4) retourne object_id de la table qui conserve les données d’historique, sinon retourne la valeur NULL.|  
-|is_remote_data_archive_enabled|**bit**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indique si la table est activée pour Stretch.<br /><br /> 0 = la table n’est pas activée pour Stretch.<br /><br /> 1 = la table est activée pour Stretch.<br /><br /> Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
+|is_remote_data_archive_enabled|**bit**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures et [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indique si la table est activée pour Stretch.<br /><br /> 0 = la table n’est pas activée pour Stretch.<br /><br /> 1 = la table est activée pour Stretch.<br /><br /> Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Indique que la table est une table externe.<br /><br /> 0 = la table n’est pas une table externe.<br /><br /> 1 = la table est une table externe.| 
 |history_retention_period|**int**|**S'applique à**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valeur numérique représentant la durée de la période de rétention temporelle de l’historique, en unités spécifiées avec history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**S'applique à**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valeur numérique représentant le type de l’unité de période de rétention de l’historique temporelle. <br /><br />-1 : INFINI <br /><br />3 : JOUR <br /><br />4 : SEMAINE <br /><br />5 : MOIS <br /><br />6 : ANNÉE |  
@@ -109,11 +111,11 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Dimensions, collection (ADO MD)
 title: Dimensions, collection (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c76d8b6e18c3ae8e348d0ee443b9602945585e30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441061"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions, collection (ADO MD)
 Contient les objets de [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) qui composent un cube.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **Dimensions** est une collection ADO standard. Avec les propriétés et les méthodes d’une collection, vous pouvez effectuer les opérations suivantes :  
   
 -   Obtenez le nombre d’objets dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  

@@ -1,4 +1,5 @@
 ---
+description: syscollector_execution_log (Transact-SQL)
 title: syscollector_execution_log (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: abf2ee225f23e055d8208a792aee3b006c21dce3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e7640d652a9123417907f803a7a28e7b97a8bdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399725"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

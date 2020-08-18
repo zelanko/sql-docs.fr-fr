@@ -1,4 +1,5 @@
 ---
+description: Enregistrer les métadonnées (OracleToSQL)
 title: Enregistrer les métadonnées (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d7287c5ed79834629c5cded6e29b87cf46d0e9ef
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ceac171c2eed43e1ee0c1feff2db9a3b4f21e7e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492322"
 ---
 # <a name="save-metadata--oracletosql"></a>Enregistrer les métadonnées (OracleToSQL)
 La boîte de dialogue **enregistrer les métadonnées** vous invite à charger les métadonnées dans votre projet SSMA avant de l’enregistrer. Cela vous permet d’avoir un fichier projet complet que vous pouvez utiliser en mode hors connexion et l’envoyer à d’autres personnes, telles que le personnel du support technique.  
