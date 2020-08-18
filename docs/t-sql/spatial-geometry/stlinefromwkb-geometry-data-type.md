@@ -1,4 +1,5 @@
 ---
+description: STLineFromWKB (type de données geometry)
 title: STLineFromWKB (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -18,12 +19,12 @@ ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
 author: MladjoA
 ms.author: mlandzic
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe1d58d14e6cb4e3ee5c8136cc8e71fb504fe3c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19f43ada9987079725ab80528d823003cb1636ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305395"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,7 +40,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_linestring*  
- Représentation WKB de l’instance **geometryLineString** à retourner. *WKB_linestring* est une expression **varbinary(max)** .  
+ Représentation WKB de l’instance **geometryLineString** à retourner. *WKB_linestring* est une expression **varbinary(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryLineString** à retourner.  
@@ -51,7 +52,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
  Type OGC : **LineString**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,8 +64,8 @@ SET @g = geometry::STLineFromWKB(0x010200000002000000000000000000594000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

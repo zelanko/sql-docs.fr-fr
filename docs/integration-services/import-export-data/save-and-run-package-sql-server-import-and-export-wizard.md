@@ -1,4 +1,5 @@
 ---
+description: Enregistrer et exécuter le package (Assistant Importation et exportation SQL Server)
 title: Enregistrer et exécuter le package (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8739c955343207a9a91660a9f8643ea807741e0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346885"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Enregistrer et exécuter le package (Assistant Importation et exportation SQL Server)
 
@@ -89,7 +90,7 @@ Si vous avez démarré l’Assistant à partir d’un projet Integration Service
   
  Ces options sont disponibles uniquement si vous sélectionnez l’option **Enregistrer le package SSIS** dans cette page.  
   
-## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+## <a name="whats-next"></a>Et ensuite ?  
  La page suivante qui s’affiche varie selon que vous avez choisi d’exécuter l’opération de copie immédiatement ou d’enregistrer le package.  
   
 -   Si vous avez sélectionné l’option pour exécuter le package immédiatement, mais sans l’enregistrer, la page suivante est **Terminer l’Assistant**. Cette page vous permet de vérifier les choix effectués dans l’Assistant et de démarrer l’opération de copie. Pour plus d’informations, consultez [Terminer l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  

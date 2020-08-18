@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308415"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,17 +53,17 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   
- Correspond au numéro facultatif d'identification de sécurité de la connexion. *server_user_sid* est de type **varbinary(85)** . *server_user_sid* peut être le numéro d’identification de sécurité de n’importe quelle connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de n’importe quel utilisateur ou groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Si *server_user_sid* n’est pas spécifié, les informations sur l’utilisateur actuel sont renvoyées. Si le paramètre contient le mot NULL, retourne NULL.  
+ Correspond au numéro facultatif d'identification de sécurité de la connexion. *server_user_sid* est de type **varbinary(85)**. *server_user_sid* peut être le numéro d’identification de sécurité de n’importe quelle connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de n’importe quel utilisateur ou groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Si *server_user_sid* n’est pas spécifié, les informations sur l’utilisateur actuel sont renvoyées. Si le paramètre contient le mot NULL, retourne NULL.  
   
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction SUSER_SNAME peut être utilisée comme une contrainte DEFAULT dans les fonctions ALTER TABLE ou CREATE TABLE. SUSER_SNAME peut être utilisé dans une liste de sélection, dans une clause WHERE, et dans tous les cas où une expression est autorisée. SUSER_SNAME doit toujours être suivi de parenthèses, même si aucun paramètre n'est spécifié.  
   
  Lorsqu'il est appelé sans argument, SUSER_SNAME retourne le nom du contexte de sécurité actuel. Lorsqu'il est appelé sans argument à l'intérieur d'un traitement qui a changé de contexte en utilisant EXECUTE AS, SUSER_SNAME retourne le nom du contexte qui a fait l'objet d'un emprunt d'identité. Lorsqu'il est appelé à partir d'un contexte faisant l'objet d'un emprunt d'identité, ORIGINAL_LOGIN retourne le nom du contexte d'origine.  
   
-## <a name="sssdsfull-remarks"></a>Notes concernant [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Notes  
  SUSER_NAME retourne toujours le nom de connexion pour le contexte de sécurité actuel.  
   
  L'instruction SUSER_SNAME ne prend pas en charge l'exécution en utilisant un contexte de sécurité représenté par la clause EXECUTE AS.  

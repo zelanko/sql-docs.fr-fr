@@ -1,4 +1,5 @@
 ---
+description: SCOPE_IDENTITY (Transact-SQL)
 title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c3a04c1fdb01ff87543789bd2f9da8bfd685b78
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d4543adc695f7de97394bc02e8b2c478f7a22d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308795"
 ---
 # <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Types de retour
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  SCOPE_IDENTITY, IDENT_CURRENT et @@IDENTITY sont des fonctions similaires car elles renvoient des valeurs insérées dans des colonnes d’identité.  
   
  IDENT_CURRENT n'est pas limitée par l'étendue et par la session ; elle est limitée à une table spécifiée. IDENT_CURRENT renvoie la valeur générée pour une table spécifique dans n'importe quelle session et n'importe quelle étendue. Pour plus d’informations, consultez [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  

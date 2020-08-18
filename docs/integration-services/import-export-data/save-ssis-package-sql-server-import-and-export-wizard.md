@@ -1,4 +1,5 @@
 ---
+description: Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
 title: Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f354643c156024eeee1db53ad366dfb63f55859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 379973cb0174e25a91b6a3dfb0ed7cc319efd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346815"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
 
@@ -64,7 +65,7 @@ Connectez-vous au serveur à l’aide de l’authentification intégrée Windows
  **Utiliser l’authentification SQL Server**  
 Connectez-vous au serveur à l’aide de l’authentification SQL Server.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
 Si vous avez choisi d’utiliser l’authentification SQL Server, entrez le nom d’utilisateur.  
   
  **Mot de passe**  
@@ -110,7 +111,7 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
 ## <a name="customize-the-saved-package"></a>Personnaliser le package enregistré  
  Pour savoir comment personnaliser le package enregistré, consultez [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
-## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+## <a name="whats-next"></a>Et ensuite ?  
  Une fois que vous avez spécifié les autres options d’enregistrement du package, la page suivante s’intitule **Terminer l’Assistant**. Cette page vous permet d’examiner les choix effectués dans l’Assistant et de lancer l’opération. Pour plus d’informations, consultez [Terminer l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
 ## <a name="see-also"></a>Voir aussi  

@@ -1,4 +1,5 @@
 ---
+description: GeomFromGML (type de données geography)
 title: GeomFromGML (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ccde42f9243c775ffe7e5044ba9df7aa3b7efbe6
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 44009b18bbe96c4d6aa8e402e584551e3c5ea521
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306469"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +82,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

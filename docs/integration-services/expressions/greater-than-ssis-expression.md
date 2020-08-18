@@ -1,4 +1,5 @@
 ---
+description: '&gt; (Supérieur à) (expression SSIS)'
 title: '&gt; (Supérieur à) (expression SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99a15645e037e578e1594142b9869ef5d92860af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45c1cc7d9c5c77141bcbe75ebef9ff056347d5aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348195"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (Supérieur à) (expression SSIS)
 
@@ -47,7 +48,7 @@ expression1 > expression2
 ## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si l'une des expressions de la comparaison est NULL, le résultat de la comparaison est NULL. Si les deux expressions sont NULL, le résultat est NULL.  
   
  Le jeu d’expressions, *expression1* et *expression2*, doit suivre une des règles suivantes :  

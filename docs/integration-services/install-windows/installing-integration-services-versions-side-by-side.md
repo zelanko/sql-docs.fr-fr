@@ -1,4 +1,5 @@
 ---
+description: Installation de plusieurs versions Integration Services côte à côte
 title: Installation de plusieurs versions Integration Services côte à côte | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e65f5ca71a664e2c17701c8e9e6662796952238
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d57148134c727b03a30d75af415d1e2476dca32d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345995"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Installation de plusieurs versions Integration Services côte à côte
 
@@ -36,8 +37,8 @@ ms.locfileid: "86915861"
 |Version cible de SQL Server|Environnement de développement de packages SSIS|  
 |----------------------------------|-----------------------------------------------|  
 |2016|SQL Server Data Tools pour Visual Studio 2015|  
-|2014|SQL Server Data Tools pour Visual Studio 2015<br /><br /> or<br /><br /> SQL Server Data Tools - Business Intelligence pour Visual Studio 2013|  
-|2012|SQL Server Data Tools pour Visual Studio 2015<br /><br /> or<br /><br /> SQL Server Data Tools – Business Intelligence pour Visual Studio 2012|  
+|2014|SQL Server Data Tools pour Visual Studio 2015<br /><br /> ou<br /><br /> SQL Server Data Tools - Business Intelligence pour Visual Studio 2013|  
+|2012|SQL Server Data Tools pour Visual Studio 2015<br /><br /> ou<br /><br /> SQL Server Data Tools – Business Intelligence pour Visual Studio 2012|  
 |2008|Business Intelligence Development Studio dans SQL Server 2008|  
   
  Lorsque vous ajoutez un package existant à un projet existant, le package est converti au format ciblé par le projet.  

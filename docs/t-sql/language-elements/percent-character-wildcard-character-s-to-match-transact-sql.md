@@ -1,4 +1,5 @@
 ---
+description: Caractère de pourcentage (caractères génériques à ne pas faire correspondre - Transact-SQL)
 title: Recherche par caractères génériques (%)
 ms.custom: seo-lt-2019
 ms.date: 12/06/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 156ee6ad9860838b1d750f523cd936cbce15e0fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a0c232b2849f2fcfc7bf7d0a946714b15f753fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307542"
 ---
 # <a name="percent-character-wildcard---characters-to-match-transact-sql"></a>Caractère de pourcentage (caractères génériques à ne pas faire correspondre - Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,6 +53,6 @@ GO
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
  [&#91; &#93; (Caractère générique - Caractères à rechercher)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
   [&#91;^&#93; (Caractère générique - Caractères à exclure)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [_ (Caractère générique, représente un caractère)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [_ (Caractère générique - représente un caractère)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

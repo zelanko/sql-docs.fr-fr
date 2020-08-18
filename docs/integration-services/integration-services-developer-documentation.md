@@ -1,4 +1,5 @@
 ---
+description: Documentation Integration Services pour les développeurs
 title: Documentation Integration Services pour les développeurs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346095"
 ---
 # <a name="integration-services-developer-documentation"></a>Documentation Integration Services pour les développeurs
 
@@ -55,13 +56,13 @@ ms.locfileid: "86919955"
  Ces méthodes de programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont décrites dans cette section et illustrées par des exemples.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble de la programmation Integration Services](../integration-services/integration-services-programming-overview.md)  
+ [Vue d'ensemble de la programmation Integration Services](../integration-services/integration-services-programming-overview.md)  
  Décrit les rôles de flux de contrôle et de flux dans le développement [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  [Présentation des transformations synchrones et asynchrones](../integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
  Décrit la distinction importante entre les sorties synchrones et les sorties asynchrones, ainsi que les composants qui les utilisent dans le flux de données.  
   
- [Utilisation de gestionnaires de connexions par programmation](../integration-services/working-with-connection-managers-programmatically.md)  
+ [Utilisation de gestionnaires de connexions par programme](../integration-services/working-with-connection-managers-programmatically.md)  
  Répertorie les gestionnaires de connexions que vous pouvez utiliser à partir du code managé, ainsi que les valeurs que les gestionnaires de connexions retournent quand le code appelle la méthode **AcquireConnection**.  
   
  [Extension de packages avec des scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
@@ -70,10 +71,10 @@ ms.locfileid: "86919955"
  [Extension de packages avec des objets personnalisés](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Décrit comment créer et programmer des tâches personnalisées, des composants de flux de données et d'autres objets de package à utiliser dans plusieurs packages.  
   
- [Génération de packages par programmation](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Génération de packages par programme](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Décrit comment créer, configurer et enregistrer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] par programme.  
   
- [Exécution et gestion de packages par programmation](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [Exécution et gestion de packages par programme](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Décrit comment énumérer, exécuter et gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] par programme.  
   
 ## <a name="reference"></a>Informations de référence  

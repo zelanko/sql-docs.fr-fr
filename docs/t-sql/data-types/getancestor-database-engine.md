@@ -1,4 +1,5 @@
 ---
+description: GetAncestor (moteur de base de données)
 title: GetAncestor (moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a6bbdeb7e8f54bbdb02d7daff3b08f83bf0a98d1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e377a022c4a027c64008b2a09ff58f2d7d27112c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311735"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (moteur de base de données)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,11 +37,11 @@ Retourne un **hierarchyid** qui représente le *n*ième ancêtre de *this*.
 child.GetAncestor ( n )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetAncestor ( int n )  
-```  
-  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Arguments
@@ -52,7 +53,7 @@ SqlHierarchyId GetAncestor ( int n )
   
 **Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Utilisé pour tester si chaque nœud de la sortie a pour ancêtre le nœud actuel au niveau spécifié.
   
 Si un nombre supérieur à [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) est passé, la valeur Null est retournée.

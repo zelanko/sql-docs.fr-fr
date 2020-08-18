@@ -1,4 +1,5 @@
 ---
+description: STSrid (type de données geography)
 title: STSrid (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 57c580706f5a8a7c9fec02ca7675b6733cd9dddf
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: bc6f88b25a67e3d8904ea7823324111e60576ab7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305930"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555343"
   
  Type CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette propriété peut être modifiée.  
   
 ## <a name="examples"></a>Exemples  

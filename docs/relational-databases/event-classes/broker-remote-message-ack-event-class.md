@@ -1,4 +1,5 @@
 ---
+description: Broker:Remote Message Ack, classe d'événements
 title: Broker:Remote Message Ack, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,18 +13,18 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb2e8f7fa1f39fffecf72a8eb51fac5bf9bcce51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 101aa4fd73e3481be1f98f4951561a3bf455dfe6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330745"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, classe d'événements
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Remote Message Ack** lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie ou reçoit un accusé de réception de message.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Remote Message Ack** quand [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie ou reçoit un accusé de réception de message.  
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Colonnes de données de la classe d'événements Broker:Remote Message Ack  
   

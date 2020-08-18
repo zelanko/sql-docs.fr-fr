@@ -1,4 +1,5 @@
 ---
+description: Vérifier le mappage de type de données (Assistant Importation et Exportation SQL Server)
 title: Vérifier le mappage de type de données (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa50c1de5a5cf1cd1963e60774617bd92713872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2376f29d6e488af4481e245440e995fd584dfea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347045"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Vérifier le mappage de type de données (Assistant Importation et Exportation SQL Server)
 
@@ -39,7 +40,7 @@ Si vous avez spécifié un mappage de type de données qui risque d’échouer d
  ![Page Vérifier le mappage de type de données de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/review-mapping.png "Page Vérifier le mappage de type de données de l’Assistant Importation et Exportation") 
  
 ## <a name="review-the-source-and-destination-tables"></a>Vérifier les tables source et de destination  
- La section supérieure de la page **Vérifier le mappage de type de données** est une liste **Table** qui répertorie les tables à copier de la source vers la destination. Pour consulter les informations de conversion d’une table spécifique, sélectionnez une table dans la liste **Table** . Les informations de conversion des colonnes individuelles de la table sélectionnée apparaissent dans la partie inférieure de la page, dans la grille **Mappage de type de données** .
+ La section supérieure de la page **Vérifier le mappage de type de données** est une liste **Table** qui répertorie les tables à copier de la source vers la destination. Pour consulter les informations de conversion d’une table spécifique, sélectionnez une table dans la liste **Table** . Les informations de conversion des colonnes individuelles de la table sélectionnée apparaissent dans la partie inférieure de la page, dans la grille **Mappage de type de données **.
 
 Dans cet exemple, les résultats de la requête fournie par l’utilisateur vont être copiés dans la table Sales.CustomerNew2 de la destination. L’icône d’avertissement indique que la conversion d’au moins une colonne de données, à partir des résultats de la requête vers un type de données compatible dans la table de destination, pose problème.
 
@@ -84,17 +85,17 @@ Cet exemple montre les valeurs par défaut pour les deux options globales de ges
 
 ![Vérifier le mappage - erreurs](../../integration-services/import-export-data/media/review-mapping-errors.png)
 
- **En cas d’erreur (global)**  
+ **En cas d'erreur (global)**  
  Spécifiez comment l'Assistant gère les erreurs :  
- -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s’agit de la valeur par défaut.
+ -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Valeur par défaut.
  -   Ignorez l'erreur et poursuivez le processus d'importation ou d'exportation.  
   
  **En cas de troncation (global)**  
  Spécifiez comment l’Assistant gère les troncations de données :  
- -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s’agit de la valeur par défaut.
+ -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Valeur par défaut.
  -   Ignorez la troncation et poursuivez le processus d'importation ou d'exportation.  
    
-## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+## <a name="whats-next"></a>Et ensuite ?  
  Une fois que vous avez consulté les avertissements, spécifié les options de conversion et indiqué la façon de gérer les erreurs, la page **Vérifier le mappage de type de données** vous fait revenir à la boîte de dialogue **Mappage de colonnes** . Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Voir aussi

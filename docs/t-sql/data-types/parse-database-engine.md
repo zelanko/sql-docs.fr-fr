@@ -1,4 +1,5 @@
 ---
+description: Parse (moteur de base de données)
 title: Parse (moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311505"
 ---
 # <a name="parse-database-engine"></a>Parse (moteur de base de données)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ CLR : valeur de chaîne évaluée.
   
 **Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Si Parse reçoit une valeur qui n’est pas une représentation de chaîne valide d’un **hierarchyid**, une exception est levée. Par exemple, si les types de données **char** contiennent des espaces de fin, une exception est levée.
   
 ## <a name="examples"></a>Exemples  

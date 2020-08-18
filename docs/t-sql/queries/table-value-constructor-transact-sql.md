@@ -1,4 +1,5 @@
 ---
+description: Constructeur de valeurs de table (Transact-SQL)
 title: Constructeur de valeurs de table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/23/2019
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e7fe813ca74c5f8bfd8a7746a05613d95d3373c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ac95b5d2fc71636ca55a29e0d82a2a35f13b816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306747"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Constructeur de valeurs de table (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Spécifie un ensemble d'expressions de valeurs de ligne à créer dans une table. Le constructeur de valeurs de table [!INCLUDE[tsql](../../includes/tsql-md.md)] permet de spécifier plusieurs lignes de données dans une seule instruction DML. Le constructeur de valeurs de table peut être spécifié en tant que clause VALUES d’une instruction INSERT ... VALUES ou que table dérivée dans la clause USING de l’instruction MERGE ou dans la clause FROM.
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

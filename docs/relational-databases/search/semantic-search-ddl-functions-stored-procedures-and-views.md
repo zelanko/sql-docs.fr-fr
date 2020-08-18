@@ -1,4 +1,5 @@
 ---
+description: DDL, fonctions, procédures stockées et vues de recherche sémantique
 title: DDL, fonctions, procédures stockées et vues de recherche sémantique
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 65ac994727a418e0886b0cb3132b537554eb54da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8564c0f0a5dcd83a434743281c85b3524fa06d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325784"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues de recherche sémantique
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

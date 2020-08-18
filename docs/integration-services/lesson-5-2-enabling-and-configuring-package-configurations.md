@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 5-2 : Activer et définir les configurations du package'
 title: 'Étape 2 : Activer et définir les configurations du package | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84f37f49d1b2a688463fcb974f6777bda601def4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7237d7356ffb97861779c4d5427fd4fb05083695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345325"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Leçon 5-2 : Activer et définir les configurations du package
 
@@ -44,11 +45,11 @@ Au cours de cette tâche, vous convertissez le projet en modèle de déploiement
   
 7.  Réaffichez l’onglet **Flux de contrôle** et double-cliquez sur le conteneur **Foreach File in Folder** .  
   
-8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, sélectionnez **Expressions**, puis le bouton de sélection **(...)** .  
+8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, sélectionnez **Expressions**, puis le bouton de sélection **(...)**.  
   
 9. Dans l’**Éditeur d’expressions de la propriété**, sélectionnez la liste **Propriété**, puis **Directory**.  
   
-10. Dans la zone **Expression**, sélectionnez le bouton de sélection **(...)** .  
+10. Dans la zone **Expression**, sélectionnez le bouton de sélection **(...)**.  
   
 11. Dans le **Générateur d’expressions**, développez le dossier **Variables et paramètres** et faites glisser la variable **User::varFolderName** vers la zone **Expression**.  
   
@@ -108,7 +109,7 @@ Au cours de cette tâche, vous convertissez le projet en modèle de déploiement
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Créer et remplir un nouveau dossier d’exemples de données  
   
-1.  Dans l’Explorateur Windows, à la racine de votre lecteur (par exemple, **C:\\** ), créez un dossier appelé **New Sample Data**.  
+1.  Dans l’Explorateur Windows, à la racine de votre lecteur (par exemple, **C:\\**), créez un dossier appelé **New Sample Data**.  
   
 2.  Localisez les fichiers d'exemple sur votre ordinateur et copiez trois des fichiers du dossier.  
   

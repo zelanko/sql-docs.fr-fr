@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS XML (Transact-SQL)
 title: SET STATISTICS XML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11d55d52b04436b4e1628c961114535c313c0d1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304735"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,9 @@ ms.locfileid: "85765659"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Notes
  La définition de SET STATISTICS XML s'effectue au moment de l'exécution, et non au moment de l'analyse.  
   
  Lorsque SET STATISTICS XML a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations d'exécution sur chaque instruction exécutée. Une fois cette option activée, des informations sur toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] consécutives sont retournées, jusqu'à ce que l'option soit désactivée (OFF). Notez qu'un traitement peut comporter d'autres instructions en plus de SET STATISTICS XML.  

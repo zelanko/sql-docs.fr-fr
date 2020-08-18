@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 5-3 : Modifier la valeur de configuration de la propriété Directory'
 title: 'Étape 3 : Modifier la valeur de configuration de la propriété Directory | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a609b6c5edc5518904432cc199e5e624fb114ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a727a5c8d709e982582c26cff8d6cf09eb44ccc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345695"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Leçon 5-3 : Modifier la valeur de configuration de la propriété Directory
 
@@ -29,7 +30,7 @@ Dans cette tâche, vous modifiez le paramètre de configuration, stocké dans le
   
 1.  Dans le Bloc-notes ou dans tout autre éditeur de texte, recherchez et ouvrez le fichier de configuration **SSISTutorial.dtsConfig** que vous avez créé à l’aide de l’Assistant Configuration de package au cours de la tâche précédente.  
   
-2.  Modifiez la valeur de l’élément **ConfiguredValue** pour qu’elle corresponde au chemin du dossier **New Sample Data** que vous avez créé dans la tâche précédente. N’encadrez pas le chemin de guillemets. Si le dossier **New Sample Data** se trouve à la racine de votre lecteur (par exemple, **C:\\** ), le code XML mis à jour doit être semblable à l’exemple suivant :  
+2.  Modifiez la valeur de l’élément **ConfiguredValue** pour qu’elle corresponde au chemin du dossier **New Sample Data** que vous avez créé dans la tâche précédente. N’encadrez pas le chemin de guillemets. Si le dossier **New Sample Data** se trouve à la racine de votre lecteur (par exemple, **C:\\**), le code XML mis à jour doit être semblable à l’exemple suivant :  
   
     ```
     <?xml version="1.0"?>
