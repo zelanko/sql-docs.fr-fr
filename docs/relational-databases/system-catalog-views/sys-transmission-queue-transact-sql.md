@@ -1,4 +1,5 @@
 ---
+description: sys.transmission_queue (Transact-SQL)
 title: sys. transmission_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 775dde0940802962cfdae09c55749fec751d5b6c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e3fbd63f399b54af919fd791f33e5d6f7b75a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400295"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,18 +35,18 @@ ms.locfileid: "85897714"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**conversation_handle**|**uniqueidentifier**|ID de la conversation à laquelle ce message appartient. Cette colonne n'accepte pas la valeur NULL.|  
-|**to_service_name**|**nvarchar(256)**|Nom du service auquel ce message est destiné. Accepte la valeur NULL.|  
+|**to_service_name**|**nvarchar (256)**|Nom du service auquel ce message est destiné. Accepte la valeur NULL.|  
 |**to_broker_instance**|**nvarchar(128)**|ID du Service Broker qui héberge le service auquel ce message est destiné. Accepte la valeur NULL.|  
-|**from_service_name**|**nvarchar(256)**|Nom du service dont ce message provient. Accepte la valeur NULL.|  
-|**service_contract_name**|**nvarchar(256)**|Nom du contrat respecté par la conversation pour ce message. Accepte la valeur NULL.|  
+|**from_service_name**|**nvarchar (256)**|Nom du service dont ce message provient. Accepte la valeur NULL.|  
+|**service_contract_name**|**nvarchar (256)**|Nom du contrat respecté par la conversation pour ce message. Accepte la valeur NULL.|  
 |**enqueue_time**|**datetime**|Heure à laquelle le message a été placé en file d'attente. Cette valeur utilise le temps universel indépendamment du fuseau horaire de l'instance. Cette colonne n'accepte pas la valeur NULL.|  
 |**message_sequence_number**|**bigint**|Numéro de séquence du message. Cette colonne n'accepte pas la valeur NULL.|  
-|**message_type_name**|**nvarchar(256)**|Nom du type de message pour le message. Accepte la valeur NULL.|  
+|**message_type_name**|**nvarchar (256)**|Nom du type de message pour le message. Accepte la valeur NULL.|  
 |**is_conversation_error**|**bit**|Indique s'il s'agit d'un message d'erreur.<br /><br /> 0 = N'est pas un message d'erreur.<br /><br /> 1 = Message d'erreur.<br /><br /> Cette colonne n'accepte pas la valeur NULL.|  
 |**is_end_of_dialog**|**bit**|Indique s'il s'agit d'un message de fin de conversation. Cette colonne n'accepte pas la valeur NULL.<br /><br /> 0 = N'est pas un message de fin de conversation.<br /><br /> 1 = Message de fin de conversation.<br /><br /> Cette colonne n'accepte pas la valeur NULL.|  
 |**message_body**|**varbinary(max)**|Corps de ce message. Accepte la valeur NULL.|  
 |**transmission_status**|**nvarchar(4000)**|Motif pour lequel le message se trouve dans la file d'attente. Il s'agit généralement d'un message d'erreur qui explique pourquoi l'envoi du message a échoué. Si aucune donnée n'est indiquée, le message n'a pas encore été envoyé. Accepte la valeur NULL.|  
-|**importance**|**tinyint**|Niveau de priorité assigné à ce message. Cette colonne n'accepte pas la valeur NULL.|  
+|**priority**|**tinyint**|Niveau de priorité assigné à ce message. Cette colonne n'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

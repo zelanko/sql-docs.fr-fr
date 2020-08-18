@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_distributed_sql_requests (Transact-SQL)
 title: sys. dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bfaaa65c08155263c15a1e4e4ddf17c20913e66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdda8279e49c5e1884cbd539e1a3158431e53b41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398845"
 ---
 # <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys. dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -47,11 +48,11 @@ ms.locfileid: "82827973"
 |total_elapsed_time|**int**|Durée totale d’exécution de l’étape de la requête, en millisecondes|Entre 0 et la différence entre end_time et start_time. 0 pour les étapes en file d’attente.|  
 |row_count|**bigint**|Nombre total de lignes modifiées ou retournées par cette demande|0 pour les étapes qui ne sont pas modifiées ou qui renvoient des données, nombre de lignes affectées dans le cas contraire. Défini sur-1 pour les étapes DMS.|  
 |spid|**int**|ID de session sur l’instance de SQL Server exécutant la distribution des requêtes||  
-|.|nvarchar(4000)|Contient le texte complet de la commande de cette étape.|Toute chaîne de demande valide pour une étape. Tronqué si plus de 4000 caractères.|  
+|command|nvarchar(4000)|Contient le texte complet de la commande de cette étape.|Toute chaîne de demande valide pour une étape. Tronqué si plus de 4000 caractères.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résolution des problèmes de Polybase avec les vues de gestion dynamique](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

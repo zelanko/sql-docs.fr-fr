@@ -1,4 +1,5 @@
 ---
+description: syscollector_config_store (Transact-SQL)
 title: syscollector_config_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccdb22362e8e52fe58aca8b7430d5329400a4908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 339bbba2335512c582251f960224baae15513618
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399785"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85896739"
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur la vue ou l'appartenance dans les rôles de base de données fixes dc_operator, dc_proxy ou dc_admin.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La liste des propriétés disponibles est corrigée et leurs valeurs ne peuvent être modifiées qu'à l'aide de la procédure stockée appropriée. La table suivante décrit les propriétés qui sont exposées par cette vue :  
   
 |Nom de la propriété|Description|  

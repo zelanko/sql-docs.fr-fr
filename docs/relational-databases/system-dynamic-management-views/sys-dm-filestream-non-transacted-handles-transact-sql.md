@@ -1,4 +1,5 @@
 ---
+description: sys.dm_filestream_non_transacted_handles (Transact-SQL)
 title: sys. dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d38b5e210e5a9c7a0b75d2ecb619ae84a61373e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398735"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

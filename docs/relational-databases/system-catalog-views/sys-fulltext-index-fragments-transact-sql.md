@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_index_fragments (Transact-SQL)
 title: sys. fulltext_index_fragments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03b6557d2d17e0a2c9b9ad651ca71d903c8ea19a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 953bf5145712d81acf0ed193719d290cc2397e43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401365"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85764746"
 |row_count|**int**|Nombre de lignes individuelles dans le fragment.|  
 |status|**int**|Statut du fragment, une des valeurs suivantes :<br /><br /> 0 = Récemment créé mais pas encore utilisé<br /><br /> 1 = Utilisé pour l'insertion pendant l'alimentation ou la fusion d'index de recherche en texte intégral<br /><br /> 4 = Fermé. Prêt à être interrogé<br /><br /> 6 = Utilisé pour l'entrée de fusion et prêt à être interrogé<br /><br /> 8 = Marqué pour la suppression. Ne sera pas utilisé pour interroger et fusionner la source.<br /><br /> L’État 4 ou 6 signifie que le fragment fait partie de l’index de recherche en texte intégral logique et peut être interrogé ; autrement dit, il s’agit d’un fragment *interrogeable* .|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'affichage catalogue sys.fulltext_index_fragments peut être utilisé pour interroger le nombre des fragments qui comprennent un index de recherche en texte intégral. Si les performances des requêtes de texte intégral sont lentes, vous pouvez utiliser sys.fulltext_index_fragments pour déterminer le nombre de fragments requêtables (statut = 4 ou 6) dans l'index de recherche en texte intégral, comme suit :  
   
 ```  
@@ -67,7 +68,7 @@ GO
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md)  
   
   
