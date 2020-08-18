@@ -1,4 +1,5 @@
 ---
+description: Fonctions de chaîne
 title: Fonctions de chaîne | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d9323809028ad170a4811b1af8b6e276cdbb4293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a5301f49a033dbc6e84a5fe43d68c794a76e84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386475"
 ---
 # <a name="string-functions"></a>Fonctions de chaîne
 Le tableau suivant répertorie les fonctions de manipulation de chaînes. Une application peut déterminer les fonctions de chaîne prises en charge par un pilote en appelant **SQLGetInfo** avec un *type d’informations* SQL_STRING_FUNCTIONS.  
@@ -36,14 +37,14 @@ Le tableau suivant répertorie les fonctions de manipulation de chaînes. Une ap
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|**ASCII (** _string_exp_ **)** (ODBC 1,0)|Retourne la valeur de code ASCII du caractère le plus à gauche de *string_exp* sous la forme d’un entier.|  
-|**BIT_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Retourne la longueur en bits de l'expression de chaîne.<br /><br /> Ne fonctionne pas uniquement pour les types de données de type chaîne. par conséquent, ne convertit pas implicitement *string_exp* en chaîne, mais retourne à la place la taille (interne) du type de données qu’il reçoit.|  
-|**Char (** _code_ **)** (ODBC 1,0)|Retourne le caractère qui a la valeur de code ASCII spécifiée par le *code*. La valeur du *code* doit être comprise entre 0 et 255 ; dans le cas contraire, la valeur de retour est dépendante de la source de données.|  
-|**CHAR_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Retourne la longueur en caractères de l’expression de chaîne, si l’expression de chaîne est d’un type de données caractère ; Sinon, retourne la longueur en octets de l’expression de chaîne (le plus petit entier non inférieur au nombre de bits divisé par 8). (Cette fonction est la même que la fonction CHARACTER_LENGTH.)|  
-|**CHARACTER_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Retourne la longueur en caractères de l’expression de chaîne, si l’expression de chaîne est d’un type de données caractère ; Sinon, retourne la longueur en octets de l’expression de chaîne (le plus petit entier non inférieur au nombre de bits divisé par 8). (Cette fonction est la même que la fonction CHAR_LENGTH.)|  
-|**Concat (** _string_exp1_,_string_exp2_**)** (ODBC 1,0)|Retourne une chaîne de caractères qui est le résultat de la concaténation de *string_exp2* à *string_exp1*. La chaîne résultante dépend de SGBD. Par exemple, si la colonne représentée par *string_exp1* contenait une valeur null, DB2 retournerait null, mais SQL Server retournerait la chaîne non null.|  
-|**Difference (** _string_exp1_,_string_exp2_**)** (ODBC 2,0)|Retourne une valeur entière qui indique la différence entre les valeurs retournées par la fonction SOUNDEX pour *string_exp1* et *string_exp2*.|  
-|**Insert (** _string_exp1_, *Start*, *Length*, _string_exp2_**)** (ODBC 1,0)|Retourne une chaîne de caractères où les caractères de *longueur* ont été supprimés de *string_exp1*, à partir de *Start*, et où *string_exp2* a été inséré dans *string_exp,* en commençant au *début*.|  
+|**ASCII (** _string_exp_ **)**  (ODBC 1,0)|Retourne la valeur de code ASCII du caractère le plus à gauche de *string_exp* sous la forme d’un entier.|  
+|**BIT_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Retourne la longueur en bits de l'expression de chaîne.<br /><br /> Ne fonctionne pas uniquement pour les types de données de type chaîne. par conséquent, ne convertit pas implicitement *string_exp* en chaîne, mais retourne à la place la taille (interne) du type de données qu’il reçoit.|  
+|**Char (** _code_ **)**  (ODBC 1,0)|Retourne le caractère qui a la valeur de code ASCII spécifiée par le *code*. La valeur du *code* doit être comprise entre 0 et 255 ; dans le cas contraire, la valeur de retour est dépendante de la source de données.|  
+|**CHAR_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Retourne la longueur en caractères de l’expression de chaîne, si l’expression de chaîne est d’un type de données caractère ; Sinon, retourne la longueur en octets de l’expression de chaîne (le plus petit entier non inférieur au nombre de bits divisé par 8). (Cette fonction est la même que la fonction CHARACTER_LENGTH.)|  
+|**CHARACTER_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Retourne la longueur en caractères de l’expression de chaîne, si l’expression de chaîne est d’un type de données caractère ; Sinon, retourne la longueur en octets de l’expression de chaîne (le plus petit entier non inférieur au nombre de bits divisé par 8). (Cette fonction est la même que la fonction CHAR_LENGTH.)|  
+|**Concat (** _string_exp1_,_string_exp2_**)**  (ODBC 1,0)|Retourne une chaîne de caractères qui est le résultat de la concaténation de *string_exp2* à *string_exp1*. La chaîne résultante dépend de SGBD. Par exemple, si la colonne représentée par *string_exp1* contenait une valeur null, DB2 retournerait null, mais SQL Server retournerait la chaîne non null.|  
+|**Difference (** _string_exp1_,_string_exp2_**)**  (ODBC 2,0)|Retourne une valeur entière qui indique la différence entre les valeurs retournées par la fonction SOUNDEX pour *string_exp1* et *string_exp2*.|  
+|**Insert (** _string_exp1_, *Start*, *Length*, _string_exp2_**)**  (ODBC 1,0)|Retourne une chaîne de caractères où les caractères de *longueur* ont été supprimés de *string_exp1*, à partir de *Start*, et où *string_exp2* a été inséré dans *string_exp,* en commençant au *début*.|  
 |**LCase (** _string_exp_ **)** (ODBC 1,0)|Retourne une chaîne égale à celle de *string_exp*, avec tous les caractères majuscules convertis en minuscules.|  
 |**Left (** _string_exp_, _Count_**)** (ODBC 1,0)|Retourne le *nombre* de caractères le plus à gauche de *string_exp*.|  
 |**Longueur (** _string_exp_ **)** (ODBC 1,0)|Retourne le nombre de caractères dans *string_exp,* à l’exception des espaces blancs de fin.<br /><br /> La **longueur** accepte uniquement les chaînes. Par conséquent, convertit implicitement *string_exp* en chaîne et retourne la longueur de cette chaîne (et non la taille interne du type de données).|  

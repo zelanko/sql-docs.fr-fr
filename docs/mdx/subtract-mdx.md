@@ -1,4 +1,5 @@
 ---
+description: '- Soustraire MDX'
 title: '- Soustraire (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3b8003bdeddea32f80636dc10a78e200d6b0e0be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c155027cbffbd69ed682d11549d5b9d1b983902
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386665"
 ---
 # <a name="--subtract-mdx"></a>- (Soustraction) (MDX)
 
@@ -62,6 +63,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

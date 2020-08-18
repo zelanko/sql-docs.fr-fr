@@ -1,4 +1,5 @@
 ---
+description: Définition des options de mise en pools des connexions ODBC
 title: Définition des options de regroupement de connexions ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d8e66c506518b77320347ce9120254aa1cae287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d6f741654f9765e909a8a2e33bce5e7e596f8b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386595"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Définition des options de mise en pools des connexions ODBC
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui n’ont pas besoin d’être rétablies pour chaque utilisation. Vous pouvez utiliser l’onglet **regroupement de connexions** de la boîte de dialogue administrateur de sources de **données ODBC** pour activer et désactiver l’analyse des performances. Double-cliquez sur un nom de pilote pour définir le délai d’attente de la connexion.  

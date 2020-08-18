@@ -1,4 +1,5 @@
 ---
+description: À propos des pilotes et des sources de données
 title: À propos des pilotes et des sources de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7dffeea3bea7e3fbfa66e534ecaa758fbc2064d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 141a8e99a219923fa8e658c2600e79cad6f4ae93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386585"
 ---
 # <a name="about-drivers-and-data-sources"></a>À propos des pilotes et des sources de données
 Les *pilotes* sont les composants qui traitent les requêtes ODBC et retournent des données à l’application. Si nécessaire, les pilotes modifient la demande d’une application dans un format compréhensible par la source de données. Vous devez utiliser le programme d’installation du pilote pour ajouter ou supprimer un pilote de votre ordinateur.  

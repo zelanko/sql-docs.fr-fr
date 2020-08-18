@@ -1,4 +1,5 @@
 ---
+description: Transitions d’instruction
 title: Transitions d’instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f82e275bfd5bff12544b35a1370cdb31495320
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386515"
 ---
 # <a name="statement-transitions"></a>Transitions d’instruction
 Les instructions ODBC ont les États suivants.  
@@ -61,7 +62,7 @@ Les instructions ODBC ont les États suivants.
   
  [4] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_DESC.  
   
- [5] l’appel de **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce handle sans tenir compte du contenu précédent dans ce handle et peut entraîner des problèmes pour les pilotes ODBC. Il s’agit d’une programmation d’application ODBC incorrecte pour appeler **SQLAllocHandle** deux fois avec la même variable d’application définie pour * \*OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le descripteur avant de le réallouer. Le remplacement des handles ODBC de telle manière peut entraîner des erreurs ou des comportements incohérents dans la partie des pilotes ODBC.  
+ [5] l’appel de **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce handle sans tenir compte du contenu précédent dans ce handle et peut entraîner des problèmes pour les pilotes ODBC. Il s’agit d’une programmation d’application ODBC incorrecte pour appeler **SQLAllocHandle** deux fois avec la même variable d’application définie pour * \* OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le descripteur avant de le réallouer. Le remplacement des handles ODBC de telle manière peut entraîner des erreurs ou des comportements incohérents dans la partie des pilotes ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -99,19 +100,19 @@ Les instructions ODBC ont les États suivants.
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1 [1] S2 [Nr] et [2] S3 [r] et [2] S5 [3] et [5] S6 ([3] ou [4]) et [6] S7 [4] et [7]|Voir le tableau suivant|  
   
- [1] **SQLExecDirect** a retourné SQL_NEED_DATA.  
+ [1]   **SQLExecDirect** a retourné SQL_NEED_DATA.  
   
- [2] **SQLExecute** a retourné SQL_NEED_DATA.  
+ [2]   **SQLExecute** a retourné SQL_NEED_DATA.  
   
- [3] **SQLBulkOperations** a retourné SQL_NEED_DATA.  
+ [3]   **SQLBulkOperations** a retourné SQL_NEED_DATA.  
   
- [4] **SQLSetPos** a retourné SQL_NEED_DATA.  
+ [4]   **SQLSetPos** a retourné SQL_NEED_DATA.  
   
- [5] **SQLFetch**, **SQLFetchScroll**ou **SQLExtendedFetch** n’a pas été appelé.  
+ [5]   **SQLFetch**, **SQLFetchScroll**ou **SQLExtendedFetch** n’a pas été appelé.  
   
- [6] **SQLFetch** ou **SQLFetchScroll** a été appelé.  
+ [6]   **SQLFetch** ou **SQLFetchScroll** a été appelé.  
   
- [7] **SQLExtendedFetch** a été appelé.  
+ [7]   **SQLExtendedFetch** a été appelé.  
   
 ## <a name="sqlcancel-asynchronous-states"></a>SQLCancel (États asynchrones)  
   
@@ -141,9 +142,9 @@ Les instructions ODBC ont les États suivants.
 |-----------------------|--------------------|  
 |--[1] 07005 [2]|--[s] S11 x|  
   
- [1] *FieldIdentifier* a été SQL_DESC_COUNT.  
+ [1]   *FieldIdentifier* a été SQL_DESC_COUNT.  
   
- [2] *FieldIdentifier* n’a pas été SQL_DESC_COUNT.  
+ [2]   *FieldIdentifier* n’a pas été SQL_DESC_COUNT.  
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges et SQLTables  
   
@@ -388,7 +389,7 @@ Les instructions ODBC ont les États suivants.
   
  [2] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_STMT.  
   
- [3] **SQLGetDiagField** retourne toujours une erreur dans cet état quand *DiagIdentifier* est SQL_DIAG_ROW_COUNT.  
+ [3]   **SQLGetDiagField** retourne toujours une erreur dans cet état quand *DiagIdentifier* est SQL_DIAG_ROW_COUNT.  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
@@ -472,15 +473,15 @@ Les instructions ODBC ont les États suivants.
 |----------------------|---------------------|---------------------|  
 |S1 [e] et [1] S2 [e], [Nr] et [2] S3 [e], [r] et [2] S5 [e] et [4] S6 [e] et [5] S7 [e] et [3] S9 [d] S11 [x]|HY010|S1 [e] et [1] S2 [e], [Nr], et [2] S3 [e], [r] et [2] S4 [s], [Nr] et ([1] ou [2]) S5 [s], [r] et ([1] ou [2]) S5 ([s] ou [e]) et [4] S6 ([s] ou [e]) et [5] S7 ([s] ou [e]) et [3] S9 [d] S11 [x]|  
   
- [1] **SQLExecDirect** a retourné SQL_NEED_DATA.  
+ [1]   **SQLExecDirect** a retourné SQL_NEED_DATA.  
   
- [2] **SQLExecute** a retourné SQL_NEED_DATA.  
+ [2]   **SQLExecute** a retourné SQL_NEED_DATA.  
   
- [3] **SQLSetPos** a été appelé à partir de l’État S7 et a retourné SQL_NEED_DATA.  
+ [3]   **SQLSetPos** a été appelé à partir de l’État S7 et a retourné SQL_NEED_DATA.  
   
- [4] **SQLBulkOperations** a été appelé à partir de l’État S5 et a retourné SQL_NEED_DATA.  
+ [4]   **SQLBulkOperations** a été appelé à partir de l’État S5 et a retourné SQL_NEED_DATA.  
   
- [5] **SQLSetPos** ou **SQLBulkOperations** a été appelé à partir de l’État S6 et a retourné SQL_NEED_DATA.  
+ [5]   **SQLSetPos** ou **SQLBulkOperations** a été appelé à partir de l’État S6 et a retourné SQL_NEED_DATA.  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
@@ -514,15 +515,15 @@ Les instructions ODBC ont les États suivants.
 |----------------------|---------------------|---------------------|  
 |HY010|S1 [e] et [1] S2 [e], [Nr] et [2] S3 [e], [r] et [2] S5 [e] et [4] S6 [e] et [5] S7 [e] et [3] S10 [s] S11 [x]|--[s] S1 [e] et [1] S2 [e], [Nr] et [2] S3 [e], [r] et [2] S5 [e] et [4] S6 [e] et [5] S7 [e] et [3] S11 [x] HY011 [6]|  
   
- [1] **SQLExecDirect** a retourné SQL_NEED_DATA.  
+ [1]   **SQLExecDirect** a retourné SQL_NEED_DATA.  
   
- [2] **SQLExecute** a retourné SQL_NEED_DATA.  
+ [2]   **SQLExecute** a retourné SQL_NEED_DATA.  
   
- [3] **SQLSetPos** a été appelé à partir de l’État S7 et a retourné SQL_NEED_DATA.  
+ [3]   **SQLSetPos** a été appelé à partir de l’État S7 et a retourné SQL_NEED_DATA.  
   
- [4] **SQLBulkOperations** a été appelé à partir de l’État S5 et a retourné SQL_NEED_DATA.  
+ [4]   **SQLBulkOperations** a été appelé à partir de l’État S5 et a retourné SQL_NEED_DATA.  
   
- [5] **SQLSetPos** ou **SQLBulkOperations** a été appelé à partir de l’État S6 et a retourné SQL_NEED_DATA.  
+ [5]   **SQLSetPos** ou **SQLBulkOperations** a été appelé à partir de l’État S6 et a retourné SQL_NEED_DATA.  
   
  [6] un ou plusieurs appels à **SQLPutData** pour un seul paramètre retourné SQL_SUCCESS, puis un appel à **SQLPutData** a été effectué pour le même paramètre avec *StrLen_Or_Ind* défini sur SQL_NULL_DATA.  
   
