@@ -1,4 +1,5 @@
 ---
+description: Opérateurs de comparaison (DMX)
 title: Opérateurs de comparaison (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 885285439721f017d1d6eaa5bb9eebd0a26c08a3
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 0be897f827740a2a27ce3376df36ec0e296951b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395805"
 ---
 # <a name="operators---comparison"></a>Opérateurs de comparaison
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,8 +42,8 @@ ms.locfileid: "86968619"
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
- [Opérateurs &#40;&#41;DMX](../dmx/operators-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
+ [Opérateurs &#40;&#41;DMX ](../dmx/operators-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

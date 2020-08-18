@@ -1,4 +1,5 @@
 ---
+description: TopCount (DMX)
 title: Nombre de points (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395725"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -111,10 +112,10 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  Les résultats contiennent les 3 prédictions supérieures triées par la valeur de support. Vous pouvez remplacer $SUPPORT par $PROBABILITY ou $ADJUSTED_PROBABILITY pour retourner des prédictions classées par probabilité ou par probabilité ajustée. Pour plus d’informations, voir **Predict (DMX)**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
  [&#41;DMX &#40;](../dmx/toppercent-dmx.md)   
- [&#41;DMX &#40;DMX](../dmx/topsum-dmx.md)  
+ [&#41;DMX &#40;DMX ](../dmx/topsum-dmx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 'Annexe A : fournisseurs de données et de services'
 title: 'Annexe A : fournisseurs | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d14a3399eb771965d039126ebf3672a8ad3d5190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396405"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Annexe A : fournisseurs de données et de services
 Cette section traite de trois types de fournisseurs : les fournisseurs de données, les fournisseurs de services et les composants de service. Les fournisseurs se répartissent en deux catégories : celles fournissant des données et celles fournissant des services. Un *fournisseur de données* possède ses propres données et l’expose sous forme tabulaire à votre application. Un *fournisseur de services* encapsule un service en générant et en consommant des données, en augmentant les fonctionnalités de vos applications ADO. Un fournisseur de services peut également être défini comme un *composant de service*, qui doit fonctionner conjointement avec d’autres fournisseurs de services ou composants.
@@ -39,7 +40,7 @@ Cette section traite de trois types de fournisseurs : les fournisseurs de donn�
 
  Les détails de chacun des fournisseurs de données actuellement disponibles auprès de Microsoft sont répertoriés comme suit.
 
-|Zone|Rubrique|
+|Domaine|Rubrique|
 |----------|-----------|
 |Bases de données ODBC|[Fournisseur Microsoft OLE DB pour ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Service d’indexation Microsoft|[Fournisseur Microsoft OLE DB pour le service d'indexation Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|

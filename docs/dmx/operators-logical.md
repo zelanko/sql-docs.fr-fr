@@ -1,4 +1,5 @@
 ---
+description: Opérateurs logiques (DMX)
 title: Opérateurs logiques (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3626cc323cd29f9a575398559bd2b82e40164246
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2171e867051c0092f2a03349b964df13f8f68e43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395715"
 ---
 # <a name="operators---logical"></a>Opérateurs logiques
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -25,8 +26,8 @@ ms.locfileid: "86968460"
 |Opérateur|Description|  
 |--------------|-----------------|  
 |[ET &#40;DMX&#41;](../dmx/and-dmx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
-|[NON &#40;&#41;DMX](../dmx/not-dmx.md)|Effectue une négation logique sur une expression numérique.|  
-|[OU &#40;&#41;DMX](../dmx/or-dmx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
+|[NON &#40;&#41;DMX ](../dmx/not-dmx.md)|Effectue une négation logique sur une expression numérique.|  
+|[OU &#40;&#41;DMX ](../dmx/or-dmx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -36,8 +37,8 @@ ms.locfileid: "86968460"
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
- [Opérateurs &#40;&#41;DMX](../dmx/operators-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
+ [Opérateurs &#40;&#41;DMX ](../dmx/operators-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

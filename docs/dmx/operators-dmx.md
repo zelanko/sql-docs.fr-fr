@@ -1,4 +1,5 @@
 ---
+description: Opérateurs (DMX)
 title: Opérateurs (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f274ebc498e5b88b8ae1fbac17c3c972686e348f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4c523ea9150f7d3361f93582e01b703be35d2366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395735"
 ---
 # <a name="operators-dmx"></a>Opérateurs (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,10 +31,10 @@ ms.locfileid: "86971594"
   
 |Catégorie d'opérateurs|Type d’opération|  
 |-----------------------|-----------------------|  
-|[Opérateurs arithmétiques &#40;&#41;DMX](../dmx/operators-arithmetic.md)|Effectuer une addition, une soustraction, une multiplication ou une division.|  
-|[Opérateurs de comparaison &#40;&#41;DMX](../dmx/operators-comparison.md)|Comparez une valeur à une autre valeur ou une expression.|  
-|[Opérateurs logiques &#40;&#41;DMX](../dmx/operators-logical.md)|Tester une condition telle que AND, OR ou NOT.|  
-|[Opérateurs unaires &#40;&#41;DMX](../dmx/operators-unary.md)|Effectuer une opération sur un opérande unique.|  
+|[Opérateurs arithmétiques &#40;&#41;DMX ](../dmx/operators-arithmetic.md)|Effectuer une addition, une soustraction, une multiplication ou une division.|  
+|[Opérateurs de comparaison &#40;&#41;DMX ](../dmx/operators-comparison.md)|Comparez une valeur à une autre valeur ou une expression.|  
+|[Opérateurs logiques &#40;&#41;DMX ](../dmx/operators-logical.md)|Tester une condition telle que AND, OR ou NOT.|  
+|[Opérateurs unaires &#40;&#41;DMX ](../dmx/operators-unary.md)|Effectuer une opération sur un opérande unique.|  
   
  Vous pouvez utiliser les opérateurs pour combiner des petites expressions DMX en expressions plus complexes. Dans les expressions complexes, les opérateurs sont analysés suivant l'ordre de priorité défini par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Les opérateurs dont le degré de priorité est le plus élevé sont exécutés avant les opérateurs de priorité moindre. Pour plus d’informations sur les expressions, consultez [expressions &#40;DMX&#41;](../dmx/expressions-dmx.md).  
   
@@ -45,7 +46,7 @@ ms.locfileid: "86971594"
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
