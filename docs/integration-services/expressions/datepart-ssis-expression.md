@@ -1,4 +1,5 @@
 ---
+description: DATEPART (expression SSIS)
 title: DATEPART (expression SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a87b6ca0118d181c21e46620a3cfd5e4c050d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348245"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expression SSIS)
 
@@ -44,7 +45,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction DATEPART renvoie un résultat NULL si l'argument est NULL.  
   
  Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -54,11 +55,11 @@ DATEPART(datepart, date)
 |partie de date|Abréviations|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
-|Quarter|qq, q|  
+|Quarter (Trimestre)|qq, q|  
 |Month|mm, m|  
 |Jour de l'année|dy, y|  
-|jour|dd, d|  
-|Week|wk, ww|  
+|Jour|dd, d|  
+|Semaine|wk, ww|  
 |Jour de la semaine|dw|  
 |Heure|Hh|  
 |Minute|mi, n|  

@@ -1,4 +1,5 @@
 ---
+description: Propriétés du projet, boîte de dialogue
 title: Boîte de dialogue Propriétés du projet | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8abf0faafe21b01c34875968cac43c501f951a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25b6f01f5966f7d157fd76bd5082567a95854fbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351605"
 ---
 # <a name="project-properties-dialog-box"></a>Propriétés du projet, boîte de dialogue
 
@@ -72,7 +73,7 @@ ms.locfileid: "86922605"
 ##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Définir les options sur la page Autorisations  
  Utilisez la page **Autorisations** pour afficher et définir les autorisations explicites du projet.  
   
- ...  
+ Parcourir  
  Cliquez sur **Parcourir** pour sélectionner les utilisateurs et les rôles auxquels vous souhaitez affecter des autorisations à l’aide de la boîte de dialogue **Parcourir tous les principaux** .  
   
  **Nom**  

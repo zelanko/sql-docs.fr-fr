@@ -1,4 +1,5 @@
 ---
+description: Gestionnaire de connexions Hadoop
 title: Gestionnaire de connexions Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72f5629e6ac5200324a149ff7242122b0ae0c16c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350215"
 ---
 # <a name="hadoop-connection-manager"></a>Gestionnaire de connexions Hadoop
 
@@ -69,7 +70,7 @@ Il existe deux options permettant de configurer l’environnement local pour pou
 -   Option 1 : [Joindre l’ordinateur SSIS au domaine Kerberos](#kerberos-join-realm)
 -   Option n°2 : [Activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos](#kerberos-mutual-trust)
 
-### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Option 1 : Joindre l’ordinateur SSIS au domaine Kerberos
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Option 1 : Joindre l’ordinateur SSIS au domaine Kerberos
 
 #### <a name="requirements"></a>Conditions requises :
 

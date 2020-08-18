@@ -1,4 +1,5 @@
 ---
+description: Service de capture de données modifiées pour Oracle par Attunity
 title: Service de capture de données modifiées pour Oracle par Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7247e2ce6c16a25cff402d20a76cee87adf0c024
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0854e117ccc765b9e4b47011e589244e71730810
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351215"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Service de capture de données modifiées pour Oracle par Attunity
 
@@ -80,11 +81,11 @@ Le service et le concepteur de capture de données modifiées Microsoft pour Ora
   
 -   [Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
--   [Aide (F1) du service CDC pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Aide sur le service de capture de données modifiées pour Oracle par Attunity via la touche F1](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Service de capture de données modifiées pour Oracle par Attunity : rubrique Procédures](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation du service CDC Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
+ [Utilisation du service de capture de données modifiées Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
   

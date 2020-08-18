@@ -1,4 +1,5 @@
 ---
+description: Transformation de regroupement approximatif
 title: Regroupement approximatif, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4e00be6f692bd3e4bec21acec6c2de6359622b7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348445"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
 
@@ -148,7 +149,7 @@ ms.locfileid: "86919329"
  **Chiffres**  
  Spécifiez l'importance des premiers et derniers chiffres en comparant les données de la colonne. Par exemple, si les premiers chiffres sont significatifs, « 123 Main Street » ne sera pas groupé avec « 456 Main Street ».  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les premiers et derniers chiffres ne sont pas significatifs.|  
 |**Premiers**|Seuls les premiers chiffres sont significatifs.|  

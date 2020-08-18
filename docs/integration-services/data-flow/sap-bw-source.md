@@ -1,4 +1,5 @@
 ---
+description: Source SAP BW
 title: Source SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349025"
 ---
 # <a name="sap-bw-source"></a>Source SAP BW
 
@@ -52,7 +53,7 @@ ms.locfileid: "86917816"
   
     2.  Pour **Type d'activation**, sélectionnez **Programme de serveur inscrit**.  
   
-    3.  Pour **Type de communication avec le système cible**, sélectionnez **Non-Unicode (Paramètres MDMP inactifs)** .  
+    3.  Pour **Type de communication avec le système cible**, sélectionnez **Non-Unicode (Paramètres MDMP inactifs)**.  
   
     4.  Attribuez un ID de programme approprié.  
   
@@ -142,6 +143,6 @@ ms.locfileid: "86917816"
 -   [Préversion](../../integration-services/data-flow/preview.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

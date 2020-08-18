@@ -1,4 +1,5 @@
 ---
+description: Gestionnaire de connexions de fichiers plats
 title: Gestionnaire de connexions de fichiers plats | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 210403386f169488773911b12fd881c4820d5a42
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351285"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
 
@@ -110,7 +111,7 @@ ms.locfileid: "86914195"
  **Format**  
  Indique si le fichier utilise une mise en forme délimitée, à largeur fixe ou en drapeau à droite.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Delimited|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
@@ -265,7 +266,7 @@ ms.locfileid: "86914195"
  **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Ajouter une colonne**|Ajoute une colonne à la fin de la liste.|  
 |**Insérer avant**|Insère une nouvelle colonne avant la colonne sélectionnée.|  

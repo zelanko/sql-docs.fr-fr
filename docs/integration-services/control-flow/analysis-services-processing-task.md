@@ -1,4 +1,5 @@
 ---
+description: tâche de traitement d'Analysis Services
 title: Traitement d’Analysis Services, tâche | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c39fdf1f63084d7f1340dae6b11f17124a52138
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349985"
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
 
@@ -114,15 +115,15 @@ ms.locfileid: "86908580"
  **Nouveau**  
  Créez un nouveau gestionnaire de connexions Analysis Services.  
   
- **Rubriques connexes :** [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Informations de référence sur l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Liste d'objets**  
  
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |**Nom de l’objet**|Affiche la liste des noms d'objets définis.|  
 |**Type**|Affiche la liste des types des objets définis.|  
-|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes :** [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes** : [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Paramètres**|Affiche la liste des paramètres de traitement des objets définis.|  
   
  **Ajouter**  
@@ -134,11 +135,11 @@ ms.locfileid: "86908580"
  **Analyse d'impact**  
  Analyse l'impact sur l'objet sélectionné.  
   
- **Rubriques connexes :** [Boîte de dialogue Analyse d'impact &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **Rubriques connexes :** [Boîte de dialogue Analyse d’impact &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Résumé des paramètres du traitement**  
  
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |**Ordre de traitement**|Indique si les objets sont traités séquentiellement ou dans un traitement. Si le traitement parallèle est utilisé, indique le nombre d'objets à traiter simultanément.|  
 |**Mode de transaction**|Indique le mode de transaction du traitement séquentiel.|  
@@ -149,4 +150,4 @@ ms.locfileid: "86908580"
  **Modifier les paramètres**  
  Change les options de traitement et la gestion des erreurs dans les clés de dimension.  
   
- **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  

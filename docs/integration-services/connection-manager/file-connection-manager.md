@@ -1,4 +1,5 @@
 ---
+description: Gestionnaire de connexions de fichiers
 title: Gestionnaire de connexions de fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11c5a2404ec0c5dd8a51f09b1b96a4b5518231ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351435"
 ---
 # <a name="file-connection-manager"></a>Gestionnaire de connexions de fichiers
 
@@ -79,7 +80,7 @@ ms.locfileid: "86920798"
  **Type d'utilisation**  
  Indiquez si le **Gestionnaire de connexions de fichiers** se connecte à un fichier ou dossier existant ou s’il crée un nouveau fichier ou dossier.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Créer un fichier|Crée un nouveau fichier au moment de l'exécution.|  
 |Fichier existant|Utilise un fichier existant.|  
