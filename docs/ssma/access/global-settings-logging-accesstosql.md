@@ -1,4 +1,5 @@
 ---
+description: Paramètres globaux (journalisation) (AccessToSQL)
 title: Paramètres globaux (journalisation) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: dbb89fe23d8ca357bcac02b16100905e27c54d8e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc7bec3f7f4ce358ccbb725e039208f574ae7aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472562"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Paramètres globaux (journalisation) (AccessToSQL)
 Utilisez la boîte de dialogue **paramètres globaux** pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous pouvez modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  

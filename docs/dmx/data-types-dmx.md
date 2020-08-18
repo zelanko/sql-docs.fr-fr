@@ -1,4 +1,5 @@
 ---
+description: Types de données (DMX)
 title: Types de données (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9658b148d2ce76d5e73f5deaf3abfa9542e79771
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491538"
 ---
 # <a name="data-types-dmx"></a>Types de données (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "86969880"
   
 -   Long  
   
--   Boolean  
+-   Booléen  
   
 -   Double  
   
@@ -42,7 +43,7 @@ ms.locfileid: "86969880"
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

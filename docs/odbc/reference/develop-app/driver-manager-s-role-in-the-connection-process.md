@@ -1,4 +1,5 @@
 ---
+description: Rôle&#39;s du gestionnaire de pilotes dans le processus de connexion
 title: Rôle&#39;s du gestionnaire de pilotes dans le processus de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0227a4063573cb05ecaa9434605ba35f2811bd06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb4eea978604960d87ef6c5b621e5801121c5f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483042"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Rôle&#39;s du gestionnaire de pilotes dans le processus de connexion
 N’oubliez pas que les applications n’appellent pas directement les fonctions des pilotes. Au lieu de cela, ils appellent les fonctions du gestionnaire de pilotes avec le même nom et le gestionnaire de pilotes appelle les fonctions du pilote. En règle générale, cela se produit presque immédiatement. Par exemple, l’application appelle **SQLExecute** dans le gestionnaire de pilotes et après quelques vérifications d’erreurs, le gestionnaire de pilotes appelle **SQLExecute** dans le pilote.  

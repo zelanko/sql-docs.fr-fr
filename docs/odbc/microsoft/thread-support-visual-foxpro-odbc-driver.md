@@ -1,4 +1,5 @@
 ---
+description: Prise en charge des threads (pilote ODBC Visual FoxPro)
 title: Prise en charge des threads (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 013ccd1f5d202794ba6b7a44c10339dd14c08d17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449071"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Prise en charge des threads (pilote ODBC Visual FoxPro)
 Le pilote ODBC Visual FoxPro est thread-safe. L’accès aux descripteurs de l’environnement (*poules*), les handles de connexion (*hdbc*) et les descripteurs d’instructions (*HSTMT*) est encapsulé dans les sémaphores appropriés pour empêcher d’autres processus d’accéder aux structures de données internes du pilote et éventuellement de les modifier.  

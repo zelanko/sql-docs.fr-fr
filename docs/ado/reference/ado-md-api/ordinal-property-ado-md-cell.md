@@ -1,4 +1,5 @@
 ---
+description: Ordinal, propriété (objet Cell d’ADO MD)
 title: Propriété ordinale (cellule ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0563912d49ba6baff085fd83be88693e8f8ba1f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 55db23316b4d920154f00aa3b03fb101b2382483
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440811"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal, propriété (objet Cell d’ADO MD)
 Identifie de façon unique une [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) en fonction de sa position dans un CellSet.  
@@ -29,7 +30,7 @@ Identifie de façon unique une [cellule](../../../ado/reference/ado-md-api/cell-
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un entier **long** et est en lecture seule.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La valeur ordinale de la cellule identifie de façon unique la cellule dans un CellSet. Conceptuellement, les cellules sont numérotées dans un ensemble de cellules comme si l’ensemble de cellules était un tableau de dimensions *p*, où *p* est le nombre d' [axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md). Les cellules sont numérotées à partir de zéro dans l’ordre ligne-principal. Voici la formule permettant de calculer le nombre ordinal d’une cellule :  
   
  La valeur ordinale de la cellule peut être utilisée avec la propriété [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) de l’objet [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) pour récupérer rapidement la [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

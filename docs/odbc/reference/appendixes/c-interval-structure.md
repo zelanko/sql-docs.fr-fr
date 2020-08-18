@@ -1,4 +1,5 @@
 ---
+description: Structure d’intervalle C
 title: Structure d’intervalle C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89962558fdbd6f0de5b5e030fe504669d51c40be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411205"
 ---
 # <a name="c-interval-structure"></a>Structure d’intervalle C
 Chacun des types de données d’intervalle C listés dans la section [types de données c](../../../odbc/reference/appendixes/c-data-types.md) utilise la même structure pour contenir les données d’intervalle. Quand **SQLFetch**, **SQLFetchScroll**ou **SQLGetData** est appelé, le pilote retourne des données dans la structure SQL_INTERVAL_STRUCT, utilise la valeur spécifiée par l’application pour les types de données C (dans l’appel à **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**) pour interpréter le contenu de SQL_INTERVAL_STRUCT et remplit le champ *Interval_type* de la structure avec la valeur d' *énumération* correspondant au type c. Notez que les pilotes ne lisent pas le champ *interval_type* pour déterminer le type de l’intervalle. ils récupèrent la valeur du champ descripteur SQL_DESC_CONCISE_TYPE. Lorsque la structure est utilisée pour les données de paramètre, le pilote utilise la valeur spécifiée par l’application dans le champ SQL_DESC_CONCISE_TYPE de l’APD pour interpréter le contenu de SQL_INTERVAL_STRUCT, même si l’application définit la valeur du champ *interval_type* sur une autre valeur.  

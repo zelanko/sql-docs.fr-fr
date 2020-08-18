@@ -1,4 +1,5 @@
 ---
+description: MSmerge_genhistory (Transact-SQL)
 title: MSmerge_genhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c0c516062e05fe71250f8f309c12a5a3d3c89a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54a0e247c024d00754e0f8b8c285c49f55f23ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460410"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85889809"
 |**changecount**|**int**|Nombre de modifications réfléchies dans une génération donnée.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

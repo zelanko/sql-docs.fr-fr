@@ -1,4 +1,5 @@
 ---
+description: Se connecter à Azure SQL Database (SybaseToSQL)
 title: Se connecter à Azure SQL Database (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50f130969949abd6f863c1a7d63c4a4e2d27decc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492312"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>Se connecter à Azure SQL Database (SybaseToSQL)
 Utilisez la boîte de dialogue se connecter au Azure SQL Database pour vous connecter à la base de données Azure SQL Database que vous souhaitez migrer.  
@@ -33,7 +34,7 @@ Sélectionnez, entrez ou **recherchez** le nom de la base de données.
 > [!IMPORTANT]  
 > SSMA pour Sybase ne prend pas en charge la connexion à la base de données Master dans Azure SQL Database.  
   
-**Nom d'utilisateur**  
+**Nom d’utilisateur**  
   
 Entrez le nom d’utilisateur que SSMA utilisera pour se connecter à la base de données Azure SQL Database  
   

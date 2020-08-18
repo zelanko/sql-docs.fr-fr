@@ -1,4 +1,5 @@
 ---
+description: sysmail_mailattachments (Transact-SQL)
 title: sysmail_mailattachments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0fd6122ec99d4f5788fbe9f2b33478df7723f238
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3bdec861d8793d2943111a692d5bcde98b582cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460529"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85900971"
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En cas de résolution des problèmes de la messagerie de base de données, utilisez cette vue pour voir les propriétés des pièces jointes.  
   
  Les pièces jointes stockées dans les tables système peuvent entraîner une augmentation de la taille de la base de données **msdb** . Utilisez **sysmail_delete_mailitems_sp** pour supprimer des éléments de messagerie et leurs pièces jointes associées. Pour plus d’informations, consultez [créer un travail de SQL Server Agent pour archiver les Messages Database mail et les journaux des événements](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

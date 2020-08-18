@@ -1,4 +1,5 @@
 ---
+description: Propriété ProtocolName (classe SqlServerAlias)
 title: Propriété ProtocolName (SqlServerAlias)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8903cae5b92ae4ce4da5771e09ed89d8f827dbab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d143c3304e340a73da8e1e66c4d6ea9ba4c19d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472722"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>Propriété ProtocolName (classe SqlServerAlias)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom du protocole utilisé par l'alias de connexion au serveur.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,5 +43,5 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom du protocole utilisée par l'alias de connexion au serveur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   

@@ -1,4 +1,5 @@
 ---
+description: Format du fichier texte (pilote de fichier texte)
 title: Format de fichier texte (pilote de fichier texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb402f0f186529da33974b77ffeecdd7ed788d53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449091"
 ---
 # <a name="text-file-format-text-file-driver"></a>Format du fichier texte (pilote de fichier texte)
 Le pilote texte ODBC prend en charge les fichiers texte délimités et à largeur fixe. Un fichier texte se compose d’une ligne d’en-tête facultative et de zéro ou plusieurs lignes de texte.  
@@ -42,7 +43,7 @@ Le pilote texte ODBC prend en charge les fichiers texte délimités et à largeu
 |Non italique|Caractères qui doivent être entrés comme indiqué|  
 |*italique*|Arguments définis ailleurs dans la grammaire|  
 |crochets ([])|Éléments facultatifs|  
-|accolades ({})|Liste de choix s’excluant mutuellement|  
+|accolades ( {} )|Liste de choix s’excluant mutuellement|  
 |barres verticales (&#124;)|Séparer les choix s’excluant mutuellement|  
 |points de suspension (...)|Éléments qui peuvent être répétés une ou plusieurs fois|  
   
@@ -67,7 +68,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  La largeur de chaque colonne dans un fichier texte de largeur fixe est spécifiée dans le fichier Schema. ini.  
+>  La largeur de chaque colonne dans un fichier texte de largeur fixe est spécifiée dans le fichier de Schema.ini.  
   
 ```  
   
@@ -87,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  Le délimiteur d’un fichier texte délimité personnalisé est spécifié dans le fichier Schema. ini.  
+>  Le délimiteur d’un fichier texte délimité personnalisé est spécifié dans le fichier de Schema.ini.  
   
 ```  
 quote-character ::= "  

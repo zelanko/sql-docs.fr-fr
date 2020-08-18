@@ -1,4 +1,5 @@
 ---
+description: Prise en charge internationale (pilote ODBC Visual FoxPro)
 title: Prise en charge internationale (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4b0c758bb478ea6a468e6756c3d6f0f52c766f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 575eb2361b5869f924cf2b8e5721121182b684db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449461"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>Prise en charge internationale (pilote ODBC Visual FoxPro)
 Le pilote ODBC Microsoft Visual FoxPro prend en charge les éléments suivants :  
