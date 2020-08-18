@@ -1,4 +1,5 @@
 ---
+description: CollectionAggregate (type de données geography)
 title: CollectionAggregate (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cdb2269e38b482d51a8320c6dd91403bdf7cc289
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b49f1ab03be85c2c83caf50b548528ff36fd97b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360385"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (type de données geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="exception"></a>Exception  
  Lève un `FormatException` en présence de valeurs d'entrée qui ne sont pas valides. Consultez [STIsValid &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La méthode retourne **null** quand l’entrée est vide ou que ses SRID sont différents. Consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  La méthode ignore les entrées **null**.  
@@ -64,7 +65,7 @@ ConvexHullAggregate ( geography_operand )
  WHERE City LIKE ('Bothell')
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

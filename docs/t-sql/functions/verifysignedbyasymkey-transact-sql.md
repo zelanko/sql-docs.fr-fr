@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8404d41f9447eeafd30788c482abd7279c6b6c46
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362245"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  Retourne 1 lorsque les signatures correspondent, sinon 0.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **VerifySignedByAsymKey** déchiffre la signature des données à l’aide de la clé publique de la clé asymétrique spécifiée, puis compare la valeur déchiffrée à un hachage MD5 des données récemment calculé. Si les valeurs correspondent, la validité de la signature est confirmée.  
   
 ## <a name="permissions"></a>Autorisations  

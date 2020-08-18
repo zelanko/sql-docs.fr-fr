@@ -1,4 +1,5 @@
 ---
+description: Gestion d'événements par programme
 title: Gestion d’événements par programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08012fc9ac717476be0bc9e592b96d7391aa7a85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 35b458354433d923a6c028badae4e6f9fb02acf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352055"
 ---
 # <a name="handling-events-programmatically"></a>Gestion d'événements par programme
 
@@ -114,7 +115,7 @@ End Class
   
  Le code suivant montre comment créer un objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Le code ajoute <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> à la collection <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> du package, puis crée un objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> pour l'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> de la tâche. <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> est ajouté au gestionnaire d'événements, qui s'exécute lorsque l'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> se produit pour le premier <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. Cet exemple suppose que vous disposez d'un fichier nommé C:\Windows\Temp\DemoFile.txt à des fins de test. La première fois que vous exécutez l'exemple, le fichier est correctement copié et le gestionnaire d'événements n'est pas appelé. Lorsque vous exécutez l’exemple une seconde fois, le premier <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> ne parvient pas à copier le fichier (car la valeur de <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> est **false**), le gestionnaire d’événements est appelé, le deuxième <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> supprime le fichier source et le package signale un échec en raison de l’erreur qui s’est produite.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```csharp  
 using System;  

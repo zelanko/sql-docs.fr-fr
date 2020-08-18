@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_ALL (Transact-SQL)
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6be25893400c5aca52d81c86710042b24979a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01361c4ed6acb7a0a1ea41c5048a6d8eb41dd283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356885"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,9 @@ ms.locfileid: "85765715"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Notes 
  L'option SET SHOWPLAN_ALL est définie lors de l'exécution, et non pas durant l'analyse.  
   
  Si `SET SHOWPLAN_ALL` a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations sur l’exécution de chaque instruction sans toutefois l’exécuter ; les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne sont pas exécutées. Une fois cette option activée, des informations sur toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ultérieures sont retournées, jusqu'à ce que l'option soit de nouveau désactivée. Par exemple, si une instruction CREATE TABLE est exécutée alors que l’option `SET SHOWPLAN_ALL` a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d’erreur pour toute instruction SELECT ultérieure se rapportant à cette table, informant les utilisateurs qu’elle n’existe pas. Par conséquent, les prochaines références à cette table échoueront. Lorsque SET SHOWPLAN_ALL a la valeur OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute les instructions sans générer de rapport.  

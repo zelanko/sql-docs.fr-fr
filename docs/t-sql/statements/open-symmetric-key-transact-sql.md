@@ -1,4 +1,5 @@
 ---
+description: OPEN SYMMETRIC KEY (Transact-SQL)
 title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0855dd1c7e57827d99bdeaa78813fa54b75e2fb8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cdcee07d25c05ca8571071dfe8f98b00c9259f9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357855"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +70,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  Mot de passe utilisé pour protéger la clé symétrique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les clés symétriques ouvertes sont liées à la session et non au contexte de sécurité. Une clé ouverte est disponible tant qu'elle n'a pas été explicitement fermée ou que la session n'a pas été arrêtée. Si vous ouvrez une clé symétrique puis vous changez de contexte, la clé reste ouverte et disponible dans le contexte de substitution. Des informations relatives aux clés symétriques ouvertes sont consultables dans la vue de catalogue [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
  Si la clé symétrique a été chiffrée avec une autre clé, celle-ci doit être ouverte d'abord.  

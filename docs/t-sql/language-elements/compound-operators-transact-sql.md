@@ -1,4 +1,5 @@
 ---
+description: Opérateurs composés (Transact-SQL)
 title: Opérateurs composés (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fe313e317a2d57bbb8547f66ccac6f44eaad264
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e42ce0876a6354056ae13daea43878a231bd5306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361805"
 ---
 # <a name="compound-operators-transact-sql"></a>Opérateurs composés (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ expression operator expression
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données de l'argument ayant la priorité la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour plus d'informations, consultez les rubriques relatives à chaque opérateur.  
   
 ## <a name="examples"></a>Exemples  

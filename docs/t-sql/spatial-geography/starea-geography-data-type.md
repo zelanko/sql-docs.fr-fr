@@ -1,4 +1,5 @@
 ---
+description: STArea (type de données geography)
 title: STArea (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b3b60616c146f668f7bc089a54d531ba6de78d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a8581700ea3145840684cce1e18e24c2f2e1cd3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359735"
 ---
 # <a name="starea-geography-data-type"></a>STArea (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **fl
   
 Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 STArea() retourne 0 si l’instance **geography** est vide ou contient uniquement des figures à zéro et une dimension.  
   
 > [!NOTE]  
@@ -59,5 +60,5 @@ SELECT @g.STArea();
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+[Méthodes OGC sur les instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: VARP (Transact-SQL)
 title: VARP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1801400b3546539cad3acc229b40298e9e165ca7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2dd740b039ae0f7c23ce9b7482201d4fdda32b9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362445"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87111269"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 -- Aggregate Function Syntax   
 VARP ( [ ALL | DISTINCT ] expression )  
   
@@ -62,7 +63,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si VARP est utilisé sur tous les éléments d'une instruction SELECT, chaque valeur du jeu de résultats est incluse dans le calcul. VARP ne peut être utilisé qu'avec des colonnes numériques. Les valeurs NULL sont ignorées.  
   
  VARP est une fonction déterministe lorsqu'elle est utilisée sans les clauses OVER et ORDER BY. Elle n'est pas déterministe avec les clauses OVER et ORDER BY. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -72,7 +73,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-varp"></a>A : Utilisation de VARP  
  L'exemple suivant renvoie la variance du remplissage de toutes les valeurs de bonus dans la table `SalesPerson` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT VARP(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -83,7 +84,7 @@ GO
 ### <a name="b-using-varp"></a>B : Utilisation de VARP  
  L’exemple suivant retourne la variance statistique (`VARP`) des valeurs de quota de ventes dans la table `dbo.FactSalesQuota`. La première colonne contient la variance de toutes les valeurs distinctes, alors que la seconde colonne contient la variance de toutes les valeurs, y compris des valeurs en double.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT VARP(DISTINCT SalesAmountQuota)AS Distinct_Values, VARP(SalesAmountQuota) AS All_Values  
@@ -101,7 +102,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-varp-with-over"></a>C. Utilisation de VAR avec OVER  
  L’exemple suivant retourne la variance statistique (`VARP`) des valeurs de quota de ventes pour chaque trimestre de l’année civile. Notez que la clause ORDER BY dans la clause OVER trie la variance statistique et que la clause ORDER BY de l’instruction SELECT trie les résultats.  
   
-```  
+```sql 
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

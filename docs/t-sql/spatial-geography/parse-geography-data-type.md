@@ -1,4 +1,5 @@
 ---
+description: Parse (type de données geography)
 title: Parse (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f6e2dcc0cf6ade3cb8f4e9c82b81e650ca7622a2
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ba373a279750e7399881edcc072dc3a086ec5e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360005"
 ---
 # <a name="parse-geography-data-type"></a>Parse (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ SET @g = geography::Parse('LINESTRING(-122.360 47.656, -122.343 47.656)');
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
  [STGeomFromText &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   

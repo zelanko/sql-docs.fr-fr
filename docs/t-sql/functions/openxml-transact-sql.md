@@ -1,4 +1,5 @@
 ---
+description: OPENXML (Transact-SQL)
 title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363635"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans un contexte d'extraction, cet indicateur spécifie que les données consommées ne doivent pas être copiées sur la propriété de dépassement **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Définition de schéma de la forme : _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ Définition de schéma de la forme : _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Nom de la colonne dans l'ensemble de lignes.  
@@ -82,7 +83,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  Nom de la table qui peut être fourni (à la place de *SchemaDeclaration*) si une table comportant le schéma souhaité existe déjà et qu’aucun modèle de colonne n’est requis.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La clause WITH fournit un format d’ensemble de lignes (et d’autres informations de mappage pertinentes) en utilisant *SchemaDeclaration* ou en spécifiant un *TableName* existant. Si la clause WITH facultative n’est pas spécifiée, les résultats sont retournés au format de table **edge**. Les tables edge représentent la structure à granularité fine des documents XML (par exemple, les noms d'élément/d'attribut, la hiérarchie du document, les espaces de noms, les instructions de traitement, etc.) dans une seule table.  
   
  Le tableau suivant décrit la structure de la table **edge**.  
@@ -247,5 +248,5 @@ EXEC sp_xml_removedocument @idoc;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples : utilisation de OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
+ [Exemples : Utilisation de OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

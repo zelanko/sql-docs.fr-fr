@@ -1,4 +1,5 @@
 ---
+description: SET FMTONLY (Transact-SQL)
 title: SET FMTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d150082120cde1b09d3437a27b2345b036daf8b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef1047125b3c923de910e046a0e92a3380480699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355945"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
 
@@ -47,7 +48,7 @@ ms.locfileid: "67929025"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 SET FMTONLY { ON | OFF }   
 ```  
 

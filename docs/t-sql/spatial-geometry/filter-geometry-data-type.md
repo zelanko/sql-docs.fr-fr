@@ -1,4 +1,5 @@
 ---
+description: Filter (type de données geometry)
 title: Filter (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5cbfa37a468fcc600b4092340d9f58365954294a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 11092f892c9e6e756849f368a44db3ec7f3d0a61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359255"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ Dans les cas où un index n’est pas disponible ou n’est pas utilisé, la mé
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode n'est pas déterministe et n'est pas précise.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,4 +1,5 @@
 ---
+description: PATINDEX (Transact-SQL)
 title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,19 +23,19 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363375"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Renvoie la position de début de la première occurrence d'un modèle dans une expression spécifiée, ou des zéros si le modèle est introuvable, pour tous les types de données texte et caractère valides.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +58,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>Types de retour  
 **bigint** si *expression* est du type **varchar(max)** ou **nvarchar(max)**  ; sinon, **int**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Si l’argument *pattern* ou *expression* est NULL, PATINDEX retourne NULL.  
  
 La position de départ de PATINDEX est 1.
@@ -67,7 +68,7 @@ PATINDEX exécute ses comparaisons en se basant sur le classement de l'entrée. 
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
 Lors de l’utilisation de classements SC, la valeur de retour compte toutes les paires de substitution UTF-16 dans le paramètre *expression* comme un caractère unique. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-0x0000 (**char(0)** ) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans PATINDEX.  
+0x0000 (**char(0)**) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans PATINDEX.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -126,7 +127,7 @@ position
  Contrairement à `LIKE`, `PATINDEX` retourne une position, comme le fait `CHARINDEX`.  
 
 ### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D. Utilisation d’expressions génériques complexes avec PATINDEX 
-L’exemple suivant utilise l’[opérateur de chaîne](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` pour rechercher la position d’un caractère qui n’est ni un chiffre, ni une lettre, ni un espace.
+L’exemple suivant utilise l’ [opérateur de chaîne](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)`[^]` pour rechercher la position d’un caractère qui n’est ni un chiffre, ni une lettre, ni un espace.
 
 ```sql
 SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 

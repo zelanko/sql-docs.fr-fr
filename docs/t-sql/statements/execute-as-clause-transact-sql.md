@@ -1,4 +1,5 @@
 ---
+description: Clause EXECUTE AS (Transact-SQL)
 title: EXECUTE AS Clause (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358405"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clause EXECUTE AS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,7 +108,7 @@ DDL Triggers with Database Scope
   
  *login_name* ne peut pas être un groupe, un rôle, un certificat, une clé ou un compte intégré tel que NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La façon dont le [!INCLUDE[ssDE](../../includes/ssde-md.md)] évalue les autorisations sur les objets référencés dans le module dépend de la chaîne d’appartenance entre les objets appelants et les objets référencés. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la chaîne d'appartenance était la seule méthode qui permettait d'éviter d'accorder l'accès de l'utilisateur appelant à tous les objets référencés.  
   
  La chaîne d'appartenance est soumise aux limitations suivantes :  

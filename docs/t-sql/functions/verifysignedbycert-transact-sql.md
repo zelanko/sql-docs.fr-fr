@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYCERT (Transact-SQL)
 title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d214adb3915ab7d4df137c23cc7bcea31bb9b51
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362055"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  Retourne 1 lorsque les données signées n'ont pas changé, sinon 0.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **VerifySignedBycert** déchiffre la signature des données à l’aide de la clé publique du certificat spécifié, puis compare la valeur déchiffrée à un hachage MD5 des données récemment calculé. Si les valeurs correspondent, la validité de la signature est confirmée.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: Fonctions logiques - CHOOSE (Transact-SQL)
 title: CHOOSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5bd06dd57b1b5c8bc26acbe0c85af175ba9c8d8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cc63fcaa6e7419a37005817f3121a2b8851dc749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363795"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Fonctions logiques - CHOOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>Types de retour  
  Retourne le type de données ayant la priorité la plus élevée à partir de l'ensemble de types transmis à la fonction. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  CHOOSE agit comme un index dans un tableau, où le tableau est composé des arguments qui suivent l'argument d'index. L'argument d'index détermine, parmi les valeurs suivantes, celle qui sera retournée.  
   
 ## <a name="examples"></a>Exemples  

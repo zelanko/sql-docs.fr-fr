@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IDENTITY (Transact-SQL)'
 title: '@@IDENTITY (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5a41eec147978e3e794c77e4c79336daa780e29
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d4c3f909144846292acf1247411582e7d9d638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365385"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87113429"
 ## <a name="return-types"></a>Types de retour
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  À la fin d’une instruction INSERT, SELECT INTO ou de copie par bloc, @@IDENTITY contient la dernière valeur d’identité générée par l’instruction. Si l’instruction n’a affecté aucune table contenant des colonnes d’identité, @@IDENTITY retourne la valeur NULL. Si plusieurs lignes ont été insérées, générant ainsi plusieurs valeurs d’identité, @@IDENTITY retourne la dernière valeur d’identité générée. Si l’instruction active un ou plusieurs déclencheurs chargés d’effectuer des instructions INSERT qui génèrent des valeurs d’identité, l’appel de @@IDENTITY immédiatement après l’instruction retourne la dernière valeur d’identité générée par les déclencheurs. Si un déclencheur est activé après une action d’insertion sur une table dotée d’une colonne d’identité et qu’il effectue une opération d’insertion dans une autre table dépourvue d’une colonne d’identité, @@IDENTITY retourne la valeur d’identité de la première insertion. La valeur @@IDENTITY ne revient pas à une valeur précédente en cas d’échec de l’instruction INSERT ou SELECT INTO, d’échec d’une copie par bloc ou d’une restauration de la transaction.  
   
  Les instructions et les transactions en échec peuvent modifier l'identité actuelle d'une table et créer des trous dans les valeurs des colonnes d'identité. La valeur d'identité n'est jamais annulée, même si la transaction qui a essayé d'insérer la valeur dans la table n'est pas validée. Par exemple, si une instruction INSERT échoue à cause d'une violation d'identité IGNORE_DUP_KEY, la valeur d'identité actuelle de la table augmente quand même d'une unité.  

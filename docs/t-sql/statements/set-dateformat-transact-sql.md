@@ -1,4 +1,5 @@
 ---
+description: SET DATEFORMAT (Transact-SQL)
 title: SET DATEFORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -27,12 +28,12 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983c1ffb63fae634fe86ffa8b90707d7242d014
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9d7a2c4feb97c534dcef80c851e1df0ae2721a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357145"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,10 +56,10 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  Ordre des parties de la date. Les paramètres valides sont **mdy**, **dmy**, **ymd**, **ydm**, **myd** et **dym**. Il peut s'agir du format Unicode ou d'un jeu de caractères codés sur deux octets (DBCS) converti en Unicode. La valeur par défaut pour l’anglais des États-Unis est **mdy**. Pour connaître le paramètre DATEFORMAT par défaut de toutes les langues prises en charge, consultez [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le paramètre DATEFORMAT **ydm** n’est pas pris en charge pour les types de données **date**, **datetime2** et **datetimeoffset**.  
   
- Le paramètre DATEFORMAT peut interpréter des chaînes de caractères différemment pour les types de données de date, en fonction de leur format de chaîne. Par exemple, les interprétations **datetime** et **smalldatetime** peuvent ne pas correspondre à **date**, **datetime2** ou  **datetimeoffset**. Le paramètre DATEFORMAT affecte l’interprétation des chaînes de caractères quand elles sont converties en valeurs de date pour la base de données. Il n’affecte pas l’affichage des valeurs du type de données Date ni leur format de stockage dans la base de données.  
+ Le paramètre DATEFORMAT peut interpréter des chaînes de caractères différemment pour les types de données de date, en fonction de leur format de chaîne. Par exemple, les interprétations **datetime** et **smalldatetime** peuvent ne pas correspondre à **date**, **datetime2** ou ** datetimeoffset**. Le paramètre DATEFORMAT affecte l’interprétation des chaînes de caractères quand elles sont converties en valeurs de date pour la base de données. Il n’affecte pas l’affichage des valeurs du type de données Date ni leur format de stockage dans la base de données.  
   
  Certains formats de chaînes de caractères, par exemple ISO 8601, sont interprétés indépendamment du paramètre DATEFORMAT.  
   

@@ -1,4 +1,5 @@
 ---
+description: STPolyFromText (type de données geometry)
 title: STPolyFromText (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 199236c4dc25764b5eab8b5f2754981cf0c70aef
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0e2ce076523c0707c8764d9a21f38abdbf41e0a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359715"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Arguments
  *polygon_tagged_text*  
- Représentation WKT de l’instance **geometryPolygon** à retourner. *polygon_tagged_text* est une expression **nvarchar(max)** .  
+ Représentation WKT de l’instance **geometryPolygon** à retourner. *polygon_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryPolygon** à retourner.  
@@ -52,7 +53,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  Type OGC : **Polygon**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,8 +65,8 @@ SET @g = geometry::STPolyFromText('POLYGON ((5 5, 10 5, 10 10, 5 5))', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

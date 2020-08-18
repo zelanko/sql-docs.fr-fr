@@ -1,4 +1,5 @@
 ---
+description: += (Affectation après addition) (Transact-SQL)
 title: += (Affectation après addition) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ec2b25adc213be5b19ab3784a2a6e234c9477b1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: da7541273796c63781723455481782af612a22e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361695"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+= (Affectation après addition) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ expression += expression
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données de l'argument ayant la priorité la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour plus d’informations, consultez [+ &#40;Addition&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
