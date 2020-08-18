@@ -1,4 +1,5 @@
 ---
+description: Fournir une requête source (Assistant Importation et Exportation SQL Server)
 title: Fournir une requête source (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 267db7655133669266b9fc0c9f6b54819333a6fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edd3812cce0a5d0b956691f3a6bfb4f708495819
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347165"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Fournir une requête source (Assistant Importation et Exportation SQL Server)
 
@@ -50,7 +51,7 @@ Pour plus d’exemples de requêtes SELECT, consultez [Exemples SELECT &#40;Tran
 
 Si votre source de données est Excel, consultez [Fournir une requête source pour Excel](#excelQueries) plus loin dans cette rubrique pour savoir comment spécifier des plages et des feuilles de calcul Excel dans une requête.
   
- **Analyser**  
+ **Analyser**.  
  Vérifiez la syntaxe de l’instruction SQL que vous avez entrée dans la zone de texte **Instruction SQL** .  
   
 > [!NOTE]
@@ -65,7 +66,7 @@ Si votre source de données est Excel, consultez [Fournir une requête source po
 > Pour obtenir des informations détaillées sur la connexion à des fichiers Excel, et sur les limitations et les problèmes connus liés au chargement de données depuis ou vers des fichiers Excel, consultez [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
 
 Il existe trois types d’objets Excel que vous pouvez interroger.
--   **Feuille de calcul.** Pour interroger une feuille de calcul, ajoutez le caractère $ à la fin du nom de la feuille et ajoutez des délimiteurs autour de la chaîne, par exemple, **[Sheet1$]** .
+-   **Feuille de calcul.** Pour interroger une feuille de calcul, ajoutez le caractère $ à la fin du nom de la feuille et ajoutez des délimiteurs autour de la chaîne, par exemple, **[Sheet1$]**.
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -83,7 +84,7 @@ Il existe trois types d’objets Excel que vous pouvez interroger.
     SELECT * FROM [Sheet1$A1:B4]
     ```
 
-## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+## <a name="whats-next"></a>Et ensuite ?  
  Une fois que vous avez écrit et testé la requête SQL qui sélectionne les données à copier, la page suivante dépend de la destination de vos données.  
   
 -   Pour la plupart des destinations, la page suivante est **Sélectionner les tables et les vues sources**, dans laquelle vous passez en revue la requête fournie. Vous pouvez éventuellement choisir les colonnes à copier et afficher un aperçu des exemples de données. Pour plus d’informations, consultez [Sélectionner les tables et les vues sources](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  

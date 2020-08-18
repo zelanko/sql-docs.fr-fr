@@ -1,4 +1,5 @@
 ---
+description: ToString (type de données geometry)
 title: ToString (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 62d8f5a0348dd6104983daaf2592feda80514a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d5b8e9d4c027dd364c9aaf84b4b8e56680548d0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305548"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Tex
   
  Type de retour CLR : **SqlString**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode retourne la chaîne « Null » quand elle est appelée sur des instances ayant une valeur Null.  
   
  Sur les instances non Null, cette méthode est équivalente à `AsTextZM().`  
@@ -58,7 +59,7 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>Voir aussi  
  [STAsText &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
- [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Méthodes étendues sur les instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

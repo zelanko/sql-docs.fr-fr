@@ -1,4 +1,5 @@
 ---
+description: Assistant Importation et Exportation SQL Server
 title: Assistant Importation et Exportation SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a18a16353ff2d015bdd5f19c59c6cf9d7fd279b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d872657de8cb28a64d709eb458cffa7b6569a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346205"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Assistant Importation et Exportation SQL Server
 
@@ -41,7 +42,7 @@ La capture d’écran suivante montre la page **Assistant Importation et Exporta
 **Ne plus afficher cette page de démarrage.**  
  Option permettant d’ignorer cette page d’accueil lors de la prochaine exécution de l’Assistant.  
   
-## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+## <a name="whats-next"></a>Et ensuite ?  
  La page qui suit la page d’accueil est **Choisir une source de données**. Dans cette page, vous indiquez la source de vos données et la façon de s’y connecter. Pour plus d’informations, consultez [Choisir une source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="related-tasks-and-content"></a><a name="related"></a> Tâches et contenus connexes  

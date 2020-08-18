@@ -1,4 +1,5 @@
 ---
+description: Opérateurs de comparaison (Transact-SQL)
 title: Opérateurs de comparaison (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307394"
 ---
 # <a name="comparison-operators-transact-sql"></a>Opérateurs de comparaison (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85706608"
 |[\!< (Non inférieur à)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Non inférieur à (hors norme ISO)|  
 |[\!> (Non supérieur à)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Non supérieur à (hors norme ISO)|  
   
-## <a name="boolean-data-type"></a>Type de données Boolean  
+## <a name="boolean-data-type"></a>Booléen (type de données)  
  Le résultat d’un opérateur de comparaison est de type **booléen**. et peut prendre trois valeurs : TRUE, FALSE et UNKNOWN. Les expressions qui retournent un type de données **booléen** sont dites expressions booléennes.  
   
  À la différence des autres types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le type de données **booléen** ne peut pas être spécifié pour une colonne de table ou une variable et il ne peut pas être retourné dans un jeu de résultats.  

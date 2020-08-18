@@ -1,4 +1,5 @@
 ---
+description: Abonnés IBM DB2
 title: Abonnés IBM DB2 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4cc6f19d4b732344f42d27513e7f1a7730566780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327065"
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -154,7 +155,7 @@ ms.locfileid: "85893312"
   
      La table générée est ainsi correctement créée sur l'Abonné, pour autant que la contrainte de taille de page DB2 soit suffisamment grande pour prendre en charge la taille maximale de la ligne. Vérifiez que le nom de connexion utilisé pour accéder à la base de données DB2 possède des autorisations d'accès à des espaces disque logiques d'une taille suffisante pour contenir les tables répliquées sur DB2.  
   
--   DB2 peut prendre en charge des colonnes VARCHAR d'une largeur de 32 kilo-octets (Ko) ; par conséquent, il est possible de mapper correctement certaines colonnes d'objet volumineux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des colonnes DB2 VARCHAR. En revanche, le fournisseur OLE DB utilisé par la réplication sur DB2 ne prend pas en charge le mappage d'objets volumineux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des objets DB2 volumineux. C’est pourquoi les colonnes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)** , **ntext** et **nvarchar(max)** sont mappées à VARCHAR(0) dans les scripts de création générés. La valeur de longueur 0 doit être changée en valeur appropriée avant d'appliquer le script sur l'Abonné. Si la longueur du type de données n'est pas modifiée, DB2 génère l'erreur 604 lors de la tentative de création de table sur l'Abonné DB2 (l'erreur 604 indique que l'attribut precision ou length d'un type de données n'est pas valide).  
+-   DB2 peut prendre en charge des colonnes VARCHAR d'une largeur de 32 kilo-octets (Ko) ; par conséquent, il est possible de mapper correctement certaines colonnes d'objet volumineux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des colonnes DB2 VARCHAR. En revanche, le fournisseur OLE DB utilisé par la réplication sur DB2 ne prend pas en charge le mappage d'objets volumineux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des objets DB2 volumineux. C’est pourquoi les colonnes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)**, **ntext** et **nvarchar(max)** sont mappées à VARCHAR(0) dans les scripts de création générés. La valeur de longueur 0 doit être changée en valeur appropriée avant d'appliquer le script sur l'Abonné. Si la longueur du type de données n'est pas modifiée, DB2 génère l'erreur 604 lors de la tentative de création de table sur l'Abonné DB2 (l'erreur 604 indique que l'attribut precision ou length d'un type de données n'est pas valide).  
   
      En fonction de ce que vous connaissez de la table source à répliquer, déterminez s'il est approprié de mapper un objet volumineux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à un élément DB2 de longueur variable et spécifiez une longueur maximale adaptée dans le script de création personnalisé. Pour plus d'informations sur la spécification d'un script de création personnalisé, reportez-vous à l'étape 5 de la section « Configuration d'un Abonné IBM DB2 » dans cette rubrique.  
   
@@ -163,7 +164,7 @@ ms.locfileid: "85893312"
   
      En l'absence d'un mappage approprié pour une colonne d'objet volumineux, envisagez d'utiliser le filtrage de colonnes sur l'article afin que la colonne ne soit pas répliquée. Pour plus d’informations, consultez [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md).  
   
--   Quand vous répliquez les types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nchar**et**nvarchar**de** vers les types CHAR et VARCHAR de DB2, la réplication utilise le même spécificateur de longueur pour le type DB2 que pour le type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, il se peut que la longueur du type de données soit trop petite pour la table DB2 générée.  
+-   Quand vous répliquez les types  **nchar** et **nvarchar** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers les types CHAR et VARCHAR de DB2, la réplication utilise le même spécificateur de longueur pour le type DB2 que pour le type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, il se peut que la longueur du type de données soit trop petite pour la table DB2 générée.  
   
      Dans certains environnements DB2, un élément de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** n’est pas limité à des caractères codés sur un octet ; la longueur d’un élément CHAR ou VARCHAR doit en tenir compte. Vous devez également prendre en compte les caractères *en code* et *hors code* , s'ils sont nécessaires. Si vous répliquez des tables avec des colonnes **nchar** et **nvarchar** , il se peut que vous deviez spécifier une longueur maximale plus élevée pour le type de données dans un script de création personnalisé. Pour plus d'informations sur la spécification d'un script de création personnalisé, reportez-vous à l'étape 5 de la section « Configuration d'un Abonné IBM DB2 » dans cette rubrique.  
   
