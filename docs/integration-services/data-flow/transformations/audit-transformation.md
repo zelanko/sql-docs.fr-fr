@@ -1,4 +1,5 @@
 ---
+description: transformation d'audit
 title: Audit, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392275"
 ---
 # <a name="audit-transformation"></a>transformation d'audit
 
@@ -70,15 +71,15 @@ ms.locfileid: "86915743"
  **Type d'audit**  
  Sélectionne une variable système disponible pour fournir les informations d'audit.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**GUID d'instance d'exécution**|Insérez le GUID qui identifie de manière unique l'instance d'exécution du package.|  
 |**ID du package**|Insérez le GUID qui identifie de manière unique le package.|  
 |**Nom du package**|Insérez le nom du package.|  
 |**ID de version**|Insérez le GUID qui identifie de manière unique la version du package.|  
 |**Heure de début de l'exécution**|Insérez l'heure à laquelle l'exécution du package a commencé.|  
-|**Nom de la machine**|Insérez le nom de l'ordinateur sur lequel le package a été lancé.|  
-|**Nom d'utilisateur**|Insérez le nom de connexion de l'utilisateur qui a lancé le package.|  
+|**Nom de l'ordinateur**|Insérez le nom de l'ordinateur sur lequel le package a été lancé.|  
+|**Nom d’utilisateur**|Insérez le nom de connexion de l'utilisateur qui a lancé le package.|  
 |**Nom de la tâche**|Insérez le nom de la tâche de flux de données à laquelle la transformation d'audit est associée.|  
 |**ID de la tâche**|Insérez le GUID qui identifie de manière unique le flux de données à laquelle la transformation d'audit est associée.|  
   

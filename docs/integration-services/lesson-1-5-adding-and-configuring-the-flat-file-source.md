@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1-5 : Ajouter et configurer la source du fichier plat'
 title: 'Étape 5 : Ajouter et configurer la source de fichier plat | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390865"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Leçon 1-5 : Ajouter et configurer la source du fichier plat
 

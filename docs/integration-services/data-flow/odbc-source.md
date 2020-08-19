@@ -1,4 +1,5 @@
 ---
+description: Source ODBC
 title: Source ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392115"
 ---
 # <a name="odbc-source"></a>Source ODBC
 
@@ -85,7 +86,7 @@ ms.locfileid: "86914987"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Extraire des données à l’aide de la source ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [Extraire des données à l'aide de la source ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [Propriétés personnalisées des sources ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   

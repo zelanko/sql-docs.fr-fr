@@ -1,4 +1,5 @@
 ---
+description: ABS (expression SSIS)
 title: ABS (expression SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8ba53861748db3d8b1d0a75800f4aa0151e81b2a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cc19d31e89795ab2af731deac610656e61f61062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391335"
 ---
 # <a name="abs-ssis-expression"></a>ABS (expression SSIS)
 
@@ -41,7 +42,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Types des résultats  
  Type de données de l'expression numérique envoyée à la fonction.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction ABS renvoie un résultat NULL si l'argument est NULL.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  

@@ -1,4 +1,5 @@
 ---
+description: Options Demande de profil de dépendance fonctionnelle (tâche de profilage des données)
 title: Options Demande de profil de dépendance fonctionnelle (tâche de profilage des données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393425"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Options Demande de profil de dépendance fonctionnelle (tâche de profilage des données)
 
@@ -50,7 +51,7 @@ ms.locfileid: "86918209"
   
 -   **Données**, qui inclut les options **DeterminantColumns** et **DependentColumn**  
   
--   **Généralités**  
+-   **Général**  
   
 -   **Options**  
   
@@ -88,7 +89,7 @@ ms.locfileid: "86918209"
 > [!NOTE]  
 >  Quand vous utilisez le caractère générique **(\*)** pour **ColumnName**, **CompareOptions** est en lecture seule et est définie avec le paramètre **Default**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Par défaut**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
@@ -96,7 +97,7 @@ ms.locfileid: "86918209"
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « à » est identique à « a ».|  
@@ -111,10 +112,10 @@ ms.locfileid: "86918209"
  **ThresholdSetting**  
  Spécifiez le paramètre de seuil. La valeur par défaut de cette propriété est **Specified**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance de la dépendance fonctionnelle est précisée, quelle que soit sa valeur.|  
-|**Specified**|Utilisez le seuil spécifié dans **FDStrengthThreshold**. La puissance de la dépendance fonctionnelle est précisée uniquement si elle est supérieure au seuil.|  
+|**Spécifié**|Utilisez le seuil spécifié dans **FDStrengthThreshold**. La puissance de la dépendance fonctionnelle est précisée uniquement si elle est supérieure au seuil.|  
 |**Exact**|Aucun seuil n'est spécifié. La puissance de la dépendance fonctionnelle est précisée uniquement si la dépendance fonctionnelle entre les colonnes sélectionnées est exacte.|  
   
  **FDStrengthThreshold**  

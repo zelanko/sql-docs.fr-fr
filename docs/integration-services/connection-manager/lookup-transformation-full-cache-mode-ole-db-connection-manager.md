@@ -1,4 +1,5 @@
 ---
+description: Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB
 title: Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1b663d20972a8c4a788c9a12f6b9b5dcdf01307
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394205"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB
 
@@ -49,17 +50,17 @@ ms.locfileid: "86923121"
   
 7.  Dans la liste **Spécifier comment gérer les lignes sans entrées correspondantes** , sélectionnez une option de gestion des erreurs pour les lignes sans entrées correspondantes.  
   
-8.  Dans la page Connexion, sélectionnez un gestionnaire de connexions dans la liste **Gestionnaire de connexions OLE DB** ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  Dans la page Connexion , sélectionnez un gestionnaire de connexions dans la liste **Gestionnaire de connexions OLE DB** ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Exécutez l'une des tâches suivantes :  
   
     -   Cliquez sur **Utiliser une table ou une vue**, puis sélectionnez une table ou une vue, ou cliquez sur **Nouveau** pour créer une table ou une vue.  
   
-         -ou-  
+         - ou -  
   
     -   Cliquez sur **Utiliser les résultats d’une requête SQL**, puis générez une requête dans la fenêtre **Commande SQL** , ou cliquez sur **Générer la requête** pour générer une requête à l’aide des outils graphiques du **Générateur de requêtes** .  
   
-         -ou-  
+         - ou -  
   
     -   Vous pouvez aussi cliquer sur **Parcourir** pour importer une instruction SQL à partir d’un fichier.  
   

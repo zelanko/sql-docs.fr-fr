@@ -1,4 +1,5 @@
 ---
+description: Développement d'un composant de destination personnalisé
 title: Développement d’un composant de destination personnalisé | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d819dc54c992c20d8558860420d27e4b54b09760
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f681c33f7921f57d42f9078a768f8f8eafec1f7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391245"
 ---
 # <a name="developing-a-custom-destination-component"></a>Développement d'un composant de destination personnalisé
 

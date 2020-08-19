@@ -1,4 +1,5 @@
 ---
+description: Utiliser des services de capture de données modifiées
 title: Utiliser des services CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394495"
 ---
 # <a name="work-with-cdc-services"></a>Utiliser des services de capture de données modifiées
 
@@ -45,6 +46,6 @@ ms.locfileid: "86921445"
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure : utiliser des services de capture de données modifiées](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
- [Créer et modifier un service CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Créer et modifier un service de capture de données modifiées Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

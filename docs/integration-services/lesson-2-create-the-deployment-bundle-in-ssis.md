@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 2 : Créer l’application de déploiement dans SSIS'
 title: 'Leçon 2 : Créer le bundle de déploiement dans SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0ad24013ea2662898857cef3b1359e284e5244b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f2117822d951d2a01ace369c61b32c630d74363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390392"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Leçon 2 : Créer l’application de déploiement dans SSIS
 
@@ -28,17 +29,17 @@ Au cours de cette leçon, vous allez créer l'application de déploiement, celle
   
 Vous allez aussi vérifier la liste des fichiers de l'application de déploiement et examiner le contenu du manifeste.  
   
-**Durée estimée pour effectuer cette leçon :** 30 minutes  
+**Durée estimée pour effectuer cette leçon :** 30 minutes  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Génération de l’utilitaire de déploiement](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [Étape 1 : Génération de l’utilitaire de déploiement](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [Étape 2 : Vérification du bundle de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [Étape 2 : Vérification de l’application de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
-[Étape 1 : Génération de l’utilitaire de déploiement](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+[Étape 1 : Génération de l’utilitaire de déploiement](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

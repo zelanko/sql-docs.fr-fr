@@ -1,4 +1,5 @@
 ---
+description: Convertir les types sans vérification de la conversion (Assistant Importation et Exportation SQL Server)
 title: Convertir les types et ne pas vérifier la conversion (Assistant Importation-Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e94009fd87412d9d015158e9a3cc4f3edde1ede
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5d7c53d4117d7634b6651069260c289657f82315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391465"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Convertir les types sans vérification de la conversion (Assistant Importation et Exportation SQL Server)
 
@@ -37,7 +38,7 @@ Le problème ici est que l’Assistant ne peut pas trouver de fichier de mappage
 
 Les informations de cette page n’incluent pas le nom du fichier de mappage manquant. Étant donné que l’Assistant ne sait pas si le fichier existe pour le fournisseur de données spécifié, il ne peut pas fournir de nom pour le fichier manquant.
 
-## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+## <a name="whats-next"></a>Et ensuite ?  
  Après avoir cliqué sur **Suivant** pour poursuivre sans savoir si les conversions des types de données vont réussir, vous tombez sur la page **Enregistrer et exécuter le package**. Dans cette page, vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement. Selon votre configuration, vous pouvez également être en mesure d’enregistrer le package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] créé par l’Assistant pour le personnaliser et le réutiliser ultérieurement. Pour plus d’informations, consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Voir aussi

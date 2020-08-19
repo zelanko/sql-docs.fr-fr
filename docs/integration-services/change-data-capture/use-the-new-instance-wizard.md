@@ -1,4 +1,5 @@
 ---
+description: Utiliser l'Assistant Nouvelle instance
 title: Utiliser l’Assistant Nouvelle instance | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37b453c91ce19289aa2f8b8684c163dc0fc638a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07b9d1037b11f92857700330c66b2fda4170058d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394475"
 ---
 # <a name="use-the-new-instance-wizard"></a>Utiliser l'Assistant Nouvelle instance
 
@@ -24,11 +25,11 @@ ms.locfileid: "86913971"
 
   L'Assistant Nouvelle instance est utilisé pour créer une instance d'un service de capture de données modifiées. Vous ouvrez l'Assistant Création d'une instance Oracle CDC à partir de la console du concepteur CDC. Vous pouvez effectuer les opérations suivantes dans l'Assistant Nouvelle instance.  
   
--   [Créer la base de données de modifications SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
+-   [Créer la base de données de modification SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
--   [Se connecter à une base de données source Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
+-   [Connexion à une base de données source Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
--   [Se connecter à Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
+-   [Connexion à Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
 -   [Sélectionner des tables et des colonnes Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
@@ -38,11 +39,11 @@ ms.locfileid: "86913971"
   
 -   [Générer et exécuter le script de journalisation supplémentaire](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
--   [Générer des tables miroir et des instances de capture CDC](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
+-   [Générer des tables miroir et des instances de capture de données modifiées](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
 -   [Terminer](../../integration-services/change-data-capture/finish.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour créer l’instance de base de données de modifications SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
+ [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

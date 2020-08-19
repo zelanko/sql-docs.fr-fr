@@ -1,4 +1,5 @@
 ---
+description: Destination de traitement de dimension
 title: Destination de traitement de dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3458ea4fd1a8c82896fd1c06a76ee4bfd8074bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392635"
 ---
 # <a name="dimension-processing-destination"></a>Destination de traitement de dimension
 
@@ -73,7 +74,7 @@ ms.locfileid: "86916718"
  **Méthode de traitement**  
  Sélectionnez la méthode de traitement à appliquer à la dimension sélectionnée dans la liste. La valeur par défaut de cette option est **Complète**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Ajouter (incrémentiel)**|Permet d'effectuer un traitement incrémentiel de la dimension.|  
 |**Complète**|Permet d'effectuer un traitement complet de la dimension.|  
@@ -105,7 +106,7 @@ ms.locfileid: "86916718"
  **Action pour l'erreur de clé**  
  Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convertir la valeur de clé non acceptable en valeur inconnue ( **UnknownMember** ).|  
 |**DiscardRecord**|Ignorer l'enregistrement.|  
@@ -116,13 +117,13 @@ ms.locfileid: "86916718"
  **Arrêter en cas d'erreur**  
  Spécifiez que le traitement doit s'arrêter lorsqu'une erreur se produit.  
   
- **Nombre d'erreurs**  
+ **Nombre d’erreurs**  
  Spécifiez le seuil d’erreurs au-delà duquel le traitement doit s’arrêter, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
  **Action pour l'erreur**  
  Indiquez l’action à appliquer quand le seuil d’erreurs est atteint, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Arrêter le traitement.|  
 |**StopLogging**|Arrêter d'enregistrer les erreurs.|  
@@ -130,7 +131,7 @@ ms.locfileid: "86916718"
  **Clé introuvable**  
  Indiquez l'action à appliquer en cas d'erreur de clé introuvable. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -139,7 +140,7 @@ ms.locfileid: "86916718"
  **Clé dupliquée**  
  Indiquez l'action à appliquer en cas d'erreur de clé dupliquée. Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -148,7 +149,7 @@ ms.locfileid: "86916718"
  **Clé NULL convertie en clé inconnue**  
  Indiquez l’action à appliquer quand une clé NULL a été convertie en clé inconnue ( **UnknownMember** ). Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -157,7 +158,7 @@ ms.locfileid: "86916718"
  **Clé NULL non autorisée**  
  Indiquez l'action à appliquer si une clé NULL est trouvée alors que les clés NULL ne sont pas autorisées. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  

@@ -1,4 +1,5 @@
 ---
+description: Conteneurs Integration Services
 title: Conteneurs Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d8f17c8aa5b2e80939be7da8cbf81592bdd279
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cebc3b8d50578999fd59f42aa2d41f3d859cebac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393035"
 ---
 # <a name="integration-services-containers"></a>Conteneurs Integration Services
 
@@ -45,31 +46,31 @@ ms.locfileid: "86915436"
 |---------------|-----------------|  
 |[Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md)|Exécute un flux de contrôle de façon répétitive à l'aide d'un énumérateur.|  
 |[Conteneur de boucles For](../../integration-services/control-flow/for-loop-container.md)|Exécute un flux de contrôle de façon répétitive en testant une condition.|  
-|[Conteneur de séquences](../../integration-services/control-flow/sequence-container.md)|Regroupe les tâches et les conteneurs en flux de contrôle représentant des sous-ensembles du flux de contrôle des packages.|  
-|[Conteneur d’hôte de tâche](../../integration-services/control-flow/task-host-container.md)|Fournit des services à une seule tâche.|  
+|[conteneur de séquences](../../integration-services/control-flow/sequence-container.md)|Regroupe les tâches et les conteneurs en flux de contrôle représentant des sous-ensembles du flux de contrôle des packages.|  
+|[conteneur d'hôte de tâche](../../integration-services/control-flow/task-host-container.md)|Fournit des services à une seule tâche.|  
   
  Les packages et les gestionnaires d'événements sont également des types de conteneurs. Pour plus d’informations, consultez [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md) et [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
 ### <a name="summary-of-container-properties"></a>Résumé des propriétés de conteneur  
  Tous les types de conteneurs possèdent un ensemble de propriétés communes. Si vous créez des packages à l’aide des outils graphiques fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , la fenêtre Propriétés répertorie les propriétés suivantes pour les conteneurs de boucles Foreach, de boucles For et de séquences. Les propriétés du conteneur d'hôte de tâche sont configurées dans le cadre de la configuration de la tâche encapsulée par l'hôte de tâche. Définissez les propriétés de l'hôte de tâche lorsque vous configurez la tâche.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
-|**DelayValidation**|Valeur booléenne qui indique si la validation du conteneur est retardée jusqu'à l'exécution. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
-|**Description**|Description du conteneur. La propriété contient une chaîne mais peut être est vide.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
-|**Disable**|Valeur booléenne qui indique si le conteneur s'exécute. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
+|**DelayValidation**|Valeur booléenne qui indique si la validation du conteneur est retardée jusqu'à l'exécution. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
+|**Description**|Description du conteneur. La propriété contient une chaîne mais peut être est vide.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
+|**Désactiver**|Valeur booléenne qui indique si le conteneur s'exécute. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
 |**DisableEventHandlers**|Valeur booléenne qui indique si les gestionnaires d'événements associés au conteneur s'exécutent. La valeur par défaut de cette propriété est **False**.|  
-|**FailPackageOnFailure**|Valeur booléenne qui indique si le package échoue en cas d'erreur dans le conteneur. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
-|**FailParentOnFailure**|Valeur booléenne qui indique si le conteneur parent échoue en cas d'erreur dans le conteneur. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
-|**ForcedExecutionValue**|Si **ForceExecutionValue** a la valeur **True**, il s’agit de l’objet qui contient la valeur d’exécution facultative du conteneur. La valeur par défaut de cette propriété est **0**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
+|**FailPackageOnFailure**|Valeur booléenne qui indique si le package échoue en cas d'erreur dans le conteneur. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
+|**FailParentOnFailure**|Valeur booléenne qui indique si le conteneur parent échoue en cas d'erreur dans le conteneur. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
+|**ForcedExecutionValue**|Si **ForceExecutionValue** a la valeur **True**, il s’agit de l’objet qui contient la valeur d’exécution facultative du conteneur. La valeur par défaut de cette propriété est **0**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
 |**ForcedExecutionValueType**|Type de données de **ForcedExecutionValue**. La valeur par défaut de cette propriété est **Int32**.|  
-|**ForceExecutionResult**|Valeur qui indique le résultat forcé de l'exécution du package ou conteneur. Cette propriété peut prendre les valeurs **None**, **Success**, **Failure**et **Completion**. La valeur par défaut de cette propriété est **None**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
-|**ForceExecutionValue**|Valeur booléenne qui indique si la valeur d'exécution facultative du conteneur doit être forcée de contenir une valeur particulière. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
+|**ForceExecutionResult**|Valeur qui indique le résultat forcé de l'exécution du package ou conteneur. Cette propriété peut prendre les valeurs **None**, **Success**, **Failure**et **Completion**. La valeur par défaut de cette propriété est **None**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
+|**ForceExecutionValue**|Valeur booléenne qui indique si la valeur d'exécution facultative du conteneur doit être forcée de contenir une valeur particulière. La valeur par défaut de cette propriété est **False**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
 |**Identifiant**|Identificateur global unique du conteneur, affecté lors de la création du package. Cette propriété est en lecture seule.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
-|**IsolationLevel**|Niveau d'isolation de la transaction sur conteneur. Cette propriété peut prendre les valeurs **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**et **Snapshot**. La valeur par défaut de cette propriété est **Serializable**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
-|**LocaleID**|Paramètre régional Microsoft Win32. La valeur par défaut de cette propriété est le paramètre régional du système d'exploitation sur l'ordinateur local.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
+|**IsolationLevel**|Niveau d'isolation de la transaction sur conteneur. Cette propriété peut prendre les valeurs **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**et **Snapshot**. La valeur par défaut de cette propriété est **Serializable**. Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|**LocaleID**|Paramètre régional Microsoft Win32. La valeur par défaut de cette propriété est le paramètre régional du système d'exploitation sur l'ordinateur local.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|Valeur qui indique le comportement de journalisation du conteneur. Ces valeurs sont **Disabled**, **Enabled**et **UseParentSetting**. La valeur par défaut de cette propriété est **UseParentSetting**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
-|**MaximumErrorCount**|Nombre maximal d'erreurs pouvant se produire avant l'arrêt de l'exécution d'un conteneur. La valeur par défaut de cette propriété est **1**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
+|**MaximumErrorCount**|Nombre maximal d'erreurs pouvant se produire avant l'arrêt de l'exécution d'un conteneur. La valeur par défaut de cette propriété est **1**.<br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
 |**Nom**|nom du conteneur.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |**TransactionOption**|Participation transactionnelle du conteneur. Cette propriété peut prendre les valeurs **NotSupported**, **Supported**et **Required**. La valeur par défaut de cette propriété est **Supported**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
