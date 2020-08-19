@@ -1,4 +1,5 @@
 ---
+description: Conversion de données de C en types de données SQL
 title: Conversion de données de types de données C en SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429711"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversion de données de C en types de données SQL
 Quand une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote récupère les données pour tous les paramètres liés à **SQLBindParameter** à partir des emplacements de stockage de l’application. Quand une application appelle **SQLSetPos**, le pilote récupère les données pour une opération de mise à jour ou d’ajout à partir des colonnes liées à **SQLBindCol**. Pour les paramètres de données en cours d’exécution, l’application envoie les données de paramètre avec **SQLPutData**. Si nécessaire, le pilote convertit les données du type de données spécifié par l’argument *ValueType* dans **SQLBindParameter** vers le type de données spécifié par l’argument *ParameterType* dans **SQLBindParameter**, puis envoie les données à la source de données.  
@@ -40,7 +41,7 @@ Quand une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote ré
   
  Si l’argument *ParameterType* dans **SQLBindParameter** contient l’identificateur d’un type de données SQL ODBC qui n’est pas indiqué dans la table pour un type de données C donné, **SQLBindParameter** retourne SQLSTATE 07006 (violation d’attribut de type de données restreint). Si l’argument *ParameterType* contient un identificateur spécifique au pilote et que le pilote ne prend pas en charge la conversion du type de données ODBC C spécifique en ce type de données SQL spécifique au pilote, **SQLBINDPARAMETER** retourne SQLState HYC00 (fonctionnalité facultative non implémentée).  
   
- Si les arguments *ParameterValuePtr* et *StrLen_or_IndPtr* spécifiés dans **SQLBindParameter** sont tous deux des pointeurs null, cette fonction retourne SQLState HY009 (utilisation non valide du pointeur null). Bien qu’il ne soit pas affiché dans les tables, une application définit la valeur de la mémoire tampon de longueur/indicateur désignée par l’argument *StrLen_or_IndPtr* de **SQLBindParameter** ou la valeur de l’argument *StrLen_or_IndPtr* de **SQLPutData** à SQL_NULL_DATA pour spécifier une valeur de données SQL null. (L’argument *StrLen_or_IndPtr* correspond au champ SQL_DESC_OCTET_LENGTH_PTR de l’APD.) L’application définit ces valeurs à SQL_NTS pour spécifier que la valeur dans \* *ParameterValuePtr* dans **SQLBindParameter** ou \* *DataPtr* dans **SQLPutData** (pointée par le champ SQL_DESC_DATA_PTR de APD) est une chaîne terminée par le caractère null.  
+ Si les arguments *ParameterValuePtr* et *StrLen_or_IndPtr* spécifiés dans **SQLBindParameter** sont tous deux des pointeurs null, cette fonction retourne SQLState HY009 (utilisation non valide du pointeur null). Bien qu’il ne soit pas affiché dans les tables, une application définit la valeur de la mémoire tampon de longueur/indicateur désignée par l’argument *StrLen_or_IndPtr* de **SQLBindParameter** ou la valeur de l’argument *StrLen_or_IndPtr* de **SQLPutData** à SQL_NULL_DATA pour spécifier une valeur de données SQL null. (L’argument *StrLen_or_IndPtr* correspond au champ SQL_DESC_OCTET_LENGTH_PTR de l’APD.) L’application définit ces valeurs à SQL_NTS pour spécifier que la valeur dans \* *ParameterValuePtr* dans **SQLBindParameter** ou \* *DataPtr* dans **SQLPUTDATA** (pointée par le champ SQL_DESC_DATA_PTR de APD) est une chaîne terminée par le caractère null.  
   
  Les termes suivants sont utilisés dans les tables :  
   
@@ -53,7 +54,7 @@ Quand une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote ré
 -   **Nombre de chiffres** : nombre de caractères utilisés pour représenter un nombre, y compris le signe moins, la virgule décimale et l’exposant (si nécessaire).  
   
 -   **Mots dans**   
-     ***italics*** : éléments de la grammaire SQL. Pour connaître la syntaxe des éléments de syntaxe, consultez [annexe C : grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***italics***  : éléments de la grammaire SQL. Pour connaître la syntaxe des éléments de syntaxe, consultez [annexe C : grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Cette section contient les rubriques suivantes :  
   

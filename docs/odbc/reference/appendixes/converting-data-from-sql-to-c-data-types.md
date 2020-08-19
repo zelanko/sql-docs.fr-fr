@@ -1,4 +1,5 @@
 ---
+description: Conversion de données de SQL en types de données C
 title: Conversion de données des types de données SQL en C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a10730cb3910c55679c264583801cd57c83bfc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1306564a9e4a5c1cbd9cac74508529a1e6df9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429691"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversion de données de SQL en types de données C
 Quand une application appelle **SQLFetch**, **SQLFetchScroll**ou **SQLGetData**, le pilote récupère les données à partir de la source de données. Si nécessaire, il convertit les données du type de données dans lequel le pilote les a récupérées dans le type de données spécifié par l’argument *TargetType* dans **SQLBindCol** ou **SQLGetData.** Enfin, il stocke les données à l’emplacement désigné par l’argument *TargetValuePtr* dans **SQLBindCol** ou **SQLGetData** (et le champ SQL_DESC_DATA_PTR de ARD).  
@@ -40,7 +41,7 @@ Quand une application appelle **SQLFetch**, **SQLFetchScroll**ou **SQLGetData**,
   
  Si l’argument *TargetType* dans **SQLBindCol** ou **SQLGetData** contient un identificateur pour un type de données C ODBC non affiché dans la table pour un type de données SQL ODBC donné, **SQLFetch**, **SQLFetchScroll**ou **SQLGetData** retourne SQLSTATE 07006 (violation d’attribut de type de données restreint). Si l’argument *TargetType* contient un identificateur qui spécifie une conversion d’un type de données SQL spécifique au pilote en un type de données C ODBC et que cette conversion n’est pas prise en charge par le pilote, **SQLFetch**, **SQLFETCHSCROLL**ou **SQLGetData** retourne SQLState HYC00 (fonctionnalité facultative non implémentée).  
   
- Bien qu’il ne soit pas affiché dans les tables, le pilote retourne SQL_NULL_DATA dans la mémoire tampon spécifiée par l’argument *StrLen_or_IndPtr* lorsque la valeur de données SQL est null. Pour une explication de l’utilisation de *StrLen_or_IndPtr* lorsque plusieurs appels sont effectués pour récupérer des données, consultez la description de la fonction [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md). Lorsque les données SQL sont converties en données de type C, le \*nombre de caractères retourné dans *StrLen_or_IndPtr* n’inclut pas l’octet de fin null. Si *TargetValuePtr* est un pointeur null, **SQLGETDATA** retourne SQLState HY009 (utilisation non valide du pointeur null); dans **SQLBindCol**, la colonne est dissociée.  
+ Bien qu’il ne soit pas affiché dans les tables, le pilote retourne SQL_NULL_DATA dans la mémoire tampon spécifiée par l’argument *StrLen_or_IndPtr* lorsque la valeur de données SQL est null. Pour une explication de l’utilisation de *StrLen_or_IndPtr* lorsque plusieurs appels sont effectués pour récupérer des données, consultez la description de la fonction [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md). Lorsque les données SQL sont converties en données de type C, le nombre de caractères retourné dans \* *StrLen_or_IndPtr* n’inclut pas l’octet de fin null. Si *TargetValuePtr* est un pointeur null, **SQLGETDATA** retourne SQLState HY009 (utilisation non valide du pointeur null); dans **SQLBindCol**, la colonne est dissociée.  
   
  Les termes et conventions suivants sont utilisés dans les tables :  
   

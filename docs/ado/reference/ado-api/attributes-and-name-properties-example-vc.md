@@ -1,4 +1,5 @@
 ---
+description: Attributes et Name, exemple de propriétés (VC + +)
 title: Attributes et Name, exemple de propriétés (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b639cafe2f37b365c733f4aabc269f5f09c27918
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1b482b59344f141b01979e850056fbb4da93bc3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451211"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes et Name, exemple de propriétés (VC + +)
 Cet exemple affiche la valeur de la propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) pour les objets de [connexion](../../../ado/reference/ado-api/connection-object-ado.md), de [champ](../../../ado/reference/ado-api/field-object.md)et de [propriété](../../../ado/reference/ado-api/property-object-ado.md) . Elle utilise la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) pour afficher le nom de chaque objet **Field** et **Property** .  

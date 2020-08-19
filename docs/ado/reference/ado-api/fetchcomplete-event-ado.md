@@ -1,4 +1,5 @@
 ---
+description: FetchComplete, événement (ADO)
 title: FetchComplete, événement (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 850709dd8b4370360f5c06105266fb2c2510916c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4fd58f7783b8fdf2b98d8e295bbf96137cfa5ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443821"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete, événement (ADO)
 L’événement **FetchComplete** est appelé une fois que tous les enregistrements d’une longue opération asynchrone ont été récupérés dans le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  

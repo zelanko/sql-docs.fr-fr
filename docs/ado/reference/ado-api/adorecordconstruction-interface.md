@@ -1,4 +1,5 @@
 ---
+description: ADORecordConstruction, interface
 title: Interface ADORecordConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451331"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction, interface
 L’interface **ADORecordConstruction**est utilisée pour construire un objet **enregistrement** ADO à partir d’un objet OLE DB **Row** dans une application C/C++.  

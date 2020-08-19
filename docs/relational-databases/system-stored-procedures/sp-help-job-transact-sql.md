@@ -1,4 +1,5 @@
 ---
+description: sp_help_job (Transact-SQL)
 title: sp_help_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5dcf8a6fa773497e119b73a9b623d414a1ad4d2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486005"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893709"
   Retourne des informations sur les travaux utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour effectuer des opérations automatisées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,14 +53,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`Numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Pour afficher un travail spécifique, *job_id* ou *job_name* doit être spécifié.  Omettez les deux *job_id* et *job_name* pour renvoyer des informations sur tous les travaux.
   
-`[ @job_aspect = ] 'job_aspect'`Attribut de tâche à afficher. *job_aspect* est de type **varchar (9)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @job_aspect = ] 'job_aspect'` Attribut de tâche à afficher. *job_aspect* est de type **varchar (9)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -69,17 +70,17 @@ sp_help_job { [ @job_id = ] job_id
 |**ÉTAPES**|Informations sur l'étape du travail|  
 |**COMPILÉ**|Informations sur la cible|  
   
-`[ @job_type = ] 'job_type'`Type des travaux à inclure dans le rapport. *job_type* est de type **varchar (12)**, avec NULL comme valeur par défaut. *job_type* peut être **local** ou **Multi-Server**.  
+`[ @job_type = ] 'job_type'` Type des travaux à inclure dans le rapport. *job_type* est de type **varchar (12)**, avec NULL comme valeur par défaut. *job_type* peut être **local** ou **Multi-Server**.  
   
-`[ @owner_login_name = ] 'login_name'`Nom de connexion du propriétaire du travail. *login_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @owner_login_name = ] 'login_name'` Nom de connexion du propriétaire du travail. *login_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subsystem = ] 'subsystem'`Nom du sous-système. *Subsystem* est de type **nvarchar (40)**, avec NULL comme valeur par défaut.  
+`[ @subsystem = ] 'subsystem'` Nom du sous-système. *Subsystem* est de type **nvarchar (40)**, avec NULL comme valeur par défaut.  
   
-`[ @category_name = ] 'category'`Nom de la catégorie. *Category* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @category_name = ] 'category'` Nom de la catégorie. *Category* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @enabled = ] enabled`Nombre indiquant si des informations sont affichées pour les travaux activés ou les travaux désactivés. *Enabled* est de **type tinyint**, avec NULL comme valeur par défaut. **1** indique que les travaux sont activés et **0** indique les travaux désactivés.  
+`[ @enabled = ] enabled` Nombre indiquant si des informations sont affichées pour les travaux activés ou les travaux désactivés. *Enabled* est de **type tinyint**, avec NULL comme valeur par défaut. **1** indique que les travaux sont activés et **0** indique les travaux désactivés.  
   
-`[ @execution_status = ] status`État d’exécution des travaux. *Status* est de **type int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @execution_status = ] status` État d’exécution des travaux. *Status* est de **type int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -91,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendu.|  
 |**7**|Effectue le travail.|  
   
-`[ @date_comparator = ] 'date_comparison'`Opérateur de comparaison à utiliser dans les comparaisons de *Date_Created* et *Date_Modified*. *date_comparison* est de **type char (1)** et peut être =, \<, or > .  
+`[ @date_comparator = ] 'date_comparison'` Opérateur de comparaison à utiliser dans les comparaisons de *Date_Created* et *Date_Modified*. *date_comparison* est de **type char (1)** et peut être =, \<, or > .  
   
-`[ @date_created = ] date_created`Date à laquelle le travail a été créé. *Date_Created*est de **type DateTime**, avec NULL comme valeur par défaut.  
+`[ @date_created = ] date_created` Date à laquelle le travail a été créé. *Date_Created*est de **type DateTime**, avec NULL comme valeur par défaut.  
   
-`[ @date_last_modified = ] date_modified`Date de la dernière modification du travail. *Date_Modified* est de **type DateTime**, avec NULL comme valeur par défaut.  
+`[ @date_last_modified = ] date_modified` Date de la dernière modification du travail. *Date_Modified* est de **type DateTime**, avec NULL comme valeur par défaut.  
   
-`[ @description = ] 'description_pattern'`Description du travail. *description_pattern* est de type **nvarchar (512)**, avec NULL comme valeur par défaut. *description_pattern* pouvez inclure les caractères génériques SQL Server pour les critères spéciaux.  
+`[ @description = ] 'description_pattern'` Description du travail. *description_pattern* est de type **nvarchar (512)**, avec NULL comme valeur par défaut. *description_pattern* pouvez inclure les caractères génériques SQL Server pour les critères spéciaux.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -110,7 +111,7 @@ sp_help_job { [ @job_id = ] job_id
 |**job_id**|**uniqueidentifier**|ID unique du travail.|  
 |**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
 |**name**|**sysname**|Nom du travail.|  
-|**désactivé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
+|**activé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
 |**description**|**nvarchar(512)**|Description du travail.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
 |**category**|**sysname**|Catégorie de travail.|  
@@ -176,7 +177,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Identificateur de la planification (unique pour tous les travaux).|  
 |**schedule_name**|**sysname**|Nom de la planification (unique pour ce travail).|  
-|**désactivé**|**int**|Indique si la planification est active (**1**) ou non (**0**).|  
+|**activé**|**int**|Indique si la planification est active (**1**) ou non (**0**).|  
 |**freq_type**|**int**|Valeur indiquant la fréquence d'exécution du travail.<br /><br /> **1** = une fois<br /><br /> **4** = tous les jours<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuelle, par rapport au **freq_interval**<br /><br /> **64** = exécution au démarrage du service **SQLServerAgent** .|  
 |**freq_interval**|**int**|Jours d’exécution du travail. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Unités pour **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  

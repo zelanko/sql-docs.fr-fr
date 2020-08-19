@@ -1,4 +1,5 @@
 ---
+description: sp_cleanup_log_shipping_history (Transact-SQL)
 title: sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42edf059f077f0896cd3c62b1420658c982b3d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486145"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée nettoie l'historique localement et sur le serveur moniteur en fonction de la période de rétention.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @agent_id = ] 'agent_id',`ID principal de la sauvegarde ou ID secondaire pour la copie ou la restauration. *agent_id* est de type **uniqueidentifier** et ne peut pas être null.  
+`[ @agent_id = ] 'agent_id',` ID principal de la sauvegarde ou ID secondaire pour la copie ou la restauration. *agent_id* est de type **uniqueidentifier** et ne peut pas être null.  
   
-`[ @agent_type = ] 'agent_type'`Type du travail d’envoi de journaux. 0 = Sauvegarde, 1 = Copie, 2 = Restauration. *agent_type* est de **type tinyint** et ne peut pas avoir la valeur null.  
+`[ @agent_type = ] 'agent_type'` Type du travail d’envoi de journaux. 0 = Sauvegarde, 1 = Copie, 2 = Restauration. *agent_type* est de **type tinyint** et ne peut pas avoir la valeur null.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,7 +52,7 @@ sp_cleanup_log_shipping_history
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_cleanup_log_shipping_history** doit être exécuté à partir de la base de données **Master** sur un serveur de copie des journaux de données. Cette procédure stockée nettoie les copies locales et distantes des **log_shipping_monitor_history_detail** et des **log_shipping_monitor_error_detail** en fonction de la période de rétention de l’historique.  
   
 ## <a name="permissions"></a>Autorisations  

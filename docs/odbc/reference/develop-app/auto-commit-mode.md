@@ -1,4 +1,5 @@
 ---
+description: Mode de validation automatique
 title: Mode de validation automatique | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f19053eec7a48eba7a51425b01744f3acd10015
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4b532a2163f0c30a3bdb792cfada6bdf806c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476891"
 ---
 # <a name="auto-commit-mode"></a>Mode de validation automatique
 *En mode de validation automatique,* chaque opération de base de données est une transaction validée lors de l’exécution. Ce mode convient pour de nombreuses transactions réelles qui se composent d’une seule instruction SQL. Il est inutile de délimiter ou de spécifier l’achèvement de ces transactions. Dans les bases de données sans prise en charge des transactions, le mode de validation automatique est le seul mode pris en charge. Dans ces bases de données, les instructions sont validées lorsqu’elles sont exécutées et il n’existe aucun moyen de les restaurer. ils sont donc toujours en mode de validation automatique.  

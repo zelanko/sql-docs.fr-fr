@@ -1,4 +1,5 @@
 ---
+description: Table de mise en lots des membres consolidés (Master Data Services)
 title: Table de mise en lots des membres consolidés
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ccf1ce5b444c86c8fe979f2865314d947d37ff8a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b0104722d3fcea882b08aab3f44becc334b2d52c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429981"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Table de mise en lots des membres consolidés (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85813118"
 
   Utilisez la table de mise en lots des membres consolidés (stg.name_Consolidated) dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour créer, mettre à jour, désactiver et supprimer des membres consolidés. Elle permet également de mettre à jour les valeurs d'attribut des membres consolidés.  
   
-##  <a name="table-columns"></a><a name="TableColumns"></a>Colonnes de table  
+##  <a name="table-columns"></a><a name="TableColumns"></a> Colonnes de table  
  Le tableau suivant explique la fonction de chacun des champs de la table de mise en lots Consolidé.  
   
 |Nom de la colonne|Description|  

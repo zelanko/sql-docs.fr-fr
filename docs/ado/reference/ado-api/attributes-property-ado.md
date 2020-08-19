@@ -1,4 +1,5 @@
 ---
+description: Attributes, propriété (ADO)
 title: Attributes, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451201"
 ---
 # <a name="attributes-property-ado"></a>Attributes, propriété (ADO)
 Indique une ou plusieurs caractéristiques d’un objet.  
@@ -54,7 +55,7 @@ Indique une ou plusieurs caractéristiques d’un objet.
         [Objet Field](../../../ado/reference/ado-api/field-object.md)  
     :::column-end:::
     :::column:::
-        [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)  
         [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
     :::column-end:::
 :::row-end:::

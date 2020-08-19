@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS TIME (Transact-SQL)
 title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d6a735e68b49216ea1e9f5604000cef2243c6ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414815"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,9 @@ ms.locfileid: "85765674"
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Notes
  Si SET STATISTICS TIME est défini à ON, les statistiques se rapportant à la durée d'une instruction sont affichées. Si l'option est désactivée (OFF), elles ne sont pas affichées.  
   
  L'option SET STATISTICS TIME est appliquée lors de l'exécution, et non pas lors de l'analyse.  

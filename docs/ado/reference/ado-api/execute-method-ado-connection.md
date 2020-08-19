@@ -1,4 +1,5 @@
 ---
+description: Execute, méthode (objet Connection ADO)
 title: Execute, méthode (connexion ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1acbdc4966f46d5e155dab3fac059568699d4727
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443911"
 ---
 # <a name="execute-method-ado-connection"></a>Execute, méthode (objet Connection ADO)
 Exécute la requête, l’instruction SQL, la procédure stockée ou le texte spécifique au fournisseur spécifié.  
@@ -53,7 +54,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  N’utilisez pas les valeurs CommandTypeEnum de adCmdFile ou adCmdTableDirect avec l’instruction EXECUTE. Ces valeurs ne peuvent être utilisées qu’en tant qu’options avec la [méthode Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) et les méthodes [Requery de méthode](../../../ado/reference/ado-api/requery-method.md) d’un **Recordset**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’utilisation de la méthode **Execute** sur un objet de [connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) exécute toute requête que vous transmettez à la méthode dans l’argument CommandText sur la connexion spécifiée. Si l’argument CommandText spécifie une requête qui retourne des lignes, les résultats générés par l’exécution sont stockés dans un nouvel objet **Recordset** . Si la commande n’est pas destinée à retourner des résultats (par exemple, une requête de mise à jour SQL), le fournisseur ne retourne **rien** tant que l’option **adExecuteNoRecords** est spécifiée. Sinon, la méthode Execute retourne un **jeu d’enregistrements**fermé.  
   
  L’objet **Recordset** retourné est toujours un curseur en lecture seule et avant uniquement. Si vous avez besoin d’un objet **Recordset** avec davantage de fonctionnalités, commencez par créer un objet **Recordset** avec les paramètres de propriété souhaités, puis utilisez la méthode Open de l’objet **Recordset** [(ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) pour exécuter la requête et retourner le type de curseur souhaité.  

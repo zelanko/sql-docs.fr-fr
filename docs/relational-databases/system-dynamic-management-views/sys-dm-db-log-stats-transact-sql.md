@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_log_stats (Transact-SQL)
 title: sys. dm_db_log_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
@@ -19,19 +20,19 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25488898f7f8c6fb56ea75bc62480aefea171b59
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b70d0b23a55584bb866c278086bec7f437cedd2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423273"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Retourne des informations et des attributs de niveau récapitulatif sur les fichiers journaux des transactions des bases de données. Utilisez ces informations pour la surveillance et le diagnostic de l’intégrité du journal des transactions.   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +44,7 @@ Retourne des informations et des attributs de niveau récapitulatif sur les fich
 
 *database_id* | NULL | **Par défaut**
 
-ID de la base de données. `database_id` a la valeur `int`. Les entrées valides sont le numéro d’identification d’une base de données, `NULL` ou `DEFAULT` . La valeur par défaut est `NULL`. `NULL`et `DEFAULT` sont des valeurs équivalentes dans le contexte de la base de données active.  
+ID de la base de données. `database_id` a la valeur `int`. Les entrées valides sont le numéro d’identification d’une base de données, `NULL` ou `DEFAULT` . La valeur par défaut est `NULL`. `NULL` et `DEFAULT` sont des valeurs équivalentes dans le contexte de la base de données active.  
 Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Lorsque vous utilisez `DB_ID` sans spécifier de nom de base de données, le niveau de compatibilité de la base de données actuelle doit être supérieur ou égal à 90.
 
   
@@ -61,7 +62,7 @@ Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-i
 |total_log_size_mb  |**float**  |   Taille totale du journal des transactions en Mo. |  
 |active_vlf_count   |**bigint** |   Nombre total de [fichiers journaux virtuels actifs (fichiers journaux virtuels)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) dans le journal des transactions.|  
 |active_log_size_mb |**float**  |   Taille totale du journal des transactions actives en Mo.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   Raison de la troncation du journal retard. La valeur est identique à celle `log_reuse_wait_desc` de la colonne de `sys.databases` .  (Pour obtenir des explications plus détaillées sur ces valeurs, consultez [le journal des transactions](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Les valeurs possibles incluent : <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />RÉPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />AUTRE TEMPORAIRE |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Raison de la troncation du journal retard. La valeur est identique à celle  `log_reuse_wait_desc` de la colonne de `sys.databases` .  (Pour obtenir des explications plus détaillées sur ces valeurs, consultez [le journal des transactions](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Les valeurs possibles incluent : <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />RÉPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />AUTRE TEMPORAIRE |  
 |log_backup_time    |**datetime**   |   Heure de la dernière sauvegarde du journal des transactions.|   
 |log_backup_lsn |**nvarchar(24)**   |   Numéro séquentiel dans le journal de la dernière sauvegarde du journal des transactions [(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb   |**float**  |   Taille du journal en Mo depuis le dernier numéro séquentiel dans le journal de sauvegarde du journal des transactions [(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
@@ -72,7 +73,7 @@ Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-i
 |recovery_vlf_count |**bigint** |   Nombre total de [fichiers journaux virtuels (fichiers journaux virtuels)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) à récupérer, en cas de basculement ou de redémarrage du serveur. |  
 
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 En cas d’exécution `sys.dm_db_log_stats` sur une base de données qui participe à un groupe de disponibilité en tant que réplica secondaire, seul un sous-ensemble des champs décrits ci-dessus est renvoyé.  Actuellement, seuls `database_id` , `recovery_model` et `log_backup_time` sont retournés lorsqu’ils sont exécutés sur une base de données secondaire.   
 
 ## <a name="permissions"></a>Autorisations  
@@ -100,8 +101,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

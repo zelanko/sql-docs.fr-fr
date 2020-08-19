@@ -1,4 +1,5 @@
 ---
+description: ErrorValueEnum
 title: ErrorValueEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443931"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Spécifie le type d’erreur d’exécution ADO.  
@@ -36,7 +37,7 @@ Spécifie le type d’erreur d’exécution ADO.
 > [!NOTE]
 >  OLE DB erreurs peuvent être transmises à votre application ADO. En règle générale, elles peuvent être identifiées par un code d’installation Windows de *4*. Par exemple, 0x800***4***.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Impossible de modifier la propriété **ActiveConnection** d’un objet **Recordset** qui possède un objet **Command** comme source.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|Le serveur ne peut pas terminer l’opération.|  
@@ -90,15 +91,15 @@ Spécifie le type d’erreur d’exécution ADO.
 |**adErrURLNamedRowDoesNotExist**|3737-2146824551 0x800A0E99|L’enregistrement nommé par cette URL n’existe pas.|  
 |**adErrVolumeNotFound**|3733-2146824555 0x800A0E95|Le fournisseur ne peut pas localiser le périphérique de stockage indiqué par l’URL. Assurez-vous que l’URL est correctement tapée.|  
 |**adErrWriteFile**|3004-2146825284 0x800A0BBC|Échec de l’écriture dans le fichier.|  
-|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|À usage interne uniquement. Ne pas utiliser.|  
-|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|À usage interne uniquement. Ne pas utiliser.|  
+|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|Uniquement réservé à un usage interne. Ne pas utiliser.|  
+|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Uniquement réservé à un usage interne. Ne pas utiliser.|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
  Seuls les sous-ensembles suivants d’équivalents ADO/WFC sont définis.  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.ErrorValue.BOUNDTOCOMMAND|  
 |AdoEnums.ErrorValue.DATACONVERSION|  

@@ -1,4 +1,5 @@
 ---
+description: sp_help_publication_access (Transact-SQL)
 title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485982"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retourne la liste de toutes les connexions accordées pour une publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication à laquelle accéder. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication à laquelle accéder. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @return_granted = ] 'return_granted'`ID de connexion. *return_granted* est de **bits**, avec 1 comme valeur par défaut. Si la **valeur 0** est spécifiée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que l’authentification est utilisée, les connexions disponibles qui s’affichent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si la **valeur 0** est spécifiée et que l’authentification Windows est utilisée, les connexions qui n’ont pas spécifiquement refusé l’accès au serveur de publication ou au serveur de distribution sont retournées.  
+`[ @return_granted = ] 'return_granted'` ID de connexion. *return_granted* est de **bits**, avec 1 comme valeur par défaut. Si la **valeur 0** est spécifiée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que l’authentification est utilisée, les connexions disponibles qui s’affichent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si la **valeur 0** est spécifiée et que l’authentification Windows est utilisée, les connexions qui n’ont pas spécifiquement refusé l’accès au serveur de publication ou au serveur de distribution sont retournées.  
   
-`[ @login = ] 'login'`ID de connexion de sécurité standard. *login* est de **type sysname**, avec la valeur par défaut **%** .  
+`[ @login = ] 'login'` ID de connexion de sécurité standard. *login* est de **type sysname**, avec la valeur par défaut **%** .  
   
-`[ @initial_list = ] initial_list`Spécifie s’il faut retourner tous les membres avec un accès à la publication ou uniquement ceux qui ont accès avant l’ajout de nouveaux membres à la liste. *initial_list* est de bit, avec **0**comme valeur par défaut.  
+`[ @initial_list = ] initial_list` Spécifie s’il faut retourner tous les membres avec un accès à la publication ou uniquement ceux qui ont accès avant l’ajout de nouveaux membres à la liste. *initial_list* est de bit, avec **0**comme valeur par défaut.  
   
  **1** retourne des informations pour tous les membres du rôle serveur fixe **sysadmin** avec des connexions valides sur le serveur de distribution qui existaient lors de la création de la publication, ainsi que la connexion actuelle.  
   
@@ -56,14 +57,14 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**LoginName**|**nvarchar(256)**|Nom de connexion réel.|  
+|**LoginName**|**nvarchar (256)**|Nom de connexion réel.|  
 |**Isntname**|**int**|**0** = la connexion n’est pas un utilisateur Windows.<br /><br /> **1** = la connexion est un utilisateur Windows.|  
 |**Isntgroup**|**int**|**0** = la connexion n’est pas un groupe Windows.<br /><br /> **1** = la connexion est un groupe Windows.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_publication_access** est utilisé dans tous les types de réplications.  
   
  Quand **Isntname** et **Isntgroup** dans le jeu de résultats sont **0**, il est supposé que la connexion est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  

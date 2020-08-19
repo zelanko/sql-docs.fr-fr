@@ -1,4 +1,5 @@
 ---
+description: EventReasonEnum
 title: EventReasonEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94b36cbab5ffe7c22f4d1941e61af8fabc8b9973
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0dc0c811f989b0fd91c47827718d1d8480ddb769
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443921"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Spécifie la raison pour laquelle un événement a eu lieu.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|Une opération a ajouté un nouvel enregistrement.|  
 |**adRsnClose**|9|Une opération a fermé le **Recordset**.|  
@@ -46,7 +47,7 @@ Spécifie la raison pour laquelle un événement a eu lieu.
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums. EventReason. ADDNEW|  
 |AdoEnums.EventReason.CLOSE|  

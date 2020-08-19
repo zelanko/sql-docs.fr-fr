@@ -1,4 +1,5 @@
 ---
+description: EditModeEnum
 title: EditModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4e16cbdddf39ba6abb03f93c35b2c2243d1bd71
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 64310c3399d24d557fc0896587dad0dc4fde091b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444041"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Spécifie l’état de modification d’un enregistrement.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|Indique qu’aucune opération de modification n’est en cours.|  
 |**adEditInProgress**|1|Indique que les données de l’enregistrement en cours ont été modifiées mais pas enregistrées.|  
@@ -35,7 +36,7 @@ Spécifie l’état de modification d’un enregistrement.
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.EditMode.NONE|  
 |AdoEnums.EditMode.INPROGRESS|  

@@ -1,4 +1,5 @@
 ---
+description: Execute, méthode (commande ADO)
 title: Execute, méthode (commande ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f595938fba37e2529f95b763d18dd91731c0b39
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b33ada4ce6ac53c1caafbec80c19d1fd31deb6ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443891"
 ---
 # <a name="execute-method-ado-command"></a>Execute, méthode (commande ADO)
 Exécute la requête, l’instruction SQL ou la procédure stockée spécifiée dans la propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) de l' [objet Command](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -40,7 +41,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *RecordsAffected*  
  facultatif. Variable de **type long** à laquelle le fournisseur retourne le nombre d’enregistrements affectés par l’opération. Le paramètre *RecordsAffected* s’applique uniquement aux requêtes d’action ou aux procédures stockées. *RecordsAffected* ne retourne pas le nombre d’enregistrements renvoyés par une requête ou une procédure stockée qui retourne un résultat. Pour obtenir ces informations, utilisez la propriété [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . La méthode **Execute** ne retourne pas les informations correctes lorsqu’elle est utilisée avec **adAsyncExecute**, simplement parce que lorsqu’une commande est exécutée de manière asynchrone, le nombre d’enregistrements affectés n’est peut-être pas encore connu au moment du retour de la méthode.  
   
- *Parameters*  
+ *Paramètres*  
  facultatif. Tableau **Variant** de valeurs de paramètre utilisées conjointement avec la chaîne d’entrée ou le flux spécifié dans **CommandText** ou **CommandStream**. (Les paramètres de sortie ne retournent pas les valeurs correctes lorsqu’ils sont passés dans cet argument.)  
   
  *Options*  
@@ -49,7 +50,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 > [!NOTE]
 >  Utilisez la **ExecuteOptionEnum** valeur ExecuteOptionEnum **adExecuteNoRecords** pour améliorer les performances en minimisant le traitement interne. Si **adExecuteStream** a été spécifié, les options **adAsyncFetch** et **adAsynchFetchNonBlocking** sont ignorées. N’utilisez pas les valeurs **CommandTypeEnum** de **adCmdFile** ou **adCmdTableDirect** avec l' **instruction EXECUTE**. Ces valeurs ne peuvent être utilisées qu’en tant qu’options avec les méthodes d' [ouverture](../../../ado/reference/ado-api/open-method-ado-recordset.md) et de [rerequête](../../../ado/reference/ado-api/requery-method.md) d’un **Recordset**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’utilisation de la méthode **Execute** sur un objet **Command** exécute la requête spécifiée dans la propriété **CommandText** ou **CommandStream** de l’objet.  
   
  Les résultats sont retournés dans un **jeu d’enregistrements** (par défaut) ou sous la forme d’un flux d’informations binaires. Pour obtenir un flux binaire, spécifiez **adExecuteStream** dans *options*, puis fournissez un flux en définissant **Command. Properties (« flux de sortie »)**. Un objet de **flux** ADO peut être spécifié pour recevoir les résultats, ou un autre objet de flux, tel que l’objet de réponse IIS, peut être spécifié. Si aucun flux n’a été spécifié avant d’appeler **Execute** avec **adExecuteStream**, une erreur se produit. La position du flux au retour de l' **instruction EXECUTE** est spécifique au fournisseur.  

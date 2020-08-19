@@ -1,4 +1,5 @@
 ---
+description: sp_enum_login_for_proxy (Transact-SQL)
 title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: cd65937894956ff008a08ea6f15222d6d020ba2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486051"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85891950"
 
   Répertorie des associations entre les principaux de sécurité et les proxys.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,11 +43,11 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal, d’une connexion, d’un rôle de serveur ou d’un rôle de base de données **msdb** pour lequel répertorier les proxies. Le nom est de type **nvarchar (256)**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'` Nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal, d’une connexion, d’un rôle de serveur ou d’un rôle de base de données **msdb** pour lequel répertorier les proxies. Le nom est de type **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
-`[ @proxy_id = ] id`Numéro d’identification du proxy pour lequel répertorier les informations. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut. L' *ID* ou le *proxy_name* peuvent être spécifiés.  
+`[ @proxy_id = ] id` Numéro d’identification du proxy pour lequel répertorier les informations. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut. L' *ID* ou le *proxy_name* peuvent être spécifiés.  
   
-`[ @proxy_name = ] 'proxy_name'`Nom du proxy pour lequel répertorier les informations. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut. L' *ID* ou le *proxy_name* peuvent être spécifiés.  
+`[ @proxy_name = ] 'proxy_name'` Nom du proxy pour lequel répertorier les informations. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut. L' *ID* ou le *proxy_name* peuvent être spécifiés.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -61,7 +62,7 @@ sp_enum_login_for_proxy
 |**flags**|**int**|Type du principal de sécurité.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion<br /><br /> **1** = rôle de système fixe<br /><br /> **2** = rôle de base de données dans **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Quand aucun paramètre n’est fourni, **sp_enum_login_for_proxy** répertorie des informations sur toutes les connexions dans l’instance pour chaque proxy.  
   
  Lorsqu’un ID de proxy ou un nom de proxy est fourni, **sp_enum_login_for_proxy** répertorie les connexions qui ont accès au proxy. Lorsqu’un nom de connexion est fourni, **sp_enum_login_for_proxy** répertorie les proxys auxquels la connexion a accès.  

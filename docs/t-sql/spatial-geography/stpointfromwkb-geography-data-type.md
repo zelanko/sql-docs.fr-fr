@@ -1,4 +1,5 @@
 ---
+description: STPointFromWKB (type de données geography)
 title: STPointFromWKB (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 11c7ec547778eb07d1713081b55f4d8c192bb9ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 70eabd3b36ad564b02d16e3ce906405d83a55730
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459014"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 
 ## <a name="arguments"></a>Arguments
  *WKB_point*  
- Représentation WKB de l’instance **geographyPoint** à retourner. *WKB_point* est une expression **varbinary(max)** .  
+ Représentation WKB de l’instance **geographyPoint** à retourner. *WKB_point* est une expression **varbinary(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyPoint** à retourner.  
@@ -52,7 +53,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  Type OGC : **Point**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,7 +65,7 @@ SET @g = geography::STPointFromWKB(0x010100000017D9CEF753D347407593180456965EC0,
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

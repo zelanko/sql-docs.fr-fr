@@ -1,4 +1,5 @@
 ---
+description: Avg (MDX)
 title: Moy (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5cac19b597139274502d455fb5f8f4e5087c8a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477061"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003, à partir du cube **Adventure Works** . La fonction **AVG** calcule la moyenne à partir de l’ensemble de jours qui sont contenus dans chaque mois `[Ship Date].[Fiscal Time]` de la hiérarchie. La première version du calcul montre le comportement par défaut d'Avg en excluant de la moyenne les jours qui n'ont pas enregistré de ventes, la deuxième version montre comment inclure les jours sans ventes dans la moyenne.  
+ L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003, à partir du cube **Adventure Works** . La fonction **AVG** calcule la moyenne à partir de l’ensemble de jours qui sont contenus dans chaque mois de la `[Ship Date].[Fiscal Time]` hiérarchie. La première version du calcul montre le comportement par défaut d'Avg en excluant de la moyenne les jours qui n'ont pas enregistré de ventes, la deuxième version montre comment inclure les jours sans ventes dans la moyenne.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   

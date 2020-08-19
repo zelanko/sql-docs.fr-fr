@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TEXTSIZE (Transact-SQL)'
 title: '@@TEXTSIZE (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d216563a1e4e666ba7b9a15bdf412de0a7d91d5b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 349ef2067c50a9955643c02cb8ba5226a1f15ddc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422563"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Renvoie la valeur actuelle de l’option [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +45,7 @@ ms.locfileid: "87110295"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Types de retour
- **entier**  
+ **integer**  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant utilise `SELECT` pour afficher la valeur `@@TEXTSIZE` avant et après sa modification avec l’instruction `SET``TEXTSIZE`.  

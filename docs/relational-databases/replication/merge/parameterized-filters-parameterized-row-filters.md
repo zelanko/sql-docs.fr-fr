@@ -1,4 +1,5 @@
 ---
+description: Filtres paramétrés - Filtres de lignes paramétrés
 title: Filtres de lignes paramétrés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7d5eae242525d57618050516f6368f016e3d89
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423543"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +96,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Par exemple, l'employée Pamela Ansman-Wolfe possède l'ID d'employé 280. Spécifiez la valeur de l'ID d'employé (280 dans notre exemple) comme valeur de HOST_NAME() lorsque vous créez un abonnement pour celle-ci. Lorsque l'Agent de fusion se connecte au serveur de publication, il compare la valeur retournée par HOST_NAME() aux valeurs de la table et ne télécharge que la ligne contenant la valeur 280 dans la colonne **EmployeeID** .  
   
 > [!IMPORTANT]
->  Du fait que la fonction HOST_NAME() retourne une valeur de type **nchar** , vous devez utiliser CONVERT si la colonne dans la clause de filtre affiche un type de données numérique comme dans l'exemple ci-dessus. Pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrables, telles que `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En revanche, il est conseillé d'adopter l'approche illustrée dans l'exemple : `EmployeeID = CONVERT(int,HOST_NAME())`. Cette clause peut être utilisée pour le paramètre `@subset_filterclause` de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), mais elle ne peut généralement pas être utilisée dans l’Assistant Nouvelle publication (l’Assistant exécute la clause de filtre pour la valider mais l’opération échoue car le nom de l’ordinateur ne peut pas être converti en un type **int**). Si vous utilisez l'Assistant Nouvelle publication, nous vous recommandons de spécifier `CONVERT(nchar,EmployeeID) = HOST_NAME()` dans l'Assistant, puis d'utiliser ensuite [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) pour modifier la clause en `EmployeeID = CONVERT(int,HOST_NAME())` avant de créer un instantané de la publication.  
+>  Du fait que la fonction HOST_NAME() retourne une valeur de type **nchar** , vous devez utiliser CONVERT si la colonne dans la clause de filtre affiche un type de données numérique comme dans l'exemple ci-dessus. Pour des raisons de performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtre de lignes paramétrables, telles que `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En revanche, il est conseillé d'adopter l'approche illustrée dans l'exemple : `EmployeeID = CONVERT(int,HOST_NAME())`. Cette clause peut être utilisée pour le paramètre `@subset_filterclause` de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)mais elle ne peut généralement pas être utilisée dans l'Assistant Nouvelle publication (l'Assistant exécute la clause de filtre pour la valider mais l'opération échoue car le nom de l'ordinateur ne peut pas être converti en un type **int**). Si vous utilisez l'Assistant Nouvelle publication, nous vous recommandons de spécifier `CONVERT(nchar,EmployeeID) = HOST_NAME()` dans l'Assistant, puis d'utiliser ensuite [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) pour modifier la clause en `EmployeeID = CONVERT(int,HOST_NAME())` avant de créer un instantané de la publication.  
   
  **Pour substituer la valeur de HOST_NAME()**  
   

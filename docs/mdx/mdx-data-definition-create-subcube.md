@@ -1,4 +1,5 @@
 ---
+description: Définition de données MDX - CREATE SUBCUBE
 title: Instruction CREATe SUBCUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477021"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Définition de données MDX - CREATE SUBCUBE
 
@@ -35,7 +36,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Expression MDX (Multidimensional Expressions) SELECT valide qui ne contient pas de clauses WITH, NON EMPTY ou HAVING et ne nécessite pas de propriétés de dimension ou de cellule.  
   
- Consultez [instruction select &#40;&#41;MDX](../mdx/mdx-data-manipulation-select.md) pour obtenir une explication détaillée de la syntaxe sur les instructions SELECT et la clause **non visuelle** .  
+ Consultez [instruction select &#40;&#41;MDX ](../mdx/mdx-data-manipulation-select.md) pour obtenir une explication détaillée de la syntaxe sur les instructions SELECT et la clause **non visuelle** .  
   
 ## <a name="remarks"></a>Notes  
  Lorsque les membres par défaut sont exclus de la définition d'un sous-cube, les coordonnées changent de façon correspondante. Pour les attributs qui peuvent être agrégés, le membre par défaut est déplacé vers le membre [All]. Pour les attributs qui ne peuvent pas être agrégés, le membre par défaut est déplacé vers un membre existant dans le sous-cube. Le tableau ci-dessous donne des exemples de combinaisons de sous-cubes et de membres par défaut.  
@@ -127,8 +128,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts clés dans MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [Instructions de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)   
- [Instruction DROP SUBCUBE &#40;&#41;MDX](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Instructions de script MDX &#40;&#41;MDX ](../mdx/mdx-scripting-statements-mdx.md)   
+ [Instruction DROP SUBCUBE &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-subcube.md)   
  [Instruction SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

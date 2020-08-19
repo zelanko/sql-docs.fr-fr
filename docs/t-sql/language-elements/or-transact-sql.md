@@ -1,4 +1,5 @@
 ---
+description: OR (Transact-SQL)
 title: OR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,19 +21,19 @@ ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00cb67ddee5f0d3f81de61bad0a76f9ff70e1d67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 11dbf45f7376a1a5557331dbd0466443bbd92739
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422493"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Combine deux conditions. Lorsque plusieurs opérateurs logiques sont utilisés dans une instruction, les opérateurs OR sont évalués après les opérateurs AND. L'utilisation des parenthèses permet toutefois de modifier l'ordre de traitement.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,11 +56,11 @@ boolean_expression OR boolean_expression
 ## <a name="remarks"></a>Notes  
  Le tableau suivant indique les résultats de l'opérateur OR.  
   
-||TRUE|FALSE|UNKNOWN|  
+||true|false|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
+|**FALSE**|true|false|UNKNOWN|  
+|**UNKNOWN**|true|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la vue `vEmployeeDepartmentHistory` pour récupérer les noms des employés de `Quality Assurance` qui travaillent dans l'équipe du soir ou l'équipe de nuit. Si les parenthèses sont omises, la requête retourne les employés de `Quality Assurance` qui travaillent dans l'équipe du soir et tous les employés qui travaillent dans l'équipe de nuit.  
