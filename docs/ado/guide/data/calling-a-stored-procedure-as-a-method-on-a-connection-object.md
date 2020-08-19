@@ -1,4 +1,5 @@
 ---
+description: Appel d’une procédure stockée en tant que méthode sur un objet Connection
 title: Appel d’une procédure stockée en tant que méthode sur un objet de connexion | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453701"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Appel d’une procédure stockée en tant que méthode sur un objet Connection
 Vous pouvez appeler une procédure stockée comme s’il s’agissait d’une méthode native sur l’objet de **connexion** ouvert associé. Cela revient à appeler une commande nommée sur l’objet de **connexion** .  

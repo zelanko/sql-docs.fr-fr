@@ -1,4 +1,5 @@
 ---
+description: Fonctionnement conjoint des gestionnaires d’événements
 title: Fonctionnement de l’ensemble des gestionnaires d’événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453251"
 ---
 # <a name="how-event-handlers-work-together"></a>Fonctionnement conjoint des gestionnaires d’événements
 À moins que vous ne programmiez dans Visual Basic, tous les gestionnaires d’événements pour les événements **Connection** et **Recordset** doivent être implémentés, que vous soyez en fait en train de traiter tous les événements. La quantité de travail d’implémentation que vous devez effectuer dépend de votre langage de programmation. Pour plus d’informations, consultez [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

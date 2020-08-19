@@ -1,4 +1,5 @@
 ---
+description: 'HelloData : une application ADO simple'
 title: 'HelloData : une application ADO simple | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453281"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData : une application ADO simple
 Cette simple application passe par chacune des quatre principales opérations ADO : obtention, examen, modification et mise à jour des données. Ces opérations sont effectuées sur l’exemple de base de données Northwind inclus avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base d’ADO et pour empêcher l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  
@@ -44,17 +45,17 @@ Cette simple application passe par chacune des quatre principales opérations AD
   
 |Type de contrôle|Propriété|Valeur|  
 |------------------|--------------|-----------|  
-|Formulaire|Name|Form1|  
+|Formulaire|Nom|Form1|  
 ||Hauteur|6500|  
 ||Largeur|6500|  
-|MS DataGrid|Name|grdDisplay1|  
-|TextBox|Name|txtDisplay1|  
+|MS DataGrid|Nom|grdDisplay1|  
+|TextBox|Nom|txtDisplay1|  
 ||Multiline|true|  
-|Bouton de commande|Name|cmdGetData|  
+|Bouton de commande|Nom|cmdGetData|  
 ||Caption|Get Data|  
-|Bouton de commande|Name|cmdExamineData|  
+|Bouton de commande|Nom|cmdExamineData|  
 ||Caption|Examiner les données|  
-|Bouton de commande|Name|cmdEditData|  
+|Bouton de commande|Nom|cmdEditData|  
 ||Caption| Modification des données|  
-|Bouton de commande|Name|cmdUpdateData|  
+|Bouton de commande|Nom|cmdUpdateData|  
 ||Caption|Données mises à jour|

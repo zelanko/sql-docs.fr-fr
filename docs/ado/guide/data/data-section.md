@@ -1,4 +1,5 @@
 ---
+description: Section de données
 title: Section données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453571"
 ---
 # <a name="data-section"></a>Section de données
 La section Data définit les données de l’ensemble de lignes, ainsi que toutes les mises à jour, insertions ou suppressions en attente. La section de données peut contenir zéro ou plusieurs lignes. Elle ne peut contenir que des données d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme indiqué précédemment, les colonnes sans données peuvent être omises. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, elle est ignorée en mode silencieux.  
@@ -29,7 +30,7 @@ La section Data définit les données de l’ensemble de lignes, ainsi que toute
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Les caractères suivants sont réservés dans XML et doivent être remplacés par des entités de caractères : {', ", &, \< , >}.  
+ Les caractères suivants sont réservés dans XML et doivent être remplacés par des entités de caractères : {', ", &, \<,> }.  
   
 ## <a name="binary"></a>Binary  
  Les données binaires sont encodées par bin. hex (autrement dit, un octet est mappé à deux caractères, un caractère par Quartet).  

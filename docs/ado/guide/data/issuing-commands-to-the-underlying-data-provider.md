@@ -1,4 +1,5 @@
 ---
+description: Émission de commandes vers le fournisseur de données sous-jacent
 title: Émission de commandes vers le Fournisseur de données sous-jacent | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bc30f35ebfe2ddc59e9ef1404253e9bc99d62e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6d9000fdf63a908257c9dbdfa29dc7b57dbb7ecf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453231"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Émission de commandes vers le fournisseur de données sous-jacent
 Toute commande qui ne commence pas par SHAPE est transmise au fournisseur de données. Cela équivaut à émettre une commande de forme sous la forme « SHAPE {Provider Command} ». Il n’est *pas* nécessaire que ces commandes produisent un **jeu d’enregistrements**. Par exemple, «la forme {DROP TABLE MyTable} est une commande de forme parfaitement valide, en supposant que le fournisseur de données prend en charge DROP TABLE.  

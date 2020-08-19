@@ -1,4 +1,5 @@
 ---
+description: Paramètres des événements
 title: Paramètres d’événement | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453431"
 ---
 # <a name="event-parameters"></a>Paramètres des événements
 Chaque gestionnaire d’événements a un paramètre d’État qui contrôle le gestionnaire d’événements. Pour les événements complets, ce paramètre est également utilisé pour indiquer la réussite ou l’échec de l’opération qui a généré l’événement. La plupart des événements complets ont également un paramètre d’erreur qui fournit des informations sur les erreurs qui ont pu se produire, ainsi qu’un ou plusieurs paramètres d’objet qui font référence aux objets ADO utilisés pour effectuer l’opération. Par exemple, l’événement [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) comprend les paramètres d’objet de la **commande**, du **Recordset**et des objets de **connexion** associés à l’événement. Dans l’exemple Microsoft® Visual Basic®, vous pouvez voir les objets pCommand, prerecordset et pConnection qui représentent les objets **Command**, **Recordset**et **Connection** utilisés par la méthode **Execute** .  

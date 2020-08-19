@@ -1,4 +1,5 @@
 ---
+description: Paramètres de l’objet Command
 title: Paramètres de l’objet de commande | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0935fa2b45d0ab496072f4f3a9619c821afc8383
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2e2cd8da9522c7aead905cc0c19debe132faf4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453671"
 ---
 # <a name="command-object-parameters"></a>Paramètres de l’objet Command
 La rubrique précédente a abordé la [création et l’exécution d’une commande simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Une utilisation plus intéressante de l’objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) est présentée dans l’exemple suivant, dans lequel la commande SQL a été paramétrée. Cette modification permet de réutiliser la commande, en passant chaque fois une valeur différente pour le paramètre. Étant donné que la propriété [Prepared Property](../../../ado/reference/ado-api/prepared-property-ado.md) de l’objet **Command** a la valeur **true**, ADO demande au fournisseur de compiler la commande spécifiée dans [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) avant de l’exécuter pour la première fois. La commande compilée est également conservée en mémoire. Cela ralentit légèrement l’exécution de la commande la première fois qu’elle est exécutée en raison de la surcharge requise pour la préparer, mais entraîne un gain de performances chaque fois que la commande est appelée par la suite. Par conséquent, les commandes doivent être préparées uniquement si elles sont utilisées plus d’une fois.  

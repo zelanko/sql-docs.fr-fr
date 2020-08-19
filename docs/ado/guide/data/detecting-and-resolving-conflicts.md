@@ -1,4 +1,5 @@
 ---
+description: Détection et résolution des conflits
 title: Détection et résolution des conflits | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453511"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
 Si vous traitez votre Recordset en mode immédiat, il y a beaucoup moins de risques de problèmes d’accès concurrentiel. En revanche, si votre application utilise la mise à jour en mode batch, il peut y avoir de bonnes chances qu’un utilisateur modifie un enregistrement avant que les modifications apportées par un autre utilisateur modifiant le même enregistrement soient enregistrées. Dans ce cas, vous souhaiterez que votre application gère correctement le conflit. Il se peut que vous souhaitiez que la dernière personne envoie une mise à jour au serveur « WINS ». Vous pouvez également permettre à l’utilisateur le plus récent de décider quelle mise à jour doit être prioritaire en lui fournissant un choix entre les deux valeurs conflictuelles.  

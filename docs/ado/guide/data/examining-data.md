@@ -1,4 +1,5 @@
 ---
+description: Examen des données
 title: Examen des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f41778d1afa806b739e43edda6fb5b79e8f432
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fef2189af66c6777e2c337026db76e85b2cb42d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453411"
 ---
 # <a name="examining-data"></a>Examen des données
 La section [obtention de données](../../../ado/guide/data/getting-data.md) a expliqué comment récupérer des données d’une source de données sous la forme d’un ou de plusieurs objets **Recordset** . Cette section traite de l' **objet Recordset** plus en détail, y compris comment naviguer dans le **Recordset** et afficher ses données.  

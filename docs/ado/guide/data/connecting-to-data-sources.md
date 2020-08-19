@@ -1,4 +1,5 @@
 ---
+description: Connexion à des sources de données
 title: Connexion à des sources de données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ef641bbfb94b8fde5f12af6cadd03f13fbfa91f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 78d7395adfb30dbf78d88baadabc42ede409f47a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453641"
 ---
 # <a name="connecting-to-data-sources"></a>Connexion à des sources de données
 Un objet de **connexion** ADO représente une session unique avec une source de données, y compris un SGBD, un magasin de fichiers ou un fichier texte délimité par des virgules. Dans le cas d’un système de base de données client/serveur, la connexion ADO peut être une véritable connexion réseau au serveur.  

@@ -1,4 +1,5 @@
 ---
+description: Déconnexion et reconnexion du recordset
 title: Déconnexion et reconnexion du Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ef30165a05bc472bfe34cec4e7f669d545d7768
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f372951375954a4ed93213cc7cbfd7bc99ef1ecf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453481"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Déconnexion et reconnexion du recordset
 L’une des fonctionnalités les plus puissantes de ADO est la possibilité d’ouvrir un jeu d’enregistrements côté client à partir d’une source de données, puis de déconnecter le Recordset de la source de données. Une fois le jeu d’enregistrements déconnecté, la connexion à la source de données peut être fermée, libérant ainsi les ressources sur le serveur utilisé pour la gérer. Vous pouvez continuer à afficher et modifier les données dans le jeu d’enregistrements pendant qu’il est déconnecté, puis vous reconnecter ultérieurement à la source de données et envoyer vos mises à jour en mode batch.  

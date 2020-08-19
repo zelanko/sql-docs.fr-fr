@@ -1,4 +1,5 @@
 ---
+description: Grammaire formelle de la commande SHAPE
 title: Grammaire de forme formelle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453371"
 ---
 # <a name="formal-shape-grammar"></a>Grammaire formelle de la commande SHAPE
 Il s’agit de la grammaire formelle pour créer n’importe quelle commande de forme :  
@@ -41,30 +42,30 @@ Il s’agit de la grammaire formelle pour créer n’importe quelle commande de 
   
 |Terme|Définition|  
 |----------|----------------|  
-|\<> de commande de forme|SHAPE [ \< table-exp> [[As] \< alias>]] [ \< forme-action>]|  
-|\<> table-exp|{ \< Provider-Command-text>} &#124;<br /><br /> ( \< Shape-command>) &#124;<br /><br /> \<Nom de la table entre guillemets> &#124;<br /><br /> \<nom entre guillemets>|  
-|\<> d’action de forme|Ajouter \< un alias-field-list> &#124;<br /><br /> Compute \< Aliased-field-list> [par \< liste de champs>]|  
-|\<> de liste de champs avec alias|\<Aliased-Field> [, \< alias-Field... >]|  
-|\<> de champ avec alias|\<Field-exp> [[AS] \< alias>]|  
-|\<field-exp>|( \< relation-exp>) &#124;<br /><br /> \<> &#124; calculé-exp<br /><br /> \<agrégat-exp> &#124;<br /><br /> \<New-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \< alias>]<br /><br /> \<Relation entre relations-cond-list>|  
-|\<relation-cond-list>|\<relation-cond> [, \< relation-cond>...]|  
-|\<relation-cond>|\<> de nom de champ en \<> de référence enfant|  
-|\<> de référence enfant|\<nom de champ> &#124;<br /><br /> PARAMÈTRE \< param-ref>|  
-|\<Param-Ref>|\<nombre>|  
-|\<field-list>|\<Field-name> [, \< Field-name>]|  
-|\<aggregate-exp>|SUM ( \< Qualified-Field-name>) &#124;<br /><br /> AVG ( \< Qualified-Field-name>) &#124;<br /><br /> &#124; MIN ( \< Qualified-Field-name>)<br /><br /> MAX ( \< Qualified-Field-name>) &#124;<br /><br /> COUNT ( \< Qualified-alias> &#124; \< Qualified-Name>) &#124;<br /><br /> ECARTYPE ( \< Qualified-Field-name>) &#124;<br /><br /> ANY ( \< Qualified-Field-name>)|  
-|\<> calculé-exp|CALC ( \< expression>)|  
-|\<Qualified-Field-name>|\<> d’alias. [ \< alias>...] \< nom de champ>|  
-|\<alias>|\<nom entre guillemets>|  
-|\<nom de champ>|\<quoted-Name> [[AS] \< alias>]|  
-|\<nom entre guillemets>|\<&#124; string><br /><br /> \<&#124; « string> »<br /><br /> [ \< string>] &#124;<br /><br /> \<nom>|  
-|\<nom qualifié>|alias [. alias...]|  
-|\<nom>|alpha [chiffre &#124; alpha &#124; _ &#124; # &#124; : &#124;...]|  
-|\<nombre>|chiffre [chiffre...]|  
-|\<New-exp>|NEW \< Field-type> [( \< Number> [, \< Number>])]|  
+|\<shape-command>|SHAPE [ \<table-exp> [[] \<alias> ]] [ \<shape-action> ]|  
+|\<table-exp>|{ \<provider-command-text> } &#124;<br /><br /> ( \<shape-command> ) &#124;<br /><br /> &#124; de TABLE \<quoted-name><br /><br /> \<quoted-name>|  
+|\<shape-action>|Ajouter \<aliased-field-list> &#124;<br /><br /> Compute \<aliased-field-list> [by \<field-list> ]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias> ]|  
+|\<field-exp>|( \<relation-exp> ) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias> ]<br /><br /> SE rapportent \<relation-cond-list>|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<field-name> À \<child-ref>|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> PARAMÈTRE \<param-ref>|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|SUM ( \<qualified-field-name> ) &#124;<br /><br /> MOYENNE ( \<qualified-field-name> ) &#124;<br /><br /> &#124; MIN ( \<qualified-field-name> )<br /><br /> MAX ( \<qualified-field-name> ) &#124;<br /><br /> &#124; de nombre ( \<qualified-alias> &#124; \<qualified-name> )<br /><br /> ECARTYPE ( \<qualified-field-name> ) &#124;<br /><br /> ANY ( \<qualified-field-name> )|  
+|\<calculated-exp>|CALC ( \<expression> )|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<quoted-name> [[AS] \<alias> ]|  
+|\<quoted-name>|\<string>&#124;<br /><br /> « \<string> » &#124;<br /><br /> [ \<string> ] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|alias [. alias...]|  
+|\<name>|alpha [chiffre &#124; alpha &#124; _ &#124; # &#124; : &#124;...]|  
+|\<number>|chiffre [chiffre...]|  
+|\<new-exp>|NOUVEAU \<field-type> [( \<number> [, \<number> ])]|  
 |\<field-type>|Type de données OLE DB ou ADO.|  
-|\<> de chaîne|Unicode-Char [Unicode-char...]|  
+|\<string>|Unicode-Char [Unicode-char...]|  
 |\<expression>|Expression Visual Basic pour Applications dont les opérandes sont d’autres colonnes non CALCULées dans la même ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  

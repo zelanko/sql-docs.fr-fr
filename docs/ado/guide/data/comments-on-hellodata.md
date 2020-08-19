@@ -1,4 +1,5 @@
 ---
+description: Commentaires sur HelloData
 title: Commentaires sur HelloData | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3836d577ab9230e425f42a52b53ed82d3354d72a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9c7756449d2e203fce0a40613c1b9279fd947bd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453651"
 ---
 # <a name="comments-on-hellodata"></a>Commentaires sur HelloData
 L’application HelloData passe en revue les opérations de base d’une application ADO type : obtention, examen, modification et mise à jour des données. Quand vous démarrez l’application, cliquez sur le premier bouton, puis sur **récupérer des données**. La sous-routine **GetData** est exécutée.  

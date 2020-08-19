@@ -1,4 +1,5 @@
 ---
+description: Détermination de ce qui est pris en charge
 title: Détermination des éléments pris en charge | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 360a57c6647b83fc72ba950a6aaa8175155c893f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1936048f0ced1a15a8134a81bc3de2a09244803d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453491"
 ---
 # <a name="determining-what-is-supported"></a>Détermination de ce qui est pris en charge
 La méthode **prend en charge** l’utilisation de la méthode pour déterminer si un objet **Recordset** spécifié prend en charge un type particulier de fonctionnalité. Sa syntaxe est la suivante :  

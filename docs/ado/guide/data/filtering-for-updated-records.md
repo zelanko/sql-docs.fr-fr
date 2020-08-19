@@ -1,4 +1,5 @@
 ---
+description: Filtrage des enregistrements mis à jour
 title: Filtrage des enregistrements mis à jour | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dae572da8f87051a58415929657f77be6c91d14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453381"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrage des enregistrements mis à jour
 Avant d’appeler UpdateBatch, vous pouvez utiliser la propriété de filtre Recordset pour afficher uniquement les enregistrements qui ont été modifiés depuis l’ouverture du recordset ou le dernier appel à UpdateBatch. Pour ce faire, définissez le filtre sur adFilterPendingRecords pour déterminer le nombre d’enregistrements qui seront mis à jour, comme indiqué dans l’exemple de code de la section suivante.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cet exemple étend l’exemple UpdateBatch précédent en filtrant l’objet Recordset juste avant d’appeler la méthode UpdateBatch, en indiquant à l’utilisateur les enregistrements qui seront modifiés et en lui permettant d’annuler la mise à jour (à l’aide de la méthode CancelBatch).  
   
 ```  

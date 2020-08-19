@@ -1,4 +1,5 @@
 ---
+description: Curseurs de jeu de clés
 title: Curseurs de jeu de clés | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3df797be676961227687117e1fd7bdb748370efd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453171"
 ---
 # <a name="keyset-cursors"></a>Curseurs de jeu de clés
 Le curseur de jeu de clés fournit les fonctionnalités entre un curseur statique et un curseur dynamique dans sa capacité à détecter les modifications. Comme un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et à l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs des lignes dans le jeu de résultats.  

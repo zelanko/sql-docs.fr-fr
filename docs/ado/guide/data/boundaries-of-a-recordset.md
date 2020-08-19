@@ -1,4 +1,5 @@
 ---
+description: Limites d’un recordset
 title: Limites d’un jeu d’enregistrements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453711"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un recordset
 **Recordset** prend en charge les propriétés **BOF** et **EOF** pour détourer le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** comme des enregistrements « fantômes » placés au début et à la fin de l’ensemble d' **enregistrements**. En comptant **BOF** et **EOF**, notre exemple de **jeu d’enregistrements** se présenterait comme suit :  

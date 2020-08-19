@@ -1,4 +1,5 @@
 ---
+description: Gestion des erreurs dans ADO
 title: Gestion des erreurs | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c42645873b78a3ac398af7f3a2f41ff086dd9b3d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d26cbadd4f9c6a33c6dc43a6dcc88e0a92f23d65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453441"
 ---
 # <a name="error-handling-in-ado"></a>Gestion des erreurs dans ADO
 ADO utilise plusieurs méthodes différentes pour notifier une application des erreurs qui se produisent. Cette section décrit les types d’erreurs qui peuvent se produire lorsque vous utilisez ADO et comment votre application est notifiée. Il conclut en faisant des suggestions sur la façon de gérer ces erreurs.  

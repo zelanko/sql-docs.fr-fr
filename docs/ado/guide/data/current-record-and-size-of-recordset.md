@@ -1,4 +1,5 @@
 ---
+description: Enregistrement actif et taille du recordset
 title: Enregistrement actuel et taille du Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453601"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Enregistrement actif et taille du recordset
 Cette section décrit comment localiser la position actuelle du curseur dans l’exemple de code **Recordset** dans [JScript pour retourner un Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Enregistrement actif  
- L’enregistrement en cours dans le jeu de données correspond à celui pointé par la position du curseur de l’objet **Recordset** . Lorsqu’un objet **Recordset** est retourné à partir de la source de données suite à l’appel de **Recordset. Open**, **Command. Execute**ou **Connection. Execute** (y compris **Connection. NamedCommand** et **Connection. StoredProcedure**), le curseur est défini pour pointer au premier enregistrement. Dans l’exemple de jeu de données, l’enregistrement initial actuel est l’élément « poires séchées organiques de l’oncle Bob ».  
+ L’enregistrement en cours dans le jeu de données correspond à celui pointé par la position du curseur de l’objet **Recordset** . Lorsqu’un objet **Recordset** est retourné à partir de la source de données comme résultat de l’appel de **Recordset. Open**, **Command.Exejolie**, ou **Connection.Exejolie** (y compris **Connection. NamedCommand** et **Connection. StoredProcedure**), le curseur est défini pour pointer au premier enregistrement. Dans l’exemple de jeu de données, l’enregistrement initial actuel est l’élément « poires séchées organiques de l’oncle Bob ».  
   
 ## <a name="size-of-recordset"></a>Taille du Recordset  
  Pour déterminer la taille d’un objet **Recordset** , obtenez la valeur de la propriété **Recordset. RecordCount** . Cette valeur est un entier long qui indique le nombre d’enregistrements dans le **Recordset**. Si le jeu de données est retourné par le fournisseur OLEDB pour Microsoft SQL Server, cette valeur indique le nombre de lignes retournées. La lecture de la propriété **RecordCount** sur un **jeu d’enregistrements** fermé génère une erreur.  

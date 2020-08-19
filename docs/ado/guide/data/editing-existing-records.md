@@ -1,4 +1,5 @@
 ---
+description: Modification d’enregistrements existants
 title: Modification des enregistrements existants | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71d8b825766ca94984ca2dc0b51577488178920f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c720d43135cb54cd610ea6e9a7e32ac249c1081
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453451"
 ---
 # <a name="editing-existing-records"></a>Modification d’enregistrements existants
 Pour modifier des enregistrements existants, accédez à la ligne que vous souhaitez modifier et modifiez la propriété **valeur** des champs que vous souhaitez modifier. Pour plus d’informations sur la propriété **value** de l’objet **Field** , consultez [examen des données](../../../ado/guide/data/examining-data.md). En fonction de votre type de curseur, vous utiliserez **Update** ou **UpdateBatch** pour renvoyer les modifications à la source de données. Pour plus d’informations, consultez [mise à jour et persistance des données](../../../ado/guide/data/updating-and-persisting-data.md).  
