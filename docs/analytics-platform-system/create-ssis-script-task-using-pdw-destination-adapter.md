@@ -1,4 +1,5 @@
 ---
+description: Créer une tâche de script qui utilise l’adaptateur de destination SSIS Parallel Data Warehouse
 title: Créer une tâche de script avec l’adaptateur de destination SSIS PDW
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
@@ -9,12 +10,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857dbc39906f57da39de623daecf18e5be0d28f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438521"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Créer une tâche de script qui utilise l’adaptateur de destination SSIS Parallel Data Warehouse
 Ce code de script de package SSIS est un exemple de code pour l’utilisation de l’adaptateur de destination PDW SSIS.  La tâche de script Integration Services vous permet d’effectuer quasiment n’importe quelle opération qui peut être accomplie dans une application .net dans le contexte d’un workflow de contrôle SSIS. 
@@ -27,7 +28,7 @@ Ce code de script de package SSIS est un exemple de code pour l’utilisation de
   
 3.  Modifiez le script pour utiliser le code fourni ci-dessous. Personnalisez le script dans votre environnement en effectuant les modifications suivantes :  
   
-    -   Vous devez conserver l’espace de noms du script créé par la tâche de script. Notez le nom de l’espace `namespace ST_<GUID>` de noms et modifiez le script ci-dessous, en remplaçant *ST_<GUID> * par le *GUID* d’origine de la tâche de script.  
+    -   Vous devez conserver l’espace de noms du script créé par la tâche de script. Notez le nom de l’espace de noms `namespace ST_<GUID>` et modifiez le script ci-dessous, en remplaçant * <GUID> ST_* par le *GUID* d’origine de la tâche de script.  
   
     -   Remplacez quatre occurrences de la valeur d’espace réservé *xxxxxxxx* par les valeurs appropriées à votre environnement et à l’action prévue.  
   

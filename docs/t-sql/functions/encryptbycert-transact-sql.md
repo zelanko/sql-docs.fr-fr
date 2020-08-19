@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYCERT (Transact-SQL)
 title: ENCRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 801d2af4bc83b974761c1bd11982e0943460cf92
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6368b5a1e030a8abd5bc1512a653d5f05631ccda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459739"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +47,10 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
 _certificate\_ID_  
 ID d'un certificat de la base de données. **int**.  
   
-_cleartext_  
+_texte clair_  
 Chaîne de données chiffrées avec le certificat.  
   
-**\@cleartext**  
+**\@texte clair**  
 Variable de l’un des types suivants, dont les données seront chiffrées avec la clé publique du certificat :
 
 * **nvarchar** 
@@ -62,7 +63,7 @@ Variable de l’un des types suivants, dont les données seront chiffrées avec 
 ## <a name="return-types"></a>Types de retour  
 **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Cette fonction chiffre des données à l’aide de la clé publique du certificat. Seule la clé privée correspondante peut déchiffrer le texte chiffré. Ces transformations asymétriques sont coûteuses par rapport au chiffrement/déchiffrement avec une clé symétrique. Par conséquent, le chiffrement asymétrique n’est pas recommandé avec des ensembles de données volumineux.
   
 ## <a name="examples"></a>Exemples  

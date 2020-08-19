@@ -1,4 +1,5 @@
 ---
+description: SET @local_variable (Transact-SQL)
 title: SET @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2393d6e51eb7c5b0df6ff1d710829a772b58dfd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f60866f303302b45092592124fb5cb6ff9bdb118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459301"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +82,7 @@ Champ public d’un type défini par l’utilisateur.
 Nom d’un type CLR (Common Language Runtime) défini par l’utilisateur.  
   
 `{ . | :: }`  
-Définit la méthode d'un type CLR défini par l'utilisateur. Pour une méthode d’instance (non statique), utilisez un point ( **.** ). Pour une méthode statique, utilisez deux fois un deux-points ( **::** ). Pour appeler une méthode, une propriété ou un champ de type CLR défini par l'utilisateur, vous devez avoir l'autorisation EXECUTE sur le type.  
+Définit la méthode d'un type CLR défini par l'utilisateur. Pour une méthode d’instance (non statique), utilisez un point (**.**). Pour une méthode statique, utilisez deux fois un deux-points (**::**). Pour appeler une méthode, une propriété ou un champ de type CLR défini par l'utilisateur, vous devez avoir l'autorisation EXECUTE sur le type.  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Méthode d’un type défini par l’utilisateur qui utilise un ou plusieurs arguments pour modifier l’état d’une instance d’un type. Les méthodes statiques doivent être publiques.  
@@ -168,7 +169,7 @@ READ ONLY
 Empêche les mises à jour par l'intermédiaire de ce curseur. Le curseur ne peut pas être référencé dans une clause WHERE CURRENT OF d’une instruction UPDATE ou DELETE. Cette option remplace la possibilité par défaut de mise à jour d'un curseur. Ce mot clé est désormais représenté par les mots READ et ONLY séparés par un espace, au lieu d'un trait de soulignement (READ_ONLY).  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Définit les colonnes qui peuvent être mises à jour par le curseur. Si OF *column_name* [ **,** ...*n*] est fourni, seules les colonnes indiquées autorisent les modifications. Lorsqu’aucune liste n’est spécifiée, toutes les colonnes peuvent être mises à jour, sauf si le curseur a été défini en tant que curseur READ_ONLY.  
+Définit les colonnes qui peuvent être mises à jour par le curseur. Si OF *column_name* [**,**...*n*] est fourni, seules les colonnes indiquées autorisent les modifications. Lorsqu’aucune liste n’est spécifiée, toutes les colonnes peuvent être mises à jour, sauf si le curseur a été défini en tant que curseur READ_ONLY.  
   
 ## <a name="remarks"></a>Notes  
 Dès qu’une variable est déclarée, elle est initialisée avec la valeur NULL. Utilisez l’instruction SET pour assigner une valeur autre que NULL à une variable déclarée. L'instruction SET qui affecte une valeur à la variable renvoie une seule valeur. Lorsque vous initialisez plusieurs variables, utilisez une instruction SET distincte pour chaque variable locale.  

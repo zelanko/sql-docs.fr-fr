@@ -1,4 +1,5 @@
 ---
+description: AbsolutePosition, propriété (ADO)
 title: AbsolutePosition, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56b21fe8cddf4d855ec1655a83cea306c0a3000c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e406012b917dd6e1694f5914088bac09201ff99e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451751"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition, propriété (ADO)
 Indique la position ordinale de l’enregistrement actif d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -30,7 +31,7 @@ Indique la position ordinale de l’enregistrement actif d’un objet [Recordset
   
  Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser long ou une autre valeur dont la longueur est égale à 64 bits, par exemple DBORDINAL. N’utilisez pas de valeurs **PositionEnum** , car elles sont limitées à une longueur de 32 bits.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour définir la propriété **AbsolutePosition** , ADO exige que le fournisseur OLE DB que vous utilisez implémente l’interface [IRowsetLocate : IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) .  
   
  L’accès à la propriété **AbsolutePosition** d’un **jeu d’enregistrements** ouvert avec un curseur avant uniquement ou dynamique génère l’erreur **adErrFeatureNotAvailable**. Avec les autres types de curseurs, la position correcte est retournée tant que le fournisseur OLE DB prend en charge l’interface **IRowsetScroll : IRowsetLocate** . Si le fournisseur ne prend pas en charge l’interface **IRowsetScroll** , la propriété est définie sur **adPosUnknown**. Consultez la documentation de votre fournisseur pour déterminer s’il prend en charge **IRowsetScroll**.  

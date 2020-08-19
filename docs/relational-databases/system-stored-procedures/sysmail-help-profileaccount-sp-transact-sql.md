@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profileaccount_sp (Transact-SQL)
 title: sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f27384e614a929cc149d8ae48355fb75a4ce301b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469121"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche les comptes associés à un ou plusieurs profils de messagerie de base de données.  
     
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id`ID du profil à répertorier. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
+`[ @profile_id = ] profile_id` ID du profil à répertorier. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @profile_name = ] 'profile_name'`Nom du profil à répertorier. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
+`[ @profile_name = ] 'profile_name'` Nom du profil à répertorier. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @account_id = ] account_id`ID de compte à répertorier. *account_id* est de **type int**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* ont tous deux la valeur null, répertorie tous les comptes du profil.  
+`[ @account_id = ] account_id` ID de compte à répertorier. *account_id* est de **type int**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* ont tous deux la valeur null, répertorie tous les comptes du profil.  
   
-`[ @account_name = ] 'account_name'`Nom du compte à répertorier. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* ont tous deux la valeur null, répertorie tous les comptes du profil.  
+`[ @account_name = ] 'account_name'` Nom du compte à répertorier. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* ont tous deux la valeur null, répertorie tous les comptes du profil.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

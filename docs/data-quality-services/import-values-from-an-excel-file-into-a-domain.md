@@ -1,4 +1,5 @@
 ---
+description: Importer les valeurs d'un fichier Excel dans un domaine
 title: Importer les valeurs d'un fichier Excel dans un domaine
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf2b2f9d6b2f3ad72121db25758b2258363d8566
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431331"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importer les valeurs d'un fichier Excel dans un domaine
 
@@ -42,7 +43,7 @@ ms.locfileid: "85882807"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les valeurs de champs d'un fichier Excel.  
   
-##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Importer des valeurs à partir d’un fichier Excel dans un domaine  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a> Importer des valeurs à partir d’un fichier Excel dans un domaine  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -72,10 +73,10 @@ ms.locfileid: "85882807"
   
 14. Cliquez **Terminer** pour ajouter les valeurs à la base de connaissances.  
   
-##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>Suivi : après l’importation des valeurs d’un fichier Excel dans un domaine  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a> Suivi : après l’importation des valeurs d’un fichier Excel dans un domaine  
  Après avoir importé des valeurs dans un domaine, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine, vous pouvez exécuter la découverte de connaissances pour ajouter des connaissances au domaine ou vous pouvez ajouter une stratégie correspondante au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="importing-synonyms"></a><a name="Synonyms"></a>Importation des synonymes  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a> Importation des synonymes  
  Les synonymes sont importés comme suit :  
   
 -   D'abord, toutes les valeurs sont importées, puis la connexion du synonyme est établie.  
@@ -90,7 +91,7 @@ ms.locfileid: "85882807"
   
 -   Si les valeurs ne peuvent pas être connectées manuellement dans l'application pour une raison quelconque, elles ne pourront pas s'appliquer à l'opération d'importation.  
   
-##  <a name="how-the-import-works"></a><a name="How"></a>Fonctionnement de l’importation  
+##  <a name="how-the-import-works"></a><a name="How"></a> Fonctionnement de l’importation  
  Les valeurs suivantes sont importées par cette opération :  
   
  Dans l'opération d'importation, DQS importe à partir d'un fichier Excel comme suit :  

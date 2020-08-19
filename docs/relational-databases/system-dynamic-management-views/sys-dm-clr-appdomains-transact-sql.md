@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_appdomains (Transact-SQL)
 title: sys. dm_clr_appdomains (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490042"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85893983"
 |**total_allocated_memory_kb**|**bigint**|Taille totale, en kilo-octets, de toutes les allocations mémoire faites par le domaine d'application depuis sa création, sans soustraction de la mémoire recueillie. Cela équivaut à **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Nombre de kilo-octets qui ont survécu à la dernière collection bloquante complète et connus pour être référencés par le domaine d'application actuel. Cela équivaut à **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il existe une relation un-à-peut entre **dm_clr_appdomains. appdomain_address** et **dm_clr_loaded_assemblies. appdomain_address**.  
   
  Les tableaux suivants répertorient les valeurs d' **État** possibles, leurs descriptions et le moment où elles se produisent dans le cycle de vie d' **AppDomain** . Vous pouvez utiliser ces informations pour suivre le vie d’un **AppDomain** et pour surveiller le déchargement des instances **AppDomain** suspectes ou répétitives, sans avoir à analyser le journal des événements Windows.  
@@ -74,7 +75,7 @@ ms.locfileid: "85893983"
   
 |State|Description|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a demandé que le CLR décharge le **domaine**d’application AppDomain, généralement parce que l’assembly qui contient les objets de base de données managés a été modifié ou supprimé.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a demandé que le CLR décharge le **domaine**d’application AppDomain, généralement parce que l’assembly qui contient les objets de base de données managés a été modifié ou supprimé.|  
 |E_APPDOMAIN_UNLOADED|Le CLR a déchargé l' **AppDomain**. C’est généralement le résultat d’une procédure de remontée en raison de **ThreadAbort**, **OutOfMemory**ou d’une exception non gérée dans le code utilisateur.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** a été déchargé dans CLR et a été défini pour être détruit par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_DESTROY|Le **domaine** d’application AppDomain est en cours de destruction par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

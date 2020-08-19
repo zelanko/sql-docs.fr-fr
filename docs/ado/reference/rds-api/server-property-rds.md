@@ -1,4 +1,5 @@
 ---
+description: Server, propriété (RDS)
 title: Server, propriété (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb7ebc994d252fc8806c133c61239cce67b693bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438651"
 ---
 # <a name="server-property-rds"></a>Server, propriété (RDS)
 Indique le nom du Internet Information Services (IIS) et le protocole de communication.  
@@ -116,8 +117,8 @@ DataControl.Server=""
  *DataControl*  
  Variable objet qui représente un objet **RDS. DataControl** .  
   
-## <a name="remarks"></a>Remarques  
- Le serveur est l’emplacement où **RDS. **Demande de DataControl (autrement dit, une requête ou une mise à jour) est traitée. Par défaut, toutes les demandes sont traitées par l’objet [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [msdfmap. ](../../../ado/guide/remote-data-service/datafactory-customization.md)Le composant Handler et le [msdfmap. Fichier INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) sur le serveur spécifié. N’oubliez pas que lorsque vous modifiez des serveurs pour harmoniser les paramètres dans l’ancien et le nouveau **msdfmap. Fichiers INI** . Les incompatibilités peuvent entraîner l’échec des requêtes qui aboutissent sur un serveur sur un autre. Si la propriété de serveur est définie sur la chaîne vide «», ces objets seront utilisés sur l’ordinateur local.  
+## <a name="remarks"></a>Notes  
+ Le serveur est l’emplacement où **RDS. ** Demande de DataControl (autrement dit, une requête ou une mise à jour) est traitée. Par défaut, toutes les demandes sont traitées par l’objet [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [msdfmap. ](../../../ado/guide/remote-data-service/datafactory-customization.md) Et [MSDFMAP.INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) fichier sur le serveur spécifié. N’oubliez pas que lorsque vous modifiez des serveurs pour rapprocher des paramètres dans les anciens et nouveaux fichiers de **MSDFMAP.INI** . Les incompatibilités peuvent entraîner l’échec des requêtes qui aboutissent sur un serveur sur un autre. Si la propriété de serveur est définie sur la chaîne vide «», ces objets seront utilisés sur l’ordinateur local.  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

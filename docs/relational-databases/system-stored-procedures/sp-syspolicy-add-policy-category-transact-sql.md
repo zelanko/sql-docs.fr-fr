@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category (Transact-SQL)
 title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469153"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute une catégorie de stratégie qui peut être utilisée avec la Gestion basée sur des stratégies. Les catégories de stratégie vous permettent d'organiser des stratégies et de définir leur étendue.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,16 +42,16 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de la catégorie de stratégie. *Name* est de **type sysname**et est obligatoire. le *nom* ne peut pas être null ou une chaîne vide.  
+`[ @name = ] 'name'` Nom de la catégorie de stratégie. *Name* est de **type sysname**et est obligatoire. le *nom* ne peut pas être null ou une chaîne vide.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Détermine si l’abonnement à la base de données est autorisé pour la catégorie de stratégie. *mandate_database_subscriptions* est une valeur de **bit** , avec 1 comme valeur par défaut (activé).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Détermine si l’abonnement à la base de données est autorisé pour la catégorie de stratégie. *mandate_database_subscriptions* est une valeur de **bit** , avec 1 comme valeur par défaut (activé).  
   
-`[ @policy_category_id = ] policy_category_id`Identificateur de la catégorie de stratégie. *policy_category_id* est de **type int**et est retourné en tant que output.  
+`[ @policy_category_id = ] policy_category_id` Identificateur de la catégorie de stratégie. *policy_category_id* est de **type int**et est retourné en tant que output.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_add_policy_category dans le contexte de la base de données système msdb.  
   
 ## <a name="permissions"></a>Autorisations  

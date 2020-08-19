@@ -1,4 +1,5 @@
 ---
+description: Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Général
 title: Boîte de dialogue « Créer une nouvelle stratégie » ou « Ouvrir une stratégie », page Général
 descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 110cdd1ac1a74986178b6d96803d20a1fc6284a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24d6ed05b1419c399f0a11d7de590a25f3d77077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475639"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Général
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

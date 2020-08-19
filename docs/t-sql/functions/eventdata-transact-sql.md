@@ -1,4 +1,5 @@
 ---
+description: EVENTDATA (Transact-SQL)
 title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfa9a876d13a1c8827649c3fe8ad145b4cb8da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459769"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,12 @@ Cette fonction retourne des informations sur les événements de serveur et de b
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-EVENTDATA( )  
-```  
-  
+```syntaxsql
+EVENTDATA( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Notes  
 `EVENTDATA` ne retourne des données que si elles sont référencées directement au sein d’un déclencheur DDL ou d’ouverture de session. `EVENTDATA` retourne la valeur Null si d’autres routines l’appellent, même si un déclencheur DDL ou d’ouverture de session appelle ces routines.
   
@@ -77,7 +79,7 @@ EVENTDATA renvoie une valeur dont le type de données est **xml**. Par défaut, 
   
 La page web [Schémas XML Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) comporte également le schéma d’événement.  
   
-Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `DROP_TABLE`, recherchez `EVENT_INSTANCE_DROP_TABLE` dans le schéma.  
+Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `EVENT_INSTANCE_DROP_TABLE`, recherchez `DROP_TABLE` dans le schéma.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -111,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Pour retourner des données d’événement, utilisez la méthode XQuery **value()** plutôt que la méthode **query()** . La méthode **query()** renvoie des instances XML et CR/LF (retour chariot/saut de ligne) à séquence d’échappement perluète dans la sortie, tandis que la méthode **value()** retourne des instances CR/LF invisibles dans la sortie.  
+>  Pour retourner des données d’événement, utilisez la méthode XQuery **value()** plutôt que la méthode **query()**. La méthode **query()** renvoie des instances XML et CR/LF (retour chariot/saut de ligne) à séquence d’échappement perluète dans la sortie, tandis que la méthode **value()** retourne des instances CR/LF invisibles dans la sortie.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Création d'une table de journal avec données d'événements dans un déclencheur DDL  
 Cet exemple crée une table pour stocker des informations sur tous les événements de niveau base de données, et la remplit avec un déclencheur DDL. La requête XQuery effectuée sur les données XML générées par `EVENTDATA` a pour effet de capturer le type d’événement et l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  

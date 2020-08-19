@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TRANCOUNT (Transact-SQL)'
 title: '@@TRANCOUNT (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -21,12 +22,12 @@ ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676c9c8f5d5fd41cd37c8ea0ae1ed4914bcc08ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b6447931645647185b105659943325b47f317a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459521"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,9 +45,9 @@ ms.locfileid: "87111765"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Types de retour
- **entier**  
+ **integer**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’instruction BEGIN TRANSACTION incrémente @@TRANCOUNT de 1. ROLLBACK TRANSACTION décrémente @@TRANCOUNT à 0, à l’exception de ROLLBACK TRANSACTION *savepoint_name*, qui n’affecte pas @@TRANCOUNT. COMMIT TRANSACTION ou COMMIT WORK décrémente @@TRANCOUNT de 1.  
   
 ## <a name="examples"></a>Exemples  
@@ -97,7 +98,7 @@ PRINT @@TRANCOUNT
 --0  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   

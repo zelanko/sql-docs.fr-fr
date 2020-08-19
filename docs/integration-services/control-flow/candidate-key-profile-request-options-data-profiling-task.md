@@ -1,4 +1,5 @@
 ---
+description: Options Demande de profil de clé candidate (tâche de profilage des données)
 title: Options Demande de profil de clé candidate (tâche de profilage des données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41f3c9d4fef15a99592421b3762515a15ef33b7b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431041"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Options Demande de profil de clé candidate (tâche de profilage des données)
 
@@ -54,7 +55,7 @@ ms.locfileid: "86913972"
   
 -   **Données**, qui incluent les options **TableOrView** et **KeyColumns** .  
   
--   **Généralités**  
+-   **Général**  
   
 -   **Options**  
   
@@ -80,7 +81,7 @@ ms.locfileid: "86913972"
  Affiche le nom de la table sélectionnée. Cette option est en lecture seule.  
   
 #### <a name="keycolumns-options"></a>Options KeyColumns  
- Les options suivantes sont proposées pour chaque colonne sélectionnée à des fins de profilage dans **KeyColumns** ou pour l’option **(\*)** .  
+ Les options suivantes sont proposées pour chaque colonne sélectionnée à des fins de profilage dans **KeyColumns** ou pour l’option **(\*)**.  
   
  Pour plus d'informations, consultez la section « Fonctionnement de la sélection des colonnes pour la propriété KeyColumns » plus haut dans cette rubrique.  
   
@@ -122,7 +123,7 @@ ms.locfileid: "86913972"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n’est spécifié. La puissance de la clé est signalée, quelle que soit sa valeur.|  
-|**Specified**|Un seuil est spécifié dans **KeyStrengthThreshold**. La puissance de clé est précisée uniquement si elle est supérieure au seuil.|  
+|**Spécifié**|Un seuil est spécifié dans **KeyStrengthThreshold**. La puissance de clé est précisée uniquement si elle est supérieure au seuil.|  
 |**Exact**|Aucun seuil n’est spécifié. La puissance de clé est précisée uniquement si les colonnes sélectionnées sont une clé exacte.|  
   
  **KeyStrengthThreshold**  

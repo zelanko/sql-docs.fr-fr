@@ -1,4 +1,5 @@
 ---
+description: Prérequis pour l’utilisation de la documentation d’ADO
 title: Conditions préalables à l’utilisation de la documentation ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 192c249bfa73c17d32faef7ec925d2704aff3144
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c1f7bdfcc0ba6f69f9dab58029f454b05feb84e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452381"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Prérequis pour l’utilisation de la documentation d’ADO
 Pour utiliser cette documentation, vous devez au minimum disposer d’une expérience de développement d’applications avec Microsoft Visual Basic, car la plupart des exemples du guide sont écrits dans ce langage. Il existe également des exemples écrits en Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) et Microsoft JScript.  

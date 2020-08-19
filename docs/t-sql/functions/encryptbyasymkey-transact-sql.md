@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYASYMKEY (Transact-SQL)
 title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b9695a2cec375cf2eb5a69bbe210478b9d0fa1e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2a0031163de085d6de07aaf7a0e707a5e5ac5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459777"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 *asym_key_ID*  
 ID d’une clé asymétrique dans la base de données. *asym_key_ID* a le type de données **int**.  
   
-*cleartext*  
+*texte clair*  
 Chaîne de données que `ENCRYPTBYASYMKEY` chiffre avec la clé asymétrique. *cleartext* peut avoir le type de données
  
 + **binary**
@@ -54,7 +55,7 @@ Chaîne de données que `ENCRYPTBYASYMKEY` chiffre avec la clé asymétrique. *c
 + **nvarchar**
 + **varbinary**
   
-or
+ou
   
 + **varchar**
  
@@ -69,7 +70,7 @@ Variable contenant une valeur que `ENCRYPTBYASYMKEY` chiffre avec la clé asymé
 + **nvarchar**
 + **varbinary**
   
-or
+ou
   
 + **varchar**
  

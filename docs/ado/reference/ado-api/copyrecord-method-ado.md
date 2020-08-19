@@ -1,4 +1,5 @@
 ---
+description: CopyRecord, méthode (ADO)
 title: CopyRecord, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444381"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord, méthode (ADO)
 Copie une entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) à un autre emplacement.  
@@ -40,7 +41,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Destination*  
  facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’emplacement où la *source* sera copiée.  
   
- *Nom d’utilisateur*  
+ *UserName*  
  facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, le cas échéant, autorise l’accès à la *destination*.  
   
  *Mot de passe*  
@@ -49,10 +50,10 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Options*  
  facultatif. Valeur [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) qui a une valeur par défaut de **adCopyUnspecified**. Spécifie le comportement de cette méthode.  
   
- *Suppr*  
+ *Asynchrone*  
  facultatif. Valeur **booléenne** qui, lorsqu’elle a la **valeur true**, spécifie que cette opération doit être asynchrone.  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur de **chaîne** qui retourne généralement la valeur de *destination*. Toutefois, la valeur exacte retournée est dépendante du fournisseur.  
   
 ## <a name="remarks"></a>Notes  

@@ -1,4 +1,5 @@
 ---
+description: Boutons de commande de l’application Carnet d’adresses
 title: Boutons de commande du carnet d’adresses | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452331"
 ---
 # <a name="address-book-command-buttons"></a>Boutons de commande de l’application Carnet d’adresses
 L’application Carnet d’adresses contient les boutons de commande suivants :  
@@ -71,7 +72,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Lors de `DC1.SubmitChanges` l’exécution, le service de données distant transmet toutes les informations de mise à jour et les envoie au serveur via http. La mise à jour est tout-ou-rien ; Si une partie de la mise à jour échoue, aucune des modifications n’est apportée et un message d’État est renvoyé. `DC1.Refresh`n’est pas nécessaire après **SubmitChanges** avec le service de données distant, mais elle garantit l’actualisation des données.  
+ Lors de `DC1.SubmitChanges` l’exécution, le service de données distant transmet toutes les informations de mise à jour et les envoie au serveur via http. La mise à jour est tout-ou-rien ; Si une partie de la mise à jour échoue, aucune des modifications n’est apportée et un message d’État est renvoyé. `DC1.Refresh` n’est pas nécessaire après **SubmitChanges** avec le service de données distant, mais elle garantit l’actualisation des données.  
   
 ## <a name="cancel-changes-button"></a>Bouton Annuler les modifications  
  Le fait de cliquer sur **annuler les modifications** active la sous-procédure VBScript Cancel_OnClick, qui exécute les [services Bureau à distance. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de l’objet ( `DC1)` méthode [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  

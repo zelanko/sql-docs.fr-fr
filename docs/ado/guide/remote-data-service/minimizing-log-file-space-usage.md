@@ -1,4 +1,5 @@
 ---
+description: Minimisation de l’espace utilisé par un fichier journal
 title: Minimisation de l’utilisation de l’espace du fichier journal | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452161"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimisation de l’espace utilisé par un fichier journal
 Un fichier journal peut être rempli rapidement (ce qui entraîne l’arrêt du serveur) s’il existe un volume important d’activités sur une base de données SQL Server. Vous pouvez définir le fichier journal à **tronquer au point de contrôle** afin d’étendre considérablement la durée de vie du fichier journal pour une base de données.  
