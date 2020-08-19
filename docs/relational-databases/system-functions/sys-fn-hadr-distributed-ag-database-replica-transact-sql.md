@@ -1,4 +1,5 @@
 ---
+description: sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
 title: sys. fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
@@ -19,18 +20,19 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7b894919a4149d37181d543b8d58fc820aad10b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: f54cfdf987474435b452421620246b6432892a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419503"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Utilisé pour mapper une base de données dans un groupe de disponibilité distribué à la base de données dans le groupe de disponibilité local.  
    
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -1,4 +1,5 @@
 ---
+description: Agent d'instantané
 title: Agent d’instantané | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,16 +16,16 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bcd2ee4bc1f193716b084bf816d27a5107e27a84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420383"
 ---
 # <a name="snapshot-agent"></a>Agent d'instantané
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  La boîte de dialogue **Agent d'instantané** affiche des informations détaillées concernant l'Agent d'instantané, notamment son état, son historique, des messages d'information ainsi que tout message d'erreur s'y rapportant.  
+   La boîte de dialogue **Agent d’instantané** affiche des informations détaillées concernant l’Agent d’instantané, notamment son état, son historique, des messages d’information ainsi que tout message d’erreur s’y rapportant.  
   
 ## <a name="options"></a>Options  
  Sélectionnez les sessions de l'Agent d'instantané à afficher à partir du menu **Affichage** , puis sélectionnez une session particulière dans la grille **Sessions de l'Agent d'instantané**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
@@ -35,13 +36,13 @@ ms.locfileid: "85767638"
  **État**  
  État de l'Agent d'instantané. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Nouvelle tentative de la commande qui a échoué  
   
 -   Non exécuté  
   
--   Completed  
+-   Effectué  
   
  **Start Time**  
  Heure d'ouverture de la session.  

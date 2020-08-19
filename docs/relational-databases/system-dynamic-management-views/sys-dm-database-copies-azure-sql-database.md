@@ -1,4 +1,5 @@
 ---
+description: sys.dm_database_copies (Azure SQL Database)
 title: sys. dm_database_copies (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4dd3890969a1820bd38712d9533c68f6fd9d0d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419773"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,7 +49,7 @@ Pour renvoyer des informations sur les liens de géo-réplication, utilisez les 
 |**partner_server**|**sysname**|Nom du serveur SQL Database sur lequel la copie est créée.|  
 |**partner_database**|**sysname**|Nom de la copie de la base de données sur le serveur partenaire.|  
 |**replication_state**|**tinyint**|État de la réplication de copie continue pour cette base de données. Les valeurs sont les suivantes :<br /><br /> 0 = en attente. La création de la copie de la base de données est planifiée, mais les étapes de préparation nécessaires ne sont pas encore terminées ou sont temporairement bloquées par le quota d’amorçage.<br /><br /> 1 = amorçage. La base de données de copie en cours d’amorçage n’est pas encore entièrement synchronisée avec la base de données source. Dans cet État, vous ne pouvez pas vous connecter à la copie. Pour annuler l’opération d’amorçage en cours, vous devez supprimer la base de données de copie.|  
-|**replication_state_desc**|**nvarchar(256)**|Description de replication_state :<br /><br /> PENDING<br /><br /> SEEDING<br />|  
+|**replication_state_desc**|**nvarchar (256)**|Description de replication_state :<br /><br /> PENDING<br /><br /> SEEDING<br />|  
 |**maximum_lag**|**int**|Champ réservé.|  
 |**is_continuous_copy**|**bit**|0 = retourne 0|  
 |**is_target_role**|**bit**|0 = base de données source<br /><br /> 1 = copier la base de données|  
@@ -58,7 +59,7 @@ Pour renvoyer des informations sur les liens de géo-réplication, utilisez les 
 ## <a name="permissions"></a>Autorisations  
  Cette vue est disponible uniquement dans la base de données **Master** à la connexion du principal au niveau du serveur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la vue **sys. dm_database_copies** dans la base de données **Master** du serveur source ou cible [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Lorsque la copie de base de données s'achève avec succès et que la nouvelle base de données devient ONLINE, la ligne dans la vue **sys.dm_database_copies** est supprimée automatiquement.  
   
   

@@ -1,4 +1,5 @@
 ---
+description: xp_grantlogin (Transact-SQL)
 title: xp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a97af7eea83e8022b30e70b5b6ccbe887469e08
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 185532cdcade18b6902fe1c3e8d1c8ab3eb568b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419263"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85890796"
   Autorise un groupe ou un utilisateur Windows à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [Create login](../../t-sql/statements/create-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [Create login](../../t-sql/statements/create-login-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'`Nom de l’utilisateur ou du groupe Windows à ajouter. L’utilisateur ou le groupe Windows doit être qualifié avec un nom de domaine Windows sous la forme *domaine* \\ *utilisateur*. *login* est de **type sysname**, sans valeur par défaut.  
+`[ @loginame = ] 'login'` Nom de l’utilisateur ou du groupe Windows à ajouter. L’utilisateur ou le groupe Windows doit être qualifié avec un nom de domaine Windows sous la forme *domaine* \\ *utilisateur*. *login* est de **type sysname**, sans valeur par défaut.  
   
-`[ @logintype = ] 'logintype'`Niveau de sécurité de la connexion à laquelle l’accès est accordé. *LoginType* est de type **varchar (5)**, avec NULL comme valeur par défaut. Seul l' **administrateur** peut être spécifié. Si l' **administrateur** est spécifié, la *connexion* se voit accorder l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ajouté en tant que membre du rôle serveur fixe **sysadmin** .  
+`[ @logintype = ] 'logintype'` Niveau de sécurité de la connexion à laquelle l’accès est accordé. *LoginType* est de type **varchar (5)**, avec NULL comme valeur par défaut. Seul l' **administrateur** peut être spécifié. Si l' **administrateur** est spécifié, la *connexion* se voit accorder l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ajouté en tant que membre du rôle serveur fixe **sysadmin** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -58,8 +59,8 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="see-also"></a>Voir aussi  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées étendues générales &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées étendues générales &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)   
  [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)   

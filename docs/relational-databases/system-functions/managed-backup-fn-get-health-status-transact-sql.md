@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_health_status (Transact-SQL)
 title: managed_backup. fn_get_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419553"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86053435"
  La fonction est utilisée pour signaler l’état d’intégrité des services sous Smart admin.  Actuellement [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pris en charge dans le cadre de Smart admin. Ainsi, les erreurs retournées sont liées à la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,12 +44,12 @@ ms.locfileid: "86053435"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  [@begin_time]  
  Début de la période à partir de laquelle le nombre agrégé des erreurs est calculé.  Le @begin_time paramètre est DateTime. La valeur par défaut est NULL. Lorsque la valeur est NULL, la fonction traite les événements signalés 30 minutes avant l'heure actuelle.  
   
  [ @end_time]  
- Fin de la période à partir de laquelle le nombre agrégé des erreurs est calculé. Le @end_time paramètre est DateTime avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la fonction traite les événements étendus jusqu'à l'heure actuelle.  
+ Fin de la période à partir de laquelle le nombre agrégé des erreurs est calculé. Le @end_time  paramètre est DateTime avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la fonction traite les événements étendus jusqu'à l'heure actuelle.  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -61,7 +63,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|int|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |number_of_retention_loops|int|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes d’erreur non null peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiés pour en savoir plus sur les problèmes éventuels. Vous pouvez également utiliser la procédure stockée **managed_backup. sp_get_backup_diagnostics** pour obtenir la liste des événements étendus afin de trouver les détails de l’erreur.  
   
 ## <a name="security"></a>Sécurité  

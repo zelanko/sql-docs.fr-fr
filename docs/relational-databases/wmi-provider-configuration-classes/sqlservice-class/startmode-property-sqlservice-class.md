@@ -1,4 +1,5 @@
 ---
+description: Propriété StartMode (classe SqlService)
 title: StartMode, propriété (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6aab858d98baa0404e4ef5f33adc16ece687d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 608214cf9d4eca2601c0f8bee7b82570ec936ea6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418755"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propriété StartMode (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le mode de démarrage du service.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -53,13 +54,13 @@ object.StartMode [= value]
  Automatique  
  Valeur = 2 Le service doit être démarré automatiquement par le Gestionnaire de contrôle des services lors du démarrage du système.  
   
- Manuelle  
+ Manuel  
  Valeur = 3. Service qui doit être démarré par le gestionnaire de l’ordinateur lorsqu’un processus appelle la méthode **StartService** .  
   
  Désactivé  
  Valeur = 4 Le service ne peut pas être démarré.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -1,4 +1,5 @@
 ---
+description: syscollector_collection_sets (Transact-SQL)
 title: syscollector_collection_sets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b65cbb9596ff25e334609e978fdf61a89be41db4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 902a8f7513bf30194ec40d7d27714e98f47b2cac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419883"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85896779"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT pour dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'API du collecteur de données vous permet uniquement de modifier ou de supprimer les jeux d'éléments de collecte que vous créez. Les jeux d'éléments de collecte fournis avec le système ne peuvent pas être modifiés ou supprimés. Toutefois, vous pouvez toujours activer ou désactiver un jeu d'éléments de collecte système et modifier sa configuration.  
   
 ## <a name="see-also"></a>Voir aussi  

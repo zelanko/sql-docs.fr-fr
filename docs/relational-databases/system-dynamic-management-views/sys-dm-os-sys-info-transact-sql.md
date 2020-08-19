@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_sys_info (Transact-SQL)
 title: sys. dm_os_sys_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -22,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9350ed24d2f82930ff6852b950ee15ff0421ae6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419643"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "87928691"
 |**process_physical_affinity**|**nvarchar (3072)** |**S’applique à :** À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] .<br /><br />Des informations encore à venir. |
 |**sql_memory_model**|**int**|**S’applique à :** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures.<br /><br />Spécifie le modèle de mémoire utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour allouer de la mémoire. N'accepte pas la valeur NULL.<br /><br />1 = modèle de mémoire conventionnelle<br />2 = verrouiller les pages en mémoire<br /> 3 = grandes pages en mémoire|
 |**sql_memory_model_desc**|**nvarchar(120)**|**S’applique à :** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures.<br /><br />Spécifie le modèle de mémoire utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour allouer de la mémoire. N'accepte pas la valeur NULL.<br /><br />**Conventionnelle**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le modèle de mémoire conventionnel pour allouer de la mémoire. Il s’agit du modèle de mémoire SQL par défaut lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service ne dispose pas de privilèges de verrouillage des pages en mémoire au cours du démarrage.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le verrouillage des pages en mémoire pour allouer de la mémoire. Il s’agit du gestionnaire de mémoire SQL par défaut quand SQL Server compte de service dispose du privilège verrouiller les pages en mémoire pendant le démarrage de SQL Server.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des pages de grande taille en mémoire pour allouer de la mémoire. SQL Server utilise l’allocation de pages de grande taille pour allouer de la mémoire uniquement avec l’édition Enterprise lorsque SQL Server compte de service possède le privilège verrouiller les pages en mémoire pendant le démarrage du serveur et lorsque l’indicateur de trace 834 est activé.|
-|**pdw_node_id**|**int**|**S’applique à :** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|**S’applique à :** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
 |**socket_count** |**int** | **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.<br /><br />Spécifie le nombre de sockets de processeur disponibles sur le système. |  
 |**cores_per_socket** |**int** | **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.<br /><br />Spécifie le nombre de processeurs par Socket disponibles sur le système. |  
 |**numa_node_count** |**int** | **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.<br /><br />Spécifie le nombre de nœuds NUMA disponibles sur le système. Cette colonne comprend des nœuds NUMA physiques, ainsi que des nœuds NUMA souples. |  
@@ -83,7 +84,7 @@ ms.locfileid: "87928691"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -1,4 +1,5 @@
 ---
+description: sys.service_broker_endpoints (Transact-SQL)
 title: sys. service_broker_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86a7fb5a83fe8e12f6721328e69c45e40e57eb46
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1fd6a01ea9b6936edc90a64e70a2c310750d2b85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419953"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85897901"
 |**encryption_algorithm**|**tinyint**|Algorithme de chiffrement. Voici les valeurs possibles avec leurs descriptions et les options DDL correspondantes.<br /><br /> **0** : aucun. Option DDL correspondante : désactivée.<br /><br /> **1** : RC4. Option DDL correspondante : {required &#124; algorithme RC4}.<br /><br /> **2** : AES. Option DDL correspondante : algorithme AES obligatoire.<br /><br /> **3** : aucun, RC4. Option DDL correspondante : {algorithme pris en charge &#124; algorithme RC4} pris en charge.<br /><br /> **4** : aucun, AES. Option DDL correspondante : algorithme AES pris en charge.<br /><br /> **5** : RC4, AES. Option DDL correspondante : algorithme obligatoire RC4 AES.<br /><br /> **6** : AES, RC4. Option DDL correspondante : algorithme obligatoire AES RC4.<br /><br /> **7** : aucun, RC4, AES. Option DDL correspondante : algorithme RC4 AES pris en charge.<br /><br /> **8** : aucun, AES, RC4. Option DDL correspondante : algorithme AES RC4 pris en charge.<br /><br /> Cette colonne n'accepte pas la valeur NULL.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Description de l’algorithme de chiffrement. Les valeurs possibles et les options DDL correspondantes sont répertoriées ci-dessous :<br /><br /> AUCUN : désactivé<br /><br /> RC4 : {required &#124; algorithme RC4}<br /><br /> AES : algorithme obligatoire AES<br /><br /> AUCUN, RC4 : {pris en charge &#124; algorithme RC4}<br /><br /> AUCUN, AES : algorithme AES pris en charge<br /><br /> RC4, AES : algorithme obligatoire RC4 AES<br /><br /> AES, RC4 : algorithme obligatoire AES RC4<br /><br /> AUCUN, RC4, AES : algorithme RC4 AES pris en charge<br /><br /> NONE, AES, RC4 : algorithme AES RC4 pris en charge<br /><br /> Accepte la valeur NULL.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 > [!NOTE]  
 >  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou de RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.  

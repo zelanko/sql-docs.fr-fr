@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profile_sp (Transact-SQL)
 title: sysmail_help_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 372f2309176b9fcf9cbb36fbcaf89d710393bb44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419293"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie des informations sur un ou plusieurs profils de messagerie.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id`ID de profil pour lequel des informations doivent être retournées. *profile_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @profile_id = ] profile_id` ID de profil pour lequel des informations doivent être retournées. *profile_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @profile_name = ] 'profile_name'`Nom du profil pour lequel des informations doivent être retournées. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @profile_name = ] 'profile_name'` Nom du profil pour lequel des informations doivent être retournées. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

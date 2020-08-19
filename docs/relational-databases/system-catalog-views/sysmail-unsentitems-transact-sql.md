@@ -1,4 +1,5 @@
 ---
+description: sysmail_unsentitems (Transact-SQL)
 title: sysmail_unsentitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f1fd96f8a9809f102bfb8fe8650513fd8eb01e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f17a4cc00724bab836c74ed1622d383d3969b16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419863"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,14 +49,14 @@ ms.locfileid: "85900984"
 |**destinataire**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
 |**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
 |**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
-|**Objet**|**nvarchar (510)**|Ligne d'objet du message.|  
+|**subject**|**nvarchar (510)**|Ligne d'objet du message.|  
 |**body**|**varchar(max)**|le corps du message.|  
 |**body_format**|**varchar (20)**|Format du corps du message. Les valeurs possibles sont **Text** et **HTML**.|  
 |**importance**|**varchar (6)**|Paramètre d' **importance** du message.|  
 |**sensibilité**|**varchar (12)**|Paramètre de **sensibilité** du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
 |**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
-|**requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
@@ -71,7 +72,7 @@ ms.locfileid: "85900984"
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En cas de dépannage de la messagerie de base de données, cette vue peut vous aider à identifier la nature du problème en vous montrant le nombre de messages se trouvant en file d'attente et leur temps d'attente. Si aucun message n'est envoyé, soit le programme externe de messagerie de base de données n'est pas en cours d'exécution, soit un problème réseau empêche la messagerie de base de données de contacter les serveurs SMTP. Si la plupart des messages non envoyés ont le même **profile_id**, il peut y avoir un problème avec le serveur SMTP. Pensez à ajouter des comptes supplémentaires au profil. Si les messages sont envoyés mais qu'ils restent trop longtemps dans la file d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite peut-être des ressources plus importantes pour traiter le volume de messages dont vous avez besoin.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: Déclencheurs DML
 title: Déclencheurs DML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1475b0b2145d40f22760edb5a23e040cb9fef58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27776324d94176619c25acbeefb3b6bd901d8a2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418933"
 ---
 # <a name="dml-triggers"></a>Déclencheurs DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85757591"
 |Références en cascade|Aucune restriction|Les déclencheurs INSTEAD OF UPDATE et DELETE ne sont pas autorisés sur des tables qui sont des cibles de contraintes d'intégrité référentielle en cascade.|  
 |Exécution|Après :<br /><br /> Traitement des contraintes<br /><br /> Actions référentielles déclaratives<br /><br /> Création de tables**inserted** et **deleted**<br /><br /> L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
 |Ordre d'exécution|La première et la dernière exécution peuvent être spécifiées|Non applicable|  
-|Références de colonnes**varchar(max)** , **nvarchar(max)** et **varbinary(max)** dans des  **inserted** et **deleted**|Autorisé|Autorisé|  
+|Références de colonnes**varchar(max)**, **nvarchar(max)** et **varbinary(max)** dans des  **inserted** et **deleted**|Autorisé|Autorisé|  
 |Références de colonnes**text**, **ntext**et **image** dans des  **inserted** et **deleted**|Non autorisé|Autorisé|  
   
  Déclencheurs CLR  
@@ -74,13 +75,13 @@ ms.locfileid: "85757591"
 |----------|-----------|  
 |Décrit comment créer un déclencheur DML.|[Créer des déclencheurs DML](../../relational-databases/triggers/create-dml-triggers.md)|  
 |Décrit comment créer un déclencheur CLR.|[Créer des déclencheurs CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
-|Décrit comment créer un déclencheur DML pour gérer à la fois les modifications de données portant sur une seule ligne et plusieurs lignes.|[Créer des déclencheurs DML pour gérer plusieurs lignes de données](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
+|Décrit comment créer un déclencheur DML pour gérer à la fois les modifications de données portant sur une seule ligne et plusieurs lignes.|[Créer de déclencheurs DML pour gérer plusieurs lignes de données](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Explique comment imbriquer des déclencheurs.|[Créer des déclencheurs imbriqués](../../relational-databases/triggers/create-nested-triggers.md)|  
 |Décrit comment spécifier l'ordre dans lequel les déclencheurs AFTER sont activés.|[Spécifier les premier et dernier déclencheurs](../../relational-databases/triggers/specify-first-and-last-triggers.md)|  
 |Décrit comment utiliser les tables inserted et deleted spéciales dans le code de déclencheur.|[Utiliser les tables inserted et deleted](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)|  
-|Explique comment modifier ou renommer un déclencheur DML.|[Modifier ou renommer des déclencheurs DML](../../relational-databases/triggers/modify-or-rename-dml-triggers.md)|  
+|Explique comment modifier ou renommer un déclencheur DML.|[Modifier ou renommer les déclencheurs DML](../../relational-databases/triggers/modify-or-rename-dml-triggers.md)|  
 |Décrit comment afficher des informations sur les déclencheurs DML.|[Obtenir des informations sur les déclencheurs DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)|  
-|Décrit comment supprimer ou désactiver les déclencheurs DML.|[Supprimer ou désactiver des déclencheurs DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
+|Décrit comment supprimer ou désactiver les déclencheurs DML.|[Supprimer ou désactiver les déclencheurs DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Décrit comment gérer la sécurité du déclencheur.|[Gérer la sécurité des déclencheurs](../../relational-databases/triggers/manage-trigger-security.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

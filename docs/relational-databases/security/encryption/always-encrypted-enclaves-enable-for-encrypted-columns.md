@@ -1,4 +1,5 @@
 ---
+description: Activer Always Encrypted avec enclaves sécurisées pour les colonnes chiffrées existantes
 title: Activer Always Encrypted avec enclaves sécurisées pour les colonnes chiffrées existantes | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d7028cc1d1789d65da424e985e191f9217b9328
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420333"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>Activer Always Encrypted avec enclaves sécurisées pour les colonnes chiffrées existantes 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -26,7 +27,7 @@ Si des colonnes existantes sont chiffrées avec des clés qui ne sont pas activ�
 
 Vous pouvez activer les calculs d’enclave pour les colonnes chiffrées existantes de différentes façons, en fonction des éléments suivants :
 
-- **Étendue/granularité :** voulez-vous activer la fonctionnalité d’enclave pour une partie des colonnes ou pour toutes les colonnes protégées par une clé principale de colonne donnée ?
+- **Étendue/granularité :** voulez-vous activer la fonctionnalité d’enclave pour un sous-ensemble de colonnes, ou pour toutes les colonnes protégées par une clé principale de colonne donnée ?
 - **Taille des données :** quelle est la taille des tables contenant les colonnes dont vous souhaitez qu’elles prennent en charge des enclaves ?
 - Voulez-vous également modifier le type de chiffrement pour vos colonnes ? N’oubliez pas que seul le chiffrement aléatoire prend en charge les calculs complexes (critères spéciaux, les opérateurs de comparaison). Si votre colonne est chiffrée avec un chiffrement déterministe, vous devez également la rechiffrer avec un chiffrement aléatoire pour déverrouiller les calculs complexes.
 

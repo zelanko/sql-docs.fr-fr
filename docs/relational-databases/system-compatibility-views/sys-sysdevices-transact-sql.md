@@ -1,4 +1,5 @@
 ---
+description: sys.sysdevices (Transact-SQL)
 title: Appareils sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56196f6a9e4ce1929bd7fd9b65a9853d3794da4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6bcc481e595dc2c061d736a6bee12da6d918b7e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419793"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +40,8 @@ ms.locfileid: "85883749"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nom logique du fichier de sauvegarde ou du fichier de base de données.|  
 |**size**|**int**|Taille du fichier en pages de 2 kilo-octets (Ko).|  
-|**low**|**int**|Conservé pour compatibilité descendante uniquement.|  
-|**high**|**int**|Conservé pour compatibilité descendante uniquement.|  
+|**entrée**|**int**|Conservé pour compatibilité descendante uniquement.|  
+|**rapide**|**int**|Conservé pour compatibilité descendante uniquement.|  
 |**statut**|**smallint**|Bitmap indiquant le type de périphérique :<br /><br /> 1 = Disque par défaut<br /><br /> 2 = Disque physique<br /><br /> 4 = Disque logique<br /><br /> 8 = Omettre en-tête<br /><br /> 16 = Fichier de sauvegarde<br /><br /> 32 = Écritures en série<br /><br /> 4096 = Lecture seule|  
 |**cntrltype**|**smallint**|Type de contrôleur :<br /><br /> 0 = Fichier de base de données non CD-ROM<br /><br /> 2 = Fichier de sauvegarde sur disque<br /><br /> 3 - 4 = Fichier de sauvegarde sur disquette<br /><br /> 5 = Fichier de sauvegarde sur bande<br /><br /> 6 = Fichier de canal nommé|  
 |**phyname**|**nvarchar(260)**|Nom du fichier physique.|  

@@ -1,4 +1,5 @@
 ---
+description: Contraintes uniques et contraintes de validation
 title: Contraintes uniques et contraintes de validation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2017
@@ -14,12 +15,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418963"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85727111"
 >  Les contraintes qui incluent une conversion de type de données implicite ou explicite peuvent causer l'échec de certaines opérations. Par exemple, ces contraintes définies sur des tables qui sont les sources d'une commutation de partition peuvent causer l'échec d'une opération ALTER TABLE...SWITCH. Évitez les conversions de types de données dans les définitions des contraintes.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitations des contraintes CHECK  
- Les contraintes CHECK rejettent les valeurs qui donnent FALSE. Comme les valeurs nulles donnent UNKNOWN, il se peut que leur présence dans les expressions supplante une contrainte. Supposons par exemple que vous placez une contrainte sur une colonne **int** **MyColumn** en spécifiant que **MyColumn** peut contenir uniquement la valeur 10 (**MyColumn=10**). Si vous insérez la valeur NULL dans **MyColumn**, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère NULL et ne retourne pas d'erreur.  
+ Les contraintes CHECK rejettent les valeurs qui donnent FALSE. Comme les valeurs nulles donnent UNKNOWN, il se peut que leur présence dans les expressions supplante une contrainte. Supposons par exemple que vous placez une contrainte sur une colonne **int****MyColumn** en spécifiant que **MyColumn** peut contenir uniquement la valeur 10 (**MyColumn=10**). Si vous insérez la valeur NULL dans **MyColumn**, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] insère NULL et ne retourne pas d'erreur.  
   
  Une contrainte CHECK retourne TRUE lorsque la condition qu'elle vérifie n'est pas FALSE pour une ligne quelconque de la table. Une contrainte CHECK s'exécute au niveau de la ligne. Si une table venant d'être créée ne comporte aucune ligne, les éventuelles contraintes CHECK sur cette table sont considérées comme valides. Cette situation peut produire des résultats inattendus, comme l'illustre l'exemple suivant.  
   
@@ -96,7 +97,7 @@ DELETE CheckTbl WHERE col1 = 10;
 |----------|-----------|  
 |Décrit comment créer une contrainte unique.|[Créer des contraintes uniques](../../relational-databases/tables/create-unique-constraints.md)|  
 |Décrit comment modifier une contrainte unique.|[Modifier des contraintes uniques](../../relational-databases/tables/modify-unique-constraints.md)|  
-|Décrit comment supprimer une contrainte unique.|[Supprimer des contraintes uniques](../../relational-databases/tables/delete-unique-constraints.md)|  
+|Décrit comment supprimer une contrainte unique.|[Supprimer des contraintes UNIQUE](../../relational-databases/tables/delete-unique-constraints.md)|  
 |Décrit comment désactiver une contrainte de validation lorsque l'Agent de réplication insère ou met à jour les données dans votre table.|[Désactiver des contraintes de validation pour la réplication](../../relational-databases/tables/disable-check-constraints-for-replication.md)|  
 |Décrit comment désactiver une contrainte de validation lorsque vous ajoutez, mettez à jour ou supprimez des données dans une table.|[Désactiver des contraintes de validation avec des instructions INSERT et UPDATE](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
 |Décrit comment modifier l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.|[Modifier des contraintes de validation](../../relational-databases/tables/modify-check-constraints.md)|  

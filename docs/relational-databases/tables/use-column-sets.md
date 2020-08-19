@@ -1,4 +1,5 @@
 ---
+description: Utiliser des jeux de colonnes
 title: Utiliser des jeux de colonnes | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418973"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -112,7 +113,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Utilisation du Type de données sql_variant  
  Le type de données **sql_variant** peut stocker plusieurs types de données différents, tels que **int**, **char**et **date**. Les jeux de colonnes retournent les informations de type de données telles que l’échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur **sql_variant** sous la forme d’attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
   
-|Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Precision|Scale|  
+|Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Précision|Scale|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|'Par défaut'|0|0|8000|Non applicable**|Non applicable|  
 |**nvarchar**|-1|'Par défaut'|0|0|4000|Non applicable|Non applicable|  

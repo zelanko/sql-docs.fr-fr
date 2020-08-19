@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_loaded_modules (Transact-SQL)
 title: sys. dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5678c74d6fbbb703e6f6fd0a93b205bc2903059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419683"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "85898763"
 |**version préliminaire**|**bit**|1 = le module est une version préliminaire du module chargé.|  
 |**private_build**|**bit**|1 = le module est une version privée du module chargé.|  
 |**special_build**|**bit**|1 = le module est une version spéciale du module chargé.|  
-|**langue**|**int**|Langue des informations de version du module.|  
-|**entreprise**|**nvarchar(256)**|Nom de la société qui a créé le module.|  
-|**description**|**nvarchar(256)**|Description du module.|  
+|**language**|**int**|Langue des informations de version du module.|  
+|**entreprise**|**nvarchar (256)**|Nom de la société qui a créé le module.|  
+|**description**|**nvarchar (256)**|Description du module.|  
 |**name**|**nvarchar(255)**|Nom du module. Inclut le chemin d'accès complet du module.|  
 |**pdw_node_id**|**int**|**S’applique à** : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85898763"
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
