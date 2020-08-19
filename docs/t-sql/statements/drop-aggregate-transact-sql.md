@@ -1,4 +1,5 @@
 ---
+description: DROP AGGREGATE (Transact-SQL)
 title: DROP AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3af850b4154726ea300688a0d155c39c1b262828
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 47abd647ce5b46986c665a1ed898232de2c0483c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416825"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *aggregate_name*  
  Nom de la fonction d'agrégation définie par l'utilisateur à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  DROP AGGREGATE ne s'exécute pas si des vues, fonctions ou procédures stockées créées avec une liaison de schéma référencent la fonction d'agrégation définie par l'utilisateur à supprimer.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -71,6 +72,6 @@ DROP AGGREGATE dbo.Concatenate;
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
- [Créer des agrégats définis par l’utilisateur](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
+ [Créer des agrégats définis par l'utilisateur](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
   
   

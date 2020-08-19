@@ -1,4 +1,5 @@
 ---
+description: Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
 title: Importer un fichier BACPAC pour créer une base de données utilisateur
 ms.date: 06/03/2020
 ms.prod: sql
@@ -25,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed5a14278e9114b9408406a103553280dd9e4f8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412435"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85781679"
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Une DAC peut être importée vers [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou une version ultérieure. Si vous exportez une DAC d'une version ultérieure, elle peut contenir des objets non pris en charge par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vous ne pouvez pas déployer ces DAC vers les instances de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables  
  Nous vous recommandons de ne pas importer de fichier d'exportation DAC provenant de sources inconnues ou non approuvées. De tels fichiers peuvent contenir du code malveillant susceptible d'exécuter un code Transact-SQL indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser un fichier d'exportation provenant d'une source inconnue ou non approuvée, décompressez la DAC et vérifiez le code, par exemple les procédures stockées ou un autre code défini par l'utilisateur. Pour plus d'informations sur la façon de procéder à ces vérifications, consultez [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Sécurité  
@@ -122,7 +123,7 @@ ms.locfileid: "85781679"
  **Base de données SQL Azure :**  
   
  - **[Importer un fichier BACPAC pour créer une nouvelle base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** fournit des instructions étape par étape relatives à l’utilisation du portail Azure, de PowerShell, de SSMS ou de SqlPackage.  
- - Consultez **[Options et performances de la base de données SQL : comprendre ce qui est disponible dans chaque niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** pour obtenir plus de détails sur les différents niveaux de service.  
+ - Consultez **[Options et performances de la base de données SQL : comprendre ce qui est disponible dans chaque niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** pour obtenir plus de détails sur les différents niveaux de service.  
 
 ### <a name="validation-page"></a>Page Validation  
  Utilisez cette page pour passer en revue tous les problèmes qui empêchent l'opération. Pour continuer, résolvez les problèmes bloquants, puis cliquez sur **Réexécuter la validation** pour vous assurer que la validation est réussie.  

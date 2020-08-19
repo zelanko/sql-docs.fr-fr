@@ -1,4 +1,5 @@
 ---
+description: Background Job Error (classe d'événements)
 title: Background Job Error, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5524bd8ed316780a9b0b8babd66e2c2582fb0585
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410425"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe d’événements **Background Job Error** intervient quand un travail en arrière-plan s’est arrêté anormalement. Cette condition peut nécessiter l'intervention d'un administrateur système.  
+   La classe d’événements **Background Job Error** intervient quand un travail en arrière-plan s’est arrêté anormalement. Cette condition peut nécessiter l'intervention d'un administrateur système.  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Colonnes de la classe d'événements Background Job Error  
   

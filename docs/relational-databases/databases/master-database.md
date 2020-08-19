@@ -1,4 +1,5 @@
 ---
+description: Base de données master
 title: Base de données master | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e313c18ef81f298a7ebd802bcf2b2cc0f69a09dc
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7be82eb5eaa61307cd5421033adc1634de9a946b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411365"
 ---
 # <a name="master-database"></a>Base de données master
 

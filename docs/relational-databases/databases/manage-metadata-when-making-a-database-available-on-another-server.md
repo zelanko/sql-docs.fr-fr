@@ -1,4 +1,5 @@
 ---
+description: Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur
 title: Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412845"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85726452"
   
  Pour plus d’informations sur cette fonctionnalité, consultez [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **REMARQUE :** Les comptes proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des informations d'identification. Pour connaître les informations d'identification d'un compte proxy, utilisez la table système [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
+> **REMARQUE : Les comptes proxy de l’Agent** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des informations d’identification. Pour connaître les informations d'identification d'un compte proxy, utilisez la table système [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
 ##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
@@ -129,7 +130,7 @@ ms.locfileid: "85726452"
   
  Pour permettre le déchiffrement automatique de la clé principale de base de données sur une instance de serveur, une copie de cette clé est chiffrée à l'aide de la clé principale du service. Cette copie chiffrée est stockée dans la base de données et dans la base **master**. En général, la copie stockée dans **master** est mise à jour sans avertissement chaque fois que la clé principale est modifiée. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente tout d'abord de déchiffrer la clé principale de base de données avec la clé principale de service de l'instance. Si ce déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification. Une clé principale qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction OPEN MASTER KEY et d'un mot de passe.  
   
- Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _mot de passe_ **'** . Nous vous recommandons d’activer le déchiffrement automatique de la clé principale de la base de données en exécutant l’instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _mot de passe_ **'** . Nous vous recommandons d'activer alors le déchiffrement automatique de la clé principale de la base de données en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Pour plus d’informations sur l’activation du déchiffrement automatique de la clé principale d’une base de données miroir, consultez [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -156,9 +157,9 @@ ms.locfileid: "85726452"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Événements WMI (Windows Management Instrumentation)  
  Le fournisseur WMI pour les événements de serveur vous permet d'utiliser WMI (Windows Management Instrumentation) pour surveiller les événements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutes les applications qui reposent sur des événements au niveau du serveur exposés par le biais du fournisseur WMI (Windows Management Instrumentation) sur lequel repose une base de données doivent être définies sur l'ordinateur de l'instance du serveur de destination. Le fournisseur d'événements WMI crée des notifications d'événements à l'aide d'un service cible défini dans **msdb**.  
   
-> **REMARQUE :** Pour plus d’informations, consultez [Fournisseur WMI pour les concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
+> **REMARQUE :** Pour plus d’informations, consultez [Fournisseur WMI pour les concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
- **Pour créer une alerte WMI à l'aide de SQL Server Management Studio**  
+ **Pour créer une alerte WMI à l'aide de SQL Server Management Studio**  
   
 -   [Créer une alerte d'événement WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
@@ -193,7 +194,7 @@ ms.locfileid: "85726452"
   
  Par ailleurs, si le composant des [analyseurs lexicaux et générateurs de formes dérivées](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) ou le composant des [filtres de recherche en texte intégral](../../relational-databases/search/configure-and-manage-filters-for-search.md) ont des versions différentes sur les instances du serveur d’origine et de destination, il est possible que les requêtes et l’index de texte intégral n’aient pas le même comportement. En outre, le [dictionnaire des synonymes](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) est stocké dans des fichiers spécifiques à l’instance. Vous devez transférer une copie de ces fichiers à un emplacement équivalent sur l'instance du serveur de destination ou les recréer sur la nouvelle instance.  
   
-> **REMARQUE :** Quand vous attachez une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui contient des fichiers catalogue de texte intégral à une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , les fichiers catalogue sont attachés à partir de leur emplacement précédent avec les autres fichiers de base de données, les mêmes que dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
+> **REMARQUE :** Quand vous attachez une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui contient des fichiers catalogue de texte intégral à une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , les fichiers catalogue sont attachés à partir de leur emplacement précédent avec les autres fichiers de base de données, les mêmes que dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
   
  Pour plus d'informations, consultez également :  
   
@@ -242,7 +243,7 @@ ms.locfileid: "85726452"
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Afficher des informations sur une étape de travail](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
@@ -259,7 +260,7 @@ ms.locfileid: "85726452"
   
  Pour générer un script pour une partie ou l'intégralité des objets figurant dans la copie initiale de la base de données, vous pouvez utiliser l'Assistant Générer des scripts, et dans la boîte de dialogue **Sélectionner les options de script** , vous attribuez à l'option **Créer un script des connexions** la valeur **True**.  
   
-> **REMARQUE :** Pour plus d’informations sur la configuration des connexions pour une base de données mise en miroir, consultez [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) et [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> **REMARQUE :** Pour plus d’informations sur la configuration des connexions pour une base de données mise en miroir, consultez [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) et [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a><a name="permissions"></a> Autorisations  
@@ -287,7 +288,7 @@ ms.locfileid: "85726452"
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>Autorisations au niveau serveur pour un certificat ou une clé asymétrique  
  Les autorisations au niveau serveur ne peuvent pas être accordées directement à un certificat ou à une clé asymétrique. Les autorisations au niveau serveur sont en fait accordées à une connexion mappée qui est créée exclusivement pour un certificat ou une clé asymétrique spécifique. Par conséquent, chaque certificat ou clé asymétrique qui nécessite des autorisations au niveau serveur doit posséder sa propre *connexion mappée sur un certificat* ou sa propre *connexion mappée sur une clé asymétrique*. Pour octroyer des autorisations au niveau serveur pour un certificat ou une clé asymétrique, accordez les autorisations à sa connexion mappée.  
   
-> **REMARQUE :** Une connexion mappée est utilisée uniquement pour l'autorisation du code signé à l'aide de la clé asymétrique ou du certificat correspondant. Les connexions mappées ne peuvent pas être utilisées pour l'authentification.  
+> **REMARQUE :** Une connexion mappée est utilisée uniquement pour l’autorisation du code signé à l’aide de la clé asymétrique ou du certificat correspondant. Les connexions mappées ne peuvent pas être utilisées pour l'authentification.  
   
  La connexion mappée et ses autorisations résident dans la base de données **master**. Si une clé asymétrique ou un certificat réside dans une base de données autre que la base **master**, vous devez les recréer dans la base **master** et les mapper à une connexion. Si vous déplacez, copiez ou restaurez la base de données sur une autre instance de serveur, vous devez recréer son certificat ou sa clé asymétrique dans la base de données **master** de l’instance du serveur de destination, les mapper à une connexion et accorder les autorisations au niveau serveur à la connexion.  
   
