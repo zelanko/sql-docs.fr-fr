@@ -1,4 +1,5 @@
 ---
+description: UpdateBatch, méthode
 title: UpdateBatch, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f0a730a64a34e13f5a7554ecb700ab1e555a77d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441601"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch, méthode
 Écrit toutes les mises à jour par lots en attente sur le disque.  
@@ -40,7 +41,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  facultatif. Valeur **booléenne** qui spécifie si les modifications locales, comme indiqué par la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) , doivent être validées. Si cette valeur est définie sur **true**, la propriété **Status** de chaque enregistrement reste inchangée une fois la mise à jour terminée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode **UpdateBatch** lors de la modification d’un objet **Recordset** en mode de mise à jour par lot pour transmettre toutes les modifications apportées à un objet **Recordset** à la base de données sous-jacente.  
   
  Si l’objet **Recordset** prend en charge la mise à jour par lot, vous pouvez mettre en cache plusieurs modifications dans un ou plusieurs enregistrements localement jusqu’à ce que vous appeliez la méthode **UpdateBatch** . Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez la méthode **UpdateBatch** , ADO appelle automatiquement la méthode [Update](../../../ado/reference/ado-api/update-method.md) pour enregistrer toutes les modifications en attente dans l’enregistrement en cours avant de transmettre les modifications par lot au fournisseur. Vous devez utiliser la mise à jour par lot avec un curseur de jeu de clés ou statique uniquement.  

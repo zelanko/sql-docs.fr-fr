@@ -1,4 +1,5 @@
 ---
+description: StayInSync, exemple de propriété (VB)
 title: StayInSync, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa4c09a56f164ca8c0d2b6d6222b9d827c1ee45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13e1026b95386cb051aba0468d371937c4ed52d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441911"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync, exemple de propriété (VB)
 Cet exemple montre comment la propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilite l’accès aux lignes d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)hiérarchique.  

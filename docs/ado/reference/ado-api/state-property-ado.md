@@ -1,4 +1,5 @@
 ---
+description: State, propriété (ADO)
 title: State, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4fa19bf21764437d3713c434e288b3bb3a3d25d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ca8a2421f15e5999347b0b7879f3faf707598ba2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441981"
 ---
 # <a name="state-property-ado"></a>State, propriété (ADO)
 Indique pour tous les objets applicables si l’état de l’objet est ouvert ou fermé. Si l’objet exécute une méthode asynchrone, indique si l’état actuel de l’objet est en cours de connexion, en cours d’exécution ou en cours d’extraction.  

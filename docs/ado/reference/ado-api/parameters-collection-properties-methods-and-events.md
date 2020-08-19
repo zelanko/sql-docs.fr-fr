@@ -1,4 +1,5 @@
 ---
+description: Propriétés, méthodes et événements de la collection Parameters
 title: Propriétés, méthodes et événements de la collection Parameters | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0bfbb7129cd4937052e919f4282e3303a29de29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cb315cfe0a46e3d3c5ba6bbf4f34044ae0f8fa9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442801"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Propriétés, méthodes et événements de la collection Parameters
 ## <a name="properties"></a>Propriétés  

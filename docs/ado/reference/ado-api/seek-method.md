@@ -1,4 +1,5 @@
 ---
+description: Seek, méthode
 title: Seek, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a96c8054d83fa0ecff4cc3fed3a1227f300f7e2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9eecf5caee690687adaffda7ccd56d869abb9e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442094"
 ---
 # <a name="seek-method"></a>Seek, méthode
 Recherche l’index d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) pour localiser rapidement la ligne qui correspond aux valeurs spécifiées et modifie la position de ligne actuelle en cette ligne.  
@@ -40,7 +41,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  Valeur de [SeekEnum](../../../ado/reference/ado-api/seekenum.md) qui spécifie le type de comparaison à effectuer entre les colonnes de l’index et les *valeurs de KeyValues*correspondantes.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode **Seek** conjointement à la propriété [index](../../../ado/reference/ado-api/index-property.md) si le fournisseur sous-jacent prend en charge les index sur l’objet **Recordset** . Utilisez la méthode [supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** pour déterminer si le fournisseur sous-jacent prend en charge la **recherche**, et la méthode **prend en charge (adIndex)** pour déterminer si le fournisseur prend en charge les index. (Par exemple, le [fournisseur de OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) prend en charge la **recherche** et l' **indexation**.)  
   
  Si la **recherche** ne trouve pas la ligne souhaitée, aucune erreur ne se produit et la ligne est positionnée à la fin de l’ensemble d' **enregistrements**. Définissez la propriété **index** sur l’index souhaité avant d’exécuter cette méthode.  

@@ -1,4 +1,5 @@
 ---
+description: Prompt, propriété dynamique (ADO)
 title: Prompt, propriété dynamique (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e99273a94fc38779b50203d3dd5b78106f6a90c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 337cfc2c0027f5c54ac5a9013975d50dc0f5d245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442661"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt, propriété dynamique (ADO)
 Spécifie si le fournisseur de OLE DB doit inviter l’utilisateur à fournir des informations d’initialisation.  
@@ -34,7 +35,7 @@ Spécifie si le fournisseur de OLE DB doit inviter l’utilisateur à fournir de
 > [!NOTE]
 >  Ne spécifiez pas que le fournisseur doit inviter l’utilisateur dans les scénarios où l’utilisateur ne sera pas en mesure de répondre à la boîte de dialogue. Par exemple, l’utilisateur ne peut pas répondre si l’application s’exécute sur un système serveur plutôt que sur le client de l’utilisateur, ou si l’application s’exécute sur un système sans utilisateur connecté. Dans ce cas, l’application attend indéfiniment une réponse et semble être verrouillée.  
   
-## <a name="usage"></a>Utilisation  
+## <a name="usage"></a>Usage  
   
 ```  
 Set cn = New Connection  

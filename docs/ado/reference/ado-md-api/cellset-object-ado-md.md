@@ -1,4 +1,5 @@
 ---
+description: Cellset, objet (ADO MD)
 title: CellSet, objet (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f30243440d9b09194bd3cd1c7ed5a162ad8de34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441211"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset, objet (ADO MD)
 Représente les résultats d’une requête multidimensionnelle. Il s’agit d’une collection de cellules sélectionnées à partir de cubes ou d’autres cellules.  

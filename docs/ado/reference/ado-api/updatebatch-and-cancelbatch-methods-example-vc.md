@@ -1,4 +1,5 @@
 ---
+description: UpdateBatch et CancelBatch, exemple de méthodes (VC++)
 title: UpdateBatch et CancelBatch, exemples de méthodes (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e467e41d77012d3366ded54c7e20b01121bec8d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 848c798a92c2075cdfff04551b17a46d2d90fc76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441621"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch et CancelBatch, exemple de méthodes (VC++)
 Cet exemple illustre la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) conjointement à la méthode [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  

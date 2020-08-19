@@ -1,4 +1,5 @@
 ---
+description: Hierarchy, objet (ADO MD)
 title: Objet Hierarchy (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 757de54d56b5220b2759e670584e432c595fc45f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440981"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy, objet (ADO MD)
 Représente une façon dont les membres d’une [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) peuvent être agrégés ou « cumulés ». Une dimension peut être agrégée avec une ou plusieurs hiérarchies.  

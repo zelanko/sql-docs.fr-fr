@@ -1,4 +1,5 @@
 ---
+description: ResyncEnum
 title: ResyncEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a53d2c64e961c1b46b2d170de712493cc06f3910
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c379ca2a3f68b195c0020d0e89009d2715da5850
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442251"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Spécifie si les valeurs sous-jacentes sont remplacées par un appel à [Resync](../../../ado/reference/ado-api/resync-method.md).  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|Par défaut. Remplace les données, et les mises à jour en attente sont annulées.|  
 |**adResyncUnderlyingValues**|1|Ne remplace pas les données et les mises à jour en attente ne sont pas annulées.|  
@@ -33,7 +34,7 @@ Spécifie si les valeurs sous-jacentes sont remplacées par un appel à [Resync]
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.Resync.ALLVALUES|  
 |AdoEnums.Resync.UNDERLYINGVALUES|  

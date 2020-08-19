@@ -1,4 +1,5 @@
 ---
+description: SchemaEnum
 title: SchemaEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442171"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque constante ADO dans les rubriques de l' [annexe B : ensembles de lignes de schéma](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de la OLE DB Guide de référence du programmeur. Le nom de chaque rubrique est indiqué entre parenthèses dans la section Description du tableau suivant.  
   
  Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque ADO MD constante dans les rubriques dans [OLE DB pour les objets OLAP et les ensembles de lignes de schéma](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) dans le OLE DB pour la documentation sur le traitement analytique en ligne (OLAP). Le nom de chaque rubrique est indiqué entre parenthèses dans la colonne Description du tableau suivant.  
@@ -34,7 +35,7 @@ Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [Ope
   
  ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **jeu d’enregistrements**, puis remplit chaque ligne avec les valeurs retournées respectivement par les méthodes **IDBInfo :: GetKeywords** et **IDBInfo :: GetLiteralInfo** . Vous trouverez des informations supplémentaires sur ces méthodes dans la section [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) du Guide de référence du programmeur OLE DB.  
   
-|Constant|Valeur|Description|Colonnes de contrainte|  
+|Constante|Valeur|Description|Colonnes de contrainte|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Retourne les assertions définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes assertions)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogue)|CATALOG_NAME|  
@@ -47,8 +48,8 @@ Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [Ope
 |**adSchemaConstraintColumnUsage**|6|Retourne les colonnes utilisées par les contraintes référentielles, les contraintes uniques, les contraintes de validation et les assertions, définies dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes CONSTRAINT_COLUMN_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Retourne les tables utilisées par les contraintes référentielles, les contraintes uniques, les contraintes de validation et les assertions, définies dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes CONSTRAINT_TABLE_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Retourne des informations sur les cubes disponibles dans un schéma (ou le catalogue, si le fournisseur ne prend pas en charge les schémas).<br /><br /> (Ensemble de lignes CUBE *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
-|**adSchemaDBInfoKeywords**|30|Retourne une liste de mots clés spécifiques au fournisseur.<br /><br /> (IDBInfo :: GetKeywords)|\<Aucun>|  
-|**adSchemaDBInfoLiterals**|31|Retourne la liste des littéraux propres au fournisseur utilisés dans les commandes de texte.<br /><br /> (IDBInfo :: GetLiteralInfo)|\<Aucun>|  
+|**adSchemaDBInfoKeywords**|30|Retourne une liste de mots clés spécifiques au fournisseur.<br /><br /> (IDBInfo :: GetKeywords)|\<None>|  
+|**adSchemaDBInfoLiterals**|31|Retourne la liste des littéraux propres au fournisseur utilisés dans les commandes de texte.<br /><br /> (IDBInfo :: GetLiteralInfo)|\<None>|  
 |**adSchemaDimensions**|33|Retourne des informations sur les dimensions d’un cube donné. Elle possède une ligne pour chaque dimension.<br /><br /> (Ensemble de lignes de DIMENSIONS)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Retourne les colonnes clés étrangères définies dans le catalogue par un utilisateur donné.<br /><br /> (Ensemble de lignes FOREIGN_KEYS)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Retourne des informations sur les hiérarchies disponibles dans une dimension.<br /><br /> (Ensemble de lignes HIERARCHIES)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
@@ -58,21 +59,21 @@ Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [Ope
 |**adSchemaMeasures**|36|Retourne des informations sur les mesures disponibles.<br /><br /> (Ensemble de lignes de mesures)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|Retourne des informations sur les membres disponibles.<br /><br /> (Ensemble de lignes des membres)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER Member_Name MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE. Pour plus d’informations, consultez OLE DB pour le traitement analytique en ligne (OLAP).|  
 |**adSchemaPrimaryKeys**|28|Retourne les colonnes de clés primaires définies dans le catalogue par un utilisateur donné.<br /><br /> (Ensemble de lignes PRIMARY_KEYS)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
-|**adSchemaProcedureColumns**|29|Renvoie des informations sur les colonnes des ensembles de lignes retournées par les procédures.<br /><br /> (Ensemble de lignes PROCEDURE_COLUMNS)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
-|**adSchemaProcedureParameters**|26|Retourne des informations sur les paramètres et les codes de retour des procédures.<br /><br /> (Ensemble de lignes PROCEDURE_PARAMETERS)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
+|**adSchemaProcedureColumns**|29|Retourne des informations sur les colonnes de jeux de lignes retournés par des procédures.<br /><br /> (Ensemble de lignes PROCEDURE_COLUMNS)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
+|**adSchemaProcedureParameters**|26|Retourne des informations sur les paramètres et les codes de retour de procédures.<br /><br /> (Ensemble de lignes PROCEDURE_PARAMETERS)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
 |**adSchemaProcedures**|16|Retourne les procédures définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes de procédures)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
 |**adSchemaProperties**|37|Retourne des informations sur les propriétés disponibles pour chaque niveau de la dimension.<br /><br /> (Ensemble de lignes PROPERTIES)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
-|**adSchemaProviderSpecific**|-1|Utilisé si le fournisseur définit ses propres requêtes de schéma non standard.|\<> spécifique au fournisseur|  
+|**adSchemaProviderSpecific**|-1|Utilisé si le fournisseur définit ses propres requêtes de schéma non standard.|\<Provider specific>|  
 |**adSchemaProviderTypes**|22|Retourne les types de données (de base) pris en charge par le fournisseur de données.<br /><br /> (Ensemble de lignes PROVIDER_TYPES)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Retourne les contraintes référentielles définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes REFERENTIAL_CONSTRAINTS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Retourne les schémas (objets de base de données) détenus par un utilisateur donné.<br /><br /> (Ensemble de lignes SCHEMATA)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Retourne les niveaux de conformité, les options et les dialectes pris en charge par l'implémentation SQL traitant les données définies dans le catalogue.<br /><br /> (Ensemble de lignes SQL_LANGUAGES)|\<Aucun>|  
+|**adSchemaSQLLanguages**|18|Retourne les niveaux de conformité, les options et les dialectes pris en charge par l'implémentation SQL traitant les données définies dans le catalogue.<br /><br /> (Ensemble de lignes SQL_LANGUAGES)|\<None>|  
 |**adSchemaStatistics**|19|Retourne les statistiques définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes de statistiques)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Retourne les contraintes de table définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes TABLE_CONSTRAINTS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|Retourne les privilèges sur les tables définies dans le catalogue qui sont mis à la disposition d'un utilisateur ou accordés par celui-ci.<br /><br /> (Ensemble de lignes TABLE_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
 |**adSchemaTables**|20|Retourne les tables (vues comprises) définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes de TABLES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|Retourne les traductions de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes TRANSLATIONs)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
-|**adSchemaTrustees**|39|Réservé pour un usage futur.||  
+|**adSchemaTrustees**|39|Réservé à un usage ultérieur.||  
 |**adSchemaUsagePrivileges**|15|Retourne les privilèges d’utilisation sur les objets définis dans le catalogue qui sont accessibles à un utilisateur donné ou accordés par celui-ci.<br /><br /> (Ensemble de lignes USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE BÉNÉFICIAIRE DU GRANTATEUR|  
 |**adSchemaViewColumnUsage**|24|Retourne les colonnes sur lesquelles les tables affichées, définies dans le catalogue et détenues par un utilisateur donné, sont dépendantes.<br /><br /> (Ensemble de lignes VIEW_COLUMN_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Retourne les vues définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes VIEWS)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -81,7 +82,7 @@ Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [Ope
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums. Schema. assertions|  
 |AdoEnums. Schema. catalogues|  

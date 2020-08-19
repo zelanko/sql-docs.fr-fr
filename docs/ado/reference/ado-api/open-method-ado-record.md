@@ -1,4 +1,5 @@
 ---
+description: Open, méthode (objet Record ADO)
 title: Open, méthode (ADO record) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442971"
 ---
 # <a name="open-method-ado-record"></a>Open, méthode (objet Record ADO)
 Ouvre un objet [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) existant ou crée un nouvel élément représenté par l' **enregistrement**, tel qu’un fichier ou un répertoire.  
@@ -49,7 +50,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Options*  
  facultatif. Valeur de [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) qui spécifie les options d’ouverture de l' **enregistrement**. La valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
   
- *Nom d’utilisateur*  
+ *UserName*  
  facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, s’il est requis, autorise l’accès à la *source*.  
   
  *Mot de passe*  
@@ -58,7 +59,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="remarks"></a>Notes  
  La *source* peut être :  
   
--   URL. Si le protocole de l’URL est http, le fournisseur Internet est appelé par défaut. Si l’URL pointe vers un nœud qui contient un script exécutable (tel qu’un. ASP), un **enregistrement** qui contient la source à la place du contenu exécuté est ouvert par défaut. Utilisez l’argument *options* pour modifier ce comportement.  
+-   Une URL. Si le protocole de l’URL est http, le fournisseur Internet est appelé par défaut. Si l’URL pointe vers un nœud qui contient un script exécutable (tel qu’un. ASP), un **enregistrement** qui contient la source à la place du contenu exécuté est ouvert par défaut. Utilisez l’argument *options* pour modifier ce comportement.  
   
 -   Objet **enregistrement** . Un objet **Record** ouvert à partir d’un autre **enregistrement** clone l’objet **enregistrement** d’origine.  
   

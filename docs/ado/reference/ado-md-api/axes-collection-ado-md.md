@@ -1,4 +1,5 @@
 ---
+description: Axes, collection (ADO MD)
 title: Collection axes (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c6a55b5ba59fab0fab3f873225f67b18d2d384
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc93e9ea8568a535067addbd51258074945200db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441314"
 ---
 # <a name="axes-collection-ado-md"></a>Axes, collection (ADO MD)
 Contient les objets [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) qui définissent un groupe de cellules.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un objet [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) contient une collection **axes** . Une fois l’ensemble de **cellules** ouvert, ce regroupement contient au moins un **axe**. Consultez l’objet [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) pour obtenir une explication plus détaillée sur l’utilisation des objets **Axis** .  
   
 > [!NOTE]

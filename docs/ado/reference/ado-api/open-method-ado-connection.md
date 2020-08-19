@@ -1,4 +1,5 @@
 ---
+description: Open, méthode (objet Connection ADO)
 title: Open, méthode (connexion ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1cfba7ddf3192d8bbc81d051e1c29ac27303ef68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442981"
 ---
 # <a name="open-method-ado-connection"></a>Open, méthode (objet Connection ADO)
 Ouvre une connexion à une source de données.  
@@ -38,7 +39,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  facultatif. Valeur de **chaîne** qui contient les informations de connexion. Pour plus d’informations sur les paramètres valides, consultez la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
- *IDutilisateur*  
+ *l'UserId*  
  facultatif. Valeur de **chaîne** qui contient un nom d’utilisateur à utiliser lors de l’établissement de la connexion.  
   
  *Mot de passe*  

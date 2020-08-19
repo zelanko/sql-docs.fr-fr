@@ -1,4 +1,5 @@
 ---
+description: FormattedValue, propriété (ADO MD)
 title: FormattedValue, propriété (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1acc577b1822beb69826120034ffa4872e60c60b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 99509ff8d72a8ad5ec587674b6c35f96a674e4db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441021"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue, propriété (ADO MD)
 Indique l’affichage mis en forme d’une valeur de [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) .  
@@ -29,7 +30,7 @@ Indique l’affichage mis en forme d’une valeur de [cellule](../../../ado/refe
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne une **chaîne** et est en lecture seule.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **FormattedValue** pour obtenir la valeur d’affichage mise en forme de la propriété [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) d’un objet [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) . Par exemple, si la valeur d’une cellule était 1056,87 et que cette valeur représente un montant en dollars, **FormattedValue** serait $1 056,87.  
   
 ## <a name="applies-to"></a>S'applique à  

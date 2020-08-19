@@ -1,4 +1,5 @@
 ---
+description: ReadText, méthode
 title: ReadText, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afabd90ee6251be650036b285de0f08a3776723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c36e4dde000e89b3fe19b258f5d307232b2cb69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442531"
 ---
 # <a name="readtext-method"></a>ReadText, méthode
 Lit le nombre spécifié de caractères à partir d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) de texte.  
@@ -37,10 +38,10 @@ String = Stream.ReadText ( NumChars)
  *NumChars*  
  facultatif. Valeur de **type long** qui spécifie le nombre de caractères à lire à partir du fichier ou une valeur [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) . La valeur par défaut est **adReadAll**.  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  La méthode **READTEXT** lit un nombre spécifié de caractères, une ligne entière ou le flux entier à partir d’un objet de **flux** et retourne la chaîne résultante.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si *NUMCHARS* est supérieur au nombre de caractères restants dans le flux, seuls les caractères restants sont retournés. La lecture de la chaîne n’est pas complétée pour correspondre à la longueur spécifiée par *NUMCHARS*. S’il ne reste aucun caractère à lire, une variante dont la valeur est null est retournée. **READTEXT** ne peut pas être utilisé pour lire vers l’arrière.  
   
 > [!NOTE]

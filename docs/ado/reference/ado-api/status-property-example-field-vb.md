@@ -1,4 +1,5 @@
 ---
+description: Status, exemple de propriété (objet Field) (VB)
 title: Status, exemple de propriété (Field) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441941"
 ---
 # <a name="status-property-example-field-vb"></a>Status, exemple de propriété (objet Field) (VB)
 L’exemple suivant ouvre un document à partir d’un dossier en lecture/écriture à l’aide du [fournisseur de publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propriété [Status](../../../ado/reference/ado-api/status-property-ado-field.md) d’un objet [Field](../../../ado/reference/ado-api/field-object.md) de l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) est d’abord définie sur **AdFieldPendingInsert**, puis mise à jour vers **adFieldOK**.  

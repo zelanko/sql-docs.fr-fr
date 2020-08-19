@@ -1,4 +1,5 @@
 ---
+description: Resync Command, propriété dynamique (ADO)
 title: Resync Command, propriété dynamique (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a7a350540d94ea0379f7829fa004d98ce691f1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442301"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command, propriété dynamique (ADO)
 Spécifie une chaîne de commande fournie par l’utilisateur que la méthode de [resynchronisation](../../../ado/reference/ado-api/resync-method.md) émet pour actualiser les données de la table nommée dans la propriété dynamique de la [table unique](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  

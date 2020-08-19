@@ -1,4 +1,5 @@
 ---
+description: Size, propriété (objet Stream ADO)
 title: Size, propriété (objet Stream ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e17bb879c63e01d8f912bb7147061099bd3e2c10
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 92b546b95c1033b6222a0acc99355c5e0906de21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442131"
 ---
 # <a name="size-property-ado-stream"></a>Size, propriété (objet Stream ADO)
 Indique la taille du flux en nombre d’octets.  

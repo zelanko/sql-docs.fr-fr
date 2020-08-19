@@ -1,4 +1,5 @@
 ---
+description: Supports, méthode
 title: Prend en charge la méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b0c05118b0f4b8f952b933bc2474bd1f0879865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441751"
 ---
 # <a name="supports-method"></a>Supports, méthode
 Détermine si un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) spécifié prend en charge un type particulier de fonctionnalité.  
@@ -40,7 +41,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  Expression **longue** qui se compose d’une ou de plusieurs valeurs [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode **prend en charge** pour déterminer les types de fonctionnalités qu’un objet **Recordset** prend en charge. Si l’objet **Recordset** prend en charge les fonctionnalités dont les constantes correspondantes se trouvent dans *CursorOptions*, la méthode **supports** retourne la **valeur true**. Sinon, elle retourne **false**.  
   
 > [!NOTE]

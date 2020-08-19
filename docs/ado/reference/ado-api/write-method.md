@@ -1,4 +1,5 @@
 ---
+description: Write, méthode
 title: Write, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 911a9dfb21c054dc95c54d9fb429d628d8e01fa4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b43e0f505a3c4455768c32abd93dbc89afe04a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441461"
 ---
 # <a name="write-method"></a>Write, méthode
 Écrit des données binaires dans un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -34,10 +35,10 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Mémoire tampon*  
+ *Buffer*  
  **Variant** qui contient un tableau d’octets à écrire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les octets spécifiés sont écrits dans l’objet de **flux** sans aucun espace intermédiaire entre chaque octet.  
   
  La [position](../../../ado/reference/ado-api/position-property-ado.md) actuelle est définie sur l’octet qui suit les données écrites. La méthode **Write** ne tronque pas le reste des données dans un flux. Si vous souhaitez tronquer ces octets, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

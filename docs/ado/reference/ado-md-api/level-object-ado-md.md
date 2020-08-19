@@ -1,4 +1,5 @@
 ---
+description: Level, objet (ADO MD)
 title: Objet Level (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cdfcf6cb1411ae4f9ece9b917b5ecb1b76718766
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440951"
 ---
 # <a name="level-object-ado-md"></a>Level, objet (ADO MD)
 Contient un ensemble de membres, chacun ayant le même rang dans une hiérarchie.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Avec les collections et les propriétés d’un objet **Level** , vous pouvez effectuer les opérations suivantes :  
   
 -   Identifiez le **niveau** avec les propriétés [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) et [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  

@@ -1,4 +1,5 @@
 ---
+description: Propriétés, méthodes et événements de l’objet Hierarchy
 title: Propriétés, méthodes et événements de l’objet Hierarchy | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f60b0138abdfba0cc6bd49d509d5b43b3432e405
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7457b43a186ba30409a34cf415c5ca0889b1f96e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440971"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Hierarchy
 ## <a name="propertiescollections"></a>Propriétés/collections  

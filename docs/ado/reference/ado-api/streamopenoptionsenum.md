@@ -1,4 +1,5 @@
 ---
+description: StreamOpenOptionsEnum
 title: StreamOpenOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d61b11ee6fedd4229433570f6b159cccf658853
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e2799d52ef8c46092132a36eb2fe4fb92f5d14d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441821"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 Spécifie les options d’ouverture d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) . Les valeurs peuvent être combinées avec une opération OR.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|Ouvre l’objet de **flux** en mode asynchrone.|  
 |**adOpenStreamFromRecord**|4|Identifie le contenu du paramètre *source* comme étant un objet [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) déjà ouvert. Le comportement par défaut consiste à traiter la *source* comme une URL qui pointe directement vers un nœud dans une arborescence. Le flux par défaut associé à ce nœud est ouvert.|  

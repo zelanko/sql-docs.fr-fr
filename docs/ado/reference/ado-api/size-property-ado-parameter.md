@@ -1,4 +1,5 @@
 ---
+description: Size, propriété (paramètre ADO)
 title: Size, propriété (paramètre ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f989ab60099673f95debbe4eb5f8217beb0ccd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 78a22e22f5bf65c211a18bd68767537af164b452
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442151"
 ---
 # <a name="size-property-ado-parameter"></a>Size, propriété (paramètre ADO)
 Indique la taille maximale, en octets ou en caractères, d’un objet de [paramètre](../../../ado/reference/ado-api/parameter-object.md) .  
@@ -40,7 +41,7 @@ Indique la taille maximale, en octets ou en caractères, d’un objet de [param�
  La propriété **Size** est en lecture/écriture.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+ [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   

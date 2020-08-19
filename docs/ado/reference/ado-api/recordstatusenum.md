@@ -1,4 +1,5 @@
 ---
+description: RecordStatusEnum
 title: RecordStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442385"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Spécifie l' [État](../../../ado/reference/ado-api/status-property-ado-recordset.md) d’un enregistrement en ce qui concerne les mises à jour par lots et les autres opérations en bloc.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indique que l’enregistrement n’a pas été enregistré parce que l’opération a été annulée.|  
 |**adRecCantRelease**|0x400|Indique que le nouvel enregistrement n’a pas été enregistré parce que l’enregistrement existant a été verrouillé.|  
@@ -51,7 +52,7 @@ Spécifie l' [État](../../../ado/reference/ado-api/status-property-ado-recordse
   
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  

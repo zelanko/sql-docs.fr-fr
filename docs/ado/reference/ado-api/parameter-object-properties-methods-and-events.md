@@ -1,4 +1,5 @@
 ---
+description: Propriétés, méthodes et événements de l’objet Parameter
 title: Propriétés, méthodes et événements de l’objet Parameter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7dec9eb2213bef6b2ba34ff1022c3aa6a2ef145a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea57679036785923a906a848b7f523e13163499f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442831"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Parameter
 ## <a name="propertiescollections"></a>Propriétés/collections  
@@ -46,4 +47,4 @@ ms.locfileid: "82765440"
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)

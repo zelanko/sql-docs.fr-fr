@@ -1,4 +1,5 @@
 ---
+description: Save et Open, exemple de méthodes (VB)
 title: Save et Open, exemples de méthodes (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442221"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save et Open, exemple de méthodes (VB)
 Ces trois exemples montrent comment les méthodes [Save](../../../ado/reference/ado-api/save-method.md) et [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) peuvent être utilisées ensemble.  
@@ -84,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- À ce stade, vous êtes arrivé à votre destination. Vous allez accéder à la table ***Authors*** en tant que **jeu d’enregistrements**local et déconnecté. Vous devez disposer du fournisseur **MSPersist** sur l’ordinateur que vous utilisez pour accéder au fichier enregistré, a:\Pubs.Xml.  
+ À ce stade, vous êtes arrivé à votre destination. Vous allez accéder à la table ***Authors*** en tant que **jeu d’enregistrements**local et déconnecté. Vous devez disposer du fournisseur **MSPersist** sur l’ordinateur que vous utilisez pour accéder au fichier enregistré, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  

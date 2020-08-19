@@ -1,4 +1,5 @@
 ---
+description: Paramètre (ADO - syntaxe WFC)
 title: Parameter (syntaxe ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3d60374102b92249062cbc705dc55c6d217537
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442821"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Paramètre (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
@@ -95,4 +96,4 @@ public void setNull()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)

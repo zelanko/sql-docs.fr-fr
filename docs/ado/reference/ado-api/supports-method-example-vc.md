@@ -1,4 +1,5 @@
 ---
+description: Supports, exemple de méthode (VC++)
 title: Supported, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441761"
 ---
 # <a name="supports-method-example-vc"></a>Supports, exemple de méthode (VC++)
 Cet exemple utilise la méthode [supports](../../../ado/reference/ado-api/supports-method.md) pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La fonction DisplaySupport est requise pour que cet exemple s’exécute.  

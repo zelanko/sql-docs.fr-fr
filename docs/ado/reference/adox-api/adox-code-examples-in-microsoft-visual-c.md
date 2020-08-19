@@ -1,4 +1,5 @@
 ---
+description: Exemples de code ADOX dans Microsoft Visual C++
 title: Exemples de code ADOX dans Microsoft Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab7c47857ac8a25b50567660ca8fbcc0ed51994c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e316cb14da5b10e7eb0525c621c5ffaa67ec53e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440621"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Exemples de code ADOX dans Microsoft Visual C++
 Ces rubriques fournissent des exemples de code pour vous aider à comprendre comment utiliser ADOX. Tous les exemples de code sont écrits à l’aide de Microsoft Visual C++.  
@@ -77,6 +78,6 @@ Ces rubriques fournissent des exemples de code pour vous aider à comprendre com
   
 -   [Propriété de type table, Connection Close, exemple de méthode (VC + +)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
-## <a name="collections"></a>Collections  
+## <a name="collections"></a>Regroupements  
   
 -   [Parameters (collection), Command (exemple de propriété) (VC++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)

@@ -1,4 +1,5 @@
 ---
+description: Open et Close, exemple de méthodes (VB)
 title: Open et Close, exemple de méthodes (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9d46d7ec04d5b19331ecda3b887e59862cdcf48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bbfd00f1cda9fcfc38a7b13b39e1f3e08a24b209
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443011"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open et Close, exemple de méthodes (VB)
 Cet exemple utilise les méthodes **Open** et [Close](../../../ado/reference/ado-api/close-method-ado.md) sur les objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [Connection](../../../ado/reference/ado-api/connection-object-ado.md) qui ont été ouverts.  

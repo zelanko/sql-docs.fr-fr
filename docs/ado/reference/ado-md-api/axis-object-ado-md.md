@@ -1,4 +1,5 @@
 ---
+description: Axis, objet (ADO MD)
 title: Objet Axis (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c251355637c5d57729a7d4aa737f2face1c9ace2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 733a2962e381a7b8918fccfd076f44dbbc23da1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441281"
 ---
 # <a name="axis-object-ado-md"></a>Axis, objet (ADO MD)
 Représente un axe positionnel ou de filtre d’un CellSet, contenant les membres sélectionnés d’une ou plusieurs dimensions.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un objet **Axis** peut être contenu dans une collection [axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) ou être retourné par la propriété [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) d’un ensemble de [cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
  Avec les collections et les propriétés d’un objet **Axis** , vous pouvez effectuer les opérations suivantes :  

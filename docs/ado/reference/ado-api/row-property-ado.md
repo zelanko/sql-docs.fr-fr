@@ -1,4 +1,5 @@
 ---
+description: Row, propriété (ADO)
 title: Row, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9752510e51f8486f40a16f353b603a8f8e3c7596
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bceacc215a67050142c773675a0af464ff9b9ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442241"
 ---
 # <a name="row-property-ado"></a>Row, propriété (ADO)
 Obtient ou définit un objet OLE DB **ligne** à partir de ou sur un objet d' [interface ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) . Lorsque vous utilisez **put_Row** pour définir un objet **Row** , une ligne est transformée en objet **Record** ADO.  

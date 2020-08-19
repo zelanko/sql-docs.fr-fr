@@ -1,4 +1,5 @@
 ---
+description: Resync, méthode
 title: Resync, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 68ece4d9ad109defafa8a0c64dbf901fb20a87b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442271"
 ---
 # <a name="resync-method"></a>Resync, méthode
 Actualise les données de la base de données sous-jacente de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) actuel ou de la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) .  

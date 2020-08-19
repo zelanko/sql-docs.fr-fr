@@ -1,4 +1,5 @@
 ---
+description: Exemples de code ADOX dans Microsoft Visual Basic
 title: Exemples de code ADOX dans Microsoft Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5591d721bde378023ef2b1f285426d036fc76cc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4cadc2a2f3681e9a993b398a03e44a856a11729a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440631"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Exemples de code ADOX dans Microsoft Visual Basic
 Ces rubriques fournissent des exemples de code pour vous aider à comprendre comment utiliser ADOX. Tous les exemples de code sont écrits à l’aide de Microsoft Visual Basic.  
@@ -93,7 +94,7 @@ Ces rubriques fournissent des exemples de code pour vous aider à comprendre com
   
 -   [Propriété de type table, méthode de fermeture de la connexion, exemple (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
-## <a name="collections"></a>Collections  
+## <a name="collections"></a>Regroupements  
   
 -   [Parameters (collection), Command (exemple de propriété) (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: RecordType, propriété (ADO)
 title: RecordType, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d215f959a921247520efeb470754e0abc5bb0d40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 578e9a0d03382e5e0dc143e07351cfb8890f278d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442371"
 ---
 # <a name="recordtype-property-ado"></a>RecordType, propriété (ADO)
 Indique le type d’objet d' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) .  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne une valeur [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La propriété **RecordType** est en lecture seule.  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -1,4 +1,5 @@
 ---
+description: Recordset, objet (ADO)
 title: Recordset, objet (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd92fc3d88372047262b91378341bc9aadcb35ef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3750a779c434810856e1cae979b7471aa3f8428c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442421"
 ---
 # <a name="recordset-object-ado"></a>Recordset, objet (ADO)
 Représente l’ensemble des enregistrements d’une table de base ou les résultats d’une commande exécutée. À tout moment, l’objet **Recordset** fait référence à un seul enregistrement dans le jeu en tant qu’enregistrement actif.  

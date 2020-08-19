@@ -1,4 +1,5 @@
 ---
+description: Open, méthode (Stream ADO)
 title: Open, méthode (objet Stream ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d59fcbbd7edea7ac87b2c080d27160cb98732759
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: baa3cb3eb5b2284a606362e31e0f185ab768c5f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442951"
 ---
 # <a name="open-method-ado-stream"></a>Open, méthode (Stream ADO)
 Ouvre un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) pour manipuler des flux de données binaires ou de texte.  
@@ -43,7 +44,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *OpenOptions*  
  facultatif. Valeur [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) . La valeur par défaut est **adOpenStreamUnspecified**.  
   
- *Nom d’utilisateur*  
+ *UserName*  
  facultatif. Valeur de **chaîne** qui contient l’identification de l’utilisateur qui, si nécessaire, accède à l’objet de **flux** .  
   
  *Mot de passe*  

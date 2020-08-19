@@ -1,4 +1,5 @@
 ---
+description: Optimize, exemple de propriété (VC++)
 title: Optimize, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f7db7d9ed14c91caf2551ef350833a67788920b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442881"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize, exemple de propriété (VC++)
 Cet exemple illustre la propriété d' **optimisation** dynamique de l’objet [Field](../../../ado/reference/ado-api/field-object.md) . Le champ **zip** de la table **Authors** de la base de données **pubs** n’est pas indexé. L’affectation de la **valeur true** à la propriété [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) du champ **zip** autorise ADO à générer un index qui améliore les performances de la méthode [Find](../../../ado/reference/ado-api/find-method-ado.md) .  

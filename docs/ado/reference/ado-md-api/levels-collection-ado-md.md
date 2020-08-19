@@ -1,4 +1,5 @@
 ---
+description: Levels, collection (ADO MD)
 title: Collection Levels (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133fff62129390c8dd0b843c48c3db81b742ea3d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 384eec0cf4d0790415eb69948981e32c86b86495
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440941"
 ---
 # <a name="levels-collection-ado-md"></a>Levels, collection (ADO MD)
 Contient les objets de [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) qui composent une hiérarchie.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **Levels** est une collection ADO standard. À l’aide des propriétés et des méthodes d’une collection, vous pouvez effectuer les opérations suivantes :  
   
 -   Obtenez le nombre d’objets dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  

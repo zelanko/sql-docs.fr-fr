@@ -1,4 +1,5 @@
 ---
+description: Glossaire ADO
 title: Glossaire ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441431"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.  
@@ -100,7 +101,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  opérateur de comparaison  
  Opérateur qui compare deux expressions et retourne une valeur booléenne.  
   
- Paramètre de critère qui peut être exprimé sous la forme « > » (supérieur à), « \< » (inférieur à), « = » (égal à), « >= » (supérieur ou égal à), « <= » (inférieur ou égal à), « <> » (différent de) ou « like » (critères spéciaux).  
+ Paramètre de critère qui peut être exprimé sous la forme « > » (supérieur à), « \<" (less than), "=" (equal), "> = » (supérieur ou égal à), « <= » (inférieur ou égal à), « <> » (différent de) ou « like » (critères spéciaux).  
   
  component  
  Objet qui encapsule les données et le code, et fournit un ensemble bien spécifié de services disponibles publiquement.  
@@ -160,7 +161,7 @@ Cette rubrique définit les termes pertinents pour ADO.
   
 ## <a name="e"></a>E  
  Énumération  
- Liste de constantes nommées. Les valeurs énumérées ne doivent pas être uniques. Toutefois, le nom de chaque valeur doit être unique dans l’étendue où l’énumération est définie. Dans ADO, les énumérations sont utilisées pour les paramètres numériques et les valeurs de retour, afin d’ajouter une signification au code ADO et de protéger le développeur des valeurs numériques (qui peuvent changer d’une version à l’autres). Par exemple, pour ouvrir un **jeu d’enregistrements**statique, utilisez la valeur énumérée **adOpenStatic** :`Recordset.Open ,,adOpenStatic`  
+ Liste de constantes nommées. Les valeurs énumérées ne doivent pas être uniques. Toutefois, le nom de chaque valeur doit être unique dans l’étendue où l’énumération est définie. Dans ADO, les énumérations sont utilisées pour les paramètres numériques et les valeurs de retour, afin d’ajouter une signification au code ADO et de protéger le développeur des valeurs numériques (qui peuvent changer d’une version à l’autres). Par exemple, pour ouvrir un **jeu d’enregistrements**statique, utilisez la valeur énumérée **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
   
  Également appelée *constante énumérée*. Voir aussi *constante*.  
   
@@ -186,7 +187,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  ISAPI (Internet Server Application Programming Interface)  
  Ensemble de fonctions pour les serveurs Internet, tels qu’un serveur Windows NT® Server/Windows 2000 exécutant Microsoft® Internet Information Services (IIS).  
   
- Clé :  
+ Clé  
  Colonne ou colonnes dans une table qui identifie de façon unique une ligne ; souvent utilisée pour indexer une table.  
   
 ## <a name="m"></a>M  
@@ -202,7 +203,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  MIME est une norme qui permet de publier et de lire des données binaires sur Internet. L’en-tête d’un fichier contenant des données binaires contient le type MIME des données ; Cela indique aux programmes clients (navigateurs Web et packages de courrier électronique, par exemple) qu’ils doivent gérer les données d’une manière différente de celle qui gère le texte. Par exemple, l’en-tête d’un document Web contenant un graphique JPEG contient le type MIME spécifique au format de fichier JPEG. Cela permet à un navigateur d’afficher le fichier avec sa visionneuse JPEG, s’il en existe un.  
   
 ## <a name="n-o"></a>N-O  
- node  
+ nœud  
  Élément dans une arborescence hiérarchique. Un nœud peut être la racine ou l’enfant d’un autre nœud. Un nœud peut également être le parent de plusieurs enfants. Voir aussi hiérarchie, arborescence, racine, enfant, parent.  
   
  variable objet  

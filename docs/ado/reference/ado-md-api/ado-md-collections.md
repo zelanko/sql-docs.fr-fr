@@ -1,4 +1,5 @@
 ---
+description: Collections ADO MD
 title: Collections de ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f04c25b012ba8ae84a9012beba7d3a664fbaa4d4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 39991f68305c1769201dd927caf79b6cc91975a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441391"
 ---
 # <a name="ado-md-collections"></a>Collections ADO MD
 
@@ -29,7 +30,7 @@ ms.locfileid: "87243140"
 |[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contient les objets de **dimension** qui composent un cube.|  
 |[Hiérarchies](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Contient les objets de **hiérarchie** définis d’une dimension.|  
 |[Niveaux](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contient les objets de **niveau** qui composent une hiérarchie.|  
-|[Membres](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contient les objets **membres** d’un niveau ou d’une position le long d’un axe.|  
+|[Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) (Membres)|Contient les objets **membres** d’un niveau ou d’une position le long d’un axe.|  
 |[Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Contient les objets **position** qui définissent un point sur un axe.|  
   
 ## <a name="see-also"></a>Voir aussi  

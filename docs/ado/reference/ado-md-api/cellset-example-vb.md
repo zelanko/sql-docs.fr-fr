@@ -1,4 +1,5 @@
 ---
+description: Exemple avec Cellset (VB)
 title: CellSet, exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 943e36057478cbb6acfcabc0fa2ad713b4e43ac5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f6f7b3fc6b60429783ba942b30193e72c60c6711
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441221"
 ---
 # <a name="cellset-example-vb"></a>Exemple avec Cellset (VB)
 Ce projet de Visual Basic montre les bases de l’utilisation de ADO MD pour accéder aux données du cube. Elle affiche des légendes de membre pour les en-têtes de colonne et de ligne, puis affiche les valeurs mises en forme de cellules spécifiques dans l’objet CellSet.  
