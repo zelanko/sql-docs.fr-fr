@@ -1,4 +1,5 @@
 ---
+description: FilterCriterion, propriété (RDS)
 title: FilterCriterion, propriété (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88e1bbdb45b48e42d69bd921384056089b3a2241
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b1e2c46549f680e248d5734efa58d949d83f3800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438991"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion, propriété (RDS)
 Indique l’opérateur d’évaluation à utiliser dans la valeur de filtre.  
@@ -38,9 +39,9 @@ DataControl.FilterCriterion = String
  Variable objet qui représente un objet [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *Chaîne*  
- Valeur de **chaîne** qui spécifie l’opérateur d’évaluation de [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) pour les enregistrements. Il peut s’agir de l’un des éléments suivants : <, \< =, >, >=, = ou <>.  
+ Valeur de **chaîne** qui spécifie l’opérateur d’évaluation de [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) pour les enregistrements. Il peut s’agir de l’un des éléments suivants : <, \<=, > , >=, = ou <>.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les propriétés [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fournissent des fonctionnalités de tri et de filtrage sur le cache côté client. La fonctionnalité de tri commande les enregistrements par valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble d’enregistrements basés sur des critères de recherche, tandis que le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) complet est conservé dans le cache. La méthode de [réinitialisation](../../../ado/reference/rds-api/reset-method-rds.md) exécute les critères et remplace le **jeu d’enregistrements** actuel par un **jeu d’enregistrements**pouvant être mis à jour.  
   
  L’opérateur «  ! = » n’est pas valide pour **FilterCriterion**; Utilisez plutôt « <> ».  

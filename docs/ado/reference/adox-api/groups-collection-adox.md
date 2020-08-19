@@ -1,4 +1,5 @@
 ---
+description: Groups, collection (ADOX)
 title: Groups, collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70c32ba5e4726aca7d6ad8b37c7df082d25b94b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439991"
 ---
 # <a name="groups-collection-adox"></a>Groups, collection (ADOX)
 Contient tous les objets de [groupe](../../../ado/reference/adox-api/group-object-adox.md) stockés d’un catalogue ou d’un utilisateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La collection **groups** d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les comptes de groupe du catalogue. La collection **groups** pour un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) représente uniquement le groupe auquel appartient l’utilisateur.  
   
  La méthode [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) d’une collection **groups** est unique pour ADOX. Vous pouvez :  

@@ -1,4 +1,5 @@
 ---
+description: Type, propriété (clé) (ADOX)
 title: Type, propriété (Key) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 000169993f3aae1047369449b7df71551b52ea22
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 28c61045a301047b944447f6037f06324a49cadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439441"
 ---
 # <a name="type-property-key-adox"></a>Type, propriété (clé) (ADOX)
 Indique le type de la clé.  

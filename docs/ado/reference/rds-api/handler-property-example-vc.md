@@ -1,4 +1,5 @@
 ---
+description: Handler, exemple de propriété (VC++)
 title: Handler, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16e94fad7c5dfc85fcde7d835363e800ab5d3f46
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438961"
 ---
 # <a name="handler-property-example-vc"></a>Handler, exemple de propriété (VC++)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751974"
   
  Cet exemple illustre la propriété du [Gestionnaire](../../../ado/reference/rds-api/handler-property-rds.md) d’objets [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Pour plus d’informations, consultez [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
   
- Supposons que les sections suivantes du fichier de paramètres msdfmap. ini se trouvent sur le serveur :  
+ Supposons que les sections suivantes dans le fichier de paramètres, Msdfmap.ini, situées sur le serveur :  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Votre code ressemble à ce qui suit. La commande affectée à la propriété [SQL](../../../ado/reference/rds-api/sql-property.md) correspond à l’identificateur ***AuthorById*** et récupère une ligne pour l’auteur Michael O’Leary. Bien que la propriété [Connect](../../../ado/reference/rds-api/connect-property-rds.md) dans votre code spécifie la source de données Northwind, cette source de données sera remplacée par la section de *connexion* msdfmap. ini. La propriété de [jeu d’enregistrements](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) de l’objet **DataControl** est assignée à un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) déconnecté, ce qui est purement indicatif.  
+ Votre code ressemble à ce qui suit. La commande affectée à la propriété [SQL](../../../ado/reference/rds-api/sql-property.md) correspond à l’identificateur ***AuthorById*** et récupère une ligne pour l’auteur Michael O’Leary. Bien que la propriété [Connect](../../../ado/reference/rds-api/connect-property-rds.md) dans votre code spécifie la source de données Northwind, cette source de données sera remplacée par la section Msdfmap.ini *Connect* . La propriété de [jeu d’enregistrements](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) de l’objet **DataControl** est assignée à un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) déconnecté, ce qui est purement indicatif.  
   
 ```  
 // BeginHandlerCpp.cpp  

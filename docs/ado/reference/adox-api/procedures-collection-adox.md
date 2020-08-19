@@ -1,4 +1,5 @@
 ---
+description: Procedures, collection (ADOX)
 title: Procedures, collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3719107d002e91880d59b0ba33c25c09596a80b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439621"
 ---
 # <a name="procedures-collection-adox"></a>Procedures, collection (ADOX)
 Contient tous les objets de [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) d’un catalogue.  

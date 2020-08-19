@@ -1,4 +1,5 @@
 ---
+description: Données retournées par les fonctions de catalogue
 title: Données retournées par les fonctions de catalogue | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0d9b63de04f79fd95c1b06d8e84d85c6f4fea02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c42319520696060cd52c14c46f968badee27e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429361"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Données retournées par les fonctions de catalogue
 Chaque fonction de catalogue retourne des données sous la forme d’un jeu de résultats. Ce jeu de résultats n’est pas différent de tout autre jeu de résultats. Elle est généralement générée par une instruction **Select** paramétrable prédéfinie qui est codée en dur dans le pilote ou stockée dans une procédure de la source de données. Pour plus d’informations sur la façon de récupérer des données à partir d’un jeu de résultats, consultez [was a-t-il créé un jeu de résultats ?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

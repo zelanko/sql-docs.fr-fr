@@ -1,4 +1,5 @@
 ---
+description: Séquences d’échappement dans ODBC
 title: Séquences d’échappement dans ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62745b749870fa33151fc1a5f6bd3a1bfc344ad7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429311"
 ---
 # <a name="escape-sequences-in-odbc"></a>Séquences d’échappement dans ODBC
 Un certain nombre de fonctionnalités de langage, telles que les jointures externes et les appels de fonction scalaires, sont généralement implémentées par des SGBD. Toutefois, les syntaxes de ces fonctionnalités ont tendance à être spécifiques au SGBD, même lorsque les syntaxes standard sont définies par les divers corps de normes. Pour cette raison, ODBC définit des séquences d’échappement qui contiennent des syntaxes standard pour les fonctionnalités de langage suivantes :  
@@ -46,9 +47,9 @@ Un certain nombre de fonctionnalités de langage, telles que les jointures exter
  La séquence d’échappement est reconnue et analysée par les pilotes, qui remplacent les séquences d’échappement par une grammaire spécifique au SGBD. Pour plus d’informations sur la syntaxe de séquence d’échappement, consultez [séquences d’échappement ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) dans annexe C : grammaire SQL.  
   
 > [!NOTE]  
->  Dans ODBC 2. *x*, il s’agit de la syntaxe standard de la séquence d’échappement : **--(\*fournisseur (**_nom du fournisseur_**),**_extension_ _product-name_**)** ** \*** du produit (nom du produit))--  
+>  Dans ODBC 2. *x*, il s’agit de la syntaxe standard de la séquence d’échappement : **--( \* fournisseur (**_nom du fournisseur_**), extension du produit (**_nom du produit_**)**_extension_ ** \* )--**  
 >   
->  En plus de cette syntaxe, une syntaxe sténographique a été définie sous la forme : **{**_extension_**}**  
+>  En plus de cette syntaxe, une syntaxe sténographique a été définie sous la forme :            **{**_extension_**}**  
 >   
 >  Dans ODBC 3. *x*, la forme longue de la séquence d’échappement est dépréciée et la forme abrégée est utilisée exclusivement.  
   

@@ -1,4 +1,5 @@
 ---
+description: CreateRecordset, méthode (RDS)
 title: CreateRecordset, méthode (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439151"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset, méthode (RDS)
 Crée un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)vide et déconnecté.  
@@ -65,28 +66,28 @@ object.CreateRecordset(ColumnInfos)
   
  Pour certains types de données de variable, le type peut être forcé au type noté dans la colonne de substitution. Vous ne verrez pas les substitutions tant que le **jeu d’enregistrements** n’a pas été créé et rempli. Vous pouvez ensuite vérifier le type de données réel, si nécessaire.  
   
-|Longueur|Constant|Number|Substitution|  
+|Longueur|Constante|Number|Substitution|  
 |------------|--------------|------------|------------------|  
-|Résolution|**adTinyInt**|16||  
-|Résolution|**adSmallInt**|2||  
-|Résolution|**adInteger**|3||  
-|Résolution|**adBigInt**|20||  
-|Résolution|**adUnsignedTinyInt**|17||  
-|Résolution|**adUnsignedSmallInt**|18||  
-|Résolution|**adUnsignedInt**|19||  
-|Résolution|**adUnsignedBigInt**|21||  
-|Résolution|**adSingle**|4||  
-|Résolution|**adDouble**|5||  
-|Résolution|**adCurrency**|6||  
-|Résolution|**adDecimal**|14||  
-|Résolution|**adNumeric**|131||  
-|Résolution|**adBoolean**|11||  
-|Résolution|**adError**|10||  
-|Résolution|**adGuid**|72||  
-|Résolution|**adDate**|7||  
-|Résolution|**adDBDate**|133||  
-|Résolution|**adDBTime**|134||  
-|Résolution|**adDBTimestamp**|135|7|  
+|Fixe|**adTinyInt**|16||  
+|Fixe|**adSmallInt**|2||  
+|Fixe|**adInteger**|3||  
+|Fixe|**adBigInt**|20||  
+|Fixe|**adUnsignedTinyInt**|17||  
+|Fixe|**adUnsignedSmallInt**|18||  
+|Fixe|**adUnsignedInt**|19||  
+|Fixe|**adUnsignedBigInt**|21||  
+|Fixe|**adSingle**|4||  
+|Fixe|**adDouble**|5||  
+|Fixe|**adCurrency**|6||  
+|Fixe|**adDecimal**|14||  
+|Fixe|**adNumeric**|131||  
+|Fixe|**adBoolean**|11||  
+|Fixe|**adError**|10||  
+|Fixe|**adGuid**|72||  
+|Fixe|**adDate**|7||  
+|Fixe|**adDBDate**|133||  
+|Fixe|**adDBTime**|134||  
+|Fixe|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
 |Variable|**adVarChar**|200||  

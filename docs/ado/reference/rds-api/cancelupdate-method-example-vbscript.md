@@ -1,4 +1,5 @@
 ---
+description: CancelUpdate, exemple de méthode (VBScript)
 title: CancelUpdate, exemple de méthode (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 21d940642388c516ddf9c0048e255e441b9076b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439241"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate, exemple de méthode (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Pour tester cet exemple, coupez et collez ce code entre les \< balises Body> et \< /Body> dans un document HTML normal, puis nommez-le **CancelUpdateVBS. asp**. Le script ASP identifie votre serveur Internet. Vous devrez modifier le nom du serveur pour refléter votre propre configuration. Remplacez simplement la valeur de la chaîne de connexion monserveur par le nom de votre installation SQL Server.  
+ Pour tester cet exemple, coupez et collez ce code entre \<Body> les \</Body> balises et dans un document HTML normal et nommez-le **CancelUpdateVBS. asp**. Le script ASP identifie votre serveur Internet. Vous devrez modifier le nom du serveur pour refléter votre propre configuration. Remplacez simplement la valeur de la chaîne de connexion monserveur par le nom de votre installation SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

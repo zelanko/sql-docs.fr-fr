@@ -1,4 +1,5 @@
 ---
+description: Conversions de type de données
 title: Conversions de types de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd888fe32692494e2b0ceadc1ed872dd96e244a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92c31cb12c7bb02cf8e108251ae5ebd6f12aed5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429341"
 ---
 # <a name="data-type-conversions"></a>Conversions de type de données
 Les données peuvent être converties d’un type à un autre à l’un des quatre moments suivants : lorsque les données sont transférées d’une variable d’application à une autre (C vers C), lorsque les données d’une variable d’application sont envoyées à un paramètre d’instruction (C vers SQL), lorsque les données d’une colonne de jeu de résultats sont renvoyées dans une variable d’application (SQL à C) et lorsque les données sont transférées d’une colonne source de données à une autre  

@@ -1,4 +1,5 @@
 ---
+description: Obtention de données de type Long
 title: Obtention de données de type long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da901c22eb26af063397b4af184179ebe5c75924
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3a40bc3f4f65f747776d747d79868340de06f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429281"
 ---
 # <a name="getting-long-data"></a>Obtention de données de type Long
 Les SGBD définissent des *données longues* sous forme de données binaires ou de caractères sur une certaine taille, par exemple 255 caractères. Ces données peuvent être suffisamment petites pour être stockées dans une seule mémoire tampon, telle qu’une description de partie de plusieurs milliers de caractères. Toutefois, il peut être trop long pour être stocké en mémoire, tel que des documents texte longs ou des bitmaps. Comme ces données ne peuvent pas être stockées dans une seule mémoire tampon, elles sont extraites du pilote en parties avec **SQLGetData** après que les autres données de la ligne ont été extraites.  

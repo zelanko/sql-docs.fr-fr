@@ -1,4 +1,5 @@
 ---
+description: Détermination des SGBD et des pilotes cibles
 title: Détermination des SGBD et des pilotes cibles | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dfbc11e96577e9027d1cc6e17701a82b89061be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429321"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Détermination des SGBD et des pilotes cibles
 La question suivante à prendre en compte est, quels sont les SGBD cibles pour l’application et quels pilotes sont disponibles pour prendre en charge ces SGBD ? Étant donné que les applications génériques ont tendance à être très interopérables, la question des SGBD cibles est la plus applicable aux applications personnalisées et verticales. Toutefois, la question des pilotes cibles s’applique à toutes les applications, car les pilotes varient largement en vitesse, qualité, prise en charge des fonctionnalités et disponibilité. En outre, si les pilotes doivent être redistribués avec l’application, le coût et la disponibilité des plans de licences doivent être pris en compte.  

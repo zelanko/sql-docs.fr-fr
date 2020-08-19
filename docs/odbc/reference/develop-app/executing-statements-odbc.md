@@ -1,4 +1,5 @@
 ---
+description: Exécution d’instructions (ODBC)
 title: Exécution d’instructions ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f34053646c9a279a95740132fcb7a046c559795c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97bd1b12ba275fa066c07d0bd936447c2ab77570
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429291"
 ---
 # <a name="executing-statements-odbc"></a>Exécution d’instructions (ODBC)
 Les applications ODBC effectuent presque tous les accès aux bases de données en exécutant des instructions SQL. La séquence générale des événements consiste à allouer un descripteur d’instruction, à définir des attributs d’instruction, à exécuter l’instruction, à récupérer des résultats et à libérer le descripteur d’instruction.  

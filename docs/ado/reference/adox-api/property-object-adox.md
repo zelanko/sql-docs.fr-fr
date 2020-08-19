@@ -1,4 +1,5 @@
 ---
+description: Property, objet (ADOX)
 title: Property, objet (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a836b5b0778aea77732036d1951db81aa790198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439601"
 ---
 # <a name="property-object-adox"></a>Property, objet (ADOX)
 Représente une caractéristique d’un objet ADOX.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les objets ADOX ont deux types de propriétés : intégré et dynamique.  
   
  Les propriétés intégrées sont les propriétés immédiatement disponibles pour tout nouvel objet, à l’aide de la syntaxe MyObject. Property. Ils n’apparaissent pas en tant qu’objets de propriété dans la [collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)d’un objet. par conséquent, bien que vous puissiez modifier leurs valeurs, vous ne pouvez pas modifier leurs caractéristiques.  

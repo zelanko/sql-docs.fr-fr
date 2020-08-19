@@ -1,4 +1,5 @@
 ---
+description: InternetTimeout, exemple de propriété (VC++)
 title: InternetTimeout, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13c9b2da5a9835946bc963af317c1c274232bd9c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a567da551fbadc89ca28e8df169b0149b780897
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438931"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout, exemple de propriété (VC++)
 > [!IMPORTANT]

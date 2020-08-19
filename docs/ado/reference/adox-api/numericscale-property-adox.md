@@ -1,4 +1,5 @@
 ---
+description: NumericScale, propriété (ADOX)
 title: NumericScale, propriété (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0a0090a24207e6faad1b14aa3cb5afd6091bc87
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94b5a154bfed13485787d46c768a371e0cceb65e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439761"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale, propriété (ADOX)
 Indique l’échelle d’une valeur numérique dans la colonne.  

@@ -1,4 +1,5 @@
 ---
+description: View, objet (ADOX)
 title: View, objet (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b468ccc3edc4cc5453b4f08371cd2b4b962f0c72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cc635db04358417948e709a4c47605fae17669b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439361"
 ---
 # <a name="view-object-adox"></a>View, objet (ADOX)
 Représente un jeu d’enregistrements filtré ou une table virtuelle. Lorsqu’il est utilisé conjointement avec l’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) ADO, l’objet **View** peut être utilisé pour ajouter, supprimer ou modifier des vues.  

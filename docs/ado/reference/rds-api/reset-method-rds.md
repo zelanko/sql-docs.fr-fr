@@ -1,4 +1,5 @@
 ---
+description: Reset, méthode (RDS)
 title: Reset, méthode (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c2f40460a4690e32cb3f94963c8cbc1f7f06c15
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438701"
 ---
 # <a name="reset-method-rds"></a>Reset, méthode (RDS)
 Exécute le tri ou le filtre sur un **jeu d’enregistrements** côté client en fonction des propriétés de tri et de filtre spécifiées.  
@@ -40,7 +41,7 @@ DataControl.Reset(value)
  *value*  
  facultatif. Valeur **booléenne** qui est **true** (valeur par défaut) si vous souhaitez filtrer sur l’ensemble de lignes « filtré » actuel. **False** indique que vous filtrez sur l’ensemble de lignes d’origine, en supprimant toutes les options de filtre précédentes.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les propriétés [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fournissent des fonctionnalités de tri et de filtrage sur le cache côté client. La fonctionnalité de tri commande les enregistrements par valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble d’enregistrements basés sur des critères de recherche, tandis que le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) complet est conservé dans le cache. La méthode de **réinitialisation** exécute les critères et remplace le **jeu d’enregistrements** actuel par un **jeu d’enregistrements**pouvant être mis à jour.  
   
  Si des modifications ont été apportées aux données d’origine qui n’ont pas été envoyées, la méthode de **réinitialisation** échoue. Tout d’abord, utilisez la méthode [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) pour enregistrer les modifications apportées à un **jeu d’enregistrements**en lecture/écriture, puis utilisez la méthode **Reset** pour trier ou filtrer les enregistrements.  

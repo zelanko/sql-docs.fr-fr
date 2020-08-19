@@ -1,4 +1,5 @@
 ---
+description: Handler, exemple de propriété (VB)
 title: Handler, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 829059639c182fa607ccb9ffe62658705500692d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438971"
 ---
 # <a name="handler-property-example-vb"></a>Handler, exemple de propriété (VB)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751990"
   
  Cet exemple illustre la propriété du [Gestionnaire](../../../ado/reference/rds-api/handler-property-rds.md) d’objets [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Pour plus d’informations, consultez [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
   
- Supposons que les sections suivantes du fichier de paramètres msdfmap. ini se trouvent sur le serveur :  
+ Supposons que les sections suivantes du fichier de paramètres, Msdfmap.ini, se trouvent sur le serveur :  
   
 ```  
 [connect AuthorDataBase]  

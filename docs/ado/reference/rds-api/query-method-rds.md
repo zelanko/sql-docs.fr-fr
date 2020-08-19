@@ -1,4 +1,5 @@
 ---
+description: Query, méthode (RDS)
 title: Query, méthode (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3025f37b47cd545e7e7cde127e96740077ab961
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4d883d9498622c5118ecfcaa418bd734e4356c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438861"
 ---
 # <a name="query-method-rds"></a>Query, méthode (RDS)
 Utilise une chaîne de requête SQL valide pour retourner un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -46,7 +47,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Requête*  
  **Chaîne** qui contient la requête SQL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La requête doit utiliser le dialecte SQL du serveur de base de données. Un état de résultat est retourné en cas d’erreur avec la requête qui a été exécutée. La méthode de **requête** n’effectue aucune vérification de la syntaxe sur la chaîne de **requête** .  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -1,4 +1,5 @@
 ---
+description: BottomSum (DMX)
 title: BottomSum (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8a80c42971199d6acf57e802994feced63b7899f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431141"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -98,8 +99,8 @@ NATURAL PREDICTION JOIN
  **Remarque** Cet exemple est fourni uniquement pour illustrer l’utilisation de BottomSum. L'exécution de cette requête peut prendre beaucoup de temps, en fonction de la taille de votre jeu de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent&#41;DMX &#40;](../dmx/bottompercent-dmx.md)  
   
   

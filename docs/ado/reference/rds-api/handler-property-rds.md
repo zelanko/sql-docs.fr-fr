@@ -1,4 +1,5 @@
 ---
+description: Handler, propriété (RDS)
 title: Handler, propriété (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438951"
 ---
 # <a name="handler-property-rds"></a>Handler, propriété (RDS)
 Indique le nom d’un programme de personnalisation côté serveur (gestionnaire) qui étend les fonctionnalités de [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)et de tous les paramètres utilisés par le *Gestionnaire*.  
@@ -42,12 +43,12 @@ DataControl.Handler = String
  *Chaîne*  
  Valeur de **chaîne** qui contient le nom du gestionnaire et des paramètres, tous séparés par des virgules (par exemple, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette propriété prend en charge la [personnalisation](../../../ado/guide/remote-data-service/datafactory-customization.md), une fonctionnalité qui requiert la définition de la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) sur **adUseClient**.  
   
  Le nom du gestionnaire et ses paramètres, le cas échéant, sont séparés par des virgules (","). Un comportement imprévisible se produira si un point-virgule (« ; ») apparaît n’importe où dans la *chaîne*. Vous pouvez écrire votre propre gestionnaire, à condition qu’il prenne en charge l’interface **IDataFactoryHandler** .  
   
- Le nom du gestionnaire par défaut est **msdfmap. Le gestionnaire**, et son paramètre par défaut, est un fichier de personnalisation nommé **msdfmap. INI**. Utilisez cette propriété pour appeler d’autres fichiers de personnalisation créés par l’administrateur du serveur.  
+ Le nom du gestionnaire par défaut est **msdfmap. Et son**paramètre par défaut est un fichier de personnalisation nommé **MSDFMAP.INI**. Utilisez cette propriété pour appeler d’autres fichiers de personnalisation créés par l’administrateur du serveur.  
   
  L’alternative à la définition de la propriété de **Gestionnaire** consiste à spécifier un gestionnaire et des paramètres dans la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) . autrement dit, «**handler =**_HandlerName, paramètre1, paramètre2,...;_».  
   

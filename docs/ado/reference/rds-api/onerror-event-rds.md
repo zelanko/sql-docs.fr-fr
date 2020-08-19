@@ -1,4 +1,5 @@
 ---
+description: onError, événement (RDS)
 title: onError, événement (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e398b80af037763dce479a9fe3a26956b0e3b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438891"
 ---
 # <a name="onerror-event-rds"></a>onError, événement (RDS)
 L’événement **OnError** est appelé chaque fois qu’une erreur se produit pendant une opération.  

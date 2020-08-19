@@ -1,4 +1,5 @@
 ---
+description: Nombre de lignes extraites et état
 title: Nombre de lignes extraites et état | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20e1632e8da765b0da2785bd846b67d13ebe01ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc328aab77d6e59db258c463a7dae1554f7d4c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429211"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Nombre de lignes extraites et état
 Si l’attribut d’instruction SQL_ATTR_ROWS_FETCHED_PTR a été défini, il spécifie une mémoire tampon qui retourne le nombre de lignes extraites par l’appel à **SQLFetch** ou **SQLFetchScroll**, ainsi que les lignes d’erreur. (Ce nombre est le nombre de toutes les lignes qui n’ont pas l’État SQL_ROW_NO_ROWS.) Après un appel à **SQLBulkOperations** ou **SQLSetPos**, la mémoire tampon contient le nombre de lignes affectées par une opération en bloc effectuée par la fonction. Si l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR a été défini, **SQLFetch** ou **SQLFetchScroll** retourne le tableau d' *État de ligne,* qui fournit l’état de chaque ligne retournée. Les deux mémoires tampons pointées par ces champs sont allouées par l’application et remplies par le pilote. Une application doit s’assurer que ces pointeurs restent valides jusqu’à la fermeture du curseur.  

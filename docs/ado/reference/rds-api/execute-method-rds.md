@@ -1,4 +1,5 @@
 ---
+description: Execute, méthode (RDS)
 title: Execute, méthode (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439081"
 ---
 # <a name="execute-method-rds"></a>Execute, méthode (RDS)
 Exécute la demande et crée un jeu d’enregistrements ADO à utiliser dans ADO 2,5 et versions ultérieures.  
@@ -43,7 +44,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *QueryString*  
  Commande dans le langage de commande prise en charge par le fournisseur de OLE DB identifié dans la chaîne de connexion. Pour les fournisseurs basés sur SQL, *QueryString* peut contenir une instruction de commande Transact-SQL, mais pour les fournisseurs non-SQL (par exemple, MSDataShape) il ne s’agit pas d’une [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction de requête.  
   
- Si un gestionnaire est utilisé, le gestionnaire peut modifier ou remplacer la valeur spécifiée ici. Par exemple, le gestionnaire remplace généralement *QueryString* par une chaîne de requête de son fichier. ini. Par défaut, le fichier Msdfmap. ini est utilisé.  
+ Si un gestionnaire est utilisé, le gestionnaire peut modifier ou remplacer la valeur spécifiée ici. Par exemple, le gestionnaire remplace généralement *QueryString* par une chaîne de requête de son fichier. ini. Par défaut, le fichier Msdfmap.ini est utilisé.  
   
  *lFetchOptions*  
  Indique le type d’extraction asynchrone.  
@@ -77,8 +78,8 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Pointeur vers une erreur d’informations retournée par l’instruction EXECUTE. Si la valeur est NULL, aucune information d’erreur n’est retournée.  
   
-## <a name="remarks"></a>Remarques  
- Le paramètre *HandlerString* peut avoir la valeur null. Ce qui se passe dans ce cas dépend de la configuration du serveur RDS. La chaîne de gestionnaire « MSDFMAP. Handler » indique que le gestionnaire fourni par Microsoft (msdfmap. dll) doit être utilisé. Une chaîne de gestionnaire « MASDFMAP. Handler, Sample. ini » indique que le gestionnaire msdfmap. dll doit être utilisé et que l’argument « Sample. ini » doit être passé au gestionnaire. MSDFMAP. dll interprète l’argument comme une direction pour utiliser le fichier Sample. ini afin de vérifier la connexion et les chaînes de requête.  
+## <a name="remarks"></a>Notes  
+ Le paramètre *HandlerString* peut avoir la valeur null. Ce qui se passe dans ce cas dépend de la configuration du serveur RDS. La chaîne de gestionnaire « MSDFMAP. Handler » indique que le gestionnaire fourni par Microsoft (Msdfmap.dll) doit être utilisé. Une chaîne de gestionnaire « MASDFMAP. Handler, sample.ini » indique que le gestionnaire de Msdfmap.dll doit être utilisé et que l’argument « sample.ini » doit être passé au gestionnaire. MSDFMAP.dll interprète l’argument comme une direction pour utiliser la sample.ini pour vérifier la connexion et les chaînes de requête.  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataFactory, objet (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

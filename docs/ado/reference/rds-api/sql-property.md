@@ -1,4 +1,5 @@
 ---
+description: SQL, propriété
 title: Propriété SQL | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438601"
 ---
 # <a name="sql-property"></a>SQL, propriété
 Indique la chaîne de requête utilisée pour récupérer le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Vous pouvez définir la propriété **SQL** au moment du design dans le [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Les balises d’objet de l’objet DataControl, ou au moment de l’exécution dans le code de script.  
+ Vous pouvez définir la propriété **SQL** au moment du design dans le [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Les balises d’objet de l’objet DataControl, ou au moment de l’exécution dans le code de script.  
   
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  

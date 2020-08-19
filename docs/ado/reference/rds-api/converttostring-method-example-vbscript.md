@@ -1,4 +1,5 @@
 ---
+description: ConvertToString, exemple de méthode (VBScript)
 title: ConvertToString, exemple de méthode (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfaba4a4ef4a67bb4b5970bf347674814caab13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d30d0268d974f8ab4cac2238ec8672c9948dcaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439180"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString, exemple de méthode (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- L’exemple suivant montre comment convertir un **Recordset** en chaîne codée au format MIME à l’aide de la méthode **ConvertToString de RDSServer. DataFactory** . Il montre ensuite comment la chaîne peut être reconvertie en un **Recordset**. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le sous le terme **ConvertToString. htm**.  
+ L’exemple suivant montre comment convertir un **Recordset** en chaîne codée au format MIME à l’aide de la méthode **ConvertToString de RDSServer. DataFactory** . Il montre ensuite comment la chaîne peut être reconvertie en un **Recordset**. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **ConvertToString.htm**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  

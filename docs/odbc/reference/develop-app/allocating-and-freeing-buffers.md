@@ -1,4 +1,5 @@
 ---
+description: Allocation et libération de mémoires tampons
 title: Allocation et libération de mémoires tampons | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 629c613e8c0aba4675b2b95c9c9ccd82fb7cdfb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429471"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Allocation et libération de mémoires tampons
 Toutes les mémoires tampons sont allouées et libérées par l’application. Si une mémoire tampon n’est pas différée, elle n’a besoin d’exister que pendant la durée de l’appel à une fonction. Par exemple, **SQLGetInfo** retourne la valeur associée à une option particulière dans la mémoire tampon vers laquelle pointe l’argument *InfoValuePtr* . Cette mémoire tampon peut être libérée immédiatement après l’appel à **SQLGetInfo**, comme illustré dans l’exemple de code suivant :  
@@ -34,7 +35,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- Étant donné que les tampons différés sont spécifiés dans une fonction et utilisés dans une autre, il s’agit d’une erreur de programmation d’application pour libérer une mémoire tampon différée alors que le pilote s’attend à ce qu’elle existe encore. Par exemple, l’adresse de la \*mémoire tampon *ValuePtr* est passée à **SQLBindCol** pour une utilisation ultérieure par **SQLFetch**. Cette mémoire tampon ne peut pas être libérée tant que la colonne n’est pas détachée, par exemple avec un appel à **SQLBindCol** ou **SQLFreeStmt** comme indiqué dans l’exemple de code suivant :  
+ Étant donné que les tampons différés sont spécifiés dans une fonction et utilisés dans une autre, il s’agit d’une erreur de programmation d’application pour libérer une mémoire tampon différée alors que le pilote s’attend à ce qu’elle existe encore. Par exemple, l’adresse de la \* mémoire tampon *ValuePtr* est passée à **SQLBindCol** pour une utilisation ultérieure par **SQLFetch**. Cette mémoire tampon ne peut pas être libérée tant que la colonne n’est pas détachée, par exemple avec un appel à **SQLBindCol** ou **SQLFreeStmt** comme indiqué dans l’exemple de code suivant :  
   
 ```  
 SQLRETURN    rc;  

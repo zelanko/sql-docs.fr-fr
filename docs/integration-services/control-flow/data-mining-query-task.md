@@ -1,4 +1,5 @@
 ---
+description: Data Mining Query Task
 title: Requête d’exploration de données, tâche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e678774a8da38b8ff2e8c64adc7309828d6dffb6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431021"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -87,12 +88,12 @@ ms.locfileid: "86919835"
  **Connection**  
  Choisissez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans la liste ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **Nouveau**  
  Créez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Structure d'exploration de données**  
  Sélectionnez une structure d'exploration de données dans la liste.  
@@ -119,12 +120,12 @@ ms.locfileid: "86919835"
  **Requête d'exploration de données**  
  Tapez une requête d'exploration de données.  
   
- **Rubriques connexes :**  [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **Rubriques connexes :**  [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **Générer une nouvelle requête**  
  Créez la requête d'exploration de données en utilisant un outil graphique.  
   
- **Rubriques connexes :** [Requête d'exploration de données](../../integration-services/control-flow/data-mining-query.md)  
+ **Rubriques connexes :** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Options de l'onglet Mappage de paramètre  
  **Nom du paramètre**  

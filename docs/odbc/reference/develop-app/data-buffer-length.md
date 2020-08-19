@@ -1,4 +1,5 @@
 ---
+description: Longueur du tampon de données
 title: Longueur du tampon de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4a4e9a739201d74cfc6c4f7c18e64b91e0fabe4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4ad4f083d9f08c744dd6f832638a49b57c04e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429371"
 ---
 # <a name="data-buffer-length"></a>Longueur du tampon de données
 L’application transmet la longueur d’octet de la mémoire tampon de données au pilote dans un argument nommé *BufferLength* ou un nom similaire. Par exemple, dans l’appel suivant à **SQLBindCol**, l’application spécifie la longueur de la mémoire tampon *ValuePtr* (**sizeof (***ValuePtr***)**) :  

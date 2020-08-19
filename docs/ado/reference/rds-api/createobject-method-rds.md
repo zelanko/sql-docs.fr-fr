@@ -1,4 +1,5 @@
 ---
+description: CreateObject, méthode (RDS)
 title: CreateObject, méthode (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439201"
 ---
 # <a name="createobject-method-rds"></a>CreateObject, méthode (RDS)
 Crée le proxy pour l’objet métier cible et retourne un pointeur vers celui-ci. Le proxy conditionne et marshale les données vers le stub côté serveur pour les communications avec l’objet métier pour envoyer des requêtes et des données sur Internet. Pour les objets de composant in-process, aucun proxy n’est utilisé, mais simplement un pointeur vers l’objet est fourni.  
@@ -37,7 +38,7 @@ Crée le proxy pour l’objet métier cible et retourne un pointeur vers celui-c
 |In-process|Set Object = DataSpace. CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>Paramètres  
- *Dessin*  
+ *Object*  
  Variable objet qui prend la valeur d’un objet qui est le type spécifié dans *ProgID*.  
   
  *DataSpace*  

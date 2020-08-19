@@ -1,4 +1,5 @@
 ---
+description: Propriétés personnalisées des fichiers plats
 title: Propriétés personnalisées des fichiers plats | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eef1dd7c7cf1a977f8443f22e7bf3af9158b8ae7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c20e9a830439e8065a1bbccfe7d25540c9ae639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430851"
 ---
 # <a name="flat-file-custom-properties"></a>Propriétés personnalisées des fichiers plats
 
@@ -31,7 +32,7 @@ ms.locfileid: "86919768"
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
 |FileNameColumnName|String|Nom d'une colonne de sortie qui contient le nom de fichier. Si le nom n'est pas spécifié, aucune colonne de sortie contenant le nom de fichier ne sera générée.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de source de fichier plat**, mais elle peut être définie à l’aide de **l’éditeur avancé**.|  
-|RetainNulls|Boolean|Valeur qui spécifie si les valeurs NULL du fichier source doivent être conservées comme valeurs NULL lorsque les données sont traitées par le moteur du pipeline de transformation des données. La valeur par défaut de cette propriété est **False**.|  
+|RetainNulls|Booléen|Valeur qui spécifie si les valeurs NULL du fichier source doivent être conservées comme valeurs NULL lorsque les données sont traitées par le moteur du pipeline de transformation des données. La valeur par défaut de cette propriété est **False**.|  
   
  La sortie de la source de fichier plat n'est pas dotée de propriétés personnalisées.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86919768"
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
 |En-tête|String|Bloc de texte inséré dans le fichier avant l'écriture des données.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
-|Remplacer|Boolean|Valeur qui spécifie s'il faut remplacer un fichier de destination existant qui porte le même nom ou lui ajouter des données. La valeur par défaut de cette propriété est **True**.|  
+|Remplacer|Booléen|Valeur qui spécifie s'il faut remplacer un fichier de destination existant qui porte le même nom ou lui ajouter des données. La valeur par défaut de cette propriété est **True**.|  
   
  L'entrée et les colonnes d'entrée de la destination de fichier plat ne disposent pas de propriétés personnalisées.  
   

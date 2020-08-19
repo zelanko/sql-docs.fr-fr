@@ -1,4 +1,5 @@
 ---
+description: Indexes, collection (ADOX)
 title: Indexes, collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 916671fdf9722c7894ee122f3d68167a8047b72c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439911"
 ---
 # <a name="indexes-collection-adox"></a>Indexes, collection (ADOX)
 Contient tous les objets [index](../../../ado/reference/adox-api/index-object-adox.md) d’une table.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La méthode [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) d’une collection **indexes** est unique pour ADOX. Vous pouvez :  
   
 -   Ajoutez un nouvel index à la collection à l’aide de la méthode **Append** .  

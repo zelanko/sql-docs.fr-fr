@@ -1,4 +1,5 @@
 ---
+description: Types de données d’intervalle
 title: Types de données Interval | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429671"
 ---
 # <a name="interval-data-types"></a>Types de données d’intervalle
 Un intervalle est défini comme la différence entre deux dates et heures. Les intervalles sont exprimés de deux façons différentes. L’un est un intervalle d' *année-mois* qui exprime les intervalles en termes d’années et un nombre entier de mois. L’autre est un intervalle de *jour-heure* qui exprime les intervalles en termes de jours, de minutes et de secondes. Ces deux types d’intervalles sont distincts et ne peuvent pas être mélangés, car les mois peuvent avoir différents nombres de jours.  

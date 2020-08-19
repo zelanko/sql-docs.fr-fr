@@ -1,4 +1,5 @@
 ---
+description: RightsEnum
 title: RightsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439551"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Spécifie les droits ou les autorisations pour un groupe ou un utilisateur sur un objet.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&H4000)|L’utilisateur ou le groupe a l’autorisation de créer des objets de ce type.|  
 |**adRightDelete**|65536 (&H10000)|L’utilisateur ou le groupe a l’autorisation de supprimer des données d’un objet. Pour les objets tels que les **tables**, l’utilisateur a l’autorisation de supprimer des valeurs de données des enregistrements.|  

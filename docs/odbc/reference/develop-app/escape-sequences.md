@@ -1,4 +1,5 @@
 ---
+description: Séquences d’échappement
 title: Séquences d’échappement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d9589230183b198cb7d59cf9739dab75625441e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15c06fc08d78422502b8aea87c40ee2821a9620f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429301"
 ---
 # <a name="escape-sequences"></a>Séquences d’échappement
 ODBC définit des séquences d’échappement contenant la grammaire standard pour les littéraux date, Time, timestamp et DateTime Interval, les appels de fonction scalaires, **comme** les caractères d’échappement de prédicat, les jointures externes et les appels de procédure. Les applications interopérables doivent utiliser ces séquences dans la mesure du possible.  
