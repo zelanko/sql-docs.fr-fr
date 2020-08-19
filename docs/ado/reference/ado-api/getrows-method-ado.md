@@ -1,4 +1,5 @@
 ---
+description: GetRows, méthode (ADO)
 title: GetRows, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443561"
 ---
 # <a name="getrows-method-ado"></a>GetRows, méthode (ADO)
 Récupère plusieurs enregistrements d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un tableau.  
@@ -46,7 +47,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Fields*  
  facultatif. **Variante** qui représente un nom de champ unique ou une position ordinale, ou un tableau de noms de champs ou de numéros de position ordinale. ADO retourne uniquement les données de ces champs.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode **GetRows** pour copier les enregistrements d’un **jeu d’enregistrements** dans un tableau à deux dimensions. Le premier indice identifie le champ et le second identifie le numéro d’enregistrement. La variable de *tableau* est automatiquement dimensionnée à la taille correcte lorsque la méthode **GetRows** retourne les données.  
   
  Si vous ne spécifiez pas de valeur pour l’argument *Rows* , la méthode **GetRows** récupère automatiquement tous les enregistrements dans l’objet **Recordset** . Si vous demandez plus d’enregistrements que ce qui est disponible, **GetRows** retourne uniquement le nombre d’enregistrements disponibles.  

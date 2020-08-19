@@ -1,4 +1,5 @@
 ---
+description: IsolationLevel, propriété
 title: Propriété IsolationLevel | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea8d538dbd5c4c06cb770a983a2733bb2f27e6b2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be8a10877a617a2c2fec2e76de04d3d482cfa71f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443421"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel, propriété
 Indique le niveau d’isolation d’un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -28,7 +29,7 @@ Indique le niveau d’isolation d’un objet de [connexion](../../../ado/referen
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) . La valeur par défaut est **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **IsolationLevel** pour définir le niveau d’isolation d’un objet de **connexion** . Le paramètre ne prend pas effet avant la prochaine fois que vous appelez la méthode [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Si le niveau d’isolation que vous demandez n’est pas disponible, le fournisseur peut retourner le niveau d’isolation supérieur suivant sans mettre à jour la propriété **IsolationLevel** .  
   
  La propriété **IsolationLevel** est en lecture/écriture.  

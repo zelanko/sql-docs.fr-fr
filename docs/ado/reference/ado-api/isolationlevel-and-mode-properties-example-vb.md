@@ -1,4 +1,5 @@
 ---
+description: IsolationLevel et mode, exemple de propriétés (VB)
 title: IsolationLevel et mode, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 893e60a87a59c882a361317af6bced3aabd7c3c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acbf64eca7aa7b0ccbd943d261968f8a70c8f9e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443441"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel et mode, exemple de propriétés (VB)
 Cet exemple utilise la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) pour ouvrir une connexion exclusive, et la propriété [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) pour ouvrir une transaction exécutée de manière isolée d’autres transactions.  

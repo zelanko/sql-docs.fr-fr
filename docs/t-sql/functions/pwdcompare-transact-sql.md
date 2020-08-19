@@ -1,4 +1,5 @@
 ---
+description: PWDCOMPARE (Transact-SQL)
 title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445615"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +47,10 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>Arguments
  **'** *clear_text_password* **'**  
- Mot de passe non chiffré. *clear_text_password* est de type **sysname** (**nvarchar(128)** ).  
+ Mot de passe non chiffré. *clear_text_password* est de type **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- Hachage de chiffrement d'un mot de passe. *password_hash* est de type **varbinary(128)** .  
+ Hachage de chiffrement d'un mot de passe. *password_hash* est de type **varbinary(128)**.  
   
  *version*  
  Paramètre obsolète auquel la valeur 1 peut être affectée si *password_hash* représente une valeur d’un compte de connexion antérieur à [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] qui a été migrée vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, mais n’a jamais été converti vers le système [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. *version* est de type **int**.  
@@ -62,7 +63,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  Renvoie 1 si le hachage de *clear_text_password* correspond au paramètre *password_hash*, et 0 si ce n’est pas le cas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction PWDCOMPARE ne constitue pas une menace pour la force des hachages de mot de passe car le même test pourrait être effectué en essayant de se connecter à l'aide du mot de passe fourni en tant que premier paramètre.  
   
  **PWDCOMPARE** ne peut pas être utilisé avec les mots de passe des utilisateurs de bases de données autonomes. Il n'existe aucun équivalent de base de données autonome.  

@@ -1,4 +1,5 @@
 ---
+description: GetLevel (moteur de base de données)
 title: GetLevel (moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d2a8f93d51cd61e9a6a7654472fabbab95475913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445920"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (moteur de base de données)
 
@@ -49,7 +50,7 @@ SqlInt16 GetLevel ( )
   
 **Type de retour CLR : SqlInt16**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Sert à déterminer le niveau d'un ou plusieurs nœuds ou à filtrer les nœuds afin d'obtenir les membres d'un niveau spécifié. La racine de la hiérarchie est le niveau 0.
   
 GetLevel est utile pour les index de recherche à largeur prioritaire. Pour plus d’informations, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).

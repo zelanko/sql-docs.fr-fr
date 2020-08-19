@@ -1,4 +1,5 @@
 ---
+description: Conversion non déterministe de chaînes de date littérale en valeurs DATE
 title: Conversion non déterministe des littéraux de date | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445867"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversion non déterministe de chaînes de date littérale en valeurs DATE
 
@@ -81,7 +82,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 Au Japon et en Chine, le format DATEFORMAT **ymd** (amj) est utilisé. Les parties du format sont dans un ordre significatif, qui va de la plus grande unité à la plus petite. Ce format est donc trié correctement. Ce format est considéré comme étant le format _international_. Il est international, car les quatre chiffres de l’année ne sont pas ambigus, et qu’aucun pays sur terre n’utilise le format archaïque **ydm** (ajm).
 
-Dans d’autres pays, comme l’Allemagne et la France, le format DATEFORMAT est **dmy** (jma), ce qui signifie **« jj-mm-aaaa »** . Le format **dmy** (jma) ne se trie pas correctement, mais c’est une séquence significative allant de la plus petite unité à la plus grande.
+Dans d’autres pays, comme l’Allemagne et la France, le format DATEFORMAT est **dmy** (jma), ce qui signifie **« jj-mm-aaaa »**. Le format **dmy** (jma) ne se trie pas correctement, mais c’est une séquence significative allant de la plus petite unité à la plus grande.
 
 Les États-Unis et les États fédérés de Micronésie sont les seuls pays à utiliser **mdy** (mja), qui ne se trie pas. La séquence mixte du format correspond à un modèle de discours parlé dans les dates énoncées verbalement.
 
@@ -145,7 +146,7 @@ La conversion de données caractères non-Unicode entre les classements est éga
 ## <a name="see-also"></a>Voir aussi
 
 - [Définir une langue de session](../../relational-databases/collations/set-a-session-language.md)
-- [Types de données et fonctions de date et d’heure (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)
+- [Types de données et fonctions de date et d'heure (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)
 - [FORMAT (Transact-SQL)](../functions/format-transact-sql.md)
 - [ISDATE (Transact-SQL)](../functions/isdate-transact-sql.md)
 

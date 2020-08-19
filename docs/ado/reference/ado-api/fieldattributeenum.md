@@ -1,4 +1,5 @@
 ---
+description: FieldAttributeEnum
 title: FieldAttributeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd8910f07b5f30170e8addd90fa41ab3299fbda5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443761"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Spécifie un ou plusieurs attributs d’un objet de [champ](../../../ado/reference/ado-api/field-object.md) .  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Indique que le fournisseur met en cache les valeurs de champ et que les lectures suivantes sont effectuées à partir du cache.|  
 |**adFldFixed**|0x10|Indique que le champ contient des données de longueur fixe.|  
@@ -48,7 +49,7 @@ Spécifie un ou plusieurs attributs d’un objet de [champ](../../../ado/referen
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.FieldAttribute.CACHEDEFERRED|  
 |AdoEnums.FieldAttribute.FIXED|  

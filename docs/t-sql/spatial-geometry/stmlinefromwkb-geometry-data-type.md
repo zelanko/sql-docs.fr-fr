@@ -1,4 +1,5 @@
 ---
+description: STMLineFromWKB (type de données geometry)
 title: STMLineFromWKB (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b0d9da3d43d82cce37ce12b60c84572af7541f2b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 675a76c43e34367586c1042aaa830679940223a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445017"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 
 ## <a name="arguments"></a>Arguments
  *WKB_multilinestring*  
- Représentation WKB de l’instance **geometryMultiLineString** à retourner. *WKB_multilinestring* est une expression **varbinary(max)** .  
+ Représentation WKB de l’instance **geometryMultiLineString** à retourner. *WKB_multilinestring* est une expression **varbinary(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryMultiLineString** à retourner.  
@@ -64,8 +65,8 @@ SET @g = geometry::STMLineFromWKB(0x01050000000200000001020000000200000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: FieldStatusEnum
 title: FieldStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 06044b54be7066deb5cf7510f060716106816805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443711"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Spécifie l' [État](../../../ado/reference/ado-api/status-property-ado-field.md) d’un [objet de champ](../../../ado/reference/ado-api/field-object.md).  
   
  Les **valeurs \* adFieldPending** indiquent l’opération qui a provoqué la définition de l’État et peuvent être combinées avec d’autres valeurs d’État.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indique que le champ spécifié existe déjà.|  
 |**adFieldBadStatus**|12|Indique qu’une valeur d’État non valide a été envoyée à partir d’ADO au fournisseur OLE DB. Les causes possibles incluent un fournisseur OLE DB 1,0 ou 1,1, ou une combinaison incorrecte de [valeur](../../../ado/reference/ado-api/value-property-ado.md) et d' [État](../../../ado/reference/ado-api/status-property-ado-field.md).|  

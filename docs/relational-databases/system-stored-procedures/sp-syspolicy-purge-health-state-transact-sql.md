@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_purge_health_state (Transact-SQL)
 title: sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c07d71e2ab4c9fe39882476eef25674718a17c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a01ee9be75223a081d19a9b71eb4d69ec150235c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446748"
 ---
 # <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime les états d'intégrité des stratégies de la Gestion basée sur des stratégies. Les états d'intégrité des stratégies sont des indicateurs visuels (symbole de parchemin marqué d'un « X » rouge) dans l'Explorateur d'objets qui vous permettent de déterminer sur quels nœuds une évaluation de stratégie a échoué.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,14 +40,14 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`Représente le nœud dans l’Explorateur d’objets où vous souhaitez effacer l’état d’intégrité. *target_tree_root_with_id* est de type **nvarchar (400)**, avec NULL comme valeur par défaut.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Représente le nœud dans l’Explorateur d’objets où vous souhaitez effacer l’état d’intégrité. *target_tree_root_with_id* est de type **nvarchar (400)**, avec NULL comme valeur par défaut.  
   
  Vous pouvez spécifier des valeurs de la colonne target_query_expression_with_id de la vue système msdb.dbo.syspolicy_system_health_state.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_purge_health_state dans le contexte de la base de données système msdb.  
   
  Si vous exécutez cette procédure stockée sans aucun paramètre, l'état d'intégrité du système est supprimé pour tous les nœuds dans l'Explorateur d'objets.  

@@ -1,4 +1,5 @@
 ---
+description: sp_register_custom_scripting (Transact-SQL)
 title: sp_register_custom_scripting (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446861"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La réplication permet aux procédures stockées personnalisées définies par l'utilisateur de remplacer une ou plusieurs procédures par défaut utilisées dans la réplication transactionnelle. Lorsqu'une modification de schéma est apportée à une table répliquée, ces procédures stockées sont recréées. **sp_register_custom_scripting** inscrit une procédure stockée ou un [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script qui est exécuté lorsqu’une modification de schéma se produit pour générer le script de la définition d’une nouvelle procédure stockée personnalisée définie par l’utilisateur. Cette nouvelle procédure stockée personnalisée définie par l'utilisateur doit refléter le nouveau schéma de la table. **sp_register_custom_scripting** est exécutée sur la base de données de publication sur le serveur de publication, et le fichier de script ou la procédure stockée inscrit est exécuté sur l’abonné lorsqu’une modification de schéma se produit.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,30 +41,30 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @type = ] 'type'`Type de la procédure stockée ou du script personnalisé en cours d’inscription. *type* **varchar (16)**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Type de la procédure stockée ou du script personnalisé en cours d’inscription. *type* **varchar (16)**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Insérer**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction INSERT est répliquée.|  
+|**insert**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction INSERT est répliquée.|  
 |**update**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction UPDATE est répliquée.|  
 |**delete**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction DELETE est répliquée.|  
 |**custom_script**|Le script est exécuté à la fin du déclencheur DDL (Data Definition Language).|  
   
-`[ @value = ] 'value'`Nom d’une procédure stockée ou d’un nom et d’un chemin d’accès complet au [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script en cours d’inscription. la *valeur* est de type **nvarchar (1024)**, sans valeur par défaut.  
+`[ @value = ] 'value'` Nom d’une procédure stockée ou d’un nom et d’un chemin d’accès complet au [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script en cours d’inscription. la *valeur* est de type **nvarchar (1024)**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  La spécification de NULL pour le paramètre de *valeur*annule l’inscription d’un script précédemment inscrit, ce qui revient à exécuter [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Lorsque la valeur de *type* est **custom_script**, le nom et le chemin d’accès complet d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script sont attendus. Dans le cas contraire, la *valeur* doit être le nom d’une procédure stockée enregistrée.  
   
-`[ @publication = ] 'publication'`Nom de la publication pour laquelle la procédure stockée ou le script personnalisé est en cours d’enregistrement. *publication* est de **type sysname**, avec **null**comme valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication pour laquelle la procédure stockée ou le script personnalisé est en cours d’enregistrement. *publication* est de **type sysname**, avec **null**comme valeur par défaut.  
   
-`[ @article = ] 'article'`Nom de l’article pour lequel la procédure stockée ou le script personnalisé est en cours d’enregistrement. *article* est de **type sysname**, avec **null**comme valeur par défaut.  
+`[ @article = ] 'article'` Nom de l’article pour lequel la procédure stockée ou le script personnalisé est en cours d’enregistrement. *article* est de **type sysname**, avec **null**comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_register_custom_scripting** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  Vous devez exécuter cette procédure stockée avant d'apporter une modification de schéma à une table répliquée. Pour plus d’informations sur l’utilisation de cette procédure stockée, consultez [régénérer des procédures transactionnelles personnalisées pour refléter les modifications de schéma](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  

@@ -1,4 +1,5 @@
 ---
+description: MoveRecord, méthode (ADO)
 title: MoveRecord, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443151"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord, méthode (ADO)
 Déplace l’entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) à un autre emplacement.  
@@ -40,7 +41,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Destination*  
  facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’emplacement où la *source* sera déplacée.  
   
- *Nom d’utilisateur*  
+ *UserName*  
  facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, le cas échéant, autorise l’accès à la *destination*.  
   
  *Mot de passe*  
@@ -49,11 +50,11 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Options*  
  facultatif. Valeur [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
   
- *Suppr*  
+ *Asynchrone*  
  facultatif. Valeur **booléenne** qui, lorsque la **valeur est true**, spécifie que cette opération doit être asynchrone.  
   
-## <a name="return-value"></a>Valeur renvoyée  
- Valeur de **chaîne**. En règle générale, la valeur de *destination* est retournée. Toutefois, la valeur exacte retournée est dépendante du fournisseur.  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur de **chaîne** . En règle générale, la valeur de *destination* est retournée. Toutefois, la valeur exacte retournée est dépendante du fournisseur.  
   
 ## <a name="remarks"></a>Notes  
  Les valeurs de *source* et de *destination* ne doivent pas être identiques ; dans le cas contraire, une erreur d’exécution se produit. Au moins le nom du serveur, du chemin d’accès et des ressources doit être différent.  

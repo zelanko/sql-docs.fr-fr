@@ -1,4 +1,5 @@
 ---
+description: RECONFIGURE (Transact-SQL)
 title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2016
@@ -22,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bab30e48ce9b9452ab3e8c28ad409df30a6516aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445471"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour la valeur actuellement configurée (la colonne **config_value** de l’ensemble de résultats de **sp_configure**) d’une option de configuration modifiée par la procédure stockée système **sp_configure**. Dans la mesure où certaines options de configuration exigent l’arrêt puis le redémarrage du serveur pour que la valeur en cours d’exécution soit mise à jour, RECONFIGURE n’actualise pas toujours cette dernière (colonne **run_value** de l’ensemble de résultats de **sp_configure**) lorsqu’une valeur de configuration est modifiée.    
     
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntaxe    
     

@@ -1,4 +1,5 @@
 ---
+description: Filter et RecordCount, exemples de propriétés (VC + +)
 title: Filter et RecordCount, exemples de propriétés (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443671"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter et RecordCount, exemples de propriétés (VC + +)
 Cet exemple utilise la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) pour ouvrir un nouveau [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) en fonction d’une condition spécifiée appliquée à un **jeu d’enregistrements**existant. Elle utilise la propriété [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) pour afficher le nombre d’enregistrements dans les deux **jeux d’enregistrements**. La fonction FilterField est requise pour l’exécution de cette procédure.  

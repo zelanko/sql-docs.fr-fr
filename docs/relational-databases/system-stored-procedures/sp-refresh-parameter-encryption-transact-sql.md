@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-SQL)
 title: sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -19,18 +20,19 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446904"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Met à jour les métadonnées de Always Encrypted pour les paramètres de la procédure stockée non liée au schéma, la fonction définie par l’utilisateur, la vue, le déclencheur DML, le déclencheur DDL au niveau de la base de données ou le déclencheur DDL au niveau du serveur spécifié dans la base de données actuelle. 
 
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,16 +47,16 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Arguments
 
-`[ @name = ] 'module_name'`Nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *module_name* ne peut pas être une procédure stockée Common Language Runtime (CLR) ou une fonction CLR. *module_name* ne peut pas être lié à un schéma. *module_name* est `nvarchar` de, sans valeur par défaut. *module_name* peut être un identificateur en plusieurs parties, mais ne peut faire référence qu’à des objets de la base de données active.
+`[ @name = ] 'module_name'` Nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *module_name* ne peut pas être une procédure stockée Common Language Runtime (CLR) ou une fonction CLR. *module_name* ne peut pas être lié à un schéma. *module_name* est `nvarchar` de, sans valeur par défaut. *module_name* peut être un identificateur en plusieurs parties, mais ne peut faire référence qu’à des objets de la base de données active.
 
-`[ @namespace = ] ' < class > '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL, `<class>` est requis. `<class>` est `nvarchar(20)`. Les entrées valides sont `DATABASE_DDL_TRIGGER` et `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '` Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL, `<class>` est requis. `<class>` a la valeur `nvarchar(20)`. Les entrées valides sont `DATABASE_DDL_TRIGGER` et `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Codet de retour  
 
 0 (réussite) ou un nombre différent de zéro (échec)
 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Notes
 
 Les métadonnées de chiffrement pour les paramètres d’un module peuvent devenir obsolètes, si :   
 * Les propriétés de chiffrement d’une colonne dans une table référencée par le module, ont été mises à jour. Par exemple, une colonne a été supprimée et une nouvelle colonne portant le même nom, mais un type de chiffrement différent, une clé de chiffrement ou un algorithme de chiffrement a été ajouté.  
@@ -62,7 +64,7 @@ Les métadonnées de chiffrement pour les paramètres d’un module peuvent deve
 
 Lorsque les propriétés de chiffrement d’une table sont modifiées, `sp_refresh_parameter_encryption` doit être exécutée pour tous les modules qui référencent directement ou indirectement la table. Cette procédure stockée peut être appelée sur ces modules dans n’importe quel ordre, sans qu’il soit nécessaire à l’utilisateur d’actualiser d’abord le module interne avant de passer à ses appelants.
 
-`sp_refresh_parameter_encryption`n’affecte pas les autorisations, les propriétés étendues ou les `SET` options associées à l’objet. 
+`sp_refresh_parameter_encryption` n’affecte pas les autorisations, les propriétés étendues ou les `SET` options associées à l’objet. 
 
 Pour actualiser un déclencheur DDL au niveau du serveur, exécutez cette procédure stockée à partir du contexte de toute base de données.
 

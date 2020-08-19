@@ -1,4 +1,5 @@
 ---
+description: dbo.sysoperators (Transact-SQL)
 title: Opérateurs dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7581d1456524c8294e470a952fb55f6f052973b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a16b2af8e9752b0df51a1cc60a227e0b055b798
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446631"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85890473"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID de l’opérateur.|  
 |**name**|**sysname**|nom de l’opérateur.|  
-|**désactivé**|**tinyint**|État des notifications d'alerte (booléen). Si la fonction est **1**, cet opérateur peut recevoir des notifications lorsqu’une alerte se produit.|  
+|**activé**|**tinyint**|État des notifications d'alerte (booléen). Si la fonction est **1**, cet opérateur peut recevoir des notifications lorsqu’une alerte se produit.|  
 |**email_address**|**nvarchar(100**|Adresse de messagerie de cet opérateur.|  
 |**last_email_date**|**int**|Date de la dernière notification d'alerte que cet opérateur a reçue par courrier électronique.|  
 |**last_email_time**|**int**|Heure de la dernière notification d'alerte que cet opérateur a reçue par courrier électronique.|  
@@ -55,6 +56,6 @@ ms.locfileid: "85890473"
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+ [Tables SQL Server Agent &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

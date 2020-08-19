@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTY (Transact-SQL)
 title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bebbaff7f4a09732705bc7168ca034f8f99a3e2c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f05d17efce6b568d5abd2cc81f3a7954f19fb34e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445754"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,16 +48,16 @@ FILEPROPERTY ( file_name , property )
 
 ## <a name="arguments"></a>Arguments
  *file_name*  
- Expression composée du nom du fichier associé à celui de la base de données actuelle dont les informations de propriété doivent être retournées. *file_name* est de type **nchar(128)** .  
+ Expression composée du nom du fichier associé à celui de la base de données actuelle dont les informations de propriété doivent être retournées. *file_name* est de type **nchar(128)**.  
   
  *property*  
  Expression contenant le nom de la propriété de fichier à renvoyer. *property* est de type **varchar(128)** et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|Valeur retournée|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|Groupe de fichiers en lecture seule.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
-|**IsPrimaryFile**|Le fichier est le fichier principal.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
-|**IsLogFile**|Le fichier est un fichier journal.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
+|**IsReadOnly**|Groupe de fichiers en lecture seule.|1 = Vrai<br /><br /> 0 = Faux<br /><br /> NULL = Entrée non valide.|  
+|**IsPrimaryFile**|Le fichier est le fichier principal.|1 = Vrai<br /><br /> 0 = Faux<br /><br /> NULL = Entrée non valide.|  
+|**IsLogFile**|Le fichier est un fichier journal.|1 = Vrai<br /><br /> 0 = Faux<br /><br /> NULL = Entrée non valide.|  
 |**SpaceUsed**|Quantité d'espace occupé par le fichier spécifié.|Nombre de pages allouées dans le fichier.|  
   
 ## <a name="return-types"></a>Types de retour  

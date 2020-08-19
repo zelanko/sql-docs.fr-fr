@@ -1,4 +1,5 @@
 ---
+description: MarshalOptionsEnum
 title: MarshalOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1aae84d12c098bdabf68cd014a359be54b0dcba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6243621ad7127e475f89052dc0d860fba6bad510
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443291"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Spécifie les enregistrements qui doivent être renvoyés au serveur.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|Par défaut. Retourne toutes les lignes sur le serveur.|  
 |**adMarshalModifiedOnly**|1|Retourne uniquement les lignes modifiées sur le serveur.|  
@@ -33,7 +34,7 @@ Spécifie les enregistrements qui doivent être renvoyés au serveur.
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums. MarshalOptions. ALL|  
 |AdoEnums. MarshalOptions. MODIFIEDONLY|  

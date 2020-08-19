@@ -1,4 +1,5 @@
 ---
+description: MarshalOptions, propriété (ADO)
 title: MarshalOptions, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 182946d30141ecbbcc2cba706338609b431abb97
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59f44093725321ef5f5b445d0edad6caec8c2113
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443321"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions, propriété (ADO)
 Indique les enregistrements du [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui doivent être remarshalés sur le serveur.  

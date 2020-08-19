@@ -1,4 +1,5 @@
 ---
+description: ROUND (Transact-SQL)
 title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdad5fc75a968a918b603ff118d7f2344379008d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 36917cc26189938e06f36d41559b2339344217c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445606"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,10 +66,10 @@ ROUND ( numeric_expression , length [ ,function ] )
 |Catégorie **money** et **smallmoney**|**money**|  
 |Catégorie **float** et **real**|**float**|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  ROUND retourne toujours une valeur. Si *length* est une valeur négative supérieure au nombre de chiffres placés avant la virgule décimale, ROUND retourne 0.  
   
-|Exemple|Résultats|  
+| Exemple|Résultats|  
 |-------------|------------|  
 |ROUND(748.58, -4)|0|  
   

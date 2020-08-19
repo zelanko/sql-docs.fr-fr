@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444888"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ L’instruction ALTER PARTITION SCHEME peut ajouter un groupe de fichiers, ou en
 Si vous créez toutes les partitions dans le même groupe de fichiers, celui-ci est initialement et automatiquement affecté comme le groupe de fichiers NEXT USED. Toutefois, après une opération de fractionnement, il n'y a plus de groupe de fichiers NEXT USED sélectionné. Vous devez affecter explicitement le groupe de fichiers comme groupe de fichiers NEXT USED à l’aide de l’instruction ALTER PARTITION SCHEME, sinon toute division ultérieure échouera.  
   
 > [!NOTE]  
->  Limitations de l’index columnstore : Seules les partitions vides peuvent être fractionnées quand il existe un index columnstore sur la table. Vous devez supprimer ou désactiver l’index columnstore avant d’effectuer cette opération.  
+>  Limitations d’index columnstore : seules les partitions vides peuvent être fractionnées quand il existe un index columnstore sur la table. Vous devez supprimer ou désactiver l’index columnstore avant d’effectuer cette opération.  
   
 MERGE [ RANGE ( *boundary_value*) ]  
 Supprime une partition et fusionne les valeurs qui existent dans la partition dans une partition restante. RANGE (*boundary_value*) doit être une valeur limite existante dans laquelle les valeurs de la partition supprimée sont fusionnées. Cet argument supprime le groupe de fichiers qui contenait initialement *boundary_value* du schéma de partition, sauf s’il est utilisé par une partition restante, ou le marque avec la propriété NEXT USED. La partition fusionnée existe dans le groupe de fichiers qui ne contenait pas initialement *boundary_value*. *boundary_value* est une expression constante qui peut référencer des variables (notamment des variables de type défini par l’utilisateur) ou des fonctions (notamment des fonctions définies par l’utilisateur). Elle ne peut pas faire référence à une expression [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* doit correspondre au type de données de sa colonne de partitionnement correspondante ou être convertible de façon implicite en celui-ci. Vous ne pouvez pas non plus tronquer *boundary_value* pendant une conversion implicite d’une manière à ce que la taille et la mise à l’échelle de la valeur ne correspondent pas à celles de son paramètre *input_parameter_type* correspondant.  

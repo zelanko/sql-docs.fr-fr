@@ -1,4 +1,5 @@
 ---
+description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445980"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -37,14 +38,14 @@ Définit une date qui est associée à une heure de la journée au format 24 he
   
 ## <a name="datetime2-description"></a>Description de datetime2
   
-|Propriété|Valeur|  
+|Property|Valeur|  
 |--------------|-----------|  
 |Syntaxe|**datetime2** [ (*précision à la fraction de seconde*) ]|  
-|Usage|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Utilisation|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|AAAA-MM-JJ hh:mm:ss[.fractions de seconde]<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage de dates|0001-01-01 à 9999-12-31<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.9999999|  
-|Plage de décalages de fuseau horaire|None|  
+|Plage de décalages de fuseau horaire|Aucun|  
 |Plages d'éléments|AAAA est un nombre de quatre chiffres, entre 0001 et 9999, qui représente une année.<br /><br /> MM est un nombre à deux chiffres, entre 01 et 12, qui représente un mois dans l'année spécifiée.<br /><br /> DD est un nombre à deux chiffres, entre 01 et 31 selon le mois, qui représente un jour du mois spécifié.<br /><br /> hh est un nombre à deux chiffres, entre 00 et 23, qui représente l'heure.<br /><br /> mm est un nombre à deux chiffres, entre 00 et 59, qui représente la minute.<br /><br /> ss est un nombre à deux chiffres, entre 00 et 59, qui représente la seconde.<br /><br /> n* est un nombre qui comprend entre zéro et sept chiffres, entre 0 et 9999999, qui représente les fractions de seconde. Dans Informatica, les fractions de seconde sont tronquées quand n > 3.|  
 |Longueur de caractère|19 positions au minimum (AAAA-MM-JJ hh:mm:ss) et 27 au maximum (AAAA-MM-JJ hh:mm:ss.0000000)|  
 |Précision, échelle|De 0 à 7 chiffres, avec une précision de 100 ns. La précision par défaut est de 7 chiffres.|  
@@ -104,7 +105,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-Dans le cas d’une conversion à partir de **time(n)** , le composant heure est copié et le composant date est défini sur « 1900-01-01 ». L'exemple suivant montre les résultats de la conversion d'une valeur `time(7)` en valeur `datetime2`.  
+Dans le cas d’une conversion à partir de **time(n)**, le composant heure est copié et le composant date est défini sur « 1900-01-01 ». L'exemple suivant montre les résultats de la conversion d'une valeur `time(7)` en valeur `datetime2`.  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -132,7 +133,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-Dans le cas d’une conversion à partir de **datetimeoffset(n)** , les composants date et heure sont copiés. Le fuseau horaire est tronqué. L'exemple suivant montre les résultats de la conversion d'une valeur `datetimeoffset(7)` en valeur `datetime2`.  
+Dans le cas d’une conversion à partir de **datetimeoffset(n)**, les composants date et heure sont copiés. Le fuseau horaire est tronqué. L'exemple suivant montre les résultats de la conversion d'une valeur `datetimeoffset(7)` en valeur `datetime2`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';

@@ -1,4 +1,5 @@
 ---
+description: Indicateurs (Transact-SQL) - Table
 title: Indicateurs de table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/21/2020
@@ -36,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445361"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -194,7 +195,7 @@ Indique que l'optimiseur de requête doit utiliser uniquement une opération de 
   
 L'indicateur FORCESEEK peut être spécifié des manières suivantes.  
   
-|Syntaxe|Exemple|Description|  
+|Syntaxe| Exemple|Description|  
 |------------|-------------|-----------------|  
 |Sans index ou indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK)`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de tout index approprié.|  
 |Combiné avec un indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de l'index spécifié.|  
